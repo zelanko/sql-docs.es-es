@@ -1,5 +1,5 @@
 ---
-title: Las perspectivas | Documentos de Microsoft
+title: Perspectivas de modelos tabulares de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3e687116fa1f388da3b59884c29526cb9e7dd629
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: dc6b574702f71a70de842c3a3b51110e8eed9814
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040552"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983896"
 ---
-# <a name="perspectives"></a>Perspectivas
+# <a name="perspectives-in-tabular-models"></a>Perspectivas de modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   En los modelos tabulares, las perspectivas definen subconjuntos visibles de un modelo que ofrecen puntos de vista centrados, específicos del negocio o específicos de la aplicación del modelo.  
   
@@ -34,12 +34,12 @@ ms.locfileid: "34040552"
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Crear y administrar perspectivas](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|Describe cómo crear y administrar perspectivas mediante el cuadro de diálogo Perspectivas del diseñador de modelos.|  
   
 ## <a name="see-also"></a>Vea también  
- [roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Jerarquías](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   

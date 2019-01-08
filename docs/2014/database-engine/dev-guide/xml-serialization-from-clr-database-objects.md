@@ -17,12 +17,12 @@ ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8125f5b8693eccfc619dd2ee3aed6f203e17dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f863aa3d32ae60ff1cbcac562e74250899088
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183175"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356576"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>Serialización XML de objetos de base de datos de CLR
   La serialización XML se requiere para dos situaciones:  
@@ -37,7 +37,7 @@ ms.locfileid: "48183175"
   
 2.  Registre el ensamblado generado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la instrucción `CREATE ASSEMBLY`.  
   
- Para obtener información sobre los errores que puede recibir al realizar la serialización XML, consulte el siguiente artículo de Microsoft Support: ["No se puede cargar el ensamblado de serialización generado dinámicamente"](http://support.microsoft.com/kb/913668).  
+ Para obtener información sobre los errores que puede recibir al realizar la serialización XML, vea el artículo de Microsoft Support siguiente: ["No se puede cargar el ensamblado de serialización generado dinámicamente"](https://support.microsoft.com/kb/913668).  
   
  Para obtener información sobre los tipos de datos no admitidos por XMLSerializer, consulte Compatibilidad con enlaces del esquema XML en .NET Framework en la documentación de .NET Framework.  
   

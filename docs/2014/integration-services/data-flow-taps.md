@@ -11,15 +11,15 @@ ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9ddd8c6de8574f10b131427cc4ff6fc8de8d5cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e807fad8929ccb087b9ba55615b235a2950cdb1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146475"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376787"
 ---
 # <a name="data-flow-taps"></a>Derivaciones de flujo de datos
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] presenta una nueva característica que le permite agregar una derivación de datos en una ruta de flujo de datos de un paquete en tiempo de ejecución y dirigir la salida de la derivación de datos a un archivo externo. Para usar esta característica, debe implementar el proyecto de SSIS con el modelo de implementación de proyectos en un servidor de SSIS. Después de implementar el paquete en el servidor, debe ejecutar scripts T-SQL en la base de datos SSISDB para agregar derivaciones de datos antes de ejecutar el paquete. Este es un escenario de ejemplo:  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] presenta una nueva característica que le permite agregar una derivación de datos en la ruta de flujo de datos en tiempo de ejecución y dirigir la salida de la derivación de datos a un archivo externo. Para usar esta característica, debe implementar el proyecto de SSIS con el modelo de implementación de proyectos en un servidor de SSIS. Después de implementar el paquete en el servidor, debe ejecutar scripts T-SQL en la base de datos SSISDB para agregar derivaciones de datos antes de ejecutar el paquete. Este es un escenario de ejemplo:  
   
 1.  Cree una instancia de ejecución de un paquete con el procedimiento almacenado [catalog.create_execution &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database).  
   
@@ -78,7 +78,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  Al habilitar el nivel de registro detallado y agregar derivaciones de datos aumentan las operaciones de E/S que realiza la solución de integración de datos. Por tanto, se recomienda agregar derivaciones de datos solo para solucionar problemas.  
   
 ## <a name="video"></a>Vídeo  
- En este [vídeo de TechNet](http://technet.microsoft.com/sqlserver/dn600163) se muestra cómo agregar y usar derivaciones de datos en el catálogo de SSISDB de SQL Server 2012, que permiten depurar paquetes mediante programación y capturar los resultados parciales en tiempo de ejecución. También explica cómo enumerar o quitar estas derivaciones de datos y las prácticas recomendadas para usar derivaciones de datos en paquetes de SSIS.  
+ En este [vídeo de TechNet](https://technet.microsoft.com/sqlserver/dn600163) se muestra cómo agregar y usar derivaciones de datos en el catálogo de SSISDB de SQL Server 2012, que permiten depurar paquetes mediante programación y capturar los resultados parciales en tiempo de ejecución. También explica cómo enumerar o quitar estas derivaciones de datos y las prácticas recomendadas para usar derivaciones de datos en paquetes de SSIS.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Depurar el flujo de datos](troubleshooting/debugging-data-flow.md)  

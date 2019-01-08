@@ -20,16 +20,16 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0021bf5b3ac905ddf63ede8d4dfd65710662aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789913"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590439"
 ---
 # <a name="sqlexecute-function"></a>Función SQLExecute
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLExecute** ejecuta una instrucción preparada, con los valores actuales de las variables de marcador de parámetro si los marcadores de parámetros existen en la instrucción.  
@@ -39,7 +39,7 @@ ms.locfileid: "47789913"
 ```  
   
 SQLRETURN SQLExecute(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -77,7 +77,7 @@ SQLRETURN SQLExecute(
 |22015|Desbordamiento de campo de intervalo|*\*StatementText* contiene un parámetro numérico o de intervalo exacto que, cuando se convierte en un intervalo del tipo de datos SQL, causó una pérdida de dígitos significativos.<br /><br /> *\*StatementText* contiene un parámetro de intervalo con más de un campo que, cuando se convierte en un tipo de datos numéricos en una columna, no tenía ninguna representación del tipo de datos numérico.<br /><br /> *\*StatementText* contenía datos de parámetro que se asignó a un intervalo de tipo SQL y no había ninguna representación del valor del tipo C en el intervalo de tipo SQL.<br /><br /> Asignación de un parámetro de entrada y salida o de salida que era un valor numérico exacto o intervalo de tipo SQL a un tipo de intervalo C causado una pérdida de dígitos significativos.<br /><br /> Cuando un parámetro de entrada y salida o de salida se asigna a una estructura de intervalo de C, no hubo ninguna representación de los datos de la estructura de datos de intervalo.|  
 |22018|Valor de carácter no válido para especificación cast|*\*StatementText* contenía un tipo de C que era un numérico exacto o aproximado, una fecha y hora o un tipo de datos de intervalo; el tipo SQL de la columna era un tipo de datos de caracteres; y el valor de la columna no era un literal válido de tipo C enlazado.<br /><br /> Cuando se devuelve un parámetro de entrada y salida o de salida, el tipo SQL era un numérico exacto o aproximado, una fecha y hora o un tipo de datos del intervalo; el tipo de C era SQL_C_CHAR; y el valor de la columna no es un literal válido del tipo SQL enlazado.|  
 |22019|Carácter de escape no válido|La instrucción preparada asociada *StatementHandle* contenidos un **como** predicado con un **ESCAPE** en el **donde** cláusula, y la longitud de los siguientes caracteres de escape **ESCAPE** no es igual a 1.|  
-|22025|Secuencia de escape no válido|La instrucción preparada asociada *StatementHandle* contenidos "**como** *valor de patrón* **ESCAPE** *escape carácter*"en el **donde** cláusula y el carácter que sigue el carácter de escape en el valor de patrón no era uno de"%"o"_".|  
+|22025|Secuencia de escape no válido|La instrucción preparada asociada *StatementHandle* contenidos "**como** _valor de patrón_ **ESCAPE** _escape carácter_"en el **donde** cláusula y el carácter que sigue el carácter de escape en el valor de patrón no era uno de"%"o"_".|  
 |23000|Infracción de restricción de integridad|La instrucción preparada asociada con el *StatementHandle* contiene un parámetro. El valor del parámetro era NULL para una columna definida como NOT NULL en la columna de tabla asociada, se proporcionó un valor duplicado para una columna que se restringen para contener solo valores únicos o se infringió alguna otra restricción de integridad.|  
 |24000|Estado de cursor no válido|Un cursor se coloca en el *StatementHandle* por **SQLFetch** o **SQLFetchScroll**. Este error se devuelve mediante el Administrador de controladores si **SQLFetch** o **SQLFetchScroll** no se devolvió SQL_NO_DATA y es devuelto por el controlador si **SQLFetch** o **SQLFetchScroll** devuelva SQL_NO_DATA.<br /><br /> Un cursor estaba abierto en el *StatementHandle*.<br /><br /> La instrucción preparada asociada con el *StatementHandle* contiene una actualización por posición o eliminar statemen, t y el cursor se coloca antes del inicio del conjunto de resultados o después del final del conjunto de resultados.|  
 |40001|Error de serialización.|Debido a un interbloqueo de recurso con otra transacción se revirtió la transacción.|  
@@ -120,7 +120,7 @@ SQLRETURN SQLExecute(
  Si se habilitan los marcadores y se ejecuta una consulta que no es compatible con marcadores, el controlador debe intentar convertir el entorno a uno que admite marcadores al cambiar un valor de atributo y devolver 01S02 de SQLSTATE SQLSTATE (valor de opción cambiado). Si no se puede cambiar el atributo, el controlador debe devolver SQLSTATE HY024 (valor de atributo no válido).  
   
 > [!NOTE]  
->  Cuando se usa la agrupación de conexiones, una aplicación no debe ejecutar instrucciones SQL que cambian la base de datos o en el contexto de la base de datos, como el **USE** *base de datos* instrucción en SQL Server, que cambia el catálogo que se usa un origen de datos.  
+>  Cuando se usa la agrupación de conexiones, una aplicación no debe ejecutar instrucciones SQL que cambian la base de datos o en el contexto de la base de datos, como el **USE** _base de datos_ instrucción en SQL Server, que cambia el catálogo que se usa un origen de datos.  
   
 ## <a name="code-example"></a>Ejemplo de código  
  Consulte [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md), [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md), y [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  

@@ -13,12 +13,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecc2a15cda3c63b1f4b29510192a28f962ffe93c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f3990965c78bec153ef87011f152ca0f13881055
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032772"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519202"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia
   En este tema se describe cómo adjuntar dominios o dominios compuestos de una base de conocimiento de calidad de datos a un servicio de datos de referencia en Windows Azure Marketplace para generar conocimiento con los datos de referencia de alta calidad. Cada servicio de datos de referencia contiene un esquema (columnas de datos). Después de adjuntar un dominio o un dominio compuesto a un servicio de datos de referencia, debe asignar el dominio adjunto o los dominios individuales dentro del dominio compuesto adjunto a las columnas adecuadas de un esquema del servicio de datos de referencia. Adjuntar un dominio compuesto a un servicio de datos de referencia permite adjuntar solo un dominio a un servicio de datos de referencia y, a continuación, asignar los dominios individuales incluidos en el dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia.  
@@ -26,11 +26,11 @@ ms.locfileid: "51032772"
 > [!WARNING]  
 >  El dominio compuesto adjunto a un servicio de datos de referencia está disponible en la lista desplegable de dominios al asignar dominios a las columnas del esquema del servicio de datos de referencia. No asigne el dominio compuesto a una columna del esquema del servicio de datos de referencia; solo debe asignar dominios individuales dentro de un dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia. De lo contrario, se producirá un error.  
   
- Un esquema del servicio de datos de referencia puede tener una columna obligatoria que se debe asignar al dominio apropiado si decide usar el servicio de datos de referencia. La columna obligatoria de un esquema de datos de referencia se identifica mediante "(M)" en el nombre de columna. Por ejemplo, **AddressLine** es la columna de esquema obligatoria en **Melissa Data – Address Data** y **CompanyName** es la columna de esquema obligatoria en **Digital Trowel Inc. – Us companies and professional data for SQL users**.  
+ Un esquema del servicio de datos de referencia puede tener una columna obligatoria que se debe asignar al dominio apropiado si decide usar el servicio de datos de referencia. La columna obligatoria de un esquema de datos de referencia se identifica mediante "(M)" en el nombre de columna. Por ejemplo, **AddressLine** es la columna de esquema obligatoria en **Melissa Data - Address Data** y **CompanyName** es la columna de esquema obligatoria en **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- En este tema, crearemos cuatro dominios: **Address line**, **City**, **State**y **Zip**, bajo un dominio compuesto, **Address Verification**, adjuntaremos el dominio compuesto al servicio de datos de referencia **Melissa Data – Address Check** y después asignaremos los dominios individuales dentro del dominio compuestas a las columnas adecuadas del esquema del servicio de datos de referencia.  
+ En este tema, crearemos cuatro dominios: **Línea de dirección**, **Ciudad**, **estado**, y **Zip**, en un dominio compuesto, **Address Verification**, adjunte el un dominio compuesto a los **Melissa Data - Address Check** al servicio de datos de referencia y, a continuación, asignar los dominios individuales dentro del dominio compuesto a las columnas adecuadas en el esquema de servicio de datos de referencia.  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Es necesario configurar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para utilizar los servicios de datos de referencia. Vea [Configurar DQS para usar datos de referencia](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "51032772"
   
 3.  En la pantalla **Nueva base de conocimiento** , escriba un nombre para la nueva base de conocimiento, haga clic en la actividad **Administración de dominios** y, por último, haga clic en **Crear**.  
   
-4.  En la pantalla **Administración de dominios** , haga clic en el icono **Crear un dominio** para crear un dominio. Cree los cuatro dominios siguientes: **Address line**, **City**, **State**y **Zip**.  
+4.  En la pantalla **Administración de dominios** , haga clic en el icono **Crear un dominio** para crear un dominio. Cree los cuatro dominios siguientes: **Línea de dirección**, **Ciudad**, **estado**, y **Zip**.  
   
 5.  Haga clic en el icono **Crear un dominio compuesto** para crear un dominio compuesto. En el cuadro de diálogo **Crear un dominio compuesto** , escriba **Address Verification** en el cuadro **Nombre de dominio compuesto** e incluya en el dominio compuesto todos los dominios creados en el paso 3. Haga clic en **Aceptar**.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "51032772"
   
 8.  En el cuadro de diálogo **Catálogo de proveedores de datos de referencia en línea** :  
   
-    1.  En **DataMarket Data Quality Services**, seleccione el cuadro **Melissa Data – Address Check** .  
+    1.  En **DataMarket Data Quality Services**, active la casilla **Melissa Data - Address Check**.  
   
-    2.  Asigne las columnas del servicio de datos de referencia Melissa Data – Address Check a los dominios adecuados (Address Line, City, State y Zip). Para asignar las columnas, seleccione una columna del servicio de datos de referencia en la columna **Esquema RDS** y, a continuación, seleccione el dominio adecuado en la columna **Dominio** . Para agregar más filas a la tabla, haga clic en el icono **Agregar entrada de esquema** .  
+    2.  Asigne las columnas del servicio de datos de referencia Melissa Data - Address Check a los dominios adecuados (Address Line, City, State y Zip). Para asignar las columnas, seleccione una columna del servicio de datos de referencia en la columna **Esquema RDS** y, a continuación, seleccione el dominio adecuado en la columna **Dominio** . Para agregar más filas a la tabla, haga clic en el icono **Agregar entrada de esquema** .  
   
     3.  Haga clic en **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo **Catálogo de proveedores de datos de referencia en línea** .  
   
@@ -71,17 +71,17 @@ ms.locfileid: "51032772"
   
 9. Regresará a la pestaña **Datos de referencia** . En el área **Configuración de proveedores**, cambie los valores de los cuadros siguientes, si es necesario:  
   
-    -   **Umbral de corrección automática**: las correcciones del servicio de datos de referencia con un nivel de confianza por encima de estos valores de umbral se llevan a cabo automáticamente. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,9 para un porcentaje del 90%.  
+    -   **Umbral de corrección automática**: Correcciones del servicio de datos de referencia con el nivel de confianza por encima de estos valores de umbral se hará automáticamente. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,9 para un porcentaje del 90%.  
   
-    -   **Candidatos sugeridos**: el número de candidatos sugeridos que se van a mostrar del servicio de datos de referencia.  
+    -   **Candidatos sugeridos**: Número de candidatos sugeridos para mostrar del servicio de datos de referencia.  
   
-    -   **Confianza mínima**: las sugerencias del servicio de datos de referencia con un nivel de confianza por debajo de este valor se omitirán. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,6 para un porcentaje del 60 %.  
+    -   **Confianza mínima**: Sugerencias del servicio de datos de referencia con un nivel de confianza inferior a este valor se omitirá. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,6 para un porcentaje del 60 %.  
   
 10. Haga clic en **Finalizar** para publicar la base de conocimiento. Aparecerá un mensaje de confirmación una vez que la base de conocimiento se haya publicado correctamente.  
   
  Ahora puede utilizar esta base de conocimiento para la actividad de limpieza en un proyecto de calidad de datos con objeto de normalizar y limpiar direcciones de EE. UU. en los datos de origen de acuerdo con el conocimiento proporcionado por Melissa Data a través de Windows Azure Marketplace.  
   
-##  <a name="FollowUp"></a> Seguimiento: después de asignar un dominio a datos de referencia  
+##  <a name="FollowUp"></a> Sigue: Después de asignar un dominio a datos de referencia  
  Cree un proyecto de calidad de datos y ejecute la actividad de limpieza en los datos de origen que incluyan direcciones de EE. UU., comparándolos con la base de conocimiento creada en este tema. Vea [Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Vea también  

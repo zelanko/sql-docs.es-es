@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
@@ -30,12 +29,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 475c77650179648642aead8275040b894ccc4b40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125325"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590259"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
   La utilidad **SQLdiag** es una herramienta de recopilación de diagnósticos de uso general que se puede ejecutar como una aplicación de consola o como un servicio. Puede usar **SQLdiag** para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. **SQLdiag** se ha diseñado para acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -85,16 +84,16 @@ ms.locfileid: "48125325"
  **/?**  
  Muestra información de uso.  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  Establece el archivo de configuración que usará **SQLdiag** . De forma predeterminada, **/I** está establecido en SQLDiag.Xml.  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  Redirige la salida de **SQLdiag** a la carpeta especificada. Si no se especifica la opción **/O** , la salida de **SQLdiag** se escribe en una subcarpeta denominada SQLDIAG en la carpeta de inicio de **SQLdiag** . Si no existe la carpeta SQLDIAG, **SQLdiag** intenta crearla.  
   
 > [!NOTE]  
 >  La ubicación de la carpeta de salida es relativa a la ubicación de la carpeta Support que se puede especificar con **/P**. Para definir una ubicación completamente distinta de la carpeta de salida, especifique la ruta de acceso completa del directorio para **/O**.  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  Define la ruta de la carpeta Support. De forma predeterminada, **/P** está establecido en la carpeta en que reside el ejecutable **SQLdiag** . La carpeta Support contiene los archivos de compatibilidad de **SQLdiag** , como el archivo de configuración XML, los scripts Transact-SQL y otros archivos que usa la utilidad durante la recopilación de diagnósticos. Si usa esta opción para especificar una ruta de acceso alternativa a los archivos de compatibilidad, **SQLdiag** copiará automáticamente los archivos de compatibilidad que necesita en la carpeta especificada, si todavía no existen.  
   
 > [!NOTE]  
@@ -102,7 +101,7 @@ ms.locfileid: "48125325"
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  Establece si **SQLdiag** sobrescribe o cambia el nombre de la carpeta de salida cuando se inicia. Opciones disponibles:  
   
  1 = Sobrescribe la carpeta de salida (valor predeterminado)  
@@ -112,12 +111,12 @@ ms.locfileid: "48125325"
 > [!NOTE]  
 >  **SQLdiag** no anexa la salida a la carpeta de salida actual cuando se inicia. Solo puede sobrescribir la carpeta de salida predeterminada (opción 1) o cambiar el nombre de la carpeta (opción 2) y, a continuación, escribir la salida en la nueva carpeta de salida predeterminada denominada SQLDIAG.  
   
- **/M** *machine1* [ *machine2 ** machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2 ** machineN*] | *@machinelistfile*  
  Invalida los equipos especificados en el archivo de configuración. De forma predeterminada, el archivo de configuración es SQLDiag.Xml, o se establece con el parámetro **/I** . Al especificar más de un equipo, separe cada nombre de equipo con un espacio.  
   
  Con *@machinelistfile* se especifica un nombre de archivo de la lista de equipos que se va a almacenar en el archivo de configuración.  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  Establece el tipo de compresión de archivo que se usa en los archivos de la carpeta de salida de **SQLdiag** . Opciones disponibles:  
   
  0 = ninguno (valor predeterminado)  
@@ -152,7 +151,7 @@ ms.locfileid: "48125325"
   
  Tenga en cuenta que **SQLdiag** usa la hora local del equipo en el que se ejecuta la utilidad.  
   
- **/A**  *SQLdiag_application_name*  
+ **/A** _SQLdiag_application_name_  
  Permite la ejecución de varias instancias de la utilidad **SQLdiag** en la misma instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Cada *SQLdiag_application_name* identifica una instancia diferente de **SQLdiag**. No existe ninguna relación entre una instancia de *SQLdiag_application_name* y un nombre de instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -161,11 +160,11 @@ ms.locfileid: "48125325"
   
  Por ejemplo:  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_nombre_aplicación_  
   
  También se puede usar con la opción **/R** para registrar una instancia concreta de **SQLdiag** como servicio. Por ejemplo:  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  **SQLdiag** agrega el prefijo DIAG$ de forma automática al nombre de instancia especificado para *SQLdiag_application_name*. De este modo, se proporciona un nombre de servicio significativo si se registra **SQLdiag** como servicio.  
@@ -201,7 +200,7 @@ ms.locfileid: "48125325"
   
  También puede usar el comando **net start** para iniciar el servicio:  
   
- **net**  **start SQLDIAG**  
+ **Net start SQLDIAG**  
   
  **/U**  
  Elimina del Registro **SQLdiag** como servicio.  
@@ -228,7 +227,7 @@ ms.locfileid: "48125325"
   
  El argumento **/A** , que especifica una instancia con nombre de **SQLdiag**, es el único que se puede usar con **START**, **STOP**o **STOP_ABORT** para controlar una instancia específica del servicio **SQLdiag** . Por ejemplo:  
   
- **SQLDIAG START /A** *SQLdiag_nombre_aplicación*  
+ **SQLDIAG START /A** _SQLdiag_nombre_aplicación_  
   
 ## <a name="security-requirements"></a>Requisitos de seguridad  
  A menos que **SQLdiag** se ejecute en modo genérico (especificando el argumento de la línea de comandos **/G** ), el usuario que ejecuta **SQLdiag** debe ser miembro del grupo **Administradores** de Windows y del rol fijo de servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. De forma predeterminada, **SQLdiag** conecta con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante la autenticación de Windows, pero también admite la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -295,7 +294,7 @@ SQLDIAG STOP /A Instance1
 >  Use **SQLDiag STOP** o **SQLDIAG STOP_ABORT** para detener el servicio **SQLdiag** . No use la consola Servicios de Windows para detener **SQLdiag** u otros servicios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>Iniciar y detener automáticamente SQLdiag  
- Para iniciar y detener automáticamente la recopilación de datos de diagnóstico a una hora especificada, use los argumentos **/B***hora_inicio* y **/E***hora_finalización* con la notación de 24 horas. Por ejemplo, si está solucionando un problema que suele aparecer a las 02:00:00 aproximadamente, puede configurar **SQLdiag** para empezar a recopilar automáticamente datos de diagnóstico a la 01:00 y dejar de recopilarlos a las 03:00:00. Use los argumentos **/B** y **/E** para especificar la hora de inicio y detención. Utilice la notación de 24 horas para especificar una hora y una fecha de inicio y de finalización exactas con el formato AAAAMMDD_HH:MM:SS. Para especificar una hora de inicio o detención relativa, anteponga **+** a la hora de inicio o de detención y omita la parte de la fecha (AAAAMMDD_) como se muestra en el siguiente ejemplo, lo que hace que **SQLdiag** espere 1 hora antes de empezar a recopilar información; después recopila la información durante 3 horas hasta que se detiene y se cierra:  
+ Para iniciar y detener automáticamente la recopilación de datos de diagnóstico a una hora especificada, use los argumentos **/B**_start_time_ y **/E**_stop_time_ (con la notación de 24 horas). Por ejemplo, si está solucionando un problema que suele aparecer a las 02:00:00 aproximadamente, puede configurar **SQLdiag** para empezar a recopilar automáticamente datos de diagnóstico a la 01:00 y dejar de recopilarlos a las 03:00:00. Use los argumentos **/B** y **/E** para especificar la hora de inicio y detención. Utilice la notación de 24 horas para especificar una hora y una fecha de inicio y de finalización exactas con el formato AAAAMMDD_HH:MM:SS. Para especificar una hora de inicio o detención relativa, anteponga **+** a la hora de inicio o de detención y omita la parte de la fecha (AAAAMMDD_) como se muestra en el siguiente ejemplo, lo que hace que **SQLdiag** espere 1 hora antes de empezar a recopilar información; después recopila la información durante 3 horas hasta que se detiene y se cierra:  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -356,7 +355,7 @@ SQLDIAG START /A Instance1
  No se permite pausar el servicio **SQLdiag** .  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>Ejecutar varias instancias de SQLdiag  
- Para ejecutar varias instancias de **SQLdiag** en el mismo equipo, especifique **/A***SQLdiag_nombre_aplicación* en la línea de comandos. Resulta útil para recopilar distintos conjuntos de diagnósticos de la misma instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma simultánea. Por ejemplo, puede configurar una instancia con nombre de **SQLdiag** para que ejecute una recopilación de datos ligera de forma constante. De este modo, si se produce un problema específico en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede ejecutar la instancia predeterminada de **SQLdiag** para recopilar los diagnósticos relativos a ese problema o para recopilar un conjunto de diagnósticos que los servicios de soporte al cliente de [!INCLUDE[msCoName](../includes/msconame-md.md)] le hayan solicitado para diagnosticar un problema.  
+ Para ejecutar varias instancias de **SQLdiag** en el mismo equipo, especifique **/A**_SQLdiag_application_name_ en la línea de comandos. Resulta útil para recopilar distintos conjuntos de diagnósticos de la misma instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma simultánea. Por ejemplo, puede configurar una instancia con nombre de **SQLdiag** para que ejecute una recopilación de datos ligera de forma constante. De este modo, si se produce un problema específico en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede ejecutar la instancia predeterminada de **SQLdiag** para recopilar los diagnósticos relativos a ese problema o para recopilar un conjunto de diagnósticos que los servicios de soporte al cliente de [!INCLUDE[msCoName](../includes/msconame-md.md)] le hayan solicitado para diagnosticar un problema.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Recopilar datos de diagnóstico de instancias de SQL Server en clúster  
  **SQLdiag** permite recopilar datos de diagnóstico de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster. Para recopilar diagnósticos de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agrupadas, asegúrese de que se especifica **"."** para el atributo **name** del elemento **\<Machine>** en el archivo de configuración SQLDiag.Xml y no especifique el argumento **/G** en la línea de comandos. De forma predeterminada, se especifica **"."** para el atributo **name** del archivo de configuración y se desactiva el argumento **/G** . Normalmente, cuando se realiza la recopilación desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster, no es necesario editar el archivo de configuración ni cambiar los argumentos de la línea de comandos.  

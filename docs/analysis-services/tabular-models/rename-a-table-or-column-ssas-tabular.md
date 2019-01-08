@@ -1,5 +1,5 @@
 ---
-title: Cambiar el nombre de una tabla o columna | Documentos de Microsoft
+title: Cambiar el nombre de una tabla de modelo tabular de Analysis Services o columna | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0c8564b7a61a73937bc5f9a207c98fd77c7b1bb7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040109"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072642"
 ---
 # <a name="rename-a-table-or-column"></a>Cambiar el nombre de una tabla o una columna 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "34040109"
   
 -   Caracteres de control  
   
--   Los siguientes caracteres (que no son válidos en los nombres de objetos de Analysis Services):., ': / \\*|? &$ de %! [] () de +={}<>  
+-   Los siguientes caracteres (que no son válidos en los nombres de objetos de Analysis Services):., ': / \\*|? & % $! [] de () +={}<>  
   
 -   Palabras clave reservadas de Analysis Services, incluidos los nombres y operadores de funciones de las expresiones multidimensionales (MDX) y las extensiones de minería de datos (DMX).  
   
 ## <a name="effect-of-renaming-on-existing-tables-columns-and-calculations"></a>Efecto de cambiar el nombre en las tablas, columnas y cálculos existentes  
- Siempre que cambia el nombre de una tabla, cambia el nombre del objeto de tabla subyacente, que puede contener varias columnas o medidas. Las columnas que se encuentran en la tabla y cualquier relación que utilice la tabla, debe actualizarse para utilizar el nuevo nombre en sus definiciones. Esta actualización se realiza automáticamente en la mayoría de los casos.
+ Siempre que cambia el nombre de una tabla, cambia el nombre del objeto de tabla subyacente, que puede contener varias columnas o medidas. Las columnas que estén en la tabla y cualquier relación que utilice la tabla, debe actualizarse para utilizar el nuevo nombre en sus definiciones. Esta actualización se realiza automáticamente en la mayoría de los casos.
   
- También se deben actualizar los cálculos que usan la tabla cuyo nombre ha cambiado, o que utilizan las columnas de la tabla cuyo nombre ha cambiado, y deben actualizarlo y calcular los datos derivados de esos cálculos. Esto puede tardar un tiempo que depende de cuántas tablas y cálculos se vean afectados. Por consiguiente, el mejor momento para cambiar el nombre de las tablas es bien durante el proceso de importación o antes de empezar a generar relaciones y cálculos complejos.  
+ También se deben actualizar los cálculos que usan la tabla cuyo nombre ha cambiado o que usen columnas de la tabla cuyo nombre ha cambiado, y deben poder actualizarlo y volver a calcular los datos derivados de esos cálculos. Esto puede tardar un tiempo que depende de cuántas tablas y cálculos se vean afectados. Por consiguiente, el mejor momento para cambiar el nombre de las tablas es bien durante el proceso de importación o antes de empezar a generar relaciones y cálculos complejos.  
   
 ## <a name="see-also"></a>Vea también  
  [Tablas y columnas](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   

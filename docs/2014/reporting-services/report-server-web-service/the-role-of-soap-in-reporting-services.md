@@ -17,12 +17,12 @@ ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7c0672fedcf39a2787f7229a8e359d6042d99088
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 276e99716b310afd2fbcd9b5bf2033e4b4738165
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166745"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371117"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>El rol de SOAP en Reporting Services
   El servicio web del servidor de informes utiliza la mensajería del Protocolo simple de acceso a objetos (SOAP, Simple Object Access Protocol) para enviar comandos basados en texto a través de una red. Estos comandos adoptan la forma de texto XML que se envía a través de World Wide Web utilizando HTTP. Al usar SOAP como protocolo de comunicaciones, el servicio web del servidor de informes permite a las aplicaciones y componentes intercambiar datos con el servidor de informes utilizando una infraestructura abierta y ampliamente aceptada. El estándar SOAP se define en www.w3.org/TR/SOAP.  
@@ -36,7 +36,7 @@ ms.locfileid: "48166745"
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItem xmlns="http://www.microsoft.com/sql/ReportingServer">  
+        <DeleteItem xmlns="https://www.microsoft.com/sql/ReportingServer">  
             <item>/Samples/Report1</item>  
         </DeleteItem>  
     </soap:Body>  
@@ -54,7 +54,7 @@ public void DeleteItem(string item);
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItemResponse xmlns="http://www.microsoft.com/sql/ReportingServer" />  
+        <DeleteItemResponse xmlns="https://www.microsoft.com/sql/ReportingServer" />  
     </soap:Body>  
 </soap:Envelope>  
 ```  
@@ -63,7 +63,7 @@ public void DeleteItem(string item);
   
 ## <a name="see-also"></a>Vea también  
  [Acceso a la API de SOAP](accessing-the-soap-api.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Servidor de informes de Reporting Services](../reporting-services-report-server.md)   
  [Servicio web del servidor de informes](report-server-web-service.md)  
   

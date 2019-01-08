@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: faf49ce16cdf76af644944a2a3cc21700863ade9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f58a349ebf67f710b4ff4722b85328992b3555eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198375"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371127"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Complemento Master Data Services para Microsoft Excel
   Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], se pueden distribuir listas maestras de datos de referencia para todos los usuarios de su organización que usen Excel. La seguridad determina los datos que los usuarios pueden ver y actualizar.  
@@ -28,12 +27,12 @@ ms.locfileid: "48198375"
  En [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede usar Data Quality Services (DQS) para comparar los datos antes de cargarlos en MDS. Esto ayuda a evitar datos duplicados en MDS.  
   
 > [!IMPORTANT]  
->  Puede seguir usando el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versión SP1 de Master Data Services complemento para Excel después de actualizar Master Data Services y Data Quality Services para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versión SP1 de Master Data Services complemento para Excel desde [aquí](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  Puede continuar con la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 de servicios del complemento Master Data Services para Excel después de actualizar Master Data Services y Data Quality Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del complemento de Master Data Services para Excel [aquí](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ## <a name="terms"></a>Términos  
  Al trabajar con el complemento, puede encontrar los siguientes términos.  
   
--   El *MDS repository* es donde se almacenan todos los datos maestros. Es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada para almacenar datos de MDS. Para trabajar con datos del repositorio, estos se cargan en Excel; cuando haya terminado, puede volver a publicar los cambios en el repositorio. Los administradores pueden agregar nuevas entidades y atributos al repositorio.  
+-   El *MDS repository* es donde se almacenan todos los datos maestros. Es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada para almacenar datos de MDS. Para trabajar con datos del repositorio, los datos se cargan en Excel; cuando haya terminado, puede volver a publicar los cambios en el repositorio. Los administradores pueden agregar nuevas entidades y atributos al repositorio.  
   
 -   Los*datos administrados con MDS* son aquellos datos que se almacenan en el repositorio MDS y se cargan en Excel, donde se muestran como filas resaltadas. Puede agregar datos no administrados por MDS a una hoja de cálculo, y esto no les afecta al actualizar los datos administrados por MDS.  
   

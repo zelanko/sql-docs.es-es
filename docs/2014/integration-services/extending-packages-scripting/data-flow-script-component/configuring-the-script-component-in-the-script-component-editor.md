@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,15 +17,15 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: a702321888ad49a9ca5e3bea90abdde6924c8dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461037"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360107"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurar el componente de script en el editor de componentes de script
-  Antes de escribir código personalizado en el componente de script, debe seleccionar el tipo de componente de flujo de datos que desea crear (origen, transformación o destino) y, a continuación, configurar los metadatos y las propiedades del componente en el **Editor de transformación Script**.  
+  Antes de escribir código personalizado en el componente de script, tiene que seleccionar el tipo de componente de flujo de datos que quiere crear (origen, transformación o destino) y, después, configurar los metadatos y las propiedades del componente en el **Editor de transformación Script**.  
   
 ## <a name="selecting-the-type-of-component-to-create"></a>Seleccionar el tipo de componente que se va a crear  
  Al agregar un componente de script al panel Flujo de datos del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)], aparece el cuadro de diálogo **Seleccionar el tipo de componente de script**. En él preconfigura el componente como un origen, transformación o destino. Después de realizar esta selección inicial, puede continuar configurando el componente en el **Editor de transformación Script**.  
@@ -86,9 +84,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  Cuando el **Editor de transformación Script** crea la primera salida, el editor establece la `SynchronousInputID` propiedad de la salida en el `ID` de la entrada del componente. Sin embargo, cuando el editor crea las salidas subsiguientes, el editor establece las propiedades `SynchronousInputID` de estas salidas en cero.  
 >   
->  Si crea un componente con salidas sincrónicas, la propiedad `SynchronousInputID` de cada salida debe estar establecida en el valor `ID` de la entrada del componente. Por tanto, en cada salida que el editor crea después de la primera salida, su valor `SynchronousInputID` debe cambiar de cero al valor `ID` de la entrada del componente.  
+>  Si va a crear un componente con salidas sincrónicas, cada salida debe tener su `SynchronousInputID` propiedad establecida en el `ID` de la entrada del componente. Por tanto, en cada salida que el editor crea después de la primera salida, su valor `SynchronousInputID` debe cambiar de cero al valor `ID` de la entrada del componente.  
 >   
->  Si crea un componente con salidas asincrónicas, la propiedad `SynchronousInputID` de cada salida debe estar establecida en cero. Por tanto, en la primera salida, su valor `SynchronousInputID` debe cambiar del valor de `ID` de la entrada del componente a cero.  
+>  Si crea un componente con salidas asincrónicas, la propiedad `SynchronousInputID` de cada salida debe estar establecida en cero. Por lo tanto, debe tener la primera salida su `SynchronousInputID` cambió el valor de la `ID` de entrada del componente a cero.  
   
  Para obtener un ejemplo de dirección de filas a una de las dos salidas sincrónicas del componente de script, consulte [Crear una transformación sincrónica con el componente de script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   
@@ -128,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Para obtener más información, consulte [Conectarse a orígenes de datos del componente de script](connecting-to-data-sources-in-the-script-component.md)  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Codificar y depurar el componente de script](coding-and-debugging-the-script-component.md)  

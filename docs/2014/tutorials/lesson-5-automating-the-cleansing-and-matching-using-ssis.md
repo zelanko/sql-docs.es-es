@@ -1,5 +1,5 @@
 ---
-title: 'Lección 5: Automatizar la limpieza y la búsqueda de coincidencias con SSIS | Microsoft Docs'
+title: 'Lección 5: Automatizar la limpieza y búsqueda de coincidencias con SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b1747b4ee9ac77ee265d3aff7c9589d87520a82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7406f0f39afb0323ff6564b4b0ea427515f0f69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195085"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375817"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lección 5: automatizar la limpieza y la búsqueda de coincidencias con SSIS
-  En la lección 1, generó la base de conocimiento proveedores y usado para limpiar los datos en la lección 2 y coinciden con los datos en la lección 3 mediante la herramienta **cliente DQS**. En un escenario real, es posible que deba extraer datos de un origen que DQS no admite o desea automatizar la limpieza y el proceso de coincidencia sin tener que usar el **cliente DQS** herramienta. SQL Server Integration Services (SSIS) tiene componentes que puede usar para integrar datos de diversos orígenes heterogéneos y un **[transformación limpieza de DQS](http://msdn.microsoft.com/library/ee677619.aspx)** componente para invocar la limpieza funcionalidad expuesta por DQS. Actualmente, DQS no expone la funcionalidad de coincidencia para que la use SSIS, pero puede usar el **[transformación Agrupación aproximada](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** para identificar duplicados en los datos.  
+  En la lección 1, generó la base de conocimiento proveedores y usado para limpiar los datos en la lección 2 y coinciden con los datos en la lección 3 mediante la herramienta **cliente DQS**. En un escenario real, es posible que deba extraer datos de un origen que DQS no admite o desea automatizar la limpieza y el proceso de coincidencia sin tener que usar el **cliente DQS** herramienta. SQL Server Integration Services (SSIS) tiene componentes que puede usar para integrar datos de diversos orígenes heterogéneos y un **[transformación limpieza de DQS](https://msdn.microsoft.com/library/ee677619.aspx)** componente para invocar la limpieza funcionalidad expuesta por DQS. Actualmente, DQS no expone la funcionalidad de coincidencia para que la use SSIS, pero puede usar el **[transformación Agrupación aproximada](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** para identificar duplicados en los datos.  
   
  Puede cargar datos en MDS utilizando el **característica de almacenamiento provisional basado en entidad**. Cuando crea una entidad en MDS, se crean automáticamente las tablas de ensayo y los procedimientos almacenados correspondientes. Por ejemplo, cuando creó la entidad proveedor, el **stg.supplier_Leaf** tabla y el **stg.udp_Supplier_Leaf** crearon automáticamente el procedimiento almacenado. Use las tablas de ensayo y los procedimientos para crear, actualizar y eliminar miembros de entidad. En esta lección, creará nuevos miembros para la entidad Proveedor. Para cargar datos en el servidor de MDS, el paquete SSIS los carga primero en la tabla de ensayo stg.supplier_Leaf y después desencadena el procedimiento almacenado stg.udp_Supplier_Leaf asociado. Consulte [la importación de datos](../master-data-services/overview-importing-data-from-tables-master-data-services.md) para obtener más detalles.  
   
@@ -38,6 +38,6 @@ ms.locfileid: "48195085"
 5.  Revisar los resultados del proyecto de limpieza de DQS creado por el paquete SSIS y realizar opcionalmente una limpieza interactiva para mejorar la base de conocimiento.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 1 &#40;requisitos previos&#41;: quitar datos de proveedor en MDS](../../2014/tutorials/task-1-prerequisite-removing-supplier-data-in-mds.md)  
+ [Tarea 1 &#40;requisitos previos&#41;: Quitar datos de proveedor en MDS](../../2014/tutorials/task-1-prerequisite-removing-supplier-data-in-mds.md)  
   
   

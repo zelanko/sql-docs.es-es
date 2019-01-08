@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], modifying
@@ -14,12 +13,12 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d5308b708e32a1e886aadc2c78d3f504c3a6640
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163575"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591849"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modificar un seguimiento existente (Transact-SQL)
   En este tema se describe cómo utilizar procedimientos almacenados para modificar un seguimiento existente.  
@@ -47,9 +46,9 @@ ms.locfileid: "48163575"
     |OFF (**0**)|NULL|El evento se desactiva, se establece en OFF. Se borran todas las columnas.|  
     ||NOT NULL|La columna se desactiva, se establece en OFF, para el evento especificado.|  
   
-> [!IMPORTANT]  
->  A diferencia de los procedimientos almacenados normales, los parámetros de todos los procedimientos almacenados del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_* xx***) deben escribirse de forma precisa y no admiten la conversión automática de tipos de datos. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
-  
+> [!IMPORTANT]
+>  A diferencia de los procedimientos almacenados normales, los parámetros de todos los [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] procedimientos almacenados (<strong>sp_trace_*xx*</strong>) deben escribirse y no admiten la conversión de tipo de datos automática. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
+
 ## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)   

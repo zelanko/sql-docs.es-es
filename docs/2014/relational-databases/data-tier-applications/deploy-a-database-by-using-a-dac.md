@@ -18,12 +18,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03233cc3a35818352c3a8875f62610b5a0814522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050485"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362817"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implementar una base de datos mediante una DAC
   Use el asistente para **implementar una base de datos en SQL Azure** para implementar una base de datos entre una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un servidor de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o entre dos servidores de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "48050485"
   
 3.  Expanda el nodo **Bases de datos** .  
   
-4.  Haga clic con el botón secundario en la base de datos que desee implementar, seleccione **Tareas**y, a continuación, seleccione **Implementar base de datos en SQL Azure…**.  
+4.  Haga clic con el botón derecho en la base de datos que quiera implementar, seleccione **Tareas** y, después, seleccione **Implementar base de datos en SQL Azure...**.  
   
 5.  Complete los cuadros de diálogo del asistente:  
   
@@ -87,22 +87,22 @@ ms.locfileid: "48050485"
   
 -   **Siguiente** : continúa a la página **Configuración de implementación** .  
   
--   **Cancelar** ; cancela la operación y cierra el asistente.  
+-   **Cancelar**: cancela la operación y cierra el asistente.  
   
 ##  <a name="Deployment_settings"></a> Página Configuración de implementación  
  Use esta página para especificar el servidor de destino y proporcionar detalles sobre la nueva base de datos.  
   
  **Host local:**  
   
--   **Conexión de servidor** : especifique los detalles de conexión del servidor y haga clic en **Conectar** para comprobar la conexión.  
+-   **Conexión de servidor**: especifique los detalles de conexión del servidor y haga clic en **Conectar** para comprobar la conexión.  
   
--   **Nombre de la nueva base de datos** : especifique un nombre para la nueva base de datos.  
+-   **Nombre de la nueva base de datos**: especifique un nombre para la nueva base de datos.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
   
 -   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: seleccione la edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el menú desplegable.  
   
--   **Tamaño máximo de la base de datos** : seleccione el tamaño máximo de la base de datos en el menú desplegable.  
+-   **Tamaño máximo de la base de datos**: seleccione el tamaño máximo de la base de datos en el menú desplegable.  
   
  **Otros valores:**  
   
@@ -122,19 +122,19 @@ ms.locfileid: "48050485"
 ## <a name="using-a-net-framework-application"></a>Mediante una aplicación de .Net Framework  
  **Para implementar una base de datos por medio de los métodos Export() e Import() de DacStore en una aplicación de .NET Framework.**  
   
- Para obtener un ejemplo de código, descargue la aplicación de ejemplo de DAC en [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575).  
+ Para obtener un ejemplo de código, descargue la aplicación de ejemplo de DAC en [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575).  
   
 1.  Cree un objeto SMO Server y establézcalo en la instancia o el servidor que contenga la base de datos que se va a implementar.  
   
-2.  Abra un `ServerConnection` de objetos y conectarse a la misma instancia.  
+2.  Abra un objeto `ServerConnection` y conéctese a la misma instancia.  
   
-3.  Use la `Export` método de la `Microsoft.SqlServer.Management.Dac.DacStore` tipo para exportar la base de datos a un archivo BACPAC. Especifique el nombre de la base de datos que se exportará y la ruta de acceso a la carpeta donde se va a guardar el archivo BACPAC.  
+3.  Use el método `Export` del tipo `Microsoft.SqlServer.Management.Dac.DacStore` para exportar la base de datos a un archivo BACPAC. Especifique el nombre de la base de datos que se exportará y la ruta de acceso a la carpeta donde se va a guardar el archivo BACPAC.  
   
 4.  Cree un objeto SMO Server y establézcalo en la instancia o el servidor de destino.  
   
-5.  Abra un `ServerConnection` de objetos y conectarse a la misma instancia.  
+5.  Abra un objeto `ServerConnection` y conéctese a la misma instancia.  
   
-6.  Use la `Import` método de la `Microsoft.SqlServer.Management.Dac.DacStore` tipo para importar el BACPAC. Especifique el archivo BACPAC creado por la exportación.  
+6.  Use el método de `Import` del tipo `Microsoft.SqlServer.Management.Dac.DacStore` para importar el archivo BACPAC. Especifique el archivo BACPAC creado por la exportación.  
   
 ## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](data-tier-applications.md)   

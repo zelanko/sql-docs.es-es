@@ -1,5 +1,6 @@
 ---
-title: Empezar a trabajar con contenedores de SQL Server en Docker | Microsoft Docs
+title: Empezar a trabajar con contenedores de SQL Server en Docker (que se ejecuta SQL Server en Linux)
+titleSuffix: SQL Server
 description: En este tutorial rápido se muestra cómo usar Docker para ejecutar el SQL Server 2017 y las imágenes de contenedor de 2019. A continuación, deberá crear una base de datos y realizar consultas en esta con sqlcmd.
 author: rothja
 ms.author: jroth
@@ -8,18 +9,18 @@ ms.date: 11/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: b0b123fbf42c81dd4f755855a2c71b0bb799a2a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a8ed1a9be24ab071bc3e202902b2a56f3ab3c046
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667014"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266016"
 ---
-# <a name="quickstart-run-sql-server-container-images-with-docker"></a>Inicio rápido: Imágenes de contenedor ejecución de SQL Server con Docker
+# <a name="quickstart-run-sql-server-container-images-with-docker"></a>Inicio rápido: Ejecutar imágenes de contenedor de SQL Server con Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -87,7 +88,7 @@ any changes to one section should be duplicated in the other-->
    ```
 
    > [!NOTE]
-   > La contraseña debe seguir la directiva de contraseñas predeterminada de SQL Server. En caso contrario, el contenedor no podrá instalar SQL Server y dejará de funcionar. De forma predeterminada, la contraseña debe tener al menos 8 caracteres y contener caracteres de 3 de los siguientes 4 conjuntos: mayúsculas, minúsculas, dígitos en base 10 y símbolos. Puede examinar el registro de errores ejecutando el comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
+   > La contraseña debe seguir la directiva de contraseñas predeterminada de SQL Server. En caso contrario, el contenedor no podrá instalar SQL Server y dejará de funcionar. De forma predeterminada, la contraseña debe tener al menos 8 caracteres y contener caracteres de tres de los cuatro grupos siguientes: Letras mayúsculas, letras minúsculas, dígitos de Base 10 y símbolos. Puede examinar el registro de errores ejecutando el comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
 
    > [!NOTE]
    > De forma predeterminada, se creará un contenedor con la edición para desarrolladores de SQL Server 2017. El proceso para ejecutar las ediciones de producción en contenedores es ligeramente diferente. Para obtener más información, vea [Run production container image](sql-server-linux-configure-docker.md#production) (Ejecutar imágenes de contenedor de producción).
@@ -140,11 +141,11 @@ Establecer `-h` y `--name` en el mismo valor es una buena manera de identificar 
 1. Extraer la versión preliminar de SQL Server 2019 imagen de contenedor de Linux de Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    > [!TIP]
@@ -159,17 +160,17 @@ Establecer `-h` y `--name` en el mismo valor es una buena manera de identificar 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    > [!NOTE]
-   > La contraseña debe seguir la directiva de contraseñas predeterminada de SQL Server. En caso contrario, el contenedor no podrá instalar SQL Server y dejará de funcionar. De forma predeterminada, la contraseña debe tener al menos 8 caracteres y contener caracteres de 3 de los siguientes 4 conjuntos: mayúsculas, minúsculas, dígitos en base 10 y símbolos. Puede examinar el registro de errores ejecutando el comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
+   > La contraseña debe seguir la directiva de contraseñas predeterminada de SQL Server. En caso contrario, el contenedor no podrá instalar SQL Server y dejará de funcionar. De forma predeterminada, la contraseña debe tener al menos 8 caracteres y contener caracteres de tres de los cuatro grupos siguientes: Letras mayúsculas, letras minúsculas, dígitos de Base 10 y símbolos. Puede examinar el registro de errores ejecutando el comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
 
    > [!NOTE]
    > De forma predeterminada, esto crea un contenedor con la edición para desarrolladores de vista previa de SQL Server 2019.
@@ -182,7 +183,7 @@ Establecer `-h` y `--name` en el mismo valor es una buena manera de identificar 
    | **-e "contraseña_sa =\<YourStrong! Passw0rd\>'** | Especifique una contraseña segura propia con al menos 8 caracteres y que cumpla los [requisitos de contraseña de SQL Server](../relational-databases/security/password-policy.md). Configuración requerida para la imagen de SQL Server. |
    | **-p 1433:1433** | Asigne un puerto TCP en el entorno de host (el primer valor) a un puerto TCP en el contenedor (el segundo valor). En este ejemplo, SQL Server está escuchando en TCP 1433 en el contenedor y se expone al puerto 1433 en el host. |
    | **--name sql1** | Especifique un nombre personalizado para el contenedor en lugar de uno generado aleatoriamente. Si ejecuta más de un contenedor, no podrá usar el mismo nombre. |
-   | **MCR.Microsoft.com/MSSQL/Server:2019-CTP2.1-Ubuntu** | La imagen de contenedor de Linux de SQL Server de 2019 CTP 2.1. |
+   | **MCR.Microsoft.com/MSSQL/Server:2019-CTP2.2-Ubuntu** | La imagen de contenedor de SQL Server de 2019 CTP 2.2 Linux. |
 
 3. Para ver los contenedores de Docker, use el comando `docker ps`.
 

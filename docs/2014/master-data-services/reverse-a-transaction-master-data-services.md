@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], reversing
@@ -13,12 +12,12 @@ ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 572a0fbe10594226a755a4f7ecb59c2e52ef6c82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24e1c1fea5404d984f05391624fd244960c0eec3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140682"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823003"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Invertir una transacción (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los administradores pueden invertir una transacción cuando sea necesario deshacer una acción. Los ejemplos de transacciones son cambios del valor de atributo, movimientos de la jerarquía o eliminaciones de miembro.  
@@ -27,7 +26,7 @@ ms.locfileid: "48140682"
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-reverse-a-transaction"></a>Para invertir una transacción  
   
@@ -46,7 +45,7 @@ ms.locfileid: "48140682"
 7.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. Se agrega otra transacción a la cuadrícula para registrar la transacción invertida.  
   
 ## <a name="see-also"></a>Vea también  
- [Las transacciones &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)   
- [Reactivar un miembro o colección &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [Transacciones &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)   
+ [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
   

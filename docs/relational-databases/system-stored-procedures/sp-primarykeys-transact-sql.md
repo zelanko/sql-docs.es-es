@@ -18,12 +18,12 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d994e44e3db00921ca184ed063bcf1bdff487297
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 484890cfe30ace1c65ea45fe2d9e447a6396b52e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753603"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591459"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_server =** ] **' *** table_server'*  
+ [  **@table_server =** ] **'**_table_server'_  
  Es el nombre del servidor vinculado cuya información de clave principal se devuelve. *table_server* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  Es el nombre de la tabla para la que se proporciona información de clave principal. *table_name*es **sysname**, su valor predeterminado es null.  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  Es el esquema de la tabla. *TABLE_SCHEMA* es **sysname**, su valor predeterminado es null. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al propietario de la tabla.  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
  Es el nombre del catálogo en el que el especificado *table_name* reside. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al nombre de base de datos. *TABLE_CATALOG* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

@@ -1,5 +1,5 @@
 ---
-title: Supervisar los servicios de R con informes personalizados en Management Studio | Documentos de Microsoft
+title: 'Supervisar R Services con informes personalizados en Management Studio: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,25 +7,25 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0e444612a5acd0726bdd6fb743e43813d6b0caf7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 48c0912794f1aac0712a529f4cf8dde10735c9d8
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201967"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432608"
 ---
-# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Supervisar servicios de aprendizaje de máquinas con informes personalizados en Management Studio
+# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Supervisar Machine Learning Services con informes personalizados en Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Para que sea más fácil de administrar la instancia utilizada para el aprendizaje automático, el equipo del producto ha proporcionado una serie de informes personalizados de ejemplo que se pueden agregar a SQL Server Management Studio. En estos informes, puede ver detalles como:
+Para que sea más fácil de administrar la instancia utilizada para el aprendizaje automático, el equipo del producto ha ofrecido una serie de informes personalizado de ejemplo que se pueden agregar a SQL Server Management Studio. En estos informes, puede ver detalles tales como:
 
-- Sesiones de R activo o Python
+- Sesiones activa R o Python
 - Configuración de la instancia
-- Estadísticas de ejecución de trabajos de aprendizaje de máquina
+- Estadísticas de ejecución de trabajos de machine learning
 - Eventos extendidos para R Services
 - Paquetes de R o Python instalados en la instancia actual
 
-En este artículo se explica cómo instalar y usar los informes personalizados que se proporcionan específicamente para leaerning de máquina. 
+En este artículo se explica cómo instalar y usar los informes personalizados proporcionados específicamente para la máquina leaerning. 
 
 Para obtener una introducción general a los informes en Management Studio, consulte [informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 
@@ -47,7 +47,7 @@ Para utilizar estos informes:
     + [Informes personalizados de SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
 
     > [!NOTE]
-    > Los informes pueden utilizarse con servicios de aprendizaje de máquina de 2017 de SQL Server o SQL Server 2016 R Services.
+    > Los informes se pueden usar con servicios de aprendizaje de máquina de SQL Server 2017 o SQL Server 2016 R Services.
 
 2. Para descargar los ejemplos, también puede iniciar sesión en GitHub y realizar una bifurcación local de los ejemplos. 
 
@@ -74,11 +74,11 @@ Para utilizar estos informes:
 
 ## <a name="report-list"></a>Lista de informes
 
-El repositorio de ejemplos del producto en GitHub actualmente incluye los siguientes informes:
+Actualmente, el repositorio de ejemplos del producto en GitHub incluye los siguientes informes:
 
 + **R Services: sesiones activas**
 
-  Utilice este informe para ver los usuarios que están conectados actualmente a la instancia de SQL Server y la máquina en ejecución trabajos de aprendizaje. 
+  Use este informe para ver los usuarios que están conectados actualmente a la instancia de SQL Server y la máquina en ejecución trabajos de aprendizaje. 
   
 + **R Services: configuración**
 
@@ -88,17 +88,17 @@ El repositorio de ejemplos del producto en GitHub actualmente incluye los siguie
 
  + **R Services : configuración de una instancia** 
 
-   Este informe está pensado para ayudarle a configurar el aprendizaje automático. También puede ejecutar este informe para solucionar errores de configuración que se encuentra en el informe anterior.
+   Este informe está pensado para ayudarle a configurar el aprendizaje automático. También puede ejecutar este informe para corregir errores de configuración que se encuentra en el informe anterior.
  
 + **R Services: estadísticas de ejecución**
 
-  Use este informe para ver estadísticas de ejecución de trabajos de aprendizaje de máquina. Por ejemplo, puede obtener el número total de secuencias de comandos de R que se han ejecutado, el número de ejecuciones en paralelo y las funciones RevoScaleR utilizadas con más frecuencia. Haga clic en **Ver secuencia de comandos SQL** para obtener el código de T-SQL completo detrás de este informe.
+  Use este informe para ver estadísticas de ejecución de trabajos de machine learning. Por ejemplo, puede obtener el número total de secuencias de comandos de R que se han ejecutado, el número de ejecuciones en paralelo y las funciones RevoScaleR utilizadas con más frecuencia. Haga clic en **ver Script de SQL** para obtener el código de T-SQL completo detrás de este informe.
 
   Actualmente el informe solo supervisa estadísticas para las funciones del paquete de RevoScaleR.
 
 + **R Services: eventos extendidos**
 
-  Use este informe para ver una lista de los eventos extendidos que están disponibles para supervisar las tareas relacionadas con tiempos de ejecución de script externo. Haga clic en **Ver secuencia de comandos SQL** para obtener el código de T-SQL completo detrás de este informe.
+  Utilice este informe para ver una lista de los eventos extendidos que están disponibles para supervisar las tareas relacionadas con los tiempos de ejecución del script externo. Haga clic en **ver Script de SQL** para obtener el código de T-SQL completo detrás de este informe.
 
 + **R Services: paquetes**
 
@@ -106,7 +106,7 @@ El repositorio de ejemplos del producto en GitHub actualmente incluye los siguie
 
 + **R Services: uso de recursos**
 
-  Utilice este informe para ver el consumo de recursos de CPU, memoria y E/S por la ejecución de scripts externos. También puede ver la configuración de la memoria de grupos de recursos externos.
+  Use este informe para ver el consumo de recursos de CPU, memoria y E/S por ejecución de scripts externos. También puede ver la configuración de la memoria de grupos de recursos externos.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,5 +1,5 @@
 ---
-title: Obtener información de paquete de R y Python en SQL Server Machine Learning | Microsoft Docs
+title: Obtener información de paquete de R y Python - SQL Server Machine Learning Services
 description: Determinar la versión del paquete de R y Python, comprobar la instalación y obtener una lista de paquetes instalados en SQL Server R Services o Machine Learning Services.
 ms.custom: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 96cda599e260982b26e6c565bd38c5097fc01763
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 47badb15b5f5a2d0eabc63b8fd1be3e83a0caffb
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291542"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645374"
 ---
 #  <a name="get-r-and-python-package-information"></a>Obtener información de paquete de R y Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,9 +91,9 @@ Hay varias formas que puede obtener una lista completa de los paquetes instalado
 
 ### <a name="r"></a>R
 
-En el ejemplo siguiente se usa la función de R `installed.packages()` en un [!INCLUDE [tsql](..\..\includes\tsql-md.md)] procedimiento almacenado para obtener una matriz de los paquetes que se han instalado en la biblioteca R_SERVICES para la instancia actual. Este script devuelve los campos de nombre y la versión del paquete en el archivo de descripción, se devuelve solo el nombre.
+En el ejemplo siguiente se usa la función de R `installed.packages()` en un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado para obtener una matriz de los paquetes que se han instalado en la biblioteca R_SERVICES para la instancia actual. Este script devuelve los campos de nombre y la versión del paquete en el archivo de descripción, se devuelve solo el nombre.
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
   @language=N'R',
   @script = N'str(OutputDataSet);

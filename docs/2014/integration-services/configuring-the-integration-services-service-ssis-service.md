@@ -16,12 +16,12 @@ ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 532a9ae9b44b300cb8d75ea0ea45d24ad5827887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fd38d33bf0ed5d074fe2784dfba38348342df98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114775"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359687"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Configurar el servicio Integration Services (servicio SSIS)
     
@@ -123,7 +123,7 @@ La clave del registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Serv
   
   
 > [!CAUTION]  
->  Editar el Registro de forma incorrecta puede originar problemas graves que requieran volver a instalar el sistema operativo. [!INCLUDE[msCoName](../includes/msconame-md.md)] no puede garantizar que se puedan resolver problemas derivados de la modificación incorrecta del registro. Haga una copia de seguridad de los datos importantes antes de modificar el Registro. Para obtener información sobre cómo hacer una copia de seguridad, restaurar y modificar el Registro, vea el artículo de [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base, [Definición del Registro de Microsoft Windows](http://support.microsoft.com/kb/256986).  
+>  Editar el Registro de forma incorrecta puede originar problemas graves que requieran volver a instalar el sistema operativo. [!INCLUDE[msCoName](../includes/msconame-md.md)] no puede garantizar la resolución de dichos problemas. Haga una copia de seguridad de los datos importantes antes de modificar el Registro. Para obtener información sobre cómo hacer una copia de seguridad, restaurar y modificar el Registro, vea el artículo de [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base, [Definición del Registro de Microsoft Windows](https://support.microsoft.com/kb/256986).  
   
  El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] carga el archivo de configuración cuando se inicia el servicio. Si se cambia la entrada del Registro, es preciso reiniciar el servicio.  
   

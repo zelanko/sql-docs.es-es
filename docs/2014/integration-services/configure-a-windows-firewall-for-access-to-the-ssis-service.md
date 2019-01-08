@@ -19,12 +19,12 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 246441fba2e72c95004baa3cdb75320b32648e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7160e4622cea397f7b300a1221797349107d38d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154745"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369997"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurar Firewall de Windows para el acceso al servicio SSIS
     
@@ -36,7 +36,7 @@ ms.locfileid: "48154745"
 > [!IMPORTANT]  
 >  Para administrar paquetes almacenados en un servidor remoto, no tiene que conectarse a la instancia del servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en ese servidor remoto. En su lugar, modifique el archivo de configuración para el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de manera que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] muestre los paquetes almacenados en el servidor remoto. Para obtener más información, vea [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utiliza el protocolo DCOM. Para obtener más información sobre cómo funciona el protocolo DCOM a través de los firewalls, vea el artículo",[COM distribuido con firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)", en MSDN Library.  
+ El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utiliza el protocolo DCOM. Para obtener más información sobre cómo funciona el protocolo DCOM a través de los firewalls, vea el artículo",[COM distribuido con firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)", en MSDN Library.  
   
  Existen varios sistemas de firewall. Si ejecuta un firewall distinto de Firewall de Windows, vea la documentación del firewall para obtener información específica del sistema que utiliza.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48154745"
 5.  En el cuadro de diálogo **Agregar un puerto** , escriba **RPC(TCP/135)** u otro nombre descriptivo en el cuadro **Nombre**, escriba **135** en el cuadro **Número de puerto** y seleccione **TCP**.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servicio utiliza el puerto 135. No se puede especificar un puerto diferente.  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utiliza siempre el puerto 135. No se puede especificar un puerto diferente.  
   
 6.  En el cuadro de diálogo **Agregar un puerto** , puede hacer clic en **Cambiar ámbito** para modificar el ámbito predeterminado.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48154745"
     >  Para configurar el Firewall de Windows, este procedimiento utiliza el elemento **Firewall de Windows** del Panel de control. El elemento **Firewall de Windows** solo configura el firewall para el perfil de la ubicación de red actual. En cambio, también puede configurar el Firewall de Windows mediante la herramienta de línea de comandos **netsh** o el complemento [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC) denominado Firewall de Windows con Seguridad avanzada. Para obtener más información sobre estas herramientas, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar la integración de servicios de Service &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   
+ [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

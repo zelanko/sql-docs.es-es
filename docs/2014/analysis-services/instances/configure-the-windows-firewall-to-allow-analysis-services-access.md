@@ -15,12 +15,12 @@ ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9073dddaf2a992ae5b735a7884bfaaa278f9d049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c5066a27097bb0919a6d0af0ffa9ad1c53e8624
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068948"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371167"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar Firewall de Windows para permitir el acceso a Analysis Services
   Un primer paso esencial para hacer que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] esté disponible en la red consiste en determinar si es necesario desbloquear puertos en un firewall. La mayoría de las instalaciones necesitarán que cree al menos una regla de firewall de entrada que permita las conexiones a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "48068948"
   
 -   En [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, no abra puertos en Firewall de Windows. Como complemento de SharePoint, el servicio usa los puertos configurados para SharePoint y solo realiza conexiones locales a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que carga y consulta modelos de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
--   Para las instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecutan en Máquinas virtuales de Windows Azure, use otras instrucciones alternativas para configurar el acceso al servidor. Vea [Business Intelligence de SQL Server en Máquinas virtuales de Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
+-   Para las instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecutan en Máquinas virtuales de Windows Azure, use otras instrucciones alternativas para configurar el acceso al servidor. Vea [Business Intelligence de SQL Server en Máquinas virtuales de Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
  Aunque la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escucha en el puerto TCP 2383, puede configurar el servidor para que escuche en otro puerto fijo, conectándose al servidor en este formato: \<nombreDeServidor >:\<portnumber >.  
   
@@ -60,15 +60,15 @@ ms.locfileid: "48068948"
 ##  <a name="bkmk_checkport"></a> Comprobar la configuración de puertos y del firewall para Analysis Services  
  En los sistemas operativos Microsoft Windows compatibles con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Firewall de Windows está activado de forma predeterminada y bloquea las conexiones remotas. Debe abrir manualmente un puerto en el firewall para permitir las solicitudes de entrada en Analysis Services. El programa de instalación de SQL Server no realiza este paso automáticamente.  
   
- La configuración de puertos se especifica en el archivo msmdsrv.ini y en la página Propiedades generales de una instancia de Analysis Services en SQL Server Management Studio. Si `Port` está establecido en un entero positivo, el servicio está escuchando en un puerto fijo. Si `Port` se establece en 0, el servicio está escuchando en el puerto 2383 si es la instancia predeterminada o en un puerto asignado dinámicamente si es una instancia con nombre.  
+ La configuración de puertos se especifica en el archivo msmdsrv.ini y en la página Propiedades generales de una instancia de Analysis Services en SQL Server Management Studio. Si `Port` está establecido en un entero positivo, el servicio está escuchando en un puerto fijo. Si `Port` está establecido en 0, el servicio está escuchando en el puerto 2383 si es la instancia predeterminada o en un puerto asignado dinámicamente si es una instancia con nombre.  
   
  Las asignaciones dinámicas de puerto solo las usan las instancias con nombre. El servicio `MSOLAP$InstanceName` determina qué puerto utilizará cuando se inicie. Puede determinar el número de puerto real en uso por una instancia con nombre haciendo lo siguiente:  
   
 -   Inicie el Administrador de tareas y, a continuación, haga clic en **servicios** para obtener el PID de la `MSOLAP$InstanceName`.  
   
--   Ejecute `netstat –ao –p TCP` desde la línea de comandos para ver la información del puerto TCP para ese PID.  
+-   Ejecute `netstat -ao -p TCP` desde la línea de comandos para ver la información del puerto TCP para ese PID.  
   
--   Compruebe el puerto mediante el uso de SQL Server Management Studio y conéctese a un servidor de Analysis Services en este formato: \<IPAddress >:\<portnumber >.  
+-   Compruebe el puerto con SQL Server Management Studio y conéctese a un servidor de Analysis Services en este formato: \<Dirección IP >:\<portnumber >.  
   
  Aunque una aplicación podría estar escuchando en un puerto concreto, las conexiones no tendrán éxito si un firewall está bloqueando el acceso. Para que las conexiones alcancen una instancia con nombre de Analysis Services, debe desbloquear el acceso a msmdsrv.exe o al puerto fijo en el que está escuchando en el firewall. En las secciones restantes de este tema se proporcionan instrucciones para hacerlo.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48068948"
   
  Si no puede utilizar el servicio SQL Server Browser, debe asignar un puerto fijo en la cadena de conexión, omitiendo la resolución de nombres de dominio. Sin el servicio SQL Server Browser, todas las conexiones de cliente deben incluir el número de puerto en la cadena de conexión (por ejemplo, AW-SRV01:54321).  
   
- **Opción 1: usar las asignaciones dinámicas de puerto y desbloquear el acceso al servicio SQL Server Browser**  
+ **Opción 1: Usar asignaciones dinámicas de puerto y desbloquear el acceso al servicio de SQL Server Browser**  
   
  `MSOLAP$InstanceName` establece las asignaciones dinámicas de puerto para las instancias con nombre de Analysis Services cuando se inicia el servicio. De forma predeterminada, el servicio reclama el primer número de puerto disponible que encuentra, utilizando un número de puerto diferente cada vez que se reinicia el servicio.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48068948"
   
 8.  Para comprobar que las conexiones remotas están habilitadas, abra SQL Server Management Studio o Excel en un equipo diferente y conéctese a Analysis Services especificando el nombre de red del servidor y el nombre de instancia en este formato: \<servername > \\< nombreDeInstancia\>. Por ejemplo, en un servidor denominado **AW-SRV01** con una instancia con nombre denominada **Finanzas**, el nombre del servidor es **AW-SRV01\Finanzas**.  
   
- **Opción 2: configurar un puerto fijo para una instancia con nombre**  
+ **Opción 2: Configurar un puerto fijo para una instancia con nombre**  
   
  O bien, puede asignar un puerto fijo y, a continuación, desbloquear el acceso a dicho puerto. Este método proporciona una capacidad de auditoría mejor que si se permite el acceso al programa ejecutable. Por eso, se recomienda utilizar un puerto fijo para acceder a una instancia de Analysis Services.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "48068948"
   
 1.  Determine un puerto TCP/IP disponible para su uso.  
   
-     Para ver una lista de los puertos reservados y registrados cuyo uso debe evitar, vea la página dedicada a los [números de puerto (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469). Para ver una lista de los puertos que ya están en uso en el sistema, abra una ventana de símbolo del sistema y escriba `netstat –a –p TCP` para mostrar una lista de los puertos TCP que están abiertos en el sistema.  
+     Para ver una lista de los puertos reservados y registrados cuyo uso debe evitar, vea la página dedicada a los [números de puerto (IANA)](https://go.microsoft.com/fwlink/?LinkID=198469). Para ver una lista de los puertos que ya están en uso en el sistema, abra una ventana de símbolo del sistema y escriba `netstat -a -p TCP` para mostrar una lista de los puertos TCP que están abiertos en el sistema.  
   
 2.  Después de determinar qué puerto va a usar, especifique el puerto modificando el valor de configuración de `Port` en el archivo msmdsrv.ini o en la página Propiedades generales de una instancia de Analysis Services en SQL Server Management Studio.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "48068948"
 5.  Haga la comprobación conectando localmente (en Management Studio) y después remotamente, desde una aplicación cliente de otro equipo. Para usar Management Studio, conectarse a una instancia predeterminada de Analysis Services especificando un nombre de servidor en este formato: \<nombreDeServidor >:\<portnumber >. Para una instancia con nombre, especifique el nombre del servidor como \<servername >\\< nombreDeInstancia\>.  
   
 ##  <a name="bkmk_cluster"></a> Configuración de puertos para un clúster de Analysis Services  
- Un clúster de conmutación por error de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] siempre escucha en el puerto TCP 2383, independientemente de si se ha instalado como una instancia predeterminada o como una instancia con nombre. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no usa asignaciones dinámicas de puerto cuando se instala en un clúster de conmutación por error de Windows. Asegúrese de abrir el puerto TCP 2383 en todos los nodos que ejecuten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el clúster. Para obtener más información acerca de cómo organizar en clúster [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Organizar en clúster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Un clúster de conmutación por error de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] siempre escucha en el puerto TCP 2383, independientemente de si se ha instalado como una instancia predeterminada o como una instancia con nombre. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no usa asignaciones dinámicas de puerto cuando se instala en un clúster de conmutación por error de Windows. Asegúrese de abrir el puerto TCP 2383 en todos los nodos que ejecuten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el clúster. Para obtener más información acerca de cómo organizar en clúster [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Organizar en clúster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ##  <a name="bkmk_powerpivot"></a> Configuración de puerto de PowerPivot para SharePoint  
  La arquitectura del servidor para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] es diferente según la versión de SharePoint que se está utilizando.  
@@ -230,7 +230,7 @@ ms.locfileid: "48068948"
   
  **SharePoint 2010**  
   
- Si está usando SharePoint 2010, no necesita abrir puertos en Firewall de Windows. SharePoint abre los puertos que necesita, y los complementos como PowerPivot para SharePoint se ejecutan dentro del entorno de SharePoint. En una instalación de PowerPivot para SharePoint 2010, el Servicio de sistema de PowerPivot tiene uso exclusivo de la instancia de servicio local de SQL Server Analysis Services (PowerPivot) que se instala con él en el mismo equipo. Utiliza conexiones locales, no conexiones de red, para tener acceso al servicio de motor local de Analysis Services que carga, consulta y procesa datos PowerPivot en el servidor de SharePoint. Para solicitar datos PowerPivot de las aplicaciones cliente, las solicitudes se enrutan a través de los puertos abiertos por el programa de instalación de SharePoint (en concreto, se definen reglas de entrada para permitir el acceso a SharePoint - 80, Administración central de SharePoint v4, SharePoint Web Services y SPUserCodeV4). Puesto que los servicios web PowerPivot se ejecutan dentro de una granja de servidores de SharePoint, las reglas de firewall de SharePoint son suficientes para el acceso remoto a datos PowerPivot en una granja de servidores de SharePoint.  
+ Si está usando SharePoint 2010, no necesita abrir puertos en Firewall de Windows. SharePoint abre los puertos que necesita, y los complementos como PowerPivot para SharePoint se ejecutan dentro del entorno de SharePoint. En una instalación de PowerPivot para SharePoint 2010, el Servicio de sistema de PowerPivot tiene uso exclusivo de la instancia de servicio local de SQL Server Analysis Services (PowerPivot) que se instala con él en el mismo equipo. Utiliza conexiones locales, no conexiones de red, para tener acceso al servicio de motor local de Analysis Services que carga, consulta y procesa datos PowerPivot en el servidor de SharePoint. Para solicitar datos PowerPivot desde aplicaciones cliente, las solicitudes se enrutan a través de puertos abiertos por el programa de instalación de SharePoint (en concreto, se definen las reglas de entrada para permitir el acceso a SharePoint - 80, Administración Central de SharePoint v4, SharePoint Web Services y SPUserCodeV4). Puesto que los servicios web PowerPivot se ejecutan dentro de una granja de servidores de SharePoint, las reglas de firewall de SharePoint son suficientes para el acceso remoto a datos PowerPivot en una granja de servidores de SharePoint.  
   
 ## <a name="see-also"></a>Vea también  
  [Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

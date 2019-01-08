@@ -19,12 +19,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140645"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361077"
 ---
 # <a name="create-package-configurations"></a>Crear configuraciones de paquetes
   Puede crear configuraciones de paquetes con el cuadro de diálogo **Organizador de configuraciones de paquetes** y el Asistente para la configuración de paquetes. Para tener acceso a estas herramientas, haga clic en **Configuraciones de paquetes** en el menú **SSI** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -111,11 +111,11 @@ ms.locfileid: "48140645"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Artículo técnico con una [introducción a las configuraciones de paquetes de Integration Services](http://go.microsoft.com/fwlink/?LinkId=165643), en msdn.microsoft.com  
+-   Artículo técnico con una [introducción a las configuraciones de paquetes de Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643), en msdn.microsoft.com  
   
--   Entrada de blog, [Crear paquetes en código: configuraciones de paquetes](http://go.microsoft.com/fwlink/?LinkId=217663), en www.sqlis.com.  
+-   Entrada de blog, [crear paquetes de código: configuraciones de paquetes](https://go.microsoft.com/fwlink/?LinkId=217663), en www.sqlis.com.  
   
--   Entrada de blog, [API de ejemplo: agregar mediante programación un archivo de configuración a un paquete](http://go.microsoft.com/fwlink/?LinkId=217664), en blogs.msdn.com.  
+-   Entrada de blog, [ejemplo de API: agregar mediante programación un archivo de configuración a un paquete](https://go.microsoft.com/fwlink/?LinkId=217664), en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vea también  
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   

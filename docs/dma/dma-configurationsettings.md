@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643823"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419256"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurar opciones para Data Migration Assistant
 
@@ -40,7 +40,7 @@ No olvide guardar una copia del archivo de configuración original antes de real
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Número de bases de datos para evaluar en paralelo
 
-Data Migration Assistant evalúa varias bases de datos en paralelo. Durante la evaluación de Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de base de datos. Esta operación puede tiempo de espera si varias bases de datos en el mismo servidor que se evalúan en paralelo. 
+Data Migration Assistant evalúa varias bases de datos en paralelo. Durante la evaluación de Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de base de datos. Esta operación puede tiempo de espera si varias bases de datos en el mismo servidor que se evalúan en paralelo. 
 
 A partir de la versión 2.0 de Data Migration Assistant, puede controlar esto estableciendo el parallelDatabases del valor de configuración. Valor predeterminado es 8.
 
@@ -70,7 +70,7 @@ Comenzando con la versión 2.0 de Data Migration Assistant, si experimenta este 
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 
@@ -87,22 +87,22 @@ Durante la valoración, Data Migration Assistant extrae la aplicación de capa d
 
 - commandTimeout
 
-   Este parámetro establece la propiedad IDbCommand.CommandTimeout *segundos*. (Predeterminado = 60)
+   Este parámetro establece la propiedad IDbCommand.CommandTimeout *segundos*. (Predeterminado = 60)
 
 - databaseLockTimeout
 
-   Este parámetro es equivalente a [establecer bloqueo\_tiempo de espera de tiempo de espera\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Predeterminado = 5000)
+   Este parámetro es equivalente a [establecer bloqueo\_tiempo de espera de tiempo de espera\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Predeterminado = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Este parámetro establece el número de conexiones de grupo de conexión SQL a usar. (Predeterminado = 8)
+  Este parámetro establece el número de conexiones de grupo de conexión SQL a usar. (Predeterminado = 8)
 
 ```
 <advisorGroup>
 
 <advisorSettings>
 
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
+<dacFx  commandTimeout="60" databaseLockTimeout="5000"
 maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorSettings>
@@ -121,7 +121,7 @@ A partir de la versión 2.0 de Data Migration Assistant, puede controlar este um
 
 <advisorSettings>
 
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
+<stretchDBAdvisor  recommendedNumberOfRows="100000" />
 
 </advisorSettings>
 
@@ -136,7 +136,7 @@ Puede controlar la [tiempo de espera de conexión SQL](https://msdn.microsoft.co
 ```
 <appSettings>
 
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 
 </appSettings>
 ```

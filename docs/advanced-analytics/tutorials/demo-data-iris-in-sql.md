@@ -1,5 +1,5 @@
 ---
-title: Conjunto de datos de iris demostración de tutoriales de Python y R en SQL Server | Microsoft Docs
+title: Conjunto de datos de iris demostración de tutoriales de Python y R, SQL Server Machine Learning
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2fbe5915f7b135882bbbefbb83b572d2cd640837
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: ce0469b5625af3f38047233737f3afbd209e11b9
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216689"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046575"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Datos de iris la demostración de tutoriales de Python y R en SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ Para completar este ejercicio, debe tener [SQL Server Management Studio](https:/
 
 Tutoriales y guías de inicio rápido con este conjunto de datos incluyen lo siguiente:
 
-+  [Usar un modelo de Python en SQL Server para el entrenamiento y puntuación](train-score-using-python-in-tsql.md)
++  [Inicio rápido: Crear, entrenar y usar un modelo de Python con procedimientos almacenados en SQL Server](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>Crear la base de datos
 
@@ -154,6 +154,6 @@ Como paso de validación, ejecute una consulta para confirmar que se han cargado
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En la lección siguiente, se crea un modelo de aprendizaje automático y guardarlo en una tabla y, a continuación, usar el modelo para generar resultados.
+En el siguiente inicio rápido, creará un modelo de aprendizaje automático y guardarlo en una tabla y, a continuación, usar el modelo para generar resultados.
 
-+ [Usar un modelo de Python en SQL Server para el entrenamiento y puntuación](train-score-using-python-in-tsql.md)
++ [Inicio rápido: Crear, entrenar y usar un modelo de Python con procedimientos almacenados en SQL Server](quickstart-python-train-score-in-tsql.md)

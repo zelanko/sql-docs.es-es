@@ -5,8 +5,7 @@ ms.date: 01/15/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - conflict_
@@ -19,12 +18,12 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1341b9e9b1f00494c655ed5a91943fadfbd5b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614143"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808907"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;esquema&gt;_&lt;tabla&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "47614143"
 |__$originator_id|**int**|Identificador del nodo en el que se originó el cambio en conflicto. Para obtener una lista de identificadores, ejecute [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).|  
 |__$origin_datasource|**int**|Nodo en el que se originó el cambio en conflicto.|  
 |__$tranid|**nvarchar (40)**|Número de flujo de registro (LSN) del cambio en conflicto cuando se aplicó en __$origin_datasource.|  
-|__$conflict_type|**int**|Tipo de conflicto, que puede ser uno de los valores siguientes:<br /><br /> 1: no se pudo realizar una actualización porque otra actualización cambió la fila local o se eliminó y, a continuación, se reinsertó.<br /><br /> 2: no se pudo realizar una actualización porque ya se había eliminado la fila local.<br /><br /> 3: no se pudo realizar una eliminación porque otra actualización cambió la fila local o se eliminó y, a continuación, se reinsertó.<br /><br /> 4: no se pudo realizar una eliminación porque ya se había eliminado la fila local.<br /><br /> 5: no se pudo realizar una inserción porque ya se había insertado la fila local o se insertó y, a continuación, se actualizó.|  
+|__$conflict_type|**int**|Tipo de conflicto, que puede ser uno de los valores siguientes:<br /><br /> 1: Una actualización porque cambió la fila local por otra actualización o se eliminó y, a continuación, volver a insertar.<br /><br /> 2: Se produce un error porque ya se ha eliminado la fila local.<br /><br /> 3: Una error porque se modificó la fila local por otra actualización o de eliminación se eliminó y, a continuación, volver a insertar.<br /><br /> 4: No se pudo eliminar porque ya se ha eliminado la fila local.<br /><br /> 5: Error en una inserción porque ya se insertó la fila local o se insertó y, a continuación, se actualiza.|  
 |__$is_winner|**bit**|Indica si la fila de esta tabla fue la ganadora del conflicto, lo que significa que se aplicó al nodo local.|  
 |__$pre_version|**varbinary (32)**|Versión de la base de datos en la que se originó el cambio en conflicto.|  
-|__$reason_code|**int**|Código de la resolución del conflicto. Puede ser uno de los siguientes valores:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Para obtener más información, consulte **__ $reason_text**.|  
-|__$reason_text|**nvarchar (720)**|Resolución del conflicto. Puede ser uno de los siguientes valores:<br /><br /> Resuelto (1)<br /><br /> No resuelto (2)<br /><br /> Desconocido (0)|  
+|__$reason_code|**int**|Código de la resolución del conflicto. Puede presentar uno de los siguientes valores:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Para obtener más información, consulte **__ $reason_text**.|  
+|__$reason_text|**nvarchar (720)**|Resolución del conflicto. Puede presentar uno de los siguientes valores:<br /><br /> Resuelto (1)<br /><br /> No resuelto (2)<br /><br /> Desconocido (0)|  
 |__$update_bitmap|**varbinary (** *n* **)**. Tamaño varía en función de contenido.|Mapa de bits que indica qué columnas se actualizaron en el caso de un conflicto de actualizaciones.|  
 |__$inserted_date|**datetime**|Fecha y hora en que la fila en conflicto se insertó en esta tabla.|  
 |__$row_id|**timestamp**|Versión de fila que está asociada a la fila que ocasionó el conflicto.|  

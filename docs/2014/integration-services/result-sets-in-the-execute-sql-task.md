@@ -14,12 +14,12 @@ ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 25f917dc3831f0915b87c4a93dbb4197a3d25df0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ac0e67e4e1c48fd1ccdd8d8b4021541b0bf4c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053375"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366317"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Conjuntos de resultados en la tarea Ejecutar SQL
   En un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , el hecho de que se devuelva un conjunto de resultados a la tarea Ejecutar SQL depende del tipo de comando SQL que use la tarea. Por ejemplo, una instrucción SELECT suele devolver un conjunto de resultados; en cambio, una instrucción INSERT no lo devuelve.  
@@ -58,18 +58,18 @@ ms.locfileid: "48053375"
   
  Cuando se asigna una variable a un conjunto de resultados con el tipo de conjunto de resultados **Fila única** , la variable debe tener un tipo de datos que sea compatible con el tipo de datos de la columna contenida en el conjunto de resultados. Por ejemplo, un conjunto de resultados que contiene una columna con un tipo de datos `String` no se puede asignar a una variable con un tipo de datos numérico. Al establecer el **TypeConversionMode** propiedad `Allowed`, la tarea Ejecutar SQL intentará convertir el parámetro de salida y resultados a los datos de tipo de la variable de los resultados de consulta que se asignan.  
   
- Un conjunto de resultados XML solamente se puede asignar a una variable con el tipo de datos `String` o `Object`. Si la variable tiene el `String` tipo de datos, la tarea Ejecutar SQL devuelve una cadena y el origen XML pueden consumir los datos XML. Si la variable tiene el `Object` tipo de datos, la tarea Ejecutar SQL devuelve un objeto de Document Object Model (DOM).  
+ Un conjunto de resultados XML solamente se puede asignar a una variable con el tipo de datos `String` o `Object`. Si la variable tiene el tipo de datos `String`, la tarea Ejecutar SQL devuelve una cadena y el origen XML puede consumir los datos XML. Si la variable tiene el tipo de datos `Object`, la tarea Ejecutar SQL devuelve un objeto DOM (modelo de objetos de documento).  
   
- Un **conjunto de resultados completo** debe asignar a una variable de la `Object` tipo de datos. El resultado devuelto es un objeto de conjunto de filas. Puede usar un contenedor de bucle Foreach para extraer los valores de las filas de una tabla almacenados en la variable Object y almacenarlos en las variables de paquete y, entonces, utilizar una tarea Script para escribir los datos almacenados en variables de paquetes en un archivo. Para ver una demostración de cómo usar un contenedor de bucle Foreach y una tarea Script, consulte el ejemplo en CodePlex, [Ejecutar parámetros SQL y conjuntos de resultados](http://go.microsoft.com/fwlink/?LinkId=157863), en msftisprodsamples.codeplex.com.  
+ Un **conjunto de resultados completo** debe asignar a una variable de la `Object` tipo de datos. El resultado devuelto es un objeto de conjunto de filas. Puede usar un contenedor de bucle Foreach para extraer los valores de las filas de una tabla almacenados en la variable Object y almacenarlos en las variables de paquete y, entonces, utilizar una tarea Script para escribir los datos almacenados en variables de paquetes en un archivo. Para ver una demostración de cómo usar un contenedor de bucle Foreach y una tarea Script, consulte el ejemplo en CodePlex, [Ejecutar parámetros SQL y conjuntos de resultados](https://go.microsoft.com/fwlink/?LinkId=157863), en msftisprodsamples.codeplex.com.  
   
  En la tabla siguiente se resumen los tipos de datos de variables que se pueden asignar a conjuntos de resultados.  
   
 |Tipo de conjunto de resultados|Tipo de datos de variable|Tipo de objeto|  
 |---------------------|---------------------------|--------------------|  
 |Fila única|Cualquier tipo que sea compatible con la columna de tipo del conjunto de resultados.|No aplicable|  
-|Conjunto de resultados completo|`Object`|Si la tarea utiliza un administrador de conexiones nativo, incluidos los administradores de conexión ADO, OLE DB, Excel y ODBC, el objeto devuelto es ADO `Recordset`.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el [!INCLUDE[vstecado](../includes/vstecado-md.md)] Administrador de conexiones, el objeto devuelto es un `System.Data.DataSet`.<br /><br /> Puede usar una tarea Script para tener acceso a la `System.Data.DataSet` de objeto, como se muestra en el ejemplo siguiente.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|Conjunto de resultados completo|`Object`|Si la tarea usa un administrador de conexiones nativo, incluidos los administradores de conexiones ADO, OLE DB, Excel y ODBC, el objeto devuelto es un `Recordset` de ADO.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)], el objeto devuelto es un objeto `System.Data.DataSet`.<br /><br /> Puede utilizar una tarea Script para tener acceso al objeto `System.Data.DataSet`, tal como se muestra en el ejemplo siguiente.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|Si la tarea utiliza un administrador de conexiones nativo, incluidos los administradores de conexión ADO, OLE DB, Excel y ODBC, el objeto devuelto es un `MSXML6.IXMLDOMDocument`.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)], el objeto devuelto es un `System.Xml.XmlDocument`.|  
+|XML|`Object`|Si la tarea usa un administrador de conexiones nativo, incluidos los administradores de conexiones ADO, OLE DB, Excel y ODBC, el objeto devuelto es un objeto `MSXML6.IXMLDOMDocument`.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)], el objeto devuelto es un `System.Xml.XmlDocument`.|  
   
  La variable puede definirse en el ámbito de la tarea Ejecutar SQL o en el ámbito del paquete. Si la variable tiene ámbito de paquete, el conjunto de resultados estará disponible para otras tareas y otros contenedores del paquete, así como para cualquier paquete ejecutado por la tarea Ejecutar paquete o Ejecutar paquete DTS 2000.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "48053375"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Ejemplo CodePlex, [Ejecutar conjuntos de resultados y parámetros de SQL](http://go.microsoft.com/fwlink/?LinkId=157863)(en inglés), en msftisprodsamples.codeplex.com  
+-   Ejemplo CodePlex, [Ejecutar conjuntos de resultados y parámetros de SQL](https://go.microsoft.com/fwlink/?LinkId=157863)(en inglés), en msftisprodsamples.codeplex.com  
   
   

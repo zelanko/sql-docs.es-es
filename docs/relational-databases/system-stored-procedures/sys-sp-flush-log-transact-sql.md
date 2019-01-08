@@ -20,19 +20,19 @@ ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c434f47fdf6dcb17cccee5ca69cefe74971560e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fba195d53911264716c73b54ea8c639ca37951e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594716"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418316"
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Vuelca en el disco el registro de transacciones de la base de datos actual, de forma que protege todas las transacciones durables diferidas que se hayan confirmado previamente.  
   
- Si elige utilizar la durabilidad diferida por sus ventajas en el rendimiento, pero también desea tener un límite garantizado de la cantidad de datos que se pueden perder en el bloqueo o conmutación por error de un servidor, ejecute `sys.sp_flush_log` periódicamente. Por ejemplo, si quiere asegurarse de no perder más de x segundos en datos, debe ejecutar `sp_flush_log` cada x segundos.  
+ Si elige utilizar la durabilidad diferida por sus ventajas en el rendimiento, pero también desea tener un límite garantizado de la cantidad de datos que se pueden perder en el bloqueo o conmutación por error de un servidor, ejecute `sys.sp_flush_log` periódicamente. Por ejemplo, si desea asegurarse de no perder más de x segundos con datos interesantes, ejecutaría `sp_flush_log` cada x segundos.  
   
  Si se ejecuta `sys.sp_flush_log`, se garantiza que todas las transacciones durables diferidas que se hayan confirmado previamente se convierten en durables. Vea el tema conceptual [controlar la durabilidad de transacciones](../../relational-databases/logs/control-transaction-durability.md) para obtener más información.  
   

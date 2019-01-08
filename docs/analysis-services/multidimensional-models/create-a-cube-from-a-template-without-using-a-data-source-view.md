@@ -1,5 +1,5 @@
 ---
-title: Crear un cubo a partir de una plantilla sin usar una vista del origen de datos | Documentos de Microsoft
+title: Crear un cubo desde una plantilla sin usar una vista del origen de datos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 654278ee171666564771a3e620c903e598039a74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025911"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521349"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Crear un cubo a partir de una plantilla sin usar una vista del origen de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34025911"
   
  Las cuadrículas **Seleccionar medidas de plantilla** y **Agregar nuevas medidas** muestran valores debajo de las columnas descritas en la tabla siguiente. Puede hacer clic en un valor de cualquier lista para cambiarlo.  
   
-|Columna|Description|  
+|columna|Descripción|  
 |------------|-----------------|  
 |**Nombre de medida**|Cada valor de esta columna define el nombre de una medida del cubo. Haga clic en un valor de esta columna para escribir un nombre. Haga clic en **Agregar nueva medida** en esta columna para crear una nueva medida. Esta columna establece la propiedad **Name** del objeto de medida.|  
 |**Grupo de medida**|El nombre del grupo de medida que contiene la medida. Haga clic en este valor para elegir o escribir un nombre. Si elimina todas las medidas que pertenecen a un grupo de medida determinado, se quita el grupo de medida. Esta columna establece la propiedad **Name** del objeto de grupo de medida.|  
@@ -55,10 +55,10 @@ ms.locfileid: "34025911"
   
  Las cuadrículas **Seleccionar dimensiones de plantilla** y **Agregar nuevas dimensiones** muestran valores debajo de las columnas descritas en la tabla siguiente. Puede hacer clic en un valor de cualquier lista para cambiarlo.  
   
-|Columna|Description|  
+|columna|Descripción|  
 |------------|-----------------|  
 |**Tipo**|Muestra el tipo de dimensión de una dimensión de la plantilla. Haga clic en esta celda para cambiar el tipo de dimensión. Esta columna establece la propiedad **Type** del objeto de dimensión.|  
-|**Nombre**|Muestra el nombre de la dimensión. Haga clic en esta celda para escribir otro nombre. Este valor establece la propiedad **Name** del objeto de dimensión.|  
+|**Name**|Muestra el nombre de la dimensión. Haga clic en esta celda para escribir otro nombre. Este valor establece la propiedad **Name** del objeto de dimensión.|  
 |**DVL**|Especifica que se trata de una dimensión de variación lenta (DVL). Si se activa esta casilla, se agregan los atributos Fecha de inicio de DVL, Id. original de DVL y Estado de DVL a la dimensión. La opción**DVL** aparece seleccionada de forma predeterminada si se usa una plantilla para crear el cubo y el asistente detecta estos cuatro tipos de atributos en una dimensión de plantilla.|  
 |**Atributos**|Muestra los atributos que se crearán para la dimensión. Cada nombre de atributo de la lista está precedido del nombre de la dimensión. Esta lista es de solo lectura. Puede editar los atributos con el Diseñador de dimensiones una vez completado el asistente.|  
   
@@ -79,10 +79,10 @@ ms.locfileid: "34025911"
 ## <a name="specifying-additional-calendars"></a>Especificar calendarios adicionales  
  En la página **Especificar calendarios adicionales** del asistente, seleccione los calendarios en los que se basarán las jerarquías de la dimensión. Puede elegir cualquiera de los calendarios siguientes.  
   
-|Calendario|Description|  
+|Calendario|Descripción|  
 |--------------|-----------------|  
 |Calendario fiscal|Calendario fiscal de doce meses. Si selecciona este calendario, especifique el día y el mes de inicio del año fiscal que usa la organización.|  
-|Calendario de informe (o marketing)|Calendario de informes de doce meses que incluye dos meses de cuatro semanas y un mes de cinco semanas en un patrón trimestral periódico. Si selecciona este calendario, especifique el día y el mes de inicio y un patrón trimestral de 4–4–5, 4–5–4 o 5–4–4 semanas, donde cada dígito representa el número de semanas de un mes.|  
+|Calendario de informe (o marketing)|Calendario de informes de doce meses que incluye dos meses de cuatro semanas y un mes de cinco semanas en un patrón trimestral periódico. Si selecciona este calendario, especifique el primer día y mes, el patrón de tres meses de 4-4-5, 4-5-4 o 5-4-4 semanas, donde cada dígito representa el número de semanas en un mes.|  
 |Calendario de fabricación|Calendario que usa 13 períodos de cuatro semanas, divididos en tres trimestres de cuatro periodos y un trimestre de cinco períodos. Si selecciona este calendario, especifique la semana (entre 1 y 4) y el mes de inicio del año de fabricación, y el trimestre con períodos adicionales.|  
 |Calendario ISO 8601|Calendario estándar (8601) de Representación de fechas y horas de la Organización internacional de normalización (ISO). Este calendario tiene un número integral de semanas de siete días. Para evitar dividir una semana, este calendario inicia un nuevo año varios días antes o después del 1 de enero.|  
   

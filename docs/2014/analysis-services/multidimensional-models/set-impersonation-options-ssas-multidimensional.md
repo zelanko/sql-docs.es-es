@@ -15,12 +15,12 @@ ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c8b5a891686a1317305c43d179e892caf69d8b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 273cc75fdd09db548b8083c20a322e9ba9172c70
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218275"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365747"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Establezca las opciones de suplantación (SSAS - multidimensional)
   Al crear un objeto de `data source` en un modelo de Analysis Services, uno de los valores que debe configurar es una opción de suplantación. Esta opción determina si Analysis Services asume la identidad de una cuenta de usuario de Windows concreta al realizar las operaciones locales relacionadas con la conexión, como cargar un proveedor de datos OLE DB o resolver la información de perfil de usuario en entornos que admiten perfiles de itinerancia.  
@@ -50,7 +50,7 @@ ms.locfileid: "48218275"
  Todas las opciones están disponibles en el cuadro de diálogo, pero no todas las opciones son adecuadas para cada escenario. Utilice la siguiente información para determinar la mejor opción para el escenario.  
   
  **Utilizar un nombre de usuario y una contraseña específicos**  
- Seleccione esta opción para que la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos usar las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato:  *\<nombre de dominio >***\\***\<usuario nombre de cuenta >*.  
+ Seleccione esta opción para que el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos usar las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato: *\<Nombre de dominio >***\\***\<nombre de la cuenta de usuario >*.  
   
  Elija esta opción para usar una identidad de usuario de Windows dedicada con los privilegios mínimos que ha creado específicamente para el acceso a los datos. Por ejemplo, si suele crear una cuenta de uso general para leer los datos que se recuperan en los informes, puede especificar esa cuenta aquí.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48218275"
  Para las instrucciones DMX OPENQUERY, los cubos locales y los modelos de minería de datos, las credenciales del usuario actual se utilizarán aunque elija la opción de cuenta de servicio. La opción de cuenta de servicio no se admite para los enlaces fuera de línea.  
   
 > [!NOTE]  
->  Pueden producirse errores al procesar un modelo de minería de datos de un cubo si la cuenta de servicio no tiene permisos de administrador en la instancia de Analysis Services. Para obtener más información, vea [Estructura de minería de datos: problema al procesar cuando el origen de datos es un cubo OLAP](http://go.microsoft.com/fwlink/?LinkId=251610).  
+>  Pueden producirse errores al procesar un modelo de minería de datos de un cubo si la cuenta de servicio no tiene permisos de administrador en la instancia de Analysis Services. Para obtener más información, consulte [estructura de minería de datos: Problema al procesar cuando el origen de datos es un cubo OLAP](https://go.microsoft.com/fwlink/?LinkId=251610).  
   
  **Utilizar las credenciales del usuario actual**  
  Seleccione esta opción para que el objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use las credenciales de seguridad del usuario actual para los enlaces fuera de línea, las instrucciones DMX OPENQUERY, los cubos locales y los modelos de minería de datos.  
@@ -101,7 +101,7 @@ ms.locfileid: "48218275"
   
  Para obtener más información sobre la configuración predeterminada en el nivel de base de datos, vea [Establecer propiedades de bases de datos multidimensionales &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md).  
   
- **Bases de datos: opción Predeterminada**  
+ **Bases de datos: opción predeterminada**  
   
  En las bases de datos tabulares, **Predeterminado** significa que se debe utilizar la cuenta de servicio.  
   

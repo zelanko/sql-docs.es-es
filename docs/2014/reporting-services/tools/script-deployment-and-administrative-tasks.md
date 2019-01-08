@@ -23,12 +23,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bf10f8ef0b748582aeef2e790207dcb287d3bdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167291"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398878"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Script para tareas administrativas y de implementación
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite el uso de scripts para automatizar las tareas rutinarias de instalación, implementación y administración. La implementación de un servidor de informes es un proceso de varios pasos en el que deben usarse varias herramientas y procedimientos de configuración: no existe ningún programa o método que automatice todas las tareas.  
@@ -64,13 +64,13 @@ ms.locfileid: "48167291"
   
 -   Se pueden usar el proveedor WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y las utilidades de línea de comandos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la configuración local y remota del servidor.  
   
-     El proveedor WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] expone las clases, propiedades y métodos que permiten al usuario configurar todos los aspectos de una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , lo que incluye la especificación de cuentas de servicio, la configuración de direcciones URL, la creación y configuración de la base de datos del servidor de informes o la configuración de un servidor de informes para la entrega por correo electrónico. Para utilizar el proveedor WMI, es necesario escribir script o código personalizados. Para más información, vea [Obtener acceso al proveedor WMI de Reporting Services](access-the-reporting-services-wmi-provider.md).  
+     El proveedor WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] expone las clases, propiedades y métodos que permiten al usuario configurar todos los aspectos de una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , lo que incluye la especificación de cuentas de servicio, la configuración de direcciones URL, la creación y configuración de la base de datos del servidor de informes o la configuración de un servidor de informes para la entrega por correo electrónico. Para utilizar el proveedor WMI, es necesario escribir script o código personalizados. Para obtener más información, vea [Obtener acceso al proveedor WMI de Reporting Services](access-the-reporting-services-wmi-provider.md).  
   
      Las utilidades de la línea de comandos (rsconfig.exe y rskeymgmt.exe) son una alternativa a escribir código. Se pueden escribir archivos por lotes que ejecuten las utilidades. Estas utilidades permiten automatizar algunas tareas de configuración, pero no todas.  
   
 -   La herramienta de host del script del servidor de informes (rs.exe) puede ejecutar código personalizado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que se haya escrito para volver a crear o mover el contenido de un servidor de informes a otro. Con este método, se escribe script en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], se guarda como un archivo .rss y, después, se usa rs.exe para ejecutarlo en el servidor de informes de destino. El script escrito puede llamar a la interfaz SOAP para el servicio web del servidor de informes. Los scripts de implementación se escriben siguiendo este método porque es posible volver a crear un espacio de nombres de carpetas del servidor de informes y su contenido, así como volver a crear la seguridad basada en roles.  
   
--   En la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se introdujeron los cmdlets de PowerShell para el modo integrado de SharePoint. Puede utilizar PowerShell para configurar y administrar la integración de SharePoint.  Para obtener más información, consulte [cmdlets de PowerShell para Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+-   En la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se introdujeron los cmdlets de PowerShell para el modo integrado de SharePoint. Puede utilizar PowerShell para configurar y administrar la integración de SharePoint.  Para obtener más información, vea [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>Usar scripts para migrar contenido y carpetas del servidor de informes  
  Se pueden escribir scripts que dupliquen un entorno de servidor de informes en otra instancia de servidor de informes. Los scripts de implementación suelen escribirse en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y, a continuación, se procesan mediante la utilidad del host de script del servidor de informes.  
@@ -94,10 +94,10 @@ ms.locfileid: "48167291"
 > [!NOTE]  
 >  Los scripts se ejecutan con las credenciales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows del usuario que ejecuta el script, salvo que las credenciales se establezcan explícitamente.  
   
- Para obtener más información acerca de cómo ejecutar un archivo de script y dar formato, vea [utilidad y el servicio Web de Script con el rs.exe](script-with-the-rs-exe-utility-and-the-web-service.md).  
+ Para obtener más información sobre cómo ejecutar y dar formato a un archivo de script, vea [Script con la utilidad rs.exe y el servicio Web](script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 ## <a name="using-scripts-to-set-server-properties"></a>Usar scripts para establecer propiedades del servidor  
- Puede escribir scripts que establezcan propiedades del sistema en el servidor de informes. El script de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET siguiente muestra una manera de establecer las propiedades. Este ejemplo deshabilita el control RSClientPrint ActiveX, pero puede reemplazar `EnableClientPrinting` y `False` con cualquier nombre de propiedad válido y el valor. Para ver una lista completa de las propiedades del servidor, consulte [Report Server System Properties](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
+ Puede escribir scripts que establezcan propiedades del sistema en el servidor de informes. El script de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET siguiente muestra una manera de establecer las propiedades. Este ejemplo deshabilita el control ActiveX RSClientPrint, aunque es posible sustituir `EnableClientPrinting` y `False` por cualquier nombre y valor de propiedad válidos. Para obtener una lista completa de propiedades de servidor, vea [Report Server System Properties](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  Para utilizar el script, guárdelo en un archivo con la extensión .rss y, a continuación, utilice la utilidad de símbolo del sistema rs.exe para ejecutar el archivo en el servidor de informes. El script no está compilado, por lo que no es necesario tener instalado [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. En este ejemplo se da por supuesto que tiene permisos en el equipo local que hospeda el servidor de informes. Si no ha iniciado una sesión con una cuenta con permisos, debe especificar la información de la cuenta mediante argumentos adicionales de la línea de comandos. Para más información, vea [Utilidad RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
@@ -109,7 +109,7 @@ Public Sub Main()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  
@@ -126,9 +126,9 @@ End Sub
  [Método GenerateDatabaseRightsScript &#40;MSReportServer_ConfigurationSetting de WMI&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
  [Método GenerateDatabaseUpgradeScript &#40;MSReportServer_ConfigurationSetting de WMI&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [Instalar a SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Instalar el servidor de informes de modo nativo de Reporting Services](../install-windows/install-reporting-services-native-mode-report-server.md)   
+ [Instalar el servidor de informes en modo nativo de Reporting Services](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Utilidades de símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Herramientas de Reporting Services](reporting-services-tools.md)  
   

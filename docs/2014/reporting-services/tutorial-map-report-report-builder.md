@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Informe de asignaciones (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Asignar informes (generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098855"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359867"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: informe de asignaciones (Generador de informes)
   Este tutorial le ayudará a obtener información sobre las características de mapa que puede utilizar para mostrar los datos de informe sobre un fondo geográfico.  
   
  Los mapas están basados en datos espaciales que normalmente está compuestos de puntos, líneas y polígonos. Por ejemplo, un polígono puede representar el perfil de un condado, una línea puede representar una carretera y un punto puede representar la ubicación de una ciudad. Cada tipo de datos espaciales se muestra en una capa de mapa independiente, como un conjunto de elementos de mapa.  
@@ -63,7 +63,7 @@ ms.locfileid: "48098855"
 10. [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar al asistente, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 30 minutos.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48098855"
   
 #### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Para agregar un mapa con el Asistente para mapas en un informe nuevo  
   
-1.  Haga clic en **iniciar**, apunte a **programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **Inicio**, seleccione **Programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**Generador de informes**y luego haga clic en **Generador de informes**.  
   
      Aparecerá el cuadro de diálogo Introducción.  
   
@@ -581,7 +581,7 @@ ms.locfileid: "48098855"
 ## <a name="next-steps"></a>Pasos siguientes  
  De esta forma se concluye el tutorial sobre cómo agregar un mapa a un informe.  
   
- Para obtener más información, consulte [mapas &#40;generador de informes y SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) y la entrada de blog [ajuste cartográfico de datos espaciales de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) en blogs.msdn.com.  
+ Para obtener más información, consulte [mapas &#40;generador de informes y SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) y la entrada de blog [ajuste cartográfico de datos espaciales de SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) en blogs.msdn.com.  
   
  Para obtener más tutoriales, vea [tutoriales &#40;Report Builder&#41;](report-builder-tutorials.md).  
   

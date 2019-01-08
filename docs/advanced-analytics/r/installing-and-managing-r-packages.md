@@ -1,5 +1,5 @@
 ---
-title: Bibliotecas de paquete de R y Python en SQL Server R y SQL Server Machine Learning predeterminadas | Microsoft Docs
+title: Valor predeterminado de bibliotecas de paquetes R y Python - SQL Server Machine Learning Services
 description: Paquetes de R y Python que se instala con SQL Server de servicios de R, R Server, Machine Learning Services (In-Database) y Machine Learning Server (independiente)
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7f5c51e9b93aca5d52858417667865633a0c4151
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 0a8c4c0f14a099dd4b6d8e6c48b8d84e209f6024
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118313"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432338"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Paquetes de R de forma predeterminada y Python en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,7 +98,7 @@ Las rutas de acceso de archivo también incluyen los nombres de instancia. SQL S
 
 En la tabla siguiente se enumera las rutas de acceso predeterminada de los archivos binarios cuando se instala SQL Server 2016 R Server (independiente) o el servidor de SQL Server 2017 Machine Learning Server (independiente). 
 
-|Versión| Installation|Ruta de acceso predeterminada|
+|Versión| Instalación|Ruta de acceso predeterminada|
 |-------|-------------|------------|
 | SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
 |SQL Server 2017|Machine Learning Server con R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|

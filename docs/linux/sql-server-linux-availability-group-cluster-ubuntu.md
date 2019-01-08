@@ -1,21 +1,22 @@
 ---
-title: Configurar grupo de disponibilidad de SQL Server del clúster Ubuntu | Microsoft Docs
-description: ''
+title: Configurar clúster de Ubuntu para el grupo de disponibilidad de SQL Server
+titleSuffix: SQL Server
+description: Obtenga información acerca de cómo crear clústeres de grupo de disponibilidad para Ubuntu
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b8be84952a1f7652fc9e40cf82ce5ca25dfa25f4
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658391"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160623"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar el clúster de Ubuntu y recursos del grupo de disponibilidad
 
@@ -123,7 +124,7 @@ El siguiente comando crea un clúster de tres nodos. Antes de ejecutar el script
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2...> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```

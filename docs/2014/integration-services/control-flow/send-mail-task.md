@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.f1
@@ -19,12 +18,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 799fe96b22881af08f1c94b10b44bd0038fa78a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1bcb08da6b28555502bb39658fb2f1fcbacb3b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064825"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354282"
 ---
 # <a name="send-mail-task"></a>Enviar correo, tarea
   La tarea Enviar correo envía un mensaje de correo electrónico. Un paquete puede utilizar la tarea Enviar correo para enviar mensajes si las tareas del paquete de flujo de trabajo finalizan correctamente o si se producen errores, o para enviar mensajes en respuesta a eventos provocados por el paquete en tiempo de ejecución. Por ejemplo, la tarea puede notificar a un administrador de base de datos si la tarea Copia de seguridad de la base de datos se realizó correctamente o no.  
@@ -70,9 +69,9 @@ ms.locfileid: "48064825"
   
  Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Enviar correo electrónico de Editor de la tarea &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Enviar correo &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Enviar correo electrónico de Editor de la tarea &#40;página de correo&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Editor de la tarea Enviar correo &#40;página Correo&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48064825"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)(Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
+-   Artículo técnico [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
   
 ## <a name="see-also"></a>Vea también  
  [Tareas de Integration Services](integration-services-tasks.md)   

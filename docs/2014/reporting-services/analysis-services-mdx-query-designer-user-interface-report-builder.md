@@ -15,12 +15,12 @@ ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26c645a134d962daff989e7f7a88b7ae9dcd67bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cb1fad6ffa7fcb8dcf1330079b12aa77f06705d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071465"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362767"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas MDX de Analysis Services (Generador de informes)
   El Generador de informes proporciona un diseñador gráfico de consultas que permite crear consultas de expresiones multidimensionales (MDX) para un origen de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de los cubos seleccionados para crear una consulta MDX; ésta recupera datos al procesarse el informe.  
@@ -58,7 +58,7 @@ ms.locfileid: "48071465"
  Si desea especificar sus propias propiedades adicionales, debe modificar manualmente la consulta MDX en el modo de consulta.  
   
 > [!NOTE]  
->  Para obtener más información sobre MDX y la información general sobre el diseñador de consultas MDX, vea "Editor (Analysis Services - Datos multidimensionales) de la Consulta MDX" en [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335). Sin embargo, para que un informe muestre los datos de una consulta MDX, debe generarla utilizando el diseñador de consultas MDX que viene con el Generador de informes. No se admite la importación de una consulta .mdx desde un archivo.  
+>  Para obtener más información sobre MDX y la información general sobre el diseñador de consultas MDX, vea "Editor (Analysis Services - Datos multidimensionales) de la Consulta MDX" en [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335). Sin embargo, para que un informe muestre los datos de una consulta MDX, debe generarla utilizando el diseñador de consultas MDX que viene con el Generador de informes. No se admite la importación de una consulta .mdx desde un archivo.  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Barra de herramientas del diseñador gráfico de consultas MDX en modo de diseño  
  La barra de herramientas del diseñador de consultas proporciona botones que le ayudan a diseñar consultas MDX mediante la interfaz gráfica. En la tabla siguiente se describen los botones y sus funciones.  
@@ -69,11 +69,11 @@ ms.locfileid: "48071465"
 |**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos.|  
 |![Cambiar a la vista de la consulta MDX](../analysis-services/media/rsqdicon-commandtypemdx.gif "Cambiar a la vista de la consulta MDX")|Cambia al tipo de comando MDX.|  
 |![Actualizar datos de resultados](../analysis-services/media/rsqdicon-refresh.gif "Actualizar datos de resultados")|Actualiza los metadatos desde el origen de datos.|  
-|![Agregar un miembro calculado](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|  
+|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|  
 |![Alternar para mostrar celdas vacías](../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías")|Muestra y oculta las celdas vacías del panel Datos. Esto equivale a utilizar la cláusula NON EMPTY en MDX.|  
 |![Ejecutar la consulta automáticamente](../analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")|Ejecuta automáticamente la consulta y muestra el resultado cada vez que se realiza un cambio. Los resultados se mostrarán en el panel Datos.|  
 |![Botón Mostrar agregaciones](../analysis-services/media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones")|Muestra agregaciones en el panel Datos.|  
-|![Eliminar](../analysis-services/media/rsqdicon-delete.gif "eliminar")|Elimina la columna seleccionada en el panel Datos de la consulta.|  
+|![Eliminar](../analysis-services/media/rsqdicon-delete.gif "Eliminar")|Elimina la columna seleccionada en el panel Datos de la consulta.|  
 |![Icono del cuadro de diálogo Parámetros de consulta](../analysis-services/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")|Muestra el cuadro de diálogo **Parámetros de consulta** . Al especificar valores para un parámetro de consulta, se crea automáticamente un parámetro de informe con el mismo nombre. El valor del parámetro de consulta se establece en una expresión que hace referencia al parámetro de informe.|  
 |![Botón Preparar consulta](../analysis-services/media/rsqdicon-preparequery.gif "Botón Preparar consulta")|Prepara la consulta.|  
 |![Ejecutar la consulta](../analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra los resultados en el panel Datos.|  
@@ -107,7 +107,7 @@ ms.locfileid: "48071465"
   
 -   **Editar como texto**  
   
--   **Agregar miembro calculado** (![Agregar miembro calculado](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado"))  
+-   **Agregar miembro calculado** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Mostrar celdas vacías** (![Alternar para mostrar celdas vacías](../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))  
   

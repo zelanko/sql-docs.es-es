@@ -20,12 +20,12 @@ ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a00c2aea93b77f65455024d15af13b153d7ebef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21b97ab3eaae8399fbc0bf37905b2b61b608948c
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732183"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785786"
 ---
 # <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +37,17 @@ ms.locfileid: "47732183"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|Nombre de la columna. nombre es único dentro del objeto. No admite valores NULL.|  
+|NAME|**nvarchar(256)**|Nombre de la columna. nombre es único dentro del objeto. No admite valores NULL.|  
 |column_id|**int**|El identificador de la columna. column_id es único dentro del objeto cuando se utiliza con column_type. No admite valores NULL.|  
-|object_name|**nvarchar(60)**|Nombre del objeto al que pertenece esta columna. Hay una relación de varios a uno con sys.dm_xe_objects.id. No admite valores NULL.|  
+|object_name|**nvarchar(256)**|Nombre del objeto al que pertenece esta columna. Hay una relación de varios a uno con sys.dm_xe_objects.id. No admite valores NULL.|  
 |object_package_guid|**uniqueidentifier**|GUID del paquete que contiene el objeto. No admite valores NULL.|  
-|type_name|**nvarchar(60)**|Nombre del tipo de esta columna. No admite valores NULL.|  
+|type_name|**nvarchar(256)**|Nombre del tipo de esta columna. No admite valores NULL.|  
 |type_package_guid|**uniqueidentifier**|GUID del paquete que contiene el tipo de datos de la columna. No admite valores NULL.|  
-|column_type|**nvarchar(60)**|Indica cómo se utiliza esta columna. No admite valores NULL. COLUMN_TYPE puede ser uno de los siguientes:<br /><br /> readonly. La columna contiene un valor estático que no se puede cambiar.<br /><br /> data. La columna contiene datos en tiempo de ejecución expuestos por el objeto.<br /><br /> customizable. La columna contiene un valor que puede cambiarse.<br /><br /> Nota: Si cambia este valor puede modificar el comportamiento del objeto.|  
+|column_type|**nvarchar(60)**|Indica cómo se utiliza esta columna. No admite valores NULL. COLUMN_TYPE puede ser uno de los siguientes:<br /><br /> readonly. La columna contiene un valor estático que no se puede cambiar.<br /><br /> data. La columna contiene datos en tiempo de ejecución expuestos por el objeto.<br /><br /> customizable. La columna contiene un valor que puede cambiarse.<br /><br /> Nota: Si se cambia este valor es posible que se modifique el comportamiento del objeto.|  
 |column_value|**nvarchar(256)**|Muestra los valores estáticos asociados con la columna de objetos. Acepta valores NULL.|  
 |capabilities|**int**|Un mapa de bits que describe las capacidades de la columna. Acepta valores NULL.|  
-|capabilities_desc|**nvarchar(256)**|Una descripción de las capacidades de esta columna de objetos. Este valor puede ser uno de los siguientes:<br /><br /> Mandatory. Se debe establecer el valor al enlazar el objeto primario a una sesión de eventos.<br /><br /> NULL|  
-|description|**nvarchar(256)**|Descripción de esta columna de objetos. Acepta valores NULL.|  
+|capabilities_desc|**nvarchar(256)**|Una descripción de las capacidades de esta columna de objetos. Este valor puede ser uno de los siguientes:<br /><br /> Mandatory. Se debe establecer el valor al enlazar el objeto primario a una sesión de eventos.<br /><br /> Acepta valores NULL.|  
+|description|**nvarchar (3072)**|Descripción de esta columna de objetos. Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  

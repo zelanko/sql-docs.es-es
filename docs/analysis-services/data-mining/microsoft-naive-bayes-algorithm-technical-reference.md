@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo Bayes Naive de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo Bayes Naive de Microsoft | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 900da37bf40f22f039146dfeb8219930b8661887
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4e571e817caf566a919b5cce453566f4ace2a649
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015892"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399648"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Referencia técnica del algoritmo Bayes naive de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34015892"
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Implementación del algoritmo Bayes naive de Microsoft  
  Desde el punto de vista computacional, el algoritmo es menos complejo que otros algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] y, por tanto, resulta útil para generar rápidamente modelos de minería de datos que detectan las relaciones entre las columnas de entrada y las columnas de predicción. El algoritmo considera cada par de valores de atributos de entrada y de atributos de salida.  
   
- La descripción de las propiedades matemáticas del Teorema de Bayes queda fuera del ámbito de esta documentación; para obtener más información, vea el documento de Microsoft Research titulado [Redes bayesianas: la combinación de conocimiento y datos estadísticos](http://go.microsoft.com/fwlink/?LinkId=207029).  
+ Una descripción de las propiedades matemáticas del teorema de Bayes queda fuera del ámbito de esta documentación; Para obtener más información, consulte el documento de Microsoft Research titulado [las redes bayesianas: La combinación de conocimiento y datos estadísticos](http://go.microsoft.com/fwlink/?LinkId=207029).  
   
  Para obtener la descripción de cómo se ajustan las probabilidades en todos los modelos para tener en cuenta los valores ausentes posibles, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34015892"
   
 |Algoritmo|Método de análisis|Comentarios|  
 |---------------|------------------------|--------------|  
-|Bayes naive|entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Bayes naive solo acepta atributos discretos o de datos discretos, por lo que no puede utilizar la puntuación de grado de interés.|  
+|Bayes naive|Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Bayes naive solo acepta atributos discretos o de datos discretos, por lo que no puede utilizar la puntuación de grado de interés.|  
   
  El algoritmo está diseñado para reducir al mínimo el tiempo de proceso y seleccionar eficazmente los atributos que tienen la importancia máxima; sin embargo, puede controlar los datos que el algoritmo utiliza estableciendo los parámetros como se indica a continuación:  
   
@@ -64,14 +64,14 @@ ms.locfileid: "34015892"
  El valor predeterminado es 0,5.  
   
  *MAXIMUM_STATES*  
- Especifica el número máximo de estados de atributo que admite el algoritmo. Si el número de estados que tiene un atributo es mayor que el número máximo de estados, el algoritmo utiliza los estados más conocidos del atributo e interpreta que faltan los estados restantes.  
+ Especifica el número máximo de estados de atributo que admite el algoritmo. Si el número de Estados que tiene un atributo es mayor que el número máximo de Estados, el algoritmo utiliza los estados más populares del atributo e interpreta que faltan los Estados restantes.  
   
  El valor predeterminado es 100.  
   
 ### <a name="modeling-flags"></a>Marcas de modelado  
  El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las marcas de modelado siguientes. Al crear la estructura o el modelo de minería de datos, se definen las marcas de modelado que especifican cómo se tratan los valores de cada columna durante el análisis. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
   
-|Marca de modelado|Description|  
+|Marca de modelado|Descripción|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|Significa que la columna se tratará como si tuviera dos estados posibles: ausente y existente. Un valor NULL es un valor ausente.<br /><br /> Se aplica a la columna del modelo de minería de datos.|  
 |NOT NULL|Indica que la columna no puede contener un valor NULL. Se producirá un error si Analysis Services encuentra un valor NULL durante el entrenamiento del modelo.<br /><br /> Se aplica a la columna de la estructura de minería de datos.|  
@@ -80,9 +80,9 @@ ms.locfileid: "34015892"
  Un modelo de árbol de Bayes naive debe contener una columna de clave, al menos un atributo de predicción y al menos un atributo de entrada. Ningún atributo puede ser continuo; si los datos contienen datos numéricos continuos, se omitirán o se convertirán en discretos.  
   
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
- El algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
+ El algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Columna|Tipos de contenido|  
+|columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Cíclico, discreto, discretizado, clave, tabla y ordenado|  
 |Atributo de predicción|Cíclico, discreto, discretizado, tabla y ordenado|  
@@ -91,8 +91,8 @@ ms.locfileid: "34015892"
 >  Se admiten los tipos de contenido Cyclical y Ordered, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmo Bayes Naive de Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Ejemplos de consultas de modelo Bayes naive](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos Bayes Naive & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Algoritmo Bayes naive de Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Ejemplos de consultas del modelo Bayes naive](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos Bayes naive &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

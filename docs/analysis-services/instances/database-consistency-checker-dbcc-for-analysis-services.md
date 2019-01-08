@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697019"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413092"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Comprobador de coherencia de base de datos (DBCC) para Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC proporciona validación de base de datos a petición para bases de datos multidimensionales y tabulares en una instancia de Analysis Services. Puede ejecutar DBCC en una ventana de consulta XMLA o MDX en SQL Server Management Studio (SSMS) y realizar el seguimiento de la salida de DBCC en SQL Server Profiler o sesiones xEvent en SSMS.  
-El comando toma una definición de objeto y devuelve un conjunto de resultados vacío o la información detallada del error si el objeto está dañado.   En este artículo, aprenderá a ejecutar el comando, interpretar los resultados y solucionar los problemas que surjan.  
+El comando toma una definición de objeto y devuelve un conjunto de resultados vacío o la información detallada del error si el objeto está dañado.   En este artículo, podrá obtener información sobre cómo ejecutar el comando, interpretar los resultados y solucionar los problemas que surgen.  
   
  En el caso de las bases de datos tabulares, las comprobaciones de coherencia realizadas por DBCC equivalen a la validación integrada que se produce automáticamente cada vez que se vuelve a cargar, se sincroniza o se restaura una base de datos.  En cambio, las comprobaciones de coherencia de bases de datos multidimensionales se producen solo al ejecutar DBCC a petición.  
   
@@ -35,7 +35,7 @@ El comando toma una definición de objeto y devuelve un conjunto de resultados v
  DBCC para Analysis Services se ejecutará en cualquier base de datos de Analysis Services en cualquier nivel de compatibilidad, siempre que la base de datos se ejecute en una instancia de SQL Server 2016. Asegúrese de que está utilizando la sintaxis de comando correcta para cada tipo de base de datos.  
   
 > [!NOTE]  
->  Si está familiarizado con [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), pronto se dará cuenta de que DBCC en Analysis Services tiene un ámbito mucho más restringido. DBCC en Analysis Services es un comando único que notifica exclusivamente los datos dañados en la base de datos o en objetos individuales. Si tiene otras tareas en mente, como la recopilación de información, pruebe a usar los scripts de PowerShell de AMO o XMLA en su lugar.
+>  Si está familiarizado con [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), observará rápidamente que DBCC en Analysis Services tiene un ámbito mucho más restringido. DBCC en Analysis Services es un comando único que notifica exclusivamente los datos dañados en la base de datos o en objetos individuales. Si tiene otras tareas en mente, como la recopilación de información, pruebe a usar los scripts de PowerShell de AMO o XMLA en su lugar.
   
 ## <a name="permission-requirements"></a>Requisitos de permisos  
  Debe ser administrador de servidor o base de datos de Analysis Services (un miembro del rol de servidor) para ejecutar el comando. Para tener instrucciones, vea [Otorgar permisos de base de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) o [Conceder permisos de administrador de servidor (Analysis Services)](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -72,7 +72,7 @@ El comando toma una definición de objeto y devuelve un conjunto de resultados v
   
 ```  
   
- Para ejecutar DBCC en objetos en posiciones superiores de la cadena de objetos, elimine los elementos de identificador de objeto de nivel inferior que no sean necesarios:  
+ Para ejecutar DBCC en objetos más arriba la cadena de objetos, elimine los elementos del Id. de objeto de nivel inferior que no es necesario:  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -200,7 +200,7 @@ Execution complete
   
      Los mensajes de error se enumeran más adelante.  
   
-## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>Referencia: comprobaciones de coherencia y errores para bases de datos multidimensionales  
+## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>Referencia: Comprobaciones de coherencia y errores para bases de datos multidimensionales  
  En el caso de las bases de datos multidimensionales, se validan solo los índices de partición.  Durante la ejecución, DBCC crea un índice temporal para cada partición y lo compara con el índice almacenado en disco.  La creación de un índice temporal requiere la lectura de todos los datos de la partición del disco y, a continuación, su mantenimiento en el índice temporal de la memoria con fines de comparación. Dada la carga de trabajo adicional, el servidor puede experimentar un importante consumo de memoria y E/S del disco durante una ejecución de DBCC.  
   
  La detección de daños del índice multidimensional incluye las siguientes comprobaciones. Los errores en esta tabla aparecen en seguimientos de errores de xEvent o Profiler a nivel de objeto.  
@@ -212,7 +212,7 @@ Execution complete
 |Índice de partición|Valida los metadatos.<br /><br /> Comprueba que cada miembro del índice temporal puede encontrarse en el archivo de encabezado de índice para el segmento en el disco.|El segmento de partición está dañado.|  
 |Índice de partición|Analiza segmentos para buscar daños físicos.<br /><br /> Lee el archivo de índice en el disco para cada miembro del índice temporal y comprueba que el tamaño del los registros del índice coinciden, y que se marcan las mismas páginas de datos como contenedoras de registros para el miembro actual.|El segmento de partición está dañado.|  
   
-## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>Referencia: comprobaciones de coherencia y errores para bases de datos tabulares  
+## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>Referencia: Comprobaciones de coherencia y errores para bases de datos tabulares  
  La tabla siguiente enumera todas las comprobaciones de coherencia realizadas en objetos tabulares, junto con los errores que se producen si la comprobación indica daños. Los errores en esta tabla aparecen en seguimientos de errores de xEvent o Profiler a nivel de objeto.  
   
 ||||  

@@ -12,12 +12,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed705d084bc1c6e5b8d06e4a68e4dbe77f67a2b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115655"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375387"
 ---
 # <a name="array-parameter-sample"></a>Ejemplo de parámetro de matriz
   A veces resulta útil crear, actualizar o eliminar un conjunto de filas en una base de datos. Este objetivo puede conseguirse mediante distintos enfoques. Uno de ellos es pasar una matriz de información de un cliente a un procedimiento almacenado de integración CLR (Common Language Runtime) del servidor mediante un tipo CLR de datos de integración definido por el usuario. La naturaleza de los tipos de datos definidos por el usuario de este tipo limita el tamaño de los datos proporcionados al servidor a 8.000 bytes. Por lo tanto, este enfoque no resulta satisfactorio para datos grandes o complejos. Si los datos que se tratan son pequeños y sencillos, este enfoque puede ser mucho más eficaz que llamar a un procedimiento almacenado para cada fila. Al pasar una matriz, el orden de los datos se conserva en las aplicaciones donde es significativo. Este ejemplo contiene lo siguiente:  
@@ -31,9 +31,9 @@ ms.locfileid: "48115655"
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   .NET Framework SDK 2.0 o posterior, o Microsoft Visual Studio 2005 o posterior. Puede obtener .NET Framework SDK de forma gratuita.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48115655"
      `GO`  
   
     > [!NOTE]  
-    >  Para habilitar CLR, debe tener `ALTER SETTINGS` permiso de nivel de servidor, que se concede implícitamente a los miembros de la `sysadmin` y `serveradmin` roles fijos de servidor.  
+    >  Para habilitar CLR, debe tener el permiso de nivel de servidor `ALTER SETTINGS`, que se concede implícitamente a los miembros de los roles fijos de servidor `sysadmin` y `serveradmin`.  
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48115655"
   
 5.  En c:\MySample, cree `Program.vb` (para el ejemplo de Visual Basic) o `Program.cs` (para el ejemplo de C#) y copie el código muestra de Visual Basic o de C# que corresponda (más abajo) en el archivo.  
   
-6.  Busque la línea adecuada en el archivo Program (alrededor de la línea 24) y reemplace `XXX` con el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  Busque la línea adecuada en el archivo Program (alrededor de la línea 24) y reemplace `XXX` por el nombre de su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   

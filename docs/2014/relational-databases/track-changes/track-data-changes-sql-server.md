@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
@@ -34,12 +33,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aef16266b62754884017528a9db6065ca824e4eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190645"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351701"
 ---
 # <a name="track-data-changes-sql-server"></a>Seguimiento de cambios de datos (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona dos características que realizan el seguimiento de los cambios en los datos de una base de datos: [captura de datos modificados](#Capture) y [seguimiento de cambios](#Tracking). Estas características permiten a las aplicaciones determinar los cambios de DML (operaciones de inserción, actualización y eliminación) que se realizaron en las tablas de usuario de una base de datos. La captura de datos modificados y el seguimiento de cambios pueden habilitarse en la misma base de datos; no se requiere ninguna consideración especial. Para las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que modificados de soporte técnico de captura de datos y seguimiento de cambios, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -59,7 +58,7 @@ ms.locfileid: "48190645"
   
 -   Se reduce la sobrecarga en las operaciones DML. El seguimiento de cambios sincrónico siempre tendrá cierta sobrecarga. Sin embargo, su uso puede ayudar a reducirla. A menudo, la sobrecarga será menor que si se usan soluciones alternativas, sobre todo si se trata de soluciones que requieren el uso de desencadenadores.  
   
--   El seguimiento de cambios se basa en transacciones confirmadas. El orden de los cambios se basa en la hora de confirmación de la transacción. Esto permite obtener resultados confiables cuando hay transacciones de ejecución prolongada que se solapan. Soluciones personalizadas que utilizan `timestamp` valores deben diseñarse específicamente para administrar estos escenarios.  
+-   El seguimiento de cambios se basa en transacciones confirmadas. El orden de los cambios se basa en la hora de confirmación de la transacción. Esto permite obtener resultados confiables cuando hay transacciones de ejecución prolongada que se solapan. Las soluciones personalizadas que utilizan valores `timestamp` deben diseñarse específicamente para administrar estos escenarios.  
   
 -   Hay herramientas estándar disponibles que se pueden utilizar para configurar y administrar. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona instrucciones DDL estándar, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vistas de catálogo y permisos de seguridad.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48190645"
 |**Cambios sometidos a seguimiento**|||  
 |Cambios de DML|Sí|Sí|  
 |**Información sometida a seguimiento**|||  
-|Datos históricos|Sí|no|  
+|Datos históricos|Sí|No|  
 |Si la columna cambió|Sí|Sí|  
 |Tipo de DML|Sí|Sí|  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48190645"
  **Configuración y administración**  
  Para habilitar o deshabilitar el cambio de captura de datos para una base de datos, el llamador de [sys.sp_cdc_enable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) o [sys.sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)debe ser miembro del servidor fijo `sysadmin` rol. Habilitar y deshabilitar la captura de datos modificados en el nivel de tabla requieren que el llamador de [sys.sp_cdc_enable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) y [sys.sp_cdc_disable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) como ser miembro del rol sysadmin o miembro de la base de datos `database db_owner` rol.  
   
- Uso de los procedimientos almacenados para admitir la administración de trabajos de captura de datos modificados se restringe a los miembros del servidor de `sysadmin` y los miembros de la `database db_owner` rol.  
+ El uso de los procedimientos almacenados para admitir la administración de trabajos de captura de datos modificados se restringe a los miembros del rol de servidor `sysadmin` y a los miembros del rol de base de datos `database db_owner`.  
   
  **Enumeración de cambios y consultas de los metadatos**  
  Para obtener acceso a los datos modificados que están asociados a una instancia de captura, se debe conceder al usuario acceso exclusivo a todas las columnas capturadas de la tabla de origen asociada. Además, si se especifica un rol de acceso cuando se crea la instancia de captura, el autor de las llamadas también debe ser miembro del rol de acceso especificado. Otras funciones de captura de datos modificados generales para tener acceso a los metadatos serán accesibles para todos los usuarios de la base de datos a través del rol public, aunque el acceso a los metadatos devueltos también se conseguirá normalmente mediante un acceso exclusivo a las tablas de origen subyacentes y por pertenencia a cualquier rol de acceso definido.  
@@ -102,7 +101,7 @@ ms.locfileid: "48190645"
 |Tipo de columna|Cambios capturados en tablas de cambios|Limitaciones|  
 |--------------------|---------------------------------------|-----------------|  
 |Columnas dispersas|Sí|No admite la captura de cambios cuando se usa un conjunto de columnas.|  
-|Columnas calculadas|no|No se hace un seguimiento de los cambios realizados en columnas calculadas. La columna aparecerá en la tabla de cambios con el tipo adecuado, pero tendrá un valor NULL.|  
+|Columnas calculadas|No|No se hace un seguimiento de los cambios realizados en columnas calculadas. La columna aparecerá en la tabla de cambios con el tipo adecuado, pero tendrá un valor NULL.|  
 |XML|Sí|No se hace un seguimiento de los cambios realizados en elementos XML individuales.|  
 |timestamp|Sí|El tipo de datos de la tabla de cambios se convierte a binario.|  
 |Tipos de datos BLOB|Sí|La imagen anterior de la columna BLOB solo se almacena si se cambia la propia columna.|  
@@ -140,7 +139,7 @@ ms.locfileid: "48190645"
   
 -   Si una base de datos se restaura en otro servidor, de forma predeterminada la captura de datos modificados está deshabilitada y se eliminan todos los metadatos relacionados.  
   
-     Para conservar la captura de datos modificados, utilice el `KEEP_CDC` opción al restaurar la base de datos. Para obtener más información acerca de esta opción, vea [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Para conservar la captura de datos modificados, utilice la opción `KEEP_CDC` al restaurar la base de datos. Para obtener más información acerca de esta opción, vea [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   Si una base de datos se desasocia y asocia en el mismo servidor o en otro servidor, la captura de datos modificados sigue estando habilitada.  
   
@@ -167,9 +166,9 @@ ms.locfileid: "48190645"
   
      Se describe el seguimiento de cambios, se proporciona información general de alto nivel sobre cómo funciona el seguimiento de cambios y se describe cómo interactúa con otras características de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
--   [Microsoft Sync Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Proporciona documentación completa para [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] y [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. En la documentación de [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], el tema sobre cómo usar el seguimiento de cambios de SQL Server contiene información detallada y ejemplos de código.  
+     Proporciona documentación completa para [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] y [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. En la documentación de [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], el tema "Cómo: Seguimiento de uso SQL Server cambios"contiene ejemplos de código e información detallados.  
   
   
 ## <a name="related-tasks-required"></a>Tareas relacionadas (necesarias)  

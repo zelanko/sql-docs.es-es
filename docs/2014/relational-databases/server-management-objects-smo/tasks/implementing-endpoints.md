@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,21 +14,21 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17e154743d221cfd4a2070c56634c6364a910afb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081644"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807717"
 ---
 # <a name="implementing-endpoints"></a>Implementar extremos
-  Un extremo es un servicio que puede escuchar originalmente las solicitudes. SMO admite varios tipos de extremos utilizando el <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objeto. Puede crear un servicio de extremos que administre un tipo específico de carga útil, que utiliza un protocolo concreto, creando una instancia de un objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> y estableciendo sus propiedades.  
+  Un extremo es un servicio que puede escuchar originalmente las solicitudes. SMO admite varios tipos de extremos utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>. Puede crear un servicio de extremos que administre un tipo específico de carga útil, que utiliza un protocolo concreto, creando una instancia de un objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> y estableciendo sus propiedades.  
   
- El <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> propiedad de la <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objeto puede utilizarse para especificar los siguientes tipos de carga:  
+ La propiedad <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> puede utilizarse para especificar los siguientes tipos de carga:  
   
 -   Creación de reflejo de base de datos  
   
--   SOAP (la compatibilidad con los extremos SOAP se encuentra en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] y versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])  
+-   SOAP (la compatibilidad con los extremos SOAP se encuentra en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] y versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )  
   
 -   Service Broker  
   
@@ -42,11 +40,11 @@ ms.locfileid: "48081644"
   
 -   Protocolo TCP  
   
- Si ha especificado el tipo de carga, la carga real puede establecerse mediante el <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> propiedad de objeto. La propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.Payload> proporciona una referencia a un objeto de carga útil del tipo especificado, para el que se pueden modificar las propiedades.  
+ Si ha especificado el tipo de carga útil, la carga útil real se puede establecer utilizando la propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A>. La propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.Payload> proporciona una referencia a un objeto de carga útil del tipo especificado, para el que se pueden modificar las propiedades.  
   
- Para el objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, debe especificar el rol de creación de reflejo y si el cifrado está habilitado. La <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> objeto requiere información sobre el reenvío de mensajes, el modo de autenticación y el número máximo de conexiones permitidas. El objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> exige establecer varias propiedades incluida la propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A>, que especifica los métodos de carga útil de SOAP disponibles para los clientes (procedimientos almacenados y funciones definidas por el usuario).  
+ Para el objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, debe especificar el rol de creación de reflejo y si el cifrado está habilitado. El objeto <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> requiere información sobre el reenvío de mensajes, el número máximo de conexiones permitido y el modo de autenticación. El objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> exige establecer varias propiedades incluida la propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A>, que especifica los métodos de carga útil de SOAP disponibles para los clientes (procedimientos almacenados y funciones definidas por el usuario).  
   
- De igual forma, el protocolo actual se puede establecer utilizando la propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> que hace referencia a un objeto de protocolo del tipo especificado por propiedad <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. El objeto <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> requiere una lista de direcciones IP restringidas y la información sobre el puerto, sitio web y autenticación. La <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> objeto también requiere una lista de direcciones IP restringidas e información del puerto.  
+ De igual forma, el protocolo actual se puede establecer utilizando la propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> que hace referencia a un objeto de protocolo del tipo especificado por propiedad <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. El objeto <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> requiere una lista de direcciones IP restringidas y la información sobre el puerto, sitio web y autenticación. El objeto <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> también requiere una lista de direcciones IP restringidas e información de puerto.  
   
  Si se ha creado el extremo y se ha definido totalmente, se puede conceder, revocar y denegar el acceso a los usuarios de la base de datos, grupos, roles e inicio de sesión.  
   

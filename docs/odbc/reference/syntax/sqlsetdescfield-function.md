@@ -20,16 +20,16 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44a3cfe212fcd452307a6aef0aedd1c22ca4e545
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8704d28fb8ae39cf7d8f6bb595c884b70a6721a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717143"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204164"
 ---
 # <a name="sqlsetdescfield-function"></a>Función SQLSetDescField
 **Conformidad**  
- Versión introdujo: ODBC 3.0 normativo: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
   
  **Resumen**  
  **SQLSetDescField** establece el valor de un único campo de un registro del descriptor.  
@@ -142,13 +142,13 @@ SQLRETURN SQLSetDescField(
   
 |Nombre del campo de encabezado|Tipo|L/E|Default|  
 |-----------------------|----------|----------|-------------|  
-|SQL_DESC_ALLOC_TYPE|SQLSMALLINT|DESCARTAR: R APD: R IRD: R IPD: R|Descartar: SQL_DESC_ALLOC_AUTO para implícita o SQL_DESC_ALLOC_USER para explícita<br /><br /> APD: SQL_DESC_ALLOC_AUTO para implícita o SQL_DESC_ALLOC_USER para explícita<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
-|SQL_DESC_ARRAY_SIZE|SQLULEN|Descartar: R/W APD: R/W IRD: sin usar IPD: sin usar|Descartar: [1] APD: [1] IRD: sin usar IPD: sin usar|  
-|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: IPD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA|Descartar: Null ptr APD: Null ptr IRD: Null ptr IPD: Null ptr|  
-|SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|Descartar: R/W APD: R/W IRD: sin usar IPD: sin usar|Descartar: Null ptr APD: Null ptr IRD: sin usar IPD: sin usar|  
-|SQL_DESC_BIND_TYPE|SQLINTEGER|Descartar: R/W APD: R/W IRD: sin usar IPD: sin usar|DESCARTAR: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: sin usar<br /><br /> IPD: sin usar|  
-SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: R IPD: LECTURA/ESCRITURA|DESCARTAR: 0 APD: IRD 0: D IPD: 0|  
-|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|Descartar: Sin usar APD: sin usar IRD: R/W IPD: lectura/escritura|Descartar: Sin usar APD: sin usar IRD: Null ptr IPD: Null ptr|  
+|SQL_DESC_ALLOC_TYPE|SQLSMALLINT|DESCARTAR: R APD: R IRD: R IPD: R|DESCARTAR: SQL_DESC_ALLOC_AUTO para implícita o SQL_DESC_ALLOC_USER para explícita<br /><br /> APD: SQL_DESC_ALLOC_AUTO para implícita o SQL_DESC_ALLOC_USER para explícita<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
+|SQL_DESC_ARRAY_SIZE|SQLULEN|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: [1] APD: [1] IRD: IPD sin usar: No utilizado|  
+|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: LECTURA/ESCRITURA IPD: L/E|DESCARTAR: Ptr null APD: Ptr null IRD: Ptr null IPD: Ptr null|  
+|SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: Ptr null APD: Ptr null IRD: IPD sin usar: No utilizado|  
+|SQL_DESC_BIND_TYPE|SQLINTEGER|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: No utilizado<br /><br /> IPD: No utilizado|  
+SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD 0: 0 IRD: D IPD: 0|  
+|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|DESCARTAR: APD sin usar: IRD sin usar: LECTURA/ESCRITURA IPD: L/E|DESCARTAR: APD sin usar: IRD sin usar: Ptr null IPD: Ptr null|  
   
  [1] estos campos se definen sólo cuando la IPD se rellena automáticamente con el controlador. Si no, son indefinidos. Si una aplicación intenta establecer estos campos, HY091 SQLSTATE se devolverán (identificador de campo descriptor no válido).  
   
@@ -156,40 +156,40 @@ SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA I
   
 |Nombre del campo de registro|Tipo|L/E|Default|  
 |-----------------------|----------|----------|-------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_CASE_SENSITIVE|SQLINTEGER|Descartar: Sin usar APD: sin usar IRD: R IPD: R|Descartar: Sin usar APD: sin usar IRD: D IPD: D. [1]|  
-|SQL_DESC_CATALOG_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: R IPD: LECTURA/ESCRITURA|DESCARTAR: SQL_C_ PREDETERMINADA APD: SQL_C_ PREDETERMINADA IRD: D IPD: ND|  
-|SQL_DESC_DATA_PTR|SQLPOINTER|Descartar: R/W APD: R/W IRD: sin usar IPD: sin usar|Descartar: Null ptr APD: Null ptr IRD: sin usar IPD: [2] no utilizado|  
-|SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: R IPD: LECTURA/ESCRITURA|DESCARTAR: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: R IPD: LECTURA/ESCRITURA|DESCARTAR: ND APD: ND IRD: D IPD: ND|  
-SQL_DESC_DISPLAY_SIZE|SQLLEN|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|Descartar: Sin usar APD: sin usar IRD: R IPD: R|Descartar: Sin usar APD: sin usar IRD: D IPD: D. [1]|  
-|SQL_DESC_INDICATOR_PTR|SQLLEN *|Descartar: R/W APD: R/W IRD: sin usar IPD: sin usar|Descartar: Null ptr APD: Null ptr IRD: sin usar IPD: sin usar|  
-|SQL_DESC_LABEL|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_LENGTH|SQLULEN|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: R IPD: LECTURA/ESCRITURA|DESCARTAR: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_LITERAL_PREFIX|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: R|Descartar: Sin usar APD: sin usar IRD: D IPD: D. [1]|  
-|SQL_DESC_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: lectura/escritura|DESCARTAR: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_NULLABLE|SQLSMALLINT|Descartar: Sin usar APD: sin usar IRD: R IPD: R|DESCARTAR: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: R IPD: LECTURA/ESCRITURA|DESCARTAR: ND APD: ND IRD: D IPD: ND|  
-SQL_DESC_OCTET_LENGTH|SQLLEN|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: R IPD: LECTURA/ESCRITURA|DESCARTAR: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|Descartar: R/W APD: R/W IRD: sin usar IPD: sin usar|Descartar: Null ptr APD: Null ptr IRD: sin usar IPD: sin usar|  
-|SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|Descartar: Sin usar APD: sin usar IRD: IPD sin usar: lectura/escritura|Descartar: Sin usar APD: sin usar IRD: sin usar IPD: D. = SQL_PARAM_INPUT|  
-|SQL_DESC_PRECISION|SQLSMALLINT|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: R IPD: LECTURA/ESCRITURA|DESCARTAR: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_ROWVER|SQLSMALLINT|Descartar: sin usar<br /><br /> APD: sin usar<br /><br /> IRD: R<br /><br /> IPD: R|Descartar: sin usar<br /><br /> APD: sin usar<br /><br /> IRD: ND<br /><br /> IPD: ND|  
-|SQL_DESC_SCALE|SQLSMALLINT|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: R IPD: LECTURA/ESCRITURA|DESCARTAR: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_SCHEMA_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_SEARCHABLE|SQLSMALLINT|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_TABLE_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
-|SQL_DESC_TYPE|SQLSMALLINT|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA IRD: R IPD: LECTURA/ESCRITURA|DESCARTAR: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
-SQL_DESC_TYPE_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: R|Descartar: Sin usar APD: sin usar IRD: D IPD: D. [1]|  
-|SQL_DESC_UNNAMED|SQLSMALLINT|Descartar: Sin usar APD: sin usar IRD: R IPD: lectura/escritura|DESCARTAR: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_UNSIGNED|SQLSMALLINT|Descartar: Sin usar APD: sin usar IRD: R IPD: R|Descartar: Sin usar APD: sin usar IRD: D IPD: D. [1]|  
-|SQL_DESC_UPDATABLE|SQLSMALLINT|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_CASE_SENSITIVE|SQLINTEGER|DESCARTAR: APD sin usar: IRD sin usar: R IPD: R|DESCARTAR: APD sin usar: IRD sin usar: D IPD: D. [1]|  
+|SQL_DESC_CATALOG_NAME|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: SQL_C_ APD DE FORMA PREDETERMINADA: SQL_C_ PREDETERMINADA IRD: D IPD: ND|  
+|SQL_DESC_DATA_PTR|SQLPOINTER|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: Ptr null APD: Ptr null IRD: IPD sin usar: Unused [2]|  
+|SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+SQL_DESC_DISPLAY_SIZE|SQLLEN|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|DESCARTAR: APD sin usar: IRD sin usar: R IPD: R|DESCARTAR: APD sin usar: IRD sin usar: D IPD: D. [1]|  
+|SQL_DESC_INDICATOR_PTR|SQLLEN *|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: Ptr null APD: Ptr null IRD: IPD sin usar: No utilizado|  
+|SQL_DESC_LABEL|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_LENGTH|SQLULEN|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+|SQL_DESC_LITERAL_PREFIX|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: R|DESCARTAR: APD sin usar: IRD sin usar: D IPD: D. [1]|  
+|SQL_DESC_NAME|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: L/E|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+|SQL_DESC_NULLABLE|SQLSMALLINT|DESCARTAR: APD sin usar: IRD sin usar: R IPD: R|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+|SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+SQL_DESC_OCTET_LENGTH|SQLLEN|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: Ptr null APD: Ptr null IRD: IPD sin usar: No utilizado|  
+|SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|DESCARTAR: APD sin usar: IRD sin usar: IPD sin usar: L/E|DESCARTAR: APD sin usar: IRD sin usar: IPD sin usar: D. = SQL_PARAM_INPUT|  
+|SQL_DESC_PRECISION|SQLSMALLINT|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+|SQL_DESC_ROWVER|SQLSMALLINT|DESCARTAR: No utilizado<br /><br /> APD: No utilizado<br /><br /> IRD: R<br /><br /> IPD: R|DESCARTAR: No utilizado<br /><br /> APD: No utilizado<br /><br /> IRD: ND<br /><br /> IPD: ND|  
+|SQL_DESC_SCALE|SQLSMALLINT|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+|SQL_DESC_SCHEMA_NAME|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_SEARCHABLE|SQLSMALLINT|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_TABLE_NAME|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
+|SQL_DESC_TYPE|SQLSMALLINT|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
+SQL_DESC_TYPE_NAME|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: R|DESCARTAR: APD sin usar: IRD sin usar: D IPD: D. [1]|  
+|SQL_DESC_UNNAMED|SQLSMALLINT|DESCARTAR: APD sin usar: IRD sin usar: R IPD: L/E|DESCARTAR: APD ND: ND IRD: D IPD: ND|  
+|SQL_DESC_UNSIGNED|SQLSMALLINT|DESCARTAR: APD sin usar: IRD sin usar: R IPD: R|DESCARTAR: APD sin usar: IRD sin usar: D IPD: D. [1]|  
+|SQL_DESC_UPDATABLE|SQLSMALLINT|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
   
  [1] estos campos se definen sólo cuando la IPD se rellena automáticamente con el controlador. Si no, son indefinidos. Si una aplicación intenta establecer estos campos, HY091 SQLSTATE se devolverán (identificador de campo descriptor no válido).  
   
@@ -216,7 +216,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: R|Des
  **SQL_DESC_ARRAY_STATUS_PTR [todos]**  
  Para cada tipo de descriptor, este SQLUSMALLINT * puntos de campo de encabezado en una matriz de valores SQLUSMALLINT. Estas matrices se denominan como sigue: matriz de Estados (IRD), matriz de Estados de parámetro (IPD), la matriz de operación de fila (descartar) y matriz de operación de parámetros (APD) de la fila.  
   
- En IRD, este campo de encabezado apunta a una matriz de estado de fila que contiene los valores de estado después de llamar a **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, o **SQLSetPos**. La matriz tiene tantos elementos como filas en el conjunto de filas. La aplicación debe asignar una matriz de SQLUSMALLINTs y establecer este campo para que apunte a la matriz. De forma predeterminada, el campo se establece en un puntero nulo. El controlador llenará la matriz, a menos que el campo SQL_DESC_ARRAY_STATUS_PTR se establece en un puntero nulo, en cuyo caso no hay valores de estado se generan y no se rellena la matriz.  
+ En IRD, este campo de encabezado apunta a una matriz de estado de fila que contiene los valores de estado después de llamar a **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, o **SQLSetPos**. La matriz tiene tantos elementos como filas en el conjunto de filas. La aplicación debe asignar una matriz de SQLUSMALLINTs y establecer este campo para que apunte a la matriz. De forma predeterminada, el campo se establece en un puntero nulo. El controlador rellenará la matriz - a menos que el campo SQL_DESC_ARRAY_STATUS_PTR se establece en un puntero nulo, en cuyo caso no hay valores de estado se generan y no se rellena la matriz.  
   
 > [!CAUTION]  
 >  Comportamiento del controlador es indefinido si la aplicación establece los elementos de la matriz de Estados de fila que apunta el campo SQL_DESC_ARRAY_STATUS_PTR de IRD.  
@@ -227,11 +227,11 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: R|Des
   
 -   SQL_ROW_SUCCESS_WITH_INFO: La fila se capturó correctamente y no ha cambiado desde que se capturó en último lugar. Sin embargo, se devuelve una advertencia acerca de la fila.  
   
--   SQL_ROW_ERROR: Error al capturar la fila.  
+-   SQL_ROW_ERROR: Se produjo un error al capturar la fila.  
   
 -   SQL_ROW_UPDATED: La fila se capturó correctamente y se ha actualizado desde que se capturó en último lugar. Si la fila se vuelve a recopilar, su estado es SQL_ROW_SUCCESS.  
   
--   SQL_ROW_DELETED: Se eliminó la fila desde que se capturó por última vez.  
+-   SQL_ROW_DELETED: Se eliminó la fila se capturó en último lugar.  
   
 -   SQL_ROW_ADDED: La fila se insertó por **SQLBulkOperations**. Si la fila se vuelve a recopilar, su estado es SQL_ROW_SUCCESS.  
   
@@ -241,15 +241,15 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: R|Des
   
  El campo SQL_DESC_ARRAY_STATUS_PTR de IRD es válido solo después de que se haya devuelto SQL_SUCCESS o SQL_SUCCESS_WITH_INFO. Si el código de retorno no es uno de estos, la ubicación señalada por SQL_DESC_ROWS_PROCESSED_PTR es indefinida.  
   
- En la IPD, este campo de encabezado apunta a una matriz de Estados de parámetro que contiene información de estado para cada conjunto de valores de parámetro después de llamar a **SQLExecute** o **SQLExecDirect**. Si la llamada a **SQLExecute** o **SQLExecDirect** no devolvió SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, el contenido de la matriz señalada por este campo son indefinidos. La aplicación debe asignar una matriz de SQLUSMALLINTs y establecer este campo para que apunte a la matriz. El controlador llenará la matriz, a menos que el campo SQL_DESC_ARRAY_STATUS_PTR se establece en un puntero nulo, en cuyo caso no hay valores de estado se generan y no se rellena la matriz. Los elementos de la matriz pueden contener los siguientes valores:  
+ En la IPD, este campo de encabezado apunta a una matriz de Estados de parámetro que contiene información de estado para cada conjunto de valores de parámetro después de llamar a **SQLExecute** o **SQLExecDirect**. Si la llamada a **SQLExecute** o **SQLExecDirect** no devolvió SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, el contenido de la matriz señalada por este campo son indefinidos. La aplicación debe asignar una matriz de SQLUSMALLINTs y establecer este campo para que apunte a la matriz. El controlador rellenará la matriz - a menos que el campo SQL_DESC_ARRAY_STATUS_PTR se establece en un puntero nulo, en cuyo caso no hay valores de estado se generan y no se rellena la matriz. Los elementos de la matriz pueden contener los siguientes valores:  
   
 -   SQL_PARAM_SUCCESS: La instrucción SQL se ha ejecutado correctamente para este conjunto de parámetros.  
   
--   SQL_PARAM_SUCCESS_WITH_INFO: La instrucción SQL se ha ejecutado correctamente para este conjunto de parámetros; Sin embargo, hay información de advertencia en la estructura de datos de diagnóstico.  
+-   SQL_PARAM_SUCCESS_WITH_INFO: Se ha ejecutado correctamente la instrucción SQL para este conjunto de parámetros; Sin embargo, hay información de advertencia en la estructura de datos de diagnóstico.  
   
 -   SQL_PARAM_ERROR: Se produjo un error en el procesamiento de este conjunto de parámetros. Información de error adicional está disponible en la estructura de datos de diagnóstico.  
   
--   SQL_PARAM_UNUSED: Este conjunto de parámetros era sin usar, posiblemente debido al hecho de que algún conjunto de parámetros anterior ha causado un error que se anuló el procesamiento posterior, o porque se estableció SQL_PARAM_IGNORE para ese conjunto de parámetros de la matriz especificada por el SQL_DESC_ARRAY_ Campo STATUS_PTR el APD.  
+-   SQL_PARAM_UNUSED: Este conjunto de parámetros estaba sin usar, posiblemente debido al hecho de que algún conjunto de parámetros anterior ha causado un error que se anuló el procesamiento posterior, o porque se estableció SQL_PARAM_IGNORE para ese conjunto de parámetros de la matriz especificada por el campo SQL_DESC_ARRAY_STATUS_PTR de el APD.  
   
 -   SQL_PARAM_DIAG_UNAVAILABLE: Información de diagnóstico no está disponible. Un ejemplo de esto es cuando el controlador trata las matrices de parámetros como una unidad monolítica y, por lo que no genera este nivel de información de error.  
   
@@ -267,7 +267,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: R|Des
   
  En el APD, este campo de encabezado apunta a una matriz de operación de parámetros de valores que se pueden establecer por la aplicación para indicar si este conjunto de parámetros se omiten cuando **SQLExecute** o **SQLExecDirect**se llama. Los elementos de la matriz pueden contener los siguientes valores:  
   
--   SQL_PARAM_PROCEED: El conjunto de parámetros se incluye en el **SQLExecute** o **SQLExecDirect** llamar.  
+-   SQL_PARAM_PROCEED: El conjunto de parámetros que se incluye en el **SQLExecute** o **SQLExecDirect** llamar.  
   
 -   SQL_PARAM_IGNORE: El conjunto de parámetros se excluye de la **SQLExecute** o **SQLExecDirect** llamar.  
   
@@ -280,7 +280,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: R|Des
   
  El desplazamiento de enlace siempre se agrega directamente a los valores de los campos SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR. Si el desplazamiento se cambia a un valor diferente, el nuevo valor todavía se agrega directamente al valor de cada campo descriptor. El desplazamiento nuevo no se agrega al valor del campo y cualquier desplazamiento anterior.  
   
- Este campo es un *campo aplazada*: no se usa en el momento en que se establece, pero se usa en un momento posterior por el controlador cuando sea necesario determinar las direcciones de los búferes de datos.  
+ Este campo es un *campo aplazada*: No se utiliza en el momento en que se establece, pero se usa en un momento posterior por el controlador cuando sea necesario determinar las direcciones de los búferes de datos.  
   
  También puede establecerse mediante una llamada a este campo en el descartar **SQLSetStmtAttr** con el atributo SQL_ATTR_ROW_BIND_OFFSET_PTR. También puede establecerse mediante una llamada a este campo en el descartar **SQLSetStmtAttr** con el atributo SQL_ATTR_PARAM_BIND_OFFSET_PTR.  
   
@@ -408,7 +408,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
   
  Si el campo SQL_DESC_INDICATOR_PTR en un APD es un puntero nulo, la aplicación no puede utilizar este registro de descriptor para especificar los argumentos es NULL.  
   
- Este campo es un *campo aplazada*: no se usa en el momento en que se establece, pero se usa en un momento posterior por el controlador para indicar la nulabilidad (para en adelante) o para determinar la nulabilidad (para APD).  
+ Este campo es un *campo aplazada*: No se utiliza en el momento en que se establece, pero se usa en un momento posterior por el controlador para indicar la nulabilidad (para en adelante) o para determinar la nulabilidad (para APD).  
   
  **SQL_DESC_LABEL [IRDs]**  
  Este SQLCHAR de solo lectura * campo de registro contiene la etiqueta de columna o el título. Si la columna no tiene una etiqueta, esta variable contiene el nombre de columna. Si la columna sin nombre y sin etiqueta, esta variable contiene una cadena vacía.  
@@ -416,7 +416,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_LENGTH [todos]**  
  Este campo de registro SQLULEN es la longitud máxima o real de una cadena de caracteres en caracteres o un tipo de datos binarios en bytes. Es la longitud máxima de un tipo de datos de longitud fija o la longitud real de un tipo de datos de longitud variable. Su valor siempre excluye el carácter de terminación null que finaliza la cadena de caracteres. Para los valores cuyo tipo es SQL_TYPE_DATE, SQL_TYPE_TIME, SQL_TYPE_TIMESTAMP o uno de los tipos de datos de intervalo SQL, este campo tiene la longitud en caracteres de la representación de cadena de caracteres del valor de intervalo o datetime.  
   
- El valor de este campo puede ser diferente del valor de "length" como se definen en ODBC 2 *.x*. Para obtener más información, consulte [apéndice D: tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ El valor de este campo puede ser diferente del valor de "length" como se definen en ODBC 2 *.x*. Para obtener más información, consulte [apéndice D: Tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
  Este SQLCHAR de solo lectura * campo de registro contiene el carácter o caracteres que el controlador reconoce como un prefijo para un literal de este tipo de datos. Esta variable contiene una cadena vacía para un tipo de datos para el que un prefijo de literal no es aplicable.  
@@ -462,7 +462,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_PRECISION [todos]**  
  Este campo SQLSMALLINT de registro contiene el número de dígitos para un tipo numérico exacto, el número de bits en mantisa (precisión binaria) para un tipo numérico aproximado, o el número de dígitos en el componente de fracciones de segundo para la SQL_TYPE_TIME, SQL_TYPE Sql_c_type_timestamp o tipo de datos SQL_INTERVAL_SECOND. Este campo está definido para los demás tipos de datos.  
   
- El valor de este campo puede ser diferente del valor de "precisión" como se definen en ODBC 2 *.x*. Para obtener más información, consulte [apéndice D: tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ El valor de este campo puede ser diferente del valor de "precisión" como se definen en ODBC 2 *.x*. Para obtener más información, consulte [apéndice D: Tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_ROWVER [descriptores de implementación]**  
  Este campo SQLSMALLINTrecord indica si una columna se modifica automáticamente el DBMS cuando se actualiza una fila (por ejemplo, una columna de tipo "timestamp" en SQL Server). El valor de este campo de registro se establece en SQL_TRUE si la columna es una columna del control de versiones de fila y SQL_FALSE en caso contrario. Este atributo de columna es similar a llamar a **SQLSpecialColumns** con IdentifierType de SQL_ROWVER para determinar si una columna se actualiza automáticamente.  
@@ -470,7 +470,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_SCALE [todos]**  
  Este campo SQLSMALLINT de registro contiene la escala definida para los tipos de datos decimal y numeric. El campo está definido para los demás tipos de datos.  
   
- El valor de este campo puede ser diferente del valor de "escala", tal como se define en el 2 de ODBC *.x*. Para obtener más información, consulte [apéndice D: tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ El valor de este campo puede ser diferente del valor de "escala", tal como se define en el 2 de ODBC *.x*. Para obtener más información, consulte [apéndice D: Tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
  Este SQLCHAR de solo lectura * campo de registro contiene el nombre del esquema de la tabla base que contiene la columna. El valor devuelto es dependiente del controlador si la columna es una expresión o si la columna forma parte de una vista. Si el origen de datos no admite esquemas o no se puede determinar el nombre del esquema, esta variable contiene una cadena vacía.  
@@ -506,7 +506,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
 |------------------------------|---------------------------------|  
 |SQL_C_CHAR DE SQL_CHAR, SQL_VARCHAR, SQL_C_VARCHAR|SQL_DESC_LENGTH se establece en 1. SQL_DESC_PRECISION se establece en 0.|  
 |SQL_DATETIME|Cuando se establece SQL_DESC_DATETIME_INTERVAL_CODE SQL_CODE_DATE o SQL_CODE_TIME, SQL_DESC_PRECISION se establece en 0. Cuando se establece en SQL_DESC_TIMESTAMP, SQL_DESC_PRECISION está establecida en 6.|  
-|SQL_C_NUMERIC SQL_DECIMAL, SQL_NUMERIC,|SQL_DESC_SCALE se establece en 0. SQL_DESC_PRECISION se establece en la precisión definido por la implementación para el tipo de datos respectivos.<br /><br /> Consulte [SQL a C: numérico](../../../odbc/reference/appendixes/sql-to-c-numeric.md) para obtener información sobre cómo enlazar manualmente un valor SQL_C_NUMERIC.|  
+|SQL_C_NUMERIC SQL_DECIMAL, SQL_NUMERIC,|SQL_DESC_SCALE se establece en 0. SQL_DESC_PRECISION se establece en la precisión definido por la implementación para el tipo de datos respectivos.<br /><br /> Consulte [SQL a C: Numérico](../../../odbc/reference/appendixes/sql-to-c-numeric.md) para obtener información sobre cómo enlazar manualmente un valor SQL_C_NUMERIC.|  
 |SQL_FLOAT, SQL_C_FLOAT|SQL_DESC_PRECISION está establecida en la precisión del valor predeterminado definido por la implementación para SQL_FLOAT.|  
 |SQL_INTERVAL|Cuando SQL_DESC_DATETIME_INTERVAL_CODE se establece en un tipo de datos de intervalo, SQL_DESC_DATETIME_INTERVAL_PRECISION está establecido en 2 (el intervalo inicial precisión predeterminada). Cuando el intervalo tiene un componente de segundos, SQL_DESC_PRECISION está establecida en 6 (la precisión de segundos de intervalo predeterminado).|  
   

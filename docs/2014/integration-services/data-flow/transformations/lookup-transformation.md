@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
@@ -20,12 +19,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c4491baada6f3a378a1704608c4dd8427c526ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229855"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353801"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
@@ -60,7 +59,7 @@ ms.locfileid: "48229855"
   
 -   Si hay varias coincidencias en la tabla de referencia, la transformación Búsqueda devuelve solo la primera coincidencia devuelta por la consulta de búsqueda. Si se encuentran varias coincidencias, la transformación Búsqueda genera un error o advertencia solo cuando la transformación se ha configurado para cargar todo el conjunto de datos de referencia en la memoria caché. En este caso, la transformación Búsqueda genera una advertencia cuando detecta varias coincidencias mientras la transformación llena la memoria caché.  
   
- La combinación puede ser compuesta, lo que indica que pueden combinarse varias columnas de la entrada de transformación con columnas del conjunto de datos de referencia. La transformación admite la combinación de columnas con cualquier tipo de datos, a excepción de DT_R4, DT_R8, DT_TEXT, DT_NTEXT o DT_IMAGE. Para más información, consulte [Integration Services Data Types](../integration-services-data-types.md).  
+ La combinación puede ser compuesta, lo que indica que pueden combinarse varias columnas de la entrada de transformación con columnas del conjunto de datos de referencia. La transformación admite la combinación de columnas con cualquier tipo de datos, a excepción de DT_R4, DT_R8, DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md).  
   
  Normalmente, los valores del conjunto de datos de referencia se agregan a la salida de transformación. Por ejemplo, la transformación Búsqueda puede extraer un nombre de producto de una tabla mediante un valor de una columna de entrada y, después, agregar el nombre del producto a la salida de transformación. Los valores de la tabla de referencia pueden reemplazar valores de columnas o agregarse a nuevas columnas.  
   
@@ -120,25 +119,25 @@ ms.locfileid: "48229855"
 ## <a name="related-tasks"></a>Related Tasks  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación. Para obtener información detallada, vea los siguientes temas.  
   
--   [Implementación de una búsqueda en los modos No hay caché o Caché parcial](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
+-   [Implementar una búsqueda en modo No hay caché o Caché parcial](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
 -   [Implementación de una transformación Búsqueda en el modo Caché completa con el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implementación de una transformación Búsqueda en el modo Caché completa con el Administrador de conexiones OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Vídeo, [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
+-   Vídeo, [Cómo: Implementar una transformación Búsqueda en modo de caché completa](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
   
--   Entrada de blog, [Prácticas recomendadas para utilizar los modos de caché de la transformación Búsqueda](http://go.microsoft.com/fwlink/?LinkId=146623)(en inglés), en blogs.msdn.com  
+-   Entrada de blog, [Prácticas recomendadas para utilizar los modos de caché de la transformación Búsqueda](https://go.microsoft.com/fwlink/?LinkId=146623)(en inglés), en blogs.msdn.com  
   
--   Entrada de blog, [Patrón de búsqueda: sin distinción de mayúsculas y minúsculas](http://go.microsoft.com/fwlink/?LinkId=157782), en blogs.msdn.com  
+-   Entrada de blog, [patrón de búsqueda: Distingue mayúsculas de minúsculas](https://go.microsoft.com/fwlink/?LinkId=157782), en blogs.msdn.com  
   
--   Ejemplo, [Transformación de búsqueda](http://go.microsoft.com/fwlink/?LinkId=267528), en msftisprodsamples.codeplex.com.  
+-   Ejemplo, [Transformación de búsqueda](https://go.microsoft.com/fwlink/?LinkId=267528), en msftisprodsamples.codeplex.com.  
   
-     Para obtener información acerca de cómo instalar muestras de producto y bases de datos de ejemplo de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vea [Ejemplos del producto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     Para obtener información acerca de cómo instalar muestras de producto y bases de datos de ejemplo de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vea [Ejemplos del producto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="see-also"></a>Vea también  
  [Transformación Búsqueda aproximada](fuzzy-lookup-transformation.md)   

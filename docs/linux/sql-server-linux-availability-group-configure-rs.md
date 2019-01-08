@@ -1,21 +1,22 @@
 ---
-title: Configurar un grupo de disponibilidad de SQL Server para el escalado de lectura en Linux | Microsoft Docs
-description: ''
+title: Configurar un grupo de disponibilidad de SQL Server para el escalado de lectura en Linux
+titleSuffix: SQL Server
+description: Obtenga información sobre cómo configurar un SQL Server siempre en grupo de disponibilidad (AG) para cargas de trabajo de escalado de lectura en Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: bbacb8630acf10b5c9d20c50ad40cfba3f036a7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 014ff123618c04f91c0e2c2a39d5ef8e5690a386
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677472"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203874"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurar un grupo de disponibilidad de SQL Server para el escalado de lectura en Linux
 

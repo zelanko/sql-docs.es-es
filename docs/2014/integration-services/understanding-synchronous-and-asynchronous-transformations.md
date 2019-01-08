@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - transformations [Integration Services], synchronous and asynchronous
@@ -17,12 +15,12 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5229fe609ed2f607478fc49fb12f01ac7359d73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 334e8f064d3db60b0c1540ab0f5a173ec8c659cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225456"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369137"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Descripción de las transformaciones sincrónicas y asincrónicas
   Para entender la diferencia que existe entre una transformación sincrónica y una transformación asincrónica en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], lo más fácil es empezar por la descripción de una transformación sincrónica. Si una transformación sincrónica no satisface sus necesidades, puede que su diseño requiera una transformación asincrónica.  
@@ -50,7 +48,7 @@ ms.locfileid: "48225456"
   
  También sería posible crear una transformación asincrónica que emule una transformación sincrónica mediante la copia explícita de cada fila de entrada en la salida. Con este enfoque, podría cambiar el nombre de las columnas o convertir los tipos de datos o los formatos. No obstante, este enfoque disminuye el rendimiento. Puede obtener los mismos resultados con un mayor rendimiento utilizando componentes integrados de Integration Services, como Copiar columna o Conversión de datos.  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una transformación sincrónica con el componente de script](data-flow/transformations/script-component.md)   

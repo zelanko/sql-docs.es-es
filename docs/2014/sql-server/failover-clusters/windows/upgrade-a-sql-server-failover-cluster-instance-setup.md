@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
@@ -17,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906495"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363717"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Actualizar una instancia de clúster de conmutación por error de SQL Server (programa de instalación)
   Puede actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un clústeres de conmutación por error de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] con el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o el símbolo del sistema.  
@@ -44,13 +43,13 @@ ms.locfileid: "48906495"
   
 -   El programa de instalación instala .NET Framework 4.0 en un sistema operativo en clúster. Para reducir al mínimo el tiempo de inactividad, considere instalar .NET Framework 4.0 antes de ejecutar el programa de instalación.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le exige que instale una actualización para asegurarse de que se puede instalar correctamente el componente de Visual Studio. El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprueba la presencia de esta actualización y, a continuación, le exige que descargue e instale la actualización antes de continuar con la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para evitar la interrupción durante la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puede descargar e instalar la actualización antes de ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], según se describe a continuación (o instalar todas las actualizaciones para .NET 3.5 SP1 disponibles en Windows Update):  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le exige que instale una actualización para asegurarse de que se puede instalar correctamente el componente de Visual Studio. El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprueba la presencia de esta actualización y, a continuación, le exige que descargue e instale la actualización antes de continuar con la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para evitar la interrupción durante la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , puede descargar e instalar la actualización antes de ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , según se describe a continuación (o instalar todas las actualizaciones para .NET 3.5 SP1 disponibles en Windows Update):  
   
-     Si instala [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en un equipo con el sistema operativo Windows Server 2008 SP2, puede obtener la actualización requerida desde [aquí](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     Si instala [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en un equipo con el sistema operativo Windows Server 2008 SP2, puede obtener la actualización requerida desde [aquí](https://go.microsoft.com/fwlink/?LinkId=198093)  
   
      Si instala [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en un equipo que tiene el sistema operativo [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 o [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] SP1, esta actualización ya está incluida.  
   
--   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala .NET Framework 3.5 SP1 pero quizá se necesite al instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]. Para más información, consulte las [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][Notas de la versión](http://go.microsoft.com/fwlink/?LinkId=296445).  
+-   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala .NET Framework 3.5 SP1 pero quizá se necesite al instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]. Para más información, consulte las [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][Notas de la versión](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
 -   En las instalaciones locales debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como administrador. Si instala [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura para dicho recurso.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "48906495"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>Actualización a un clústeres de conmutación por error de varias subredes de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]  
  Hay dos posibles escenarios para las actualizaciones:  
   
-1.  El clúster de conmutación por error de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está configurado actualmente en una misma subred: Primero debe actualizar el clúster existente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] iniciando de instalación y después del proceso de actualización. Después de completar la actualización del clúster de conmutación por error existente, agregue un nodo que esté en otra subred mediante la funcionalidad AddNode. Confirme el cambio de dependencia de recurso de dirección IP a OR en la página de configuración de red en clúster. Tiene ahora un clústeres de conmutación por error de varias subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clúster de conmutación por error está configurado actualmente en una sola subred: Primero debe actualizar el clúster existente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] iniciando el programa de instalación y siguiendo el proceso de actualización. Después de completar la actualización del clúster de conmutación por error existente, agregue un nodo que esté en otra subred mediante la funcionalidad AddNode. Confirme el cambio de dependencia de recurso de dirección IP a OR en la página de configuración de red en clúster. Tiene ahora un clústeres de conmutación por error de varias subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 2.  El clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está configurado actualmente en varias subredes mediante la tecnología de V-LAN elástica: debe actualizar primero el clúster existente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Dado que la tecnología de V-LAN elástica configura una subred única, se debe cambiar la configuración de red a varias subredes, cambiar la dependencia de recurso de dirección IP mediante la herramienta de administración de clúster de conmutación por error de Windows y cambiar la dependencia de IP a OR.  
   
@@ -104,18 +103,18 @@ ms.locfileid: "48906495"
   
 #### <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Para actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, vaya a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe. Puede que se le solicite que instale los requisitos previos si no se han instalado previamente.  
+1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, vaya a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe. Puede que se le solicite que instale los requisitos previos si no se han instalado previamente.  
   
 2.  > [!IMPORTANT]  
     >  Para obtener más información sobre los pasos 3 y 4, consulte el [prácticas recomendadas antes de actualizar conmutación por error de clústeres](#BestPractices) sección.  
   
-3.  Una vez instalados los requisitos previos, el Asistente para instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para actualizar una instancia existente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], haga clic en **actualizar desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].**  
+3.  Una vez instalados los requisitos previos, el Asistente para instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para actualizar una instancia existente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], haga clic en **actualizar desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].**  
   
-4.  Si son necesarios los archivos auxiliares del programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el citado programa se encarga de instalarlos. Si se le solicita que reinicie el equipo, hágalo antes de continuar.  
+4.  Si son necesarios los archivos auxiliares del programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el citado programa se encarga de instalarlos. Si se le solicita que reinicie el equipo, hágalo antes de continuar.  
   
 5.  El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
-6.  En la página Clave del producto, escriba la clave de PID de la nueva edición de la versión, que debe ser la misma edición que la de la versión anterior del producto. Por ejemplo, para actualizar un clústeres de conmutación por error de Enterprise, debe especificar la clave de PID de [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Para continuar, haga clic en **Siguiente** . Tenga en cuenta que la clave de PID que use para actualizar los clústeres de conmutación por error debe ser coherente en todos los nodos de clúster de conmutación por error de la misma instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [ediciones y componentes de SQL Server 2014](../../editions-and-components-of-sql-server-2016.md) y [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+6.  En la página Clave del producto, escriba la clave de PID de la nueva edición de la versión, que debe ser la misma edición que la de la versión anterior del producto. Por ejemplo, para actualizar un clústeres de conmutación por error de Enterprise, debe especificar la clave de PID de [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Para continuar, haga clic en **Siguiente** . Tenga en cuenta que la clave de PID que use para actualizar los clústeres de conmutación por error debe ser coherente en todos los nodos de clúster de conmutación por error de la misma instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [ediciones y componentes de SQL Server 2014](../../editions-and-components-of-sql-server-2016.md) y [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 7.  En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Para continuar, haga clic en**Siguiente**. Para salir del programa de instalación, haga clic en **Cancelar**.  
   

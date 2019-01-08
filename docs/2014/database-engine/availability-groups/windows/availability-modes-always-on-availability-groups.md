@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129045"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376317"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidad (grupos de disponibilidad AlwaysOn)
   En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], el *modo de disponibilidad* es una propiedad de réplica que determina si una réplica de disponibilidad determinada puede ejecutarse en modo de confirmación sincrónica. Para cada replicación de disponibilidad, el modo de disponibilidad debe estar configurado como modo de confirmación sincrónica o modo de confirmación asincrónica.  Si la réplica principal se configura para el *modo de confirmación asincrónica*, no espera a que ninguna réplica secundaria escriba las entradas del registro de transacciones entrantes en el disco ( *se fortalece el registro*). Si una réplica secundaria dada se configura para el modo de confirmación asincrónica, la réplica principal no espera a que esa réplica secundaria proteja el registro. Si la réplica principal y una réplica secundaria determinada se configuran ambas para el *modo de confirmación sincrónica*, la réplica principal espera a que la réplica secundaria confirme que ha reforzado el registro (a menos que la réplica secundaria no pueda hacer ping a la réplica principal en el *período de tiempo de espera de sesión*de la principal).  
@@ -32,7 +32,7 @@ ms.locfileid: "48129045"
   
   
 ##  <a name="SupportedAvModes"></a> Modos de disponibilidad admitidos  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite dos modos de disponibilidad (modo de confirmación asincrónica y modo de confirmación sincrónica), como se indica a continuación:  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite dos disponibilidad modos: modo de confirmación asincrónica y modo de confirmación sincrónica, del siguiente modo:  
   
 -   *Modo de confirmación asincrónica* es una solución de recuperación ante desastres que funciona bien cuando las réplicas de disponibilidad se distribuyen a distancias considerables. Si cada réplica secundaria se está ejecutando en modo de confirmación asincrónica, la réplica principal no espera ninguna réplica secundaria para proteger el registro. En su lugar, inmediatamente después de escribir el registro en el archivo de registro local, la réplica principal envía la confirmación de la transacción al cliente. La réplica principal se ejecuta con la mínima latencia de transacciones respecto a una réplica secundaria que se configura para el modo de confirmación asincrónica.  Si la principal actual se configura para el modo de disponibilidad de confirmación asincrónica, confirmará las transacciones de forma asincrónica para todas las réplicas secundarias independientemente de su configuración del modo de disponibilidad individual.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "48129045"
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 y 03|04|Sí|  
 |02|01|01 y 03|04|Sí|  
-|03||01 y 02|04|no|  
-|04|||01, 02 y 03|no|  
+|03||01 y 02|04|No|  
+|04|||01, 02 y 03|No|  
   
  Normalmente, el nodo 04 como réplica de confirmación asincrónica, se implementa en un sitio de recuperación ante desastres. El hecho de que los nodos 01, 02, 03 se mantengan en el modo de confirmación asincrónica después de conmutar por error al nodo 04 ayuda a evitar la degradación del rendimiento potencial en el grupo de disponibilidad debido a la alta latencia de red entre los dos sitios.  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48129045"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn SQL Server: El blog del equipo de AlwaysOn oficial SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

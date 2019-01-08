@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changearticle
@@ -17,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 064465e133e5b122ef532fa09a7601a81f5606ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: 582eb67d72941e24c135d3cd1690ab23aaca5acc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705993"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208167"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,12 +62,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |--------------|------------|-----------------|  
 |**creation_script**||Ruta de acceso y nombre de un script de esquema del artículo que se utiliza para crear tablas de destino. El valor predeterminado es NULL.|  
 |**del_cmd**||Instrucción DELETE que se va a ejecutar; de lo contrario, se genera a partir del registro.|  
-|**Descripción**||Nueva entrada descriptiva del artículo.|  
+|**description**||Nueva entrada descriptiva del artículo.|  
 |**dest_object**||Se proporciona para mantener la compatibilidad con versiones anteriores. Use **dest_table**.|  
 |**dest_table**||Nueva tabla de destino.|  
 |**destination_owner**||Nombre del propietario del objeto de destino.|  
 |**filter**||Nuevo procedimiento almacenado para filtrar la tabla (filtrado horizontal). El valor predeterminado es NULL. No se puede cambiar para las publicaciones de replicación punto a punto.|  
-|**fire_triggers_on_snapshot**|**true**|Los desencadenadores de usuario replicados se ejecutan cuando se aplica la instantánea inicial.<br /><br /> Nota: para los desencadenadores que replicarse, el valor de máscara de bits de *schema_option* debe incluir el valor **0 x 100**.|  
+|**fire_triggers_on_snapshot**|**true**|Los desencadenadores de usuario replicados se ejecutan cuando se aplica la instantánea inicial.<br /><br /> Nota: Para los desencadenadores que replicarse, el valor de máscara de bits de *schema_option* debe incluir el valor **0 x 100**.|  
 ||**False**|Los desencadenadores de usuario replicados no se ejecutan cuando se aplica la instantánea inicial.|  
 |**identity_range**||Controla el tamaño de los intervalos de identidad asignados en el suscriptor. No se admite para la replicación punto a punto.|  
 |**ins_cmd**||Instrucción INSERT que se ejecuta; de lo contrario, se crea a partir del registro.|  
@@ -95,7 +94,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0 x 1000**|Replica la intercalación de columna.|  
 ||**0 x 2000**|Replica las propiedades extendidas asociadas con el objeto de origen del artículo publicado.|  
 ||**0 x 4000**|Replica las claves únicas si están definidas en un artículo de tabla.|  
-||**0 x 8000**|Replica la clave principal y las claves únicas de un artículo de tabla como restricciones mediante instrucciones ALTER TABLE.<br /><br /> Nota: Esta opción en desuso. Use **0 x 80** y **0 x 4000** en su lugar.|  
+||**0 x 8000**|Replica la clave principal y las claves únicas de un artículo de tabla como restricciones mediante instrucciones ALTER TABLE.<br /><br /> Nota: Esta opción ha quedado desusada. Use **0 x 80** y **0 x 4000** en su lugar.|  
 ||**0 x 10000**|Replica las restricciones CHECK como NOT FOR REPLICATION de manera que no se impongan durante la sincronización.|  
 ||**0 x 20000**|Replica las restricciones FOREIGN KEY como NOT FOR REPLICATION de manera que no se impongan durante la sincronización.|  
 ||**0 x 40000**|Replica grupos de archivos asociados con un índice o una tabla con particiones.|  
@@ -166,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Vea en la sección de Notas las propiedades que, si se cambian, requieren que se reinicialicen todas las suscripciones existentes.  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no debe usarse cuando se cambia las propiedades del artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -236,8 +235,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**solo esquema Func**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0 x 8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, y **0 x 80000000**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0 x 8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, y **0 x 80000000**|  
 |**solo esquema de vista indizada**|**0 x 01**, **0 x 010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0x200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0 x 8000000**, **0 x 40000000**, y **0 x 80000000**|**0 x 01**, **0 x 010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0x200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0 x 8000000**, **0 x 40000000**, y **0 x 80000000**|  
   
-> [!NOTE]  
->  Para las publicaciones de actualización en cola, el *schema_option* valor **0 x 80** debe estar habilitada. Admitidos *schema_option* valores para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicaciones son: **0 x 01**, **0 x 02**, **0 x 10**,  **0 x 40**, **0 x 80**, **0 x 1000** y **0 x 4000**.  
+> [!NOTE]
+>  Para las publicaciones de actualización en cola, el *schema_option* valor **0 x 80** debe estar habilitada. Admitidos *schema_option* valores para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicaciones son: **0 x 01**, **0 x 02**, **0 x 10**, **0 x 40**, **0 x 80**, **0 x 1000** y  **0 x 4000**.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

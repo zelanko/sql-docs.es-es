@@ -1,62 +1,53 @@
 ---
-title: Tutoriales de Python de SQL Server | Microsoft Docs
+title: 'Tutorial introductorio de Python de SQL Server 2017: aprendizaje automático de SQL Server'
+description: Introducción a los tutoriales de Python para realizar análisis en bases de datos de SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/18/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5cafb253cea118148bd654ea770234843f742838
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383340"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046465"
 ---
-# <a name="sql-server-python-tutorials"></a>Tutoriales de Python de SQL Server
+# <a name="sql-server-2017-python-tutorials"></a>Tutoriales de Python de SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo se proporciona una lista de tutoriales y ejemplos que muestran el uso de Python con SQL Server 2017. A través de estos ejemplos y demostraciones, aprenderá lo siguiente:
+En este artículo se describe los tutoriales de Python para realizar análisis en bases de datos en [Machine Learning Services de SQL Server 2017](../install/sql-machine-learning-services-windows-install.md). 
 
-+ Ejecución de Python desde T-SQL
-+ ¿Cuáles son los contextos de cálculo locales y remotos, y cómo pueden ejecutar código de Python con el equipo de SQL Server
-+ Cómo ajustar el código de Python en un procedimiento almacenado
-+ Optimizar el código de Python para un entorno de producción de SQL
-+ Escenarios del mundo real para la incrustación en aplicaciones de aprendizaje automático
++ Obtenga información sobre cómo ajustar y ejecutar código de Python en los procedimientos almacenados.
++ Serialice y guardar los modelos basados en Python en las bases de datos de SQL Server.
++ Obtenga información sobre los contextos de cálculo locales y remotos y cuándo utilizarlas.
++ Explore los módulos de Python de Microsoft para tareas de aprendizaje automático y ciencia de datos.
 
-Para obtener información sobre los requisitos y el programa de instalación, consulte [requisitos previos](#bkmk_Prerequisites).
+<a name="bkmk_pythontutorials"></a>
 
-## <a name="bkmk_pythontutorials"></a>Tutoriales de Python
+## <a name="python-quickstarts-and-tutorials"></a>Tutoriales y guías de inicio rápido de Python
 
-+ [Ejecutar Python en T-SQL](run-python-using-t-sql.md)
+| Vínculo | Descripción |
+|------|-------------|
+| [Inicio rápido: Script de Python "Hello world" en SQL Server](quickstart-r-run-using-tsql.md) | Obtenga información sobre los conceptos básicos de cómo llamar a Python en T-SQL. |
+| [Inicio rápido: Crear, entrenar y usar un modelo de Python con procedimientos almacenados en SQL Server](quickstart-python-train-score-in-tsql.md) | Explica los mecanismos de incrustación de código de Python en un procedimiento almacenado, que proporciona las entradas y ejecución del procedimiento almacenado. |
+| [Tutorial: Crear un modelo mediante revoscalepy](use-python-revoscalepy-to-create-model.md) | Muestra cómo ejecutar código desde un terminal de Python remoto, utilizando el contexto de proceso de SQL Server. Debe estar un poco familiarizado con los entornos y herramientas de Python. Código de ejemplo es que crea un modelo con **rxLinMod**, desde el nuevo **revoscalepy** biblioteca. |
+| [Tutorial: Obtenga información sobre análisis de Python en bases de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md) | En este tutorial de extremo a extremo muestra el proceso de creación de una solución completa de Python mediante procedimientos almacenado de Transact-SQL. Se incluye todo el código Python.|
 
-   Obtenga información sobre los conceptos básicos de cómo llamar a Python en T-SQL, mediante el mecanismo de extensibilidad introducidas por primera vez en SQL Server 2016.
+<a name ="bkmk_samples"></a>
 
-+ [Crear un modelo de machine learning en Python mediante revoscalepy](use-python-revoscalepy-to-create-model.md)
-
-   En esta lección se muestra cómo ejecutar el código desde un terminal de Python remoto, utilizando el contexto de proceso de SQL Server. Debe estar un poco familiarizado con los entornos y herramientas de Python. Código de ejemplo es que crea un modelo con **rxLinMod**, desde el nuevo **revoscalepy** biblioteca. 
-
-+ [Análisis de Python en bases de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md)
-
-    En este tutorial de extremo a extremo muestra el proceso de creación de una solución completa de Python mediante procedimientos almacenado de Transact-SQL. Se incluye todo el código Python.
-
-
-## <a name="python-samples"></a>Ejemplos de Python
+## <a name="code-samples"></a>Ejemplos de código
 
 Estos ejemplos y demostraciones proporcionadas por el equipo de desarrollo de SQL Server resaltan formas en que puede usar análisis insertados en aplicaciones del mundo real.
 
-+ [Crear un modelo predictivo con Python y SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
-
-  Obtenga información sobre cómo una empresa de alquiler de esquís puede usar el aprendizaje automático para predecir alquileres futuros, que permite el plan de negocio y personal para satisfacer la demanda futura.
-
-  > [!TIP]
-  > ¡Ahora incluye la puntuación nativa de modelos de Python!
-
-+ [Realizar el cliente agrupación en clústeres con Python y SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
-
-    Obtenga información sobre cómo usar el algoritmo de Kmeans para realizar una agrupación en clústeres no supervisado de los clientes.
+| Vínculo | Descripción |
+|------|-------------|
+| [Crear un modelo predictivo con Python y SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Obtenga información sobre cómo una empresa de alquiler de esquís puede usar el aprendizaje automático para predecir alquileres futuros, que permite el plan de negocio y personal para satisfacer la demanda futura. |
+| [Realizar el cliente agrupación en clústeres con Python y SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Obtenga información sobre cómo usar el algoritmo de Kmeans para realizar una agrupación en clústeres no supervisado de los clientes. |
 
 ## <a name="see-also"></a>Vea también
 
-[Tutoriales de R para SQL Server](sql-server-r-tutorials.md)
++ [Extensión de Python para SQL Server](../concepts/extension-python.md)
++ [Tutoriales de SQL Server Machine Learning Services](machine-learning-services-tutorials.md)

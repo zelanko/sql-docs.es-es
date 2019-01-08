@@ -10,28 +10,28 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40ea7c27958fe2a245b2279dc35f2029f81e21d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147425"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377905"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinar el número correcto de depósitos para los índices hash
-  Debe especificar un valor para el `BUCKET_COUNT` parámetro cuando se crea la tabla optimizada para memoria. En este tema se hacen recomendaciones para determinar el valor adecuado para el parámetro `BUCKET_COUNT`. Si no puede determinar el número de depósitos correcto, utilice un índice no clúster en su lugar.  Un valor incorrecto de `BUCKET_COUNT`, especialmente si es demasiado bajo, puede afectar significativamente el rendimiento de la carga de trabajo, así como afectar el tiempo de recuperación de la base de datos. Es mejor sobrestimar el número de depósitos.  
+  Debe especificar un valor para el parámetro `BUCKET_COUNT` al crear la tabla optimizada para memoria. En este tema se hacen recomendaciones para determinar el valor adecuado para el parámetro `BUCKET_COUNT`. Si no puede determinar el número de cubos correcto, utilice un índice no clúster en su lugar.  Un valor incorrecto de `BUCKET_COUNT`, especialmente si es demasiado bajo, puede afectar significativamente el rendimiento de la carga de trabajo, así como afectar el tiempo de recuperación de la base de datos. Es mejor sobrestimar el número de cubos.  
   
  Las claves de índice duplicadas pueden reducir el rendimiento con un índice hash porque a las claves se les aplica el algoritmo hash en el mismo cubo, por lo que la cadena del cubo aumenta.  
   
- Para obtener más información acerca de los índices nonclustered hash, vea [índices Hash](hash-indexes.md) y [directrices para utilizar índices en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Para obtener más información sobre índices de hash no clúster, vea [Hash Indexes](hash-indexes.md) y [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Se asigna una tabla hash para cada índice de hash de una tabla optimizada para memoria. El tamaño de la tabla hash asignada para un índice especificado por el `BUCKET_COUNT` parámetro [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) o [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). El número de cubos se redondeará internamente hasta la siguiente potencia de dos. Por ejemplo, especificar un número de cubos de 300.000 producirá un número real de cubos de 524.288.  
   
- Para ver vínculos a un artículo y vídeo en el número de cubos, consulte [Cómo determinar el número de cubos adecuado para índices de hash (OLTP en memoria)](http://go.microsoft.com/fwlink/p/?LinkId=525853).  
+ Para ver vínculos a un artículo y vídeo en el número de cubos, consulte [Cómo determinar el número de cubos adecuado para índices de hash (OLTP en memoria)](https://go.microsoft.com/fwlink/p/?LinkId=525853).  
   
 ## <a name="recommendations"></a>Recomendaciones  
  En la mayoría de los casos el número de cubos debe estar entre 1 y 2 veces el número de valores distintos de la clave de índice. Si la clave de índice contiene muchos valores duplicados, como promedio hay más de 10 filas por cada valor de clave de índice, utilice un índice no clúster en su lugar.  
   
- No podrá siempre predecir cuántos valores puede tener o tendrá una clave de índice determinada. Rendimiento debe ser aceptable si el `BUCKET_COUNT` valor está dentro de 5 veces el número real de valores de clave.  
+ No podrá siempre predecir cuántos valores puede tener o tendrá una clave de índice determinada. El rendimiento debe ser aceptable si el valor de `BUCKET_COUNT` está en el intervalo de 5 veces el número real de valores de clave.  
   
  Para determinar el número de claves de índice único en los datos existentes, utilice las consultas similares a los siguientes ejemplos:  
   
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Los dos indicadores clave de estado de índice de hash son:  
   
  *empty_bucket_percent*  
- *empty_bucket_percent* indica el número de depósitos vacíos en el índice de hash.  
+ *empty_bucket_percent* indica el número de cubos vacíos del índice de hash.  
   
  Si *empty_bucket_percent* es menos que el 10 por ciento, probablemente el número de cubos es demasiado bajo. Idealmente, *empty_bucket_percent* debe ser el 33 por ciento o mayor. Si el número de cubos coincide con el número de valores de clave de índice, cerca de 1/3 de los cubos está vacío, debido a la distribución de hash.  
   
  *avg_chain_length*  
- *avg_chain_length* indica la longitud media de las cadenas de fila en los depósitos de hash.  
+ *avg_chain_length* indica el promedio de longitud de las cadenas de filas de los cubos de hash.  
   
  Si *avg_chain_length* es mayor que 10 y *empty_bucket_percent* es mayor del 10 por ciento, probablemente hay muchos valores de clave de índice duplicados y un índice no clúster resultaría más adecuado. Un promedio de longitud de cadena de 1 es ideal.  
   
@@ -137,13 +137,13 @@ GO
   
  Considere los tres índices de hash en esta tabla:  
   
--   IX_Status: el 50 por ciento de los cubos están vacíos, que es bueno. Sin embargo, el promedio de longitud de cadena es muy elevado (65.536). Esto indica un gran número de valores duplicados. Por consiguiente, el uso de un índice de hash no clúster no es adecuado en este caso. Se debe usar un índice no clúster en su lugar.  
+-   IX_Status: El 50 % de los depósitos están vacíos, lo que es un buen dato. Sin embargo, el promedio de longitud de cadena es muy elevado (65.536). Esto indica un gran número de valores duplicados. Por consiguiente, el uso de un índice de hash no clúster no es adecuado en este caso. Se debe usar un índice no clúster en su lugar.  
   
--   IX_OrderSequence: el 0 por ciento de los cubos están vacíos, que es demasiado bajo. Además, el promedio de longitud de cadena es 8. Como los valores de este índice son únicos, esto significa que por término medio están asignados 8 valores a cada cubo. El número de cubos se debe aumentar. Como la clave de índice tiene 262.144 valores únicos, el número de cubos debe ser al menos 262.144. Si se espera un aumento futuro, el número debe ser superior.  
+-   IX_OrderSequence: El 0 % de los depósitos están vacíos, un dato demasiado bajo. Además, el promedio de longitud de cadena es 8. Como los valores de este índice son únicos, esto significa que por término medio están asignados 8 valores a cada cubo. El número de cubos se debe aumentar. Como la clave de índice tiene 262.144 valores únicos, el número de cubos debe ser al menos 262.144. Si se espera un aumento futuro, el número debe ser superior.  
   
--   Índice de clave principal (PK__SalesOrder…): el 36 por ciento de los cubos están vacíos, que es bueno. Además el promedio de longitud de cadena es 1, que también es bueno. No es necesario ningún cambio.  
+-   Índice de clave principal (PK__SalesOrder...): El 36 % de los depósitos están vacíos, lo que es un buen dato. Además el promedio de longitud de cadena es 1, que también es bueno. No es necesario ningún cambio.  
   
- Para obtener más información sobre cómo solucionar problemas con los índices hash optimizados para memoria, vea [solución de problemas de rendimiento comunes con los índices de Hash con optimización para memoria](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
+ Para obtener más información sobre problemas de solución de problemas con los índices de hash optimizados para memoria, vea [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>Consideraciones detalladas de optimización adicional  
  Esta sección describe las consideraciones adicionales para optimizar el número de cubos.  
@@ -152,7 +152,7 @@ GO
   
 -   Cuanto mayor sea el valor de número de cubos, más cubos vacíos habrá en el índice. Esto tiene un impacto en la utilización de memoria (8 bytes por cada cubo) y en el rendimiento de los recorridos de tablas, ya que cada cubo se examina como parte de un recorrido de tabla.  
   
--   Cuanto menor es el número de cubos, más valores se asignan a un único cubo. Esto reduce el rendimiento de las búsquedas de puntos e inserciones, porque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede necesitar recorrer varios valores en un único cubo para encontrar el valor especificado por el predicado de búsqueda.  
+-   Cuanto menor es el número de cubos, más valores se asignan a un único cubo. Esto reduce el rendimiento de las inserciones y las búsquedas de puntos, porque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede necesitar recorrer varios valores en un único cubo para encontrar el valor especificado por el predicado de búsqueda.  
   
  Si el número de cubos es significativamente menor que el número de claves de índice único, se asignarán muchos valores a cada cubo. Esto disminuye el rendimiento de la mayoría de las operaciones DML, especialmente para las búsquedas de punto (búsquedas de claves de índice individuales) y para las operaciones de inserción. Por ejemplo, es posible que observe poco rendimiento de las consultas SELECT y de las operaciones UPDATE y DELETE con predicados de igualdad que se corresponden con las columnas de clave de índice en la cláusula WHERE. Un número inferior de depósitos afectará también el tiempo de recuperación de la base de datos, dado que se vuelven a crear los índices durante el inicio de la base de datos.  
   

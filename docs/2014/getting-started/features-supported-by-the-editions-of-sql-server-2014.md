@@ -17,19 +17,19 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35fad6632f6c03cbbcc913868da15a60d4b87453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095901"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358007"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Características compatibles con las ediciones de SQL Server 2014
   Este tema proporciona información detallada de las características admitidas por las diversas ediciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-> **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponible en una edición de evaluación durante un período de prueba de 180 días. Para obtener más información, consulte el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [sitio Web de Software de prueba](http://go.microsoft.com/fwlink/?LinkId=190955).  
-  
-> **Nota:** para características compatibles con las ediciones Evaluation y Developer, consulte el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conjunto de características de Enterprise.  
+> **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponible en una edición de evaluación durante un período de prueba de 180 días. Para obtener más información, consulte el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [sitio Web de Software de prueba](https://go.microsoft.com/fwlink/?LinkId=190955).  
+> 
+> **NOTA:** Para saber las características admitidas por las ediciones Evaluation y Developer, vea el conjunto de características de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.  
   
  Para navegar hasta la tabla de una tecnología de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , haga clic en su vínculo:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48095901"
   
  [Modelo semántico BI (Multidimensional)](#BISemModel_multi)  
   
- [Modelo semántico BI (Tabular)](#BISemModel_tabular)  
+ [Modelo semántico BI (tabular)](#BISemModel_tabular)  
   
  [PowerPivot para SharePoint](#PowerPivot)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48095901"
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Capacidad máxima de cálculo utilizada por una instancia única ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] motor de base de datos)<sup>1</sup>|Sistema operativo máximo|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
 |Capacidad máxima de cálculo utilizada por una instancia única (Analysis Services, Reporting Services) <sup>1</sup>|Sistema operativo máximo|Sistema operativo máximo|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
-|Memoria máxima usada (por instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])|Sistema operativo máximo|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
+|Memoria máxima usada (por instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Sistema operativo máximo|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
 |Memoria máxima usada (por instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Sistema operativo máximo|Sistema operativo máximo|64 GB|N/A|N/D|N/D|N/D|  
 |Memoria máxima usada (por instancia de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Sistema operativo máximo|Sistema operativo máximo|64 GB|64 GB|4 GB|N/D|N/D|  
 |Tamaño máximo de la base de datos relacional|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
@@ -103,7 +103,7 @@ ms.locfileid: "48095901"
 |Creación de reflejo de base de datos|Sí|Sí (solo seguridad completa)|Sí (solo seguridad completa)|Solo testigo|Solo testigo|Solo testigo|Solo testigo|  
 |Compresión de copia de seguridad|Sí|Sí|Sí|||||  
 |Instantáneas de base de datos|Sí|||||||  
-|Instancias de clúster de conmutación por error de AlwaysOn|Sí (soporte del nodo: sistema operativo máximo)|Sí (soporte del nodo: 2)|Sí (soporte del nodo: 2)|||||  
+|Instancias de clúster de conmutación por error de AlwaysOn|Sí (soporte del nodo: Sistema operativo máximo|Sí (soporte del nodo: 2)|Sí (soporte del nodo: 2)|||||  
 |Grupos de disponibilidad AlwaysOn|Sí (hasta 8 réplicas secundarias, incluidas 2 réplicas secundarias síncronas)|||||||  
 |Connection Director|Sí|||||||  
 |Restauración de archivos y páginas en línea|Sí|||||||  
@@ -114,7 +114,7 @@ ms.locfileid: "48095901"
 |En caliente de memoria y CPU<sup>2</sup>|Sí|||||||  
 |Asistente para recuperación de base de datos|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |Copia de seguridad cifrada|Sí|Sí|Sí|||||  
-|Copia de seguridad inteligente|Sí|Sí|Sí|no||||  
+|Copia de seguridad inteligente|Sí|Sí|Sí|No||||  
   
  <sup>1</sup>para obtener más información acerca de cómo instalar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] en Server Core, vea [instalar SQL Server 2014 en Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
@@ -127,7 +127,7 @@ ms.locfileid: "48095901"
 |Compatibilidad con varias instancias|50|50|50|50|50|50|50|  
 |Particiones de tabla e índice|Sí|||||||  
 |Compresión de datos|Sí|||||||  
-|Regulador de recursos|Sí|||||||  
+|regulador de recursos|Sí|||||||  
 |Paralelismo de la tabla de particiones|Sí|||||||  
 |Varios contenedores de secuencias de archivo|Sí|||||||  
 |Asignación de memoria de página grande habilitada para NUMA y matriz de búferes|Sí|||||||  
@@ -154,7 +154,7 @@ ms.locfileid: "48095901"
   
 |Nombre de la característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seguimiento de cambios|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
+|Seguimiento de los cambios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |Replicación de mezcla|Sí|Sí|Sí|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|  
 |Replicación transaccional|Sí|Sí|Sí|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|  
 |Replicación de instantáneas|Sí|Sí|Sí|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|Sí (solo suscriptor)|  
@@ -171,8 +171,8 @@ ms.locfileid: "48095901"
 |SQL CMD (herramienta del símbolo del sistema)|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|Sí|Sí|Sí|Sí|Sí|Sí||  
 |Distributed Replay: herramienta de administración|Sí|Sí|Sí|Sí|Sí|Sí||  
-|Distributed Replay: cliente|Sí|no|Sí|Sí||||  
-|Distributed Replay: controlador|Sí (Enterprise admite hasta 16 clientes, Developer admite solo 1 cliente)|no|Sí (solo admite 1 cliente)|Sí (solo admite 1 cliente)||||  
+|Distributed Replay: cliente|Sí|No|Sí|Sí||||  
+|Distributed Replay: controlador|Sí (Enterprise admite hasta 16 clientes, Developer admite solo 1 cliente)|No|Sí (solo admite 1 cliente)|Sí (solo admite 1 cliente)||||  
 |SQL Profiler|Sí|Sí|Sí|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
 |e[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Sí|Sí|Sí|Sí||||  
 |Paquete de administración de Microsoft System Center Operations Manager|Sí|Sí|Sí|Sí||||  
@@ -193,7 +193,7 @@ ms.locfileid: "48095901"
 |Conexión de administración dedicada|Sí|Sí|Sí|Sí|Sí (bajo marca de seguimiento)|Sí (bajo marca de seguimiento)|Sí (bajo marca de seguimiento)|  
 |Compatibilidad con PowerShell scripting|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |Compatibilidad con SysPrep<sup>1</sup>|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
-|Compatibilidad con las operaciones de componentes de aplicación de capa de datos: extracción, implementación, actualización, eliminación|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
+|Soporte técnico para las operaciones de componentes de aplicación de capa de datos - extraer, implementar, actualizar, eliminar|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |Automatización de directivas (comprobar en la programación y cambio)|Sí|Sí|Sí|Sí||||  
 |Recopilador de datos de rendimiento|Sí|Sí|Sí|Sí||||  
 |Capacidad de inscribirse como instancia administrada en una administración de varias instancias|Sí|Sí|Sí|Sí||||  
@@ -205,7 +205,7 @@ ms.locfileid: "48095901"
 |Operaciones indizadas en paralelo|Sí|||||||  
 |Uso automático de vistas indexadas por el optimizador de consultas|Sí|||||||  
 |Comprobación de coherencia en paralelo|Sí|||||||  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Punto de control de utilidad|Sí|||||||  
+|Punto de control de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Sí|||||||  
 |Bases de datos independientes|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |Extensión del grupo de búferes<sup>2</sup>|Sí|Sí|Sí|||||  
   
@@ -218,7 +218,7 @@ ms.locfileid: "48095901"
 |Nombre de la característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Integración de [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
-|IntelliSense ([!INCLUDE[tsql](../includes/tsql-md.md)] y MDX)|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
+|Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] y MDX)|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Sí|Sí|Sí|Sí|Sí|||  
 |Herramientas de edición y diseño de consultas de SQL<sup>1</sup>|Sí|Sí|Sí|||||  
 |Compatibilidad de control de versiones<sup>1</sup>|Sí|Sí|Sí|||||  
@@ -280,7 +280,7 @@ ms.locfileid: "48095901"
 ##  <a name="MDS"></a> Master Data Services  
   
 > [!NOTE]  
->  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está disponible en las ediciones de 64 bits de Business Intelligence y Enterprise solo.  
+>  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] solo está disponible en las ediciones de 64 bits de Business Intelligence y Enterprise.  
   
 |Característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -293,7 +293,7 @@ ms.locfileid: "48095901"
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Crear cubos sin base de datos|Sí|Sí|Sí|||||  
 |Ensayo de generación automática y esquema de almacenamiento de datos|Sí|Sí|Sí|||||  
-|Captura de datos modificados|Sí|||||||  
+|captura de datos modificados|Sí|||||||  
 |Optimizaciones de consultas de combinación en estrella|Sí|||||||  
 |Configuración de solo lectura escalable de Analysis Services|Sí|||||||  
 |Procesamiento de consultas en paralelo en las tablas e índices con particiones|Sí|||||||  
@@ -371,7 +371,7 @@ ms.locfileid: "48095901"
 |Actualización de datos PowerPivot|Sí|Sí||||||  
 |Fuentes de distribución de datos de PowerPivot|Sí|Sí||||||  
   
-###  <a name="DataMining"></a> Data Mining  
+###  <a name="DataMining"></a> Minería de datos  
   
 |Nombre de la característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -379,13 +379,13 @@ ms.locfileid: "48095901"
 |Herramientas de minería de datos (asistentes, editores, generadores de consultas)|Sí|Sí|Sí|||||  
 |Validación cruzada|Sí|Sí||||||  
 |Modelos de subconjuntos filtrados de datos de estructura de minería de datos|Sí|Sí||||||  
-|Series temporales: mezcla personalizada entre métodos ARTXP y ARIMA|Sí|Sí||||||  
-|Series horarias: predicción con nuevos datos|Sí|Sí||||||  
+|Serie temporal: mezcla personalizada entre los métodos ARTXP y ARIMA|Sí|Sí||||||  
+|Serie temporal: predicción con datos nuevos|Sí|Sí||||||  
 |Consultas de minería de datos simultáneas ilimitadas|Sí|Sí||||||  
 |Configuración avanzada y opciones de optimización de algoritmos de minería de datos|Sí|Sí||||||  
 |Compatibilidad con algoritmos de complemento|Sí|Sí||||||  
 |Procesamiento de modelos en paralelo|Sí|Sí||||||  
-|Series temporales: predicción de series cruzadas|Sí|Sí||||||  
+|Serie temporal: predicción para series cruzadas|Sí|Sí||||||  
 |Atributos ilimitados para reglas de asociación|Sí|Sí||||||  
 |Predicción de secuencias|Sí|Sí||||||  
 |Varios destinos de predicción para Bayes naive, red neuronal y regresión logística|Sí|Sí||||||  
@@ -439,7 +439,7 @@ ms.locfileid: "48095901"
 |Evaluation|Evaluation|  
   
 ##  <a name="BIClients"></a> Clientes de Business Intelligence  
- Las siguientes aplicaciones cliente de software están disponibles en el centro de Microsoft Downloads y se proporcionan para ayudarle a crear documentos de business intelligence que se ejecutan en un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia. Si hospeda estos documentos en un entorno de servidor, utilice una edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que es compatible con ese tipo de documento. En la siguiente tabla se indica qué edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene las características de servidor necesarias para hospedar los documentos creados en estas aplicaciones cliente.  
+ Las siguientes aplicaciones cliente de software están disponibles en el centro de descargas de Microsoft y se proporcionan para ayudarle a crear documentos de Business Intelligence que se ejecutan en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si hospeda estos documentos en un entorno de servidor, utilice una edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compatible con ese tipo de documento. En la siguiente tabla se indica qué edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene las características de servidor necesarias para hospedar los documentos creados en estas aplicaciones cliente.  
   
 |Nombre de la característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -448,9 +448,9 @@ ms.locfileid: "48095901"
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Sí|Sí||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Sí|Sí||||||  
   
-> [!NOTE]  
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] es un complemento de Excel y no depende de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sin embargo se requiere [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] para el uso compartido y la colaboración con los libros de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] de SharePoint y esta función está disponible como parte de las ediciones Enterprise y Business Intelligence de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> 2.  La tabla anterior se identifican los [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ediciones que son necesarios para habilitar estas herramientas de cliente; sin embargo estas características pueden tener acceso a datos hospedados en cualquier edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+> [!NOTE]
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] es un complemento de Excel y no depende de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sin embargo se requiere [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] para el uso compartido y la colaboración con los libros de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] de SharePoint y esta función está disponible como parte de las ediciones Enterprise y Business Intelligence de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+> 2.  En la tabla anterior se identifican las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necesarias para habilitar estas herramientas de cliente. No obstante, estas características pueden acceder a los datos hospedados en cualquier edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   

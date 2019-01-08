@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104178"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350010"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn (SQL Server)
   El modelo de estados de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] evalúa un conjunto de directivas predefinidas de administración basada en directiva (PBM). Puede utilizarlas para ver el estado de un grupo de disponibilidad y sus réplicas de disponibilidad y bases de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -84,9 +84,9 @@ ms.locfileid: "48104178"
 ##  <a name="ExtendHealthModel"></a> Extender el modelo de estado de AlwaysOn  
  Extender el modelo de estados de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es simplemente cuestión de crear sus propias directivas definidas por el usuario y ponerlas en determinadas categorías según el tipo de objeto que se está supervisando.  Después de modificar algunos valores, el panel AlwaysOn evaluará automáticamente sus propias directivas definidas por el usuario, junto con las directivas predefinidas AlwaysOn.  
   
- Una directiva definidas por el usuario puede utilizar cualquiera de las facetas PBM disponibles, incluidas las utilizadas por las directivas predefinidas AlwaysOn (vea [Directiva predefinidas y problemas](#AlwaysOnPBM), anteriormente en este tema). La faceta de servidor proporciona las siguientes propiedades para la supervisión de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] estado: (`IsHadrEnabled` y `HadrManagerStatus`). La faceta de servidor también proporciona a las propiedades las siguientes directivas para supervisar la configuración de clúster de WSFC: `ClusterQuorumType` y `ClusterQuorumState`.  
+ Una directiva definidas por el usuario puede utilizar cualquiera de las facetas PBM disponibles, incluidas las utilizadas por las directivas predefinidas AlwaysOn (vea [Directiva predefinidas y problemas](#AlwaysOnPBM), anteriormente en este tema). La faceta de servidor proporciona las siguientes propiedades para supervisar el estado de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (`IsHadrEnabled` y `HadrManagerStatus`). La faceta de servidor también proporciona a las propiedades las siguientes directivas para supervisar la configuración de clúster de WSFC: `ClusterQuorumType` y `ClusterQuorumState`.  
   
- Para obtener más información, vea [Modelo de estado AlwaysOn Parte 2: el modelo de estado](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (un blog del equipo de SQL Server AlwaysOn).  
+ Para obtener más información, vea [Modelo de estado AlwaysOn Parte 2: el modelo de estado](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (un blog del equipo de SQL Server AlwaysOn).  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -104,11 +104,11 @@ ms.locfileid: "48104178"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [El modelo de estado de AlwaysOn, parte 1: arquitectura del modelo de estado](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [El modelo de estado de AlwaysOn, parte 1: arquitectura del modelo de estado](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [El modelo de estado AlwaysOn parte 2: Extender el modelo de estado](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [El modelo de estado AlwaysOn parte 2: Extender el modelo de estado](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Vea también  
  [Grupos de disponibilidad AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   

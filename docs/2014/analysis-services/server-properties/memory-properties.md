@@ -24,19 +24,19 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94fa7654af0494d7d6bfec8396212634afade30f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091655"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362827"
 ---
 # <a name="memory-properties"></a>Propiedades de memoria
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de memoria de servidor que aparecen en la siguiente tabla. Para obtener información orientativa acerca de estas propiedades, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de memoria de servidor que aparecen en la siguiente tabla. Para obtener información orientativa acerca de estas propiedades, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Los valores comprendidos entre 1 y 100 representan porcentajes de **Memoria física total** o de **Espacio de direcciones virtuales**, lo que sea menor. Los valores superiores a 100 representan límites de memoria en bytes.  
   
- **Dirigido a:** modo de servidor multidimensional y tabular, a menos que se especifique lo contrario.  
+ **Se aplica a:** modo de servidor multidimensional y tabular, a menos que se especifique lo contrario.  
   
 ## <a name="properties"></a>Propiedades  
  `LowMemoryLimit`  
@@ -48,7 +48,7 @@ ms.locfileid: "48091655"
  Tenga en cuenta que `TotalMemoryLimit` siempre debe ser menor que `HardMemoryLimit`  
   
  `HardMemoryLimit`  
- Especifica un umbral de memoria a partir del cual la instancia finaliza enérgicamente las sesiones de usuario activas para reducir el uso de memoria. Todas las sesiones finalizadas recibirán un error indicando que la cancelación se ha debido a la presión de memoria. El valor predeterminado, cero (0), significa el `HardMemoryLimit` se establecerá en un valor intermedio comprendido entre `TotalMemoryLimit` y la memoria física total del sistema; si la memoria física del sistema es mayor que el espacio de direcciones virtuales de la dirección de proceso y, después, virtual espacio se usará en su lugar para calcular `HardMemoryLimit`.  
+ Especifica un umbral de memoria a partir del cual la instancia finaliza enérgicamente las sesiones de usuario activas para reducir el uso de memoria. Todas las sesiones finalizadas recibirán un error indicando que la cancelación se ha debido a la presión de memoria. El valor predeterminado, cero (0), significa que `HardMemoryLimit` se establecerá en un valor intermedio comprendido entre `TotalMemoryLimit` y la memoria física total del sistema; si la memoria física del sistema es mayor que el espacio de direcciones virtuales del proceso, se usará dicho espacio para calcular `HardMemoryLimit`.  
   
  `VirtualMemoryLimit`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -60,9 +60,9 @@ ms.locfileid: "48091655"
   
  **1** es el valor predeterminado. Esta propiedad habilita la paginación en disco mediante el archivo de paginación del sistema operativo (pagefile.sys).  
   
- Cuando `VertiPaqPagingPolicy` está establecido en 1, procesamiento es menos probable que genere un error debido a restricciones de memoria porque el servidor intentará paginar en el disco utilizando el método especificado. Establecer la propiedad `VertiPaqPagingPolicy` no garantiza que no se producirán errores de memoria. Pueden seguir produciéndose errores de memoria insuficiente en las siguientes condiciones:  
+ Cuando `VertiPaqPagingPolicy` se establece en 1, es menos probable que se produzcan errores en el procesamiento debido a restricciones de memoria, ya que el servidor intentará paginar en el disco utilizando el método especificado. Establecer la propiedad `VertiPaqPagingPolicy` no garantiza que no se producirán errores de memoria. Pueden seguir produciéndose errores de memoria insuficiente en las siguientes condiciones:  
   
--   No hay suficiente memoria para todos los diccionarios. Durante el procesamiento, Analysis Services bloquea los diccionarios de cada columna en la memoria y todos juntos no pueden superar el valor especificado para `VertiPaqMemoryLimit`.  
+-   No hay suficiente memoria para todos los diccionarios. Durante el procesamiento, Analysis Services bloquea los diccionarios de cada columna en memoria, y todos juntos no pueden superar el valor especificado en `VertiPaqMemoryLimit`.  
   
 -   No hay espacio suficiente en las direcciones virtuales para alojar el proceso.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48091655"
  `VertiPaqMemoryLimit`  
  Si se permite la paginación en el disco, esta propiedad especifica el nivel de consumo de memoria (como porcentaje de la memoria total) en el que comienza la paginación. El valor predeterminado es 60. Si el consumo de memoria es inferior al 60 por ciento, el servidor no paginará en el disco.  
   
- Esta propiedad depende del `VertiPaqPagingPolicyProperty`, que se debe establecer en 1 para que se produzca la paginación.  
+ Esta propiedad depende de `VertiPaqPagingPolicyProperty`, que se debe establecer en 1 para que se produzca la paginación.  
   
  Se aplica solo al modo de servidor tabular.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar un minigráfico a un informe (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Agregar un minigráfico a un informe (generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 542720be68e6fabd2cb16e25928d73efa4f41d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091485"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376677"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (Generador de informes)
   En este tutorial, crea un informe de la tabla básico basado en datos de ventas de ejemplo y, a continuación, agrega un minigráfico a una celda de la tabla.  
   
- Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, vea [informe del generador de informes de ejemplo](http://go.microsoft.com/fwlink/?LinkId=184851). La siguiente ilustración muestra un informe de ejemplo similar al que creará.  
+ Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, vea [informe del generador de informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=184851). La siguiente ilustración muestra un informe de ejemplo similar al que creará.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- El vídeo [Cómo: crear un minigráfico en una tabla (vídeo del generador de informes)](http://technet.microsoft.com/bi/ff871942.aspx) se muestra cómo crear un informe similar con minigráficos.  
+ El vídeo [Cómo: Crear un minigráfico en una tabla (vídeo del generador de informes)](https://technet.microsoft.com/bi/ff871942.aspx) se muestra cómo crear un informe similar con minigráficos.  
   
 ##  <a name="BackToTop"></a> Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
@@ -183,7 +183,7 @@ ms.locfileid: "48091485"
   
 14. La tabla se agrega a la superficie de diseño. La tabla tiene tres columnas y tres filas.  
   
-     Busque en el panel Agrupación. Si no ve el panel Agrupación, en el menú **Vista** , haga clic en **Agrupación**. El panel Grupos de filas muestra un grupo de filas: **Product**. El panel Grupos de columnas muestra un grupo de columnas: **SalesDate**. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
+     Busque en el panel Agrupación. Si no ve el panel Agrupación, en el menú **Vista** , haga clic en **Agrupación**. El panel Grupos de filas muestra un grupo de filas: **Producto**. El panel Grupos de columnas muestra un grupo de columnas: **SalesDate**. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
   
 15. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "48091485"
   
      Tenga en cuenta que hay minigráficos en cada fila de la tabla, pero no son correctos. Las barras de los gráficos no están alineadas entre sí. Solo hay cuatro barras en la segunda fila de datos, por lo que las barras son más anchas que las de la primera fila, que tiene seis. No puede comparar los valores para cada producto por día. Tienen que estar alineados entre sí.  
   
-     Además, observe que para cada fila, la barra más alta de esa fila es el alto de la fila. Esto también induce a error, porque los valores mayores de cada fila no son iguales: el valor mayor para Budget Movie-Maker es 10.400 dólares, pero el valor mayor para Slim Digital es 26.576 dólares: más del doble. Además, las barras más grandes de esas dos filas tienen aproximadamente el mismo alto. También es necesario realizar esto para ajustarse a los demás minigráficos.  
+     Además, observe que para cada fila, la barra más alta de esa fila es el alto de la fila. Esto puede resultar confuso, también, porque los valores mayores de cada fila no son iguales: el valor mayor para Budget Movie-Maker es 10.400 dólares, pero el valor mayor para Slim Digital es 26.576 dólares: más de dos veces tan grande. Además, las barras más grandes de esas dos filas tienen aproximadamente el mismo alto. También es necesario realizar esto para ajustarse a los demás minigráficos.  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   

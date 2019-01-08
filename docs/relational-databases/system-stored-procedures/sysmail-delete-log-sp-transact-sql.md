@@ -18,12 +18,12 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a61fa55fc9f2b1209d0f7da7f483c0fedce07f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649214"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588468"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@logged_before** =] **'***logged_before***'**  
+ [ **@logged_before** =] **'**_logged_before_**'**  
  Elimina las entradas hasta la fecha y hora especificadas por el *logged_before* argumento. *logged_before* es **datetime** con NULL como valor predeterminado. NULL indica todas las fechas.  
   
- [ **@event_type** =] **'***event_type***'**  
+ [ **@event_type** =] **'**_event_type_**'**  
  Elimina las entradas del tipo especificado como registro el *event_type*. *event_type* es **varchar (15)** no tiene ningún valor predeterminado. Las entradas válidas son **éxito**, **advertencia**, **error**, y **informativo**. NULL indica todos los tipos de evento.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -69,7 +69,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp ;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-events"></a>B. Eliminar los eventos más antiguos  
+### <a name="b-deleting-the-oldest-events"></a>b. Eliminar los eventos más antiguos  
  En el ejemplo siguiente se eliminan los eventos del registro del Correo electrónico de base de datos anteriores al 9 de octubre de 2005.  
   
 ```  

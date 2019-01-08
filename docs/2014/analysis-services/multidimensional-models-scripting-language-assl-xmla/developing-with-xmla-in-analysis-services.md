@@ -19,12 +19,12 @@ ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52c03994288a54db9057fcac7c121b08b806d8db
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bb3ed3080d27a5db2cadcc9ab2b47e9a66d95a62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145570"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374477"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Desarrollar con XMLA en Analysis Services
   XML for Analysis (XMLA) es un protocolo XML basado en SOAP, diseñado específicamente para el acceso universal a los datos de cualquier origen de datos multidimensionales estándar a los que se puede acceder mediante una conexión HTTP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa XMLA como único protocolo al comunicar con aplicaciones cliente. Básicamente, todas las bibliotecas de cliente admitidas por Analysis Services formulan solicitudes y respuestas en XMLA.  
@@ -62,7 +62,7 @@ ms.locfileid: "50145570"
 ## <a name="namespace-and-schema"></a>Espacio de nombres y esquema  
   
 ### <a name="namespace"></a>Espacio de nombres  
- El esquema definido en esta especificación utiliza el espacio de nombres XML http://schemas.microsoft.com/AnalysisServices/2003/Engine y la abreviatura estándar "DDL".  
+ El esquema definido en esta especificación utiliza el espacio de nombres XML https://schemas.microsoft.com/AnalysisServices/2003/Engine y la abreviatura estándar "DDL".  
   
 ### <a name="schema"></a>esquema  
  La definición de un esquema de lenguaje de definición de esquema XML (XSD) para el lenguaje de definición de objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se basa en la definición de la jerarquía y los elementos del esquema en esta sección.  

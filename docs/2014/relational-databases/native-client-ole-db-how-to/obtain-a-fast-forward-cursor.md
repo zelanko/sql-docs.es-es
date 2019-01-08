@@ -12,12 +12,12 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fb7c388d3a3e46b8f56a4bf002701e5be16e598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155565"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366807"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>Obtener un cursor FAST_FORWARD
   Para obtener un cursor de solo avance y de solo lectura, establezca las propiedades del conjunto de filas DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT y DBPROP_OWNUPDATEDELETE en VARIANT_TRUE.  
@@ -25,7 +25,7 @@ ms.locfileid: "48155565"
  En un ejemplo completo se muestra cómo establecer las propiedades del conjunto de filas para obtener un cursor FAST_FORWARD. Una vez que se han establecido las propiedades, se ejecuta una instrucción SELECT para recuperar y mostrar la columna **Name** de la tabla **Purchasing.Vendor** de la base de datos **AdventureWorks** .  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-obtain-fastforward-cursor"></a>Para obtener el cursor FAST_FORWARD  
   
@@ -38,9 +38,9 @@ ms.locfileid: "48155565"
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo establecer las propiedades del conjunto de filas para obtener un cursor FAST_FORWARD. Una vez que se han establecido las propiedades, se ejecuta una instrucción SELECT para recuperar y mostrar la columna Name de la tabla Purchasing.Vendor de la base de datos AdventureWorks. Este ejemplo no es compatible con IA64.  
   
- Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  
+ Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
- Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

@@ -11,12 +11,12 @@ ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8813dba9c266c6a7930a636da27015c300426c79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c91d12665ac8637f9de407896aed435a02af6940
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220095"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365177"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Buscar y ver informes con un explorador (Generador de informes y SSRS)
   Puede utilizar cualquier explorador web compatible para ver un informe mediante una conexión directa a un servidor de informes. Cada informe dispone de una dirección URL en el servidor de informes. Puede escribir la dirección web de un informe para abrirlo por sí solo en una ventana del explorador de una aplicación web. El informe se abre en formato HTML e incluye la barra de herramientas de informe para que pueda navegar por las páginas o buscar valores de datos dentro del informe. Puede establecer parámetros en la dirección URL para ocultar la barra de herramientas o para seleccionar el formato de salida del informe.  
@@ -31,7 +31,7 @@ Carpetas en un explorador
 > [!NOTE]  
 >  Si obtiene acceso a un informe desde un dispositivo de mano, deberá utilizar el explorador para abrir los informes. El Administrador de informes todavía no ofrece compatibilidad con este tipo de dispositivos.  
   
- Para obtener más información acerca de los tipos de exploradores que puede usar, vea el tema relativo a los tipos de exploradores admitidos por Reporting Services en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
+ Para obtener más información acerca de los tipos de exploradores que puede usar, vea el tema relativo a los tipos de exploradores admitidos por Reporting Services en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,9 +54,9 @@ Carpetas en un explorador
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- El límite máximo para una dirección URL en Internet Explorer es de 2.083 caracteres. Para obtener más información, vea [La longitud máxima de la dirección URL es de 2083 caracteres en Internet Explorer](http://support.microsoft.com/kb/208427).  
+ El límite máximo para una dirección URL en Internet Explorer es de 2.083 caracteres. Para obtener más información, vea [La longitud máxima de la dirección URL es de 2083 caracteres en Internet Explorer](https://support.microsoft.com/kb/208427).  
   
- Para obtener más información acerca de cómo obtener acceso a un informe a través de una URL, incluida la información acerca de cómo está construida una URL, vea el artículo sobre acceso a URL en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
+ Para obtener más información acerca de cómo obtener acceso a un informe a través de una URL, incluida la información acerca de cómo está construida una URL, vea el artículo sobre acceso a URL en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
   
 ## <a name="see-also"></a>Vea también  
  [Buscar y ver informes en el Administrador de informes &#40;generador de informes y SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  

@@ -11,21 +11,21 @@ ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a80e3134fc734f962fa9b082374dc3f9c4a74ba2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 471bfe1a93e76630e6699a2ff07fcf5c6bddc913
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147255"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368607"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Solucionar problemas de una instalación de PowerPivot para SharePoint
   Si obtiene errores en lugar de las páginas y características que espera, haga lo siguiente.  
   
 -   Revise las notas de la versión para SharePoint y [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con el fin de conocer soluciones alternativas para los problemas de instalación conocidos. Las notas de la versión se proporcionan con los discos de instalación o en el sitio de Microsoft del que descargó el software.  
   
-    -   [Notas de la versión de SQL Server 2014](http://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
+    -   [Notas de la versión de SQL Server 2014](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
   
--   Vea el tema de wiki de Technet, [solución de problemas de las instalaciones de PowerPivot (y otros complementos)](http://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx).  
+-   Vea el tema de wiki de Technet, [solución de problemas de las instalaciones de PowerPivot (y otros complementos)](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx).  
   
 ## <a name="issues"></a>Problemas  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48147255"
   
 4.  Comprobar **características de PowerPivot para colecciones de sitios** es **Active**.  
   
- Para otras causas de este problema, consulte [rojas para los iconos de muestra de la Galería de PowerPivot](http://support.microsoft.com/kb/2361559) (http://support.microsoft.com/kb/2361559).  
+ Para otras causas de este problema, consulte [rojas para los iconos de muestra de la Galería de PowerPivot](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b262cea6362c1f6cb3c69c8b9e96e2bb09aa3e14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de01fcb7f694331eb9ab4df33429f9a32ee1308
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062480"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978421"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Cuadro de diálogo Editor de transformación Limpieza de DQS
   Use el cuadro de diálogo **Editor de transformación Limpieza de DQS** para corregir datos con Data Quality Services (DQS). Para más información, consulte [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "48062480"
  Seleccione una base de conocimiento de DQS existente para el origen de datos conectado. Para obtener más información acerca de la base de conocimiento de DQS, vea [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Cifrar conexión**  
- Especifique si quiere cifrar la conexión para cifrar la transferencia de datos entre el servidor DQS y [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ Especifique si desea cifrar la conexión, para cifrar la transferencia de datos entre el servidor DQS y [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Dominios disponibles**  
  Enumera los dominios disponibles para la base de conocimiento seleccionada. Hay dos tipos de dominios: dominios únicos y dominios compuestos que contienen dos o más dominios únicos.  
@@ -130,6 +130,6 @@ ms.locfileid: "48062480"
 3.  Haga clic en **Agregar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicación de reglas de calidad de los datos al origen de datos](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
+ [Aplicar reglas de calidad de los datos al origen de datos](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

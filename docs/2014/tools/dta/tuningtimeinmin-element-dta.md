@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c81d0dd5ad56db2216143ed847f148467fc2e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140335"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815877"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin (DTA, elemento)
   Especifica la duración máxima de una sesión de optimización en minutos.  
@@ -41,13 +40,13 @@ ms.locfileid: "48140335"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|`unsignedInt`, longitud ilimitada.|  
 |**Valor predeterminado**|480 minutos (8 horas).|  
-|**Repetición**|Obligatoria a menos que se ha especificado un valor para el `NumberOfEvents` elemento.|  
+|**Repetición**|Obligatoria a menos que se haya especificado un valor para el elemento `NumberOfEvents`.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[TuningOptions, elemento &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Elemento primario**|[TuningOptions &#40;DTA, elemento&#41;](tuningoptions-element-dta.md)|  
 |**Elementos secundarios**|None|  
   
 ## <a name="example"></a>Ejemplo  
@@ -55,7 +54,7 @@ ms.locfileid: "48140335"
 ## <a name="description"></a>Descripción  
  En el siguiente ejemplo de código se muestra cómo establecer un tiempo de optimización máximo de 12 horas:  
   
-## <a name="code"></a>código  
+## <a name="code"></a>Código  
   
 ```  
 <DTAInput>  

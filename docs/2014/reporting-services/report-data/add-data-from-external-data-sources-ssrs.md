@@ -11,12 +11,12 @@ ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f1dff5b37bdf608478105e684a09dab8cae9280
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 527c089b1fd1dc49330ea3ee3c9b3576f7c969ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161955"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369667"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Agregar datos de orígenes de datos externos (SSRS)
   Para recuperar datos de un origen de datos externo, use una conexión de datos. La información de la conexión de datos la suele proporcionar el propietario del origen de datos externo, que es responsable de otorgar los permisos y de especificar qué tipos de credenciales se han de usar. La información de la conexión de datos se guarda como un origen de datos de informe. El tipo de origen de datos especifica qué extensión de datos usar para recuperar los datos.  
@@ -107,8 +107,8 @@ ms.locfileid: "48161955"
 |[Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|Proporciona información sobre las conexiones de datos y los orígenes de datos.|  
 |[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Proporciona información sobre conjuntos de datos compartidos e incrustados.|  
 |[Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.|  
-|[Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.|  
-|[Introducción a las extensiones de procesamiento de datos](../extensions/data-processing/data-processing-extensions-overview.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](http://go.microsoft.com/fwlink/?linkid=121312).|Proporciona a los usuarios expertos información detallada sobre las extensiones de datos.|  
+|[Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.|  
+|[Introducción a las extensiones de procesamiento de datos](../extensions/data-processing/data-processing-extensions-overview.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](https://go.microsoft.com/fwlink/?linkid=121312).|Proporciona a los usuarios expertos información detallada sobre las extensiones de datos.|  
   
 
   

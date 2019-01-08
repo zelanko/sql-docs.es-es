@@ -29,12 +29,12 @@ ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 118c20c16890edb50bdc19686da40c77b362c29d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217655"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521118"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Referencia técnica del algoritmo de red neuronal de Microsoft
   La red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa una red de tipo *perceptrón multinivel* , que también se denomina *red de tipo regla delta de propagación hacia atrás*, compuesta por tres niveles de neuronas o *perceptrones*. Estos niveles son: un nivel de entrada, un nivel oculto opcional y un nivel de salida.  
@@ -103,7 +103,7 @@ ms.locfileid: "48217655"
   
  **Valores discretos**  
   
- Μ = p – la probabilidad de un estado anterior  
+ Μ = p - la probabilidad de un estado anterior  
   
  StdDev = sqrt(p(1-p))  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48217655"
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
- [Los modelos de red neuronal contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelos de red neuronal](neural-network-model-query-examples.md)  
   
   

@@ -1,22 +1,24 @@
 ---
-title: ¿Qué es los clústeres de macrodatos de SQL Server master instancia? | Microsoft Docs
-description: En este artículo se describe la instancia maestra en un clúster de macrodatos de SQL Server 2019.
+title: ¿Qué es la instancia maestra?
+titleSuffix: SQL Server 2019 big data clusters
+description: En este artículo se describe la instancia principal de SQL Server en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 2ea25aeb5c7c39c5b00e545bc39974073132b1b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221601"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208174"
 ---
-# <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>¿Qué es los big data de SQL Server del clúster instancia maestra?
+# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>¿Qué es la instancia maestra en un clúster de macrodatos de 2019 de SQL Server?
 
-En este artículo se describe el rol de la *instancia principal de SQL Server* en un clúster de SQL Server 2019 ata grande. La instancia maestra es una instancia de SQL Server que se ejecuta en un clúster de SQL Server macrodatos [plano de control](big-data-cluster-overview.md#controlplane).
+En este artículo se describe el rol de la *instancia principal de SQL Server* en un clúster de macrodatos de SQL Server 2019. La instancia maestra es una instancia de SQL Server que se ejecuta en un clúster de SQL Server macrodatos [plano de control](big-data-cluster-overview.md#controlplane).
 
 La instancia principal de SQL Server proporciona la funcionalidad siguiente:
 
@@ -26,7 +28,7 @@ La instancia principal de SQL Server proporciona un punto de conexión accesible
 
 ## <a name="scale-out-query-management"></a>Administración de la consulta de escalabilidad horizontal
 
-La instancia principal de SQL Server contiene el motor de consultas de escalabilidad horizontal que se utiliza para distribuir las consultas entre instancias de SQL Server en nodos de la [proceso grupo](concept-compute-pool.md). El motor de consultas de escalado horizontal también proporciona acceso a través de Transact-SQL para todas las tablas de Hive en el clúster sin ninguna configuración adicional. (Compatibilidad con las tablas de hive no está en CTP 2.1)
+La instancia principal de SQL Server contiene el motor de consultas de escalabilidad horizontal que se utiliza para distribuir las consultas entre instancias de SQL Server en nodos de la [proceso grupo](concept-compute-pool.md). El motor de consultas de escalado horizontal también proporciona acceso a través de Transact-SQL para todas las tablas de Hive en el clúster sin ninguna configuración adicional. (Compatibilidad con las tablas de hive no está en CTP 2.2)
 
 ## <a name="metadata-and-user-databases"></a>Bases de datos de usuario y los metadatos
 
@@ -43,7 +45,7 @@ También puede agregar sus propias bases de datos de usuario a la instancia prin
 
 Servicios de aprendizaje automático de SQL Server es una característica incluida en el motor de base de datos, utilizado para ejecutar código de Java, R y Python en SQL Server. Esta característica se basa en el marco de extensibilidad de SQL Server que aísla los procesos externos de los procesos del motor principal, pero se integra completamente con los datos relacionales, como procedimientos almacenados, como script de Transact-SQL que contiene instrucciones de R o Python o como Java, R o Código de Python que contiene la instrucción T-SQL.
 
-Como parte de un clúster de macrodatos de SQL Server, servicios de machine learning estará disponibles en la instancia maestra Serevr SQL de forma predeterminada. Esto significa que una vez que la ejecución de scripts externos está habilitada en la instancia principal de SQL Server, se va a ser posible ejecutar Java, scripts de R y Python mediante sp_execute_external_script.
+Como parte de un clúster de macrodatos de SQL Server, servicios de machine learning estará disponibles en la instancia principal de SQL Server de forma predeterminada. Esto significa que una vez que la ejecución de scripts externos está habilitada en la instancia principal de SQL Server, se va a ser posible ejecutar Java, scripts de R y Python mediante sp_execute_external_script.
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Ventajas de machine learning services en un clúster de macrodatos
 

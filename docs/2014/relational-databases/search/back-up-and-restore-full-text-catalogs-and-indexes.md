@@ -17,18 +17,18 @@ ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39b23832aecdbfadfe1907e2b50e9993a45edd76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 932263934fe7ce93a50caec468d7f1444ccae181
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128825"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372497"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Realizar copias de seguridad de los catálogos de texto completo y restaurarlos
   En este tema se explica cómo hacer una copia de seguridad y restaurar los índices de texto completo creados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el catálogo de texto completo es un concepto lógico y no reside en un grupo de archivos. Por consiguiente, para hacer una copia de seguridad de un catálogo de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe identificar cada grupo de archivos que contenga un índice de texto completo que pertenezca al catálogo. A continuación, debe hacer copia de seguridad de cada uno de estos grupos de archivos, uno por uno.  
   
 > [!IMPORTANT]  
->  Se pueden importar los catálogos de texto completo al actualizar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Cada catálogo de texto completo importado es un archivo de base de datos en su propio grupo de archivos. Para hacer una copia de seguridad de un catálogo importado, basta con hacer una copia de seguridad de su grupo de archivos. Para obtener más información, vea [Realizar copias de seguridad y restaurar catálogos de texto completo](http://go.microsoft.com/fwlink/?LinkID=121052), en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+>  Se pueden importar los catálogos de texto completo al actualizar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Cada catálogo de texto completo importado es un archivo de base de datos en su propio grupo de archivos. Para hacer una copia de seguridad de un catálogo importado, basta con hacer una copia de seguridad de su grupo de archivos. Para obtener más información, vea [Realizar copias de seguridad y restaurar catálogos de texto completo](https://go.microsoft.com/fwlink/?LinkID=121052), en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##  <a name="backingup"></a> Hacer la copia de seguridad de los índices de texto completo de un catálogo de texto completo  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -17,12 +16,12 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c307d7c31b3599a358346812279d79c37705b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89fdb4d112d37a61b377bbac768d94012a703664
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074165"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362757"
 ---
 # <a name="integration-services-user-interface"></a>Interfaz de usuario de Integration Services
   Además de las superficies de diseño de las pestañas del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la interfaz de usuario proporciona acceso a las siguientes ventanas y cuadros de diálogo para agregar características a paquetes y configurar las propiedades de los objetos de paquete:  
@@ -40,7 +39,7 @@ ms.locfileid: "48074165"
   
  La tabla enumera los cuadros de diálogo disponibles en el menú **SSIS** y las superficies de diseño del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-|Cuadro de diálogo|Finalidad|Acceso|  
+|Cuadro de diálogo|Propósito|Acceso|  
 |----------------|-------------|------------|  
 |**Introducción**|Tener acceso a ejemplos, tutoriales y vídeos.|En la superficie de diseño de la pestaña **Flujo de control** o de la pestaña **Flujo de datos** , haga clic con el botón derecho y elija **Introducción**.<br /><br /> Para mostrar automáticamente la ventana **Introducción** cada vez que cree un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , seleccione **Mostrar siempre en los proyectos nuevos** en la parte inferior de la ventana.|  
 |**Configurar registros SSIS**|Configurar el registro de un paquete y sus tareas agregando registros y configurando detalles de registro.|En el menú **SSIS** , haga clic en **Registro**.<br /><br /> - O bien -<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Registro**.|  
@@ -56,11 +55,11 @@ ms.locfileid: "48074165"
   
  `- <SamplesSites>`  
   
- `<GettingStartedSamples>http://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
+ `<GettingStartedSamples>https://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
   
  `- <ToolboxSamples>`  
   
- `<Site>http://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
+ `<Site>https://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
   
  `</ToolboxSamples>`  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48074165"
   
  En esta tabla se enumeran las ventanas disponibles desde los menús **SSIS** y **Ver** , y las superficies de diseño del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-|Ventana|Finalidad|Acceso|  
+|Ventana|Propósito|Acceso|  
 |------------|-------------|------------|  
 |**Variables**|Agregar y administrar variables personalizadas.|En el menú **SSIS** , haga clic en **Variables**.<br /><br /> -o bien-<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de las pestañas **Flujo de control** y **Flujo de datos** y, luego, haga clic en **Variables**.<br /><br /> -o bien-<br /><br /> En el menú **Ver** , seleccione **Otras ventanas**y haga clic en **Variables**.|  
 |**Registrar eventos**|Ver entradas del registro en tiempo de ejecución.|En el menú **SSIS** , haga clic en **Registrar eventos**.<br /><br /> -o bien-<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de las pestañas **Flujo de control** y **Flujo de datos** y, luego, haga clic en **Registrar eventos**.<br /><br /> -o bien-<br /><br /> En el menú **Ver** , seleccione **Otras ventanas**y haga clic en **Registrar eventos**.|  

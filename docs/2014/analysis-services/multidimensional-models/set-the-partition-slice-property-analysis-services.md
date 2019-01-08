@@ -14,12 +14,12 @@ ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7049cce942cb593df74255a1459e07a6fa894c51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c94ac9865540016020bf1853bc318881defdaea7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090515"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374067"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Establecer la propiedad Slice de particiones (Analysis Services)
   Un segmento de datos es una característica de optimización importante que ayuda a dirigir consultas a los datos de las particiones adecuadas. Establecer explícitamente la propiedad Slice puede mejorar el rendimiento de las consultas invalidando los sectores predeterminados generados para las particiones MOLAP y ROLAP. Además, la propiedad Slice proporciona una comprobación de validación adicional al procesar la partición.  
@@ -37,16 +37,16 @@ ms.locfileid: "48090515"
   
  Un sector de datos de una partición debería reflejar lo más fielmente posible los datos de la partición. Por ejemplo, si una partición está limitada a los datos de 2012, el segmento de datos de la partición debería especificar el miembro 2012 de la dimensión de tiempo. No siempre es posible especificar un segmento de datos que refleje el contenido exacto de una partición. Por ejemplo, si una partición contiene datos solamente para enero y febrero, pero los niveles de la dimensión de tiempo son año, trimestre y mes, el Asistente para particiones no puede seleccionar los miembros de enero y febrero a la vez. En estos casos, seleccione el miembro primario de los miembros que reflejen el contenido de la partición. En este ejemplo, seleccione el trimestre 1.  
   
- Para obtener una explicación de las ventajas de los segmentos de datos, vea [Establecer el segmento en una partición de un cubo de SSAS](http://go.microsoft.com/fwlink/?LinkId=317783).  
+ Para obtener una explicación de las ventajas de los segmentos de datos, vea [Establecer el segmento en una partición de un cubo de SSAS](https://go.microsoft.com/fwlink/?LinkId=317783).  
   
 > [!NOTE]  
 >  Tenga en cuenta que las funciones MDX dinámicas (como [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) o [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) no son compatibles con la propiedad Slice para particiones. Debe definir el segmento utilizando tuplas explícitas o referencias de miembro.  
 >   
 >  Por ejemplo, en lugar de usar el [: &#40;intervalo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) función para definir un intervalo, necesitaría enumerar cada miembro por los años específicos.  
 >   
->  Si necesita definir un segmento complejo, se recomienda definir las tuplas del segmento con un script Alter de XMLA. A continuación, puede usar la herramienta de línea de comandos ascmd o SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) tarea para ejecutar el script y crear el conjunto de miembros especificado inmediatamente antes de procesar la partición.  
+>  Si necesita definir un segmento complejo, se recomienda definir las tuplas del segmento con un script Alter de XMLA. Después, puede usar la herramienta de línea de comandos ascmd o la tarea SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) para ejecutar el script y crear el conjunto de miembros especificado inmediatamente antes de procesar la partición.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear y administrar una partición Local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [Crear y administrar una partición local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

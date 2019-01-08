@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -22,15 +22,15 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204945"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364187"
 ---
 # <a name="data-compression"></a>Data Compression
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la compresión row y page para índices y tablas de almacén de filas y es compatible con almacén de columnas y compresión de archivo de almacén de columnas para las tablas de almacén de columnas e índices.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la compresión de fila y de página para las tablas e índices de almacén de filas, y admite la compresión de almacén de columnas y de archivo de almacén de columnas para las tablas e índices de almacén de columnas.  
   
  Para las tablas e índices de almacén de filas, use la característica de compresión de datos como ayuda para reducir el tamaño de la base de datos. Además de ahorrar espacio, la compresión de datos puede contribuir a mejorar el rendimiento de las cargas de trabajo que hacen un uso intensivo de las operaciones de E/S porque los datos se almacenan en menos páginas y las consultas deben leer menos páginas del disco. No obstante, se requieren recursos de CPU adicionales en el servidor de base de datos para comprimir y descomprimir los datos, mientras los datos se intercambian con la aplicación. La compresión de fila y de página se puede configurar en los objetos de base de datos siguientes:  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48204945"
   
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>Conceptos básicos  
  Las tablas y los índices de almacén de columnas siempre se almacenan con compresión de almacén de columnas. El tamaño de los datos de almacén de columnas se puede reducir más configurando una compresión adicional denominada compresión de archivo.  Para realizar la compresión de archivo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta el algoritmo de compresión de Microsoft XPRESS en los datos. La compresión de archivo se agrega o se quita mediante los tipos de compresión de datos siguientes:  
   
--   Use `COLUMNSTORE_ARCHIVE` compresión de datos para comprimir los datos de almacén de columnas con compresión de archivo.  
+-   Use la compresión de datos de `COLUMNSTORE_ARCHIVE` para comprimir los datos de almacén de columnas con la compresión de archivo.  
   
 -   Use la compresión de datos de **COLUMNSTORE** para descomprimir la compresión de archivo. Estos datos resultantes seguirán comprimiéndose con la compresión de almacén de columnas.  
   
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [Sys.Indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) : la `type` y `type_desc` columnas incluyen CLUSTERED COLUMNSTORE y NONCLUSTERED COLUMNSTORE.  
   
--   [Sys.Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) : el `data_compression` y `data_compression_desc` columnas incluyen COLUMNSTORE y COLUMNSTORE_ARCHIVE.  
+-   [Sys.Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) : la `data_compression` y `data_compression_desc` columnas incluyen COLUMNSTORE y COLUMNSTORE_ARCHIVE.  
   
  El procedimiento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) no se aplica a los índices de almacén de columnas.  
   

@@ -1,20 +1,21 @@
 ---
-title: Depuración y diagnóstico de aplicaciones de Spark en clústeres de macrodatos de SQL Server en el servidor de historial de Spark
-description: Depuración y diagnóstico de aplicaciones de Spark en clústeres de macrodatos de SQL Server en el servidor de historial de Spark
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Depuración y diagnóstico de aplicaciones de Spark
+titleSuffix: SQL Server 2019 big data clusters
+description: Utilice el servidor de historial de Spark para depurar y diagnosticar aplicaciones de Spark que se ejecutan en clústeres de macrodatos de SQL Server 2019.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: a9416f774e84d6b458e14aeb28db2ab39ad8543e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460870"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029751"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones de Spark en clústeres de macrodatos de SQL Server en el servidor de historial de Spark
 
@@ -25,7 +26,7 @@ Este artículo proporcionan instrucciones sobre cómo usar el servidor de histor
 Se ha mejorado la experiencia de usuario de servidor historial de Spark de código abierto con información que incluye datos específicos del trabajo y visualización interactiva de flujos de trabajo gráfico y los datos para el clúster de macrodatos. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Abre el sitio Web del servidor de historial Spark mediante la dirección URL de la interfaz de usuario
-Abra el servidor de historial de Spark, vaya a la siguiente dirección URL, reemplace `<Ipaddress>` y `<Port>` con información específica del clúster de macrodatos. Obtener más información se puede hacer referencia a: [clúster de macrodatos de implementar SQL Server](quickstart-big-data-cluster-deploy.md)
+Abra el servidor de historial de Spark, vaya a la siguiente dirección URL, reemplace `<Ipaddress>` y `<Port>` con información específica del clúster de macrodatos. Puede hacer referencia más información: [Implementar el clúster de macrodatos de SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -41,31 +42,31 @@ Seleccione el Id. de trabajo, a continuación, haga clic en **datos** en el men�
 
 + Compruebe el **entradas**, **salidas**, y **las operaciones de tabla** seleccionando las pestañas por separado.
 
-    ![Pestañas de datos](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Fichas de datos del servidor de historial de Spark](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
 + Copie todas las filas, haga clic en botón **copia**.
 
-    ![Copia de datos](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![Copie todas las filas](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
 + Guardar todos los datos como archivo CSV, haga clic en botón **csv**.
 
-    ![Datos de almacenamiento](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![Guardar los datos como archivos CSV](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
 + Búsqueda, escriba palabras clave en el campo **búsqueda**, el resultado de la búsqueda mostrará inmediatamente.
 
-    ![Búsqueda de datos](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![Buscar por palabras clave](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
 + Haga clic en el encabezado de columna para ordenar la tabla, haga clic en el signo más para expandir una fila para mostrar más detalles o haga clic en el signo menos para contraer una fila.
 
-    ![Tabla de datos](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![Funcionalidad de la tabla de datos](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
 + Descargar archivo único haciendo clic en botón **descarga parcial** que colocar a la derecha, a continuación, se descarga el archivo seleccionado en un contexto local. Si el archivo no existe más, se abrirá una nueva pestaña para mostrar los mensajes de error.
 
-    ![Fila de la descarga de datos](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![Descargue una fila de datos](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
 + Copiar ruta de acceso completa o relativa seleccionando el **Copiar ruta de acceso completa**, **Copiar ruta de acceso relativa** que se expande en el menú de descarga. Para archivos de almacenamiento de azure data lake, **abierto en el Explorador de Azure Storage** se iniciará el Explorador de Azure Storage. Y busque la carpeta exacta al iniciar sesión.
 
-    ![Ruta de acceso de copia de datos](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![Copiar una ruta de acceso completa o relativa](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
 + Haga clic en el número de la tabla siguiente para navegar por páginas cuando demasiado muchas filas para mostrar en una sola página. 
 
@@ -99,11 +100,11 @@ Seleccione el Id. de trabajo, a continuación, haga clic en **Graph** en el men�
 
 + Reproducir el trabajo haciendo clic en el **reproducción** botón y detener en cualquier momento haciendo clic en el botón Detener. La presentación de la tarea en el color que se mostrará un estado diferente al reproducir:
 
-    + Verde significa correcto: el trabajo se ha completado correctamente.
-    + Naranja para reintentar: instancias de tareas que no se pudo pero no influyen en el resultado final del trabajo. Estas tareas tenían duplicar o vuelva a intentar las instancias que pueden realizar correctamente más tarde.
-    + Azul para la ejecución: se está ejecutando la tarea.
-    + Blanco para esperar u omitidos: la tarea está esperando para ejecutarse, o se ha omitido la fase.
-    + Rojo de error: error en la tarea.
+    + Verde significa correcto: El trabajo se completó correctamente.
+    + Color naranja para reintenta: Instancias de las tareas que no se pudo pero no influyen en el resultado final del trabajo. Estas tareas tenían duplicar o vuelva a intentar las instancias que pueden realizar correctamente más tarde.
+    + Azul para ejecutar: Se está ejecutando la tarea.
+    + Blanco para esperar u omitidos: La tarea está esperando para ejecutarse, o se ha omitido la fase.
+    + Error en rojo para: Error de la tarea.
 
     ![muestra de color del gráfico, ejecución](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
@@ -161,7 +162,7 @@ Seleccione el Id. de trabajo, a continuación, haga clic en **diagnóstico** en 
 ### <a name="data-skew"></a>Asimetría de datos
 Haga clic en **asimetría de datos** ficha correspondiente se muestran tareas sesgadas según los parámetros especificados. 
 
-+ **Especificar parámetros** -la primera sección muestra los parámetros, que se usan para detectar la asimetría de datos. La regla integrada es: lectura de datos de tarea es mayor que tres veces el promedio de datos de tarea de lectura y lectura de los datos de tarea están más de 10 MB. Si desea definir su propia regla para tareas sesgadas, puede elegir los parámetros, el **fase sesgada**, y **sesgar Char** sección se actualizará según corresponda. 
++ **Especificar parámetros** -la primera sección muestra los parámetros, que se usan para detectar la asimetría de datos. La regla integrada es: Lectura de datos de tarea es mayor que tres veces el promedio de datos de tarea leer y leer los datos de la tarea están más de 10 MB. Si desea definir su propia regla para tareas sesgadas, puede elegir los parámetros, el **fase sesgada**, y **sesgar Char** sección se actualizará según corresponda. 
 
 + **Sesgar fase** -la segunda sección muestra las fases, que se han sesgado las tareas que cumplen los criterios especificados anteriormente. Si hay más de una tarea sesgada de una fase, la tabla de fase sesgada muestra solo la tarea más sesgada (por ejemplo, los datos más grandes de asimetría de datos). 
 

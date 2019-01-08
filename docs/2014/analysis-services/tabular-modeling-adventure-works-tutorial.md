@@ -11,12 +11,12 @@ ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083285"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373687"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Creación de modelos tabulares (tutorial de Adventure Works)
   En este tutorial se proporcionan lecciones sobre cómo crear un modelo tabular de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "48083285"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]   
   
--   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base de datos de ejemplo, consulte [ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base de datos de ejemplo, consulte [ https://go.microsoft.com/fwlink/?LinkID=335807 ](https://go.microsoft.com/fwlink/?LinkID=335807).  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 o posterior (para su uso con la característica Analizar de Excel en la lección 11)  
   
@@ -68,18 +68,18 @@ ms.locfileid: "48083285"
   
 |Lección|Tiempo estimado para completar la lección|  
 |------------|--------------------------------|  
-|[Lección 1: Crear un nuevo proyecto de modelo tabular](lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
+|[Lección 1: Cree un nuevo proyecto de modelo Tabular](lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
 |[Lección 2: Agregar datos](lesson-2-add-data.md)|20 minutos|  
-|[Lección 3: Cambiar el nombre de las columnas](rename-columns.md)|20 minutos|  
+|[Lección 3: Cambiar el nombre de columnas](rename-columns.md)|20 minutos|  
 |[Lección 4: Marcar como tabla de fechas](lesson-3-mark-as-date-table.md)|3 minutos|  
 |[Lección 5: Crear relaciones](lesson-4-create-relationships.md)|10 minutos|  
 |[Lección 6: Crear columnas calculadas](lesson-5-create-calculated-columns.md)|15 minutos|  
 |[Lección 7: Crear medidas](lesson-6-create-measures.md)|30 minutos|  
-|[Lección 8: Crear indicadores clave de rendimiento](lesson-7-create-key-performance-indicators.md)|15 minutos|  
+|[Lección 8: Creación de indicadores clave de rendimiento](lesson-7-create-key-performance-indicators.md)|15 minutos|  
 |[Lección 9: Crear perspectivas](lesson-8-create-perspectives.md)|5 minutos|  
 |[Lección 10: Crear jerarquías](lesson-9-create-hierarchies.md)|20 minutos|  
-|[Lección 11: Crear particiones](lesson-10-create-partitions.md)|15 minutos|  
-|[Lección 12: Crear roles](lesson-11-create-roles.md)|15 minutos|  
+|[Lección 11: Creación de particiones](lesson-10-create-partitions.md)|15 minutos|  
+|[Lección 12: Crear Roles](lesson-11-create-roles.md)|15 minutos|  
 |[Lección 13: Analizar en Excel](lesson-12-analyze-in-excel.md)|20 minutos|  
 |[Lección 14: Implementar](lesson-13-deploy.md)|5 minutos|  
   
@@ -94,6 +94,6 @@ ms.locfileid: "48083285"
 |[Configurar propiedades de informes para informes de Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)configurar propiedades de informes para informes de Power View|30 minutos|  
   
 ## <a name="next-step"></a>Paso siguiente  
- Para empezar el tutorial, vaya a la primera lección: [Lección 1: Crear un nuevo proyecto de modelo tabular](lesson-1-create-a-new-tabular-model-project.md).  
+ Para comenzar el tutorial, vaya a la primera lección: [Lección 1: Cree un nuevo proyecto de modelo Tabular](lesson-1-create-a-new-tabular-model-project.md).  
   
   

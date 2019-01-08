@@ -1,5 +1,5 @@
 ---
-title: Agregar una tabla | Documentos de Microsoft
+title: Agregar una tabla a un modelo tabular de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0e54c5dfa244c28eaba765c70bf827ce66c5e02
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 224df75c15acf560c7eadc70fe91fbbc2b0396d9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040309"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072292"
 ---
 # <a name="add-a-table"></a>Agregar una tabla
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  En este artículo se describe cómo agregar una tabla de un origen de datos desde el que ha importado datos previamente en el modelo. Para agregar una tabla del mismo origen de datos, puede usar la conexión de origen de datos existente. Se recomienda usar siempre una conexión única al importar cualquier número de tablas de un origen de datos único.  
+  En este artículo se describe cómo agregar una tabla desde un origen de datos desde el que previamente ha importado datos en el modelo. Para agregar una tabla del mismo origen de datos, puede usar la conexión de origen de datos existente. Se recomienda usar siempre una conexión única al importar cualquier número de tablas de un origen de datos único.  
   
 ### <a name="to-add-a-table-from-an-existing-data-source"></a>Para agregar una tabla de un origen de datos existente  
   

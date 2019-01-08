@@ -11,12 +11,12 @@ ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 935957ce0934e6b57bd7abd27bcf74fd14ee8cd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113245"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409062"
 ---
 # <a name="lesson-5-create-relationships"></a>Lección 5: Crear relaciones
   En esta lección, comprobará las relaciones que se han creado de forma automática al importar datos y agregará nuevas relaciones entre tablas diferentes. Una relación es una conexión entre dos tablas de datos que establece cómo se deben poner en correlación los datos de esas tablas. Por ejemplo, la tabla Product y la tabla Product Subcategory tienen una relación basada en el hecho de que cada producto pertenece a una subcategoría. Para obtener más información, consulte [Relaciones &#40;SSAS tabular&#41;](tabular-models/relationships-ssas-tabular.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "48113245"
  Tiempo estimado para completar esta lección: **10 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 3: Cambiar el nombre de las columnas](rename-columns.md).  
+ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 3: Cambiar el nombre de las columnas](rename-columns.md).  
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Examinar las relaciones existentes y agregar nuevas relaciones  
  Cuando importó los datos mediante el Asistente para la importación de tablas, importó siete tablas de la base de datos AdventureWorksDW. Normalmente, si importa datos de un origen relacional, las relaciones existentes se importan automáticamente junto con los datos. Sin embargo, para poder crear el modelo debe comprobar que esas relaciones entre las tablas se crearon correctamente. En este tutorial, agregará también tres relaciones nuevas.  
@@ -39,7 +39,7 @@ ms.locfileid: "48113245"
   
 2.  Haga clic en la línea sólida entre la tabla **Customer** y la tabla **Geography** . La línea sólida entre estas dos tablas muestra que esta relación está activa, es decir, se utiliza de forma predeterminada al calcular fórmulas DAX.  
   
-     Observe que la columna **Geography Id** de la tabla **Customer** y la columna **Geography Id** de la tabla **Geography** aparecen ahora dentro de un cuadro. Esto indica que esas son las columnas usadas en la relación. Las propiedades de la relación aparecen ahora también en la ventana **Propiedades** .  
+     Observe que la columna **Geography Id** de la tabla **Customer** y la columna **Geography Id** de la tabla **Geography** aparecen ahora dentro de un cuadro. Esto indica que esas son las columnas usadas en la relación. Propiedades de la relación aparecen ahora también en el **propiedades** ventana.  
   
     > [!TIP]  
     >  Además de usar el diseñador de modelos en la vista de diagrama, puede usar también el cuadro de diálogo **Administrar relaciones** para mostrar las relaciones entre todas las tablas en un formato de tabla. Haga clic en el menú **Tabla** y, después, haga clic en **Administrar relaciones**. El cuadro de diálogo **Administrar relaciones** muestra las relaciones que se han creado de forma automática al importar los datos.  
@@ -54,7 +54,7 @@ ms.locfileid: "48113245"
     |Sí|**Ventas por Internet [Id. de cliente]**|**Clientes [Id. de cliente]**|  
     |Sí|**Ventas por Internet [Id. de producto]**|**Producto [Id. de producto]**|  
   
- Si falta alguna de las relaciones en la tabla, compruebe que el modelo incluye las tablas siguientes: Customer, Date, Geography, Product, Product Category, Product Subcategory y Internet Sales. Si las tablas de la misma conexión del origen de datos se importan en momentos distintos, no se creará ninguna relación entre estas tablas y las relaciones deberán crearse manualmente.  
+ Si falta cualquiera de las relaciones en la tabla anterior, compruebe que el modelo incluye las siguientes tablas: Customer, Date, Geography, Product, categoría de producto, subcategoría de producto y ventas por Internet. Si las tablas de la misma conexión del origen de datos se importan en momentos distintos, no se creará ninguna relación entre estas tablas y las relaciones deberán crearse manualmente.  
   
  En algunos casos, tal vez necesite crear relaciones adicionales entre las tablas de su modelo para permitir una determinada lógica empresarial. En este tutorial, tendrá que crear tres relaciones adicionales entre la tabla Internet Sales y la tabla Date.  
   

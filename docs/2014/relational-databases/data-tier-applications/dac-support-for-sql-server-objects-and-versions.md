@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24c2184d01c52222dae0bad6bb05ddd7979dbac5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209395"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361917"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Compatibilidad de DAC con las versiones y objetos de SQL Server
   Una aplicación de capa de datos (DAC) admite los objetos [!INCLUDE[ssDE](../../includes/ssde-md.md)] más comúnmente utilizados.  
@@ -38,20 +38,20 @@ ms.locfileid: "48209395"
   
 |||  
 |-|-|  
-|ROL DE BASE DE DATOS|FUNCIÓN: insertada con valores de tabla|  
-|FUNCIÓN: con valores de tabla de múltiples instrucciones|FUNCIÓN: escalar|  
-|ÍNDICE: clúster|ÍNDICE: no clúster|  
-|INDEX: espacial|ÍNDICE: único|  
-|LOGIN|Permisos|  
+|ROL DE BASE DE DATOS|FUNCIÓN: Con valores de tabla insertada|  
+|FUNCIÓN: Con valores de tabla de múltiples instrucciones|FUNCIÓN: Escalar|  
+|ÍNDICE: Clúster|ÍNDICE: No agrupados|  
+|ÍNDICE: Espacial|ÍNDICE: Único|  
+|Login|Permisos|  
 |Pertenencias al rol|SCHEMA|  
 |Estadísticas|PROCEDIMIENTO ALMACENADO: Transact-SQL|  
-|Sinónimos|TABLA: restricción CHECK|  
-|TABLA: intercalación|TABLA: columna, incluidas las columnas calculadas|  
-|TABLA: restricción, predeterminada|TABLA: restricción, clave externa|  
-|TABLA: restricción, índice|TABLA: restricción, clave principal|  
-|TABLA: restricción, única|DESENCADENADOR: DML|  
-|TIPO: HIERARCHYID, GEOMETRY, GEOGRAPHY|TIPO: tipo de datos definido por el usuario|  
-|TIPO: tipo de tabla definida por el usuario|USER|  
+|Sinónimos|TABLA: Restricción CHECK|  
+|TABLA: Intercalación|TABLA: Columna, incluidas las columnas calculadas|  
+|TABLA: Restricción, predeterminada|TABLA: Restricción de clave externa|  
+|TABLA: Restricción, índice|TABLA: Restricción de clave principal|  
+|TABLA: Restricción, única|DESENCADENADOR: DML|  
+|TIPO: HIERARCHYID, GEOMETRY, GEOGRAPHY|TIPO: Tipo de datos definido por el usuario|  
+|TIPO: Tipo de tabla definido por el usuario|User|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> Compatibilidad de aplicaciones de la capa de datos con versiones de SQL Server  
@@ -71,7 +71,7 @@ ms.locfileid: "48209395"
   
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 y Visual Studio 2010 SP1 incluían DAC Framework 1.1, que admite todas las operaciones DAC excepto la exportación y la importación.  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y Visual Studio 2010 incluían DAC Framework 1.0, que admite todas las operaciones DAC excepto la exportación, la importación, y la actualización en contexto.  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y Visual Studio 2010 incluían DAC Framework 1.0, que admite todas las operaciones DAC excepto la exportación, la importación y la actualización en contexto.  
   
 -   Las herramientas cliente de versiones anteriores de SQL Server o de Visual Studio no admiten las operaciones DAC.  
   
@@ -82,38 +82,38 @@ ms.locfileid: "48209395"
 ##  <a name="DeploymentLimitations"></a> Limitaciones de la implementación de datos  
  Tenga en cuenta estas limitaciones en la fidelidad del motor de implementación de datos de DAC Framework en SQL Server 2012 SP1. Las limitaciones se aplican a las siguientes acciones de DAC Framework: implementar o publicar un archivo .dacpac e importar un archivo .bacpac.  
   
-1.  Pérdida de metadatos para ciertas condiciones y tipos base en columnas sql_variant. En los casos correspondientes, aparecerá una advertencia con el siguiente mensaje:  **Determinadas propiedades de determinados tipos de datos utilizados dentro de una columna sql_variant no se conservan al implementarlos DAC Framework**.  
+1.  Pérdida de metadatos para ciertas condiciones y tipos base en columnas sql_variant. En los casos correspondientes, verá una advertencia con el mensaje siguiente:  **Algunas propiedades de determinados tipos de datos utilizados dentro de una columna sql_variant no se conservan al implementarlos DAC Framework.**  
   
-    -   Tipos base MONEY, SMALLMONEY NUMERIC y DECIMAL: no se mantiene la precisión.  
+    -   MONEY, SMALLMONEY NUMERIC y DECIMAL de tipos base:  No se conserva la precisión.  
   
-        -   Tipos base DECIMAL/NUMERIC con precisión 38: los metadatos de sql_variant de “TotalBytes” siempre se establecen en 21.  
+        -   Tipos base DECIMAL/NUMERIC con precisión 38: los metadatos de sql_variant de "TotalBytes" siempre se establecen en 21.  
   
-    -   Todos los tipos base de texto: la intercalación predeterminada de la base de datos se aplica a todo el texto.  
+    -   Todos los tipos de base de texto:  La intercalación de base de datos predeterminada se aplica a todo el texto.  
   
-    -   Tipos base BINARY: no se mantiene la propiedad longitud máxima.  
+    -   Tipos base BINARY:  No se conserva la propiedad longitud máxima.  
   
-    -   Tipos base TIME y DATETIMEOFFSET: la precisión se establece siempre en 7.  
+    -   Tipos base de TIME y DATETIMEOFFSET:  Precisión siempre se establece en 7.  
   
-2.  Pérdida de datos en las columnas sql_variant. En el caso correspondiente, aparecerá una advertencia con el siguiente mensaje: **Se perderán datos cuando DAC Framework implemente un valor en una columna sql_variant DATETIME2 con una escala mayor que 3. Durante la implementación, el valor DATETIME2 está limitado a una escala igual a 3.**  
+2.  Pérdida de datos en las columnas sql_variant. En el caso correspondiente, verá una advertencia con el mensaje siguiente:  **Habrá pérdida de datos cuando DAC Framework implemente un valor en una columna sql_variant DATETIME2 con una escala mayor que 3. Durante la implementación, el valor DATETIME2 está limitado a una escala igual a 3.**  
   
     -   Tipo base DATETIME2 con una escala mayor que 3: el límite de la escala es 3.  
   
-3.  La operación de implementación no se realiza correctamente para las condiciones en las columnas sql_variant. En los casos correspondientes, aparecerá un cuadro de diálogo con el siguiente mensaje:  **La operación no se realizó correctamente debido a limitaciones de datos en DAC Framework.**  
+3.  La operación de implementación no se realiza correctamente para las condiciones en las columnas sql_variant. En los casos correspondientes, verá un cuadro de diálogo con el siguiente mensaje:  **Error en la operación debido a limitaciones de los datos en DAC Framework.**  
   
-    -   Tipos base DATETIME2, SMALLDATETIME y DATE: si el valor no está comprendido en el intervalo de DATETIME (por ejemplo, el año es menor que 1753).  
+    -   Tipos base DateTime2, SMALLDATETIME y DATE:  Si el valor está fuera del intervalo de fecha y hora - por ejemplo, el año es menor que 1753.  
   
     -   Tipo base DECIMAL, NUMERIC: cuando la precisión del valor es mayor que 28.  
   
 ##  <a name="Considerations"></a> Consideraciones adicionales para las acciones de implementación  
  Tenga en cuenta las siguientes consideraciones en acciones de implementación de datos de DAC Framework:  
   
--   **Extraer, exportar:** estas limitaciones no se aplican en acciones que usan DAC Framework para crear un paquete a partir de una base de datos como, por ejemplo, extraer un archivo .dacpac o exportar un archivo .bacpac. Los datos del paquete son una representación totalmente exacta de los datos en la base de datos de origen. Si el paquete incorpora alguna de estas condiciones, el registro de extracciones y exportaciones incluirá un resumen de los problemas que se enviaron en los mensajes indicados anteriormente. Con esto, se pretende advertir a los usuario de los potenciales problemas en la implementación de datos con el paquete que han creado. El usuario verá también el mensaje de resumen siguiente en el registro: **Estas limitaciones no afectan a la fidelidad de los tipos de datos y de los valores almacenados en el paquete DAC que ha creado DAC Framework; solo se aplican a los tipos de datos y a los valores resultantes al implementar un paquete DAC en una base de datos. Para obtener más información sobre los datos que se ven afectados y cómo evitar esta limitación, consulte** [en este tema](http://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extraer, exportar**: estas limitaciones no se aplican en acciones que usan DAC Framework para crear un paquete a partir de una base de datos como, por ejemplo, extraer un archivo .dacpac o exportar un archivo .bacpac. Los datos del paquete son una representación totalmente exacta de los datos en la base de datos de origen. Si el paquete incorpora alguna de estas condiciones, el registro de extracciones y exportaciones incluirá un resumen de los problemas que se enviaron en los mensajes indicados anteriormente. Con esto, se pretende advertir a los usuario de los potenciales problemas en la implementación de datos con el paquete que han creado. El usuario verá también el siguiente mensaje de resumen en el registro:  **Estas limitaciones no afectan a la fidelidad de los tipos de datos y los valores almacenados en el paquete DAC creado por DAC Framework; solo se aplican a los tipos de datos y los valores resultantes al implementar un paquete DAC en una base de datos. Para obtener más información sobre los datos que se ven afectados y cómo evitar esta limitación, consulte** [en este tema](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
--   **Implementar, publicar, importar:** estas limitaciones se aplican en acciones que usan DAC Framework para implementar un paquete en una base de datos como, por ejemplo, implementar o publicar un archivo .dacpac e importar un archivo .bacpac. Es posible que los datos que se obtienen en la base de datos de destino no contengan una representación totalmente exacta de los datos del paquete. El registro de implementaciones e importaciones contendrá un mensaje (arriba indicado) para cada instancia donde se produzca el problema. Si hay errores, estos bloquearán la operación (vea la categoría 3 de más arriba), pero seguirá con las otras advertencias.  
+-   **Implementar, publicar, importar:** estas limitaciones se aplican en acciones que usan DAC Framework para implementar un paquete en una base de datos como, por ejemplo, implementar o publicar un archivo .dacpac e importar un archivo .bacpac. Es posible que los datos que se obtienen en la base de datos de destino no contengan una representación totalmente exacta de los datos del paquete. El registro de implementaciones e importaciones contendrá un mensaje (arriba indicado) para cada instancia donde se produzca el problema. Si hay errores, estos bloquearán la operación (vea la categoría 3 anterior), pero seguirá con las otras advertencias.  
   
-     Para obtener más información sobre los datos que se ven afectados en esta situación y cómo evitar esta limitación para implementar, publicar e importar acciones, vea [este tema](http://go.microsoft.com/fwlink/?LinkId=267087).  
+     Para obtener más información sobre los datos que se ven afectados en esta situación y cómo evitar esta limitación para implementar, publicar e importar acciones, vea [este tema](https://go.microsoft.com/fwlink/?LinkId=267087).  
   
--   **Soluciones alternativas:** las operaciones de extracción y exportación escribirán archivos de datos BCP totalmente exactos en archivos .dacpac o .bacpac. Para evitar limitaciones, utilice la utilidad de línea de comandos SQL Server BCP.exe con el fin de implementar datos totalmente exactos en una base de datos de destino a partir de un paquete DAC.  
+-   **Soluciones alternativas**: las operaciones de extracción y exportación escribirán archivos de datos BCP totalmente exactos en los archivos .dacpac o .bacpac. Para evitar limitaciones, utilice la utilidad de línea de comandos SQL Server BCP.exe con el fin de implementar datos totalmente exactos en una base de datos de destino a partir de un paquete DAC.  
   
 ## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](data-tier-applications.md)  

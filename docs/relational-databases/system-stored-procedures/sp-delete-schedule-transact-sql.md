@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd7f01df2c381ae4ee13b62e196efbc33809e23d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803773"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591499"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [  **@schedule_id=** ] *schedule_id*  
  Número de identificación de la programación que se va a eliminar. *schedule_id* es **int**, su valor predeterminado es null.  
   
-> **Nota:** cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
+> **NOTA:** Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [  **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'**_schedule_name_**'**  
  Nombre de la programación que se va a eliminar. *schedule_name* es **sysname**, su valor predeterminado es null.  
   
-> **Nota:** cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
+> **NOTA:** Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [ **@force_delete** =] *force_delete*  
  Especifica si el procedimiento debe generar un error si la programación está adjunta a un trabajo. *Force_delete* es de tipo bit, su valor predeterminado es **0**. Cuando *force_delete* es **0**, el procedimiento almacenado produce un error si la programación está adjunta a un trabajo. Cuando *force_delete* es **1**, se eliminó el programa independientemente de si la programación está adjunta a un trabajo.  
@@ -92,7 +92,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-### <a name="b-deleting-a-schedule-attached-to-a-job"></a>B. Eliminar una programación adjunta a un trabajo  
+### <a name="b-deleting-a-schedule-attached-to-a-job"></a>b. Eliminar una programación adjunta a un trabajo  
  En el ejemplo siguiente se elimina la programación `RunOnce`, independientemente de si está adjunta a un trabajo.  
   
 ```  

@@ -20,12 +20,12 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e911f31751ed0ef2d6fedb17c1b79affde79eef3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 400b7ca37d5eef130df855b3519079e2ccc8799e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166165"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376127"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Aplicar formato a números y fechas (Generador de informes y SSRS)
   Para dar formato a los números y fechas de las regiones de datos, seleccione un formato en la página **Número** del cuadro de diálogo **Propiedades** de la región de datos correspondiente.  
@@ -47,7 +47,7 @@ ms.locfileid: "48166165"
   
 -   De forma predeterminada, se da formato a los números de acuerdo con la configuración de referencia cultural del equipo cliente. Use cadenas de formato para especificar cómo se muestran los números y hacer que el formato sea coherente, independientemente de dónde se encuentre la persona que está viendo el informe.  
   
--   Los formatos proporcionados en la página **Número** son un subconjunto de las cadenas de formato numérico estándar de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para dar formato a un número o una fecha mediante un formato personalizado que no se muestra en el cuadro de diálogo, puede usar cualquier cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para números o fechas. Para obtener más información sobre las cadenas de formato personalizado, vea el tema [Aplicar formato a tipos](http://go.microsoft.com/fwlink/?LinkId=112024) en MSDN.  
+-   Los formatos proporcionados en la página **Número** son un subconjunto de las cadenas de formato numérico estándar de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para dar formato a un número o una fecha mediante un formato personalizado que no se muestra en el cuadro de diálogo, puede usar cualquier cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para números o fechas. Para obtener más información sobre las cadenas de formato personalizado, vea el tema [Aplicar formato a tipos](https://go.microsoft.com/fwlink/?LinkId=112024) en MSDN.  
   
 -   Si se especifica una cadena de formato personalizado, ésta tiene una prioridad más alta que la configuración predeterminada específica de la referencia cultural. Por ejemplo, imagine que establece una cadena con formato personalizado de "#, ###" para mostrar el número 1234 como 1,234. Esto puede tener un significado diferente para los usuarios de los Estados Unidos y para los usuarios de Europa. Antes de especificar un formato personalizado, tenga en cuenta cómo afectará el formato que elija a los usuarios de diferentes culturas que vean el informe.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "48166165"
 -   Si selecciona **Moneda** en **Categoría** y activa **Mostrar valores en**, puede seleccionar **Miles**, **Millones**o **Miles de millones** para mostrar los números mediante formatos financieros. Por ejemplo, si el valor del campo es 1.789.905.394, y selecciona **Miles de millones** y especifica 2 decimales, el valor mostrado en el informe será 1,78.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a texto y marcadores de posición &#40;generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Aplicar formato a líneas, colores e imágenes &#40;Generador de informes y SSRS&#41;](images-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Aplicar formato a las escalas de un medidor &#40;generador de informes y SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

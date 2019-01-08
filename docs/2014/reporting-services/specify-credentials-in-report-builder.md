@@ -11,12 +11,12 @@ ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f800d28a8c7e1440308761abc3d05c4d41995f00
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154105"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372127"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Especificar credenciales en el Generador de informes
   Las credenciales autentican al usuario que intenta recuperar datos de un origen de datos. El propietario del origen de datos determina el tipo de credenciales que se deben utilizar. Por ejemplo, un administrador de bases de datos podría especificar que el usuario debe proporcionar un nombre de usuario y una contraseña de Windows.  
@@ -49,7 +49,7 @@ ms.locfileid: "48154105"
  Para más información, vea [Propiedades del origen de datos (cuadro de diálogo), General &#40;Generador de informes&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md) y [Mostrar la vista previa de informes en el Generador de informes](report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="types-of-credentials"></a>Tipos de credenciales  
- El tipo de credenciales que admite un origen de datos lo especifica el propietario del origen de datos. Por ejemplo, para tener acceso a un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos, es posible que deba proporcionar una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nombre de usuario de inicio de sesión y contraseña. Para tener acceso a un origen de datos diferente, puede tener que proporcionar un nombre de usuario y contraseña de Windows. Es posible que algunos orígenes de datos no requieran credenciales.  
+ El tipo de credenciales que admite un origen de datos lo especifica el propietario del origen de datos. Por ejemplo, para tener acceso a una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , puede ser necesario proporcionar un nombre de usuario y una contraseña de inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para tener acceso a un origen de datos diferente, puede tener que proporcionar un nombre de usuario y contraseña de Windows. Es posible que algunos orígenes de datos no requieran credenciales.  
   
 ### <a name="options-for-specifying-credentials"></a>Opciones para especificar credenciales  
  Para especificar credenciales para un origen de datos existen las siguientes opciones:  
@@ -66,19 +66,19 @@ ms.locfileid: "48154105"
  Al seleccionar **Usar autenticación de Windows (seguridad integrada)**, se pasa el token del usuario actual al origen de datos. En este caso, no se solicita al usuario que escriba un nombre de usuario ni una contraseña. Esta opción requiere normalmente que las características de delegación estén habilitadas. Si estas características no están habilitadas, solamente puede usar esta opción para tener acceso a un origen de datos ubicado en el mismo servidor.  
   
 ### <a name="user-name-and-password-login"></a>Inicio de sesión con nombre de usuario y contraseña  
- Cuando se selecciona la opción **Usar este nombre de usuario y esta contraseña**, debe especificarse un nombre de usuario y una contraseña para obtener acceso al origen de datos. En el caso de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], las credenciales podrían servir para iniciar sesión en la base de datos. Las credenciales se pasan al origen de datos externo para su autenticación.  
+ Cuando se selecciona la opción **Usar este nombre de usuario y esta contraseña**, debe especificarse un nombre de usuario y una contraseña para obtener acceso al origen de datos. En el caso de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , las credenciales podrían servir para iniciar sesión en la base de datos. Las credenciales se pasan al origen de datos externo para su autenticación.  
   
 ### <a name="prompted-credentials"></a>Credenciales solicitadas  
  Al especificar las credenciales solicitadas, cada usuario que obtiene acceso al informe debe escribir un nombre de usuario y una contraseña para recuperar los datos. Esta es la opción recomendada para los informes que contienen información confidencial. Las credenciales solicitadas pueden ser para una cuenta de Windows o para iniciar sesión en una base de datos. Si el servidor de bases de datos no reconoce las credenciales proporcionadas, o si al usuario especificado no se le ha concedido permiso para recuperar los datos, se produce un error en la conexión.  
   
 ### <a name="no-credentials"></a>Sin credenciales  
- No se requieren credenciales para este origen de datos. Para ejecutar este informe en el servidor de informes, se debe configurar una cuenta de ejecución desatendida. Para obtener más información, consulte [configurar la cuenta de ejecución desatendida &#40;SSRS Configuration Manager&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros](http://go.microsoft.com/fwlink/?linkid=121312).  
+ No se requieren credenciales para este origen de datos. Para ejecutar este informe en el servidor de informes, se debe configurar una cuenta de ejecución desatendida. Para obtener más información, consulte [configurar la cuenta de ejecución desatendida &#40;SSRS Configuration Manager&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>Vea también  
  [Instalar, desinstalar y asistencia del generador de informes](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [Incrustados y compartidos de conexiones de datos u orígenes de datos &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Conexiones de datos u orígenes de datos compartidos e incrustados &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Cuadro de diálogo, configuración de opciones del generador de informes &#40;generador de informes&#41;](report-builder/set-default-options-for-report-builder.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   

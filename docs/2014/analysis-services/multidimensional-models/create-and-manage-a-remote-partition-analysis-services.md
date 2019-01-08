@@ -14,12 +14,12 @@ ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 584dea7a48b316a4e78a46b0ef1b014b8cc7cf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106914"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356638"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Crear y administrar una partición remota (Analysis Services)
   Al crear particiones en un grupo de medida, puede configurar una base de datos secundaria en una instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como almacenamiento de partición.  
@@ -57,36 +57,36 @@ ms.locfileid: "48106914"
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>Especificar nombres de servidor válidos para la implementación del cubo (en SSDT)  
   
-1.  En el servidor maestro: en el Explorador de soluciones, haga clic con el botón derecho en el nombre de la solución y seleccione **Propiedades**. En el cuadro de diálogo **Propiedades** , haga clic en **Propiedades de configuración**, haga clic en **Implementación**y, a continuación, haga clic en **Servidor** ; después, establezca el nombre del servidor maestro.  
+1.  En el servidor maestro: En el Explorador de soluciones, haga clic en el nombre de la solución y seleccione **propiedades**. En el cuadro de diálogo **Propiedades** , haga clic en **Propiedades de configuración**, haga clic en **Implementación**y, a continuación, haga clic en **Servidor** ; después, establezca el nombre del servidor maestro.  
   
-2.  En el servidor subordinado: en el Explorador de soluciones, haga clic con el botón derecho en el nombre de la solución y seleccione **Propiedades**. En el cuadro de diálogo **Propiedades** , haga clic en **Propiedades de configuración**, haga clic en **Implementación**y, a continuación, haga clic en **Servidor** ; después, establezca el nombre del servidor subordinado.  
+2.  En el servidor subordinado: En el Explorador de soluciones, haga clic en el nombre de la solución y seleccione **propiedades**. En el cuadro de diálogo **Propiedades** , haga clic en **Propiedades de configuración**, haga clic en **Implementación**y, a continuación, haga clic en **Servidor** ; después, establezca el nombre del servidor subordinado.  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>Crear e implementar una base de datos secundaria (en SSDT)  
   
-1.  En el servidor subordinado: cree un nuevo proyecto de Analysis Services para la base de datos de almacenamiento.  
+1.  En el servidor subordinado: Cree un nuevo proyecto de Analysis Services para la base de datos de almacenamiento.  
   
-2.  En el servidor subordinado: en el Explorador de soluciones, cree un nuevo origen de datos que apunte a la base de datos de cubo, db-master. Use el proveedor **Proveedor Microsoft OLE DB/OLE DB nativo para Analysis Services 11.0**.  
+2.  En el servidor subordinado: En el Explorador de soluciones, cree un nuevo origen de datos que apunta a la base de datos de cubo, db-master. Use el proveedor **Proveedor Microsoft OLE DB/OLE DB nativo para Analysis Services 11.0**.  
   
-3.  En el servidor subordinado: implemente la solución.  
+3.  En el servidor subordinado: Implementar la solución.  
   
 #### <a name="enable-features-in-ssms"></a>Habilitar características (en SSMS)  
   
-1.  En el servidor subordinado: en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la instancia conectada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos y seleccione **Propiedades**. Establezca **Feature\LinkToOtherInstanceEnabled** y **Feature\LinkFromOtherInstanceEnabled** en **True**.  
+1.  En el servidor subordinado: En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic en su conectado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos de instancia y seleccione **propiedades**. Establezca **Feature\LinkToOtherInstanceEnabled** y **Feature\LinkFromOtherInstanceEnabled** en **True**.  
   
-2.  En el servidor subordinado: haga clic con el botón derecho en el nombre del servidor en el Explorador de objetos y seleccione **Reiniciar**para reiniciar el servidor.  
+2.  En el servidor subordinado: Reinicie el servidor haciendo clic en el nombre del servidor en el Explorador de objetos y seleccionando **reiniciar**.  
   
-3.  En el servidor maestro: en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la instancia conectada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos y seleccione **Propiedades**. Establezca **Feature\LinkToOtherInstanceEnabled** y **Feature\LinkFromOtherInstanceEnabled** en **True**.  
+3.  En el servidor maestro: En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic en su conectado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos de instancia y seleccione **propiedades**. Establezca **Feature\LinkToOtherInstanceEnabled** y **Feature\LinkFromOtherInstanceEnabled** en **True**.  
   
-4.  En el servidor maestro: para reiniciar el servidor, haga clic con el botón derecho en el nombre del servidor en el Explorador de objetos y seleccione **Reiniciar**.  
+4.  En el servidor maestro: Para reiniciar el servidor, haga clic en el nombre del servidor en el Explorador de objetos y seleccione **reiniciar**.  
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>Establecer la propiedad de base de datos MasterDataSourceID en el servidor remoto (en SSMS)  
   
-1.  En el servidor subordinado: haga clic con el botón derecho en la base de datos de almacenamiento, db-storage, seleccione **Incluir la base de datos como** | **ALTER To** | **Nueva ventana del Editor de consultas**.  
+1.  En el servidor subordinado: Haga clic en el almacenamiento de base de datos, almacenamiento de base de datos, seleccione **base de datos de secuencia de comandos como** | **ALTER To** | **nueva ventana del Editor de consultas**.  
   
 2.  Agregue **MasterDataSourceID** al código XMLA y especifique después el identificador de la base de datos de cubo, db-master, como valor. El XMLA debe ser similar a lo siguiente.  
   
     ```  
-    <Alter ObjectExpansion="ExpandFull" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Alter ObjectExpansion="ExpandFull" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
        <DatabaseID>DB-Storage</DatabaseID>  
     </Object>  
@@ -111,7 +111,7 @@ ms.locfileid: "48106914"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>Configurar la partición remota (en SSDT)  
   
-1.  En el servidor maestro: abra el cubo en el Diseñador de cubos y haga clic en la pestaña **Particiones** . Expanda el grupo de medida. Haga clic en **Nueva partición** si el grupo de medida ya está configurado para varias particiones o haga clic en el botón Examinar (. . ) en la columna Origen para editar la partición existente.  
+1.  En el servidor maestro: Abra el cubo del Diseñador de cubos y haga clic en **particiones** ficha. Expanda el grupo de medida. Haga clic en **Nueva partición** si el grupo de medida ya está configurado para varias particiones o haga clic en el botón Examinar (. . ) en la columna Origen para editar la partición existente.  
   
 2.  En el Asistente para particiones, en **Especificar información de origen**, seleccione la vista del origen de datos y la tabla de hechos originales.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48106914"
     > [!NOTE]  
     >  Si obtiene un error que indica que el origen de datos no existe en la colección, debe abrir el proyecto de la base de datos de almacenamiento, db-storage, y crear un origen de datos que apunte a la base de datos maestra, db-master.  
   
-5.  En el servidor maestro: haga clic con el botón derecho en el nombre del cubo en el Explorador de soluciones, seleccione **Procesar** y procese totalmente el cubo.  
+5.  En el servidor maestro: Haga clic en el nombre del cubo en el Explorador de soluciones, seleccione **proceso** y procese totalmente el cubo.  
   
 ## <a name="administering-remote-partitions"></a>Administrar particiones remotas  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite tanto el procesamiento paralelo como el procesamiento secuencial de las particiones remotas. La base de datos maestra, en la que se definieron las particiones, coordina las transacciones entre todas las instancias que participan en el procesamiento de las particiones de un cubo. A continuación se envían informes de procesamiento a todas las instancias que procesaron una partición.  
@@ -133,6 +133,6 @@ ms.locfileid: "48106914"
 >  Aunque las bases de datos dedicadas al almacenamiento de particiones remotas no se exponen a los conjuntos de filas de esquema, las aplicaciones que usan Objetos de administración de análisis (AMO) pueden seguir detectando una base de datos dedicada mediante el uso del comando Discover de XML for Analysis. Cualquier comando CREATE o DELETE que se envíe directamente a una base de datos dedicada mediante un cliente TCP o HTTP se ejecutará correctamente, pero el servidor devolverá una advertencia que indica que la acción puede dañar la base de datos estrechamente administrada.  
   
 ## <a name="see-also"></a>Vea también  
- [Las particiones &#40;Analysis Services - datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

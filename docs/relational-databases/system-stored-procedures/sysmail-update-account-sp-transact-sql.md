@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 035e206b68242316ed8a9299842920feb18dacd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670473"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589956"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,37 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@account_id** =] *account_id*  
  Identificador de la cuenta que se va a actualizar. *account_id* es **int**, su valor predeterminado es null. Al menos uno de *account_id* o *account_name* debe especificarse. Si se especifican los dos, el procedimiento cambia el nombre de la cuenta.  
   
- [ **@account_name** =] **'***account_name***'**  
+ [ **@account_name** =] **'**_account_name_**'**  
  Nombre de la cuenta que se va a actualizar. *account_name* es **sysname**, su valor predeterminado es null. Al menos uno de *account_id* o *account_name* debe especificarse. Si se especifican los dos, el procedimiento cambia el nombre de la cuenta.  
   
- [ **@email_address** =] **'***email_address***'**  
+ [ **@email_address** =] **'**_email_address_**'**  
  Es la nueva dirección de correo electrónico desde la que se envía el mensaje. Esta dirección debe ser una dirección de correo electrónico de Internet. El nombre de servidor de la dirección es el servidor que Database Mail utiliza para enviar correo de esta cuenta. *Email_Address* es **nvarchar (128)**, su valor predeterminado es null.  
   
- [ **@display_name** =] **'***display_name***'**  
+ [ **@display_name** =] **'**_display_name_**'**  
  Nuevo nombre para mostrar que se utilizará en los mensajes de correo electrónico de esta cuenta. *display_name* es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
- [ **@replyto_address** =] **'***replyto_address***'**  
+ [ **@replyto_address** =] **'**_replyto_address_**'**  
  Nueva dirección que se utilizará en el encabezado Responder a de los mensajes de correo electrónico de esta cuenta. *replyto_address* es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
- [ **@description** =] **'***descripción***'**  
+ [ **@description** =] **'**_descripción_**'**  
  Nueva descripción de la cuenta. *descripción* es **nvarchar (256)**, su valor predeterminado es null.  
   
- [ **@mailserver_name** =] **'***nombre_servidor***'**  
+ [ **@mailserver_name** =] **'**_nombre_servidor_**'**  
  Es el nuevo nombre del servidor de correo SMTP que se debe utilizar para esta cuenta. El equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser capaz de resolver el *nombre_servidor* en una dirección IP. *nombre_servidor* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@mailserver_type** =] **'***server_type***'**  
+ [ **@mailserver_type** =] **'**_server_type_**'**  
  Nuevo tipo del servidor de correo. *server_type* es **sysname**, no tiene ningún valor predeterminado. Solo un valor de **'SMTP'** se admite.  
   
  [ **@port** =] *número_puerto*  
  Nuevo número de puerto del servidor de correo. *número_puerto* es **int**, no tiene ningún valor predeterminado.  
   
- [ **@timeout** =] **'***tiempo de espera***'**  
+ [ **@timeout** =] **'**_tiempo de espera_**'**  
  Parámetro Timeout para SmtpClient.Send de un único mensaje de correo electrónico. *Tiempo de espera* es **int** en segundos, no tiene ningún valor predeterminado.  
   
- [ **@username** =] **'***username***'**  
+ [ **@username** =] **'**_username_**'**  
  Nuevo nombre de usuario que se utilizará para iniciar sesión en el servidor de correo. *Nombre de usuario* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@password** =] **'***contraseña***'**  
+ [ **@password** =] **'**_contraseña_**'**  
  Nueva contraseña que se utilizará para iniciar sesión en el servidor de correo. *contraseña* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@use_default_credentials** =] use_default_credentials  
@@ -128,7 +128,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B. Cambio del nombre de una cuenta y de la información de una cuenta  
+### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>b. Cambio del nombre de una cuenta y de la información de una cuenta  
  En el ejemplo siguiente se cambia el nombre y se actualiza la información de la cuenta con el Id. de cuenta `125`. El nuevo nombre de la cuenta es `Backup Mail Server`.  
   
 ```  

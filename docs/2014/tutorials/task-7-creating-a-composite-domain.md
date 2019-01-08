@@ -13,15 +13,15 @@ ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18ab1fb6986941355a89cb8075897de07fc9ff3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d804e3d2b7f851f8142f0e9c95158cb56ea521ed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175835"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371707"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Tarea 7: crear una regla de dominio compuesto
-  En esta tarea, creará un dominio compuesto, **validación de direcciones**, que consta de **Address Line**, **Ciudad**, **estado**y  **Código postal** dominios. Un dominio compuesto permite definir una regla entre dominios que afecta a varias dominios de una regla. Un dominio compuesto presenta otras ventajas como la posibilidad de analizar un valor de campo en varios dominios.  Por ejemplo, un valor de un campo Nombre completo se puede analizar en distintos dominios Nombre, Segundo nombre y Apellidos. En este tutorial, solo definirá una regla entre dominios. Consulte [administrar un dominio compuesto](http://msdn.microsoft.com/library/hh510399.aspx) para obtener más detalles.  
+# <a name="task-7-creating-a-composite-domain"></a>Tarea 7: crear un dominio compuesto
+  En esta tarea, creará un dominio compuesto, **validación de direcciones**, que consta de **Address Line**, **Ciudad**, **estado**y  **Código postal** dominios. Un dominio compuesto permite definir una regla entre dominios que afecta a varias dominios de una regla. Un dominio compuesto presenta otras ventajas como la posibilidad de analizar un valor de campo en varios dominios.  Por ejemplo, un valor de un campo Nombre completo se puede analizar en distintos dominios Nombre, Segundo nombre y Apellidos. En este tutorial, solo definirá una regla entre dominios. Consulte [administrar un dominio compuesto](https://msdn.microsoft.com/library/hh510399.aspx) para obtener más detalles.  
   
 1.  En el panel izquierdo, haga clic en **crear un dominio compuesto** en la barra de herramientas.  
   

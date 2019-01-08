@@ -14,17 +14,17 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 981b2b5dc1f76d879b18e5569e7fb70dbece1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813083"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501759"
 ---
 # <a name="what-is-a-lock"></a>¿Qué es un bloqueo?
 El bloqueo es el proceso mediante el cual un DBMS restringe el acceso a una fila en un entorno multiusuario. Cuando está bloqueado exclusivamente una fila o columna, no se permiten otros usuarios para tener acceso a los datos bloqueados hasta que se libere el bloqueo. Esto garantiza que dos usuarios no puedan actualizar simultáneamente la misma columna en una fila.  
   
- Los bloqueos pueden ser muy costosos desde una perspectiva de los recursos y deben usarse solo cuando sea necesario para mantener la integridad de datos. En una base de datos donde cientos o miles de usuarios podrían estar intentando tener acceso a un registro cada segundo, como una base de datos conectada a Internet, el bloqueo innecesario podría reducir el rendimiento de la aplicación.  
+ Los bloqueos pueden ser muy costosos desde una perspectiva de los recursos y deben usarse solo cuando sea necesario para mantener la integridad de datos. En una base de datos donde cientos o miles de usuarios podrían estar intentando tener acceso a un registro cada segundo: por ejemplo, una base de datos conectado a Internet, el bloqueo innecesario rápidamente podría provocar un rendimiento más lento en la aplicación.  
   
  Puede controlar cómo el origen de datos y la biblioteca de cursores ADO administran la simultaneidad eligiendo la opción de bloqueo apropiada.  
   

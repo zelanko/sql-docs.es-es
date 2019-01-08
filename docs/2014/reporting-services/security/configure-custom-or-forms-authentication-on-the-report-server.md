@@ -14,12 +14,12 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3417491298352ac6cc72ce5543542142a412d89e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 591fc282f6e60f97d4b900e3b88f727d554535e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176725"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366107"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurar la autenticación de formularios o personalizada en el servidor de informes
   Reporting Services proporciona una arquitectura extensible que permite conectar módulos de autenticación personalizados o basados en formularios. Podría considerar implementar una extensión de autenticación personalizada si los requisitos de implementación no incluyen la seguridad integrada de Windows o la autenticación básica. El escenario más común para utilizar la autenticación personalizada es admitir el acceso a una extranet o a Internet en una aplicación web. Reemplazar la extensión de autenticación de Windows predeterminada con una extensión de autenticación personalizada le proporciona más control sobre cómo se concede acceso a los usuarios externos al servidor de informes.  
@@ -29,13 +29,13 @@ ms.locfileid: "48176725"
 > [!NOTE]  
 >  La creación de una extensión de autenticación personalizada requiere código personalizado y conocimientos sobre la seguridad de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Si no desea crear una extensión de autenticación personalizada, puede utilizar grupos y cuentas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, pero tendrá que reducir en gran parte el ámbito de implementación de un servidor de informes. Para obtener más información sobre la autenticación personalizada, vea [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md).  
   
- Además, si desea utilizar una extensión de la autenticación personalizada o de la autenticación de formularios en un entorno de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que esté integrado con un producto de SharePoint, debe configurar el sitio de SharePoint para utilizar el método de autenticación que elija. Para obtener más información sobre cómo configurar la autenticación en SharePoint, vea [Ejemplos de autenticación](http://go.microsoft.com/fwlink/?LinkId=115575) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).  
+ Además, si desea utilizar una extensión de la autenticación personalizada o de la autenticación de formularios en un entorno de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que esté integrado con un producto de SharePoint, debe configurar el sitio de SharePoint para utilizar el método de autenticación que elija. Para obtener más información sobre cómo configurar la autenticación en SharePoint, vea [Ejemplos de autenticación](https://go.microsoft.com/fwlink/?LinkId=115575) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).  
   
 ### <a name="to-configure-a-report-server-to-use-custom-authentication"></a>Para configurar un servidor de informes de modo que use la autenticación personalizada  
   
 1.  Abra RSReportServer.config en un editor de texto.  
   
-2.  Busque <`Authentication`>.  
+2.  Buscar <`Authentication`>.  
   
 3.  Copie la estructura XML siguiente:  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48176725"
     <authentication mode = "Forms" />  
     ```  
   
-8.  Buscar `identity impersonate` y establézcalo en `False`.  
+8.  Busque `identity impersonate` y establézcalo en `False`.  
   
     ```  
     <identity impersonate = "false" />  
@@ -76,13 +76,13 @@ ms.locfileid: "48176725"
     <authentication mode = "Forms" />  
     ```  
   
-11. Buscar `identity impersonate` y establézcalo en `False`.  
+11. Busque `identity impersonate` y establézcalo en `False`.  
   
     ```  
     <identity impersonate = "false" />  
     ```  
   
-12. Agregar el `PassThroughCookies` estructura del elemento al archivo de configuración. Para obtener más información, vea [Configurar el Administrador de informes para pasar cookies de autenticación personalizada](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+12. Agregue la estructura del elemento `PassThroughCookies` al archivo de configuración. Para obtener más información, vea [Configurar el Administrador de informes para pasar cookies de autenticación personalizada](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 13. Guarde el archivo.  
   
@@ -91,10 +91,10 @@ ms.locfileid: "48176725"
 15. Reinicie el servidor de informes para borrar las sesiones que estén abiertas en ese momento.  
   
 ## <a name="see-also"></a>Vea también  
- [Implementación de una extensión de seguridad](../extensions/security-extension/implementing-a-security-extension.md)   
+ [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)   
  [Autenticación con el servidor de informes](authentication-with-the-report-server.md)   
  [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Configurar la autenticación básica en el servidor de informes](configure-basic-authentication-on-the-report-server.md)   
- [Configuración de la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)  
+ [Configurar la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)  
   
   

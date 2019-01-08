@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e01f9a772b306616c8ac2ca3763a01f820e7854
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d8d0d377cff846bcabac999667718c5696089971
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661154"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216054"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copiar datos de forma masiva desde variables de programa (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "51661154"
   
     -   El nombre de un archivo de datos para recibir los mensajes de error de copia masiva (especifique NULL si no desea que un archivo de mensaje).  
   
-    -   La dirección de la copia: DB_IN de la aplicación a la vista o tabla o DB_OUT a la aplicación desde la tabla o vista.  
+    -   La dirección de la copia: DB_IN desde la aplicación a la vista o tabla o DB_OUT a la aplicación desde la tabla o vista.  
   
 5.  Llame a [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para cada columna de la copia masiva para enlazar la columna a una variable de programa.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "51661154"
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- Ejecute la primera lista de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para crear las tablas que usará el ejemplo.  
+ Ejecute la primera ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) lista para crear las tablas que usará el ejemplo de código.  
   
  Compile la segunda lista de código (C++) con odbc32.lib y odbcbcp.lib. Si la generación se realizó con MSBuild.exe, copie Bcpfmt.fmt y Bcpodbc.bcp del directorio del proyecto al directorio que contiene el archivo .exe y, a continuación, invóquelo.  
   
- Ejecute la tercer lista de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para eliminar las tablas que usó el ejemplo.  
+ Ejecute la tercera ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) lista para eliminar las tablas que usó el ejemplo de código.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

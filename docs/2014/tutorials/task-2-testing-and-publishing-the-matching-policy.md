@@ -13,12 +13,12 @@ ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e6f8fbd3ffbfcee4db212a22d4aef223450e41c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17723cfd2c1c694f21130e985b6bd65736f90236
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174465"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373945"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarea 2: probar y publicar la directiva de coincidencia
   En esta tarea, probará y publicará el **quitar proveedores duplicados** directiva de coincidencia.  
@@ -27,11 +27,11 @@ ms.locfileid: "48174465"
   
 2.  Examine todos los registros coincidentes y su puntuación de coincidencia en el cuadro de lista. Un registro que tiene un **verde** icono asociado a ella es un duplicado del registro dinámico que lo precede. He aquí un par de ejemplos:  
   
-    1.  El registro con **Id. de registro: 1000005** es una coincidencia del registro con **Id. de registro: 1000004** con **puntuación: 100%** porque ambos registros tienen los mismos valores para **SupplierID (requisito previo)**, **Supplier Name**, y **ContactEmailAddress columnas**. DQS elige aleatoriamente un registro como registro dinámico para un clúster.  
+    1.  El registro que tiene **Id. de registro: 1000005** es una coincidencia del registro con **Id. de registro: 1000004** con **puntuación: 100%** porque ambos registros tienen los mismos valores para **SupplierID (requisito previo)**, **Supplier Name**, y **ContactEmailAddress columnas**. DQS elige aleatoriamente un registro como registro dinámico para un clúster.  
   
-    2.  El registro **1000023** es una coincidencia del registro **1000022** con la puntuación de coincidencia: 93% porque los dos registros tienen los mismos valores para **SupplierID (requisito previo)** y  **Nombre de proveedor** columnas, pero valores diferentes para el **ContactEmailAddress** columna.  
+    2.  El registro **1000023** es una coincidencia del registro **1000022** con la puntuación de coincidencia: 93% porque los dos registros tienen los mismos valores para **SupplierID (requisito previo)** y **Supplier Name** columnas, pero valores diferentes para el **ContactEmailAddress** columna.  
   
-    3.  Desplácese hasta la parte inferior de la lista para ver dos registros cuyos identificadores: **1000051** y **1000052**. Registro **1000052** se considera una coincidencia con la puntuación de coincidencia **91%** porque los dos registros tienen los mismos valores para el **SupplierID** y  **ContactEmailAddress** columnas, pero valores diferentes para el **Supplier Name** columna.  
+    3.  Desplácese hasta la parte inferior de la lista para ver dos registros cuyos identificadores son **1000051** y **1000052**. Registro **1000052** se considera una coincidencia con la puntuación de coincidencia **91%** porque los dos registros tienen los mismos valores para el **SupplierID** y  **ContactEmailAddress** columnas, pero valores diferentes para el **Supplier Name** columna.  
   
      ![Definición de directiva - resultados de directivas de](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "definición de directiva - resultados de directivas")  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48174465"
   
 4.  Haga clic en **cerrar** para cerrar el **detalles de puntuación de coincidencia** cuadro de diálogo.  
   
-5.  Haga clic en **resultados coincidentes** ficha en la parte inferior de la página. Esta pestaña proporciona detalles como el número de registros coincidentes, el número de registros no coincidentes, el número de clústeres con registros coincidentes, el tamaño promedio de clúster, el tamaño mínimo de clúster y el tamaño máximo de clúster. Consulte [crear una directiva de coincidencia](http://msdn.microsoft.com/library/hh270290.aspx) para obtener más detalles. No puede exportar los resultados de esta actividad. Simplemente está definiendo una directiva de coincidencia usando datos de ejemplo para probar reglas y la directiva con los datos de ejemplo.  
+5.  Haga clic en **resultados coincidentes** ficha en la parte inferior de la página. Esta pestaña proporciona detalles como el número de registros coincidentes, el número de registros no coincidentes, el número de clústeres con registros coincidentes, el tamaño promedio de clúster, el tamaño mínimo de clúster y el tamaño máximo de clúster. Consulte [crear una directiva de coincidencia](https://msdn.microsoft.com/library/hh270290.aspx) para obtener más detalles. No puede exportar los resultados de esta actividad. Simplemente está definiendo una directiva de coincidencia usando datos de ejemplo para probar reglas y la directiva con los datos de ejemplo.  
   
      ![Pestaña de resultados de coincidencia](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-03.jpg "coincidentes de la pestaña de resultados")  
   

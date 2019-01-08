@@ -1,5 +1,5 @@
 ---
-title: Modificar la propiedad KeyColumns de un atributo | Documentos de Microsoft
+title: Modificar la propiedad KeyColumns de un atributo | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 278780dd8457a90a6ee2fba632216bd1697ec0f7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4415c5dba3382e636488ac94408f163c8e54dc6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021492"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539029"
 ---
-# <a name="attribute-properties---modify-the-keycolumn-property"></a>Propiedades de atributo: modificar la propiedad KeyColumns
+# <a name="attribute-properties---modify-the-keycolumn-property"></a>Propiedades de atributos: Modificar la propiedad KeyColumns
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Puede modificar la propiedad **KeyColumns** de un atributo. Por ejemplo, es posible que desee especificar una clave compuesta en lugar de una sola clave como clave del atributo.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "34021492"
   
     -   En el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Dimensiones** y, después, haga clic en **Abrir** o en **Diseñador de vistas**.  
   
-         O bien  
+         -o bien-  
   
     -   En el Diseñador de cubos, en el **estructura de cubo** , expanda la dimensión de cubo en el **dimensiones** panel y haga clic en **editar \<dimensión >**.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "34021492"
 8.  Para cambiar el orden de las columnas de clave, seleccione una columna y, después, haga clic en el botón **Subir** o **Bajar** .  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de propiedades de atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

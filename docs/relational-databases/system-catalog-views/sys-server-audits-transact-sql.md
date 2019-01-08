@@ -20,12 +20,12 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c89ec6b6054f6a681550fa3fb12aa925476bc0c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742683"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506363"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "47742683"
 |**create_date**|**datetime**|Fecha UTC en la que se creó la auditoría.|  
 |**modify_date**|**datetime**|Fecha UTC en la que se modificó por última vez la auditoría.|  
 |**principal_id**|**int**|ID del propietario de la auditoría, tal y como se registró en el servidor.|  
-|**Tipo**|**char(2)**|Tipo de auditoría:<br /><br /> SL – Registro de eventos de seguridad de NT<br /><br /> AL – Registro de eventos de aplicación de NT<br /><br /> FL – Archivo del sistema de archivos|  
+|**Tipo**|**char(2)**|Tipo de auditoría:<br /><br /> SL - registro de eventos de seguridad de NT<br /><br /> AL - registro de eventos de aplicación de NT<br /><br /> FL - archivo en el sistema de archivos|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
-|**ON_FAILURE**|**tinyint**|En caso de error escribir una entrada de acción:<br /><br /> 0 – Continuar<br /><br /> 1 – Cerrar instancia de servidor<br /><br /> 2 – Error en la operación|  
+|**ON_FAILURE**|**tinyint**|En caso de error escribir una entrada de acción:<br /><br /> 0 - continuar<br /><br /> 1 – Cerrar instancia de servidor<br /><br /> 2 - error en la operación|  
 |**on_failure_desc**|**nvarchar(60)**|En caso de error escribir una entrada de acción:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
-|**is_state_enabled**|**tinyint**|0 – Deshabilitado<br /><br /> 1 – Habilitado|  
+|**is_state_enabled**|**tinyint**|0 - deshabilitado<br /><br /> 1 – Habilitado|  
 |**QUEUE_DELAY**|**int**|Tiempo máximo, en milisegundos, que debe transcurrir antes de realizar la escritura en disco. Si es igual a 0, la auditoría garantizará la escritura antes de que continúe un evento.|  
 |**predicado**|**nvarchar(3000)**|La expresión de predicado aplicada al evento.|  
   

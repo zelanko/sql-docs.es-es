@@ -1,6 +1,6 @@
 ---
-title: Configuración de Firewall para SQL Server Machine Learning Services | Microsoft Docs
-description: Cómo configurar el firewall para SQL Server Machine Learning Services.
+title: 'Configuración de Firewall: SQL Server Machine Learning Services'
+description: Cómo configurar el firewall para las conexiones salientes desde SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d2bf36ea9a7c7a0b193dc4613f6a36f58e66014a
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: fc89855364e8bfdb2c1e5de1f58d87ae57886db9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419060"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431948"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>Configuración de Firewall para SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

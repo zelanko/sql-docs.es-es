@@ -13,17 +13,17 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e0b80a483032b1be28780297bacc998a2be0b51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d9711b5b9d079df0396ba9874b203a89f26344f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181481"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373022"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
   El almacén remoto de blobs RBS de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un componente complementario opcional que permite a los administradores de bases de datos almacenar directamente objetos binarios grandes en soluciones de almacenamiento de artículos en lugar de en el servidor de base de datos principal.  
   
- RBS se incluye en el disco de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y pero no lo instala el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ RBS se incluye en el disco de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pero no lo instala el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Para obtener más información acerca de RBS, vea [RBS Resources](#rbsresources) en este tema.  
   
@@ -50,22 +50,22 @@ ms.locfileid: "48181481"
 ## <a name="rbs-requirements"></a>Requisitos de RBS  
  RBS requiere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise para el servidor de base de datos principal en el que se almacenan los metadatos de los blobs. Sin embargo, si usa el proveedor FILESTREAM suministrado, puede almacenar los propios blobs en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard.  
   
- RBS incluye un proveedor FILESTREAM que permite usar RBS para almacenar los blobs en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si desea usar RBS para almacenar los blobs en una solución de almacenamiento diferente, tiene que usar un proveedor RBS de terceros desarrollado para dicha solución de almacenamiento o desarrollar un proveedor RBS personalizado con la API RBS. En [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)hay disponible como recurso de aprendizaje un ejemplo de proveedor que almacena los blobs en el sistema de archivos NTFS.  
+ RBS incluye un proveedor FILESTREAM que permite usar RBS para almacenar los blobs en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si desea usar RBS para almacenar los blobs en una solución de almacenamiento diferente, tiene que usar un proveedor RBS de terceros desarrollado para dicha solución de almacenamiento o desarrollar un proveedor RBS personalizado con la API RBS. En [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)hay disponible como recurso de aprendizaje un ejemplo de proveedor que almacena los blobs en el sistema de archivos NTFS.  
   
 ## <a name="rbs-security"></a>Seguridad de RBS  
  Cuando usa un proveedor personalizado para almacenar los blobs fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pueden estar disponibles para otros procesos que omiten el sistema de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Asegúrese de que protege los blobs almacenados con opciones de cifrado y permisos apropiados para el medio de almacenamiento que use el proveedor personalizado.  
   
 ##  <a name="rbsresources"></a> Recursos de RBS  
  **Documentación de RBS**  
- La documentación de RBS se incluye en el paquete del programa de instalación de Windows. Si desea examinar la documentación de RBS sin instalarlo, puede ver la versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de la documentación [en línea en MSDN Library](http://go.microsoft.com/fwlink/?LinkId=210192).  
+ La documentación de RBS se incluye en el paquete del programa de instalación de Windows. Si desea examinar la documentación de RBS sin instalarlo, puede ver la versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de la documentación [en línea en MSDN Library](https://go.microsoft.com/fwlink/?LinkId=210192).  
   
  **Notas RBS**  
- En las notas del producto "[Almacenamiento remoto de blobs](http://go.microsoft.com/fwlink/?LinkId=210422)", que pueden descargarse como documento de Microsoft Word, se proporciona información detallada acerca de la instalación y configuración de RBS.  
+ En las notas del producto "[Almacenamiento remoto de blobs](https://go.microsoft.com/fwlink/?LinkId=210422)", que pueden descargarse como documento de Microsoft Word, se proporciona información detallada acerca de la instalación y configuración de RBS.  
   
  **Ejemplos de RBS**  
- Los ejemplos de RBS disponibles en [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) demuestran cómo desarrollar una aplicación de RBS y cómo desarrollar e instalar un proveedor de RBS personalizado.  
+ Los ejemplos de RBS disponibles en [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) demuestran cómo desarrollar una aplicación de RBS y cómo desarrollar e instalar un proveedor de RBS personalizado.  
   
  **Blog de RBS**  
- En el [blog de RBS](http://go.microsoft.com/fwlink/?LinkId=210315) se proporciona información adicional para ayudarle a entender, implementar y mantener RBS.  
+ En el [blog de RBS](https://go.microsoft.com/fwlink/?LinkId=210315) se proporciona información adicional para ayudarle a entender, implementar y mantener RBS.  
   
   

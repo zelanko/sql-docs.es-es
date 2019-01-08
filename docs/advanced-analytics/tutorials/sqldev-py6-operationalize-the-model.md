@@ -1,5 +1,5 @@
 ---
-title: Predecir los resultados posibles mediante modelos de Python (SQL Server Machine Learning) | Microsoft Docs
+title: Predecir los resultados posibles mediante modelos de Python, SQL Server Machine Learning
 description: Tutorial que muestra cómo poner script incrustado de PYthon en SQL Server en procedimientos almacenados con funciones de Transact-SQL
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d1466fba7c659887578bf349a07968bfb580158
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a75c25528003d0133cfd33c3eaddc20a8241692
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033682"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644774"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Ejecutar predicciones con Python incrustado en un procedimiento almacenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +26,8 @@ En este escenario, la puesta en marcha significa implementar el modelo en produc
 
 Esta lección muestra dos métodos para crear predicciones basadas en un modelo de Python: procesar por lotes de puntuación y la puntuación de fila por fila.
 
-- **Puntuación por lotes:** para proporcionar varias filas de datos de entrada, pasar una consulta SELECT como un argumento para el procedimiento almacenado. El resultado es una tabla de observaciones correspondientes a los casos de entrada.
-- **Puntuación individuales:** pasar un conjunto de valores de parámetro individuales como entrada.  El procedimiento almacenado devuelve una sola fila o valor.
+- **Puntuación por lotes:** Para proporcionar varias filas de datos de entrada, pasar una consulta SELECT como un argumento para el procedimiento almacenado. El resultado es una tabla de observaciones correspondientes a los casos de entrada.
+- **Persona de puntuación:** Pasar un conjunto de valores de parámetro individuales como entrada.  El procedimiento almacenado devuelve una sola fila o valor.
 
 Todo el código de Python necesario para la puntuación se proporciona como parte de los procedimientos almacenados.
 
@@ -48,7 +48,7 @@ Instrucciones de Rrun el siguiente comando T-SQL para crear los procedimientos a
 
 + La trama de datos que contiene las entradas que se pasa a la `predict_proba` función del modelo de regresión logística, `mod`. El `predict_proba` función (`probArray = mod.predict_proba(X)`) devuelve un **float** que representa la probabilidad de que se dará una propina (de cualquier importe).
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
 GO
 
@@ -92,7 +92,7 @@ GO
 
 Este procedimiento almacenado usa las mismas entradas y crea el mismo tipo de puntuaciones que el procedimiento almacenado anterior, pero usa funciones desde la **revoscalepy** paquete proporcionado con el aprendizaje automático de SQL Server.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
 GO
 
@@ -142,7 +142,7 @@ Al pasar esos argumentos al procedimiento almacenado, puede seleccionar un model
 
 1. Para usar el **scikit-aprender** del modelo para puntuar, llame al procedimiento almacenado **PredictTipSciKitPy**, pasando el nombre del modelo y la cadena de consulta como entradas.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -157,7 +157,7 @@ Al pasar esos argumentos al procedimiento almacenado, puede seleccionar un model
 
 2. Para usar el **revoscalepy** del modelo para puntuar, llame al procedimiento almacenado **PredictTipRxPy**, pasando el nombre del modelo y la cadena de consulta como entradas.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -188,7 +188,7 @@ Ambos procedimientos almacenados crean una puntuación basada en el modelo de Py
 
 Tómese un minuto para revisar el código del procedimiento almacenado que realiza la puntuación mediante el **scikit-aprender** modelo.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
 GO
 
@@ -255,7 +255,7 @@ GO
 
 El siguiente procedimiento almacenado realiza la puntuación mediante el **revoscalepy** modelo.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
 GO
 
@@ -297,7 +297,7 @@ X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "dire
 probArray = rx_predict(mod, X)
 
 probList = []
-prob_list = prob_array["tipped_Pred"].values
+probList = probArray["tipped_Pred"].values
 
 # Create output data frame
 OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
@@ -335,14 +335,14 @@ Una vez creados los procedimientos almacenados, es fácil generar una puntuació
 
 1. Para generar una predicción mediante el **revoscalepy** modelo, ejecute esta instrucción:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 2. Para generar una puntuación mediante el **scikit-aprender** modelo, ejecute esta instrucción:
 
-    ```SQL
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'ScitKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 La salida de ambos procedimientos es una probabilidad de una propina de la carrera de taxi con los parámetros especificados o características.

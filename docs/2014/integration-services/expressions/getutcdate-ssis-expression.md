@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], GETUTCDATE
@@ -16,12 +15,12 @@ ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d266d5c329776279f21dfbfdaa51a823f460a407
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dfddc692246050d97893141715b105fc017b46f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087106"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779107"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (expresión de SSIS)
   Devuelve la fecha actual del sistema en hora UTC (horario universal coordinado u hora del meridiano de Greenwich) usando un formato DT_DBTIMESTAMP. La función GETUTCDATE no tiene argumentos.  

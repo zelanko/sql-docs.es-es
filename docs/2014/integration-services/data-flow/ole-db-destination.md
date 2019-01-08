@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
@@ -21,12 +20,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39f15609f326699c77688cfef599eed9c01adab6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0aedda782c65cbe8d28f066b7e5e97d3e7fc87cd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058135"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790777"
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
   El destino de OLE DB carga datos en una serie de bases de datos compatibles con OLE DB que usan una tabla o vista de base de datos o un comando SQL. Por ejemplo, un origen de OLE DB puede cargar datos en tablas en bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -46,7 +45,7 @@ ms.locfileid: "48058135"
 > [!NOTE]  
 >  El destino de OLE DB no admite parámetros. Si tiene que ejecutar una instrucción INSERT con parámetros, puede usar la transformación Comando de OLE DB. Para más información, consulte [OLE DB Command Transformation](transformations/ole-db-command-transformation.md).  
   
- Cuando el destino de OLE DB carga datos que utilizan un juego de caracteres de doble byte (DBCS), los datos se pueden dañar si el modo del acceso a datos no usa la opción de carga rápida y si el administrador de conexiones OLE DB utiliza el proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Para garantizar la integridad de datos de DBCS es necesario configurar el administrador de conexiones OLE DB para que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o uno de los modos de acceso de carga rápida: **Carga rápida de tabla o vista** o **Carga rápida de variable de nombre de tabla o nombre de vista**. Ambas opciones están disponibles en el cuadro de diálogo **Editor de destino de OLE DB** . Al programar el [!INCLUDE[ssIS](../../includes/ssis-md.md)] modelo de objetos, debe establecer la propiedad AccessMode en `OpenRowset Using FastLoad`, o `OpenRowset Using FastLoad From Variable`.  
+ Cuando el destino de OLE DB carga datos que utilizan un juego de caracteres de doble byte (DBCS), los datos se pueden dañar si el modo del acceso a datos no usa la opción de carga rápida y si el administrador de conexiones OLE DB utiliza el proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Para garantizar la integridad de datos de DBCS debe configurar el Administrador de conexiones OLE DB para usar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o use uno de los modos de acceso de carga rápida: **Tabla o vista - carga rápida** o **tabla nombre o la vista de nombre de la carga rápida de variable**. Ambas opciones están disponibles en el cuadro de diálogo **Editor de destino de OLE DB** . Al programar el [!INCLUDE[ssIS](../../includes/ssis-md.md)] modelo de objetos, debe establecer la propiedad AccessMode en `OpenRowset Using FastLoad`, o `OpenRowset Using FastLoad From Variable`.  
   
 > [!NOTE]  
 >  Si usa el cuadro de diálogo **Editor de destino de OLE DB** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] para crear la tabla de destino en la que el destino de OLE DB inserta los datos, puede tener que seleccionar la tabla nueva manualmente. La necesidad de selección manual se produce cuando un proveedor OLE DB, como el proveedor OLE DB para DB2 agrega automáticamente identificadores de esquema al nombre de la tabla.  
@@ -88,14 +87,14 @@ ms.locfileid: "48058135"
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene el formato `KILOBYTES_PER_BATCH`  =  \<valor entero positivo**>**.|  
 |FIRE_TRIGGERS|Especifica si se activan los desencadenadores en la tabla de inserción. La opción tiene la forma **FIRE_TRIGGERS**. La presencia de la opción indica que se activan los desencadenadores.|  
-|ORDER|Especifica cómo se ordenan los datos de entrada. La opción tiene el formato ORDER \<nombre de columna> ASC&#124;DESC. Se puede enumerar cualquier cantidad de columnas (el orden es opcional). Si se omite el orden, la operación de inserción presupone que los datos no están ordenados.<br /><br /> Nota: El rendimiento puede mejorar si se utiliza la opción ORDER para ordenar los datos de entrada según el índice agrupado de la tabla.|  
+|ORDER|Especifica cómo se ordenan los datos de entrada. La opción tiene el formato ORDER \<nombre de columna> ASC&#124;DESC. Se puede enumerar cualquier cantidad de columnas (el orden es opcional). Si se omite el orden, la operación de inserción presupone que los datos no están ordenados.<br /><br /> Nota: El rendimiento puede mejorar si se utiliza la opción ORDER para ordenar los datos de entrada según el índice clúster de la tabla.|  
   
  Las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] se suelen escribir en mayúsculas, aunque las palabras clave no distinguen entre mayúsculas y minúsculas.  
   
  Para más información sobre las opciones de carga rápida, vea [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 ## <a name="troubleshooting-the-ole-db-destination"></a>Solucionar problemas del destino de OLE DB  
- Puede registrar las llamadas realizadas por el destino OLE DB a proveedores de datos externos. Puede utilizar esta nueva capacidad de registro para solucionar problemas relacionados con el almacenamiento de datos en orígenes de datos externos que realiza el destino OLE DB. Para registrar las llamadas realizadas por el destino OLE DB a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para obtener más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Puede registrar las llamadas realizadas por el destino OLE DB a proveedores de datos externos. Puede utilizar esta nueva capacidad de registro para solucionar problemas relacionados con el almacenamiento de datos en orígenes de datos externos que realiza el destino OLE DB. Para registrar las llamadas realizadas por el destino OLE DB a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="configuring-the-ole-db-destination"></a>Configurar el destino de OLE DB  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
@@ -104,9 +103,9 @@ ms.locfileid: "48058135"
   
 -   [Editor de destino de OLE DB &#40;página Administrador de conexiones&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de OLE DB &#40;página asignaciones&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [Editor de destino de OLE DB &#40;página Asignaciones&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [Editor de destino de OLE DB &#40;página de salida de Error&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Editor de destino de OLE DB &#40;página Salida de error&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -123,7 +122,7 @@ ms.locfileid: "48058135"
 ## <a name="related-content"></a>Contenido relacionado  
  [Origen de OLE DB](ole-db-source.md)  
   
- [Servicios de integración &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)  
+ [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)  
   
  [Flujo de datos](data-flow.md)  
   

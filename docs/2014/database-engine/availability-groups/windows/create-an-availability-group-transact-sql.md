@@ -12,12 +12,12 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f47820be28dccb90b158a7b71c886306d7961d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13d14fafd18fb9e0cdb156617798c8d2f15ff661
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365188"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Crear un grupo de disponibilidad (Transact-SQL)
   En este tema se describe cómo usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] para crear y configurar un grupo de disponibilidad en las instancias de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] en que se habilita la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Un *grupo de disponibilidad* define un conjunto de bases de datos de usuario que realizarán la conmutación por error como una sola unidad y un conjunto de asociados de conmutación por error, conocido como *réplicas de disponibilidad*, que admiten la conmutación por error.  
@@ -30,7 +30,7 @@ ms.locfileid: "48169865"
 > [!NOTE]  
 >  Como alternativa al uso de [!INCLUDE[tsql](../../../includes/tsql-md.md)], puede usar el Asistente para crear grupo de disponibilidad o cmdlets de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obtener más información, vea [Usar el Asistente para grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md), [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)o [Crear un grupo de disponibilidad &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md).  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Se recomienda encarecidamente leer esta sección antes de intentar crear el primer grupo de disponibilidad.  
   
 ###  <a name="PrerequisitesRestrictions"></a> Requisitos previos, restricciones y recomendaciones  
@@ -47,7 +47,7 @@ ms.locfileid: "48169865"
   
 |Tarea|Instrucciones Transact-SQL|Dónde realizar la tarea**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
-|Crear extremo de creación de reflejo de la base de datos (una vez por instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql) *endpointName* … FOR DATABASE_MIRRORING|Se ejecuta en cada instancia del servidor que carece de extremo de creación de reflejo de la base de datos.|  
+|Crear extremo de creación de reflejo de la base de datos (una vez por instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql) *nombre_del_punto_de_conexión* ... FOR DATABASE_MIRRORING|Se ejecuta en cada instancia del servidor que carece de extremo de creación de reflejo de la base de datos.|  
 |Crear grupo de disponibilidad|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|Se ejecuta en la instancia del servidor que va a hospedar la réplica principal inicial.|  
 |Unir la réplica secundaria al grupo de disponibilidad|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|Se ejecuta en cada una de las instancias del servidor que hospedan una réplica secundaria.|  
 |Preparar la base de datos secundaria|[BACKUP](/sql/t-sql/statements/backup-transact-sql) y [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).|Se crean las copias de seguridad de la instancia del servidor que hospeda la réplica principal.<br /><br /> Se restauran las copias de seguridad en cada una de las instancias del servidor que hospedan una réplica secundaria utilizando RESTORE WITH NORECOVERY.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48169865"
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL para crear y configurar un grupo de disponibilidad  
   
 > [!NOTE]  
->  Para consultar un procedimiento de configuración de ejemplo que contiene ejemplos de código de cada una de estas instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] , vea [Ejemplo: configurar un grupo de disponibilidad que use la Autenticación de Windows](#ExampleConfigAGWinAuth).  
+>  Para obtener un procedimiento de configuración de ejemplo que contiene ejemplos de código de cada una de estas [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones, consulte [ejemplo: Configurar un grupo de disponibilidad que utiliza la autenticación de Windows](#ExampleConfigAGWinAuth).  
   
 1.  Conéctese a la instancia del servidor que va a hospedar la réplica principal.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48169865"
   
 3.  Una la nueva réplica secundaria al grupo de disponibilidad. Para obtener más información, vea [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-4.  Para cada base de datos del grupo de disponibilidad, cree una base de datos secundaria restaurando las copias de seguridad recientes de la base de datos principal, utilizando RESTORE WITH NORECOVERY. Para obtener más información, vea [Ejemplo: configurar un grupo de disponibilidad que use la Autenticación de Windows (Transact-SQL)](create-an-availability-group-transact-sql.md), comenzando por el paso que restaura la copia de seguridad de la base de datos.  
+4.  Para cada base de datos del grupo de disponibilidad, cree una base de datos secundaria restaurando las copias de seguridad recientes de la base de datos principal, utilizando RESTORE WITH NORECOVERY. Para obtener más información, consulte [ejemplo: Configurar una disponibilidad de grupo mediante Windows la autenticación (Transact-SQL)](create-an-availability-group-transact-sql.md), comenzando por el paso que restaura la copia de seguridad de base de datos.  
   
 5.  Una cada nueva base de datos secundaria al grupo de disponibilidad. Para obtener más información, vea [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="ExampleConfigAGWinAuth"></a> Ejemplo: configurar un grupo de disponibilidad que use la Autenticación de Windows  
+##  <a name="ExampleConfigAGWinAuth"></a> Ejemplo: Configuración de un grupo de disponibilidad que usa la Autenticación de Windows  
  En este ejemplo se crea un procedimiento de configuración de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de ejemplo que utiliza [!INCLUDE[tsql](../../../includes/tsql-md.md)] para configurar los extremos de creación de reflejo de la base de datos que utilizan la Autenticación de Windows y para crear y configurar un grupo de disponibilidad y sus bases de datos secundarias.  
   
  Este ejemplo contiene las siguientes secciones:  
@@ -510,11 +510,11 @@ GO
   
 -   **Blogs:**  
   
-     [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Blogs del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs del equipo de AlwaysOn SQL Server: El blog del equipo de AlwaysOn oficial SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server de CSS](http://blogs.msdn.com/b/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vídeos:**  
   
@@ -524,9 +524,9 @@ GO
   
 -   **Notas del producto:**  
   
-     [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Notas del producto de Microsoft para SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
   

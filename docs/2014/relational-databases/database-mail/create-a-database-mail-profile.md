@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], public profiles
@@ -15,12 +14,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071819"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979141"
 ---
 # <a name="create-a-database-mail-profile"></a>Crear un perfil de correo electrónico de base de datos
   Para crear perfiles públicos y privados de Correo electrónico de base de datos, use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -53,7 +52,7 @@ ms.locfileid: "49071819"
   
 -   En la página **Administrar perfiles y cuentas** , seleccione la opción **Crear nuevo perfil** y haga clic en **Siguiente**.  
   
--   En la página **Nuevo perfil** , especifique el nombre de perfil y la descripción. Agregue las cuentas que se incluirán en el perfil y haga clic **Siguiente**.  
+-   En el **nuevo perfil** , especifique el nombre del perfil, descripción y agregue las cuentas que se incluirán en el perfil y haga clic en **siguiente**.  
   
 -   En la página **Finalización del asistente** , revise las acciones que realizará y haga clic en **Finalizar** para completar crear el nuevo perfil.  
   
@@ -157,7 +156,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 ###  <a name="PublicProfile"></a> Para crear un perfil público de Correo electrónico de base de datos  
   
--   Conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Para crear un nuevo perfil, ejecute el procedimiento almacenado del sistema [sysmail_add_profile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql) como sigue:  
   
@@ -191,7 +190,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Estado del perfil predeterminado* '  
   
-     donde *@profile_name* es el nombre del perfil y *@principal_name* para indicar que se trata de un perfil público *@is_default* determina si esto perfil es el predeterminado para el usuario de base de datos o el rol.  
+     donde *@profile_name* es el nombre del perfil y *@principal_name* indica si se trata de un perfil público. Con *@is_default* se determina si este perfil es el predeterminado para el usuario o rol de la base de datos.  
   
  El ejemplo siguiente se crea una cuenta de Correo electrónico de base de datos, crea un perfil privado de Correo electrónico de base de datos, agrega la cuenta al perfil y concede acceso público al perfil.  
   

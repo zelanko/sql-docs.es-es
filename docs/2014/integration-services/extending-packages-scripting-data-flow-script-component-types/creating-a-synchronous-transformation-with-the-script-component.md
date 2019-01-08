@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96585ac5a5f248cd1a127c766e5925bdc66d0b71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dad9b912d6202c79b21ee1e8638f5ce9b42f7cf2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215825"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376197"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Crear una transformación sincrónica con el componente de script
   Un componente de transformación se utiliza en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar y analizar los datos cuando pasan del origen al destino. Una transformación con salidas sincrónicas procesa cada fila de entrada a medida que pasa por el componente. Una transformación con salidas asincrónicas espera hasta que haya recibido todas las filas de entrada para completar su procesamiento. En este tema se describe una transformación sincrónica. Para obtener información sobre transformaciones asincrónicas, vea [Crear una transformación asincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, consulte [Understanding Synchronous and Asynchronous Transformations](../understanding-synchronous-and-asynchronous-transformations.md) (Descripción de las transformaciones sincrónicas y asincrónicas).  
@@ -41,7 +39,7 @@ ms.locfileid: "48215825"
  Para establecer el lenguaje de script para el componente de script, puede establecer la propiedad **ScriptLanguage** en la página **Script** del **Editor de transformación Script**.  
   
 > [!NOTE]  
->  Para establecer el lenguaje de scripting predeterminado para el componente de script, utilice la opción **Lenguaje de scripting** en la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea [General Page](../general-page-of-integration-services-designers-options.md).  
+>  Para establecer el lenguaje de scripting predeterminado para el componente de script, utilice la opción **Lenguaje de scripting** en la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea[página General](../general-page-of-integration-services-designers-options.md).  
   
  Un componente de transformación de flujo de datos tiene una entrada y admite una o varias salidas. La configuración de la entrada y las salidas del componente es uno de los pasos que debe completar en el modo de diseño de metadatos, mediante el **Editor de transformación Script**, antes de escribir un script personalizado.  
   
@@ -87,7 +85,7 @@ ms.locfileid: "48215825"
 ### <a name="understanding-the-auto-generated-code"></a>Descripción del código generado automáticamente  
  Al abrir el IDE de VSTA después de crear y configurar un componente de transformación, la clase `ScriptMain` modificable aparece en el editor de código con un código auxiliar para el método `ProcessInputRow`. En la clase `ScriptMain` se escribirá el código personalizado y `ProcessInputRow` es el método más importante de un componente de transformación.  
   
- Si abre el **Explorador de proyectos** ventana en VSTA, puede ver que el componente de Script también ha generado de solo lectura `BufferWrapper` y `ComponentWrapper` elementos de proyecto. El `ScriptMain` clase hereda de la `UserComponent` clase en el `ComponentWrapper` elemento de proyecto.  
+ Si abre el **Explorador de proyectos** ventana en VSTA, puede ver que el componente de Script también ha generado de solo lectura `BufferWrapper` y `ComponentWrapper` elementos de proyecto. La clase `ScriptMain` hereda de la clase `UserComponent` en el elemento de proyecto `ComponentWrapper`.  
   
  En tiempo de ejecución, el motor de flujo de datos invoca el método `ProcessInput` de la clase `UserComponent`, lo que invalida el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la clase primaria <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A su vez, el método `ProcessInput` recorre las filas del búfer de entrada y llama al método `ProcessInputRow` una vez por cada fila.  
   
@@ -260,7 +258,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 }  
 ```  
   
-|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Descripción de las transformaciones sincrónicas y asincrónicas](../understanding-synchronous-and-asynchronous-transformations.md) [crear una transformación asincrónica con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [desarrollar un componente de transformación personalizado con sincrónica Salidas](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  

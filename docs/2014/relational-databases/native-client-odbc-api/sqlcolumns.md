@@ -14,12 +14,12 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f4398efa6d8132800926c18d74bbcd7b9a524e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181325"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360957"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` Devuelve SQL_SUCCESS si existen o no valores para el *CatalogName*, *TableName*, o *ColumnName* parámetros. **SQLFetch** devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
@@ -29,7 +29,7 @@ ms.locfileid: "48181325"
   
  `SQLColumns` se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar `SQLColumns` en un cursor actualizable (dinámico o controlado por conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, lo que indica que se ha cambiado el tipo de cursor.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *CatalogName* parámetro: *nombre_servidor_vinculado.nombre_catálogo*.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *CatalogName* parámetro: *Nombre_servidor_vinculado.nombre_catálogo*.  
   
  Para ODBC 2. *x* no usa caracteres comodín en las aplicaciones *TableName*, `SQLColumns` devuelve información sobre las tablas cuyo nombres coinciden con *TableName* y son propiedad actual usuario. Si el usuario actual no posee ninguna tabla cuyo nombre coincide con el *TableName* parámetro, `SQLColumns` devuelve información sobre las tablas que pertenecen a otros usuarios que coincide con el nombre de la tabla el *TableName* parámetro. Para ODBC 2. *x* aplicaciones mediante caracteres comodín, `SQLColumns` devuelve todas las tablas cuyo nombres coinciden con *TableName*. Para ODBC 3. *x* aplicaciones `SQLColumns` devuelve todas las tablas cuyo nombres coinciden con *TableName* independientemente del propietario o si se utilizan caracteres comodín.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48181325"
  Para obtener más información sobre las columnas dispersas en ODBC, vea [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLColumns](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [Función SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

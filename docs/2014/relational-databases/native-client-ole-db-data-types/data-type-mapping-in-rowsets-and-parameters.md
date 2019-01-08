@@ -21,12 +21,12 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b79afdc8917e3a14055b8ada17cbd3d57a8c9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186415"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766047"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros
   En los conjuntos de filas y como valores de parámetro, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representa el proveedor OLE DB de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos mediante el uso de las siguientes DB OLE definen los tipos de datos, notificados en las funciones **IColumnsInfo:: GetColumnInfo** y  **ICommandWithParameters:: GetParameterInfo**.  
@@ -68,7 +68,7 @@ ms.locfileid: "48186415"
  Los objetos **sql_variant** pueden contener datos de cualquier tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] excepto text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp y los tipos definidos por el usuario de Common Language Runtime (CLR) de Microsoft .NET Framework. Una instancia de datos sql_variant no puede tener sql_variant como tipo de datos base subyacente. Por ejemplo, la columna puede contener valores **smallint** en algunas filas, valores **float** en otras filas y valores **char**/**nchar** en el resto.  
   
 > [!NOTE]  
->  El tipo de datos **sql_variant** es similar al tipo de datos Variant de Microsoft Visual Basic® y DBTYPE_VARIANT, DBTYPE_SQLVARIANT de OLEDB.  
+>  ¿El **sql_variant** tipo de datos es similar al tipo de datos Variant en Microsoft Visual Basic? y DBTYPE_VARIANT, DBTYPE_SQLVARIANT de OLEDB.  
   
  Cuando los datos **sql_variant** se capturan como DBTYPE_VARIANT, se incluyen en una estructura VARIANT en el búfer. Pero es posible que los subtipos de la estructura VARIANT no se asignen a los subtipos definidos en el tipo de datos **sql_variant**. Los datos **sql_variant** se tienen que capturar en este caso como DBTYPE_SQLVARIANT para que todos los subtipos coincidan.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48186415"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|Tipo: VT_BOOL<br /><br /> L/E: de lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: determina si los datos se capturan como DBTYPE_VARIANT o DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT.<br /><br /> VARIANT_FALSE: el tipo de columna se devuelve como DBTYPE_VARIANT y el búfer contendrá la estructura VARIANT.|  
+|SSPROP_ALLOWNATIVEVARIANT|Tipo: VT_BOOL<br /><br /> R/W: Lectura/escritura<br /><br /> Predeterminado: VARIANT_FALSE<br /><br /> Descripción: Determina si los datos que se capturan como DBTYPE_VARIANT o DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: Tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT.<br /><br /> VARIANT_FALSE: Tipo de columna se devuelve como DBTYPE_VARIANT y el búfer contendrá la estructura VARIANT.|  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos &#40;OLE DB&#41;](data-types-ole-db.md)  

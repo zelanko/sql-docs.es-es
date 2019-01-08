@@ -11,12 +11,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194715"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368887"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Usar una versión modificada del proyecto Tutorial de Analysis Services
   Las lecciones restantes de este tutorial se basan en una versión mejorada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que completó en las tres primeras lecciones. Se han agregado tablas y cálculos con nombre adicionales a la vista del origen de datos **Adventure Works DW 2012** , se han agregado más dimensiones al proyecto y estas nuevas dimensiones se han agregado al cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Además, se ha agregado un segundo grupo de medidas, que contiene medidas de una segunda tabla de hechos. Este proyecto mejorado le permitirá continuar aprendiendo a agregar funciones adicionales a la aplicación de Business Intelligence sin necesidad de tener que repetir las técnicas ya aprendidas.  
@@ -25,7 +25,7 @@ ms.locfileid: "48194715"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Descargar y extraer el archivo de proyecto  
   
-1.  [Haga clic aquí](http://go.microsoft.com/fwlink/?LinkID=221866) para ir a la página de descarga que proporciona los proyectos de ejemplo relacionados con este tutorial. Los proyectos del tutorial se incluyen en la descarga de **Tutorial de Analysis Services SQL Server 2012** .  
+1.  [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para ir a la página de descarga que proporciona los proyectos de ejemplo relacionados con este tutorial. Los proyectos del tutorial se incluyen en la descarga de **Tutorial de Analysis Services SQL Server 2012** .  
   
 2.  Haga clic en **Tutorial de Analysis Services de SQL Server 2012** para descargar el paquete que contiene los proyectos para este tutorial.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "48194715"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Cargar y procesar el proyecto mejorado  
   
-1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Archivo** , haga clic en **Cerrar solución** para cerrar los archivos que no vaya a usar.  
+1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el **archivo** menú, haga clic en **Cerrar solución** para cerrar los archivos que no va a usar.  
   
-2.  En el menú **Archivo**, seleccione **Abrir** y haga clic en **Proyecto o solución**.  
+2.  En el menú **Archivo** , seleccione **Abrir**y haga clic en **Proyecto o solución**.  
   
 3.  Vaya a la ubicación donde extrajo los archivos del proyecto de tutorial.  
   

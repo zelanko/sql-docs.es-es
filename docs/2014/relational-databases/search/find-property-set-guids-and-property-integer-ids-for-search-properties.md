@@ -13,17 +13,17 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 387cb0f529858efc858004c9c0d2a382f52cf048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da65bc5c3879a20ff178e27747a9bf5b267ff2c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222645"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372187"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda
   En este tema se explica cómo obtener los valores necesarios para poder agregar una propiedad a una lista de propiedades de búsqueda y hacer que se pueda buscar en ella mediante la búsqueda de texto completo. Estos valores incluyen el GUID de conjunto de propiedades y el identificador entero de propiedad de una propiedad de documento.  
   
- Propiedad del documento que se extrae mediante IFilters de datos binarios, es decir, de los datos almacenados en un `varbinary`, `varbinary(max)` (incluidos `FILESTREAM`), o `image` columna con tipo de datos pueden estar disponibles para la búsqueda de texto completo. Para que se pueda buscar una propiedad extraída, la propiedad se debe agregar manualmente una lista de propiedades de búsqueda. La lista de propiedades de búsqueda también debe estar asociada a uno o más índices de texto completo. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](search-document-properties-with-search-property-lists.md).  
+ Propiedad del documento que se extrae mediante IFilters de datos binarios: es decir, de datos almacenados en un `varbinary`, `varbinary(max)` (incluidos `FILESTREAM`), o `image` columna de tipo de datos - pueden estar disponibles para la búsqueda de texto completo. Para que se pueda buscar una propiedad extraída, la propiedad se debe agregar manualmente una lista de propiedades de búsqueda. La lista de propiedades de búsqueda también debe estar asociada a uno o más índices de texto completo. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](search-document-properties-with-search-property-lists.md).  
   
  Para poder agregar una propiedad disponible a una lista de propiedades, tiene que buscar 2 elementos de información acerca de la propiedad:  
   
@@ -43,9 +43,9 @@ ms.locfileid: "48222645"
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor o autores de un elemento determinado.|  
 |Etiquetas|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palabras clave (también conocido como etiquetas) asignado al elemento.|  
 |Tipo|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de archivo percibido basado en su tipo canónico.|  
-|Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título del elemento. Por ejemplo, el título de un documento, el asunto de un mensaje, la leyenda de una foto o el nombre de una pista de música.|  
+|Título|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título del elemento. Por ejemplo, el título de un documento, el asunto de un mensaje, la leyenda de una foto o el nombre de una pista de música.|  
   
- Para fomentar la coherencia entre los formatos de archivo, Microsoft ha identificado subconjuntos de las propiedades de documento de alta prioridad usadas con frecuencia para diversas categorías de documentos. Esto incluye comunicaciones, contactos, documentos, archivos de música, imágenes y vídeos. Para obtener más información sobre las principales propiedades para cada categoría, vea la sección sobre las [propiedades definidas por el sistema para formatos de archivo personalizados](http://go.microsoft.com/fwlink/?LinkId=144336) en la documentación de Windows Search.  
+ Para fomentar la coherencia entre los formatos de archivo, Microsoft ha identificado subconjuntos de las propiedades de documento de alta prioridad usadas con frecuencia para diversas categorías de documentos. Esto incluye comunicaciones, contactos, documentos, archivos de música, imágenes y vídeos. Para obtener más información sobre las principales propiedades para cada categoría, vea la sección sobre las [propiedades definidas por el sistema para formatos de archivo personalizados](https://go.microsoft.com/fwlink/?LinkId=144336) en la documentación de Windows Search.  
   
  Un formato de archivo específico puede implementar propiedades de tres tipos:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48222645"
   
  Ejecute **filtdump.exe** desde el símbolo del sistema y proporcione un único argumento. Este argumento es el nombre de un archivo individual que tiene un tipo de archivo para el que está instalado un IFilter. La utilidad muestra una lista de todas las propiedades detectadas por el IFilter en el documento, con sus GUID de conjunto de propiedades, identificadores enteros e información adicional.  
   
- Para obtener información acerca de la instalación de este software, vea [SDK de Microsoft Windows para Windows 7 y .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=212980). Después de descargar e instalar el SDK, busque en las siguientes carpetas la utilidad filtdump.exe.  
+ Para obtener información acerca de la instalación de este software, vea [SDK de Microsoft Windows para Windows 7 y .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). Después de descargar e instalar el SDK, busque en las siguientes carpetas la utilidad filtdump.exe.  
   
 -   Para la versión de 64 bits, busque en `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   
@@ -75,15 +75,15 @@ ms.locfileid: "48222645"
 .  
 propertyDescription  
 name = System.Author  
-…  
+...  
 formatID = F29F85E0-4FF9-1068-AB91-08002B27B3D9  
 propID = 4  
-…  
+...  
 ```  
   
- Para obtener la descripción completa de esta propiedad, vea [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) en la documentación de Windows Search.  
+ Para obtener la descripción completa de esta propiedad, vea [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) en la documentación de Windows Search.  
   
- Para obtener una lista completa de las propiedades de Windows, vea [Propiedades de Windows](http://go.microsoft.com/fwlink/?LinkId=215013), también en la documentación de Windows Search.  
+ Para obtener una lista completa de las propiedades de Windows, vea [Propiedades de Windows](https://go.microsoft.com/fwlink/?LinkId=215013), también en la documentación de Windows Search.  
   
 ##  <a name="examples"></a> Agregar una propiedad a una lista de propiedades de búsqueda  
  En el ejemplo siguiente se muestra cómo agregar una propiedad a una lista de propiedades de búsqueda. En el ejemplo se usa una instrucción [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) para agregar la propiedad `System.Author` a una lista de propiedades de búsqueda denominada `PropertyList1`y se proporciona un nombre descriptivo para la propiedad, `Author`.  

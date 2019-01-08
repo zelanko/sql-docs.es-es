@@ -11,12 +11,12 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: cb940edad51f7d05effc7ba35534a25edddaf441
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df19fffaec69eac9c3a80fe7fee1899994682a0b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180675"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354540"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tablas (Generador de informes y SSRS)
   Use una tabla para mostrar datos detallados o datos agrupados, o una combinación de ambos. Puede agrupar los datos por un solo campo, por varios campos o escribiendo su propia expresión. Puede crear grupos anidados o grupos adyacentes independientes. Para mostrar los valores agregados para los datos agrupados, agregue totales a los grupos. Dé formato a las filas y columnas para resaltar los datos a los que desea dar énfasis. Puede ocultar inicialmente los datos detallados o agrupados, e incluir controles de alternancia de obtención de detalles para permitir a los usuarios elegir interactivamente cuántos datos se van a mostrar.  
@@ -24,9 +24,9 @@ ms.locfileid: "48180675"
 > [!NOTE]  
 >  Puede publicar tablas por separado de un informe como elementos de informe.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para empezar a usar tablas rápidamente, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) o [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ Para empezar rápidamente con tablas, vea [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41; ](../tutorial-creating-a-basic-table-report-report-builder.md) o [crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
- Los informes de ejemplo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluyen una serie de informes que utilizan tablas. Puede obtener conocimientos sobre las tablas explorando la definición de un informe de ejemplo en el Generador de informes o el Diseñador de informes, u obteniendo una vista previa del informe representado en el Generador de informes o el Diseñador de informes. Para obtener más información sobre la descarga de los informes de ejemplo, vea el tema sobre [ejemplos de Reporting Services (SSRS)](http://go.microsoft.com/fwlink/?LinkID=198283).  
+ Los informes de ejemplo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluyen una serie de informes que utilizan tablas. Puede obtener conocimientos sobre las tablas explorando la definición de un informe de ejemplo en el Generador de informes o el Diseñador de informes, u obteniendo una vista previa del informe representado en el Generador de informes o el Diseñador de informes. Para obtener más información sobre la descarga de los informes de ejemplo, vea el tema sobre [ejemplos de Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "48180675"
   
  ![Plantilla de tabla en la superficie de diseño, seleccionada](../media/rs-tabletemplatenewselected.gif "Plantilla de tabla en la superficie de diseño, seleccionada")  
   
- El identificador de fila para la fila Datos muestra el símbolo de detalles (![Identificador de fila con tres líneas paralelas para la fila de detalles](../media/rs-icontablix-detailsrow.gif "Identificador de fila con tres líneas paralelas para la fila de detalles")). Para mostrar datos en estas filas, arrastre los campos desde el panel Datos de informe hasta las celdas de la tabla en la fila de encabezado o la fila de detalles. Ambas filas se rellenan simultáneamente. Para agregar columnas adicionales, arrastre el campo hacia la tabla hasta que vea un punto de inserción. Después de agregar campos de conjunto de datos a la tabla, puede cambiar el formato predeterminado de las fechas y la moneda para controlar su visualización en el informe. El diagrama siguiente muestra una región de datos de tabla con estos campos: Date, Order, Product, Qty, y Line Total.  
+ El identificador de fila para la fila Datos muestra el símbolo de detalles (![Identificador de fila con tres líneas paralelas para la fila de detalles](../media/rs-icontablix-detailsrow.gif "Identificador de fila con tres líneas paralelas para la fila de detalles")). Para mostrar datos en estas filas, arrastre los campos desde el panel Datos de informe hasta las celdas de la tabla en la fila de encabezado o la fila de detalles. Ambas filas se rellenan simultáneamente. Para agregar columnas adicionales, arrastre el campo hacia la tabla hasta que vea un punto de inserción. Después de agregar campos de conjunto de datos a la tabla, puede cambiar el formato predeterminado de las fechas y la moneda para controlar su visualización en el informe. El siguiente diagrama muestra una región de datos de tabla con estos campos: Fecha, Order, Product, Qty y Total de línea.  
   
  ![Diseño, Tabla con encabezados de columna en negrita](../media/rs-basictabledetailsformatteddesign.gif "Diseño, Tabla con encabezados de columna en negrita")  
   

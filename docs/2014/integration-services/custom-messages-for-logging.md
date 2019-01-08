@@ -16,19 +16,19 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28e4b5a405279b1aaede6fc9db96cf9024a59b96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55c99ad60dd449a3f5b591adf09f325127258b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148055"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366577"
 ---
 # <a name="custom-messages-for-logging"></a>Mensajes personalizados para registro
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Proporciona un amplio conjunto de eventos personalizados para escribir entradas del registro para paquetes y muchas tareas. Puede utilizar estas entradas para guardar información detallada sobre el progreso, resultados y problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. Por ejemplo, puede registrar cuando se inicia y finaliza la inserción masiva para identificar los problemas de rendimiento en la ejecución del paquete.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona a un amplio conjunto de eventos personalizados para escribir entradas del registro para paquetes y muchas tareas. Puede utilizar estas entradas para guardar información detallada sobre el progreso, resultados y problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. Por ejemplo, puede registrar cuando se inicia y finaliza la inserción masiva para identificar los problemas de rendimiento en la ejecución del paquete.  
   
  Las entradas del registro personalizadas pertenecen a un conjunto de entradas diferente de los eventos estándar de registro que están disponibles para los paquetes y todos los contenedores y tareas. Las entradas del registro personalizadas se han adaptado para capturar información de utilidad sobre una tarea específica de un paquete. Por ejemplo, una de las entradas de registro personalizadas para la tarea Ejecutar SQL registra la instrucción SQL que ejecuta la tarea en el registro.  
   
- Todas las entradas del registro incluyen información de fecha y hora, incluidas las entradas del registro que se escriben automáticamente cuando se inicia o finaliza un paquete. Muchos de los eventos de registro escriben varias entradas en el registro. Esto ocurre generalmente cuando los eventos tienen diferentes fases. Por ejemplo, el `ExecuteSQLExecutingQuery` registro de eventos escribe tres entradas: una entrada después de la tarea adquiere una conexión a la base de datos, otra después de que la tarea comienza a preparar la instrucción SQL y otra más una vez completada la ejecución de la instrucción SQL.  
+ Todas las entradas del registro incluyen información de fecha y hora, incluidas las entradas del registro que se escriben automáticamente cuando se inicia o finaliza un paquete. Muchos de los eventos de registro escriben varias entradas en el registro. Esto ocurre generalmente cuando los eventos tienen diferentes fases. Por ejemplo, el evento de registro `ExecuteSQLExecutingQuery` escribe tres entradas: una entrada después de que la tarea adquiere una conexión con la base de datos, otra después de que la tarea comienza a preparar la instrucción SQL y otra más una vez que se completa la ejecución de la instrucción SQL.  
   
  Los siguientes objetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] poseen entradas del registro personalizadas:  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48148055"
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
-|`PackageStart`|Indica que se inició la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
-|`PackageEnd`|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
-|`Diagnostic`|Proporciona información sobre la configuración del sistema que afecta a la ejecución de paquetes, como el número de ejecutables que se pueden ejecutar simultáneamente.<br /><br /> El `Diagnostic` entrada del registro también incluye antes y después de las entradas para las llamadas a proveedores de datos externos. Para obtener más información, consulte [Troubleshooting Tools Package Connectivity](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
+|`PackageStart`|Indica que se inició la ejecución del paquete.<br /><br /> Nota: Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
+|`PackageEnd`|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
+|`Diagnostic`|Proporciona información sobre la configuración del sistema que afecta a la ejecución de paquetes, como el número de ejecutables que se pueden ejecutar simultáneamente.<br /><br /> La entrada del registro `Diagnostic` también incluye entradas por delante y por detrás relativas a las llamadas a proveedores de datos externos. Para obtener más información, consulte [Troubleshooting Tools Package Connectivity](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
 ###  <a name="BulkInsert"></a> Tarea Inserción masiva  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Inserción masiva.  
@@ -100,9 +100,9 @@ ms.locfileid: "48148055"
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indica que la tarea Flujo de datos cambió el tamaño del búfer. En la entrada del registro se describen las razones del cambio de tamaño y se indica el nuevo tamaño temporal del búfer.|  
-|`OnPipelinePostEndOfRowset`|Indica que un componente se ha dado la señal de fin del conjunto de filas, que se establece mediante la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
-|`OnPipelinePostPrimeOutput`|Indica que el componente ha completado su última llamada a la `PrimeOutput` método. En función del flujo de datos, es posible que se escriban varias entradas. Si el componente es un origen, esto significa que el componente ha terminado de procesar filas.|  
-|`OnPipelinePreEndOfRowset`|Indica que un componente está a punto de recibir la señal de fin del conjunto de filas, que se establece mediante la última llamada de la `ProcessInput` método. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
+|`OnPipelinePostEndOfRowset`|Indica que se ha dado la señal de fin del conjunto de filas a un componente, la cual se establece a través de la última llamada del método `ProcessInput`. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
+|`OnPipelinePostPrimeOutput`|Indica que el componente ha completado su última llamada al método `PrimeOutput`. En función del flujo de datos, es posible que se escriban varias entradas. Si el componente es un origen, esto significa que el componente ha terminado de procesar filas.|  
+|`OnPipelinePreEndOfRowset`|Indica que un componente está a punto de recibir la señal de fin del conjunto de filas, la cual se establece a través de la última llamada del método `ProcessInput`. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
 |`OnPipelinePrePrimeOutput`|Indica que el componente está a punto de recibir su última llamada del método `PrimeOutput`. En función del flujo de datos, es posible que se escriban varias entradas.|  
 |`OnPipelineRowsSent`|Informa del número de filas que se proporciona a una entrada de componentes a través de una llamada al método `ProcessInput`. La entrada del registro incluye el nombre del componente.|  
 |`PipelineBufferLeak`|Proporciona información sobre cualquier componente que mantuvo la conexión de los búferes después de que desapareciera el administrador de búferes. Esto significa que no se liberaron los recursos de los búferes y podría ocasionar pérdidas de memoria. La entrada del registro proporciona el nombre del componente y el Id. del búfer.|  
@@ -169,7 +169,7 @@ ms.locfileid: "48148055"
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Informa sobre los resultados de la implementación del registro en el script. Se escribe una entrada de registro para cada llamada a la `Log` método de la `Dts` objeto. La entrada se escribe cuando se ejecuta el código. Para más información, consulte [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Informa sobre los resultados de la implementación del registro en el script. Se escribe una entrada de registro para cada llamada al método `Log` del objeto `Dts`. La entrada se escribe cuando se ejecuta el código. Para más información, consulte [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ###  <a name="SendMail"></a> Tarea Enviar correo  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Enviar correo.  
@@ -262,7 +262,7 @@ ms.locfileid: "48148055"
 |`XMLOperation`|Proporciona información sobre la operación que la tarea realiza.|  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog sobre [el registro de eventos personalizados para tareas de Integration Services](http://go.microsoft.com/fwlink/?LinkId=150580), en dougbert.com.  
+ Entrada de blog sobre [el registro de eventos personalizados para tareas de Integration Services](https://go.microsoft.com/fwlink/?LinkId=150580), en dougbert.com.  
   
 ## <a name="see-also"></a>Vea también  
  [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  

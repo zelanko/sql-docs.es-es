@@ -11,17 +11,17 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5a372f230cfc2fc63e59787b8f9b674928f72368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095305"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356461"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lección 6: Agregar grupos y totales (Reporting Services)
   Agregue grupos y totales al informe para organizar y resumir los datos.  
   
- Para obtener información sobre cómo agregar totales acumulativos a informes, consulte la siguiente selección en curah.Microsoft.com: [Adding totals to Reporting Services (SSRS) reports](http://go.microsoft.com/fwlink/p/?LinkId=403698)(Adición de totales a los informes de Reporting Services [SSRS]).  
+ Para obtener información acerca de cómo agregar totales acumulados a los informes, vea esta selección en curah.microsoft.com sobre [Agregar totales a los informes de Reporting Services (SSRS)](https://go.microsoft.com/fwlink/p/?LinkId=403698).  
   
  **En este tema:**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48095305"
   
 6.  En el menú **Formato** , haga clic en **Color de fondo**y, a continuación, haga clic en **Gris claro**y en **Aceptar**.  
   
-     ![Vista Diseño: tabla básica con total de pedidos](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Vista Diseño: tabla básica con total de pedidos")  
+     ![Vista de diseño: Tabla básica con total del pedido](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "vista de diseño: Tabla básica con total del pedido")  
   
 ##  <a name="bkmk_adddailytotal"></a> Para agregar un total diario a un informe  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48095305"
   
 4.  En el menú **Formato** , haga clic en **Color de fondo**y, a continuación, haga clic en **Azul claro**y en **Aceptar**.  
   
-     ![Vista Diseño: total general en tabla básica](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Vista Diseño: total general en tabla básica")  
+     ![Vista de diseño: Total general en tabla básica](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "vista de diseño: Total general en tabla básica")  
   
 5.  Haga clic en Vista previa.  
   
      La última página debe tener un aspecto similar a este:  
   
-     ![Vista previa: tabla básica con total general](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Vista previa: tabla básica con total general")  
+     ![Vista previa: Tabla básica con total general](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "vista previa: Tabla básica con total general")  
   
 ##  <a name="bkmk_publishreport"></a> Para publicar el informe en el servidor de informes (opcional)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48095305"
   
      Si ve un mensaje similar al siguiente en la ventana de salida, indica que la implementación se realiza correctamente.  
   
-    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Elemento está actualizado. Generación completa--0 errores, 0 advertencias---implementación iniciada: proyecto: tutorial, configuración: Debug---implementar a http://\<nombre del servidor > / /reportserverdeploying report '/ tutorial/Sales Orders'. Implementación completa--0 errores, 0 advertencias === compilar: 1 correctos o actualizados, 0 incorrectos, 0 omitidos === implementar: 1 correctos, 0 incorrectos, 0 omitidos ===  
+    > ------ Compilación iniciada: Proyecto: tutorial, configuración: Depurar ------Omitiendo 'Sales Orders.rdl'. Elemento actualizado. Compilación completa -- 0 errores, 0 avisos------ Implementación iniciada: Proyecto: tutorial, configuración: Depuración---implementar a http://\<nombre del servidor > / /reportserverdeploying report '/ tutorial/Sales Orders'. Implementación completa--0 errores, 0 advertencias === compilar: 1 actualizado o completado con éxito, 0 con errores, 0 omitidos ==================== Implementar: 1 con éxito, 0 con errores, 0 omitidos ==========  
   
      Si aparece un mensaje de error similar al siguiente, compruebe que dispone de permisos en el servidor de informes y que ha iniciado [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegios de administrador.  
   
@@ -139,12 +139,12 @@ ms.locfileid: "48095305"
   
      Busque la dirección URL del Administrador de informes, por ejemplo: `http://<server name>/reports`.  
   
-7.  Vaya a la carpeta que contiene el informe y haga clic en el nombre del informe `Sales Orders` para ver el informe representado en el explorador.  
+7.  Busque la carpeta que contiene el informe y haga clic en el nombre del informe `Sales Orders` para verlo representado en el explorador.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Ha completado correctamente el tutorial Crear un informe de tabla básico.  
   
 ## <a name="see-also"></a>Vea también  
- [Filtrar, agrupar y ordenar datos &#40;generador de informes y SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
@@ -14,12 +13,12 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1fdca5fb5b8600664d22aabb0b87f458a84f0937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3974ef5155c5fac96b193096b9b2391714ceace6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809917"
 ---
 # <a name="create-an-entity-master-data-services"></a>Crear una entidad (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una entidad para contener los miembros y sus atributos.  
@@ -29,7 +28,7 @@ ms.locfileid: "48129565"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Debe existir un modelo. Para obtener más información, consulte [Crear un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md).  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48129565"
 -   [Crear un atributo de archivo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Las entidades &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+ [Entidades &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Cambiar el nombre de una entidad &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   
  [Eliminar una entidad &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)  

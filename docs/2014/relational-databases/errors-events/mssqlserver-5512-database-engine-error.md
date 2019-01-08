@@ -12,12 +12,12 @@ ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2706d2ec2c82828534c41851001dbac644ecbe1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 859a2b99a62b0ed33f3c6773fe2df3dcbdb91a87
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132495"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366827"
 ---
 # <a name="mssqlserver5512"></a>MSSQLSERVER_5512
     
@@ -36,6 +36,6 @@ ms.locfileid: "48132495"
  Se ha producido un error en la operación de truncamiento.  
   
 ## <a name="user-action"></a>Acción del usuario  
- La causa del error, vea el código de estado de Windows específico. Para obtener más información sobre este código de estado, consulte el [centro de eventos y errores de mensaje](http://go.microsoft.com/fwlink/?linkid=47660).  
+ La causa del error, vea el código de estado de Windows específico. Para obtener más información sobre este código de estado, consulte el [centro de eventos y errores de mensaje](https://go.microsoft.com/fwlink/?linkid=47660).  
   
   

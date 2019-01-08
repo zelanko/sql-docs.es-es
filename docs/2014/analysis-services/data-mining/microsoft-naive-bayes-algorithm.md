@@ -17,12 +17,12 @@ ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0eb14757ba0b327d478f287e425ad5124a239043
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7ea7b0f79dac89188599854c73279ee8d8c2f5c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187115"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390882"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
   El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Bayes Naive es un algoritmo de clasificación basado en los teoremas de Bayes y proporcionada por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para su uso en el modelado de predicción. La palabra naïve (ingenuo en inglés) del término Bayes naive proviene del hecho que el algoritmo utiliza técnicas Bayesianas pero no tiene en cuenta las dependencias que puedan existir.  
@@ -93,10 +93,10 @@ ms.locfileid: "48187115"
 -   Admite el uso de modelos de minería de datos OLAP.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Selección de características &#40;minería de datos&#41;](feature-selection-data-mining.md)   
  [Ejemplos de consultas del modelo Bayes naive](naive-bayes-model-query-examples.md)   
- [Para los modelos Bayes Naive contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos para los modelos Bayes naive &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Referencia técnica del algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

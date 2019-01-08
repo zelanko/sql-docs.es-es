@@ -1,5 +1,5 @@
 ---
-title: TopPercent (MDX) | Documentos de Microsoft
+title: TopPercent (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d7de38f27d23fe11d0953553a8737a9e2f4e2db3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0093da0a4f69d8a1e4cf178959d28509eef15b75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743654"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532341"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -41,16 +41,16 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Numeric_expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Notas  
- El **TopPercent** función calcula la suma de la expresión numérica especificada evaluada sobre un conjunto especificado, ordenando el conjunto en orden descendente. A continuación, la función devuelve los elementos con los valores más altos cuyo porcentaje acumulado del valor total sumado sea al menos el porcentaje especificado. Esta función devuelve el subconjunto más pequeño de un conjunto cuyo total acumulado sea al menos el porcentaje especificado. Los elementos devueltos se ordenan de mayor a menor.  
+## <a name="remarks"></a>Comentarios  
+ El **TopPercent** función calcula la suma de la expresión numérica especificada evaluada sobre el conjunto especificado, ordenando el conjunto en orden descendente. A continuación, la función devuelve los elementos con los valores más altos cuyo porcentaje acumulado del valor total sumado sea al menos el porcentaje especificado. Esta función devuelve el subconjunto más pequeño de un conjunto cuyo total acumulado sea al menos el porcentaje especificado. Los elementos devueltos se ordenan de mayor a menor.  
   
 > [!WARNING]  
->  Si *Numeric_Expression* devuelve un valor negativo, a continuación, **TopPercent** devuelve las filas solo uno (1).  
+>  Si *Numeric_Expression* devuelve un valor negativo, a continuación, **TopPercent** devuelve solo una (1) la fila.  
 >   
 >  Vea en el segundo ejemplo una presentación detallada de este comportamiento.  
   
 > [!IMPORTANT]  
->  Al igual que el [BottomPercent](../mdx/bottompercent-mdx.md) función, el **TopPercent** función siempre rompe la jerarquía.  
+>  Al igual que el [BottomPercent](../mdx/bottompercent-mdx.md) función, el **TopPercent** siempre rompe la jerarquía.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se devuelven las mejores ciudades que contribuyen a realizar el 10% principal de ventas de los distribuidores en la categoría Bike. El resultado se mostrará en orden descendente, empezando por la ciudad que tiene el valor de ventas más elevado.  
@@ -90,7 +90,7 @@ WHERE([Product].[Product Categories].[Bikes])
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente tutorial le ayudará a entender el efecto de los valores negativos en la *Numeric_Expression*. En primer lugar, crearemos cierto contexto donde podamos mostrar el comportamiento.  
+ El siguiente tutorial le ayudará a entender el efecto de los valores negativos en el *Numeric_Expression*. En primer lugar, crearemos cierto contexto donde podamos mostrar el comportamiento.  
   
  La consulta siguiente devuelve una tabla con el importe de las ventas, el costo total del producto y el beneficio bruto de los distribuidores en orden descendente en función del beneficio. Tenga en cuenta que solo hay valores negativos en el beneficio; por tanto, la pérdida más pequeña aparece en la parte superior.  
   
@@ -109,7 +109,7 @@ FROM [Adventure Works]
 |Touring-2000 azul, 46|$321,027.03|$333,021.50|($11,994.47)|  
 |62 azul, Touring-3000|$87,773.61|$100,133.52|($12,359.91)|  
 |…|…|…|…|  
-|Touring-1000 amarillo, 46|$1,016,312.83|$1,234,454.27|($218,141.44)|  
+|46 amarillo, Touring-1000|$1,016,312.83|$1,234,454.27|($218,141.44)|  
 |Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
   
  Ahora, si le pidieran que presentara el 100% de las mejores bicicletas según el beneficio, escribiría una consulta como esta:  
@@ -121,7 +121,7 @@ FROM [Adventure Works]
   
 ```  
   
- Tenga en cuenta que la consulta solicita el cien por cien (100%); esto significa que deben devolverse todas las filas. Sin embargo, porque no hay valores negativos en la *Numeric_Expression* , se devuelve una sola fila.  
+ Tenga en cuenta que la consulta solicita el cien por cien (100%); esto significa que deben devolverse todas las filas. Sin embargo, dado que hay valores negativos en el *Numeric_Expression* , se devuelve una única fila.  
   
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  

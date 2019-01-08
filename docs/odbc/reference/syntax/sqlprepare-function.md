@@ -20,16 +20,16 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d64f536b88d3b6fd8f10fc36b75cd3395c818af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e4c15cfe0d82fc4b68115c029334fa7d3ec7410
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814983"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590292"
 ---
 # <a name="sqlprepare-function"></a>Función SQLPrepare
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLPrepare** prepara una cadena de SQL para su ejecución.  
@@ -69,7 +69,7 @@ SQLRETURN SQLPrepare(
 |21S02|Grado de la tabla derivada no coincide con la lista de columnas|\**StatementText* contiene un **CREATE VIEW** instrucción y el número de nombres especificado no es el mismo grado que la tabla derivada definido por la especificación de consulta.|  
 |22018|Valor de carácter no válido para especificación cast|**StatementText* contenía una instrucción SQL que contenía un literal o un parámetro y el valor no era compatible con el tipo de datos de la columna de tabla asociada.|  
 |22019|Carácter de escape no válido|El argumento *StatementText* contiene un **como** predicado con un **ESCAPE** en el **donde** cláusula y la longitud del escape siguiente carácter **ESCAPE** no es igual a 1.|  
-|22025|Secuencia de escape no válido|El argumento *StatementText* contenidos "**como** *valor de patrón* **ESCAPE** *decarácterdeescape*"en el **donde** cláusula y el carácter que sigue el carácter de escape en el valor de patrón no era"%"ni"_".|  
+|22025|Secuencia de escape no válido|El argumento *StatementText* contenidos "**como** _valor de patrón_ **ESCAPE** _decarácterdeescape_"en el **donde** cláusula y el carácter que sigue el carácter de escape en el valor de patrón no era"%"ni"_".|  
 |24000|Estado de cursor no válido|(DM) un cursor estaba abierto en el *StatementHandle*, y **SQLFetch** o **SQLFetchScroll** hubiera llamado.<br /><br /> Un cursor estaba abierto en el *StatementHandle*, pero **SQLFetch** o **SQLFetchScroll** no se había llamado.|  
 |34000|Nombre de cursor no válido|\**StatementText* contenida en una posición **eliminar** o una posición **actualización**, y no se ha abierto el cursor al que hace referencia la instrucción que se está preparada.|  
 |3D000|Nombre del catálogo no válido|El nombre de catálogo especificado en *StatementText* no era válido.|  
@@ -102,7 +102,7 @@ SQLRETURN SQLPrepare(
 > [!NOTE]  
 >  Si una aplicación utiliza **SQLPrepare** para preparar y **SQLExecute** para enviar un **confirmar** o **reversión** instrucción, no será interoperar entre productos DBMS. Para confirmar o revertir una transacción, llamar a **SQLEndTran**.  
   
- El controlador puede modificar la instrucción para utilizar el formulario de SQL que utiliza el origen de datos y, a continuación, enviarla al origen de datos para la preparación. En concreto, el controlador modifica las secuencias de escape que se usan para definir la sintaxis SQL para determinadas características. (Para obtener una descripción de gramática de instrucción SQL, consulte [secuencias de Escape de ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) y [Apéndice C: SQL gramática](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).) Para el controlador, un identificador de instrucción es similar a un identificador de instrucción de código SQL incrustado. Si el origen de datos es compatible con los identificadores de instrucción, el controlador puede enviar un identificador de instrucción y los valores de parámetro para el origen de datos.  
+ El controlador puede modificar la instrucción para utilizar el formulario de SQL que utiliza el origen de datos y, a continuación, enviarla al origen de datos para la preparación. En concreto, el controlador modifica las secuencias de escape que se usan para definir la sintaxis SQL para determinadas características. (Para obtener una descripción de gramática de instrucción SQL, consulte [secuencias de Escape de ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) y [Apéndice C: Gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).) Para el controlador, un identificador de instrucción es similar a un identificador de instrucción de código SQL incrustado. Si el origen de datos es compatible con los identificadores de instrucción, el controlador puede enviar un identificador de instrucción y los valores de parámetro para el origen de datos.  
   
  Después de prepara una instrucción, la aplicación utiliza el identificador de instrucción para hacer referencia a la instrucción en posteriores llamadas de función. La instrucción preparada asociada con el identificador de instrucción puede volver a ejecutar mediante una llamada a **SQLExecute** hasta que la aplicación libera la instrucción con una llamada a **SQLFreeStmt** con la opción SQL_DROP o hasta que se usa el identificador de instrucción en una llamada a **SQLPrepare**, **SQLExecDirect**, o una de las funciones de catálogo (**SQLColumns**,  **SQLTables**, y así sucesivamente). Una vez que la aplicación prepara una instrucción, puede solicitar información sobre el formato del conjunto de resultados. Para algunas implementaciones, una llamada a **SQLDescribeCol** o **SQLDescribeParam** después **SQLPrepare** podría no ser tan eficaz como una llamada a la función después de **SQLExecute** o **SQLExecDirect**.  
   

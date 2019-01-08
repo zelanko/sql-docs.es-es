@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
@@ -22,12 +21,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7b7fb74610afb89c0c493b6f2b3480377df7f8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199411"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376687"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opciones de configuración de memoria del servidor
   Use las dos opciones de memoria de servidor **Memoria de servidor mínima** y **Memoria de servidor máxima**para reconfigurar la cantidad de memoria (en megabytes) administrada por el Administrador de memoria de SQL Server para un proceso de SQL Server usado por una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -86,7 +85,7 @@ ms.locfileid: "48199411"
 ## <a name="lock-pages-in-memory"></a>Bloquear páginas en la memoria  
  Esta directiva de Windows determina qué cuentas pueden usar un proceso para mantener los datos en la memoria física, impidiendo que el sistema realice la paginación de los datos en la memoria virtual del disco. El bloqueo de páginas en memoria puede mantener el servidor activo cuando se produce la paginación en la memoria del disco. El servidor SQL Server **Lock Pages in Memory** opción está establecida en ON en las instancias de 32 bits y 64 bits de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition y posterior cuando la cuenta con privilegios para ejecutar sqlservr.exe se le ha otorgado el Windows "bloqueado en páginas Derecho de usuario de "Memoria" (LPIM). En versiones anteriores de SQL Server, establecer la opción de bloqueo de páginas para una instancia de 32 bits de SQL Server requiere que la cuenta con privilegios para ejecutar sqlservr.exe tenga el derecho del usuario LPIM y que la opción de configuración “awe_enabled” esté establecida en ON.  
   
- Para deshabilitar la opción de **Bloquear páginas en la memoria** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quite el derecho de usuario “Bloquear páginas en la memoria” para la cuenta de inicio de SQL Server.  
+ Para deshabilitar la **Lock Pages In Memory** opción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quite el usuario "Bloquear páginas en memoria" adecuado para la cuenta de inicio de SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Para deshabilitar Bloquear páginas en la memoria  
  **Para deshabilitar la opción Bloquear páginas en memoria:**  
@@ -135,9 +134,9 @@ ms.locfileid: "48199411"
 |-|-------------|-------------|  
 |Memoria convencional|Hasta el límite de espacio de direcciones virtuales del proceso en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 GB<br /><br /> / 3 GB con **/3 gb** arranque parámetro *<br /><br /> 4 GB en WOW64\*\*|Hasta el límite de espacio de direcciones virtuales del proceso en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 TB en la arquitectura x64|  
   
- ***/3gb** es un parámetro de arranque del sistema operativo. Para obtener más información, visite [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ***/3gb** es un parámetro de arranque del sistema operativo. Para obtener más información, visite [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- ** WOW64 (Windows on Windows 64) es un modo en que 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un sistema operativo de 64 bits. Para obtener más información, visite [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ** WOW64 (Windows on Windows 64) es un modo en que 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un sistema operativo de 64 bits. Para obtener más información, visite [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Ejemplos  
   

@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d72dbd993c3944131e80ad4ba6215cee3d3cf2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 686eb039660efb6e3596b9dac88fc0d24deacaee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147485"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771837"
 ---
 # <a name="unknown-service-log-on-tab"></a>Servicio desconocido (pestaña Iniciar sesión)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede identificar este servicio.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recibe información de los servicios del proveedor WMI del equipo que ejecuta el servicio. Se ha producido un error al leer las propiedades del servicio o éstas no están completas. Para solucionar el problema, intente cerrar y volver a abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o compruebe el proveedor WMI del equipo en el que se ejecuta el servicio.  
   
- El proveedor WMI es un componente de Windows. Para obtener información sobre cómo comprobar los permisos en el proveedor de WMI, vea "Cómo: Configure WMI para mostrar Estado del Servidor en herramientas SQL Server" en los Libros en pantalla de SQL Server.  
+ El proveedor WMI es un componente de Windows. Para obtener información sobre cómo comprobar permisos en el proveedor de WMI, vea "Cómo: Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server" en los Libros en pantalla de SQL Server.  
   
  Si cree que está viendo el servicio correcto, utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Servicio desconocido** para especificar la cuenta utilizada por este servicio, así como para iniciar y detener el servicio.  
   

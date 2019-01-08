@@ -1,5 +1,5 @@
 ---
-title: Tablas y columnas | Documentos de Microsoft
+title: Tablas y columnas de modelo tabular de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10133b2843c01f16134c028140394247c2669236
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043429"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072162"
 ---
 # <a name="tables-and-columns"></a>Tablas y columnas 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34043429"
  **Metadatos de la tabla**  
  Las relaciones, las medidas, los roles, las perspectivas y los datos pegados son los metadatos que definen los objetos en el contexto de una tabla.  
   
- **Datos**  
+ **Data**  
  Los datos se rellenan en las columnas de las tablas la primera vez que se importan las tablas usando el Asistente para la importación de tablas o creando nuevos datos en columnas calculadas. Cuando los datos cambian en el origen, o cuando se quita un modelo de la memoria, es necesario ejecutar una operación de proceso para volver a rellenar los datos en las tablas.  
   
 ##  <a name="bkmk_working"></a> Trabajar con tablas y columnas  
@@ -57,7 +57,7 @@ ms.locfileid: "34043429"
   
 ##  <a name="bkmk_related_tasks"></a> Tareas relacionadas  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Agregar columnas a una tabla](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|Describe cómo agregar una columna de origen a una definición de tabla.|  
 |[Eliminar una columna](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|Describe cómo eliminar una columna de la tabla modelo mediante el diseñador de modelos o mediante el cuadro de diálogo Propiedades de la tabla.|  
@@ -67,7 +67,7 @@ ms.locfileid: "34043429"
 |[Eliminar una tabla](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|Describe cómo eliminar tablas que ya no necesita de la base de datos del área de trabajo del modelo.|  
 |[Cambiar el nombre de una tabla o una columna](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Describe cómo cambiar el nombre de una tabla o una columna para que sea más identificable en el modelo.|  
 |[Establecer el tipo de datos de una columna](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Describe cómo modificar el tipo de datos de una columna. El tipo de datos define cómo se almacenan y presentan los datos de la columna.|  
-|[Ocultar o inmovilizar columnas](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Describe cómo ocultar columnas que no desea mostrar y cómo mantener visible un área de un modelo mientras se desplaza a otra área del modelo inmovilizando (bloqueando) columnas específicas en un área.|  
+|[Ocultar o inmovilizar columnas](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Describe cómo ocultar las columnas que no desea mostrar y cómo mantener un área de un modelo visible mientras se desplaza a otra área del modelo inmovilizando (bloqueando) columnas específicas en un área.|  
 |[Columnas calculadas](../../analysis-services/tabular-models/ssas-calculated-columns.md)|En los temas de esta sección se describe cómo usar las columnas calculadas para incorporar datos agregados al modelo.|  
 |[Filtrar y ordenar datos](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|En los temas de esta sección se describe cómo filtrar u ordenar los datos usando los controles del diseñador de modelos.|  
   

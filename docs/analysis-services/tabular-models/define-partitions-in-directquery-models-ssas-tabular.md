@@ -1,5 +1,5 @@
 ---
-title: Definir las particiones en los modelos DirectQuery | Documentos de Microsoft
+title: Defina particiones en los modelos DirectQuery de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 599e2f97991bc6256132861f335ac7bd0b0aa592
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044619"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072282"
 ---
 # <a name="define-partitions-in-directquery-models"></a>Definición de particiones en los modelos DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  En esta sección se explica cómo se utilizan las particiones en los modelos DirectQuery. Para obtener más información acerca de las particiones en los modelos tabulares, vea [particiones](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+  En esta sección se explica cómo se utilizan las particiones en los modelos DirectQuery. Para obtener información general acerca de las particiones en los modelos tabulares, vea [particiones](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Aunque una tabla puede tener varias particiones, en el modo DirectQuery, solo una de ellas puede designarse para uso en la ejecución de consultas. El requisito de una sola partición se aplica a los modelos DirectQuery en todos los niveles de compatibilidad.  

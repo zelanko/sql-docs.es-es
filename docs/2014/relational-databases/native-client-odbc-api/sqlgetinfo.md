@@ -14,12 +14,12 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70877cb9fd10a02f0d8f7f3bd954a8334a3d028b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112205"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354870"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   La tabla muestran los valores devueltos por **SQLGetInfo**. Estos valores pueden variar en función del número de versión del servidor conectado.  
@@ -208,7 +208,7 @@ ms.locfileid: "48112205"
 |SQL_USER_NAME|Nombre de usuario actual.|  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLGetInfo](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [Función SQLGetInfo](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

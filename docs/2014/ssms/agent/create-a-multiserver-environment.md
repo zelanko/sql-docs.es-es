@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
@@ -15,12 +15,12 @@ ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bacf87c25d7949580eb3d366467e1dae9381e8a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115595"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795625"
 ---
 # <a name="create-a-multiserver-environment"></a>Crear un entorno multiservidor
   La administración multiservidor requiere que se configure un servidor maestro (MSX) y uno o más servidores de destino (TSX). Los trabajos que se van a procesar en todos los servidores de destino se definen primero en el servidor maestro y luego se descargan en los servidores de destino.  
@@ -37,13 +37,13 @@ ms.locfileid: "48115595"
   
 ||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 o superior**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|Sí|Sí|no|no|no|no|no|  
-|**MSX = 8.0 &LT; SP3**|Sí|Sí|no|no|no|no|no|  
-|**MSX = 8.0 SP3 o superior**|no|no|Sí|Sí|Sí|Sí|Sí|  
-|**MSX = 9.0**|no|no|no|Sí|Sí|Sí|Sí|  
-|**MSX = 10.0**|no|no|no|no|Sí|Sí|Sí|  
-|**MSX = 10.5**|no|no|no|no|no|Sí|Sí|  
-|**MSX = 11.0**|no|no|no|no|no|no|Sí|  
+|**MSX = 7.0**|Sí|Sí|No|No|No|No|No|  
+|**MSX = 8.0 &LT; SP3**|Sí|Sí|No|No|No|No|No|  
+|**MSX = 8.0 SP3 o superior**|No|No|Sí|Sí|Sí|Sí|Sí|  
+|**MSX = 9.0**|No|No|No|Sí|Sí|Sí|Sí|  
+|**MSX = 10.0**|No|No|No|No|Sí|Sí|Sí|  
+|**MSX = 10.5**|No|No|No|No|No|Sí|Sí|  
+|**MSX = 11.0**|No|No|No|No|No|No|Sí|  
   
  Considere lo siguiente cuando cree un entorno multiservidor:  
   

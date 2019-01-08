@@ -14,12 +14,12 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bea7e5bac71c3e4fdd90253f30a503dc44f44d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209005"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364697"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` puede eliminar la carga de conversión de datos cuando se usa para proporcionar datos para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, produciendo ganancias de rendimiento significativas para los componentes del cliente y el servidor de aplicaciones. Entre otras ventajas se incluyen la pérdida reducida de precisión al insertar o actualizar los tipos de datos numéricos aproximados.  
@@ -31,7 +31,7 @@ ms.locfileid: "48209005"
   
  Al usar el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, especifique SQL_PARAM_INPUT al enlazar parámetros de entrada. Especifique únicamente SQL_PARAM_OUTPUT o SQL_PARAM_INPUT_OUTPUT al enlazar parámetros de procedimientos almacenados definidos con la palabra clave OUTPUT.  
   
- [SQLRowCount](sqlrowcount.md) es confiable con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador de ODBC de Native Client si un elemento de matriz de una matriz de parámetros enlazados produce un error en la ejecución de la instrucción. El atributo de instrucción ODBC SQL_ATTR_PARAMS_PROCESSED_PTR notifica el número de filas procesadas antes de que se produzca el error. A continuación, la aplicación puede atravesar su matriz de estado de parámetro para detectar el número de instrucciones ejecutado correctamente, si es necesario.  
+ [SQLRowCount](sqlrowcount.md) no es confiable con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client si un elemento de matriz de parámetros enlazados produce un error en la ejecución de la instrucción. El atributo de instrucción ODBC SQL_ATTR_PARAMS_PROCESSED_PTR notifica el número de filas procesadas antes de que se produzca el error. A continuación, la aplicación puede atravesar su matriz de estado de parámetro para detectar el número de instrucciones ejecutado correctamente, si es necesario.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Enlazar parámetros para tipos de caracteres SQL  
  Si el tipo de datos SQL que se pasa es un tipo de caracteres, *ColumnSize* es el tamaño en caracteres (no en bytes). Si la longitud de la cadena de datos en bytes es mayor que 8000, *ColumnSize* debe establecerse en `SQL_SS_LENGTH_UNLIMITED`, que indica que no hay ningún límite al tamaño del tipo SQL.  
@@ -57,6 +57,6 @@ ms.locfileid: "48209005"
   
 ## <a name="see-also"></a>Vea también  
  [Detalles de implementación de API de ODBC](odbc-api-implementation-details.md)   
- [Función SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328)  
+ [Función SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

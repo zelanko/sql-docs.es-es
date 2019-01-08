@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - zoom [SQL Server]
@@ -20,12 +19,12 @@ ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bcdd937dcd0bde4359c03fa5735947668e88fceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 555ded0e34c0dc13ce794cc6f3119af7b2688910
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136895"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796897"
 ---
 # <a name="display-the-estimated-execution-plan"></a>Mostrar el plan de ejecución estimado
   En este tema se describe cómo generar planes de ejecución estimados gráficos utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se generan planes de ejecución estimados, las consultas o lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] no se ejecutan. En su lugar, el plan de ejecución que se genera muestra el plan de ejecución de la consulta que el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizaría con más probabilidad si se ejecutaran realmente las consultas.  

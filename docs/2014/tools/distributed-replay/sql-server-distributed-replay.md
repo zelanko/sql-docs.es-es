@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
@@ -13,12 +13,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc991efeaf05658c78a5b4b0eaf7ca5b528cd9d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a131d7607c798faed2e99a6e03713095bb6bb60f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093607"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358467"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   La característica Distributed Replay de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le ayuda a evaluar el impacto de las actualizaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] futuras. También puede usarla para ayudar a evaluar el impacto de las actualizaciones del sistema operativo y el hardware, y de la optimización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -31,7 +31,7 @@ ms.locfileid: "48093607"
  La característica [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay puede usar varios equipos para reproducir los datos de seguimiento y simular una carga de trabajo esencial. Utilice Distributed Replay para probar la compatibilidad de las aplicaciones o el rendimiento, o planear la capacidad.  
   
 ## <a name="when-to-use-distributed-replay"></a>Cuándo usar Distributed Replay  
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] y Distributed Replay proporcionan cierta superposición en la funcionalidad.  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] y Distributed Replay tienen algunas funciones que se solapan.  
   
  Puede usar [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] para volver a consultar un seguimiento capturado en un entorno de pruebas actualizado. También puede analizar los resultados de la reproducción para buscar posibles incompatibilidades en el rendimiento y la funcionalidad. Sin embargo, [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] solo puede reproducir una carga de trabajo de un equipo. Al reproducir una aplicación OLTP que requiere muchos recursos y que tiene muchas conexiones simultáneas activas o un rendimiento alto, [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] se puede convertir en un cuello de botella para los recursos.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48093607"
   
  En la siguiente tabla se describe cuándo usar cada herramienta.  
   
-|Herramienta|Se utiliza si...|  
+|Herramienta|Usar cuando...|  
 |----------|---------------|  
 |[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]|Desea usar el mecanismo de reproducción convencional en un solo equipo. En concreto, necesita las capacidades de depuración línea por línea, como los comandos **Paso**, **Ejecutar hasta el cursor**y **Alternar punto de interrupción** .<br /><br /> Desea volver a reproducir un seguimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Distributed Replay|Desea evaluar la compatibilidad de las aplicaciones. Por ejemplo, desea probar escenarios de actualización de sistemas operativos y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , actualizaciones de hardware o la optimización de los índices.<br /><br /> La simultaneidad en el seguimiento capturado es tan alta que un solo cliente de reproducción no basta para simularla.|  
@@ -47,13 +47,13 @@ ms.locfileid: "48093607"
 ## <a name="distributed-replay-concepts"></a>Conceptos de Distributed Replay  
  Los siguientes componentes conforman el entorno de Distributed Replay:  
   
--   **Herramienta de administración de Distributed Replay**: una aplicación de consola, `DReplay.exe`, que se usa para comunicarse con distributed replay controller. Use la herramienta de administración para controlar la reproducción distribuida.  
+-   **Herramienta de administración de Distributed Replay**: Una aplicación de consola, `DReplay.exe`, que se usa para comunicarse con distributed replay controller. Use la herramienta de administración para controlar la reproducción distribuida.  
   
--   **Distributed Replay Controller**: equipo que ejecuta el servicio de Windows denominado Distributed Replay Controller de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El controlador de Distributed Replay orquestra las acciones de los clientes de Distributed Replay. Solo puede haber una instancia de controlador en cada entorno de Distributed Replay.  
+-   **Controlador de Distributed Replay**: Un equipo que ejecuta el servicio de Windows denominado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay controller. El controlador de Distributed Replay orquestra las acciones de los clientes de Distributed Replay. Solo puede haber una instancia de controlador en cada entorno de Distributed Replay.  
   
--   **Distributed Replay Clients**: uno o varios equipos (físicos o virtuales) que ejecutan el servicio de Windows denominado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Client. Los clientes de Distributed Replay colaboran para simular cargas de trabajo en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede haber uno o más clientes en cada entorno de Distributed Replay.  
+-   **Distributed Replay Client**: Uno o varios equipos (físicos o virtuales) que ejecutan el servicio de Windows denominado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay client. Los clientes de Distributed Replay colaboran para simular cargas de trabajo en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede haber uno o más clientes en cada entorno de Distributed Replay.  
   
--   **Servidor de destino**: instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que Distributed Replay Clients pueden usar para reproducir datos de seguimiento. Se recomienda que el servidor de destino se encuentre en un entorno de prueba.  
+-   **Servidor de destino**: Una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que Distributed Replay clients pueden usar para reproducir datos de seguimiento. Se recomienda que el servidor de destino se encuentre en un entorno de prueba.  
   
  La herramienta de administración, Distributed Replay Controller y Distributed Replay Client se pueden instalar en equipos distintos o en el mismo equipo. Solo puede haber una instancia del servicio de Distributed Replay Controller o Client ejecutándose en el mismo equipo.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48093607"
 |Describe cómo preparar la información de seguimiento de entrada.|[Preparar los datos de seguimiento de entrada](prepare-the-input-trace-data.md)|  
 |Describe cómo reproducir los datos de seguimiento.|[Reproducir datos de seguimiento](replay-trace-data.md)|  
 |Describe cómo revisar los resultados de los datos de seguimiento de Distributed Replay.|[Revisar los resultados de la reproducción](review-the-replay-results.md)|  
-|Describe cómo usar la herramienta de administración para iniciar, supervisar y cancelar operaciones en el controlador.|[Opciones de línea de comandos de la herramienta de administración &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
+|Describe cómo usar la herramienta de administración para iniciar, supervisar y cancelar operaciones en el controlador.|[Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Foro de SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Usar Distributed Replay para la prueba de carga de SQL Server, parte 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Usar Distributed Replay para la prueba de carga de SQL Server, parte 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Foro de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Usar Distributed Replay para la prueba de carga de SQL Server, parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Usar Distributed Replay para la prueba de carga de SQL Server, parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

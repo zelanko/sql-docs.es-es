@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], excluding
@@ -13,12 +12,12 @@ ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65b9a4fd4febbb5ef9279ee734faef85383861a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6285d32ca514cacef4b78b31336bb33866baf860
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059555"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800707"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Excluir una regla de negocios (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], excluya una regla de negocios cuando no desee eliminar la regla permanentemente, pero no desee validar los datos con ella.  
@@ -28,7 +27,7 @@ ms.locfileid: "48059555"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-exclude-a-business-rule"></a>Para excluir una regla de negocios  
   
@@ -53,6 +52,6 @@ ms.locfileid: "48059555"
 ## <a name="see-also"></a>Vea también  
  [Eliminar una regla de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   
  [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [Las reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

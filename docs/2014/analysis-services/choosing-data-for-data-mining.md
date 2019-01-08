@@ -21,15 +21,15 @@ ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 050a7e4b7b89eb52d9fcb8f9d7a6b8a911eaa825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134625"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355812"
 ---
 # <a name="choosing-data-for-data-mining"></a>Elegir datos para minería de datos
-  Cuando comienza la minería de datos, podría preguntar "¿cuántos datos necesito?" o "¿hay algún requisito especial que debo conocer al limpiar o dar formato a mis datos?".  
+  Al comenzar la minería de datos, podría preguntar "¿cuántos datos necesito?" o "¿hay algún requisito especial que debo conocer al limpiar o dar formato a Mis datos?"  
   
  En concreto, las personas sin experiencia en minería de datos suelen tener problemas con los datos de Excel, como la necesidad de dar formato a los datos de forma coherente dentro de las columnas, limpiar los valores ausentes o discretizar números. En esta sección también se muestran los requisitos de datos para determinados tipos de modelos.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48134625"
 ### <a name="how-much-data-do-i-need"></a>¿Cuántos datos necesito?  
  Una regla general es no tener nunca menos de 50-100 filas de datos para los tipos y escenarios de modelos más simples. Por ejemplo, si va a predecir un solo atributo mediante un modelo Bayes naive y el conjunto de datos es correcto, es posible que pueda generar predicciones bastante precisas con 50-100 filas de datos.  
   
- Para los modelos de asociación, normalmente se necesitan muchos más datos; puede que mil filas no sean suficientes si va a analizar muchos atributos, como asociaciones entre productos. Si el conjunto de datos es demasiado grande o demasiado pequeño, a veces puede conseguir mejores resultados si contrae las filas en categorías. Por ejemplo, en lugar de analizar las asociaciones entre productos individuales, puede categorizar los productos.  
+ Para los modelos de asociación, normalmente se necesitan muchos más datos, mil filas no podrían ser suficiente si va a analizar muchos atributos, como las asociaciones entre productos. Si el conjunto de datos es demasiado grande o demasiado pequeño, a veces puede conseguir mejores resultados si contrae las filas en categorías. Por ejemplo, en lugar de analizar las asociaciones entre productos individuales, puede categorizar los productos.  
   
  Si tiene un conjunto de datos de un tamaño razonable, céntrese más en la calidad de los datos que en agregar cada vez más datos. Llegado a un punto, se habrán encontrado todos los patrones que son estadísticamente válidos y el hecho de agregar más datos no mejora su validez. Por el contrario, a medida que se agregan más datos en ocasiones se pueden introducir correlaciones accidentales.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48134625"
   
  Es posible que también decida tratar números como discretos cuando los valores están claramente separados y no existe ninguna posibilidad de que se den valores fraccionarios, o cuando los valores fraccionarios no son útiles.  
   
- Los datos numéricos*continuos* pueden incluir un número de valores fraccionales infinito. Una columna de ingresos es un ejemplo de una columna de atributos continua. Si especifica que una columna es numérica, cada valor de esa columna debe ser un número, excepto los valores NULL. Tenga en cuenta que, en Excel, se pueden considerar las marcas de tiempo y cualquier otra representación de fecha y hora que se pueda convertir a un tipo de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Los datos numéricos*continuos* pueden incluir un número de valores fraccionales infinito. Una columna de ingresos es un ejemplo de una columna de atributos continua. Si especifica que una columna es numérica, cada valor de esa columna debe ser un número, excepto los valores NULL. Tenga en cuenta que, en Excel, se pueden considerar las marcas de tiempo y cualquier otra representación de fecha y hora que se pueda convertir a un tipo de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Convertir números en Variables de categorías**  
   
@@ -113,11 +113,11 @@ ms.locfileid: "48134625"
 ##  <a name="bkmk_CommonDataProblems"></a> Problemas comunes de datos  
   
 ### <a name="excel-number-formats"></a>Formatos de números de Excel  
- Excel es una herramienta fácil de usar porque es permisiva; es decir, permite colocar cualquier tipo de datos en cualquier sitio. Sin embargo, antes de empezar a buscar patrones y analizar correlaciones, debe imponer alguna estructura o restricciones en los datos.  
+ Excel es una herramienta fácil de usar porque es permisiva;: puede colocar cualquier tipo de datos en cualquier lugar. Sin embargo, antes de empezar a buscar patrones y analizar correlaciones, debe imponer alguna estructura o restricciones en los datos.  
   
  De forma predeterminada, cuando se importan datos numéricos en [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, los números se almacenan en un formato decimal con dos posiciones decimales. Si este no es un formato de número adecuado, debería cambiar a otro formato numérico o modificar el número de decimales.  
   
- Una opción consiste en usar el [cambiar etiquetas](relabel-sql-server-data-mining-add-ins.md) herramienta para cambiar la manera en que los números se muestran o agrupan.  
+ Una opción es usar la herramienta [Cambiar etiquetas](relabel-sql-server-data-mining-add-ins.md) para cambiar la forma en que se muestran o agrupan los números.  
   
  No obstante, si los datos son demasiado complejos como para procesarlos con la herramienta **Cambiar etiquetas** , puede usar las funciones numéricas de Excel para convertir los datos en rangos discretos, guardar el resultado en una columna independiente y, posteriormente, usar la columna de datos discretos para la clasificación.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48134625"
   
  Por ejemplo, si una columna contiene números que se repiten en un intervalo concreto para indicar los días de la semana, podría especificar el tipo de contenido de esa columna como `Cyclical`.  
   
- No tiene que preocuparse de los tipos de contenido si utiliza los asistentes y las herramientas proporcionadas en este complemento. Sin embargo, si usa el [Agregar modelo a estructura &#40;complementos minería de datos para Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) opción para agregar un nuevo modelo a los datos existentes de modelado, podría obtener un error relacionado con los tipos de contenido.  
+ No tiene que preocuparse sobre los tipos de contenido si utiliza los asistentes y herramientas proporcionadas en este complemento. Sin embargo, si usa el [Agregar modelo a estructura &#40;complementos minería de datos para Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) opción para agregar un nuevo modelo a los datos existentes de modelado, podría obtener un error relacionado con los tipos de contenido.  
   
  El motivo es que algunos tipos de modelo requieren una clase determinada de datos (como una marca de tiempo). Las herramientas procesan estas columnas según requisitos específicos y también agregan una propiedad de tipo de contenido. Por tanto, si reutiliza los datos con un algoritmo completamente diferente, necesitará cambiar el tipo de datos o el tipo de contenido.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48134625"
  `Continuous`  
  La columna contiene valores que representan datos numéricos en una escala que permite valores intermedios. Una columna continua representa medidas escalables; además, es posible que los datos contengan un número infinito de valores fraccionarios. Una columna de temperaturas es un ejemplo de una columna de atributos continua.  
   
- El `Continuous` tipo de contenido puede usarse con los siguientes tipos de datos: `Date`, `Double`, y `Long`.  
+ El tipo de contenido `Continuous` se puede utilizar con los siguientes tipos de datos: `Date`, `Double` y `Long`.  
   
  `Discretized`  
  La columna contiene valores que representan grupos de valores que se han derivado de una columna continua. Los cubos se tratan como si fueran valores **ordenados** y discretos.  
@@ -206,14 +206,14 @@ ms.locfileid: "48134625"
   
  Normalmente, la columna de clave es un identificador numérico o de texto que no debe utilizarse para el análisis, sino para realizar el seguimiento de los registros. Las excepciones son las claves de serie temporal y las claves de secuencia.  
   
- **Claves de tabla anidada** se usan únicamente al obtener datos desde un origen de datos externo definido como un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vista del origen de datos. Para obtener más información sobre las tablas anidadas, vea [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ Las**claves de tabla anidada** solo se utilizan al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obtener más información sobre las tablas anidadas, vea [ https://msdn.microsoft.com/library/ms175659.aspx ](https://msdn.microsoft.com/library/ms175659.aspx):  
   
  Este tipo de contenido se puede utilizar con los siguientes tipos de datos: `Date`, `Double`, `Long` y `Text`.  
   
  **Secuencia de teclas**  
  La columna contiene valores que representan una secuencia de eventos. Los valores están ordenados y no tienen que estar separados por una distancia equivalente.  
   
- Este tipo de contenido es compatible con los siguientes tipos de datos: `Double`, `Long`, `Text`, y `Date`.  
+ Este tipo de contenido es compatible con los siguientes tipos de datos: `Double`, `Long`, `Text` y `Date`.  
   
  **Clave temporal**  
  La columna contiene valores que se ordenan y representan una escala de tiempo. Solo puede utilizar el tipo de contenido Key Time si el modelo es un modelo de serie temporal o un modelo de agrupación en clústeres de secuencia.  
@@ -221,7 +221,7 @@ ms.locfileid: "48134625"
  Este tipo de contenido es compatible con los siguientes tipos de datos: `Double`, `Long` y `Date`.  
   
  **Table**  
- Este tipo de contenido también se utiliza únicamente al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Este tipo de contenido también se utiliza únicamente al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Lo que significa es que cada fila de datos contiene realmente una tabla de datos anidada, con una o más columnas y una o más filas.  
   

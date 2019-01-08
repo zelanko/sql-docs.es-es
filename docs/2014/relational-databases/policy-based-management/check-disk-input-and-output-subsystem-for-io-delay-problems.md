@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59c6c98a9b401b220e912617e9c5693b5d782a2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ff6a91f14242d79c3fec543632f74eeb9f452bd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110455"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354812"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>Comprobación del subsistema de entrada y salida de disco para problemas de retraso de E/S
   Esta regla comprueba si existe el mensaje de error 833 en el registro de eventos. Este mensaje indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha emitido una solicitud de lectura o escritura desde el disco y que la solicitud ha tardado más de 15 segundos en volver. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] notifica este error, que indica un problema con el subsistema de E/S de disco. Estos largos retrasos pueden dañar gravemente el rendimiento del entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,8 +38,8 @@ ms.locfileid: "48110455"
 ## <a name="for-more-information"></a>Para obtener más información  
  [MSSQLSERVER_833](../errors-events/mssqlserver-833-database-engine-error.md)  
   
- [Artículo 897284 de Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?linkid=117743)  
+ [Artículo 897284 de Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117743)  
   
- [Elementos fundamentales de E/S de SQL Server, capítulo 2](http://go.microsoft.com/fwlink/?LinkId=69370)  
+ [Elementos fundamentales de E/S de SQL Server, capítulo 2](https://go.microsoft.com/fwlink/?LinkId=69370)  
   
   

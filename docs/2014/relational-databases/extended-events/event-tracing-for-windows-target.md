@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
@@ -15,19 +14,19 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64ae07c8f8ac258730ea5de04dd0e1f304b79bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175165"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355996"
 ---
 # <a name="event-tracing-for-windows-target"></a>seguimiento de eventos para Windows de destino
   Antes de utilizar el Seguimiento de eventos para Windows (ETW) como destino, se recomienda tener conocimientos prácticos de ETW. El Seguimiento de eventos para Windows (ETW) se utiliza junto a Extended Events o como un consumidor de eventos de Extended Events. Los vínculos externos siguientes proporcionan un punto de inicio para obtener información general sobre ETW:  
   
--   [Eventos de Windows](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Eventos de Windows](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [Mejorar la depuración y el ajuste del rendimiento con ETW](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Mejorar la depuración y el ajuste del rendimiento con ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  El destino ETW es un destino singleton, aunque el destino se puede agregar a muchas sesiones. Si un evento se provoca en muchas sesiones, solamente se difundirá al destino ETW una vez por cada vez que se produzca. El motor de Extended Events está limitado a una sola instancia por proceso.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48175165"
  El destino ETW no admite el control de las controladoras ETW externas como logman.exe. Para generar seguimientos de ETW, se debe crear una sesión de evento con el destino ETW. Para obtener más información, vea [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql).  
   
 > [!NOTE]  
->  Al habilitar el destino ETW se crea una sesión ETW denominada XE_DEFAULT_ETW_SESSION. Si ya existe una sesión con el nombre XE_DEFAULT_ETW_SESSION, se usa sin modificar ninguna de las propiedades de la sesión existente. XE_DEFAULT_ETW_SESSION se comparte entre todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de iniciar una sesión XE_DEFAULT_ETW_SESSION, debe detenerla mediante una controladora ETW, como la herramienta Logman. Por ejemplo, puede ejecutar el comando siguiente en el símbolo del sistema: `logman stop XE_DEFAULT_ETW_SESSION -ets`.  
+>  Al habilitar el destino ETW se crea una sesión ETW denominada XE_DEFAULT_ETW_SESSION. Si ya existe una sesión con el nombre XE_DEFAULT_ETW_SESSION, se usa sin modificar ninguna de las propiedades de la sesión existente. XE_DEFAULT_ETW_SESSION se comparte entre todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de iniciar una sesión XE_DEFAULT_ETW_SESSION, debe detenerla mediante una controladora ETW, como la herramienta Logman. Por ejemplo, puede ejecutar el siguiente comando en el símbolo del sistema: `logman stop XE_DEFAULT_ETW_SESSION -ets`.  
   
  En la tabla siguiente se describen las opciones disponibles para configurar el destino ETW.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48175165"
     > [!IMPORTANT]  
     >  No se puede cambiar la ruta de acceso del archivo después de que la primera sesión se haya iniciado.  
   
--   Los archivos MOF (Managed Object Format) se encuentran en *\<su ruta de instalación>* \Microsoft SQL Server\Shared. Para obtener más información, vea [Formato de objetos administrados](http://go.microsoft.com/fwlink/?LinkId=92851) en MSDN.  
+-   Los archivos MOF (Managed Object Format) se encuentran en *\<su ruta de instalación>* \Microsoft SQL Server\Shared. Para obtener más información, vea [Formato de objetos administrados](https://go.microsoft.com/fwlink/?LinkId=92851) en MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Agregar el destino a una sesión  
  Para agregar el destino ETW a una sesión de eventos extendidos, debe incluir la siguiente instrucción al crear o modificar una sesión de eventos:  

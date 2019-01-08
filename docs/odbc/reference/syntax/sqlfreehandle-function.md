@@ -20,21 +20,21 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14d883228c17b24f42765c6fbf8484592b5fa117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820203"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203914"
 ---
 # <a name="sqlfreehandle-function"></a>Función SQLFreeHandle
 **Conformidad**  
- Versión introdujo: ODBC 3.0 normativo: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
   
  **Resumen**  
  **SQLFreeHandle** libera los recursos asociados con un identificador específico del entorno, conexión, instrucción o descriptor.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Esta función es una función genérica de liberación de identificadores. Reemplaza las funciones ODBC 2.0 **SQLFreeConnect** (para liberar un identificador de conexión) y **SQLFreeEnv** (para liberar un identificador de entorno). **SQLFreeConnect** y **SQLFreeEnv** están desusadas en ODBC 3 *.x*. **SQLFreeHandle** también reemplaza la función ODBC 2.0 **SQLFreeStmt** (con el SQL_DROP *opción*) para liberar un identificador de instrucción. Para obtener más información, vea "Comentarios". Para obtener más información sobre lo que el Administrador de controladores se asigna esta función cuando una aplicación ODBC 3 *.x* aplicación funciona con un ODBC 2 *.x* controladores, consulte [asignación de funciones de reemplazo para hacia atrás Compatibilidad de aplicaciones](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -109,7 +109,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="freeing-a-descriptor-handle"></a>Liberar un identificador de Descriptor  
  Una llamada a **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_DESC libera el identificador de descriptor en *controlar*. La llamada a **SQLFreeHandle** no libera memoria asignada por la aplicación que puede hacer referencia a un campo de puntero (incluido SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR) de cualquiera registro del descriptor de *controlar*. Cuando se libere el identificador, se libera la memoria asignada por el controlador para los campos que no son campos de puntero. Cuando se libera un identificador de descriptor asignado por el usuario, todas las instrucciones que había se ha asociado el identificador liberado se vuelven a sus identificadores respectivos descriptor asignado automáticamente.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2 *.x* controladores no admiten identificadores de descriptor de liberación, igual que no admiten la asignación de identificadores de descriptor.  
   
  Tenga en cuenta que **SQLDisconnect** quita automáticamente las declaraciones y los descriptores de abierto en la conexión. Cuando una aplicación libera un identificador de instrucción, el controlador libera todos los descriptores de generado automáticamente asociados con ese identificador.  
@@ -119,7 +119,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="code-example"></a>Ejemplo de código  
  Para obtener ejemplos de código adicional, vea [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) y [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 // SQLFreeHandle.cpp  

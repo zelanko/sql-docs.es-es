@@ -11,12 +11,12 @@ ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f12f91e51383607d9bbcb8dc8ce2807c71ee289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd6264834efbafe65bc323f0e7bd3f5eb7a0490e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149835"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370168"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Conectarse desde aplicaciones cliente (Analysis Services)
   Si no está familiarizado con Analysis Services, use la información de este tema para conectarse a una instancia existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante herramientas y aplicaciones comunes. En este tema también explica cómo conectarse bajo distintas identidades de usuario para realizar pruebas.  
@@ -35,7 +35,7 @@ ms.locfileid: "48149835"
   
 -   [Configurar Firewall de Windows para permitir el acceso a Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Conectarse con SQL Server Management Studio (SSMS)  
  Conéctese a Analysis Services en SSMS para administrar las instancias de servidor y las bases de datos de forma interactiva. También puede ejecutar consultas XMLA o MDX para realizar tareas administrativas o recuperar datos. A diferencia de otras herramientas y aplicaciones que solo cargan bases de datos cuando se envía una consulta, SSMS carga todas las bases de datos cuando se conecta al servidor, siempre y cuando tenga permiso para ver la base de datos. Esto significa que si tiene numerosas bases de datos tabulares en el servidor, todas ellas se cargan en la memoria del sistema cuando se conecta mediante SSMS.  
@@ -50,7 +50,7 @@ ms.locfileid: "48149835"
   
      En el caso de una instancia con nombre, el nombre del servidor se debe especificar en este formato: nombreDeServidor\nombreDeInstancia. Un ejemplo de esta convención de nomenclatura puede ser ADV-SRV062\Finanzas para un servidor que tenga el nombre de red ADV-SRV062, donde Analysis Services se instala como una instancia con nombre denominada Finanzas.  
   
-     Para los servidores implementados en un clúster de conmutación por error, conéctese usando el nombre de red del clúster de SSAS. Este nombre se especifica durante la instalación de SQL Server, como **Nombre de red de SQL Server**. Tenga en cuenta que si instaló SSAS como una instancia con nombre en un clúster de conmutación por error de Windows Server (WSFC), nunca agregue el nombre de instancia en la conexión. Esta práctica es única en SSAS; en cambio, una instancia con nombre de un motor de base de datos relacional en clúster incluye el nombre de instancia. Por ejemplo, si instaló SSAS y el motor de base de datos como una instancia con nombre (Contoso-Contabilidad) con un Nombre de red de SQL Server de SQL-CLU, se conectaría a SSAS con “SQL-CLU” y al motor de base de datos como "SQL-CLU\Contoso-Contabilidad". Vea [Organizar en clúster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548) para obtener más información y ejemplos.  
+     Para los servidores implementados en un clúster de conmutación por error, conéctese usando el nombre de red del clúster de SSAS. Este nombre se especifica durante la instalación de SQL Server, como **Nombre de red de SQL Server**. Tenga en cuenta que si instaló SSAS como una instancia con nombre en un clúster de conmutación por error de Windows Server (WSFC), nunca agregue el nombre de instancia en la conexión. Esta práctica es única en SSAS; en cambio, una instancia con nombre de un motor de base de datos relacional en clúster incluye el nombre de instancia. Por ejemplo, si instaló SSAS y el motor de base de datos como una instancia con nombre (Contoso-Contabilidad) con un Nombre de red de SQL Server de SQL-CLU, se conectaría a SSAS con “SQL-CLU” y al motor de base de datos como "SQL-CLU\Contoso-Contabilidad". Vea [Organizar en clúster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548) para obtener más información y ejemplos.  
   
      En los servidores implementados en un clúster con equilibrio de carga de red, conéctese mediante el nombre de servidor virtual del NLB.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48149835"
   
      Evite usar **Ninguna**. Analysis Services no permite especificar un nombre de usuario y una contraseña en la cadena de conexión a menos que vaya a conectarse a un servidor que esté configurado para el acceso HTTP. Asimismo, no utilice SSS a menos que ya sepa que el identificador de la aplicación de destino SSS está asignado a un conjunto de credenciales de usuario de Windows que tiene acceso a las bases de datos de Analysis Services. En la mayoría de los escenarios, la opción de autenticación de Windows predeterminada es la mejor opción para una conexión de Analysis Services desde Excel.  
   
- Para obtener más información, vea [Conectarse a datos o importarlos desde SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
+ Para obtener más información, vea [Conectarse a datos o importarlos desde SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
 ##  <a name="bkmk_SSDT"></a> Conectarse con SQL Server Data Tools  
  SQL Server Data Tools se usa para compilar soluciones de BI, incluidos modelos de Analysis Services, informes de Reporting Services y paquetes SSIS. Al compilar informes o paquetes, puede que necesite especificar una conexión con Analysis Services.  
@@ -106,7 +106,7 @@ ms.locfileid: "48149835"
   
 1.  Inicie **SQL Server Profiler** en la instancia de Analysis Services e inicie después un nuevo seguimiento.  
   
-2.  En selección de eventos, compruebe que `Audit Login` y `Audit Logout` están activadas en la sección de auditoría de seguridad.  
+2.  En Selección de eventos, compruebe que `Audit Login` y `Audit Logout` están activadas en la sección Auditoría de seguridad.  
   
 3.  Conéctese a Analysis Services a través de un servicio de aplicación (como SharePoint o Reporting Services) desde un equipo cliente remoto. El evento Audit Login mostrará la identidad del usuario que se conecta a Analysis Services.  
   
@@ -126,12 +126,12 @@ ms.locfileid: "48149835"
   
  He aquí algunos recursos que pueden ayudarle a resolver errores de conexión:  
   
- [Resolver problemas comunes de conectividad en escenarios de conectividad de SQL Server 2005 Analysis Services](http://technet.microsoft.com/library/cc917670.aspx) Este documento tiene algunos años de antigüedad, pero la información y las metodologías que contiene siguen siendo aplicables.  
+ [Resolver problemas comunes de conectividad en escenarios de conectividad de SQL Server 2005 Analysis Services](https://technet.microsoft.com/library/cc917670.aspx) Este documento tiene algunos años de antigüedad, pero la información y las metodologías que contiene siguen siendo aplicables.  
   
 ## <a name="see-also"></a>Vea también  
- [Conectarse a Analysis Services](connect-to-analysis-services.md)   
+ [Conectar a Analysis Services](connect-to-analysis-services.md)   
  [Metodologías de autenticación admitidas por Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
- [Suplantación &#40;Tabular de SSAS&#41;](../tabular-models/impersonation-ssas-tabular.md)   
- [Crear un origen de datos &#40;SSAS Multidimensional&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Suplantación &#40;SSAS tabular&#41;](../tabular-models/impersonation-ssas-tabular.md)   
+ [Crear un origen de datos &#40;SSAS multidimensional&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

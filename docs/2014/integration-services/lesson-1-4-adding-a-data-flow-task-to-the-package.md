@@ -1,24 +1,23 @@
 ---
-title: 'Paso 4: Agregar una tarea Flujo de datos al paquete | Microsoft Docs'
+title: 'Paso 4: Agregar una tarea de flujo de datos al paquete | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e36f658dc2742efba59d5a708fd5f626ea8a1609
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06c80bc188937ef66f72fef003a5f8c27830ad10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219455"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793947"
 ---
-# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Paso 4: agregar una tarea de flujo de datos al paquete
+# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Paso 4: Agregar una tarea de flujo de datos al paquete
   Una vez que ha creado los administradores de conexión para los datos de origen y de destino, la siguiente tarea consiste en agregar una tarea de flujo de datos al paquete. La tarea de flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y proporciona la funcionalidad para transformar, limpiar y modificar los datos a medida que se mueven. En la tarea de flujo de datos se lleva a cabo la mayor parte del proceso de extracción, transformación y carga (ETL).  
   
 > [!NOTE]  
@@ -31,7 +30,7 @@ ms.locfileid: "48219455"
 2.  En el **Cuadro de herramientas de SSIS**, expanda **Favoritos**y arrastre una **tarea Flujo de datos** a la superficie de diseño de la pestaña **Flujo de control** .  
   
     > [!NOTE]  
-    >  Si el cuadro de herramientas de SSIS no está disponible, en el menú principal seleccione SSIS y después el cuadro de herramientas de SSIS para mostrar el cuadro de herramientas de SSIS.  
+    >  Si el cuadro de herramientas de SSIS no está disponible, seleccione SSIS en el menú principal y, después, haga clic en el cuadro de herramientas de SSIS para mostrarlo.  
   
 3.  En el **flujo de Control** superficie de diseño, haga clic en la recién agregada **Data Flow Task**, haga clic en **cambiar el nombre de**y cambie el nombre a `Extract Sample Currency Data`.  
   
@@ -43,6 +42,6 @@ ms.locfileid: "48219455"
  [Paso 5: Agregar y configurar el origen de archivo plano](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Tarea Flujo de datos](control-flow/data-flow-task.md)  
+ [tarea Flujo de datos](control-flow/data-flow-task.md)  
   
   

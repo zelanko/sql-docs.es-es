@@ -11,12 +11,12 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117495"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358157"
 ---
 # <a name="report-builder-ssrs"></a>Generador de informes (SSRS)
   El Generador de informes es un entorno de creación de informes destinado a los usuarios empresariales que prefieren trabajar en el entorno de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office. Al diseñar un informe, especifica dónde obtener los datos, qué datos obtener y cómo mostrar los datos. Al ejecutar el informe, el procesador de informes toma toda la información especificada, recupera los datos y los combina con el diseño del informe para generar el informe.  
@@ -42,10 +42,10 @@ ms.locfileid: "48117495"
   
 -   Guardar el informe y los elementos relacionados en una biblioteca de SharePoint, en un servidor de informes o en el equipo local.  
   
- El Generador de informes y el Diseñador de informes comparten muchas características. Para obtener más información acerca de Generador de informes, vea la [documentación del Generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
+ El Generador de informes y el Diseñador de informes comparten muchas características. Para obtener más información acerca de Generador de informes, vea la [documentación del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar el acceso al generador de informes](../report-server/configure-report-builder-access.md)   
+ [Configurar el acceso al Generador de informes](../report-server/configure-report-builder-access.md)   
  [Herramientas de Reporting Services](reporting-services-tools.md)   
  [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

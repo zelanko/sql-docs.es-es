@@ -11,12 +11,12 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e327923618c4c48073582b7f3a46aba00737788f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c929542449ee5d88db7ab87e9b952f4a2c45ec8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183645"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351979"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
   Los campos de conjunto de datos representan los datos de una conexión de datos. Un campo puede representar datos numéricos o no numéricos. En los ejemplos se incluyen cantidades de ventas, ventas totales, nombres de cliente, identificadores de base de datos, direcciones URL, imágenes, datos espaciales y direcciones de correo electrónico. En la superficie de diseño, los campos aparecen como expresiones en los elementos de informe como los cuadros de texto, tablas y gráficos.  
@@ -77,17 +77,17 @@ ms.locfileid: "48183645"
 ##  <a name="DataTypes"></a> Tipos de datos de campo  
  Al crear un conjunto de datos, es posible que los tipos de datos de los campos del origen de datos no coincidan exactamente con los tipos de datos que se usan en un informe. Los tipos de datos pueden pasar por uno o dos niveles de asignación. La extensión de procesamiento de datos o el proveedor de datos pueden asignar los tipos de datos del origen de datos a tipos de datos de Common Language Runtime (CLR). Los tipos de datos devueltos por las extensiones de procesamiento de datos se asignan a un subconjunto de los tipos de datos de Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
- En el origen de datos, los datos se almacenan en tipos de datos admitidos por el origen de datos. Por ejemplo, los datos de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos debe ser uno de los admitidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos como `nvarchar` o `datetime`. Cuando se recuperan datos del origen de datos, éstos pasan por la extensión de procesamiento de datos o por el proveedor de datos que está asociado al tipo de origen de datos. Dependiendo de la extensión de procesamiento de datos, los datos se pueden convertir desde los tipos de datos utilizados por el origen de datos en los tipos de datos admitidos por la extensión de procesamiento de datos. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los tipos de datos admitidos por la versión de Common Language Runtime (CLR) instalada con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. El proveedor de datos asigna cada columna del conjunto de resultados del tipo de datos nativo a un tipo de datos de CLR (Common Language Runtime) de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ En el origen de datos, los datos se almacenan en tipos de datos admitidos por el origen de datos. Por ejemplo, los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben ser de uno de los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitidos, como `nvarchar` o `datetime`. Cuando se recuperan datos del origen de datos, éstos pasan por la extensión de procesamiento de datos o por el proveedor de datos que está asociado al tipo de origen de datos. Dependiendo de la extensión de procesamiento de datos, los datos se pueden convertir desde los tipos de datos utilizados por el origen de datos en los tipos de datos admitidos por la extensión de procesamiento de datos. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los tipos de datos admitidos por la versión de Common Language Runtime (CLR) instalada con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. El proveedor de datos asigna cada columna del conjunto de resultados del tipo de datos nativo a un tipo de datos de CLR (Common Language Runtime) de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  En cada fase, los datos se representan mediante los tipos de datos descritos en la lista siguiente:  
   
 -   **Origen de datos** : los tipos de datos admitidos por la versión del tipo de origen de datos con el que se está conectando.  
   
-     Por ejemplo, para un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], son típicos los tipos de datos `int`, `datetime` y `varchar`. Con [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], se han agregado los tipos de datos `date`, `time`, `datetimetz` y `datetime2`. Para obtener más información, vea [Tipos de datos (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362).  
+     Por ejemplo, para un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], son típicos los tipos de datos `int`, `datetime` y `varchar`. Con [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], se han agregado los tipos de datos `date`, `time`, `datetimetz` y `datetime2`. Para obtener más información, vea [Tipos de datos (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
   
--   **Proveedor de datos o extensión de procesamiento de datos** : los tipos de datos admitidos por la versión del proveedor de datos de la extensión de procesamiento de datos que se selecciona al conectar con el origen de datos. Los proveedores de datos basados en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usan tipos de datos admitidos por CLR. Para obtener más información sobre los tipos de datos de los proveedores de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Asignar tipos de datos en ADO.NET](http://go.microsoft.com/fwlink/?LinkId=112178) y [Trabajar con tipos base en .NET Framework](http://go.microsoft.com/fwlink/?LinkId=112177) en MSDN.  
+-   **Proveedor de datos o extensión de procesamiento de datos** : los tipos de datos admitidos por la versión del proveedor de datos de la extensión de procesamiento de datos que se selecciona al conectar con el origen de datos. Los proveedores de datos basados en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usan tipos de datos admitidos por CLR. Para obtener más información sobre los tipos de datos de los proveedores de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Asignar tipos de datos en ADO.NET](https://go.microsoft.com/fwlink/?LinkId=112178) y [Trabajar con tipos base en .NET Framework](https://go.microsoft.com/fwlink/?LinkId=112177) en MSDN.  
   
-     Por ejemplo, tipos de datos típicos admiten por el [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] incluyen `Int32` y `String`. La estructura `DateTime` admite las fechas y horas del calendario. El [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 introdujo compatibilidad con la `DateTimeOffset` estructura para las fechas con un desplazamiento de zona horaria.  
+     Por ejemplo, los tipos de datos típicos admitidos por [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] son `Int32` y `String`. La estructura `DateTime` admite las fechas y horas del calendario. En el Service Pack 1 de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 se introdujo la compatibilidad con la estructura `DateTimeOffset` para las fechas con un ajuste de zona horaria.  
   
     > [!NOTE]  
     >  El servidor de informes usa los proveedores de datos que se encuentran instalados y configurados en el mismo. En el modo de vista previa, los clientes de creación de informes usan las extensiones de procesamiento de datos instaladas y configuradas en el equipo cliente. Debe probar el informe en el entorno del cliente de informes y en el del servidor de informes.  
@@ -103,7 +103,7 @@ ms.locfileid: "48183645"
     |`DateTimeTZ`|`DateTimeOffset`|Fecha y hora con ajuste de zona horaria|  
     |`DateTime2`|`DateTime`|Fecha y hora con fracciones de milisegundos|  
   
- Para obtener más información sobre los tipos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos (motor de base de datos)](http://go.microsoft.com/fwlink/?linkid=98362) y [Tipos de datos y funciones de fecha y hora (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Para obtener más información sobre los tipos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos (motor de base de datos)](https://go.microsoft.com/fwlink/?linkid=98362) y [Tipos de datos y funciones de fecha y hora (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360).  
   
  Para obtener más información sobre cómo incluir referencias a un campo de conjunto de datos desde una expresión, vea [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -115,8 +115,8 @@ ms.locfileid: "48183645"
 
   
 ## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de propiedades de conjunto de datos, campos &#40;generador de informes&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
- [Elementos de informe y conjuntos de datos en el generador de informes](report-parts-and-datasets-in-report-builder.md)   
+ [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
+ [Elementos de informe y conjuntos de datos en el Generador de informes](report-parts-and-datasets-in-report-builder.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

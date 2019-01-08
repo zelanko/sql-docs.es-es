@@ -13,19 +13,19 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0893a32d31c4f64d99503fce7e64ccdd325cea7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138515"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359537"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en memoria (optimización en memoria)
   Es una novedad en [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] puede mejorar significativamente el rendimiento de la aplicación de base de datos OLTP. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] es un motor de base de datos optimizados para memoria integrado en el motor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], optimizado para OLTP.  
   
 |||  
 |-|-|  
-|![Máquina Virtual de Azure](../../master-data-services/media/azure-virtual-machine.png "Máquina Virtual de Azure")|¿Quiere probar SQL Server 2016? Suscríbase a Microsoft Azure y, después, vaya **[aquí](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para sincronizar una máquina virtual que ya tenga SQL Server 2016 instalado. Puede eliminar la máquina virtual cuando haya terminado.|  
+|![Máquina Virtual de Azure](../../master-data-services/media/azure-virtual-machine.png "Máquina Virtual de Azure")|¿Quiere probar SQL Server 2016? Suscríbase a Microsoft Azure y, después, vaya **[aquí](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para sincronizar una máquina virtual que ya tenga SQL Server 2016 instalado. Puede eliminar la máquina Virtual cuando haya terminado.|  
   
  Para usar [!INCLUDE[hek_2](../../../includes/hek-2-md.md)], debe definir una tabla a la que se accede con mucha frecuencia como que está optimizada para memoria. Las tablas con optimización para memoria son completamente transaccionales y durables, y se accede a ellas mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] , igual que con las tablas basadas en disco. Una consulta puede hacer referencia tanto a tablas optimizadas para memoria como a tablas basadas en disco. Una transacción puede actualizar datos en tablas optimizadas para memoria y en tablas basadas en disco. Los procedimientos almacenados que solo hacen referencia a tablas optimizadas para memoria se pueden compilar de forma nativa en código máquina para obtener nuevas mejoras en el rendimiento. El motor [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] se ha diseñado para sesiones de simultaneidad muy elevada para el tipo OLTP de transacciones que se derivan de un nivel medio con gran capacidad de ampliación horizontal. Para lograr esto, usa estructuras de datos sin bloqueos temporales y control de simultaneidad optimista de múltiples versiones. El resultado es predecible, de baja latencia por debajo de los milisegundos y de gran rendimiento con escalado lineal para transacciones de bases de datos. La ganancia de rendimiento real depende de muchos factores, pero es habitual obtener un rendimiento entre 5 y 20 veces superior.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48138515"
 |Baja latencia.|Requerir transacciones empresariales de baja latencia que no pueden realizar las soluciones de bases de datos habituales.|Eliminar contención.<br /><br /> Minimizar el tiempo de ejecución del código.<br /><br /> Ejecución de código de baja latencia.<br /><br /> Recuperación eficaz de datos.|  
 |Administración del estado de la sesión.|Inserciones, actualizaciones y búsquedas de punto frecuentes.<br /><br /> Carga de escala alta de numerosos servidores web sin estado.|Eliminar contención.<br /><br /> Recuperación eficaz de datos.<br /><br /> Opcional: reducción o eliminación de E/S cuando se usen tablas que no sean durables|  
   
- Para más información sobre escenarios donde el uso de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] suponga alcanzar un mayor rendimiento, vea el tema sobre [OLTP en memoria y los patrones de carga de trabajo comunes y consideraciones para la migración](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Para obtener más información acerca de los escenarios donde [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] suponga alcanzar un mayor rendimiento, consulte [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones de migración](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] mejorará el rendimiento de forma óptima en OLTP con transacciones de breve ejecución.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "48138515"
   
  En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existen limitaciones en el área expuesta de [!INCLUDE[tsql](../../../includes/tsql-md.md)] admitida para [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] logra importantes mejoras de rendimiento y escalabilidad mediante:  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] logra importantes mejoras en el rendimiento y la escalabilidad mediante:  
   
 -   Los algoritmos que se optimizan para tener acceso a los datos residentes en memoria.  
   
 -   Control de simultaneidad optimista que elimina los bloqueos lógicos.  
   
--   Objetos sin bloqueo que eliminan todos los bloqueos físicos y temporales. Los subprocesos que realizan el trabajo transaccional no usan bloqueos ni bloqueos temporales para el control de simultaneidad.  
+-   Objetos sin bloqueo que eliminan todos los bloqueos físicos y temporales. Subprocesos que realizan el trabajo transaccional no usan bloqueos ni bloqueos temporales para el control de simultaneidad.  
   
 -   Los procedimientos almacenados compilados de forma nativa, que tienen un rendimiento bastante mejor que los procedimientos almacenados interpretados, cuando se tiene acceso a tablas optimizadas para memoria.  
   
@@ -84,13 +84,13 @@ ms.locfileid: "48138515"
   
  Encontrará más información acerca de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] en:  
   
--   [Guía del producto Microsoft® SQL Server® 2014](http://www.microsoft.com/download/confirmation.aspx?id=39269)  
+-   [Microsoft?? ¿SQL Server? Guía de producto de 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
   
--   [Blog de OLTP en memoria](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [Blog de OLTP en memoria](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
--   [OLTP en memoria y los patrones de carga de trabajo comunes y consideraciones para la migración](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [OLTP en memoria y los patrones de carga de trabajo comunes y consideraciones para la migración](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Información general de los aspectos internos OLTP en memoria SQL Server](http://msdn.microsoft.com/library/dn720242.aspx)  
+-   [Información general de los aspectos internos OLTP en memoria SQL Server](https://msdn.microsoft.com/library/dn720242.aspx)  
   
 ## <a name="see-also"></a>Vea también  
  [Características de la base de datos](../database-features.md)  

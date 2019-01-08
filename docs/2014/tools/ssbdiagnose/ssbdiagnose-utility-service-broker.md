@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -26,12 +25,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111175"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823689"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>utilidad ssbdiagnose (Service Broker)
   La utilidad **ssbdiagnose** informa de la existencia de problemas en las conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] o en la configuración de los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las comprobaciones de la configuración se pueden realizar en dos servicios o en un único servicio. La existencia de problemas se indica en la ventana del símbolo del sistema en forma de texto legible, o como XML con formato que se puede redirigir a un archivo o a otro programa.  
@@ -92,7 +91,7 @@ ms.locfileid: "48111175"
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -Ulogin_id [ -Ppassword ] } ]  
+    [ -E | { -Ulogin_id [ -Ppassword ] } ]  
   [ -Sserver_name[\instance_name] ]  
   [ -ddatabase_name ]  
   [ -llogin_timeout ]  
@@ -157,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Solicita que se compruebe si el diálogo está configurado correctamente para el nivel de cifrado especificado:  
   
- **ON**: valor predeterminado. Se ha configurado la seguridad de diálogo completa. Se han implementado los certificados en ambos extremos del diálogo, está presente un enlace de servicio remoto y la instrucción GRANT SEND para el servicio de destino especificó el usuario del iniciador.  
+ **ON**: Configuración predeterminada. Se ha configurado la seguridad de diálogo completa. Se han implementado los certificados en ambos extremos del diálogo, está presente un enlace de servicio remoto y la instrucción GRANT SEND para el servicio de destino especificó el usuario del iniciador.  
   
- **OFF**: no se ha configurado la seguridad de diálogo. No se ha implementado ningún certificado, no se ha creado ningún enlace de servicio remoto y la instrucción GRANT SEND para el servicio del iniciador ha especificado el rol **public** .  
+ **DESACTIVAR**: La seguridad de diálogo no está configurada. No se ha implementado ningún certificado, no se ha creado ningún enlace de servicio remoto y la instrucción GRANT SEND para el servicio del iniciador ha especificado el rol **public** .  
   
- **ANONYMOUS**: se ha configurado la seguridad de diálogo anónima. Se ha implementado un certificado, el enlace de servicio remoto ha especificado la cláusula anónima y la instrucción GRANT SEND del servicio de destino ha especificado el rol **public** .  
+ **ANÓNIMO**: Se configura la seguridad de diálogo anónima. Se ha implementado un certificado, el enlace de servicio remoto ha especificado la cláusula anónima y la instrucción GRANT SEND del servicio de destino ha especificado el rol **public** .  
   
  **RUNTIME**  
  Solicita un informe de los problemas que provocan errores en tiempo de ejecución en una conversación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Si no se especifican **-NEW** ni **-ID** , **ssbdiagnose** supervisa todas las conversaciones en todas las bases de datos especificadas en las opciones de conexión. Si se especifican **-NEW** o **-ID** , **ssbdiagnose** genera una lista de los identificadores especificados en los parámetros.  
@@ -206,7 +205,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions >**  
  Especifica la información de conexión para las bases de datos que contienen los servicios asociados a los elementos de conversación que se están supervisando. Si todos los servicios se encuentran en la misma base de datos, solo es necesario especificar una cláusula **CONNECT TO** . Por el contrario, si los servicios se encuentran en bases de datos independientes, será necesario especificar una cláusula **CONNECT TO** para cada base de datos. Si **runtimeconnectionoptions** no se especifica, **ssbdiagnose** usa la información de conexión de **baseconnectionoptions**.  
   
- **–E**  
+ **-E**  
  Abre una conexión con autenticación de Windows para una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y usa la cuenta de Windows actual como identificador de inicio de sesión. El usuario debe ser miembro del rol fijo de servidor **sysadmin** .  
   
  La opción -E omite la configuración de usuario y de contraseña de las variables de entorno SQLCMDUSER y SQLCMDPASSWORD.  
@@ -231,7 +230,7 @@ WHERE database_id = DB_ID();
  Si se especifica la opción **-P** sin una contraseña, **ssbdiagnose** usa la contraseña predeterminada (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Para obtener más información, consulte [Contraseñas seguras](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Para obtener más información, consulte [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
  El mensaje de contraseña se muestra en la consola de la siguiente manera: `Password:`  
   
@@ -330,7 +329,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Comprobar la configuración de dos servicios en equipos independientes que usan un mismo inicio de sesión  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Comprobar la configuración de dos servicios en equipos independientes que usan un mismo inicio de sesión  
  En el ejemplo siguiente se muestra cómo solicitar un informe de configuración cuando el servicio iniciador y el servicio de destino están en equipos distintos, pero se puede obtener acceso a ellos usando el mismo inicio de sesión con autenticación de Windows.  
   
 ```  

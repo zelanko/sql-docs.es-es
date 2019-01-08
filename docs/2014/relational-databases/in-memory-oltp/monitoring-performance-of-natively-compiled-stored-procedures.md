@@ -10,18 +10,18 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad93f867eb10768806d3384c05596f7d4f008dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa8a92b3727bf4c06a5b5a85c8359f96b592cd44
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209155"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359757"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa
   En este tema se describe cómo supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa.  
   
 ## <a name="using-extended-events"></a>Utilizar eventos extendidos  
- Use el `sp_statement_completed` eventos extendidos para el seguimiento de la ejecución de una consulta. Cree una sesión de eventos extendidos con este evento, opcionalmente con un filtro en object_id para un procedimiento almacenado compilado de forma nativa específico. El evento extendido se genera tras la ejecución de cada consulta. El tiempo de CPU y la duración notificados por el evento extendido indican cuánta CPU utilizó la consulta y el tiempo de ejecución. Un procedimiento almacenado compilado de forma nativa que utiliza mucho tiempo de CPU puede tener problemas de rendimiento.  
+ Utilice el evento extendido `sp_statement_completed` para realizar el seguimiento de la ejecución de una consulta. Cree una sesión de eventos extendidos con este evento, opcionalmente con un filtro en object_id para un procedimiento almacenado compilado de forma nativa específico. El evento extendido se genera tras la ejecución de cada consulta. El tiempo de CPU y la duración notificados por el evento extendido indican cuánta CPU utilizó la consulta y el tiempo de ejecución. Un procedimiento almacenado compilado de forma nativa que utiliza mucho tiempo de CPU puede tener problemas de rendimiento.  
   
  Se puede utilizar `line_number` junto con el `object_id` del evento extendido para investigar la consulta. La siguiente consulta se puede utilizar para recuperar la definición del procedimiento. El número de línea se puede utilizar para identificar la consulta dentro de la definición:  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48209155"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Para obtener más información sobre la `sp_statement_completed` evento extendido, vea [cómo recuperar la instrucción que produjo un evento](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Para obtener más información sobre la `sp_statement_completed` evento extendido, vea [cómo recuperar la instrucción que produjo un evento](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## <a name="using-data-management-views"></a>Utilizar vistas de administración de datos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la recopilación de estadísticas de ejecución para los procedimientos almacenados compilados de forma nativa, tanto en el nivel de procedimiento como en el nivel de consulta. La recopilación de estadísticas de ejecución no está habilitada de forma predeterminada debido al impacto que tiene sobre el rendimiento.  

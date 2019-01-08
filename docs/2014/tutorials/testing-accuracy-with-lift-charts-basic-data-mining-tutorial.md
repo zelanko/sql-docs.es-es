@@ -11,12 +11,12 @@ ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5311f08e9ec6b31fd0eabc1395baa31319eff64
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222245"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412212"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Probar la exactitud con gráficos de mejora respecto al modelo predictivo (Tutorial básico de minería de datos)
   En el **gráfico de precisión de minería de datos** ficha del Diseñador de minería de datos, puede calcular el grado en cada uno de los modelos realiza predicciones y comparar los resultados de cada modelo directamente en los resultados de los otros modelos. Este método de comparación se conoce como un *gráfico de elevación*. Normalmente, la exactitud de la predicción de un modelo de minería de datos se cuantifica mediante la mejora respecto al modelo predictivo o la exactitud de la clasificación. En este tutorial utilizaremos solamente el gráfico de mejora respecto al modelo predictivo.  
@@ -32,7 +32,7 @@ ms.locfileid: "48222245"
   
 #### <a name="to-select-the-data-set"></a>Para seleccionar el conjunto de datos  
   
-1.  Cambie a la **gráfico de precisión de minería de datos** ficha en el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y seleccione el **selección de entrada** ficha.  
+1.  Cambie a la pestaña **Gráfico de precisión de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y seleccione la pestaña **Selección de entrada** .  
   
 2.  En el cuadro de grupo **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión** , seleccione **Usar casos de prueba de estructura de minería de datos**. Estos son los datos de prueba que separó cuando creó la estructura de minería de datos.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48222245"
   
      Para utilizar una columna como el **nombre de columna de predicción** en un gráfico de precisión, las columnas deben tener el tipo de uso de `Predict` o `Predict Only`. Además, el tipo de contenido de la columna de destino debe ser `Discrete` o `Discretized`. Es decir, no puede medir la precisión en salidas numéricas continuas con el gráfico de elevación.  
   
--   Desea medir la precisión general del modelo, o su precisión para predecir un valor concreto (por ejemplo [Bike Buyer] = ‘Yes’)  
+-   ¿Desea medir la exactitud del modelo general o su precisión para predecir un valor determinado (por ejemplo, [Bike Buyer] = 'Sí')  
   
 #### <a name="to-generate-the-lift-chart"></a>Para generar el gráfico de elevación  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48222245"
  [Probar un modelo filtrado &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Gráfico de elevación &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Pestaña gráfico de elevación &#40;vista Gráfico de precisión de minería de datos&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   
   

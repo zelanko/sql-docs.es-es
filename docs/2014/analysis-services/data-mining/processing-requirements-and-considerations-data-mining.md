@@ -15,12 +15,12 @@ ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44b24dc04a66538e57db696ba7620e61e7114719
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 181e2a367f6196d50f90aee77ca9590f55ba0ce4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196345"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369727"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisitos y consideraciones de procesamiento (minería de datos)
   En este tema se describen algunas consideraciones técnicas que debe tener en cuenta al procesar objetos de minería de datos. Para obtener una explicación general de qué es el procesamiento y cómo se aplica a la minería de datos, vea [Procesar objetos de minería de datos](processing-data-mining-objects.md).  
@@ -36,11 +36,11 @@ ms.locfileid: "48196345"
   
  El servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emite consultas a la base de datos que proporciona los datos sin procesar. Esta base de datos puede ser una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o una versión anterior del motor de base de datos de SQL Server. Cuando se procesa una estructura de minería de datos, los datos del origen se transfieren a la estructura de minería de datos y se conservan en el disco en un nuevo formato comprimido. No se procesan todas las columnas del origen de datos sino únicamente aquellas que están incluidas en la estructura de minería de datos, de acuerdo con la definición de los enlaces.  
   
- Con estos datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un índice de todos los datos y columnas de datos discretos, y crea un índice independiente para las columnas continuas. Se emite una consulta por cada tabla anidada para crear el índice y se genera una consulta adicional por cada tabla anidada para procesar las relaciones entre cada par de una tabla anidada y tabla de casos. La razón de crear varias consultas es procesar un almacén interno especial de datos multidimensionales. Puede limitar el número de consultas que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] envía al almacén relacional estableciendo la propiedad del servidor `DatabaseConnectionPoolMax`. Para más información, consulte [OLAP Properties](../server-properties/olap-properties.md).  
+ Con estos datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un índice de todos los datos y columnas de datos discretos, y crea un índice independiente para las columnas continuas. Se emite una consulta por cada tabla anidada para crear el índice y se genera una consulta adicional por cada tabla anidada para procesar las relaciones entre cada par de una tabla anidada y tabla de casos. La razón de crear varias consultas es procesar un almacén interno especial de datos multidimensionales. Puede limitar el número de consultas que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] envía al almacén relacional estableciendo la propiedad del servidor, `DatabaseConnectionPoolMax`. Para más información, consulte [OLAP Properties](../server-properties/olap-properties.md).  
   
  Al procesar el modelo, éste no vuelve a leer directamente los datos del origen de datos, sino que recibe el resumen de los datos de la estructura de minería de datos. Utilizando el cubo que se creó, junto con el índice y los datos del caso almacenados en memoria caché, el servidor crea subprocesos independientes para entrenar los modelos.  
   
- Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten el procesamiento de modelos en paralelo, vea [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+ Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten el procesamiento de modelos en paralelo, vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_ProcessStructures"></a> Procesar estructuras de minería de datos  
  Una estructura de minería de datos se puede procesar con todos los modelos dependientes, o por separado. Procesar una estructura de minería de datos independientemente de los modelos puede ser útil cuando se prevé que el procesamiento de algunos modelos llevará mucho tiempo y se desee diferir esa operación.  
@@ -63,13 +63,13 @@ ms.locfileid: "48196345"
   
  Los modelos de minería de datos también se procesan en estos casos:  
   
- **Implementación de un proyecto**: dependiendo de la configuración del proyecto y de su estado actual, los modelos de minería de datos del proyecto normalmente se procesan por completo cuando se implementa el proyecto.  
+ **Implementación de un proyecto**: Según la configuración del proyecto y el estado actual del proyecto, normalmente se procesan los modelos de minería de datos en el proyecto en su totalidad cuando se implementa el proyecto.  
   
  Cuando se inicia la implementación, el procesamiento se inicia automáticamente, a menos que haya una versión procesada anteriormente en el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y que no se hayan producido cambios estructurales. Puede implementar un proyecto seleccionando **Implementar solución** en la lista desplegable o presionando la tecla F5. Puede  
   
  Para más información sobre cómo establecer las propiedades de implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que controlan cómo se implementan los modelos de minería de datos, vea [Implementación de soluciones de minería de datos](deployment-of-data-mining-solutions.md).  
   
- **Mover un modelo de minería de datos**: al mover un modelo de minería de datos usando el comando EXPORT, solo se exportará la definición del modelo, lo que incluye el nombre de la estructura de minería de datos que se espera que proporcione datos al modelo.  
+ **Mover un modelo de minería de datos**: Al mover un modelo de minería de datos mediante el comando de exportación, se exporta solo la definición del modelo, que incluye el nombre de la estructura de minería de datos que se espera que proporcione datos al modelo.  
   
  Requisitos de nuevo procesamiento en los siguientes escenarios con los comandos EXPORT e IMPORT:  
   
@@ -88,8 +88,8 @@ ms.locfileid: "48196345"
  Para más información, vea [Exportar e importar objetos de minería de datos](export-and-import-data-mining-objects.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
  [Procesamiento de objetos de modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f2d6612b50fc3bd9b07231c42363a8e1e6889e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148725"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359717"
 ---
 # <a name="availability-group-is-offline"></a>Grupo de disponibilidad sin conexión
     
@@ -38,7 +38,7 @@ ms.locfileid: "48148725"
  El estado de la directiva es correcto cuando el recurso de clúster del grupo de disponibilidad está en línea y el grupo de disponibilidad tiene una réplica principal.  
   
 > [!NOTE]  
->  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Grupo de disponibilidad sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=220850) en TechNet Wiki.  
+>  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Grupo de disponibilidad sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=220850) en TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Posibles causas  
  Este problema se puede deber a un error en la instancia del servidor que hospeda la réplica principal o a que el recurso de grupo de disponibilidad del clúster de conmutación por error de Windows Server (WSFC) se ha quedado sin conexión. A continuación se indican las posibles causas de que el grupo de disponibilidad esté sin conexión:  

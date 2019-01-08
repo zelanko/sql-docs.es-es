@@ -11,18 +11,18 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
-ms.translationtype: MT
+ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018680"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373227"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite datos espaciales e índices espaciales. Un *índice espacial* es un tipo de índice extendido que permite indizar una columna espacial. Una columna espacial es una columna de tabla que contiene datos de un tipo espacial, como `geometry` o `geography`.  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluidas las características que afectan a los índices espaciales, descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluidas las características que afectan a los índices espaciales, descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ##  <a name="about"></a> Acerca de los índices espaciales  
   
@@ -106,7 +106,7 @@ ms.locfileid: "51018680"
 #### <a name="deepest-cell-rule"></a>Regla de celda más profunda  
  La regla de celda más profunda se aprovecha del hecho de que todas las celdas de nivel inferior pertenecen a la celda superior: una celda de nivel 4 pertenece a una celda de nivel 3, una celda de nivel 3 pertenece a una celda de nivel 2 y una celda de nivel 2 pertenece a una celda de nivel 1. Por ejemplo, un objeto que pertenezca a la celda 1.1.1.1, también pertenece a la celda 1.1.1, a la celda 1.1 y a la celda 1. El conocimiento de dichas relaciones de jerarquía de celdas está integrado en el procesador de consultas. Por consiguiente, solo las celdas de nivel más profundo se tienen que grabar en el índice, minimizando la información que el índice tiene que almacenar.  
   
- En la ilustración siguiente, un polígono en forma de rombo relativamente pequeño se divide en mosaicos. El índice usa el límite de celdas por proyecto predeterminado de 16, que no se alcanza para este objeto pequeño. Por lo tanto, la teselación continúa bajando hasta el nivel 4. El polígono reside en las siguientes celdas del nivel 1 hasta el nivel 3: 4, 4.4, 4.4.10 y 4.4.14. Sin embargo, si se usa la regla de celda más profunda, la teselación solo cuenta las doce celdas del nivel 4: 4.4.10.13-15 y 4.4.14.1-3, 4.4.14.5-7 y 4.4.14.9-11.  
+ En la ilustración siguiente, un polígono en forma de rombo relativamente pequeño se divide en mosaicos. El índice usa el límite de celdas por proyecto predeterminado de 16, que no se alcanza para este objeto pequeño. Por lo tanto, la teselación continúa bajando hasta el nivel 4. El polígono reside en las siguientes celdas del nivel 1 hasta el nivel 3: 4, 4.4, 4.4.10 y 4.4.14. Sin embargo, si se usa la regla de celda más profunda, la teselación solo cuenta las doce celdas del nivel 4: 4.4.10.13-15, 4.4.14.1-3, 4.4.14.5-7 y 4.4.14.9-11.  
   
  ![Optimización de celda más profunda](../../database-engine/media/spndx-opt-deepest-cell.gif "Optimización de celda más profunda")  
   
@@ -179,7 +179,7 @@ ms.locfileid: "51018680"
 ##  <a name="methods"></a> Métodos admitidos por los índices espaciales  
   
 ###  <a name="geometry"></a> Métodos de Geometry que los índices espaciales admiten  
- En ciertas condiciones, los índices espaciales son compatibles con los siguientes métodos de geometry y orientados a conjuntos: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() y STWithin(). Para que un índice espacial los admita, estos métodos se deben usar dentro de la cláusula WHERE o JOIN ON de una consulta, y se deben producir dentro de un predicado con el formato general siguiente:  
+ Los índices espaciales admiten los siguientes métodos de geometry y orientados a conjuntos en determinadas condiciones: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() y STWithin(). Para que un índice espacial los admita, estos métodos se deben usar dentro de la cláusula WHERE o JOIN ON de una consulta, y se deben producir dentro de un predicado con el formato general siguiente:  
   
  *geometry1*.*nombre_método*(*geometry2*)*operador_comparación**número_válido*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51018680"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Métodos de Geography admitidos por los índices espaciales  
- En ciertas condiciones, los índices espaciales son compatibles con los siguientes métodos de geography orientados a conjuntos: STIntersects(),STEquals() y STDistance(). Para que un índice espacial los admita, estos métodos se deben usar dentro de la cláusula WHERE y se deben producir dentro de un predicado con el formato general siguiente:  
+ En determinadas condiciones, los índices espaciales admiten los siguientes métodos de geography orientados a conjuntos: Stintersects y STDistance(). Para que un índice espacial los admita, estos métodos se deben usar dentro de la cláusula WHERE y se deben producir dentro de un predicado con el formato general siguiente:  
   
  *geography1*.*nombre_método*(*geography2*)*operador_comparación**número_válido*  
   

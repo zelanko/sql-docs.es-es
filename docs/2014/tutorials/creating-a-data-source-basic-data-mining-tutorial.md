@@ -11,18 +11,18 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f576ceb6b465dd8238972d29456300a01837df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e216aa5da4ef837da632ba83d4cf6e14edb40b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128175"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376457"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Crear un origen de datos (Tutorial básico de minería de datos)
   Un *origen de datos* es una conexión de datos que se guardan y administrada en el proyecto e implementa en su [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos. El origen de datos contiene los nombres del servidor y la base de datos donde residen los datos de origen, además de otras propiedades de conexión necesarias.  
   
 > [!IMPORTANT]  
->  El nombre de la base de datos es [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Si ya no ha instalado esta base de datos, vea el [bases de datos de ejemplo de Microsoft SQL](http://go.microsoft.com/fwlink/?LinkId=88417) página.  
+>  El nombre de la base de datos es [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Si ya no ha instalado esta base de datos, vea el [bases de datos de ejemplo de Microsoft SQL](https://go.microsoft.com/fwlink/?LinkId=88417) página.  
   
 ### <a name="to-create-a-data-source"></a>Para crear un origen de datos  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48128175"
 ## <a name="see-also"></a>Vea también  
  [Crear un origen de datos &#40;SSAS multidimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Definir un origen de datos](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Establecer las opciones de suplantación &#40;SSAS - multidimensionales&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
+ [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
   
   

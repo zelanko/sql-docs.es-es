@@ -17,12 +17,12 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 41736a7de5469650d1d2e13b6b78d8a9c2e92573
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20b64e86aa63b88175b505659e78dce35b2250bb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152825"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361267"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas relacionales (Generador de informes)
   El generador de informes proporciona un diseñador gráfico de consultas y un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos deben recuperarse [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bases de datos relacionales y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] para un conjunto de datos. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
@@ -90,9 +90,9 @@ ms.locfileid: "48152825"
   
  Los agregados proporcionan resúmenes de datos y los datos se agrupan para admitir el agregado que ofrece los datos de resumen. Al utilizar un agregado en la consulta, los otros campos que devuelve se agrupan automáticamente y la consulta incluye la cláusula de SQL GROUP BY. Puede resumir los datos sin agregar un agregado utilizando solo la opción **Agrupar por** en la lista **Grupo y agregado** . Muchos de los agregados incluyen una versión que utiliza la palabra clave DISTINCT. Al incluir DISTINCT, se eliminan los valores duplicados.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../../includes/tsql-md.md)] y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../../includes/tsql-md.md)] y de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
   
- Para más información sobre [!INCLUDE[tsql](../../../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
+ Para más información sobre [!INCLUDE[tsql](../../../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
   
  En la siguiente tabla se enumeran los agregados y se proporciona una breve descripción de los mismos.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48152825"
 |Max|Devuelve el valor máximo en un grupo. Implementa el agregado de SQL MAX.|  
 |StDev|Devuelve la desviación estadística estándar de todos los valores de un grupo. Implementa el agregado de SQL STDEV.|  
 |StDevP|Devuelve la desviación estadística estándar para la población de todos los valores de una expresión especificada de grupo. Implementa el agregado de SQL STDEVP.|  
-|SUM|Devuelve la suma de todos los valores de un grupo. Implementa el agregado de SQL SUM.|  
+|Sum|Devuelve la suma de todos los valores de un grupo. Implementa el agregado de SQL SUM.|  
 |Var|Devuelve la varianza estadística de todos los valores del grupo. Implementa el agregado de SQL VAR.|  
 |VarP|Devuelve la varianza estadística de la población de todos los valores del grupo. Implementa el agregado de SQL VARP.|  
 |Avg Distinct|Devuelve los promedios únicos. Implementa una combinación de la agregación AVG y la palabra clave DISTINCT.|  
@@ -132,7 +132,7 @@ ms.locfileid: "48152825"
 -   **Detección automática** : alterna la característica de detección automática que crea automáticamente las relaciones entre las tablas. Si se activa la detección automática, el diseñador de consultas crea las relaciones a partir de las claves externas de las tablas; de lo contrario, debe crearlas manualmente. Al seleccionar las tablas en el panel **Vista de base de datos** , la detección automática intenta crear las relaciones automáticamente. Si activa la detección automática después de haber creado combinaciones manualmente, estas se descartarán.  
   
     > [!IMPORTANT]  
-    >  Cuando se usa con [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] no se proporcionan los metadatos necesarios para crear las combinaciones y las relaciones no se detectan automáticamente. Si una consulta recupera los datos de [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)], todas las combinaciones de la tabla deben crearse de forma manual.  
+    >  Cuando se usa con [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] , no se proporcionan los metadatos necesarios para crear las combinaciones y las relaciones no se pueden detectar automáticamente. Si una consulta recupera los datos de [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)], todas las combinaciones de la tabla deben crearse de forma manual.  
   
 -   **Agregar relación** : agrega una relación a la lista **Relación** .  
   
@@ -156,7 +156,7 @@ ms.locfileid: "48152825"
   
 -   **Tabla izquierda** : muestra el nombre de la primera tabla que forma parte de una relación de combinación.  
   
--   **Tipo de combinación** : muestra el tipo de instrucción JOIN de SQL que se usa en la consulta generada automáticamente. De forma predeterminada, si se detecta una restricción de clave externa, se utiliza INNER JOIN. Otros tipos de combinación pueden ser LEFT JOIN o RIGHT JOIN. Si no se aplica ninguno de estos tipos de combinación, la columna **Tipo de combinación** muestra **No relacionada**. No se crea ninguna combinación CROSS JOIN para las tablas no relacionadas; en su lugar, debe crear las relaciones manualmente combinando las columnas de las tablas izquierda y derecha. Para obtener más información acerca de los tipos de combinaciones, vea "UNIR Fundamentals" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [libros](http://go.microsoft.com/fwlink/?LinkId=141687) en msdn.microsoft.com...  
+-   **Tipo de combinación** : muestra el tipo de instrucción JOIN de SQL que se usa en la consulta generada automáticamente. De forma predeterminada, si se detecta una restricción de clave externa, se utiliza INNER JOIN. Otros tipos de combinación pueden ser LEFT JOIN o RIGHT JOIN. Si no se aplica ninguno de estos tipos de combinación, la columna **Tipo de combinación** muestra **No relacionada**. No se crea ninguna combinación CROSS JOIN para las tablas no relacionadas; en su lugar, debe crear las relaciones manualmente combinando las columnas de las tablas izquierda y derecha. Para obtener más información acerca de los tipos de combinaciones JOIN, vea el tema sobre aspectos básicos de las combinaciones en los [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) en msdn.microsoft.com.  
   
 -   **Tabla derecha** : muestra el nombre de la segunda tabla que forma parte de una relación de combinación.  
   

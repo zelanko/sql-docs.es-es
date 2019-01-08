@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlefilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98bafb6441b29bef41f7a2fffefac38a8ce9048a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0869cfb6914766e2ab43e138831e2992aa6977b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633423"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209204"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +44,16 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicación***'**  
+ [  **@publication=**] **'**_publicación_**'**  
  Es el nombre de la publicación que contiene el artículo. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article=**] **'***artículo***'**  
+ [  **@article=**] **'**_artículo_**'**  
  Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@filter_name=**] **'***filter_name***'**  
+ [  **@filter_name=**] **'**_filter_name_**'**  
  Es el nombre del procedimiento almacenado de filtro que se creará a partir del *filter_name*. *filter_name* es **nvarchar (386)**, su valor predeterminado es null. Debe especificar un nombre único para el filtro de artículo.  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  Es una cláusula de restricción (WHERE) que define un filtro horizontal. Al especificar la cláusula de restricción, omita la palabra clave WHERE. *filter_clause* es **ntext**, su valor predeterminado es null.  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
@@ -71,8 +70,8 @@ sp_articlefilter [ @publication = ] 'publication'
   
  **1** especifica que los cambios en el artículo hace que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Especifica que no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+ [  **@publisher=** ] **'**_publisher_**'**  
+ Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no debe usarse con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

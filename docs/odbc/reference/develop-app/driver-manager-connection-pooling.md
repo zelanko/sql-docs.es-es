@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677584"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590939"
 ---
 # <a name="driver-manager-connection-pooling"></a>Agrupación de conexiones de administrador de controladores
 Agrupación de conexiones permite a una aplicación usar una conexión de un grupo de conexiones que no es necesario volver a establecerse para cada usuario. Una vez creada y colocada en un grupo de una conexión, una aplicación puede reutilizar esa conexión sin necesidad de realizar el proceso de conexión completa.  
@@ -30,12 +30,13 @@ Agrupación de conexiones permite a una aplicación usar una conexión de un gru
   
  Además de mejoras de rendimiento, la arquitectura de agrupación de conexiones permite un entorno y sus conexiones asociadas para ser utilizada por varios componentes en un único proceso. Esto significa que pueden interactuar entre sí los componentes independientes en el mismo proceso sin conocer entre sí. Una conexión en un grupo de conexiones puede utilizarse varias veces por varios componentes.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Agrupación de conexiones puede utilizarse por una aplicación ODBC ODBC 2. *x* comportamiento, siempre y cuando la aplicación puede llamar a *SQLSetEnvAttr*. Cuando se usa la agrupación de conexiones, la aplicación no debe ejecutar instrucciones SQL que cambiar la base de datos o en el contexto de la base de datos, como cambiar la \< *base de datos ** nombre*>, que cambia el catálogo utilizado por un origen de datos.  
-  
+
+
  Un controlador ODBC debe estar completamente segura para subprocesos y conexiones no deben tener afinidad de subprocesos para admitir la agrupación de conexiones. Esto significa que el controlador es capaz de controlar una llamada en cualquier subproceso en cualquier momento y puede conectarse en un subproceso, para usar la conexión en otro subproceso y desconectar en un tercer subproceso.  
   
- La agrupación de conexiones se mantiene mediante el Administrador de controladores. Las conexiones se extraen del grupo cuando la aplicación llama **SQLConnect** o **SQLDriverConnect** y se devuelven al grupo cuando la aplicación llama **SQLDisconnect**. El tamaño del grupo crece de forma dinámica, basándose en las asignaciones del recurso solicitado. Reduce según el tiempo de espera de inactividad: si una conexión está inactiva durante un período de tiempo (no se usó en una conexión), se quita del grupo. El tamaño del grupo está limitado únicamente por las restricciones de memoria y los límites en el servidor.  
+ La agrupación de conexiones se mantiene mediante el Administrador de controladores. Las conexiones se extraen del grupo cuando la aplicación llama **SQLConnect** o **SQLDriverConnect** y se devuelven al grupo cuando la aplicación llama **SQLDisconnect**. El tamaño del grupo crece de forma dinámica, basándose en las asignaciones del recurso solicitado. Se reduce según el tiempo de espera de inactividad: Si una conexión está inactiva durante un período de tiempo (no se usó en una conexión), se quita del grupo. El tamaño del grupo está limitado únicamente por las restricciones de memoria y los límites en el servidor.  
   
  El Administrador de controladores determina si se debe usar una conexión específica en un grupo de acuerdo con los argumentos pasados **SQLConnect** o **SQLDriverConnect**y de acuerdo con los atributos de conexión establecer después de la conexión se ha asignado.  
   

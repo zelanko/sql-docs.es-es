@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetInstanceInfo
@@ -18,12 +16,12 @@ ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c14b2e06b45591642484f1c160a26019612e789d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150115"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780857"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Función LocalDBGetInstanceInfo
   Devuelve información para la instancia de SQL Server Express LocalDB especificada, por ejemplo si existe, la versión de LocalDB que usa, si se está ejecutando, etc.  
@@ -137,7 +135,7 @@ HRESULT LocalDBGetInstanceInfo(
   
 ```  
 LocalDBInstanceInfo ii;  
-LocalDBInstanceInfo(L”Test”, &ii, sizeof(LocalDBInstanceInfo));  
+LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));  
   
 ```  
   

@@ -14,18 +14,18 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 45e0f3be43ce8e2780268b7dfde83253b71da946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559442"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539704"
 ---
 # <a name="rds-scenario"></a>Escenario de RDS
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- La aplicación Libreta de direcciones es un escenario que se muestra cómo usar el servicio de datos remoto (RDS) para compilar una aplicación Web simple, basada en datos, una libreta de direcciones de la empresa en línea. Este escenario es útil para Microsoft Visual Basic Scripting Edition (VBScript) y los programadores de COM que desean aprender a usar controles ActiveX compatibles con datos con RDS y software con más experiencia de los desarrolladores que desean crear aplicaciones Web centradas en datos.  
+ La aplicación Libreta de direcciones es un escenario que se muestra cómo usar el servicio de datos remoto (RDS) para crear una aplicación Web simple, basada en datos: una libreta de direcciones de la empresa en línea. Este escenario es útil para Microsoft Visual Basic Scripting Edition (VBScript) y los programadores de COM que desean aprender a usar controles ActiveX compatibles con datos con RDS y software con más experiencia de los desarrolladores que desean crear aplicaciones Web centradas en datos.  
   
  Este escenario se supone que sabe cómo usar las etiquetas de diseño básico HTML, técnicas de enlace de datos de uso DHTML y programa con controles ActiveX.  
   

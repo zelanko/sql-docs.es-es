@@ -14,23 +14,23 @@ ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 879aaaf33365cb7453c1047c3f9b2408edee10f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe8dd1ebcc6604b8cff514cff3628abc23275517
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846783"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532712"
 ---
 # <a name="creating-script-files-oracletosql"></a>Creación de archivos de script (OracleToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA crear el archivo de script y si es necesario crear el archivo de valor de la variable y el archivo de conexión de servidor.  
   
 El archivo de script puede dividirse en tres secciones viz..,:  
   
-1.  **config:** permite al usuario establecer los parámetros de configuración para la aplicación de consola.  
+1.  **configuración:** Permite al usuario establecer los parámetros de configuración para la aplicación de consola.  
   
-2.  **servidores:** permite al usuario establecer el origen o destino de las definiciones de servidor. Esto también puede estar en un archivo de conexión de servidor independiente.  
+2.  **servidores:** Permite al usuario establecer el origen o destino de las definiciones de servidor. Esto también puede estar en un archivo de conexión de servidor independiente.  
   
-3.  **secuencias de comandos:** permite al usuario ejecutar comandos de flujo de trabajo SSMA.  
+3.  **secuencias de comandos:** Permite al usuario ejecutar comandos de flujo de trabajo SSMA.  
   
 Cada sección se describe en detalle a continuación:  
   
@@ -41,13 +41,13 @@ Si cualquiera de los elementos se especifican en el nodo de configuración, se e
   
 Las opciones configurables por el usuario incluyen:  
   
-1.  **Proveedor de la ventana de salida:** si suprimir de mensajes está establecido en 'true', la específica del comando no se muestran mensajes en la consola. La descripción de los atributos se indica a continuación:  
+1.  **Proveedor de la ventana de salida:** Si los mensajes suprimir está establecido en 'true', la específica del comando no se muestran mensajes en la consola. La descripción de los atributos se indica a continuación:  
   
     -   destino: Especifica si la salida se debe imprimir a un archivo o stdout. Se trata de un valor predeterminado es false.  
   
-    -   nombre de archivo: la ruta de acceso del archivo (opcional).  
+    -   nombre de archivo: La ruta de acceso del archivo (opcional).  
   
-    -   Suprimir-messages: suprime los mensajes en la consola. Esto es 'false', de forma predeterminada.  
+    -   Suprimir-messages: Suprime los mensajes en la consola. Esto es 'false', de forma predeterminada.  
   
     **Ejemplo:**  
   
@@ -66,10 +66,10 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *O*  
+    *o Administrador de configuración de*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <output-window  
   
@@ -81,7 +81,7 @@ Las opciones configurables por el usuario incluyen:
   
        />  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
 2.  **Proveedor de conexión de la migración de datos:** Esto especifica que el servidor de origen o destino es para considerarse para la migración de datos.  Origen-use-último uso indica que se utiliza el último servidor de origen usados para la migración de datos. Del mismo modo destino-use-último uso indica que se utiliza el último servidor de destino usada para la migración de datos. El usuario también puede especificar el servidor (origen o destino) mediante el uso de los atributos de servidor de origen o el servidor de destino.  
@@ -103,7 +103,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *O*  
+    *o Administrador de configuración de*  
   
     ```xml  
     <migrate-data>  
@@ -136,7 +136,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *O*  
+    *o Administrador de configuración de*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -152,9 +152,9 @@ Las opciones configurables por el usuario incluyen:
   
     Los modos de reconexión son:  
   
-    -   volver a conectarse a último-usar-servidor: si la conexión no está activa, intenta volver a conectarse hasta el último servidor que se usa como máximo 5 veces.  
+    -   volver a conectarse a último-usar-servidor: Si la conexión no está activa, intenta volver a conectarse hasta el último servidor que se usa como máximo 5 veces.  
   
-    -   generar un error: si la conexión no está activa, se genera un error.  
+    -   generar una-error: Si la conexión no está activa, se genera un error.  
   
     El modo predeterminado es **generar un error**.  
   
@@ -169,7 +169,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *O*  
+    *o Administrador de configuración de*  
   
     ```xml  
     <!--synchronization-->  
@@ -180,7 +180,7 @@ Las opciones configurables por el usuario incluyen:
   
     </synchronize-target>  
     ```  
-    *O*  
+    *o Administrador de configuración de*  
   
     ```xml  
     <!--data migration-->  
@@ -196,15 +196,15 @@ Las opciones configurables por el usuario incluyen:
     </migrate-data>  
     ```  
   
-5.  **Proveedor de sobrescritura de convertidor:** Esto permite al usuario controlar los objetos que ya están presentes en el destino de la metabase. Las posibles acciones incluyen:  
+5.  **Convertidor de sobrescritura proveedor:** Esto permite al usuario controlar los objetos que ya están presentes en el destino de la metabase. Las posibles acciones incluyen:  
   
-    -   Error: la consola mostrará un error y detiene la ejecución.  
+    -   error: La consola muestra un error y detiene la ejecución.  
   
-    -   sobrescribir: sobrescribe los valores de objeto existentes. Esta acción se realiza de forma predeterminada.  
+    -   sobrescribir: Sobrescribe los valores de objeto existentes. Esta acción se realiza de forma predeterminada.  
   
-    -   Omitir: la consola omite los objetos que ya existen en la base de datos  
+    -   Omitir: La consola omite los objetos que ya existen en la base de datos  
   
-    -   usuario preguntar: pide al usuario para la entrada ('Sí' / 'no')  
+    -   usuario preguntar: Pide al usuario para la entrada ("Sí" o "no")  
   
     **Ejemplo:**  
   
@@ -215,7 +215,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *O*  
+    *o Administrador de configuración de*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -225,7 +225,7 @@ Las opciones configurables por el usuario incluyen:
     </convert-schema>  
     ```  
   
-6.  **Error de requisitos previos de proveedor:** Esto permite al usuario controlar los requisitos previos que son necesarios para procesar un comando. De forma predeterminada, el modo strict es 'false'. Si se establece en 'true', una excepción se genera si hay errores a cumplir los requisitos previos.  
+6.  **Proveedor con errores de requisitos previos:** Esto permite al usuario controlar los requisitos previos que son necesarios para procesar un comando. De forma predeterminada, el modo strict es 'false'. Si se establece en 'true', una excepción se genera si hay errores a cumplir los requisitos previos.  
   
     **Ejemplo:**  
   
@@ -237,11 +237,11 @@ Las opciones configurables por el usuario incluyen:
     </output-providers>  
     ```  
   
-7.  **Operación de detención:** durante la operación intermedio, si el usuario desea detener la operación, a continuación, **'Ctrl + C'** se puede usar la tecla de acceso rápido. SSMA para Oracle consola esperará a que se complete la operación y finaliza la ejecución de la consola.  
+7.  **Detener la operación:** Durante la operación intermedio, si el usuario desea detener la operación, a continuación, **'Ctrl + C'** se puede usar la tecla de acceso rápido. SSMA para Oracle consola esperará a que se complete la operación y finaliza la ejecución de la consola.  
   
     Si el usuario desea detener la ejecución inmediatamente, a continuación, **'Ctrl + C'** pueden presionar teclas de acceso rápido nuevo para la terminación repentina de la aplicación de consola de SSMA.  
   
-8.  **Proveedor de progreso:** informa del progreso de cada comando de la consola. Esta opción está deshabilitada de forma predeterminada. Constan de los atributos de informes de progreso:  
+8.  **Proveedor de progreso:** Informa del progreso de cada comando de la consola. Esta opción está deshabilitada de forma predeterminada. Constan de los atributos de informes de progreso:  
   
     -   off  
   
@@ -268,10 +268,10 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *O*  
+    *o Administrador de configuración de*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <progress-reporting  
   
@@ -281,22 +281,22 @@ Las opciones configurables por el usuario incluyen:
   
         report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off"     (optional)/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-9. **Nivel de detalle del registrador:** conjuntos de nivel de detalle de registro. Esto se corresponde con la opción de todas las categorías en la interfaz de usuario. De forma predeterminada, el nivel de detalle de registro es "error".  
+9. **Nivel de detalle del registrador:** Conjuntos de nivel de detalle de registro. Esto se corresponde con la opción de todas las categorías en la interfaz de usuario. De forma predeterminada, el nivel de detalle de registro es "error".  
   
     Las opciones de nivel de registrador incluyen:  
   
-    -   error irrecuperable: se registran los mensajes solo error irrecuperable.  
+    -   error irrecuperable: Solo los mensajes de error irrecuperable se registran.  
   
-    -   Error: se registran los mensajes de error y el error irrecuperable única.  
+    -   error: Solo los mensajes de error y fatal error se registran.  
   
-    -   Advertencia: se registran todos los niveles, excepto los mensajes de depuración e información.  
+    -   Advertencia: Todos los niveles, salvo que se registran los mensajes de depuración e información.  
   
-    -   Info: todos los niveles, salvo que se registran los mensajes de depuración.  
+    -   información: Se registran todos los niveles, excepto los mensajes de depuración.  
   
-    -   depurar: todos los niveles de los mensajes registrados.  
+    -   Depurar: Todos los niveles de los mensajes registrados.  
   
     > [!NOTE]  
     > Se registran mensajes obligatorios en cualquier nivel.  
@@ -310,17 +310,17 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *O*  
+    *o Administrador de configuración de*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <log-verbosity level="fatal-error/error/warning/info/debug"/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-10. **Contraseña cifrada de invalidación:** si es 'true', la contraseña de texto no cifrado especificado en la sección de definición de servidor del archivo de conexión del servidor o en el archivo de script, invalidaciones de la contraseña cifrada almacenada en almacenamiento protegido, si ya existe. Si se especifica ninguna contraseña en texto no cifrado, se solicita al usuario que escriba la contraseña.  
+10. **Reemplace la contraseña cifrada:** Si es 'true', la contraseña de texto no cifrado especificado en la sección de definición de servidor del archivo de conexión del servidor o en el archivo de script, invalidaciones de la contraseña cifrada almacenada en un almacenamiento protegido, si existe. Si se especifica ninguna contraseña en texto no cifrado, se solicita al usuario que escriba la contraseña.  
   
     Aquí surgen dos casos:  
   
@@ -340,7 +340,7 @@ Las opciones configurables por el usuario incluyen:
   
 Es la opción que no es configurable:  
   
--   **Número máximo de intentos de reconexión:** cuando una conexión establecida se agota el tiempo o se interrumpe debida a errores de red, el servidor es necesario volver a conectarse. Se permiten los intentos de reconexión a un máximo de **5** reintentos después de eso, la consola realiza automáticamente la reconexión. La instalación de la reconexión automática reduce el esfuerzo de volver a ejecutar el script.  
+-   **Máximo de intentos de conexión:** Cuando una conexión establecida se agota el tiempo o se interrumpe debido a un error de red, es necesario para volver a conectar el servidor. Se permiten los intentos de reconexión a un máximo de **5** reintentos después de eso, la consola realiza automáticamente la reconexión. La instalación de la reconexión automática reduce el esfuerzo de volver a ejecutar el script.  
   
 ## <a name="server-connection-parameters"></a>Parámetros de conexión del servidor  
 Parámetros de conexión de servidor pueden definirse en el archivo de script o en el archivo de conexión de servidor. Consulte la [crear los archivos de conexión de servidor &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) sección para obtener más detalles.  
@@ -348,7 +348,7 @@ Parámetros de conexión de servidor pueden definirse en el archivo de script o 
 ## <a name="script-commands"></a>Comandos de script  
 El archivo de script contiene una secuencia de comandos de flujo de trabajo de migración en formato XML. La aplicación de consola SSMA procesa la migración en el orden de los comandos que aparecen en el archivo de script.  
   
-Por ejemplo, sigue a la jerarquía de una migración de datos típica de una tabla específica en una base de datos de Oracle: esquema -&gt; tabla.  
+Por ejemplo, una migración de datos típica de una tabla específica en una base de datos de Oracle sigue la jerarquía de: Esquema -&gt; tabla.  
   
 Cuando todos los comandos en el archivo de script se ejecuta correctamente, la aplicación de consola SSMA sale y devuelve el control al usuario. El contenido de un archivo de script es más o menos estático con información sobre las variable contenidas en un [crear archivos de valor Variable &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) o, en una sección independiente dentro del archivo de script para los valores de variable.  
   

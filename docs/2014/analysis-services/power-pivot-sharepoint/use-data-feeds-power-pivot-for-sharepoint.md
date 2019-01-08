@@ -11,12 +11,12 @@ ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178135"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365017"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Usar fuentes de distribución de datos (PowerPivot para SharePoint)
   Las fuentes de distribución de datos son una o varias secuencias de datos que se generan en un origen de datos en línea y se difunden en un documento o aplicación de destino. Si está utilizando PowerPivot para Excel, las fuentes de distribución de datos pueden ayudarle a poner los datos empresariales o corporativos existentes de orígenes de datos arbitrarios en la ventana de PowerPivot de un libro de Excel 2010. Después de importar una fuente de distribución de datos en un libro, puede hacer referencia a ella posteriormente en cualquier operación de actualización de datos que programe en un servidor de SharePoint.  
@@ -63,7 +63,7 @@ ms.locfileid: "48178135"
 ##  <a name="rsreport"></a> Crear una fuente de distribución de datos a partir de un informe de Reporting Services  
  Si tiene una implementación de Reporting Services de SQL Server 2008 R2, puede usar la nueva extensión de representación de Atom para generar una fuente de distribución de datos a partir de un informe existente. Para obtener los mejores resultados, debería tener Excel 2010 con PowerPivot para Excel en la estación de trabajo. La aplicación cliente de PowerPivot se iniciará en respuesta a la exportación de la fuente de datos, y agregará y relacionará las tablas y columnas automáticamente a medida que se transmitan.  
   
- Para obtener instrucciones sobre cómo exportar una fuente de distribución de datos a partir de un informe, vea [Generar fuentes de distribución de datos a partir de un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) en el [archivo de Ayuda del Generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494).  
+ Para obtener instrucciones sobre cómo exportar una fuente de distribución de datos a partir de un informe, vea [Generar fuentes de distribución de datos a partir de un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) en el [archivo de Ayuda del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494).  
   
 > [!NOTE]  
 >  Para configurar la programación de una actualización de datos reiterada que vuelva a importar los datos del informe en un libro PowerPivot que esté publicado en una biblioteca de SharePoint, el servidor de informes se debe configurar para la integración de SharePoint. Para obtener más información sobre el uso de PowerPivot para SharePoint y Reporting Services juntos, consulte [configuración y administración de un servidor de informes &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
@@ -17,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a07b83aa6c7556cc8404dab6ff5e26e75800e340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130635"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797667"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relaciones de claves externas.
   Puede modificar el lado de clave externa de una relación en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modificar los cambios de clave externa de una tabla cuyas columnas están relacionadas con las columnas de la tabla de clave principal.  
@@ -41,7 +40,7 @@ ms.locfileid: "48130635"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  La nueva columna de clave externa debe tener el mismo tipo de datos y el mismo tamaño que la columna de clave principal con la que está relacionada, con las siguientes excepciones:  
@@ -83,7 +82,7 @@ ms.locfileid: "48130635"
      Comprueba con la restricción todos los datos que había en la tabla antes de crear o habilitar de nuevo la restricción.  
   
      **Especificación de tablas y columnas (Categoría)**  
-     Se expande para mostrar qué columnas actúan como clave externa y principal (o única) en la relación y a qué tablas pertenecen. Para editar o definir estos valores, haga clic en el botón de puntos suspensivos (**…**) situado a la derecha del campo de propiedad.  
+     Se expande para mostrar qué columnas actúan como clave externa y principal (o única) en la relación y a qué tablas pertenecen. Para editar o definir estos valores, haga clic en el botón de puntos suspensivos (**...**) situado a la derecha del campo de propiedad.  
   
      **Tabla base de clave externa**  
      Muestra la tabla que contiene la columna que actúa como clave externa en la relación seleccionada.  
@@ -100,7 +99,7 @@ ms.locfileid: "48130635"
      **Categoría Identidad**  
      Se expande para mostrar los campos de propiedades de **Nombre** y **Descripción**.  
   
-     **Nombre**  
+     **Name**  
      Muestra el nombre de relación. Cuando se crea una nueva relación, se le da un nombre predeterminado que se basa en la tabla de la ventana activa del **Diseñador de tablas**. Este nombre se puede cambiar en cualquier momento.  
   
      **Descripción**  

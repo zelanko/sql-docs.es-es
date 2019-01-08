@@ -16,12 +16,12 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782203"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208467"
 ---
 # <a name="c-data-types"></a>Tipos de datos C
 Tipos de datos ODBC C indican el tipo de datos de los búferes de C que se utiliza para almacenar datos en la aplicación.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  [e] un número se almacena en el *val* campo de la estructura SQL_NUMERIC_STRUCT como un entero escalado, en el modo little-endian (el byte más a la izquierda está el byte menos significativo). Por ejemplo, el número 10.001 en base 10, con una escala de 4, se escala a un entero de 100010. Dado que esto es 186AA en formato hexadecimal, el valor en SQL_NUMERIC_STRUCT sería "AA 86 01 00 00... 00", con el número de bytes definido por el SQL_MAX_NUMERIC_LEN **#define**.  
   
- Para obtener más información acerca de **SQL_NUMERIC_STRUCT**, consulte [HOWTO: recuperación de datos numéricos con SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Para obtener más información acerca de **SQL_NUMERIC_STRUCT**, consulte [HOWTO: Recuperar datos numéricos con SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
  [f] los campos de precisión y escala de los datos SQL_C_NUMERIC escriba areused para la entrada de una aplicación y para la salida desde el controlador a la aplicación. Cuando el controlador escribe un valor numérico en el SQL_NUMERIC_STRUCT, usará su propia predeterminado específico del controlador como el valor de la *precisión* campo y usará el valor del campo SQL_DESC_SCALE del descriptor de aplicación () cuyo valor predeterminado es 0) para el *escala* campo. Una aplicación puede proporcionar sus propios valores de precisión y escala estableciendo los campos SQL_DESC_PRECISION y SQL_DESC_SCALE del descriptor de aplicación.  
   
@@ -148,7 +148,7 @@ struct tagSQLGUID {
   
  [i] _SQL_C_BOOKMARK ha quedado obsoleto en ODBC 3 *.x*.  
   
- [j] _SQL_C_SHORT, SQL_C_LONG y SQL_C_TINYINT se han reemplazado en ODBC por tipos con signo y sin signo: SQL_C_SSHORT y SQL_C_USHORT, SQL_C_SLONG y SQL_C_ULONG y SQL_C_STINYINT y SQL_C_UTINYINT. Una aplicación ODBC 3 *.x* controlador que deban trabajar con ODBC 2. *x* aplicaciones deberían admitir SQL_C_SHORT, SQL_C_LONG y SQL_C_TINYINT, porque cuando se les llama, el Administrador de controladores pasa a través del controlador.  
+ [j] _SQL_C_SHORT, SQL_C_LONG y SQL_C_TINYINT han sido reemplazados en ODBC por tipos con signo y sin signo: SQL_C_SSHORT y SQL_C_USHORT, SQL_C_SLONG y SQL_C_ULONG y SQL_C_STINYINT y SQL_C_UTINYINT. Una aplicación ODBC 3 *.x* controlador que deban trabajar con ODBC 2. *x* aplicaciones deberían admitir SQL_C_SHORT, SQL_C_LONG y SQL_C_TINYINT, porque cuando se les llama, el Administrador de controladores pasa a través del controlador.  
   
  [k] SQL_C_GUID puede convertirse solo a SQL_CHAR o SQL_WCHAR.  
   

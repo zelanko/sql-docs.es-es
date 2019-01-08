@@ -14,12 +14,12 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a6dee085342d800caf2cf7353d28a6813d8b74b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29da5204dc5bd88ed2c92b93347358b9860fc5c4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201045"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373877"
 ---
 # <a name="xml-format-files-sql-server"></a>XML, archivos de formato (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona un esquema XML que define la sintaxis para escribir *archivos de formato XML* que se usarán para la importación masiva de datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los archivos de formato XML deben adherirse a este esquema, que se define en el lenguaje de definición de esquemas XML (XSDL). Los archivos con formato XML solamente se admiten cuando se instalan herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -241,7 +241,7 @@ ms.locfileid: "48201045"
   
 |Categoría de tipo|Tipos de datos de \<COLUMN>|Atributos XML obligatorios<br /><br /> para el tipo de datos|Atributos XML opcionales<br /><br /> para el tipo de datos|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Fixed|`SQLBIT`, `SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT`, y `SQLUNIQUEID`|Ninguno.|NULLABLE|  
+|Fixed|`SQLBIT`, `SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT` y `SQLUNIQUEID`|Ninguno.|NULLABLE|  
 |Número de variable|`SQLDECIMAL` y `SQLNUMERIC`|Ninguno.|NULLABLE, PRECISION, SCALE|  
 |LOB|`SQLIMAGE`, `CharLOB`, `SQLTEXT` y `SQLUDT`.|Ninguno.|NULLABLE|  
 |LOB de caracteres|`SQLNTEXT`|Ninguno.|NULLABLE|  
@@ -249,7 +249,7 @@ ms.locfileid: "48201045"
 |Cadena de caracteres|`SQLCHAR`, `SQLVARYCHAR`, `SQLNCHAR` y `SQLNVARCHAR`.|Ninguno.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Para importar o exportar datos SQLXML de manera masiva, use uno de los siguientes tipos de datos en el archivo de formato: SQLCHAR o SQLVARYCHAR (los datos se envían en la página de códigos del cliente o en la página de códigos implícita en la intercalación), SQLNCHAR o SQLNVARCHAR (los datos se envían como Unicode), o SQLBINARY o SQLVARYBIN (los datos se envían sin ninguna conversión).  
+>  Para importar o exportar de forma masiva datos SQLXML, utilice uno de los tipos de datos siguientes en el archivo de formato: SQLCHAR o SQLVARYCHAR (los datos se envían en la página de códigos del cliente o en la página de códigos implicado por la intercalación), SQLNCHAR o SQLNVARCHAR (los datos se envían como Unicode), o SQLBINARY o SQLVARYBIN (los datos se envían sin realizar ninguna conversión).  
   
  Para obtener más información sobre los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
@@ -308,9 +308,9 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="OrderCharFieldsSameAsCols"></a> A. Ordenar campos de datos de caracteres igual que columnas de tabla  
  En el ejemplo siguiente se muestra un archivo de formato XML que describe un archivo de datos que contiene tres campos de datos de caracteres. El archivo de formato asigna el archivo de datos a una tabla que contiene tres columnas. Los campos de datos se corresponden uno a uno con las columnas de la tabla.  
   
- **Tabla (fila):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **Tabla (fila):** Person (Age int, FirstName varchar (20), LastName varchar(30))  
   
- **Archivo de datos (registro):** Age\<tab>Firstname\<tab>Lastname\<return>  
+ **Archivo de datos (registro):** Edad\<ficha > Firstname\<ficha > Lastname\<devolver >  
   
  El siguiente archivo de formato XML lee del archivo de datos a la tabla.  
   
@@ -321,7 +321,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -346,9 +346,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. Ordenar campos de datos y columnas de tabla de forma diferente  
  En el ejemplo siguiente se muestra un archivo de formato XML que describe un archivo de datos que contiene tres campos de datos de caracteres. El archivo de formato asigna el archivo de datos a una tabla que contiene tres columnas que están ordenadas de forma diferente a los campos del archivo de datos.  
   
- **Tabla (fila):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **Tabla (fila):** Person (Age int, FirstName varchar (20), LastName varchar(30))  
   
- **Archivo de datos** (registro): Age\<tab>Lastname\<tab>Firstname\<return>  
+ **Archivo de datos** (registro): Edad\<ficha > Lastname\<ficha > Firstname\<devolver >  
   
  En el elemento `<RECORD>` , el archivo de formato representa los valores de datos de los tres campos como datos de caracteres.  
   
@@ -357,7 +357,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -381,9 +381,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ### <a name="c-omitting-a-data-field"></a>C. Omitir un campo de datos  
  En el ejemplo siguiente se muestra un archivo de formato XML que describe un archivo de datos que contiene cuatro campos de datos de caracteres. El archivo de formato asigna el archivo de datos a una tabla que contiene tres columnas. El segundo campo de datos no se corresponde con ninguna columna de la tabla.  
   
- **Tabla (fila):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **Tabla (fila):** Person (Age int, FirstName varchar (20), LastName Varchar(30))  
   
- **Archivo de datos (registro):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **Archivo de datos (registro):** Edad\<ficha > employeeID\<ficha > Firstname\<ficha > Lastname\<devolver >  
   
  En el elemento `<RECORD>` , el archivo de formato representa los valores de datos de los cuatro campos como datos de caracteres. Para cada campo, el atributo TERMINATOR indica el terminador que sigue al valor de datos.  
   
@@ -391,7 +391,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 ```  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -423,7 +423,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version = "1.0"?>  
 <BCPFORMAT  
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
@@ -465,7 +465,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
@@ -484,7 +484,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT  
-       xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
+       xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  

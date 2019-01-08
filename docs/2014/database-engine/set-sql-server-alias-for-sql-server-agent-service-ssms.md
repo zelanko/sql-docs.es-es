@@ -13,12 +13,12 @@ ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc684002c4ebc7f7ced43c6aa3f706b62fc82fa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097565"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588607"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
   En este tema se describe cómo establecer un alias de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para el Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con el fin de conectarse al [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. De manera predeterminada, el servicio del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se conecta a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a través de canalizaciones con nombre, mediante nombres de servidores dinámicos que no requieren ninguna configuración adicional del cliente. Solo es necesario configurar un alias de conexión de servidor si no se utiliza el transporte de red predeterminado o si se va a conectar a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la escucha en una canalización con nombre alternativa.  
@@ -33,7 +33,7 @@ ms.locfileid: "48097565"
   
 -   [Para establecer un alias de SQL Server para el servicio del Agente SQL Server utilizando SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48097565"
   
 2.  Haga clic con el botón derecho en **Agente SQL Server**y, luego, haga clic en **Propiedades**.  
   
-3.  En el cuadro de diálogo **Propiedades de Agente SQL Server***nombre_de_servidor*, en **Seleccionar una página**, seleccione **Conexión**.  
+3.  En el cuadro de diálogo **Propiedades de Agente SQL Server**_nombre_servidor_ , en **Seleccionar una página**, seleccione **Conexión**y  
   
 4.  En el cuadro de **Servidor de host local del alias** , escriba el alias de servidor al que debe conectarse el Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5088f627aee3b9e570b4b4c43e46a42853165193
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544559"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover una base de datos de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "50148446"
   
 1.  Localice la base de datos que desea mover en el panel izquierdo o derecho de SSMS.  
   
-2.  Haga clic con el botón derecho del mouse en la base de datos y seleccione **Separar…**  
+2.  Haga doble clic en la base de datos y seleccione **separar...**  
   
 3.  Asigne una contraseña a la base de datos que se va separar y, a continuación, haga clic en **Aceptar** para ejecutar el comando Detach.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "50148446"
   
 5.  Localice la carpeta **Bases de datos** en el panel izquierdo o derecho de SSMS.  
   
-6.  Haga clic con el botón derecho en la carpeta **Bases de datos** y seleccione **Asociar…**  
+6.  Haga doble clic en el **bases de datos** carpeta y seleccione **adjuntar...**  
   
-7.  En el cuadro de texto **Carpeta** , escriba la nueva ubicación de la carpeta de la base de datos. También puede usar el botón Examinar (**…**) para buscar la carpeta de la base de datos.  
+7.  En el cuadro de texto **Carpeta** , escriba la nueva ubicación de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar (**...** ) para buscar la carpeta de base de datos.  
   
 8.  Seleccione el modo **ReadWrite** para la base de datos.  
   

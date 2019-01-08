@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc819ab06a960887963b48be70c18e2ce8f656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131945"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362847"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
     
@@ -30,7 +30,7 @@ ms.locfileid: "48131945"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC3_CHECK_CATALOG|  
-|Texto del mensaje|Mensaje de comprobación del catálogo ERROR nivel LEVEL estado STATE: MESSAGE.|  
+|Texto del mensaje|Mensaje de comprobación del catálogo ERROR, nivel LEVEL, estado STATE: MESSAGE.|  
   
 ## <a name="explanation"></a>Explicación  
  DBCC CHECKCATALOG o DBCC CHECKDB encontró una incoherencia en las tablas de metadatos de sistema para el objeto especificado. Es decir, hay una incoherencia entre el identificador de objeto registrado y el objeto especificado en el mensaje de error.  
@@ -75,6 +75,6 @@ ms.locfileid: "48131945"
  No realice actualizaciones manuales de las tablas del sistema. SQL Server no admite los cambios manuales en las bases de datos del sistema. Si actualiza una tabla del sistema de una base de datos de SQL Server, se registran dos eventos (identificadores de evento 17659 y 3859). Para obtener más información, vea el artículo 2688307 de KB, "Se registran los identificadores de evento 17659 y 3859 al actualizar tablas del sistema en una base de datos de SQL Server".  
   
 ## <a name="see-also"></a>Vea también  
- [Se registran los identificadores de evento 17659 y 3859 al actualizar tablas del sistema en una base de datos de SQL Server](http://support.microsoft.com/kb/2688307/EN-US)  
+ [Se registran los identificadores de evento 17659 y 3859 al actualizar tablas del sistema en una base de datos de SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2bb84f3ba798ba8d1af4132f6553e6428365ca9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7949729f3ebee87d06e5e591c46513c111b70016
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171305"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358897"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matriz de clasificación (Analysis Services - Minería de datos)
   Una *matriz de clasificación* ordena todos los casos del modelo en categorías, determinando si el valor de predicción coincide con el valor real. A continuación, se cuentan todos los casos de cada categoría y los totales se muestran en la matriz. La matriz de clasificación es una herramienta estándar de evaluación de modelos estadísticos a la que a veces se denomina *matriz de confusión*.  
@@ -67,7 +67,7 @@ ms.locfileid: "48171305"
 |1|2|123|17|  
 |2|19|0|20|  
   
- Aunque la existencia de columnas adicionales hace que el informe parezca más complejo, el detalle adicional puede ser muy útil cuando se desea evaluar el costo acumulativo de realizar una predicción errónea. Para sumar las diagonales o comparar los resultados de combinaciones diferentes de filas, puede hacer clic en el botón **Copiar** que se proporciona en la pestaña **Matriz de clasificación** y pegar el informe en Excel. También puede usar un cliente como el Cliente de minería de datos para Excel, que admite [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, para crear directamente un informe de clasificación en Excel que incluya recuentos y porcentajes. Para obtener más información, vea [Minería de datos de SQL Server](http://go.microsoft.com/fwlink/?LinkID=77733).  
+ Aunque la existencia de columnas adicionales hace que el informe parezca más complejo, el detalle adicional puede ser muy útil cuando se desea evaluar el costo acumulativo de realizar una predicción errónea. Para sumar las diagonales o comparar los resultados de combinaciones diferentes de filas, puede hacer clic en el botón **Copiar** que se proporciona en la pestaña **Matriz de clasificación** y pegar el informe en Excel. También puede usar un cliente como el Cliente de minería de datos para Excel, que admite [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, para crear directamente un informe de clasificación en Excel que incluya recuentos y porcentajes. Para obtener más información, vea [Minería de datos de SQL Server](https://go.microsoft.com/fwlink/?LinkID=77733).  
   
 ## <a name="restrictions-on-the-classification-matrix"></a>Restricciones en la matriz de clasificación  
  Una matriz de clasificación solo se puede usar con atributos de predicción discretos.  
@@ -79,12 +79,12 @@ ms.locfileid: "48171305"
   
 |Temas|Vínculos|  
 |------------|-----------|  
-|Incluye una visita guiada que explica cómo se crea un gráfico de mejora respecto al modelo predictivo para el modelo de distribución de correo directo.|[Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Probar la exactitud con gráficos de elevación &#40;Tutorial de minería de datos básicos&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|Explica los tipos de gráficos relacionados.|[Gráfico de elevación &#40;Analysis Services - minería de datos&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services - minería de datos&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services - minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Describe los usos de la validación cruzada en los modelos y estructuras de minería de datos.|[La validación cruzada &#40;Analysis Services - minería de datos&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Describe los pasos necesarios para crear gráficos de mejora respecto al modelo predictivo y otros gráficos de precisión.|[Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Incluye una visita guiada que explica cómo se crea un gráfico de mejora respecto al modelo predictivo para el modelo de distribución de correo directo.|[Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Probar la exactitud con gráficos de mejora respecto al modelo predictivo &#40;Tutorial básico de minería de datos&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Explica los tipos de gráficos relacionados.|[Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services - Minería de datos&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services - Minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Describe los usos de la validación cruzada en los modelos y estructuras de minería de datos.|[Validación cruzada &#40;Analysis Services - Minería de datos&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Describe los pasos necesarios para crear gráficos de mejora respecto al modelo predictivo y otros gráficos de precisión.|[Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Pruebas y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
   

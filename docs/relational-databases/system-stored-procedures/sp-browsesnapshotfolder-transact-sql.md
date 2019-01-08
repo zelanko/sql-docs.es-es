@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_browsesnapshotfolder
@@ -17,12 +16,12 @@ ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fffd6e0131c00194ae65fb425b202add18cd23f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bd85e4d3e76df8cf5fe0b30350fb1a02959516f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785233"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591159"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicación***'**  
+ [  **@publication=**] **'**_publicación_**'**  
  Es el nombre de la publicación que contiene el artículo. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@subscriber=**] **'***suscriptor***'**  
+ [  **@subscriber=**] **'**_suscriptor_**'**  
  Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  Es el nombre de la base de datos de suscripción. *subscriber_db* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

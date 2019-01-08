@@ -22,12 +22,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067925"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360147"
 ---
 # <a name="feature-selection-data-mining"></a>Selección de características (minería de datos)
   *Selección de características* es un término usado habitualmente en la minería de datos para describir las herramientas y técnicas disponibles para reducir las entradas a un tamaño apropiado para su procesamiento y análisis. Selección de características implica no solo *reducción de cardinalidad*, lo que significa que impone un límite arbitrario o predefinido en el número de atributos que se pueden considerar al crear un modelo, sino también la elección de atributos, lo que significa que el analista o la herramienta de modelado activamente selecciona o descarta los atributos según su utilidad para el análisis.  
@@ -43,9 +43,9 @@ ms.locfileid: "48067925"
  Si solo 50 de las 500 columnas del origen de datos tienen información útil para la generación de un modelo, puede dejar fuera del modelo las que no son útiles o usar técnicas de selección de características para detectar automáticamente las mejores características y excluir los valores estadísticamente no significativos. La selección de características ayuda a resolver el problema de tener demasiados datos de escaso valor o muy pocos datos de mucho valor.  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Selección de características en minería de datos de Analysis Services  
- Por lo general, la selección de características se realiza automáticamente en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], y cada algoritmo tiene un conjunto de técnicas predeterminadas para aplicar de forma inteligente la reducción de la característica. La selección de características siempre se realiza antes del entrenamiento del modelo y permite elegir automáticamente en un conjunto de datos los atributos que con toda probabilidad se usarán en el mismo. Sin embargo, también puede establecer parámetros manualmente para influir en el comportamiento de la selección de características.  
+ Normalmente, la selección de características se realiza automáticamente en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], y cada algoritmo tiene un conjunto de técnicas predeterminadas para aplicar de forma inteligente la reducción de características. La selección de características siempre se realiza antes del entrenamiento del modelo y permite elegir automáticamente en un conjunto de datos los atributos que con toda probabilidad se usarán en el mismo. Sin embargo, también puede establecer parámetros manualmente para influir en el comportamiento de la selección de características.  
   
- En general, la selección de características funciona calculando una puntuación para cada atributo y seleccionando a continuación solo los atributos que han obtenido las mejores puntuaciones. También puede ajustar el umbral para las puntuaciones más altas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios métodos para calcular estas puntuaciones y el método exacto que se aplica en un modelo depende de estos factores:  
+ En general, la selección de características funciona calculando una puntuación para cada atributo y seleccionando a continuación solo los atributos que han obtenido las mejores puntuaciones. También puede ajustar el umbral para las puntuaciones más altas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios métodos para calcular estas puntuaciones, y el método exacto que se aplica en un modelo depende de estos factores:  
   
 -   El algoritmo usado en el modelo  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48067925"
 #### <a name="bayesian-with-k2-prior"></a>Bayesiano con prioridad K2  
  Analysis Services proporciona dos puntuaciones de selección de características basadas en las redes bayesianas. Una red bayesiana es un gráfico *dirigido* o *acíclico* de estados y de transiciones entre ellos; esto significa que algunos estados siempre son anteriores al estado actual y otros son posteriores, y que el gráfico no se repite ni realiza bucles. Por definición, las redes bayesianas permiten el uso del conocimiento previo. Sin embargo, la pregunta sobre qué estados anteriores se deben utilizar para calcular las probabilidades de los estados posteriores es importante para la precisión, el rendimiento y el diseño del algoritmo.  
   
- Cooper y Herskovits desarrollaron el algoritmo K2 para el aprendizaje a partir de una red bayesiana y este algoritmo se utiliza a menudo en la minería de datos. Es escalable y puede analizar varias variables, pero requiere la ordenación de las variables utilizadas como entrada. Para obtener más información, vea el documento [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885) por Chickering, Geiger y Heckerman.  
+ Cooper y Herskovits desarrollaron el algoritmo K2 para el aprendizaje a partir de una red bayesiana y este algoritmo se utiliza a menudo en la minería de datos. Es escalable y puede analizar varias variables, pero requiere la ordenación de las variables utilizadas como entrada. Para obtener más información, vea el documento [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885) por Chickering, Geiger y Heckerman.  
   
  Este método de puntuación está disponible para los atributos discretos y de datos discretos.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48067925"
   
  El método Equivalente Dirichlet bayesiano con prioridad uniforme (BDEU) considera un caso especial de la distribución Dirichlet, en el que se utiliza una constante matemática para crear una distribución fija o uniforme de estados anteriores. La puntuación BDE también considera la equivalencia de probabilidad; esto significa que no es de esperar que los datos diferencien estructuras equivalentes. Es decir, si la puntuación de “Si A, entonces B” es la misma que la puntuación de “Si B, entonces A”, las estructuras no se pueden diferenciar basándose en los datos y no se puede deducir la causalidad.  
   
- Para obtener más información sobre las redes bayesianas y la implementación de estos métodos de puntuación, vea este artículo sobre las [redes bayesianas](http://go.microsoft.com/fwlink/?LinkId=105885).  
+ Para obtener más información sobre las redes bayesianas y la implementación de estos métodos de puntuación, vea este artículo sobre las [redes bayesianas](https://go.microsoft.com/fwlink/?LinkId=105885).  
   
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Métodos de selección de características empleados por los algoritmos de Analysis Services  
  La tabla siguiente contiene una lista de los algoritmos que admiten la selección de características, los métodos de selección de características utilizados por los algoritmos, y los parámetros que se establecen para controlar el comportamiento de la selección de características.  

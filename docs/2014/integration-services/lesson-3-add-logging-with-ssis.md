@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7dc2b824ef3fb3b1809bf685b3b5b8409ca1f805
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 088afb5cdd4640aab550552d4fc15c25f3a852e1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196925"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375287"
 ---
 # <a name="lesson-3-adding-logging"></a>Lección 3: Agregar registro
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye características de registro que permiten supervisar y solucionar los problemas de ejecución de paquetes mediante el seguimiento de eventos de tarea y de contenedor. La características de registro son flexibles, pueden habilitarse en el nivel de paquete o en tareas y contendores individuales del paquete. Puede seleccionar qué eventos deben registrarse y crear varios registros para un único paquete.  
@@ -33,10 +32,10 @@ ms.locfileid: "48196925"
   
 -   Archivo XML  
   
- En esta lección, creará una copia del paquete que creó en [lección 2: Agregar bucles](lesson-2-adding-looping-with-ssis.md). Utilizando este nuevo paquete, luego agregará y configurará el registro para supervisar eventos específicos durante la ejecución del paquete. Si no ha finalizado cualquiera de las lecciones anteriores, también puede copiar el paquete de la lección 2 finalizada incluido en el tutorial.  
+ En esta lección, creará una copia del paquete que creó en [lección 2: Agregar bucle](lesson-2-adding-looping-with-ssis.md). Utilizando este nuevo paquete, luego agregará y configurará el registro para supervisar eventos específicos durante la ejecución del paquete. Si no ha finalizado cualquiera de las lecciones anteriores, también puede copiar el paquete de la lección 2 finalizada incluido en el tutorial.  
   
 > [!IMPORTANT]  
->  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información acerca de cómo instalar e implementar **AdventureWorksDW2012**, [Reporting Services Product Samples de CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información acerca de cómo instalar e implementar **AdventureWorksDW2012**, [Reporting Services Product Samples de CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  Esta lección contiene las siguientes tareas:  
@@ -45,7 +44,7 @@ ms.locfileid: "48196925"
   
 -   [Paso 2: Agregar y configurar el registro](lesson-3-2-adding-and-configuring-logging.md)  
   
--   [Paso 3: Probar el paquete del tutorial de la lección 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [Paso 3: Probar el paquete del Tutorial lección 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
  [Paso 1: Copiar el paquete de la lección 2](lesson-3-1-copying-the-lesson-2-package.md)  

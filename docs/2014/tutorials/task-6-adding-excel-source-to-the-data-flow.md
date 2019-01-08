@@ -13,12 +13,12 @@ ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f51d2f6f48263e764d73eb9fcd8ee0dcd27b26da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb79a52e8ce910425de44b5cf475400daa3f40aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071765"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356538"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tarea 6: agregar el origen de Excel al flujo de datos
   En esta tarea, agregará un origen de Excel al flujo de datos para leer datos de proveedor del archivo de Excel de origen. El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de Microsoft Excel. Vea el tema [Origen de Excel](../integration-services/data-flow/excel-source.md) para obtener más detalles.  
@@ -45,9 +45,9 @@ ms.locfileid: "48071765"
   
 9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-10. Arrastre y coloque la transformación **Limpieza de DQS** de **Otras transformaciones** del **Cuadro de herramientas de SSIS** hasta la pestaña **Flujo de datos** bajo **Leer datos de proveedor de archivo de Excel**. La transformación Limpieza de DQS emplea Data Quality Services (DQS) para corregir datos aplicando reglas aprobadas de la base de conocimiento. Esta transformación, en tiempo de ejecución, crea un proyecto de limpieza de DQS en el servidor de DQS. Vea el tema [Transformación Limpieza de DQS](http://msdn.microsoft.com/library/ee677619.aspx) para obtener más detalles.  
+10. Arrastre y coloque la transformación **Limpieza de DQS** de **Otras transformaciones** del **Cuadro de herramientas de SSIS** hasta la pestaña **Flujo de datos** bajo **Leer datos de proveedor de archivo de Excel**. La transformación Limpieza de DQS emplea Data Quality Services (DQS) para corregir datos aplicando reglas aprobadas de la base de conocimiento. Esta transformación, en tiempo de ejecución, crea un proyecto de limpieza de DQS en el servidor de DQS. Vea el tema [Transformación Limpieza de DQS](https://msdn.microsoft.com/library/ee677619.aspx) para obtener más detalles.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 7: Agregar la transformación Limpieza de DQS al flujo de datos](../integration-services/data-flow/data-flow.md)  
+ [Tarea 7: Transformación de limpieza de DQS agregar al flujo de datos](../integration-services/data-flow/data-flow.md)  
   
   

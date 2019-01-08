@@ -19,17 +19,17 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a97dc3f074a1302f852f710f05eb51e1ba1350c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d43074e9cdffa27e971d32278259001ae86c005f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681233"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209454"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [actual versión](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Agrega un dispositivo de copia de seguridad a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -110,7 +110,7 @@ GO
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';  
 ```  
   
-### <a name="b-adding-a-network-disk-backup-device"></a>B. Agregar un dispositivo de copia de seguridad de disco de red  
+### <a name="b-adding-a-network-disk-backup-device"></a>b. Agregar un dispositivo de copia de seguridad de disco de red  
  En el ejemplo siguiente se muestra cómo agregar un dispositivo de copia de seguridad de disco remoto llamado `networkdevice`. El nombre con el que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] se ha iniciado debe tener permisos de acceso al archivo remoto (`\\<servername>\<sharename>\<path>\<filename>.bak`).  
   
 ```  

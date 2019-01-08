@@ -23,17 +23,17 @@ ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1489cf9a0950a172c847f5abb6b666dd68b589c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 427744a5971cae92f5a3a8e111a85dd5a858b882
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191395"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537065"
 ---
 # <a name="modeling-flags-data-mining"></a>Marcas de modelado (Minería de datos)
   Puede utilizar marcas de modelado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar información adicional a un algoritmo de minería de datos acerca de los datos que se definen en una tabla de casos. El algoritmo puede usar esta información para crear un modelo de minería de datos más preciso.  
   
- Algunas marcas de modelado se definen en la estructura de minería de datos, mientras que otras se definen en la columna del modelo de minería de datos. Por ejemplo, el `NOT NULL` marca de modelado se usa con las columnas de estructura de minería de datos. Puede definir marcas de modelado adicionales en las columnas del modelo de minería de datos, dependiendo del algoritmo que se utilice para crear el modelo.  
+ Algunas marcas de modelado se definen en la estructura de minería de datos, mientras que otras se definen en la columna del modelo de minería de datos. Por ejemplo, la marca de modelado `NOT NULL` se utiliza con las columnas de la estructura de minería de datos. Puede definir marcas de modelado adicionales en las columnas del modelo de minería de datos, dependiendo del algoritmo que se utilice para crear el modelo.  
   
 > [!NOTE]  
 >  Los complementos de otros proveedores podrían tener otras marcas de modelado, además de las predefinidas por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -45,11 +45,11 @@ ms.locfileid: "48191395"
  Indica que los valores de la columna de atributos nunca deben incluir un valor NULL. Se producirá un error si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] encuentra un valor NULL para esta columna de atributos durante el proceso de entrenamiento de modelos.  
   
  **MODEL_EXISTENCE_ONLY**  
- Indica que la columna se tratará como si tuviera dos estados posibles: `Missing` y `Existing`. Si el valor es `NULL`, se trata como ausente. La marca MODEL_EXISTENCE_ONLY se aplica al atributo de predicción y es compatible con la mayoría de los algoritmos.  
+ Indica que la columna se tratará como si tuviera dos estados posibles: `Missing` y `Existing`. Si el valor es `NULL`, se trata como Ausente. La marca MODEL_EXISTENCE_ONLY se aplica al atributo de predicción y es compatible con la mayoría de los algoritmos.  
   
- De hecho, establecer la marca MODEL_EXISTENCE_ONLY en `True` cambia la representación de los valores de modo que hay sólo dos estados: `Missing` y `Existing`. Los Estados no ausentes se combinan en una sola `Existing` valor.  
+ De hecho, al establecer la marca MODEL_EXISTENCE_ONLY en `True` se cambia la representación de los valores de forma que solo haya dos estados: `Missing` y `Existing`. Todos los estados que indica que no falta un elemento se combinan en un único valor `Existing`.  
   
- Un uso típico de esta marca de modelado se daría en los atributos para los que el estado `NULL` tiene un significado implícito; el valor explícito del estado `NOT NULL` podría no ser tan importante como el hecho de que la columna tenga cualquier valor. Por ejemplo, podría ser una columna [DateContractSigned] `NULL` si nunca se ha firmado un contrato y `NOT NULL` si se ha firmado el contrato. Por lo tanto, si el propósito del modelo es predecir si se firmará un contrato, puede usar la marca MODEL_EXISTENCE_ONLY para omitir el valor de fecha exacta en la `NOT NULL` casos y distinciones únicamente los casos donde un contrato es `Missing` o `Existing`.  
+ Un uso típico de esta marca de modelado se daría en los atributos para los que el estado `NULL` tiene un significado implícito; el valor explícito del estado `NOT NULL` podría no ser tan importante como el hecho de que la columna tenga cualquier valor. Por ejemplo, una columna [DateContractSigned] podría ser `NULL` si nunca se llegó a firmar el contrato y `NOT NULL` si se llegó a firmar. Por tanto, si la finalidad del modelo es predecir si se firmará el contrato, podría utilizar la marca MODEL_EXISTENCE_ONLY para omitir el valor de fecha exacto en los casos `NOT NULL` y hacer distinciones únicamente en los casos donde un contrato es `Missing` o `Existing`.  
   
 > [!NOTE]  
 >  Ausente es un estado especial utilizado por el algoritmo y no debe confundirse con el valor de texto "Ausente" de una columna. Para más información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
@@ -70,7 +70,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  Puede agregar o cambiar las marcas de modelado utilizadas en un modelo mediante el Diseñador de minería de datos y modificar las propiedades de las columnas asociadas. Dichos cambios requieren que la estructura o el modelo se vuelvan a procesar.  
   
- Puede especificar las marcas de modelado en una nueva estructura o modelo de minería de datos mediante DMX, o utilizando AMO o XMLA. Sin embargo, no puede cambiar las marcas de modelado utilizadas en un modelo y en una estructura de minería de datos existentes utilizando DMX. Puede crear un nuevo modelo de minería de datos utilizando la sintaxis `ALTER MINING STRUCTURE….ADD MINING MODEL`.  
+ Puede especificar las marcas de modelado en una nueva estructura o modelo de minería de datos mediante DMX, o utilizando AMO o XMLA. Sin embargo, no puede cambiar las marcas de modelado utilizadas en un modelo y en una estructura de minería de datos existentes utilizando DMX. Puede crear un nuevo modelo de minería de datos utilizando la sintaxis `ALTER MINING STRUCTURE....ADD MINING MODEL`.  
   
 ##  <a name="bkmk_UseRegressors"></a> Usos de la marca de modelado REGRESSOR  
  Cuando se establece la marca de modelado REGRESSOR en una columna, se indica al algoritmo que la columna contiene regresores potenciales. Los regresores reales que se utilizan en el modelo los determina el algoritmo. Se puede descartar un regresor potencial si no modela el atributo de predicción.  
@@ -107,11 +107,11 @@ WHERE MODEL_NAME = '<model name>'
 |----------|-----------|  
 |Modificar las marcas de modelado mediante el Diseñador de minería de datos|[Ver o cambiar marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)|  
 |Especificar una sugerencia al algoritmo para recomendar regresores probables|[Especificar una columna para usar como regresor en un modelo](specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Ver las marcas de modelado admitidas por algoritmos concretos (en la sección Marcas de modelado de cada tema de referencia del algoritmo)|[Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|Ver las marcas de modelado admitidas por algoritmos concretos (en la sección Marcas de modelado de cada tema de referencia del algoritmo)|[Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |Obtener más información acerca de las columnas de la estructura de minería de datos y las propiedades que se pueden establecer en ellas|[Columnas de la estructura de minería de datos](mining-structure-columns.md)|  
 |Obtener información sobre las marcas de modelado y las columnas del modelo de minería de datos que se pueden aplicar en el modelo|[Columnas del modelo de minería de datos](mining-model-columns.md)|  
-|Ver la sintaxis para trabajar con marcas de modelado en instrucciones DMX|[Las marcas de modelado &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
-|Descripción de los valores que faltan y cómo trabajar con ellos|[Los valores que faltan &#40;Analysis Services - minería de datos&#41;](missing-values-analysis-services-data-mining.md)|  
+|Ver la sintaxis para trabajar con marcas de modelado en instrucciones DMX|[Marcas de modelado &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
+|Descripción de los valores que faltan y cómo trabajar con ellos|[Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md)|  
 |Obtener información sobre cómo administrar los modelos y las estructuras y establecer las propiedades de uso|[Mover objetos de minería de datos](moving-data-mining-objects.md)|  
   
   

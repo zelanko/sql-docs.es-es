@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 6bc375492034f4e9b05eda85805cd452fe6d3557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723193"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206624"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>AlwaysOn de grupos de disponibilidad en Linux
 
@@ -51,15 +51,15 @@ Tipo de clúster se almacena en el [!INCLUDE[ssnoversion-md](../includes/ssnover
 
 ## <a name="requiredsynchronizedsecondariestocommit"></a>requiere\_sincronizado\_secundarias\_a\_confirmación
 
-Nuevo en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] es un valor que se usa por grupos de disponibilidad denominados `required_synchronized_secondaries_to_commit`. Esto indica el grupo de disponibilidad en el número de réplicas secundarias que deben estar en modo "lockstep" con la principal. Esto permite cosas como la conmutación por error automática (solo cuando se integra con Pacemaker con un tipo de clúster externo) y controla el comportamiento de cosas como la disponibilidad de la réplica principal si el número correcto de las réplicas secundarias está en línea o sin conexión. Para conocer más acerca de cómo funciona esto, vea [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). El `required_synchronized_secondaries_to_commit` valor se establece de forma predeterminada y mantenido por Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Puede invalidar este valor manualmente.
+Nuevo en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] es un valor que se usa por grupos de disponibilidad denominados `required_synchronized_secondaries_to_commit`. Esto indica el grupo de disponibilidad en el número de réplicas secundarias que deben estar en modo "lockstep" con la principal. Esto permite cosas como la conmutación por error automática (solo cuando se integra con Pacemaker con un tipo de clúster externo) y controla el comportamiento de cosas como la disponibilidad de la réplica principal si el número correcto de las réplicas secundarias está en línea o sin conexión. Para conocer más acerca de cómo funciona esto, vea [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). El `required_synchronized_secondaries_to_commit` valor se establece de forma predeterminada y mantenido por Pacemaker / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Puede invalidar este valor manualmente.
 
 La combinación de `required_synchronized_secondaries_to_commit` y el nuevo número de secuencia (que se almacena en `sys.availability_groups`) le informa de Pacemaker y [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] que, por ejemplo, puede ocurrir conmutación automática por error. En ese caso, una réplica secundaria tendría el mismo número de secuencia que el servidor principal, lo que significa que está al día con toda la información de configuración más reciente.
 
 Hay tres valores que se pueden establecer para `required_synchronized_secondaries_to_commit`: 0, 1 o 2. Controlan el comportamiento de lo que sucede cuando una réplica deja de estar disponible. Los números corresponden al número de réplicas secundarias que deben sincronizarse con la principal. El comportamiento es así en Linux:
 
--   0: ninguna conmutación por error automática es posible porque ninguna réplica secundaria se necesita para sincronizarse. La base de datos principal está disponible en todo momento.
--   1: una réplica secundaria debe estar en un estado sincronizado con la principal; es posible la conmutación automática por error. La base de datos principal no está disponible hasta que una réplica secundaria sincrónica está disponible.
--   2 – ambas réplicas secundarias en una configuración de AG de tres o más nodos deben estar sincronizadas con el servidor principal; es posible la conmutación automática por error.
+-   0 - ninguna conmutación por error automática es posible porque ninguna réplica secundaria se necesita para sincronizarse. La base de datos principal está disponible en todo momento.
+-   1 - una réplica secundaria debe estar en un estado sincronizado con la principal; es posible la conmutación automática por error. La base de datos principal no está disponible hasta que una réplica secundaria sincrónica está disponible.
+-   2 - ambas réplicas secundarias en una configuración de AG de tres o más nodos deben estar sincronizadas con el servidor principal; es posible la conmutación automática por error.
 
 `required_synchronized_secondaries_to_commit` los controles no solo el comportamiento de las conmutaciones por error con réplicas sincrónicas, pero la pérdida de datos. Con un valor de 1 o 2, una réplica secundaria siempre es necesaria que se sincronizarán, por lo que siempre habrá redundancia de datos. Esto significa que no hay pérdida de datos.
 
@@ -87,7 +87,7 @@ Conmutación automática por error de un grupo de disponibilidad es posible cuan
 -   La principal y la réplica secundaria se establecen en el movimiento de datos sincrónico.
 -   La base de datos secundaria tiene un estado de sincronizado (no sincronizar), lo que significa que los dos están en el mismo punto de datos.
 -   El tipo de clúster se establece como externa. Conmutación automática por error no es posible con un tipo de clúster ninguno.
--   El `sequence_number` de la réplica secundaria se convierta en la réplica principal tiene el mayor número de secuencia: en otras palabras, la réplica secundaria `sequence_number` coincida con el de la réplica principal original.
+-   El `sequence_number` de la réplica secundaria se convierta en la réplica principal tiene el número de secuencia superior - en otras palabras, la réplica secundaria `sequence_number` coincida con el de la réplica principal original.
 
 Si se cumplen estas condiciones y se produce un error en el servidor que hospeda la réplica principal, el grupo de disponibilidad cambiará la propiedad a una réplica sincrónica. El comportamiento de réplicas sincrónicas (de lo que puede haber tres total: uno principal y dos réplicas secundarias) adicional puede controlarse mediante `required_synchronized_secondaries_to_commit`. Esto funciona con grupos de disponibilidad en Windows y Linux, pero se configura de manera completamente diferente. En Linux, el valor se configura automáticamente el clúster en el propio recurso de grupo de disponibilidad.
 
@@ -151,7 +151,7 @@ Un grupo de disponibilidad distribuido también puede cruzar los límites del si
 
 ![Híbrido Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

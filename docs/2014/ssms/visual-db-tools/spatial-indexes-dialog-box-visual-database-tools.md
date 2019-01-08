@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
@@ -12,12 +12,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: b347715a601be779b864500a6bc28655141ceeeb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113365"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773477"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Cuadro de diálogo Índices espaciales (Visual Database Tools)
   Use el cuadro de diálogo **Índices espaciales** para crear índices para las columnas del tipo de datos **geometry** o **geography** (*columnas espaciales*) que no pueden indizarse mediante el cuadro de diálogo **Índice y claves** . Cada columna espacial puede tener más de un índice espacial, pero se deben crear de uno en uno.  
@@ -88,7 +88,7 @@ ms.locfileid: "48113365"
  Muestra el nombre del índice espacial. Cuando se crea un nuevo índice, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Este nombre se puede cambiar en cualquier momento.  
   
  **Descripción**  
- Describe el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y, a continuación, en el botón de puntos suspensivos (**…**) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
+ Describe el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos (**...**) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
   
  **Categoría Diseñador de tablas**  
  Expandido, muestra información sobre las propiedades de este índice espacial.  
@@ -109,7 +109,7 @@ ms.locfileid: "48113365"
  **Bloqueos de página permitidos**  
  Especifica si se permite el bloqueo de páginas en este índice. Permitir o denegar el bloqueo de página afecta al rendimiento de la base de datos.  
   
- **Volver a calcular****estadísticas**   
+ **Volver a calcular****estadísticas**  
  Especifica si se deben calcular estadísticas nuevas cuando se crea el índice. Al volver a calcular las estadísticas, se ralentiza la generación de índices, pero suele mejorar el rendimiento de las consultas.  
   
  **Bloqueos de fila permitidos**  

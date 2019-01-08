@@ -1,6 +1,6 @@
 ---
-title: Crear una tabla calculada | Documentos de Microsoft
-ms.date: 05/07/2018
+title: Crea una tabla calculada en modelos tabulares de Analysis Services | Microsoft Docs
+ms.date: 12/19/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f920d7ef7ae8a8fb5016e4bb4833b3637b325f8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 199096efcdf9212e19e1055f1276079eddfb1a75
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041999"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626274"
 ---
 # <a name="create-a-calculated-table"></a>Crear una tabla calculada 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Una *tabla calculada* es un objeto calculado que se basa en una expresión o consulta DAX derivada del resto de tablas del mismo modelo (o de una parte).  
   
- Un problema habitual de diseño que las tablas calculadas pueden resolver es exponer una dimensión realizadora de roles en un contexto específico para que se pueda exponer como una estructura de consulta en aplicaciones cliente.  Como probablemente recuerde, una dimensión realizadora de roles es simplemente una tabla expuesta en varios contextos. Un ejemplo clásico es la tabla Date, manifestada como OrderDate, ShipDate o DueDate en función de la relación de clave externa. Al crear una columna calculada explícitamente para ShipDate, obtendrá una tabla independiente que está disponible para consultas, tan operativa como cualquier otra tabla.  
+ Un problema habitual de diseño que las tablas calculadas pueden resolver es exponer una dimensión realizadora de roles en un contexto específico para que se pueda exponer como una estructura de consulta en aplicaciones cliente.  Como probablemente recuerde, una dimensión realizadora de roles es simplemente una tabla expuesta en varios contextos. Un ejemplo clásico es la tabla Date, manifestada como OrderDate, ShipDate o DueDate en función de la relación de clave externa. Al crear una columna calculada explícitamente para ShipDate, obtendrá una tabla independiente que está disponible para consultas, tan operativa como cualquier otra tabla. Otro uso incluye la configuración de un conjunto de filas filtrada, un subconjunto o superconjunto de columnas de otras tablas existentes. Esto permite mantener intacta la tabla original a la vez que se crean variaciones de dicha tabla para admitir escenarios concretos.  
   
- Un segundo uso de las tablas calculadas incluye la configuración de un conjunto de filas filtrado o un subconjunto o superconjunto de columnas a partir de otras tablas existentes. Esto permite mantener intacta la tabla original a la vez que se crean variaciones de dicha tabla para admitir escenarios concretos.  
-  
- Para aprovechar al máximo el uso de las tablas calculadas, debe tener conocimientos básicos de DAX. Cuando se trabaja con expresiones para la tabla, puede ser útil saber que una tabla calculada contiene una sola partición con un objeto DAXSource, donde la expresión es una expresión DAX.  
-Hay un valor CalculatedTableColumn para cada columna que devuelve la expresión, donde SourceColumn es el nombre de la columna devuelta (similar a los objetos DataColumn de las tablas no calculadas).  
+ Para aprovechar al máximo el uso de las tablas calculadas, debe tener conocimientos básicos de DAX. Cuando se trabaja con expresiones para la tabla, puede ser útil para saber que una tabla calculada contiene una sola partición con un objeto DAXSource, donde la expresión es una expresión de DAX.  
+Hay un valor CalculatedTableColumn para cada columna que devuelve la expresión, donde SourceColumn es el nombre de la columna devuelta (similar a los objetos DataColumn de las tablas no calculadas). 
+
+Ya debe existir al menos una tabla antes de poder crear una tabla calculada. Si va a crear una tabla calculada como un objeto de tabla calculada independiente, puede crear primero una tabla mediante la importación desde un origen de datos de archivo (csv, xls, xml). Puede tener el archivo que importa desde una sola columna y un valor único. A continuación, puede ocultar esa tabla. 
   
 ## <a name="how-to-create-a-calculated-table"></a>Cómo crear una tabla calculada  
   
@@ -39,7 +39,7 @@ Hay un valor CalculatedTableColumn para cada columna que devuelve la expresión,
   
 5.  Asígnele un nombre a la tabla.  
   
-6.  Cree relaciones con otras tablas del modelo. Vea [crear una relación entre dos tablas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) si necesita ayuda con este paso.  
+6.  Cree relaciones con otras tablas del modelo. Consulte [crear una relación entre dos tablas](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) si necesita ayuda con este paso.  
   
 7.  Haga referencia a la tabla en los cálculos o las expresiones del modelo o use **Analizar en Excel** para realizar una exploración de datos ad hoc.  
   
@@ -69,7 +69,7 @@ Hay un valor CalculatedTableColumn para cada columna que devuelve la expresión,
   
 ## <a name="see-also"></a>Vea también  
  [Nivel de compatibilidad](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Expresiones de análisis de datos &#40;DAX&#41; en Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
+ [Data Analysis Expressions &#40;DAX&#41; in Analysis Services (Expresiones de análisis de datos (DAX) en Analysis Services)](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [Descripción de DAX en modelos tabulares](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

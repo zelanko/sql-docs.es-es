@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169225"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590869"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Archivo Schema.ini (controlador de archivo de texto)
 Cuando se usa el controlador de texto, el formato del archivo de texto se determina mediante el uso de un archivo de información de esquema. El archivo de información de esquema es siempre denominado Schema.ini y siempre se mantiene en el mismo directorio que el origen de datos de texto. El archivo de información de esquema proporciona la IISAM con información sobre el formato general del archivo, el nombre de columna y la información de tipo de datos y varias otras características de datos. Un archivo Schema.ini siempre es necesario para tener acceso a datos de longitud fija. Debe usar un archivo Schema.ini cuando la tabla de texto contiene la fecha y hora, moneda, o datos Decimal o siempre que desee más control sobre la administración de los datos en la tabla.  
@@ -95,12 +95,12 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- En la tabla siguiente describe cada parte de la **Col *** n* entrada.  
+ En la tabla siguiente describe cada parte de la **Col**_n_ entrada.  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
 |*ColumnName*|El nombre de la columna de texto. Si el nombre de columna contiene espacios incrustados, debe encerrarlo entre comillas dobles.|  
-|*Tipo*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos Microsoft Jet**<br /><br /> Bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Moneda<br /><br /> Single<br /><br /> Doble<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Entero (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
+|*Tipo*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Moneda<br /><br /> Único<br /><br /> Doble<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Entero (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
 |**Width**|El valor de cadena literal `Width`. Indica que el número siguiente designa el ancho de la columna (opcional para archivos delimitados por caracteres; necesario para los archivos de longitud fija).|  
 |*#*|El valor entero que designa el ancho de la columna (obligatorio si **ancho** se especifica).|  
   
@@ -119,11 +119,11 @@ CharacterSet=ANSI
 |**DateTimeFormat**|Puede establecerse en una cadena de formato que indica las fechas y horas. Debe especificar esta entrada si se administran todos los campos de fecha y hora en la importación y exportación con el mismo formato. Todos los formatos de Microsoft Jet excepto a. M. y p. M. se admiten. Si no hay ninguna cadena de formato, se usan las opciones de imagen y la hora de fecha corta de Panel de Control de Windows.|  
 |**DecimalSymbol**|Puede establecerse en cualquier carácter individual que se usa para separar el entero de la parte fraccionaria de un número.|  
 |**NumberDigits**|Indica el número de dígitos decimales en la parte fraccionaria de un número.|  
-|**NumberLeadingZeros**|Especifica si un valor decimal inferior a 1 y más de – 1 debe contener ceros; Este valor puede ser cualquiera (sin ceros) False o True.|  
+|**NumberLeadingZeros**|Especifica si un valor decimal inferior a 1 y -más de 1 debe contener ceros; Este valor puede ser cualquiera (sin ceros) False o True.|  
 |**CurrencySymbol**|Indica el símbolo de moneda que se puede usar para los valores de moneda en el archivo de texto. Algunos ejemplos son el signo de dólar ($) y minería de datos.|  
 |**CurrencyPosFormat**|Se puede establecer en cualquiera de los siguientes valores:<br /><br /> -Prefijo de símbolo de moneda sin separación ($1)<br />-Sufijo de símbolo de moneda sin separación (1$)<br />-Prefijo de símbolo de moneda con separación de un carácter ($ 1)<br />-Sufijo con separación de un carácter de símbolo de moneda (1 $)|  
 |**CurrencyDigits**|Especifica el número de dígitos utilizados para la parte fraccionaria de un importe de divisa.|  
-|**CurrencyNegFormat**|Puede ser uno de los siguientes valores:<br /><br /> -   ($1)<br />-   –$1<br />-   $–1<br />-   $1–<br />-   (1$)<br />-   –1$<br />-   1–$<br />-   1$–<br />-   –1 $<br />-   –$ 1<br />-   1 $–<br />-   $ 1–<br />-   $ –1<br />-   1– $<br />-   ($ 1)<br />-   (1 $)<br /><br /> En este ejemplo se muestra el signo de dólar, pero se debe reemplazar con los valores adecuados **CurrencySymbol** valor en el programa real.|  
+|**CurrencyNegFormat**|Puede presentar uno de los siguientes valores:<br /><br /> -   ($1)<br />--$1<br />-$1<br />-$1:<br />-   (1$)<br />--1$<br />-1$<br />-$- de 1<br />--1 $<br />--$ 1<br />-$- de 1<br />-$ 1:<br />-$ -1<br />-1 $<br />-   ($ 1)<br />-   (1 $)<br /><br /> En este ejemplo se muestra el signo de dólar, pero se debe reemplazar con los valores adecuados **CurrencySymbol** valor en el programa real.|  
 |**CurrencyThousandSymbol**|Indica el símbolo de carácter único que puede usarse para separar los valores de moneda en el archivo de texto miles.|  
 |**CurrencyDecimalSymbol**|Puede establecerse en cualquier carácter individual que se usa para separar la totalidad de la parte fraccionaria de un importe de divisa.|  
   

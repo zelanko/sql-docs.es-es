@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistributor_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a73e458f6ecdab249ea0aae1301dd2d5ee0e6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790275"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591399"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,43 +50,43 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@distributor=**] **'***distribuidor***'** salida  
+ [  **@distributor=**] **'**_distribuidor_**'** salida  
  Es el nombre del distribuidor. El distribuidor es **sysname**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
   
- [  **@distribdb=**] **'***distribdb***'** salida  
+ [  **@distribdb=**] **'**_distribdb_**'** salida  
  Es el nombre de la base de datos de distribución. *distribdb* es **sysname**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
   
- [  **@directory=**] **'***directory***'** salida  
+ [  **@directory=**] **'**_directory_**'** salida  
  Es el directorio de trabajo. *directorio* es **nvarchar (255)**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
   
- [  **@account=**] **'***cuenta***' salida**  
+ [  **@account=**] **'**_cuenta_**' salida**  
  Es la cuenta de usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *cuenta*es **nvarchar (255)**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
   
- [  **@min_distretention=**] *min_distretention *** salida**  
+ [  **@min_distretention=**] _min_distretention_**salida**  
  Es el período mínimo de retención de la distribución en horas. *min_distretention* es **int**, su valor predeterminado es **-1**.  
   
- [  **@max_distretention=**] *max_distretention *** salida**  
+ [  **@max_distretention=**] _max_distretention_**salida**  
  Es el período máximo de retención de la distribución en horas. *max_distretention* es **int**, su valor predeterminado es **-1**.  
   
- [  **@history_retention=**] *history_retention *** salida**  
+ [  **@history_retention=**] _history_retention_**salida**  
  Es el período mínimo de retención del historial en horas. *history_retention* es **int**, su valor predeterminado es **-1**.  
   
- [  **@history_cleanupagent=**] **'***history_cleanupagent***' salida**  
+ [  **@history_cleanupagent=**] **'**_history_cleanupagent_**' salida**  
  Es el nombre del agente de limpieza del historial. *history_cleanupagent* es **nvarchar (100)**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
   
- [  **@distrib_cleanupagent =**] **'***distrib_cleanupagent***' salida**  
+ [  **@distrib_cleanupagent =**] **'**_distrib_cleanupagent_**' salida**  
  Es el nombre del agente de limpieza de distribución. *distrib_cleanupagent* es **nvarchar (100)**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
   
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_publisher_**'**  
  Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
- [  **@local=**] **'***local***'**  
+ [  **@local=**] **'**_local_**'**  
  Indica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe obtener valores del servidor local. *local* es **nvarchar (5)**, su valor predeterminado es null.  
   
- [  **@rpcsrvname=**] **'***rpcsrvname***' salida**  
+ [  **@rpcsrvname=**] **'**_rpcsrvname_**' salida**  
  Es el nombre del servidor que genera llamadas a procedimientos remotos. *rpcsrvname* es **sysname**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
   
- [ **@publisher_type**=] **'***publisher_type***' salida**  
+ [ **@publisher_type**=] **'**_publisher_type_**' salida**  
  Es el tipo de publicador. *publisher_type* es **sysname**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

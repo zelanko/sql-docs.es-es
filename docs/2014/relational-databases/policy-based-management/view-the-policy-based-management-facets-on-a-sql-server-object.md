@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, view facets
@@ -12,12 +12,12 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 648de1ee5d44dcfab7d686a69de20f9dd272db19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 462a4e0b58a9a201f0a26c4bb910f47f14c900d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214025"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757957"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Ver las facetas de administración basada en directivas en un objeto de SQL Server
   En este tema se describe cómo ver todas las facetas de administración basada en directivas aplicadas a un objeto específico de SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48214025"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48214025"
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], objeto de instancia, base de datos u objeto de base de datos y, después, haga clic en **Facetas**.  
   
-2.  En el cuadro de diálogo **Ver facetas –***nombre_de_objeto*, en la lista **Faceta**, seleccione una faceta para ver sus propiedades. Para obtener más información acerca de las opciones disponibles en este cuadro de diálogo, vea [View Facets Dialog Box](view-facets-dialog-box.md).  
+2.  En el cuadro de diálogo **Ver facetas -***nombre_de_objeto*, en la lista **Faceta**, seleccione una faceta para ver sus propiedades. Para obtener más información acerca de las opciones disponibles en este cuadro de diálogo, vea [View Facets Dialog Box](view-facets-dialog-box.md).  
   
 3.  Cuando termine, haga clic en **Aceptar**.  
   

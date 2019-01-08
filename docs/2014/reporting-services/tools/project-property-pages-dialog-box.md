@@ -15,21 +15,21 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122375"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589629"
 ---
 # <a name="project-property-pages-dialog-box"></a>Páginas de propiedades del proyecto (cuadro de diálogo)
-  Utilice las páginas de propiedades del proyecto para configurar las propiedades de implementación de un proyecto del servidor de informes. Para abrir este cuadro de diálogo, en el menú **Proyecto**, haga clic en \<Propiedades**de**Nombre del proyecto de informe>.  
+  Utilice las páginas de propiedades del proyecto para configurar las propiedades de implementación de un proyecto del servidor de informes. Para abrir este cuadro de diálogo, en el menú **Proyecto**, haga clic en _\<Nombre del proyecto de informe>_**Propiedades**.  
   
  Después de definir las propiedades de configuración, puede seleccionar una configuración en la lista desplegable **Configuraciones de soluciones** de la barra de herramientas.  
   
 ## <a name="options"></a>Opciones  
  **Configuración**  
- Seleccione la configuración que desee editar. Inicialmente, están disponibles las configuraciones siguientes: **Debug**, **DebugLocal**y **Release**. La configuración activa aparece en primer lugar (por ejemplo, **Active(Debug)**).  
+ Seleccione la configuración que desee editar. Inicialmente, están disponibles las configuraciones siguientes: **Depurar**, **DebugLocal**, y **versión**. La configuración activa aparece en primer lugar (por ejemplo, **Active(Debug)**).  
   
  Para ver propiedades para más de una configuración al mismo tiempo, seleccione **Todas las config.** o **Varias configuraciones**.  
   

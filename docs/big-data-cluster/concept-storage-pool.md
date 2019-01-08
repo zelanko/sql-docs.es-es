@@ -1,22 +1,24 @@
 ---
-title: ¿Qué es el bloque de almacenamiento de clústeres de macrodatos de SQL Server? | Microsoft Docs
+title: ¿Qué es el bloque de almacenamiento?
+titleSuffix: SQL Server 2019 big data clusters
 description: Este artículo describe el grupo de almacenamiento en un clúster de macrodatos de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cbf9ff14ece1b33e1c271786bc96f0ac590b807e
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.custom: seodec18
+ms.openlocfilehash: c0f376066ad02e70576c59bfe13c6f77e4b72c09
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050757"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029959"
 ---
-# <a name="what-is-the-sql-server-big-data-clusters-storage-pool"></a>¿Qué es el bloque de almacenamiento de clústeres de macrodatos de SQL Server?
+# <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>¿Qué es el bloque de almacenamiento (clústeres de SQL Server 2019 macrodatos)?
 
-En este artículo se describe el rol de la *bloque de almacenamiento de SQL Server* en un clúster de macrodatos de vista previa de 2019 de SQL Server. Las secciones siguientes describen la arquitectura y la funcionalidad de un grupo de almacenamiento SQL.
+En este artículo se describe el rol de la *bloque de almacenamiento de SQL Server* en un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Las secciones siguientes describen la arquitectura y la funcionalidad de un grupo de almacenamiento SQL.
 
 ## <a name="storage-pool-architecture"></a>Arquitectura del grupo de almacenamiento
 

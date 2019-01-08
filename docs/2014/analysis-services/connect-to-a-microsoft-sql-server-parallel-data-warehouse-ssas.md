@@ -13,17 +13,17 @@ ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b13e56895a9880a8bffc319c247769b4f5b2911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e8dd851604203a9a6c02959c3d11002145f9dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191075"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354317"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Conectarse a un almacenamiento de datos paralelos de Microsoft SQL Server (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar los valores para conectar con un almacenamiento de datos paralelos (PDW) de Microsoft SQL Server. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
   
- SQL Server PDW es un dispositivo muy escalable que ofrece rendimiento a un costo bajo mediante un procesamiento paralelo masivo. Para obtener información acerca de SQL Server PDW, vea el sitio web sobre el [almacenamiento de datos paralelo de SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=150895). Para conectarse con el almacenamiento de datos se usa la autenticación de SQL Server. Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado.  
+ SQL Server PDW es un dispositivo muy escalable que ofrece rendimiento a un costo bajo mediante un procesamiento paralelo masivo. Para obtener información acerca de SQL Server PDW, vea el sitio web sobre el [almacenamiento de datos paralelo de SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=150895). Para conectarse con el almacenamiento de datos se usa la autenticación de SQL Server. Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado.  
   
 > [!NOTE]  
 >  Las credenciales del usuario actual se utilizan al seleccionar una base de datos en esta página. Sin embargo, la importación no se realizará correctamente si el usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer la base de datos seleccionada.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b985193eb9aa9b73d513f2d5ce8368f5d8fbb6ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb705b82ec9f03de8cc458e62eded9f1817850c0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060704"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356783"
 ---
 # <a name="monitoring-for-package-executions-and-other-operations"></a>Supervisar las ejecuciones de paquetes y otras operaciones
   Puede supervisar las ejecuciones de paquetes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , validaciones de proyectos y otras operaciones mediante una o varias de las herramientas siguientes. Algunas herramientas como las derivaciones de datos solo están disponibles para los proyectos que se implementan en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -40,11 +39,11 @@ ms.locfileid: "48060704"
 -   Derivaciones de datos  
   
 ## <a name="operation-types"></a>Tipos de operación  
- Se supervisan varios tipos diferentes de operaciones en el `SSISDB` de catálogo, en el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Cada operación puede tener varios mensajes asociados. Cada mensaje se puede clasificar en uno de varios tipos. Por ejemplo, un mensaje puede ser de información, de advertencia o de error. Para obtener la lista completa de tipos de mensaje, vea la documentación de la vista [catalog.operation_messages &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database) de Transact-SQL. Para obtener una lista completa de los tipos de operaciones, vea [catalog.operations &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database).  
+ En el catálogo de `SSISDB` se supervisan varios tipos diferentes de operaciones, en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Cada operación puede tener varios mensajes asociados. Cada mensaje se puede clasificar en uno de varios tipos. Por ejemplo, un mensaje puede ser de información, de advertencia o de error. Para obtener la lista completa de tipos de mensaje, vea la documentación de la vista [catalog.operation_messages &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database) de Transact-SQL. Para obtener una lista completa de los tipos de operaciones, vea [catalog.operations &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database).  
   
  Se usan nueve tipos de estado diferentes para indicar el estado de una operación. Para obtener una lista completa de los tipos de estado, vea la vista [catalog.operations &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database).  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog con una [introducción a la API T-SQL de SSIS](http://go.microsoft.com/fwlink/?LinkId=249051), en blogs.msdn.com.  
+ Entrada de blog con una [introducción a la API T-SQL de SSIS](https://go.microsoft.com/fwlink/?LinkId=249051), en blogs.msdn.com.  
   
   

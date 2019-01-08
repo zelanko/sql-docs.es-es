@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
@@ -19,12 +18,12 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab0d7678ec07f3819bf7dd6b9b949f4c2d11229d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111695"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372417"
 ---
 # <a name="server-network-configuration"></a>Configuración de red del servidor
   Entre las tareas de configuración de red del servidor se incluyen las siguientes: habilitar protocolos, modificar el puerto o canalización usados por un protocolo, configurar el cifrado, configurar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, mostrar u ocultar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la red y registrar el nombre de la entidad de seguridad del servidor. La mayoría de las veces, no es necesario cambiar la configuración de red del servidor. Solo debe volver a configurar los protocolos de red del servidor si la red tiene requisitos especiales.  
@@ -49,7 +48,7 @@ ms.locfileid: "48111695"
  La compatibilidad con Protección ampliada para la autenticación mediante el uso del enlace de canal y el enlace de servicio está disponible en los sistemas operativos que admiten Protección ampliada. Para obtener más información, vea [Conectar al motor de base de datos con protección ampliada](connect-to-the-database-engine-using-extended-protection.md).  
   
 ## <a name="authenticating-by-using-kerberos"></a>Autenticar mediante Kerberos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la autenticación Kerberos. Para obtener más información, vea [Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](register-a-service-principal-name-for-kerberos-connections.md) y [Microsoft Kerberos Configuration Manager para SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la autenticación Kerberos. Para obtener más información, vea [Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](register-a-service-principal-name-for-kerberos-connections.md) y [Microsoft Kerberos Configuration Manager para SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ### <a name="registering-a-server-principal-name-spn"></a>Registrar un nombre de la entidad de seguridad del servidor (SPN)  
  El servicio de autenticación de Kerberos usa un SPN para autenticar un servicio. Para obtener más información, vea [Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](register-a-service-principal-name-for-kerberos-connections.md).  

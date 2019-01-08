@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
@@ -21,12 +20,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac56fd795f819fe308dee9980e12883e73b0172d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222635"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810647"
 ---
 # <a name="filter-published-data"></a>Filtrar datos publicados
   Filtrar artículos de tabla permite crear particiones de los datos que se van a publicar. Si filtra los datos publicados, podrá:  
@@ -73,7 +72,7 @@ ms.locfileid: "48222635"
     > [!NOTE]  
     >  Los filtros de fila en las publicaciones transaccionales pueden producir una sobrecarga significativa porque la cláusula de filtro de artículos se evalúa para cada fila de registro escrita en una tabla publicada para determinar si la fila se debe replicar. Se deben evitar los filtros de fila en publicaciones transaccionales si cada nodo de replicación puede admitir la carga de datos completa y el conjunto de datos global es suficientemente pequeño.  
   
--   Con la replicación de mezcla, utilice filtros de fila con parámetros en vez de crear varias publicaciones con filtros de fila estáticos. Para obtener más información, consulte [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Con la replicación de mezcla, utilice filtros de fila con parámetros en vez de crear varias publicaciones con filtros de fila estáticos. Para más información, consulte [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  Para definir o modificar un filtro de fila estático, vea [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
@@ -130,7 +129,7 @@ ms.locfileid: "48222635"
   
 -   La replicación transaccional le permite replicar una vista indizada como vista o como tabla. Si replica la vista como tabla, no podrá filtrar columnas de la tabla.  
   
- Los filtros de fila no están diseñados para funcionar entre bases de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita intencionadamente la ejecución de `sp_replcmds` (que filtra la ejecución debajo) al propietario de la base de datos (`dbo`). El `dbo` no tiene privilegios de base de datos entre. Con la incorporación de CDC (Captura de datos modificados) a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la lógica de `sp_replcmds` rellena las tablas de seguimiento de cambios con información a la que el usuario puede volver y que puede consultar. Por motivos de seguridad, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita la ejecución de esta lógica para que un malintencionado `dbo` no pueda asaltar esta ruta de acceso de ejecución. Por ejemplo, un `dbo` malintencionado podría agregar desencadenadores a las tablas de CDC que se ejecutarían en el contexto del usuario que llama a `sp_replcmds`, en este caso el agente del lector de registros.  Si la cuenta bajo la que se está ejecutando el agente tiene privilegios mayores, el `dbo` malintencionado podría escalar sus privilegios.  
+ Los filtros de fila no están diseñados para funcionar entre bases de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita intencionadamente la ejecución de `sp_replcmds` (que filtra la ejecución debajo) al propietario de la base de datos (`dbo`). El `dbo` no tiene privilegios entre bases de datos. Con la incorporación de CDC (Captura de datos modificados) a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la lógica de `sp_replcmds` rellena las tablas de seguimiento de cambios con información a la que el usuario puede volver y que puede consultar. Por motivos de seguridad, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita la ejecución de esta lógica para que un malintencionado `dbo` no pueda asaltar esta ruta de acceso de ejecución. Por ejemplo, un `dbo` malintencionado podría agregar desencadenadores a las tablas de CDC que se ejecutarían en el contexto del usuario que llama a `sp_replcmds`, en este caso el agente del lector de registros.  Si la cuenta bajo la que se está ejecutando el agente tiene privilegios mayores, el `dbo` malintencionado podría escalar sus privilegios.  
   
 ## <a name="see-also"></a>Vea también  
  [Publicar datos y objetos de base de datos](publish-data-and-database-objects.md)  

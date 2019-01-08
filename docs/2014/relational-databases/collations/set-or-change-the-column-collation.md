@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
@@ -14,15 +13,15 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e864a2e4320bbdac3af4f5db2fd0cccfe32fd712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154995"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795077"
 ---
 # <a name="set-or-change-the-column-collation"></a>Establecer o cambiar la intercalación de columnas
-  Puede invalidar la intercalación de base de datos para `char`, `varchar`, `text`, `nchar`, `nvarchar`, y `ntext` datos especificando una intercalación diferente para una columna específica de una tabla y utilizando uno de los siguientes:  
+  Puede invalidar la intercalación de base de datos para los datos `char`, `varchar`, `text`, `nchar`, `nvarchar` y `ntext` especificando una intercalación diferente para una columna específica de una tabla y utilizando una de las siguientes cláusulas:  
   
 -   La cláusula COLLATE de [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) y [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql). Por ejemplo:  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48154995"
  Al trabajar con la base de datos **tempdb**, la cláusula [COLLATE](/sql/t-sql/statements/collations) incluye una opción *database_default* para especificar que una columna de una tabla temporal use el valor predeterminado de intercalación de la base de datos del usuario actual para la conexión en lugar de la intercalación de **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Intercalaciones y columnas de texto  
- Puede insertar o actualizar valores en un `text` columna cuya intercalación sea diferente de la página de códigos de la intercalación predeterminada de la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente los valores a la intercalación de la columna.  
+ Puede insertar o actualizar los valores de una columna `text` cuya intercalación sea diferente a la de la página de códigos de la intercalación predeterminada de la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente los valores a la intercalación de la columna.  
   
 ## <a name="collations-and-tempdb"></a>Intercalación y tempdb  
  La base de datos **tempdb** se crea cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y tiene la misma intercalación predeterminada que la base de datos **model** . Suele ser la misma que la intercalación predeterminada de la instancia. Si crea una base de datos de usuario y especifica una intercalación predeterminada distinta de **model**, la base de datos de usuario tiene una intercalación predeterminada distinta de **tempdb**. Todos los procedimientos almacenados temporales o tablas temporales se crean y se almacenan en **tempdb**. Esto significa que todas las columnas implícitas de las tablas temporales y todas las constantes, variables y parámetros coaccionable-predeterminados en los procedimientos almacenados temporales tienen intercalaciones distintas de los objetos comparables creados en las tablas y procedimientos almacenados permanentes.  
@@ -88,7 +87,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Dado que **tempdb** usa la intercalación de servidor predeterminada y `TestPermTab.Col1` usa una intercalación diferente, SQL Server devuelve este error: "No se puede resolver el conflicto de intercalación entre 'Latin1_General_CI_AS_KS_WS' y 'Estonian_CS_AS' en la operación Igual a".  
+ Dado que **tempdb** utiliza la intercalación predeterminada del servidor y `TestPermTab.Col1` usa una intercalación diferente, SQL Server devuelve este error: "No puede resolver el conflicto de intercalación entre 'Latin1_General_CI_AS_KS_WS' y 'Estonian_CS_AS' en igual a la operación".  
   
  Para evitar el error, puede utilizar cualquiera de las alternativas siguientes:  
   

@@ -16,12 +16,12 @@ ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 951fc38d89718a2c202d436c857e7b06f19de2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0dea5d937c09d551faf0cc923ee3f36f258d708
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167175"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367567"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Almacenamiento de las credenciales en un origen de datos de Reporting Services
   Es posible configurar credenciales almacenadas que un servidor de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] use para obtener acceso a los datos externos de un informe. Las credenciales almacenadas se utilizan si un informe se ejecuta de forma desatendida, por ejemplo, una suscripción [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que publica un informe como correo electrónico. El servidor de informes recupera y usa las credenciales cuando se programa o desencadena el procesamiento de informes. En este tema se explica cómo configurar credenciales almacenadas para los servidores de informes en modo Nativo y en modo de SharePoint.  
@@ -43,11 +43,11 @@ ms.locfileid: "48167175"
 ##  <a name="bkmk_top"></a> Requisitos de directiva de seguridad para credenciales almacenadas  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Es necesario que la cuenta que usa para las credenciales almacenadas se configure para una de las siguientes directivas de seguridad en el servidor de informes. Se recomienda seleccionar la directiva con el nivel mínimo de permisos necesario para el entorno.  
   
-1.  **Permitir el inicio de sesión local**. Para obtener más información, vea [Permitir el inicio de sesión local](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
+1.  **Permitir el inicio de sesión local**. Para obtener más información, vea [Permitir el inicio de sesión local](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
-2.  **Iniciar sesión como proceso por lotes**. Para obtener más información, vea [Iniciar sesión como proceso por lotes](http://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
+2.  **Iniciar sesión como proceso por lotes**. Para obtener más información, vea [Iniciar sesión como proceso por lotes](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
   
-3.  Para obtener información general sobre directivas, vea [Modificar la configuración de seguridad en un objeto de directiva de grupo](http://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
+3.  Para obtener información general sobre directivas, vea [Modificar la configuración de seguridad en un objeto de directiva de grupo](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> Configurar credenciales almacenadas para un origen de datos específico de informe (modo Nativo)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48167175"
   
 4.  En la lista **Tipo de origen de datos** , seleccione la extensión de procesamiento de datos que se usa para procesar los datos del origen de datos.  
   
-5.  En **Cadena de conexión**, especifique la cadena de conexión que usa el servidor de informes para conectarse al origen de datos. El ejemplo siguiente muestra una cadena de conexión utilizada para conectarse a la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de datos:  
+5.  En **Cadena de conexión**, especifique la cadena de conexión que usa el servidor de informes para conectarse al origen de datos. En el ejemplo siguiente, se muestra la cadena de conexión que se usa para establecer conexión con la base de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] :  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -87,7 +87,7 @@ ms.locfileid: "48167175"
   
 4.  En la lista **Tipo de origen de datos** , seleccione la extensión de procesamiento de datos que se usa para procesar los datos del origen de datos.  
   
-5.  En **Cadena de conexión**, especifique la cadena de conexión que usa el servidor de informes para conectarse al origen de datos. El ejemplo siguiente muestra una cadena de conexión utilizada para conectarse a la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de datos:  
+5.  En **Cadena de conexión**, especifique la cadena de conexión que usa el servidor de informes para conectarse al origen de datos. En el ejemplo siguiente, se muestra la cadena de conexión que se usa para establecer conexión con la base de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] :  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -162,7 +162,7 @@ ms.locfileid: "48167175"
 ## <a name="see-also"></a>Vea también  
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../integration-services/connection-manager/data-sources.md)   
  [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](../data-sources-properties-page-report-manager.md)   
  [Nuevo origen de datos &#40;página del Administrador de informes&#41;](../new-data-source-page-report-manager.md)  
   

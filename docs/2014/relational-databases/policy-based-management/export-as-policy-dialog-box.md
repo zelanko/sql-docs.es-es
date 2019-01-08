@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.exportaspolicy.f1
@@ -12,12 +12,12 @@ ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ea8ece2c34afa0de797312f282bd9c8a9cb47b40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df28974c9fc6fdf3c9ef974ea5dd868f775af134
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199105"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755857"
 ---
 # <a name="export-as-policy-dialog-box"></a>Exportar como directiva (cuadro de diálogo)
   Utilice este cuadro de diálogo para guardar un conjunto de propiedades de faceta de administración basada en directivas como una directiva. Las directivas se pueden guardar en un archivo XML o directamente en la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]actual.  

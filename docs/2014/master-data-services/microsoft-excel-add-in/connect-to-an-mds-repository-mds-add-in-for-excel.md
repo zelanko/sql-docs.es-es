@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 655980ec11c3e8865219b1429e412068348a36b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28afdb4a07177f9ba34b946c4c9c4e1e12e672c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122585"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797937"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>Conectarse a un repositorio MDS (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], debe conectarse a un repositorio MDS para poder cargar o publicar datos.  
@@ -39,7 +38,7 @@ ms.locfileid: "48122585"
 5.  En el cuadro **Dirección del servidor MDS**, escriba la dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]; por ejemplo, http://contoso/mds.  
   
     > [!NOTE]  
-    >  Asegúrese de utilizar el nombre del equipo; no utilice “localhost”.  
+    >  Asegúrese de usar el nombre del equipo; no utilice "localhost".  
   
 6.  Haga clic en **Aceptar**. El nombre se muestra en la sección **Conexiones existentes** .  
   

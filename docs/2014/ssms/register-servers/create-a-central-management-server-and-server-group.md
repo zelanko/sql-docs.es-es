@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - configuration server
@@ -12,12 +12,12 @@ ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38dfb1fd91079116840522c7ce51b064ca89d641
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 783654f312590d64c57c1c47481886c865d203c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066125"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792757"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>Crear un servidor de administración central y un grupo de servidores (SQL Server Management Studio)
   En este tema se describe cómo designar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como servidor de administración central de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los servidores de administración central almacenan una lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se organizan en uno o varios grupos de este tipo de servidores. Las acciones que se llevan a cabo mediante un servidor de administración central actúan en todos los servidores del grupo. Esto incluye la conexión a los servidores mediante el Explorador de objetos y la ejecución de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] y de directivas de administración basada en directivas en varios servidores al mismo tiempo.  
@@ -35,7 +35,7 @@ ms.locfileid: "48066125"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   

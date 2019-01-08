@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
@@ -18,12 +17,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe677e6b2fb13c3a158c78e0416142b7b15ce975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64e3a60d767c100ad66a293f1e588369a140d1e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204825"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367317"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
   La tarea Ejecutar SQL ejecuta instrucciones SQL o procedimientos almacenados de un paquete. La tarea puede contener una sola instrucción SQL o múltiples instrucciones SQL que se ejecutarán de forma secuencial. Puede usar la tarea Ejecutar SQL para los siguientes fines:  
@@ -63,7 +62,7 @@ ms.locfileid: "48204825"
 >  Es posible que la tarea Ejecutar SQL no pueda analizar correctamente instrucciones SQL válidas escritas fuera de dicha tarea.  
   
 > [!NOTE]  
->  La tarea Ejecutar SQL usa el valor de enumeración de ParseMode `RecognizeAll`. Para obtener más información, vea [Espacio de nombres ManagedBatchParser](http://go.microsoft.com/fwlink/?LinkId=223617).  
+>  La tarea Ejecutar SQL usa el valor de enumeración de ParseMode `RecognizeAll`. Para obtener más información, vea [Espacio de nombres ManagedBatchParser](https://go.microsoft.com/fwlink/?LinkId=223617).  
   
 ## <a name="sending-multiple-statements-in-a-batch"></a>Enviar varias instrucciones en un lote  
  Si incluye varias instrucciones en una tarea Ejecutar SQL, puede agruparlas y ejecutarlas como un lote. Para indicar el final de un lote, utilice el comando GO. Todas las instrucciones SQL entre dos comandos GO se envían en un lote al proveedor OLE DB para que se ejecuten. El comando SQL puede incluir varios lotes separados por comandos GO.  
@@ -81,7 +80,7 @@ ms.locfileid: "48204825"
 -   Si la tarea utiliza enlace de parámetros, todas las consultas del lote deberán tener el mismo número de parámetros y estos deberán ser del mismo tipo.  
   
 ## <a name="running-parameterized-sql-commands"></a>Ejecutar comandos SQL con parámetros  
- Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros de entrada, parámetros de salida y códigos de retorno. La tarea Ejecutar SQL admite el `Input`, `Output`, y `ReturnValue` tipos de parámetro. Usa el `Input` tipo para parámetros de entrada, `Output` para parámetros de salida y `ReturnValue` para códigos de retorno.  
+ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros de entrada, parámetros de salida y códigos de retorno. La tarea Ejecutar SQL admite los tipos de parámetros `Input`, `Output` y `ReturnValue`. Utilice el tipo `Input` para parámetros de entrada, `Output` para parámetros de salida y `ReturnValue` para códigos de retorno.  
   
 > [!NOTE]  
 >  Solo puede usar parámetros en una tarea Ejecutar SQL si el proveedor de datos los admite.  
@@ -96,7 +95,7 @@ ms.locfileid: "48204825"
 ## <a name="troubleshooting-the-execute-sql-task"></a>Solucionar problemas de la tarea Ejecutar SQL  
  Puede registrar las llamadas que realiza la tarea Ejecutar SQL a proveedores de datos externos. Puede usar esta capacidad de registro para solucionar problemas relacionados con los comandos SQL que ejecuta la tarea Ejecutar SQL. Para registrar las llamadas realizadas por la tarea Ejecutar SQL a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- A veces, un procedimiento almacenado o comando SQL devuelve varios conjuntos de resultados. Estos conjuntos de resultados incluyen no solo los conjuntos de filas que son el resultado de `SELECT` consultas, sino valores únicos que son el resultado de errores de `RAISERROR` o `PRINT` instrucciones. El hecho de que la tarea omita errores en los conjuntos de resultados que se producen después del primer conjunto de resultados depende del tipo de administrador de conexiones que se use:  
+ A veces, un procedimiento almacenado o comando SQL devuelve varios conjuntos de resultados. Estos conjuntos de resultados no solo incluyen los conjuntos de filas resultantes de consultas `SELECT`, sino valores únicos generados por errores de las instrucciones `RAISERROR` o `PRINT`. El hecho de que la tarea omita errores en los conjuntos de resultados que se producen después del primer conjunto de resultados depende del tipo de administrador de conexiones que se use:  
   
 -   Si utiliza los administradores de conexiones ADO y OLE DB, la tarea omite los conjuntos de resultados que se producen después del primer conjunto de resultados. Por consiguiente, con estos administradores de conexiones la tarea omite un error devuelto por un procedimiento almacenado o comando SQL cuando el error no forma parte del primer conjunto de resultados.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48204825"
   
 -   Indicar si la tarea omite la fase de preparación para la instrucción SQL.  
   
--   Si utiliza el tipo de conexión ADO, debe indicar si la instrucción SQL es un procedimiento almacenado. Para otros tipos de conexión, esta propiedad es de solo lectura y su valor es siempre `false`.  
+-   Si utiliza el tipo de conexión ADO, debe indicar si la instrucción SQL es un procedimiento almacenado. Para otros tipos de conexión, esta propiedad es de solo lectura y su valor siempre es `false`.  
   
  Puede establecer propiedades mediante programación o a través del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -159,6 +158,6 @@ ms.locfileid: "48204825"
   
 -   [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference)  
   
--   Entrada de blog, [Nuevas funciones de fecha y hora en SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=239783), en mssqltips.com.  
+-   Entrada de blog, [Nuevas funciones de fecha y hora en SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783), en mssqltips.com.  
   
   

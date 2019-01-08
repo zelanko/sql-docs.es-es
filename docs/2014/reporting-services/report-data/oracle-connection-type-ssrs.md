@@ -11,12 +11,12 @@ ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef55fa4a5715ba58ed1ecd426533ef161034dc7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af3216db3e2e281448a0fd371d67b475fafd5af0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141801"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371985"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Tipo de conexión de Oracle (SSRS)
   Para utilizar en el informe los datos de una base de datos de Oracle, debe tener un conjunto de datos basado en un origen de datos de informe de tipo Oracle. Este tipo de origen de datos integrado está basado en el proveedor administrado de .NET Framework para Oracle y requiere un componente de software del cliente Oracle.  
@@ -30,7 +30,7 @@ ms.locfileid: "48141801"
 Data Source="Oracle9"; Unicode="True"  
 ```  
   
- Para obtener más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Para más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ##  <a name="Credentials"></a> Credenciales  
  Se necesitan credenciales para ejecutar consultas y obtener una vista previa del informe localmente y desde el servidor de informes.  
@@ -49,7 +49,7 @@ Data Source="Oracle9"; Unicode="True"
 ##  <a name="Parameters"></a> Parámetros  
  Si la consulta incluye las variables de consulta, se generan automáticamente los parámetros de informe correspondientes. Esta extensión admite los parámetros con nombre. En Oracle versión 9 o posterior, se admiten los parámetros de varios valores.  
   
- Los parámetros de informe se crean con valores de propiedad predeterminados que quizá necesite modificar. Por ejemplo, los parámetro de informe son un tipo de datos **Texto**. Una vez creados los parámetros de informe, podría suceder que tenga que cambiar los valores predeterminados. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Los parámetros de informe se crean con valores de propiedad predeterminados que quizá necesite modificar. Por ejemplo, los parámetro de informe son un tipo de datos **Texto**. Una vez creados los parámetros de informe, podría suceder que tenga que cambiar los valores predeterminados. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 
   
@@ -58,11 +58,11 @@ Data Source="Oracle9"; Unicode="True"
   
  Para obtener más información, vea:  
   
--   Para obtener más información, vea[Uso del proveedor de datos de .NET Framework para Oracle](http://go.microsoft.com/fwlink/?LinkId=112314) en msdn.microsoft.com  
+-   Para obtener más información, vea[Uso del proveedor de datos de .NET Framework para Oracle](https://go.microsoft.com/fwlink/?LinkId=112314) en msdn.microsoft.com  
   
--   [Cómo usar Reporting Services para tener acceso a un origen de datos de Oracle y configurarlo](http://support.microsoft.com/kb/834305)  
+-   [Cómo usar Reporting Services para tener acceso a un origen de datos de Oracle y configurarlo](https://support.microsoft.com/kb/834305)  
   
--   [Cómo agregar permisos para la entidad de seguridad NETWORK SERVICE](http://support.microsoft.com/kb/870668)  
+-   [Cómo agregar permisos para la entidad de seguridad NETWORK SERVICE](https://support.microsoft.com/kb/870668)  
   
 ###### <a name="alternate-data-extensions"></a>Extensiones de datos alternativas  
  También puede recuperar los datos de una base de datos de Oracle utilizando un tipo de origen de datos OLE DB. Para obtener más información, vea [Tipo de conexión OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md).  
@@ -71,7 +71,7 @@ Data Source="Oracle9"; Unicode="True"
  También se pueden crear modelos basados en una base de datos de Oracle.  
   
 ###### <a name="platform-and-version-information"></a>Información de plataforma y de versión  
- Para obtener más información sobre la compatibilidad de plataformas y de versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Para obtener más información sobre la compatibilidad de plataformas y de versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 
   
@@ -101,7 +101,7 @@ Data Source="Oracle9"; Unicode="True"
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
   
- [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
   
 

@@ -1,5 +1,5 @@
 ---
-title: Actualizar los componentes de R y Python en instancias de SQL Server (servicios de Machine Learning) | Microsoft Docs
+title: 'Actualizar componentes de R y Python: SQL Server Machine Learning Services'
 description: Actualización de R y Python en SQL Server 2016 Services o SQL Server 2017 Machine Learning Services usar sqlbindr.exe para enlazar a Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078895"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645454"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Actualizar componentes de machine learning (R y Python) en instancias de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ El enlace es un proceso de instalación que intercambia el contenido de las carp
 
 Junto con los componentes actualizados incluye un modificador en modelos de servicio. En lugar de la [ciclo de vida del producto de SQL Server](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017), con [actualizaciones acumulativas de SQL Server](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions), las actualizaciones de servicio ahora se ajustan a la [admite la escala de tiempo para Microsoft R Server & máquina Servidor de aprendizaje](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) en el [ciclo de vida moderno](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
-Excepto en las versiones de componente y las actualizaciones del servicio, enlace no cambia los aspectos básicos de la instalación: integración de R y Python sigue siendo parte de una instancia del motor de base de datos, las licencias no ha cambiado (sin costos adicionales asociados con el enlace) y SQL Siguen ofreciendo las directivas de soporte técnico de servidor para el motor de base de datos. El resto de este artículo explica el mecanismo de enlace y su funcionamiento para cada versión de SQL Server.
+Excepto en las versiones de componente y las actualizaciones del servicio, enlace no cambia los aspectos básicos de la instalación: Integración de R y Python sigue siendo parte de una instancia del motor de base de datos, las licencias no ha cambiado (sin costo adicional asociado con el enlace) y siguen ofreciendo las directivas de soporte técnico de SQL Server para el motor de base de datos. El resto de este artículo explica el mecanismo de enlace y su funcionamiento para cada versión de SQL Server.
 
 > [!NOTE]
 > Enlace se aplica a las instancias (en bases de datos) solo que están enlazadas a instancias de SQL Server. Enlace no es relevante para una instalación (independiente).
@@ -109,7 +109,7 @@ Instalación de Microsoft Machine Learning detecta las características existent
 
 1. Compruebe la versión de base de R y paquetes de RevoScaleR para confirmar las versiones existentes son menores que planea reemplácelas con. Para SQL Server 2016 R Services, paquete de R Base es 3.2.2 y RevoScaleR es 8.0.3.
 
-    ```SQL
+    ```sql
     EXECUTE sp_execute_external_script
     @language=N'R'
     ,@script = N'str(OutputDataSet);
@@ -139,7 +139,7 @@ Instalación de Microsoft Machine Learning detecta las características existent
 
    A la derecha, active la casilla situada junto al nombre de instancia. Si no aparece ninguna instancia, tener una combinación incompatible. Si no selecciona una instancia, se crea una nueva instalación independiente de Machine Learning Server y las bibliotecas de SQL Server son iguales. Si no puede seleccionar una instancia, pueden no estar en [SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). 
 
-    ![Asistente para la instalación de Microsoft Machine Learning Server](media/mls-931-installer-mssql13.png)
+    ![Configurar el paso de instalación](media/mls-931-installer-mssql13.png)
 
 1. En el **contrato de licencia** página, seleccione **acepto estos términos** para aceptar los términos de licencia para Machine Learning Server. 
 
@@ -159,7 +159,7 @@ Si se produce un error en la actualización, compruebe [códigos de error SqlBin
 
 Vuelva a comprobar la versión de R y RevoScaleR para confirmar que tiene las versiones más recientes. Use la consola de R distribuida con los paquetes de R en la instancia del motor de base de datos para obtener información de paquete:
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
 @language=N'R'
 ,@script = N'str(OutputDataSet);
@@ -228,11 +228,11 @@ Puede restaurar una instancia enlazada a una instalación inicial de los compone
 
 + [Paso 1: Desenlazar de Microsoft Machine Learning Server](#step-1-unbind)
 + [Paso 2: Restaurar la instancia al estado original](#step-2-restore)
-+ [Paso 3: Volver a instalar los paquetes que agregan a la instalación](#step-3-reinstall-packages)
++ [Paso 3: Vuelva a instalar los paquetes que agregan a la instalación](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>Paso 1: desenlazar
+### <a name="step-1-unbind"></a>Paso 1: Desenlazar
 
 Tiene dos opciones para deshacer el enlace: vuelva a ejecutar el programa de instalación o usar la utilidad de línea de comandos SqlBindR.
 
@@ -283,7 +283,7 @@ Podría haber agregado otros paquetes de código abierto o de terceros a la bibl
 |*bind*| Actualiza la instancia de SQL Database especificada a la versión más reciente de R Server y garantiza que la instancia obtenga automáticamente las actualizaciones futuras de R Server.|
 |*unbind*|Desinstala la versión más reciente de R Server de la instancia de SQL Database especificada e impide que las actualizaciones futuras de R Server afecten a la instancia.|
 
-<a name="sqlbinder-error-codes"><a/>
+<a name="sqlbindr-error-codes"><a/>
 
 ## <a name="binding-errors"></a>Errores de enlace
 

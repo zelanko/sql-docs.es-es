@@ -17,12 +17,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 03636c3eaf9d416d32f0143503625a7c71b8a254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab52d307d914e1f3f4b1e808b59999dcae96cccb
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219622"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979801"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Crear una auditoría de servidor y una especificación de auditoría de servidor
   En este tema se describe cómo crear una auditoría de servidor y una especificación de auditoría de servidor en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La*auditoría* de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica el seguimiento y registro de los eventos que se producen en el sistema. El objeto *SQL Server Audit* recopila una única instancia de acciones y grupos de acciones de nivel de servidor o de base de datos para su supervisión. La auditoría se realiza en el nivel de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es posible tener varias auditorías por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El objeto *Especificación de auditoría de servidor* pertenece a una auditoría. Puede crear una especificación de auditoría de servidor por cada auditoría, ya que ambos se crean en el ámbito de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](sql-server-audit-database-engine.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "48219622"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48219622"
   
 1.  En el Explorador de objetos, expanda la carpeta **Seguridad** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría**.  
+2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría...**.  
   
      Las siguientes opciones están disponibles en la página **General** del cuadro de diálogo **Crear auditoría** .  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48219622"
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Las operaciones de  continúan. Los registros de auditoría no se conservan. La auditoría continúa intentando el registro de eventos y se reanudará si se resuelve la condición de error. La selección de la opción **Continuar** puede permitir que una actividad no se audite, con lo que se infringirían las directivas de seguridad. Seleccione esta opción cuando la operación de continuación del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] sea más importante que el mantenimiento de una auditoría completa. Esta es la selección predeterminada.  
   
      **Apagar el servidor**  
-     Fuerza el apagado del servidor cuando la instancia de servidor que escribe en el destino no puede escribir datos en el destino de la auditoría. El poder de inicio de sesión debe tener el `SHUTDOWN` permiso. Si el inicio de sesión no tiene dicho permiso, la función generará un error y se mostrará un mensaje de error. No se producirán eventos auditados. Seleccione esta opción si un error de auditoría puede poner en peligro la seguridad o la integridad del sistema.  
+     Fuerza el apagado del servidor cuando la instancia de servidor que escribe en el destino no puede escribir datos en el destino de la auditoría. Para poder usarlo, es preciso utilizar un inicio de sesión con el permiso `SHUTDOWN`. Si el inicio de sesión no tiene dicho permiso, la función generará un error y se mostrará un mensaje de error. No se producirán eventos auditados. Seleccione esta opción si un error de auditoría puede poner en peligro la seguridad o la integridad del sistema.  
   
      **Error en la operación**  
      En los casos en que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit no puede escribir en el registro de auditoría, esta opción haría que las acciones de base de datos produjesen un error si generasen eventos auditados. No se producirán eventos auditados. Las acciones que no producen eventos auditados pueden continuar. La auditoría continúa intentando el registro de eventos y se reanudará si se resuelve la condición de error. Seleccione esta opción si el mantenimiento de una auditoría completa es más importante que el acceso total al [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -94,8 +94,8 @@ ms.locfileid: "48219622"
      **Ruta del archivo**  
      Especifica la ubicación de la carpeta donde se escriben los datos de la auditoría si se ha especificado un archivo **Destino de auditoría** .  
   
-     **Puntos suspensivos (…)**  
-     Abre el cuadro de diálogo **Buscar carpeta –***nombre_servidor* para especificar una ruta de acceso a un archivo o para crear una carpeta en la que se escribirá el archivo de auditoría.  
+     **Puntos suspensivos (...)**  
+     Se abre el **Buscar carpeta-*** nombre_servidor* cuadro de diálogo para especificar una ruta de acceso de archivo o crear una carpeta donde se escribirá el archivo de auditoría.  
   
      **Límite máximo del archivo de auditoría:**  
      **Máximo de archivos de sustitución incremental**  
@@ -124,11 +124,11 @@ ms.locfileid: "48219622"
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir la carpeta **Seguridad** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de servidor** y seleccione **Nueva especificación de auditoría de base de servidor**.  
+2.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de servidor** y seleccione **Nueva especificación de auditoría de base de servidor...**.  
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **Crear especificación de auditoría de servidor** .  
   
-     **Nombre**  
+     **Name**  
      El nombre de la especificación de auditoría de servidor. Se genera automáticamente al crear una nueva especificación de auditoría de servidor, pero se puede modificar.  
   
      **Auditar**  
@@ -143,13 +143,13 @@ ms.locfileid: "48219622"
      **Nombre de objeto**  
      Nombre del objeto que se va a auditar. Este valor solo está disponible para las acciones de auditoría, no se aplica a los grupos de auditoría.  
   
-     **Puntos suspensivos (…)**  
+     **Puntos suspensivos (...)**  
      Abre el cuadro de diálogo **Seleccionar objetos** para buscar y seleccionar un objeto disponible, basándose en el **Tipo de acción de auditoría**especificado.  
   
      **Nombre de la entidad**  
      La cuenta por la que se va filtrar la auditoría para el objeto que se va a auditar.  
   
-     **Puntos suspensivos (…)**  
+     **Puntos suspensivos (...)**  
      Abre el cuadro de diálogo **Seleccionar objetos** para buscar y seleccionar un objeto disponible, basándose en el **Nombre de objeto**especificado.  
   
 3.  Cuando termine, haga clic en **Aceptar**.  
@@ -165,7 +165,7 @@ ms.locfileid: "48219622"
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
     ```  
-    -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
+    -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
@@ -179,11 +179,11 @@ ms.locfileid: "48219622"
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
     ```  
-    /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  
+    /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  
     */  
   
-    CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-    FOR SERVER AUDIT HIPPA_Audit  
+    CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+    FOR SERVER AUDIT HIPAA_Audit  
         ADD (FAILED_LOGIN_GROUP);  
     GO  
     -- Enables the audit.   

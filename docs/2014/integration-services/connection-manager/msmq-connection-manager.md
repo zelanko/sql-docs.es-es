@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], message queues
@@ -16,17 +15,17 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1501af4a26c0e039df3113a719a61e1e2c3f40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 015488fc30b364b9f82086acb995df3967eb5b10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135045"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766857"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ, administrador de conexiones
   Un administrador de conexiones MSMQ permite a un paquete conectarse a una cola de mensajes que usa Message Queue Server (que también recibe el nombre de MSMQ). La tarea Cola de mensajes que incluye [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa un administrador de conexiones MSMQ.  
   
- Cuando se agrega un administrador de conexiones MSMQ a un paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador que se resuelve como una conexión MSMQ en tiempo de ejecución, Establece las propiedades del Administrador de la conexión y agrega el Administrador de conexiones para el `Connections` colección en el paquete. El `ConnectionManagerType` propiedad del Administrador de conexiones se establece en `MSMQ`.  
+ Cuando agrega un administrador de conexiones MSMQ a un paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones que se resuelve como una conexión MSMQ en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el administrador de conexiones a la colección `Connections` del paquete. La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `MSMQ`.  
   
  Puede configurar el administrador de conexiones MSMQ de las maneras siguientes:  
   
@@ -48,10 +47,10 @@ ms.locfileid: "48135045"
   
  Para más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Editor del administrador de conexiones MSMQ](../msmq-connection-manager-editor.md).  
   
- Para obtener información acerca de cómo configurar un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Tarea cola de mensajes](../control-flow/message-queue-task.md)   
- [Servicios de integración &#40;SSIS&#41; conexiones](integration-services-ssis-connections.md)  
+ [Tarea Cola de mensajes](../control-flow/message-queue-task.md)   
+ [Conexiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

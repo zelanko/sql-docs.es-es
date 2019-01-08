@@ -11,17 +11,17 @@ ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89a99ed7f3f38abba8eeaaf8b2f420106dbbe790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198435"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363757"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operaciones de registro en Analysis Services
-  Una instancia de Analysis Services registrará las advertencias, los errores y las notificaciones del servidor en el archivo msmdsrv.log: uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](http://support.microsoft.com/kb/2965035).  
+  Una instancia de Analysis Services registrará las notificaciones de servidor, los errores y advertencias en el archivo msmdsrv.log: uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](https://support.microsoft.com/kb/2965035).  
   
- Además de la característica de registro integrada, muchos administradores y desarrolladores también usan herramientas proporcionadas por la comunidad de Analysis Services para recopilar datos sobre las operaciones de servidor, como **ASTrace**. Vea [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Ejemplos de la comunidad de Microsoft SQL Server: Analysis Services) para acceder a los vínculos de descarga.  
+ Además de la característica de registro integrada, muchos administradores y desarrolladores también usan herramientas proporcionadas por la comunidad de Analysis Services para recopilar datos sobre las operaciones de servidor, como **ASTrace**. Consulte [ejemplos de la Comunidad de Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) para los vínculos de descarga.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -46,10 +46,10 @@ ms.locfileid: "48198435"
 |Nombre de archivo o ubicación|Tipo|Se usa para|Activado de forma predeterminada|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Registro de errores|Supervisión rutinaria y solución de problemas básicos|Sí|  
-|Tabla OlapQueryLog en una base de datos relacional|Registro de consultas|Recopilación de entradas para el Asistente de optimización de uso|no|  
-|Archivos SQLDmp\<guid > .mdmp archivos|Errores y excepciones|Solución de problemas a fondo|no|  
+|Tabla OlapQueryLog en una base de datos relacional|Registro de consultas|Recopilación de entradas para el Asistente de optimización de uso|No|  
+|Archivos SQLDmp\<guid > .mdmp archivos|Errores y excepciones|Solución de problemas a fondo|No|  
   
- Se recomienda encarecidamente consultar el siguiente vínculo para obtener recursos de información adicionales que no se tratan en este tema: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Consejos para la recolección de datos inicial de Soporte técnico de Microsoft).  
+ Recomendamos consultar el siguiente vínculo para obtener recursos de información adicionales que no se tratan en este tema: [Inicial sugerencias de recopilación de datos de Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Información general sobre la configuración del archivo de registro  
  Puede encontrar secciones para cada registro en el archivo de configuración del servidor msmdsrv.ini, ubicado en la carpeta \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config. Consulte en [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) las instrucciones para editar el archivo.  
@@ -63,9 +63,9 @@ ms.locfileid: "48198435"
   
  Este archivo de registro se vacía en cada reinicio del servicio. En versiones anteriores, en ocasiones los administradores podían reiniciar el servicio con el único objetivo de vaciar el archivo de registro para evitar que creciera tanto que no pudiera usarse. Ya no es necesario. Las opciones de configuración, introducidas en SQL Server 2012 SP2 y versiones posteriores, le permiten controlar el tamaño del archivo de registro y su historial:  
   
--   `MaxFileSizeMB` especifica un tamaño de archivo de registro máximo en megabytes. El valor predeterminado es 256. Un valor de reemplazo válido debe ser un entero positivo. Cuando `MaxFileSizeMB` es alcanzado, Analysis Services cambia el nombre del archivo actual del archivo msmdsrv {actual timestamp} .log y empieza un nuevo archivo msmdsrv.log.  
+-   `MaxFileSizeMB` especifica un tamaño de archivo de registro máximo en megabytes. El valor predeterminado es 256. Un valor de reemplazo válido debe ser un entero positivo. Cuando se alcanzan `MaxFileSizeMB`, Analysis Services cambia el nombre del archivo actual a msmdsrv{current timestamp}.log y empieza un nuevo archivo msmdsrv.log.  
   
--   `MaxNumberFiles` Especifica la retención de archivos de registro antiguos. El valor predeterminado es 0 (deshabilitado). Puede cambiarlo a un número entero positivo para mantener las versiones del archivo de registro. Cuando `MaxNumberFiles` es alcanzado, Analysis Services elimina el archivo con la marca de tiempo más antigua en su nombre.  
+-   `MaxNumberFiles` Especifica la retención de archivos de registro antiguos. El valor predeterminado es 0 (deshabilitado). Puede cambiarlo a un número entero positivo para mantener las versiones del archivo de registro. Cuando se alcanzan `MaxNumberFiles`, Analysis Services elimina el archivo con la marca de tiempo más antigua.  
   
  Para usar esta configuración, realice lo siguiente:  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48198435"
   
  Permita que el registro de consultas acumule datos suficientes para el Asistente para optimización basada en el uso. Si los volúmenes de consultas son cíclicos, capture suficiente tráfico para tener un conjunto de datos representativo. Consulte [Asistente para optimización basada en el uso](https://msdn.microsoft.com/library/ms189706.aspx) para obtener instrucciones sobre cómo ejecutar el asistente.  
   
- Consulte [Configurar el registro de consultas de Analysis Services](http://technet.microsoft.com/library/Cc917676) para obtener más información acerca de la configuración del registro de consultas. Aunque la referencia es antigua, la configuración del registro de consultas no ha cambiado en las versiones recientes y la información que contiene se sigue aplicando.  
+ Consulte [Configurar el registro de consultas de Analysis Services](https://technet.microsoft.com/library/Cc917676) para obtener más información acerca de la configuración del registro de consultas. Aunque la referencia es antigua, la configuración del registro de consultas no ha cambiado en las versiones recientes y la información que contiene se sigue aplicando.  
   
 ##  <a name="bkmk_mdmp"></a> Archivos de minivolcado (.mdmp)  
  Los archivos de volcado capturan los datos usados para analizar eventos extraordinarios. Analysis Services genera automáticamente archivos de minivolcado (.mdmp) en respuesta a un bloqueo del servidor, una excepción y determinados errores de configuración. La característica está habilitada, pero no envía informes de bloqueo de manera automática.  
@@ -149,9 +149,9 @@ ms.locfileid: "48198435"
   
  **Configurar informes de bloqueo**  
   
- A menos que el soporte técnico de Microsoft indique lo contrario, la mayoría de los administradores usan la configuración predeterminada. Este artículo anterior de Knowledge Base aún se utiliza para proporcionar instrucciones sobre cómo configurar los archivos de volcado: [Cómo configurar Analysis Services para generar archivos de volcado de memoria](http://support.microsoft.com/kb/919711).  
+ A menos que el soporte técnico de Microsoft indique lo contrario, la mayoría de los administradores usan la configuración predeterminada. Este artículo anterior de Knowledge Base se sigue usando para ofrecer instrucciones sobre cómo configurar los archivos de volcado: [Cómo configurar Analysis Services para generar archivos de volcado de memoria](https://support.microsoft.com/kb/919711).  
   
- El valor más probable que se modifiquen de configuración es la `CreateAndSendCrashReports` usa para determinar si se generará un archivo de volcado de memoria.  
+ El ajuste de configuración que se modificará con más probabilidad es `CreateAndSendCrashReports`, que se usa para determinar si se generará un archivo de volcado de memoria.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -165,24 +165,24 @@ ms.locfileid: "48198435"
   
  En los vínculos siguientes encontrará más información:  
   
--   [Información más detallada sobre el uso de minivolcados en SQL Server](http://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [Información más detallada sobre el uso de minivolcados en SQL Server](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
--   [Cómo crear un archivo de volcado de modo de usuario](http://support.microsoft.com/kb/931673)  
+-   [Cómo crear un archivo de volcado de modo de usuario](https://support.microsoft.com/kb/931673)  
   
--   [Cómo usar la utilidad Sqldumper.exe para generar un archivo de volcado en SQL Server](http://support.microsoft.com/kb/917825)  
+-   [Cómo usar la utilidad Sqldumper.exe para generar un archivo de volcado en SQL Server](https://support.microsoft.com/kb/917825)  
   
 ##  <a name="bkmk_tips"></a> Sugerencias y prácticas recomendadas  
  Esta sección es un resumen de las sugerencias mencionadas en este artículo.  
   
 -   Configure el archivo msmdsrv.log para controlar el tamaño y el número de archivos de registro msmdsrv. Estos ajustes no están habilitados de forma predeterminada, por lo que debe asegurarse de agregarlos después de la instalación. Consulte [Archivo de registro del servicio MSMDSRV](#bkmk_msmdsrv) en este tema.  
   
--   Revise esta entrada de blog del servicio de asistencia al cliente de Microsoft para obtener información sobre los recursos que usan para obtener datos sobre las operaciones del servidor: [Recopilación de datos iniciales](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
+-   Revise esta entrada de blog del servicio de soporte al cliente de Microsoft para obtener información sobre los recursos que usan para obtener datos acerca de las operaciones del servidor: [Recopilación de datos iniciales](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
--   Utilice ASTrace2012 en lugar de un registro de consultas para averiguar quién está consultando los cubos. El registro de consultas se usa normalmente para proporcionar datos al Asistente para la optimización basada en el uso. Los datos que captura no se leen o interpretan fácilmente. ASTrace2012 es una herramienta de la comunidad ampliamente utilizada que captura las operaciones de consulta. Vea [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)(Ejemplos de la comunidad de Microsoft SQL Server: Analysis Services).  
+-   Utilice ASTrace2012 en lugar de un registro de consultas para averiguar quién está consultando los cubos. El registro de consultas se usa normalmente para proporcionar datos al Asistente para la optimización basada en el uso. Los datos que captura no se leen o interpretan fácilmente. ASTrace2012 es una herramienta de la comunidad ampliamente utilizada que captura las operaciones de consulta. Consulte [ejemplos de la Comunidad de Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   
 ## <a name="see-also"></a>Vea también  
  [Administración de una instancia de Analysis Services](analysis-services-instance-management.md)   
- [Introducción a la supervisión de Analysis Services con SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Introducción a Supervisar Analysis Services con SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Configurar las propiedades del servidor en Analysis Services](../server-properties/server-properties-in-analysis-services.md)  
   
   

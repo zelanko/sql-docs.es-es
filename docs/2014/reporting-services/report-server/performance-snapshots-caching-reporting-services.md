@@ -14,15 +14,15 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c578e5e56d575f3d324d8585f73a9891b2ad00ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3204e8f3f47dc77f38e9690bf34c0e6b69c79fdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091685"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353148"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Rendimiento, instantáneas, almacenamiento en caché (Reporting Services)
-  El rendimiento del servidor de informes se ve afectado por una combinación de factores entre los que se incluyen el hardware, el número de usuarios simultáneos que tienen acceso a los informes, la cantidad de datos de un informe y el formato de salida. Para entender los factores de rendimiento específicos de su instalación y qué remedios generarán los resultados que desea, necesitará obtener datos de línea base y ejecutar pruebas. Para obtener más información sobre herramientas e instrucciones, vea las publicaciones siguientes en MSDN: [Optimización del rendimiento de Reporting Services](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) y [Usar Visual Studio 2005 para realizar pruebas de carga en un servidor de informes de SQL Server 2005 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=77519).  
+  El rendimiento del servidor de informes se ve afectado por una combinación de factores entre los que se incluyen el hardware, el número de usuarios simultáneos que tienen acceso a los informes, la cantidad de datos de un informe y el formato de salida. Para entender los factores de rendimiento específicos de su instalación y qué remedios generarán los resultados que desea, necesitará obtener datos de línea base y ejecutar pruebas. Para obtener más información sobre herramientas e instrucciones, consulte las siguientes publicaciones en MSDN: [Optimización del rendimiento de Reporting Services](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) y [mediante Visual Studio 2005 para realizar pruebas de carga en un SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
  Entre los principios generales que hay que tener en cuenta se incluyen los siguientes:  
   
@@ -38,32 +38,32 @@ ms.locfileid: "48091685"
   
 -   Para averiguar cuánto tiempo se tarda en procesar un informe y otras métricas de uso, revise el registro de ejecución del servidor de informes. Para obtener más información, consulte [registro de ejecución del servidor de informes y la vista ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
   
--   Para obtener más información sobre cómo mitigar problemas de rendimiento ajustando los valores de configuración de administración de memoria, vea [configurar la memoria disponible para las aplicaciones de servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md).  
+-   Para más información sobre cómo reducir los problemas de rendimiento con la configuración de la administración de la memoria, vea [Configurar la memoria disponible para aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Supervisión del rendimiento del servidor de informes](monitoring-report-server-performance.md)  
+ [Supervisar el rendimiento del servidor de informes](monitoring-report-server-performance.md)  
  Describe los objetos de rendimiento que puede usar para realizar un seguimiento de la carga de procesamiento en su servidor.  
   
- [Establecimiento de las propiedades del procesamiento de informes](set-report-processing-properties.md)  
+ [Establecer las propiedades del procesamiento de informes](set-report-processing-properties.md)  
  Describe los modos de configuración de un informe para ejecutarlo a petición, desde la memoria caché, o en función de una programación como una instantánea de informe.  
   
- [Configuración de la memoria disponible para las aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md)  
+ [Configurar la memoria disponible para aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md)  
  Describe cómo puede invalidar el comportamiento predeterminado de administración de memoria.  
   
  [Informes almacenados en caché &#40;SSRS&#41;](caching-reports-ssrs.md)  
  Describe el comportamiento del almacenamiento en caché de los informes de un servidor de informes.  
   
- [Caché de conjuntos de datos compartidos &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
+ [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
  Describe el comportamiento del almacenamiento en caché de conjuntos de datos compartidos en un servidor de informes.  
   
- [Procesamiento de informes grandes](process-large-reports.md)  
+ [Procesar informes grandes](process-large-reports.md)  
  Proporciona recomendaciones sobre cómo configurar y distribuir un informe de gran tamaño.  
   
- [Establecer valores de tiempo de espera de procesamiento de informes y conjunto de datos compartido &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  Explica cómo establecer los tiempos de espera para el procesamiento de informes y de consultas.  
   
 ## <a name="see-also"></a>Vea también  
  [Administrar un proceso en ejecución](../subscriptions/manage-a-running-process.md)   
- [Verificación de la ejecución de un informe](verifying-a-report-run.md)  
+ [Comprobar la ejecución de un informe](verifying-a-report-run.md)  
   
   

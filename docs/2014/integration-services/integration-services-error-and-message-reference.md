@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edcc54e1915e0fe78ace560c0d7db7d52509e2c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106735"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372527"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
   En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> en el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -45,7 +44,7 @@ ms.locfileid: "48106735"
 -   [Mensajes de error de componentes de flujo de datos (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> mensajes de error  
- Los nombres simbólicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensajes de error que comienzan por `DTS_E_`.  
+ Los nombres simbólicos de los mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_E_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -113,7 +112,7 @@ ms.locfileid: "48106735"
 |0xC001201B|-1073668069|DTS_E_CONFIGFILEFAILEDEXPORT|Error al exportar el archivo de configuración.|  
 |0xC0012021|-1073668063|DTS_E_PROPERTIESCOLLECTIONREADONLY|No se puede modificar la colección Properties.|  
 |0xC0012022|-1073668062|DTS_E_DTRXMLSAVEFAILURE|No se puede guardar el archivo de configuración. El archivo puede ser de solo lectura.|  
-|0xC0012023|-1073668061|DTS_E_FAILPACKAGEONFAILURENA|La propiedad FailPackageOnFailure no es aplicable al contenedor de paquetes. |  
+|0xC0012023|-1073668061|DTS_E_FAILPACKAGEONFAILURENA|La propiedad FailPackageOnFailure no es aplicable al contenedor de paquetes.|  
 |0xC0012024|-1073668060|DTS_E_TASKPRODUCTLEVEL|No se puede ejecutar la tarea "%1" en la instalación %2 de Integration Services. Requiere %3 o una edición de nivel superior.|  
 |0xC0012029|-1073668055|DTS_E_UNABLETOSAVETOFILE|No se puede guardar el archivo xml en "%1". El archivo puede ser de solo lectura.|  
 |0xC0012037|-1073668041|DTS_E_CONFIGTYPECONVERSIONFAILED|Error al convertir un tipo en la configuración "%1" de la ruta de acceso del paquete "%2".  Esto sucede si no se puede convertir un valor de configuración de una cadena en el tipo de destino adecuado. Compruebe el valor de configuración para asegurarse de que puede convertirse al tipo de la propiedad o variable de destino.|  
@@ -194,7 +193,7 @@ ms.locfileid: "48106735"
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|La ruta de acceso del paquete especificada no contiene un nombre de paquete. Esto sucede si la ruta no contiene al menos una barra diagonal inversa o una barra diagonal.|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|No se encuentra la carpeta "%1".|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|Error de OLE DB al intentar buscar una carpeta en SQL. Código de error: 0x%1!8.8X! (%2).|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|El proveedor de registro de SSIS no pudo abrir el registro.  Código de error: 0x%1!8.8X!.|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|El proveedor de registro de SSIS no pudo abrir el registro.  Código de error: ¡0x%1!8.8X!.|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|Error al obtener la colección ConnectionInfos: 0x%1!8.8X! "%2". Este error se produce cuando no se puede llamar a IDTSApplication100::get_ConnectionInfos.|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|Se detectó un interbloqueo al intentar bloquear las variables. Los bloqueos no pueden adquirirse después de 16 intentos. Se agotó el tiempo de espera de los bloqueos.|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|No se ha devuelto la colección Variables de VariableDispenser. Se intentó realizar una operación que solo se permite en colecciones dispensadas.|  
@@ -376,7 +375,7 @@ ms.locfileid: "48106735"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|Error 0x%1!8.8X! al preparar la carga del paquete. %2.|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|Error del método Validate en la tarea. Se devolvió el código de error 0x%1!8.8X! (%2). El método Validate debe ejecutarse correctamente e indicar el resultado con un parámetro "out".|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|El método Execute en la tarea devolvió el código de error 0x%1!8.8X! (%2). El método Execute debe ejecutarse correctamente e indicar el resultado con un parámetro "out".|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Error en la tarea “%1": 0x%2!8.8X! mientras se recuperaban las dependencias. El error se produjo cuando se recuperaban las dependencias de la colección de dependencias de la tarea. Puede ser que la tarea haya implementado incorrectamente una de las interfaces de dependencia.|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Se produjo un error en la tarea "%1": ¡0x%2!8.8X! mientras se recuperaban las dependencias. El error se produjo cuando se recuperaban las dependencias de la colección de dependencias de la tarea. Puede ser que la tarea haya implementado incorrectamente una de las interfaces de dependencia.|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|Se produjeron errores al validar la tarea.|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|El formato de la cadena de conexión no es válido. Debe estar formado por uno o más componentes X=Y, separados por puntos y comas. Este error se produce si se establece una cadena de conexión con cero componentes en el administrador de conexiones de base de datos.|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|Los componentes de la cadena de conexión no pueden contener puntos y comas sin comillas. Si el valor debe contener un punto y coma, ponga todo el valor entre comillas. Este error se produce si los valores de la cadena de conexión contienen puntos y comas sin comillas, como la propiedad InitialCatalog.|  
@@ -569,7 +568,7 @@ ms.locfileid: "48106735"
 |0xC00291BE|-1073573442|DTS_E_SCRIPTTASK_INVALID_SCRIPT_LANGUAGE|El lenguaje de script especificado no es válido.|  
 |0xC00291BF|-1073573441|DTS_E_SCRIPTTASK_INVALID_ENTRY_POINT|Punto de entrada no encontrado.|  
 |0xC00291C0|-1073573440|DTS_E_SCRIPTTASK_LANGUAGE_EMPTY|No se ha especificado el lenguaje de script. Compruebe que se especifica un lenguaje de script válido.|  
-|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Inicialización de la interfaz de usuario: la tarea es NULL.|  
+|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Inicialización de la interfaz de usuario: La tarea es null.|  
 |0xC00291C2|-1073573438|DTS_E_SCRIPTTASK_UI_INITIALIZATION_WITH_WRONG_TASK|La interfaz de usuario de la tarea Script se inicializó con una tarea incorrecta.|  
 |0xC00291C3|-1073573437|DTS_E_SENDMAILTASK_RECIPIENT_EMPTY|No se especificó un destinatario.|  
 |0xC00291C4|-1073573436|DTS_E_SENDMAILTASK_SMTP_SERVER_NOT_SPECIFIED|Servidor de protocolo simple de transferencia de correo (SMTP) no especificado. Proporcione una dirección IP o un nombre válido del servidor SMTP.|  
@@ -790,7 +789,7 @@ ms.locfileid: "48106735"
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|Debe especificarse al menos un archivo de origen.|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|No se encontró el archivo "%1" en la base de datos de origen "%2".|  
 |0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|La operación solicitada no se permite en sistemas compatibles con el estándar FIPS 140-2 de EE.UU.|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Error al ejecutar la consulta "%1": "%2". Posibles motivos del error: problemas con la consulta, la propiedad "ResultSet" no fue establecida correctamente, parámetros no establecidos correctamente o conexión mal establecida.|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Error al ejecutar la consulta "%1": "%2". Posibles motivos del error: Problemas con la consulta, propiedad "ResultSet" no establecido correctamente, parámetros no establecidos correctamente o conexión mal establecida.|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|Error al leer nombres de procedimientos almacenados en el archivo xml.|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|Nodo de datos no válido para la tarea Transferir procedimiento almacenado.|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|La conexión "%1" no es del tipo "SMOServer".|  
@@ -1237,15 +1236,15 @@ ms.locfileid: "48106735"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|El usuario solicitó la cancelación de la transformación de búsquedas.|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|El procesamiento de los datos de caracteres u objetos binarios grandes (LOB) se ha detenido porque se ha alcanzado el límite de 4 GB.|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|No se pudo cargar el componente de canalización administrado "%1".  Excepción: %2.|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Código de error SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: El Administrador de conexiones con Excel no es compatible con la versión de 64 bits de SSIS debido a que no hay ningún proveedor OLE DB disponible.|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Código de Error SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: El Administrador de conexiones de Excel no se admite en la versión de 64 bits de SSIS, tal como está disponible ningún proveedor OLE DB.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|El archivo caché está dañado o no se creó mediante el administrador de conexiones de caché.  Proporcione un archivo caché válido.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|El comando SQL no se ha establecido correctamente. Compruebe la propiedad SQLCommand.|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|Información del objeto de error COM disponible.  Origen: "%1" Código de error: 0x%2!8.8X!  Descripción: "%3".|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|Información del objeto de error COM disponible.  Origen: código de error "%1": ¡0x%2!8.8X!  Descripción: "%3".|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|No se puede obtener acceso a las conexiones adquiridas.|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|El número de columnas es incorrecto.|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|La columna "%1" no se encuentra en el origen de datos.|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Hay un registro OLE DB disponible.  Origen: "%1" Hresult: 0x%2!8.8X!  Descripción: "%3".|  
-|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Código de error SSIS DTS_E_OLEDBERROR.  Error de OLE DB. Código de error: 0x%1!8.8X!.|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Hay un registro OLE DB disponible.  Origen: "%1" Hresult: ¡0x%2!8.8X!  Descripción: "%3".|  
+|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Código de error SSIS DTS_E_OLEDBERROR.  Error de OLE DB. Código de error: ¡0x%1!8.8X!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|El componente ya está conectado. Es necesario desconectar el componente antes de intentar conectarlo.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|El valor de la propiedad "%1" no es correcto.|  
 |0xC020200E|-1071636466|DTS_E_CANNOTOPENDATAFILE|No se puede abrir el archivo de datos "%1".|  
@@ -1687,7 +1686,7 @@ ms.locfileid: "48106735"
 |0xC0208301|-1071611135|DTS_E_TXCHARMAP_INVALIDMAPFLAGANDDATATYPE|El tipo de datos de la columna "%1" no puede asignarse de la forma especificada.|  
 |0xC0208302|-1071611134|DTS_E_TXFUZZYLOOKUP_UNSUPPORTED_MATCH_INDEX_VERSION|La versión (%1) del índice de coincidencia existente "%2" no es compatible. La versión esperada es "%3". Este error se produce si la versión almacenada en los metadatos de índice no coincide con la versión para la cual se generó el código actual. Para solucionar el error, vuelva a generar el índice con la versión actual del código.|  
 |0xC0208303|-1071611133|DTS_E_TXFUZZYLOOKUP_INVALID_MATCH_INDEX|Aparentemente la tabla "%1" no es un índice de coincidencia pregenerado válido. Este error se produce si no se puede cargar el registro de metadatos del índice pregenerado especificado.|  
-|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|No se puede leer el índice de coincidencia pregenerado "%1" especificado.  Código de error de OLEDB: 0x%2! 8.8X!.|  
+|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|No se puede leer el índice de coincidencia pregenerado "%1" especificado.  Código de Error de OLEDB: 0x%2!8.8X!.|  
 |0xC0208305|-1071611131|DTS_E_TXFUZZYLOOKUP_NO_JOIN_COLUMNS|No hay ninguna columna de entrada válida que tenga una combinación válida con una columna de tabla de referencia.  Asegúrese de que exista al menos una combinación definida con las propiedades de columna de entrada JoinToReferenceColumn y JoinType.|  
 |0xC0208306|-1071611130|DTS_E_TXFUZZYLOOKUP_INDEX_DOES_NOT_CONTAIN_COLUMN|El índice de coincidencia existente "%1" especificado no se generó originalmente con información de coincidencias parciales para la columna "%2".  Debe volver a generarse para incluir esta información. Este error se produce si se generó el índice con una columna que no era de combinación parcial.|  
 |0xC0208307|-1071611129|DTS_E_TXFUZZYLOOKUP_IDENTIFIER_PROPERTY|El nombre "%1" asignado a la propiedad "%2" no es un nombre de identificador de SQL válido. Esto sucede si el nombre de la propiedad no cumple las especificaciones de los nombres de identificadores de SQL válidos.|  
@@ -1992,8 +1991,8 @@ ms.locfileid: "48106735"
 |0xC02092B5|-1071607115|DTS_E_COMMITFAILED|Error de confirmación.|  
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|La propiedad personalizada "%1" de %2 solo se puede utilizar con archivos ANSI.|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|La propiedad personalizada "%1" de %2 solo se puede utilizar con DT_BYTES.|  
-|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Código de error SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  El proveedor OLE DB solicitado %2 no está registrado. Código de error: 0x%1!8.8X!.|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Código de error SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  El proveedor OLE DB solicitado %2 no está registrado; es posible que no haya ningún proveedor de 64 bits disponible.  Código de error: 0x%1!8.8X!.|  
+|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Código de error SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  El proveedor OLE DB solicitado %2 no está registrado. Código de error: ¡0x%1!8.8X!.|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Código de error SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  El proveedor OLE DB solicitado %2 no está registrado; es posible que no haya ningún proveedor de 64 bits disponible.  Código de error: ¡0x%1!8.8X!.|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|La columna de caché, "%1", está asignada a varias columnas. Quite las asignaciones de columna duplicadas.|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|%1 no está asignada a una columna de caché válida.|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|No se puede asignar la columna de entrada, %1, y la columna de caché, "%2", porque los tipos de datos no coinciden.|  
@@ -2013,7 +2012,7 @@ ms.locfileid: "48106735"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|Ha cambiado la información de tipo de datos del esquema XML para "%1" en el elemento "%2".  Reinicialice los metadatos para este componente y revise las asignaciones de columna.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 no se utiliza en combinación o copia. Elimine la columna no utilizada de la lista de columnas de salida.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|Se produjo un error en la ordenación debido a un desbordamiento de la pila mientras se ordenaba un búfer de entrada.  Reduzca la propiedad DefaultBufferMaxRows en la tarea Flujo de datos.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Considere la posibilidad de cambiar el valor de PROVIDER en la cadena de conexión por %1 o visite http://www.microsoft.com/downloads para buscar e instalar compatibilidad para %2.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Considere la posibilidad de cambiar el valor de PROVIDER en la cadena de conexión por %1 o visite https://www.microsoft.com/downloads para buscar e instalar compatibilidad para %2.|  
 |||DTS_E_INITTASKOBJECTFAILED|Error al inicializar el objeto de la tarea "%1!s!", tipo "%2!s!" debido al error 0x%3!8.8X! "%4!s!".|  
 |||DTS_E_GETCATMANAGERFAILED|Error al crear el administrador de categorías del componente COM debido al error 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|Componente %1!s! no se pudo inicializar debido al error 0x%2!8.8X! "%3!s!".|  
@@ -2125,7 +2124,7 @@ ms.locfileid: "48106735"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|No se encuentra el valor "%1" del componente %2. No se encuentra el valor CurrentVersion del componente. Este error se produce si el componente no ha establecido la información del Registro de forma que contenga un valor CurrentVersion en la sección DTSInfo. Este mensaje aparece durante el desarrollo de componentes o cuando se utiliza el componente en un paquete, si el componente no se ha registrado correctamente.|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|El administrador de búfer no pudo obtener un nombre de archivo temporal.|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|El administrador de búfer no pudo crear un archivo temporal en la ruta de acceso "%1". La ruta de acceso no volverá a tenerse en cuenta para su almacenamiento temporal.|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Advertencia: no se pudo abrir la memoria compartida global para comunicar con la DLL de rendimiento; los contadores de rendimiento del flujo de datos no están disponibles.  Para resolver este problema, ejecute el paquete como administrador o en la consola del sistema.|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Advertencia: No se pudo abrir la memoria compartida global para comunicar con el rendimiento de archivo DLL; contadores de rendimiento del flujo de datos no están disponibles.  Para resolver este problema, ejecute el paquete como administrador o en la consola del sistema.|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|Hay una fila parcial al final del archivo.|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|Se alcanzó el final del archivo de datos mientras se leían las filas de encabezados. Asegúrese de que el delimitador de filas de encabezados y el número de filas de encabezados que se omitirán son correctos.|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|No se puede recuperar la información de página de códigos de columna del proveedor OLE DB.  Si el componente admite la propiedad "%1", se utilizará la página de códigos de dicha propiedad.  Cambie el valor de la propiedad si los valores de la página de códigos de la cadena actual no son correctos.  Si el componente no admite la propiedad, se utilizará la página de códigos del Id. de configuración regional del componente.|  
@@ -2264,7 +2263,7 @@ ms.locfileid: "48106735"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|La propiedad de tamaño máximo de confirmación de inserción del destino de OLE DB "%1" está establecida en 0. Este valor de la propiedad puede hacer que el paquete en ejecución deje de responder. Para obtener más información, vea el tema de Ayuda F1 del Editor de destino de OLE DB (página Administrador de conexiones).|  
   
 ##  <a name="msgGeneral"></a> Mensajes generales y de eventos  
- Los nombres simbólicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensajes de error que comienzan por `DTS_MSG_`.  
+ Los nombres simbólicos de los mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_MSG_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2303,7 +2302,7 @@ ms.locfileid: "48106735"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nombre del evento: %1<br /><br /> Mensaje: %9<br /><br /> Operador: %2<br /><br /> Nombre de origen: %3<br /><br /> Id. de origen: %4<br /><br /> Id. de ejecución: %5<br /><br /> Hora de inicio: %6<br /><br /> Hora de finalización: %7<br /><br /> Código de datos: %8|  
   
 ##  <a name="msgSuccess"></a> Mensajes de aprobación  
- Los nombres simbólicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mensajes de aprobación que comienzan por `DTS_S_`.  
+ Los nombres simbólicos de los mensajes de aprobación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_S_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  

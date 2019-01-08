@@ -17,12 +17,12 @@ ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad973b69d9f85b731e417e502225036ae714ae63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529612"
 ---
 # <a name="copyto-method-ado"></a>CopyTo (método) (ADO)
 Copia el número especificado de caracteres o bytes (en función de [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) en el [Stream](../../../ado/reference/ado-api/stream-object-ado.md) a otro **Stream** objeto.  
@@ -45,7 +45,7 @@ Stream.CopyTo DestStream, NumChars
  Opcional. Un **entero** valor que especifica el número de bytes o caracteres que se copian desde la posición actual en el origen de **Stream** al destino **Stream**. El valor predeterminado es -1, que especifica que todos los caracteres o bytes que se copian desde la posición actual para [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Comentarios  
- Este método copia el número especificado de caracteres o bytes, desde la posición actual especificada por el [posición](../../../ado/reference/ado-api/position-property-ado.md) propiedad. Si el número especificado es mayor que el número de bytes hasta disponibles **EOS**, entonces solo caracteres o bytes desde la posición actual para **EOS** se copian. Si el valor de *NumChars* es – 1, o se omite, se copian todos los caracteres o bytes a partir de la posición actual.  
+ Este método copia el número especificado de caracteres o bytes, desde la posición actual especificada por el [posición](../../../ado/reference/ado-api/position-property-ado.md) propiedad. Si el número especificado es mayor que el número de bytes hasta disponibles **EOS**, entonces solo caracteres o bytes desde la posición actual para **EOS** se copian. Si el valor de *NumChars* es -1, o se omite, se copian todos los caracteres o bytes a partir de la posición actual.  
   
  Si existen caracteres o bytes en la secuencia de destino, permanece todo el contenido más allá del punto donde finaliza la copia y no se trunca. **Posición** se convierte en el byte inmediatamente después del último byte copiado. Si desea truncar estos bytes, llame a [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   

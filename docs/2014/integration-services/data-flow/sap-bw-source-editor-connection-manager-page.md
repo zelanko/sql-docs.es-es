@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37ef852cea67ee021cee7dd182dc4a11132abcea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d491467d16b34207ab74f6ec4d892747e26165e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201265"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802047"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor de origen de SAP BW (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de SAP BW** para seleccionar el administrador de conexiones de SAP BW para el origen de SAP BW. En esta página, puede seleccionar el modo de ejecución y los parámetros para extraer los datos del sistema SAP Netweaver BW.  
   
- Para obtener más información sobre el componente de origen de SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vea [Origen de SAP BW](sap-bw-source.md).  
+ Para más información sobre el componente de origen de SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vea [Origen de SAP BW](sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  La documentación de Microsoft Connector 1.1 for SAP BW da por supuesto que se está familiarizado con el entorno SAP Netweaver BW. Para obtener más información acerca de SAP Netweaver BW, o sobre cómo configurar los objetos y los procesos de SAP Netweaver BW, vea la documentación de SAP.  
@@ -84,7 +83,7 @@ ms.locfileid: "48201265"
  Permite escribir el nombre del servidor o la dirección IP del host de puerta de enlace. Normalmente, el nombre o la dirección IP es el mismo que el del servidor de aplicaciones SAP.  
   
  **Servicio de puerta de enlace**  
- Escriba el nombre del servicio de puerta de enlace, en el formato `sapgwNN`, donde `NN` es el número del sistema.  
+ Escriba el nombre del servicio de puerta de enlace, con el formato `sapgwNN`, donde `NN` es el número del sistema.  
   
  **Id. de programa**  
  Permite escribir el identificador de programa asociado al destino RFC.  
@@ -110,7 +109,7 @@ ms.locfileid: "48201265"
  Permite escribir el nombre del servidor o la dirección IP del host de puerta de enlace. Normalmente, el nombre o la dirección IP es el mismo que el del servidor de aplicaciones SAP.  
   
  **Servicio de puerta de enlace**  
- Escriba el nombre del servicio de puerta de enlace, en el formato `sapgwNN`, donde `NN` es el número del sistema.  
+ Escriba el nombre del servicio de puerta de enlace, con el formato `sapgwNN`, donde `NN` es el número del sistema.  
   
  **Id. de programa**  
  Permite escribir el identificador de programa asociado al destino RFC.  
@@ -123,7 +122,7 @@ ms.locfileid: "48201265"
  Permite escribir el identificador de solicitud asociado a la extracción.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de origen de SAP BW &#40;página columnas&#41;](sap-bw-source-editor-columns-page.md)   
+ [Editor de origen de SAP BW &#40;página Columnas&#41;](sap-bw-source-editor-columns-page.md)   
  [Editor de origen de SAP BW &#40;página Salida de error&#41;](sap-bw-source-editor-error-output-page.md)   
  [Editor de origen de SAP BW &#40;página Opciones avanzadas&#41;](sap-bw-source-editor-advanced-page.md)   
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

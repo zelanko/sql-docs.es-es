@@ -10,17 +10,17 @@ ms.assetid: 06075248-705e-4563-9371-b64cd609793c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aaefdcd2739b2036703cdb7235fe56865ff1fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064635"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369957"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>Descripción de las transacciones en tablas con optimización para memoria
   Las transacciones tienen acceso a las tablas optimizadas para memoria mediante control de simultaneidad optimista multiversión. Esto significa que hay versiones diferentes de los datos. Cada transacción opera en su propia versión coherente de forma transaccional de la base de datos, de forma independiente de otras transacciones que se ejecutan simultáneamente. Además, las transacciones operan con la suposición optimista de que no habrá ningún conflicto con otras transacciones simultáneas. Esto evita la necesidad de utilizar bloqueos, pero requiere que el sistema detecte los conflictos y termine una de las transacciones en conflicto. Los conflictos pueden aparecer solo para las transacciones de escritura contra escritura y para las transacciones de lectura contra escritura. Si hay un conflicto de escritura contra escritura, finaliza una transacción de escritura.  
   
- Hay similitudes entre el control de simultaneidad de las tablas optimizadas para memoria y el control de simultaneidad en las tablas basadas en disco para los niveles de aislamiento de transacción READ_COMMITTED_SNAPSHOT y SNAPSHOT. (Para obtener más información acerca de las tablas basadas en disco, consulte [niveles de aislamiento basados en versiones de fila en el motor de base de datos](http://msdn.microsoft.com/library/ms177404\(v=sql.100\).aspx).)  
+ Hay similitudes entre el control de simultaneidad de las tablas optimizadas para memoria y el control de simultaneidad en las tablas basadas en disco para los niveles de aislamiento de transacción READ_COMMITTED_SNAPSHOT y SNAPSHOT. (Para obtener más información acerca de las tablas basadas en disco, consulte [niveles de aislamiento basados en versiones de fila en el motor de base de datos](https://msdn.microsoft.com/library/ms177404\(v=sql.100\).aspx).)  
   
 ## <a name="topics-in-this-section"></a>Temas de esta sección  
  Esta sección sobre las transacciones en tablas optimizadas para memoria incluye los temas siguientes:  

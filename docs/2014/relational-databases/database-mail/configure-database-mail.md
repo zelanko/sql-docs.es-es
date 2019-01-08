@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
@@ -40,19 +39,19 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1e6aa62858c85da20f13295cfb2dce0ee302ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217625"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371187"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
   En este tema se describe cómo habilitar y configurar el Correo electrónico de base de datos con el Asistente para configuración de Correo electrónico de base de datos y crear un script de configuración de Correo electrónico de base de datos mediante plantillas.  
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Use la opción **DatabaseMail XPs** para habilitar Correo electrónico de base de datos en este servidor. Para obtener más información, vea el tema de referencia [Database Mail XPs (opción de configuración del servidor)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
@@ -79,11 +78,11 @@ ms.locfileid: "48217625"
 ###  <a name="Welcome"></a> Página Asistente  
  En esta página se describen los pasos para configurar Correo electrónico de base de datos.  
   
- **No volver a mostrar esta página** : active esta opción para evitar que la página de bienvenida se muestre en el futuro.  
+ **No volver a mostrar esta página**: active esta opción para evitar que la página de bienvenida se muestre en el futuro.  
   
  **Siguiente** : continúa con la página **Seleccionar una tarea de configuración** .  
   
- **Cancelar** : termina el asistente sin configurar Correo electrónico de base de datos.  
+ **Cancelar**: finaliza el asistente sin configurar Correo electrónico de base de datos.  
   
  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48217625"
  Use la página **Seleccionar tarea de configuración** para indicar qué tarea se completará cada vez que se use el Asistente. Si cambia de opinión antes de completar el Asistente, utilice el botón **Atrás** para volver a esta página y seleccionar otra tarea.  
   
 > [!NOTE]  
->  Si no se ha habilitado el Correo electrónico de base de datos, recibirá el mensaje **La característica Correo electrónico de base de datos no está disponible.  ¿Quiere habilitar esta característica?** Responder **Sí**es equivalente a habilitar Correo electrónico de base de datos con la [opción Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) del procedimiento almacenado del sistema **sp_configure** .  
+>  Si no se ha habilitado el correo electrónico de base de datos, recibirá el mensaje: **La característica correo electrónico de base de datos no está disponible.  ¿Quiere habilitar esta característica?** Responder **Sí**es equivalente a habilitar Correo electrónico de base de datos con la [opción Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) del procedimiento almacenado del sistema **sp_configure** .  
   
  **Instalar Correo electrónico de base de datos realizando las siguientes tareas**  
  Realiza todas las tareas necesarias para configurar el Correo electrónico de base de datos por primera vez. Esta opción incluye las otras tres.  
@@ -415,7 +414,7 @@ ms.locfileid: "48217625"
  **mailitem_id** del mensaje de correo electrónico de prueba.  
   
  **Solucionar problemas**  
- Haga clic para abrir los Libros en pantalla en el tema [Solucionar problemas del Correo electrónico de base de datos](http://msdn.microsoft.com/library/ms188663.aspx).  
+ Haga clic para abrir los Libros en pantalla en el tema [Solucionar problemas del Correo electrónico de base de datos](https://msdn.microsoft.com/library/ms188663.aspx).  
   
 
   

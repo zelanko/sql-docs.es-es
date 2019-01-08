@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_MSchange_snapshot_agent_properties_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fb47f7475a64c89a11fca8bb3dee1f3e180765a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a4c8eb45ad7864466ccedc3de5b034325279322
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614833"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589759"
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +57,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
+ [ **@publisher** =] **'**_publisher_**'**  
  Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
+ [  **@publisher_db=** ] **'**_publisher_db_**'**  
  Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publication =** ] **'***publicación***'**  
+ [  **@publication =** ] **'**_publicación_**'**  
  Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@frequency_type =** ] *frequency_type*  
@@ -114,31 +113,31 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
  Es la hora del día en que el agente de instantáneas deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
+ [  **@snapshot_job_name =** ] **'**_snapshot_agent_name_**'**  
  Es el nombre de un trabajo del agente de instantáneas existente, si se está utilizando un trabajo existente. *snapshot_agent_name* es **nvarchar (100)**, no tiene ningún valor predeterminado.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
- Es el modo de seguridad que el agente utiliza al conectarse al publicador. *publisher_security_mode* es **int**, no tiene ningún valor predeterminado. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, y **1** especifica autenticación de Windows. Un valor de **0** debe especificarse para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ Es el modo de seguridad que el agente utiliza al conectarse al publicador. *publisher_security_mode* es **int**, no tiene ningún valor predeterminado. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, y **1** especifica autenticación de Windows. Un valor de **0** debe especificarse para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'***publisher_login***'**  
+ [ **@publisher_login**=] **'**_publisher_login_**'**  
  Es el inicio de sesión utilizado al conectar al publicador. *publisher_login* es **sysname**, no tiene ningún valor predeterminado. *publisher_login* debe especificarse cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y el publicador *_ ** security_mode* es **1**, la cuenta de Windows especificada en *job_login* será se usa al conectarse al publicador.  
   
- [ **@publisher_password**=] **'***publisher_password***'**  
+ [ **@publisher_password**=] **'**_publisher_password_**'**  
  Es la contraseña utilizada para conectarse al publicador. *publisher_password* es **nvarchar (524)**, no tiene ningún valor predeterminado.  
   
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
- [ **@job_login**=] **'***job_login***'**  
+ [ **@job_login**=] **'**_job_login_**'**  
  Es el inicio de sesión de la cuenta de Windows en la que se ejecuta el agente. *job_login* es **nvarchar (257)**, no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas. *No se puede cambiar para que no es* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Publisher.*  
   
- [ **@job_password**=] **'***job_password***'**  
+ [ **@job_password**=] **'**_job_password_**'**  
  Es la contraseña de la cuenta de Windows en la que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
   
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
- [ **@publisher_type**=] **'***publisher_type***'**  
+ [ **@publisher_type**=] **'**_publisher_type_**'**  
  Especifica el tipo de publicador cuando el publicador no se ejecuta en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* es **sysname**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
@@ -18,27 +17,27 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3d67e256b6dca357db45cd831b2f9eab3ff93dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 664a338dd1d34126717b3953c54b175ffccd63e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103459"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355712"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
   El contenedor de bucles Foreach define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **Foreach** de los lenguajes de programación. En un paquete, los bucles se habilitan mediante un enumerador Foreach.  El contenedor de bucles Foreach repite el flujo de control para cada miembro de un enumerador especificado.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Proporciona los siguientes tipos de enumerador:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona los siguientes tipos de enumerador:  
   
 -   Enumerador de ADO para Foreach, para enumerar filas de tablas. Por ejemplo, puede obtener las filas de un conjunto de registros ADO.  
   
-     El destino de conjunto de registros guarda los datos en memoria en un conjunto de registros que se almacena en una variable de paquete `Object` tipo de datos. Normalmente usa un contenedor de bucles Foreach con el enumerador Foreach ADO para procesar una fila del conjunto cada vez. La variable especificada para el enumerador Foreach ADO debe ser del tipo de datos Object. Para obtener más información acerca del destino de conjunto de registros, vea [Use a Recordset Destination](../data-flow/recordset-destination.md).  
+     El destino de conjunto de registros guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete del tipo de datos `Object`. Normalmente usa un contenedor de bucles Foreach con el enumerador Foreach ADO para procesar una fila del conjunto cada vez. La variable especificada para el enumerador Foreach ADO debe ser del tipo de datos Object. Para obtener más información acerca del destino de conjunto de registros, vea [Use a Recordset Destination](../data-flow/recordset-destination.md).  
   
 -   Enumerador de conjunto de filas del esquema para Foreach de ADO.NET, para enumerar la información de esquema sobre un origen de datos. Por ejemplo, puede enumerar y obtener una lista de tablas de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Enumerador Foreach File para enumerar los archivos de una carpeta. El enumerador puede recorrer subcarpetas. Por ejemplo, puede leer todos los archivos de la carpeta y subcarpetas de Windows que tengan la extensión de nombre de archivo *.log.  
   
--   Enumerador de variable para Foreach, para enumerar el objeto enumerable contenido en una variable especificada. El objeto enumerable puede ser una matriz, un ADO.NET `DataTable`, un [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enumerador y así sucesivamente. Por ejemplo, puede enumerar los valores de una matriz que contenga los nombres de los servidores.  
+-   Enumerador de variable para Foreach, para enumerar el objeto enumerable contenido en una variable especificada. El objeto enumerable puede ser una matriz, una `DataTable` ADO.NET, un enumerador [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], etc. Por ejemplo, puede enumerar los valores de una matriz que contenga los nombres de los servidores.  
   
 -   Enumerador de elementos para Foreach para enumerar elementos que son colecciones. Por ejemplo, puede enumerar los nombres de los ejecutables y directorios de trabajo que utiliza una tarea Ejecutar proceso.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48103459"
   
  Con frecuencia, es útil implementar una expresión de propiedad para establecer el valor de la propiedad ConnectionString de los administradores de conexiones que usan los enumeradores de bucle Foreach. La expresión de propiedad de ConnectionString se establece con una variable que se asigna al valor de la colección del enumerador y se actualiza en cada iteración del bucle.  
   
- Para evitar consecuencias negativas de tiempos no determinativos en la ejecución paralela de tareas en el bucle, se debe configurar el paquete para que ejecute solamente un ejecutable a la vez. Por ejemplo, si un paquete puede ejecutar varias tareas simultáneamente, un contenedor de bucles Foreach que enumera archivos en la carpeta, recupera los nombres de los archivos y luego utiliza una tarea Ejecutar SQL para insertar los nombres de archivos en una tabla puede incurrir en conflictos de escritura cuando dos instancias de la tarea Ejecutar SQL intentan escribir al mismo tiempo. Para obtener más información, vea [Usar expresiones de propiedad en paquetes](../expressions/use-property-expressions-in-packages.md).  
+ Para evitar consecuencias negativas de tiempos no determinativos en la ejecución paralela de tareas en el bucle, se debe configurar el paquete para que ejecute solamente un ejecutable a la vez. Por ejemplo, si un paquete puede ejecutar varias tareas simultáneamente, un contenedor de bucles Foreach que enumera archivos en la carpeta, recupera los nombres de los archivos y luego utiliza una tarea Ejecutar SQL para insertar los nombres de archivos en una tabla puede incurrir en conflictos de escritura cuando dos instancias de la tarea Ejecutar SQL intentan escribir al mismo tiempo. Para más información, vea [Usar expresiones de propiedad en paquetes](../expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
@@ -100,7 +99,7 @@ ms.locfileid: "48103459"
 -   <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog, sobre [SSIS para cada enumerador de lista de nodo](http://go.microsoft.com/fwlink/?LinkId=220671), en bidn.com.  
+ Entrada de blog, sobre [SSIS para cada enumerador de lista de nodo](https://go.microsoft.com/fwlink/?LinkId=220671), en bidn.com.  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de control](control-flow.md)   

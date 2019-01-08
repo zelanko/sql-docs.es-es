@@ -35,7 +35,7 @@ Dado que los grupos de disponibilidad solo proporcionan protección a nivel de b
 
 Un grupo de disponibilidad también tiene otro componente denominado el agente de escucha, que permite a las aplicaciones y los usuarios finales conectarse sin necesidad de conocer qué instancia de SQL Server hospeda la réplica principal. Cada grupo de disponibilidad tendrá su propio agente de escucha. Si bien las implementaciones del agente de escucha son ligeramente diferentes en Windows Server y Linux, la funcionalidad que ofrece y el modo en que se utiliza son iguales. La figura siguiente muestra un grupo de disponibilidad basado en Windows Server que está usando un clúster de conmutación por error de Windows Server (WSFC). Se requiere un clúster subyacente en el nivel de sistema operativo para la disponibilidad, ya sea en Linux o en Windows Server. En el ejemplo se muestra una sencilla configuración de dos servidores, o nodos, en la que el WSCF es el clúster subyacente. 
 
-![Grupo de disponibilidad sencillo][SimpleAG]
+![Grupo de disponibilidad sencillo](media/sql-server-ha-story/image1.png)
  
 Las versiones Standard y Enterprise Edition tienen diferentes valores máximos diferentes en lo relativo a las réplicas. Un grupo de disponibilidad en Standard Edition, conocido como Grupo de disponibilidad básica, admite dos réplicas (una principal y otra secundaria) con una sola base de datos en el grupo de disponibilidad. La versión Enterprise Edition no solo permite que se configuren varias bases de datos en un solo grupo de disponibilidad, sino que también puede tener hasta nueve réplicas totales (una principal, ocho secundarias). Enterprise Edition también proporciona otras ventajas opcionales, como las réplicas secundarias legibles o la posibilidad de realizar copias de seguridad a partir de una réplica secundaria, entre otras.
 
@@ -81,7 +81,7 @@ Para aquellos usuarios que simplemente desean agregar otras copias de solo lectu
 
 La captura de pantalla siguiente muestra la compatibilidad para los distintos tipos de tipos de clúster en SSMS. Debe ejecutar la versión 17.1 o una posterior. La captura de pantalla siguiente es de la versión 17.2.
 
-![Opciones de AG de SSMS][SSMSAGOptions]
+![Opciones de AG de SSMS](media/sql-server-ha-story/image2.png)
  
 ##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
@@ -111,11 +111,11 @@ Otra mejora de la compatibilidad con DTC para grupos de disponibilidad es que, e
 #### <a name="always-on-failover-cluster-instances"></a>Instancias de clúster de conmutación por error de AlwaysOn
 Las instalaciones en clúster han sido una característica de SQL Server desde la versión 6.5. Las FCI han resultado ser un método de eficacia probada a la hora de proporcionar disponibilidad para toda la instalación de SQL Server, lo que se conoce como una instancia. Esto significa que todos los elementos de la instancia, incluidas las bases de datos, los trabajos del Agente SQL Server, los servidores vinculados, etc., se moverán a otro servidor en caso que el servidor subyacente encuentre un problema. Todas las FCI requieren algún tipo de almacenamiento compartido, incluso si se proporciona a través de redes. Los recursos de la FCI solo pueden estar en ejecución y ser propiedad de un solo nodo en un momento dado. En la figura siguiente, el primer nodo del clúster posee la FCI, lo que también significa que posee los recursos de almacenamiento compartido asociados, que se indican mediante la línea continua hacia el almacenamiento.
 
-![Instancia de clúster de conmutación por error][BasicFCI]
+![Instancia de clúster de conmutación por error](media/sql-server-ha-story/image3.png)
  
 Después de una conmutación por error, la propiedad cambia tal y como se muestra en la figura siguiente.
 
-![Después de conmutación por error][PostFailoverFCI]
+![Después de conmutación por error](media/sql-server-ha-story/image4.png)
  
 Con una FCI no hay pérdida de datos, pero el almacenamiento compartido subyacente es un único punto de error porque hay una copia de los datos. Las FCI se combinan a menudo con otro método de disponibilidad, como un grupo de disponibilidad o el trasvase de registros, a fin de tener copias redundantes de las bases de datos. El método adicional implementado debe usar almacenamiento físicamente separado de la FCI. Cuando la FCI conmuta por error en otro nodo, se detiene en un nodo y se inicia en otro, en un proceso no muy diferente de apagar un servidor y encenderlo. Una FCI pasa por el proceso de recuperación normal, lo que significa que las transacciones que tengan que ponerse al día se pondrán al día, y las transacciones que estén incompletas se revertirán. Por lo tanto, la base de datos es coherente desde un punto de datos hasta el momento del error o la conmutación por error manual; por lo tanto, no hay pérdida de datos. Las bases de datos solo están disponibles una vez completada la recuperación, por lo que el tiempo de recuperación dependerá de muchos factores y, en general, será más largo que la conmutación por error en un grupo de disponibilidad. La contrapartida es que cuando conmuta por error un grupo de disponibilidad, puede que sea necesario ocuparse de tareas adicionales para permitir que una base de datos se pueda utilizar, como la habilitación de un trabajo del Agente SQL Server.
 
@@ -132,7 +132,7 @@ Si el punto de recuperación y los objetivos de tiempo de recuperación son más
 > [!IMPORTANT] 
 > En Linux, los trabajos del Agente SQL Server no se incluyen como parte de la instalación del propio SQL Server. Está disponible en los trabajos mssql-server-Agent del paquete, que también debe instalarse para usar el trasvase de registros.
 
-![Trasvase de registros][LogShipping]
+![Trasvase de registros](media/sql-server-ha-story/image5.png)
  
 Podría decirse que la mayor ventaja de utilizar el trasvase de registros en cierta manera es que tiene en cuenta el error humano. Es posible retrasar la aplicación de los registros de transacciones. Por lo tanto, si un usuario emite algo parecido a UPDATE sin una cláusula WHERE, el modo de espera podría no tener el cambio, así que podría cambiar a ese modo mientras repara el sistema principal. Aunque el trasvase de registros es fácil de configurar, el cambio desde el servidor principal al estado de espera semiactiva, proceso conocido como cambio de rol, siempre es manual. Un cambio de rol se inicia a través de Transact-SQL y, al igual que un grupo de disponibilidad,todos los objetos no capturados en el registro de transacciones se deben sincronizar manualmente. El trasvase de registros también debe configurarse para cada base de datos, mientras que un solo grupo de disponibilidad puede contener varias bases de datos. A diferencia de un grupo de disponibilidad o FCI, el trasvase de registros no tiene ninguna abstracción para un cambio de rol. Las aplicaciones deben ser capaces de controlar esto. Se podrían emplear técnicas como un alias de DNS (CNAME), pero esto tiene ventajas y desventajas, como el tiempo necesario para que DNS se actualice después del cambio.
 
@@ -144,17 +144,17 @@ Cuando la ubicación de disponibilidad principal experimenta un evento catastró
 
 Una de las ventajas de los grupos de disponibilidad es que tanto la alta disponibilidad como la recuperación ante desastres pueden configurarse con una sola característica. Sin necesidad de garantizar que el almacenamiento compartido tenga también una alta disponibilidad, es mucho más fácil tener réplicas que sean locales en un centro de datos para la alta disponibilidad y remotas en otros centros de datos para la recuperación ante desastres, cada una con almacenamiento independiente. El hecho de tener copias adicionales de la base de datos es la compensación para asegurar la redundancia. A continuación se muestra un ejemplo de un grupo de disponibilidad que abarca varios centros de datos. Una réplica principal es responsable de mantener todas las réplicas secundarias sincronizadas.
 
-![Grupo de disponibilidad][AG]
+![Grupo de disponibilidad](media/sql-server-ha-story/image6.png)
  
 Fuera de un grupo de disponibilidad con un tipo de clúster Ninguno, un grupo de disponibilidad requiere que todas las réplicas formen parte del mismo clúster subyacente, ya sea WSFC o Pacemaker. Esto significa que, en la figura anterior, el clúster WSFC se ajusta para funcionar en dos centros de datos diferentes, lo cual agrega complejidad independientemente de la plataforma (Windows Server o Linux). El ajuste de clústeres a distancia aumenta la complejidad. Introducido en SQL Server 2016, un grupo de disponibilidad distribuido permite que un grupo de disponibilidad abarque grupos de disponibilidad configurados en clústeres diferentes. Esto elimina la necesidad de que todos los nodos participen en el mismo clúster, lo que facilita en gran medida la configuración de la recuperación ante desastres. Para obtener más información sobre los grupos de disponibilidad distribuidos, consulte [Grupos de disponibilidad distribuidos](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups).
 
-![Grupo de disponibilidad distribuido][DAG]
+![Grupo de disponibilidad distribuido](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>Instancias de clúster de conmutación por error de AlwaysOn
 
 FCI puede usarse para la recuperación ante desastres. Al igual que con un grupo de disponibilidad normal, el mecanismo de clúster subyacente también se debe extender a todas las ubicaciones, lo cual incrementa complejidad. Hay algo más que se debe tener en cuenta para FCI: el almacenamiento compartido. Los mismos discos deben estar disponibles tanto en el sitio principal como en el secundario, por lo que se requiere un método externo, como la funcionalidad proporcionada por el proveedor de almacenamiento a nivel de hardware o el uso de una réplica de almacenamiento en Windows Server, para asegurarse de que los discos usados por la FCI existen en otra parte. 
 
-![FCI de AlwaysOn][AlwaysOnFCI]
+![FCI de AlwaysOn](media/sql-server-ha-story/image8.png)
  
 ### <a name="log-shipping"></a>Trasvase de registros
 El trasvase de registros es uno de los métodos más antiguo de proporcionar recuperación ante desastres para bases de datos de SQL Server. El trasvase de registros se suele usarse junto con los grupos de disponibilidad y FCI para proporcionar una funcionalidad de recuperación ante desastres más sencilla y rentable en comparación con otras opciones que pueden resultar complejas debido al entorno, las exigencias de tipo administrativo o el presupuesto. De forma similar al caso de alta disponibilidad para el trasvase de registros, muchos entornos retrasarán la carga de un registro de transacciones para tener en cuenta los errores humanos.
@@ -174,7 +174,7 @@ Si el objetivo es migrar a nuevos servidores y no cambiar la configuración (inc
 
 Los grupos de disponibilidad distribuidos son también otro método para migrar a una configuración nueva o actualizar SQL Server. Dado que un grupo de disponibilidad distribuido admite diferentes grupos de disponibilidad en distintas arquitecturas, puede cambiar, por ejemplo, de una instancia de SQL Server 2016 que se ejecuta en Windows Server 2012 R2 a otra instancia de SQL Server 2017 que se ejecuta en Windows Server 2016. 
 
-![Grupo de disponibilidad distribuido][image10]
+![Grupo de disponibilidad distribuido](media/sql-server-ha-story/image10.png)
 
 Por último, los grupos de disponibilidad con un tipo de clúster Ninguno también pueden utilizarse para la migración o la actualización. No es posible mezclar y combinar tipos de clúster en una configuración de grupo de disponibilidad típica, por lo que todas las réplicas tendrían que ser de tipo Ninguno. Un grupo de disponibilidad distribuido puede utilizarse para abarcar grupos de disponibilidad configurados con tipos de clúster distintos. Este método también se admite en todas las plataformas de sistema operativo diferentes.
 
@@ -218,7 +218,7 @@ Antes de tratar los escenarios de interoperabilidad y multiplataforma, es necesa
 
 Los grupos de disponibilidad distribuidos están diseñados para abarcar las configuraciones de grupo de disponibilidad, con independencia de que los dos clústeres subyacentes debajo de los grupos de disponibilidad sean dos clústeres WSFC diferentes, distribuciones de Linux, o uno esté en un clúster WSFC y otro en Linux. Un grupo de disponibilidad distribuido será el método principal de contar con una solución multiplataforma. Un grupo de disponibilidad distribuido es también la solución principal para las migraciones del tipo de una conversión desde una infraestructura de SQL Server basada en Windows Server a otra basada en Linux, en caso de que sea esto lo que quiere hacer su empresa. Como se mencionó anteriormente, los grupos de disponibilidad, y especialmente los grupos de disponibilidad distribuidos, minimizarán el tiempo durante el que una aplicación podría estar no disponible para su uso. A continuación se muestra un ejemplo de un grupo de disponibilidad distribuido que abarca un clúster WSFC y Pacemaker.
 
-![Grupo de disponibilidad distribuido][BasicDAG]
+![Grupo de disponibilidad distribuido](media/sql-server-ha-story/image9.png)
  
 Si se configura un grupo de disponibilidad con un clúster de tipo Ninguno, este puede abarcar Windows Server y Linux, así como varias distribuciones de Linux. Puesto que esta no es una auténtica configuración de alta disponibilidad, no debe utilizarse para las implementaciones críticas, sino para escenarios de escala de lectura o de migración o actualización.
 
@@ -230,12 +230,12 @@ Dado que el trasvase de registros se basa simplemente en la copia de seguridad y
 
 Desde su introducción en SQL Server 2012, las réplicas secundarias han podido utilizarse para consultas de solo lectura. Hay dos maneras de hacerlo con un grupo de disponibilidad: permitiendo el acceso directo a la secundaria, así como [configurando el enrutamiento de solo lectura](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), lo que requiere el uso del agente de escucha.  SQL Server 2016 introdujo la posibilidad de equilibrar la carga de las conexiones de solo lectura a través del agente de escucha mediante un algoritmo round-robin, lo que permite a las solicitudes de solo lectura su expansión por todas las réplicas legibles. 
 
-> [!NOTE] 
-Las réplicas secundarias legibles son una característica exclusiva de Enterprise Edition, y cada instancia que hospeda una réplica legible necesitará una licencia de SQL Server.
+> [!NOTE]
+> Las réplicas secundarias legibles son una característica exclusiva de Enterprise Edition, y cada instancia que hospeda una réplica legible necesitará una licencia de SQL Server.
 
 El escalado de copias legibles de una base de datos a través de grupos de disponibilidad apareció por primera vez con los grupos de disponibilidad distribuidos en SQL Server 2016. Esto permitió a las empresas contar con copias de solo lectura de la base de datos no solo localmente, sino también a nivel regional y mundial con una cantidad mínima de configuración, y reducir el tráfico de red y la latencia gracias a que las consultas se ejecutan localmente. Cada réplica principal de un grupo de disponibilidad puede inicializar dos otros grupos de disponibilidad, incluso si no es la copia de lectura/escritura completa, por lo que cada grupo de disponibilidad distribuido puede admitir hasta 27 copias de los datos que son legibles. 
 
-![Grupo de disponibilidad distribuido][DAG]
+![Grupo de disponibilidad distribuido](media/sql-server-ha-story/image11.png)
 
 A partir de SQL Server 2017, es posible crear una solución de solo lectura casi en tiempo real con la configuración de grupos de disponibilidad con un clúster de tipo Ninguno. Si el objetivo radica en utilizar grupos de disponibilidad para las réplicas secundarias legibles y no en la disponibilidad, esta opción elimina la complejidad de utilizar un clúster WSFC o Pacemaker, y ofrece las ventajas legibles de un grupo de disponibilidad en un método de implementación más sencillo. 
 

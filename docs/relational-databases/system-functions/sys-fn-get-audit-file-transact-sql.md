@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018340"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980051"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,22 +117,22 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Id. de evento definido por usuario se pasa como argumento a **sp_audit_write**. **NULL** para eventos del sistema (valor predeterminado) y distinto de cero para el evento definido por el usuario. Para obtener más información, consulte [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Permite registrar cualquier información adicional que el usuario desea grabar en |registro de auditoría mediante el uso de la **sp_audit_write** procedimiento almacenado.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **Se aplica a**: solo SQL Server (a partir de 2016) |  
-|transaction_id |**bigint** | **Se aplica a**: solo SQL Server (a partir de 2016) |  
+|sequence_group_id |**varbinary** | **Se aplica a**: Sólo servidor SQL Server (a partir de 2016) |  
+|transaction_id |**bigint** | **Se aplica a**: Sólo servidor SQL Server (a partir de 2016) |  
 |client_ip |**nvarchar(128)** | **Se aplica a**: Azure SQL DB + SQL Server (a partir de 2017) |  
 |application_name |**nvarchar(128)** | **Se aplica a**: Azure SQL DB + SQL Server (a partir de 2017) |  
-|duration_milliseconds |**bigint** | **Se aplica a**: la base de datos de SQL Azure solo |  
-|response_rows |**bigint** | **Se aplica a**: la base de datos de SQL Azure solo |  
-|affected_rows |**bigint** | **Se aplica a**: la base de datos de SQL Azure solo |  
-|connection_id |GUID | **Se aplica a**: la base de datos de SQL Azure solo |
-|data_sensitivity_information |nvarchar(4000) | **Se aplica a**: la base de datos de SQL Azure solo |
+|duration_milliseconds |**bigint** | **Se aplica a**: La base de datos de SQL Azure solo |  
+|response_rows |**bigint** | **Se aplica a**: La base de datos de SQL Azure solo |  
+|affected_rows |**bigint** | **Se aplica a**: La base de datos de SQL Azure solo |  
+|connection_id |GUID | **Se aplica a**: La base de datos de SQL Azure solo |
+|data_sensitivity_information |nvarchar(4000) | **Se aplica a**: La base de datos de SQL Azure solo |
   
 ## <a name="remarks"></a>Comentarios  
  Si el *file_pattern* argumento pasado a **fn_get_audit_file** hace referencia a una ruta de acceso o archivo que no existe, o si el archivo no es un archivo de auditoría, el **MSG_INVALID_AUDIT_FILE**devuelve el mensaje de error.  
   
 ## <a name="permissions"></a>Permisos  
- - **SQL Server**: requiere la **CONTROL SERVER** permiso.  
- - **Azure SQL DB**: requiere la **CONTROL DATABASE** permiso.     
+ - **SQL Server**: Requiere el permiso **CONTROL SERVER** .  
+ - **Azure SQL DB**: Requiere el **CONTROL DATABASE** permiso.     
     - Los administradores de servidor pueden tener acceso a los registros de auditoría de todas las bases de datos en el servidor.
     - Servidor que no sean administradores solo pueden acceder a los registros de auditoría de la base de datos actual.
     - Se omitirán los blobs que no cumplen los criterios anteriores (se mostrará una lista de blobs omitidos en el mensaje de salida de consulta), y la función devolverá los registros solo de blobs para el que se permite el acceso.  
@@ -141,10 +141,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  En este ejemplo se lee un archivo denominado `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+  En este ejemplo se lee un archivo denominado `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`.  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

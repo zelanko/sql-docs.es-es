@@ -20,16 +20,16 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a044f3122f3f553e068d474901e52cce3eef1c9
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120092"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204674"
 ---
 # <a name="sqlprocedures-function"></a>Función SQLProcedures
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: ODBC  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ODBC  
   
  **Resumen**  
  **SQLProcedures** devuelve la lista de nombres de procedimientos almacenados en un origen de datos específico. *Procedimiento* es un término genérico que se utiliza para describir un *objeto ejecutable*, o una entidad con nombre que se puede invocar con parámetros de entrada y salida. Para obtener más información sobre procedimientos, consulte el [procedimientos](../../../odbc/reference/develop-app/procedures-odbc.md).  

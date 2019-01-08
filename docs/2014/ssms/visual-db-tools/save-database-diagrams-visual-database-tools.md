@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - saving database diagrams
@@ -14,12 +14,12 @@ ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47064af46b21eb8a06b52fc9b03799dac73dcbad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070477"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816997"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Guardar diagramas de base de datos (Visual Database Tools)
   Al guardar un diagrama de base de datos, puede guardar todos los cambios realizados, incluidos los efectuados en las tablas, las columnas y otros objetos de base de datos.  

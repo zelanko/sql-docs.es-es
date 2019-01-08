@@ -18,19 +18,19 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6dd33dab83157d9436184411f7af323e339030f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88cc24ed5a8165da839c12caebb1028d05e6afcd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181945"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363137"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Inicializar un servidor de informes (Administrador de configuración de SSRS)
-  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], un servidor inicializado es el que puede cifrar y descifrar los datos de una base de datos del servidor de informes. La inicialización es un requisito para la operación del servidor de informes. La inicialización se produce cuando el servicio Servidor de informes se inicia por primera vez. También ocurre cuando se une el servidor de informes a la implementación existente o se vuelven a crear manualmente las claves como parte del proceso de recuperación. Para más información sobre cómo y por qué se usan claves de cifrado, vea [Claves de cifrado de SSRS: administrar claves de cifrado](ssrs-encryption-keys-manage-encryption-keys.md) y [Claves de cifrado de SSRS: almacenar datos del servidor de informes cifrados](ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], un servidor inicializado es el que puede cifrar y descifrar los datos de una base de datos del servidor de informes. La inicialización es un requisito para la operación del servidor de informes. La inicialización se produce cuando el servicio Servidor de informes se inicia por primera vez. También ocurre cuando se une el servidor de informes a la implementación existente o se vuelven a crear manualmente las claves como parte del proceso de recuperación. Para obtener más información sobre cómo y por qué se usan las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md) y [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Las claves de cifrado se basan en parte en la información de perfil del servicio Servidor de informes. Si cambia la identidad del usuario que se utiliza para ejecutar el servicio Servidor de informes, debe actualizar las claves en consecuencia. Si utiliza la herramienta de configuración de Reporting Services para cambiar la identidad, el sistema controla automáticamente este paso.  
   
- Si se produce un error en la inicialización por algún motivo, el servidor de informes devuelve un `RSReportServerNotActivated` error en respuesta a solicitudes de usuario y servicio. En este caso, es posible que deba solucionar el problema de la configuración del sistema o del servidor. Para más información, consulte [SSRS: Solucionar problemas y errores con Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) en el wiki de TechNet.  
+ Si por algún motivo se produce un error en la inicialización, el servidor de informes devuelve un error `RSReportServerNotActivated` en respuesta a las solicitudes del usuario y del servicio. En este caso, es posible que deba solucionar el problema de la configuración del sistema o del servidor. Para obtener más información, consulte [SSRS: Solucionar problemas y errores con Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) en Wiki de Technet.  
   
 ## <a name="overview-of-the-initialization-process"></a>Información general sobre el proceso de inicialización  
  El proceso de inicialización crea y almacena una clave simétrica que se utiliza para el cifrado. Los Servicios de cifrado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows crean la clave simétrica que el servicio Servidor de informes utiliza para cifrar y descifrar los datos. La clave simétrica se cifra con una clave asimétrica.  
@@ -58,20 +58,20 @@ ms.locfileid: "48181945"
   
 -   Para inicializar un servidor de informes, utilice la herramienta de configuración de Reporting Services. La inicialización se lleva a cabo automáticamente cuando se crea y configura la base de datos del servidor de informes. Para obtener más información, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
--   Para inicializar un servidor de informes en una implementación escalada, puede usar la página Inicialización de la herramienta de configuración de Reporting Services o la utilidad **RSKeymgmt**. Para seguir instrucciones paso a paso, vea [Configuración de una implementación de escalabilidad horizontal del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   Para inicializar un servidor de informes en una implementación escalada, puede usar la página Inicialización de la herramienta de configuración de Reporting Services o la utilidad **RSKeymgmt**. Para seguir las instrucciones paso a paso, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 > [!NOTE]  
 >  **RSKeymgmt** es una aplicación de consola que se puede ejecutar desde una línea de comandos del equipo que hospeda la instancia del servidor de informes que ya forma parte de una implementación escalada. Cuando ejecute la utilidad, especifique argumentos para seleccionar la instancia del servidor de informes remoto que desea inicializar.  
   
- Solo se inicializará un servidor de informes si el identificador de instalación y la clave pública coinciden. Si coinciden, se crea una clave simétrica que permite el cifrado reversible. Si no coinciden, el servidor de informes se deshabilita, en cuyo caso es posible que se le solicite al usuario que aplique una clave de copia de seguridad o elimine los datos cifrados si no se encuentra disponible una clave de seguridad o si ésta no es válida. Para más información sobre las claves de cifrado que usa un servidor de informes, vea [Claves de cifrado de SSRS: administrar claves de cifrado](ssrs-encryption-keys-manage-encryption-keys.md).  
+ Solo se inicializará un servidor de informes si el identificador de instalación y la clave pública coinciden. Si coinciden, se crea una clave simétrica que permite el cifrado reversible. Si no coinciden, el servidor de informes se deshabilita, en cuyo caso es posible que se le solicite al usuario que aplique una clave de copia de seguridad o elimine los datos cifrados si no se encuentra disponible una clave de seguridad o si ésta no es válida. Para obtener más información sobre las claves de cifrado que usa un servidor de informes, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md).  
   
 > [!NOTE]  
->  También puede utilizar el proveedor de Instrumental de administración de Windows (WMI) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para inicializar un servidor de informes mediante programación. Para obtener más información, consulte [acceso al proveedor de WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+>  También puede utilizar el proveedor de Instrumental de administración de Windows (WMI) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para inicializar un servidor de informes mediante programación. Para obtener más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>Cómo confirmar la inicialización de un servidor de informes  
  Para confirmar la inicialización del servidor de informes, haga ping al servicio web del servidor de informes al escribir **http://\<nombreDeServidor>/reportserver** en la ventana de comandos. Si se produce el error `RSReportServerNotActivated`, no se produce la inicialización.  
   
 ## <a name="see-also"></a>Vea también  
- [Store los datos del servidor de informes cifrados &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], about merge replication
@@ -14,12 +13,12 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c734af98b906be974a92e2c4286e7b91b6e1d25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0e7f4d0c1b8f6e4b1f4442c9b3ae6538b0eabef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148245"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752358"
 ---
 # <a name="merge-replication"></a>Replicación de mezcla
   La replicación de mezcla, como la replicación transaccional, normalmente se inicia con una instantánea de los objetos y datos de una base de datos de publicaciones. Los cambios de datos y las modificaciones de esquema posteriores que se lleven a cabo en el publicador y en los suscriptores se controlan mediante desencadenadores. El suscriptor se sincroniza con el publicador cuando están conectados a la red e intercambian todas las filas que han cambiado entre el publicador y el suscriptor desde la última vez que se produjo la sincronización.  
@@ -40,7 +39,7 @@ ms.locfileid: "48148245"
   
  El Agente de instantáneas y el Agente de mezcla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementan la replicación de mezcla. Si la publicación no se filtra o utiliza filtros estáticos, el Agente de instantáneas crea una sola instantánea. Si la publicación utiliza filtros con parámetros, el Agente de instantáneas crea una instantánea para cada partición de datos. El Agente de mezcla aplica las instantáneas iniciales a los suscriptores. También combina los cambios incrementales de los datos que tienen lugar en el publicador o en los suscriptores después de la creación de la instantánea inicial y detecta y resuelve los conflictos según las reglas que configure.  
   
- Para realizar un seguimiento de los cambios, la replicación de mezcla (y la replicación transaccional con suscripciones de actualización en cola) deben poder identificar de forma única cada fila de todas las tablas publicadas. Para conseguirlo, l.La replicación de mezcla agrega la columna `rowguid` a todas las tablas, a menos que la tabla ya tenga una columna del tipo de datos `uniqueidentifier` con la propiedad `ROWGUIDCOL` definida (en cuyo caso se usa dicha columna). Si se quita la tabla de la publicación, la `rowguid` columna se quita; si se utilizó una columna existente para el seguimiento, no se quita la columna. Un filtro no debe incluir la columna `rowguidcol` que usa la replicación para identificar filas. La función `newid()` se proporciona como valor predeterminado para la columna de `rowguid`; no obstante, los clientes pueden proporcionar un GUID para cada fila si es necesario. Sin embargo, no proporcione el valor 00000000-0000-0000-0000-000000000000.  
+ Para realizar un seguimiento de los cambios, la replicación de mezcla (y la replicación transaccional con suscripciones de actualización en cola) deben poder identificar de forma única cada fila de todas las tablas publicadas. Para conseguirlo, l.La replicación de mezcla agrega la columna `rowguid` a todas las tablas, a menos que la tabla ya tenga una columna del tipo de datos `uniqueidentifier` con la propiedad `ROWGUIDCOL` definida (en cuyo caso se usa dicha columna). Si la tabla se quita de la publicación, la columna `rowguid` se quita; si se ha usado una columna existente para realizar el seguimiento, la columna no se quita. Un filtro no debe incluir la columna `rowguidcol` que usa la replicación para identificar filas. La función `newid()` se proporciona como valor predeterminado para la columna de `rowguid`; no obstante, los clientes pueden proporcionar un GUID para cada fila si es necesario. Sin embargo, no proporcione el valor 00000000-0000-0000-0000-000000000000.  
   
  En el siguiente diagrama se muestran los componentes que se utilizan en la replicación de mezcla.  
   

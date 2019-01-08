@@ -16,24 +16,24 @@ ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 30fef45662f5cfa81e88ce740e556cdc0e66cf39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57231f0455a4dafbe7dccf5eac74325411cdfdc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192505"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375327"
 ---
 # <a name="start-report-builder-report-builder"></a>Iniciar el Generador de informes (Generador de informes)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] incluye independiente y [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versiones del generador de informes. La versión [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] se puede usar con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado en modo nativo o en modo integrado de SharePoint.  
   
 > [!NOTE]  
->  El Generador de informes no se puede instalar en los equipos basados en Itanium 64. Esto se aplica a la [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] y versiones independientes del generador de informes.  
+>  El Generador de informes no se puede instalar en los equipos basados en Itanium 64. Esto se aplica a las versiones independiente y [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] del Generador de informes.  
   
  Si el [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versión del generador de informes que se abre es una versión anterior del generador de informes, póngase en contacto con su administrador para que se puede actualizar el Administrador de informes y el sitio de SharePoint para usar el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versión del generador de informes  
   
- También puede utilizar la versión [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] del Generador de informes para crear los informes en un libro de [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] publicado en SharePoint. Para obtener más información acerca de cómo utilizar el generador de informes con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], consulte [crear un informe de Reporting Services con datos PowerPivot](http://go.microsoft.com/fwlink/?LinkId=185238) en technet.microsoft.com.  
+ También puede utilizar la versión [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] del Generador de informes para crear los informes en un libro de [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] publicado en SharePoint. Para obtener más información acerca de cómo utilizar el generador de informes con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], consulte [crear un informe de Reporting Services con datos PowerPivot](https://go.microsoft.com/fwlink/?LinkId=185238) en technet.microsoft.com.  
   
- Para iniciar el generador de informes independiente desde el **iniciar** menú en el equipo local o un administrador debe instalar el generador de informes directamente en el equipo antes de la herramienta está disponible para su uso. No se instala la versión independiente al instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; debe descargarla e instalarla por separado. Para descargar el generador de informes, consulte [generador de informes de Microsoft® SQL Server® 2012](http://go.microsoft.com/fwlink/?LinkId=401502).  
+ Para iniciar el generador de informes independiente desde el **iniciar** menú en el equipo local o un administrador debe instalar el generador de informes directamente en el equipo antes de la herramienta está disponible para su uso. No se instala la versión independiente al instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; debe descargarla e instalarla por separado. Para descargar el generador de informes, consulte [generador de informes de Microsoft® SQL Server® 2012](https://go.microsoft.com/fwlink/?LinkId=401502).  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>Para iniciar el Generador de informes ClickOnce desde el Administrador de informes  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48192505"
   
      El Generador de informes se abre y puede crear un informe o abrirlo en el servidor de informes.  
   
-     **Tenga en cuenta** si el **nuevo documento** menú no enumera el **del generador de informes**, **modelo del generador de informes**, y **deorigendedatosdeinforme** opciones, sus tipos de contenido deben agregarse a la biblioteca de SharePoint. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca &#40;Reporting Services en modo integrado de SharePoint&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [libros](http://go.microsoft.com/fwlink/?LinkId=154888) en MSDN.Microsoft.com.  
+     **Tenga en cuenta** si el **nuevo documento** menú no enumera el **del generador de informes**, **modelo del generador de informes**, y **deorigendedatosdeinforme** opciones, sus tipos de contenido deben agregarse a la biblioteca de SharePoint. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca &#40;Reporting Services en modo integrado de SharePoint&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [libros](https://go.microsoft.com/fwlink/?LinkId=154888) en MSDN.Microsoft.com.  
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>Iniciar el Generador de informes independiente desde el menú Inicio  
   

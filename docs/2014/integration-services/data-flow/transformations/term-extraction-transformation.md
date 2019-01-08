@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -26,12 +25,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d63836dbc6827eb47daaf4110bc678357012d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155135"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762447"
 ---
 # <a name="term-extraction-transformation"></a>Extracción de términos, transformación
   La transformación Extracción de términos extrae términos del texto en una columna de entrada de transformación y luego escribe los términos en una columna de salida de transformación. La transformación funciona solo con texto en inglés y utiliza únicamente su propio diccionario en inglés e información lingüística sobre el idioma inglés.  
@@ -54,7 +53,7 @@ ms.locfileid: "48155135"
 ## <a name="exclusion-terms"></a>Términos de exclusión  
  Opcionalmente, la transformación Extracción de términos puede hacer referencia a una columna en una tabla que contiene términos de exclusión, lo que significa términos que la transformación debe omitir cuando extrae términos de un conjunto de datos. Esto resulta útil cuando un conjunto de términos ya ha sido identificado como insignificante en una actividad o un segmento en concreto, normalmente porque el término aparece con tanta frecuencia que resulta una palabra vacía. Por ejemplo, al extraer términos de un conjunto de datos que contiene información de asistencia al cliente sobre una marca de automóviles concreta, el nombre de la marca se puede excluir porque se menciona con demasiada frecuencia como para que resulte significativo. Por tanto, los valores en la lista de exclusión deben ser personalizados para el conjunto de datos con el que está trabajando.  
   
- Cuando se agrega un término a la lista de exclusión, se excluyen también todos los términos (palabras o frases) que contienen el término. Por ejemplo, si la lista de exclusión incluye la palabra única *data*(datos), también se excluyen todos los términos que contienen esta palabra, como *data*(datos), *data mining*(minería de datos), *data integrity*(integridad de datos) y *data validation* (validación de datos). Si solamente desea excluir los términos compuestos que contienen la palabra *data*(datos), debe agregar explícitamente estos términos compuestos a la lista de exclusión. Por ejemplo, si desea extraer incidencias de *data*(datos), pero excluir *data validation*(validación de datos), debe agregar *data validation* a la lista de exclusión y asegurarse de que *data* (datos) se ha quitado de la lista de exclusión.  
+ Al agregar un término a la lista de exclusión, se excluyen también todos los términos (palabras o frases) que contienen el término. Por ejemplo, si la lista de exclusión incluye la palabra única *data*(datos), también se excluyen todos los términos que contienen esta palabra, como *data*(datos), *data mining*(minería de datos), *data integrity*(integridad de datos) y *data validation* (validación de datos). Si solamente desea excluir los términos compuestos que contienen la palabra *data*(datos), debe agregar explícitamente estos términos compuestos a la lista de exclusión. Por ejemplo, si desea extraer incidencias de *data*(datos), pero excluir *data validation*(validación de datos), debe agregar *data validation* a la lista de exclusión y asegurarse de que *data* (datos) se ha quitado de la lista de exclusión.  
   
  La tabla de referencia debe ser una tabla en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Access. La transformación Extracción de términos usa una conexión OLE DB independiente para conectarse a la tabla de referencia. Para más información, consulte [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
   
@@ -139,7 +138,7 @@ ms.locfileid: "48155135"
   
 -   Caracteres de salto de línea ASCII 0x0d (retorno de carro) y 0x0a (avance de línea). Para usar este carácter como límite de oración, debe haber dos o más caracteres de salto de línea en una fila.  
   
--   Guiones (–). Para usar este carácter como límite de oración, el carácter situado a la izquierda o a la derecha del guión no puede ser una letra.  
+-   Guiones (-). Para usar este carácter como límite de oración, el carácter situado a la izquierda o a la derecha del guión no puede ser una letra.  
   
 -   Carácter de subrayado (_). Para usar este carácter como límite de oración, el carácter situado a la izquierda o a la derecha del guión no puede ser una letra.  
   
@@ -147,7 +146,7 @@ ms.locfileid: "48155135"
   
 -   Combinaciones de números, signos de puntuación y caracteres alfabéticos. Por ejemplo, *A23B#99* devuelve el término *A23B*.  
   
--   Los caracteres, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ y ‘.  
+-   Los caracteres %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " y '.  
   
     > [!NOTE]  
     >  Las siglas que incluyen uno o más puntos (.) no se separan en varias oraciones.  
@@ -174,11 +173,11 @@ ms.locfileid: "48155135"
   
  Para obtener más información sobre las propiedades que se pueden configurar en el cuadro de diálogo **Editor de transformación Extracción de términos** , haga clic en uno de los siguientes temas:  
   
--   [Editor de transformación extracción de términos &#40;pestaña extracción de términos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Editor de transformación Extracción de términos &#40;pestaña Extracción de términos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Editor de transformación extracción de términos &#40;pestaña exclusión&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Editor de transformación Extracción de términos &#40;pestaña Exclusión&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Editor de transformación extracción de términos &#40;ficha Opciones avanzadas&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación Extracción de términos &#40;pestaña Avanzadas&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -186,6 +185,6 @@ ms.locfileid: "48155135"
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
- Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
+ Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
   
   

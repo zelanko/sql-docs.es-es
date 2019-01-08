@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEADD
@@ -15,12 +14,12 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8f49e6ebab115dd4d0363fd19ae477902389bd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c202f5d990d707de4aa4a3077d055e7cd72e7bac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140595"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781187"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (expresión de SSIS)
   Devuelve un nuevo valor de tipo DT_DBTIMESTAMP tras agregar un número que representa una fecha o un intervalo de tiempo a la parte de fecha especificada de una fecha determinada. La evaluación del parámetro number debe devolver un entero y la del parámetro date debe devolver una fecha válida.  
@@ -66,7 +65,7 @@ DATEADD(datepart, number, date)
   
  El argumento *datepart* debe entrecomillarse.  
   
- Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  DATEADD devuelve un resultado NULL si el valor del argumento es NULL.  
   

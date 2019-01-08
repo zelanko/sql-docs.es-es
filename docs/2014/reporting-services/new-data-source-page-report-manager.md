@@ -11,12 +11,12 @@ ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 74a48d913a5222ee566843eff85d71aaec194bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4bc08bcf6e56a5f839ebe17a8907bb7ce603d78
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073743"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349964"
 ---
 # <a name="new-data-source-page-report-manager"></a>Nuevo origen de datos (página del Administrador de informes)
   Use la página Nuevo origen de datos para crear un elemento de origen de datos compartido. Un origen de datos compartido define una conexión a un origen de datos externo. Con un origen de datos compartido, se puede crear y mantener la configuración de la conexión al origen de datos independientemente de los informes, modelos y suscripciones controladas por datos que usan el origen de datos.  
@@ -31,7 +31,7 @@ ms.locfileid: "48073743"
 2.  En la barra de herramientas, haga clic en **Nuevo origen de datos**. Debe tener los permisos de Administrador de contenido para crear un origen de datos compartido.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba un nombre para el origen de datos compartido, que se usa para identificar el elemento en la jerarquía de carpetas del servidor de informes.  
   
  **Descripción**  
@@ -44,14 +44,14 @@ ms.locfileid: "48073743"
  Seleccione esta opción para habilitar o deshabilitar el origen de datos compartido. Puede deshabilitar el origen de datos compartido para impedir que se procesen todos los informes y modelos que hagan referencia al elemento.  
   
  **Tipo de origen de datos**  
- Especifique la extensión de procesamiento de datos que se va a utilizar para procesar los datos del origen de datos. Servidor de informes incluye extensiones de procesamiento de datos para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC y OLE DB. Es posible que otros fabricantes ofrezcan extensiones de procesamiento de datos adicionales.  
+ Especifique la extensión de procesamiento de datos que se va a utilizar para procesar los datos del origen de datos. El servidor de informes incluye extensiones de procesamiento de datos para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC y OLE DB. Es posible que otros fabricantes ofrezcan extensiones de procesamiento de datos adicionales.  
   
- Para obtener más información sobre la compatibilidad de origen de datos remotos y ajenos a SQL, consulte [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (HYPERLINK "http://go.microsoft.com/fwlink/?linkid=232473" http://go.microsoft.com/fwlink/?linkid=232473) y [Data Sources Supported by Reporting Servicios &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Para obtener más información sobre la compatibilidad de origen de datos remotos y ajenos a SQL, consulte [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (HYPERLINK "<https://go.microsoft.com/fwlink/?linkid=232473>" <https://go.microsoft.com/fwlink/?linkid=232473>) y [Data Sources Supported by Reporting Servicios &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  **Cadena de conexión**  
  Especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. El tipo de conexión determina la sintaxis que debería usar. Por ejemplo, una cadena de conexión para la extensión de procesamiento de datos XML es una dirección URL a un documento XML. En la mayoría de los casos, la cadena de conexión típica especifica el servidor de bases de datos y un archivo de datos.  
   
- El ejemplo siguiente muestra una cadena de conexión utilizada para conectarse a la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] base de datos:  
+ En el ejemplo siguiente, se muestra la cadena de conexión que se usa para establecer conexión con la base de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] :  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -68,14 +68,14 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Credenciales suministradas por el usuario que ejecuta el informe (Conectar usando)**  
  Cada usuario debe escribir un nombre de usuario y una contraseña para obtener acceso al origen de datos. Puede definir el texto del mensaje que solicita las credenciales del usuario. La cadena de texto predeterminada es "Especifique un nombre de usuario y una contraseña para tener acceso al origen de datos".  
   
- Seleccione **Usar como credenciales de Windows para la conexión al origen de datos** si las credenciales que el usuario suministra son las credenciales de autenticación de Windows. No seleccione esta casilla si está usando la autenticación de base de datos (por ejemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación).  
+ Seleccione **Usar como credenciales de Windows para la conexión al origen de datos** si las credenciales que el usuario suministra son las credenciales de autenticación de Windows. No active esta casilla si va a usar la autenticación de la base de datos (por ejemplo, autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
  **Credenciales almacenadas de forma segura en el servidor de informes (Conectar usando)**  
  Almacene un nombre de usuario y una contraseña cifrados en la base de datos del servidor de informes. Elija esta opción para ejecutar un informe de manera desatendida; por ejemplo, informes iniciados por programaciones o eventos en lugar de una acción del usuario. Si va a usar la seguridad predeterminada, el nombre de usuario debe ser una cuenta de dominio de Windows. Especifique la cuenta con este formato: \<dominio >\\< nombre de usuario\>. La cuenta que especifica debe tener permisos de inicio de sesión local en el equipo que hospeda el origen de datos usado por el informe.  
   
- Active la casilla **Utilizar como credenciales de Windows para la conexión al origen de datos** si las credenciales son las credenciales de autenticación de Windows. No seleccione esta casilla si está usando la autenticación de base de datos (por ejemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación).  
+ Active la casilla **Utilizar como credenciales de Windows para la conexión al origen de datos** si las credenciales son las credenciales de autenticación de Windows. No active esta casilla si va a usar la autenticación de la base de datos (por ejemplo, autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
- Si está usando la autenticación de base de datos, seleccione **Suplantar al usuario autenticado después de realizar una conexión al origen de datos** para permitir la delegación de las credenciales de la base de datos, pero solo si un servidor de base de datos admite la suplantación. Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bases de datos, esta opción establece la función SETUSER.  
+ Si está usando la autenticación de base de datos, seleccione **Suplantar al usuario autenticado después de realizar una conexión al origen de datos** para permitir la delegación de las credenciales de la base de datos, pero solo si un servidor de base de datos admite la suplantación. En el caso de las bases de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , esta opción establece la función SETUSER.  
   
  **Seguridad integrada de Windows (Conectar usando)**  
  Use las credenciales de Windows del usuario actual para obtener acceso al origen de datos. Elija esta opción cuando las credenciales que se utilizan para obtener acceso a un origen de datos son las mismas que se utilizaron para iniciar sesión en el dominio de red. Esta opción funciona de manera óptima cuando la autenticación Kerberos está habilitada para el dominio o cuando el origen de datos se encuentra en el mismo equipo que el servidor de informes. Si la autenticación de Kerberos no está habilitada, se pueden pasar las credenciales de Windows a otro equipo. Si se requieren más conexiones de equipos, obtendrá un error en lugar de los datos esperados.  
@@ -93,10 +93,10 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  Haga clic para guardar los cambios.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [El contenido de página &#40;el Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Contenido &#40;página del Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
  [Especificación de información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

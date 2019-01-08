@@ -16,18 +16,18 @@ ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a988044b258eb114a0a58ed7902e58c41d340e3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ea756a960ee5030d974ef38a3ceeb1b72d1ad703
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144252"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351446"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Supervisar una instancia de Analysis Services
   Puede supervisar el rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o mediante el Monitor de Rendimiento, una aplicación que se denomina a veces **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. El Monitor de rendimiento notifica el estado del producto tal como se indiza a través de ciertos contadores, que se analizan en la siguiente sección.  
   
 > [!NOTE]  
->  Para obtener más información sobre la supervisión, vea [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guía de operaciones de SQL Server 2008 R2).  
+>  Para obtener más información sobre la supervisión, vea [SQL Server 2008 R2 Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(Guía de operaciones de SQL Server 2008 R2).  
   
 ## <a name="in-this-section"></a>En esta sección  
  Siga estos vínculos para obtener más información sobre la supervisión.  

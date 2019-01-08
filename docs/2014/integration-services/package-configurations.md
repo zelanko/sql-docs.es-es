@@ -22,15 +22,15 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 832cd038151c3816decbc17542c805ed7e161465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a44b923f98a5e54f8907953d38bf42c37ca0968b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200925"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369507"
 ---
 # <a name="package-configurations"></a>Configuraciones de paquetes
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona configuraciones de paquetes que puede usar para actualizar los valores de propiedades en tiempo de ejecución.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona configuraciones de paquetes que se pueden usar para actualizar los valores de las propiedades en tiempo de ejecución.  
   
 > [!NOTE]  
 >  Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación de proyectos le permite implementar proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "48200925"
   
 -   Aumentan la flexibilidad de los paquetes. Por ejemplo, una configuración puede actualizar el valor de una variable que se utiliza en una expresión de propiedad.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite varios métodos distintos para almacenar configuraciones de paquetes, como archivos XML, tablas de un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos y las variables de entorno y de paquete.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite varios métodos distintos para almacenar configuraciones de paquetes, como archivos XML, tablas de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y variables de entorno y de paquete.  
   
  Cada configuración es una pareja propiedad/valor. El archivo de configuración XML y los tipos de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden incluir varias configuraciones.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48200925"
 |Variable de entorno|Una variable de entorno contiene la configuración.|  
 |Entrada del Registro|Una entrada del Registro contiene la configuración.|  
 |Variable de paquete primario|Una variable del paquete contiene la configuración. Este tipo de configuración se utiliza habitualmente para actualizar las propiedades de los paquetes secundarios.|  
-|Tabla [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Una tabla de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiene la configuración. La tabla puede incluir varias configuraciones.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table|Una tabla de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiene la configuración. La tabla puede incluir varias configuraciones.|  
   
 ### <a name="xml-configuration-files"></a>Archivos de configuración XML  
  Si selecciona el tipo de configuración **Archivo de configuración XML** , puede crear un archivo de configuración, reutilizar un archivo existente y agregarle configuraciones nuevas, o bien reutilizar un archivo existente sobrescribiendo el contenido actual.  
@@ -122,7 +122,7 @@ ms.locfileid: "48200925"
 ```  
   
 ### <a name="registry-entry"></a>Entrada del Registro  
- Si desea usar una entrada del Registro para guardar la configuración, puede usar una clave existente o crear otra en HKEY_CURRENT_USER. La clave del registro que utilice debe tener un valor denominado `Value`. El valor puede ser un valor de tipo DWORD o una cadena.  
+ Si desea usar una entrada del Registro para guardar la configuración, puede usar una clave existente o crear otra en HKEY_CURRENT_USER. La clave del Registro que utilice debe tener un valor denominado `Value`. El valor puede ser un valor de tipo DWORD o una cadena.  
   
  Si selecciona el tipo de configuración **Entrada del Registro** , debe escribir el nombre de la clave del Registro en el cuadro de texto del Registro. El formato es \<clave del Registro>. Si quiere usar una clave del Registro que no está en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\...> para identificarla. Por ejemplo, para usar la clave MyPackage de SSISPackages, escriba `SSISPackages\MyPackage`.  
   
@@ -154,10 +154,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico con una [introducción a las configuraciones de paquetes de Integration Services](http://go.microsoft.com/fwlink/?LinkId=165643), en msdn.microsoft.com  
+-   Artículo técnico con una [introducción a las configuraciones de paquetes de Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643), en msdn.microsoft.com  
   
--   Entrada de blog, [Crear paquetes en código: configuraciones de paquetes](http://go.microsoft.com/fwlink/?LinkId=217663), en www.sqlis.com.  
+-   Entrada de blog, [crear paquetes de código: configuraciones de paquetes](https://go.microsoft.com/fwlink/?LinkId=217663), en www.sqlis.com.  
   
--   Entrada de blog, [API de ejemplo: agregar mediante programación un archivo de configuración a un paquete](http://go.microsoft.com/fwlink/?LinkId=217664), en blogs.msdn.com.  
+-   Entrada de blog, [ejemplo de API: agregar mediante programación un archivo de configuración a un paquete](https://go.microsoft.com/fwlink/?LinkId=217664), en blogs.msdn.com.  
   
   

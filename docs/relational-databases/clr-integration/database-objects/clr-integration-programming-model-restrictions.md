@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c39bb3499302ef1b60744a4332c665506c7fd21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538529"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restricciones del modelo de programación de la integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47809043"
  En tiempo de ejecución, el ensamblado de código se comprueba para las condiciones siguientes. Si se encuentra cualquiera de estas condiciones, el código administrado no se puede ejecutar y se iniciará una excepción.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Cargar un ensamblado, explícitamente llamando el **System.Reflection.Assembly.Load()** método desde una matriz de bytes o implícitamente mediante el uso de **Reflection.Emit** espacio de nombres, no se permite.  
+ Cargar un ensamblado, ya sea explícitamente mediante una llamada a la **System.Reflection.Assembly.Load()** método desde una matriz de bytes o implícitamente mediante el uso de **Reflection.Emit** espacio de nombres: no se permite.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Todos los **UNSAFE** se comprueban las condiciones.  

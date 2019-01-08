@@ -21,12 +21,12 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d94d3127a5957b1684133019cf4991cba7adbff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769454"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409805"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Si faltan datos en LSN que indican que hay una interrupción en la cadena de reg
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|La dirección URL del archivo de copia de seguridad.|  
-|backup_type|NVARCHAR(6)|‘DB’ de copia de seguridad de base de datos ‘LOG’ de copia de seguridad de registros|  
+|backup_type|NVARCHAR(6)|'DB' de la base de datos de copia de seguridad 'LOG' de la copia de seguridad del registro|  
 |expiration_date|DATETIME|Fecha en la que se espera que este archivo sea eliminado. Esto se determina según la capacidad de recuperar la base de datos a un momento dado durante el período de retención especificado.|  
 |database_guid|UNIQUEIDENTIFIER|Valor GUID para la base de datos especificada.  El GUID identifica de forma única una base de datos.|  
 |first_lsn|NUMERIC(25, 0)|Número de secuencia de registro de la primera entrada de registro del conjunto de copia de seguridad o de la más antigua. Puede ser NULL.|  
@@ -75,7 +75,7 @@ Si faltan datos en LSN que indican que hay una interrupción en la cadena de reg
  Requiere **seleccione** permisos en esta función.  
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se muestran todas las copias de seguridad disponibles a través de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la base de datos ‘MyDB’  
+ En el ejemplo siguiente se enumeran todas las copias de seguridad disponibles a través de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la base de datos 'MyDB'  
   
 ```  
 SELECT *   

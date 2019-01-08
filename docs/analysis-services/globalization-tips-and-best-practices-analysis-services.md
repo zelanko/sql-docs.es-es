@@ -1,5 +1,5 @@
 ---
-title: Sugerencias de globalización y procedimientos recomendados (Analysis Services) | Documentos de Microsoft
+title: Sugerencias de globalización y procedimientos recomendados (Analysis Services) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 12b771c40e6c17f1da41f1636b785b7dfc719941
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 57031c75e9433981b45419348ab2d5c0745edbfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019392"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202634"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Sugerencias de globalización y procedimientos recomendados (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34019392"
   
      En RPC y Singapur, Microsoft Support acostumbra a preferir el chino simplificado con pinyin como orden de clasificación. Las intercalaciones recomendadas son Chinese_PRC (para SQL Server 2000), Chinese_PRC_90 (para SQL Server 2005) o Chinese_Simplified_Pinyin_100 (para SQL Server 2008 y versiones posteriores).  
   
-     En Taiwán, es más habitual ver chino tradicional con el criterio de ordenación recomendado basado en el número de trazos: Chinese_Taiwan_Stroke (para SQL Server 2000), Chinese_Taiwan_Stroke_90 (para SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 y versiones posteriores).  
+     En Taiwán, es más común el uso del chino tradicional con el criterio de ordenación recomendado en función del número de trazos: Chinese_Taiwan_Stroke (para SQL Server 2000), Chinese_Taiwan_Stroke_90 (para SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 y versiones posteriores).  
   
      Otras regiones (por ejemplo, Hong Kong y Macao) también utilizan el chino tradicional. Para las intercalaciones en Hong Kong es habitual ver Chinese_Hong_Kong_Stroke_90 (en SQL Server 2005). En Macao, se utiliza con bastante frecuencia Chinese_Traditional_Stroke_Count_100 (en SQL Server 2008 y versiones posteriores).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34019392"
   
 |Alfabeto del idioma|Distinción de mayúsculas y minúsculas|  
 |---------------------|----------------------|  
-|**Alfabeto Latín básico**|Los identificadores de objetos expresados en el alfabeto latino (cualquiera de las 26 letras mayúsculas o minúsculas del inglés) se tratan sin distinguir mayúsculas de minúsculas, independientemente de la intercalación. Por ejemplo, los identificadores de objetos siguientes se consideran idénticos: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services trata los caracteres de la cadena como si todos estuvieran en mayúsculas y, luego, realiza una comparación de byte simple que es independiente del idioma.<br /><br /> Tenga en cuenta que solo los 26 caracteres se ven afectados. Si el idioma es Europeo occidental pero utiliza caracteres escandinavos, los caracteres adicionales no estarán en mayúsculas.|  
+|**Alfabeto Latín básico**|Los identificadores de objetos expresados en el alfabeto latino (cualquiera de las 26 letras mayúsculas o minúsculas del inglés) se tratan sin distinguir mayúsculas de minúsculas, independientemente de la intercalación. Por ejemplo, los identificadores de objeto siguientes se consideran idénticos: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services trata los caracteres de la cadena como si todos estuvieran en mayúsculas y, luego, realiza una comparación de byte simple que es independiente del idioma.<br /><br /> Tenga en cuenta que solo los 26 caracteres se ven afectados. Si el idioma es Europeo occidental pero utiliza caracteres escandinavos, los caracteres adicionales no estarán en mayúsculas.|  
 |**Cirílico, griego, copto y armenio**|Los identificadores de objetos en script bicameral no latino, como el cirílico, siempre distinguen entre mayúsculas y minúsculas. Por ejemplo, Измерение y измерение se consideran dos valores distintos, aunque la única diferencia sea el uso de mayúsculas y minúsculas en la primera letra.|  
   
  **Implicaciones de la distinción entre mayúsculas y minúsculas para los identificadores de objetos**  
@@ -122,7 +122,7 @@ ms.locfileid: "34019392"
   
 3.  **Usar formatos de fecha ISO para información de fecha y hora universal**  
   
-     Un [experto en Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) tiene esta recomendación: “Siempre uso el formato de fecha ISO, aaaa-mm-dd, para las cadenas de fecha que paso a las consultas en SQL o MDX, porque no es ambiguo y funciona sea cual sea la configuración regional del servidor o del cliente. Sé que el servidor debería recurrir a su configuración regional al analizar formatos de fecha ambiguos, pero también creo que si hay una opción que no da pie a varias interpretaciones, lo mejor es elegir esa opción en cualquier caso”.  
+     Una [experto en Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) tiene esta recomendación: "Siempre uso el formato de fecha ISO aaaa-mm-dd para todas las cadenas de fechas que paso a consultas en SQL o MDX porque no es ambiguo y funciona independientemente del cliente o de la configuración regional del servidor. Sé que el servidor debería recurrir a su configuración regional al analizar formatos de fecha ambiguos, pero también creo que si hay una opción que no da pie a varias interpretaciones, lo mejor es elegir esa opción en cualquier caso”.  
   
 4.  **Use la función Format para aplicar un formato específico, con independencia de la configuración regional de idioma.**  
   

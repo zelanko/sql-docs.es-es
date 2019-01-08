@@ -13,12 +13,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 887f881ad6a4cefec80620ebedb2ac210692ce5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdb70467f5844c2d2dba623c340209f495002cdd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090105"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357263"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Editor de destinos de ADO NET (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destinos de ADO NET** para seleccionar la conexión [!INCLUDE[vstecado](../includes/vstecado-md.md)] del destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -57,21 +57,21 @@ ms.locfileid: "48090105"
   
  Solamente los proveedores ADO.NET que devuelven un objeto <xref:System.Data.SqlClient.SqlConnection> admiten el uso de la interfaz <xref:System.Data.SqlClient.SqlBulkCopy> . El Proveedor de datos .NET para SQL Server (SqlClient) devuelve un objeto <xref:System.Data.SqlClient.SqlConnection> y, por otra parte, un proveedor personalizado puede devolver un objeto <xref:System.Data.SqlClient.SqlConnection> .  
   
- Puede usar el proveedor de datos .NET para SQL Server (SqlClient) para conectarse a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
+ Puede usar el proveedor de datos .NET para SQL Server (SqlClient) para conectarse a [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
  Si selecciona **Use bulk insert when available**(Usar la inserción masiva cuando esté disponible) y establece la opción **Error** en **Redirect the row**(Redirigir la fila), el lote de datos que el destino redirige a la salida de error puede incluir filas correctas. Para obtener más información sobre cómo administrar errores en operaciones masivas, vea [Control de errores en los datos](data-flow/error-handling-in-data.md). Para obtener más información sobre la opción **Error** , vea [ADO NET Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Si una tabla de origen de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o de Sybase incluye una columna de identidad, es necesario que use las tareas Ejecutar SQL para ejecutar una instrucción SET IDENTITY_INSERT antes y después del destino de ADO NET. La propiedad de la columna de identidad especifica un valor incremental de la columna. La instrucción SET IDENTITY_INSERT permite insertar valores explícitos en la columna de identidad. Para ejecutar las instrucciones CREATE TABLE y SET IDENTITY en la misma conexión de base de datos, establezca el `RetainSameConnection` propiedad de la [!INCLUDE[vstecado](../includes/vstecado-md.md)] Administrador de conexiones a `True`. Asimismo, use el mismo administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] para las tareas Ejecutar SQL y el destino de ADO NET.  
+>  Si una tabla de origen de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o de Sybase incluye una columna de identidad, es necesario que use las tareas Ejecutar SQL para ejecutar una instrucción SET IDENTITY_INSERT antes y después del destino de ADO NET. La propiedad de la columna de identidad especifica un valor incremental de la columna. La instrucción SET IDENTITY_INSERT permite insertar valores explícitos en la columna de identidad. Para ejecutar las instrucciones CREATE TABLE y SET IDENTITY en la misma conexión de bases de datos, establezca en `RetainSameConnection` la propiedad `True` del administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)]. Asimismo, use el mismo administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] para las tareas Ejecutar SQL y el destino de ADO NET.  
 >   
 >  Para obtener más información, vea [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) y [IDENTITY &#40;propiedad de Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artículo técnico, sobre cómo [cargar datos en Windows Azure SQL Database de la forma más rápida](http://go.microsoft.com/fwlink/?LinkId=244333), en sqlcat.com  
+ Artículo técnico, sobre cómo [cargar datos en Windows Azure SQL Database de la forma más rápida](https://go.microsoft.com/fwlink/?LinkId=244333), en sqlcat.com  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de destinos de ADO NET &#40;página asignaciones&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
- [Editor de destinos de ADO NET &#40;página de salida de Error&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
+ [Editor de destinos de ADO NET &#40;página Asignaciones&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
+ [Editor de destinos de ADO NET &#40;página Salida de error&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md)   
  [Tarea Ejecutar SQL](control-flow/execute-sql-task.md)  
   

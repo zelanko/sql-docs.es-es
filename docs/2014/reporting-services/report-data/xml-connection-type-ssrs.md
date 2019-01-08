@@ -11,12 +11,12 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e47b2cc13c05438ce38d1b6f63bcbcb357c60d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211955"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363377"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexión XML (SSRS)
   Para incluir los datos de un origen de datos XML en el informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo XML. Este tipo de origen de datos integrado se basa en la extensión de datos XML. Utilice este tipo de origen de datos para conectarse y recuperar datos de documentos XML, servicios web o XML incrustado en la consulta.  
@@ -47,7 +47,7 @@ ms.locfileid: "48211955"
   
 -   Usuario actual de Windows (lo que se conoce también como seguridad integrada).  
   
--   No se necesitan credenciales. Si no especifica credenciales, se utilizará el acceso anónimo. Asegúrese de haber definido la cuenta de ejecución desatendida para que el servidor de informes se conecte a un origen de datos externo. La extensión de procesamiento de datos XML no pasa credenciales a la dirección URL de destino ni al servicio web; la conexión no se realizará correctamente a menos que haya definido la cuenta de ejecución desatendida. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en msdn.microsoft.com.  
+-   No se necesitan credenciales. Si no especifica credenciales, se utilizará el acceso anónimo. Asegúrese de haber definido la cuenta de ejecución desatendida para que el servidor de informes se conecte a un origen de datos externo. La extensión de procesamiento de datos XML no pasa credenciales a la dirección URL de destino ni al servicio web; la conexión no se realizará correctamente a menos que haya definido la cuenta de ejecución desatendida. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en msdn.microsoft.com.  
   
  Las credenciales almacenadas o solicitadas no están admitidas. Recuerde que si deshabilita la seguridad integrada de Windows, no podrá usarla para recuperar datos. Si especifica credenciales almacenadas o solicitadas, se producirá un error en tiempo de ejecución.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "48211955"
   
  A continuación se muestran los posibles valores de una consulta de conjunto de datos para un origen de datos de tipo XML.  
   
--   *Vacía*: usar una consulta vacía para crear un conjunto de resultados predeterminado. Para crear la consulta predeterminada se lee el origen de datos y se recorre la jerarquía de nodos XML hasta la primera colección de nodos hoja. El conjunto de resultados incluye todos los nodos con valores de texto y todos los atributos de nodo encontrados en el recorrido. Las columnas del conjunto de resultados hacen referencia a los campos del conjunto de datos.  
+-   *Vacía*: Use una consulta vacía para crear un conjunto de resultados predeterminado. Para crear la consulta predeterminada se lee el origen de datos y se recorre la jerarquía de nodos XML hasta la primera colección de nodos hoja. El conjunto de resultados incluye todos los nodos con valores de texto y todos los atributos de nodo encontrados en el recorrido. Las columnas del conjunto de resultados hacen referencia a los campos del conjunto de datos.  
   
--   Una ruta de acceso de elemento: especifica la secuencia de nodos que se va a utilizar al recuperar datos XML desde el origen de datos.  
+-   Una ruta de acceso de elemento: Especifica la secuencia de nodos que se debe utilizar al recuperar datos XML del origen de datos.  
   
--   Un elemento XML Query: especificación de consulta XML con los siguientes elementos opcionales:  
+-   Un elemento XML Query: Una especificación de consulta XML con los siguientes elementos opcionales:  
   
     -   **Para un servicio Web:**  
   
@@ -108,9 +108,9 @@ ms.locfileid: "48211955"
   
          `<ElementPath IgnoreNamespaces="true">`  *ruta de acceso de elemento*  `</ElementPath>`  
   
- Para obtener más información sobre la sintaxis de consulta, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](report-data-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en msdn.microsoft.com.  
+ Para obtener más información sobre la sintaxis de consulta, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](report-data-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en msdn.microsoft.com.  
   
- Para obtener ejemplos, vea la página en que se describe cómo [usar orígenes de datos XML y de servicio web en Reporting Services](http://go.microsoft.com/fwlink/?LinkId=81654).  
+ Para obtener ejemplos, vea [Reporting Services: Uso de XML y orígenes de datos del servicio Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisitos para recuperar datos del servicio web XML  
  La extensión de procesamiento de datos XML no detecta el esquema de forma automática. Por tanto, debe tener alguna manera de determinar los métodos SOAP que recuperarán los datos que desea. También debe comprender el esquema de direcciones o el espacio de nombres que utiliza el servicio web para sus datos.  
@@ -124,7 +124,7 @@ ms.locfileid: "48211955"
   
  Puede proporcionar una ruta de acceso de elemento utilizando una sintaxis XML similar a XQuery.  
   
- Para obtener más información, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en msdn.microsoft.com.  
+ Para obtener más información, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en msdn.microsoft.com.  
   
 ##  <a name="Parameters"></a> Parámetros  
  La consulta no se analiza para identificar los parámetros.  
@@ -160,7 +160,7 @@ ms.locfileid: "48211955"
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
   
- [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
   
 ## <a name="see-also"></a>Vea también  

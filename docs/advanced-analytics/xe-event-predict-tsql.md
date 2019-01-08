@@ -1,5 +1,5 @@
 ---
-title: Eventos extendidos para supervisar las instrucciones de PREDICCIÓN | Documentos de Microsoft
+title: 'Eventos extendidos para la supervisión de instrucciones PREDICT: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,22 +7,22 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9f56544416d88cc56fed13833667bf689f395693
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e680da7485069e6838edff260a505461a22c472b
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201877"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432248"
 ---
-# <a name="extended-events-for-monitoring-predict-statements"></a>Eventos extendidos para la supervisión de las instrucciones de PREDICCIÓN
+# <a name="extended-events-for-monitoring-predict-statements"></a>Eventos extendidos para la supervisión de instrucciones PREDICT
 
-Este artículo describen los eventos extendidos proporcionados en SQL Server que puede utilizar para supervisar y analizar los trabajos que utilizan [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) para realizar la puntuación en tiempo real en SQL Server.
+En este artículo se describe los eventos extendidos proporcionados en SQL Server que puede usar para supervisar y analizar los trabajos que usan [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) para realizar la puntuación en tiempo real en SQL Server.
 
-La puntuación en tiempo real genera las puntuaciones de un modelo que se ha almacenado en SQL Server de aprendizaje automático. La función de PREDICCIÓN no requiere un tiempo de ejecución externo, como R o Python, solo un modelo que se ha creado mediante un formato binario específico. Para obtener más información, consulte [en tiempo real de puntuación](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
+Puntuación en tiempo real genera las puntuaciones de un modelo de machine learning que se ha almacenado en SQL Server. La función PREDICT no requiere un tiempo de ejecución externo como R o Python, solo un modelo que se ha creado utilizando un formato binario concreto. Para obtener más información, consulte [de puntuación en tiempo real](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para obtener información general sobre eventos extendidos (a veces denominados XEvents) y cómo realizar el seguimiento de eventos en una sesión, vea estos artículos:
+Para obtener información general sobre eventos extendidos (a veces denominados XEvents) y cómo realizar el seguimiento de eventos en una sesión, consulte estos artículos:
 
 + [Arquitectura y conceptos de eventos extendidos](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
 + [Configurar la captura de eventos en SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
@@ -30,19 +30,19 @@ Para obtener información general sobre eventos extendidos (a veces denominados 
 
 ## <a name="table-of-extended-events"></a>Tabla de eventos extendidos
 
-Eventos extendidos siguientes están disponibles en todas las versiones de SQL Server que admiten la [T-SQL PREDECIR](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) instrucción, incluido SQL Server en Linux y base de datos de SQL Azure. 
+Los siguientes eventos extendidos están disponibles en todas las versiones de SQL Server que admiten la [T-SQL PREDECIR](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) instrucción, incluido SQL Server en Linux y Azure SQL Database. 
 
 La instrucción T-SQL PREDECIR se introdujo en SQL Server 2017. 
 
-|name |object_type|description| 
+|NAME |object_type|description| 
 |----|----|----|
 |predict_function_completed |event  |Desglose de tiempo de ejecución de Builtin|
-|predict_model_cache_hit |event|Se produce cuando un modelo se recupera de la caché de modelos de la función de PREDICCIÓN. Use este evento junto con otros eventos predict_model_cache_ * para solucionar problemas causados por la caché de modelos de la función de PREDICCIÓN.|
-|predict_model_cache_insert |event  |   Se produce cuando un modelo de inserción en la caché de modelos de la función de PREDICCIÓN. Use este evento junto con otros eventos predict_model_cache_ * para solucionar problemas causados por la caché de modelos de la función de PREDICCIÓN.    |
-|predict_model_cache_miss   |event|Se produce cuando un modelo no se encuentra en la caché de modelos de la función de PREDICCIÓN. Frecuentes repeticiones de este evento pudieron indicar que SQL Server necesita más memoria. Use este evento junto con otros eventos predict_model_cache_ * para solucionar problemas causados por la caché de modelos de la función de PREDICCIÓN.|
-|predict_model_cache_remove |event| Se produce cuando se quita un modelo de memoria caché de modelos para la función de PREDICCIÓN. Use este evento junto con otros eventos predict_model_cache_ * para solucionar problemas causados por la caché de modelos de la función de PREDICCIÓN.|
+|predict_model_cache_hit |event|Se produce cuando un modelo se recupera de la caché del modelo de función PREDICT. Use este evento junto con otros eventos predict_model_cache_ * para solucionar problemas causados por la caché del modelo de función PREDICT.|
+|predict_model_cache_insert |event  |   Se produce cuando un modelo se inserta en la caché del modelo de función PREDICT. Use este evento junto con otros eventos predict_model_cache_ * para solucionar problemas causados por la caché del modelo de función PREDICT.    |
+|predict_model_cache_miss   |event|Se produce cuando un modelo no se encuentra en la caché del modelo de función PREDICT. La aparición frecuente de este evento podría indicar que SQL Server necesita más memoria. Use este evento junto con otros eventos predict_model_cache_ * para solucionar problemas causados por la caché del modelo de función PREDICT.|
+|predict_model_cache_remove |event| Se produce cuando se quita un modelo de memoria caché de modelos para la función PREDICT. Use este evento junto con otros eventos predict_model_cache_ * para solucionar problemas causados por la caché del modelo de función PREDICT.|
 
-## <a name="query-for-related-events"></a>Permite consultar los eventos relacionados
+## <a name="query-for-related-events"></a>Consulta los eventos relacionados
 
 Para ver una lista de todas las columnas devueltas para estos eventos, ejecute la siguiente consulta en SQL Server Management Studio:
 
@@ -52,23 +52,23 @@ SELECT * FROM sys.dm_xe_object_columns WHERE object_name LIKE `predict%'
 
 ## <a name="examples"></a>Ejemplos
 
-Para capturar información sobre el rendimiento de una sesión de puntuación con PREDICCIÓN:
+Para capturar información sobre el rendimiento de una sesión de puntuación mediante PREDICT:
 
-1. Crear un nuevo extendidos sesión de eventos, mediante Management Studio o en otro admite [herramienta](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
+1. Cree un nuevo extendidos de la sesión de eventos, mediante Management Studio u otra admite [herramienta](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
 2. Agregue los eventos `predict_function_completed` y `predict_model_cache_hit` a la sesión.
 3. Inicie la sesión de eventos extendidos.
 4. Ejecute la consulta que usa la PREDICCIÓN.
 
 En los resultados, revise estas columnas:
 
-+ El valor de `predict_function_completed` muestra cuánto tiempo la consulta invertida en cargar el modelo y la puntuación.
-+ El valor booleano de `predict_model_cache_hit` indica si la consulta utiliza un modelo en memoria caché o no. 
++ El valor de `predict_function_completed` muestra cuánto tiempo la consulta dedicada a cargar el modelo y la puntuación.
++ El valor booleano para `predict_model_cache_hit` indica si la consulta utiliza un modelo en caché o no. 
 
-### <a name="native-scoring-model-cache"></a>Caché de modelos de puntuación nativo
+### <a name="native-scoring-model-cache"></a>Caché del modelo de puntuación nativa
 
-Además de los eventos específicos de PREDICCIÓN, puede usar las consultas siguientes para obtener más información sobre el modelo en memoria caché y el uso de caché:
+Además de los eventos específicos de PREDICCIÓN, puede usar las siguientes consultas para obtener más información sobre el modelo en caché y el uso de memoria caché:
 
-Ver la caché de modelos de puntuación nativo:
+Vista de la caché del modelo de puntuación nativa:
 
 ```sql
 SELECT *
@@ -76,7 +76,7 @@ FROM sys.dm_os_memory_clerks
 WHERE type = 'CACHESTORE_NATIVESCORING';
 ```
 
-Ver los objetos en la memoria caché de modelos:
+Ver los objetos de la caché del modelo:
 
 ```sql
 SELECT *

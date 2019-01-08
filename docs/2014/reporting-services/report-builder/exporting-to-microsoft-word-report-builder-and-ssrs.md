@@ -11,24 +11,24 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0e040fe0b31f9cead8843987199164e45767db82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc149e8d8af6b2b5f08d849f3fda261849ff9d8f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224705"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361097"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
   La extensión de representación de Word representa informes en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. El formato es Office Open XML.  
   
- El representador de Word es compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, así como con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 con el Paquete de compatibilidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel y PowerPoint instalado. Para obtener más información sobre el Paquete de compatibilidad, vea [Paquete de compatibilidad de Microsoft Office para formatos de archivo de Word, Excel y PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
+ El representador de Word es compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, así como con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 con el Paquete de compatibilidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel y PowerPoint instalado. Para obtener más información sobre el Paquete de compatibilidad, vea [Paquete de compatibilidad de Microsoft Office para formatos de archivo de Word, Excel y PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
   
  El tipo de contenido de los archivos generados por este representador es **application/vnd.openxmlformats-officedocument.wordprocessingml.document** y la extensión de los archivos es .docx.  
   
  El nombre de la versión anterior de la extensión de representación de Word, solo compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, cambia a Word 2003. Solo la extensión de representación de Word está disponible de forma predeterminada. Debe actualizar los archivos de configuración de Reporting Services para que la extensión de representación de Word 2003 esté disponible. El tipo de contenido de los archivos generados por el representador de Word 2003 es **application/vnd.ms-word** y la extensión del nombre de los archivos es .doc.  
   
 > [!IMPORTANT]  
->  El [!INCLUDE[ofprword](../../includes/ofprword-md.md)] extensión de representación 2003 está en desuso. Para obtener más información, consulte [características desusadas de SQL Server Reporting Services en SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  La extensión de representación de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 ha quedado obsoleta. Para obtener más información, consulte [características desusadas de SQL Server Reporting Services en SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Después de exportar el informe a un documento de Word, puede modificar su contenido y diseñar informes con estilo de documento, como etiquetas postales, pedidos de compra o circulares.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48224705"
   
 |Propiedades del elemento de informe|Descripción|  
 |-------------------------------|-----------------|  
-|Título del informe|Title|  
+|Título del informe|Título|  
 |Autor del informe|Autor|  
 |Descripción del informe|Comentarios|  
   
@@ -77,9 +77,9 @@ ms.locfileid: "48224705"
   
  Esto ocurre porque el representador de Word analiza el informe para ver si hay campos relacionados con la paginación, como **PageNumber** y **TotalPages** , y solo administra referencias simples, no llamadas a una función. En este caso, la expresión llama a la función **ToString** . Las dos expresiones siguientes son equivalentes y ambas se representan correctamente al obtener una vista previa del informe en el Generador de informes o en el Diseñador de informes, o al representar el informe publicado en el Administrador de informes o en una biblioteca de SharePoint. Sin embargo, el representador de Word solo analiza correctamente la segunda expresión y representa los números de página correctos.  
   
--   **Expresión compleja:**  la expresión es `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Expresión compleja:**  La expresión es `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expresión con ejecuciones de texto:** Texto, **Average Sales**, y expresión,  `=Avg(Fields!YTDPurchase.Value, "Sales)`, y texto, **Page Number**, y expresión `=Globals!PageNumber`  
+-   **Expresión con ejecuciones de texto:** Texto, **promedio de ventas**y expresión, `=Avg(Fields!YTDPurchase.Value, "Sales)`y texto, **número de página**y expresión `=Globals!PageNumber`  
   
  Para evitar este problema, use varias ejecuciones de texto en vez de una expresión compleja cuando use expresiones en encabezados y pies de página. Las dos siguientes expresiones son equivalentes. La primera es una expresión compleja y la segunda usa ejecuciones de texto. El representador de Word solo analiza correctamente la segunda expresión.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "48224705"
 -   Cuando se exporta texto a Word, el texto con decoración en determinadas fuentes puede generar glifos inesperados en el informe representado o la pérdida de glifos en el mismo.  
   
 ##  <a name="WordBenefits"></a> Ventajas de usar el representador de Word  
- Además de las características que son nuevas en [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 estén disponibles para exportar informes, los archivos *.docx de los informes exportados suelen ser menores. Los informes exportados mediante el representador de Word suelen ser mucho menores que los mismos informes exportados mediante el representador de Word 2003.  
+ Además de hacer que las características nuevas de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 estén disponibles en los informes exportados, los archivos *.docx de los informes exportados suelen ser menores. Los informes exportados mediante el representador de Word suelen ser mucho menores que los mismos informes exportados mediante el representador de Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilidad con versiones anteriores de los informes exportados  
  Puede seleccionar un modo de compatibilidad de Word y establecer opciones de compatibilidad. El representador de Word crea documentos con el modo de compatibilidad activado. Al volver a guardar los documentos con el modo de compatibilidad desactivado, el diseño del documento puede verse afectado.  
@@ -152,11 +152,11 @@ ms.locfileid: "48224705"
  Si desactiva el modo de compatibilidad y después vuelve a guardar un informe, el diseño del informe puede cambiar de maneras inesperadas.  
   
 ##  <a name="AvailabilityWord"></a> Disponibilidad del representador de Word 2003  
- En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el representador de Word predeterminado es la versión que se representa en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Es la opción **Word** que aparece en los menús **Exportar** del Administrador de informes y SharePoint. La versión anterior, compatible solo con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, se denomina a partir de ahora Word 2003 y aparece en los menús con ese nombre. La opción de menú **Word 2003** no es visible de forma predeterminada, pero el administrador puede hacer que lo esté actualizando el archivo de configuración RSReportServer. Si desea exportar informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con el representador de Word 2003, debe actualizar el archivo de configuración RSReportDesigner. Sin embargo, aunque se haga que el representador de Word 2003 esté visible, no está disponible en todos los escenarios. El archivo de configuración RSReportServer reside en el servidor de informes, por lo que las herramientas o productos desde los que exporte informes se deben conectar con un servidor de informes para leer el archivo de configuración. Si usa herramientas o productos en modo sin conexión o local, hacer que el representador de Word 2003 esté visible no tiene ningún efecto. La opción de menú **Word 2003** sigue sin estar disponible. Si hace que el representador de Word 2003 esté visible en el archivo de configuración RSReportDesigner, la opción de menú **Word 2003** siempre está disponible en la vista previa de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+ En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el representador de Word predeterminado es la versión que representa en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Es la opción **Word** que aparece en los menús **Exportar** del Administrador de informes y SharePoint. La versión anterior, compatible solo con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, se denomina a partir de ahora Word 2003 y aparece en los menús con ese nombre. La opción de menú **Word 2003** no es visible de forma predeterminada, pero el administrador puede hacer que lo esté actualizando el archivo de configuración RSReportServer. Si desea exportar informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con el representador de Word 2003, debe actualizar el archivo de configuración RSReportDesigner. Sin embargo, aunque se haga que el representador de Word 2003 esté visible, no está disponible en todos los escenarios. El archivo de configuración RSReportServer reside en el servidor de informes, por lo que las herramientas o productos desde los que exporte informes se deben conectar con un servidor de informes para leer el archivo de configuración. Si usa herramientas o productos en modo sin conexión o local, hacer que el representador de Word 2003 esté visible no tiene ningún efecto. La opción de menú **Word 2003** sigue sin estar disponible. Si hace que el representador de Word 2003 esté visible en el archivo de configuración RSReportDesigner, la opción de menú **Word 2003** siempre está disponible en la vista previa de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  La opción de menú **Word 2003** nunca está visible en los escenarios siguientes:  
   
--   El Generador de informes está en modo sin conexión y se obtiene la vista previa de un informe en el Generador de informes. Esto es así en el [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] y versiones independientes del generador de informes.  
+-   El Generador de informes está en modo sin conexión y se obtiene la vista previa de un informe en el Generador de informes. Esto es así en las versiones independiente y [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] del Generador de informes.  
   
 -   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48224705"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y obtiene una vista previa del informe.  
   
--   Generador de informes está conectado a un servidor de informes. Esto puede ser un [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] o una versión independiente del generador de informes.  
+-   Generador de informes está conectado a un servidor de informes. Puede tratarse de una versión de [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] o independiente del Generador de informes.  
   
 -   El elemento web Visor de informes en modo remoto.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "48224705"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- La extensión WORDOPENXML define el representador de Word para [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. La extensión WORD define la versión de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indica que el representador de Word 2003 está oculto. Para obtener más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ La extensión WORDOPENXML define el representador de Word para [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. La extensión WORD define la versión de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = "false"` indica que el representador de Word 2003 está oculto. Para obtener más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ##  <a name="Differences"></a> Diferencias entre los representadores de 2003 de Word y Word  
  Los informes representados mediante el representador de Word o Word 2003 no se suelen distinguir visualmente. Sin embargo, puede observar pequeñas diferencias entre los dos formatos de Word o Word 2003.  
@@ -189,7 +189,7 @@ ms.locfileid: "48224705"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

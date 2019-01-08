@@ -16,12 +16,12 @@ ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b60e17ca95bff865d1a0786aa7da5ee398adcb7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170297"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518113"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Pronóstico (Herramientas de análisis de tabla para Excel)
   ![Cinta de opciones de herramientas de botón de previsión de análisis de tabla](media/tat-forecast.gif "botón pronóstico en la cinta de opciones de herramientas de análisis de tabla")  
@@ -40,7 +40,7 @@ ms.locfileid: "48170297"
   
 2.  Haga clic en **previsión** en el **analizar** ficha.  
   
-3.  Especifique las columnas que desea pronosticar. La herramienta selecciona automáticamente las columnas que tienen un tipo de datos predecible, es decir, datos numéricos continuos. Es posible que la herramienta no seleccione algunas columnas que tienen datos numéricos continuos si esas columnas contienen muchos valores NULL o valores cero, ya que los datos ausentes pueden afectar a los resultados. Si esto ocurre, puede corregir los datos usando el [cambiar etiquetas &#40;complementos de minería de datos de SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) herramienta.  
+3.  Especifique las columnas que desea pronosticar. La herramienta selecciona automáticamente las columnas de los datos que tienen un tipo de datos predecible: es decir, datos numéricos continuos. Es posible que la herramienta no seleccione algunas columnas que tienen datos numéricos continuos si esas columnas contienen muchos valores NULL o valores cero, ya que los datos ausentes pueden afectar a los resultados. Si esto ocurre, puede corregir los datos usando el [cambiar etiquetas &#40;complementos de minería de datos de SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) herramienta.  
   
 4.  Especifique la columna que contiene la fecha, hora u otro identificador de serie. Si selecciona la opción  **\<sin marca de tiempo >** la herramienta creará una serie basada en la secuencia de filas en el origen de datos.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48170297"
 ### <a name="requirements"></a>Requisitos  
  Las columnas que se predicen deben contener datos numéricos continuos, como valores de moneda u otros números.  
   
- Si es posible, los datos también deben incluir una columna que contenga una serie de fechas o de horas. Se puede usar una serie numérica (1,2,3…) en lugar de datos de fecha y hora. No obstante, los valores de la columna de serie deben ser únicos. Se produce un error si el **previsión** herramienta descubre valores duplicados en la columna de serie.  
+ Si es posible, los datos también deben incluir una columna que contenga una serie de fechas o de horas. Puede usar una serie numérica (1,2,3...) en lugar de los datos de fecha y hora. No obstante, los valores de la columna de serie deben ser únicos. Se produce un error si el **previsión** herramienta descubre valores duplicados en la columna de serie.  
   
  No se puede predecir una fecha mediante el uso de la **previsión** herramienta. Aunque es posible que no se produzca ningún error, este algoritmo no está diseñado para usar fechas como valores de predicción.  
   

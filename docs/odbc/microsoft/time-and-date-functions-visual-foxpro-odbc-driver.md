@@ -18,12 +18,12 @@ ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644333"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538753"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Hora y funciones de fecha (el controlador ODBC de Visual FoxPro)
 La tabla siguiente muestran funciones de fecha y hora ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis ODBC, se muestra el equivalente de Visual FoxPro.  
@@ -57,8 +57,8 @@ La tabla siguiente muestran funciones de fecha y hora ODBC compatibles con el co
  El controlador admite también la secuencia de escape ODBC para los datos de fecha y hora. La sintaxis de la cláusula de escape es como sigue:  
   
 ```  
---(*vendor(Microsoft),product(ODBC) d 'value' *)—  
---(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
+--(*vendor(Microsoft),product(ODBC) d 'value' *)-  
+--(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
  En esta sintaxis, **d.** indica que *valor* es una fecha en la *aaaa-mm-dd* formato y **ts** indica que *valor*  es una marca de tiempo en el *aaaa-mm-dd hh: mm:*[.*f...*] formato. La sintaxis abreviada para datos de fecha y la marca de tiempo es como sigue:  

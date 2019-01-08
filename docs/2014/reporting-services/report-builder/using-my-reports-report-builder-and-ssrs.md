@@ -11,12 +11,12 @@ ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9ab1c8c07ed176632f98ed19251d616633480436
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ca96d67a219ff106d2eb3388c129f9b8af306f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179035"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356652"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Usar Mis informes (Generador de informes y SSRS)
   En un servidor de informes configurado en modo nativo, la carpeta Mis informes es un área de trabajo personal que puede usar para trabajar con sus informes y para almacenarlos. Otras carpetas del servidor de informes son públicas y suelen requerir que los usuarios dispongan de permisos avanzados para agregar o modificar su contenido. En cambio, la carpeta Mis informes es un área de trabajo que administra el propio usuario. Así, es posible agregar o quitar informes y carpetas, o guardar informes vinculados, con una configuración personalizada.  
@@ -25,7 +25,7 @@ ms.locfileid: "48179035"
   
  La función Mis informes es opcional y los administradores del servidor de informes pueden deshabilitarla. Cuando está habilitada, la carpeta Mis informes aparece en la carpeta Inicio, a la que se puede tener acceso mediante el Administrador de informes o un explorador web. Para más información, vea [Buscar y ver informes en el Administrador de informes &#40;Generador de informes y SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md).  
   
- En un servidor de informes configurado en el modo integrado de SharePoint, no hay equivalente a la carpeta Mis informes. Para obtener más información, consulte [buscar, ver y administrar informes &#40;generador de informes y SSRS &#41; ](finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ En un servidor de informes configurado en el modo integrado de SharePoint, no hay equivalente a la carpeta Mis informes. Para obtener más información, vea [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -33,9 +33,9 @@ ms.locfileid: "48179035"
 ## <a name="ways-to-use-my-reports"></a>Modos de empleo de Mis informes  
  La carpeta Mis informes está vacía hasta que se agregan informes, carpetas u otros elementos. A continuación se indican algunos métodos para agregar contenido a Mis informes.  
   
--   Crear un informe vinculado personal y almacenarlo en Mis informes. No todos los informes permiten la vinculación. Para más información, vea [Crear un informe vinculado](../reports/create-a-linked-report.md).  
+-   Crear un informe vinculado personal y almacenarlo en Mis informes. No todos los informes permiten la vinculación. Para obtener más información, vea [Crear un informe vinculado](../reports/create-a-linked-report.md).  
   
--   Cargar un archivo de definición de informe (.rdl), un archivo de modelo de informe (.smdl) u otros archivos del sistema de archivos. Puede cargarse cualquier archivo, pero el servidor de informes solamente procesa los archivos con la extensión .rdl o .smdl. Para más información, vea Definiciones de informe en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) de los Libros en pantalla de SQL Server y [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../reports/upload-a-file-or-report-report-manager.md).  
+-   Cargar un archivo de definición de informe (.rdl), un archivo de modelo de informe (.smdl) u otros archivos del sistema de archivos. Puede cargarse cualquier archivo, pero el servidor de informes solamente procesa los archivos con la extensión .rdl o .smdl. Para más información, vea Definiciones de informe en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) de los Libros en pantalla de SQL Server y [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 -   Crear y publicar sus propios informes en Mis informes. Para más información, vea [Vista de diseño de informe &#40;Generador de informes&#41;](report-design-view-report-builder.md).  
   

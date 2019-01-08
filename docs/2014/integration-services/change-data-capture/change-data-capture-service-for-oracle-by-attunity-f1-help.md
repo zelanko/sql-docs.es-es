@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acdde1c9f1b394803b18ef401781f14f97c6102d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6cdd755fa9a999905d1afe10dfffad51c4be5bb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155475"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779727"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Servicio de captura de datos modificados para Oracle de Attunity (Ayuda de F1)
   La Consola de configuración del servicio CDC se emplea para definir, actualizar y eliminar un servicio CDC de Oracle local.  

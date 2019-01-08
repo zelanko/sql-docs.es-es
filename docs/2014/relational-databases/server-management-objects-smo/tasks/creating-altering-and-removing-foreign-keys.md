@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - foreign keys [SMO]
@@ -14,19 +12,19 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 546fc65d29447119ad40593e016dc4db60f598d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121705"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789547"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Crear, modificar y eliminar las claves externas
   En los objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), el objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> representa las claves externas.  
   
- Para crear una clave externa en SMO, debe especificar la tabla en el que la clave externa se define en el constructor de la <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objeto. En la tabla, debe seleccionar al menos una columna para ser la clave externa. Para ello, cree una variable de objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> y especifique el nombre de la columna que es la clave externa. A continuación, especifique la tabla y la columna a las que se hace referencia. Use la <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> método para agregar la columna a la `Columns` propiedad de objeto.  
+ Para crear una clave externa en SMO, debe especificar la tabla en la que la clave externa se define en el constructor del objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. En la tabla, debe seleccionar al menos una columna para ser la clave externa. Para ello, cree una variable de objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> y especifique el nombre de la columna que es la clave externa. A continuación, especifique la tabla y la columna a las que se hace referencia. Utilice el método <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> para agregar la columna a la propiedad de objeto `Columns`.  
   
- Las columnas que representan la clave externa se muestran en la propiedad de objeto `Columns` del objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. La clave principal que se hace referencia a la clave externa está representada por la <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> propiedad que se encuentra en la tabla especificada en el <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> propiedad.  
+ Las columnas que representan la clave externa se muestran en la propiedad de objeto `Columns` del objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. La propiedad <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> que se encuentra en la tabla especificada en la propiedad <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> representa la clave principal a la que hace referencia la clave externa.  
   
 ## <a name="example"></a>Ejemplo  
  Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -94,7 +92,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Ejemplo: claves externas, claves principales y columnas de restricción UNIQUE  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Ejemplo: Las claves externas, claves principales y columnas de restricción Unique  
  Este ejemplo explica cómo:  
   
 -   Buscar una clave externa en un objeto existente.  

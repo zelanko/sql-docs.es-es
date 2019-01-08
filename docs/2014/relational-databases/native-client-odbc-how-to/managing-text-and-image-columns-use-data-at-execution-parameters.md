@@ -12,12 +12,12 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9f6a00432f4feed70f010e18bdeea45980fa053
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102245"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353573"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Usar parámetros de datos en ejecución (ODBC)
     
@@ -29,20 +29,20 @@ ms.locfileid: "48102245"
   
     -   Use un `rgbValue` (octavo parámetro) de un identificador de parámetros definido por el programa.  
   
-2.  Al llamar a [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) o [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) devuelve SQL_NEED_DATA, lo que indica que los parámetros de datos en ejecución están listos para procesar.  
+2.  Al llamar a [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) o [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) devuelve SQL_NEED_DATA, lo que indica que los parámetros de datos en ejecución están listos para procesar.  
   
 3.  Para cada parámetro de datos en ejecución:  
   
-    -   Llame a [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) para obtener el identificador del parámetro definido por el programa. Devolverá SQL_NEED_DATA si hay otro parámetro de datos en ejecución.  
+    -   Llame a [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para obtener el identificador del parámetro definido por el programa. Devolverá SQL_NEED_DATA si hay otro parámetro de datos en ejecución.  
   
     -   Llame a una o más veces a [SQLPutData](../native-client-odbc-api/sqlputdata.md) para enviar los datos del parámetro, hasta que se envíe la longitud.  
   
-4.  Llame a [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) para indicar que se envían todos los datos para el parámetro de datos en ejecución final. No devolverá SQL_NEED_DATA.  
+4.  Llame a [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para indicar que se envían todos los datos para el parámetro de datos en ejecución final. No devolverá SQL_NEED_DATA.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo, se muestra cómo leer datos de caracteres variables SQL_LONG mediante SQLParamData y SQLPutData. Este ejemplo no es compatible con IA64.  
   
- Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   

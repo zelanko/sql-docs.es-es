@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193195"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823489"
 ---
 # <a name="sql-trace"></a>Seguimiento de SQL
   En Seguimiento de SQL, los eventos se recopilan si se enumeran instancias de clases de eventos en la definición del seguimiento. Estos eventos pueden filtrarse para quitarlos del seguimiento o ponerse en cola para su destino. El destino puede ser un archivo u Objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), que pueden usar la información del seguimiento en aplicaciones que administran [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -74,8 +73,8 @@ ms.locfileid: "48193195"
 |Columna de datos|Número de columna|Descripción|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, no con el nombre del programa.|  
-|**BigintData1**|52|Valor (`bigint` tipo de datos), que depende de la clase de evento especificada en el seguimiento.|  
-|**BigintData2**|53|Valor (`bigint` tipo de datos), que depende de la clase de evento especificada en el seguimiento.|  
+|**BigintData1**|52|Valor (tipo de datos `bigint`) que depende de la clase de evento especificada en el seguimiento.|  
+|**BigintData2**|53|Valor (tipo de datos `bigint`) que depende de la clase de evento especificada en el seguimiento.|  
 |**Binary Data**|2|Valor binario que depende de la clase de evento que se captura en el seguimiento.|  
 |**ClientProcessID** <sup>1</sup>|9|Id. que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|  
 |**ColumnPermissions**|44|Indica si se estableció un permiso de columna. Puede analizar el texto de la instrucción para determinar los permisos que se aplicaron a las columnas.|  
@@ -127,7 +126,7 @@ ms.locfileid: "48193195"
 |**SPID**|12|Id. de proceso de servidor (SPID) que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|  
 |**SqlHandle**|63|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a **sys.dm_exec_sql_text()** para recuperar el texto SQL asociado.|  
 |**StartTime** <sup>1</sup>|14|Hora a la que se inició el evento, si está disponible.|  
-|**State**|30|Código de estado de error.|  
+|**Estado**|30|Código de estado de error.|  
 |**Correcto**|23|Indica si el evento se realizó correctamente. Los valores son:<br /><br /> **1** = Correcto<br /><br /> **0** = Error<br /><br /> Por ejemplo, el valor **1** significa que se ha comprobado un permiso correctamente y el valor **0** significa que se ha producido un error en la comprobación.|  
 |**TargetLoginName**|42|Para acciones que se dirigen a un inicio de sesión, el nombre del inicio de sesión de destino; por ejemplo, agregar un nuevo inicio de sesión.|  
 |**TargetLoginSid**|43|Para acciones que se dirigen a un inicio de sesión, el SID del inicio de sesión de destino; por ejemplo, agregar un nuevo inicio de sesión.|  

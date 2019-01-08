@@ -22,17 +22,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603853"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403721"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Nota: Esto solo se aplica a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
+  **Nota: Esto se aplica únicamente a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
   
  Devuelve información sobre el ancho de banda de red utilizado por cada base de datos en un  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor lógico de V11**,. Cada fila devuelta para una base de datos determinada resume una única dirección y clase de uso durante un período de una hora.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "47603853"
 |-----------------|-----------------|  
 |**time**|La hora a la que se utilizó el ancho de banda. Las filas de esta vista ofrecen información por horas. Por ejemplo, 2009-09-19 02:00:00.000 significa que el ancho de banda se consumió el 19 de septiembre de 2009 entre las 2:00 a. m. y las 3:00 a. m.|  
 |**database_name**|El nombre de la base de datos que utilizó ancho de banda.|  
-|**Dirección**|El tipo de ancho banda utilizado, que puede ser:<br /><br /> Entrada: Datos que se mueven hacia la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Salida: Datos que se mueven fuera de la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**class**|La clase de ancho banda utilizada, que puede ser:<br />Interno: Los datos que se mueven dentro de la plataforma Azure.<br />Externos: Datos que se mueven fuera de la plataforma Azure.<br /><br /> Esta clase solo se devuelve si se activa la base de datos en una relación de copia continua entre regiones ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si una determinada base de datos no participa en una relación continua de copias, no se devuelven filas “Interlink”. Para más información, vea la sección “Comentarios” más adelante en este tema.|  
+|**direction**|El tipo de ancho banda utilizado, que puede ser:<br /><br /> Entrada: Datos que se mueven a la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Salida: Datos que se mueven fuera de la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**class**|La clase de ancho banda utilizada, que puede ser:<br />Interno: Datos que se mueven dentro de la plataforma Azure.<br />Externo: Datos que se mueven fuera de la plataforma Azure.<br /><br /> Se devuelve esta clase solamente si la base de datos está ocupada en una relación continua de copias entre las regiones ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si una base de datos no participa en una relación de copia continua, no se devuelven filas "Interlink". Para obtener más información, vea la sección “Comentarios” más adelante en este tema.|  
 |**time_period**|El período de tiempo cuando se produjo el uso es pico o programarla. El valor Peak va en función de la región en la que se creó el servidor. Por ejemplo, si se creó un servidor en la región "US_Northwest”, las horas pico se definen como una hora comprendida entre las 10:00 a. m. y a las 06:00:00 p. m. PST.|  
 |**Cantidad**|La cantidad de ancho banda consumido, en kilobytes (KB).|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47603853"
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Ingress|External|Peak|66|  
 |2012-04-21 17:00:00|Db1|Egress|External|Peak|741|  
-|2012-04-21 17:00:00|Db1|Ingress|Internal|Máximo|1052|  
+|2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|Interno|Peak|3525|  
   
 ### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>Interpretar la dirección de los datos para [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
@@ -15,15 +14,15 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200615"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363797"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
-  La lógica de estimación de cardinalidad, denominada Estimador de cardinalidad, se ha rediseñado en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para mejorar la calidad de los planes de consulta y por lo tanto, para mejorar el rendimiento de las consultas. El nuevo estimador de cardinalidad incorpora suposiciones y algoritmos que funcionan bien en las cargas de trabajo OLTP y de almacenamiento de datos modernas. Se basa en un profundo estudio sobre la estimación de cardinalidad en las cargas de trabajo modernas y en lo que hemos aprendido durante los últimos 15 años para mejorar el estimador de cardinalidad de SQL Server. Los comentarios de los clientes indican que si bien la mayoría de las consultas se beneficiarán del cambio o no cambiarán, un número reducido puede mostrar regresiones en comparación con el estimador de cardinalidad anterior.  
+  La lógica de estimación de la cardinalidad, denominada estimador de cardinalidad, se ha rediseñado en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para mejorar la calidad de los planes de consulta y, por tanto, mejorar el rendimiento de las consultas. El nuevo estimador de cardinalidad incorpora suposiciones y algoritmos que funcionan bien en las cargas de trabajo OLTP y de almacenamiento de datos modernas. Se basa en un profundo estudio sobre la estimación de cardinalidad en las cargas de trabajo modernas y en lo que hemos aprendido durante los últimos 15 años para mejorar el estimador de cardinalidad de SQL Server. Los comentarios de los clientes indican que si bien la mayoría de las consultas se beneficiarán del cambio o no cambiarán, un número reducido puede mostrar regresiones en comparación con el estimador de cardinalidad anterior.  
   
 > [!NOTE]  
 >  Las estimaciones de cardinalidad son una predicción del número de filas del resultado de la consulta. El optimizador de consultas utiliza estas estimaciones a la hora de elegir un plan para ejecutar la consulta. La calidad del plan de consulta tiene un impacto directo sobre la mejora del rendimiento de las consultas.  
@@ -37,11 +36,11 @@ ms.locfileid: "48200615"
   
 2.  Ejecute la carga de trabajo de prueba con el nuevo estimador de cardinalidad y solucione cualquier problema nuevo de rendimiento del mismo modo que lo hace ahora.  
   
-3.  Una vez que se está ejecutando la carga de trabajo con el nuevo Estimador de cardinalidad (nivel de compatibilidad de base de datos (SQL Server 2014) 120) y ha hecho la regresión de una consulta concreta, puede ejecutar la consulta con la marca de seguimiento 9481 para utilizar la versión del estimador de cardinalidad utilizado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]y versiones anteriores. Para ejecutar una consulta con una marca de seguimiento, vea el artículo de KB [Habilitar el plan afecta al comportamiento del optimizador de consultas de SQL Server, que se puede controlar mediante distintas marcas de seguimiento en un nivel de consulta específico](http://support.microsoft.com/kb/2801413).  
+3.  Una vez que la carga de trabajo se está ejecutando con el nuevo estimador de cardinalidad (nivel de compatibilidad de la base de datos 120 [SQL Server 2014]) y se ha realizado la regresión de una consulta concreta, puede ejecutar la consulta con la marca de seguimiento 9481 para usar la versión del estimador de cardinalidad utilizada en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores. Para ejecutar una consulta con una marca de seguimiento, vea el artículo de KB [Habilitar el plan afecta al comportamiento del optimizador de consultas de SQL Server, que se puede controlar mediante distintas marcas de seguimiento en un nivel de consulta específico](https://support.microsoft.com/kb/2801413).  
   
 4.  Si no se puede cambiar todas las bases de datos a la vez para usar el nuevo Estimador de cardinalidad, puede usar el Estimador de cardinalidad anterior para todas las bases de datos mediante [nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) a establecer el nivel de compatibilidad de base de datos a 110.  
   
-5.  Si la carga de trabajo se está ejecutando con el nivel de compatibilidad de base de datos 110 y desea probar o ejecutar una consulta concreta con el nuevo estimador de cardinalidad, puede ejecutar la consulta con la marca de seguimiento 2312 para utilizar la versión de SQL Server 2014 del estimador de cardinalidad.  Para ejecutar una consulta con una marca de seguimiento, vea el artículo de KB [Habilitar el plan afecta al comportamiento del optimizador de consultas de SQL Server, que se puede controlar mediante distintas marcas de seguimiento en un nivel de consulta específico](http://support.microsoft.com/kb/2801413).  
+5.  Si la carga de trabajo se está ejecutando con el nivel de compatibilidad de base de datos 110 y desea probar o ejecutar una consulta concreta con el nuevo estimador de cardinalidad, puede ejecutar la consulta con la marca de seguimiento 2312 para utilizar la versión de SQL Server 2014 del estimador de cardinalidad.  Para ejecutar una consulta con una marca de seguimiento, vea el artículo de KB [Habilitar el plan afecta al comportamiento del optimizador de consultas de SQL Server, que se puede controlar mediante distintas marcas de seguimiento en un nivel de consulta específico](https://support.microsoft.com/kb/2801413).  
   
 ## <a name="new-xevents"></a>Nuevos XEvents  
  Hay dos nuevos XEvents query_optimizer_estimate_cardinality para admitir los nuevos planes de consulta.  

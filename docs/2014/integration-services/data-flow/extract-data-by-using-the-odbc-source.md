@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f702490cd4137e2a791c796e6b126da247648813
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 850d5b6472fda4b12ad9be2018575ea7d0d97770
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069340"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784867"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extraer datos mediante el origen de ODBC
   Este procedimiento describe cómo extraer datos mediante un origen ODBC. Para agregar y configurar un origen ODBC, el paquete ya debe incluir por lo menos una tarea Flujo de datos.  
@@ -33,11 +32,11 @@ ms.locfileid: "48069340"
   
 5.  Seleccione el método de acceso de datos.  
   
-    -   **Nombre de la tabla**: seleccione una tabla o vista en la base de datos o escriba una expresión regular para identificar la tabla con la que el administrador de conexiones ODBC se conecta.  
+    -   **Nombre de la tabla**: Seleccione una tabla o vista en la base de datos o escriba una expresión regular para identificar la tabla a la que se conecta el Administrador de conexiones ODBC.  
   
          Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.  
   
-    -   **Comando SQL**: escriba un comando SQL o haga clic en **Examinar** para cargar la consulta SQL desde un archivo de texto.  
+    -   **Comando SQL**: Escriba un comando SQL o haga clic en **examinar** para cargar la consulta SQL desde un archivo de texto.  
   
 6.  Puede hacer clic en **Vista previa** para ver hasta 200 filas de los datos extraídos por el origen ODBC.  
   
@@ -54,6 +53,6 @@ ms.locfileid: "48069340"
 ## <a name="see-also"></a>Vea también  
  [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../odbc-source-editor-connection-manager-page.md)   
  [Editor de orígenes ODBC &#40;página Columnas&#41;](../odbc-source-editor-columns-page.md)   
- [Editor de orígenes ODBC &#40;página de salida de Error&#41;](../odbc-source-editor-error-output-page.md)  
+ [Editor de orígenes ODBC &#40;página Salida de error&#41;](../odbc-source-editor-error-output-page.md)  
   
   

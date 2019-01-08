@@ -1,7 +1,7 @@
 ---
 title: Últimos cambios a la administración de las herramientas de las características de SQL Server 2014 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 11/27/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
@@ -10,12 +10,12 @@ ms.assetid: 3ff3fad8-b569-4516-bd58-5a3efeb537e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f3e0df9dc3f9c81907d4c230a36586a5953baf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73e2c6ecb4ae2f829c02897ed5c6ab5d84f1ba4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545303"
 ---
 # <a name="breaking-changes-to-management-tools-features-in-sql-server-2014"></a>Últimos cambios en las características de las herramientas de administración de SQL Server 2014
   En este tema se describen los últimos cambios realizados en las características de las herramientas de administración. Estos cambios pueden provocar errores en las aplicaciones, en los scripts o en las funcionalidades basados en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Podría encontrar estos problemas al actualizar. Para obtener más información, vea [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -28,10 +28,15 @@ ms.locfileid: "48079435"
 ### <a name="you-cannot-use-includesssql11includessssql11-mdmd-management-tools-to-create-a-utility-control-point-on-a-includesskilimanjaroincludessskilimanjaro-mdmd-instance-of-sql-server"></a>No puede utilizar las Herramientas de administración de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] para crear un punto de control de la utilidad en una instancia de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] de SQL Server  
  Para crear un punto de control de la utilidad en una instancia de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], utilice las herramientas de administración de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] .  
   
-### <a name="smo-has-been-reversioned-in-includesssql11includessssql11-mdmd"></a>SMO ha sido creado una nueva versión en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+### <a name="smo-has-been-reversioned-in-includesssql11includessssql11-mdmd"></a>Se ha creado una nueva versión de SMO en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  El código desarrollado con SMO de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] o versiones anteriores podría no crearse en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sin tener que hacer modificaciones. Para más información, consulte [Backward Compatibility in SMO](../relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md).  
-  
+
+## <a name="previous-versions"></a> Cambios importantes en SQL Server 2005  
+
+[!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con versiones anteriores](../../2014/getting-started/backward-compatibility.md)  
+ [Más información sobre cambios importantes en las características de herramientas de administración de SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

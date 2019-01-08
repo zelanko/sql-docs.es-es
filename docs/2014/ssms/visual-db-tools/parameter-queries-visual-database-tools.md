@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
@@ -12,12 +12,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53d38505a07fe30ef22145f4ec8197092e7bc6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098645"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815747"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Consultas con parámetros (Visual Database Tools)
   En algunos casos, tal vez necesite crear una consulta que pueda utilizar en muchas ocasiones, pero con un valor diferente cada vez. Por ejemplo, puede ejecutar habitualmente una consulta para buscar todos los `title_ids` escritos por un autor. Puede ejecutar la misma consulta para cada solicitud, con la salvedad de que el nombre o el Id. del autor serán diferentes cada vez.  
@@ -31,7 +31,7 @@ WHERE (au_id = ?)
 ```  
   
 ## <a name="where-you-can-use-parameters"></a>Cuándo se pueden utilizar parámetros  
- Puede utilizar parámetros como marcadores de posición para valores literales: tanto para valores de texto como para valores numéricos. Generalmente, los parámetros se utilizan como marcadores de posición en condiciones de búsqueda para filas individuales o para grupos (es decir, en las cláusulas WHERE o HAVING de una instrucción SQL).  
+ Puede usar parámetros como marcadores de posición para valores literales, tanto para valores de texto como para valores numéricos. Generalmente, los parámetros se utilizan como marcadores de posición en condiciones de búsqueda para filas individuales o para grupos (es decir, en las cláusulas WHERE o HAVING de una instrucción SQL).  
   
  Se pueden utilizar parámetros como marcadores de posición en expresiones. Por ejemplo, si desea calcular precios con descuento, proporcione un valor de descuento distinto cada vez que ejecute una consulta. Para hacerlo, puede especificar la siguiente expresión:  
   

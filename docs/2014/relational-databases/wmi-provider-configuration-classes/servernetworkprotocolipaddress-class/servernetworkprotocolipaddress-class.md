@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - ServerNetworkProtocolIPAddress Class
@@ -20,12 +18,12 @@ ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8b248a818366ce1bf1c4fd2214d5c08aad40374b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180501"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365647"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>Clase ServerNetworkProtocolIPAddress
   El [clase ServerNetworkProtocolIPAddress] servernetworkprotocolipaddress-class.md) representa una dirección IP admitida por el protocolo de red de servidor.  
@@ -41,6 +39,6 @@ ms.locfileid: "48180501"
 -   Habilitar y deshabilitar la dirección IP.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

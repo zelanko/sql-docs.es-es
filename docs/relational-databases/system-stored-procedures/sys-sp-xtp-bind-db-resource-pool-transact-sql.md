@@ -21,12 +21,12 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a36ad2d94982a0e536f223ceff187a04632baa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e8182a0fca11105541f8dd435f352ba0d393731
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647053"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391658"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name se refiere a un grupo de sistema reservado**  
- Los nombres de grupo “INTERNAL” y “DEFAULT” están reservados para los grupos de servidores del sistema.  No es válido enlazar explícitamente una base de datos a cualquiera de estos.  Si se especifica un nombre de grupo de servidores del sistema, se devuelve el error siguiente:  
+ Los nombres de grupo "INTERNAL" y "DEFAULT" están reservados para los grupos del sistema.  No es válido enlazar explícitamente una base de datos a cualquiera de estos.  Si se especifica un nombre de grupo de servidores del sistema, se devuelve el error siguiente:  
 *Grupo de recursos %s es un grupo de recursos del sistema.  Grupos de recursos del sistema no pueden estar enlazados explícitamente a una base de datos mediante este procedimiento.*  
   
 ```  
@@ -116,7 +116,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  El enlace surte efecto la próxima vez que la base de datos pase a estar en línea.  
  
- B. Ejemplo ampliado de ejemplo que incluye algunas comprobaciones básicas anterior.  Ejecute el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ b. Ejemplo ampliado de ejemplo que incluye algunas comprobaciones básicas anterior.  Ejecute el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';

@@ -14,12 +14,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372227"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensiones de personalización de Analysis Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización son el fundamento de la idea de implementar una arquitectura de complemento. En una arquitectura de este tipo se pueden desarrollar de forma dinámica nuevos objetos y funcionalidad de cubo, y compartirlos fácilmente con otros programadores. Por lo tanto, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización proporcionan la funcionalidad que permite lograr lo siguiente:  
@@ -43,7 +43,7 @@ ms.locfileid: "48164865"
  Al iniciar el servicio, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] carga los ensamblados necesarios y determina qué clases tienen el <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> atributo personalizado.  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define los atributos personalizados como una manera de describir el código e influir en el comportamiento en tiempo de ejecución. Para obtener más información, vea el tema "[Attributes Overview](http://go.microsoft.com/fwlink/?LinkId=82929)," en el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Guía del desarrollador en MSDN.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define los atributos personalizados como una manera de describir el código e influir en el comportamiento en tiempo de ejecución. Para obtener más información, vea el tema "[Attributes Overview](https://go.microsoft.com/fwlink/?LinkId=82929)," en el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Guía del desarrollador en MSDN.  
   
  Para todas las clases con el <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> atributo personalizado, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] invoca sus constructores predeterminados. Invocar todos los constructores en el inicio proporciona una ubicación común desde el que se va a crear nuevos objetos y que es independiente de cualquier actividad de usuario.  
   
@@ -117,13 +117,13 @@ ms.locfileid: "48164865"
 #### <a name="adomdcommand-class"></a>Clase AdomdCommand  
  La clase <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> admite ahora los comandos MDX siguientes:  
   
--   [Instrucción CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [CREATE MEMBER &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [UPDATE MEMBER, instrucción &#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [DROP MEMBER, instrucción &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [Instrucción CREATE SET &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [CREATE SET &#40;Instrucción, MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [Instrucción DROP &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
@@ -141,10 +141,10 @@ ms.locfileid: "48164865"
  Los comandos CREATE KPI y DROP KPI se agregan a la sintaxis de MDX. Las KPI se pueden crear dinámicamente a partir de cualquier script MDX.  
   
 ### <a name="schema-rowsets-extensions"></a>Extensiones de conjuntos de filas de esquema  
- En MDSCHEMA_MEMBERS *ámbito* se agrega la columna. Los valores de scope son los siguientes: MDMEMBER_SCOPE_GLOBAL=1, MDMEMBER_SCOPE_SESSION=2.  
+ En MDSCHEMA_MEMBERS *ámbito* se agrega la columna. Los valores de ámbito son los siguientes: MDMEMBER_SCOPE_GLOBAL = 1, MDMEMBER_SCOPE_SESSION = 2.  
   
- En MDSCHEMA_SETS *set_evaluation_context* se agrega la columna. Los valores de set evaluation context son los siguientes: MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
+ En MDSCHEMA_SETS *set_evaluation_context* se agrega la columna. Establecer el contexto de evaluación de los valores son los siguientes: MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
- En MDSCHEMA_KPIS se agrega la columna scope. Los valores de scope son los siguientes: MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2.  
+ En MDSCHEMA_KPIS se agrega la columna scope. Los valores de ámbito son los siguientes: MDKPI_SCOPE_GLOBAL = 1, MDKPI_SCOPE_SESSION = 2.  
   
   

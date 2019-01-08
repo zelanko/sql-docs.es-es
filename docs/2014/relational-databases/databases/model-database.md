@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/02/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6c205ece4af38512525e3b89abd69298484516
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089697"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812187"
 ---
 # <a name="model-database"></a>Base de datos model
   La base de datos **modelo** se utiliza como plantilla para todas las bases de datos creadas en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** se crea de nuevo cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la base de datos **modelo** siempre tiene que existir en un sistema con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo el contenido de la base de datos **modelo** , incluidas las opciones de base de datos, se copia en la base de datos nueva. Algunos de los valores de configuración de la base de datos **model** también se usan para crear una base de datos **tempdb** nueva durante el inicio, de modo que la base de datos **model** siempre debe existir en un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +35,7 @@ ms.locfileid: "48089697"
  Si modifica la base de datos **model** , todas las bases de datos creadas posteriormente heredan los cambios. Por ejemplo, se podrían establecer permisos u opciones de base de datos o agregar objetos, como tablas, funciones o procedimientos almacenados. Las propiedades del archivo de la base de datos del **modelo** son una excepción y se ignoran, excepto el tamaño inicial del archivo de datos.  
   
 ## <a name="physical-properties-of-model"></a>Propiedades físicas de model  
- Las siguientes tablas muestran los valores de configuración iniciales de los archivos de datos y registro de **model** . Los tamaños de estos archivos pueden variar ligeramente en diferentes ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Las siguientes tablas muestran los valores de configuración iniciales de los archivos de datos y registro de **model** . El tamaño de los archivos puede variar ligeramente según la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Archivo|Nombre lógico|Nombre físico|Crecimiento del archivo|  
 |----------|------------------|-------------------|-----------------|  
@@ -61,14 +60,14 @@ ms.locfileid: "48089697"
 |AUTO_SHRINK|OFF|Sí|  
 |AUTO_UPDATE_STATISTICS|ON|Sí|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|no|  
+|CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> Sí<br /><br /> Sí|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sí<br /><br /> Sí|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|OFF|no|  
-|ENCRYPTION|OFF|no|  
+|DB_CHAINING|OFF|No|  
+|ENCRYPTION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
@@ -76,8 +75,8 @@ ms.locfileid: "48089697"
 |READ_COMMITTED_SNAPSHOT|OFF|Sí|  
 |RECOVERY|Depende de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|Sí|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
-|Opciones de Service Broker|DISABLE_BROKER|no|  
-|TRUSTWORTHY|OFF|no|  
+|Opciones de Service Broker|DISABLE_BROKER|No|  
+|TRUSTWORTHY|OFF|No|  
   
  <sup>1</sup> para comprobar el modelo de recuperación actual de la base de datos, vea [ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) o [sys.databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   

@@ -11,19 +11,19 @@ ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f03e9e8149fe0d3b1b9599ff0ec94613efcba4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169235"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363467"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurar las propiedades de notificación para informes de Power View
   En esta lección complementaria, verá las propiedades de informes del proyecto Adventure Works Internet Sales Model. Las propiedades de informe facilitan a los usuarios finales la selección y presentación de datos del modelo en Power View. También establecerá las propiedades para ocultar ciertas columnas y tablas, y creará nuevos datos para usar en gráficos.  
   
  Tras completar esta lección y volver a implementar el modelo para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integrada con SharePoint y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], puede crear un origen de datos, especificar la información de conexión de datos, iniciar Power View y diseñar informes con el modelo.  
   
- En esta lección no se describe cómo crear y usar los informes de Power View. Esta lección pretende proporcionar a los autores de modelos tabulares una introducción aquellas propiedades y opciones que afectan al modo en que los datos del modelo aparecerán en Power View. Para obtener información sobre cómo crear informes de Power View, vea [Tutorial: Crear un informe de ejemplo en Power View](http://go.microsoft.com/fwlink/?LinkId=221204).  
+ En esta lección no se describe cómo crear y usar los informes de Power View. Esta lección pretende proporcionar a los autores de modelos tabulares una introducción aquellas propiedades y opciones que afectan al modo en que los datos del modelo aparecerán en Power View. Para más información sobre la creación de informes de Power View, vea [Tutorial: Crear un informe de ejemplo en Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
   
  Tiempo estimado para completar esta lección: **30 minutos**  
   
@@ -41,17 +41,17 @@ ms.locfileid: "48169235"
 ## <a name="model-properties-that-affect-reporting"></a>Propiedades de modelo que afectan a los informes  
  Al crear un modelo tabular, hay ciertas propiedades que puede establecer en tablas y columnas individuales para mejorar la experiencia de informes del usuario final en Power View. Además, puede crear datos de modelo adicionales para permitir la visualización de datos y otras características específicas del cliente de informes. Para el Adventure Works Internet Sales Model de ejemplo, aquí se enumeran algunos de los cambios que hará:  
   
--   **Agregar datos nuevos** : al agregar datos nuevos en una columna calculada con una fórmula DAX, se crea información de fecha en un formato más fácil de mostrar en los gráficos.  
+-   **Agregar nuevos datos** -agregar nuevos datos en una columna calculada mediante una fórmula DAX crea información de fecha en un formato que sea más fácil de mostrar en los gráficos.  
   
 -   **Ocultar las tablas y las columnas que no son útiles para el usuario final** : la propiedad **Hidden** controla si las tablas y las columnas de tabla se muestran en el cliente de informes. Los elementos que están ocultos siguen siendo parte del modelo y permanecen disponibles para las consultas y los cálculos.  
   
--   **Habilitar las tablas de un clic** : de manera predeterminada, no ocurre nada si un usuario final hace clic en una tabla en la lista de campos. Para cambiar este comportamiento de modo que al hacer clic en la tabla, se agregue al informe, establecerá Conjunto de campos predeterminado en cada columna que desee incluir en la tabla. Esta propiedad se establece en las columnas de tabla que los usuarios finales es probable que deseen usar.  
+-   **Habilitar las tablas con un solo clic** : de forma predeterminada, se realiza ninguna acción si un usuario final hace clic en una tabla en la lista de campos. Para cambiar este comportamiento de modo que al hacer clic en la tabla, se agregue al informe, establecerá Conjunto de campos predeterminado en cada columna que desee incluir en la tabla. Esta propiedad se establece en las columnas de tabla que los usuarios finales es probable que deseen usar.  
   
 -   **Establecer agrupación cuando sea necesario** : la propiedad **Mantener filas únicas** determina si los valores de la columna se deben agrupar por valores en un campo diferente, como un campo identificador. En las columnas que contienen valores duplicados, como Customer Name (por ejemplo, varios clientes denominados John Smith), es importante agrupar (mantener filas únicas) en el campo **Identificador de fila** para proporcionar a los usuarios finales los resultados correctos.  
   
 -   **Establecer tipos de datos y formatos de datos** : de manera predeterminada, Power View aplica las reglas según el tipo de datos de columna a fin de determinar si el campo puede usarse como una medida. Dado que cada visualización de datos en Power View también tiene reglas sobre dónde se pueden colocar las medidas y las no medidas, es importante establecer el tipo de datos en el modelo o invalidar el predeterminado para lograr el comportamiento que quiera para el usuario final.  
   
--   Establezca la propiedad**Short by Column** : la propiedad **Sort By Column** especifica si los valores de la columna se deben ordenar por valores en un campo diferente. Por ejemplo, en la columna Month Calendar que contiene el nombre de mes, ordene por la columna Month Number.  
+-   **Establecer el criterio de ordenación por columna** propiedad - la **ordenar por columna** propiedad especifica si los valores de la columna se deben ordenar por valores en un campo diferente. Por ejemplo, en la columna Month Calendar que contiene el nombre de mes, ordene por la columna Month Number.  
   
 ## <a name="hide-tables-from-client-tools"></a>Ocultar las tablas de las herramientas de cliente  
  Dado que hay una columna calculada Product Category y otra Product Subcategory en la tabla calculated Product, no es necesario tener visibles las tablas Product Category y Product Subcategory para las aplicaciones cliente.  
@@ -137,7 +137,7 @@ ms.locfileid: "48169235"
 7.  Repita estos pasos con la tabla **Product** , seleccionando la columna **Product Id** como identificador de fila y la columna **Product Name** en el cuadro de lista **Mantener filas únicas** . En **Etiqueta predeterminada**, seleccione **Product Alternate Id**.  
   
 ## <a name="reporting-properties-for-columns"></a>Propiedades de informe para las columnas  
- Hay varias propiedades de columna básicas y propiedades de informe específicos en las columnas que puede establecer para mejorar la experiencia de informes de modelo. Por ejemplo, puede no ser necesario que los usuarios vena cada columna de cada tabla. Igual que ocultó las tablas Product Category y Product Subcategory antes, mediante la propiedad Hidden de una columna puede ocultar columnas concretas de una tabla que de otro modo se mostrarían. Otras propiedades, como Data Format y Sort by Column, también pueden afectar al modo en que los datos de columna pueden aparecer en los informes. Establecerá algunas de esas columnas concretas ahora. Otras columnas no requieren ninguna acción y no se muestran a continuación.  
+ Hay varias propiedades de columna básicas y propiedades de informe específicos en las columnas que puede establecer para mejorar la experiencia de informes de modelo. Por ejemplo, puede no ser necesario que los usuarios vena cada columna de cada tabla. Igual que ocultó las tablas Product Category y Product Subcategory antes, mediante el uso de la propiedad Hidden de una columna, puede ocultar columnas concretas de una tabla que se muestra en caso contrario. Otras propiedades, como Data Format y Sort by Column, también pueden afectar al modo en que los datos de columna pueden aparecer en los informes. Establecerá algunas de esas columnas concretas ahora. Otras columnas no requieren ninguna acción y no se muestran a continuación.  
   
  Solo establecerá algunas propiedades de columna distintas aquí, pero hay muchas otras. Para obtener más información sobre las propiedades de informes de columna, vea [Pestaña Propiedades de columna &#40;SSAS tabular&#41;](tabular-models/properties-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48169235"
      **Date**  
   
     > [!NOTE]  
-    >  Dado que la tabla Date se seleccionó como la tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7, Marcar como tabla de fechas, y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información sobre cómo especificar una tabla de fechas, vea [Especificar Marcar como tabla de fechas con inteligencia de tiempo &#40;SSAS tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
+    >  Dado que la tabla Date se seleccionó como tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7: Marcar como tabla de fechas y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información sobre cómo especificar una tabla de fechas, vea [Especificar Marcar como tabla de fechas con inteligencia de tiempo &#40;SSAS tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
   
     |columna|Property|Valor|  
     |------------|--------------|-----------|  
@@ -208,10 +208,10 @@ ms.locfileid: "48169235"
     |Cantidad del pedido|Tipo de datos<br /><br /> Formato de datos<br /><br /> Posiciones decimales|Decimal Number<br /><br /> Decimal Number<br /><br /> 0|  
     |Order Date|Tipo de datos|Short Date|  
     |Due Date|Tipo de datos|Short Date|  
-    |Fecha de envío|Tipo de datos|Short Date|  
+    |Ship Date|Tipo de datos|Short Date|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>Volver a implementar el MT Ventas AW  
- Dado que ha cambiado el modelo, debe volver a implementarlo. Básicamente, repetirá las tareas realizadas en [Lección 14: Implementar](lesson-13-deploy.md).  
+ Dado que ha cambiado el modelo, debe volver a implementarlo. Básicamente, repetirá las tareas realizadas en [lección 14: Implementar](lesson-13-deploy.md).  
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Para volver a implementar el modelo tabular Ventas por Internet de Adventure Works  
   
@@ -222,6 +222,6 @@ ms.locfileid: "48169235"
 ## <a name="next-steps"></a>Pasos siguientes  
  Ahora puede usar Power View para visualizar los datos del modelo. Asegúrese de que las cuentas de Analysis Services y Reporting Services en el sitio de SharePoint tienen permisos de lectura en la instancia de Analysis Services donde implementó el modelo.  
   
- Para crear un origen de datos de informe de Reporting Services que señale al modelo, vea [Crear un origen de datos compartido para un modelo de datos (SSRS)](http://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  
+ Para crear un origen de datos de informe de Reporting Services que señale al modelo, vea [Crear un origen de datos compartido para un modelo de datos (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  
   
   

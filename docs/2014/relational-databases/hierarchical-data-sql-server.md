@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -18,12 +17,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab581202049b9dab362de4278950e0597cf5b3b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154762"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817567"
 ---
 # <a name="hierarchical-data-sql-server"></a>Datos jerárquicos (SQL Server)
   Integrado `hierarchyid` tipo de datos resulta más fácil almacenar y consultar datos jerárquicos. `hierarchyid` se optimiza para representar árboles, que son el tipo más común de los datos jerárquicos.  
@@ -43,7 +42,7 @@ ms.locfileid: "48154762"
  Use [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) como tipo de datos para crear tablas con una estructura jerárquica o para describir la estructura jerárquica de datos almacenados en otra ubicación. Use las [funciones hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) de [!INCLUDE[tsql](../includes/tsql-md.md)] para consultar y administrar los datos jerárquicos.  
   
 ##  <a name="keyprops"></a> Propiedades principales de hierarchyid  
- Un valor de la `hierarchyid` tipo de datos representa una posición en una jerarquía de árbol. Los valores de `hierarchyid` tienen las siguientes propiedades.  
+ Un valor del tipo de datos `hierarchyid` representa una posición en una jerarquía de árbol. Los valores de `hierarchyid` tienen las siguientes propiedades.  
   
 -   Muy compactos  
   
@@ -63,9 +62,9 @@ ms.locfileid: "48154762"
   
 -   Una columna de tipo `hierarchyid` no representa automáticamente un árbol. Dependerá de la aplicación generar y asignar los valores `hierarchyid` de tal forma que la relación deseada entre las filas se refleje en los valores. Algunas aplicaciones pueden tener una columna de tipo `hierarchyid` que indica la ubicación en una jerarquía definida en otra tabla.  
   
--   Depende de la aplicación para administrar la simultaneidad en la generación y asignación `hierarchyid` valores. No hay ninguna garantía de que los valores `hierarchyid` de una columna sean únicos, a menos que la aplicación use una restricción de clave única o se aplique singularidad a través de su lógica.  
+-   Depende de la aplicación el administrar la simultaneidad en la generación y asignación de valores `hierarchyid`. No hay ninguna garantía de que los valores `hierarchyid` de una columna sean únicos, a menos que la aplicación use una restricción de clave única o se aplique singularidad a través de su lógica.  
   
--   Las relaciones jerárquicas representadas por `hierarchyid` valores no se aplican como una relación de clave externa. Es posible, y a veces adecuado, establecer una relación jerárquica donde A tiene un elemento secundario B, de forma que A se elimina dejando a B con una relación con un registro no existente. Si este comportamiento no es aceptable, la aplicación debe consultar a los descendientes antes de eliminar los miembros primarios.  
+-   Las relaciones jerárquicas representadas por valores `hierarchyid` no se aplican como una relación de clave externa. Es posible, y a veces adecuado, establecer una relación jerárquica donde A tiene un elemento secundario B, de forma que A se elimina dejando a B con una relación con un registro no existente. Si este comportamiento no es aceptable, la aplicación debe consultar a los descendientes antes de eliminar los miembros primarios.  
   
   
 ##  <a name="alternatives"></a> Cuándo utilizar alternativas a hierarchyid  
@@ -105,7 +104,7 @@ GO
   
  La estructura de elemento primario/secundario puede ser mejor opción cuando se dan las condiciones siguientes:  
   
--   El tamaño de la clave es crítico. Para el mismo número de nodos, un `hierarchyid` valor es igual o mayor que una familia de enteros (`smallint`, `int`, `bigint`) valor. Esto es sólo una razón para usar los elementos primarios y secundarios en casos excepcionales, porque `hierarchyid` tiene una proximidad significativamente mejor de E/S y CPU de complejidad de las expresiones de tabla comunes necesarias cuando se usa una estructura de elementos primarios y secundarios.  
+-   El tamaño de la clave es crítico. Para el mismo número de nodos, un valor `hierarchyid` es igual o mayor que un valor de la familia de enteros (`smallint`, `int`, `bigint`). Ésta es solo una de las razones para utilizar la estructura de elemento primario/secundario en casos poco comunes porque `hierarchyid` tiene una proximidad significativamente mejor de E/S y de complejidad de la CPU que las expresiones de tabla comunes necesarias cuando se utiliza una estructura de elemento primario/secundario.  
   
 -   Las consultas raramente recorren todas las secciones de la jerarquía. Dicho de otro modo, las consultas normalmente se dirigen a un solo punto de la jerarquía. En estos casos la ubicación conjunta no es importante. Por ejemplo, la estructura de elemento primario y secundario es la mejor opción cuando la tabla de organización solo se usa para procesar la nómina de empleados individuales.  
   
@@ -160,7 +159,7 @@ GO
   
      En un índice con prioridad a la amplitud, todos los elementos secundarios directos de un nodo se ubican conjuntamente. Por lo tanto, los índices con prioridad a la amplitud son eficaces para responder a las consultas sobre elementos secundarios inmediatos, como "Buscar todos los empleados que informan directamente a este gerente".  
   
- Saber si es mejor tener un índice con prioridad de profundidad, con prioridad de amplitud, o ambos, y cuál de estos se debe establecer como clave de agrupación en clústeres (cuando proceda), depende de la importancia relativa de los tipos de consultas anteriores y de la importancia relativa de las operaciones SELECT frente a las de DML. Para obtener un ejemplo detallado de las estrategias de indización, consulte [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Saber si es mejor tener un índice con prioridad de profundidad, con prioridad de amplitud, o ambos, y cuál de estos se debe establecer como clave de agrupación en clústeres (cuando proceda), depende de la importancia relativa de los tipos de consultas anteriores y de la importancia relativa de las operaciones SELECT frente a las de DML. Para obtener un ejemplo detallado de estrategias de indización, consulte [Tutorial: Usar el tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Crear índices  
@@ -266,11 +265,11 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Tareas relacionadas  
   
 ###  <a name="migrating"></a> Migrar de elemento primario/secundario a hierarchyid  
- La mayoría de los árboles se representan mediante elementos primario y secundario. La manera más fácil migrar de una estructura de elementos primarios y secundarios en una tabla con `hierarchyid` consiste en usar una columna temporal o una tabla temporal para mantener el seguimiento del número de nodos en cada nivel de la jerarquía. Para ver un ejemplo sobre la migración de una tabla de elemento primario/secundario, consulte la lección 1 de [Tutorial: Usar el tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La mayoría de los árboles se representan mediante elementos primario y secundario. La manera más fácil de migrar de una estructura de elemento primario y secundario a una tabla que use `hierarchyid` consiste en utilizar una columna temporal o una tabla temporal para realizar el seguimiento del número de nodos en cada nivel de la jerarquía. Para obtener un ejemplo de migración de una tabla de elementos primarios y secundarios, consulte la lección 1 de [Tutorial: Usar el tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Administrar un árbol mediante hierarchyid  
- Aunque un `hierarchyid` columna no representa necesariamente un árbol, una aplicación puede exigir fácilmente que sí lo haga.  
+ Aunque una columna de `hierarchyid` no representa necesariamente un árbol, una aplicación puede exigir fácilmente que sí lo haga.  
   
 -   Cuando genere nuevos valores, realice una de las siguientes operaciones:  
   
@@ -526,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de los métodos del tipo de datos hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Usar el tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

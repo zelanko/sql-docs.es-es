@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '- (subtract)'
@@ -14,12 +13,12 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82d268ed8f61085a2a829821ee3d68931f31e680
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d23203fece79af9b52c363bc51b9e7442d82158
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161835"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810417"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Restar) (expresión de SSIS)
   Resta la segunda expresión numérica de la primera.  
@@ -28,13 +27,13 @@ ms.locfileid: "48161835"
   
 ```  
   
-numeric_expression1 – numeric_expression2  
+numeric_expression1 - numeric_expression2  
   
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  *expresión_numérica1, expresión_numérica2*  
- Expresión válida de un tipo de datos numérico. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Expresión válida de un tipo de datos numérico. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Dependen de los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
@@ -65,7 +64,7 @@ ListPrice - (ListPrice * @[Discount%])
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Precedencia y asociatividad](operator-precedence-and-associativity.md)   
+ [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Acceso a datos PowerPivot de energía | Documentos de Microsoft
+title: Acceso a datos PowerPivot de energía | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d6c1b5e8ca611abf821f81761d862a6b0ddde20
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 79366c8f07728f0063fa5841f8fc5e0c8e3cc236
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027032"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983906"
 ---
 # <a name="power-pivot-data-access"></a>Acceso a datos PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34027032"
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no administra todos los datos en un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Excel Services procesa las tablas y los datos de la celda en una hoja de cálculo. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint administra únicamente las tablas dinámicas, los gráficos dinámicos y las segmentaciones que tienen que ver con los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Conectarse a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Acceso a datos de modelo tabular](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -15,12 +14,12 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87066f0d1460490312bbd2a7ca22035629b9f069
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116457"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355794"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
   Antes de instalar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe seleccionar el hardware y el sistema operativo en el que se ejecutará [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. También deberá configurar el servicio de clústeres de conmutación por error de Windows Server (WSFC), así como revisar la red, la seguridad y las consideraciones relativas al resto del software que se ejecutará en los clústeres de conmutación por error.  
@@ -34,27 +33,27 @@ ms.locfileid: "48116457"
 |Describe los conceptos de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y proporciona vínculos a las tareas y contenido asociados.|[Instancias de clúster de conmutación por error AlwaysOn (SQL Server)](../windows/always-on-failover-cluster-instances-sql-server.md)|  
 |Describe los conceptos de la directiva de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y proporciona vínculos para configurarla de modo que satisfaga los requisitos de su organización.|[Failover Policy for Failover Cluster Instances](../windows/failover-policy-for-failover-cluster-instances.md)|  
 |Describe cómo mantener el clúster de conmutación por error existente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Administración y mantenimiento de la instancia de clúster de conmutación por error](../windows/failover-cluster-instance-administration-and-maintenance.md)|  
-|Explica cómo instalar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en un Clúster de conmutación por error de Windows Server (WSFC).|[Organizar en clúster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
+|Explica cómo instalar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en un Clúster de conmutación por error de Windows Server (WSFC).|[Organizar en clúster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
   
   
 ##  <a name="BestPractices"></a> Procedimientos recomendados  
   
--   Revise las [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Notas de la versión](http://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Revise las [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Notas de la versión](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   Instale el software previo requerido. Antes de ejecutar el programa de instalación para instalar o actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], instale el software previo siguiente para reducir el tiempo de instalación. Puede instalar el software previo en cada nodo de clúster de conmutación por error y, a continuación, reiniciar los nodos una vez antes de ejecutar el programa de instalación.  
   
-    -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala Windows PowerShell. Windows PowerShell 2.0 es un requisito previo para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] componentes y [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si Windows PowerShell 2.0 no está presente en su equipo, puede habilitarlo mediante las instrucciones de la página [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214).  
+    -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala Windows PowerShell. Windows PowerShell 2.0 es un requisito previo para instalar los componentes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si Windows PowerShell 2.0 no está presente en su equipo, puede habilitarlo mediante las instrucciones de la página [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214).  
   
-    -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala .NET Framework 3.5 SP1 pero quizá se necesite al instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en los sistemas operativos Windows anteriores. Para más información, consulte las [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Notas de la versión](http://go.microsoft.com/fwlink/?LinkId=296445).  
+    -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala .NET Framework 3.5 SP1 pero quizá se necesite al instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en los sistemas operativos Windows anteriores. Para más información, consulte las [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Notas de la versión](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update:** para evitar el reinicio del equipo debida a la instalación de .NET Framework 4 durante la instalación, el programa de instalación de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] requiere la instalación de una actualización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  Si va a instalar [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en Windows 7 SP1 o [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, esta actualización se incluye. Si instala en un sistema operativo Windows anterior, descárguelo desde [Microsoft Update para .NET Framework 4.0 en Windows Vista y Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Paquete de actualización:** Para evitar el reinicio del equipo debida a la instalación de .NET Framework 4 durante la instalación, el programa de instalación de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] requiere la instalación de una actualización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  Si va a instalar [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en Windows 7 SP1 o [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, esta actualización se incluye. Si instala en un sistema operativo Windows anterior, descárguelo desde [Microsoft Update para .NET Framework 4.0 en Windows Vista y Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
-    -   .NET Framework 4: el programa de instalación instala .NET Framework 4 en un sistema operativo en clúster. Para reducir el tiempo total de instalación, considere la instalación de .NET Framework 4 antes de ejecutar el programa de instalación principal.  
+    -   .NET Framework 4: El programa de instalación instala .NET Framework 4 en un sistema operativo en clúster. Para reducir el tiempo total de instalación, considere la instalación de .NET Framework 4 antes de ejecutar el programa de instalación principal.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Puede instalar estos archivos ejecutando el archivo SqlSupport.msi ubicado en el soporte físico de instalación de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
--   Compruebe que no tiene instalado software antivirus en el clúster WSFC. Para obtener más información, vea el artículo de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base [Software antivirus que no es compatible con clúster puede causar problemas con servicios de Cluster Server](http://go.microsoft.com/fwlink/?LinkId=116986).  
+-   Compruebe que no tiene instalado software antivirus en el clúster WSFC. Para obtener más información, vea el artículo de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base [Software antivirus que no es compatible con clúster puede causar problemas con servicios de Cluster Server](https://go.microsoft.com/fwlink/?LinkId=116986).  
   
 -   Cuando asigne nombre a un grupo de clústeres de la instalación de clústeres de conmutación por error, no debe utilizar ninguno de los caracteres siguientes:  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48116457"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] establece automáticamente las dependencias entre el grupo de clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y los discos que estarán en el clúster de conmutación por error. No establezca las dependencias para los discos antes de la instalación.  
   
-    -   Durante la instalación de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se crea el objeto de equipo (cuentas de equipo de Active Directory) para el nombre de recurso de red de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . En un clúster de [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] , la cuenta del nombre del clúster (cuenta de equipo del propio clúster) necesita tener permisos para crear objetos de equipo. Para obtener más información, vea [Configurar cuentas en Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx).  
+    -   Durante la instalación de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se crea el objeto de equipo (cuentas de equipo de Active Directory) para el nombre de recurso de red de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . En un clúster de [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] , la cuenta del nombre del clúster (cuenta de equipo del propio clúster) necesita tener permisos para crear objetos de equipo. Para obtener más información, vea [Configurar cuentas en Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx).  
   
     -   Si está utilizando el recurso compartido de archivos SMB como opción de almacenamiento, la cuenta del programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe tener SeSecurityPrivilege en el servidor de archivos. Para ello, use la consola de directivas de seguridad local del servidor de archivos para agregar la cuenta de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a los derechos **Administrar registro de seguridad y auditoría** .  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48116457"
   
 -   Si la solución de clúster incluye nodos de clúster geográficamente dispersos, deben comprobarse elementos adicionales como la latencia de red y la compatibilidad con discos compartidos.  
   
-    -   Para obtener más información sobre [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] y [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)], vea [Validar el hardware para un clúster de conmutación por error](http://go.microsoft.com/fwlink/?LinkId=196817) y [Directiva de compatibilidad para clústeres de conmutación por error de Windows](http://go.microsoft.com/fwlink/?LinkId=196818).  
+    -   Para obtener más información sobre [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] y [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)], vea [Validar el hardware para un clúster de conmutación por error](https://go.microsoft.com/fwlink/?LinkId=196817) y [Directiva de compatibilidad para clústeres de conmutación por error de Windows](https://go.microsoft.com/fwlink/?LinkId=196818).  
   
 -   Compruebe que el disco en el que se instalará [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no esté comprimido o cifrado. Si intenta instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en una unidad comprimida o en una unidad cifrada, se producirá un error en la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -120,11 +119,11 @@ ms.locfileid: "48116457"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite el disco local solo para instalar los archivos tempdb. Asegúrese de que la ruta de acceso especificada para los archivos de datos y registro de tempdb es válida en todos los nodos del clúster. Durante la conmutación por error, si los directorios de tempdb no están disponibles en el nodo de destino de la conmutación por error, el recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no podrá ponerse en línea. Para obtener más información, vea [Tipos de almacenamiento para los archivos de datos](../../install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) y [Configuración del motor de base de datos - Directorios de datos](../../install/database-engine-configuration-data-directories.md).  
   
--   Si implementa un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en componentes de tecnología de interfaz para pequeños equipos de Internet (iSCSI), se recomienda hacerlo con precaución. Para obtener más información, vea [Compatibilidad con SQL Server en componentes de tecnología iSCSI](http://go.microsoft.com/fwlink/?LinkId=116960).  
+-   Si implementa un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en componentes de tecnología de interfaz para pequeños equipos de Internet (iSCSI), se recomienda hacerlo con precaución. Para obtener más información, vea [Compatibilidad con SQL Server en componentes de tecnología iSCSI](https://go.microsoft.com/fwlink/?LinkId=116960).  
   
--   Para obtener más información, vea [Directiva de compatibilidad de SQL Server para Clústeres de Microsoft](http://go.microsoft.com/fwlink/?LinkId=116958).  
+-   Para obtener más información, vea [Directiva de compatibilidad de SQL Server para Clústeres de Microsoft](https://go.microsoft.com/fwlink/?LinkId=116958).  
   
--   Para obtener más información sobre la configuración correcta de unidades de quórum, vea el artículo de [Información de configuración de la unidad de cuórum](http://go.microsoft.com/fwlink/?LinkId=196816).  
+-   Para obtener más información sobre la configuración correcta de unidades de quórum, vea el artículo de [Información de configuración de la unidad de cuórum](https://go.microsoft.com/fwlink/?LinkId=196816).  
   
 -   Para instalar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando los archivos de instalación de origen de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el clúster están en dominios diferentes, copie los archivos de instalación en el dominio actual disponible para los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -149,7 +148,7 @@ ms.locfileid: "48116457"
   
 -   Revise el contenido de [Security Considerations for a SQL Server Installation](../../install/security-considerations-for-a-sql-server-installation.md).  
   
--   Para habilitar la autenticación Kerberos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea el artículo [Cómo utilizar la autenticación Kerberos en SQL Server](http://support.microsoft.com/kb/319723) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
+-   Para habilitar la autenticación Kerberos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea el artículo [Cómo utilizar la autenticación Kerberos en SQL Server](https://support.microsoft.com/kb/319723) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
   
   
   
@@ -228,7 +227,7 @@ ms.locfileid: "48116457"
      Si decide usar más de una dirección IP configurada para la misma subred, puede experimentar errores de conexión de cliente durante el inicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="related-content"></a>Contenido relacionado  
- Para obtener más información sobre la conmutación por error de varios sitios de [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] , vea [Failover Clusters in Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) (Clústeres de conmutación por error de Windows Server 2008 R2) y [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](http://go.microsoft.com/fwlink/?LinkId=177873)(Diseño de una aplicación o un servicio de clúster en un clúster de conmutación por error de varios sitios).  
+ Para obtener más información sobre la conmutación por error de varios sitios de [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] , vea [Failover Clusters in Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) (Clústeres de conmutación por error de Windows Server 2008 R2) y [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](https://go.microsoft.com/fwlink/?LinkId=177873)(Diseño de una aplicación o un servicio de clúster en un clúster de conmutación por error de varios sitios).  
   
 ##  <a name="WSFC"></a> Configurar los clústeres de conmutación por error de Windows Server  
   
@@ -238,7 +237,7 @@ ms.locfileid: "48116457"
   
 -   WSFC debe poder comprobar que la instancia en clústeres de conmutación por error está en ejecución mediante la comprobación IsAlive. Esto requiere conectarse al servidor mediante una conexión de confianza. De forma predeterminada, la cuenta que ejecuta el servicio de clúster no está configurada como administrador en los nodos del clúster y el grupo BUILTIN\Administradores no tiene permiso para iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta configuración solo cambia si se cambian los permisos para los nodos del clúster.  
   
--   Configure el Servicio de nombres de dominio (DNS) o el Servicio de nombres Internet de Windows (WINS). En el entorno donde se va a instalar los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe estar ejecutándose un servidor DNS o WINS. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere el registro del servicio de nombres de dominio dinámicos de la referencia virtual de la interfaz IP de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La configuración del servidor DNS debe permitir que los nodos de clúster registren dinámicamente un mapa de direcciones IP en línea en el nombre de red. Si no se puede completar el registro dinámico, se produce un error en el programa de instalación y esta se revierte. Para obtener más información, vea [este artículo de Knowledge Base](http://support.microsoft.com/kb/947048).  
+-   Configure el Servicio de nombres de dominio (DNS) o el Servicio de nombres Internet de Windows (WINS). En el entorno donde se va a instalar los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe estar ejecutándose un servidor DNS o WINS. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere el registro del servicio de nombres de dominio dinámicos de la referencia virtual de la interfaz IP de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La configuración del servidor DNS debe permitir que los nodos de clúster registren dinámicamente un mapa de direcciones IP en línea en el nombre de red. Si no se puede completar el registro dinámico, se produce un error en el programa de instalación y esta se revierte. Para obtener más información, vea [este artículo de Knowledge Base](https://support.microsoft.com/kb/947048).  
   
   
   
@@ -255,7 +254,7 @@ ms.locfileid: "48116457"
   
 -   usar la instancia predeterminada del clúster de MSDTC; si no es posible,  
   
--   usar la instancia de MSDTC instalada del equipo local  
+-   Usar la instancia de MSDTC instalada del equipo local  
   
 > [!IMPORTANT]  
 >  Si la instancia de MSDTC que se instala en el grupo de clústeres local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] produce un error, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no intenta automáticamente utilizar la instancia del clúster predeterminado o la instancia del equipo local de MSDTC. Para poder utilizar otra instancia de MSDTC, se debería quitar completamente del grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la instancia de MSDTC que produjo el error . Igualmente, si crea una asignación para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la instancia asignada de MSDTC produce un error, las transacciones distribuidas también producirán un error. Si desea que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilice una instancia diferente de MSDTC, deberá agregar una instancia de MSDTC al grupo de clústeres local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o eliminar la asignación.  

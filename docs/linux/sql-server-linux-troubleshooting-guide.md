@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677924"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215461"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solución de problemas de SQL Server en Linux
 
@@ -105,7 +105,7 @@ El programa de instalación registra aquí: / var/opt/mssql/setup-< marca de tie
 Si lo prefiere, también puede convertir los archivos en UTF-8 para leerlos con 'más' o 'menos' con el siguiente comando:
    
    ```bash
-   sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
+   sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## <a name="extended-events"></a>Eventos extendidos
 
@@ -118,9 +118,9 @@ Busque los volcados de memoria en el directorio de registro en Linux. Compruebe 
 Para los volcados del núcleo 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-For SQL dumps 
+Para los volcados de memoria SQL 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -205,7 +205,7 @@ Hay muchos factores que afectan al rendimiento, incluidos el diseño de la base 
 
    Consulte la sección de solución de problemas del artículo, [conectar con SQL Server en Linux](#connection).
 
-2. ERROR: El nombre de host debe tener 15 caracteres o menos.
+2. ERROR: Nombre de host debe tener 15 caracteres o menos.
 
    Se trata de un problema conocido que ocurre siempre que el nombre de la máquina que está intentando instalar el paquete de Debian en SQL Server tiene más de 15 caracteres. Actualmente no hay ningún soluciones alternativas que no sea de cambiar el nombre de la máquina. Es una manera de lograr esto, edite el archivo de nombre de host y reiniciar el equipo. La siguiente [Guía del sitio Web](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) Esto se explica en detalle.
 
@@ -239,7 +239,7 @@ Hay muchos factores que afectan al rendimiento, incluidos el diseño de la base 
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   Recursos: [caracteres especiales](https://tldp.org/LDP/abs/html/special-chars.html)
+   Recursos: [Caracteres especiales](https://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

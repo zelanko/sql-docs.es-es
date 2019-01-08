@@ -12,22 +12,22 @@ ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5dc70e7c8dba2668ee2ef8bf73dbe7dfb9f26175
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361377"
 ---
 # <a name="clr-transactions-sample"></a>Ejemplo de transacciones de CLR
-  En este ejemplo, se muestra el control de transacciones con las API administradas que se encuentran en el espacio de nombres `System.Transactions` . En especial, se usa la clase `System.Transactions.TransactionScope` para establecer un límite de transacciones con el fin de asegurar que las cifras del inventario no están ajustadas a menos que haya inventario suficiente para cubrir la solicitud y, si lo hay, que la transferencia del inventario de una ubicación a otra se produce de forma indivisible. El registro automático de una transacción distribuida se demuestra registrando los cambios en el inventario en una base de datos de auditoría que está almacenada en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente.  
+  En este ejemplo, se muestra el control de transacciones con las API administradas que se encuentran en el espacio de nombres `System.Transactions` . En especial, se usa la clase `System.Transactions.TransactionScope` para establecer un límite de transacciones con el fin de asegurar que las cifras del inventario no están ajustadas a menos que haya inventario suficiente para cubrir la solicitud y, si lo hay, que la transferencia del inventario de una ubicación a otra se produce de forma indivisible. El registro automático de una transacción distribuida se demuestra registrando los cambios en el inventario en una base de datos de auditoría que está almacenada en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]independiente.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   .NET Framework SDK 2.0 o posterior, o Microsoft Visual Studio 2005 o posterior. Puede obtener .NET Framework SDK de forma gratuita.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "48149865"
      `GO`  
   
     > [!NOTE]  
-    >  Para habilitar CLR, debe tener `ALTER SETTINGS` permiso de nivel de servidor, que se concede implícitamente a los miembros de la `sysadmin` y `serveradmin` roles fijos de servidor.  
+    >  Para habilitar CLR, debe tener el permiso de nivel de servidor `ALTER SETTINGS`, que se concede implícitamente a los miembros de los roles fijos de servidor `sysadmin` y `serveradmin`.  
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es un administrador para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia utiliza, debe tener un administrador le conceda **CreateAssembly** permiso para completar la instalación.  
+-   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está utilizando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   
@@ -80,11 +80,11 @@ ms.locfileid: "48149865"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  Copia el [!INCLUDE[tsql](../../includes/tsql-md.md)] código de instalación de base de datos en un archivo y guárdelo como `installDB.sql` en el directorio de ejemplo.  
+7.  Copie el código de instalación de base de datos [!INCLUDE[tsql](../../includes/tsql-md.md)] en un archivo y guárdelo como `installDB.sql` en el directorio del ejemplo.  
   
 8.  Instale la base de datos de auditoría ejecutando  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i installDB.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i installDB.sql`  
   
      con los valores correspondientes de la instancia y el servidor.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48149865"
   
 12. Ejecute el script con el siguiente comando  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i cleanup.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i cleanup.sql`  
   
          con los valores correspondientes de la instancia y el servidor.  
   

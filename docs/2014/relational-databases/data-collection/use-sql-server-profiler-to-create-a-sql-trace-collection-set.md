@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
@@ -12,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143445"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798697"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento SQL (SQL Server Management Studio)
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] puede aprovechar la funcionalidad de seguimiento del lado servidor de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar una definición de seguimiento y emplearla después para crear un conjunto de recopilación que use el tipo de recopilador genérico de Seguimiento de SQL. En este proceso hay dos partes:  
@@ -54,7 +54,7 @@ ms.locfileid: "48143445"
   
 6.  En la pestaña **General** , haga lo siguiente:  
   
-    1.  En el cuadro **Nombre de seguimiento** , escriba el nombre que desee usar para el seguimiento. En este ejemplo, el nombre de seguimiento es `SPgt80`.  
+    1.  En el cuadro **Nombre de seguimiento** , escriba el nombre que desee usar para el seguimiento. En este ejemplo, el nombre del seguimiento es `SPgt80`.  
   
     2.  En la lista **Usar la plantilla**, seleccione la plantilla que desea usar para el seguimiento. Para este ejemplo, haga clic en **TSQL_SPs**.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48143445"
   
 3.  Desplácese a través del script y realice las sustituciones siguientes, que están anotadas en el texto de los comentarios del script:  
   
-    -   Reemplace **SQLTrace Collection Set Name Here** por el nombre que desea usar para el conjunto de recopilación. Para este ejemplo, el nombre del conjunto de recopilación `SPROC_CollectionSet`.  
+    -   Reemplace **SQLTrace Collection Set Name Here** por el nombre que desea usar para el conjunto de recopilación. En este ejemplo, asigne el nombre `SPROC_CollectionSet` al conjunto de colección.  
   
-    -   Reemplace **SQLTrace Collection Item Name Here** por el nombre que desea usar para el elemento de recopilación. En este ejemplo, el nombre del elemento de colección `SPROC_Collection_Item`.  
+    -   Reemplace **SQLTrace Collection Item Name Here** por el nombre que desea usar para el elemento de recopilación. En este ejemplo, asigne el nombre `SPROC_Collection_Item` al elemento de colección.  
   
 4.  Haga clic en **Ejecutar** para ejecutar la consulta y crear el conjunto de recopilación.  
   

@@ -18,12 +18,12 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7ba1ee6a8fae84d0371c30758fcd2be1098b60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 409dec92a6dbfe9c4dd2c8cef1d81b2aa7f21d91
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536373"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_detach_schedule
  [ **@job_id=** ] *job_id*  
  Número de identificación del trabajo cuya programación se va a quitar. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  Nombre del trabajo cuya programación se va a quitar. *job_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
@@ -55,7 +55,7 @@ sp_detach_schedule
  [  **@schedule_id=** ] *schedule_id*  
  Número de identificación de la programación que se va a quitar del trabajo. *schedule_id* es **int**, su valor predeterminado es null.  
   
- [  **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'**_schedule_name_**'**  
  Nombre de la programación se va a quitar del trabajo. *schedule_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  

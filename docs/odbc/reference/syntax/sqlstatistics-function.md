@@ -20,16 +20,16 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02bc4c6d30fc6f8fa9d77e3da5f10664fd5a2704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693903"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207554"
 ---
 # <a name="sqlstatistics-function"></a>Función SQLStatistics
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLStatistics** recupera una lista de las estadísticas sobre una sola tabla y los índices asociados con la tabla. El controlador devuelve la información como un conjunto de resultados.  
@@ -148,7 +148,7 @@ SQLRETURN SQLStatistics(
 |TIPO DE (ODBC 1.0)|7|Smallint no NULL|Tipo de información que se devuelve:<br /><br /> SQL_TABLE_STAT indica una estadística para la tabla (en la columna de CARDINALIDAD o páginas).<br /><br /> SQL_INDEX_BTREE indica un índice de árbol B.<br /><br /> SQL_INDEX_CLUSTERED indica un índice agrupado.<br /><br /> SQL_INDEX_CONTENT indica un índice de contenido.<br /><br /> SQL_INDEX_HASHED indica un índice hash.<br /><br /> SQL_INDEX_OTHER indica de otro tipo de índice.|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Número de secuencia de la columna de índice (empezando por 1); Se devuelve NULL si el tipo es SQL_TABLE_STAT.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Nombre de columna. Si la columna se basa en una expresión, como el salario + ventajas, se devuelve la expresión; Si la expresión no puede determinarse, se devuelve una cadena vacía. Se devuelve NULL si el tipo es SQL_TABLE_STAT.|  
-|ASC_OR_DESC (ODBC 1.0)|10|Char (1)|Ordenar la secuencia para la columna: "A" ascendente; "D" para descendente; Se devuelve NULL si la secuencia de ordenación de columnas no es compatible con el origen de datos o si el tipo es SQL_TABLE_STAT.|  
+|ASC_OR_DESC (ODBC 1.0)|10|Char (1)|Secuencia de ordenación para la columna: "A" ascendente; "D" para descendente; Se devuelve NULL si la secuencia de ordenación de columnas no es compatible con el origen de datos o si el tipo es SQL_TABLE_STAT.|  
 |CARDINALIDAD (ODBC 1.0)|11|Integer|Cardinalidad de tabla o índice; número de filas de tabla si el tipo es SQL_TABLE_STAT; número de valores únicos del índice si el tipo no es SQL_TABLE_STAT; Se devuelve NULL si el valor no está disponible desde el origen de datos.|  
 |PÁGINAS DE (ODBC 1.0)|12|Integer|Número de páginas utilizadas para almacenar el índice o tabla. número de páginas de la tabla si el tipo es SQL_TABLE_STAT; número de páginas de índice si el tipo no es SQL_TABLE_STAT; Se devuelve NULL si el valor no está disponible desde el origen de datos o si no es aplicable al origen de datos.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|Si el índice es un índice filtrado, se trata de la condición de filtro, como el salario > 30000; Si no se puede determinar la condición de filtro, esto es una cadena vacía.<br /><br /> NULL si el índice no es un índice filtrado, no se puede determinar si el índice es un índice filtrado o el tipo es SQL_TABLE_STAT.|  

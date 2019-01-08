@@ -13,15 +13,15 @@ ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e2f62236d844a6ded850f33207bad9da082ce62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75529b9880183a644abdbdce1f6174c375245ba2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177295"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355842"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tarea 14: agregar la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS
-  Después de cargar datos en las tablas de ensayo de MDS, hay que ejecutar un procedimiento almacenado asociado a esa tabla para cargar los datos de las tablas de ensayo en las tablas adecuadas de la base de datos de MDS. Este procedimiento almacenado tiene dos parámetros requeridos que tiene que pasar: LogFlag y VersionName. LogFlag especifica si las transacciones se registran durante el proceso de almacenamiento provisional y VersionName representa la versión del modelo. Consulte [procedimiento almacenado provisionalmente](http://msdn.microsoft.com/library/hh231028.aspx) tema para obtener más detalles.  
+  Después de cargar datos en las tablas de ensayo de MDS, hay que ejecutar un procedimiento almacenado asociado a esa tabla para cargar los datos de las tablas de ensayo en las tablas adecuadas de la base de datos de MDS. Este procedimiento almacenado tiene dos parámetros necesarios que necesita pasar: LogFlag y VersionName. LogFlag especifica si las transacciones se registran durante el proceso de almacenamiento provisional y VersionName representa la versión del modelo. Consulte [procedimiento almacenado provisionalmente](https://msdn.microsoft.com/library/hh231028.aspx) tema para obtener más detalles.  
   
  En esta tarea, agregará la tarea Ejecutar SQL al flujo de control para invocar el procedimiento almacenado con el fin de cargar los datos almacenados provisionalmente en las tablas adecuadas de MDS.  
   

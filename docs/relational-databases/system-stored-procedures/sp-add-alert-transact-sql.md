@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 924c6ccdcd5d6e2c5529c3967c2943ec6349fe19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610770"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203286"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_add_alert [ @name = ] 'name'
  [  **@include_event_description_in =** ] *include_event_description_in*  
  Indica si la descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se debe incluir como parte del mensaje de notificación. *include_event_description_in*es **tinyint**, su valor predeterminado es **5** (correo electrónico y **net send**) y puede tener uno o varios de estos valores combinados con un **o** operador lógico.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Las opciones Buscapersonas y **net send** se quitarán del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
   
 |Valor|Descripción|  
@@ -119,7 +119,7 @@ sp_add_alert [ @name = ] 'name'
 |--------------------|-----------------|  
 |*Elemento*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
 |*Comparador*|Uno de estos operadores: >, < o =.|  
-|*Value*|Valor numérico del contador|  
+|*Valor*|Valor numérico del contador|  
   
  [  **@category_name =** ] **'***categoría***'**  
  El nombre de la categoría de alerta. *categoría* es **sysname**, su valor predeterminado es null.  

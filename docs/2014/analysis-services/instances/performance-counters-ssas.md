@@ -11,27 +11,27 @@ ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9db2bfec3a189fcad99d72821e1415e935b1368c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7d4e13542e8361fb9f4bf4fb05509ebe01669ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168585"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365797"
 ---
 # <a name="performance-counters-ssas"></a>Contadores de rendimiento (SSAS)
   Mediante el Monitor de rendimiento, puede supervisar el rendimiento de una instancia de Microsoft SQL Server Analysis Services (SSAS) mediante contadores de rendimiento.  
   
  El Monitor de rendimiento es un complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) que hace un seguimiento del uso de los recursos. Para iniciar este complemento MMC, escriba **PerfMon** en el símbolo del sistema, o bien, en el Panel de control, haga clic en **Herramientas administrativas**y, después, en **Monitor de rendimiento**. El Monitor de rendimiento permite seguir la actividad y el rendimiento de los servidores y los procesos mediante objetos y contadores predefinidos, y supervisar los eventos mediante contadores definidos por el usuario. El Monitor de rendimiento recopila recuentos en lugar de datos sobre los eventos, como, por ejemplo, uso de la memoria, cantidad de transacciones activas o actividad de la CPU. También puede establecer umbrales en contadores específicos para generar alertas que notifiquen a los operadores.  
   
- El Monitor de rendimiento permite supervisar el servidor remoto y las instancias locales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Usar el Monitor de rendimiento](http://technet.microsoft.com/library/cc749115.aspx).  
+ El Monitor de rendimiento permite supervisar el servidor remoto y las instancias locales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Usar el Monitor de rendimiento](https://technet.microsoft.com/library/cc749115.aspx).  
   
- Para ver la descripción de cualquier contador que se pueda usar con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], en el Monitor de rendimiento, abra el cuadro de diálogo **Agregar contadores** , seleccione un objeto de rendimiento y haga clic en **Mostrar descripción**. Los contadores más importantes son el uso de la CPU, el uso de la memoria y la velocidad de E/S del disco. Se recomienda empezar con estos contadores importantes, y pasar a los contadores más detallados cuando tenga una idea mejor de lo que se puede mejorar mediante la supervisión. Para obtener más información sobre qué contadores incluir, vea [Guía de operaciones de SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ Para ver la descripción de cualquier contador que se pueda usar con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], en el Monitor de rendimiento, abra el cuadro de diálogo **Agregar contadores** , seleccione un objeto de rendimiento y haga clic en **Mostrar descripción**. Los contadores más importantes son el uso de la CPU, el uso de la memoria y la velocidad de E/S del disco. Se recomienda empezar con estos contadores importantes, y pasar a los contadores más detallados cuando tenga una idea mejor de lo que se puede mejorar mediante la supervisión. Para obtener más información sobre qué contadores incluir, vea [Guía de operaciones de SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Los contadores están agrupados para que pueda encontrar más fácilmente los contadores relacionados.  
   
 ## <a name="counters-by-groups"></a>Contadores por grupos  
   
-|Grupo|Descripción|  
+|Agrupar|Descripción|  
 |-----------|-----------------|  
 |[Caché](#bkmk_Cache)|Estadísticas relacionadas con la memoria caché de agregaciones de Analysis Services.|  
 |[Conexión](#bkmk_Connection)|Estadísticas relacionadas con las conexiones de Microsoft Analysis Services.|  
@@ -101,7 +101,7 @@ ms.locfileid: "48168585"
 |Filas/s|Número de filas procesadas durante una consulta de predicción de minería de datos.|  
 |Consultas/s|Número de consultas de minería de datos procesadas.|  
 |Total de consultas|Total de consultas de minería de datos recibidas por el servidor.|  
-|Total de filas|Total de filas devueltas por consultas de minería de datos.|  
+|Filas de totales|Total de filas devueltas por consultas de minería de datos.|  
 |Total de predicciones|Total de consultas de predicciones de minería de datos recibidas por el servidor.|  
   
 ###  <a name="bkmk_Locks"></a> Bloqueos  

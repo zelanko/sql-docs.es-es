@@ -1,5 +1,5 @@
 ---
-title: Crear un origen de datos (SSAS Multidimensional) | Documentos de Microsoft
+title: Crear un origen de datos (SSAS Multidimensional) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c461f38e7e2d0cf43cf206fee0c474f6fd74d35a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027052"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410322"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crear un origen de datos (SSAS multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34027052"
   
 3.  En la página **Seleccione cómo definir la conexión** , elija **Crear un origen de datos basado en una conexión nueva o existente** y, a continuación, haga clic en **Nueva** para abrir el **Administrador de conexiones**.  
   
-     Las nuevas conexiones se crean en el Administrador de conexiones. En el Administrador de conexiones, se selecciona un proveedor y luego se especifican las propiedades de las cadenas de conexión que usa el proveedor para conectarse a los datos subyacentes. La información exacta necesaria depende del proveedor seleccionado, pero generalmente incluye un servidor o una instancia de servicio, la información para iniciar la sesión en el servidor o la instancia de servicio, un nombre de archivo o de base de datos y otras configuraciones específicas del proveedor. En el resto de este procedimiento, supondremos una conexión de base de datos de SQL Server.  
+     Las nuevas conexiones se crean en el Administrador de conexiones. En el Administrador de conexiones, se selecciona un proveedor y luego se especifican las propiedades de las cadenas de conexión que usa el proveedor para conectarse a los datos subyacentes. La información exacta necesaria depende del proveedor seleccionado, pero generalmente incluye un servidor o una instancia de servicio, la información para iniciar la sesión en el servidor o la instancia de servicio, un nombre de archivo o de base de datos y otras configuraciones específicas del proveedor. El resto de este procedimiento, supondremos una conexión de base de datos de SQL Server.  
   
 4.  Seleccione el proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework o el proveedor OLE DB nativo que se va a usar para la conexión.  
   

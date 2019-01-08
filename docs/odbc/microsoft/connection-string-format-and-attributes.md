@@ -14,12 +14,12 @@ ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a28c3f7128d05307afba95d288f6a20afd75aeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652473"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542779"
 ---
 # <a name="connection-string-format-and-attributes"></a>Atributos y el formato de cadena de conexión
 > [!IMPORTANT]  
@@ -45,7 +45,7 @@ ms.locfileid: "47652473"
 |DSN|El nombre del origen de datos aparece en la ficha controladores de la **Administrador de orígenes de datos ODBC** cuadro de diálogo.|""|  
 |PWD|La contraseña para el servidor de Oracle que desea tener acceso. Este controlador es compatible con las limitaciones que Oracle se aplica a las contraseñas.|""|  
 |SERVER|La cadena de conexión para el servidor de Oracle que desea tener acceso.|""|  
-|UID|El nombre de usuario del servidor de Oracle. Dependiendo del sistema, este atributo no puede ser opcional, es decir, ciertas tablas y bases de datos podrían requerir este atributo por motivos de seguridad.<br /><br /> Utilice "/" utilizar Oracle operativo de la autenticación del sistema.|""|  
+|UID|El nombre de usuario del servidor de Oracle. Dependiendo del sistema, este atributo no puede ser opcional: es decir, ciertas tablas y bases de datos podrían requerir este atributo por motivos de seguridad.<br /><br /> Utilice "/" utilizar Oracle operativo de la autenticación del sistema.|""|  
 |BUFFERSIZE|El tamaño del búfer óptimo utilizado al recuperar las columnas.<br /><br /> El controlador optimiza la recuperación para que una búsqueda desde el servidor Oracle devuelve las filas suficientes para rellenar un búfer de este tamaño. Los valores más grandes tienden a aumentar el rendimiento si captura una gran cantidad de datos.|65535|  
 |SYNONYMCOLUMNS|Cuando este valor es true (1), una llamada de API de () SQLColumn devuelve información de columna. En caso contrario, () SQLColumn devuelve solo las columnas para las tablas y vistas. El controlador ODBC para Oracle proporciona un acceso más rápido cuando no se establece este valor.|1|  
 |REMARKS|Cuando este valor es true (1), el controlador devuelve columnas de la sección Comentarios para el [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) conjunto de resultados. El controlador ODBC para Oracle proporciona un acceso más rápido cuando no se establece este valor.|0|  

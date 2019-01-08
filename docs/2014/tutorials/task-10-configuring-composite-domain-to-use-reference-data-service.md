@@ -13,15 +13,15 @@ ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e4a8ef8c3b9d60040d6d9b5fcbff145a600cd88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8541ea7446fe80bf6bb0fd5f1bc3e80285912ffe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167685"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370027"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Tarea 10: configurar un dominio compuesto para que use un servicio de datos de referencia
-  En esta tarea, configurará la **validación de direcciones** un dominio compuesto a usar el **Melissa Data – Address Check** service. En tiempo de ejecución, durante la actividad de limpieza, DQS pasa los valores de dominios del dominio Validación de direcciones al servicio para su limpieza. Consulte [mapa de dominio o un dominio compuesto a datos de referencia](http://msdn.microsoft.com/library/hh213030.aspx) para obtener más detalles.  
+  En esta tarea, configurará la **validación de direcciones** un dominio compuesto a usar el **Melissa Data - Address Check** service. En tiempo de ejecución, durante la actividad de limpieza, DQS pasa los valores de dominios del dominio Validación de direcciones al servicio para su limpieza. Consulte [mapa de dominio o un dominio compuesto a datos de referencia](https://msdn.microsoft.com/library/hh213030.aspx) para obtener más detalles.  
   
 1.  En la página principal de **cliente DQS**, haga clic en **proveedores (administración de dominios)** en **base de conocimiento reciente** para iniciar el **Domain Management**página.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48167685"
   
 4.  Haga clic en **examinar** en la barra de herramientas.  
   
-5.  En el **catálogo de proveedores de datos de referencia en línea** cuadro de diálogo, seleccione **casilla** junto a **Melissa Data – Address Check**.  
+5.  En el **catálogo de proveedores de datos de referencia en línea** cuadro de diálogo, seleccione **casilla** junto a **Melissa Data - Address Check**.  
   
      ![Seleccionar Melissa Data - Address Check](../../2014/tutorials/media/et-configuringcdtouserds-02.jpg "seleccionar Melissa Data - Address Check")  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48167685"
 9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 11: Publicar la base de conocimiento](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
+ [Tarea 11: Publicación de la Base de conocimiento](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18c950015de84ac6b4204e657dfd52f894b6bced
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21fad41528bfc47ae2b117db68e73320109c98be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207435"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374754"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Propiedades del origen de datos (cuadro de diálogo), Credenciales (Generador de informes)
   Seleccione **Credenciales** en el cuadro de diálogo **Propiedades del origen de datos** para mostrar y modificar las credenciales para conectarse a un origen de datos incrustado en el informe. Las credenciales que proporcione se usarán para tener acceso al origen de datos con el fin de obtener una vista previa de los informes. Para obtener más información, vea [Especificar credenciales en el Generador de informes](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48207435"
  Seleccione esta opción para utilizar la autenticación de Windows.  
   
  **Use este nombre de usuario y contraseña**  
- Seleccione esta opción para proporcionar un nombre de usuario y una contraseña específicos. Para los orígenes de datos incrustados: al publicar el proyecto del servidor de informes en el servidor de destino, el nombre de usuario y la contraseña se guardan como las credenciales almacenadas para la base de datos. Si desea usar el nombre de usuario y la contraseña como credenciales de Windows, puede cambiar las propiedades del origen de datos compartido publicado en el servidor de destino. Para obtener más información, vea [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) en la documentación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Seleccione esta opción para proporcionar un nombre de usuario y una contraseña específicos. Para los orígenes de datos incrustados: al publicar el proyecto del servidor de informes en el servidor de destino, el nombre de usuario y la contraseña se guardan como las credenciales almacenadas para la base de datos. Si desea usar el nombre de usuario y la contraseña como credenciales de Windows, puede cambiar las propiedades del origen de datos compartido publicado en el servidor de destino. Para obtener más información, vea [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) en la documentación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Nombre de usuario.**  
  Escriba un nombre de usuario con el que iniciar sesión en el origen de datos.  
@@ -47,7 +47,7 @@ ms.locfileid: "48207435"
   
  En algunas extensiones de datos, se debe configurar una cuenta de ejecución desatendida en el servidor de informes.  
   
- Para obtener más información, vea el tema del tipo de origen de datos correspondiente en [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) y [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la documentación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Para obtener más información, vea el tema del tipo de origen de datos correspondiente en [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) y [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la documentación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

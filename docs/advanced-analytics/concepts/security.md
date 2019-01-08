@@ -1,5 +1,5 @@
 ---
-title: Seguridad para el aprendizaje automático de SQL Server | Microsoft Docs
+title: 'Información general de seguridad para las extensiones de R y Python: SQL Server Machine Learning'
 description: Información general sobre la seguridad para el marco de extensibilidad en SQL Server Machine Learning Services. Seguridad para inicio de sesión y cuentas de usuario, el servicio Launchpad de SQL Server, cuentas de trabajo, que se ejecutan varias secuencias de comandos y los permisos de archivo.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a5d109e16c81481f9e4267dc4963ecea74cfa736
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419380"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596576"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Información general de seguridad para el marco de extensibilidad en SQL Server Machine Learning Services
 
@@ -71,7 +71,7 @@ Por lo tanto, todos los scripts externos que se inician desde un cliente remoto 
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Servicios que se usan en el procesamiento externo (Launchpad)
 
-El marco de extensibilidad agrega un nuevo servicio de NT para el [lista de servicios](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) en una instalación de SQL Server: [ **SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
+El marco de extensibilidad agrega un nuevo servicio de NT para el [lista de servicios](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) en una instalación de SQL Server: [**Launchpad de SQL Server (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 El motor de base de datos, usa el servicio Launchpad de SQL Server para crear instancias de una sesión de R o Python como un proceso independiente. El proceso se ejecuta bajo una cuenta con pocos privilegios; distinto de SQL Server, Launchpad propio y la identidad del usuario en la que se ejecutó la consulta de host o el procedimiento almacenada. Ejecutar script en un proceso independiente, bajo cuenta con pocos privilegios, es la base del modelo de seguridad y aislamiento para R y Python en SQL Server.
 

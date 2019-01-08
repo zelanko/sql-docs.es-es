@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar jerarquías | Documentos de Microsoft
+title: Crear y administrar jerarquías en los modelos tabulares de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c9282c3b28ca5998cc21d2906f06d50f862e49a9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e9e5fc942aa7b03cd4cb9a15d8b474a12f12a8d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044839"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072602"
 ---
 # <a name="create-and-manage-hierarchies"></a>Crear y administrar jerarquías 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Las jerarquías se pueden crear y administrar en la Vista de diagrama del diseñador de modelos. Para ver el diseñador de modelos en la Vista de diagrama, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** , seleccione **Vista de modelo**y haga clic en **Vista de diagrama**.  
   
- Este artículo incluye las siguientes tareas:  
+ En este artículo incluye las siguientes tareas:  
   
 -   [Crear una jerarquía](#bkmk_create)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34044839"
   
 2.  Escriba el nombre de la jerarquía.  
   
- Puede arrastrar columnas adicionales al nivel primario de la jerarquía para copiarlas. Arrastre y coloque el nivel secundario para situarlo donde desea que aparezca en la jerarquía.  
+ Puede arrastrar columnas adicionales al nivel primario de la jerarquía, que copia las columnas. Arrastre y coloque el nivel secundario para situarlo donde desea que aparezca en la jerarquía.  
   
 > [!NOTE]  
 >  El comando Crear jerarquía está deshabilitado en el menú contextual si realiza una selección múltiple de una medida junto con una o varias columnas, o si selecciona columnas de varias tablas.  

@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - changesubscription
@@ -19,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c3b60aedb42c6d249920cb42da021c474faf5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640713"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209844"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +49,22 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication**=] **'***publicación***'**  
+ [ **@publication**=] **'**_publicación_**'**  
  Es el nombre de la publicación que se va a cambiar. *publicación*es **sysname**, no tiene ningún valor predeterminado  
   
- [ **@article** =] **'***artículo***'**  
+ [ **@article** =] **'**_artículo_**'**  
  Es el nombre del artículo que se va a cambiar. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@subscriber** =] **'***suscriptor***'**  
+ [ **@subscriber** =] **'**_suscriptor_**'**  
  Es el nombre del suscriptor. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@destination_db** =] **'***destination_db***'**  
+ [ **@destination_db** =] **'**_destination_db_**'**  
  Es el nombre de la base de datos de suscripción. *destination_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@property=**] **'***propiedad***'**  
+ [  **@property=**] **'**_propiedad_**'**  
  Es la propiedad para cambiar de la suscripción especificada. *propiedad* es **nvarchar (30)**, y puede tener uno de los valores de la tabla.  
   
- [  **@value=**] **'***valor***'**  
+ [  **@value=**] **'**_valor_**'**  
  Es el nuevo valor para el elemento especificado *propiedad*. *valor* es **nvarchar (4000)**, y puede tener uno de los valores de la tabla.  
   
 |Property|Valor|Descripción|  
@@ -86,8 +85,8 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Proveedor OLE DB|  
 |**memory_optimized**|**bit**|Indica que la suscripción admite tablas optimizadas para memoria. *memory_optimized* es **bit**, donde 1 es igual a true (la suscripción es compatible con tablas optimizadas para memoria).|  
   
- [  **@publisher =** ] **'***publisher***'**  
- Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* es **sysname**, su valor predeterminado es null.  
+ [  **@publisher =** ] **'**_publisher_**'**  
+ Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no se debe especificar para una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

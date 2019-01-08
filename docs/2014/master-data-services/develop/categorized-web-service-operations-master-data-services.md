@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 48a4fcdf1d1bb0f3f0736abfac5946e066937ae7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3e0d205cba04fd0d45249eb2b1915310f98d6a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064135"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814587"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Operaciones de servicio web clasificadas (Master Data Services)
   El servicio web de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] contiene un conjunto completo de operaciones que le permiten escribir código para controlar todas las características que proporciona [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] a través de su interfaz de usuario. Las operaciones del servicio web se definen mediante la interfaz <xref:Microsoft.MasterDataServices.IService> y se implementan como métodos en la clase <xref:Microsoft.MasterDataServices.ServiceClient>. En este tema se agrupan las operaciones del servicio web en categorías conceptuales para ayudarle a entender cómo se usa la API del servicio web.  
@@ -118,7 +118,7 @@ ms.locfileid: "48064135"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>Operaciones de importación de datos  
- Estas operaciones se utilizan para importar datos en una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Para más información, vea [Importación de datos &#40;Master Data Services&#41;](../overview-importing-data-from-tables-master-data-services.md).  
+ Estas operaciones se utilizan para importar datos en una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Para más información, vea [Importación de datos &#40;Master Data Services&#41;](../overview-importing-data-from-tables-master-data-services.md).  
   
 ||  
 |-|  
@@ -147,7 +147,7 @@ ms.locfileid: "48064135"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
 ## <a name="security-operations"></a>Operaciones de seguridad  
- Estas operaciones se utilizan para modificar la configuración de seguridad que controla el acceso a la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Para obtener más información, consulte [Seguridad &#40;Master Data Services&#41;](../security-master-data-services.md).  
+ Estas operaciones se utilizan para modificar la configuración de seguridad que controla el acceso a la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Para obtener más información, consulte [Seguridad &#40;Master Data Services&#41;](../security-master-data-services.md).  
   
 ||  
 |-|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], processing order
@@ -14,19 +13,19 @@ ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 569767e74c6666a68b41b5af9914a5a028522bc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb5506a4279ecd11c31d860f68d4c3736425298b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174055"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788537"
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>Especificar el orden de procesamiento de los artículos de mezcla
   Desde [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], es posible invalidar el orden predeterminado del procesamiento de artículos para las publicaciones de combinación. Esto resulta útil, por ejemplo, si define la integridad referencial a través de desencadenadores que se deben activar en un orden determinado.  
   
  **Para especificar el orden de procesamiento de los artículos**  
   
--   Programación de Transact-SQL de replicación: [Especificar el orden de procesamiento de la mezcla de artículos de tabla &#40;programación de la replicación con Transact-SQL&#41;](../publish/specify-the-processing-order-of-merge-table-articles.md)  
+-   Programación de Transact-SQL de la replicación: [Especificar el orden de procesamiento de la mezcla de artículos de tabla &#40;programación de la replicación con Transact-SQL&#41;](../publish/specify-the-processing-order-of-merge-table-articles.md)  
   
 ## <a name="how-processing-order-is-determined"></a>Cómo se determina el orden de procesamiento  
  De manera predeterminada, durante la sincronización de mezcla, los artículos se procesan en el orden requerido por las dependencias entre objetos, incluidas las restricciones de integridad referencial declarativa (DRI) definidas en las tablas base. El procesamiento implica enumerar los cambios de una tabla y aplicar esos cambios a continuación. Si no hay DRI presente pero hay filtros de combinación o registros lógicos entre los artículos de la tabla, los artículos se procesan en el orden que requieran los filtros y los registros lógicos. Los artículos que no estén relacionados con ningún otro artículo mediante DRI, filtros de combinación, registros lógicos u otras dependencias, se procesan según el alias del artículo de la tabla de sistema [sysmergearticles &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/sysmergearticles-transact-sql).  

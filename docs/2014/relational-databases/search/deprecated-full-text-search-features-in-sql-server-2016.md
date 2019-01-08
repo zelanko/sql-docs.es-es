@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [full-text search]
@@ -14,12 +14,12 @@ ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63c53ddd93af33c966ae229c305d9f69367f1ceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b39faa18a310a652b9a0b52c5c50c55060ab0f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129875"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799777"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Características de la búsqueda de texto completo desusadas en SQL Server 2014
   En este tema se describen las características de búsqueda de texto completo desusadas que todavía están disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
@@ -48,7 +48,7 @@ ms.locfileid: "48129875"
   
 |Característica desusada|Sustituta|Nombre de característica|Id. de la característica|  
 |------------------------|-----------------|------------------|----------------|  
-|Operador NEAR genérico de CONTAINS y CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|El operador NEAR personalizado:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,\<distancia > [,\<orden >]]<br /><br /> }<br /><br /> )<br /><br /> \<distancia >:: = {*entero* &#124; **MAX**}<br /><br /> \<orden >:: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|Operador NEAR genérico de CONTAINS y CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|El operador NEAR personalizado:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,\<distancia > [,\<orden >]]<br /><br /> }<br /><br /> )<br /><br /> \<distancia >:: = {*entero* &#124; **MAX**}<br /><br /> \<orden >:: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Opción CREATE FULLTEXT CATALOG:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Ninguno.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Ninguno.*|237<br /><br /> Ninguno.<sup>*</sup>|  
 |Propiedad DATABASEPROPERTYEX: IsFullTextEnabled|Ninguno.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db option:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Ninguno.|sp_detach_db @keepfulltextindexfile|226|  

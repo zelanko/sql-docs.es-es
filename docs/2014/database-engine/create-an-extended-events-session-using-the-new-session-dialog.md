@@ -20,12 +20,12 @@ ms.assetid: 6b2244bc-df6a-4b0a-990e-ddd8d42f7907
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0bfce6c45fcfefd214511c994b3d87fd34bf8282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1135b4738aea40d4bf426dffc6bcccb64c9f59e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150615"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408692"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>Crear una sesión de eventos extendidos utilizando el cuadro de diálogo Nueva sesión
   El cuadro de diálogo Nueva sesión permite definir una sesión de Extended Events que capture, presente y analice los datos. El cuadro de diálogo Nueva sesión expone toda la funcionalidad de Extended Events.  
@@ -35,7 +35,7 @@ ms.locfileid: "48150615"
 ## <a name="before-you-begin"></a>Antes de empezar  
  Para abrir el cuadro de diálogo Nueva sesión, en el Explorador de objetos, expanda el nodo **Administración** y, a continuación, expanda **Extended Events**. Haga clic con el botón secundario en **Sesiones**y, a continuación, haga clic en **Nueva sesión**.  
   
-##  <a name="BeforeYouBegin"></a> Permisos  
+##  <a name="BeforeYouBegin"></a> Permissions  
  Para crear una sesión de eventos extendidos, debe disponer del permiso ALTER ANY EVENT SESSION.  
   
 ## <a name="to-create-an-extended-events-session-using-the-new-session-dialog"></a>Para crear una sesión de Extended Events utilizando el cuadro de diálogo Nueva sesión  
@@ -59,7 +59,7 @@ ms.locfileid: "48150615"
   
 6.  En la sección de **Seguimiento de causalidad** , active la casilla **Realizar un seguimiento de cómo se relacionan los eventos entre sí** para realizar el seguimiento del trabajo en varias tareas.  
   
-     Para obtener más información acerca del seguimiento de causalidad, vea "Contenido y características de la sesión" en el tema [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md) .  
+     Para obtener más información acerca del seguimiento de causalidad, vea "Contenido y características de la sesión" en el [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md) tema.  
   
      Para agregar eventos a la sesión, en la sección **Seleccionar una página** , haga clic en **Eventos**.  
   

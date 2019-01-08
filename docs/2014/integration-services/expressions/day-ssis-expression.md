@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DAY function
@@ -14,12 +13,12 @@ ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 919b6f92cda6a533ac4918e3f7cc4496fdb23e52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d530819e235efd233df3247d2e85d7da8c2cf1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198211"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805137"
 ---
 # <a name="day-ssis-expression"></a>DAY (expresión de SSIS)
   Devuelve un entero que representa la parte del día de una fecha.  
@@ -41,10 +40,10 @@ DAY(date)
 ## <a name="remarks"></a>Comentarios  
  DAY devuelve un resultado NULL si el valor del argumento es NULL.  
   
- Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
->  La expresión no puede validarse cuando un literal de fecha se convierte explícitamente en uno de estos tipos de datos de fecha: DT_DBTIMESTAMPOFFSET y DT_DBTIMESTAMP2.  
+>  La expresión no puede validarse cuando un literal de fecha se convierte explícitamente a uno de estos tipos de datos de fecha: DT_DBTIMESTAMPOFFSET y DT_DBTIMESTAMP2.  
   
  Utilizar la función DAY es más sencillo pero equivalente a utilizar la función DATEPART("Day", date).  
   

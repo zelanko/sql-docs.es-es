@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5124a091b59ec1669f5d77cbe989f780fee46c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738123"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589129"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  Es el testigo de un objeto OLE creado anteriormente mediante el uso de **sp_OACreate** o es NULL. Si *objecttoken* está especificado, se devuelve información de error para ese objeto. Si se especifica NULL, se devuelve la información de error de todo el lote.  
   
- *origen* **salida**  
+ _origen_ **salida**  
  Es el origen de la información de error. Si se especifica, debe ser una variable local **char**, **nchar**, **varchar**, o **nvarchar** variable. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- *descripción* **salida**  
+ _descripción_ **salida**  
  Es la descripción del error. Si se especifica, debe ser una variable local **char**, **nchar**, **varchar**, o **nvarchar** variable. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- *HelpFile* **salida**  
+ _HelpFile_ **salida**  
  Es el archivo de ayuda del objeto OLE. Si se especifica, debe ser una variable local **char**, **nchar**, **varchar**, o **nvarchar** variable. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- *HelpID* **salida**  
+ _HelpID_ **salida**  
  Es el identificador de contexto del archivo de ayuda. Si se especifica, debe ser una variable local **int** variable.  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**Error en la ejecución de servidor (0 x 80080005)**|El objeto OLE especificado está registrado como servidor OLE local (archivo .exe), pero no se pudo encontrar o iniciar el archivo .exe.|  
 |**El módulo especificado no se encontró (0x8007007e)**|El objeto OLE especificado está registrado como servidor OLE en proceso (archivo .dll), pero no se pudo encontrar o cargar el archivo .dll.|  
 |**Discordancia de tipos (0 x 80020005)**|El tipo de datos de una variable local de [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizada para almacenar un valor de propiedad o un valor de método devueltos no coincidió con el tipo de datos de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para el valor devuelto de la propiedad o método. O bien, se solicitó el valor devuelto de una propiedad o método, pero no se devuelve un valor.|  
-|**El tipo de datos o el valor del parámetro 'context' de sp_OACreate no es válido. (0x8004275B)**|El valor del parámetro de contexto debe ser uno de los siguientes: 1, 4 o 5.|  
+|**El tipo de datos o el valor del parámetro 'context' de sp_OACreate no es válido. (0x8004275B)**|El valor del parámetro de contexto debe ser uno de: 1, 4 o 5.|  
   
  Para obtener más información acerca de cómo procesar códigos de retorno HRESULT, vea [OLE Automation códigos de retorno e información de Error](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   

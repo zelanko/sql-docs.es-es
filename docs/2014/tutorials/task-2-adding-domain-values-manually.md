@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 2: Agregar valores de dominio manualmente | Microsoft Docs'
+title: 'Tarea 2: Agregar manualmente los valores de dominio | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0383bc30f93afd893abcf86717df3a4e3a06d7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 756f69f172c1c901ffdf15658a6fefdcee64df1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138395"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359957"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>Tarea 2: agregar valores de dominio manualmente
-  En esta tarea, agregará un valor para el **país** dominio manualmente. Consulte [Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx) tema para obtener más información acerca de los campos de esta página.  
+  En esta tarea, agregará un valor para el **país** dominio manualmente. Consulte [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) tema para obtener más información acerca de los campos de esta página.  
   
 1.  Haga clic en **país** dominio en el **lista de dominios**.  
   

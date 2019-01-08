@@ -12,12 +12,12 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 374ba32b5cc79a503333b691b4708921f507004a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182775"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353581"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propiedades del catálogo de texto completo (página General)
   En esta sección se muestran las opciones y funciones disponibles en la página **General** del cuadro de diálogo **Propiedades del catálogo de texto completo** .  
@@ -50,7 +50,7 @@ ms.locfileid: "48182775"
   
 -   **Generando índice**  
   
--   **El disco está lleno, en pausa**  
+-   **El disco está en pausa el completo**  
   
 -   **Change tracking**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48182775"
  **Tamaño del catálogo**  
  Muestra el tamaño del catálogo de texto completo en megabytes.  
   
- **Nombre**  
+ **Name**  
  Nombre del catálogo de texto completo.  
   
  **Distinguir acentos**  
@@ -70,7 +70,7 @@ ms.locfileid: "48182775"
   
 -   **Sí**  
   
--   Para obtener información acerca de las marcas diacríticas, vea [Marca diacrítica](http://go.microsoft.com/fwlink/?LinkId=154091) en la Enciclopedia MSN Encarta.  
+-   Para obtener información acerca de las marcas diacríticas, vea [Marca diacrítica](https://go.microsoft.com/fwlink/?LinkId=154091) en la Enciclopedia MSN Encarta.  
   
  **Fecha del último rellenado**  
  Muestra la fecha de la última vez que se rellenó el catálogo.  

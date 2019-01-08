@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -14,12 +13,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a03d530c5dc6ca964d35df5ee67a932ddea3a6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8f239afa5d26ee4a3d6d97a24f58a46f1e3334
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175386"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370207"
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
   Para todas las aplicaciones web y servicios web asociados a la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , puede configurar las opciones del sistema.  
@@ -79,7 +78,7 @@ ms.locfileid: "48175386"
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
-|**Número predeterminado de miembros en la jerarquía**|**HierarchyChildNodeLimit**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...** . Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
+|**Número predeterminado de miembros en la jerarquía**|**HierarchyChildNodeLimit**|En el área funcional del **Explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], el número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...**. Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
 |**Mostrar nombres en jerarquía de manera predeterminada**|**ShowNamesInHierarchy**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , determina la configuración predeterminada que se selecciona al ver jerarquías.<br /><br /> El valor predeterminado es **Sí** o **1**, que indica que se muestran el nombre y el código de cada miembro. Cambie a **No** o **2** para mostrar solo el código.|  
 |**Número de atributos basados en dominio de la lista**|**DBAListRowLimit**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. El valor predeterminado es **50**. Si hay más de 50 miembros, en su lugar se muestra un cuadro de diálogo en el que se puede buscar.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , nivel de similitud que se usa cuando se utiliza el criterio de filtro **Coincide** . El valor predeterminado es **0.3**. Establezca el valor más próximo a **1** para devolver una coincidencia que se aproxime más al criterio de búsqueda. Establezca el valor en **1** para obtener una coincidencia exacta.|  
@@ -107,8 +106,8 @@ ms.locfileid: "48175386"
 |**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que se usa en el vínculo en las notificaciones por correo electrónico; por ejemplo, http://constoso/mds.|  
 |**Intervalo de las notificaciones de correo electrónico**|**NotificationInterval**|La frecuencia, en segundos, con la que se envían las notificaciones de correo electrónico. El valor predeterminado es **120** segundos (2 minutos).|  
 |**Número de notificaciones en un solo correo electrónico**|**NotificationsPerEmail**|El número máximo de problemas de validación que se enumerarán en un solo correo electrónico de notificación. Los problemas adicionales, si los hay, no se incluyen en el correo electrónico, pero están disponibles en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cambiando y guardando el **Formato de correo electrónico** en la pestaña **General** del usuario.|  
-|**Expresión regular para la dirección de correo electrónico**|**EmailRegExPattern**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expresión regular que se utiliza para validar la dirección de correo electrónico escrita en la pestaña **General** del usuario. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](http://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
+|**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Nota: Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cambiando y guardando el **formato de correo electrónico** en el usuario **General** ficha.|  
+|**Expresión regular para la dirección de correo electrónico**|**EmailRegExPattern**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expresión regular que se utiliza para validar la dirección de correo electrónico escrita en la pestaña **General** del usuario. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
 |**Cuenta de Correo electrónico de base de datos**|**EmailProfilePrincipalAccount**|Muestra la cuenta de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. El perfil predeterminado es **mds_email_user**.|  
 |**Perfil de Correo electrónico de base de datos**|**DatabaseMailProfile**|El perfil de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. Está en blanco de forma predeterminada.|  
 ||**ValidationIssueHTML**|En formato HTML, texto que los usuarios de correo electrónico obtienen cuando una regla de negocios produce un error en la validación.|  
@@ -146,6 +145,6 @@ ms.locfileid: "48175386"
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad de los objetos de base de datos &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+ [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 93d31c4f9f8f712834131136034541bf469e0014
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1fc6c16004ba2a3bba7d11b49a351fcb3fc1641e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119885"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362557"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Características desusadas de SQL Server Reporting Services en SQL Server 2014
   En este tema se describen las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] desusadas. Las características siguen estando disponibles en la versión en que están desusadas; no obstante, las características están programadas para quitarlas en una versión futura de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
@@ -39,7 +39,7 @@ ms.locfileid: "48119885"
 ##  <a name="bkmk_2014"></a> Características desusadas de SQL Server 2014 Reporting Services  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Características no admitidas en la siguiente versión de SQL Server  
- La siguiente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no se admitirán las características en el **siguiente** verzi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente.  
+ Las siguientes características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no se admitirán en la **próxima** versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>Configuración de información de dispositivo de extensión de representación HTML  
  La siguiente configuración de información de dispositivo para la extensión de representación de HTML está desusada.  
@@ -65,12 +65,12 @@ ms.locfileid: "48119885"
  Para obtener más información sobre la extensión de representación HTML, vea [HTML Device Information Settings](html-device-information-settings.md)  
   
 #### <a name="microsoft-word-and-microsoft-excel-1997-2003-rendering"></a>Representación de Microsoft Word y Microsoft Excel 1997-2003  
- El[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] las extensiones de representación BIFF8 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] notifica a la [!INCLUDE[msCoName](../includes/msconame-md.md)] Word y [!INCLUDE[msCoName](../includes/msconame-md.md)] formato de archivo de intercambio binario de Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Incluye extensiones que se procesan en el [!INCLUDE[msCoName](../includes/msconame-md.md)] formato XML abierto de Office 2007-2010.  
+ Extensiones de representación BIFF8 de[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para el formato de archivo de intercambio binario de [!INCLUDE[msCoName](../includes/msconame-md.md)] Word y [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Incluye extensiones que se procesan en el [!INCLUDE[msCoName](../includes/msconame-md.md)] formato XML abierto de Office 2007-2010.  
   
 #### <a name="report-definition-language-rdl-2005-and-earlier"></a>Lenguaje RDL 2005 y anterior  
  Lenguaje RDL 2005 y anterior está desusado. Para obtener más información acerca de RDL, vea [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- Para obtener más información sobre cómo actualizar los informes, vea [actualizar informes](install-windows/upgrade-reports.md).  
+ Para obtener más información acerca de la actualización de informes, vea [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 #### <a name="sql-server-2005-and-earlier-custom-report-items"></a>SQL Server 2005 y elementos de informe personalizados anteriores  
  Los elementos de informe personalizados (CRI) compilados para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 y anterior están desusados.  
@@ -84,7 +84,7 @@ ms.locfileid: "48119885"
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no incluye las herramientas para crear o actualizar los modelos de informe. Para obtener más información, consulte [cambios substanciales de SQL Server Reporting Services en SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
 #### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Métodos desusados en el extremo del servicio web  
- Las operaciones siguientes han quedado obsoletas en la <xref:ReportService2010.ReportingService2010> extremo del servicio Web:  
+ Las operaciones siguientes han quedado en desuso en el extremo de servicios web de <xref:ReportService2010.ReportingService2010>:  
   
 -   <xref:ReportService2010.ReportingService2010.GetProperties%2A>  
   
@@ -93,23 +93,23 @@ ms.locfileid: "48119885"
 #### <a name="sharepoint-web-parts"></a>Elementos web de SharePoint  
  El archivo contenedor de instalación **RSWebParts.cab** y los elementos web de SharePoint que se pueden extraer del archivo .cab, están en desuso. Los elementos web en desuso son el Explorador de informes (**SPExplorer.dwp**) y el Visor de informes (**SPViewer.dwp**).  
   
- Para obtener más información sobre los elementos web en desuso, vea [Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)](http://msdn.microsoft.com/library/ms159772.aspx)  
+ Para obtener más información sobre los elementos web en desuso, vea [Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx)  
   
 ### <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Características no admitidas en una versión futura de SQL Server  
  Las características del [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] siguientes se admiten en la próxima versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero se quitarán en una versión posterior. No se ha determinado la versión específica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] características han quedado en desuso en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ Ninguna característica de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ha quedado en desuso en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ##  <a name="bkmk_2012sp1"></a> Características desusadas de SQL Server 2012 SP1 Reporting Services  
- Esta sección se describen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] características en desuso en [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Las características del [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] siguientes se admiten en la próxima versión de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], pero se quitarán en una versión posterior. No se ha determinado la versión específica de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+ En esta sección se describen las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] desusadas en [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Las características del [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] siguientes se admiten en la próxima versión de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], pero se quitarán en una versión posterior. No se ha determinado la versión específica de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ### <a name="sharepoint-web-parts"></a>Elementos web de SharePoint  
  El archivo contenedor de instalación **RSWebParts.cab** y los elementos web de SharePoint que se pueden extraer del archivo .cab, están en desuso. Los elementos web en desuso son el Explorador de informes (**SPExplorer.dwp**) y el Visor de informes (**SPViewer.dwp**).  
   
- Para obtener más información sobre los elementos web en desuso, vea [Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)](http://msdn.microsoft.com/library/ms159772.aspx)  
+ Para obtener más información sobre los elementos web en desuso, vea [Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx)  
   
 ##  <a name="bkmk_2012"></a> Características desusadas de SQL Server 2012 Reporting Services  
- Esta sección se describen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] características en desuso en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
+ En esta sección se describen las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] desusadas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>Configuración de información de dispositivo de extensión de representación HTML  
  La siguiente configuración de información de dispositivo para la extensión de representación de HTML está desusada.  
@@ -135,12 +135,12 @@ ms.locfileid: "48119885"
  Para obtener más información sobre la extensión de representación HTML, vea [HTML Device Information Settings](html-device-information-settings.md)  
   
 ### <a name="microsoft-word-and-microsoft-excel-1997-2003-rendering"></a>Representación de Microsoft Word y Microsoft Excel 1997-2003  
- El[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] las extensiones de representación BIFF8 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] notifica a la [!INCLUDE[msCoName](../includes/msconame-md.md)] Word y [!INCLUDE[msCoName](../includes/msconame-md.md)] formato de archivo de intercambio binario de Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Incluye extensiones que se procesan en el [!INCLUDE[msCoName](../includes/msconame-md.md)] formato XML abierto de Office 2007-2010.  
+ Extensiones de representación BIFF8 de[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para el formato de archivo de intercambio binario de [!INCLUDE[msCoName](../includes/msconame-md.md)] Word y [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Incluye extensiones que se procesan en el [!INCLUDE[msCoName](../includes/msconame-md.md)] formato XML abierto de Office 2007-2010.  
   
 ### <a name="report-definition-language-rdl-2005-and-earlier"></a>Lenguaje RDL 2005 y anterior  
  Lenguaje RDL 2005 y anterior está desusado. Para obtener más información acerca de RDL, vea [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- Para obtener más información sobre cómo actualizar los informes, vea [actualizar informes](install-windows/upgrade-reports.md).  
+ Para obtener más información acerca de la actualización de informes, vea [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 ### <a name="sql-server-2005-and-earlier-custom-report-items"></a>SQL Server 2005 y elementos de informe personalizados anteriores  
  Los elementos de informe personalizados (CRI) compilados para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 y anterior están desusados.  
@@ -154,7 +154,7 @@ ms.locfileid: "48119885"
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no incluye las herramientas para crear o actualizar los modelos de informe. Para obtener más información, consulte [cambios substanciales de SQL Server Reporting Services en SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
 ### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Métodos desusados en el extremo del servicio web  
- Las operaciones siguientes han quedado obsoletas en la <xref:ReportService2010.ReportingService2010> extremo del servicio Web:  
+ Las operaciones siguientes han quedado en desuso en el extremo de servicios web de <xref:ReportService2010.ReportingService2010>:  
   
 -   <xref:ReportService2010.ReportingService2010.GetProperties%2A>  
   
@@ -166,7 +166,7 @@ ms.locfileid: "48119885"
 >  Dado que SQL Server 2008 R2 es una actualización de versión menor de SQL Server 2008, recomendamos también revisar el contenido en la sección de SQL Server 2008.  
   
 ### <a name="report-server-web-service-endpoints"></a>Extremos de servicios web del servidor de informes  
- Los servicios Web <xref:ReportService2005.ReportingService2005> y <xref:ReportService2006.ReportingService2006> han quedado en desuso en esta versión. Estos puntos de conexión se han reemplazado por un nuevo punto de conexión: <xref:ReportService2010.ReportingService2010>.  
+ Los servicios web <xref:ReportService2005.ReportingService2005> y <xref:ReportService2006.ReportingService2006> están obsoletos en esta versión. Un nuevo extremo ha reemplazado estos extremos: <xref:ReportService2010.ReportingService2010>.  
   
  El nuevo extremo incluye toda la funcionalidad disponible en los extremos desusados y las nuevas características introducidas en SQL Server 2008 R2.  
   

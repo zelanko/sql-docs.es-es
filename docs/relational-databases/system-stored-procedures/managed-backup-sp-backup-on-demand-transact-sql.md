@@ -21,12 +21,12 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a82c376481b5c0bb563ea5c48be8053d70f0d52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8945ba72471855b2c3de5b169b12bea4cc2b656e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636573"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391350"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_on_demand
  El nombre de la base de datos en la que se realiza la copia de seguridad. El @database_name es **SYSNAME**.  
   
  @type  
- Tipo de la copia de seguridad que se va a realizar: base de datos o registro. El @type parámetro es **nvarchar (32)**.  
+ Tipo de copia de seguridad que se va a realizar:  base de datos o registro. El @type parámetro es **nvarchar (32)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto) o 1 (error)  
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_backup_on_demand
  Requiere la pertenencia a **db_backupoperator** rol, la base de datos con **ALTER ANY CREDENTIAL** permisos, y **EXECUTE** permisos **sp_delete_ backuphistory**procedimiento almacenado.  
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se realiza una solicitud de copia de seguridad de base de datos para la base de datos ‘TestDB’. Esta base de datos tiene [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] habilitado.  
+ El ejemplo siguiente realiza una solicitud de copia de seguridad de base de datos de la base de datos 'TestDB'. Esta base de datos tiene [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] habilitado.  
   
 ```  
 Use MSDB  

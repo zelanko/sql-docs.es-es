@@ -1,20 +1,22 @@
 ---
-title: Supervisión de clústeres de macrodatos de SQL Server (versión preliminar) con el portal de administración de clúster | Microsoft Docs
+title: Portal de administración de clústeres
+titleSuffix: SQL Server 2019 big data clusters
 description: Obtenga información sobre cómo usar el portal de administración de clúster para supervisar clústeres de macrodatos de 2019 de SQL Server (versión preliminar).
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 46d2565ac90bfd007bbe0f3c9e8a2382ca5eeb74
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221471"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215541"
 ---
-# <a name="introduction-to-the-cluster-administration-portal"></a>Introducción al portal de administración de clúster
+# <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Cómo usar el portal de administración de clúster para supervisar un clúster de macrodatos de SQL Server
 
 Si desea supervisar o solucionar problemas de su clúster de macrodatos de 2019 de SQL Server (versión preliminar), use el portal de administración de clúster.
 
@@ -29,10 +31,10 @@ El portal de administración de clúster le permite:
 
 Siga el [inicio rápido para implementar el clúster de macrodatos](quickstart-big-data-cluster-deploy.md) hasta llegar a la **portal de administración de clúster** sección. Una vez que el clúster de macrodatos que se está ejecutando con mssqlctl, siga estas instrucciones:
 
-Una vez que se está ejecutando el pod del controlador, puede usar el portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `service-proxy-lb` (por ejemplo: **https://\<ip-address\>: 30777**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente.
+Una vez que se está ejecutando el pod del controlador, puede usar el portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `service-proxy-lb` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente.
 
 > [!NOTE]
-> Para CTP 2.1, hay una advertencia de seguridad al obtener acceso a la página web, dado que usa certificados SSL generados automáticamente.
+> Para CTP 2.2, hay una advertencia de seguridad al obtener acceso a la página web, dado que usa certificados SSL generados automáticamente.
 
 ## <a name="overview"></a>Información general
 

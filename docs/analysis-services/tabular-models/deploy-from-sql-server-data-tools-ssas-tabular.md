@@ -1,5 +1,5 @@
 ---
-title: Implementar con SQL Server Data Tools | Documentos de Microsoft
+title: Implementar modelos tabulares de Analysis Services de SQL Server Data Tools | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 009c286c105f8088897343f3694c7b3106ca493a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 09d859cf8b5c372b9588266b9210837012396ea6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042339"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072142"
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Implementar con SQL Server Data Tools
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Utilice las tareas de este tema para implementar una solución de modelo tabular mediante el comando implementar en SSDT.  
+  Use las tareas de este tema para implementar una solución de modelo tabular mediante el comando implementar en SSDT.  
   
 ##  <a name="bkmk_deploy"></a> Configurar las propiedades Opciones de implementación y Servidor de implementación  
- Antes de implementar la solución de modelo tabular, primero debe especificar las propiedades Opciones de implementación y Servidor de implementación. Para obtener más información sobre propiedades de implementación y configuración, consulte [implementación de la solución de modelo Tabular](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
+ Antes de implementar la solución de modelo tabular, primero debe especificar las propiedades Opciones de implementación y Servidor de implementación. Para obtener más información acerca de las propiedades de implementación y configuración, consulte [implementación de la solución de modelo Tabular](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
-#### <a name="to-configure-options-and-properties"></a>Para configurar las propiedades y opciones  
+#### <a name="to-configure-options-and-properties"></a>Para configurar las opciones y propiedades  
   
 1.  En SSDT, en **el Explorador de soluciones**, haga clic en el nombre del proyecto y, a continuación, haga clic en **propiedades**.  
   
@@ -38,15 +38,15 @@ ms.locfileid: "34042339"
 3.  En **Servidor de implementación**, especifique la configuración de las propiedades **Servidor** (nombre), **Edición**, **Base de datos** (nombre) y **Nombre del cubo** si difiere de la predeterminada y, después, haga clic en **Aceptar**.  
   
 > [!NOTE]  
->  También puede especificar el valor de la propiedad Servidor de implementación predeterminado de modo que los proyectos que se creen se implementen automáticamente en el servidor especificado. Para obtener más información, consulte [configurar las propiedades de implementación y de modelado de datos predeterminadas](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  También puede especificar el valor de la propiedad Servidor de implementación predeterminado de modo que los proyectos que se creen se implementen automáticamente en el servidor especificado. Para obtener más información, consulte [configurar propiedades de implementación y modelado de datos predeterminada](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
 ##  <a name="bkmk_deploy_proc"></a> Implementar un modelo tabular  
   
 #### <a name="to-deploy-a-tabular-model"></a>Para implementar un modelo tabular
   
--   En SSDT, en la **generar** menú, haga clic en **implementar \<nombre del proyecto >**.  
+-   En SSDT, en el **compilar** menú, haga clic en **implementar \<nombre del proyecto >**.  
   
-     Aparecerá el cuadro de diálogo **Implementar** e indicará el estado de la implementación de los metadatos y del procesamiento (a menos que se haya establecido la propiedad Opción de procesamiento en No procesar) de cada tabla incluida en el modelo. Una vez completado el proceso de implementación, utilice SSMS para conectarse a la instancia de Analysis Services y comprobar que se ha creado el nuevo objeto de base de datos de modelo o una aplicación cliente de informes para conectarse al modelo implementado.  
+     Aparecerá el cuadro de diálogo **Implementar** e indicará el estado de la implementación de los metadatos y del procesamiento (a menos que se haya establecido la propiedad Opción de procesamiento en No procesar) de cada tabla incluida en el modelo. Una vez completado el proceso de implementación, utilice SSMS para conectarse a la instancia de Analysis Services y comprobar que se ha creado el nuevo objeto de base de datos de modelo o un aplicación cliente de informes para conectarse al modelo implementado.  
   
 ##  <a name="bkmk_deploy_status"></a> Estado de la implementación  
  El cuadro de diálogo **Implementar** permite supervisar el progreso de una operación de implementación. Una operación de implementación también se puede detener.  

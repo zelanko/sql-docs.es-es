@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - delayed durability
@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ff62ed93210521c9bc5499c5518edae7cf7d2ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147175"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818357"
 ---
 # <a name="control-transaction-durability"></a>Controlar la durabilidad de las transacciones
   Las confirmaciones de transacciones de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser totalmente durables (el valor predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) o durables diferidas (conocidas también como confirmaciones diferidas).  
@@ -83,7 +83,7 @@ ms.locfileid: "48147175"
   
      Si una transacción totalmente durable o sp_flush_log se confirman correctamente, todas las transacciones de durabilidad diferida que se hubieran confirmado anteriormente serán durables.  
   
- Es posible que el registro se vacíe en el disco de forma periódica. Sin embargo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporciona garantías de durabilidad de las transacciones durables y sp_flush_log.  
+ Es posible que el registro se vacíe en el disco de forma periódica. Sin embargo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporciona garantías de durabilidad que no sean las transacciones durables y sp_flush_log.  
   
 ## <a name="how-to-control-transaction-durability"></a>Cómo controlar la durabilidad de las transacciones  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48147175"
  Como administrador de la base de datos (DBA), con la instrucción siguiente puede controlar si los usuarios pueden usar transacciones de durabilidad diferida en una base de datos. Debe establecer la configuración de durabilidad diferida con ALTER DATABASE.  
   
 ```tsql  
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
  `DISABLED`  
@@ -119,26 +119,26 @@ DELAYED_DURABILITY = { OFF | ON }
  **Código de ejemplo**  
   
 ```tsql  
-CREATE PROCEDURE <procedureName> …  
+CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
 (  
     DELAYED_DURABILITY = ON,  
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
     LANGUAGE = N'English'  
-    …  
+    ...  
 )  
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>Tabla 1: durabilidad de bloques ATOMIC  
+### <a name="table-1-durability-in-atomic-blocks"></a>Tabla 1: Durabilidad en bloques ATOMIC  
   
 |Opción de durabilidad de bloque ATOMIC|Ninguna transacción existente|Transacción en proceso (totalmente durable o durable diferida)|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  
 |`DELAYED_DURABILITY = OFF`|El bloque ATOMIC inicia una nueva transacción totalmente durable.|El bloque ATOMIC crea un punto de retorno en la transacción existente y después inicia la nueva transacción.|  
 |`DELAYED_DURABILITY = ON`|El bloque ATOMIC inicia una nueva transacción durable diferida.|El bloque ATOMIC crea un punto de retorno en la transacción existente y después inicia la nueva transacción.|  
   
-###  <a name="bkmk_T-SQLControl"></a> Control de nivel COMMIT –[!INCLUDE[tsql](../../includes/tsql-md.md)]  
+###  <a name="bkmk_T-SQLControl"></a> Control de nivel COMMIT -[!INCLUDE[tsql](../../includes/tsql-md.md)]  
  La sintaxis de COMMIT se ha ampliado para que pueda forzar la durabilidad diferida de transacciones. Si DELAYED_DURABILITY es DISABLED o FORCED en el nivel de base de datos (vea más arriba), esta opción de COMMIT se omite.  
   
 ```tsql  
@@ -159,8 +159,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
 |`DELAYED_DURABILITY = OFF` Transacciones de nivel de base de datos.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es de durabilidad diferida.|  
 |`DELAYED_DURABILITY = ON` Transacciones de nivel de base de datos.|La transacción es totalmente durable.|La transacción es de durabilidad diferida.|La transacción es de durabilidad diferida.|  
-|`DELAYED_DURABILITY = OFF` Entre la base de datos o una transacción distribuida.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
-|`DELAYED_DURABILITY = ON` Entre la base de datos o una transacción distribuida.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
+|`DELAYED_DURABILITY = OFF` Transacciones entre bases de datos o distribuidas.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
+|`DELAYED_DURABILITY = ON` Transacciones entre bases de datos o distribuidas.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>Cómo forzar un vaciado del registro de transacciones  
  Existen dos formas de forzar el vaciado en el disco del registro de transacciones.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -35,12 +34,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 15b32fd7e81c098c26571254f9017152135406e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198505"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785997"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia de servidor (SQL Server)
   Este tema es pertinente en las siguientes situaciones:  
@@ -109,7 +108,7 @@ ms.locfileid: "48198505"
  Para obtener más información sobre esta característica, vea [Credenciales &#40;motor de base de datos&#41;](../security/authentication-access/credentials-database-engine.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las cuentas de Proxy del agente utilizan credenciales. Para conocer el identificador de la credencial de una cuenta proxy, use la tabla del sistema [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) .  
+>  Las cuentas de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan credenciales. Para conocer el identificador de la credencial de una cuenta proxy, use la tabla del sistema [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) .  
   
  [&#91;Principio&#93;](#information_entities_and_objects)  
   
@@ -135,7 +134,7 @@ ms.locfileid: "48198505"
   
  Para habilitar el cifrado automático de la clave maestra de una instancia de servidor, se cifra una copia de esta clave mediante la clave maestra de servicio. Esta copia cifrada se almacena en la base de datos y en **maestra**. Por lo general, la copia almacenada en la base de datos **maestra** se actualiza automáticamente al cambiar la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta primero descifrar la clave maestra de base de datos con la clave maestra de servicio de la instancia. Si ese descifrado produce errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buscará en el almacén de credenciales las credenciales de clave maestra con el mismo GUID de familia que la base de datos para la que necesita la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará después descifrar la clave maestra de la base de datos con cada credencial coincidente hasta que el descifrado se realice correctamente o no queden más credenciales. Para abrir una clave maestra que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción OPEN MASTER KEY y una contraseña.  
   
- Cuando se copia, restaura o adjunta una base de datos a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia de la clave maestra de la base de datos cifrada por la clave maestra de servicio no se almacena en **maestra** en la instancia de servidor de destino. Se debe abrir la clave maestra de la base de datos en esta instancia. Para abrir la clave maestra, ejecute la siguiente instrucción: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***contraseña***'**. Se recomienda habilitar el descifrado automático de la clave maestra de la base de datos ejecutando la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. La instrucción ALTER MASTER KEY proporciona a la instancia de servidor una copia de la clave maestra de la base de datos que se ha cifrado con la clave maestra de servicio. Para obtener más información, vea [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Cuando se copia, restaura o adjunta una base de datos a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia de la clave maestra de la base de datos cifrada por la clave maestra de servicio no se almacena en **maestra** en la instancia de servidor de destino. Se debe abrir la clave maestra de la base de datos en esta instancia. Para abrir la clave maestra, ejecute la instrucción siguiente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***contraseña***'**. Se recomienda que, a continuación, habilite el descifrado automático de la clave maestra de base de datos ejecutando la siguiente instrucción: ALTER MASTER KEY AGREGAR CIFRADO POR CLAVE MAESTRA DE SERVICIO. La instrucción ALTER MASTER KEY proporciona a la instancia de servidor una copia de la clave maestra de la base de datos que se ha cifrado con la clave maestra de servicio. Para obtener más información, vea [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Para obtener información sobre cómo habilitar el descifrado automático de la clave maestra de base de datos de una base de datos reflejada, vea [Establecer una base de datos reflejada cifrada](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -154,7 +153,7 @@ ms.locfileid: "48198505"
   
  [&#91;Principio&#93;](#information_entities_and_objects)  
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> Las notificaciones de eventos y eventos de Windows Management Instrumentation (WMI) (en el nivel de servidor)  
   
 ### <a name="server-level-event-notifications"></a>Notificaciones de eventos del servidor  
  Las notificaciones de eventos del servidor se almacenan en la base de datos **msdb**. Por lo tanto, si una aplicación de la base de datos depende de las notificaciones de eventos del servidor, la notificación de un evento debe volver a crearse en la instancia de servidor de destino. Para ver las notificaciones de eventos de una instancia del servidor, use la vista de catálogo [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) . Para más información, consulte [Event Notifications](../service-broker/event-notifications.md).  
@@ -281,7 +280,7 @@ ms.locfileid: "48198505"
   
  [&#91;Principio&#93;](#information_entities_and_objects)  
   
-##  <a name="permissions"></a> Permisos  
+##  <a name="permissions"></a> Permissions  
  Los siguientes tipos de permisos se podrían ver afectados cuando una base de datos se pone a disposición de otra instancia de servidor.  
   
 -   Permisos GRANT, REVOKE o DENY sobre los objetos del sistema  

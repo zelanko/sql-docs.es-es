@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ErrorControl Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 83955510a18a2fbc77be5aeb7005704852f0e4a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135885"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373607"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>Propiedad ErrorControl (clase SqlService)
   Obtiene o establece la gravedad del error si el servicio no se puede iniciar durante el inicio.  
@@ -64,6 +62,6 @@ object
  El valor indica la acción realizada por el programa de inicio si se produce un error. El sistema registra todos los errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Iniciar y detener servicios](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

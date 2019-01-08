@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Compact, connection manager
@@ -15,12 +14,12 @@ ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fd067d6f01c168861a42895c36024cb4c0a9aa5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec47718114d100863db8126a520d5aea74912d87
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082795"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818368"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Administrador de conexiones con SQL Server Compact Edition
   Un administrador de conexiones con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact habilita un paquete para establecer conexión con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. El destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye usa este administrador de conexiones para cargar datos en una tabla de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
@@ -31,7 +30,7 @@ ms.locfileid: "48082795"
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>Configuración del administrador de conexiones con SQL Server Compact Edition  
  Cuando se agrega un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrador de conexiones Compact a un paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador que se resuelve como un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexión Compact en tiempo de ejecución, Establece las propiedades del Administrador de la conexión y agrega el Administrador de conexiones a la `Connections` colección en el paquete.  
   
- El `ConnectionManagerType` propiedad del Administrador de conexiones se establece en `SQLMOBILE`.  
+ La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `SQLMOBILE`.  
   
  Puede configurar el administrador de conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact de las maneras siguientes:  
   
@@ -47,10 +46,10 @@ ms.locfileid: "48082795"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor del Administrador de conexiones Edition con SQL Server Compact &#40;página de conexión&#41;](../sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+-   [Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Conexión&#41;](../sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
--   [Editor del Administrador de conexiones Edition con SQL Server Compact &#40;página todo&#41;](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
+-   [Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Todo&#41;](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
- Para obtener información acerca de cómo configurar un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

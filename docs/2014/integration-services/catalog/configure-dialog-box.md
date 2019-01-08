@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
@@ -15,12 +14,12 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0637b19437c2570cbb87fb56b84641274d9d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a4175429222306ac006122a3d36ee5ae97453ad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174195"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793506"
 ---
 # <a name="configure-dialog-box"></a>Cuadro de diálogo Configurar
   Utilice el cuadro de diálogo **Configurar** para configurar parámetros, administradores de conexión y referencias a los entornos, para los paquetes y los proyectos.  
@@ -57,7 +56,7 @@ ms.locfileid: "48174195"
  **Contenedor**  
  Muestra el objeto que contiene el parámetro.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre de parámetro.  
   
  **Value**  
@@ -68,7 +67,7 @@ ms.locfileid: "48174195"
  **Contenedor**  
  Muestra el objeto que contiene el administrador de conexiones.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre del administrador de conexiones.  
   
  **Nombre de la propiedad**  
@@ -80,7 +79,7 @@ ms.locfileid: "48174195"
 ##  <a name="references"></a> Establecer las opciones de la página Referencias  
  Use la página **Referencias** para agregar y quitar las referencias a los entornos y a las propiedades del entorno de acceso.  
   
- Un entorno especifica los valores en tiempo de ejecución para los paquetes contenidos en los proyectos que ha implementado en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ Un entorno especifica los valores en tiempo de ejecución para los paquetes contenidos en los proyectos que ha implementado en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  **Entorno**  
  Muestra el entorno.  

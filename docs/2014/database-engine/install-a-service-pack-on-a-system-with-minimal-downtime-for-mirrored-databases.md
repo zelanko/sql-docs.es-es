@@ -17,12 +17,12 @@ ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f654292e1d756cd655766851e0bc056e41ce3f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053015"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520381"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar un Service Pack en un sistema con un tiempo de inactividad mínimo para bases de datos reflejadas
   En este tema se describe cómo minimizar el tiempo de inactividad de las bases de datos reflejadas cuando instale los Service Pack o las revisiones. Este proceso conlleva la actualización secuencial de las instancias de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que forman parte de la creación de reflejo de la base de datos. Este formulario de actualización, que se conoce como un *actualización gradual*, reduce el tiempo de inactividad a solo una conmutación por error único. Tenga en cuenta que para las sesiones de modo de alto rendimiento en el que el servidor reflejado está geográficamente distante del servidor principal, una actualización gradual podría ser inadecuada.  
@@ -34,7 +34,7 @@ ms.locfileid: "48053015"
 -   Si la sesión incluye un testigo, recomendamos que lo quite. Si no lo hace, al actualizar la instancia del servidor reflejado, la disponibilidad de la base de datos depende del testigo que sigue estando conectado a la instancia del servidor principal. Después de quitar un testigo, puede actualizarlo en cualquier momento durante el proceso de actualización gradual sin aumentar el tiempo de inactividad de la base de datos.  
   
     > [!NOTE]  
-    >  Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para obtener más información, consulte [quórum: Cómo un testigo afecta a la disponibilidad de la base de datos &#40;la creación de reflejo de base de datos&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   Si una sesión se está ejecutando en modo de alto rendimiento, cambie el modo de funcionamiento al modo de alta seguridad.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "48053015"
   
 1.  Si una sesión de creación de reflejo se está ejecutando en modo de alto rendimiento, antes de realizar una actualización gradual, cambie al modo operativo de seguridad alta sin conmutación automática por error. Utilice uno de los métodos siguientes:  
   
-    -   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: cambie la opción **Modo de funcionamiento** a **Seguridad alta sin conmutación automática por error (sincrónico)** mediante la página [Creación de reflejo](../relational-databases/databases/database-properties-mirroring-page.md) del cuadro de diálogo **Propiedades de la base de datos**. Para obtener información sobre cómo obtener acceso a esta página, vea [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
+    -   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Cambiar el **modo de funcionamiento** opción a **seguridad alta sin conmutación automática por error (sincrónico)** mediante el uso de la [página creación de reflejo](../relational-databases/databases/database-properties-mirroring-page.md) de la **base de datos Propiedades** cuadro de diálogo. Para obtener información sobre cómo obtener acceso a esta página, vea [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   En [!INCLUDE[tsql](../includes/tsql-md.md)]: establezca la seguridad de transacciones en FULL. Para obtener más información, vea [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   En [!INCLUDE[tsql](../includes/tsql-md.md)]: Seguridad de las transacciones se establece en FULL. Para obtener más información, vea [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-perform-the-rolling-update"></a>Para realizar la actualización gradual  
   
-1.  Para minimizar el tiempo de inactividad, se recomienda lo siguiente: iniciar la actualización gradual actualizando cualquier asociado de creación de reflejo que es actualmente el servidor reflejado en todas sus sesiones de creación de reflejo. Podría tener que actualizar varias instancias del servidor en este momento.  
+1.  Para minimizar el tiempo de inactividad, se recomienda lo siguiente: Iniciar la actualización gradual actualizando cualquier asociado de creación de reflejo que es actualmente el servidor reflejado en todas sus sesiones de creación de reflejo. Podría tener que actualizar varias instancias del servidor en este momento.  
   
     > [!NOTE]  
     >  Un testigo se puede actualizar en cualquier momento del proceso de actualización gradual. Por ejemplo, si una instancia del servidor es un servidor reflejado en la sesión 1 y es un testigo en la sesión 2, puede actualizar ahora la instancia del servidor.  
@@ -123,7 +123,7 @@ ms.locfileid: "48053015"
   
 1.  Si lo desea, vuelva al modo de alto rendimiento utilizando uno de los métodos siguientes:  
   
-    -   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: cambie la opción **Modo de funcionamiento** a **Rendimiento alto (asincrónico)** mediante la página [Creación de reflejo](../relational-databases/databases/database-properties-mirroring-page.md) del cuadro de diálogo **Propiedades de la base de datos** .  
+    -   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Cambio la **modo de funcionamiento** opción a **rendimiento alto (asincrónico)** mediante el uso de la [página creación de reflejo](../relational-databases/databases/database-properties-mirroring-page.md) de la **propiedades de la base de datos**cuadro de diálogo.  
   
     -   En [!INCLUDE[tsql](../includes/tsql-md.md)]: Use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) para establecer la seguridad de las transacciones en OFF.  
   

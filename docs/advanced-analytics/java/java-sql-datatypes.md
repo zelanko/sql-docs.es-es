@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos de Java admitidos en SQL Server 2019 | Microsoft Docs
+title: 'Tipos de datos de Java admitidos en SQL Server 2019: SQL Server Machine Learning Services'
 description: Asignar tipos de datos de Java para SQL Server para las estructuras de datos de entrada y salida y para los parámetros de entrada en el sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3510b53510514daa125382fc10ea33285fe44a80
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 6921a40efc9af3ef94c0a53f8409891fee16127e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715439"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432538"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java y SQL Server admiten los tipos de datos
 

@@ -17,12 +17,12 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbcbf7f2e0a6423e9e2ea918d5bb561a9ec1c97c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e38ceb561c2b0d66cbf274e09d61fc327d8543f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076804"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372607"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Restricción de atribución de partículas exclusivas
   En XSD, los modelos de contenido complejos están restringidos por la regla de restricción de atribución de partículas exclusivas (UPA). Esta regla requiere que cada elemento de un documento de una instancia se corresponda sin ambigüedades exactamente con una partícula `<xsd:element>` o `<xsd:any>` en el modelo de contenido de su elemento principal. Cualquier esquema que contenga un tipo con un modelo de contenido potencialmente ambiguo se rechaza.  
@@ -80,13 +80,13 @@ ms.locfileid: "48076804"
 ## <a name="finding-more-information"></a>Buscar más información  
  El World Wide Web Consortium (W3C) publica el siguiente documento, que contiene la descripción técnica de la restricción de atribución de partículas exclusivas:  
   
- Structures Second Edition, W3C Proposed Edited Recommendation":  
+ "XML Schema Part 1: Segunda edición de estructuras, recomendación editada propuesta por la W3C":  
   
--   Constraints on Model Group Schema Components  
+-   Sección 3.8.6: Restricciones en los componentes del esquema de grupo de modelos  
   
--   Analysis of the Unique Particle Attribution Constraint (non-normative)  
+-   Apéndice H: Análisis de la restricción de la atribución de partículas únicas (no normativa)  
   
- Para ver el documento, visite [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881).  
+ Para ver el documento, visite [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   
 ## <a name="see-also"></a>Vea también  
  [Colecciones de esquemas XML &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  

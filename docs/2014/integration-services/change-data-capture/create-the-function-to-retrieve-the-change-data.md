@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
@@ -13,12 +12,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9749418654d76f542d865aad78135b1a11a987b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b49001c7b62be67097223421ef85db2b475aa1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088605"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761897"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Crear la función para recuperar los datos modificados
   Después de completar el flujo de control para un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tarea siguiente es crear una función con valores de tabla que recupere los datos modificados. Solo tiene que crear esta función una vez antes de la primera carga incremental.  
@@ -133,16 +132,16 @@ deallocate #hfunctions
   
 -   Todas las columnas de datos modificados solicitadas.  
   
--   Una columna denominada __CDC_OPERATION que usa un campo de uno o dos caracteres para identificar la operación que está asociada a la fila. Los valores válidos para este campo son los siguientes: ‘I’ para insertar, ‘D’ para eliminar, ‘UO’ para actualizar valores antiguos y ‘UN’ para actualizar valores nuevos.  
+-   Una columna denominada __CDC_OPERATION que usa un campo de uno o dos caracteres para identificar la operación que está asociada a la fila. Los valores válidos para este campo son como sigue: 'I' para insertar, d ' para la eliminación, 'UO' para actualizar valores antiguos y ' un ' para actualizar valores nuevos.  
   
--   Marcas de actualización, si las pide, que aparecen como columnas de bits después del código de operación y en el orden especificado en el parámetro *@update_flag_list* . El nombre de estas columnas se obtiene anexando ‘_uflag’ al nombre de columna asociado.  
+-   Marcas de actualización, si las pide, que aparecen como columnas de bits después del código de operación y en el orden especificado en el parámetro *@update_flag_list* . El nombre de estas columnas se obtiene anexando “_uflag” al nombre de columna asociado.  
   
  Si el paquete llama a una función de contenedor que consulta todos los cambios, dicha función también devolverá las columnas __CDC_STARTLSN y \__CDC_SEQVAL. Estas dos columnas se convierten en la primera y en la segunda columna, respectivamente, del conjunto de resultados. La función de contenedor también ordena el conjunto de resultados basándose en estas dos columnas.  
   
 ## <a name="writing-your-own-table-value-function"></a>Escribir su propia función con valores de tabla  
  También puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para escribir su propia función de contenedor con valores de tabla que llame a la función de consulta de captura de datos modificados y almacenar la función de contenedor con valores de tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información sobre cómo crear una función Transact-SQL, vea [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
- En el ejemplo siguiente se define una función con valores de tabla que recupera los cambios de una tabla Customer para el intervalo de cambios especificado. Esta función usa cambio datos captura las funciones para asignar el `datetime` valores en el registro binario de secuencia de valores de número (LSN) que las tablas de cambios usan internamente. Esta función también controla varias condiciones especiales:  
+ En el ejemplo siguiente se define una función con valores de tabla que recupera los cambios de una tabla Customer para el intervalo de cambios especificado. Esta función utiliza las funciones de captura de datos modificados para asignar los valores `datetime` a los valores de número de flujo de registro binario (LSN) que las tablas de cambios utilizan internamente. Esta función también controla varias condiciones especiales:  
   
 -   Cuando se pasa un valor nulo para la fecha y hora de inicio, esta función utiliza el primer valor disponible.  
   

@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58c86f9eed16b83d9cc63c54f907f50dda1aab4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd6b9c144df14f9480ff825726fc918deb86f6cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702723"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516285"
 ---
 # <a name="sysexternaltables-transact-sql"></a>Sys.external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47702723"
 |reject_type|**tinyint**|Para las tablas externas a través de un origen de datos externo de HADOOP, esta es la manera en que se cuentan las filas rechazadas al consultar datos externos.|VALOR: el número de filas rechazadas.<br /><br /> PORCENTAJE: el porcentaje de filas rechazadas.|  
 |reject_value|**float**|Para las tablas externas a través de un origen de datos externo de HADOOP:<br /><br /> Para *reject_type =* valor, este es el número de rechazos de fila que se permiten antes de establecer la consulta.<br /><br /> Para *reject_type* = porcentaje, este es el porcentaje de rechazos de fila que se permiten antes de establecer la consulta.||  
 |reject_sample_value|**int**|Para *reject_type* = porcentaje, este es el número de filas que se va a cargar, ya sea correcta o incorrectamente, antes de calcular el porcentaje de filas rechazadas.|NULL si reject_type = VALUE.|  
-|distribution_type|**int**|Para las tablas externas a través de un origen de datos externos SHARD_MAP_MANAGER, esta es la distribución de datos de las filas entre las tablas base subyacentes.|0 – Sharded<br /><br /> 1: replicación<br /><br /> 2 – Round robin|  
+|distribution_type|**int**|Para las tablas externas a través de un origen de datos externos SHARD_MAP_MANAGER, esta es la distribución de datos de las filas entre las tablas base subyacentes.|0 - particionadas<br /><br /> 1 - replicado<br /><br /> 2 - Round robin|  
 |distribution_desc|**nvarchar(120)**|Para las tablas externas a través de un origen de datos externos SHARD_MAP_MANAGER, este es el tipo de distribución que se muestra como una cadena.||  
 |sharding_column_id|**int**|Para las tablas externas a través de un origen de datos externos SHARD_MAP_MANAGER y una distribución con particiones, se trata del Id. de columna de la columna que contiene los valores de clave de particionamiento.||  
 |remote_schema_name|**sysname**|Para las tablas externas a través de un origen de datos externos SHARD_MAP_MANAGER, éste es el esquema donde se encuentra la tabla base en las bases de datos remotos (si difiere del esquema donde se define la tabla externa).||  

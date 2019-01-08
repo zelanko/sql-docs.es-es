@@ -1,11 +1,10 @@
 ---
-title: 'Lección 2: Creación y administración de los datos de una tabla jerárquica | Microsoft Docs'
+title: 'Lección 2: Creación y administración de datos en una tabla jerárquica | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,14 +12,14 @@ ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e17ad0f4f73ccec1875a57fc3263c4320c0625a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760907"
 ---
-# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lección 2: Crear y administrar los datos de una tabla jerárquica
+# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lección 2: Creación y administración de datos en una tabla jerárquica
   En la lección 1, se modificó una tabla existente para utilizar el tipo de datos `hierarchyid` y se rellenó la columna `hierarchyid` con la representación de los datos existentes. En esta lección, se iniciará con una nueva tabla e insertará los datos utilizando los métodos jerárquicos. A continuación, se consultarán y manipularán los datos utilizando los métodos jerárquicos.  
   
  En esta lección se incluyen los temas siguientes:  
@@ -33,7 +32,7 @@ ms.locfileid: "48076756"
   
 -   [Reordenar los datos de una tabla jerárquica mediante métodos jerárquicos](lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md)  
   
--   [Resumen: Administración de los datos de una tabla jerárquica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+-   [Resumen: Administración de datos en una tabla jerárquica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Crear una tabla mediante el tipo de datos hierarchyid](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  

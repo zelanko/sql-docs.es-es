@@ -1,5 +1,5 @@
 ---
-title: Usar una versión modificada del análisis Services proyecto Tutorial | Documentos de Microsoft
+title: Usar una versión modificada del análisis de proyecto del Tutorial de servicios | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93847b7e6cade7d77774603ba1852c16a5a783b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4d3fb90b8823ff8a8585647bf60b87ed4098bc6e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017702"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401119"
 ---
-# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lección 4-1: uso de una versión modificada del proyecto Tutorial de Analysis Services
+# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lección 4-1: usar una versión modificada del proyecto Tutorial de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Las lecciones restantes de este tutorial se basan en una versión mejorada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que completó en las tres primeras lecciones. Se han agregado tablas y cálculos con nombre adicionales a la vista del origen de datos **Adventure Works DW 2012** , se han agregado más dimensiones al proyecto y estas nuevas dimensiones se han agregado al cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Además, se ha agregado un segundo grupo de medidas, que contiene medidas de una segunda tabla de hechos. Este proyecto mejorado le permitirá continuar aprendiendo a agregar funciones adicionales a la aplicación de Business Intelligence sin necesidad de tener que repetir las técnicas ya aprendidas.  
@@ -25,15 +25,15 @@ Para poder continuar con el tutorial, debe descargar, extraer, cargar y procesar
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Descargar y extraer el archivo de proyecto  
   
-1.  [Haga clic aquí](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) para ir a la página de descarga que proporciona los proyectos de ejemplo relacionados con este tutorial. Los proyectos del tutorial se incluyen en el **adventure-works-multidimensionales-tutorial-projects.zip** descargar.  
+1.  [Haga clic aquí](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) para ir a la página de descarga que proporciona los proyectos de ejemplo relacionados con este tutorial. Los proyectos del tutorial se incluyen en el **adventure-works-multidimensional-tutorial-projects.zip** descargar.  
   
-2.  Haga clic en **adventure-works-multidimensionales-tutorial-projects.zip** para descargar el paquete que contiene los proyectos para este tutorial.  
+2.  Haga clic en **adventure-works-multidimensional-tutorial-projects.zip** para descargar el paquete que contiene los proyectos para este tutorial.  
   
     De forma predeterminada, se guarda un archivo .zip en la carpeta Descargas. Debe mover el archivo .zip a una ubicación que tenga una ruta de acceso más corta (por ejemplo, cree una carpeta C:\Tutoriales para almacenar los archivos).  Después puede extraer los archivos contenidos en el archivo .zip. Si intentar descomprimir los archivos desde la carpeta Descargas, que tiene una ruta de acceso más larga, solo obtendrá la lección 1.  
   
 3.  Cree una subcarpeta en la unidad raíz, o cerca de ella, por ejemplo C:\Tutorial.  
   
-4.  Mover el **adventure-works-multidimensionales-tutorial-projects.zip** archivo en la subcarpeta.  
+4.  Mover el **adventure-works-multidimensional-tutorial-projects.zip** archivo a la subcarpeta.  
   
 5.  Haga clic con el botón derecho en el archivo y seleccione **Extraer todo**.  
   
@@ -41,9 +41,9 @@ Para poder continuar con el tutorial, debe descargar, extraer, cargar y procesar
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Cargar y procesar el proyecto mejorado  
   
-1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Archivo** , haga clic en **Cerrar solución** para cerrar los archivos que no vaya a usar.  
+1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el **archivo** menú, haga clic en **Cerrar solución** para cerrar los archivos que no va a usar.  
   
-2.  En el menú **Archivo**, seleccione **Abrir** y haga clic en **Proyecto o solución**.  
+2.  En el menú **Archivo** , seleccione **Abrir**y haga clic en **Proyecto o solución**.  
   
 3.  Vaya a la ubicación donde extrajo los archivos del proyecto de tutorial.  
   
@@ -62,7 +62,7 @@ Observe que, con diez tablas en la vista del origen de datos, el diagrama <All T
 #### <a name="internet-sales-diagram"></a>Diagrama Internet Sales  
 El diagrama **Internet Sales** contiene las tablas que están relacionadas con la venta directa de productos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] a los clientes a través de Internet. Las tablas del diagrama son las cuatro tablas de dimensiones y la tabla de hechos que agregó a la vista del origen de datos **Adventure Works DW 2012** en la Lección 1. Estas tablas son las siguientes:  
   
--   **Geografía**  
+-   **Geography**  
   
 -   **Customer**  
   

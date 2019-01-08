@@ -11,17 +11,17 @@ ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12943c96c64c1a5d20ee94c76a9701fc7a983d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083825"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411282"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurar la recolección de datos de uso para PowerPivot para SharePoint
   La recopilación de datos de uso es una característica propia de SharePoint para las granjas. PowerPivot para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de PowerPivot que muestran cómo se usan los datos y servicios PowerPivot. Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el Panel de administración de PowerPivot.  
   
- Para obtener información sobre los datos de uso en el panel de administración de PowerPivot, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Para obtener información sobre los datos de uso en el Panel de administración de PowerPivot, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **En este tema:**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48083825"
     |**Conexiones de PowerPivot**|El evento de conexión de PowerPivot se utiliza para supervisar las conexiones al servidor de PowerPivot que se realizan en nombre de un usuario.|  
     |**Uso de datos de carga de PowerPivot**|El uso de datos de descarga de PowerPivot se utiliza para supervisar las solicitudes que cargan datos PowerPivot en la memoria del servidor. Un evento de carga se genera para los archivos de datos PowerPivot cargados desde una base de datos de contenido o desde la memoria caché.|  
     |**Uso de datos de descarga de PowerPivot**|El uso de datos de descarga de PowerPivot se utiliza para supervisar las solicitudes de descarga de un origen de datos PowerPivot después de un período de inactividad. El almacenamiento en memoria caché de un origen de datos PowerPivot en el disco se notificará como un evento de descarga.|  
-    |**Uso de consultas de PowerPivot**|Uso de consultas de PowerPivot se utiliza para supervisar los tiempos de procesamiento de consultas para datos que se cargan en un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instancia.|  
+    |**Uso de consultas de PowerPivot**|Uso de consultas de PowerPivot se emplea para supervisar los tiempos de procesamiento de las consultas para los datos que se cargan en una instancia de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] .|  
   
     > [!NOTE]  
     >  El estado del servidor y las operaciones de actualización de datos también generan datos de uso, pero no hay ningún evento asociado a estos procesos.  
@@ -87,9 +87,9 @@ ms.locfileid: "48083825"
 ##  <a name="jobs"></a> Configurar los trabajos de temporizador utilizados en la recopilación de datos de uso  
  Los datos de estado y de uso de servidor de PowerPivot se mueven a ubicaciones diferentes en el sistema de recopilación de datos de uso mediante dos trabajos de temporizador:  
   
--   El trabajo de temporizador "Importación de datos de uso de Microsoft SharePoint Foundation" mueve los datos de uso de PowerPivot a la base de datos de aplicación de servicio PowerPivot.  
+-   El trabajo de temporizador "Importación de datos de uso de Microsoft SharePoint Foundation" mueve el uso de PowerPivot a la base de datos de aplicación de servicio PowerPivot.  
   
--   El trabajo de temporizador "Procesamiento del panel de administración de PowerPivot" mueve los datos a un libro PowerPivot que es el origen de datos para los informes administrativos integrados.  
+-   El "trabajo de temporizador de procesamiento del panel de administración de PowerPivot" los datos al libro PowerPivot que sea el origen de datos para los informes administrativos integrados.  
   
  Si necesita actualizar los informes administrativos que aparecen con más frecuencia en el Panel de administración de PowerPivot, siga estos pasos.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48083825"
   
 6.  Haga clic en **Ejecutar ahora**.  
   
-7.  Compruebe los informes para ver los datos de la actualización. Para obtener más información, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+7.  Compruebe los informes para ver los datos de la actualización. Para obtener más información, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
 ##  <a name="confighist"></a> Limitar durante cuánto tiempo se almacena el historial de datos de uso  
  El historial de datos de uso se almacena para los eventos (conexiones, carga, descarga y procesamiento de consultas a petición) y la actualización de datos (procesamiento de datos programado). Aunque los datos de uso se recopilan a través del sistema de recopilación de datos de uso de SharePoint, los datos de los informes se mueven a una base de datos de aplicación de PowerPivot y a una base de datos de informes para conseguir un almacenamiento a más largo plazo. La configuración del historial de datos de uso controla cuánto tiempo se conservan en las bases de datos de aplicación de PowerPivot. El mismo límite se aplica por igual a todos los tipos de datos de uso almacenados en la misma base de datos de aplicación de servicio PowerPivot.  
@@ -129,7 +129,7 @@ ms.locfileid: "48083825"
  Para obtener más información acerca de cómo se recopilan y almacenan los datos de uso, consulte [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definir las categorías de respuesta a las consultas rápida, media y lenta a efectos de los informes  
- El rendimiento del procesamiento de las consultas se mide con las categorías predefinidas que definen un ciclo de solicitud-respuesta con el tiempo que se tarda en completarse. Las categorías predefinidas son: trivial, rápido, esperado, de ejecución prolongada y superada. Cada solicitud para un servidor de PowerPivot pertenecerá a una de las categorías en función del tiempo que tarde en completarse.  
+ El rendimiento del procesamiento de las consultas se mide con las categorías predefinidas que definen un ciclo de solicitud-respuesta con el tiempo que se tarda en completarse. Las categorías predefinidas son: Trivial, Rápida, Esperada, Larga ejecución y Superado. Cada solicitud para un servidor de PowerPivot pertenecerá a una de las categorías en función del tiempo que tarde en completarse.  
   
  La información de las respuestas a las consultas se utiliza en los informes de actividad. Dentro de los informes, cada categoría se utiliza de manera diferente para revelar mejor las tendencias de rendimiento del sistema de PowerPivot. Las solicitudes triviales se excluyen completamente, por ejemplo, porque de ese modo se quita el ruido en los datos y se muestran las tendencias más significativas mediante las categorías restantes. Por el contrario, las estadísticas de solicitudes de ejecución prolongada o superadas se destacan en el informe para que los administradores o los propietarios de los libros puedan emprender la acción correctora inmediatamente.  
   

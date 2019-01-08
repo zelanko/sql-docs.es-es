@@ -4,34 +4,33 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82045ec643ae7cd1362a28b6aecf0c36bc4d328f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57cab8512adb2f0377c932fbeb0140f1482ae454
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088845"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753157"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificar y descodificar identificadores de SQL Server
   Los identificadores delimitados de SQL Server a veces contienen caracteres no admitidos en las rutas de acceso de Windows PowerShell. Estos caracteres se pueden especificar codificando sus valores hexadecimales.  
   
 1.  **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions)  
   
-2.  **Para procesar los caracteres especiales:**  [Codificar un identificador](#EncodeIdent), [Descodificar un identificador](#DecodeIdent)  
+2.  **Para procesar los caracteres especiales:**  [Codificar un identificador](#EncodeIdent), [descodificar un identificador](#DecodeIdent)  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Los caracteres que no se permiten en los nombres de ruta de Windows PowerShell se pueden representar, o codificar, como el carácter "%" seguido del valor hexadecimal del modelo de bits que representa el carácter, como en "**%** xx". La codificación siempre se puede usar para controlar los caracteres que no se admiten en las rutas de Windows PowerShell.  
   
  El cmdlet **Encode-SqlName** toma como entrada un identificador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Genera una cadena con todos los caracteres que no son admitidos por el lenguaje de Windows PowerShell codificados con "%xx". El cmdlet **Decode-SqlName** toma como entrada un identificador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] codificado y devuelve el identificador original.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
- El `Encode-Sqlname` y `Decode-Sqlname` cmdlets solo codifican o descodifican caracteres que se permiten en los identificadores delimitados de SQL Server, pero no se admiten en las rutas de PowerShell. Estos son los caracteres codificados por **Encode-SqlName** y descodificados por **Decode-SqlName**:  
+ Los cmdlets de `Encode-Sqlname` y de `Decode-Sqlname` solo codifican o descodifican caracteres que se permiten en los identificadores delimitados de SQL Server, pero no solo se admiten en las rutas de PowerShell. Estos son los caracteres codificados por **Encode-SqlName** y descodificados por **Decode-SqlName**:  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
@@ -63,10 +62,10 @@ Set-Location (Encode-SqlName "Table:Test")
 ##  <a name="DecodeIdent"></a> Descodificar un identificador  
  **Descodificar un identificador de SQL Server de una ruta de PowerShell**  
   
- Use el `Decode-Sqlname` cmdlet para reemplazar las codificaciones hexadecimales con caracteres representados por la codificación.  
+ Use el cmdlet `Decode-Sqlname` para reemplazar las codificaciones hexadecimales con caracteres representados por la codificación.  
   
 ### <a name="examples-decoding"></a>Ejemplos (descodificación)  
- Este ejemplo devuelve "Table:Test":  
+ Este ejemplo devuelve “Table:Test”:  
   
 ```  
 Decode-SqlName "Table%3ATest"  
@@ -74,7 +73,7 @@ Decode-SqlName "Table%3ATest"
   
 ## <a name="see-also"></a>Vea también  
  [Identificadores de SQL Server en PowerShell](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

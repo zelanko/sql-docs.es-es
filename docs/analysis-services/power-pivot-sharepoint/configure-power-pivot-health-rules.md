@@ -1,5 +1,5 @@
 ---
-title: Configurar reglas de estado de Power Pivot | Documentos de Microsoft
+title: Configurar reglas de estado de Power Pivot | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: befe9b69e50ee6b57caef8275dce81139b977d42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aae3b89c52f5d1d8524681a3a4fd2eda9ab73907
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027162"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398068"
 ---
 # <a name="configure-power-pivot-health-rules"></a>Configuración de las reglas de mantenimiento de PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,10 +28,10 @@ ms.locfileid: "34027162"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **Nota** : La configuración de reglas de mantenimiento se establece de forma independiente para la instancia de SQL Server Analysis Services y la aplicación de servicio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Siga las instrucciones de este tema para configurar reglas de estado para cada servicio. En una implementación de SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] solo usa la aplicación de servicio. Por tanto, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala distintos conjuntos de reglas de mantenimiento para las diferentes versiones de SharePoint. Vea la columna "versión" en el tema [Referencia de las reglas de estado &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md), o bien puede ejecutar el siguiente comando de Windows PowerShell para ver las reglas instaladas.  
+ **Nota:** Configuración de reglas de mantenimiento se configura por separado para la instancia de SQL Server Analysis Services y el [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] aplicación de servicio. Siga las instrucciones de este tema para configurar reglas de estado para cada servicio. En una implementación de SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] solo usa la aplicación de servicio. Por tanto, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala distintos conjuntos de reglas de mantenimiento para las diferentes versiones de SharePoint. Vea la columna "versión" en el tema [referencia de reglas de mantenimiento &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md), o bien puede ejecutar el siguiente comando de Windows PowerShell para ver las reglas instaladas.  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **En este tema:**  
@@ -73,27 +73,27 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Asignación de recursos de CPU insuficiente (el valor predeterminado es 80%)  
      Se desencadena esta regla de estado si los recursos de CPU que utiliza el proceso de servidor de Analysis Services (msmdsrv.exe) permanecen en el 80% o por encima más de cuatro horas (lo que especifique el valor del intervalo de recopilación de datos).  
   
-     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services no tiene suficientes recursos de CPU para realizar las operaciones solicitadas**.  
+     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services no tiene suficientes recursos de CPU para realizar las operaciones solicitadas.**  
   
      Recursos de CPU en el sistema insuficientes (el valor predeterminado es 90%)  
      Esta regla de estado se desencadena si los recursos de CPU del servidor permanecen en el 90% o por encima más de cuatro horas (según se especifique en el valor del intervalo de recopilación de datos). La utilización global de la CPU se mide como parte del algoritmo de equilibrio de carga basado en el estado que supervisa el uso de la CPU como medida del estado del servidor.  
   
-     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: el uso total de la CPU es demasiado alto**.  
+     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: En general, el uso de CPU es demasiado alto.**  
   
      Umbral insuficiente de memoria (el valor predeterminado es 5%)  
      En un servidor de aplicaciones SharePoint, una instancia de SQL Server Analysis Services siempre debe tener una pequeña cantidad de memoria en reserva sin usar. Dado que el servidor está enlazado a memoria en la mayoría de sus operaciones, el servidor se ejecuta mejor si no se ejecuta hasta el final del límite superior. El 5% de la memoria sin usar se calcula como un porcentaje de la memoria asignada a Analysis Services. Por ejemplo, si tiene 200 GB de memoria total y a Analysis Services se le asigna el 80% (o 160 GB), el 5% de la memoria sin usar es el 5% de 160 GB (u 8 GB).  
   
-     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services no tiene suficiente memoria para realizar las operaciones solicitadas**.  
+     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services no tiene suficiente memoria para realizar las operaciones solicitadas.**  
   
      Número máximo de conexiones (el valor predeterminado es 100)  
      Esta regla de estado se desencadena si el número de conexiones a la instancia de Analysis Services permanece en 100 conexiones o más durante más de cuatro horas (según especifique el valor del intervalo de recopilación de datos). Este valor predeterminado es arbitrario (no se basa en las especificaciones de hardware del servidor o en la actividad del usuario) de modo que podría elevar o disminuir el valor según la capacidad del servidor y la actividad de los usuarios en el entorno.  
   
-     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: el número elevado de conexiones indica que se deben implementar más servidores para tratar la carga actual**.  
+     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: El número elevado de conexiones indica que se deben implementar más servidores para administrar la carga actual.**  
   
      Espacio en disco insuficiente (el valor predeterminado es 5%)  
      El espacio en disco se usa para almacenar en caché los datos de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] cada vez que se solicita una base de datos. Esta regla permite saber cuándo está empezando a quedar poco espacio en disco. De forma predeterminada, esta regla de estado se desencadena cuando el espacio en disco es menor del 5% en la unidad de disco donde se encuentra la carpeta de copia de seguridad. Para obtener más información sobre el uso de disco, vea [Configurar el uso del espacio en disco &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
-     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: el espacio en disco está empezando a agotarse en la unidad en la que los datos [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se almacenan en caché**.  
+     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Se está quedando sin espacio en disco en la unidad donde [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se almacena en caché de datos.**  
   
      Intervalo de recopilación de datos (en horas)  
      Puede especificar el período de recopilación de datos utilizado para calcular los números que se usan para desencadenar reglas de estado. Aunque el sistema se supervise constantemente, los umbrales usados para desencadenar advertencias de la regla de estado se calculan con los datos que se generaron en un intervalo predefinido. El intervalo predeterminado es de cuatro horas. El servidor recupera los datos del sistema y de uso durante las cuatro horas anteriores para evaluar el número de conexiones de usuario, el uso de espacio en disco y la tasa de utilización de la CPU y la memoria.  
@@ -104,18 +104,18 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  En la página Aplicaciones de servicio, haga clic en **Default [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service Application** (Aplicación de servicio PowerPivot predeterminada).  
   
-     ![Página de captura de pantalla de la aplicación](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-app.gif "página de captura de pantalla de la aplicación")  
+     ![Página de la captura de pantalla de la aplicación](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-app.gif "página de la captura de pantalla de la aplicación")  
   
 3.  Se abre el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Haga clic en **Configurar las opciones de aplicación de servicio** , en la lista **Acciones** para abrir la página de configuración de la aplicación de servicio.  
   
-     ![Captura de pantalla de panel, se centran en la lista acciones](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-actionslist.gif "captura de pantalla de panel, se centran en la lista de acciones")  
+     ![Captura de pantalla de panel, se centran en la lista de acciones](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-actionslist.gif "captura de pantalla de panel, se centran en la lista de acciones")  
   
 4.  En Configuración de reglas de estado, modifique los valores siguientes:  
   
      Ratio entre carga y conexión (el valor predeterminado es 20%)  
      Esta regla de estado se desencadena si el número de eventos de carga es alto en relación con el número de eventos de conexión, lo que indica que el servidor podría estar descargando las bases de datos demasiado rápidamente o que la configuración de la reducción de caché es excesiva.  
   
-     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: la proporción de eventos de carga y conexiones es demasiado alta**.  
+     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: La proporción de eventos de carga para las conexiones es demasiado alta.**  
   
      Intervalo de recopilación de datos (el valor predeterminado es 4 horas)  
      Puede especificar el período de recopilación de datos utilizado para calcular los números que se usan para desencadenar reglas de estado. Aunque el sistema se supervise constantemente, los umbrales usados para desencadenar advertencias de la regla de estado se calculan con los datos que se generaron en un intervalo predefinido. El intervalo predeterminado es de cuatro horas. El servidor recupera los datos de uso y del sistema recopilados durante las cuatro horas anteriores para evaluar la proporción entre la carga y la colección.  
@@ -125,7 +125,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      Para obtener más información, vea [Configurar la recolección de datos de uso para &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
-     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: los datos de uso no se actualizan con la frecuencia prevista**.  
+     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Datos de uso no se actualizan con la frecuencia esperada.**  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar el uso del espacio en disco &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   

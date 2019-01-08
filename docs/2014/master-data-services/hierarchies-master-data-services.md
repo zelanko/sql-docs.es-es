@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92aeef62aef03d0e80f1bc4486ff04fa600fcf09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af91e39bd3c338670906bb5dc50987bc0c413746
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206635"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780327"
 ---
 # <a name="hierarchies-master-data-services"></a>Jerarquías (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], una jerarquía es una estructura en forma de árbol que se puede usar para:  

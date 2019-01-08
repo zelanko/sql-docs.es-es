@@ -14,12 +14,12 @@ ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ead3f5a4fcca7e096a73994cbb35f8a6075f8c0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74154a3cf39f3ba06346acea3c00d5e2ad8f563c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202945"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394646"
 ---
 # <a name="xml-device-information-settings"></a>Configuración de la información del dispositivo XML
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato XML.  
@@ -34,7 +34,7 @@ ms.locfileid: "48202945"
 |`OmitSchema`|Indica si se va a omitir la ubicación del esquema en el código XML. La ubicación es el atributo SchemaLocation. El valor predeterminado de OmitSchema depende del valor de OmitNamespace:<br /><br /> Si OmitNamespace = False, OmitSchema = `False` de forma predeterminada. El usuario puede invalidar el valor predeterminado si establece OmitSchema = True.<br /><br /> Si OmitNamespace = True, OmitSchema funcionará como `True` independientemente del valor que se haya configurado explícitamente para OmitSchema.|  
 |**Codificación**|Nombre del organismo Internet Assigned Numbers Authority (IANA) de una codificación de caracteres que es compatible con .NET Framework. El valor predeterminado es `UTF-8`. Entre los ejemplos de otros valores se incluyen ASCII, UTF-7 y UTF-16.|  
 |**FileExtension**|Extensión de archivo que se va a utilizar para el archivo generado.|  
-|**Esquema**|Indica si se representa la definición del esquema XML (XSD) o si se representan los datos XML reales. Un valor de `true` indica que se representa un esquema XML. El valor predeterminado es `false`.|  
+|**Esquema**|Indica si se representa la definición del esquema XML (XSD) o si se representan los datos XML reales. El valor `true` indica que se representa un esquema XML. El valor predeterminado es `false`.|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

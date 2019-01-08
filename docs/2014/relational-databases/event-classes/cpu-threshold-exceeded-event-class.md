@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd85605f6f99563cd042e438e4ffd517a636d133
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176475"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770457"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Clase de eventos Umbral de la CPU superado
   Esta clase de eventos indica que el regulador de recursos ha detectado una consulta que supera el umbral de la CPU especificado para REQUEST_MAX_CPU_TIME_SEC.  
@@ -33,7 +32,7 @@ ms.locfileid: "48176475"
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|`int`|Uso de la CPU en milisegundos.|18|Sí|  
-|EventClass|`int`|214|27|no|  
+|EventClass|`int`|214|27|No|  
 |EventSubClass|`int`|Infracción del límite de la CPU.|21|Sí|  
 |GroupID|`int`|Id. del grupo donde se produjo la infracción.|66|Sí|  
 |OwnerID|`int`|SPID del proceso que produjo la infracción.|58|Sí|  

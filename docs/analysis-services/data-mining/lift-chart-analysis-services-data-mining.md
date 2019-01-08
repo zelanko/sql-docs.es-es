@@ -1,5 +1,5 @@
 ---
-title: 'Gráfico de elevación (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Gráfico de elevación (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a72e7c40719511e8514c38d08cd7cd88a24055f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cd4c0ea515020067cb7dd5c49b97db69ca6a756c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016412"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401294"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  A *mejora respecto al modelo predictivo chart* representa gráficamente la mejora que proporciona un modelo de minería de datos en comparación con una estimación aleatoria, y mide el cambio en términos de puntuación de la *mejora respecto al modelo predictivo* . Si compara las puntuaciones de mejora de los distintos modelos, puede determinar qué modelo es mejor. También puede determinar el punto en el que las predicciones del modelo pasan a ser menos útiles. Por ejemplo, revisando el gráfico de elevación, podría observar que es probable que una campaña de promoción solo sea eficaz para un 30 % de los clientes y usar esa cifra para limitar el ámbito de la campaña.  
+  A *mejora respecto al modelo predictivo chart* representa gráficamente la mejora que proporciona un modelo de minería de datos en comparación con una estimación aleatoria, y mide el cambio en términos de puntuación de la *mejora respecto al modelo predictivo* . Si compara las puntuaciones de mejora de los distintos modelos, puede determinar qué modelo es mejor. También puede determinar el punto en que las predicciones del modelo pasa a ser menos útiles. Por ejemplo, revisando el gráfico de elevación, podría observar que es probable que una campaña de promoción solo sea eficaz para un 30 % de los clientes y usar esa cifra para limitar el ámbito de la campaña.  
   
  En la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el gráfico de elevación puede comparar la precisión de varios modelos que tienen el mismo atributo de predicción. También puede evaluar la exactitud de la predicción para un único resultado (un único valor del atributo de predicción) o para todos los resultados (todos los valores del atributo especificado).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34016412"
   
  Este gráfico contiene varios modelos basados en los mismos datos. Uno de ellos se ha personalizado para dirigirse a clientes concretos. Puede personalizar un modelo agregando filtros para los datos usados para entrenarlo. Este filtro restringe los casos que se usan tanto en el entrenamiento como en la evaluación a los clientes menores de 30 años. Observe que un efecto del filtrado es que el modelo básico y el modelo filtrado usan conjuntos de datos distintos, por lo que el número de casos usados para la evaluación en el gráfico de mejora respecto al modelo predictivo también es diferente. Es importante recordar este punto al interpretar los resultados de predicción y otras estadísticas.  
   
- ![gráfico de elevación que muestra dos modelos](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "que muestra dos modelos de gráfico de elevación")  
+ ![elevación del gráfico que muestra dos modelos](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "elevación del gráfico que muestra dos modelos")  
   
  El eje X del gráfico representa el porcentaje del conjunto de datos de prueba que se usa para comparar las predicciones. El eje Y del gráfico representa el porcentaje de valores de predicción.  
   
@@ -63,8 +63,8 @@ ms.locfileid: "34016412"
 |Correo destinado a todos|0.71|47,40 %|61,38 %|  
 |Correo destinado a menores de 30|0.85|51,81 %|46.62 %|  
 |Modelo de estimación aleatoria||31.00 %||  
-|Modelo ideal para: correo destinado a todos||62.48 %||  
-|Modelo ideal para: correo destinado a menores de 30||65.28 %||  
+|Modelo ideal para: Correo destinado a todos||62.48 %||  
+|Modelo ideal para: Correo destinado a menores de 30||65.28 %||  
   
  [Volver al principio](#bkmk_Top)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34016412"
   
  El eje X es el mismo que en el gráfico con la columna de predicción especificada, pero ahora el eje Y representa el porcentaje de predicciones correctas. Por consiguiente, la línea ideal es la línea diagonal, que muestra que en el 50 por ciento de los datos, el modelo predice correctamente el 50 por ciento de los casos, el máximo que se puede esperar.  
   
- ![Elevación predicciones correctas de gráfico que muestra](../../analysis-services/data-mining/media/lift1.gif "gráfico de elevación con predicciones correctas")  
+ ![Elevación de predicciones correctas de gráfico que muestra](../../analysis-services/data-mining/media/lift1.gif "gráfico de elevación Mostrar predicciones correctas")  
   
  Puede hacer clic en el gráfico para mover la barra gris vertical y la **Leyenda de minería de datos** muestra el porcentaje de casos total y el porcentaje de casos que se predijeron correctamente. Por ejemplo, si coloca la barra deslizante gris en la marca del 50 por ciento, la **Leyenda de minería de datos** muestra las puntuaciones de precisión siguientes. Estas cifras se basan en el modelo TM_Decision Tree creado en el Tutorial básico de minería de datos.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "34016412"
  [Volver al principio](#bkmk_Top)  
   
 ## <a name="see-also"></a>Vea también  
- [Prueba y validación & #40; minería de datos & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

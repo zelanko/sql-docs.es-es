@@ -1,5 +1,5 @@
 ---
-title: Configurar y ver el registro de diagnóstico y SharePoint | Documentos de Microsoft
+title: Configurar y ver el registro de diagnóstico y de SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9d36c65115f1ad786340ec8a4058bd20c52cb6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027222"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410422"
 ---
-# <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurar y ver el registro de diagnóstico y SharePoint
+# <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurar y ver el registro de diagnóstico y de SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se graban en archivos de registro de SharePoint. Use la información de este tema para configurar los niveles de registro y ver la información del archivo de registro. Puede controlar qué eventos de servidor de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se registran en el archivo. También puede controlar la gravedad de los mensajes que se registran. Para más información, vea [Configurar la recolección de datos de uso para Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34027222"
   
 -   En el caso de los errores que proporcionan un identificador de correlación, cópielo y utilícelo como término de búsqueda en el archivo de registro.  
   
--   Busque el estado del error "High" o "Exception". Busque "Servicio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ".  
+-   Busque el estado del error "High" o "Exception". Busque "[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service".  
   
 -   Si sabe cuándo se produjo el error, utilice la información de fecha y hora para restringir el ámbito de entradas por las que debe desplazarse.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "34027222"
 |w3wp.exe|Servicio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Uso|Verbose|No hay ninguna estadística de solicitudes actuales, nada para registrar.|En los intervalos predefinidos, el servicio notifica las estadísticas de respuesta de las consultas como un evento de uso al sistema de recopilación de datos de uso. Este mensaje indica que no hubo ninguna estadística de consulta que notificar.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|Empezar a buscar un servidor de aplicaciones para el origen de datos =\<*ruta de acceso*>|Cuando se recibe una solicitud de conexión, el servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponible para administrar la solicitud. Si hay solo un servidor en la granja, el servidor local acepta la solicitud en todos los casos.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|La búsqueda del servidor de aplicaciones tuvo éxito.|La solicitud se asignó a una aplicación de servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|Redireccionar la solicitud para la \< *origen de datos de PowerPivot*> a la [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La solicitud se reenvió al [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|Redireccionar la solicitud para el \< *origen de datos de PowerPivot*> a la [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La solicitud se reenvió al [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
 |w3wp.exe|Servicio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Procesamiento de solicitudes|Verbose|Redireccionar la solicitud para el nombre de usuario\<*usuario de SharePoint*> a la base de datos|Una conexión suplantada con el origen de datos de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se creó en nombre del usuario de SharePoint.|  
   
 ## <a name="see-also"></a>Vea también  

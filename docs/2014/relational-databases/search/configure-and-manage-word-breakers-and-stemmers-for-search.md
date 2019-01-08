@@ -20,12 +20,12 @@ ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0804fedde52ad335197c142b897afab8743f45b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199451"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505840"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar y administrar separadores de palabras y lematizadores para la búsqueda
   Los separadores de palabras y lematizadores realizan un análisis lingüístico de todos los datos indizados de texto completo. El análisis lingüístico incluye la búsqueda de los límites de las palabras (separación de palabras) y la conjugación de los verbos (lematización). Los separadores de palabras y lematizadores son específicos del idioma, y las reglas para el análisis lingüístico difieren en los diferentes idiomas. Para un idioma determinado, un *separador de palabras* identifica las palabras individuales determinando los límites de palabras en función de las reglas léxicas de ese idioma. Cada palabra (también conocida como *token*) se inserta en el índice de texto completo usando una representación comprimida para reducir su tamaño. El *lematizador* genera las formas de inflexión de una palabra determinada en función de las reglas de ese idioma (por ejemplo, "corriendo", "corrió" y "corredor" son varias formas de la palabra "carrera").  
@@ -33,14 +33,14 @@ ms.locfileid: "48199451"
  El uso de separadores de palabras específicos del idioma permite que los términos resultantes sean más precisos para dicho idioma. Cuando hay un separador de palabras para la familia de idiomas, pero no para el subidioma específico, se utiliza el del idioma principal. Por ejemplo, el separador de palabras del francés se utiliza en el texto escrito en francés de Canadá. Si no hay ningún separador de palabras disponible para un idioma concreto, se utiliza el separador de palabras neutral. El separador de palabras neutral divide las palabras en caracteres neutrales como espacios y marcas de puntuación.  
   
 ##  <a name="register"></a> Registrar separadores de palabras  
- Para usar los separadores de palabras de un idioma, se deben registrar. Con los separadores de palabras registrados, los recursos lingüísticos asociados (lematizadores, palabras irrelevantes y archivos de sinónimos) también están disponibles para las operaciones de indización y consulta de texto completo. Para ver una lista de los idiomas cuyos separadores de palabras están registrados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
+ Para usar los separadores de palabras de un idioma, se deben registrar. Para los separadores de palabras registrados asociados recursos lingüísticos-lematizadores, palabras irrelevantes (palabras irrelevantes) y archivos de sinónimos-también están disponibles para texto completo de indización y operaciones de consulta. Para ver una lista de los idiomas cuyos separadores de palabras están registrados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
  SELECT * FROM sys.fulltext_languages  
   
  Si agrega, quita o modifica un separador de palabras, necesita actualizar la lista de identificadores de configuración regional (LCID) de Microsoft Windows que se admiten para la indización y las consultas de texto completo. Para obtener más información, consulte [ver o cambiar los filtros registrados y separadores de palabras](view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Establecer la opción de idioma de texto completo predeterminado  
- Para una versión localizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de instalación la `default full-text language` opción para el idioma del servidor, si existe una correspondencia apropiada. Para obtener una versión no localizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el `default full-text language` opción es el inglés.  
+ Para una versión localizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de instalación la `default full-text language` opción para el idioma del servidor, si existe una correspondencia apropiada. En las versiones no traducidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción `default full-text language` es el inglés.  
   
  Al crear o modificar un índice de texto completo, puede especificar un idioma diferente para cada columna indizada de texto completo. Si no se especifica ningún idioma para una columna, el valor predeterminado es el de la opción de configuración `default full-text language`.  
   

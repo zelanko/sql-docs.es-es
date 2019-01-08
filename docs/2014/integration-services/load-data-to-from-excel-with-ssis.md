@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 90accbf1e7d5cc683b862707e0688c5b32d86242
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991258"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778317"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)
 
@@ -41,7 +41,7 @@ Este artículo contiene los tres conjuntos de información que necesita para usa
 
 Para poder importar datos desde Excel o exportarlos a Excel, tendrá que descargar los componentes de conectividad de Excel si no están instalados. Los componentes de conectividad de Excel no están instalados de forma predeterminada.
 
-Descargue la versión más reciente de los componentes de conectividad de Excel aquí: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+Descargue la versión más reciente de los componentes de conectividad para Excel aquí: [Base de datos de Microsoft Access Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
 La versión más reciente de los componentes puede abrir los archivos creados con versiones anteriores de los programas de Excel.
 
@@ -53,7 +53,7 @@ Si tiene una suscripción de Office 365, puede que vea un mensaje de error al ej
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-Si tiene problemas para instalar la versión 2016 Redistributable, instale la versión 2010 Redistributable desde aquí: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) (no hay ninguna versión redistribuible para Excel 2013).
+Si tiene problemas para instalar la versión 2016 redistributable, se debe instalar la versión 2010 redistributable desde aquí: [Base de datos de Microsoft Access Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (no hay ninguna versión redistribuible para Excel 2013).
 
 ## <a name="specify-excel"></a> Especificar Excel
 
@@ -161,7 +161,7 @@ Después de seleccionar o de escribir los objetos de Excel que se van a importar
 
 El controlador de Excel reconoce solo un conjunto limitado de tipos de datos. Por ejemplo, todas las columnas numéricas se interpretan como dobles (DT_R8) y todas las columnas de cadena (a excepción de las columnas memorando) se interpretan como cadenas Unicode de 255 caracteres (DT_WSTR). SSIS asigna los tipos de datos de Excel de la siguiente manera:
 
--   Numérico: flotante de doble precisión (DT_R8)
+-   Numérico flotante de doble precisión (DT_R8)
 
 -   Moneda: moneda (DT_CY)
 

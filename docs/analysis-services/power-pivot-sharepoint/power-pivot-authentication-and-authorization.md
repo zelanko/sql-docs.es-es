@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1a114fbb79ff3c6df57991f0db695f357d743adc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983470"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402650"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticación y autorización de PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "38983470"
 |Administrador de granja o de servicio|Instalar, habilitar y configurar servicios y aplicaciones.<br /><br /> Usar el panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y ver informes administrativos.|  
 |Control total|Activar la integración de características de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en el nivel de colección de sitios.<br /><br /> Crear una biblioteca de la galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Crear una biblioteca de fuentes de distribución de datos.|  
 |Contribuir|Agregar, editar, eliminar y descargar libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Configurar actualización de datos.<br /><br /> Crear nuevos libros e informes basados en libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un sitio de SharePoint.<br /><br /> Crear documentos de servicio de datos en una biblioteca de fuentes de distribución de datos.|  
-|Lectura|Acceder a libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como origen de datos externo, donde la URL del libro se escribe explícitamente en un cuadro de diálogo de conexión (por ejemplo, en el Asistente para conexión de datos de Excel).|  
+|Lectura|Acceso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libros como origen de datos externo, donde la dirección URL del libro se escribe explícitamente en un cuadro de diálogo de conexión (por ejemplo, en el Asistente para la conexión de datos de Excel).|  
 |Solo ver|Ver libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Ver el historial de la actualización de datos.<br /><br /> Conectarse con un libro local a un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un sitio de SharePoint, para cambiar sus datos de otras formas.<br /><br /> Descargue una instantánea del libro. La instantánea es una copia estática de los datos, segmentaciones de datos, filtros, fórmulas ni conexiones de datos. El contenido de la instantánea es parecido al que se obtiene al copiar los valores de las celdas de la ventana del explorador.|  
   
 ##  <a name="excel"></a> Consideraciones de seguridad de Excel Services para los libros PowerPivot  
@@ -112,8 +112,8 @@ ms.locfileid: "38983470"
   
 ## <a name="see-also"></a>Vea también  
  [Configurar las cuentas de servicio Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [Configuración de la combinación de PowerPivot (PowerPivot para SharePoint) de la cuenta de actualización de datos desatendida](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [Crear una ubicación de confianza para los sitios PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Arquitectura de seguridad de Power Pivot](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [PowerPivot Security Architecture (Arquitectura de seguridad de PowerPivot)](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

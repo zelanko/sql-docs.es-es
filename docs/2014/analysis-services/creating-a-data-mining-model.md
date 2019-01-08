@@ -20,12 +20,12 @@ ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134798"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394468"
 ---
 # <a name="creating-a-data-mining-model"></a>Crear un modelo de minería de datos
   Modelado de datos es el paso de minería de datos donde se generan patrones y tendencias aplicando *algoritmos* a los datos. Después, puede utilizar esos patrones para el análisis, o para realizar predicciones.  
@@ -72,7 +72,7 @@ ms.locfileid: "48134798"
  [Asistente para clúster &#40;datos complementos de minería de datos para Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md).  
   
 ## <a name="detect-categories-analyze"></a>Detectar categorías (Analizar)  
- El **detectar categorías** herramienta le permite agregar cualquier conjunto de datos y aplicar la agrupación en clústeres para buscar agrupaciones de datos. Es útil para buscar similitudes y crear grupos para analizarlos después más a fondo.  
+ El **detectar categorías** herramienta le permite agregar cualquier conjunto de datos y aplicar la agrupación en clústeres para buscar agrupaciones de datos. Es útil para buscar similitudes y crear grupos para analizarlos en detalle.  
   
  El **detectar categorías** herramienta usa el algoritmo Microsoft Clustering.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48134798"
   
  [Escenario Buscar objetivo &#40;herramientas de análisis de tabla para Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-what-if-scenario-analyze"></a>Escenario: Escenario Y si (Analizar)  
+## <a name="scenario-what-if-scenario-analyze"></a>Escenario: Escenario y si (Analizar)  
  El **el análisis de hipótesis** herramienta complementa el **Buscar objetivo** herramienta. Con esta herramienta, se introduce el valor que se desea cambiar y el modelo predice si el cambio será suficiente para obtener el resultado deseado. Por ejemplo, podría solicitar al modelo que infiera si la adición de un operador de llamadas adicional incrementaría la satisfacción del cliente en un punto.  
   
  El **hipótesis** herramienta usa el algoritmo de regresión logística de Microsoft.  

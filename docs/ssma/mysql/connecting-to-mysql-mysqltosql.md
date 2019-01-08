@@ -13,12 +13,12 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 638a79e5785c74a11cb2e424739c3d80959a4d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843083"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409512"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Conexión a MySQL (MySQLToSQL)
 Para migrar bases de datos MySQL a SQL Server o SQL Azure, debe conectarse a la base de datos MySQL que se va a migrar. Cuando se conecta, SSMA obtiene metadatos sobre todos los esquemas de MySQL y, a continuación, muestra en el panel Explorador de metadatos de MySQL. SSMA almacena información sobre el servidor de base de datos, pero no almacena las contraseñas.  
@@ -62,20 +62,20 @@ Cuando se conecta a una base de datos, SSMA lee los metadatos de la base de dato
   
     3.  En el **contraseña** , escriba la contraseña del nombre de usuario especificado.  
   
-5.  **SSL:** si desea conectarse de forma segura a MySQL, asegúrese de utilizar capa de sockets seguros (SSL) al comprobar la **SSL** casilla de verificación.  
+5.  **SSL:** Si desea conectarse de forma segura a MySQL, asegúrese de utilizar capa de sockets seguros (SSL) al comprobar la **SSL** casilla de verificación.  
   
-6.  **Configurar:** ofrece una opción para configurar la conexión a MySQL a través de la capa de sockets seguros (SSL).  
+6.  **Configurar:** Proporciona una opción para configurar la conexión a MySQL a través de la capa de sockets seguros (SSL).  
   
     > [!NOTE]  
     > Para habilitar **configurar**, SSL debe establecerse en **True**.  
   
     Al hacer clic en el botón "Configurar", aparece un cuadro de diálogo. Para usar el cifrado mientras se conecta a la base de datos MySQL, ruta de acceso a los siguientes archivos de tres certificado presentes en el cuadro de diálogo debe ser definido [privacidad mejorada correo certificados (PEM)]:  
   
-    -   **Entidad emisora de certificados SSL:** especifica la ruta de acceso a un archivo con una lista de confianza de entidades emisoras de certificados SSL.  
+    -   **Entidad emisora de certificados SSL:** Especifica la ruta de acceso a un archivo con una lista de confianza de entidades emisoras de certificados SSL.  
   
-    -   **Certificado SSL:** especifica el nombre del archivo de certificado SSL que se utilizará para establecer una conexión segura.  
+    -   **Certificado SSL:** Especifica el nombre del archivo de certificado SSL que se utilizará para establecer una conexión segura.  
   
-    -   **CLAVE SSL:** especifica el nombre del archivo de clave SSL que se utilizará para establecer una conexión segura.  
+    -   **CLAVE SSL:** Especifica el nombre del archivo de clave SSL que se utilizará para establecer una conexión segura.  
   
     > [!NOTE]  
     > -   El **Aceptar** botón se habilita cuando se ha proporcionado la información necesaria. Si cualquiera de las rutas de acceso de archivo son válida, el botón "Aceptar" permanecerá deshabilitado.  

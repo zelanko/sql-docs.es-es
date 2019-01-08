@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c9b6b7e6118fc23ef821d85ea6d0ac2f040e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537869"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,25 +55,25 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  Nombre del trabajo. El nombre debe ser único y no puede contener el porcentaje (**%**) caracteres. *job_name*es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
  [  **@enabled =** ] *habilitado*  
  Indica el estado del trabajo agregado. *habilitado*es **tinyint**, su valor predeterminado es 1 (habilitado). Si **0**, el trabajo no está habilitado y no se ejecuta según la programación; sin embargo, se puede ejecutar manualmente.  
   
- [  **@description =** ] **'***descripción***'**  
+ [  **@description =** ] **'**_descripción_**'**  
  Descripción del trabajo. *descripción* es **nvarchar (512)**, su valor predeterminado es null. Si *descripción* es se omite, se utiliza "No hay descripción disponible".  
   
  [ **@start_step_id =** ] *step_id*  
  Número de identificación del primer paso que se va a ejecutar para el trabajo. *step_id*es **int**, su valor predeterminado es 1.  
   
- [  **@category_name =** ] **'***categoría***'**  
+ [  **@category_name =** ] **'**_categoría_**'**  
  Categoría del trabajo. *categoría*es **sysname**, su valor predeterminado es null.  
   
  [ **@category_id =** ] *category_id*  
  Mecanismo independiente del idioma para especificar una categoría de trabajo. *category_id*es **int**, su valor predeterminado es null.  
   
- [ **@owner_login_name =** ] **'***login***'**  
+ [  **@owner_login_name =** ] **'**_inicio de sesión_**'**  
  Nombre del inicio de sesión al que pertenece el trabajo. *inicio de sesión*es **sysname**, su valor predeterminado es null, que se interpreta como el nombre de inicio de sesión actual. Solo los miembros de la **sysadmin** rol fijo de servidor puede establecer o cambiar el valor de **@owner_login_name**. Si los usuarios que no son miembros de la **sysadmin** rol establecer o cambiar el valor de **@owner_login_name**, se produce un error en la ejecución de este procedimiento almacenado y devuelve un error.  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
@@ -95,13 +95,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@notify_level_page =** ] *page_level*  
  Valor que indica cuándo se debe enviar una página para notificar la finalización del trabajo. *page_level*es **int**, su valor predeterminado es **0**, lo que no significa que nunca. *page_level*utiliza los mismos valores que *eventlog_level*.  
   
- [  **@notify_email_operator_name =** ] **'***nombre_correo***'**  
+ [  **@notify_email_operator_name =** ] **'**_nombre_correo_**'**  
  El nombre de correo electrónico de la persona para enviar correo electrónico cuando *email_level* se alcanza. *nombre de correo electrónico* es **sysname**, su valor predeterminado es null.  
   
- [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [  **@notify_netsend_operator_name =** ] **'**_netsend_name_**'**  
  Nombre del operador al que se enviará el mensaje de red al finalizar este trabajo. *netsend_name*es **sysname**, su valor predeterminado es null.  
   
- [  **@notify_page_operator_name =** ] **'***page_name***'**  
+ [  **@notify_page_operator_name =** ] **'**_page_name_**'**  
  Nombre de la persona a la que se enviará un mensaje por localizador al finalizar este trabajo. *page_name*es **sysname**, su valor predeterminado es null.  
   
  [ **@delete_level =** ] *delete_level*  
@@ -110,7 +110,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Cuando *delete_level* es **3**, el trabajo se ejecuta solo una vez, independientemente de las programaciones definidas para el trabajo. Además, si un trabajo se elimina a sí mismo, también se elimina todo el historial de trabajos.  
   
- [  **@job_id =** ] *job_id *** salida**  
+ [  **@job_id =** ] _job_id_**salida**  
  Número de identificación que se ha asignado al trabajo si este se ha creado correctamente. *job_id*es una variable de salida de tipo **uniqueidentifier**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -155,7 +155,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B. Agregar un trabajo con la información de buscapersonas, correo electrónico y net send  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>b. Agregar un trabajo con la información de buscapersonas, correo electrónico y net send  
  En este ejemplo se crea un trabajo denominado `Ad hoc Sales Data Backup` que notifica a `François Ajenstat` (por medio de un mensaje emergente de red, buscapersonas o correo electrónico) si se produce algún error, y se elimina el trabajo si éste se realiza correctamente.  
   
 > [!NOTE]  

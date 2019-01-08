@@ -1,5 +1,5 @@
 ---
-title: Programación de actualización de datos y orígenes de datos, sin autenticación de Windows | Documentos de Microsoft
+title: Actualización de datos programada y orígenes de datos - sin autenticación de Windows | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4c7a5a66ff831c94129c2833d74d0eeeb65de30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027775"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408578"
 ---
-# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Programación de actualización de datos y orígenes de datos, sin autenticación de Windows
+# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Actualización de datos programada y orígenes de datos - sin autenticación de Windows
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   En este tema se describe un flujo de trabajo de nuevos datos de programación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que pueden usar orígenes de datos que **NO** admiten la autenticación de Windows. Por ejemplo, orígenes de datos Oracle o IBM DB2. Las ilustraciones y los pasos de este tema hacen referencia a orígenes de datos Oracle, pero se aplica el mismo flujo de trabajo a otros orígenes de datos.  
   
@@ -24,15 +24,15 @@ ms.locfileid: "34027775"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Información general:** Cree dos aplicaciones de destino de almacenamiento seguro Configure la primera aplicación de destino (PowerPivotDataRefresh) para usar las credenciales de Windows. Configure la segunda aplicación de destino con las credenciales para un origen de datos que no admita la autenticación de Windows, por ejemplo, una base de datos Oracle. La segunda aplicación de destino también usa la primera aplicación de destino para la cuenta de actualización de datos desatendida.  
+ **Información general:** cree dos aplicaciones de destino de almacenamiento seguro Configure la primera aplicación de destino (PowerPivotDataRefresh) para usar las credenciales de Windows. Configure la segunda aplicación de destino con las credenciales para un origen de datos que no admita la autenticación de Windows, por ejemplo, una base de datos Oracle. La segunda aplicación de destino también usa la primera aplicación de destino para la cuenta de actualización de datos desatendida.  
   
  ![as_powerpivot_refresh_no_windows_auth](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** Un identificador de aplicación de destino de almacén seguro que se establece con la autenticación de Windows.  
+-   **(1) PowerPivotDatarefresh:** un identificador de aplicación de destino de almacén seguro que se establece con la autenticación de Windows.  
   
--   **(2) OracleAuthentication:** Un identificador de aplicación de destino de almacén seguro que se establece con las credenciales de Oracle.  
+-   **(2) OracleAuthentication:** un identificador de aplicación de destino de almacén seguro que se establece con las credenciales de Oracle.  
   
--   **(3)** La aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] está configurada para usar la aplicación de destino "PowerPivotDataRefresh" para la **cuenta de actualización de datos desatendida**.  
+-   **(3)**  El [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicación de servicio está configurada para usar la aplicación de destino "PowerPivotDataRefresh" para el **cuenta de actualización de datos desatendida**.  
   
 -   **(4)** El libro de PowerPivot usa datos de Oracle. Los valores de actualización del libro especifican la conexión de origen de datos que usa la aplicación de destino **(2)** para las credenciales.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34027775"
   
 4.  En la página **Crear nueva aplicación de destino de almacenamiento seguro** , configure los valores siguientes:  
   
-    -   **Identificador de la aplicación de destino:** PowerPivotDataRefresh.  
+    -   **Id. de aplicación de destino:** PowerPivotDataRefresh.  
   
     -   **Nombre para mostrar:** PowerPivotDataRefresh.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34027775"
   
     -   **Tipo de aplicación de destino:** Grupo.  
   
-    -   **Dirección URL de la página de la aplicación de destino:** Ninguna.  
+    -   **Dirección URL de la página de aplicación de destino:** Ninguno.  
   
 5.  Haga clic en **Siguiente**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "34027775"
   
 4.  En la página **Crear nueva aplicación de destino de almacenamiento seguro** , configure los valores siguientes:  
   
-    -   **Identificador de aplicación de destino:** OracleAuthentication.  
+    -   **Id. de aplicación de destino:** OracleAuthentication.  
   
     -   **Nombre para mostrar:** OracleAuthentication.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "34027775"
   
     -   **Tipo de aplicación de destino:** Grupo.  
   
-    -   **Dirección URL de la página de la aplicación de destino:** Ninguna.  
+    -   **Dirección URL de la página de aplicación de destino:** Ninguno.  
   
 5.  Haga clic en **Siguiente**.  
   
@@ -114,13 +114,13 @@ ms.locfileid: "34027775"
   
 11. Escriba el identificador de usuario Oracle y la contraseña de Oracle y, a continuación, haga clic en **Aceptar**.  
   
- Para obtener más información, vea la sección "Para crear una aplicación de destino para la autenticación de SQL Server" en [usar almacenamiento seguro con autenticación de SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Para obtener más información, vea la sección "Para crear una aplicación de destino para la autenticación de SQL Server" en [Use Secure Store con la autenticación de SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>Para configurar la aplicación de servicio Power Pivot  
   
 1.  En Administración central de SharePoint, haga clic en Administrar aplicaciones de servicio.  
   
-2.  Haga clic en el nombre de la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , por ejemplo "Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] predeterminada".  
+2.  Haga clic en el nombre de su [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicación de servicio, por ejemplo "Default [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicación de servicio".  
   
 3.  Haga clic en **Configurar las opciones de aplicación de servicio** en la sección Acciones.  
   
@@ -167,6 +167,6 @@ ms.locfileid: "34027775"
   
 -   [Configurar el Servicio de almacenamiento seguro de SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
   
--   Vea la sección "Actualización de datos programada" de [Actualización de datos de Power Pivot con SharePoint 2013 y SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   Consulte la sección "Actualización de datos programada" de [actualización de datos PowerPivot con SharePoint 2013 y SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145600"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391868"
 ---
 # <a name="impersonation-ssas-tabular"></a>Suplantación (SSAS tabular)
   Este tema proporciona a los autores de modelos tabulares una descripción de cómo usa Analysis Services las credenciales de inicio de sesión al conectarse a un origen de datos para importar y procesar (actualizar) datos.  
@@ -38,7 +38,7 @@ ms.locfileid: "50145600"
   
  Las credenciales usadas para la suplantación son diferentes de las credenciales del usuario que ha iniciado sesión actualmente. Las credenciales del usuario que tiene abierta una sesión se usan para determinadas operaciones del lado cliente mientras se crea un modelo.  
   
- Es importante entender cómo se especifican y protegen las credenciales de suplantación, así como la diferencia entre los contextos en los que se usan tanto las credenciales del usuario que tiene abierta una sesión como las demás credenciales.  
+ Es importante comprender cómo se especifican y protegen las credenciales de suplantación, así como la diferencia entre los contextos en los que ambos actual ha iniciado en credenciales del usuario y cuando se usan otras credenciales.  
   
  **Descripción de las credenciales del servidor**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "50145600"
   
  De forma similar, para los modelos que ya se han creado, puede usar el cuadro de diálogo **Editar propiedades de tabla** para obtener una vista previa y filtrar los datos importados en una tabla. Estas funciones de vista previa y filtrado emplean la misma funcionalidad que la característica **Vista previa y filtrar** de la página **Seleccionar tablas y vistas** del Asistente para la importación de tablas.  
   
- La característica **Vista previa y aplicar filtro** y los cuadros de diálogo **Propiedades de tabla** y **Administrador de partición** son operaciones del *lado cliente* en proceso (es decir, lo que se realiza durante estas operaciones es diferente de cómo se ha conectado con el origen de datos y cómo se capturan los datos desde el origen de datos, que son operaciones del lado servidor). Las credenciales utilizadas para obtener una vista previa y filtrar los datos son las credenciales del usuario que ha iniciado sesión actualmente. Las operaciones del lado cliente siempre utilizan las credenciales de Windows del usuario actual para conectarse al origen de datos.  
+ La característica **Vista previa y aplicar filtro** y los cuadros de diálogo **Propiedades de tabla** y **Administrador de partición** son operaciones del *lado cliente* en proceso (es decir, lo que se realiza durante estas operaciones es diferente de cómo se ha conectado con el origen de datos y cómo se capturan los datos desde el origen de datos, que son operaciones del lado servidor). Las credenciales utilizadas para obtener una vista previa y filtrar los datos son las credenciales del usuario que ha iniciado sesión actualmente. Operaciones del lado cliente siempre utilizan credenciales de Windows del usuario actual para conectarse al origen de datos.  
   
  Esta separación entre las credenciales usadas durante las operaciones de lado servidor y las del lado cliente puede dar lugar a un error de coincidencia entre lo que ve el usuario con la característica **Vista previa y aplicar filtro** o el cuadro de diálogo **Propiedades de tabla** (operaciones del lado cliente) y los datos que se capturarán durante una importación o un procesamiento (una operación del lado servidor). Si las credenciales del usuario que ha iniciado sesión actualmente y las credenciales de suplantación especificadas son diferentes, los datos que se ven en la característica **Vista previa y filtrar** o en el cuadro de diálogo **Propiedades de tabla** y los datos capturados durante una importación o un procesamiento pueden ser diferentes según las credenciales que requiera el origen de datos.  
   

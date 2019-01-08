@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -14,12 +13,12 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 17df4d4f8d311be311907d18ad61cbbce05ea397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf14f942857361256febd4329a116c2d349659a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217597"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747937"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Crear una vista de suscripciones (Master Data Services)
   Crear una vista de suscripciones cuando desea crear una vista de los datos en el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos para su uso en sistemas de suscripción.  
@@ -29,7 +28,7 @@ ms.locfileid: "48217597"
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de integraciones** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-create-a-subscription-view"></a>Crear una vista de suscripción  
   

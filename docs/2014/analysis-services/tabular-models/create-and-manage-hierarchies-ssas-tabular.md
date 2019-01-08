@@ -11,12 +11,12 @@ ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2544b53b1fabc94a8ab0801141349d5da7f891c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda916232a3d1b0c46a4278def28ec3759e346d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149635"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404890"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Crear y administrar jerarquías (SSAS tabular)
   Las jerarquías se pueden crear y administrar en la Vista de diagrama del diseñador de modelos. Para ver el diseñador de modelos en la Vista de diagrama, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** , seleccione **Vista de modelo**y haga clic en **Vista de diagrama**.  
@@ -42,7 +42,7 @@ ms.locfileid: "48149635"
   
 2.  Escriba el nombre de la jerarquía.  
   
- Puede arrastrar columnas adicionales al nivel primario de la jerarquía para copiarlas. Arrastre y coloque el nivel secundario para situarlo donde desea que aparezca en la jerarquía.  
+ Puede arrastrar columnas adicionales al nivel primario de la jerarquía, que copia las columnas. Arrastre y coloque el nivel secundario para situarlo donde desea que aparezca en la jerarquía.  
   
 > [!NOTE]  
 >  El comando Crear jerarquía está deshabilitado en el menú contextual si realiza una selección múltiple de una medida junto con una o varias columnas, o si selecciona columnas de varias tablas.  
@@ -96,7 +96,7 @@ ms.locfileid: "48149635"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñador de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
- [Jerarquías &#40;Tabular de SSAS&#41;](hierarchies-ssas-tabular.md)   
- [Las medidas &#40;Tabular de SSAS&#41;](measures-ssas-tabular.md)  
+ [Jerarquías &#40;SSAS tabular&#41;](hierarchies-ssas-tabular.md)   
+ [Medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)  
   
   

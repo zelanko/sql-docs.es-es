@@ -1,5 +1,5 @@
 ---
-title: Definir conjuntos con nombre | Documentos de Microsoft
+title: Definir conjuntos con nombre | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 705c263d425985d23c823eee9cdd550b5a44db1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018232"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507664"
 ---
-# <a name="lesson-6-2---defining-named-sets"></a>Lección 6-2 - definir conjuntos con nombre
+# <a name="lesson-6-2---defining-named-sets"></a>Lección 6-2: definir conjuntos con nombre
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Un conjunto con nombre es una expresión de Expresiones multidimensionales (MDX) que devuelve un conjunto de miembros de dimensión. Puede definir conjuntos con nombre y guardarlos como parte de la definición del cubo; también puede crear conjuntos con nombre en aplicaciones cliente. Puede crear conjuntos con nombre combinando datos del cubo, operadores aritméticos, números y funciones. Los usuarios pueden usar los conjuntos con nombre en consultas MDX en aplicaciones cliente y también pueden usarse para definir conjuntos en subcubos. Un subcubo es una colección de conjuntos unidos de forma cruzada que restringe el espacio del cubo al subespacio definido para instrucciones posteriores. La definición de un espacio del cubo restringido es un concepto fundamental para el scripting de MDX.  
@@ -68,7 +68,7 @@ En las tareas de este tema, definirá dos conjuntos con nombre: un conjunto con 
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-    Ahora que ha definido el primer conjunto para la expresión de conjunto Exists, estará listo para agregar el segundo conjunto: el conjunto de miembros de dimensión Reseller que contiene el mayor número de empleados.  
+    Ahora que ha definido el primer conjunto para el método Exists expresión de conjunto, estará listo para agregar el segundo conjunto, el conjunto de miembros de dimensión Reseller que contiene el mayor número de empleados.  
   
 7.  En la pestaña **Metadatos** del panel **Herramientas de cálculo** , expanda **Número de empleados** en la dimensión Reseller, expanda **Miembros**y luego **All Resellers**.  
   
@@ -118,22 +118,22 @@ En las tareas de este tema, definirá dos conjuntos con nombre: un conjunto con 
   
 5.  Expanda la dimensión Product y, a continuación, agregue Category y Subcategory al área de fila, como se muestra en la ilustración siguiente.  
   
-    ![Los miembros del atributo Subcategory](../analysis-services/media/l6-named-set-03.gif "miembros del atributo de subcategoría")  
+    ![Los miembros del atributo Subcategory](../analysis-services/media/l6-named-set-03.gif "miembros del atributo Subcategory")  
   
 6.  En el panel **Metadatos** , en la dimensión **Product** , arrastre **Core Products** el área de filtro.  
   
     Observe que solo el miembro **Bike** del atributo **Category** y los miembros de las subcategorías **Bike** permanecen en el cubo. Esto se debe a que se usa el conjunto con nombre **Core Products** para definir un subcubo. Este subcubo limita los miembros del atributo **Category** en la dimensión **Product** del subcubo a los miembros del conjunto con nombre **Core Products** , tal como se muestra en la ilustración siguiente.  
   
-    ![Conjunto con nombre de los miembros del producto base](../analysis-services/media/l6-named-set-04.gif "conjunto con nombre de los miembros del producto principal")  
+    ![Conjunto con nombre de los miembros del producto principal](../analysis-services/media/l6-named-set-04.gif "conjunto con nombre de los miembros del producto principal")  
   
 7.  En el panel **Metadatos** , expanda **Distribuidor**y agregue **Grandes distribuidores** al área de filtro.  
   
     Observe que la medida Importe de datos del distribuidor del panel Datos solo muestra importes de venta para los grandes distribuidores de bicicletas. Observe también que el panel Filtro muestra ahora los dos conjuntos con nombre que se utilizan para definir este subcubo en particular, tal como muestra la siguiente imagen.  
   
-    ![Panel de filtro que contiene dos denominado establece](../analysis-services/media/l6-named-set-05.gif "establece el panel de filtro que contiene dos denominado")  
+    ![Panel de filtro que contiene dos denominado establece](../analysis-services/media/l6-named-set-05.gif "establece el panel de filtro que contiene dos con nombre")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 7: Definir indicadores clave de rendimiento & #40; KPI & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vea también  
 [Cálculos](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab407cac265c148b946380c58d48e2c98f231a81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223175"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505451"
 ---
 # <a name="view-user-defined-functions"></a>Ver funciones definidas por el usuario
   Puede obtener información sobre la definición o las propiedades de una función definida por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Es posible que necesite ver la definición de la función para entender cómo se derivan sus datos de las tablas de origen o para ver los datos que ella misma define.  
@@ -43,7 +43,7 @@ ms.locfileid: "48223175"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48223175"
   
 4.  Haga clic con el botón derecho en la función cuyas propiedades quiere ver y seleccione **Propiedades**.  
   
-     Las siguientes propiedades aparecen en el cuadro de diálogo **Propiedades de la función:** *nombre_función* .  
+     Las propiedades siguientes aparecen en el cuadro de diálogo **Propiedades de la función:** *nombre_función*.  
   
      **Base de datos**  
      Nombre de la base de datos que contiene esta función.  
@@ -85,7 +85,7 @@ ms.locfileid: "48223175"
      **Ejecutar como**  
      Contexto de ejecución para la función.  
   
-     **Nombre**  
+     **Name**  
      Nombre de la función actual.  
   
      **Esquema**  

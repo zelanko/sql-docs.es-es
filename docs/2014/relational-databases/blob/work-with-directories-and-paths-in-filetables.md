@@ -12,17 +12,17 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 321c452c816f765642d14142a64ab88f5ecb9cdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa4fd0543c45e26f305506280bccce1f83107e55
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198795"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393298"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabajar con directorios y rutas de acceso de FileTables
   Describe la estructura de directorios en la que los archivos se almacenan en FileTables.  
   
-##  <a name="HowToDirectories"></a> Trabajar con directorios y rutas de acceso de FileTables  
+##  <a name="HowToDirectories"></a> Cómo: Trabajar con directorios y rutas de acceso de FileTables  
  Puede usar las tres funciones que se indican a continuación para trabajar con directorios de FileTable en [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Para obtener este resultado|Use esta función|  
@@ -31,7 +31,7 @@ ms.locfileid: "48198795"
 |Obtener una ruta de acceso UNC absoluta o relativa de un archivo o directorio de una FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |Obtener el valor del identificador del localizador de ruta de acceso del archivo o directorio especificado en una FileTable proporcionando la ruta de acceso.|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> Usar rutas de acceso relativas para el código portable  
+##  <a name="BestPracticeRelativePaths"></a> Cómo: Usar rutas de acceso relativas para el código Portable  
  Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa de un archivo en tiempo de ejecución usando conjuntamente las funciones [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) y [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql), como se muestra en el siguiente ejemplo. De forma predeterminada, la función `GetFileNamespacePath` devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
   
 ```tsql  
@@ -73,7 +73,7 @@ GO
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\`  
   
- Esta jerarquía de directorios constituye la raíz del espacio de nombres de archivo de la FileTable. En esta jerarquía de directorios, los datos de FILESTREAM de la FileTable se almacenan como archivos y como subdirectorios, que, a su vez, pueden contener archivos y subdirectorios.  
+ Esta jerarquía de directorios constituye la raíz del espacio de nombres de archivo de FileTable. En esta jerarquía de directorios, los datos de FILESTREAM de la FileTable se almacenan como archivos y como subdirectorios, que, a su vez, pueden contener archivos y subdirectorios.  
   
  Es importante tener en cuenta que la jerarquía de directorios creada en el recurso compartido de FILESTREAM en el nivel de instancia es una jerarquía de directorios virtual. Esta jerarquía se almacena en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no se representa físicamente en el sistema de archivos NTFS. Todas las operaciones que tienen acceso a los archivos y directorios situados en el recurso compartido de FILESTREAM y en las FileTables que contiene se interceptan y controlan mediante un componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incrustado en el sistema de archivos.  
   

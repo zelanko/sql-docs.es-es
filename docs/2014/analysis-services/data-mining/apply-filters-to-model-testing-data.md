@@ -15,12 +15,12 @@ ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510749"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a los datos de prueba del modelo
   Al especificar un origen de datos externo que se va a utilizar para probar un modelo, opcionalmente puede aplicar un filtro para restringir los datos de entrada. Por ejemplo, es posible que desee probar el modelo específicamente para realizar predicciones para los clientes con a un intervalo de ingresos determinado.  
@@ -47,7 +47,7 @@ ms.locfileid: "48114445"
   
  Para determinar si un modelo contiene un filtro predefinido que puede afectar a los resultados, busque la propiedad **Filter** en el panel **Propiedad** o consulte el modelo utilizando los conjuntos de filas de esquema de minería de datos. Por ejemplo, la consulta siguiente devuelve el texto del filtro para el modelo especificado:  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  Si desea quitar el filtro de un modelo de minería de datos existente, o cambiar las condiciones del filtro, deberá volver a procesar dicho modelo.  
@@ -62,7 +62,7 @@ ms.locfileid: "48114445"
   
 3.  En la pestaña **Selección de entrada** , en **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión**, seleccione la opción **Especificar otro conjunto de datos**.  
   
-4.  Haga clic en el botón Examinar **(…)** para abrir un cuadro de diálogo y seleccionar el conjunto de datos externo.  
+4.  Haga clic en el botón Examinar **(...)**  para abrir un cuadro de diálogo y elegir el conjunto de datos externos.  
   
 5.  Elija la tabla de casos y agregue una tabla anidada si fuera necesario. Asigne columnas del modelo a columnas del conjunto de datos externos según sea necesario. Cierre el cuadro de diálogo **Especificar asignación de columna** para guardar la definición de la tabla de origen.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48114445"
   
 9. Haga clic en el cuadro de texto **Y/O** y seleccione un operador lógico para definir cómo se combinan varias condiciones.  
   
-10. También puede hacer clic en el botón Examinar **(…)** a la derecha del cuadro de texto **Valor** para abrir el cuadro de diálogo **Filtro** y establecer las condiciones en la tabla anidada o en las columnas de la tabla de casos.  
+10. Si lo desea, haga clic en el botón Examinar **(...)**  a la derecha de la **valor** cuadro de texto para abrir el **filtro** diálogo cuadro y establecer las condiciones en la tabla anidada o en las columnas de tabla de casos.  
   
 11. Vea el texto que aparece en el panel **Expresión** para comprobar que las condiciones de filtro completadas son correctas.  
   
@@ -91,8 +91,8 @@ ms.locfileid: "48114445"
      La condición de filtro se aplica al origen de datos al crear el gráfico de precisión.  
   
 ## <a name="see-also"></a>Vea también  
- [Elegir y asignar el modelo de datos de prueba](choose-and-map-model-testing-data.md)   
- [Uso de datos de tabla anidada como entrada para un gráfico de precisión](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Elegir y asignar datos de prueba para el modelo](choose-and-map-model-testing-data.md)   
+ [Usar datos de tabla anidada como entrada para un gráfico de precisión](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Elegir un tipo de gráfico de precisión y establecer las opciones del gráfico](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

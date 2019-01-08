@@ -1,5 +1,5 @@
 ---
-title: 'Lección del tutorial de Analysis Services 4: crear relaciones | Microsoft Docs'
+title: 'Analysis Services tutorial la lección 4: Crear relaciones | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1768bd38be49515012139f8cd93c749ac7e3c48c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063736"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394536"
 ---
 # <a name="create-relationships"></a>Crear relaciones
 
@@ -26,7 +26,7 @@ Tiempo estimado para completar esta lección: **10 minutos**
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 3: marcar como tabla de fechas](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 3: Marcar como tabla de fechas](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Examinar las relaciones existentes y agregar nuevas relaciones  
 
@@ -50,7 +50,7 @@ Antes de continuar creando el modelo, debe comprobar que las relaciones entre ta
   
 2.  Haga clic en la línea sólida entre la **DimCustomer** tabla y el **DimGeography** tabla. La línea sólida entre estas dos tablas se muestra que esta relación está activa, es decir, se usa de forma predeterminada al calcular las fórmulas DAX.  
   
-    Tenga en cuenta la **GeographyKey** columna en el **DimCustomer** tabla y el **GeographyKey** columna en el **DimGeography** tabla ahora ambos aparecen dentro de un cuadro. Estas columnas se utilizan en la relación. Las propiedades de la relación aparecen ahora también en la ventana **Propiedades** .  
+    Tenga en cuenta la **GeographyKey** columna en el **DimCustomer** tabla y el **GeographyKey** columna en el **DimGeography** tabla ahora ambos aparecen dentro de un cuadro. Estas columnas se utilizan en la relación. Propiedades de la relación aparecen ahora también en el **propiedades** ventana.  
   
     > [!TIP]  
     > También puede usar el cuadro de diálogo Administrar relaciones para mostrar las relaciones entre todas las tablas en un formato de tabla. En el Explorador de modelos tabulares, haga clic en **relaciones** > **administrar relaciones**.

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
@@ -15,12 +15,12 @@ ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54952d2e72de22efe1f3b9eb34183464339fbd51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053245"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764587"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
   Esta pestaña del cuadro de diálogo **Personalizar el cuadro de herramientas** muestra una lista de todos los componentes de tareas de mantenimiento registrados en el equipo y permite cambiar los que muestra el cuadro de herramientas. Puede abrir el cuadro de diálogo **Personalizar el cuadro de herramientas** en el menú **Herramientas** . Para ordenar la lista de componentes, seleccione un encabezado de columna.  
@@ -28,7 +28,7 @@ ms.locfileid: "48053245"
 ## <a name="options"></a>Opciones  
  La pestaña **Tareas de mantenimiento** incluye las siguientes columnas de información.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre de los componentes disponibles. Delante del nombre aparece una casilla. Si está activada, indica que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha encontrado una entrada para el componente en el Registro del equipo. El componente ya se encuentra en la pestaña **Cuadro de herramientas** activa o se agregará a ella cuando haga clic en **Aceptar**. Si está desactivada, indica que el componente no se encuentra en el **Cuadro de herramientas**o que se quitará del **Cuadro de herramientas** cuando haga clic en **Aceptar**.  
   
  **Ruta de acceso**  

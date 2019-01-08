@@ -16,12 +16,12 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80fb27aa51d6e0a44f8f006711708e24cd04bef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632323"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507158"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Especifica uno o varios atributos de un [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
@@ -38,7 +38,7 @@ Especifica uno o varios atributos de un [campo](../../../ado/reference/ado-api/f
 |**adFldIsRowURL**|0x10000|Indica que el campo contiene la dirección URL que los nombres de los recursos del almacén de datos representado por el registro.|  
 |**adFldLong**|0x80|Indica que el campo es un campo binario largo. También indica que se puede utilizar el [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) y [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) métodos.|  
 |**adFldMayBeNull**|0x40|Indica que puede leer valores nulos del campo.|  
-|**adFldMayDefer**|0x2|Indica que el campo está diferido, es decir, no se recuperan los valores de campo del origen de datos con el registro completo, pero solo cuando se realiza un acceso explícito a ellos.|  
+|**adFldMayDefer**|0x2|Indica que el campo es que aplaza es, no se recuperan los valores de campo del origen de datos con el registro completo, pero solo cuando se realiza un acceso explícito a ellos.|  
 |**adFldNegativeScale**|0x4000|Indica que el campo representa un valor numérico de una columna que admite valores de escala negativos. La escala es especificada por el [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) propiedad.|  
 |**adFldRowID**|0x100|Indica que el campo contiene un identificador de fila persistente que no se puede escribir y no tiene ningún valor significativo salvo para identificar la fila (por ejemplo, un número de registro, identificador único y así sucesivamente).|  
 |**adFldRowVersion**|0x200|Indica que el campo contiene algún tipo de marca de hora o fecha usada para realizar el seguimiento de las actualizaciones.|  

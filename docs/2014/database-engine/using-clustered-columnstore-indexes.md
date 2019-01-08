@@ -10,19 +10,19 @@ ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6d040f8d7e784650cfbf0cf8b4540c599ed9599
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059405"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502699"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Usar índices clúster de almacén de columnas
   Tareas para utilizar índices clúster de almacén de columnas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Para obtener información general de los índices de almacén de columnas, vea [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Para obtener información general acerca de los índices de almacén de columnas, vea [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
- Para obtener información acerca de los índices de almacén de columnas agrupado, vea [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+ Para obtener información acerca de los índices clúster de almacén de columnas, vea [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="contents"></a>Contenido  
   
@@ -60,7 +60,7 @@ GO
  Use la [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) instrucción para quitar un índice de almacén de columnas agrupado. Esta operación quitará el índice y convertirá la tabla de almacén de columnas en un montón de almacenes de filas.  
   
 ##  <a name="load"></a> Cargar datos en un índice agrupado de almacén de columnas  
- Puede agregar datos a un índice clúster de almacén de columnas existente mediante cualquiera de los métodos estándar de carga.  Por ejemplo, la herramienta de carga masiva bcp, los servicios de integración e INSERT... SELECT puede cargar todos los datos en un índice de almacén de columnas en clúster.  
+ Puede agregar datos a un índice clúster de almacén de columnas existente mediante cualquiera de los métodos estándar de carga.  Por ejemplo, la carga masiva bcp herramienta, los servicios de integración e INSERT... SELECT puede cargar todos los datos en un índice de almacén de columnas en clúster.  
   
  Los índices clúster de almacén de columnas aprovechan el almacén delta para evitar la fragmentación de segmentos de columna en el almacén de columnas.  
   
@@ -68,7 +68,7 @@ GO
  Para los datos con particiones, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] primero asigna cada fila a una partición y después realiza operaciones del almacén de columnas con los datos de la partición. Cada partición tiene sus propios grupos de filas y un almacén delta por lo menos.  
   
 ### <a name="deltastore-loading-scenarios"></a>Escenarios de carga de almacén delta  
- Las filas se acumulan en el almacén delta hasta que su número alcanza el máximo permitido para formar un grupo de filas. Cuando el almacén delta contiene el número máximo de filas permitido en un grupo de filas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marca el grupo de filas como “CLOSED”. Un proceso en segundo plano, denominado “tupla motriz”, encuentra el grupo de filas marcado como CLOSED y lo mueve al almacén de columnas, donde se comprime el grupo de filas en segmentos de columna y estos últimos se almacenan en el almacén de columnas.  
+ Las filas se acumulan en el almacén delta hasta que su número alcanza el máximo permitido para formar un grupo de filas. Cuando el almacén delta contiene el número máximo de filas por grupo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marca como "CLOSED". Un proceso en segundo plano, denominado el "motor de tupla", busca el grupo de filas cerrado y se mueve al almacén de columnas, donde el grupo de filas se comprime en segmentos de columna y los segmentos de columna se almacenan en el almacén de columnas.  
   
  Para cada índice clúster del almacén de columnas puede haber varios almacenes delta.  
   
@@ -83,9 +83,9 @@ GO
 |Filas que se cargarán de forma masiva|Filas agregadas al almacén de columnas|Filas agregadas al almacén delta|  
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
-|145,000|145,000<br /><br /> Tamaño del grupo de filas: 145.000|0|  
-|1,048,577|1,048,576<br /><br /> Tamaño del grupo de filas: 1.048.576|1|  
-|2,252,152|2,252,152<br /><br /> Tamaños de los grupos de filas: 1.048.576, 1.048.576, 155.000|0|  
+|145,000|145,000<br /><br /> Tamaño del grupo de filas: 145,000|0|  
+|1,048,577|1,048,576<br /><br /> Tamaño del grupo de filas: 1,048,576.|1|  
+|2,252,152|2,252,152<br /><br /> Tamaños de los grupos de filas: 1,048,576, 1,048,576, 155,000.|0|  
   
  En el ejemplo siguiente se muestran los resultados de cargar 1.048.577 filas en una partición. Los resultados muestran un grupo de filas COMPRESSED en el almacén de columnas (como segmentos de columna comprimidos) y una fila en el almacén delta.  
   

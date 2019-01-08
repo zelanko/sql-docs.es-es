@@ -11,17 +11,17 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110705"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513006"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir un editor (SQL Server Management Studio)
   En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se abre, cada ventana del editor aparece como una pestaña en el panel central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] admite cuatro editores: el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para editar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , los editores DMX y MDX para editar scripts con esos lenguajes y el editor XML/A para editar scripts XML/A o archivos XML. Cualquiera de los editores también se puede usar para editar archivos de texto.  
   
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
@@ -30,15 +30,15 @@ ms.locfileid: "48110705"
 ### <a name="permissions"></a>Permisos  
  Las operaciones que realiza en un editor de código están sujetas a los permisos concedidos a la cuenta de autenticación que usó para iniciar sesión. Por ejemplo, si abre una ventana del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante la autenticación de Windows, no puede ejecutar instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que hacen referencia a los objetos para los que no tiene acceso la cuenta de inicio de sesión de Windows.  
   
-## <a name="how-to-open-editors"></a>Cómo: abrir editores  
+## <a name="how-to-open-editors"></a>Cómo: Abrir editores  
  En esta sección se explica cómo abrir varios editores en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Mediante el menú Archivo/Nuevo  
  En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, seleccione una de las opciones del editor de consultas:  
   
--   **Consulta con conexión actual** : abre una nueva ventana del editor del tipo asociado a la conexión actual en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La ventana del editor usa la misma información de autenticación que la conexión actual. Por ejemplo, si selecciona una instancia en el Explorador de objetos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y, a continuación, usa **Consulta con conexión actual**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre un editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado a la misma instancia con la misma información de autenticación.  
+-   **Consulta con conexión actual**: abre una nueva ventana del editor del tipo asociado a la conexión actual en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La ventana del editor usa la misma información de autenticación que la conexión actual. Por ejemplo, si selecciona una instancia en el Explorador de objetos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y, a continuación, usa **Consulta con conexión actual**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre un editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado a la misma instancia con la misma información de autenticación.  
   
--   **Consulta de motor de base de datos** : abre un nuevo editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Consulta de motor de base de datos**: abre un nuevo editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Consulta MDX de Analysis Services** : abre un nuevo editor de consultas MDX de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -54,9 +54,9 @@ ms.locfileid: "48110705"
 ### <a name="using-the-toolbar"></a>Usar la barra de herramientas  
  En la barra de herramientas de **Estándar** , haga clic en uno de los siguientes botones:  
   
--   **Nueva consulta** : abre una nueva ventana del editor del tipo asociado a la conexión actual en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La ventana del editor usa la misma información de autenticación que la conexión actual. Por ejemplo, si selecciona una instancia en el Explorador de objetos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y, a continuación, haga clic en el botón **Nueva consulta** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre un editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado a la misma instancia con la misma información de autenticación.  
+-   **Nueva consulta**: abre una nueva ventana del editor del tipo asociado a la conexión actual en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La ventana del editor usa la misma información de autenticación que la conexión actual. Por ejemplo, si selecciona una instancia en el Explorador de objetos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y, a continuación, haga clic en el botón **Nueva consulta** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre un editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado a la misma instancia con la misma información de autenticación.  
   
--   **Consulta de motor de base de datos** : abre un nuevo editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Consulta de motor de base de datos**: abre un nuevo editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Consulta MDX de Analysis Services** : abre un nuevo editor de consultas MDX de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

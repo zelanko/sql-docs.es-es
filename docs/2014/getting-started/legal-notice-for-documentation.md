@@ -16,12 +16,12 @@ ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c8f5a510ca569f4dd24464abf176b2db772115
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228505"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439397"
 ---
 # <a name="legal-notice-for-documentation"></a>Aviso legal de la documentación
   Este documento se proporciona "tal cual". La información y los puntos de vista que se proporcionan en este documento, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden sufrir modificaciones sin previo aviso. El usuario asume el riesgo de su uso.  
@@ -39,6 +39,6 @@ ms.locfileid: "48228505"
   
  En algunos casos, una característica determinada de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] no se ha probado o desarrollado suficientemente y no está destinada a usarse. Tales características se incluyen a menudo como marcadores. Por consiguiente, ciertas características que están contenidas en el software no están documentadas. Las características que no están documentadas o que se incluyen como una anotación para uso interno de Microsoft no están destinadas a usarse y los servicios de soporte al cliente de Microsoft no las admiten en su servicio. A menos que la documentación de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] indiquen lo contrario, el contenido de terceros, incluidos los problemas que sean resultado de utilizar dicho contenido con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], no se admite en los servicios de soporte al cliente de Microsoft y también puede provocar la pérdida de datos. Los servicios de soporte al cliente de Microsoft tampoco proporcionan soporte técnico para las bases de datos o aplicaciones que aprovechen o usen puntos de entrada indocumentados, como las API que no estén documentadas; por ejemplo, procedimientos almacenados, procedimientos almacenados extendidos, funciones, vistas, tablas, columnas, propiedades o metadatos.  
   
- Puede que tampoco funcionen las actualizaciones de servidor y de base de datos a versiones futuras de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] para las aplicaciones y bases de datos que aprovechen o utilicen puntos de entrada no documentados y no se admiten. El uso de características de SQL Server y la funcionalidad incluida en Microsoft SQL Server que no están documentados en el [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] documentación para su uso no se admiten y tal uso puede provocar la pérdida de datos.  
+ Puede que tampoco funcionen las actualizaciones de servidor y de base de datos a versiones futuras de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] para las aplicaciones y bases de datos que aprovechen o utilicen puntos de entrada no documentados y no se admiten. No se admite el uso de las características y funcionalidad de SQL Server que se incluyen en Microsoft SQL Server y que no se documentan en la documentación de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] para usarse y tal uso puede provocar la pérdida de datos.  
   
   

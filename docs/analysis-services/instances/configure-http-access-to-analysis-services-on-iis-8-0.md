@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b3d45b5f1e3dc47aa47a4478cb8408626ad73de3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148150"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420656"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurar el acceso HTTP a Analysis Services en IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,12 +91,12 @@ ms.locfileid: "50148150"
 > [!NOTE]  
 >  No olvide desbloquear los puertos en Firewall de Windows para permitir las conexiones cliente a un servidor Analysis Services remoto. Para obtener más información, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Paso 1: copiar los archivos MSMDPUMP en una carpeta del servidor Web  
+##  <a name="bkmk_copy"></a> Paso 1: Copiar los archivos MSMDPUMP en una carpeta del servidor web  
  Cada extremo HTTP que cree debería tener su propio conjunto de archivos MSMDPUMP. En este paso, copie el ejecutable MSMDPUMP, el archivo de configuración y la carpeta de recursos de las carpetas de programas de Analysis Services a una nueva carpeta del directorio virtual que creará en el sistema de archivos del equipo que ejecuta IIS.  
   
  La unidad debe tener el formato del sistema de archivos NTFS. La ruta de acceso a la carpeta que cree no debe contener ningún espacio.  
   
-1.  Copie los archivos siguientes, que se encuentra en \<unidad >: \Program Files\Microsoft SQL Server\\< instancia\>\OLAP\bin\isapi: MSMDPUMP. ARCHIVO DLL, MSMDPUMP. INI y una carpeta de recursos.  
+1.  Copie los archivos siguientes, que se encuentra en \<unidad >: \Program Files\Microsoft SQL Server\\< instancia\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI y una carpeta de recursos.  
   
      ![Estructura de carpetas de archivos MSMDPUMP](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "estructura de carpetas de archivos MSMDPUMP")  
   
@@ -104,7 +104,7 @@ ms.locfileid: "50148150"
   
 3.  Pegue los archivos que copió anteriormente en esta nueva carpeta.  
   
-4.  Compruebe que la carpeta \inetpub\wwwroot\OLAP del servidor Web contiene lo siguiente: MSMDPUMP.DLL, MSMDPUMP.INI y una carpeta Resources. La estructura de carpetas debe tener una apariencia como esta:  
+4.  Compruebe que la carpeta \inetpub\wwwroot\OLAP del servidor web contenga lo siguiente: MSMDPUMP.DLL, MSMDPUMP.INI y una carpeta de recursos. La estructura de carpetas debe tener una apariencia como esta:  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
@@ -112,7 +112,7 @@ ms.locfileid: "50148150"
   
     -   \<unidad >: \inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a> Paso 2: crear un grupo de aplicaciones y un directorio virtual en IIS  
+##  <a name="bkmk_appPool"></a> Paso 2: Crear un grupo de aplicaciones y un directorio virtual en IIS  
  A continuación, cree un grupo de aplicaciones y un extremo al bombeo.  
   
 #### <a name="create-an-application-pool"></a>Crear un grupo de aplicaciones  
@@ -148,7 +148,7 @@ ms.locfileid: "50148150"
 > [!NOTE]  
 >  Las versiones anteriores de estas instrucciones incluyen pasos para crear un directorio virtual. Esa operación ya no es necesaria.  
   
-##  <a name="bkmk_auth"></a> Paso 3: configurar la autenticación IIS y agregar la extensión  
+##  <a name="bkmk_auth"></a> Paso 3: Configurar la autenticación IIS y agregar la extensión  
  En este paso, seguirá configurando el directorio virtual SSAS recién creado. Especificará un método de autenticación y después agregará una asignación de script. Algunos métodos de autenticación admitidos para Analysis Services sobre HTTP son los siguientes:  
   
 -   Autenticación de Windows (Kerberos o NTLM)  
@@ -167,7 +167,7 @@ ms.locfileid: "50148150"
   
  También puede utilizar la autenticación anónima en un entorno de producción si los usuarios no tienen cuentas de usuario de Windows pero seguir las prácticas recomendadas bloqueando los permisos del sistema host, como se explica en este artículo: [Habilitar la autenticación anónima (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Asegúrese de que la autenticación se establece en el directorio virtual y no en el sitio Web primario, para reducir aún más el nivel de acceso de la cuenta.  
   
- Cuando se habilita la autenticación anónima, cualquier conexión de usuario al extremo HTTP se permite como usuario anónimo. No podrá auditar conexiones de usuario individuales, ni utilizar la identidad de usuario para seleccionar datos de un modelo. Como puede ver, el uso de la autenticación anónima afecta a todo, desde el diseño del modelo a la actualización y el acceso a los datos. Sin embargo, si los usuarios no tienen un inicio de sesión de usuario de Windows con el que empezar, el uso de la cuenta anónima podría ser la única opción.  
+ Cuando se habilita la autenticación anónima, cualquier conexión de usuario al extremo HTTP se permite como usuario anónimo. No podrá auditar conexiones de usuario individuales, ni usar la identidad del usuario para seleccionar datos de un modelo. Como puede ver, el uso de la autenticación anónima afecta a todo, desde el diseño del modelo a la actualización y el acceso a los datos. Sin embargo, si los usuarios no tienen un inicio de sesión de usuario de Windows con el que empezar, el uso de la cuenta anónima podría ser la única opción.  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>Establecer el tipo de autenticación y el mapa de script  
   
@@ -207,7 +207,7 @@ ms.locfileid: "50148150"
   
      ![Captura de pantalla de confirmación para agregar la extensión ISAPI](../../analysis-services/instances/media/ssas-httpaccess-isapiprompt.png "captura de pantalla de confirmación para agregar la extensión ISAPI")  
   
-##  <a name="bkmk_edit"></a> Paso 4: modificar el archivo MSMDPUMP.INI para establecer el servidor de destino  
+##  <a name="bkmk_edit"></a> Paso 4: Modificar el archivo MSMDPUMP.INI para establecer el servidor de destino  
  El archivo MSMDPUMP.INI especifica la instancia de Analysis Services a la que se conecta MSMDPUMP.DLL. Esta instancia puede ser local o remota, instalarse como la predeterminada o como una instancia con nombre.  
   
  Abra el archivo msmdpump.ini que se encuentra en la carpeta C:\inetpub\wwwroot\OLAP y examine el contenido de este archivo. Debería ser similar al siguiente:  
@@ -227,7 +227,7 @@ ms.locfileid: "50148150"
   
  Si configura una con nombre o predeterminada de la instancia de Analysis Services para escuchar en un puerto fijo, debe agregar el número de puerto al nombre del servidor (por ejemplo, \<nombreDeServidor > AW-SRV01:55555\</ServerName >) y debe permitir entrantes conexiones a ese puerto en Firewall de Windows.  
   
-## <a name="step-5-grant-data-access-permissions"></a>Paso 5: otorgar permisos de acceso a datos  
+## <a name="step-5-grant-data-access-permissions"></a>Paso 5: Conceder permisos de acceso  
  Como se indicó anteriormente, deberá conceder permisos en la instancia de Analysis Services. Cada objeto de base de datos tendrá roles que proporcionan un nivel determinado de permisos (lectura o lectura/escritura), y cada rol tendrá miembros que constan de identidades de usuario de Windows.  
   
  Para establecer los permisos puede utilizar SQL Server Management Studio. En la carpeta **Base de datos** | **Roles** , puede crear roles, especificar permisos de base de datos, asignar la pertenencia a las cuentas de grupo o de usuario de Windows y, a continuación, conceder permisos de lectura o escritura en objetos específicos. Normalmente, los permisos de **Lectura** en un cubo son suficientes para las conexiones de cliente que utilizan, pero no actualizan, los datos del modelo.  
@@ -242,7 +242,7 @@ ms.locfileid: "50148150"
   
  Para obtener más información sobre los permisos de configuración, vea [Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
-##  <a name="bkmk_test"></a> Paso 6: probar la configuración  
+##  <a name="bkmk_test"></a> Paso 6: Probar la configuración  
  La sintaxis de la cadena de conexión para MSMDPUMP es la dirección URL del archivo MSMDPUMP.dll.  
   
  Si la aplicación web está escuchando en un puerto fijo, anexe el número de puerto para el nombre del servidor o dirección IP (por ejemplo, `http://my-web-srv01:8080/OLAP/msmdpump.dll` o `http://123.456.789.012:8080/OLAP/msmdpump.dll`.  
@@ -251,7 +251,7 @@ ms.locfileid: "50148150"
   
  **Solución de problemas de conexiones mediante Internet Explorer**  
   
- Una solicitud de conexión que finaliza con este error podría no proporcionarle muchas alternativas: "no se puede establecer una conexión con '\<nombre del servidor >', o el servicio de análisis no se está ejecutando en el servidor".  
+ Una solicitud de conexión que finaliza con este error podría no proporcionarle muchas alternativas:  "No se puede establecer una conexión con '\<nombre del servidor >', o el servicio de análisis no se está ejecutando en el servidor".  
   
  Para obtener un error más informativo, realice lo siguiente:  
   

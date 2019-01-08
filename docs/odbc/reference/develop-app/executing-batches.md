@@ -14,15 +14,15 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695041"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541224"
 ---
 # <a name="executing-batches"></a>Ejecución de lotes
-Antes de que una aplicación ejecuta un lote de instrucciones, en primer lugar debe comprobar si son compatibles. Para ello, la aplicación llama a **SQLGetInfo** con las opciones SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si generación recuento de filas y resultado de la generación de conjunto de instrucciones son compatibles con lotes explícitos y procedimientos, mientras que las dos últimas opciones devuelven información acerca de la disponibilidad de los recuentos de filas y el resultado se establece en parámetros ejecución.  
+Antes de que una aplicación ejecuta un lote de instrucciones, en primer lugar debe comprobar si son compatibles. Para ello, la aplicación llama a **SQLGetInfo** con las opciones SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si generadora de recuento de filas y resultado de la generación de conjunto de instrucciones son compatibles con lotes explícitos y procedimientos, mientras que las dos últimas opciones devuelven información acerca de la disponibilidad de los recuentos de filas y el resultado se establece en parámetros ejecución.  
   
  Lotes de instrucciones se ejecutan a través de **SQLExecute** o **SQLExecDirect**. Por ejemplo, la llamada siguiente ejecuta un lote de instrucciones para abrir un nuevo pedido de ventas explícito.  
   

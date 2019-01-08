@@ -1,5 +1,5 @@
 ---
-title: Complementos de minería de datos para Office de datos de SQL Server | Documentos de Microsoft
+title: Los datos de SQL Server a los complementos de minería de datos para Office | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2220bb48704fb29aa00236ebf1ec4ad46ecb4007
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 89986d3c8de4a1cbefbccf285a92a2dc19c6c7aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014742"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504746"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Complementos de minería de datos de SQL Server para Office
 
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complementos de minería de datos para Office es un conjunto ligero de herramientas para análisis predictivos que permite utilizar datos de Excel para generar modelos analíticos para la predicción, recomendación o exploración.  
   
 > [!IMPORTANT]
-> El complemento de minería de datos con datos de Office no se admite en Office 2016 o posterior.
+> El complemento de minería de datos con datos para Office no se admite en Office 2016 o posterior.
   
  Los asistentes y las herramientas de administración de datos de los complementos proporcionan instrucciones paso a paso para estas tareas comunes de minería de datos:  
   
@@ -45,11 +45,11 @@ ms.locfileid: "34014742"
   
      Los usuarios avanzados pueden crear consultas DMX personalizadas con el **Editor de consultas avanzadas**que permite arrastrar y colocar, o automatizar las predicciones con VBA de Excel.  
   
--   **Documentar y administrar.** Después de crear un conjunto de datos y generar algunos modelos, documente el trabajo y las diferentes perspectivas generando un resumen estadístico de los datos y de los parámetros del modelo.  
+-   **Documentar y administrar.** Una vez que ha creado un conjunto de datos y generar algunos modelos, documente el trabajo y sus conocimientos mediante la generación de un resumen estadístico de los parámetros de datos y el modelo.  
   
--   **Explorar y visualizar.** La minería de datos no es una actividad que pueda ser automatizada por completo. Es necesario explorar y entender los resultados para realizar las acciones adecuadas. Los complementos le ayudan con la exploración al proporcionar visores interactivos de Excel, plantillas de Visio que le permiten personalizar los diagramas de modelos y la capacidad de exportar los gráficos y las tablas de Excel para filtrarlas o modificarlas más.  
+-   **Explorar y visualizar.** Minería de datos no es una actividad que se puede automatizar completamente: necesita explorar y entender los resultados para realizar las acciones adecuadas. Los complementos le ayudan con la exploración al proporcionar visores interactivos de Excel, plantillas de Visio que le permiten personalizar los diagramas de modelos y la capacidad de exportar los gráficos y las tablas de Excel para filtrarlas o modificarlas más.  
   
--   **Implementar e integrar.** Cuando haya creado un modelo útil, páselo a producción, usando las herramientas de administración para exportarlo desde el servidor experimental a otra instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Implementar e integrar.** Cuando haya creado un modelo útil, páselo a producción, mediante el uso de las herramientas de administración para exportarlo desde el servidor experimental a otra instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      También puede dejar el modelo en el servidor donde lo creó, pero actualizar los datos de aprendizaje y ejecutar predicciones con Integration Services o scripts DMX.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "34014742"
   
 -   Business Intelligence  
   
--   Standard  
+-   Estándar  
   
  Dependiendo de la edición de SQL Server Analysis Services a la que se conecte, es posible que algunos algoritmos avanzados no estén disponibles. Para más información, vea [Características compatibles con las ediciones de SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   

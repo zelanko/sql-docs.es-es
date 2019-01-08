@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 429a0d7d29864cb3aeca313f5e69638014ff2887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215125"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408288"
 ---
 # <a name="set-index-options"></a>Establecer opciones de índice
   En este tema se describe cómo modificar las propiedades de un índice en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -47,13 +47,13 @@ ms.locfileid: "48215125"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Las siguientes opciones se aplican inmediatamente al índice mediante la cláusula SET de la instrucción ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY y STATISTICS_NORECOMPUTE.  
+-   Las siguientes opciones se aplican inmediatamente al índice utilizando la cláusula SET de la instrucción ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY y STATISTICS_NORECOMPUTE.  
   
--   Las opciones siguientes se pueden establecer cuando se vuelve a generar un índice mediante ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP y DROP_EXISTING (solo CREATE INDEX).  
+-   Cuando se regenera un índice mediante ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING, se pueden establecer las siguientes opciones: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP y DROP_EXISTING (solo CREATE INDEX).  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48215125"
   
 #### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Para modificar las propiedades de un índice en el Diseñador de tablas  
   
-1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que desea modificar las propiedades de un índice.  
+1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que quiere modificar las propiedades de un índice.  
   
 2.  Haga clic en el signo más para expandir la carpeta **Tablas** .  
   
@@ -82,11 +82,11 @@ ms.locfileid: "48215125"
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Para modificar las propiedades de un índice en el Explorador de objetos  
   
-1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que desea modificar las propiedades de un índice.  
+1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que quiere modificar las propiedades de un índice.  
   
 2.  Haga clic en el signo más para expandir la carpeta **Tablas** .  
   
-3.  Haga clic en el signo más para expandir la tabla en la que desea modificar las propiedades de un índice.  
+3.  Haga clic en el signo más para expandir la tabla en la que quiera modificar las propiedades de un índice.  
   
 4.  Haga clic en el signo más para expandir la carpeta **Índices** .  
   

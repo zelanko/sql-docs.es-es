@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144840"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398078"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Descripción de la instrucción Select de DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50144840"
   
      En ese caso, debe obtener detalles de la estructura de minería de datos, que es el dominio de datos, y examinar las filas individuales de columnas como Gender, Bike Buyer, etc.  
   
- **Importante:** todo lo que se incluye en la lista de expresiones o en el **donde** cláusula debe proceder del dominio de datos definido por el **FROM** cláusula. No puede mezclar dominios de datos.  
+ **IMPORTANTE:** Todo lo que se incluye en la lista de expresiones o en el **donde** cláusula debe proceder del dominio de datos definido por el **FROM** cláusula. No puede mezclar dominios de datos.  
   
 ##  <a name="Select_Types"></a> Seleccionar tipos  
  La sintaxis de **seleccione** instrucción admite muchas tareas diferentes. Use los patrones siguientes para realizar estas tareas:  

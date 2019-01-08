@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsplitter.f1
@@ -13,12 +12,12 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03f677f8214fb086f3feb6077608fed83d7089d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd69d23338510b08a450504c477c23d076ffaf1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086264"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754697"
 ---
 # <a name="cdc-splitter"></a>Divisor CDC
   El divisor CDC divide un único flujo de filas de un flujo de datos de origen de CDC en varios flujos de datos para las operaciones de inserción, actualización y eliminación. El flujo de datos se divide según la columna obligatoria `__$operation` y sus valores estándar en las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -41,11 +40,11 @@ ms.locfileid: "48086264"
   
  La salida de error del componente incluye las columnas de salida siguientes:  
   
--   **Código de error**: se establece en 1.  
+-   **Código de error**: Se establece en 1.  
   
--   **Columna de error**: columna de origen que produce el error (para los errores de conversión).  
+-   **Columna de error**: La columna de origen que produce el error (para errores de conversión).  
   
--   **Columnas de fila de error**: las columnas de entrada de la fila que produjo el error.  
+-   **Columnas de la fila de error**: Las columnas de entrada de la fila que produjo el error.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configuración del divisor CDC  
  No hay propiedades configurables del divisor CDC.  

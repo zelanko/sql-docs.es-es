@@ -19,15 +19,15 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734036"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407152"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve información acerca de todas las esperas de bloqueos temporales organizadas por clase.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47734036"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Nombre de la clase de bloqueo temporal.|  
 |waiting_requests_count|**bigint**|Número de esperas en bloqueos temporales en esta clase Este recuento se incrementa al inicio de una espera de bloqueo temporal.|  
-|wait_time_ms|**bigint**|Tiempo total de espera, en milisegundos, en bloqueos temporales en esta clase<br /><br /> **Nota:** esta columna se actualiza cada cinco minutos durante una espera de bloqueos temporales y al final de la misma.|  
+|wait_time_ms|**bigint**|Tiempo total de espera, en milisegundos, en bloqueos temporales en esta clase<br /><br /> **Nota:** Esta columna se actualiza cada cinco minutos durante una espera de bloqueo temporal y al final de la misma.|  
 |max_wait_time_ms|**bigint**|Tiempo máximo que un objeto de memoria ha esperado en este bloqueo temporal. Si este valor es extraordinariamente alto, puede indicar un bloqueo interno.|  
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
@@ -166,14 +166,14 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_HOST_NAME|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_READ_CACHE|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Se utiliza para sincronizar una asignación de nivel de instancia de colas de tareas en espera. Existe una cola por cada tupla de Id. de versión de la base de datos e Id. de cola de la base de datos. La contención de bloqueos temporales de esta clase puede producirse cuando hay muchas conexiones: en unos WAITFOR(RECEIVE) espera estado; una llamada a WAITFOR(RECEIVE); Si se supera el tiempo de espera WAITFOR; recibir un mensaje; confirmar o revertir la transacción que contiene el WAITFOR(RECEIVE); Puede reducir la contención al reducir el número de subprocesos en un estado de espera WAITFOR(RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Se utiliza para sincronizar una asignación de nivel de instancia de colas de tareas en espera. Existe una cola por cada tupla de Id. de versión de la base de datos e Id. de cola de la base de datos. La contención de bloqueos temporales de esta clase puede producirse cuando hay muchas conexiones: En un WAITFOR(RECEIVE) espere estado; una llamada a WAITFOR(RECEIVE); Si se supera el tiempo de espera WAITFOR; recibir un mensaje; confirmar o revertir la transacción que contiene el WAITFOR(RECEIVE); Puede reducir la contención al reducir el número de subprocesos en un estado de espera WAITFOR(RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_TRANSPORT|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_MIRROR_ROUTE|Exclusivamente para uso interno.|  
 |TRACE_ID|Exclusivamente para uso interno.|  
 |TRACE_AUDIT_ID|Exclusivamente para uso interno.|  
-|TRACE|Exclusivamente para uso interno.|  
+|seguimiento|Exclusivamente para uso interno.|  
 |TRACE_CONTROLLER|Exclusivamente para uso interno.|  
 |TRACE_EVENT_QUEUE|Exclusivamente para uso interno.|  
 |TRANSACTION_DISTRIBUTED_MARK|Exclusivamente para uso interno.|  

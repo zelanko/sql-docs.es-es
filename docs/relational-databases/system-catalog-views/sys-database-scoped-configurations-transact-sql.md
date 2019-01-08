@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 350f3af1bfd6e2765f74d074727577541378d2e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733843"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947659"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "47733843"
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Id. de la opción de configuración.|  
 |**Nombre**|**nvarchar(60)**|El nombre de la opción de configuración. Para obtener información acerca de las configuraciones posibles, vea [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
-|**Valor**|**SQLVARIANT**|El valor establecido para esta opción de configuración para la réplica principal.|  
+|**value**|**SQLVARIANT**|El valor establecido para esta opción de configuración para la réplica principal.|  
 |**value_for_secondary**|**SQLVARIANT**|El valor establecido para esta opción de configuración para las réplicas secundarias.|  
-|**elevate_online**|**nvarchar(60)** |Conjunto predeterminado de la opción para las operaciones de índice en línea con ámbito de la base de datos |
+|**is_value_default**|**bit** |Especifica si el valor establecido es el valor predeterminado.|
 |**elevate_resumable**|nvarchar(60)|Conjunto predeterminado de la opción para las operaciones de índice reanudable con ámbito de la base de datos| 
   
 ##  <a name="Permissions"></a> Permissions  

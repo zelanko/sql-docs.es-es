@@ -10,12 +10,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cf4a0a0e566e79ad9c248f5b368f98c1f99dc328
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a67b2331959dbc3087f6282be05de90b42443c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049316"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416836"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups"></a>Configurar Copia de seguridad administrada de SQL Server para Microsoft Azure para grupos de disponibilidad
   Este tema es un tutorial sobre la configuración de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para las bases de datos participantes en Grupos de disponibilidad AlwaysOn.  
@@ -23,9 +23,9 @@ ms.locfileid: "48049316"
 ## <a name="availability-group-configurations"></a>Configuraciones de grupo de disponibilidad  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se admite para las bases de datos del grupo de disponibilidad, tanto si todas las réplicas están configuradas de forma local o totalmente en Windows Azure, como si se trata de una implementación híbrida entre local y una o varias máquinas virtuales de Windows Azure. No obstante, puede ser necesario tener en cuenta lo siguiente para una o varias implementaciones:  
   
--   Frecuencia de copia de seguridad de registros: la frecuencia de la copia de seguridad de registros es tanto el tiempo como el crecimiento de los registros. Por ejemplo, la copia de seguridad de registros se realiza una vez cada 2 horas a menos que el espacio de registro usado en ese período de dos horas sea 5 MB o más. Esto se aplica a todas las implementaciones, ya sean locales, en la nube o híbridas.  
+-   Frecuencia de copia de seguridad de registros: La frecuencia de copia de seguridad de registros es tanto el tiempo y como el aumento de registros. Por ejemplo, la copia de seguridad de registros se realiza una vez cada 2 horas a menos que el espacio de registro usado en ese período de dos horas sea 5 MB o más. Esto se aplica a todas las implementaciones, ya sean locales, en la nube o híbridas.  
   
--   Ancho de banda de red: se aplica a las implementaciones en las que las réplicas se encuentran en diferentes ubicaciones físicas, como en una nube híbrida, o en diferentes regiones de Windows Azure en una configuración solo en la nube. El ancho de banda de red puede afectar a la latencia de las secundarias y, si las secundarias están establecidas en replicación sincrónica, esto puede provocar el crecimiento de los registros en la principal. Si las secundarias están establecidas en replicación sincrónica, las secundarias quizás no puedan seguir el ritmo debido a la latencia de red, que puede provocar la pérdida de datos en caso de conmutación por error a la réplica secundaria.  
+-   Ancho de banda de red: Se aplica a las implementaciones en las que las réplicas se encuentran en diferentes ubicaciones físicas, como en una nube híbrida o en diferentes regiones de Microsoft Azure en una configuración solo en la nube. El ancho de banda de red puede afectar a la latencia de las secundarias y, si las secundarias están establecidas en replicación sincrónica, esto puede provocar el crecimiento de los registros en la principal. Si las secundarias están establecidas en replicación sincrónica, las secundarias quizás no puedan seguir el ritmo debido a la latencia de red, que puede provocar la pérdida de datos en caso de conmutación por error a la réplica secundaria.  
   
 ### <a name="configuring-includesssmartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>Configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para las bases de datos de disponibilidad.  
  **Permisos:**  
@@ -61,24 +61,24 @@ ms.locfileid: "48049316"
   
 -   Si configura [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] después de configurar el Grupo de disponibilidad, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] intentará copiar las copias de seguridad existentes y las copiará en el contenedor de almacenamiento.  Si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no encuentra o no tiene acceso a las copias de seguridad existentes, programará una copia de seguridad completa de la base de datos. Esto se hace específicamente para optimizar las operaciones de copia de seguridad para las bases de datos del Grupo de disponibilidad.  
   
--   Puede ser conveniente deshabilitar la configuración del nivel de instancia si va a crear una nueva base de datos de disponibilidad y no pretende aplicar la configuración de nivel de instancia a la base de datos  
+-   Es posible que desee considerar la deshabilitación de la configuración del nivel de instancia si está creando una nueva base de datos de disponibilidad, y no pretende aplicar la configuración de nivel de instancia a la base de datos  
   
 -   Cuando se usa cifrado, emplee el mismo certificado en todas las réplicas. Esto facilita operaciones de copia de seguridad continuadas e ininterrumpidas en caso de conmutación por error o restauraciones en otra réplica diferente.  
   
 #### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>Habilitar y configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para una base de datos de disponibilidad  
- En este tutorial se describe los pasos para habilitar y configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para una base de datos (AGTestDB) en los equipos Node1 y Node2, además de los pasos para habilitar la supervisión del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] estado de mantenimiento.  
+ En este tutorial se describen los pasos para habilitar y configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para una base de datos (AGTestDB) en los equipos Node1 y Node2, además de los pasos para habilitar la supervisión del estado de mantenimiento de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-1.  **Crear una cuenta de almacenamiento de Windows Azure:** las copias de seguridad se almacenan en el servicio de Windows Azure Blob storage. Primero debe crear una cuenta de almacenamiento de Windows Azure, si aún no tiene ninguna Para obtener más información, consulte [crear una cuenta de almacenamiento de Windows Azure](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Anote el nombre, las claves de acceso y la dirección URL de la cuenta de almacenamiento. La información del nombre de cuenta y de la clave de acceso se utiliza para crear una credencial SQL. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa la credencial de SQL durante las operaciones de copia de seguridad para autenticarse en la cuenta de almacenamiento.  
+1.  **Cree una cuenta de almacenamiento de Windows Azure:** Las copias de seguridad se almacenan en el servicio de almacenamiento de blobs de Microsoft Azure. Primero debe crear una cuenta de almacenamiento de Windows Azure, si aún no tiene ninguna Para obtener más información, consulte [crear una cuenta de almacenamiento de Windows Azure](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Anote el nombre, las claves de acceso y la dirección URL de la cuenta de almacenamiento. La información del nombre de cuenta y de la clave de acceso se utiliza para crear una credencial SQL. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa la credencial de SQL durante las operaciones de copia de seguridad para autenticarse en la cuenta de almacenamiento.  
   
-2.  **Crear una credencial SQL:** crear una credencial de SQL con el nombre de la cuenta de almacenamiento que la identidad y la clave de acceso de almacenamiento como contraseña.  
+2.  **Crear una credencial SQL:** Cree una credencial de SQL con el nombre de la cuenta de almacenamiento como identidad y la clave de acceso de almacenamiento como contraseña.  
   
-3.  **Asegúrese de que el servicio del Agente SQL Server se haya iniciado y esté ejecutándose:** inicie el Agente SQL Server, si no se está ejecutando. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
+3.  **Asegúrese de que el servicio de agente SQL Server está iniciado y en ejecución:** Iniciar el Agente SQL Server si no se está ejecutando. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
   
-4.  **Determinar el período de retención:** Determine el período de retención que desea para los archivos de copia de seguridad. El período de retención se especifica en días y puede abarcar de 1 a 30. Este período de retención determina el margen de tiempo durante el cual se puede recuperar la base de datos.  
+4.  **Determine el período de retención:** Determine el período de retención que desea para los archivos de copia de seguridad. El período de retención se especifica en días y puede abarcar de 1 a 30. Este período de retención determina el margen de tiempo durante el cual se puede recuperar la base de datos.  
   
-5.  **Crear un certificado o clave asimétrica que se usará para el cifrado durante la copia de seguridad:** crear el certificado en el primer nodo Node1 y luego expórtelo a un archivo mediante [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... En el Nodo 2, cree un certificado mediante el archivo exportado del Nodo 1. Para obtener más información sobre cómo crear un certificado desde un archivo, vea el ejemplo de [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
+5.  **Crear un certificado o clave asimétrica que se usará para el cifrado durante la copia de seguridad:** Crear el certificado en el primer nodo Node1 y luego expórtelo a un archivo mediante [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... En el Nodo 2, cree un certificado mediante el archivo exportado del Nodo 1. Para obtener más información sobre cómo crear un certificado desde un archivo, vea el ejemplo de [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
   
-6.  **Habilitar y configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB en Node1:** inicie SQL Server Management Studio y conéctese a la instancia en Node1 donde está instalada la base de datos de disponibilidad. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la dirección URL de almacenamiento, la credencial SQL y el período de retención según sus requisitos:  
+6.  **Habilitar y configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB en Node1:** Inicie SQL Server Management Studio y conéctese a la instancia en Node1 donde está instalada la base de datos de disponibilidad. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la dirección URL de almacenamiento, la credencial SQL y el período de retención según sus requisitos:  
   
     ```  
     Use msdb;  
@@ -97,7 +97,7 @@ ms.locfileid: "48049316"
   
      Para obtener más información sobre cómo crear un certificado para el cifrado, vea la **crear un certificado de copia de seguridad** paso a paso [crear una copia de seguridad cifrada](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-7.  **Habilitar y configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB en Nodo2:** inicie SQL Server Management Studio y conéctese a la instancia en Node2 donde está instalada la base de datos de disponibilidad. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la dirección URL de almacenamiento, la credencial SQL y el período de retención según sus requisitos:  
+7.  **Habilitar y configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB en Nodo2:** Inicie SQL Server Management Studio y conéctese a la instancia en Node2 donde está instalada la base de datos de disponibilidad. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la dirección URL de almacenamiento, la credencial SQL y el período de retención según sus requisitos:  
   
     ```  
     Use msdb;  
@@ -116,7 +116,7 @@ ms.locfileid: "48049316"
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está habilitada ahora en la base de datos especificada. Puede tardarse hasta 15 minutos en que las operaciones de copia de seguridad de la base de datos empiecen a ejecutarse. La copia de seguridad tendrá lugar en la réplica de la copia de seguridad preferida.  
   
-8.  **Configuración predeterminada del evento extendido revisión:** revise la configuración del evento extendido ejecutando la siguiente instrucción de transact-SQL en la réplica que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa para programar las copias de seguridad. Esta suele ser la configuración de la réplica de copia de seguridad preferida para el Grupo de disponibilidad al que pertenece la base de datos.  
+8.  **Revise la configuración predeterminada del evento extendido:**  Revise la configuración del evento extendido ejecutando la siguiente instrucción de transact-SQL en la réplica que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa para programar las copias de seguridad. Esta suele ser la configuración de la réplica de copia de seguridad preferida para el Grupo de disponibilidad al que pertenece la base de datos.  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -124,13 +124,13 @@ ms.locfileid: "48049316"
   
      Debe ver que los eventos de canal Administración, Operativo y Analítico están habilitados de forma predeterminada y no se pueden deshabilitar. Debe ser suficiente supervisar los eventos que requieren intervención manual.  Puede habilitar los eventos de depuración, pero estos canales incluyen eventos informativos y de depuración que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa para detectar problemas y solucionarlos. Para obtener más información, consulte [Monitor de SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
-9. **Habilite y Configure la notificación de estado de mantenimiento:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tiene un procedimiento almacenado que crea un trabajo de agente para enviar notificaciones por correo electrónico de errores o advertencias que puedan requerir atención.  Para recibir dichas notificaciones, debe habilitar el procedimiento almacenado que crea un trabajo del Agente SQL Server. En los pasos siguientes se describe el proceso para habilitar y configurar las notificaciones por correo electrónico:  
+9. **Habilite y configure la notificación del estado de mantenimiento:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tiene un procedimiento almacenado que crea un trabajo del agente para enviar notificaciones por correo electrónico de los errores o las advertencias que puedan requerir atención.  Para recibir dichas notificaciones, debe habilitar el procedimiento almacenado que crea un trabajo del Agente SQL Server. En los pasos siguientes se describe el proceso para habilitar y configurar las notificaciones por correo electrónico:  
   
     1.  Configure Correo electrónico de base de datos si aún no está habilitado en la instancia. Para obtener más información, vea [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
   
-    2.  Configure la notificación del Agente SQL Server para que use Correo electrónico de base de datos. Para obtener más información, consulte [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+    2.  Configure la notificación del Agente SQL Server para que use Correo electrónico de base de datos. Para más información, consulte [Configurar el Agente SQL Server para que use el Correo electrónico de base de datos](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Habilite las notificaciones por correo electrónico para recibir los errores y advertencias de copia de seguridad:** en la ventana de consulta, ejecute las siguientes instrucciones Transact-SQL:  
+    3.  **Habilitar las notificaciones de correo electrónico para recibir advertencias y errores de copia de seguridad:** En la ventana de consulta, ejecute las siguientes instrucciones Transact-SQL:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -141,9 +141,9 @@ ms.locfileid: "48049316"
   
          Para obtener más información y un script de ejemplo completo, vea [Monitor de SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
-10. **Ver archivos de copia de seguridad en la cuenta de almacenamiento de Windows Azure:** conexión a la cuenta de almacenamiento desde SQL Server Management Studio o el Portal de administración de Azure. Verá un contenedor para la instancia de SQL Server que hospeda la base de datos que configuró para utilizar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. También puede ver una base de datos y una copia de seguridad de registros antes de 15 minutos después de habilitar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para la base de datos.  
+10. **Ver archivos de copia de seguridad en la cuenta de almacenamiento de Windows Azure:** Conéctese a la cuenta de almacenamiento desde SQL Server Management Studio o el Portal de administración de Azure. Verá un contenedor para la instancia de SQL Server que hospeda la base de datos que configuró para utilizar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. También puede ver una base de datos y una copia de seguridad de registros antes de 15 minutos después de habilitar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para la base de datos.  
   
-11. **Supervise el estado de mantenimiento:**  puede supervisar a través de notificaciones por correo electrónico que configuró previamente o supervisar los eventos registrados de forma activa. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
+11. **Supervisar el estado de mantenimiento:**  Puede supervisar a través de notificaciones de correo electrónico que configuró previamente o supervisar activamente los eventos registrados. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
   
     ```  
     --  view all admin events  

@@ -11,12 +11,12 @@ ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a8d8a5238caa09d9b4a3d85d014b2891c3f427e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45acf7bef608bb23d697fc18381872f741cc2e21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145915"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401370"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Explorar el modelo de árbol de decisión (tutorial básico de minería de datos)
   El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../includes/msconame-md.md)] predice qué columnas influyen en la decisión de comprar una bicicleta en función de las columnas restantes del conjunto de entrenamiento.  
@@ -28,7 +28,7 @@ ms.locfileid: "48145915"
   
  En este caso, el modelo predice solo una columna, Bike Buyer, por lo que hay un único árbol para ver. Si hubiera más árboles, podría utilizar el **árbol** para elegir otro árbol.  
   
- Cuando se ve el `TM_Decision_Tree` modelo en el Visor de árbol de decisión, puede ver los atributos más importantes en el lado izquierdo del gráfico. "Más importantes" significa que estos atributos son los que más influyen en el resultado. Los atributos situados más abajo en el árbol (a la derecha del gráfico) tiene menos efecto.  
+ Cuando se ve el `TM_Decision_Tree` modelo en el Visor de árbol de decisión, puede ver los atributos más importantes en el lado izquierdo del gráfico. "Más importantes" significa que estos atributos tienen mayor influencia en el resultado. Los atributos situados más abajo en el árbol (a la derecha del gráfico) tiene menos efecto.  
   
  En este ejemplo, la edad es el factor único más importante para predecir la compra de bicicletas. El modelo agrupa los clientes por edad y, a continuación, muestra el siguiente atributo más importante para cada grupo de edad. Por ejemplo, en el grupo de clientes de entre 34 y 40 años, el número de automóviles en propiedad es el factor de predicción más seguro después de la edad.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48145915"
   
  Como habilitó la obtención de detalles cuando creó la estructura y el modelo, puede recuperar información detallada de los casos del modelo y de la estructura de minería de datos, incluidas las columnas que no se incluyeron en el modelo de minería de datos (por ejemplo, emailAddress y FirstName).  
   
- Para más información, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Para obtener más información, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### <a name="to-drill-through-to-case-data"></a>Para obtener información detallada de los datos del caso  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48145915"
  [Explorar el modelo de agrupación en clústeres &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas del Visor de modelo de minería de datos y procedimientos](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Pestaña árbol de decisión &#40;Visor de modelos de minería de datos&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Pestaña red de dependencias &#40;Visor de modelos de minería de datos&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
  [Examinar un modelo usando el Visor de árboles de Microsoft](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  

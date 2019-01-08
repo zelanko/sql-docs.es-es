@@ -17,12 +17,12 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a39a0dd5320245b99bae1256deedea52e201be47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211025"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542715"
 ---
 # <a name="index-disk-space-example"></a>Ejemplo de espacio en disco del índice
   Cuando se crea, regenera o quita un índice, se necesita espacio en disco para las estructuras antiguas (origen) y nuevas (destino) en los archivos y grupos de archivos correspondientes. La asignación de la estructura antigua no se cancela hasta que no se confirma la transacción de creación del índice. También puede resultar necesario espacio en disco temporal adicional para operaciones de ordenación. Para más información, consulte [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
@@ -61,9 +61,9 @@ ms.locfileid: "48211025"
   
      Índice clúster: 1 millón * 200 bytes / 80% ~ 250 MB  
   
-     Índice no clúster A: 1 millón * (50 – 8 + 24) bytes / 80% ~ 83 MB  
+     Índice no clúster A: 1 millón * (50-8 + 24) bytes / 80% ~ 83 MB  
   
-     Índice no clúster B: 1 millón * (80 – 8 + 24) bytes / 80% ~ 120 MB  
+     Índice no clúster B: 1 millón * (80-8 + 24) bytes / 80% ~ 120 MB  
   
      Tamaño total de las nuevas estructuras: 453 MB  
   
@@ -109,10 +109,10 @@ ms.locfileid: "48211025"
   
 |Operación de índice|Requisitos de espacio en disco para las ubicaciones de las siguientes estructuras|  
 |---------------------|---------------------------------------------------------------------------|  
-|Operación de índice sin conexión con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1018 MB:<br /><br /> - Tabla e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
-|Operación de índice sin conexión con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 816 MB:<br /><br /> - Tabla e índices existentes: 363 MB*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
-|Operación de índice en línea con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1058 MB:<br /><br /> - Tabla e índices existentes: 363 MB\*<br /><br /> -**tempdb** (incluye índice de asignación): 242 MB *<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
-|Operación de índice en línea con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 856 MB:<br /><br /> - Tabla e índices existentes: 363 MB*<br /><br /> - Índice de asignación temporal: 40 MB\*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice sin conexión con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1018 MB:<br /><br /> -Tabla e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB *<br /><br /> -Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice sin conexión con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 816 MB:<br /><br /> -Tabla e índices existentes: 363 MB *<br /><br /> -Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice en línea con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1058 MB:<br /><br /> -Tabla e índices existentes: 363 MB\*<br /><br /> -**tempdb** (incluye índice de asignación): 242 MB *<br /><br /> -Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice en línea con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 856 MB:<br /><br /> -Tabla e índices existentes: 363 MB *<br /><br /> -Índice de asignación temporal: 40 MB\*<br /><br /> -Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
   
  *La asignación de este espacio se cancela cuando se confirma la operación de índice.  
   

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601825"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503277"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluar una empresa y consolidar los informes de evaluación con DMA
 
@@ -70,7 +70,7 @@ Este inventario puede estar en uno de dos formas:
 - Tabla de SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Si usa un archivo CSV
-Cuando se usa un archivo csv para importar los datos, asegúrese de que hay solo dos columnas de datos – **nombre de instancia** y **nombre de base de datos**, y que las columnas no tienen filas de encabezado.
+Cuando se usa un archivo csv para importar los datos, asegúrese de que hay solo dos columnas de datos - **nombre de instancia** y **nombre de base de datos**, y que las columnas no tienen filas de encabezado.
  
  ![contenido del archivo CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
@@ -218,7 +218,7 @@ Este objeto visual muestra los problemas que actualmente se están produciendo d
 En esta sección es la parte principal del informe, que muestra la preparación de una base de datos de instancia. Este informe tiene una jerarquía de profundidad de:
 - InstanceDatabase
 - ChangeCategory
-- Title
+- Título
 - ObjectType
 - ImpactedObjectName
 

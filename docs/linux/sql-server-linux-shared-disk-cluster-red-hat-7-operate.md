@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661276"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393579"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Operar el clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
@@ -142,10 +142,10 @@ Ver los registros del agente de recursos en `/var/log/cluster/corosync.log`
    ```
 
    > [!NOTE]
-   > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, deberán abrirse los puertos siguientes para que Pacemaker pueda comunicarse con otros nodos del clúster.
+   > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, los puertos siguientes es necesario abrir para que Pacemaker pueda comunicarse con otros nodos del clúster
    >
-   > * TCP: puertos 2224, 3121, 21064
-   > * UDP: puerto 5405
+   > * TCP: Puertos 2224, 3121, 21064
+   > * UDP: Puerto 5405
 
 1. Instale los paquetes de Pacemaker en el nuevo nodo.
 

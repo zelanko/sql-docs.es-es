@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 825bc3d35a0080933c73853a05bf1a6dd9ed3df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069721"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419879"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Panel de administración de PowerPivot y datos de uso
   El Panel de administración de PowerPivot es una colección de informes predefinidos y elementos web de Administración central de SharePoint que ayudan a administrar una implementación de SQL Server PowerPivot para SharePoint. El Panel de administración proporciona información relacionada con el estado del servidor, la actividad de los libros y la actualización de datos. El panel usa datos de la recopilación de datos de uso de SharePoint.  
@@ -82,7 +82,7 @@ ms.locfileid: "48069721"
   
 -   [Configurar la recopilación de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Para capturar datos acerca del sistema de servidor de PowerPivot, compruebe que la mensajería de eventos, el historial de actualización de datos y otros historiales de uso están habilitados para todas las aplicaciones de servicio PowerPivot. Los datos de uso y de servidor recopilados durante las operaciones normales del servidor son los datos de origen que terminan en el modelo de datos interno. **Nota** : si desactiva el historial de uso o de eventos, los informes compuestos estarán incompletos o serán erróneos.  
+ Para capturar datos acerca del sistema de servidor de PowerPivot, compruebe que la mensajería de eventos, el historial de actualización de datos y otros historiales de uso están habilitados para todas las aplicaciones de servicio PowerPivot. Los datos de uso y de servidor recopilados durante las operaciones normales del servidor son los datos de origen que terminan en el modelo de datos interno. **Nota:** Si desactiva el historial de uso o de eventos, los informes compuestos estarán incompletos o serán erróneos.  
   
 ##  <a name="edit"></a> Modificar el panel de PowerPivot  
  Si tiene experiencia en el desarrollo o personalización de paneles, puede modificar un panel para incluir las nuevas partes web. También puede editar las propiedades de los elementos web que se incluyen en el panel.  
@@ -93,7 +93,7 @@ ms.locfileid: "48069721"
  Para ayudarle a empezar a trabajar rápidamente con informes personalizados, el Panel de administración de PowerPivot proporciona un archivo de conexión de datos de Office (.odc) para conectar con el libro de origen. Por ejemplo, puede usar el archivo .odc en Excel para crear informes adicionales.  
   
 > [!NOTE]  
->  Edite el archivo para evitar el siguiente error al intentar usar el archivo .odc en Excel: "Error al inicializarse el origen de datos". El archivo .odc generado automáticamente incluye un parámetro que el proveedor OLE DB MSOLAP no admite. Las siguientes instrucciones proporcionan la solución alternativa para quitar los parámetros.  
+>  Edite el archivo para evitar el error siguiente al intentar usar el archivo .odc en Excel: "Error al inicializarse el origen de datos". El archivo .odc generado automáticamente incluye un parámetro que el proveedor OLE DB MSOLAP no admite. Las siguientes instrucciones proporcionan la solución alternativa para quitar los parámetros.  
   
  Debe ser un administrador de granja o de servicio para compilar informes que estén basados en el libro PowerPivot en la administración central.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48069721"
   
     7.  Escriba un nombre para la conexión y, a continuación, haga clic en **Siguiente**.  
   
-    8.  En Especificar una consulta MDX, haga clic en **Diseño** para abrir el diseñador de consultas MDX con el fin de ensamblar los datos con los que desea trabajar **Si ve el mensaje de error** "El nombre de propiedad Modo Edición tiene un formato incorrecto", compruebe las modificaciones realizadas en el archivo .ODC.  
+    8.  En especificar una consulta MDX, haga clic en **diseño** para abrir el Diseñador de consultas MDX para ensamblar los datos que desea trabajar con **si ve el mensaje de error** "el nombre de propiedad del modo de edición no se formateó correctamente.", compruebe que las modificaciones del. Archivo ODC.  
   
     9. Haga clic en **Aceptar** y, a continuación, haga clic en **Finalizar**.  
   

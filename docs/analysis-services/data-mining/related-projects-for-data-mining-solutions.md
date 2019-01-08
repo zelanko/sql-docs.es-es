@@ -1,5 +1,5 @@
 ---
-title: Proyectos relacionados para soluciones de minería de datos | Documentos de Microsoft
+title: Proyectos relacionados para soluciones de minería de datos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019462"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415612"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Proyectos relacionados en las soluciones de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34019462"
  [Indización semántica](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Proporciona los componentes y características que son necesarias para las fases de entrenamiento de un proyecto de minería de datos y la preparación de los datos. Aunque puede realizar numerosas tareas de preparación o de limpieza de datos con otras herramientas, como scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] presenta numerosas ventajas para la minería de datos:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona los componentes y las características necesarias para las fases de entrenamiento y de preparación de los datos de un proyecto de minería de datos. Aunque puede realizar numerosas tareas de preparación o de limpieza de datos con otras herramientas, como scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] presenta numerosas ventajas para la minería de datos:  
   
 -   Representa las tareas como parte de un flujo de trabajo, que puede repetirse, automatizarse, bifurcarse y ampliarse.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34019462"
   
  **Componentes de flujo de control**  
   
--   [Tarea Ejecutar DDL Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Tarea Ejecutar DDL de Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
 -   [Tarea de procesamiento de Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
@@ -65,27 +65,27 @@ ms.locfileid: "34019462"
   
 -   [Limpieza de datos](../../data-quality-services/data-cleansing.md)  
   
--   [Tarea consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [Tarea de generación de perfiles de datos](../../integration-services/control-flow/data-profiling-task.md)  
   
  **Componentes de flujo de datos**  
   
--   [Componentes de flujo de CDC](../../integration-services/data-flow/cdc-flow-components.md)  
+-   [Componentes del flujo de CDC](../../integration-services/data-flow/cdc-flow-components.md)  
   
 -   [Transformación División condicional](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Transformación conversión de datos](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Transformación Conversión de datos](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
 -   [Destino de entrenamiento del modelo de minería de datos](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Transformación de consulta de minería de datos](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Transformación Consulta de minería de datos](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Transformación Columna derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
 -   [Transformación Muestreo de porcentaje](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Transformación extracción de términos](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+-   [Transformación Extracción de términos](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
 -   [Transformación Búsqueda de términos](../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
   
@@ -102,11 +102,11 @@ ms.locfileid: "34019462"
   
  Para obtener más información sobre cómo usar Reporting Services con consultas DMX como origen de datos, vea los siguientes vínculos:  
   
- [Recuperar datos de un modelo de minería de datos & #40; DMX & #41; & #40; SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperar datos de un modelo de minería de datos &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Interfaz de usuario del Diseñador de consultas DMX de Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo de conexión de Analysis Services para DMX & #40; SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Sin embargo, no es necesario utilizar DMX como origen de datos. Los componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para minería de datos también permite guardar los resultados de una consulta de predicción en una base de datos relacional. Si tiene un flujo de trabajo establecido para actualizar los modelos con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], las predicciones de persistencia y otros resultados de consulta de minería de datos en SQL Server le permiten utilizar [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para los informes, así como otras herramientas que no interactúen con DMX.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019462"
   
  Para obtener más información, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- La versión de una palabra que se almacena después de una indización de texto completo es un símbolo en formato comprimido. Las consultas posteriores al índice de texto completo generan formas no flexionadas de una palabra determinada según las reglas de ese idioma, para asegurarse de que se realizan todas las coincidencias probables. Por ejemplo, aunque el símbolo que se almacena podría ser “ejecutar”, el motor de consultas también busca los términos “ejecutándose“, "ejecutado” y “ejecutor”, porque son variaciones morfológicas derivadas de forma regular de la palabra raíz “ejecutar”.  
+ La versión de una palabra que se almacena después de una indización de texto completo es un símbolo en formato comprimido. Las consultas posteriores al índice de texto completo generan formas no flexionadas de una palabra determinada según las reglas de ese idioma, para asegurarse de que se realizan todas las coincidencias probables. Por ejemplo, aunque el token que se almacena podría ser "ejecutar", el motor de consultas también busca los términos "running", "corrió" y "corredor", porque son variaciones morfológicas derivadas de la palabra raíz "ejecutar".  
   
  También puede crear y generar un diccionario de sinónimos de usuario para almacenar los sinónimos y habilitar mejores resultados de la búsqueda, o la clasificación de los términos. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos. Para obtener más información, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   

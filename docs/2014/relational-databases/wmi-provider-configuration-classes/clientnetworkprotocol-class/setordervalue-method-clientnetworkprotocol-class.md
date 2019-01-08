@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetOrderValue Method (ClientNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 603a3e22a3fee14dc3e03ccb2afae7e731547e21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b06773049204b126a37e21ce8c070f11666f19df
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113763"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373127"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Método SetOrderValue (clase ClientNetworkProtocol)
   Selecciona el protocolo con el valor de orden especificado en la lista de protocolos del cliente.  
@@ -57,6 +55,6 @@ OrderValue
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades de los protocolos de cliente (pestaña Ordenar)](http://technet.microsoft.com/library/ms187884.aspx)  
+ [Propiedades de los protocolos de cliente (pestaña Ordenar)](https://technet.microsoft.com/library/ms187884.aspx)  
   
   

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45a536e151432a2f2edbac55362af9ea2f2feb55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bcc6c331908f33df3b324ff7061b38065e36981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205555"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360896"
 ---
-# <a name="step-1-copying-the-lesson-2-package"></a>Paso 1: Copiar el paquete de la Lección 2
+# <a name="step-1-copying-the-lesson-2-package"></a>Paso 1: Copiar el paquete de la lección 2
   En esta tarea, creará una copia del paquete que ha creado en la lección 2, denominado Lesson 2.dtsx. También puede agregar al proyecto el paquete completado de la lección 2 que se incluye con el tutorial y, después, copiar dicho paquete. Usará esta nueva copia en toda la lección 3.  
   
 ### <a name="to-create-the-lesson-3-package"></a>Para crear el paquete de la lección 3  
@@ -49,11 +48,11 @@ ms.locfileid: "48205555"
   
 3.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.  
   
-4.  Haga clic en el botón de búsqueda **(…)** , vaya a **Lesson 2.dtsx** en el equipo y, después, haga clic en **Abrir**.  
+4.  Haga clic en el botón Examinar **(…)**, busque **Lesson 2.dtsx** en el equipo y, después, haga clic en **Abrir**.  
   
      Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   
-    1.  Navegue a los [ejemplos del producto Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Haga clic en la pestaña **DOWNLOADS** .  
   

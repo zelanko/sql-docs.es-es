@@ -11,12 +11,12 @@ ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 121f1265e567636fb979a84c609861bc0e558dcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1b1355893e9134723e9f073327b3da1d4803cf9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119775"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359027"
 ---
 # <a name="report-model-connection-ssrs"></a>Conexión de modelo de informe (SSRS)
   Para incluir datos de un modelo de informe, debe tener como origen de datos un conjunto de datos basado en un modelo de informe. A diferencia de otros orígenes de datos de informe, no hay ninguna extensión de datos para un modelo de informe. En el Generador de informes, busque y seleccione el modelo directamente desde el servidor de informes. En el Diseñador de informes, especifique la dirección URL del modelo de informe.  
@@ -49,7 +49,7 @@ ms.locfileid: "48119775"
   
  Los parámetros de informe se crean con valores de propiedad predeterminados que quizá necesite modificar. De forma predeterminada, cada parámetro de informe es un tipo de datos **Texto**. Si los datos subyacentes son un tipo de datos diferente, debe cambiar el tipo de datos de parámetro.  
   
- Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
   
@@ -84,7 +84,7 @@ ms.locfileid: "48119775"
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
   
- [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
   
   

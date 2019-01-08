@@ -11,12 +11,12 @@ ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 127e0dbeef729c21c7155d7d3d7edf6f21a444c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85d4c4d79dbddd59c3208c28b3fea50c0aa857b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514064"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Realizar una evaluación a petición usando servidores registrados
   Puede realizar una evaluación a petición de las directivas de prácticas recomendadas con una o más instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizando servidores registrados. Puede utilizar grupos de servidores locales o un servidor de administración central.  
@@ -25,7 +25,7 @@ ms.locfileid: "48182426"
 >  Puede realizar una evaluación a petición de las directivas de prácticas recomendadas con los miembros del grupo de servidores que ejecutan [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] o una versión posterior de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sin embargo, puede recibir un error de excepción si hay algunas propiedades a las que se haga referencia en una directiva que no se admita en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] o [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Para realizar esta tarea, debe haber configurado uno o más registros de servidor en los servidores registrados. Para obtener más información, consulte los temas siguientes:  
+ Para realizar esta tarea, debe haber configurado uno o más registros de servidor en los servidores registrados. Para obtener más información, vea los temas siguientes:  
   
 -   [Crear o editar un grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48182426"
 8.  Para ver los resultados detallados de una directiva, haga clic en la directiva en el **resultados** tabla. El **detalles del destino** tabla muestra los detalles para cada instancia.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Evaluar las directivas de procedimientos recomendados de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lección 2: Evaluar las directivas de prácticas recomendadas de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar y aplicar las prácticas recomendadas usando administración basada en directivas](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

@@ -14,20 +14,20 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff622236100399f43b8420bb71a7ae4d5a915013
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: da0514f10e4669d5e1e0bd20469b5922d38f2d70
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030113"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367257"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurar DQS para utilizar datos de referencia
   En este tema se describe cómo configurar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) con el fin de utilizar datos de referencia para limpiar los datos. Puede utilizar datos de referencia tanto de Windows Azure Marketplace como de proveedores directos de datos de referencia de terceros en línea.  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
- Para utilizar datos de referencia de Marketplace, es necesario tener una clave de cuenta de Marketplace válida. Para obtener información detallada sobre cómo crear una clave de cuenta de Marketplace, vea [Crear su cuenta](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936). También es posible crear una clave de cuenta de Marketplace desde [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; para ello, haga clic en **Configuración** en el área **Administración** de la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] y, a continuación, haga clic en **Crear un id. de cuenta de DataMarket** en la pestaña **Datos de referencia** .  
+ Para utilizar datos de referencia de Marketplace, es necesario tener una clave de cuenta de Marketplace válida. Para obtener información detallada sobre cómo crear una clave de cuenta de Marketplace, vea [Crear su cuenta](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936). También es posible crear una clave de cuenta de Marketplace desde [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; para ello, haga clic en **Configuración** en el área **Administración** de la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] y, a continuación, haga clic en **Crear un id. de cuenta de DataMarket** en la pestaña **Datos de referencia** .  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -66,7 +66,7 @@ ms.locfileid: "51030113"
   
     4.  En el cuadro Esquema, especifique el esquema que define la cadena de los campos (nombres de columna) que se van a utilizar del proveedor de servicios directos de datos de referencia. Los nombres de campo no pueden incluir espacios, y los campos deben ir separados con comas. Por ejemplo: `FirstName, LastName, City, State`.  
   
-    5.  En el cuadro **URI** , escriba el URI del proveedor de servicios directos de datos de referencia. Solo se permiten URI seguros (aquellos cuya dirección empieza por “https://") en DQS.  
+    5.  En el cuadro **URI** , escriba el URI del proveedor de servicios directos de datos de referencia. Solo se permiten URI seguros (aquellos cuya dirección empieza por "https://") en DQS.  
   
     6.  En el cuadro **Tamaño máximo de lote** , escriba el número máximo de registros por lote que se enviarán al proveedor de servicios de datos de referencia para la limpieza. Se puede especificar un máximo de 100 registros por lote para la actividad de limpieza.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51030113"
   
  Ahora ya puede utilizar los servicios de datos de referencia del proveedor de servicios directos de datos de referencia de terceros en línea que se acaba de configurar en DQS.  
   
-##  <a name="FollowUp"></a> Seguimiento: después de configurar DQS para utilizar datos de referencia  
+##  <a name="FollowUp"></a> Sigue: Después de configurar DQS para utilizar datos de referencia  
  A continuación, debe asignar los dominios de la base de conocimiento necesarios a los datos de referencia disponibles en los proveedores de datos que acaba de configurar. Para ello, consulte [adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
   

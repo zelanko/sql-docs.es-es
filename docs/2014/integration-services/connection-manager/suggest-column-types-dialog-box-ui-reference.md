@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.suggestdatatypes.f1
@@ -13,12 +12,12 @@ ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2a1706a252ae9e70d214b4231442a201dfac88c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05ae90b30fb94615c4be8f16efaf5c837fe1856c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058375"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756688"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Sugerir tipos de columna
   Utilice el cuadro de diálogo **Sugerir tipos de columna** para identificar el tipo de datos y la longitud de las columnas de un Administrador de conexiones de archivos planos basándose en un muestreo del contenido del archivo.  
@@ -45,7 +44,7 @@ ms.locfileid: "48058375"
  Escriba o seleccione el porcentaje de longitud de columna que se incrementará para tipos de datos de caracteres. El porcentaje debe ser un número entero.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md)   
  [Administrador de conexiones de archivos planos](file-connection-manager.md)  
   
   

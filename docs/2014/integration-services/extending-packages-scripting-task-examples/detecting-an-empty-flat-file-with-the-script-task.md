@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - flat files
@@ -17,12 +15,12 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c33e25a9fde0a410773de9c2070d0ded53962d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66f0bf42724b2806704503f0e0538d5b69ed7738
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088965"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355634"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Detectar un archivo plano vacío con la tarea Script
   El origen de archivo plano no determina si un archivo de este tipo contiene filas de datos antes de intentar procesarlo. Puede que desee mejorar la eficacia de un paquete (sobre todo un paquete que recorre en iteración numerosos archivos planos) mediante la omisión de archivos que no contienen filas de datos. La tarea Script puede buscar un archivo plano vacío antes de que el paquete comience a procesar el flujo de datos.  
@@ -49,7 +47,7 @@ ms.locfileid: "48088965"
   
  Si recorre en iteración archivos con un enumerador Foreach File, en lugar de utilizar solamente un administrador de conexiones de archivos planos, tendrá que modificar el código de ejemplo siguiente para obtener el nombre de archivo y la ruta de acceso de la variable donde se almacena el valor enumerado y no del administrador de conexiones.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```vb  
 Public Sub Main()  
@@ -141,7 +139,7 @@ public void Main()
         }  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos de tarea Script](../extending-packages-scripting-task-examples/script-task-examples.md)  

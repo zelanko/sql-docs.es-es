@@ -14,12 +14,12 @@ ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 2eb30c45af544fc57c0d3dfd328ce2d4c2246746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152d8ba2964c8485a1f158b71717067fdea948a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675313"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406022"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Archivos de script de ejemplo de la consola (OracleToSQL)
 Se han proporcionado algunos archivos de ejemplo junto con el producto para la referencia de usuario y el uso. Esta sección describe la manera de personalizar fácilmente estos scripts para satisfacer las necesidades del usuario final.  
@@ -45,11 +45,11 @@ Los siguientes archivos de secuencia de comandos de consola de ejemplo que abarc
   
     -   Para obtener más información acerca de cómo conectarse al servidor de origen y destino, consulte [crear los archivos de conexión de servidor &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) .  
   
--   **VariableValueFileSample.xml:** todas las variables que se han usado en la consola de ejemplo de los archivos de script y `ServersConnectionFileSample.xml` ha sido intercalan en este archivo. Para ejecutar las secuencias de comandos de consola muestra que el usuario tiene que reemplazar simplemente la variable del ejemplo valores con el usuario las definen y pasan este archivo como un argumento de línea de comandos adicionales junto con el archivo de script.  
+-   **VariableValueFileSample.xml:** Archivos de script de todas las variables que se han usado en la consola de ejemplo y `ServersConnectionFileSample.xml` ha sido intercalan en este archivo. Para ejecutar las secuencias de comandos de consola muestra que el usuario tiene que reemplazar simplemente la variable del ejemplo valores con el usuario las definen y pasan este archivo como un argumento de línea de comandos adicionales junto con el archivo de script.  
   
     Para obtener más información sobre el archivo de valores variables, consulte [crear archivos de valor Variable &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
   
--   **AssessmentReportGenerationSample.xml:** este ejemplo permite al usuario generar un informe de evaluación de xml que se puede usar por el usuario para el análisis antes de que empiece a convertir y migrar los datos.  
+-   **AssessmentReportGenerationSample.xml:** Este ejemplo permite al usuario generar un informe de evaluación de xml que se puede usar por el usuario para el análisis antes de que empiece a convertir y migrar los datos.  
   
     En el `generate-assessment-report` el usuario debe cambiar obligatoriamente el valor de la variable de comando (consulte **VariableValueFileSample.xml**) en el `object-name` atributo por el nombre de la base de datos está en uso por el usuario. Según el tipo de objeto especificado, el `object-type` valor también debe cambiarse.  
   
@@ -96,7 +96,7 @@ Los siguientes archivos de secuencia de comandos de consola de ejemplo que abarc
   
     **Atributo**  
   
-    `object-name`: Especifique la base de datos de origen o el nombre que requiere que para se va a convertir de objeto. Asegúrese de que el correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`  
+    `object-name`: Especificar la base de datos de origen / objeto de nombre que requiere que para se va a convertir. Asegúrese de que el correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`  
   
     **Nombre de comando**  
   

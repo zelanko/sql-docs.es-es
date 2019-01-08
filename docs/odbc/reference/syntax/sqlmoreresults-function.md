@@ -20,16 +20,16 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c26111571eb505640acee035cba37d617b43c481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a680f5579b241f6b279f5ecc994d32c8fad784f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849943"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205364"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults (función)
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: ODBC  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ODBC  
   
  **Resumen**  
  **SQLMoreResults** determina si están disponibles en una instrucción que contiene los resultados más **seleccione**, **actualización**, **insertar**, o  **ELIMINAR** instrucciones y, si es así, inicializa procese dichos resultados.  
@@ -39,7 +39,7 @@ ms.locfileid: "47849943"
 ```  
   
 SQLRETURN SQLMoreResults(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -89,14 +89,14 @@ SQLRETURN SQLMoreResults(
   
  Si una búsqueda, insert, instrucción update o delete en un lote de instrucciones no afecta a todas las filas en el origen de datos, **SQLMoreResults** devuelve SQL_SUCCESS. Esto es diferente en el caso de una actualización por búsqueda, insertar o eliminar la instrucción que se ejecuta a través de **SQLExecDirect**, **SQLExecute**, o **SQLParamData**, que devuelve SQL_NO_DATA si no afecta a todas las filas en el origen de datos. Si una aplicación llama a **SQLRowCount** para recuperar el recuento de filas después de llamar a **SQLMoreResults** no ha afectado a ninguna fila, **SQLRowCount** devuelve SQL_NO_DATA.  
   
- Para obtener más información acerca de la secuenciación válida de funciones de procesamiento de los resultados, vea [tablas de transición de estado de apéndice B: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Para obtener más información acerca de la secuenciación válida de funciones de procesamiento de los resultados, vea [Apéndice B: Las tablas de transición de estado de ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Para obtener más información acerca de los parámetros de salida transmitidos y SQL_PARAM_DATA_AVAILABLE, consulte [recuperar parámetros de salida mediante SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 ## <a name="availability-of-row-counts"></a>Disponibilidad de los recuentos de filas  
  Cuando un lote contiene varias instrucciones de generación de recuento de filas consecutivas, es posible que estos recuentos de filas se acumulan en el recuento de filas de una sola. Por ejemplo, si un lote tiene cinco instrucciones insert, algunos orígenes de datos son capaces de devolver cinco recuentos de filas individuales. Algunos otros orígenes de datos devuelven recuento solo una fila que representa la suma de los cinco recuentos de filas individuales.  
   
- Cuando un lote contiene una combinación de instrucciones de generación de recuento de fila y generación de conjunto de resultados, recuentos de filas pueden o no esté disponibles en absoluto. El comportamiento del controlador con respecto a la disponibilidad de los recuentos de filas se enumera en el tipo de información de SQL_BATCH_ROW_COUNT disponible a través de una llamada a **SQLGetInfo**. Por ejemplo, suponga que el lote contiene un **seleccione**, seguido de dos **insertar**s y otra **seleccione**. A continuación, son posibles los casos siguientes:  
+ Cuando un lote contiene una combinación de instrucciones de generación de recuento de fila y generar conjunto de resultados, recuentos de filas pueden o no esté disponibles en absoluto. El comportamiento del controlador con respecto a la disponibilidad de los recuentos de filas se enumera en el tipo de información de SQL_BATCH_ROW_COUNT disponible a través de una llamada a **SQLGetInfo**. Por ejemplo, suponga que el lote contiene un **seleccione**, seguido de dos **insertar**s y otra **seleccione**. A continuación, son posibles los casos siguientes:  
   
 -   El recuento de filas correspondientes a las dos **insertar** instrucciones no están disponibles en absoluto. La primera llamada a **SQLMoreResults** colocará en el conjunto de resultados de la segunda **seleccione** instrucción.  
   

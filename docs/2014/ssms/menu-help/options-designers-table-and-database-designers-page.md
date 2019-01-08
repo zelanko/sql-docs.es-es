@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.Table_Designer
@@ -12,12 +12,12 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 715456e4e358346d19a3fe698cbb5d36fd754929
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168749"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751207"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>Opciones (diseñadores-Table y página diseñadores de base de datos)
   Utilice esta página para determinar el comportamiento predeterminado del diseñador. Para tener acceso a esta configuración, en el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Diseñadores** y haga clic en **Diseñador de tablas**.  

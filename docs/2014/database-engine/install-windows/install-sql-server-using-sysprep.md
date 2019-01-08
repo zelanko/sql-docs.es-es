@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d9bcc1a87bd4853736cdc43d597e58728b848e1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018270"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371057"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Instalar SQL Server 2014 mediante SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relacionadas con SysPrep. La página **Avanzadas** del **Centro de instalación** tiene dos opciones: **Preparar imagen de una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Completar imagen de una instancia independiente preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Las secciones [Preparar](#prepare) y [Completar](#complete) describen el proceso de instalación en detalle. Para obtener más información, vea [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "51018270"
 -   [Modificar o desinstalar una instancia completada de SQL Server](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compatibilidad con clústeres de SysPrep  
- A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep admite instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en clúster en instalaciones desde la línea de comandos. Para obtener más información, vea [¿Qué es Sysprep?](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
+ A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep admite instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en clúster en instalaciones desde la línea de comandos. Para obtener más información, vea [¿Qué es Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
   
 #### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Para preparar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desatendido)  
   
@@ -131,13 +131,13 @@ ms.locfileid: "51018270"
   
 11. En la página Configuración de instancia, especifique el identificador de la instancia. Para continuar, haga clic en **Siguiente** .  
   
-     **Id. de instancia:** se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Si la instancia preparada se ha completado como una instancia predeterminada durante el paso Completar, el nombre se sobrescribe con MSSQLSERVER. El identificador de instancia es el mismo que se ha especificado.  
+     **Id. de instancia**: se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Si la instancia preparada se ha completado como una instancia predeterminada durante el paso Completar, el nombre se sobrescribe con MSSQLSERVER. El identificador de instancia es el mismo que se ha especificado.  
   
-     **Directorio raíz de instancia:** de forma predeterminada, el directorio raíz de instancia es [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Para especificar un directorio raíz no predeterminado, use el campo proporcionado o haga clic en **Examinar** para buscar una carpeta de instalación. El directorio especificado en el paso de preparación se usará durante la configuración en el paso Completar.  
+     **Directorio raíz de instancia**: de forma predeterminada, el directorio raíz de instancia es [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Para especificar un directorio raíz no predeterminado, use el campo proporcionado o haga clic en **Examinar** para buscar una carpeta de instalación. El directorio especificado en el paso de preparación se usará durante la configuración en el paso Completar.  
   
      Todos los Service Pack y actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplicarán a cada componente de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instancias instaladas:** la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que están en el equipo en el que se ejecuta el programa de instalación.  
+     **Instancias instaladas**: en la cuadrícula se muestran las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que están en el equipo en el que se ejecuta el programa de instalación.  
   
 12. La página **Requisitos de espacio en disco** calcula el espacio en disco necesario para las características que haya especificado. A continuación, compara el espacio necesario con el espacio en disco disponible.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "51018270"
   
 7.  En la página **Seleccionar una instancia preparada** , seleccione la instancia preparada que desea completar en el cuadro desplegable. Seleccione la instancia sin configurar en la lista **Id. de instancia** .  
   
-     **Instancias instaladas:** esta cuadrícula muestra todas las instancias, incluidas las instancias preparadas en este equipo.  
+     **Instancias instaladas:** Esta cuadrícula muestra todas las instancias, incluidas las instancias preparadas en este equipo.  
   
 8.  En la página **Revisión de características** , verá las características seleccionadas y los componentes incluidos en la instalación durante el paso de preparación. Si desea agregar a su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más características no incluidas en la instancia preparada, primero debe realizar este paso para completar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, agregar las características desde **Agregar características** en el **Centro de instalación**.  
   
@@ -180,9 +180,9 @@ ms.locfileid: "51018270"
   
 9. En la página Configuración de instancia, especifique el nombre de la instancia preparada. Este es el nombre de la instancia después de haber completado la configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para continuar, haga clic en **Siguiente** .  
   
-     **Id. de instancia:** se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Si la instancia preparada se ha completado como una instancia predeterminada durante el paso Completar, el nombre se sobrescribe con MSSQLSERVER. El identificador de instancia es el mismo que el especificado durante el paso Preparar.  
+     **Id. de instancia**: se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Si la instancia preparada se ha completado como una instancia predeterminada durante el paso Completar, el nombre se sobrescribe con MSSQLSERVER. El identificador de instancia es el mismo que el especificado durante el paso Preparar.  
   
-     **Directorio raíz de instancia:** se usará el directorio especificado en el paso de preparación y no se podrá modificar en este paso.  
+     **Directorio raíz de instancia**: se usará el directorio especificado en el paso de preparación y no se podrá modificar en este paso.  
   
      Todos los Service Pack y actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplicarán a cada componente de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -190,7 +190,7 @@ ms.locfileid: "51018270"
   
 10. El flujo de trabajo en el resto del tema depende de las características seleccionadas durante el paso de preparación. En función de las selecciones, es posible que no vea todas las páginas.  
   
-11. En la página **Configuración del servidor** - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los servicios reales que se configuran en esta página dependen de las características que se van a instalar.  
+11. En la página **Configuración del servidor** - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servicios reales que se configuran en esta página dependen de las características que se van a instalar.  
   
      Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o configurar cada cuenta de servicio individualmente. También puede especificar si los servicios se inician de forma automática o manual, o si están deshabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](../../sql-server/install/server-configuration-service-accounts.md) y [Configurar los permisos y las cuentas de servicio de Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -200,15 +200,15 @@ ms.locfileid: "51018270"
   
      Cuando termine de especificar la información de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Siguiente**.  
   
-12. Use la pestaña **Configuración del servidor - Intercalación** para especificar intercalaciones no predeterminadas para [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener más información, vea [Configuración del servidor - Intercalación](../../sql-server/install/server-configuration-collation.md).  
+12. Use la pestaña **Configurar servidor - Intercalación** para especificar intercalaciones no predeterminadas para [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener más información, vea [Configuración del servidor - Intercalación](../../sql-server/install/server-configuration-collation.md).  
   
 13. Use la página Configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Aprovisionamiento de cuentas para especificar lo siguiente:  
   
-    -   Modo de seguridad: seleccione la autenticación de Windows o la autenticación de modo mixto para su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si selecciona la autenticación de modo mixto, debe proporcionar una contraseña segura para la cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada.  
+    -   Modo de Seguridad: seleccione la autenticación de Windows o la autenticación de modo mixto para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si selecciona la autenticación de modo mixto, debe proporcionar una contraseña segura para la cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada.  
   
          Una vez que un dispositivo establece una conexión correcta con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el mecanismo de seguridad es el mismo para la autenticación de Windows y para el modo mixto. Para obtener más información, vea [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : debe especificar al menos un administrador del sistema para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: debe especificar al menos un administrador del sistema para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
      Cuando haya terminado de modificar la lista, haga clic en **Aceptar**. Compruebe la lista de administradores en el cuadro de diálogo de configuración. Cuando la lista esté completa, haga clic en **Siguiente**.  
   
@@ -316,14 +316,14 @@ ms.locfileid: "51018270"
 10. Repita los pasos 1 a 9 hasta que se hayan quitado todos los componentes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ##  <a name="bk_Modifying_Uninstalling"></a> Modificar o desinstalar una instancia completada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
- El proceso para agregar o quitar características, o bien para desinstalar una instancia completada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es similar al proceso de una instancia instalada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte los temas siguientes:  
+ El proceso para agregar o quitar características, o bien para desinstalar una instancia completada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es similar al proceso de una instancia instalada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea los temas siguientes:  
   
 -   [Agregar características a una instancia de SQL Server 2014 &#40;el programa de instalación&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
   
 -   [Desinstalar una instancia existente de SQL Server &#40;programa de instalación&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Qué es Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [Cómo funciona Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143547)  
+ [Qué es Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Cómo funciona Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

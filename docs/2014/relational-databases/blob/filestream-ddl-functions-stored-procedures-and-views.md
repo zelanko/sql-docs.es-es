@@ -10,12 +10,12 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ec7d554c8dedd2fb48d1af8a44dbee550e376ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b69cb7d47c70b6c34015c90252875c81c231d0a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189855"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356015"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM DDL, funciones, procedimientos almacenados y vistas
   Enumera las instrucciones Transact-SQL y los objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten FILESTREAM.  
@@ -62,6 +62,6 @@ ms.locfileid: "48189855"
   
 -   [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)  
   
--   [API administrada: clase SqlFileStream](http://go.microsoft.com/fwlink/?LinkId=220875)  
+-   [API administrada: clase SqlFileStream](https://go.microsoft.com/fwlink/?LinkId=220875)  
   
   

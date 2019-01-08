@@ -14,12 +14,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157996"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518259"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptador para la nube de SQL Server
   El servicio del adaptador para la nube se crea como parte del aprovisionamiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en una máquina virtual de Windows Azure. El servicio Adaptador para la nube genera un certificado SSL autofirmado la primera vez que se ejecuta y, después, se ejecuta como una cuenta de **sistema local** . Genera un archivo de configuración que utiliza para configurarse a sí mismo. El adaptador para la nube también crea una regla de Firewall de Windows para permitir conexiones entrantes de TCP en el puerto predeterminado 11435.  
@@ -29,11 +29,11 @@ ms.locfileid: "48157996"
 ## <a name="cloud-adapter-requirements"></a>Requisitos del adaptador para la nube  
  Tenga en cuenta los siguientes requisitos a la hora de instalar, habilitar y ejecutar el adaptador para la nube de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Adaptador para la nube es compatible con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 y versiones posteriores. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, el adaptador para la nube de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiere Objetos de administración de SQL para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
+-   El adaptador para la nube es compatible con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 y versiones posteriores. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, el adaptador para la nube de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiere Objetos de administración de SQL para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
   
 -   El servicio web del adaptador para la nube se ejecuta como una cuenta **Sistema local** y comprueba las credenciales del cliente antes de ejecutar cualquier tarea. Las credenciales proporcionadas por el cliente deben pertenecer a la cuenta de usuario que sea miembro de la variable local **administradores** grupo en el equipo remoto.  
   
--   El adaptador para la nube solo admite la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   El adaptador para la nube solo admite la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   El adaptador para la nube utiliza la cuenta de administrador local de VM para ejecutar comandos en el equipo local, no una cuenta sa.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48157996"
 ## <a name="cloud-adapter-configuration-settings"></a>Valores de configuración del adaptador para la nube  
  Utilice los detalles de configuración siguientes para modificar la configuración de un adaptador para la nube.  
   
--   **Ruta de acceso predeterminada del archivo de configuración** : C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
+-   **Ruta de acceso predeterminada del archivo de configuración** -C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
   
 -   **Parámetros del archivo de configuración** -  
   
@@ -62,9 +62,9 @@ ms.locfileid: "48157996"
   
     -   \</Configuration >  
   
--   **Detalles del certificado** : el certificado tiene los valores siguientes:  
+-   **Detalles del certificado** -el certificado tiene los siguientes valores:  
   
-    -   Subject: "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
+    -   Asunto: "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
   
     -   El certificado solo debe tener un EKU de autenticación de servidor habilitado.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "48157996"
 ## <a name="cloud-adapter-troubleshooting"></a>Solución de problemas del adaptador para la nube  
  Use la información siguiente para solucionar problemas del adaptador para la nube de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   **Control de errores y registro** : los errores y los mensajes de estado se escriben en el registro de eventos de aplicación.  
+-   **Control de errores y registro** -errores y mensajes de estado se escriben en el registro de eventos de aplicación.  
   
--   **Seguimiento, eventos** : todos los eventos se escriben en el registro de eventos de aplicación.  
+-   **Seguimiento, eventos** -todos los eventos se escriben en el registro de eventos de aplicación.  
   
--   **Control, configuración** : utilice el archivo de configuración ubicado en: C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Control, configuración** -utilice el archivo de configuración ubicado en:  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
 |Error|Id. de error|Causa|Solución|  
 |-----------|--------------|-----------|----------------|  

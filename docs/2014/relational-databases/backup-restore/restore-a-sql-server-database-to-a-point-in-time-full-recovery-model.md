@@ -14,12 +14,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 476c5cec902ce7403ae761fcf2353be444eeb448
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091025"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506821"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperación completa)
   En este tema se describe cómo restaurar una base de datos a un momento dado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Este tema solo es pertinente para las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan los modelos de recuperación optimizados para cargas masivas de registros.  
@@ -39,7 +39,7 @@ ms.locfileid: "48091025"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48091025"
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
-         En el cuadro de lista **Origen: Dispositivo: Base de datos** , seleccione el nombre de la base de datos que se debe restaurar.  
+         En el **origen: Dispositivo: Base de datos** cuadro de lista, seleccione el nombre de la base de datos que se debe restaurar.  
   
          **Nota** : esta lista solo está disponible cuando se selecciona **Dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en el dispositivo seleccionado.  
   

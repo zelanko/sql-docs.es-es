@@ -15,15 +15,15 @@ ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbd89984e64ac3ca37c3ac9ec31e19191606dc9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 960a435500f243598f9db078644950d38d7869f2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217575"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351952"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services - Minería de datos)
-  En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). Es importante recordar que el algoritmo de árboles de decisión de Microsoft es un algoritmo híbrido que puede crear modelos con funciones muy diferentes: un árbol de decisión puede representar asociaciones, reglas o incluso una regresión lineal. La estructura del árbol es básicamente la misma, pero la forma en la que se interpretará la información dependerá del propósito para el que creó el modelo.  
+  En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md). Es importante recordar que el algoritmo de árboles de decisión de Microsoft es un algoritmo híbrido que puede crear modelos con funciones muy diferentes: un árbol de decisión puede representar asociaciones, reglas o incluso una regresión lineal. La estructura del árbol es básicamente la misma, pero la forma en la que se interpretará la información dependerá del propósito para el que creó el modelo.  
   
 ##  <a name="bkmk_Top"></a> Descripción de la estructura de un modelo de árboles de decisión  
  Un modelo de árboles de decisión tiene un nodo primario único que representa el modelo y sus metadatos. Debajo del nodo primario aparecen árboles independientes que representan los atributos de predicción que se seleccionan. Por ejemplo, si configura su modelo de árboles de decisión para predecir si los clientes comprarán algo y, a continuación, proporciona entradas para el género y los ingresos, el modelo creará un árbol único para el atributo de compra, con muchas bifurcaciones que se dividen en función de condiciones relacionadas con el género y los ingresos.  
@@ -199,7 +199,7 @@ ms.locfileid: "48217575"
  El atributo representado por el fragmento XML puede ser simple o complejo. Un atributo simple contiene el nombre de la columna del modelo y el valor del atributo. Si la columna del modelo contiene una tabla anidada, el atributo de tabla anidada se representa como una concatenación del nombre de tabla, el valor de clave y el atributo.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la versión 2.0 del estándar PMML, con extensiones para admitir el uso de la tabla anidada. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es compatible con la versión 2.0 del estándar PMML, con extensiones para admitir el uso de tablas anidadas. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Distribución de nodos para los atributos discretos  
  En un modelo de árboles de decisión, la tabla NODE_DISTRIBUTION contiene estadísticas útiles. Sin embargo, el tipo de estadísticas depende de si el árbol predice un atributo discreto o un atributo continuo. En esta sección se describe el significado de las estadísticas de distribución de nodos para los atributos discretos.  
@@ -262,7 +262,7 @@ ms.locfileid: "48217575"
   
  Para el resto de los nodos del árbol (excepto los nodos hoja), la puntuación para cada nodo representa el mejor resultado de división para el nodo actual, menos el resultado de división para el nodo primario. Normalmente, el resultado de división para un nodo primario siempre debería ser mejor que el de cualquiera de sus nodos secundarios. Esto se debe a que, teóricamente, un modelo de árboles de decisión se divide primero en los atributos más importantes.  
   
- Hay muchas maneras de calcular una puntuación para una división, dependiendo del parámetro de algoritmo que se elija. La explicación de cómo se calculan las puntuaciones para cada uno de los métodos de puntuación queda fuera del ámbito de este tema. Para obtener más información, vea "[Descripción de las redes Bayesianas: combinación de conocimiento y datos estadísticos](http://go.microsoft.com/fwlink/?LinkId=45963)", en el sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research.  
+ Hay muchas maneras de calcular una puntuación para una división, dependiendo del parámetro de algoritmo que se elija. La explicación de cómo se calculan las puntuaciones para cada uno de los métodos de puntuación queda fuera del ámbito de este tema. Para obtener más información, vea "[las redes bayesianas: La combinación de conocimiento y datos estadísticos](https://go.microsoft.com/fwlink/?LinkId=45963)", en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] sitio Web de investigación.  
   
 > [!NOTE]  
 >  Si crea un modelo de árboles de decisión que tenga atributos de predicción continuos y discretos, verá puntuaciones completamente diferentes en los nodos (Todos) que representan cada tipo de árbol. Cada modelo se debería considerar de forma individual, ya que los métodos usados para puntuar la regresión son completamente diferentes de los usados para puntuar la clasificación. Los valores de puntuación de nodo no se pueden comparar.  
@@ -283,7 +283,7 @@ ms.locfileid: "48217575"
  Para obtener más información sobre los nodos de regresión, vea [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)   
  [Consultas de minería de datos](data-mining-queries.md)   
  [Algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm.md)  

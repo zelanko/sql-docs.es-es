@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201345"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353984"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El `SSISDB` catálogo es el punto central para trabajar con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), proyectos que han implementado en el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -27,7 +26,7 @@ ms.locfileid: "48201345"
   
  Para mantener la base de datos de `SSISDB`, se recomienda aplicar las directivas corporativas estándar para administrar las bases de datos de usuario. Para obtener información acerca de cómo crear planes de mantenimiento, vea [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- El `SSISDB` catálogo y el `SSISDB` database: compatibilidad con Windows PowerShell. Para obtener más información acerca de cómo usar SQL Server con Windows PowerShell, vea [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Para obtener ejemplos de cómo usar Windows PowerShell para completar tareas como implementar un proyecto, vea la entrada del blog [SSIS y PowerShell en SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), en blogs.msdn.com.  
+ El `SSISDB` catálogo y el `SSISDB` database: compatibilidad con Windows PowerShell. Para obtener más información acerca de cómo usar SQL Server con Windows PowerShell, vea [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Para obtener ejemplos de cómo usar Windows PowerShell para completar tareas como implementar un proyecto, vea la entrada del blog [SSIS y PowerShell en SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), en blogs.msdn.com.  
   
  Para obtener más información acerca de cómo ver los datos de las operaciones, consulte [supervisión de ejecuciones de paquetes y otras operaciones](../performance/monitor-running-packages-and-other-operations.md).  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48201345"
 > [!NOTE]  
 >  Si el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de instancia que el `SSISDB` base de datos se adjunta a, se detiene o no responde, el ISServerExec.exe proceso finaliza. Se escribe un mensaje en un registro de eventos de Windows.  
 >   
->  Si los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conmutan por error como parte de una conmutación por error de clúster, los paquetes en ejecución no se reinician. Puede usar los puntos de comprobación para reiniciar los paquetes. Para obtener más información, vea [Reiniciar paquetes de usando puntos de comprobación](../packages/restart-packages-by-using-checkpoints.md).  
+>  Si los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conmutan por error como parte de una conmutación por error de clúster, los paquetes en ejecución no se reinician. Puede usar los puntos de comprobación para reiniciar los paquetes. Para más información, consulte [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Identificadores de objeto de catálogo  
  Cuando cree un nuevo objeto en el catálogo, asígnele un nombre El nombre del objeto es un identificador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define las reglas para las que los caracteres se pueden usar en un identificador. Los nombres de los siguientes objetos deben seguir las reglas de identificador.  
@@ -106,7 +105,7 @@ ms.locfileid: "48201345"
  El valor mínimo es un día. El valor máximo está limitado sólo por el valor máximo de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` datos. Para más información sobre este tipo de datos, vea [int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Quitar periódicamente versiones anteriores**  
- El paso de trabajo de limpieza de versión del proyecto se ejecuta cuando esta propiedad se establece en `True`.  
+ El paso de trabajo de limpieza de versiones del proyecto se ejecuta cuando esta propiedad se establece en `True`.  
   
  **Número máximo de versiones por proyecto**  
  Define cuántas versiones de un proyecto se almacenan en el catálogo. Se quitan las versiones anteriores de proyectos.  
@@ -128,7 +127,7 @@ ms.locfileid: "48201345"
   
 -   DES  
   
- Al implementar un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el catálogo cifra automáticamente los datos del paquete y los valores confidenciales. El catálogo también descifra automáticamente los datos cuando lo recupera. El catálogo de SSISDB emplea el `ServerStorage` nivel de protección. Para más información, consulte [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+ Al implementar un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el catálogo cifra automáticamente los datos del paquete y los valores confidenciales. El catálogo también descifra automáticamente los datos cuando lo recupera. El catálogo de SSISDB emplea el nivel de protección `ServerStorage`. Para más información, consulte [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
  Cambiar el algoritmo de cifrado es una operación que lleva mucho tiempo. En primer lugar, el servidor tiene que utilizar el algoritmo especificado previamente para descifrar todos los valores de configuración. A continuación, el servidor tiene que utilizar el nuevo algoritmo para volver a cifrar los valores. Durante este tiempo, no puede haber otras operaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor. Así, para que las operaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] continúen sin interrupción, el algoritmo de cifrado es un valor de solo lectura en el cuadro de diálogo de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -284,10 +283,10 @@ ms.locfileid: "48201345"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada de blog, [SSIS y PowerShell en SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), en blogs.msdn.com.  
+-   Entrada de blog, [SSIS y PowerShell en SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), en blogs.msdn.com.  
   
--   Entrada de blog [Sugerencias del control de acceso al catálogo de SSIS](http://go.microsoft.com/fwlink/?LinkId=246669), en blogs.msdn.com.  
+-   Entrada de blog [Sugerencias del control de acceso al catálogo de SSIS](https://go.microsoft.com/fwlink/?LinkId=246669), en blogs.msdn.com.  
   
--   Entrada del blog [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=254267), en blogs.msdn.com.  
+-   Entrada del blog [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=254267), en blogs.msdn.com.  
   
   

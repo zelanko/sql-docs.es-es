@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699461"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534078"
 ---
 # <a name="transparent-data-encryption"></a>Cifrado de datos transparente
 Puede tomar varias precauciones para proteger la base de datos, como diseñar un sistema seguro, cifrar los datos confidenciales e instalar un firewall alrededor de los servidores de bases de datos. Sin embargo, para un escenario en el que se roban medios físicos (como unidades o cintas de copia de seguridad), un tercero malintencionado puede simplemente restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
@@ -56,7 +56,7 @@ Para usar TDE, siga estos pasos. Los tres primeros pasos solo se realizan una ve
   
 El siguiente ejemplo ilustra cifrar el `AdventureWorksPDW2012` base de datos mediante un certificado denominado `MyServerCert`, creado en PDW de SQL Server.  
   
-**Primer: Habilitar TDE en SQL Server PDW.** Esta acción solo es necesaria una vez.  
+**En primer lugar: Habilitar TDE en SQL Server PDW.** Esta acción solo es necesaria una vez.  
   
 ```sql  
 USE master;  
@@ -93,7 +93,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**Última: Crear la clave DEK y utilice ALTER DATABASE para cifrar una base de datos de usuario.** Esta acción se repite para cada base de datos protegida por TDE.  
+**Último: Cree la clave DEK y utilice ALTER DATABASE para cifrar una base de datos de usuario.** Esta acción se repite para cada base de datos protegida por TDE.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -118,7 +118,7 @@ Para que puedan ser aceptados por las instrucciones siguientes, los certificados
   
 En la tabla siguiente se proporcionan vínculos y explicaciones de los comandos y funciones de TDE.  
   
-|Comando o función|Finalidad|  
+|Comando o función|Propósito|  
 |-----------------------|-----------|  
 |[CREAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crea una clave que se utiliza para cifrar una base de datos.|  
 |[MODIFICAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Cambia la clave que se utiliza para cifrar una base de datos.|  
@@ -128,7 +128,7 @@ En la tabla siguiente se proporcionan vínculos y explicaciones de los comandos 
 ## <a name="catalog-views-and-dynamic-management-views"></a>Vistas de catálogo y vistas de administración dinámica  
 En la tabla siguiente se muestran las vistas de catálogo y las vistas de administración dinámica de TDE.  
   
-|Vista de catálogo o vista de administración dinámica|Finalidad|  
+|Vista de catálogo o vista de administración dinámica|Propósito|  
 |-------------------------------------------|-----------|  
 |[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Vista de catálogo que muestra información sobre las bases de datos.|  
 |[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Vista de catálogo que muestra los certificados de una base de datos.|  
@@ -238,11 +238,11 @@ Si existe una DMK en el dispositivo en el que se realizó la actualización o re
   
 Ejemplo de la acción de actualización. Reemplace `**********` con la contraseña de la DMK.  
   
-`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
   
 Ejemplo de la acción que se va a reemplazar una máquina virtual.  
   
-`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
   
 Durante la actualización, si un usuario de base de datos se cifran y no se proporciona la contraseña de la DMK, la acción de actualización se producirá un error. Durante el reemplazo, si no se proporciona la contraseña correcta cuando existe una DMK, la operación omitirá el paso de recuperación de la DMK. Todos los demás pasos se completará al final de la acción de máquina virtual de reemplazo, sin embargo, la acción notificará un error al final para indicar que se requieren pasos adicionales. En los registros de instalación (ubicado en **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\\Detail-Setup < marca de tiempo >**), se mostrará la siguiente advertencia cerca del final.  
   

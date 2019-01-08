@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - pull subscriptions [SQL Server replication], creating
@@ -17,12 +16,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18b53eaf464d0d11949e7dccbc5154debca733f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8868957d7c479de3a51a599deed42c34d6676eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206145"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753497"
 ---
 # <a name="create-a-pull-subscription"></a>Crear una suscripción de extracción
   En este tema se describe cómo crear una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -119,9 +118,9 @@ ms.locfileid: "48206145"
   
 2.  En el suscriptor, ejecute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**y los parámetros siguientes:  
   
-    -   **@subscriber_type** – especifique **local** para una suscripción de cliente y **global** para una suscripción de servidor.  
+    -   **@subscriber_type**: especifique **local** para una suscripción de cliente y **global** para una suscripción de servidor.  
   
-    -   **@subscription_priority** – Especifique una prioridad para la suscripción (**0,00** a **99,99**). Solo es necesario para las suscripciones de servidor.  
+    -   **@subscription_priority**: especifique una prioridad para la suscripción (**0,00** a **99,99**). Solo es necesario para las suscripciones de servidor.  
   
          Para más información, consulte [Detección y resolución de conflictos de replicación de mezcla avanzada](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
@@ -164,9 +163,9 @@ ms.locfileid: "48206145"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication> con la conexión de publicador del paso 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> y <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si este método devuelve `false`, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve `false`, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
   
-4.  Realizar una operación lógica AND bit a bit (`&` en Visual C# y `And` en Visual Basic) entre el <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propiedad y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Si el resultado es <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, establezca <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> en el resultado de una operación lógica OR bit a bit (`|` en Visual C# y `Or` en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. A continuación, llame a <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar las suscripciones de extracción.  
+4.  Ejecuta una operación lógica AND bit a bit (`&` en Visual C# y `And` en Visual Basic) entre la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Si el resultado es <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, establezca <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> en el resultado de una operación lógica OR bit a bit (`|` en Visual C# y `Or` en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. A continuación, llame a <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar las suscripciones de extracción.  
   
 5.  Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obtener más información, consulte [Crear, modificar y eliminar bases de datos](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
@@ -184,7 +183,7 @@ ms.locfileid: "48206145"
   
     -   El nombre de la publicación para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
   
-    -   El <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para proporcionar las credenciales para la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows que el agente de distribución se ejecuta en el suscriptor. Esta cuenta se utiliza para realizar conexiones locales al suscriptor y conexiones remotas con la autenticación de Windows.  
+    -   Los campos <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para proporcionar las credenciales para la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con la que se ejecuta el Agente de distribución en el suscriptor. Esta cuenta se utiliza para realizar conexiones locales al suscriptor y conexiones remotas con la autenticación de Windows.  
   
         > [!NOTE]  
         >  No es necesario configurar <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> cuando un miembro del rol fijo de servidor `sysadmin` crea la suscripción; sin embargo, es recomendable. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para más información, consulte [Modelo de seguridad del agente de replicación](security/replication-agent-security-model.md).  
@@ -192,7 +191,7 @@ ms.locfileid: "48206145"
     -   (Opcional) El valor `true` para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para crear un trabajo de agente que se utilice para sincronizar la suscripción. Si especifica `false` (el valor predeterminado), solamente se puede sincronizar la suscripción mediante programación y deberá especificar las propiedades adicionales del <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> cuando obtenga acceso a este objeto desde la propiedad <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A>. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
         > [!NOTE]  
-        >  Agente SQL Server no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Cuando se especifica un valor de `true` para suscriptores de Express, no se crea el trabajo del agente. Sin embargo, los metadatos importantes relacionados con la suscripción se almacenan en el suscriptor.  
+        >  Agente SQL Server no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Cuando se especifica el valor `true` para suscriptores de Express, no se crea el trabajo de agente. Sin embargo, los metadatos importantes relacionados con la suscripción se almacenan en el suscriptor.  
   
     -   (Opcional) Configure los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> si utiliza la autenticación de SQL Server para conectarse al distribuidor.  
   
@@ -206,9 +205,9 @@ ms.locfileid: "48206145"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> con la conexión de publicador del paso 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>y <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si este método devuelve `false`, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve `false`, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
   
-4.  Realizar una operación lógica AND bit a bit (`&` en Visual C# y `And` en Visual Basic) entre el <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propiedad y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Si el resultado es <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, establezca <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> en el resultado de una operación lógica OR bit a bit (`|` en Visual C# y `Or` en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. A continuación, llame a <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar las suscripciones de extracción.  
+4.  Ejecuta una operación lógica AND bit a bit (`&` en Visual C# y `And` en Visual Basic) entre la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Si el resultado es <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, establezca <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> en el resultado de una operación lógica OR bit a bit (`|` en Visual C# y `Or` en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. A continuación, llame a <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar las suscripciones de extracción.  
   
 5.  Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obtener más información, consulte [Crear, modificar y eliminar bases de datos](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   

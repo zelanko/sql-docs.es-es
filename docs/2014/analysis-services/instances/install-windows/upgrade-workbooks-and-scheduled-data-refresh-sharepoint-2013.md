@@ -11,18 +11,18 @@ ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f321f4851a5257ebaacccbc05ecec46ba1baae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190265"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373954"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Actualizar libros y actualización de datos programada (SharePoint 2013)
-  En este tema se explica la experiencia de usuario de libros creados en entornos anteriores de PowerPivot y cómo actualizar los libros PowerPivot para poder aprovechar las nuevas características presentadas en esta versión. Para obtener más información acerca de las nuevas características, vea [Novedades de PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+  En este tema se explica la experiencia de usuario de libros creados en entornos anteriores de PowerPivot y cómo actualizar los libros PowerPivot para poder aprovechar las nuevas características presentadas en esta versión. Para más información sobre las nuevas características, consulte [Novedades de PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
->  No se puede revertir la actualización de los libros que se actualizan automáticamente en el servidor. Una vez actualizado un libro, permanece actualizado. Para usar una versión anterior, puede volver a publicar el libro anterior en SharePoint, restaurar una versión anterior o reciclar el libro. Para obtener más información acerca de cómo restaurar o reciclar un documento en SharePoint, vea [Planear la protección de contenido mediante papeleras de reciclaje y control de versiones](http://go.microsoft.com/fwlink/?LinkId=238669).  
+>  No se puede revertir la actualización de los libros que se actualizan automáticamente en el servidor. Una vez actualizado un libro, permanece actualizado. Para usar una versión anterior, puede volver a publicar el libro anterior en SharePoint, restaurar una versión anterior o reciclar el libro. Para obtener más información acerca de cómo restaurar o reciclar un documento en SharePoint, vea [Planear la protección de contenido mediante papeleras de reciclaje y control de versiones](https://go.microsoft.com/fwlink/?LinkId=238669).  
   
  Este tema contiene las siguientes secciones:  
   
@@ -53,24 +53,24 @@ ms.locfileid: "48190265"
 |Creado en|\<|Compatibilidad y comportamiento|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot para SharePoint 2010**|**2012 PowerPivot para SharePoint 2010**|**2012 SP1 PowerPivot para SharePoint 2013**|  
-|**2008 R2 PowerPivot para Excel 2010**|Todas las características|**Experiencia** : los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización** : los libros se actualizarán automáticamente en la biblioteca de documentos si la actualización automática está habilitada para el servicio del sistema PowerPivot en la granja de servidores de SharePoint.<br /><br /> **Programar la actualización de datos** : NO se admite. Es necesario actualizar el libro.|**Experiencia** : los usuarios pueden interactuar con el libro y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización** : la actualización automática no está disponible. Los usuarios deben actualizar manualmente sus libros de 2008 R2 a la versión 2012 o a la versión de Office 2013.<br /><br /> **Programar la actualización de datos** : NO se admite. Es necesario actualizar el libro.|  
-|**2012 PowerPivot para Excel**|No compatible|Todas las características|**Experiencia** : los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones. La programación de la actualización de datos está disponible.<br /><br /> **Actualización** : la actualización automática no se admite. Los usuarios pueden actualizar manualmente sus libros a la versión de Office 2013.<br /><br /> **Programar la actualización de datos** : se admite.|  
+|**2008 R2 PowerPivot para Excel 2010**|Todas las características|**Experiencia:** los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización:** los libros se actualizarán automáticamente en la biblioteca de documentos si la actualización automática está habilitada para el servicio del sistema PowerPivot en la granja de servidores de SharePoint.<br /><br /> **Programar la actualización de datos:** NO compatible. Es necesario actualizar el libro.|**Experiencia:** los usuarios pueden interactuar con el libro y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización:** la actualización automática no está disponible. Los usuarios deben actualizar manualmente sus libros de 2008 R2 a la versión 2012 o a la versión de Office 2013.<br /><br /> **Programar la actualización de datos:** NO compatible. Es necesario actualizar el libro.|  
+|**2012 PowerPivot para Excel**|No compatible|Todas las características|**Experiencia:** los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones. La programación de la actualización de datos está disponible.<br /><br /> **Actualización:** la actualización automática no se admite. Los usuarios pueden actualizar manualmente sus libros a la versión de Office 2013.<br /><br /> **Programar la actualización de datos** : se admite.|  
 |**Excel 2013**|No compatible|No compatible|Todas las características|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Actualizar libros de SQL Server 2008 R2 a libros de SQL Server 2012 Service Pack 1 (SP1)  
  En esta sección se describe cómo actualizar libros de SQL Server 2008 R2 PowerPivot para Excel 2010 a libros de SQL Server 2012 SP1 PowerPivot para Excel 2013.  
   
- **Cambio de comportamiento** : los libros de SQL Server 2008 R2 PowerPivot no se actualizarán automáticamente cuando se usen en SQL Server 2012 SP1 PowerPivot para SharePoint 2013. Por tanto, las actualizaciones de datos programadas no funcionarán para los libros de SQL Server 2008 R2 PowerPivot.  
+ **Cambio de comportamiento:** los libros de SQL Server 2008 R2 PowerPivot no se actualizarán automáticamente cuando se usen en SQL Server 2012 SP1 PowerPivot para SharePoint 2013. Por tanto, las actualizaciones de datos programadas no funcionarán para los libros de SQL Server 2008 R2 PowerPivot.  
   
  Los libros de SQL Server 2008 R2 se abrirán en PowerPivot para SharePoint 2013, pero las actualizaciones de datos programadas no funcionarán. Si examina el historial de actualización verá un mensaje de error similar al siguiente:  
   
- “El libro contiene un modelo de PowerPivot no admitido. El modelo de PowerPivot del libro tiene el formato de SQL Server 2008 R2 PowerPivot para Excel 2010. Los modelos de PowerPivot admitidos son los siguientes:  
+ "El libro contiene un modelo de PowerPivot no admitido. El modelo de PowerPivot del libro tiene el formato de SQL Server 2008 R2 PowerPivot para Excel 2010. Los modelos de PowerPivot admitidos son los siguientes:  
   
 -   SQL Server 2012 PowerPivot para Excel 2010.  
   
 -   SQL Server 2012 PowerPivot para Excel 2013.  
   
- **Cómo actualizar un libro** : la actualización de datos programada no funcionará hasta que actualice el libro a un libro de 2012. Para actualizar el libro y el modelo que contiene, complete una de las acciones siguientes:  
+ **Cómo actualizar un libro:** la actualización de datos programada no funcionará hasta que actualice el libro a un libro de 2012. Para actualizar el libro y el modelo que contiene, complete una de las acciones siguientes:  
   
 -   Descargue y abra el libro en Microsoft Excel 2010 con el complemento SQL Server 2012 PowerPivot para Excel instalado.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48190265"
   
  La actualización de un libro resuelve el siguiente error que aparece al intentar la actualización de datos programada en el libro de una versión anterior:  
   
- "La operación de actualización de libros creada con una versión anterior de PowerPivot no está disponible."  
+ "La operación de actualización de los libros creados con una versión anterior de PowerPivot no está disponible."  
   
  **Cómo actualizar un libro**  
   
@@ -110,15 +110,15 @@ ms.locfileid: "48190265"
   
  La actualización de un libro resuelve el siguiente error que aparece al intentar la actualización de datos programada en el libro de una versión anterior:  
   
- "La operación de actualización de libros creada con una versión anterior de PowerPivot no está disponible."  
+ "La operación de actualización de los libros creados con una versión anterior de PowerPivot no está disponible."  
   
  **Cómo actualizar un libro**  
   
  Hay dos formas de realizar la actualización:  
   
-1.  Actualice cada libro manualmente abriéndolo en Excel en un equipo que tenga el [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] versión de PowerPivot para Excel y, a continuación, publicarlo en el servidor. Al abrir el libro en la versión más reciente del complemento, se producen las operaciones internas siguientes: el proveedor de datos en la cadena de conexión de datos del libro se actualiza a MSOLAP.5, se actualizan los metadatos y las relaciones se vuelven a crear para adecuarlas a una implementación más reciente.  
+1.  Actualice cada libro manualmente; para ello, ábralo en Excel en un equipo que tenga la versión [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] de PowerPivot para Excel y, a continuación, vuelva a publicarlo en el servidor. Al abrir el libro en la versión más reciente del complemento, se producen las operaciones internas siguientes: el proveedor de datos en la cadena de conexión de datos del libro se actualiza a MSOLAP.5, se actualizan los metadatos y las relaciones se vuelven a crear para adecuarlas a una implementación más reciente.  
   
-2.  Como alternativa, un administrador de SharePoint puede permitir que la característica de actualización automática para el servicio de sistema de PowerPivot en una granja de SharePoint actualizar automáticamente un [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] libro de PowerPivot cuando la actualización de datos programada ejecuta (sólo los libros que están ha configurado para la actualización de datos programada se actualizan).  
+2.  Como alternativa, un administrador de SharePoint puede permitir que la característica de actualización automática para el servicio del sistema PowerPivot de una granja de servidores de SharePoint actualice automáticamente un libro de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] PowerPivot cuando se ejecute la actualización de datos programada (solo se actualizan los libros que están configurados para la actualización de datos programada).  
   
     > [!NOTE]  
     >  La actualización automática es una característica de configuración del servidor; no puede habilitarla o deshabilitarla para libros, bibliotecas o colecciones de sitios concretos.  
@@ -133,12 +133,12 @@ ms.locfileid: "48190265"
 PS C:\Windows\system32> Get-PowerPivotSystemService  
 ```  
   
- La salida de Get-PowerPivotSystemService es una lista de propiedades y valores correspondientes. Debería ver `WorkbookUpgradeOnDataRefresh` en la lista de propiedades. Se establecerá en **true** si la actualización automática está habilitada. Si es **false**, continúe en el paso siguiente, habilitar la actualización automática del libro.  
+ La salida de Get-PowerPivotSystemService es una lista de propiedades y valores correspondientes. Debería aparecer `WorkbookUpgradeOnDataRefresh` en la lista de propiedades. Se establecerá en **true** si la actualización automática está habilitada. Si es **false**, continúe en el paso siguiente, habilitar la actualización automática del libro.  
   
  Para habilitar la actualización automática del libro, ejecute el comando siguiente:  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  Después de actualizar el libro, puede usar la actualización de datos programada y las nuevas características del complemento PowerPivot para Excel.  
@@ -148,7 +148,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
  Según cómo haya instalado el servidor, **es posible que necesite** instalar una versión anterior del proveedor OLE DB de Analysis Services para poder obtener acceso a libros anteriores y recientes en el mismo servidor.  
   
- Tenga en cuenta que no se admite la publicación de libros de una versión más reciente en instancias anteriores de SQL Server de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Una instancia de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] no cargará un libro creado en la versión de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] y una instancia de SQL Server 2012 no cargará libros de Office 2013 con modelos de datos avanzados que se hayan creado con la versión de [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] de PowerPivot en Excel.  
+ Tenga en cuenta que no se admite la publicación de libros de una versión más reciente en instancias anteriores de SQL Server de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Una instancia de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] no cargará un libro creado en la versión de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]y una instancia de SQL Server 2012 no cargará libros de Office 2013 con modelos de datos avanzados que se hayan creado con la versión de [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] de PowerPivot en Excel.  
   
 ###  <a name="bkmk_msolapxslx"></a> Cómo comprobar la información del proveedor de datos MSOLAP en un libro PowerPivot  
  Siga estas indicaciones para comprobar qué proveedor OLE DB se utiliza en un libro PowerPivot. La comprobación de la información de conexión de datos no requiere que se instale el complemento de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] .  

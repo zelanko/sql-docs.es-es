@@ -1,5 +1,5 @@
 ---
-title: Habilitar el modo DirectQuery en SSMS | Microsoft Docs
+title: Habilitar el modo DirectQuery de Analysis Services en SSMS | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700593"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072212"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Habilitar el modo DirectQuery en SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51700593"
   
 -   Como último paso, confirme que el modo DirectQuery se encuentra operativo mediante la ejecución de una consulta.  
   
-## <a name="step-1-check-the-compatibility-level"></a>Paso1: comprobación del nivel de compatibilidad  
+## <a name="step-1-check-the-compatibility-level"></a>Paso 1: Compruebe el nivel de compatibilidad  
  Las propiedades que definen el acceso a datos son varían según el nivel de compatibilidad. Como paso preliminar, compruebe qué nivel de compatibilidad presenta la base de datos.  
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], conéctese a la instancia que contenga el modelo tabular.  
@@ -93,7 +93,7 @@ ms.locfileid: "51700593"
   
 -   Una vez implementado el modelo, puede cambiar el método de conexión preferido. Por ejemplo, puede utilizar un modo híbrido para las pruebas, y cambiar el modelo a **Solo DirectQuery** únicamente después de probar exhaustivamente los informes o las consultas utilizadas por este. Para más información, vea [Establecer o cambiar el método de conexión preferido para DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
-## <a name="step-3-check-the-connection-properties-on-the-database"></a>Paso 3: comprobación de las propiedades de conexión en la base de datos  
+## <a name="step-3-check-the-connection-properties-on-the-database"></a>Paso 3: Compruebe las propiedades de conexión en la base de datos  
  Según la configuración de la conexión de origen de datos, si cambia a DirectQuery, es posible que se modifique el contexto de seguridad de la conexión. Al cambiar el modo de acceso de datos, consulte las propiedades de la cadena de conexión y la suplantación a fin de comprobar que el inicio de sesión sea válido para las conexiones salientes a la base de datos back-end.  
   
  Consulte la sección **Configurar Analysis Services para la delegación de confianza** de [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) para obtener información general sobre la delegación de una identidad de usuario para escenarios de DirectQuery.  
@@ -114,7 +114,7 @@ ms.locfileid: "51700593"
   
  No se puede utilizar la suplantación si el modelo solo se usa en la memoria. El valor **ImpersonateCurrentUser**no es válido a menos que el modelo utilice el modo DirectQuery.  
   
-## <a name="step-4-validate-directquery-access"></a>Paso 4: validación del acceso DirectQuery  
+## <a name="step-4-validate-directquery-access"></a>Paso 4: Validar el acceso DirectQuery  
   
 1.  Inicie un seguimiento mediante SQL Server Profiler o XEvents en Management Studio, conectado a la base de datos relacional de SQL Server.  
   

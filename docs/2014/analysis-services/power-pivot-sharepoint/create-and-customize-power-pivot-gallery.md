@@ -11,12 +11,12 @@ ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c52425d05f7e9acf8ea5468dff21f17aaf30ebe4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f753856fbec3fe521cf23e6506c3b43e5dec481
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163685"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358907"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Crear y personalizar la Galería de PowerPivot
   La Galería de PowerPivot es un tipo especial de biblioteca de documentos de SharePoint que permite obtener una vista previa y administrar los documentos de los libros de Excel publicados y los informes de Reporting Services que contienen datos PowerPivot.  
@@ -43,7 +43,7 @@ ms.locfileid: "48163685"
     >  La Galería de Power Pivot requiere Microsoft Silverlight.  El navegador Microsoft Edge no es compatible con Silverlight.   
     > Para ver el contenido de la biblioteca en Edge, haga clic en la pestaña **Biblioteca** de la Galería de Power Pivot y, luego, cambie la vista de la biblioteca de documentos a **Todos los documentos**.    
     > Para cambiar la vista predeterminada, haga clic en la pestaña **Biblioteca** y, después, en Modificar vista. Haga clic en "Establecer esta vista como predeterminada" y, después, en Aceptar para guardar la vista predeterminada.  
-    >  Para obtener más información sobre la compatibilidad de Edge, consulte [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)en el blog de Windows.  
+    >  Para obtener más información sobre la compatibilidad de Edge, consulte el blog de Windows, [un salto desde el pasado, 2ª parte: Adiós a ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Debe ser propietario de un sitio para crear una biblioteca.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48163685"
 -   Para crear o ver un informe de Reporting Services que se base en un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , el libro y el informe deben estar en la misma Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El informe debe usar un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con datos incrustados o el libro debe contener como máximo un origen de datos externo que sea un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="overview"></a> Información general  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una plantilla de biblioteca que está disponible al instalar [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] en un servidor de SharePoint. La Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] combina una vista previa precisa del contenido del archivo con información sobre el origen del documento. Puede ver inmediatamente quién creó el documento y cuándo se modificó por última vez. Para crear imágenes de vista previa, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galería utiliza un servicio de instantánea que puede leer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libros e informes de Reporting Services que contienen datos PowerPivot. Si publica un archivo que el servicio de instantánea no puede leer, no habrá ninguna imagen de vista previa disponible para el mismo.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una plantilla de biblioteca que está disponible al instalar [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] en un servidor de SharePoint. La Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] combina una vista previa precisa del contenido del archivo con información sobre el origen del documento. Puede ver inmediatamente quién creó el documento y cuándo se modificó por última vez. Para crear las imágenes de la vista previa, la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] utiliza un servicio de instantánea que puede leer los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e informes de Reporting Services que contienen los datos PowerPivot. Si publica un archivo que el servicio de instantánea no puede leer, no habrá ninguna imagen de vista previa disponible para el mismo.  
   
  Las imágenes de vista previa se basan en el modo en que el libro se representa en Excel Services. La representación de la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] debería ser idéntica a lo que se ve en un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con un explorador. Sin embargo, la vista previa tiene un área expuesta limitada. Las partes de un libro o un informe podrían reducirse para ajustarse al espacio disponible. Es posible que tenga que abrir un libro o informe para ver todo el documento.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "48163685"
 ##  <a name="createlib"></a> Creación de la Galería de PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se crea automáticamente al instalar [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] mediante la opción de instalación Nuevo servidor. Si agregó [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a una granja existente o si desea una biblioteca adicional, puede crear una nueva para la aplicación o el sitio.  
   
-1.  1.  **SharePoint 2010**: haga clic en **Acciones del sitio** en la esquina superior izquierda de la página principal del sitio.  
+1.  1.  **SharePoint 2010**: Haga clic en **acciones del sitio** en la esquina superior izquierda de la página del sitio principal.  
   
     2.  Haga clic en **Más opciones**.  
   
     3.  En Bibliotecas, haga clic en **Galería de PowerPivot**.  
   
-    1.  **SharePoint 2013**: haga clic en el icono de configuración ![configuración de SharePoint](../media/as-sharepoint2013-settings-gear.gif "configuración de SharePoint"). Haga clic en **Contenido del sitio**  
+    1.  **SharePoint 2013**: Haga clic en el icono de configuración ![configuración de SharePoint](../media/as-sharepoint2013-settings-gear.gif "configuración de SharePoint"). Haga clic en **Contenido del sitio**  
   
     2.  Haga clic en **Agregar una aplicación**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48163685"
   
 3.  Haga clic en **Crear**.  
   
-4.  Pida al administrador del servicio o la granja que agregue la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como una ubicación de confianza para Excel Services. Este paso es necesario para evitar errores si un usuario configura un libro para la actualización de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener más información acerca de esta tarea, vea [crear una ubicación de confianza para sitios PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+4.  Pida al administrador del servicio o la granja que agregue la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como una ubicación de confianza para Excel Services. Este paso es necesario para evitar errores si un usuario configura un libro para la actualización de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener más información acerca de esta tarea, vea [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
  Un vínculo a la biblioteca de la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aparecerá en el panel Inicio rápido de navegación para el sitio actual.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "48163685"
   
 2.  En la cinta de opciones, haga clic en **Biblioteca**.  
   
-3.  **SharePoint 2010** : en Vistas personalizadas, haga clic en **Modificar esta vista**.  
+3.  **SharePoint 2010:** En vistas personalizadas, haga clic en **modificar esta vista**.  
   
-     **SharePoint 2013** : en **Administrar vistas**, haga clic en **Modificar vista**.  
+     **SharePoint 2013:** En **administrar vistas**, haga clic en **Modificar vista**.  
   
 4.  En Ordenar, especifique los criterios que se utilizarán para determinar cómo aparecen los libros en la lista. De forma predeterminada, los documentos se enumeran en el orden en el que se agregaron.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48163685"
   
  ![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
- Los propietarios o los autores de los libros deben tener el permiso para **contribuir** si desean programar la actualización de los datos en un libro. Los usuarios que tienen permisos Contribuir pueden abrir y editar la página de configuración de la actualización de datos del libro para especificar las credenciales y la información de programación que se usa para actualizar los datos.  
+ Los propietarios o los autores de los libros deben tener el permiso para **contribuir** si desean programar la actualización de los datos en un libro. Los usuarios con permisos para contribuir pueden abrir y editar la página de configuración de actualización de datos del libro para especificar las credenciales y la información utilizada para actualizar los datos de programación.  
   
- Los usuarios que solo tengan los niveles de permisos **Ver** o **Leer** no podrán tener acceso al botón para actualizar. El botón para actualizar es visible pero está deshabilitado. Para obtener más información, vea [Permisos de usuario y niveles de permisos en SharePoint 2013](http://technet.microsoft.com/library/cc721640.aspx).  
+ Los usuarios que solo tengan los niveles de permisos **Ver** o **Leer** no podrán tener acceso al botón para actualizar. El botón para actualizar es visible pero está deshabilitado. Para obtener más información, vea [Permisos de usuario y niveles de permisos en SharePoint 2013](https://technet.microsoft.com/library/cc721640.aspx).  
   
 ##  <a name="switch"></a> Cambiar a la Vista de teatro o a la Vista de galería  
  La vista previa varía según cómo se configura la vista para la biblioteca. En la vista de galería, puede mantener el puntero del mouse sobre cada hoja de cálculo de un libro para poner una hoja en el foco del área de vista previa.  
@@ -137,7 +137,7 @@ ms.locfileid: "48163685"
 |----------|-----------------|  
 |Vista de la galería (valor predeterminado)|La Vista de la galería es la predeterminada para una Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . La vista previa aparece a la izquierda. Las miniaturas más pequeñas de cada hoja de cálculo aparecen al lado de ella siguiendo un orden secuencial de izquierda a derecha.|  
 |Todos los documentos|Este es el diseño estándar para las bibliotecas de documentos. Puede elegir esta vista para administrar documentos individuales o ver el contenido de la biblioteca en un formato de lista.<br /><br /> Utilice esta vista para modificar las propiedades, y eliminar o mover documentos individuales.<br /><br /> Si habilitó el control de versiones, debe utilizar esta vista para proteger o desproteger los documentos en la biblioteca.|  
-|Vista de teatro y vista de carrusel|Se trata de vistas especializadas que funcionan mejor si se muestra un número pequeño de documentos relacionados. El giro completo de miniaturas incluye todas las páginas de todos los documentos de la biblioteca. Si tiene un número grande de documentos, estas vistas podrían no ser prácticas para los usuarios que deseen encontrar o abrir un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] concreto.<br /><br /> Vista de teatro: el área de vista previa está centrada. Las miniaturas menores de cada hoja de cálculo aparecen más abajo en la página, en uno de los lados.<br /><br /> Vista de carrusel: el área de vista previa está centrada. Las miniaturas que preceden y siguen inmediatamente a la miniatura actual son adyacentes al área de vista previa.|  
+|Vista de teatro y vista de carrusel|Se trata de vistas especializadas que funcionan mejor si se muestra un número pequeño de documentos relacionados. El giro completo de miniaturas incluye todas las páginas de todos los documentos de la biblioteca. Si tiene un número grande de documentos, estas vistas podrían no ser prácticas para los usuarios que deseen encontrar o abrir un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] concreto.<br /><br /> Vista de teatro: El área de vista previa está centrada. Las miniaturas menores de cada hoja de cálculo aparecen más abajo en la página, en uno de los lados.<br /><br /> Vista de carrusel: El área de vista previa está centrada. Las miniaturas que preceden y siguen inmediatamente a la miniatura actual son adyacentes al área de vista previa.|  
   
 ### <a name="switch-to-a-different-view"></a>Cambiar a una vista diferente  
   

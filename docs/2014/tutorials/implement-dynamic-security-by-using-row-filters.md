@@ -11,19 +11,19 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fa34786d8d939581c5b8fecfb54103229a2a2c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196585"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404200"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar seguridad dinámica utilizando filtros de filas
   En esta lección complementaria, creará un rol adicional que implemente seguridad dinámica. La seguridad dinámica proporciona seguridad de nivel de fila basada en el nombre de usuario o el identificador de inicio de sesión del usuario que ha iniciado sesión actualmente. Para obtener más información, consulte [Roles &#40;SSAS tabular&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
  Para implementar la seguridad dinámica, debe agregar una tabla al modelo que contiene los nombres de usuario de Windows de los usuarios que pueden crear una conexión al modelo como un origen de datos y examinar los objetos y datos del modelo. El modelo que se crea con este tutorial está en el contexto de Adventure Works Corp.; sin embargo, para completar esta lección, debe agregar una tabla que contenga usuarios de su propio dominio. No necesitará contraseñas para los nombres de usuario que se van a agregar. Para crear una tabla de seguridad de empleados, con una pequeña muestra de usuarios de su propio dominio, utilizará la función de pegar para pegar datos de empleados de una hoja de cálculo de Excel. En un escenario real, la tabla que contiene los nombres de usuario que agrega a un modelo utilizaría normalmente una tabla de una base de datos real como origen de datos; por ejemplo, una tabla dimEmployee real.  
   
- Para implementar seguridad dinámica, utilizará dos nuevas funciones de DAX: [función USERNAME &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) y [función LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Estas funciones, aplicadas en una fórmula de filtro de columna, se definen en un nuevo rol. Con la función LOOKUPVALUE, la fórmula especifica un valor de la tabla Employee Security y pasa ese valor a la función USERNAME, que especifica el nombre del usuario que ha iniciado sesión como perteneciente a este rol. El usuario puede examinar los datos especificados por los filtros de fila del rol. En este escenario, especificará que los empleados de ventas solo podrán examinar los datos de ventas por Internet de los territorios de ventas de los que son miembros.  
+ Para implementar seguridad dinámica, utilizará dos nuevas funciones de DAX: [Función USERNAME &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) y [función LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Estas funciones, aplicadas en una fórmula de filtro de columna, se definen en un nuevo rol. Con la función LOOKUPVALUE, la fórmula especifica un valor de la tabla Employee Security y pasa ese valor a la función USERNAME, que especifica el nombre del usuario que ha iniciado sesión como perteneciente a este rol. El usuario, a continuación, puede examinar solo los datos especificados por los filtros de fila del rol. En este escenario, especificará que los empleados de ventas solo podrán examinar los datos de ventas por Internet de los territorios de ventas de los que son miembros.  
   
  Para completar esta lección complementaria, realizará una serie de tareas. Las tareas que son únicas de este escenario de modelo tabular de Adventure Works, pero que no se aplicarían necesariamente en un escenario real, se identifican como tales. Cada tarea incluye información adicional que describe el propósito de la tarea.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48196585"
   
 1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** y, a continuación, en **Conexiones existentes**.  
   
-2.  En el cuadro de diálogo **Conexiones existentes**, compruebe que esté seleccionada la conexión al origen de datos **BD de Adventure Works de SQL** y haga clic en **Abrir**.  
+2.  En el cuadro de diálogo **Conexiones existentes** , compruebe que esté seleccionada la conexión al origen de datos **BD de Adventure Works de SQL** y haga clic en **Abrir**.  
   
-     Si aparece el cuadro de diálogo Credenciales de suplantación, escriba las credenciales de suplantación que utilizó en la lección 2: Agregar datos.  
+     Si aparece el cuadro de diálogo de credenciales de suplantación, escriba las credenciales de suplantación que usó en la lección 2: Agregar datos.  
   
 3.  En la página **Elegir cómo importar los datos** , deje seleccionada la opción **Seleccionar en una lista de tablas y vistas para elegir los datos a importar** y haga clic en **Siguiente**.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48196585"
  En esta tarea, creará un rol de usuario. Este rol incluirá un filtro de fila que define qué filas de la tabla Sales Territory estarán visibles para los usuarios. El filtro se aplicará en una dirección de relación de uno-a muchos para el resto de las tablas relacionadas con Sales Territory. También aplicará un filtro sencillo que proteja la tabla Seguridad de los empleados de las consultas por parte de cualquier usuario que sea miembro del rol.  
   
 > [!NOTE]  
->  El rol de empleados de ventas por territorio que creará en esta lección solo permitirá a los miembros examinar (o consultar) los datos de ventas del territorio de ventas al que pertenezcan. Si agrega un usuario como miembro al rol de empleados de ventas por territorio que también existe como miembro del rol creado en [Lección 12: Crear roles](../analysis-services/lesson-11-create-roles.md), obtendrá una combinación de permisos. Cuando un usuario es miembro de varios roles, los permisos y los filtros de fila definidos para cada uno de ellos son acumulativos. Es decir, el usuario tendrá los mayores permisos determinados por la combinación de roles.  
+>  El rol de empleados de ventas por territorio que creará en esta lección solo permitirá a los miembros examinar (o consultar) los datos de ventas del territorio de ventas al que pertenezcan. Si agrega un usuario como miembro a los empleados de ventas por rol territorio que también existe como un miembro del rol creado en [lección 12: Crear Roles](../analysis-services/lesson-11-create-roles.md), obtendrá una combinación de permisos. Cuando un usuario es miembro de varios roles, los permisos y los filtros de fila definidos para cada uno de ellos son acumulativos. Es decir, el usuario tendrá los mayores permisos determinados por la combinación de roles.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Para crear empleados de ventas por el rol de usuario de Territorio  
   

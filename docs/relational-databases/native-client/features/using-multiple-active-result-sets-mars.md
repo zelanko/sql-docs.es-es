@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e05d6734333e6863d2f487cf77943763fdd8229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b072c3c07ea2f70e365ca04be83d407203d48b01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816135"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521374"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilizar conjuntos de resultados activos múltiples (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -226,8 +226,8 @@ SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt2);
   
 // The 2nd execute would have failed with connection busy error if  
 // MARS were not enabled.  
-SQLExecDirect(hstmt1, L”SELECT * FROM Authors”, SQL_NTS);  
-SQLExecDirect(hstmt2, L”SELECT * FROM Titles”, SQL_NTS);  
+SQLExecDirect(hstmt1, L"SELECT * FROM Authors", SQL_NTS);  
+SQLExecDirect(hstmt2, L"SELECT * FROM Titles", SQL_NTS);  
   
 // Result set processing can interleave.  
 SQLFetch(hstmt1);  

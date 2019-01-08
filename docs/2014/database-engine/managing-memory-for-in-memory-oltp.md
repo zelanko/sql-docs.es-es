@@ -10,12 +10,12 @@ ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f7b32b9e3d87c783efe2a064714454c50a886c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214256"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407223"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Administrar memoria para OLTP en memoria
   Las tablas con optimización para memoria requieren que exista memoria suficiente para mantener todas las filas e índices en memoria. Dado que la memoria es un recurso finito, es importante que conozca y administre el uso que hace de la memoria en su sistema. Los temas de esta sección se ocupan de situaciones de uso y administración de la memoria.  

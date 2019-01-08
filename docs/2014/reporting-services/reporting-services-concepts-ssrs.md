@@ -11,12 +11,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094455"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357162"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceptos de Reporting Services (SSRS)
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -39,7 +39,7 @@ ms.locfileid: "48094455"
  Un servidor de informes es un equipo que tiene instalada una instancia de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Un servidor de informes almacena internamente elementos como informes, elementos y recursos relacionados con informes, programaciones y suscripciones. Un servidor de informes se puede configurar como un único servidor independiente o como una granja escalada, o se puede integrar con SharePoint Server. Se interactúa con los elementos del servidor de informes mediante el servicio web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , un proveedor WMI, acceso mediante dirección URL o mediante programación a través de scripts. La forma en que interactúa con un servidor de informes depende de la topología de implementación y la configuración.  
   
  **Un servidor de informes de modo nativo**  
- Un servidor de informes configurado en modo nativo es un equipo que tiene [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalado y configurado como un servidor independiente. Para interactuar con el servidor de informes, los informes y los elementos relacionados con informes se usa un explorador con el Administrador de informes o comandos de acceso mediante URL, SQL Server Management Studio o mediante programación a través de scripts. Para obtener más información, vea [Servidor de informes de Reporting Services &#40;modo nativo&#41;](report-server/reporting-services-report-server-native-mode.md).  
+ Un servidor de informes configurado en modo nativo es un equipo que tiene [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalado y configurado como un servidor independiente. Para interactuar con el servidor de informes, los informes y los elementos relacionados con informes se usa un explorador con el Administrador de informes o comandos de acceso mediante URL, SQL Server Management Studio o mediante programación a través de scripts. Para más información, vea [Servidor de informes de Reporting Services &#40;modo nativo&#41;](report-server/reporting-services-report-server-native-mode.md).  
   
  **Un servidor de informes de modo de SharePoint**  
  Un servidor de informes integrado con SharePoint tiene dos configuraciones posibles. En [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se instala con SharePoint Server como un servicio compartido de SharePoint. En versiones anteriores, el servidor de informes se integra con SharePoint Server instalando el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint. En ambos casos, para interactuar con el servidor de informes, los informes y los elementos relacionados con informes se usan páginas de aplicación del sitio de SharePoint. Se usa la biblioteca de documentos de SharePoint y otras bibliotecas que cree para almacenar los tipos de contenido relacionados con los informes. Para obtener más información, vea [Servidor de informes de Reporting Services &#40;modo de SharePoint&#41;](../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "48094455"
  En un sitio de SharePoint, use la página de administradores de sitios de SharePoint para administrar los permisos de acceso a informes y a contenido de sitios relacionados con informes.  
   
  **Programaciones**  
- En un servidor de informes nativo, es posible programar informes, conjuntos de datos compartidos y suscripciones para recuperar datos y entregar informes y consultas de conjuntos de datos a horas determinadas o cuando haya menos carga de trabajo. Las programaciones pueden ejecutarse una sola vez o bien continuamente a intervalos de horas, días, semanas o meses. Para obtener más información, consulte [programaciones](subscriptions/schedules.md).  
+ En un servidor de informes nativo, es posible programar informes, conjuntos de datos compartidos y suscripciones para recuperar datos y entregar informes y consultas de conjuntos de datos a horas determinadas o cuando haya menos carga de trabajo. Las programaciones pueden ejecutarse una sola vez o bien continuamente a intervalos de horas, días, semanas o meses. Para obtener más información, vea [Schedules](subscriptions/schedules.md).  
   
  **Suscripciones y entrega**  
  Una suscripción es una solicitud pendiente para entregar un informe en un momento concreto o en respuesta a un evento, y en un formato de archivo de aplicación especificado en la suscripción. Las suscripciones proporcionan una alternativa a la ejecución de un informe a petición. Los informes a petición requieren que el usuario seleccione el informe de forma activa cada vez que desee verlo. Las suscripciones, en cambio, permiten programar y automatizar la entrega de un informe. Puede entregar informes a una bandeja de entrada de correo electrónico o a un recurso compartido de archivos. Para obtener más información, vea [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48094455"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona una arquitectura extensible que puede usar para personalizar soluciones de informe. El servidor de informes admite extensiones de autenticación personalizadas, extensiones de procesamiento de datos, extensiones de procesamiento de informes, extensiones de representación y extensiones de entrega, y las extensiones disponibles para los usuarios se pueden configurar en el archivo de configuración RSReportServer.config. Por ejemplo, puede limitar los formatos de exportación que el visor de informes puede usar. Las extensiones de procesamiento de informes y de entrega son opcionales, pero necesarias si desea admitir controles personalizados o de distribución de informes. Para obtener más información, vea [Extensiones &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Acceso a los informes**  
- El acceso a petición permite a los usuarios seleccionar los informes desde una herramienta de visualización de informes. Según la configuración del servidor de informes, puede usar el Administrador de informes, un [!INCLUDE[msCoName](../includes/msconame-md.md)] elemento Web de SharePoint 2.0, una biblioteca de SharePoint cuando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado en modo integrado de SharePoint, un control ReportViewer incrustado o un explorador utilizando la dirección URL acceso. Para más información sobre el acceso a petición a los informes, vea [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ El acceso a petición permite a los usuarios seleccionar los informes desde una herramienta de visualización de informes. Dependiendo de la configuración del servidor de informes, puede usar el Administrador de informes, un elemento web [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0, una biblioteca de SharePoint cuando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se instala en modo integrado de SharePoint, un control ReportViewer incrustado o un explorador que usa acceso mediante una dirección URL. Para más información sobre el acceso a petición a los informes, vea [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  Las suscripciones proporcionan una alternativa a la ejecución de un informe a petición. Para obtener más información, vea [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48094455"
  **Los informes y definiciones de informe**  
  **RDL.** Una definición de informe es un archivo XML conforme a una gramática XML denominada lenguaje RDL (Report Definition Language). En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], una definición de informe se crea en una herramienta como el Generador de informes o el Diseñador de informes. Incluye elementos que definen conexiones a orígenes de datos, consultas usadas para recuperar datos, expresiones, parámetros, imágenes, cuadros de texto, tablas y cualquier otro elemento de tiempo de diseño. Para más información, vea [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- **RDLX.** Una definición de informe en RDLX es un archivo RDL con extensiones internas que habilitan la experiencia de visualización de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea el tema de [información general acerca de la vista avanzada](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
+ **RDLX.** Una definición de informe en RDLX es un archivo RDL con extensiones internas que habilitan la experiencia de visualización de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea el tema de [información general acerca de la vista avanzada](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
   
  **RDLC.** El Diseñador de informes de Visual Studio genera archivos de definición de informe de cliente (.rdlc) en formato XML para su uso con el control ReportViewer.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48094455"
  **Informes vinculados**  
  Un informe vinculado es un elemento del servidor de informes que contiene un puntero a la definición de informe pero tiene su propio conjunto de propiedades y configuraciones de informe. Esto incluye seguridad, parámetros, ubicación, suscripciones y programaciones. Puesto que los parámetros se administran de forma independiente en el servidor, al volver a publicar un informe principal que usa una nueva configuración de parámetros no se sobrescribe la configuración de parámetros existente del informe principal ni del vinculado.  
   
- Para más información, vea [Crear un informe vinculado](reports/create-a-linked-report.md).  
+ Para obtener más información, consulte [Crear un informe vinculado](reports/create-a-linked-report.md).  
   
  **Informes de historial**  
  El historial de informe es un conjunto de instantáneas de informe. Puede usar el historial de informe para conservar un registro de un informe a lo largo del tiempo. El historial del informe no se ha diseñado para informes que contienen datos confidenciales o personales. Por esta razón, el historial de informe puede incluir solo los informes que consultan un origen de datos mediante un único conjunto de credenciales. O bien, puede crear un historial de un informe definiendo una programación y una suscripción para entregar el informe en un formato de archivo exportado a un recurso compartido de archivos. Para obtener más información, vea [Rendimiento, instantáneas, almacenamiento en caché &#40;Reporting Services&#41;](report-server/performance-snapshots-caching-reporting-services.md).  

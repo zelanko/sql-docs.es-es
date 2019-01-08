@@ -13,15 +13,15 @@ ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0eff880132e33cd8d73e7a1faa6dc6649b2caa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac003c18ae36f4cd2d58a1355df16d6d2f9b066
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137645"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359857"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Tarea 6: importar valores del proyecto Limpiar lista de proveedores
-  En esta tarea, importará el conocimiento de calidad de datos obtenido durante el proceso de limpieza. Consulte [importar valores de proyecto de limpieza en un dominio](http://msdn.microsoft.com/library/hh479581.aspx) tema para obtener más detalles. Exportar también la base de conocimiento en un archivo DQS antes de publicar la actualización **proveedores** knowledge base.  
+  En esta tarea, importará el conocimiento de calidad de datos obtenido durante el proceso de limpieza. Consulte [importar valores de proyecto de limpieza en un dominio](https://msdn.microsoft.com/library/hh479581.aspx) tema para obtener más detalles. Exportar también la base de conocimiento en un archivo DQS antes de publicar la actualización **proveedores** knowledge base.  
   
 1.  En la página principal de **cliente DQS**, haga clic en **flecha derecha** junto a **proveedores** en **base de conocimiento reciente** y haga clic en **Administración de dominios**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48137645"
   
 10. Vaya a la carpeta Tutorial, escriba **Suppliers.dqs** para el **nombre de archivo**y haga clic en **guardar**. Puede usar este archivo de DQS para crear una nueva base de conocimiento a partir de él.  
   
-11. Haga clic en **Aceptar** para cerrar el **Exportar Base de conocimiento – proveedores** cuadro de mensaje.  
+11. Haga clic en **Aceptar** para cerrar el **Exportar Base de conocimiento - proveedores** cuadro de mensaje.  
   
 12. Haga clic en **finalizar** para finalizar la actividad.  
   

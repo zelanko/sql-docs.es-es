@@ -14,12 +14,12 @@ ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afd5a20d99692c1a623b13b53218f62c00cb218a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a4ac67e1a593cdfd7e67d789289bd1a5ece1467
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845923"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515311"
 ---
 # <a name="oracle-software-patches"></a>Revisiones de Software de Oracle
 > [!IMPORTANT]  
@@ -36,7 +36,7 @@ ms.locfileid: "47845923"
   
 2.  Navegue hasta el siguiente directorio: /server/wgt_tech/server/windowsNT.  
   
-3.  Para descargar las revisiones más relevantes para Windows 95, Windows 98 y Windows NT o Windows 2000, desplácese hasta el subdirectorio de la versión de Oracle: 7.3 u 8.0. Los dos subdirectorios son /73patchsets y /80patchsets.  
+3.  Para descargar las revisiones más relevantes para Windows 95, Windows 98 y Windows NT o Windows 2000, desplácese hasta el subdirectorio de la versión de Oracle - 7.3 u 8.0. Los dos subdirectorios son /73patchsets y /80patchsets.  
   
 4.  Para descargar las revisiones para la tecnología de red de Oracle, SQL * Net o Net8, navegue hasta el siguiente directorio: de red.  
   

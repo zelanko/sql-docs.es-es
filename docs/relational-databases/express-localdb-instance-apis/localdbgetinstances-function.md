@@ -16,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a562aa5947444fe149c5e24f3a5a1b9cd74fe4d3
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571225"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398178"
 ---
 # <a name="localdbgetinstances-function"></a>Función LocalDBGetInstances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parámetros  
  *pInstanceNames*  
- [Salida] Cuando esta función devuelve valores, contiene los nombres de las instancias predeterminadas y con nombre de LocalDB en la estación de trabajo del usuario.  
+ [Salida] Cuando esta función devuelve, contiene los nombres de ambos denominado y predeterminada de las instancias de LocalDB en la estación de trabajo del usuario.  
   
  *lpdwNumberOfInstances*  
- [Entrada/Salida] En la entrada, contiene el número de zonas para los nombres de instancia en el búfer de *pInstanceNames* . En la salida, contiene el número de instancias de LocalDB que se encontraron en la estación de trabajo del usuario.  
+ [Entrada/Salida] En la entrada, contiene el número de zonas para los nombres de instancia en el búfer de *pInstanceNames* . En la salida, contiene el número de instancias de LocalDB que se encuentra en la estación de trabajo del usuario.  
   
 ## <a name="returns"></a>Devuelve  
  S_OK  

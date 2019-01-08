@@ -15,12 +15,12 @@ ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8f07c94b986c697721188a50e2ec5d478ac0b1b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a4ebac7cac4a62dde5c89aa3e37146c78eb79d19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146861"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535431"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor de la tarea Ejecutar DDL de Analysis Services (página DDL)
   Use la página **DDL** del cuadro de diálogo **Editor de la tarea Ejecutar DDL de Analysis Services** para especificar una conexión a un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y proporcionar información sobre el origen de las instrucciones del lenguaje de definición de datos (DDL).  
@@ -31,7 +31,7 @@ ms.locfileid: "50146861"
  **Conexión**  
  Seleccione un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o un administrador de conexiones de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la lista, o bien haga clic en \<**Nueva conexión…**> y use el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** para crear una conexión.  
   
- **Temas relacionados:** [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Administrador de conexiones de Analysis Services](connection-manager/analysis-services-connection-manager.md)  
+ **Temas relacionados:** [Agregar referencia de interfaz de usuario del cuadro de diálogo Administrador de conexiones de Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Administrador de conexiones de Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
  **Tipo de origen**  
  Especifique el tipo de origen de las instrucciones de DDL. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
@@ -46,7 +46,7 @@ ms.locfileid: "50146861"
   
 ### <a name="sourcetype--direct-input"></a>SourceType = Entrada directa  
  **Source**  
- Escriba las instrucciones de DDL, o bien haga clic en el botón de puntos suspensivos **(…)** y, después, escriba las instrucciones en el cuadro de diálogo **Instrucciones de DDL** .  
+ Escriba las instrucciones de DDL, o bien haga clic en el botón de puntos suspensivos **(…)** y, después, escriba las instrucciones en el cuadro de diálogo **Instrucciones DDL**.  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = Conexión de archivos  
  **Source**  

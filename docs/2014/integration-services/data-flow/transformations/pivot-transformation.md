@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.pivottrans.f1
@@ -19,12 +18,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca3b0ce90e56f3327e1e591a033e8d5fb212c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd6e2b6fad2ea40c3a536b8b89eecbba441ecfd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157595"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771887"
 ---
 # <a name="pivot-transformation"></a>Dinámica, transformación
   La transformación dinámica transforma un conjunto de datos normalizado en una versión menos normalizada pero más compacta dinamizando los datos de entrada en un valor de columna. Por ejemplo, un conjunto de datos **Orders** normalizado que enumera el nombre del cliente, el producto y la cantidad comprada normalmente tiene varias filas para cualquier cliente que compró varios productos, donde cada fila para ese cliente muestra los detalles de pedido de un producto diferente. Al dinamizar el conjunto de datos en la columna de producto, la transformación dinámica puede obtener un conjunto de datos con una sola fila por cliente. Esa única fila enumera todas las compras realizadas por el cliente, con los nombres de los productos representados como nombres de columnas, y la cantidad indicada como un valor en la columna de producto. Dado que no todos los clientes compran todos los productos, muchas columnas pueden contener valores NULL.  
@@ -98,7 +97,7 @@ ms.locfileid: "48157595"
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
-|2004|Water Bottle – 30 oz.|2805.00|  
+|2004|Water Bottle - 30 oz.|2805.00|  
 |2002|Touring tire|62364.225|  
   
  La tabla siguiente muestra un conjunto de datos después de que los datos se hayan dinamizado en la columna **Year** .  
@@ -107,7 +106,7 @@ ms.locfileid: "48157595"
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  
-|Water Bottle – 30 oz.|*NULL*|*NULL*|2805.00|  
+|Water Bottle - 30 oz.|*NULL*|*NULL*|2805.00|  
 |Touring tire|62364.225|375051.60|1041810.00|  
   
  Para dinamizar los datos de la columna **Year** , tal como se muestra más arriba, se establecen las opciones siguientes en el cuadro de diálogo **Dinamización** .  

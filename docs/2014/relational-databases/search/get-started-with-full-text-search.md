@@ -15,12 +15,12 @@ ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541408"
 ---
 # <a name="get-started-with-full-text-search"></a>Introducción a la búsqueda de texto completo
   Las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están habilitadas para texto completo de forma predeterminada. Sin embargo, para usar un índice de texto completo en una tabla, debe configurar la capacidad de indización de texto completo en las columnas de las tablas a las que desea obtener acceso mediante el motor de búsqueda de texto completo.  
@@ -51,7 +51,7 @@ ms.locfileid: "48125045"
   
 2.  Crear un índice de texto completo en la tabla o en la vista indizada.  
   
-     Un índice de texto completo es un tipo especial de índice funcional basado en token que crea y mantiene el motor de texto completo. Para crear una búsqueda de texto completo en una tabla o vista, debe haber un índice único de una sola columna que no acepte valores NULL. El motor de búsqueda de texto completo requiere este índice único para asignar cada fila de la tabla a una clave única que se pueda comprimir. Un índice de texto completo puede incluir `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, y `varbinary(max)` columnas. Para obtener más información, vea [Crear y administrar índices de texto completo](create-and-manage-full-text-indexes.md).  
+     Un índice de texto completo es un tipo especial de índice funcional basado en token que crea y mantiene el motor de texto completo. Para crear una búsqueda de texto completo en una tabla o vista, debe haber un índice único de una sola columna que no acepte valores NULL. El motor de búsqueda de texto completo requiere este índice único para asignar cada fila de la tabla a una clave única que se pueda comprimir. Un índice de texto completo puede incluir las columnas `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` y `varbinary(max)` columnas. Para obtener más información, vea [Crear y administrar índices de texto completo](create-and-manage-full-text-indexes.md).  
   
  Antes de aprender a crear índices de texto completo, es importante tener en cuenta en qué se diferencian éstos de los índices normales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En la tabla siguiente, se indican las diferencias.  
   
@@ -108,7 +108,7 @@ CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;
 GO  
 ```  
   
- La siguiente [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción modifica una lista de palabras irrelevantes denominada mystoplist; para ello, agrega la palabra 'en', primero para español y, a continuación, para francés:  
+ La siguiente instrucción [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] modifica una lista de palabras irrelevantes denominada myStoplist; para ello, agrega la palabra "en", primero para el idioma español y, a continuación, para el francés:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -118,7 +118,7 @@ GO
   
   
 ### <a name="updating-a-full-text-index"></a>Actualizar un índice de texto completo  
- Al igual que los índices normales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los índices de texto completo se pueden actualizar automáticamente cuando se modifican los datos de las tablas asociadas. Éste es el comportamiento predeterminado. Como alternativa, puede mantener actualizados los índices de texto completo de forma manual o durante los intervalos programados especificados. Rellenar un índice de texto completo puede consumir mucho tiempo y muchos recursos, por lo que, normalmente, la actualización del índice se realiza como un proceso asincrónico que se ejecuta en segundo plano para mantenerlo al día después de haber llevado a cabo modificaciones en la tabla base. Actualizar un índice de texto completo inmediatamente después de cada cambio realizado en la tabla base puede consumir muchos recursos. Por tanto, si el porcentaje de actualizaciones, inserciones y eliminaciones es muy elevado, es posible que experimente una disminución en el rendimiento de las consultas. Si se da esta situación, plantéese la posibilidad de programar las actualizaciones provocadas por el seguimiento de cambios manual; es decir, en lugar de disputarse los recursos con las consultas, lleve a cabo una actualización de vez en cuando.  
+ Al igual que los índices normales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los índices de texto completo se pueden actualizar automáticamente cuando se modifican los datos de las tablas asociadas. Éste es el comportamiento predeterminado. Como alternativa, puede mantener actualizados los índices de texto completo de forma manual o durante los intervalos programados especificados. Rellenar un índice de texto completo puede consumir mucho tiempo y muchos recursos, por lo que, normalmente, la actualización del índice se realiza como un proceso asincrónico que se ejecuta en segundo plano para mantenerlo al día después de haber llevado a cabo modificaciones en la tabla base. Actualizar un índice de texto completo inmediatamente después de cada cambio realizado en la tabla base puede consumir muchos recursos. Por tanto, si el porcentaje de actualizaciones, inserciones y eliminaciones es muy elevado, es posible que experimente una disminución en el rendimiento de las consultas. Si se da esta situación, plantéese la posibilidad de programar las actualizaciones provocadas por el seguimiento de cambios manual; es decir, en lugar de disputarse los recursos con las consultas, lleve a cabo una actualización de vez en cuando.  
   
  Para supervisar el estado del rellenado, use las funciones FULLTEXTCATALOGPROPERTY u OBJECTPROPERTYEX. Para obtener el estado del rellenado del catálogo, ejecute la instrucción siguiente:  
   
@@ -161,7 +161,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     El elemento TYPE COLUMN definido en este ejemplo especifica la columna de tipo de la tabla que contiene el tipo del documento en cada fila de la columna "Document" (que es del tipo binario). La columna de tipo almacena la extensión de archivo proporcionada por el usuario (".doc", ".xls", etc.) del documento en una fila determinada. El motor de búsqueda de texto completo utiliza la extensión de archivo almacenada en una fila determinada para invocar el filtro adecuado para analizar los datos de esa fila. Después de que el filtro haya analizado los datos binarios de la fila, el separador de palabras especificado analizará el contenido (en este ejemplo, se usa el separador de palabras para inglés del Reino Unido). Tenga en cuenta que el proceso de filtrado solo tiene lugar durante la indización o cuando un usuario inserta o actualiza una columna de la tabla base mientras está habilitado el seguimiento de cambios automático para el índice de texto completo asociado. Para obtener más información, vea [Configurar y administrar filtros para búsquedas](configure-and-manage-filters-for-search.md).  
+     El elemento TYPE COLUMN definido en este ejemplo especifica la columna de tipo de la tabla que contiene el tipo del documento en cada fila de la columna "Document" (que es del tipo binario). La columna de tipo almacena el archivo proporcionado por el usuario extensión-".doc", ".xls" y así sucesivamente del documento en una fila determinada. El motor de búsqueda de texto completo utiliza la extensión de archivo almacenada en una fila determinada para invocar el filtro adecuado para analizar los datos de esa fila. Después de que el filtro haya analizado los datos binarios de la fila, el separador de palabras especificado analizará el contenido (en este ejemplo, se usa el separador de palabras para inglés del Reino Unido). Tenga en cuenta que el proceso de filtrado solo tiene lugar durante la indización o cuando un usuario inserta o actualiza una columna de la tabla base mientras está habilitado el seguimiento de cambios automático para el índice de texto completo asociado. Para obtener más información, vea [Configurar y administrar filtros para búsquedas](configure-and-manage-filters-for-search.md).  
   
   
 ##  <a name="tasks"></a> Tareas comunes  

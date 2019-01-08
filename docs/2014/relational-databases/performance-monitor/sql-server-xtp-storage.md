@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 628e93e1ceef7bd34b55860370fc7b1ab98a020c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e62a9232690deb368096723f428118e9de7aa2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227641"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803437"
 ---
 # <a name="xtp-storage"></a>XTP Storage
   El objeto de rendimiento XTP Storage contiene contadores relacionados con el almacenamiento de XTP en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -20,16 +20,16 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1e4c4462aa10a2d99e50e71d7b2e86fa4d8555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825943"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213094"
 ---
 # <a name="sqlfetch-function"></a>Función SQLFetch
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLFetch** recupera el siguiente conjunto de filas de datos del conjunto de resultados y devuelve datos para todas las columnas enlazadas.  
@@ -39,7 +39,7 @@ ms.locfileid: "47825943"
 ```  
   
 SQLRETURN SQLFetch(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -65,7 +65,7 @@ SQLRETURN SQLFetch(
 |08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos a la que se ha conectado el controlador antes del procesamiento de la función se ha completado.|  
 |22001|Datos de cadena derecha truncados|Se ha truncado un marcador de longitud variable devuelto para una columna.|  
 |22002|Variable de indicador necesaria pero no proporcionado|Datos nulos se capturan en una columna cuya propiedad *StrLen_or_IndPtr* establecido por **SQLBindCol** (o SQL_DESC_INDICATOR_PTR establecido por **SQLSetDescField** o  **SQLSetDescRec**) era un puntero nulo.|  
-|22003|Valor numérico fuera del intervalo|Devuelve el valor numérico como numérico o cadena de uno o más columnas enlazadas habría causado la parte entera (en contraposición a fraccionarios) del número que se va a truncar.<br /><br /> Para obtener más información, consulte [convertir datos de SQL a tipos de datos C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) en Apéndice D: tipos de datos.|  
+|22003|Valor numérico fuera del intervalo|Devuelve el valor numérico como numérico o cadena de uno o más columnas enlazadas habría causado la parte entera (en contraposición a fraccionarios) del número que se va a truncar.<br /><br /> Para obtener más información, consulte [convertir datos de SQL a tipos de datos C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) en el apéndice D: Tipos de datos.|  
 |22007|Formato de datetime no válido|Una columna de caracteres del conjunto de resultados se enlazó con una fecha, hora o estructura de marca de tiempo C y un valor en la columna era, respectivamente, una fecha no válida, la hora o marca de tiempo.|  
 |22012|División por cero|Devolvió un valor de una expresión aritmética, lo que resultó en la división por cero.|  
 |22015|Desbordamiento de campo de intervalo|Asignación de un valor numérico exacto o el intervalo de tipo SQL a un tipo de intervalo C causó una pérdida de dígitos significativos en el campo inicial.<br /><br /> Al capturar datos para un tipo de intervalo de C, no hubo ninguna representación del valor del tipo SQL en el tipo de intervalo C.|  
@@ -93,12 +93,12 @@ SQLRETURN SQLFetch(
   
  Si una aplicación ODBC 3 *.x* aplicación trabaja con un ODBC 2 *.x* controlador, el Administrador de controladores asigna **SQLFetch** las llamadas a **SQLExtendedFetch** para un ODBC 2 *.x* controlador que admita **SQLExtendedFetch**. Si la API ODBC 2 *.x* controlador no es compatible con **SQLExtendedFetch**, asigna el Administrador de controladores **SQLFetch** las llamadas a **SQLFetch** en ODBC 2 *.x* controlador, que se puede recuperar una única fila.  
   
- Para obtener más información, consulte [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) en Apéndice G: directrices de controlador para la compatibilidad con versiones anteriores.  
+ Para obtener más información, consulte [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) en Apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
   
 ## <a name="positioning-the-cursor"></a>Sitúe el Cursor  
  Cuando se crea el conjunto de resultados, el cursor se coloca antes del inicio del conjunto de resultados. **SQLFetch** Obtiene el siguiente conjunto de filas. Equivale a llamar a **SQLFetchScroll** con *FetchOrientation* establecido en SQL_FETCH_NEXT. Para obtener más información acerca de los cursores, vea [cursores](../../../odbc/reference/develop-app/cursors.md) y [cursores de bloque](../../../odbc/reference/develop-app/block-cursors.md).  
   
- El atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE especifica el número de filas del conjunto de filas. Si el conjunto de filas que se va a buscar por **SQLFetch** se superpone al final del conjunto de resultados, **SQLFetch** devuelve un conjunto de filas parcial. Es decir, si S + R – 1 es mayor que L, donde S es la fila inicial del conjunto de filas que se capturan, R es el tamaño del conjunto de filas y L es la última fila del conjunto de resultados, a continuación, solo el primer L – S + 1 filas del conjunto de filas son válidas. Las filas restantes están vacías y tienen un estado de SQL_ROW_NOROW.  
+ El atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE especifica el número de filas del conjunto de filas. Si el conjunto de filas que se va a buscar por **SQLFetch** se superpone al final del conjunto de resultados, **SQLFetch** devuelve un conjunto de filas parcial. Es decir, si S + R - 1 es mayor que L, donde S es la fila inicial del conjunto de filas que se capturan, R es el tamaño del conjunto de filas y L es la última fila del conjunto de resultados, a continuación, solo el primer L - S + 1 filas del conjunto de filas son válidas. Las filas restantes están vacías y tienen un estado de SQL_ROW_NOROW.  
   
  Después de **SQLFetch** que devuelve la fila actual es la primera fila del conjunto de filas.  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
 |Antes de comenzar|1|  
-|*CurrRowsetStart* \< =  *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|Después de finales|  
+|*CurrRowsetStart* \< =  *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|Después de finales|  
 |Después de finales|Después de finales|  
   
  [1] si se cambia el tamaño del conjunto de filas entre capturas, esto es el tamaño del conjunto de filas que se usó con la captura anterior.  

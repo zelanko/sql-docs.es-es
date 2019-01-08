@@ -12,15 +12,15 @@ ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ff6bcd9379e6e20351dacee75cb92e56b79d374
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 899ea4a4f60fb3e8981de4119697864a24f57093
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056155"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362807"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>Columnas con un nombre especificado como carácter comodín
-  Si el nombre de columna especificado es un carácter comodín (\*), su contenido se insertará como si no se hubiera especificado ningún nombre. Si esta columna no es`xml` columna de tipo, el contenido de la columna se inserta como un nodo de texto, como se muestra en el ejemplo siguiente:  
+  Si el nombre de columna especificado es un carácter comodín (\*), su contenido se insertará como si no se hubiera especificado ningún nombre. Si esta columna no es del tipo `xml`, su contenido se insertará como un nodo de texto, tal y como se muestra en el ejemplo siguiente:  
   
 ```  
 USE AdventureWorks2012;  
@@ -36,9 +36,9 @@ WHERE E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
- `<row EmpID="1">KenJSánchez</row>`  
+ `<row EmpID="1">KenJS??nchez</row>`  
   
  Si la columna es de tipo `xml`, se inserta el árbol XML correspondiente. Por ejemplo, la consulta siguiente especifica "*" para el nombre de columna que incluye el XML devuelto por XQuery con la columna Instructions.  
   
@@ -46,7 +46,7 @@ FOR XML PATH;
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
                 /MI:root/MI:Location   
               ') as "*"  
 FROM Production.ProductModel  

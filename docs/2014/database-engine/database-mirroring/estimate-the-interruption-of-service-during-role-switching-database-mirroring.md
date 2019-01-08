@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e474e9f8a933fb00a2d06062668ad3af7f64ccfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528245"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos)
   Durante una conmutación de roles, la cantidad de tiempo que la creación de reflejo de la base de datos estará fuera de servicio depende del tipo y la causa de la conmutación de roles.  
@@ -45,7 +45,7 @@ ms.locfileid: "48156475"
  El tiempo de la conmutación por error consiste principalmente en el tiempo que el servidor reflejado anterior necesita para poner al día los registros pendientes en su cola rehecha más un breve tiempo adicional (para obtener más información sobre cómo procesa las entradas de registro el servidor reflejado, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)). Para obtener información acerca de cómo calcular el tiempo de la conmutación por error, vea Calcular la tasa de puesta al día de la conmutación por error, más adelante en este tema.  
   
 > [!IMPORTANT]  
->  Si la conmutación por error se produce durante una transacción en la que se crea un índice o tabla y después se cambia, es posible que tarde más de lo habitual.  Por ejemplo, si se realiza una conmutación por error durante la siguiente secuencia de operaciones, es posible que el tiempo de conmutación por error sea mayor: BEGIN TRANSACTION, CREATE INDEX en una tabla y SELECT INTO en la tabla. Existe la posibilidad de un mayor tiempo de conmutación por error durante una transacción de este tipo hasta su finalización con una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
+>  Si la conmutación por error se produce durante una transacción en la que se crea un índice o tabla y después se cambia, es posible que tarde más de lo habitual.  Por ejemplo, la conmutación por error durante la siguiente serie de operaciones puede aumentar el tiempo de conmutación por error:  BEGIN TRANSACTION, CREATE INDEX en una tabla y SELECT INTO en la tabla. Existe la posibilidad de un mayor tiempo de conmutación por error durante una transacción de este tipo hasta su finalización con una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
   
 ### <a name="the-redo-queue"></a>Cola rehecha  
  La confirmación de la base de datos conlleva aplicar las entradas de registro que se encuentren en la cola rehecha del servidor reflejado. La *cola rehecha* está formada por las entradas de registro que se han escrito en el disco del servidor reflejado, pero todavía no se han puesto al día en la base de datos reflejada.  
@@ -53,7 +53,7 @@ ms.locfileid: "48156475"
  El tiempo de la conmutación por error para la base de datos depende de la rapidez con la que el servidor reflejado pueda poner al día el registro en la cola rehecha, que, a su vez, se determina principalmente por el hardware del sistema y la carga de trabajo actual. Potencialmente, una base de datos principal puede estar tan ocupada que el servidor principal envía los registros al servidor reflejado mucho más rápidamente de lo que puede confirmarlos. En esta situación, la conmutación por error puede tardar mucho tiempo mientras el servidor reflejado pone al día el registro en la cola rehecha. Para conocer el tamaño actual de la cola rehecha, utilice el contador **Cola rehecha** en el objeto de rendimiento de creación de reflejo de la base de datos. Para más información, consulte [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md).  
   
 ### <a name="estimating-the-failover-redo-rate"></a>Calcular la tasa de puesta al día de la conmutación por error  
- Puede medir la cantidad de tiempo que se necesita para poner al día las entradas de registro ( *tasa de puesta al día*) utilizando una copia de prueba de la base de datos de producción.  
+ Puede medir la cantidad de tiempo que se necesita para poner al día las entradas de registro (*tasa de puesta al día*) mediante una copia de prueba de la base de datos de producción.  
   
  El método para calcular el tiempo de confirmación durante la conmutación por error depende del número de subprocesos que el servidor reflejado utiliza durante la fase de puesta al día. El número de subprocesos depende de lo siguiente:  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b15ac5c21a8fb9b1efafd1124e2338b58d0324e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111414"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775767"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats [clase de eventos]
   La clase de evento **Auto Stats** indica que se ha producido una actualización automática del índice y de las estadísticas de las columnas.  
@@ -36,9 +35,9 @@ ms.locfileid: "48111414"
 |**Duración**|**bigint**|Tiempo (en microsegundos) que tarda el evento.|13|Sí|  
 |**EndTime**|**datetime**|Hora a la que finalizó el evento.|15|Sí|  
 |**Error**|**int**|Número de error de un evento dado. Con frecuencia, es el número de error almacenado en la vista de catálogo **sys.messages** .|31|Sí|  
-|**EventClass**|**int**|Tipo de evento = 58.|27|no|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
-|**EventSubClass**|**int**|Tipo de subclase de evento:<br /><br /> 1: estadísticas creadas o actualizadas de forma sincrónica; **TextData** columna indica qué estadísticas y si se crea o se actualizaron.<br /><br /> 2: Actualización de estadísticas asincrónica; trabajo en cola.<br /><br /> 3: Actualización de estadísticas asincrónica; trabajo en inicio.<br /><br /> 4: Actualización de estadísticas asincrónica; trabajo finalizado.|21|Sí|  
+|**EventClass**|**int**|Tipo de evento = 58.|27|No|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
+|**EventSubClass**|**int**|Tipo de subclase de evento:<br /><br /> 1: Estadísticas creadas o actualizadas de forma sincrónica; **TextData** columna indica qué estadísticas y si se crea o se actualizaron.<br /><br /> 2: Actualización de estadísticas asincrónica; trabajo en cola.<br /><br /> 3: Actualización de estadísticas asincrónica; trabajo en inicio.<br /><br /> 4: Actualización de estadísticas asincrónica; trabajo finalizado.|21|Sí|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IndexID**|**int**|Id. de la entrada del índice/estadísticas del objeto afectada por el evento. Para averiguar el identificador de índice de un objeto, use la columna **index_id** de la vista de catálogo **sys.indexes** .|24|Sí|  
@@ -51,12 +50,12 @@ ms.locfileid: "48111414"
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**ObjectID**|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
 |**IdSolicitud**|**int**|Id. de la solicitud que contiene la instrucción.|49|Sí|  
-|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
+|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**Correcto**|**int**|0 = error.<br /><br /> 1 = correcto.<br /><br /> 2 = omisión debida a la limitación del servidor (MSDE).|23|Sí|  
-|**TextData**|**ntext**|El contenido de esta columna depende de si las estadísticas se actualizan de forma sincrónica (**EventSubClass** 1) o asincrónica (**EventSubClass** 2, 3 o 4):<br /><br /> 1: Enumera las estadísticas actualizadas o creadas<br /><br /> 2, 3 o 4: NULL; la columna **IndexID** se rellena con el identificador de índice o estadística de las estadísticas actualizadas.|1|Sí|  
+|**TextData**|**ntext**|El contenido de esta columna depende de si las estadísticas se actualizan de forma sincrónica (**EventSubClass** 1) o asincrónica (**EventSubClass** 2, 3 o 4):<br /><br /> 1: Enumera las estadísticas actualizadas o creadas<br /><br /> 2, 3 o 4: ES NULL; **IndexID** columna se rellena con el Id. de índice o estadística de las estadísticas actualizadas.|1|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**Tipo**|**int**|Tipo de trabajo.|57|Sí|  
   

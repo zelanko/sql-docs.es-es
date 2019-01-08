@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating cache files for Lookup transformation
@@ -15,12 +14,12 @@ ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c26b79cde6f6b3e8bce96f765fec03f1a2d7c5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33efec852a748552e56db76a4af023809a531f5c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118660"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757348"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Crear e implementar una memoria caché para la transformación Búsqueda
   Puede crear e implementar un archivo caché (.caw) para la transformación Búsqueda. El conjunto de datos de referencia está almacenado en el archivo caché.  
@@ -73,7 +72,7 @@ ms.locfileid: "48118660"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contiene el paquete con el que desea trabajar y ábralo.  
   
-2.  Opcionalmente, puede crear una configuración de paquetes. Para más información, vea [Crear configuraciones de paquetes](../../create-package-configurations.md).  
+2.  Opcionalmente, puede crear una configuración de paquetes. Para obtener más información, vea [Crear configuraciones de paquetes](../../create-package-configurations.md).  
   
 3.  Haga lo siguiente para agregar el archivo caché al proyecto:  
   

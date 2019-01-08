@@ -17,12 +17,12 @@ ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8eb7d5d58e0f6afe31304b6fce13da2d8c48e54e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8864ac47f3fa212cc6c204cc79d587b8952512cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696924"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527408"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Método Delete (colección de parámetros de ADO)
 Elimina un objeto desde el [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección.  
@@ -39,7 +39,7 @@ Parameters.Delete Index
  Un **cadena** valor que contiene el nombre del objeto que desea eliminar, o la posición del objeto ordinal (índice) en la colección.  
   
 ## <a name="remarks"></a>Comentarios  
- Mediante el **eliminar** método en una colección permite quitar uno de los objetos de la colección. Este método solo está disponible en el **parámetros** colección de un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto. Debe usar el [parámetro](../../../ado/reference/ado-api/parameter-object.md) del objeto [nombre](../../../ado/reference/ado-api/name-property-ado.md) propiedad o su índice de colección cuando se llama a la **eliminar** método, una variable de objeto no es un argumento válido.  
+ Mediante el **eliminar** método en una colección permite quitar uno de los objetos de la colección. Este método solo está disponible en el **parámetros** colección de un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto. Debe usar el [parámetro](../../../ado/reference/ado-api/parameter-object.md) del objeto [nombre](../../../ado/reference/ado-api/name-property-ado.md) propiedad o su índice de colección cuando se llama a la **eliminar** variable de objeto de un método no es un argumento válido.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Colección de parámetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  

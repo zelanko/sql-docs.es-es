@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8691e57b9750447b1740c79337b75500febd9549
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070745"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751557"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting (DTA, elemento)
   Especifica las estructuras de diseño físico (índices, vistas indizadas o particiones) que el Asistente para la optimización de motor de base de datos debe conservar al generar su recomendación.  
@@ -42,13 +41,13 @@ ms.locfileid: "48070745"
 |**Tipo y longitud de los datos**|`string`, límite de longitud aplicado por el servidor.|  
 |**Valores permitidos**|**NONE**<br /> Ninguna estructura existente.<br /><br /> **ALL**<br /> Todas las estructuras existentes.<br /><br /> **ALIGNED**<br /> Todas las estructuras alineadas de partición.<br /><br /> **CL_IDX**<br /> Todos los clúster de las tablas.<br /><br /> **IDX**<br /> Todos los índices clúster y no clúster de las tablas.<br /><br /> Utilice solo uno de estos valores con este elemento.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Opcional. Puede utilizar una sola vez por cada `TuningOptions` elemento.|  
+|**Repetición**|Opcional. Se puede utilizar una sola vez por cada elemento `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[TuningOptions, elemento &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Elemento primario**|[TuningOptions &#40;DTA, elemento&#41;](tuningoptions-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  

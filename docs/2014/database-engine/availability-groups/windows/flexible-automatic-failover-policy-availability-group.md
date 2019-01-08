@@ -15,12 +15,12 @@ ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d72fa514d7e1666562506150c7be26aac63670a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63c9f56894ede1002b358c624ab763935fd42fc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218215"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374647"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad (SQL Server)
   Una directiva de conmutación por error flexible proporciona mayor control sobre las condiciones que produce una [conmutación automática por error](failover-and-failover-modes-always-on-availability-groups.md) para un grupo de disponibilidad. Al cambiar las condiciones de error que activan una conmutación automática por error y la frecuencia de comprobaciones de estado, se puede aumentar o reducir la probabilidad de una conmutación automática por error que sea compatible con su SLA por tener alta disponibilidad.  
@@ -48,7 +48,7 @@ ms.locfileid: "48218215"
   
 |Nivel|Condición de error|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Valor de PowerShell|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|Uno|Por inactividad de servidor. Este es el nivel menos restrictivo. Especifica que se inicia una conmutación automática por error en los casos siguientes:<br /><br /> El servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está inactivo.<br /><br /> La concesión del grupo de disponibilidad para conectarse al clúster de WSFC expira porque no se ha recibido ninguna confirmación de la instancia del servidor. Para obtener más información, vea [Cómo funciona: tiempo de espera de concesión de AlwaysOn de SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
+|Uno|Por inactividad de servidor. Este es el nivel menos restrictivo. Especifica que se inicia una conmutación automática por error en los casos siguientes:<br /><br /> El servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está inactivo.<br /><br /> La concesión del grupo de disponibilidad para conectarse al clúster de WSFC expira porque no se ha recibido ninguna confirmación de la instancia del servidor. Para obtener más información, vea [cómo funciona: Tiempo de espera de concesión de AlwaysOn SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
 |Dos|Al dejar de responder el servidor. Especifica que se inicia una conmutación automática por error en los casos siguientes:<br /><br /> La instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se conecta al clúster y se ha superado el umbral de tiempo de espera de comprobación de estado del grupo de disponibilidad definido por el usuario.<br /><br /> La réplica de disponibilidad tiene un estado de error.|2|`OnServerUnresponsive`|  
 |Tres|En errores de servidor críticos. Especifica que se inicia una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] graves, como bloqueos por subproceso huérfanos, infracciones serias de acceso de escritura o volcado excesivo. Es el nivel predeterminado.|3|`OnCriticalServerError`|  
 |Cuatro|En errores de servidor moderados. Especifica que se inicia una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] moderados, tales como una condición persistente de falta de memoria en el grupo de recursos de servidor interno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|4|`OnModerateServerError`|  
@@ -68,7 +68,7 @@ ms.locfileid: "48218215"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Cómo funciona: Del tiempo de espera SQL Server AlwaysOn concesión](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
+-   [Cómo funciona: Tiempo de espera de concesión de AlwaysOn SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

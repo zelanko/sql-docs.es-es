@@ -15,19 +15,19 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74caa8d0ef17bf0b9401662969ce34c8d78cc112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125485"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798737"
 ---
 # <a name="unpack-a-dac-package"></a>Desempaquetar un paquete de DAC
   Utilice el diálogo Unpack Data-tier Application para descomprimir los scripts y archivos de un paquete de la aplicación de capa de datos (DAC). Los scripts y archivos se colocan en una carpeta donde se pueden revisar antes de usar el paquete para implementar la DAC en un sistema de producción. El contenido de una DAC también se puede comparar con el contenido de otro paquete desempaquetado en otra carpeta.  
   
 1.  **Antes de empezar:**  [Seguridad](#Security)  
   
-2.  **Para desempaquetar una DAC, mediante:**  [Cuadro de diálogo Desempaquetar aplicación de capa de datos](#UnpackDACDial), [Examinar el contenido de un paquete DAC](#ExamDACPack)  
+2.  **Para desempaquetar una DAC, mediante:**  [Cuadro de diálogo de aplicación de capa de datos desempaquetar](#UnpackDACDial), [examinar el contenido de un paquete DAC](#ExamDACPack)  
   
 ##  <a name="Security"></a> Seguridad  
  Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estas DAC contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema. Antes de usar una DAC de un origen desconocido o que no es de confianza, impleméntela en una instancia de prueba aislada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], desempaquete la DAC y examine el código, como los procedimientos almacenados o el código definido por el usuario.  

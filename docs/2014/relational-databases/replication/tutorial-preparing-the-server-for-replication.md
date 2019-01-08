@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e68be637511fb00774d35b564b0e5ec5979b60d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228245"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813997"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Tutorial: Preparar el servidor para la replicación
   Es importante planificar la seguridad antes de configurar la topología de replicación. En este tutorial se muestra cómo proteger una topología de replicación y cómo configurar la distribución, que es el primer paso en la replicación de datos. Debe finalizar este tutorial antes que cualquiera de los otros tutoriales.  
@@ -40,9 +39,9 @@ ms.locfileid: "48228245"
   
 ## <a name="lessons-in-this-tutorial"></a>Lecciones de este tutorial  
   
--   [Lección 1: Crear cuentas de Windows para replicación](lesson-1-creating-windows-accounts-for-replication.md)  
+-   [Lección 1: Creación de Windows de cuentas para la replicación](lesson-1-creating-windows-accounts-for-replication.md)  
   
--   [Lección 2: Preparar la carpeta de instantáneas](lesson-2-preparing-the-snapshot-folder.md)  
+-   [Lección 2: Preparación de la carpeta de instantáneas](lesson-2-preparing-the-snapshot-folder.md)  
   
 -   [Lección 3: Configurar la distribución](lesson-3-configuring-distribution.md)  
   

@@ -17,12 +17,12 @@ ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0f9f0130c90796efa8bc12f663fbe3ad32f19413
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533143"
 ---
 # <a name="enable-indexes-and-constraints"></a>Habilitar índices y restricciones
   En este tema se describe cómo habilitar un índice deshabilitado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando se deshabilita un índice, sigue deshabilitado hasta que se vuelve a generar o se quita.  
@@ -41,7 +41,7 @@ ms.locfileid: "48152625"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48152625"
   
 -   Si el índice clúster está deshabilitado o habilitado y el índice no clúster está deshabilitado, la acción del índice clúster tiene los siguientes resultados en el índice no clúster deshabilitado.  
   
-    |Acción del índice clúster|Índice no clúster deshabilitado…|  
+    |Acción del índice clúster|Índice no agrupado deshabilitado ...|  
     |----------------------------|-----------------------------------|  
     |ALTER INDEX REBUILD.|Sigue deshabilitado.|  
     |ALTER INDEX ALL REBUILD.|Se vuelve a generar y se habilita.|  

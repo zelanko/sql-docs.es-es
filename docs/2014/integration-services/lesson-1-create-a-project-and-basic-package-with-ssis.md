@@ -4,30 +4,29 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62a4a0737f57d6040d2c166847f191f13d435071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ff1883c8940e791d35dfe97c33acc1fe4f4a0e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229494"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359377"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lección 1: Crear el proyecto y el paquete básico
   En esta lección, creará un paquete ETL simple que extrae datos de un único origen de archivo plano, transforma los datos usando dos componentes de la transformación de búsqueda y escribe dichos datos en la tabla de hechos **FactCurrency** de **AdventureWorksDW2012**. Como parte de esta lección, aprenderá a crear paquetes nuevos, agregar y configurar orígenes de datos y conexiones de destino, y trabajar con nuevos componentes de flujo de control y flujo de datos.  
   
 > [!IMPORTANT]  
->  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre la instalación e implementación de **AdventureWorksDW2012**, consulte [Ejemplos de producto de Reporting Services en CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre la instalación e implementación de **AdventureWorksDW2012**, consulte [Ejemplos de producto de Reporting Services en CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
   
 ## <a name="understanding-the-package-requirements"></a>Descripción de los requisitos de paquete  
  Este tutorial necesita Microsoft SQL Server Data Tools.  
   
- Para obtener más información acerca de cómo instalar SQL Server Data Tools, vea [Descarga de SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
+ Para obtener más información sobre cómo instalar SQL Server Data Tools, consulte [Descargar SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
   
  Antes de crear un paquete, debe saber qué formato se utiliza en los datos de origen y de destino. Una vez que conozca ambos formatos de datos, estará listo para definir las transformaciones necesarias para asignar los datos de origen al destino.  
   
@@ -95,9 +94,9 @@ ms.locfileid: "48229494"
   
 -   [Paso 7: Agregar y configurar el destino de OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Paso 8: Facilitar la comprensión del paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Paso 8: Lo más fácil de entender el paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Paso 9: Probar el paquete del tutorial de la lección 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Paso 9: Probar el paquete del Tutorial de la lección 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
  [Paso 1: Crear un nuevo proyecto de Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  

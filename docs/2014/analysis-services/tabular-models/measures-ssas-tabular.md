@@ -11,12 +11,12 @@ ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a92df5ff3826ea7febe4bcf0910125f38c30a2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ebda5596422d8dd8964c9da1e042f266d3e23db
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121575"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407312"
 ---
 # <a name="measures-ssas-tabular"></a>Medidas (SSAS tabular)
   En los modelos tabulares, una medida es un cálculo creado usando una fórmula DAX para usarla en un cliente de informes. Las medidas se evalúan según los campos, filtros y segmentaciones de datos que los usuarios seleccionan en la aplicación cliente de informes.  
@@ -63,13 +63,13 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Total general**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Definir medidas mediante la cuadrícula de medidas  
- Las medidas se crean en tiempo de diseño mediante la cuadrícula de medidas en el diseñador de modelos. Cada tabla tiene una cuadrícula de medidas. De forma predeterminada, la cuadrícula de medidas aparece debajo de cada tabla en el diseñador de modelos. También puede optar por no ver la cuadrícula de medidas de una determinada tabla. Para alternar entre las visualizaciones de la cuadrícula de medidas de una tabla, haga clic en el menú **Tabla** y, a continuación, en **Mostrar cuadrícula de medidas**.  
+ Las medidas se crean en tiempo de diseño mediante la cuadrícula de medidas en el diseñador de modelos. Cada tabla tiene una cuadrícula de medidas. De forma predeterminada, la cuadrícula de medidas aparece debajo de cada tabla en el diseñador de modelos. También puede optar por no ver la cuadrícula de medidas de una determinada tabla. Para alternar la presentación de la cuadrícula de medidas de una tabla, haga clic en el **tabla** menú y, a continuación, haga clic en **Mostrar cuadrícula de medidas**.  
   
  En la cuadrícula de medidas, puede crear medidas de las maneras siguientes:  
   
 -   Haga clic en una celda vacía de la cuadrícula de medidas y, a continuación, escriba una fórmula de DAX en la barra de fórmulas. Al hacer clic en ENTRAR para completar la fórmula, la medida aparecerá en la celda de la cuadrícula de medidas.  
   
--   Cree una medida mediante una función de agregación estándar; para ello, haga clic en una columna, haga clic en el botón de autosuma (∑) de la barra de herramientas y, por último, haga clic en una función de agregación estándar. Las agregaciones estándar son: Sum, Average, Count, DistinctCount, Max, Min. Las medidas creadas mediante el botón de autosuma siempre aparecerán directamente en la cuadrícula de medidas debajo de la columna.  
+-   Cree una medida mediante una función de agregación estándar; para ello, haga clic en una columna, haga clic en el botón de autosuma (∑) de la barra de herramientas y, por último, haga clic en una función de agregación estándar. Las agregaciones estándar son: SUM, Average, Count, DistinctCount, Max, Min. Las medidas creadas mediante el botón de autosuma siempre aparecerán directamente en la cuadrícula de medidas debajo de la columna.  
   
  De forma predeterminada, cuando se usa la autosuma, el nombre de la medida viene definido por el nombre de la columna asociada seguido de un signo de dos puntos y de la fórmula. Dicho nombre se puede cambiar en la barra de fórmulas o en el valor de la propiedad **Nombre de medida** en la ventana Propiedades. Al crear una medida mediante una fórmula personalizada, puede escribir un nombre en la barra de fórmulas, seguido de un signo de dos puntos y de la fórmula, o puede escribir un nombre en el valor de la propiedad **Nombre de medida** en la ventana Propiedades.  
   
@@ -78,7 +78,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 > [!TIP]  
 >  Puede agrupar en una tabla medidas de varias tablas si crea una tabla vacía y mueve a esa tabla las medidas o crea nuevas medidas en ella. Tenga en cuenta que quizás necesite incluir los nombres de tabla en las fórmulas DAX al hacer referencia a columnas de otras tablas.  
   
- Si se han definido perspectivas para el modelo, las medidas no se agregarán automáticamente a ninguna de ellas. Deberá agregarlas manualmente mediante el cuadro de diálogo Perspectivas. Para más información, vea [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md).  
+ Si se han definido perspectivas para el modelo, las medidas no se agregarán automáticamente a ninguna de ellas. Deberá agregarlas manualmente mediante el cuadro de diálogo Perspectivas. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_properties"></a> Propiedades de medidas  
  Cada medida tiene propiedades que la definen. Las propiedades de las medidas, junto con las propiedades de las columnas asociadas, se pueden modificar en la ventana Propiedades. Las medidas tienen las propiedades siguientes:  
@@ -93,17 +93,17 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> Usar una medida en un KPI  
  Un KPI (indicador clave de rendimiento) viene definido por un valor *base* , definido a su vez por una medida, con respecto a un valor de *destino* , también definido por una medida o por un valor absoluto. Los KPI también incluyen un *estado*, un cálculo en el que se evalúa el valor base con respecto al valor de destino entre los umbrales, mostrado en formato gráfico. Los KPI los usan a menudo los profesionales de las empresas para identificar tendencias en métricas empresariales críticas.  
   
- Cualquier medida puede servir como medida base de un KPI. Para crear un KPI, haga clic con el botón derecho en una medida en la cuadrícula de medidas y, después, haga clic en **Crear KPI**. Aparecerá el cuadro de diálogo Indicador clave de rendimiento, donde podrá especificar un valor de destino (definido por una medida o un valor absoluto) y definir umbrales de estado, así como un tipo de gráfico. Para obtener más información, vea [KPIs &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md).  
+ Cualquier medida puede servir como medida base de un KPI. Para crear un KPI, haga clic con el botón derecho en una medida en la cuadrícula de medidas y, después, haga clic en **Crear KPI**. Aparecerá el cuadro de diálogo Indicador clave de rendimiento, donde podrá especificar un valor de destino (definido por una medida o un valor absoluto) y definir umbrales de estado, así como un tipo de gráfico. Para obtener más información, vea [KPI &#40;SSAS tabular&#41;](kpis-ssas-tabular.md).  
   
 ##  <a name="bkmk_rel_tasks"></a> Tareas relacionadas  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Crear y administrar medidas &#40;Tabular de SSAS&#41;](measures-ssas-tabular.md)|Describe cómo crear y administrar medidas mediante la cuadrícula de medidas del diseñador de modelos.|  
+|[Crear y administrar medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)|Describe cómo crear y administrar medidas mediante la cuadrícula de medidas del diseñador de modelos.|  
   
 ## <a name="see-also"></a>Vea también  
- [KPI &#40;Tabular de SSAS&#41;](kpis-ssas-tabular.md)   
- [Crear y administrar KPI &#40;Tabular de SSAS&#41;](create-and-manage-kpis-ssas-tabular.md)   
- [Columnas calculadas &#40;Tabular de SSAS&#41;](ssas-calculated-columns.md)  
+ [KPI &#40;SSAS tabular&#41;](kpis-ssas-tabular.md)   
+ [Crear y administrar KPI &#40;SSAS tabular&#41;](create-and-manage-kpis-ssas-tabular.md)   
+ [Columnas calculadas &#40;SSAS tabular&#41;](ssas-calculated-columns.md)  
   
   

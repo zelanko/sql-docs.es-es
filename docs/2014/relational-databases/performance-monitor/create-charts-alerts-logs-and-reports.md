@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - System Monitor [SQL Server], charts and reports
@@ -19,12 +19,12 @@ ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3921f2db7ef3e80dd13ad9df0787ab1f6afc0611
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f36f1a3df7eae3fd363aa5e2bc4b5ae13f36ae2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136865"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780837"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Crear gráficos, alertas, registros e informes
   El Monitor de sistema le permite crear gráficos, alertas, registros e informes para supervisar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "48136865"
   
  Los gráficos son útiles para la supervisión a corto plazo en tiempo real de equipos locales o remotos, por ejemplo, cuando se desea supervisar un evento a medida que se produce.  
   
-## <a name="alerts"></a>Trabajos  
+## <a name="alerts"></a>Alertas  
  Mediante las alertas, el Monitor de sistema realiza un seguimiento de eventos específicos y le notifica dichos eventos cuando lo solicite. El registro de alertas permite supervisar el rendimiento actual de contadores e instancias seleccionados de objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando un contador supera un valor determinado, se guardan en el registro la fecha y hora del evento. Un evento también puede generar una alerta de red. Puede establecer la ejecución de un programa específico la primera vez o cada vez que se produzca un evento. Por ejemplo, una alerta puede enviar un mensaje de red a todos los administradores del sistema acerca de que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está quedando sin espacio en disco.  
   
 ## <a name="logs"></a>Registros  

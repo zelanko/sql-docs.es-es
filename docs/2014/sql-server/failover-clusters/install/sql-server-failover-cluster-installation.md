@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86f3e229893373589521a739b9a3cbdaceb290d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176355"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815737"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Instalación de clúster de conmutación por error de SQL Server
   Para instalar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe crear y configurar una instancia en clúster de conmutación por error mediante la ejecución del programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -44,14 +43,14 @@ ms.locfileid: "48176355"
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opciones de instalación de clústeres de conmutación por error  
   
-##### <a name="option-1-integrated-installation-with-add-node"></a>Opción 1: instalación integrada con Agregar nodo  
+##### <a name="option-1-integrated-installation-with-add-node"></a>Opción 1: Instalación integrada con agregar nodo  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrada consta de dos pasos:  
   
 1.  Cree y configure una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de un único nodo. Cuando termine de configurar correctamente el nodo, dispondrá de una instancia del clúster de conmutación por error totalmente funcional. En ese momento no dispondrá de alta disponibilidad porque solamente hay un nodo en el clúster de conmutación por error.  
   
 2.  En cada nodo que se va a agregar al clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ejecute el programa de instalación con la función Agregar nodo para agregar ese nodo.  
   
-##### <a name="option-2-advancedenterprise-installation"></a>Opción 2: instalación de Advanced/Enterprise  
+##### <a name="option-2-advancedenterprise-installation"></a>Opción 2: Instalación de Advanced/Enterprise  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La instalación de clústeres de conmutación por error Advanced/Enterprise consta de dos pasos:  
   
 1.  En cada nodo que va a formar parte del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ejecute el programa de instalación con la función Preparar clúster de conmutación por error. En este paso se preparan los nodos para su agrupación en clústeres, pero al final de este paso no hay ninguna instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] operativa.  

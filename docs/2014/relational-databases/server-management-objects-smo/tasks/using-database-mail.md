@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - e-mail [SMO]
@@ -16,15 +14,15 @@ ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fcf6e57ed33e0799ae61610fdb15bd59aea45de8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 232ea094ac81badfe7a6ec378371b55a0b08103b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221575"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758541"
 ---
 # <a name="using-database-mail"></a>Utilizar el correo electrónico de base de datos
-  En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> referenciado por la propiedad <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> representa el subsistema del correo electrónico de base de datos. Mediante el objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> de SMO, puede configurar el subsistema del correo electrónico de base de datos y administrar los perfiles y cuentas de correo. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> objeto pertenece a la `Server` objeto, lo que significa que el ámbito de las cuentas de correo está en el nivel de servidor.  
+  En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> referenciado por la propiedad <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> representa el subsistema del correo electrónico de base de datos. Mediante el objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> de SMO, puede configurar el subsistema del correo electrónico de base de datos y administrar los perfiles y cuentas de correo. El objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> de SMO pertenece al objeto `Server`, lo que significa que el ámbito de las cuentas de correo está en el nivel del servidor.  
   
 ## <a name="examples"></a>Ejemplos  
  Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

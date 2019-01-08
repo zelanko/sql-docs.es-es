@@ -13,15 +13,15 @@ ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c28b74a271fc2da7c99aeb1ab7b990b11e90fd3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118725"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399785"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Crear una consulta de predicción singleton desde una plantilla
-  Una consulta singleton es útil cuando tiene un modelo que desea utilizar para la predicción, pero no desea asignarlo a un conjunto de datos de entrada externos o realizar predicciones masivas. Una consulta singleton le permite proporcionar un valor o varios valores al modelo y ver al momento el valor predicho.  
+  Una consulta singleton es útil cuando tiene un modelo que desea usar para la predicción, pero no desea asignarlo a un conjunto de datos de entrada externos o realizar predicciones masivas. Una consulta singleton le permite proporcionar un valor o varios valores al modelo y ver al momento el valor predicho.  
   
  Por ejemplo, la consulta DMX siguiente representa una consulta singleton frente al modelo de correo directo, TM_Decision_Tree.  
   
@@ -89,11 +89,11 @@ AS [t]
   
 10. En el panel de texto de consulta, busque las marcas en zigzag rojas debajo de la coma y los puntos suspensivos que indican un error de sintaxis. Elimine los puntos suspensivos y agregue cualquier condición de consulta adicional que desee. Si no agrega ninguna otra condición, elimine la coma.  
   
-     Para el código de ejemplo mostrado al principio de este tema, la condición de consulta adicional se estableció en `'45' as [Age]`.  
+     En el caso del código de ejemplo que se muestra en el comienzo de este tema, la condición de consulta adicional se estableció en `'45' as [Age]`.  
   
 11. Haga clic en **Ejecutar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear predicciones &#40;Tutorial de minería de datos básicos&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Crear predicciones &#40;Tutorial básico de minería de datos&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

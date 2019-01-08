@@ -14,12 +14,12 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfa47e9df9d3d795df365249273732918878a1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184485"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353753"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>Grupo de disponibilidad no preparado para conmutación automática por error
     
@@ -38,7 +38,7 @@ ms.locfileid: "48184485"
  La directiva está en un estado correcto cuando al menos una réplica secundaria está lista para la conmutación automática por error.  
   
 > [!NOTE]  
->  En esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [El grupo de disponibilidad no está listo para la conmutación automática por error](http://go.microsoft.com/fwlink/p/?LinkId=220851) en TechNet Wiki.  
+>  En esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [El grupo de disponibilidad no está listo para la conmutación automática por error](https://go.microsoft.com/fwlink/p/?LinkId=220851) en TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Posibles causas  
  Grupo de disponibilidad no preparado para la conmutación automática por error. La réplica principal está configurada para la conmutación automática por error; sin embargo, la réplica secundaria no está lista para la conmutación automática por error. La réplica secundaria configurada para la conmutación automática por error podría no estar disponible o su estado de sincronización de datos no es actualmente SYNCHRONIZED.  

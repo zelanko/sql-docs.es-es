@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90dcc76466709b1cc3e76406029ea2fffaaea1f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167202"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768457"
 ---
 # <a name="manage-job-steps"></a>Administrar pasos de trabajo
   Los pasos de trabajo son acciones que el trabajo realiza en una base de datos o en un servidor. Cada trabajo debe estar formado por un paso, como mínimo. Los pasos de trabajo pueden ser:  
@@ -57,7 +57,7 @@ ms.locfileid: "48167202"
   
 -   Programas ejecutables y comandos del sistema operativo.  
   
--   Instrucciones[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tareas.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48167202"
   
 -   El código de salida del proceso que se devuelve si el comando se ha ejecutado correctamente.  
   
--   El comando que se debe ejecutar. Para ejecutar un comando del sistema operativo, se trata simplemente del propio comando. En un programa externo, es el nombre del programa y los argumentos para el programa, por ejemplo: **C:\Archivos de programa\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   El comando que se debe ejecutar. Para ejecutar un comando del sistema operativo, se trata simplemente del propio comando. Un programa externo, este es el nombre del programa y los argumentos para el programa, por ejemplo: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e - q "sp_who"**  
   
     > [!NOTE]  
     >  Debe proporcionar la ruta de acceso completa del archivo ejecutable si éste no se encuentra en un directorio especificado en la ruta de acceso del sistema o la ruta de acceso del usuario con el que se ejecuta el paso de trabajo.  
@@ -206,7 +206,7 @@ Set oServer = nothing
 |Describe cómo definir opciones para los pasos de trabajo Transact-SQL del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Microsoft.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
 |Describe cómo crear un paso de trabajo de script ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
 |Describe cómo crear y definir pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
-|Describe la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar si se produce un error durante la ejecución del trabajo.|[Establecer el flujo correcto o con errores de los pasos de un trabajo](set-job-step-success-or-failure-flow.md)|  
+|Describe la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar si se produce un error durante la ejecución del trabajo.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |Describe cómo ver detalles de pasos de trabajo en el cuadro de diálogo Propiedades de paso de trabajo.|[Ver información de pasos de trabajo](view-job-step-information.md)|  
 |Describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   

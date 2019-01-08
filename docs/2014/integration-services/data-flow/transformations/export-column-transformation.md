@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exportcolumntrans.f1
@@ -20,12 +19,12 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc32abc07dd76137e735692a4ed1e1f392e9ae29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 790e7b0aeb6ec7ec73c6eed8f3dc8dd67e0b28ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205129"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767507"
 ---
 # <a name="export-column-transformation"></a>Transformación Exportar columna
   La transformación Exportar columna lee datos de un flujo de datos e inserta dichos datos en un archivo. Por ejemplo, si el flujo de datos contiene información de productos, como una foto de cada producto, puede usar la transformación Exportar columna para guardar las imágenes en archivos.  
@@ -35,10 +34,10 @@ ms.locfileid: "48205129"
   
 |Anexar|Truncamiento|El archivo existe|Resultado|  
 |------------|--------------|-----------------|-------------|  
-|False|False|no|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|True|False|no|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|False|True|no|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|True|True|no|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en `true`.|  
+|False|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|True|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|False|True|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|True|True|No|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en `true`.|  
 |False|False|Sí|Se produce un error en tiempo de ejecución. El archivo existe, pero la transformación no puede escribir en él.|  
 |False|True|Sí|La transformación elimina y vuelve a crear el archivo, y escribe los datos en el archivo.|  
 |True|False|Sí|La transformación abre el archivo y escribe los datos al final del archivo.|  
@@ -56,7 +55,7 @@ ms.locfileid: "48205129"
     > [!NOTE]  
     >  Solo se escribe una BOM cuando no se anexan los datos a un archivo existente y cuando los datos tienen el tipo de datos DT_NTEXT.  
   
- La transformación utiliza pares de columnas de entrada: una columna contiene un nombre de archivo y la otra contiene datos. Cada fila del conjunto de datos puede especificar un archivo diferente. Cuando la transformación procesa una fila, los datos de dicha fila se insertan en el archivo especificado. En tiempo de ejecución, la transformación crea los archivos (si no existen) y después escribe los datos en dichos archivos. Los datos deben tener un tipo de datos DT_TEXT, DT_NTEXT o DT_IMAGE. Para más información, consulte [Integration Services Data Types](../integration-services-data-types.md).  
+ La transformación utiliza pares de columnas de entrada: Una columna contiene un nombre de archivo y la otra columna contiene datos. Cada fila del conjunto de datos puede especificar un archivo diferente. Cuando la transformación procesa una fila, los datos de dicha fila se insertan en el archivo especificado. En tiempo de ejecución, la transformación crea los archivos (si no existen) y después escribe los datos en dichos archivos. Los datos deben tener un tipo de datos DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md).  
   
  Esta transformación tiene una entrada, una salida y una salida de error.  
   
@@ -70,6 +69,6 @@ ms.locfileid: "48205129"
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
- Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
+ Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
   
   

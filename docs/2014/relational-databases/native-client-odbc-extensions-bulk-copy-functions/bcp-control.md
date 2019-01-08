@@ -18,12 +18,12 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145245"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753087"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Cambia la configuración predeterminada de varios parámetros de control para una copia masiva entre un archivo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ iValue
  BCPFILECP  
  *iValue* contiene el número de la página de códigos del archivo de datos. Puede especificar el número de la página de códigos, como 1252 o 850, o uno de estos valores:  
   
- BCPFILE_ACP: los datos del archivo están en la página de códigos de Microsoft Windows® del cliente.  
+ BCPFILE_ACP: los datos en el archivo están en el Windows Microsoft?? página de códigos del cliente.  
   
  BCPFILE_OEMCP: los datos del archivo están en la página de códigos OEM del cliente (valor predeterminado).  
   

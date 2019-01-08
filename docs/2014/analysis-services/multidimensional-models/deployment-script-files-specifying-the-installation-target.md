@@ -18,12 +18,12 @@ ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e8ecad7b3d9df0974d7f7548438f2464d75fd35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d98c06131029f804476fe1f3779352a34ccd81e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225075"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537484"
 ---
 # <a name="specifying-the-installation-target"></a>Especificar el destino de instalación
   El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para implementación de lee la información del destino de instalación la \< *nombre del proyecto*> .deploymenttargets archivo. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea este archivo cuando se genera el proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa la base de datos y servidor especificados en el **implementación** página de la  *\<nombre del proyecto >* **las páginas de propiedades** cuadro de diálogo para crear el \< *nombre del proyecto*> archivo .targets.  
@@ -37,17 +37,17 @@ ms.locfileid: "48225075"
   
 -   Ejecute el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de forma interactiva. En la página **Destino de instalación** , especifique un nuevo destino para la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y la base de datos.  
   
-     O bien  
+     -o bien-  
   
 -   Ejecute el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el símbolo del sistema y ajuste el asistente de manera que se ejecute en modo de archivo de respuesta. Para obtener más información acerca del modo de archivo de respuesta, vea [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
-     O bien  
+     -o bien-  
   
 -   Modificar el \< *nombre del proyecto*> archivo .deploymenttargets usando cualquier editor de texto.  
   
 ## <a name="see-also"></a>Vea también  
  [Especificar opciones de implementación de roles y particiones](deployment-script-files-partition-and-role-deployment-options.md)   
- [Especificar la configuración de implementación de la solución](deployment-script-files-solution-deployment-config-settings.md)   
+ [Especificar la configuración para la implementación de soluciones](deployment-script-files-solution-deployment-config-settings.md)   
  [Especificar opciones de procesamiento](deployment-script-files-specifying-processing-options.md)  
   
   

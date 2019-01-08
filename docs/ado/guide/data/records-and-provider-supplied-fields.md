@@ -14,12 +14,12 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3eb100042c36d86d604d48e716023dc0c0c4b04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679973"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538046"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros y campos proporcionados por el proveedor
 Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) se abre el objeto, su origen puede ser la fila actual de una abierta [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), una dirección URL absoluta o una dirección URL relativa junto con una apertura [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
@@ -41,7 +41,7 @@ Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) se abr
 ## <a name="special-fields-for-document-source-providers"></a>Campos especiales para el documento de origen de los proveedores  
  Una clase especial de proveedores, denominados *proveedores de código fuente de documentos*, administra las carpetas y documentos. Cuando un **registro** objeto que representa un documento o una **Recordset** objeto representa una carpeta de documentos, el proveedor de origen de documentos rellena esos objetos con un único conjunto de campos que describen las características del documento en su lugar del propio documento. Normalmente, un campo contiene una referencia a la **Stream** que representa el documento.  
   
- Estos campos constituyen un recurso **registro** o **recordset** y se muestran para los proveedores específicos que los respaldan en [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md).  
+ Estos campos constituyen un recurso **registro** o **recordset** y se muestran para los proveedores específicos que los respaldan en [Apéndice A: Los proveedores](../../../ado/guide/appendixes/appendix-a-providers.md).  
   
  Índice de dos constantes del **campos** colección de un recurso **registro** o **Recordset** para recuperar un par de campos de uso general. El **campo** objeto [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad devuelve el contenido deseado.  
   
@@ -63,7 +63,7 @@ Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) se abr
 |RESOURCE_ABSOLUTEPARSENAME|adVarWChar|Solo lectura. Indica la dirección URL absoluta del recurso, que es la concatenación de PARENTNAME y PARSENAME.|  
 |VALOR DE RESOURCE_ISHIDDEN|adBoolean|True si el recurso está oculto. A menos que el comando que crea explícitamente el conjunto de filas selecciona filas donde el valor de RESOURCE_ISHIDDEN es True, no se devolverá ninguna fila.|  
 |RESOURCE_ISREADONLY|adBoolean|True si el recurso es de solo lectura. Si intenta abrir este recurso con DBBINDFLAG_WRITE, se producirá un error con DB_E_READONLY. Esta propiedad se puede editar incluso cuando el recurso solo se ha abierto para lectura.|  
-|RESOURCE_CONTENTTYPE|adVarWChar|Indica el uso probable del documento, por ejemplo, de un abogado. Esto es posible que se corresponde con la plantilla de Office que se usó para crear el documento.|  
+|RESOURCE_CONTENTTYPE|adVarWChar|Indica el uso probable del documento: por ejemplo, de un abogado. Esto es posible que se corresponde con la plantilla de Office que se usó para crear el documento.|  
 |RESOURCE_CONTENTCLASS|adVarWChar|Indica el tipo MIME del documento, que indica el formato, como "`text/html`".|  
 |RESOURCE_CONTENTLANGUAGE|adVarWChar|Indica el idioma en el que se almacena el contenido.|  
 |RESOURCE_CREATIONTIME|adFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora en que se creó el recurso. El tiempo se expresa en formato de hora Universal coordinada (UTC).|  
@@ -79,4 +79,4 @@ Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) se abr
   
 ## <a name="see-also"></a>Vea también  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

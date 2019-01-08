@@ -13,12 +13,12 @@ ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227705"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394246"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tarea 1 (requisito previo): quitar datos de proveedor en MDS
   En esta tarea, quitará los datos de proveedor almacenados en MDS. En la lección anterior cargó los datos manualmente mediante el **complemento MDS para Excel** . El paquete de SSIS que cree en esta lección cargará los datos en MDS automáticamente. Por tanto, antes de probar el paquete de SSIS, necesita quitar los datos de proveedor de MDS, quitar la jerarquía derivada, quitar las entidades Proveedor y Estado, y crear la entidad Proveedor sin datos.  
@@ -43,7 +43,7 @@ ms.locfileid: "48227705"
   
 10. Cambie a la ventana de Excel que tiene abierto el archivo **Cleansed and Matched Suppliers.xls** . Cambie a la pestaña **Hoja1** en la parte inferior.  
   
-11. Seleccione solo la **primera fila con encabezados**. No seleccione ninguna otra fila. Desea crear las entidades basándose en las columnas de Excel, pero no desea cargar ningún dato. Por tanto, solo selecciona la primera fila con los encabezados.  
+11. Seleccione solo la **primera fila con encabezados**. No seleccione ninguna otra fila. Para crear las entidades basándose en las columnas de Excel, pero no desea cargar los datos. Por tanto, solo selecciona la primera fila con los encabezados.  
   
 12. Haga clic en **Datos maestros** en la barra de menús.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48227705"
 22. Haga clic en **Explorador**. Observe que se crea la entidad **Proveedor** con todos los atributos **sin ningún valor**.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 2 &#40;opcional&#41;: creación de una vista de suscripciones de MDS con Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [Tarea 2 &#40;opcional&#41;: Creación de una vista de suscripciones de MDS con Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

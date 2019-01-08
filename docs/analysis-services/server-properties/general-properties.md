@@ -1,5 +1,5 @@
 ---
-title: Propiedades generales | Microsoft Docs
+title: Propiedades generales de Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906215"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072392"
 ---
 # <a name="general-properties"></a>Propiedades generales
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. En este tema se documentan las propiedades de servidor en el archivo msmdsrv.ini que no se incluyen de otro modo en una sección concreta, como Seguridad, Red o ThreadPool. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Se aplica a:** modo de servidor multidimensional y tabular, a menos que se especifique lo contrario  
+ **Se aplica a:** Modo de servidor multidimensional y Tabular, a menos que se indique lo contrario  
   
 ## <a name="non-specific-category"></a>Categoría no específica  
  **AdminTimeout**  
@@ -58,26 +58,26 @@ ms.locfileid: "48906215"
  Una propiedad de entero de 32 bits con signo que define el máximo de subprocesos por segmento de partición durante una resolución de consulta. Cuanto menor sea el número de usuarios simultáneos, mayor podrá ser este valor, a expensas de la memoria. Por el contrario, puede ser necesario disminuirlo si hay un gran número de usuarios simultáneos.  
   
  **CoordinatorShutdownMode**  
- Una propiedad booleana que define el modo de apagado del coordinador. Se trata de una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Una propiedad booleana que define el modo de apagado del coordinador. Se trata de una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **DataDir**  
  Una propiedad de cadena que identifica el nombre del directorio en el que se almacenan los datos.  
   
  **DeploymentMode**  
- Determina el contexto operativo de una instancia de servidor de Analysis Services. Esta propiedad se denomina ‘modo de servidor’ en los cuadros de diálogo, los mensajes y la documentación. Esta propiedad la configura el programa de instalación de SQL Server en función del modo de servidor que se seleccione al instalar Analysis Services. Esta propiedad debe considerarse interna únicamente y siempre se usa el valor especificado por el programa de instalación.  
+ Determina el contexto operativo de una instancia de servidor de Analysis Services. Esta propiedad se denomina 'modo de servidor"en los cuadros de diálogo, mensajes y documentación. Esta propiedad la configura el programa de instalación de SQL Server en función del modo de servidor que se seleccione al instalar Analysis Services. Esta propiedad debe considerarse interna únicamente y siempre se usa el valor especificado por el programa de instalación.  
   
  Los valores válidos de esta propiedad incluyen los siguientes:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|0|Es el valor predeterminado. Especifica el modo multidimensional, utilizado para dar servicio a las bases de datos multidimensionales que usan el almacenamiento MOLAP, HOLAP y ROLAP, así como a los modelos de minería de datos.|  
+|0|Este es el valor predeterminado. Especifica el modo multidimensional, utilizado para dar servicio a las bases de datos multidimensionales que usan el almacenamiento MOLAP, HOLAP y ROLAP, así como a los modelos de minería de datos.|  
 |1|Especifica las instancias de Analysis Services que se instalaron como parte de una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. No cambie la propiedad del modo de implementación de la instancia de Analysis Services que forma parte de una instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dejarán de ejecutarse en el servidor si cambia el modo.|  
 |2|Especifica el modo tabular empleado para hospedar las bases de datos de modelos tabulares que utilizan el almacenamiento en memoria o el almacenamiento DirectQuery.|  
   
  Cada modo excluye a los demás. Un servidor configurado para el modo tabular no podrá ejecutar las bases de datos de Analysis Services que contengan cubos y dimensiones. Si el hardware del equipo subyacente puede admitirlo, puede instalar varias instancias de Analysis Services en el mismo equipo y configurar cada instancia para utilizar otro modo. Recuerde que Analysis Services es una aplicación que usa muchos recursos. La implementación de varias instancias en el mismo sistema solo se recomienda para los servidores de tecnología avanzada.  
   
  **EnableFast1033Locale**  
- Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **ExternalCommandTimeout**  
  Propiedad de entero que define el tiempo de espera, en segundos, para comandos emitidos a servidores externos, incluidos los orígenes de datos relacionales y los servidores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] externos.  
@@ -140,10 +140,10 @@ ms.locfileid: "48906215"
   
 ## <a name="requestprioritization-category"></a>Categoría RequestPrioritization  
  **Enabled**  
- Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **StatisticsStoreSize**  
- Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   

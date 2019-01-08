@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f017c96bd10feb0ac794041d11c449b199ce196b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147415"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757717"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Crear un seguimiento (SQL Server Profiler)
   En este tema se describe cómo utilizar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear un seguimiento.  
@@ -51,7 +50,7 @@ ms.locfileid: "48147415"
   
 5.  Opcionalmente, active la casilla **Habilitar hora de detención de seguimiento** para especificar una fecha y hora de detención.  
   
-6.  Para agregar o quitar eventos, columnas de datos o filtros, haga clic en la pestaña **Selección de eventos**. Para obtener más información, vea [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](sql-server-profiler.md).  
+6.  Para agregar o quitar eventos, columnas de datos o filtros, haga clic en la pestaña **Selección de eventos**. Para obtener más información, vea: [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
   
 7.  Haga clic en **Ejecutar** para iniciar el seguimiento.  
   

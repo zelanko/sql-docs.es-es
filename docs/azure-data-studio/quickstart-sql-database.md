@@ -1,8 +1,9 @@
 ---
-title: 'Inicio rápido: Conectarse y consultar Azure SQL database mediante Azure Data Studio | Microsoft Docs'
+title: 'Inicio rápido: Conectarse y consultar una base de datos SQL de Azure'
+titleSuffix: Azure Data Studio
 description: En este tutorial rápido se muestra cómo usar Azure Data Studio para conectarse a una base de datos SQL y ejecutar una consulta
-ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.custom: seodec18
+ms.date: 12/21/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,24 +11,24 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: a1d39e8ebd3d986825141b1acadd0ebc782083a6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356046"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991818"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Inicio rápido: Usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse y consultar la base de datos SQL de Azure
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Inicio rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse y consultar la base de datos SQL de Azure
 
-En este tutorial rápido se muestra cómo usar *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* para conectarse a una base de datos SQL de Azure y, a continuación, usar instrucciones Transact-SQL (T-SQL) para crear el *TutorialDB* utilizados en [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
+En este tutorial, usará [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a un servidor de base de datos de SQL Azure. A continuación, se va a ejecutar las instrucciones de Transact-SQL (T-SQL) para crear y consultar la base de datos TutorialDB que se usa en otros [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para completar este tutorial rápido, necesitará [!INCLUDE[name-sos](../includes/name-sos-short.md)]y un servidor SQL Azure.
+Para completar este tutorial rápido, necesitará [!INCLUDE[name-sos](../includes/name-sos-short.md)]y un servidor de base de datos de SQL Azure.
 
-- [Instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
+- [Instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 
-Si aún no tiene un servidor SQL Azure, complete uno de los siguientes inicios rápidos de Azure SQL Database (recuerde el nombre del servidor y las credenciales de inicio de sesión.):
+Si no tiene un servidor SQL Azure, complete uno de los siguientes inicios rápidos de Azure SQL Database. Recuerde el nombre completo del servidor e inicie sesión en las credenciales para los pasos posteriores:
 
 - [Crear base de datos: Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [Creación de base de datos: CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
@@ -38,37 +39,39 @@ Si aún no tiene un servidor SQL Azure, complete uno de los siguientes inicios r
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para establecer una conexión al servidor de Azure SQL Database.
 
-1. La primera vez que ejecute [!INCLUDE[name-sos](../includes/name-sos-short.md)] el **conexión** debe abrir la página. Si no ve el **conexión** página, haga clic en **Agregar conexión**, o el **nueva conexión** icono en el **servidores** sidebar:
+1. La primera vez que ejecute [!INCLUDE[name-sos](../includes/name-sos-short.md)] el **conexión** debe abrir la página. Si no ve el **conexión** página, seleccione **Agregar conexión**, o el **nueva conexión** icono en el **servidores** sidebar:
    
    ![Nuevo icono de conexión](media/quickstart-sql-database/new-connection-icon.png)
 
-2. Este artículo se usa *inicio de sesión SQL*, pero *Windows autenticación* también es compatible. Rellene los campos como se indica a continuación con el nombre del servidor, el nombre de usuario y la contraseña para *su* servidor SQL de Azure:
+2. En este artículo usa inicio de sesión de SQL, pero también admite la autenticación de Windows. Rellene los campos siguientes con el nombre del servidor, el nombre de usuario y la contraseña para el servidor SQL de Azure:
 
-   | Configuración       | Valor sugerido | Description |
+   | Parámetro       | Valor sugerido | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Nombre del servidor** | Nombre completo del servidor | El nombre debe ser algo parecido a esto: **nombreDeServidor.baseDeDatos.Windows.NET** |
-   | **Autenticación** | Inicio de sesión de SQL| En este tutorial, se utiliza la autenticación de SQL. |
-   | **Nombre de usuario.** | Cuenta de administrador del servidor | Se trata de la cuenta que especificó cuando creó el servidor. |
-   | **Contraseña (inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Se trata de la contraseña que especificó cuando creó el servidor. |
-   | **¿Desea guardar la contraseña?** | Sí o no | Seleccione Sí si no desea escribir la contraseña cada vez. |
-   | **Nombre de la base de datos** | *Deje en blanco* | El nombre de la base de datos que desea conectarse. |
-   | **Grupo de servidores** | Seleccione <Default> | Si ha creado un grupo de servidores, puede establecer para un grupo de servidores específicos. | 
+   | **Nombre del servidor** | Nombre completo del servidor | Algo como: **nombreDeServidor.baseDeDatos.Windows.NET**. |
+   | **Autenticación** | Inicio de sesión de SQL| Este tutorial usa autenticación de SQL. |
+   | **Nombre de usuario.** | El nombre de usuario de cuenta de administrador de servidor | El nombre de usuario de la cuenta usada para crear el servidor. |
+   | **Contraseña (inicio de sesión de SQL)** | La contraseña de cuenta de administrador de servidor | La contraseña de la cuenta usada para crear el servidor. |
+   | **¿Desea guardar la contraseña?** | Sí o no | Seleccione **Sí** si no desea escribir la contraseña cada vez. |
+   | **Nombre de la base de datos** | *Deje en blanco* | Se conecta sólo a este servidor. |
+   | **Grupo de servidores** | Seleccione <Default> | Puede establecer este campo a un grupo de servidores específicos que creó. | 
 
    ![Nuevo icono de conexión](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. Si el servidor no tiene una regla de firewall que permita Studio de datos de Azure para conectarse, el **crear nueva regla de firewall** se abrirá el formulario. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Seleccione **Conectar**.
+
+4. Si el servidor no tiene una regla de firewall que permita Studio de datos de Azure para conectarse, el **crear nueva regla de firewall** se abrirá el formulario. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nueva regla de firewall](media/quickstart-sql-database/firewall.png)  
 
-4. Después de conectarse correctamente el servidor se abre en el *servidores* barra lateral.
+Después de conectarse correctamente, el servidor se abre en el **servidores** barra lateral.
 
 ## <a name="create-the-tutorial-database"></a>Crear la base de datos tutorial
 
-Las siguientes secciones se creación el *TutorialDB* base de datos que se utiliza en varios [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
+Las secciones siguientes creación la base de datos TutorialDB que se usa en otros [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
 
-1. Haga clic con el botón derecho en el servidor SQL de Azure en la barra lateral de los servidores y seleccione **nueva consulta.**
+1. Haga doble clic en el servidor SQL de Azure en el **servidores** barra lateral y seleccione **nueva consulta**.
 
-1. Pegue el siguiente fragmento de código en el editor de consultas y haga clic en **ejecutar**:
+1. Pegue este SQL en el editor de consultas.
 
    ```sql
    IF NOT EXISTS (
@@ -83,22 +86,21 @@ Las siguientes secciones se creación el *TutorialDB* base de datos que se utili
    GO
    ```
 
-
+1. En la barra de herramientas, seleccione **ejecutar**. Las notificaciones aparecen en la **mensajes** panel que muestra el progreso de la consulta.
 
 ## <a name="create-a-table"></a>Creación de una tabla
 
-El editor de consultas aún está conectado a la *maestro* base de datos, pero si desea crear una tabla en la *TutorialDB* base de datos. 
+El editor de consultas está conectado a la **maestro** base de datos, pero si desea crear una tabla en la **TutorialDB** base de datos. 
 
-1. Cambiar el contexto de conexión a **TutorialDB**:
+1. Conectarse a la **TutorialDB** base de datos.
 
-   ![Cambio de contexto](media/quickstart-sql-database/change-context.png)
+   ![Cambio de contexto](media/quickstart-sql-database/change-context2.png)
 
 
 
-1. Pegue el siguiente fragmento de código en el editor de consultas y haga clic en **ejecutar**:
+1. Crear un `Customers` tabla. 
 
-   > [!NOTE]
-   > Puede esta opción para anexar o sobrescribir la consulta anterior en el editor. Tenga en cuenta que al hacer clic **ejecutar** ejecuta solo la consulta seleccionada. Si se selecciona nada, haga clic en **ejecutar** ejecuta todas las consultas en el editor.
+   Reemplace la consulta anterior en el editor de consultas con ésta y seleccione **ejecutar**.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -118,9 +120,9 @@ El editor de consultas aún está conectado a la *maestro* base de datos, pero s
    ```
 
 
-## <a name="insert-rows"></a>Insertar filas
+## <a name="insert-rows-into-the-table"></a>Insertar filas en la tabla
 
-- Pegue el siguiente fragmento de código en el editor de consultas y haga clic en **ejecutar**:
+Reemplace la consulta anterior con ésta y seleccione **ejecutar**.
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -134,25 +136,24 @@ El editor de consultas aún está conectado a la *maestro* base de datos, pero s
    GO
    ```
 
-
 ## <a name="view-the-result"></a>Ver el resultado
-1. Pegue el siguiente fragmento de código en el editor de consultas y haga clic en **ejecutar**:
+
+Reemplace la consulta anterior con ésta y seleccione **ejecutar**.
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. Se muestran los resultados de la consulta:
+Mostrarán los resultados de consulta:
 
-   ![Seleccione los resultados](media/quickstart-sql-database/select-results.png)
+   ![Seleccione los resultados](media/quickstart-sql-database/select-results2.png)
 
 
 ## <a name="clean-up-resources"></a>Limpiar recursos
 
-Otros artículos de esta colección se basan en esta guía. Si tiene previsto seguir trabajando con los tutoriales posteriores, no limpie los recursos creados en esta guía de inicio rápido. Si no tiene previsto continuar, utilice los pasos siguientes para eliminar recursos creados en este inicio rápido en el portal de Azure.
-Limpiar los recursos mediante la eliminación de los grupos de recursos que ya no necesita. Para obtener más información, consulte [limpiar recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Los artículos de inicio rápido posteriores se basan en los recursos creados aquí. Si tiene previsto trabajar con estos artículos, asegúrese de no eliminar estos recursos. En caso contrario, en el portal de Azure, elimine los recursos que ya no necesita. Para obtener más información, consulte [limpiar recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ahora que ha conectado correctamente a una base de datos SQL de Azure y ejecutar una consulta, pruebe el [tutorial del editor de código](tutorial-sql-editor.md).
+Ahora que se ha conectado correctamente a una base de datos SQL de Azure y ejecutar una consulta, pruebe el [tutorial del editor de código](tutorial-sql-editor.md).

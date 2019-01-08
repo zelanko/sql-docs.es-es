@@ -1,5 +1,5 @@
 ---
-title: Jerarquías desiguales | Documentos de Microsoft
+title: Jerarquías desiguales | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c5eb53a8ae3ff25b7c0b4d390d9c5ffc896e542
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529342"
 ---
-# <a name="user-defined-hierarchies---ragged-hierarchies"></a>Jerarquías definidas por el usuario - jerarquías desiguales
+# <a name="user-defined-hierarchies---ragged-hierarchies"></a>Jerarquías definidas por el usuario: Jerarquías desiguales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Una jerarquía desigual es una jerarquía definida por el usuario que tiene un número impar de niveles. Por ejemplo, un organigrama donde un director de alto nivel tiene tanto directores de departamento como no directores a su cargo o jerarquías geográficas que constan de País-Región-Ciudad, donde algunas ciudades no tienen un Estado o Provincia primario, como Washington D.C., Ciudad del Vaticano o Nueva Delhi.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34023102"
   
 -   Cree una jerarquía de elementos primarios y secundarios que administre explícitamente los miembros del nivel. Para conocer esta técnica, vea la entrada de blog [Ragged Hierarchy in SSAS (Jerarquía desigual en SSAS)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Para más información, vea [Dimensiones de elementos primarios y secundarios](../../analysis-services/multidimensional-models/parent-child-dimension.md)en Libros en pantalla. Las desventajas de crear una jerarquía de elementos primarios y secundarios son que solo puede tener una por dimensión y que normalmente disminuye el rendimiento cuando se calculan agregaciones para los miembros intermedios.  
   
- Si la dimensión contiene más de una jerarquía desigual, debe usar el primer enfoque y establecer **HideMemberIf**. Los desarrolladores de BI que tienen experiencia práctica en el trabajo con jerarquías desiguales van más allá y son partidarios de realizar cambios adicionales en las tablas de datos físicas, creando tablas diferentes para cada nivel. Para más información sobre esta técnica, vea la entrada del blog de Martin Mason [The SSAS Financial Cube–Part 1a–Ragged Hierarchies (El cubo financiero de SSAS - Parte 1a: Jerarquías desiguales)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) .  
+ Si la dimensión contiene más de una jerarquía desigual, debe usar el primer enfoque y establecer **HideMemberIf**. Los desarrolladores de BI que tienen experiencia práctica en el trabajo con jerarquías desiguales van más allá y son partidarios de realizar cambios adicionales en las tablas de datos físicas, creando tablas diferentes para cada nivel. Consulte [Martin Mason de las jerarquías de SSAS Financial Cube-parte 1a-desiguales (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) para obtener más información sobre esta técnica.  
   
 ##  <a name="bkmk_Hide"></a> Establecer HideMemberIf para ocultar miembros en una jerarquía normal  
  En la tabla de una dimensión desigual, los miembros que faltan de manera lógica se pueden representar de distintos modos. Las celdas de la tabla pueden contener valores NULL o cadenas vacías o bien pueden contener el mismo valor que su elemento primario para servir de marcador de posición. La representación de los marcadores de posición está determinada por el estado de los marcadores de posición de los miembros secundarios, según determina la propiedad **HideMemberIf** , y la propiedad de cadena de conexión **MDX Compatibility** de la aplicación cliente.  
@@ -52,9 +52,9 @@ ms.locfileid: "34023102"
   
 2.  Haga clic con el botón derecho en un miembro dentro de la jerarquía y seleccione **Propiedades**. Establezca **HideMemberIf** en uno de los valores que se describen a continuación.  
   
-    |Configuración de HideMemberIf|Description|  
+    |Configuración de HideMemberIf|Descripción|  
     |--------------------------|-----------------|  
-    |**Never**|Los miembros del nivel nunca están ocultos. Es el valor predeterminado.|  
+    |**Never**|Los miembros del nivel nunca están ocultos. Este es el valor predeterminado.|  
     |**OnlyChildWithNoName**|Un miembro del nivel está oculto cuando es el único elemento secundario de su elemento primario y su nombre es nulo o es una cadena vacía.|  
     |**OnlyChildWithParentName**|Un miembro del nivel está oculto cuando es el único elemento secundario de su elemento primario y su nombre es el mismo que el de su primario.|  
     |**NoName**|Un miembro del nivel está oculto cuando su nombre está vacío.|  
@@ -63,7 +63,7 @@ ms.locfileid: "34023102"
 ##  <a name="bkmk_Mdx"></a> Establecer MDX Compatibility para determinar cómo se representan los marcadores de posición en las aplicaciones cliente  
  Después de establecer **HideMemberIf** en un nivel de jerarquía, debe establecer también la propiedad **MDX Compatibility** en la cadena de conexión enviada desde la aplicación cliente. El valor de **MDX Compatibility** determina si se usa **HideMemberIf** o no.  
   
-|Valor de MDX Compatibility|Description|Uso|  
+|Valor de MDX Compatibility|Descripción|Uso|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Mostrar un valor de marcador de posición.|Es el valor predeterminado utilizado por Excel, SSDT y SSMS. Indica al servidor que devuelva los valores de marcador de posición al obtener detalles de niveles vacíos en una jerarquía desigual. Si hace clic en el valor de marcador de posición, puede seguir profundizando hasta obtener los nodos secundarios (hoja).<br /><br /> Excel posee la cadena de conexión usada para conectarse a Analysis Services y siempre establece **MDX Compatibility** en 1 en todas las conexiones nuevas. Este comportamiento conserva la compatibilidad con versiones anteriores.|  
 |**2**|Ocultar un valor de marcador de posición (un valor NULL o un duplicado del nivel primario), pero mostrar otros niveles y nodos que tengan los valores pertinentes.|**MDX Compatibility**=2 se suele considerar el valor preferido para las jerarquías desiguales. Un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y algunas aplicaciones cliente de terceros pueden conservar este valor.|  
@@ -72,6 +72,6 @@ ms.locfileid: "34023102"
  [Crear jerarquías definidas por el usuario](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Jerarquías de usuario](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Dimensiones de elementos primarios y secundarios](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
- [Propiedades de la cadena de conexión & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Propiedades de cadena de conexión &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

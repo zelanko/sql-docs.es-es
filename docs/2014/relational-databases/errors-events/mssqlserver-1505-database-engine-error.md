@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb3b255e145c489968b0d62b73aaa526bec8446c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134888"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359317"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -59,7 +59,7 @@ ms.locfileid: "48134888"
   
 -   Seleccionar columnas que se hayan definido como NOT NULL al elegir columnas para un índice o una restricción únicos. Esto elimina la posibilidad de que se produzca una infracción de unicidad cuando más de una fila contenga NULL en los valores de clave.  
   
--   Si los valores duplicados son consecuencia de errores de entrada de datos, corregir manualmente los datos y crear el índice o la restricción. Para obtener información sobre la eliminación de filas duplicadas en una tabla, vea el artículo 139444 de la base de conocimiento: [How to remove duplicate rows from a table in SQL Server](http://support.microsoft.com/kb/139444) (Cómo eliminar filas duplicadas de una tabla en SQL Server).  
+-   Si los valores duplicados son consecuencia de errores de entrada de datos, corregir manualmente los datos y crear el índice o la restricción. Para obtener información acerca de cómo quitar filas duplicadas en una tabla, vea el artículo 139444 de Knowledge Base: [Cómo quitar filas duplicadas de una tabla en SQL Server](https://support.microsoft.com/kb/139444).  
   
 ## <a name="see-also"></a>Vea también  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

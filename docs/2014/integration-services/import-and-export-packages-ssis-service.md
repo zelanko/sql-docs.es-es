@@ -16,12 +16,12 @@ ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28ac9304ac49a210cfeafc564332828da0680dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba210106a7a4045c3dae43db3590e69a7c2c5ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178825"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515786"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importar y exportar paquetes (servicio SSIS)
     
@@ -38,9 +38,9 @@ ms.locfileid: "48178825"
   
 -   Carpetas del almacén de paquetes SSIS. Las dos carpetas predeterminadas se llaman Sistema de archivos y MSDB.  
   
--   La base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   La base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le ofrece la capacidad de importar y exportar paquetes y hacerlo por cambiar el formato de almacenamiento y la ubicación de los paquetes. Con las características de importación y exportación, puede agregar paquetes al sistema de archivos, al almacén de paquetes o a la base de datos msdb, así como copiar paquetes de un formato de almacenamiento a otro. Por ejemplo, los paquetes guardados en msdb se pueden copiar al sistema de archivos y viceversa.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite importar y exportar paquetes y, a través de estos procesos, cambiar el formato de almacenamiento y la ubicación de los paquetes. Con las características de importación y exportación, puede agregar paquetes al sistema de archivos, al almacén de paquetes o a la base de datos msdb, así como copiar paquetes de un formato de almacenamiento a otro. Por ejemplo, los paquetes guardados en msdb se pueden copiar al sistema de archivos y viceversa.  
   
  También puede copiar un paquete a un formato distinto con la utilidad del símbolo del sistema **dtutil** (dtutil.exe). Para más información, consulte [dtutil Utility](dtutil-utility.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48178825"
   
     -   En el cuadro **Tipo de servidor** , seleccione **Integration Services**.  
   
-    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más...>** y busque el servidor que va a usar.  
+    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más…>** y busque el servidor que quiera usar.  
   
 3.  Si el Explorador de objetos no está abierto, en el menú **Ver** , haga clic en **Explorador de objetos**.  
   
@@ -83,31 +83,31 @@ ms.locfileid: "48178825"
   
     -   Para importar desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], seleccione la opción **SQL Server** y luego especifique el servidor y seleccione el modo de autenticación. Si selecciona Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario y una contraseña.  
   
-         Haga clic en el botón de búsqueda **(…)**, seleccione el paquete que importar y haga clic en **Aceptar**.  
+         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
   
     -   Para importar desde el sistema de archivos, seleccione la opción **Sistema de archivos** .  
   
-         Haga clic en el botón de búsqueda **(…)**, seleccione el paquete que importar y haga clic en **Abrir**.  
+         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Abrir**.  
   
     -   Para importar desde el almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] , seleccione la opción **Almacén de paquetes SSIS** y especifique el servidor.  
   
-         Haga clic en el botón de búsqueda **(…)**, seleccione el paquete que importar y haga clic en **Aceptar**.  
+         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
   
 7.  Si lo desea, actualice el nombre del paquete.  
   
-8.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y elija un nivel de protección diferente usando el cuadro de diálogo **Nivel de protección de paquetes** . Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
+8.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y seleccione otro nivel de protección con el cuadro de diálogo **Nivel de protección de paquetes**. Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
   
 9. Haga clic en **Aceptar** para completar la importación.  
   
 #### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>Para exportar un paquete con SQL Server Management Studio  
   
-1.  Haga clic en **Inicio**, seleccione **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y, después, haga clic en **SQL Server Management Studio**.  
+1.  Haga clic en **Inicio**, seleccione **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, después, haga clic en **SQL Server Management Studio**.  
   
 2.  En el cuadro de diálogo **Conectar al servidor** , establezca las siguientes opciones:  
   
     -   En el cuadro **Tipo de servidor** , seleccione **Integration Services**.  
   
-    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más...>** y busque el servidor que va a usar.  
+    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más…>** y busque el servidor que quiera usar.  
   
 3.  Si el Explorador de objetos no está abierto, en el menú **Ver** , haga clic en **Explorador de objetos**.  
   
@@ -119,17 +119,17 @@ ms.locfileid: "48178825"
   
     -   Para exportar a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], seleccione la opción **SQL Server** y luego especifique el servidor y seleccione el modo de autenticación. Si selecciona Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario y una contraseña.  
   
-         Haga clic en el botón Examinar **(…)** y expanda la carpeta **Paquetes SSIS** para buscar la carpeta en la que quiere guardar el paquete. Opcionalmente, actualice el nombre predeterminado del paquete y luego haga clic en **Aceptar**.  
+         Haga clic en el botón Examinar **(…)** y expanda la carpeta **Paquetes SSIS** para buscar la carpeta donde quiera guardar el paquete. Opcionalmente, actualice el nombre predeterminado del paquete y luego haga clic en **Aceptar**.  
   
     -   Para exportar al sistema de archivos, seleccione la opción **Sistema de archivos** .  
   
-         Haga clic en el botón Examinar **(…)** para buscar la carpeta a la que quiere exportar el paquete, escriba el nombre del archivo de paquete y haga clic en **Guardar**.  
+         Haga clic en el botón Examinar **(…)** para buscar la carpeta donde quiera exportar el paquete, escriba el nombre del archivo de paquete y, después, haga clic en **Guardar**.  
   
     -   Para exportar al almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] , seleccione la opción **Almacén de paquetes SSIS** y especifique el servidor.  
   
-         Haga clic en el botón Examinar **(…)**, expanda la carpeta **Paquetes SSIS** y seleccione la carpeta en la que quiere guardar el paquete. Opcionalmente, escriba un nuevo nombre para el paquete en el cuadro de texto **Nombre del paquete** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         Haga clic en el botón Examinar **(…)**, expanda la carpeta **Paquetes SSIS** y seleccione la carpeta donde quiera guardar el paquete. Opcionalmente, escriba un nuevo nombre para el paquete en el cuadro de texto **Nombre del paquete** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y elija un nivel de protección diferente usando el cuadro de diálogo **Nivel de protección de paquetes**. Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
+7.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y seleccione otro nivel de protección con el cuadro de diálogo **Nivel de protección de paquetes**. Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
   
 8.  Haga clic en **Aceptar** para completar la exportación.  
   

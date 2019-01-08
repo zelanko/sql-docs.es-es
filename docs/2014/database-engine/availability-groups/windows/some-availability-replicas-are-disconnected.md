@@ -14,12 +14,12 @@ ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ebc6b8e8d06418c289726fd3ff2a1e56830f464
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7393fe6d415f8b68758d75fafba91c9ab0a420c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155945"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370347"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>Algunas réplicas de disponibilidad están desconectadas
     
@@ -36,7 +36,7 @@ ms.locfileid: "48155945"
  Esta directiva acumula el estado de todas las réplicas de disponibilidad y comprueba las que están en estado DISCONNECTED. La directiva está en mal estado cuando cualquier réplica de disponibilidad está en estado DISCONNECTED. De lo contrario, la directiva está en un estado correcto.  
   
 > [!NOTE]  
->  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Algunas réplicas de disponibilidad están desconectadas](http://go.microsoft.com/fwlink/p/?LinkId=220855) en TechNet Wiki.  
+>  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Algunas réplicas de disponibilidad están desconectadas](https://go.microsoft.com/fwlink/p/?LinkId=220855) en TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Posibles causas  
  En este grupo de disponibilidad, al menos una réplica secundaria no está conectada con la réplica principal. El estado de conexión es DISCONNECTED.  

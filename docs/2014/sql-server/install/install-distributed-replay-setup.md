@@ -11,12 +11,12 @@ ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9d81920e9e14dc745813795bcf98eb1d9ebdf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051408"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545381"
 ---
 # <a name="install-distributed-replay-setup"></a>Instalar Distributed Replay (programa de instalación)
   Instalar las características de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay con el Asistente para instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Cuando planee dónde desea instalar las características, tenga en cuenta lo siguiente:  
@@ -87,7 +87,7 @@ ms.locfileid: "48051408"
   
     -   Para instalar el servicio de cliente, seleccione **Distributed Replay Client**.  
   
-     **Importante**: al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
+     **Importante**: Al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
   
     -   Cuenta de usuario de dominio  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48051408"
   
      No se aceptan cuentas de grupo (locales o de dominio) y otras cuentas integradas (como Todos).  
   
-8.  Opcionalmente, haga clic en el botón de puntos suspensivos (…) para cambiar la ruta de acceso al directorio de características compartidas.  
+8.  Si lo desea, haga clic en el botón de puntos suspensivos (...) para cambiar la ruta de acceso del directorio de características compartidas.  
   
     1.  En equipos de 32 bits, la ruta de instalación predeterminada es **C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48051408"
 ## <a name="see-also"></a>Vea también  
  [Características compatibles con las ediciones de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisitos de reproducción distribuida](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
  [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   

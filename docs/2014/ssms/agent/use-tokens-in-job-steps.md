@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -16,12 +16,12 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 009c83975aa730626858c793b53c51c309c218b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222795"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356873"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens en pasos de trabajo
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente le permite usar tokens en scripts de pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La utilización de tokens al escribir pasos de trabajo ofrece la misma flexibilidad que las variables al escribir programas de software. Una vez que se inserta un token en un script de pasos de trabajo, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sustituye el token en tiempo de ejecución, antes de que el subsistema de [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecute el paso de trabajo.  
@@ -34,11 +34,11 @@ ms.locfileid: "48222795"
 ## <a name="understanding-using-tokens"></a>Descripción del uso de tokens  
   
 > [!IMPORTANT]  
->  Todos los usuarios de Windows que tengan permisos de escritura en el Registro de eventos de Windows pueden tener acceso a los pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de WMI. Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Estos tokens son: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., y **(WMI *`property`*)**. Tenga en cuenta que en esta versión el uso de los tokens se ha ampliado a todas las alertas.  
+>  Todos los usuarios de Windows que tengan permisos de escritura en el Registro de eventos de Windows pueden tener acceso a los pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de WMI. Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Estos tokens son: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., y **WMI ( *`property`*)**. Tenga en cuenta que en esta versión el uso de los tokens se ha ampliado a todas las alertas.  
 >   
 >  Si necesita usar estos tokens, asegúrese primero de que solo los miembros de los grupos de seguridad de Windows de confianza, como el grupo Administradores, tienen permisos de escritura en el registro de eventos del equipo donde reside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A continuación, para habilitar estos tokens, haga clic con el botón derecho en **Agente SQL Server** en el Explorador de objetos, elija **Propiedades**y, en la página **Sistema de alerta** , active la casilla **Reemplazar tokens para todas las respuestas de trabajos a alertas** .  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La sustitución del token del Agente es sencilla y eficaz: el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reemplaza el token por un valor literal de cadena exacto. Todos los tokens distinguen mayúsculas de minúsculas. Los pasos de trabajo deben tenerlo en cuenta y citar correctamente los tokens utilizados o convertir la cadena de reemplazo al tipo de datos correcto.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sustitución del token del agente es sencilla y eficaz: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente reemplaza por un valor de cadena literal exacta para el token. Todos los tokens distinguen mayúsculas de minúsculas. Los pasos de trabajo deben tenerlo en cuenta y citar correctamente los tokens utilizados o convertir la cadena de reemplazo al tipo de datos correcto.  
   
  Por ejemplo, se puede usar la siguiente instrucción para imprimir el nombre de la base de datos en un paso de trabajo:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48222795"
 |**(MSSA)**|Nombre del servicio SQLServerAgent maestro.|  
 |**(OSCMD)**|Prefijo del programa usado para ejecutar los pasos de trabajo de **CmdExec** .|  
 |**(SQLDIR)**|Directorio en el que se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El directorio predeterminado es C:\Archivos de programa\Microsoft SQL Server\MSSQL.|  
-|**(SQLLOGDIR)**|Token de reemplazo para la ruta de la carpeta de registro de errores de SQL Server; por ejemplo, $(ESCAPE_SQUOTE (SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Token de reemplazo para la ruta de la carpeta de registro de errores de SQL Server; por ejemplo, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
 |**(STEPCT)**|Contador del número de veces que se ha ejecutado este paso (sin incluir los reintentos). Lo puede utilizar el comando del paso para forzar la terminación de un bucle de múltiples pasos.|  
 |**(STEPID)**|Id. del paso.|  
 |**(SRVR)**|Nombre del equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia con nombre, incluye el nombre.|  
@@ -94,7 +94,7 @@ ms.locfileid: "48222795"
 ## <a name="updating-job-steps-to-use-macros"></a>Actualizar pasos de trabajo para usar macros  
  A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, los pasos de trabajo que contienen tokens sin macros de escape producirán un error y devolverán un mensaje de error indicando que el paso de trabajo contiene uno o más tokens que deben actualizarse con una macro antes de poder ejecutar el trabajo.  
   
- El artículo 915845 de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base [SQL Server Agent Job Steps That Use Tokens Fail in SQL Server 2005 Service Pack 1](http://support.microsoft.com/kb/915845)proporciona un script que puede usar para actualizar todos los pasos de trabajo que usan tokens con la macro **ESCAPE_NONE** . Después de usar el script, se recomienda revisar cuanto antes los pasos de trabajo que usan tokens y sustituir la macro **ESCAPE_NONE** por una macro de escape apropiada para el contexto del paso de trabajo.  
+ Se proporciona un script con [!INCLUDE[msCoName](../../includes/msconame-md.md)] el artículo 915845 de Knowledge Base: [Pasos de trabajo de agente de servidor SQL que usan Tokens producirá un error en SQL Server 2005 Service Pack 1](https://support.microsoft.com/kb/915845). Puede usar este script para actualizar todos los pasos de trabajo que usan tokens con el **ESCAPE_NONE** macro. Después de usar el script, se recomienda revisar cuanto antes los pasos de trabajo que usan tokens y sustituir la macro **ESCAPE_NONE** por una macro de escape apropiada para el contexto del paso de trabajo.  
   
  La tabla siguiente describe cómo el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra el reemplazo de los tokens. Para habilitar o deshabilitar la alerta de sustitución de los tokens, haga clic con el botón derecho en **Agente SQL Server** en el Explorador de objetos, seleccione **Propiedades**y, en la página **Sistema de alerta** , active o desactive la casilla **Reemplazar tokens para todas las respuestas de trabajos a alertas** .  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48222795"
   
  `PRINT N'Current database name is $(ESCAPE_SQUOTE(A-DBN))' ;`  
   
-### <a name="b-using-tokens-in-nested-strings"></a>B. Usar tokens en cadenas anidadas  
+### <a name="b-using-tokens-in-nested-strings"></a>b. Usar tokens en cadenas anidadas  
  En scripts de pasos de trabajo donde se utilizan tokens en cadenas o instrucciones anidadas, éstas deben volver a escribirse como varias instrucciones antes de insertarse en las macros de escape apropiadas.  
   
  Por ejemplo, considere el siguiente paso de trabajo, que utiliza el token `A-MSG` y no se ha actualizado con una macro de escape:  

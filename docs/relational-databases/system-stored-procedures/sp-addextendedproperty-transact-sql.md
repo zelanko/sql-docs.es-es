@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1eced8802504704506402d2ffb75609a096cb51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689223"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321751"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,8 +72,7 @@ sp_addextendedproperty
  Nombre del tipo de objeto de nivel 0 especificado. *level0_object_name* es **sysname** con el valor predeterminado es NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
- Tipo de objeto de nivel 1. *level1_object_type* es **varchar (128)**, su valor predeterminado es null. Las entradas válidas son AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION y NULL.  
-  
+ Tipo de objeto de nivel 1. *level1_object_type* es **varchar (128)**, su valor predeterminado es null. Las entradas válidas son AGREGADO, predeterminado, función, LOGICAL FILE NAME, procedimiento, cola, regla, secuencia, sinónimo, TABLE, TABLE_TYPE, tipo, vista, XML SCHEMA COLLECTION y NULL.    
  [ @level1name=] {'*level1_object_name*'}  
  Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es **sysname**, su valor predeterminado es null.  
   
@@ -87,7 +86,7 @@ sp_addextendedproperty
  0 (correcto) o 1 (error)  
   
 ## <a name="remarks"></a>Comentarios  
- Para especificar propiedades extendidas, los objetos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos se clasifican en tres niveles: 0, 1 y 2. El nivel 0 es el más alto y corresponde a los objetos contenidos en el ámbito de la base de datos. Los objetos de nivel 1 se incluyen en un ámbito de esquema o de usuario, y los objetos de nivel 2 están incluidos en los objetos de nivel 1. Se pueden definir propiedades extendidas para los objetos de cualquiera de estos niveles.  
+ Para especificar propiedades extendidas, los objetos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se clasifican en tres niveles: 0, 1 y 2. El nivel 0 es el más alto y corresponde a los objetos contenidos en el ámbito de la base de datos. Los objetos de nivel 1 se incluyen en un ámbito de esquema o de usuario, y los objetos de nivel 2 están incluidos en los objetos de nivel 1. Se pueden definir propiedades extendidas para los objetos de cualquiera de estos niveles.  
   
  Las referencias a un objeto de un nivel deben estar calificadas con los nombres de los objetos del nivel superior que son sus propietarios o que los contienen. Por ejemplo, cuando se agrega una propiedad extendida a una columna de tabla (nivel 2), también se debe especificar el nombre de la tabla (nivel 1) que contiene la columna y el esquema (nivel 0) que contiene la tabla.  
   
@@ -122,7 +121,7 @@ EXEC sp_addextendedproperty
 @value = 'AdventureWorks2012 Sample OLTP Database';  
 ```  
   
-### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>B. Agregar una propiedad extendida a una columna de una tabla  
+### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>b. Agregar una propiedad extendida a una columna de una tabla  
  En el ejemplo siguiente se agrega una propiedad de descripción (Caption) a la columna `PostalCode` de la tabla `Address`.  
   
 ```  

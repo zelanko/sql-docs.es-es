@@ -1,5 +1,5 @@
 ---
-title: Convenciones XML de ASSL | Documentos de Microsoft
+title: Convenciones XML de ASSL | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7bdc53ee4e85ee0ad782985744b3722ade6fd14
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c357efe4636c1b502cdb57305b9072907d4b2e98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023452"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532068"
 ---
 # <a name="assl-xml-conventions"></a>Convenciones XML de ASSL
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34023452"
   
  Para representar la jerarquía de objetos, ASSL utiliza las siguientes convenciones XML:  
   
--   Todos los objetos y las propiedades se representan como elementos, salvo los atributos XML estándar como "xml:lang".  
+-   Todos los objetos y propiedades se representan como elementos, salvo los atributos XML estándar, como "XML: lang".  
   
--   Nombres de elementos y valores de enumeración siguen la convención de nomenclatura de Microsoft .NET Framework de Pascal de mayúsculas y minúsculas sin caracteres de subrayado.  
+-   Nombres de elementos y valores de enumeración siguen la convención de nomenclatura de Microsoft .NET Framework de Pascal las mayúsculas y minúsculas sin caracteres de subrayado.  
   
 -   Se conserva el uso de mayúsculas o minúsculas de todos los valores. Los valores de las enumeraciones también distinguen entre mayúsculas y minúsculas.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34023452"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34023452"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34023452"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34023452"
   
  ``  
   
- Generalmente, la herencia no se utiliza cuando varios tipos tienen una propiedad con el mismo nombre. Por ejemplo, el **nombre** y **identificador** propiedades aparecen en muchos elementos, pero estas propiedades no se han promocionado a un tipo abstracto.  
+ Generalmente, la herencia no se utiliza cuando varios tipos tienen una propiedad con el mismo nombre. Por ejemplo, el **nombre** y **ID** propiedades aparecen en muchos elementos, pero estas propiedades no han sido aumentadas a un tipo abstracto.  
   
 ## <a name="whitespace"></a>Espacio en blanco  
  El espacio en blanco dentro de un valor de elemento se conserva. Sin embargo, el espacio en blanco inicial y final siempre se recorta. Por ejemplo, los elementos siguientes tienen el mismo texto pero cantidades distintas de espacio en blanco dentro de dicho texto, por lo tanto se tratan como si tuvieran valores distintos:  
@@ -107,10 +107,10 @@ ms.locfileid: "34023452"
  Analysis Services utiliza los siguientes tipos de datos del lenguaje de definición de esquema XML (XSD) estándar:  
   
  **Int**  
- Valor entero en el intervalo de -231 a 231 – 1.  
+ Valor entero en el intervalo de -231 a 231-1.  
   
  **Long**  
- Valor entero en el intervalo de -263 a 263 – 1.  
+ Un valor entero del intervalo de-263 a 263-1.  
   
  **String**  
  Valor de cadena que se ajusta a las reglas globales siguientes:  
@@ -121,10 +121,10 @@ ms.locfileid: "34023452"
   
 -   Se conserva el espacio en blanco interno.  
   
- **Nombre** y **identificador** propiedades tienen limitaciones especiales respecto a los caracteres válidos en los elementos de cadena. Para obtener información adicional acerca de **nombre** y **identificador** convenciones, vea [ASSL y características de objetos](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ **Nombre** y **ID** propiedades tienen limitaciones especiales en caracteres válidos en los elementos de cadena. Para obtener más información acerca de **nombre** y **ID** convenciones, vea [ASSL y características de objetos](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
  **DateTime**  
- A **DateTime** estructura a partir de .NET Framework. A **DateTime** valor no puede ser NULL. La fecha más antigua que admite la **DataTime** tipo de datos es el 1 de enero de 1601, que está disponible para los programadores como **DateTime.MinValue**. La fecha más antigua admitida indica que un **DateTime** falta el valor.  
+ Un **DateTime** estructura a partir de .NET Framework. Un **DateTime** valor no puede ser NULL. La fecha más antigua que admite el **DataTime** tipo de datos es el 1 de enero de 1601, que está disponible para los programadores como **DateTime.MinValue**. La fecha más antigua admitida indica que un **DateTime** falta el valor.  
   
  **Boolean**  
  Enumeración con solo dos valores, como {true, false} o {0, 1}.  
@@ -148,7 +148,7 @@ ms.locfileid: "34023452"
   
 -   No es posible determinar mediante programación si la propiedad de un objeto secundario se ha establecido directamente en el objeto secundario o se ha heredado.  
   
- Algunos elementos tienen valores predeterminados definidos que se aplican cuando falta el elemento. Por ejemplo, el **dimensión** elementos en el siguiente fragmento XML son equivalentes aunque un **dimensión** elemento contiene un **Visible** elemento, pero los otros  **Dimensión** elemento no lo hace.  
+ Algunos elementos tienen valores predeterminados definidos que se aplican cuando falta el elemento. Por ejemplo, el **dimensión** elementos en el siguiente fragmento XML son equivalentes aunque un **dimensión** elemento contiene un **Visible** elemento, pero los otros  **Dimensión** elemento no es así.  
   
  `<Dimension>`  
   
@@ -164,6 +164,6 @@ ms.locfileid: "34023452"
   
  `</Dimension>`  
   
- Para obtener más información sobre los valores predeterminados heredados, consulte [ASSL y características de objetos](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Para obtener más información sobre los valores predeterminados heredados, vea [ASSL y características de objetos](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
   

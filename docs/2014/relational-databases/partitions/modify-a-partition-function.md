@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7cc06db0cf02a5d2e85b4e49a778f5484446b9be
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640762"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763677"
 ---
 # <a name="modify-a-partition-function"></a>Modificar una función de partición
   Puede cambiar el modo en que se crean las particiones de una tabla o un índice en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al sumar o restar el número de particiones especificadas, en aumentos de 1, en la función de partición de la tabla o el índice con particiones mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lo que sucede al agregar una partición es que se "divide" una partición existente en dos particiones y se vuelven a definir los límites de las particiones nuevas. Al quitar una partición, se "mezclan" los límites de dos particiones en una sola. Lo que hace esta última acción es volver a llenar una partición y dejar la otra sin asignar.  
@@ -56,7 +56,7 @@ ms.locfileid: "51640762"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporciona compatibilidad de replicación para modificar una función de partición. Si desea realizar cambios en una función de partición de una base de datos de publicación, deberá hacerlo manualmente en la base de datos de suscripciones.  
   
--   Todos los grupos de archivos que se ven afectados por ALTER PARTITION FUNCTION deben estar en línea.  
+-   Todos los grupos de archivos que estén afectados por ALTER PARTITION FUNCTION deben estar en línea.  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -95,12 +95,12 @@ ms.locfileid: "51640762"
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  
@@ -120,12 +120,12 @@ ms.locfileid: "51640762"
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  

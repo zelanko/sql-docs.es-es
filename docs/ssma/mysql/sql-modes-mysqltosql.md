@@ -10,12 +10,12 @@ ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 46d91efa1451749d8d1cce2b1a8cf361cc30986a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6965d67b6dae484b3fa72f215446682f9aa6760c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737313"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394878"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modos DE SQL (MySQLToSQL)
 SSMA para MySQL puede funcionar en diferentes modos de SQL y puede aplicar estos modos de forma diferente para distintos clientes.  
@@ -24,11 +24,11 @@ Modos de definen la sintaxis SQL que debe ser compatibles con MySQL y el tipo de
   
 ## <a name="sql-modes-grid"></a>Cuadrícula de los modos SQL:  
   
--   Cuadrícula de modos de SQL en el nivel de raíz contiene las siguientes columnas: **SQL nombre de modo**, **cargado modos SQL**, y **eficaz de los modos de SQL**.  
+-   Cuadrícula de modos de SQL en el nivel de raíz contiene las siguientes columnas: **Nombre de modo SQL**, **cargado modos SQL**, y **modos eficaces SQL**.  
   
--   Cuadrícula de los modos de SQL en bases de datos categoría, base de datos, tabla categoría, categoría de instrucciones, categoría de vistas, tabla, vista, funciones, procedimientos, UDF y nivel de objeto de evento contiene las siguientes columnas: **SQL nombre de modo**,  **Heredan los modos SQL**, y **modos eficaces SQL**.  
+-   Cuadrícula de los modos de SQL en bases de datos categoría, base de datos, tabla categoría, categoría de instrucciones, categoría de vistas, tabla, vista, funciones, procedimientos, UDF y nivel de objeto de evento contiene las siguientes columnas: **Nombre de modo SQL**, **heredan los modos SQL**, y **modos eficaces SQL**.  
   
--   Cuadrícula de modos de SQL en el nivel de procedimiento almacenado, función almacenado y desencadenador contiene las siguientes columnas: **SQL nombre de modo**, **Original de los modos de SQL**, y **eficaz de los modos de SQL**.  
+-   Cuadrícula de modos de SQL en el nivel de procedimiento almacenado, función almacenado y desencadenador contiene las siguientes columnas: **Nombre de modo SQL**, **modos Original de SQL**, y **modos eficaces SQL**.  
   
 > [!NOTE]  
 > Modos de grupo se mostrará en negrita, en la columna 'Nombre de modo SQL'.  

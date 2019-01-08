@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5911783558ff259eef7488df082560cfe56a4dfb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 028da8892406be7c29d604cc0357f0006bacc4cb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665924"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215441"
 ---
 # <a name="process-odbc-errors-odbc"></a>Procesar errores de ODBC (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Se pueden usar dos llamadas a la función de ODBC para recuperar los mensajes de ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) y [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Para obtener la información principal relacionada con ODBC de los campos de diagnóstico **SQLState**, **pfNative** y **ErrorMessage**, llame a [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) hasta que devuelva SQL_NO_DATA. Para cada registro de diagnóstico, se puede llamar a [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) para recuperar los campos individuales. Todos los campos específicos del controlador se deben recuperar usando **SQLGetDiagField**.  
+  Dos llamadas a funciones ODBC pueden usarse para recuperar los mensajes de ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) y [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Para obtener la información principal relacionada con ODBC de los campos de diagnóstico **SQLState**, **pfNative** y **ErrorMessage**, llame a [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) hasta que devuelva SQL_NO_DATA. Para cada registro de diagnóstico, se puede llamar a [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) para recuperar los campos individuales. Todos los campos específicos del controlador se deben recuperar usando **SQLGetDiagField**.  
   
  [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) y [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) los procesa el Administrador de controladores ODBC, no un controlador individual. El Administrador de controladores ODBC no almacena en memoria caché los campos de diagnóstico específicos del controlador hasta que no se ha realizado una conexión correcta. No se puede llamar a [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) para los campos de diagnóstico específicos del controlador antes de que la conexión no sea correcta. Esto incluye los comandos de conexión ODBC, aun cuando devuelvan SQL_SUCCESS_WITH_INFO. Los campos de diagnóstico específicos del controlador no estarán disponibles hasta la llamada a función de ODBC siguiente.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "51665924"
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- Ejecute el primer fragmento de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para crear el procedimiento almacenado utilizado en este ejemplo.  
+ Ejecute la primera ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) lista para crear el procedimiento almacenado utilizado por este ejemplo de código.  
   
  Compile el segundo fragmento de código (C++) con odbc32.lib. A continuación, ejecute el programa.  
   
- Ejecute el tercer fragmento de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para eliminar el procedimiento almacenado que se usa en este ejemplo.  
+ Ejecute la tercera ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) lista para eliminar el procedimiento almacenado utilizado por este ejemplo de código.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 use AdventureWorks  
@@ -64,7 +64,7 @@ SELECT * FROM Purchasing.Vendor
 Go  
 ```  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 // compile with: odbc32.lib  
@@ -232,7 +232,7 @@ void ProcessLogMessages(SQLSMALLINT plm_handle_type, SQLHANDLE plm_handle, char 
 }  
 ```  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 use AdventureWorks  

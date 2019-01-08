@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -22,12 +21,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf244ce793bfcf3e5e5a01d2a79166b49c18c4fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22355696fda59f984e21b72e1070aaa69cba9b97
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198225"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792357"
 ---
 # <a name="view-and-modify-article-properties"></a>Ver y modificar las propiedades de un artículo
   En este tema se describe cómo ver y modificar las propiedades del artículo en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -48,7 +47,7 @@ ms.locfileid: "48198225"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48198225"
   
  [!code-sql[HowTo#sp_changemergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergeart.sql#sp_changemergearticle)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Puede modificar los artículos y obtener acceso mediante programación a sus propiedades utilizando Replication Management Objects (RMO). Las clases RMO que usa para ver o modificar las propiedades de artículo dependen del tipo de publicación a la que pertenece el artículo.  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>Para ver o modificar propiedades de un artículo que pertenece a una publicación transaccional o de instantáneas  
@@ -157,11 +156,11 @@ ms.locfileid: "48198225"
   
 4.  Establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades del artículo en el paso 3 se definieron incorrectamente o el artículo no existe.  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, se definieron incorrectamente las propiedades de artículo en el paso 3, o bien el artículo no existe.  
   
 6.  (Opcional) Para cambiar las propiedades, establezca un nuevo valor para una de las propiedades <xref:Microsoft.SqlServer.Replication.TransArticle> que se pueden establecer.  
   
-7.  (Opcional) Si especifica un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método para confirmar los cambios en el servidor. Si especifica un valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valor predeterminado), los cambios se envían al servidor inmediatamente.  
+7.  (Opcional) Si especificara un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar los cambios en el servidor. Si especificó el valor `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (predeterminado), los cambios se envían inmediatamente al servidor.  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-merge-publication"></a>Para ver o modificar propiedades de un artículo que pertenece a una publicación de combinación  
   
@@ -173,11 +172,11 @@ ms.locfileid: "48198225"
   
 4.  Establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades del artículo en el paso 3 se definieron incorrectamente o el artículo no existe.  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, se definieron incorrectamente las propiedades de artículo en el paso 3, o bien el artículo no existe.  
   
 6.  (Opcional) Para cambiar las propiedades, establezca un nuevo valor para una de las propiedades <xref:Microsoft.SqlServer.Replication.MergeArticle> que se pueden establecer.  
   
-7.  (Opcional) Si especifica un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método para confirmar los cambios en el servidor. Si especifica un valor de `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valor predeterminado), los cambios se envían al servidor inmediatamente.  
+7.  (Opcional) Si especificara un valor de `true` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar los cambios en el servidor. Si especificó el valor `false` para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (predeterminado), los cambios se envían inmediatamente al servidor.  
   
 ###  <a name="PShellExample"></a> Ejemplo (RMO)  
  Este ejemplo cambia un artículo de mezcla para especificar el controlador de lógica de negocios que usa el artículo.  

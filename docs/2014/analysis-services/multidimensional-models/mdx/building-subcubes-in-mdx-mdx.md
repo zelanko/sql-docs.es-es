@@ -18,12 +18,12 @@ ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d480df54eeb0565ed685602870484deff6600d2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fbccf5cfd31e79252933a67b2e0c66a73ee6dc3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078708"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401586"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Generar subcubos en MDX (MDX)
   Un subcubo es un subconjunto de un cubo en la representación de una vista filtrada de los datos subyacentes. El hecho de limitar un cubo a un subcubo permite mejorar el rendimiento de las consultas.  
@@ -50,11 +50,11 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 -   Si se incluyen todos los miembros de un nivel, se deben incluir todos los miembros de la jerarquía. Los miembros de otras jerarquías quedan excluidos cuando no existen con miembros del nivel (por ejemplo, una jerarquía desequilibrada como puede ser una ciudad que no incluya clientes).  
   
--   Un subcubo siempre contiene cada `(All)` miembro del cubo.  
+-   Un subcubo siempre contiene todos los miembros `(All)` del cubo.  
   
  Otra característica es el cálculo visual del total de los valores agregados del subcubo. Por ejemplo, imaginemos un subcubo que incluya `USA`, `WA`y `OR`. El valor agregado de `USA` será la suma de `{WA,OR}` puesto que `WA` y `OR` son los únicos estados definidos por el subcubo. El resto de los estados se ignoran.  
   
- Las referencias explícitas a las celdas externas al subcubo devuelven valores de celda cuya evaluación se efectúa en el contexto del cubo completo. Por ejemplo, imagine un subcubo limitado al año en curso. Utiliza la función [ParallelPeriod](/sql/mdx/parallelperiod-mdx) para comparar el año actual con el anterior. El resultado será la diferencia de los valores, incluso si el valor del año anterior no pertenece al subcubo.  
+ Las referencias explícitas a las celdas externas al subcubo devuelven valores de celda cuya evaluación se efectúa en el contexto del cubo completo. Por ejemplo, imagine un subcubo limitado al año en curso. Utiliza la función [ParallelPeriod](/sql/mdx/parallelperiod-mdx) para comparar el año actual con el anterior. La diferencia en los valores se devolverán, aunque el valor del año anterior se encuentra fuera del subcubo.  
   
  Por último, si no se sobrescribe el contexto original, las funciones de conjuntos evaluadas en una subselección se evalúan en el contexto de dicha subselección. En caso de que se sobrescriba el contexto, las funciones de conjunto se evalúan en el contexto del cubo completo.  
   
@@ -69,6 +69,6 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 ## <a name="see-also"></a>Vea también  
  [Establecer el contexto de cubo en una consulta &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

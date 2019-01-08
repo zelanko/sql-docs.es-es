@@ -1,5 +1,5 @@
 ---
-title: Crear un proyecto de Analysis Services (SSDT) | Documentos de Microsoft
+title: Crear un proyecto de Analysis Services (SSDT) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1634c864ba88afbcd9489732c5507800709f9931
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4fe65216ad293786496f412c9cc1451e6b92a7bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025262"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503394"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Crear un proyecto de Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34025262"
   
 5.  Para agregar el proyecto nuevo a la solución existente, en la lista desplegable **Solución** , seleccione **Agregar a solución**.  
   
-     O bien  
+     -o bien-  
   
      Para crear una nueva solución, en la lista desplegable **Solución** , seleccione **Crear nueva solución**. Para crear una nueva carpeta para la nueva solución, seleccione **Crear directorio para la solución**. En **Nombre de la solución**, escriba el nombre de la nueva solución.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34025262"
 ##  <a name="bkmk_ProjectFolders"></a> Carpetas de proyecto de Analysis Services  
  Un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene las siguientes carpetas, que se usan para organizar los elementos incluidos en el proyecto.  
   
-|Carpeta|Description|  
+|Carpeta|Descripción|  
 |------------|-----------------|  
 |Orígenes de datos|Contiene los orígenes de datos de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede crear estos objetos con el Asistente para orígenes de datos y editarlos en el Diseñador de origen de datos.|  
 |Vistas del origen de datos|Contiene las vistas del origen de datos de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede crear estos objetos con el Asistente para orígenes de datos y editarlos en el Diseñador de vistas del origen de datos.|  
@@ -125,10 +125,10 @@ ms.locfileid: "34025262"
   
  La carpeta de proyecto de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede contener los tipos de archivos que aparecen en la siguiente tabla.  
   
-|Tipo de archivo|Description|  
+|Tipo de archivo|Descripción|  
 |---------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]archivo de definición de proyecto (.dwproj)|Contiene metadatos sobre los elementos, las configuraciones y las referencias de ensamblado definidos e incluidos en el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|Configuración de usuario de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.dwproj.user)|Contiene información de configuración del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para un usuario específico.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] archivo de definición de proyecto (.dwproj)|Contiene metadatos sobre los elementos, las configuraciones y las referencias de ensamblado definidos e incluidos en el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuración de usuario de proyecto (.dwproj.user)|Contiene información de configuración del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para un usuario específico.|  
 |Archivo de origen de datos (.ds)|Contiene elementos ASSL (Lenguaje de scripting de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) que definen los metadatos de un origen de datos.|  
 |Archivo de vista del origen de datos (.dsv)|Contiene elementos ASSL que definen los metadatos de una vista del origen de datos.|  
 |Archivo de cubo (.cube)|Contiene elementos ASSL que definen los metadatos de un cubo, incluyendo grupos de medida, medidas y dimensiones de cubo.|  
@@ -143,9 +143,9 @@ ms.locfileid: "34025262"
   
  Las plantillas de elementos, que aparecen en la tabla siguiente, están disponibles en la categoría Elementos de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , en el cuadro de diálogo **Agregar nuevo elemento** .  
   
-|Categoría|Plantilla de elementos|Description|  
+|Categoría|Plantilla de elementos|Descripción|  
 |--------------|-------------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Elementos de proyecto|Cube|Inicia el Asistente para cubos para agregar un nuevo cubo al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Elementos de un proyecto|Cube|Inicia el Asistente para cubos para agregar un nuevo cubo al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Origen de datos|Inicia el Asistente para orígenes de datos para agregar un nuevo origen de datos al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Vista del origen de datos|Inicia el Asistente para vistas del origen de datos para agregar una nueva vista del origen de datos al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Rol de base de datos|Agrega un nuevo rol de base de datos al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y, a continuación, muestra el Diseñador de roles para el nuevo rol de base de datos.|  
@@ -153,8 +153,8 @@ ms.locfileid: "34025262"
 ||Estructura de minería de datos|Inicia el Asistente para minería de datos para agregar una nueva estructura de minería de datos y el modelo de minería de datos asociado al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar propiedades de proyecto de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Compilar proyectos de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Implementar proyectos de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Generar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

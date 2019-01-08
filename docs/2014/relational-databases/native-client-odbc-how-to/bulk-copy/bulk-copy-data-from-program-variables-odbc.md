@@ -13,19 +13,19 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be9f005c7bbfbbd931b2947ce61cc91e1d9969b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192877"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364427"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copiar datos de forma masiva desde variables de programa (ODBC)
   En este ejemplo se muestra cómo usar las funciones de copia masiva para copiar datos de forma masiva de variables de programa a SQL Server utilizando `bcp_bind` y `bcp_sendrow`. (Se ha quitado el código de comprobación de errores para simplificar el ejemplo).  
   
  Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   
- **Nota de seguridad** cuando sea posible, use la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [cryptoAPI de Win32](http://go.microsoft.com/fwlink/?LinkId=9504).  
+ **Nota de seguridad** cuando sea posible, use la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [cryptoAPI de Win32](https://go.microsoft.com/fwlink/?LinkId=9504).  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>Para usar las funciones de copia masiva directamente en variables de programa  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48192877"
   
     -   El nombre de un archivo de datos para recibir los mensajes de error de copia masiva (especifique NULL si no desea que un archivo de mensaje).  
   
-    -   La dirección de la copia: DB_IN de la aplicación a la vista o tabla o DB_OUT a la aplicación desde la tabla o vista.  
+    -   La dirección de la copia: DB_IN desde la aplicación a la vista o tabla o DB_OUT a la aplicación desde la tabla o vista.  
   
 5.  Llame a [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para cada columna de la copia masiva para enlazar la columna a una variable de programa.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48192877"
 ## <a name="example"></a>Ejemplo  
  Este ejemplo no es compatible con IA64.  
   
- Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   

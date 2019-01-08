@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -29,12 +28,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0b69773070201021390926e6da1a7fdd20d8fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137295"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813917"
 ---
 # <a name="programmatically-monitor-replication"></a>Supervisar la replicación mediante programación
   El Monitor de replicación es una herramienta gráfica que permite supervisar una topología de replicación. Puede tener acceso a los mismos datos de supervisión mediante programación usando los procedimientos de almacenamiento de replicación de [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Replication Management Objects (RMO). Estos objetos permiten programar las tareas siguientes:  
@@ -93,7 +92,7 @@ ms.locfileid: "48137295"
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>Para ver y modificar las métricas del umbral de supervisión de una publicación  
   
-1.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). De esta forma se devuelve el conjunto de umbrales de supervisión de todas las publicaciones que usan este distribuidor. Para limitar el conjunto de resultados a los umbrales de supervisión de las publicaciones que pertenecen a un único publicador, base de datos de publicación o publicación, especifique un valor en **@publisher**, **@publisher_db**o **@publication**, respectivamente. Anote el valor de **Metric_id** de cualquier umbral que se deba cambiar. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+1.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). De esta forma se devuelve el conjunto de umbrales de supervisión de todas las publicaciones que usan este distribuidor. Para limitar el conjunto de resultados a los umbrales de supervisión de las publicaciones que pertenecen a un único publicador, base de datos de publicación o publicación, especifique un valor en **@publisher**, **@publisher_db**o **@publication**, respectivamente. Anote el valor de **Metric_id** de cualquier umbral que se deba cambiar. Para obtener más información, consulte [establecer umbrales y advertencias en el Monitor de replicación](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 2.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql). Especifique los valores siguientes, según sea necesario:  
   
@@ -109,7 +108,7 @@ ms.locfileid: "48137295"
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>Para supervisar una suscripción a una publicación de combinación en el suscriptor  
   
-1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
+1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor> , y establezca las propiedades <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publisher%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publication%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.PublisherDB%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.SubscriberDB%2A> de la suscripción y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creada en el paso 1.  
   
@@ -173,7 +172,7 @@ ms.locfileid: "48137295"
   
 2.  Obtenga un objeto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> de alguna de estas maneras.  
   
-    -   Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> del publicador, y establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creada en el paso 1. Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, ya sea el nombre del publicador se definió incorrectamente o no existe la publicación.  
+    -   Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> del publicador, y establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creada en el paso 1. Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que el nombre del publicador se definió incorrectamente o que la publicación no existe.  
   
     -   De <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> al que obtuvo acceso por medio de la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> de un objeto <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> existente.  
   
@@ -269,13 +268,13 @@ ms.locfileid: "48137295"
   
         |Valor|Descripción|  
         |-----------|-----------------|  
-        |1|`expiration` : supervisa la expiración inminente de suscripciones a publicaciones transaccionales.|  
-        |2|`latency` -supervisa el rendimiento de las suscripciones a publicaciones transaccionales.|  
-        |4|`mergeexpiration` : supervisa la expiración inminente de suscripciones a publicaciones de mezcla.|  
+        |1|`expiration`: supervisa la expiración inminente de suscripciones a publicaciones transaccionales.|  
+        |2|`latency`: supervisa el rendimiento de suscripciones a publicaciones transaccionales.|  
+        |4|`mergeexpiration`: supervisa la expiración inminente de suscripciones a publicaciones de combinación.|  
         |5|`mergeslowrunduration` : supervisa la duración de sincronizaciones de mezcla en conexiones de poco ancho de banda (acceso telefónico).|  
-        |6|`mergefastrunduration` : supervisa la duración de sincronizaciones de mezcla en conexiones de alto y ancho de banda (LAN).|  
+        |6|`mergefastrunduration`: supervisa la duración de sincronizaciones de mezcla en conexiones de gran ancho de banda (LAN).|  
         |7|`mergefastrunspeed`: supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de red de área local (LAN) de gran ancho de banda.|  
-        |8|`mergeslowrunspeed` : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de poco ancho de banda (acceso telefónico).|  
+        |8|`mergeslowrunspeed`: supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de poco ancho de banda (acceso telefónico).|  
   
     -   *enable* - <xref:System.Boolean> que indica si la métrica está habilitada para la publicación.  
   

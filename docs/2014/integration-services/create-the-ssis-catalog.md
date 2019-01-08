@@ -11,15 +11,15 @@ ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 860102dff3b20bd42da048dbd33960c8f936cea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8ee32faea8c8390c0ecb1540e6115a3baedfc92
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120257"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357714"
 ---
 # <a name="create-the-ssis-catalog"></a>Crear el catálogo de SSIS
-  Después de diseñar y probar paquetes en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], puede implementar los proyectos que contienen los paquetes en un servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Antes de poder implementar los proyectos en el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, el servidor debe contener el `SSISDB` catálogo. El programa de instalación de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] no crea automáticamente el catálogo; es necesario crear manualmente el catálogo usando las instrucciones siguientes.  
+  Después de diseñar y probar paquetes en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], puede implementar los proyectos que contienen los paquetes en un servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para poder implementar los proyectos en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], el servidor debe contener el catálogo de `SSISDB`. El programa de instalación de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] no crea automáticamente el catálogo; es necesario crear manualmente el catálogo usando las instrucciones siguientes.  
   
  Puede crear el catálogo de SSISDB en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. También crea el catálogo mediante programación con Windows PowerShell.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48120257"
   
 6.  Escriba una contraseña y haga clic en **Aceptar**.  
   
-     La contraseña protege la clave maestra de la base de datos que se usar para cifrar los datos del catálogo. Guarde la contraseña en un lugar seguro. Se recomienda que haga también una copia de seguridad de la clave maestra de la base de datos. Para obtener más información, consulte [Hacer copias de seguridad de una clave maestra de una base de datos](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+     La contraseña protege la clave maestra de la base de datos que se usar para cifrar los datos del catálogo. Guarde la contraseña en un lugar seguro. Se recomienda que haga también una copia de seguridad de la clave maestra de la base de datos. Para más información, consulte [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>Para crear el catálogo de SSISDB mediante programación  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48120257"
   
     ```  
   
-     Para obtener más ejemplos de cómo usar Windows PowerShell y el espacio de nombres <xref:Microsoft.SqlServer.Management.IntegrationServices>, vea la entrada del blog [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539) (SSIS y PowerShell en SQL Server 2012), en blogs.msdn.com. Para obtener información general sobre el espacio de nombres y ejemplos de código, vea la entrada del blog sobre el [Modelo de objetos administrados del catálogo de SSIS](http://go.microsoft.com/fwlink/?LinkId=254267)en blogs.msdn.com.  
+     Para obtener más ejemplos de cómo usar Windows PowerShell y el espacio de nombres <xref:Microsoft.SqlServer.Management.IntegrationServices>, vea la entrada del blog [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (SSIS y PowerShell en SQL Server 2012), en blogs.msdn.com. Para obtener información general sobre el espacio de nombres y ejemplos de código, vea la entrada del blog sobre el [Modelo de objetos administrados del catálogo de SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vea también  
  [Catálogo de SSIS](catalog/ssis-catalog.md)   

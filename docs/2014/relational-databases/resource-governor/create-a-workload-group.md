@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, workload group create
@@ -14,21 +13,21 @@ ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 18bdb4168720f65a44bb904c823ae692d6cac262
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075180"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814057"
 ---
 # <a name="create-a-workload-group"></a>Crear un grupo de cargas de trabajo
   Puede crear un grupo de cargas de trabajo utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [permisos](#Permissions)  
   
--   **Para crear un grupo de cargas de trabajo, utilice:**  [SQL Server Management Studio](#CreWGProp), [Transact-SQL](#CreWGTSQL)  
+-   **Para crear una carga de trabajo de grupo, mediante:**  [SQL Server Management Studio](#CreWGProp), [Transact-SQL](#CreWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  

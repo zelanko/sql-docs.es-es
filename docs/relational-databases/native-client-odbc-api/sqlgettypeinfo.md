@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ea75578bdd1cfd67255ab8c76149920452d1245
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e6d813848a45326ee9a74ea38616ceef9dd02cd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670804"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524054"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51670804"
  Para el **xml** tipo de datos, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client notifica SQL_SS_LENGTH_UNLIMITED para COLUMN_SIZE denotar un tamaño ilimitado.  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo y parámetros con valores de tabla  
- El tipo de tabla para los parámetros con valores de tabla es efectivamente un metatipo, es decir, un tipo que se utiliza para definir otros tipos. Por lo tanto, no tiene que exponerse a través de SQLGetTypeInfo. Las aplicaciones deben usar SQLTables, en lugar de SQLGetTypeInfo, para recuperar los metadatos para los tipos de tabla usa parámetros con valores de tabla.  
+ El tipo de tabla para los parámetros con valores de tabla es efectivamente una meta-tipo-que es, un tipo que se usan para definir otros tipos. Por lo tanto, no tiene que exponerse a través de SQLGetTypeInfo. Las aplicaciones deben usar SQLTables, en lugar de SQLGetTypeInfo, para recuperar los metadatos para los tipos de tabla usa parámetros con valores de tabla.  
   
  Para obtener más información acerca de cómo recuperar metadatos para parámetros con valores de tabla, vea [declaración de atributos que los parámetros de Affect Table-Valued](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md).  
   

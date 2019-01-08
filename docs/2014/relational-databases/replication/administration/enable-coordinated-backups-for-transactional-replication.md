@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27c4a2daa8574d9ad012f079309e5a1658db5568
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5055305259715c323e1f6cb26fc3428879acfddb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101835"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805407"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication-replication-transact-sql-programming"></a>Habilitar copias de seguridad coordinadas para la replicación transaccional (programación de la replicación con Transact-SQL)
   Al habilitar una base de datos para la replicación transaccional, puede especificar que se tenga que realizar una copia de seguridad de todas las transacciones antes de ser entregadas a la base de datos de distribución. También puede habilitar la copia de seguridad coordinada en la base de datos de distribución para que el registro de transacciones de la base de datos de publicación no se trunque hasta que se haya realizado una copia de seguridad de las transacciones que se han propagado al distribuidor. Para más información, consulte [Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "48101835"
 2.  Si la función del paso 1 devuelve **0**, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) en la base de datos de publicación del publicador. Especifique un valor de **sync with backup** para **@optname**y **true** para **@value**.  
   
     > [!NOTE]  
-    >  Si cambia la opción **sync with backup** a **false**, el punto de la truncación de la base de datos de publicación estará actualizado después de que el Agente de registro del LOG se ejecute o después de un intervalo si el Agente de registro del LOG está ejecutando permanentemente. El parámetro del agente **–MessageInterval** , que tiene un valor predeterminado de 30 segundos, controla el intervalo máximo.  
+    >  Si cambia la opción **sync with backup** a **false**, el punto de la truncación de la base de datos de publicación estará actualizado después de que el Agente de registro del LOG se ejecute o después de un intervalo si el Agente de registro del LOG está ejecutando permanentemente. El parámetro del agente **-MessageInterval**, que tiene un valor predeterminado de 30 segundos, controla el intervalo máximo.  
   
 ### <a name="to-enable-coordinated-backups-for-a-distribution-database"></a>Para habilitar las copias de seguridad coordinadas para una base de datos de distribución  
   

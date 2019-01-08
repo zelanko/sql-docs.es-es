@@ -12,19 +12,19 @@ ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbc48ab864b3492346798042c4c1a340c459a287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ead6e45099ef16f8ee7d4935c5f02b528bd5750
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179565"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407002"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Buscar frases clave en documentos con la búsqueda semántica
   Describe cómo buscar las frases clave en documentos o columnas de texto configurados para la indización semántica estadística.  
   
 ##  <a name="BasicsQueryKey"></a> Buscar frases clave en documentos  
   
-###  <a name="howtofind"></a> Cómo: buscar frases clave en documentos con SEMANTICKEYPHRASETABLE  
+###  <a name="howtofind"></a> Cómo: Buscar las frases clave en documentos con SEMANTICKEYPHRASETABLE  
  Para identificar las frases clave de documentos específicos o para identificar documentos que contengan frases clave específicas, consulte la función [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
  SEMANTICKEYPHRASETABLE devuelve una tabla con cero, una o más filas para las frases clave asociadas con las columnas de la tabla especificada. Se puede hacer referencia a esta función de conjunto de filas en la cláusula FROM de una instrucción SELECT como si fuese un nombre de tabla normal.  
@@ -55,7 +55,7 @@ GO
  La función **SEMANTICKEYPHRASETABLE** recupera estos resultados eficazmente mediante una búsqueda de índice en vez de un recorrido de tabla.  
   
 ###  <a name="HowToTopDocuments"></a> Ejemplo 2: Buscar los documentos principales que contienen una frase clave específica  
- En el ejemplo siguiente se recuperan los 25 primeros documentos que contengan la palabra clave “Bracket” de la columna Document de la tabla Production.Document de la base de datos de ejemplo AdventureWorks.  
+ En el ejemplo siguiente se recuperan los 25 primeros documentos que contengan la palabra clave "Bracket" de la columna Document de la tabla Production.Document de la base de datos de ejemplo AdventureWorks.  
   
 ```tsql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  

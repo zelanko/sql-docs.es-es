@@ -20,16 +20,16 @@ ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd56404bfedece75d78ebaabd670cf25f19cbb0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a247b9916bd4b8bfe8704d7f374ef027043e2ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680233"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206594"
 ---
 # <a name="sqlreadfiledsn-function"></a>Función SQLReadFileDSN
 **Conformidad**  
- Versión introdujo: ODBC 3.0  
+ Versión de introducción: ODBC 3.0  
   
  **Resumen**  
  **SQLReadFileDSN** lee la información de un DSN de archivo.  

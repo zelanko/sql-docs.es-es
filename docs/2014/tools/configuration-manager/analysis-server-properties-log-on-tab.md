@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54a310d16df2ddfbbea052975fcc0756ec093485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 907840b051a4230a06525e8c3d6574aee4f40bcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116045"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801907"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Propiedades de Analysis Server (pestaña Iniciar sesión)
   Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Analysis Server** para especificar la cuenta que utiliza el servicio [!INCLUDE[ssAS](../../includes/ssas-md.md)] así como para iniciar y detener el servicio.  

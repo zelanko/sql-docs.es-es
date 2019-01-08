@@ -16,12 +16,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2d0db051e473a5b84bef5139137e33b91b62d2d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559400"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363597"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Información general de los grupos de disponibilidad AlwaysOn (SQL Server)
   En este tema se presentan los conceptos centrales de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para configurar y administrar uno o varios grupos de disponibilidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obtener un resumen de las ventajas proporcionadas por los grupos de disponibilidad e información general de la terminología de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).  
@@ -29,9 +29,9 @@ ms.locfileid: "51559400"
  Un *grupo de disponibilidad* admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como *bases de datos de disponibilidad*, que realizan la conmutación por error conjuntamente. Un grupo de disponibilidad admite un conjunto de bases de datos principales y de uno a ocho conjuntos de bases de datos secundarias correspondientes. Las bases de datos secundarias *no* son copias de seguridad. Continúe haciendo copias de seguridad de las bases de datos y de sus registros de transacciones periódicamente.  
   
 > [!TIP]  
->  Puede crear cualquier tipo de copia de seguridad de una base de datos principal. También puede crear copias de seguridad de registros y copias de seguridad completas de solo copia de las bases de datos secundarias. Para más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Puede crear cualquier tipo de copia de seguridad de una base de datos principal. También puede crear copias de seguridad de registros y copias de seguridad completas de solo copia de las bases de datos secundarias. Para obtener más información, consulte [secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
- Cada conjunto de base de datos de disponibilidad es hospedado por una *réplica de disponibilidad*. Existen dos tipos de réplicas de disponibilidad: una única *réplica principal*, que hospeda las bases de datos principales, y entre una y ocho *réplicas secundarias*, cada una de las cuales hospeda un conjunto de bases de datos secundarias y podría ser el destino de una posible conmutación por error del grupo de disponibilidad. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. En el conjunto de bases de datos de un grupo de disponibilidad, una réplica de disponibilidad proporciona redundancia únicamente en el nivel de base de datos. Las conmutaciones por error no se deben a problemas de bases de datos, como, por ejemplo, a que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos o a los daños de un registro de transacciones.  
+ Cada conjunto de base de datos de disponibilidad es hospedado por una *réplica de disponibilidad*. Existen dos tipos de réplicas de disponibilidad: una única *réplica principal*, que hospeda las bases de datos principales, y entre una y ocho *réplicas secundarias*, cada una de las cuales hospeda un conjunto de bases de datos secundarias y podría ser el destino de una posible conmutación por error del grupo de disponibilidad. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. En el conjunto de bases de datos de un grupo de disponibilidad, una réplica de disponibilidad proporciona redundancia únicamente en el nivel de la base de datos. Las conmutaciones por error no se deben a problemas de bases de datos, como, por ejemplo, a que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos o a los daños de un registro de transacciones.  
   
  La réplica principal hace que las bases de datos principales estén disponibles para las conexiones de lectura/escritura que tienen como origen los clientes. También en un proceso denominado *sincronización de datos*, que tiene lugar en el nivel de la base de datos. La réplica principal envía las entradas del registro de transacciones de cada base de datos principal a todas las bases de datos secundarias. Cada una de las réplicas secundarias almacena en memoria caché las entradas del registro de transacciones (*refuerza* el registro) y las aplica a la base de datos secundaria correspondiente. La sincronización de datos se produce entre la base de datos principal y cada una de las bases de datos secundarias conectadas, independientemente de las demás bases de datos. Por tanto, una base de datos secundaria puede suspenderse o sufrir un error sin afectar a otras bases de datos secundarias, y una base de datos principal puede suspenderse o sufrir un error sin afectar a otras bases de datos principales.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51559400"
 >  Cuando el rol de una réplica de disponibilidad es indeterminado, como durante una conmutación por error, sus bases de datos están temporalmente en estado NOT SYNCHRONIZING. Su rol se establece en RESOLVING hasta que el rol de la réplica de disponibilidad se resuelve. Si una réplica de disponibilidad se resuelve en el rol principal, sus bases de datos se convierten en las bases de datos principales. Si una réplica de disponibilidad se resuelve en el rol secundario, sus bases de datos se convierten en bases de datos secundarias.  
   
 ##  <a name="AvailabilityModes"></a> Modos de disponibilidad  
- El modo de disponibilidad es una propiedad de cada réplica de disponibilidad. El modo de disponibilidad determina si la réplica principal espera la confirmación de transacciones en una base de datos hasta que una réplica secundaria haya escrito las entradas del registro de transacciones en el disco (protegido el registro). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite dos modos de disponibilidad:*modo de confirmación asincrónica* y *modo de confirmación sincrónica*.  
+ El modo de disponibilidad es una propiedad de cada réplica de disponibilidad. El modo de disponibilidad determina si la réplica principal espera la confirmación de transacciones en una base de datos hasta que una réplica secundaria haya escrito las entradas del registro de transacciones en el disco (protegido el registro). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite dos modos de disponibilidad: *modo de confirmación asincrónica* y *modo de confirmación sincrónica*.  
   
 -   **Asynchronous-commit mode**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "51559400"
   
  Existen tres formas de conmutación por error: automática, manual y forzada (con posible pérdida de datos). La forma o formas de conmutación por error admitidas por una réplica secundaria dependen de su modo de disponibilidad y, para el modo de confirmación sincrónica, del modo de conmutación por error de la réplica principal y la réplica secundaria de destino, del siguiente modo.  
   
--   El modo de confirmación sincrónica admite dos formas de conmutación por error:*conmutación por error manual planeada* y *conmutación automática por error*, si la réplica secundaria de destino está sincronizada actualmente con el avt1. La compatibilidad con estas formas de conmutación por error depende de la *propiedad del modo de conmutación por error* en los asociados de conmutación por error. Si el modo de conmutación por error se establece en "manual” en la réplica principal o la réplica secundaria, solo se admite la conmutación por error manual para esa réplica secundaria. Si el modo de conmutación por error se establece en “automático” en las réplicas principal y secundaria, se admiten la conmutación por error manual y automática en esa réplica secundaria.  
+-   El modo de confirmación sincrónica admite dos formas de conmutación por error: *conmutación por error manual planeada* y *conmutación por error automática*, si la réplica secundaria de destino está sincronizada actualmente con el avt1. La compatibilidad con estas formas de conmutación por error depende de la *propiedad del modo de conmutación por error* en los asociados de conmutación por error. Si el modo de conmutación por error se establece en "manual” en la réplica principal o la réplica secundaria, solo se admite la conmutación por error manual para esa réplica secundaria. Si el modo de conmutación por error se establece en “automático” en las réplicas principal y secundaria, se admiten la conmutación por error manual y automática en esa réplica secundaria.  
   
     -   **Conmutación por error manual planeada** (sin pérdida de datos)  
   
@@ -118,11 +118,11 @@ ms.locfileid: "51559400"
   
 -   **Realizar operaciones de copia de seguridad en las réplicas secundarias**  
   
-     Las réplicas secundarias admiten la realización de copias de seguridad de registros y de [solo copia](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) de toda una base de datos, un archivo o un grupo de archivos. Puede configurar el grupo de disponibilidad para que se especifique la preferencia por la que las copias de seguridad deben realizarse. Es importante entender que SQL Server no aplica la preferencia, por lo que las copias de seguridad ad hoc no resultan afectadas. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para cada una de las bases de datos de un grupo de disponibilidad dado. En el caso de una réplica de disponibilidad individual, puede especificar la prioridad para realizar copias de seguridad en esta réplica en relación con las otras réplicas del mismo grupo de disponibilidad. Para más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Las réplicas secundarias admiten la realización de copias de seguridad de registros y de [solo copia](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) de toda una base de datos, un archivo o un grupo de archivos. Puede configurar el grupo de disponibilidad para que se especifique la preferencia por la que las copias de seguridad deben realizarse. Es importante entender que SQL Server no aplica la preferencia, por lo que las copias de seguridad ad hoc no resultan afectadas. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para cada una de las bases de datos de un grupo de disponibilidad dado. En el caso de una réplica de disponibilidad individual, puede especificar la prioridad para realizar copias de seguridad en esta réplica en relación con las otras réplicas del mismo grupo de disponibilidad. Para obtener más información, consulte [secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Acceso de solo lectura a una o varias réplicas secundarias (réplicas secundarias legibles)**  
   
-     La réplica de disponibilidad se puede configurar para permitir el acceso de solo lectura a las bases de datos locales si desempeñan el rol secundario, aunque algunas operaciones no son totalmente compatibles. Además, si desea evitar que cargas de trabajo de solo lectura se ejecuten en la réplica principal, puede configurar las réplicas para permitir el acceso de lectura y escritura cuando se ejecuten con el rol principal. Para más información, vea [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     La réplica de disponibilidad se puede configurar para permitir el acceso de solo lectura a las bases de datos locales si desempeñan el rol secundario, aunque algunas operaciones no son totalmente compatibles. Además, si desea evitar que cargas de trabajo de solo lectura se ejecuten en la réplica principal, puede configurar las réplicas para permitir el acceso de lectura y escritura cuando se ejecuten con el rol principal. Para obtener más información, consulte [secundarias activas: Las réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Si un grupo de disponibilidad posee actualmente un agente de escucha de grupo de disponibilidad y una o varias réplicas secundarias legibles, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede enrutar las solicitudes de conexión de intento de lectura a una de ellas (*enrutamiento de solo lectura*). Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -149,11 +149,11 @@ ms.locfileid: "51559400"
   
 -   **Blogs:**  
   
-     [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Blogs del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs del equipo de AlwaysOn SQL Server: El blog del equipo de AlwaysOn oficial SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server de CSS](http://blogs.msdn.com/b/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vídeos:**  
   
@@ -163,9 +163,9 @@ ms.locfileid: "51559400"
   
 -   **Notas del producto:**  
   
-     [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Notas del producto de Microsoft para SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
   
@@ -177,7 +177,7 @@ ms.locfileid: "51559400"
  [Compatibilidad con alta disponibilidad para bases de datos de OLTP en memoria](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)   
  [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Secundarias activas: Réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Secundarias activas: Las réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
   

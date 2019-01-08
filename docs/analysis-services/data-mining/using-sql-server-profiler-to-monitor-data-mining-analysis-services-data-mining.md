@@ -1,5 +1,5 @@
 ---
-title: Usar SQL Server Profiler para supervisar la minería de datos | Documentos de Microsoft
+title: Uso de SQL Server Profiler para supervisar la minería de datos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a40a02e3fd19ac853c7c4b291bbc3875229c747f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4ba9720f87cd41849cc118482ffbf4731049e8c9
+ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016662"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51818501"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Usar SQL Server Profiler para supervisar la minería de datos (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34016662"
 ## <a name="using-traces-to-monitor-data-mining"></a>Usar seguimientos para supervisar la minería de datos  
  Al capturar información en un seguimiento, puede especificar si se guarda en un archivo o en una tabla en una instancia de SQL Server. Independientemente del método que use para almacenar los datos, puede utilizar SQL Server Profiler para ver el seguimiento y filtrar por eventos. En la tabla siguiente se muestran algunos eventos y subclases del seguimiento predeterminado de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tienen interés para la minería de datos.  
   
-|EventClass|EventSubclass|Description|  
+|EventClass|EventSubclass|Descripción|  
 |----------------|-------------------|-----------------|  
 |**Query Begin**<br /><br /> **Query End**|**0 - MDXQuery**|Contiene el texto de todas las llamadas a los procedimientos almacenados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |**Query Begin**<br /><br /> **Query End**|**1 - DMXQuery**|Contiene el texto y los resultados de las instrucciones de Extensiones de minería de datos (DMX).|  
@@ -40,7 +40,7 @@ ms.locfileid: "34016662"
  Al ver las instrucciones de comandos en el registro de seguimiento, también puede ver la sintaxis de las instrucciones complejas que el cliente envía al servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluidas las llamadas a los procedimientos almacenados del sistema. Esta información puede ser útil para depurar o puede utilizar las instrucciones válidas como plantilla para crear consultas de predicción o modelos nuevos. Para consultar algunos ejemplos sobre las llamadas a procedimientos almacenados que se pueden capturar con un seguimiento, vea [Ejemplos de consultas de modelos de agrupación en clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+
  [Supervisar Analysis Services con SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

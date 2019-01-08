@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/10/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
@@ -17,12 +16,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b55612e8143a8ec207902ff7c802d518382820b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214832"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793627"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replicar tablas e índices con particiones
   La creación de particiones facilita el uso de tablas o índices grandes, ya que permite administrar y tener acceso a subconjuntos de datos de forma rápida y eficaz, y mantener la integridad de una recopilación de datos al mismo tiempo. Para obtener más información, vea [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). La replicación es compatible con la creación de particiones al proporcionar un conjunto de propiedades que especifican cómo se deben tratar las tablas y los índices con particiones.  
@@ -50,7 +49,7 @@ ms.locfileid: "48214832"
   
  La replicación copia los objetos en el suscriptor durante la sincronización inicial. Si el esquema de partición utiliza grupos de archivos distintos del archivo de grupos PRIMARY, esos grupos de archivos deben existir en el suscriptor antes de la sincronización inicial.  
   
- Una vez inicializado el suscriptor, los cambios de los datos se propagan al suscriptor y se aplican a las particiones adecuadas. Sin embargo, no se admiten cambios en el esquema de partición. Las replicaciones transaccional y de mezcla no admiten la replicación de los comandos siguientes: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, ni la instrucción REBUILD WITH PARTITION de ALTER INDEX.  Los cambios asociados a ellos no se replicarán automáticamente al suscriptor. Es responsabilidad del usuario realizar modificaciones similares en el suscriptor de forma manual.  
+ Una vez inicializado el suscriptor, los cambios de los datos se propagan al suscriptor y se aplican a las particiones adecuadas. Sin embargo, no se admiten cambios en el esquema de partición. La replicación transaccional y de mezcla no son compatibles con la replicación de los siguientes comandos: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, o la instrucción REBUILD WITH PARTITION de ALTER INDEX.  Los cambios asociados a ellos no se replicarán automáticamente al suscriptor. Es responsabilidad del usuario realizar modificaciones similares en el suscriptor de forma manual.  
   
 ## <a name="replication-support-for-partition-switching"></a>Compatibilidad de la replicación con la modificación de particiones  
  Una de las ventajas principales de crear particiones en una tabla es la posibilidad de mover rápida y eficazmente subconjuntos de datos entre particiones. Los datos se mueven utilizando el comando SWITCH PARTITION. De forma predeterminada, cuando en una tabla se habilita la replicación, las operaciones SWITCH PARTITION se bloquean por las razones siguientes:  

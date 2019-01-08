@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.histattriboption.f1
@@ -13,12 +12,12 @@ ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b2a0b30329516a478e07eeaddf4d04f6f5d8c65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3600b52d9233cf751a01d055a0038be49e75facf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805544"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Opciones de atributos históricos (Asistente para dimensiones variables)
   Utilice el cuadro de diálogo **Opciones de atributos históricos** para mostrar los atributos históricos por fechas de inicio y finalización, o bien para registrar atributos históricos en una columna creada especialmente con este fin.  
@@ -45,6 +44,6 @@ ms.locfileid: "48103633"
 |**Variable para establecer valores de fecha**|Seleccione una variable de fecha de la lista.|  
   
 ## <a name="see-also"></a>Vea también  
- [Configuración de salidas con el Asistente para dimensiones de variación lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configurar salidas mediante el Asistente para dimensión de variación lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

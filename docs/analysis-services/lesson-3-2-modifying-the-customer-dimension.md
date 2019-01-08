@@ -1,5 +1,5 @@
 ---
-title: Modificar la dimensión Customer | Documentos de Microsoft
+title: Modificar la dimensión Customer | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9f922dfcc073ce72834515b42691bef2e3c90d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019052"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514709"
 ---
-# <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lección 3-2-modificar la dimensión Customer
+# <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lección 3-2: modificar la dimensión Customer
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Existen varios métodos para hacer que las dimensiones de un cubo sean más fáciles de usar y tengan más funciones. En las tareas de este tema, debe modificar la dimensión Customer.  
@@ -32,11 +32,11 @@ Use la pestaña **Estructura de dimensión** del Diseñador de dimensiones para 
   
 3.  Cambie los nombres de los atributos siguientes del mismo modo:  
   
-    -   **English Education** por **Education**  
+    -   **English Education** atributos: cambiar a **educación**  
   
-    -   **English Occupation** por **Occupation**  
+    -   **English Occupation** atributos: cambiar a **ocupación**  
   
-    -   **State Province Name** por **State-Province**  
+    -   **State Province Name** atributos: cambiar a **State-Province**  
   
 4.  En el menú **Archivo** , haga clic en **Guardar todo**.  
   
@@ -106,7 +106,7 @@ Una vez que ha creado un cálculo con nombre en la vista del origen de datos, pu
   
 4.  En el campo de la propiedad **Name** , escriba **Full Name**.  
   
-5.  Haga clic en el campo de la propiedad **NameColumn** situado en la parte inferior y, después, haga clic en el botón Examinar (**…**) para abrir el cuadro de diálogo **Columna de nombre** .  
+5.  Haga clic en el **NameColumn** propiedad de campo en la parte inferior y, a continuación, haga clic en el (**...** ) para abrir el **nombre de columna** cuadro de diálogo.  
   
 6.  Seleccione **FullName** al final de la lista **Columna de origen** y haga clic en **Aceptar**.  
   

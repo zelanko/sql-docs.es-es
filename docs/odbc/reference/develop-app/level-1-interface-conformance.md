@@ -15,15 +15,15 @@ ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2071ec7d7c9a31a9da8982b583ef7618700db5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649323"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504092"
 ---
 # <a name="level-1-interface-conformance"></a>Cumplimiento de la interfaz de nivel 1
-El nivel de conformidad de interfaz de nivel 1 incluye la funcionalidad de nivel de conformidad de interfaz de Core además de características adicionales, como las transacciones, que suelen estar disponibles en un DBMS relacional OLTP. Un controlador compatible con interfaz de nivel 1 permite que la aplicación haga lo siguiente, además de las características en el nivel de conformidad de interfaz de núcleo:  
+El nivel de conformidad de interfaz de nivel 1 incluye la funcionalidad de nivel de conformidad de interfaz de Core además de características adicionales, como las transacciones, que suelen estar disponibles en un DBMS relacional OLTP. Un controlador de función de la interfaz de nivel 1 permite que la aplicación haga lo siguiente, además de las características en el nivel de conformidad de interfaz de núcleo:  
   
 |||  
 |-|-|  
@@ -33,6 +33,6 @@ El nivel de conformidad de interfaz de nivel 1 incluye la funcionalidad de nivel
 |104|Obtener las claves principales de tablas, mediante una llamada a **SQLPrimaryKeys**.|  
 |105|Utilice los procedimientos almacenados, a través de la secuencia de escape ODBC para las llamadas de procedimiento y consultar el diccionario de datos con respecto a los procedimientos almacenados, mediante una llamada a **SQLProcedureColumns** y **SQLProcedures**. (El proceso por el que los procedimientos se crean y almacenan en el origen de datos está fuera del ámbito de este documento).|  
 |106|Conectarse a un origen de datos a través de forma interactiva los servidores disponibles, mediante una llamada a **SQLBrowseConnect**.|  
-|107|Usar funciones de ODBC en lugar de instrucciones SQL para realizar determinadas operaciones de base de datos: **SQLSetPos** con SQL_POSITION y SQL_REFRESH.|  
+|107|Utilice las funciones ODBC en lugar de instrucciones SQL para realizar determinadas operaciones de base de datos: **SQLSetPos** con SQL_POSITION y SQL_REFRESH.|  
 |108|Obtener acceso al contenido de varios conjuntos de resultados generados por lotes y procedimientos almacenados, mediante una llamada a **SQLMoreResults**.|  
 |109|Delimitar las transacciones que abarcan varias funciones ODBC, con atomicidad y la capacidad de especificar SQL_ROLLBACK en **SQLEndTran**.|

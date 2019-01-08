@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - scan for startup procs option
@@ -13,12 +12,12 @@ ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12bd68e17762a041e9d5c106f60d3e60e736750c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccda9c60880bb6864fc411966ab3e410b5008101
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149035"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640847"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>Establecer la opción de configuración del servidor Buscar procedimientos de inicio
   En este tema se describe cómo establecer la opción de configuración del servidor **buscar procedimientos de inicio** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use la opción de **buscar procedimientos de inicio** para buscar la ejecución automática de procedimientos almacenados durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si el valor de esta opción se establece en 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buscará y ejecutará todos los procedimientos almacenados de ejecución automática definidos en el servidor. El valor predeterminado de **Buscar procedimientos de inicio** es 0 (no buscar).  
@@ -37,9 +36,9 @@ ms.locfileid: "48149035"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**[Después de configurar la opción de buscar procedimientos de inicio](#FollowUp)  
+-   **Seguimiento:**  [Después de configurar la opción scan for startup procs](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -66,7 +65,7 @@ ms.locfileid: "48149035"
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>Para configurar la opción scan for startup procs  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -86,7 +85,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de buscar procedimientos de inicio  
+##  <a name="FollowUp"></a> Sigue: Después de configurar la opción de buscar procedimientos de inicio  
  El servidor debe reiniciarse para que el valor surta efecto.  
   
 ## <a name="see-also"></a>Vea también  

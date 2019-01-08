@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.hostnamevalue.f1
@@ -13,12 +12,12 @@ ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f116033e54e33bc63893865bdc4339399dde4f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f8f7f1304b0d72cf59467aee16c04481fbd51ad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100764"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752207"
 ---
 # <a name="hostname-values"></a>Valores de HOST_NAME
   Las publicaciones de combinación con filtros con parámetros utilizan la función SUSER_SNAME() o la función HOST_NAME() para filtrar datos. La función se especifica en el Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación** .  

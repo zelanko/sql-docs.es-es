@@ -13,12 +13,12 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 287392869ef22492f0f3b5ac850ec4ecd58515ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623b0139d70cec0574aaf9b68e37a1ad6f4f9eaf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084635"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355210"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidad de FILESTREAM con otras características de SQL Server
   Dado que los datos FILESTREAM están en el sistema de archivos, este tema proporciona algunas consideraciones, directrices y limitaciones para usar FILESTREAM con las siguientes características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -69,7 +69,7 @@ ms.locfileid: "48084635"
  Una columna `varbinary(max)` que tiene el atributo FILESTREAM habilitado en el publicador puede replicarse en un suscriptor con o sin el atributo FILESTREAM. Para especificar cómo se replica la columna, utilice el cuadro de diálogo **Propiedades del artículo - \<Artículo>** o el parámetro @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Los datos que se replican en una columna `varbinary(max)` que no tiene el atributo FILESTREAM no deben superar el límite de 2 GB para ese tipo de datos; de lo contrario, se genera un error en tiempo de ejecución. Se recomienda que replique el atributo FILESTREAM, a menos que se va a replicar datos a [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] no es compatible con suscriptores, independientemente de la opción de esquema que se ha especificado.  
   
 > [!NOTE]  
->  La replicación de valores de datos de gran tamaño de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a suscriptores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] está limitada a un máximo de 256 MB de valores de datos. Para obtener más información, vea [Especificaciones de capacidad máxima](http://go.microsoft.com/fwlink/?LinkId=103810).  
+>  La replicación de valores de datos de gran tamaño de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a suscriptores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] está limitada a un máximo de 256 MB de valores de datos. Para obtener más información, vea [Especificaciones de capacidad máxima](https://go.microsoft.com/fwlink/?LinkId=103810).  
   
 ### <a name="considerations-for-transactional-replication"></a>Consideraciones acerca de la replicación transaccional  
  Si utiliza columnas FILESTREAM en tablas que se publican para la replicación transaccional, tenga en cuenta las consideraciones siguientes:  
@@ -78,18 +78,18 @@ ms.locfileid: "48084635"
   
 -   La opción max text repl size especifica la cantidad máxima de datos que se pueden insertar en una columna que se publica para la replicación. Esta opción se puede utilizar para controlar el tamaño de los datos FILESTREAM que se replican.  
   
--   Si se especifica la opción de esquema para replicar el atributo FILESTREAM, pero filtra la `uniqueidentifier` columna que FILESTREAM necesita o especifica que no replique la restricción UNIQUE para la columna, la replicación no replica la secuencia de archivos atributo. La columna solo se replica como una columna `varbinary(max)`.  
+-   Si especifica la opción de esquema para replicar el atributo FILESTREAM, pero filtra la columna `uniqueidentifier` que FILESTREAM necesita o especifica que no se replique la restricción UNIQUE para la columna, la replicación no replica el atributo FILESTREAM. La columna solo se replica como una columna `varbinary(max)`.  
   
 ### <a name="considerations-for-merge-replication"></a>Consideraciones acerca de la replicación de mezcla  
  Si utiliza columnas FILESTREAM en tablas que se publican para la replicación de mezcla, tenga en cuenta las consideraciones siguientes:  
   
--   Tanto la replicación de mezcla como FILESTREAM requieren una columna de tipo de datos `uniqueidentifier` para identificar cada fila de una tabla. La replicación de mezcla agrega una columna automáticamente si la tabla no la tiene. La replicación de mezcla requiere que la columna tenga establecida la propiedad ROWGUIDCOL y su valor predeterminado sea NEWID() o NEWSEQUENTIALID(). Además de estos requisitos, FILESTREAM requiere que se defina una restricción UNIQUE para la columna. Estos requisitos tienen las consecuencias siguientes:  
+-   Tanto la replicación de mezcla como FILESTREAM requieren una columna del tipo de datos `uniqueidentifier` para identificar cada fila de una tabla. La replicación de mezcla agrega una columna automáticamente si la tabla no la tiene. La replicación de mezcla requiere que la columna tenga establecida la propiedad ROWGUIDCOL y su valor predeterminado sea NEWID() o NEWSEQUENTIALID(). Además de estos requisitos, FILESTREAM requiere que se defina una restricción UNIQUE para la columna. Estos requisitos tienen las consecuencias siguientes:  
   
     -   Si agrega una columna FILESTREAM a una tabla que ya está publicada para la replicación de mezcla, asegúrese de que la columna `uniqueidentifier` tiene una restricción UNIQUE. Si no tiene una restricción UNIQUE, agregue una restricción con nombre a la tabla en la base de datos de publicación. De forma predeterminada, la replicación de mezcla publicará este cambio del esquema y se aplicará a cada base de datos de suscripciones.  
   
          Si agrega manualmente una restricción UNIQUE tal como se ha descrito y desea quitar la replicación de mezcla, primero debe quitar la restricción UNIQUE; de lo contrario, se producirá un error en la eliminación de la replicación.  
   
-    -   De forma predeterminada, la replicación de mezcla utiliza NEWSEQUENTIALID() porque puede proporcionar un mejor rendimiento que NEWID(). Si agrega un `uniqueidentifier` columna a una tabla que se va a publicar para replicación de mezcla, especifique NEWSEQUENTIALID() como valor predeterminado.  
+    -   De forma predeterminada, la replicación de mezcla utiliza NEWSEQUENTIALID() porque puede proporcionar un mejor rendimiento que NEWID(). Si agrega una columna `uniqueidentifier` a una tabla que se publicará para la replicación de mezcla, especifique NEWSEQUENTIALID() como valor predeterminado.  
   
 -   La replicación de mezcla incluye una optimización para replicar tipos de objetos grandes. Esta optimización la controla el parámetro @stream_blob_columns de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Si establece la opción de esquema para replicar el atributo FILESTREAM, el valor del parámetro @stream_blob_columns se establece en `true`. Esta optimización se puede invalidar con [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Este procedimiento almacenado le permite establecer @stream_blob_columns en `false`. Si agrega una columna FILESTREAM a una tabla que ya está publicada para la replicación de mezcla, se recomienda establecer la opción en `true` mediante el uso de sp_changemergearticle.  
   

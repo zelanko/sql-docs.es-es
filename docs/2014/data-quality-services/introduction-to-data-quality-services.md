@@ -12,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 585639067bd75c12be1b580ecd210171dff848a8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6dcc318a7bcd4bdbf8a8f4466e0a15bed155761c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030992"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392259"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introducción a Data Quality Services
   La solución de calidad de datos que aporta [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite al administrador de datos o al profesional de TI mantener la calidad de los datos y asegurarse de que los datos son apropiados para su uso empresarial. DQS es una solución controlada por conocimiento que proporciona métodos asistidos por PC e interactivos para administrar la integridad y la calidad de los orígenes de datos. DQS permite detectar, compilar y administrar conocimientos sobre sus datos. Puede utilizar ese conocimiento para limpiar datos, buscar coincidencias y generar perfiles de los datos. Asimismo, puede aprovechar los servicios basados en la nube de proveedores de datos de referencia en un proyecto de calidad de datos DQS.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 171c6e7893aa30a1fbdc6ed0c836ba0d1f8323c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128455"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806037"
 ---
 # <a name="uninstall-sql-server-2014"></a>Desinstalar SQL Server 2014
   Consulte los temas siguientes para desinstalar totalmente una instancia existente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y preparar el sistema para poder volver a instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

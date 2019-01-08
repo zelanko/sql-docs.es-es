@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 58afef163d7c46c69556ad00bfd201751e61e943
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753572"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514564"
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lección 3-4: modificar la dimensión Date
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ Una vez que ha creado un cálculo con nombre en la vista del origen de datos, pu
   
 3.  Si la ventana Propiedades no está abierta, ábrala y, después, haga clic en el botón **Ocultar automáticamente** en la barra de título para que permanezca abierta.  
   
-4.  Haga clic en el campo de la propiedad **NameColumn** situado en la parte inferior de la ventana y, después, haga clic en el botón de puntos suspensivos (**…**) para abrir el cuadro de diálogo **Columna de nombre** .  
+4.  Haga clic en el **NameColumn** propiedad situada en la parte inferior de la ventana y, a continuación, haga clic en el botón de puntos suspensivos (**...** ) para abrir el **nombre de columna** cuadro de diálogo.  
   
 5.  Seleccione **SimpleDate** al final de la lista **Columna de origen** y haga clic en **Aceptar**.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acdc9600b7d1081492893f3cc8497359df65fdb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153733"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782887"
 ---
 # <a name="tables"></a>Tablas
   Las tablas son objetos de base de datos que contienen todos sus datos. En las tablas, los datos se organizan con arreglo a un formato de filas y columnas, similar al de una hoja de cálculo. Cada fila representa un registro único y cada columna un campo dentro del registro. Por ejemplo, en una tabla que contiene los datos de los empleados de una compañía puede haber una fila para cada empleado y distintas columnas en las que figuren detalles de los mismos, como el número de empleado, el nombre, la dirección, el puesto que ocupa y su número de teléfono particular.  

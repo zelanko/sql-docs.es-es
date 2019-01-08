@@ -28,15 +28,15 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6d91a6c21bc162ff1f6100e88101f34a0a275cd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084555"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371217"
 ---
 # <a name="principals-database-engine"></a>Entidades de seguridad (motor de base de datos)
-  Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de su definición: Windows, servidor o base de datos; y de si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID).  
+  Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de la definición de la entidad de seguridad: Windows server, base de datos; y si la entidad de seguridad es indivisible o una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID).  
   
  **Entidades de seguridad de Windows**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48084555"
  Todos los usuarios de una base de datos pertenecen al rol de base de datos public. Cuando a un usuario no se le han concedido ni denegado permisos concretos para un elemento protegible, hereda los permisos para ese elemento concedidos a public.  
   
 ## <a name="informationschema-and-sys"></a>INFORMATION_SCHEMA y sys  
- Todas las bases de datos incluyen dos entidades que aparecen como usuarios en las vistas de catálogo: INFORMATION_SCHEMA y sys. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]necesita estas dos entidades. No son entidades de seguridad y no se pueden modificar ni quitar.  
+ Cada base de datos incluye dos entidades que aparecen como usuarios en las vistas de catálogo: INFORMATION_SCHEMA y sys. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]necesita estas dos entidades. No son entidades de seguridad y no se pueden modificar ni quitar.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Inicios de sesión de SQL Server basados en certificados  
  Las entidades de seguridad de servidor con nombres incluidos entre signos de número dobles (##) son exclusivamente para uso interno del sistema. Las siguientes entidades de seguridad se crean a partir de certificados cuando se instala [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y no deben eliminarse.  
@@ -88,7 +88,7 @@ ms.locfileid: "48084555"
  Cada base de datos incluye un usuario **guest**. Los permisos concedidos al usuario **guest** se aplican a todos los usuarios que tienen acceso a la base de datos, pero no disponen de una cuenta en la base de datos. El **invitado** usuario no puede quitarse, pero se puede deshabilitar si se revoca su del `CONNECT` permiso. El `CONNECT` permiso se puede revocar ejecutando `REVOKE CONNECT FROM GUEST` dentro de cualquier base de datos que no sea master o tempdb.  
   
 ## <a name="client-and-database-server"></a>Cliente y servidor de base de datos  
- Por definición, un cliente y un servidor de base de datos son entidades de seguridad y se pueden proteger. Estas entidades se pueden autenticar mutuamente antes de establecer una conexión de red segura. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) protocolo de autenticación, que define cómo interactúan los clientes con un servicio de autenticación de red.  
+ Por definición, un cliente y un servidor de base de datos son entidades de seguridad y se pueden proteger. Estas entidades se pueden autenticar mutuamente antes de establecer una conexión de red segura. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) protocolo de autenticación, que define cómo interactúan los clientes con un servicio de autenticación de red.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Los temas siguientes se incluyen en esta sección de Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  

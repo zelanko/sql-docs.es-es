@@ -15,15 +15,15 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226275"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520370"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Cambios de comportamiento en las características del Motor de base de datos en SQL Server 2014
-  En este tema se describe los cambios de comportamiento en el [!INCLUDE[ssDE](../includes/ssde-md.md)]. Los cambios de comportamiento afectan al modo en que las características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] funcionan o interactúan en comparación con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  En este tema se describen los cambios de comportamiento en [!INCLUDE[ssDE](../includes/ssde-md.md)]. Los cambios de comportamiento afectan al modo en que las características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] funcionan o interactúan en comparación con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>Cambios de comportamiento en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  En las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], las consultas en un documento XML que contiene cadenas por encima de una determinada longitud (más de 4020 caracteres) pueden producir resultados incorrectos. En [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], estas consultas devuelven resultados correctos.  
@@ -87,7 +87,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 |-------------------------|--------------------------------------|  
 |byte<br /><br /> short<br /><br /> INT<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> SMALLINT<br /><br /> INT<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
 |Decimal|Decimal<br /><br /> NUMERIC|  
-|FLOAT|real|  
+|FLOAT|REAL|  
 |double|FLOAT|  
   
  El nuevo comportamiento mejora el rendimiento cuando la conversión intermedia puede omitirse. Sin embargo, cuando se producen errores en las conversiones de tipo de datos, aparecerán mensajes de error distintos de los que se generaban al convertir del valor xs:string intermedio. Por ejemplo, si el método value no podía convertir el valor `int` 100000 a `smallint`, el mensaje de error anterior era:  
@@ -99,7 +99,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>Cambio de comportamiento de sqlcmd.exe en modo XML  
- Hay cambios de comportamiento si usa sqlcmd.exe con el modo XML (comando :XML ON) al ejecutar SELECT * desde T FOR XML…  
+ Hay cambios de comportamiento si usa sqlcmd.exe con el modo XML (: comando XML ON) al ejecutar una instrucción SELECT * desde T FOR XML...  
   
 ### <a name="dbcc-checkident-revised-message"></a>Mensaje revisado de CHECKIDENT DBCC  
  En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], ha cambiado el mensaje devuelto por el comando DBCC CHECKIDENT solo cuando se usa con RESEED *new_reseed_value* para cambiar el valor de identidad actual. El nuevo mensaje es "comprobación de información de identidad: valor de identidad actual '\<valor de identidad actual >'. Ejecución de DBCC completada. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."  

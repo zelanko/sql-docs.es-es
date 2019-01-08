@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Diagram pane
@@ -15,12 +15,12 @@ ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8b79e058ddc189042b05c0ffc151d583417e961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117875"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819377"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Panel Diagrama (Visual Database Tools)
   El panel Diagrama muestra una presentación gráfica de las tablas o de los objetos con valores de tabla que ha seleccionado en la conexión de datos. También muestra todas las relaciones de combinación entre ellos.  

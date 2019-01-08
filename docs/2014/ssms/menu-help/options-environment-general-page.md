@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
@@ -12,12 +12,12 @@ ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80003c9bf964a094398256bf2f96a41fd2b3c579
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033032"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764347"
 ---
 # <a name="options-environment-general-page"></a>Opciones (Entorno - Página General)
   Use el cuadro de diálogo **Opciones** para configurar las acciones de inicio de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , opciones generales de administración de ventanas y otros valores de configuración generales. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** y haga clic en **General**.  

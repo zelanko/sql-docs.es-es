@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f57bf8b1a40783eccbb75cd27edf5eb390b1cdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078165"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822179"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection, clase de eventos
   La clase de eventos ExistingConnection indica las propiedades de las conexiones de usuario existentes al iniciar el seguimiento. El servidor genera un evento ExistingConnection para cada conexión de usuario existente.  
@@ -34,8 +33,8 @@ ms.locfileid: "48078165"
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |DatabaseID|`int`|El Id. de la base de datos actual de la conexión de usuario. Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|EventClass|`int`|Tipo de evento = 17.|27|no|  
-|EventSequence|`int`|La secuencia de este evento dentro de este seguimiento.|51|no|  
+|EventClass|`int`|Tipo de evento = 17.|27|No|  
+|EventSequence|`int`|La secuencia de este evento dentro de este seguimiento.|51|No|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IntegerData|`int`|El tamaño de paquete de red que se utiliza para la conexión.|25|Sí|  
@@ -45,7 +44,7 @@ ms.locfileid: "48078165"
 |NTDomainName|`nvarchar`|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |IdSolicitud|`int`|Id. de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
+|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que el usuario ha abierto esta conexión (hora de inicio de sesión).|14|Sí|  

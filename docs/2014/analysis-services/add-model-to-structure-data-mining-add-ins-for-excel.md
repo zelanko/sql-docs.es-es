@@ -13,12 +13,12 @@ ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cbbbbcd154642ef3437b0860d8346d76f84bd97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104795"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521039"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Agregar modelo a estructura (Complementos de minería de datos para Excel)
   ![Agregar modelo a botón estructura](media/dmc-addmodel.gif "Agregar modelo a botón estructura")  
@@ -35,13 +35,13 @@ ms.locfileid: "48104795"
   
 2.  En el **seleccionar estructura** diálogo cuadro, elija la estructura que contiene los datos que desea usar y, a continuación, haga clic en **siguiente**.  
   
-     **Sugerencia**: si no estás seguro de qué estructura de minería de datos contiene los datos que necesita, use el **documentar modelo** Asistente para ver las columnas y estadísticas básicas sobre los datos.  
+     **Sugerencia**: Si no estás seguro de qué estructura de minería de datos contiene los datos que necesita, use el **documentar modelo** Asistente para ver las columnas y estadísticas básicas sobre los datos.  
   
-     Si no encuentra una estructura de minería de datos, compruebe la conexión que está usando actualmente. Quizás necesite abrir una conexión a un servidor diferente.  
+     Si no se encuentra una estructura de minería de datos, compruebe la conexión que está usando actualmente. Quizás necesite abrir una conexión a un servidor diferente.  
   
 3.  En el **seleccionar algoritmo de minería de datos** cuadro de diálogo, seleccione un algoritmo de minería de datos para usar en el nuevo modelo de minería de datos.  
   
-     Observe que el cuadro de diálogo proporciona muchas más opciones que verá en los asistentes. Puede crear un modelo con cualquiera de los algoritmos admitidos en el servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], siempre y cuando los datos sean compatibles.  
+     Tenga en cuenta que el cuadro de diálogo proporciona muchas más opciones que verá en los asistentes. Puede crear un modelo con cualquiera de los algoritmos admitidos en el servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], siempre y cuando los datos sean compatibles.  
   
 4.  Se recomienda que hacer clic en el **parámetros** botón para abrir el **parámetros de algoritmo** diálogo cuadro y personalizar los parámetros del algoritmo. Esta opción es la manera más fácil de crear modelos de minería de datos personalizados.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48104795"
 |Opción|Comentarios|  
 |------------|--------------|  
 |**Seleccionar estructura o modelo** cuadro de diálogo|Elija una estructura de minería de datos existente para usarla como base para generar un nuevo modelo.  La estructura que elija debe estar en la conexión actual. Si no, cambie las conexiones mediante el [conectarse a los datos de origen &#40;cliente de minería de datos para Excel&#41; ](connect-to-source-data-data-mining-client-for-excel.md) herramienta.|  
-|**Seleccione el algoritmo de minería de datos** cuadro de diálogo|La lista de los algoritmos de minería de datos depende del servidor al que está conectado. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona diferentes algoritmos en las ediciones Standard y Enterprise. El administrador puede haber agregado también algoritmos personalizados.<br /><br /> Si no puede ver los algoritmos, compruebe que está conectado a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Seleccione el algoritmo de minería de datos** cuadro de diálogo|La lista de los algoritmos de minería de datos depende del servidor al que está conectado. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona diferentes algoritmos en las ediciones Standard y Enterprise. El administrador puede haber agregado también algoritmos personalizados.<br /><br /> Si no se puede ver los algoritmos, compruebe que está conectado a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Parámetros de algoritmo** cuadro de diálogo|En estos valores, puede personalizar cada algoritmo usando parámetros específicos del método analítico. También puede establecer un valor de inicialización para asegurarse de que los resultados del modelo se pueden reproducir en varios pasos de entrenamiento.<br /><br /> Para obtener más información, consulte [parámetros de algoritmo &#40;complementos de minería de datos de SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Establecer marcadores de modelo de columna** cuadro de diálogo|Los marcadores de modelado pueden mejorar el modelo especificando cómo se deben tratar los datos que faltan. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](data-mining/modeling-flags-data-mining.md).|  
   

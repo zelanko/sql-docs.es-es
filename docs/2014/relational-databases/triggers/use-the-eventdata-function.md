@@ -13,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 184e6a3354069ae5a1ed0d6b7557f4b0ac3fa716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222655"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776387"
 ---
 # <a name="use-the-eventdata-function"></a>Usar la función EVENTDATA
   La información acerca de un evento que activa un desencadenador DDL se captura mediante la función EVENTDATA. Esta función devuelve un valor `xml`. El esquema XML incluye información acerca de lo siguiente:  
@@ -95,7 +95,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   La instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que contenía el evento.  
   
- Nuevamente, los dos últimos elementos se capturan mediante XQuery con el `xml` datos generados por EVENTDATA.  
+ Una vez más, los dos últimos elementos se capturan mediante XQuery con los datos `xml` generados por EVENTDATA.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Para devolver datos de eventos, se recomienda usar el método XQuery `value()` en lugar del método `query()`. El `query()` método devuelve XML, escape "y" comercial un retorno de carro y avance de línea (CRLF) instancias de la salida, mientras que el `value()` método representa instancias de CRLF invisibles en el resultado.  
+>  Para devolver datos de eventos, se recomienda usar el método XQuery `value()` en lugar del método `query()`. El método `query()` devuelve XML e instancias de retorno de carro y avance de línea (CRLF) con caracteres de escape de Y comercial en el resultado, mientras que en el método `value()` las instancias CRLF no están visibles en el resultado.  
   
  Un ejemplo de desencadenador DDL parecido se proporciona con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obtener el ejemplo, localice la carpeta Database Triggers mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Haga clic con el botón derecho en **ddlDatabseTriggerLog** y seleccione **Incluir desencadenador de base de datos como**. De forma predeterminada, el desencadenador DDL **ddlDatabseTriggerLog** está deshabilitado.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
@@ -16,12 +15,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d0262328fd3f5a2ed948fb8f2c62781dc19ae17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a6e6fd3c6639abedc0324d2f8831e782270bc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229787"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363127"
 ---
 # <a name="wmi-data-reader-task"></a>Tarea Lector de datos WMI
   La tarea Lector de datos WMI ejecuta consultas mediante el Lenguaje de consulta del Instrumental de administración de Windows (WMI), que devuelve información de WMI sobre un sistema informático. Puede usar la tarea Lector de datos WMI para los siguientes fines:  
@@ -49,7 +48,7 @@ ms.locfileid: "48229787"
  La tarea Lector de datos WMI usa un administrador de conexiones WMI para conectarse al servidor desde el cual lee la información de WMI. Para más información, consulte [WMI Connection Manager](../connection-manager/wmi-connection-manager.md).  
   
 ## <a name="wql-query"></a>WQL Query  
- WQL es un dialecto de SQL con extensiones para admitir la notificación de eventos de WMI y otras características específicas de WMI. Para obtener más información sobre WQL, vea la documentación sobre Instrumental de administración de Windows en [MSDN Library](http://go.microsoft.com/fwlink/?linkid=7022).  
+ WQL es un dialecto de SQL con extensiones para admitir la notificación de eventos de WMI y otras características específicas de WMI. Para obtener más información sobre WQL, vea la documentación sobre Instrumental de administración de Windows en [MSDN Library](https://go.microsoft.com/fwlink/?linkid=7022).  
   
 > [!NOTE]  
 >  Las clases de WMI varían en las diferentes versiones de Windows.  
@@ -85,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de tareas de lector de datos WMI &#40;página Opciones de WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Editor de la tarea Lector de datos WMI &#40;página Opciones WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

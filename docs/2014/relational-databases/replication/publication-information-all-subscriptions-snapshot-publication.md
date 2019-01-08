@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.allsubscriptions.snapshot.f1
@@ -13,12 +12,12 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86b43caccd6117d7371b201938acc593b6d63da9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30f407c862bdc0b4cc38b225b9ff6842e8fbcce0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081075"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776947"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>Información de publicación, Todas las suscripciones (Publicación de instantáneas)
   La pestaña **Todas las suscripciones** muestra información de todas las suscripciones a la publicación de instantáneas seleccionada.  
@@ -26,13 +25,13 @@ ms.locfileid: "48081075"
 ## <a name="options"></a>Opciones  
  Para obtener información más detallada y las tareas de una suscripción, haga clic con el botón secundario en la fila de dicha suscripción y, a continuación, haga clic en una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
   
--   **Ordenar**: ordene en una o más columnas en el cuadro de diálogo **Ordenar columnas** .  
+-   **Ordenación**: Ordenar por una o varias columnas en el **ordenar columnas** cuadro de diálogo.  
   
--   **Elegir columnas para mostrar**: seleccione las columnas que se mostrarán y el orden en el que se mostrarán en el cuadro de diálogo **Elegir columnas** .  
+-   **Elegir columnas para mostrar**: Seleccionar qué columnas desea mostrar y el orden en que se mostrarán en el **Elegir columnas** cuadro de diálogo.  
   
--   **Filtro**: filtre filas en la cuadrícula basándose en los valores de columna en el cuadro de diálogo **Configuración del filtro** .  
+-   **Filtro**: Filtrar las filas en la cuadrícula basándose en valores de columna en la **configuración del filtro** cuadro de diálogo.  
   
--   **Borrar filtro**: borre cualquier configuración de filtro para la cuadrícula.  
+-   **Borrar filtro**: Borre cualquier configuración de la cuadrícula de filtro.  
   
  La configuración del filtro es específica de cada cuadrícula. La selección y ordenación de las columnas se aplica a todas las cuadrículas del mismo tipo, como la cuadrícula de las publicaciones para cada Publicador.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48081075"
  El valor de estado **Con expiración en breve/Expirado** solamente se muestra si se ha establecido un umbral. Para obtener más información, vea [Establecer umbrales y advertencias en el Monitor de replicación](monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Suscripción**  
- Muestra el nombre de cada suscripción, en el formato: *nombreDeSuscriptor: nombreDeBaseDeDatosDeSuscripción*.  
+ El nombre de cada suscripción, en el formulario: *Nombredesuscriptor: Nombredebasededatosdesuscripción*.  
   
  **Última sincronización**  
  Indica la hora en que se ejecutó por última vez el Agente de distribución. Si la sincronización está en curso, se muestra **En curso** .  

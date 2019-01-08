@@ -13,12 +13,12 @@ ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8daa6582f18d9c5279e7539dd9c3740d90e36d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103025"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353201"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementar una directiva de firma estableciendo un valor del Registro
   Se puede usar un valor opcional del Registro para administrar la directiva de una organización para la carga de paquetes firmados o sin firmar. Si utiliza este valor del Registro, debe crearlo en cada equipo en el que se ejecutarán los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y en el que desea exigir el cumplimiento de la directiva. Una vez establecido el valor del Registro, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprobará las firmas antes de cargar los paquetes.  
@@ -43,7 +43,7 @@ ms.locfileid: "48103025"
 |3|Bloquear las firmas no válidas, las que no sean de confianza y los paquetes sin firmar.<br /><br /> Este valor también bloquea las firmas generadas automáticamente.|  
   
 > [!NOTE]  
->  El valor recomendado para `BlockedSignatureStates` es 3. Este valor proporciona la protección óptima frente a paquetes sin firmar o firmas que no son válidas o no son de confianza. No obstante, es posible que el valor recomendado no sea adecuado para todas las circunstancias. Para obtener más información sobre la firma de activos digitales, vea el tema de[introducción a la firma de código](http://go.microsoft.com/fwlink/?LinkId=51414)en MSDN Library.  
+>  El valor recomendado para `BlockedSignatureStates` es 3. Este valor proporciona la protección óptima frente a paquetes sin firmar o firmas que no son válidas o no son de confianza. No obstante, es posible que el valor recomendado no sea adecuado para todas las circunstancias. Para obtener más información sobre la firma de activos digitales, vea el tema de[introducción a la firma de código](https://go.microsoft.com/fwlink/?LinkId=51414)en MSDN Library.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Para implementar una directiva de firma para paquetes  
   

@@ -11,12 +11,12 @@ ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39fc136bc29813c01c237289debbc6474f7d291d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161365"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361057"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>La búsqueda de texto completo ha cambiado desde SQL Server 2008
   El Asesor de actualizaciones detectó que la búsqueda de texto completo va a ser actualizada. Muchas opciones y valores de configuración de la búsqueda de texto completo han cambiado. Por consiguiente, al actualizar a la búsqueda de texto completo de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , es posible que sea necesario modificar algunos valores.  
@@ -33,7 +33,7 @@ ms.locfileid: "48161365"
 ## <a name="external-resources"></a>Recursos externos  
  [Compatibilidad con versiones anteriores de búsqueda de texto completo](../../../2014/database-engine/full-text-search-backward-compatibility.md)  
   
- [Actualización de la búsqueda de texto completo](http://go.microsoft.com/fwlink/?LinkId=112291)  
+ [Actualización de la búsqueda de texto completo](https://go.microsoft.com/fwlink/?LinkId=112291)  
   
  [Cambios principales en la búsqueda de texto completo](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
   

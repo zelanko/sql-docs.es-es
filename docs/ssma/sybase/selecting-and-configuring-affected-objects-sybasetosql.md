@@ -12,12 +12,12 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0aed95b084970bf4aa24bd279d8f52af7a33cfc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627553"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402269"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selección y configuración de objetos afectados (SybaseToSQL)
 En esta página puede seleccionar tablas y claves externas, los cambios en el que se deben comparar cuando SSMA comprueba los resultados de ejecución para los objetos que haya elegido en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -42,14 +42,14 @@ La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionad
   
 -   Default  
   
--   Identidad  
+-   identidad  
   
 -   Admisión de valores NULL  
   
 ## <a name="sql"></a>SQL  
 Pestaña SQL contiene la tabla"crear" SQL de la tabla seleccionada.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Datos  
 Pestaña de datos muestra los datos presentes en la tabla seleccionada.  
   
 ## <a name="properties"></a>Propiedades  

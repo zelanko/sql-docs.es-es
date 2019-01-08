@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEPART
@@ -14,12 +13,12 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e5a5a8b8d9cb15761a35bc01e9d8fe80153b288
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33935997c2c53867555001fa93ba9973257650d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189065"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793697"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (expresión de SSIS)
   Devuelve un entero que representa una parte de una fecha.  
@@ -44,7 +43,7 @@ DATEPART(datepart, date)
 ## <a name="remarks"></a>Comentarios  
  DATEPART devuelve un resultado NULL si el valor del argumento es NULL.  
   
- Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  En la tabla siguiente se incluyen las partes de fecha y las abreviaturas reconocidas por el evaluador de expresiones. En los nombres de partes de fecha no se distinguen mayúsculas de minúsculas.  
   

@@ -1,5 +1,5 @@
 ---
-title: Propiedades de red | Microsoft Docs
+title: Propiedades de red de Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a7fdeb553473c3a7ef560cce914e0c3e5612f287
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991607"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072362"
 ---
 # <a name="network-properties"></a>Propiedades de red
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Se aplica a:** modo de servidor multidimensional y tabular  
+ **Se aplica a:** Modo de servidor multidimensional y Tabular  
   
 ## <a name="general"></a>General  
  **ListenOnlyOnLocalConnections**  

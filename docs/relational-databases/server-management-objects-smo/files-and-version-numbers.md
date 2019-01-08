@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 991efd9798b371c24c5c68c595c6ef86446d79e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a72b776add3dc1fb31886711b3f812b65d1176c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836423"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203707"
 ---
 # <a name="files-and-version-numbers"></a>Archivos y números de versión
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Todos los necesarios los componentes del objeto de administración de SQL Server (SMO) se incluyen en el paquete Microsoft.SqlServer.SqlManagementObjects NuGet. SMO se implementa en varios ensamblados administrados. Puede desarrollar aplicaciones SMO en un cliente o un servidor.  
 
->>[!Important]
-La versión del archivo de los ensamblados SMO se muestra como principal. **0**. Build.Revision. Pero la versión de ensamblado incrustado es principal. **100**. Build.Revision. Esto sirve para mantener la versión de SMO que se usan en cada aplicación independiente, por lo que las actualizaciones en uno no afecta a los demás.
->>
->>Por este motivo debe **no** instalar estas versiones de los ensamblados a la caché de ensamblados Global (GAC). Si lo hace, podría hacer que otras aplicaciones, tales como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, se interrumpa. 
+> > [!Important]
+> > La versión del archivo de los ensamblados SMO se muestra como principal. **0**. Build.Revision. Pero la versión de ensamblado incrustado es principal. **100**. Build.Revision. Esto sirve para mantener la versión de SMO que se usan en cada aplicación independiente, por lo que las actualizaciones en uno no afecta a los demás.
+> > 
+> > Por este motivo debe **no** instalar estas versiones de los ensamblados a la caché de ensamblados Global (GAC). Si lo hace, podría hacer que otras aplicaciones, tales como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, se interrumpa. 
   
 |Archivo|Descripción|  
 |-----------|-----------------|  

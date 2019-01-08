@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f530061bcc4956391a79b78e656233812a877d1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c4dc82149a8906159c25c620aab6842b3444959
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229415"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364057"
 ---
-# <a name="step-1-copying-the-lesson-3-package"></a>Paso 1: copiar el paquete de la lección 3
+# <a name="step-1-copying-the-lesson-3-package"></a>Paso 1: Copiar el paquete de la lección 3
   En esta tarea, creará una copia del paquete que ha creado en la lección 3, denominado Lesson 3.dtsx. Por otra parte, si no ha completado la lección 3, puede agregar al proyecto el paquete completado de la lección 3 que se incluye con el tutorial y, a continuación, copiar dicho paquete para trabajar. Usará esta nueva copia en toda la lección 4.  
   
 ### <a name="to-create-the-lesson-4-package"></a>Para crear el paquete de la lección 4  
@@ -47,13 +46,13 @@ ms.locfileid: "48229415"
   
 2.  En el Explorador de soluciones, haga clic con el botón derecho en **Paquetes SSIS**y haga clic en **Agregar paquete existente**.  
   
-3.  En el cuadro de diálogo **Agregar copia de paquete existente**, en **Ubicación del paquete**, seleccione **Sistema de archivos**.  
+3.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.  
   
-4.  Haga clic en el botón para examinar **(…)** , vaya a Lesson 3.dtsx en la máquina y, después, haga clic en **Abrir**.  
+4.  Haga clic en el botón Examinar **(…)**, busque Lesson 3.dtsx en el equipo y, después, haga clic en **Abrir**.  
   
      Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   
-    1.  Navegue a los [ejemplos del producto Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Haga clic en la pestaña **DOWNLOADS** .  
   

@@ -11,12 +11,12 @@ ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c4fe81ed240f210157e450b6c54fe370e22bcb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b34ff1ef4f204b2c4a753366aa6e84f678c9ea8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094135"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397769"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introducción a la minería de datos (Complementos de minería de datos para Excel)
   La minería de datos es el proceso de detectar patrones significativos en los datos. La minería de datos es un complemento natural al proceso de explorar y entender los datos a través de BI tradicional. Los algoritmos automáticos pueden procesar cantidades de datos muy grandes y detectar patrones y tendencias que, de lo contrario, estarían ocultos.  
@@ -52,19 +52,19 @@ ms.locfileid: "48094135"
 ## <a name="define-your-goal"></a>Definir el objetivo  
  Antes de empezar, dedique un par de minutos a considerar cuál es la pregunta a la que verdaderamente quiere dar una respuesta. La exploración en sí misma es reveladora, pero si desea aplicar sus hallazgos a nuevos datos, debe ser capaz de indicar claramente qué espera que genere el modelo y cómo medirá si el modelo logra los objetivos.  
   
- Por ejemplo, en lugar de un objetivo "buscar nuevos clientes", concrete más su objetivo; por ejemplo, "identificar la demografía de los clientes que es probable que compren nuestro producto con una probabilidad mínima del 65 %”.  
+ Por ejemplo, en lugar de un objetivo de "Buscar nuevos clientes", aclarar su objetivo a algo más concreto, como "identificar la demografía de clientes que están probables que compren nuestro producto, con una probabilidad de al menos un 65%".  
   
--   El conjunto de datos debe contener al menos un atributo de "resultado" que pueda usar para aprendizaje y predicción. Si no existe ese tipo de atributo, puede etiquetar manualmente algunos datos de entrenamiento o usar otras columnas para crear un proxy para el resultado.  
+-   El conjunto de datos debe contener al menos un atributo de "resultado" que puede usar para el entrenamiento y predicción. Si no existe ese tipo de atributo, puede etiquetar manualmente algunos datos de entrenamiento o usar otras columnas para crear un proxy para el resultado.  
   
-     Por ejemplo, si desea predecir cuáles serán "los mejores clientes potenciales", debe aplicar alguna regla de negocios antes de etiquetar los clientes existentes, de forma que pueda aportar información a la minería de datos a través de los ejemplos que proporciona.  
+     Por ejemplo, si desea predecir "las mejores perspectivas", se debe aplicar alguna regla de negocios con antelación para etiquetar los clientes existentes, por lo que puede aprender la minería de datos de los ejemplos que proporciona.  
   
 -   Si trabaja con un valor que cambia con el paso del tiempo y desea predecir las tendencias futuras, piense en cuál va a ser la granularidad de los resultados que necesita. ¿Desea que las predicciones se realicen diaria, mensual o anualmente? Los datos tienen que analizarse con las mismas unidades que desea predecir.  
   
-     Con los patrones cíclicos, si no obtiene buenos resultados con datos diarios, pruebe distintos intervalos de tiempo, o pruebe a usar días de la semana, meses o incluso días no laborables.  
+     Con los patrones cíclicos, si no obtiene buenos resultados con datos diarios, pruebe distintos intervalos de tiempo o pruebe a usar días de la semana, meses o incluso días no laborables.  
   
 -   Antes de iniciar un asistente para encontrar correlaciones nuevas en los datos, examine una vez más los datos y considere qué clase de relaciones existentes podría haber en el conjunto de datos. ¿Hay variables poco claras? ¿Hay duplicados o servidores proxy?  
   
--   ¿Cuáles son los parámetros por los cuales se evaluará el éxito del modelo? ¿Cómo sabrá que el modelo es “suficientemente bueno”?  
+-   ¿Cuáles son las métricas por el que se va a evaluar el éxito del modelo? ¿Cómo sabrá que el modelo es "suficientemente bueno"?  
   
 -   ¿Desea realizar predicciones a partir del modelo de minería de datos o sólo buscar asociaciones y patrones interesantes?  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48094135"
   
  Dedique un minuto a ver la distribución de valores e identificar posibles problemas como valores o marcadores de posición ausentes.  
   
- Si tiene intención de realizar la minería de datos en un conjunto de datos demasiado grande o complejo para analizarlo con otros métodos, considere la posibilidad de muestrear o reducir los datos.  
+ Si va a realizar la minería de datos en un conjunto de datos que era demasiado grande y complejo que no se pudo analizar con otros métodos, considere la posibilidad de muestreo o la reducción de datos.  
   
 -   ¿Cómo se distribuyen los datos?  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48094135"
  [Exploración y limpieza de datos](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Validar el modelo  
- A medida que se ejecuta cada asistente o herramienta, el algoritmo analiza el contenido de los datos y determina si existe un patrón estadísticamente válido. Si el algoritmo no puede encontrar patrones válidos, obtendrá un mensaje de error. Sin embargo, aunque un modelo se creara correctamente, es aconsejable probarlo para ver si valida sus suposiciones. Puede usar herramientas como el [gráfico de precisión &#40;complementos de minería de datos de SQL Server&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) o [validación cruzada &#40;complementos de minería de datos de SQL Server&#41; ](cross-validation-sql-server-data-mining-add-ins.md) para generar estadísticas medidas de calidad del modelo.  
+ A medida que se ejecuta cada asistente o herramienta, el algoritmo analiza el contenido de los datos y determina si existe un patrón estadísticamente válido. Si el algoritmo no puede encontrar patrones válidos, obtendrá un mensaje de error. Sin embargo, incluso si se ha creado correctamente un modelo, desea probar el modelo para ver si valida sus suposiciones. Puede usar herramientas como el [gráfico de precisión &#40;complementos de minería de datos de SQL Server&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) o [validación cruzada &#40;complementos de minería de datos de SQL Server&#41; ](cross-validation-sql-server-data-mining-add-ins.md) para generar estadísticas medidas de calidad del modelo.  
   
  Cuando evalúe los resultados del primer modelo, hágase preguntas como estas:  
   

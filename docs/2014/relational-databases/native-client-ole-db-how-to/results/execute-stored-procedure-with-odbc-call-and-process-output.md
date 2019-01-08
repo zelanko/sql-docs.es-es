@@ -13,18 +13,18 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04423fb562cd0990a5ae45c7952ee86545fff096
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160925"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365081"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Ejecutar un procedimiento almacenado (mediante la sintaxis ODBC CALL) y procesar códigos de retorno y parámetros de salida (OLE DB)
   Los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden incluir códigos de retorno y parámetros de salida de tipo entero. Los códigos de retorno y parámetros de salida se envían en el último paquete del servidor y, por tanto, no están disponibles para la aplicación hasta que se haya lanzado al mercado completamente el conjunto de filas. Si el comando devuelve varios resultados, los datos del parámetro de salida están disponibles cuando `IMultipleResults::GetResult` devuelve DB_S_NORESULT o se lanza al mercado completamente la interfaz `IMultipleResults`, lo que se produzca en primer lugar.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, necesita cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, necesita cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Para procesar códigos de retorno y parámetros de salida  
   
@@ -45,11 +45,11 @@ ms.locfileid: "48160925"
 ## <a name="example"></a>Ejemplo  
  En este ejemplo, se muestra cómo se procesan un conjunto de filas, un código de retorno y un parámetro de salida. No se procesan los conjuntos de resultados. Este ejemplo no es compatible con IA64.  
   
- Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  
+ Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
  Ejecute la primera lista de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para crear el procedimiento almacenado utilizado por la aplicación.  
   
- Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
  Ejecute la tercera lista de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para eliminar el procedimiento almacenado utilizado por la aplicación.  
   

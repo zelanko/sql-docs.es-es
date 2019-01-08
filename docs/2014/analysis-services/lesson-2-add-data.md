@@ -11,12 +11,12 @@ ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2ffda70d3af46434886a7f2878ce238d3190905
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049355"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416356"
 ---
 # <a name="lesson-2-add-data"></a>Lección 2: Agregar datos
   En esta lección usará el Asistente para la importación de tablas de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para conectarse a la base de datos SQL AdventureWorksDW, seleccionar datos, obtener una vista previa, filtrar los datos e importarlos al área de trabajo del modelo.  
@@ -28,7 +28,7 @@ ms.locfileid: "48049355"
  Tiempo estimado para completar esta lección: **20 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 1: Crear un nuevo proyecto de modelo tabular](lesson-1-create-a-new-tabular-model-project.md).  
+ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 1: Cree un nuevo proyecto de modelo Tabular](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Crear una conexión  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48049355"
   
 7.  En la página **Elegir cómo importar los datos** , compruebe que la opción **Seleccionar de una lista de tablas y vistas para elegir los datos para importar** está seleccionada. Tendrá que seleccionar valores de una lista de tablas y vistas, así que haga clic en **Siguiente** para mostrar una lista de todas las tablas de origen de la base de datos de origen.  
   
-8.  En la página **Seleccionar tablas y vistas** , active la casilla para las siguientes tablas: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**y **FactInternetSales**.  
+8.  En el **seleccionar tablas y vistas** , seleccione la casilla de verificación para las siguientes tablas: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, y **FactInternetSales**.  
   
-9. Vamos a asignar nombres fáciles de identificar a las tablas del modelo. Haga clic en la celda de la columna **Nombre descriptivo** de **DimCustomer**. Cambie el nombre de la tabla quitando “Dim” de DimCustomer.  
+9. Vamos a asignar nombres fáciles de identificar a las tablas del modelo. Haga clic en la celda de la columna **Nombre descriptivo** de **DimCustomer**. Cambiar el nombre de la tabla quitando "Dim" de DimCustomer.  
   
 10. Cambie el nombre de las demás tablas:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48049355"
     |-----------------|-------------------|  
     |DimDate|date|  
     |DimGeography|Geografía|  
-    |DimProduct|Product|  
+    |DimProduct|Producto|  
     |DimProductCategory|Categoría del producto|  
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
@@ -92,7 +92,7 @@ ms.locfileid: "48049355"
   
 3.  Compruebe que el resto de las columnas estén activadas y después haga clic **Aceptar**.  
   
-     Observe que las palabras **Filtros aplicados** se muestran ahora en la columna **Detalles del filtro** en la fila **Customer** ; si hace clic en ese vínculo, verá una descripción textual de los filtros recién aplicados.  
+     Tenga en cuenta las palabras **filtros aplicados** se muestran ahora en el **detalles del filtro** columna en el **cliente** fila; si hace clic en ese vínculo, verá una descripción textual de la filtros que recién aplicados.  
   
 4.  Filtre las tablas restantes desactivando las casillas de las columnas siguientes en cada tabla:  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48049355"
     |**FrenchCountryRegionName**|  
     |**IpAddressLocator**|  
   
-    |Product|  
+    |Producto|  
     |-------------|  
     |**SpanishProductName**|  
     |**FrenchProductName**|  

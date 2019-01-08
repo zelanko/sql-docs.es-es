@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f34454f292e7efc92c960930b6a9218edae6a70f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6c451d13016915c9218efb2963429f8f5a7709e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148320"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544228"
 ---
 # <a name="performing-batch-operations-xmla"></a>Realizar operaciones por lotes (XMLA)
   Puede usar el [Batch](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) comando XML for Analysis (XMLA) para ejecutar varios comandos XMLA con un único XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método. Puede ejecutar varios comandos incluidos en el **Batch** comando como una única transacción o en transacciones individuales para cada comando, en serie o en paralelo. También puede especificar los enlaces fuera de línea y otras propiedades en el **Batch** comando para procesar varios [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos.  
@@ -23,12 +23,12 @@ ms.locfileid: "50148320"
  El **Batch** comando ejecuta los comandos de dos maneras:  
   
  **Transaccional**  
- Si el **transacciones** atributo de la **Batch** comando se establece en true, el **por lotes** comando ejecuta todos los comandos contenidos por el **Batch** comando en una sola transacción, un *transaccional* por lotes.  
+ Si el **transacciones** atributo de la **Batch** comando se establece en true, el **por lotes** comando ejecuta todos los comandos contenidos por el **Batch** comando en una única transacción, un *transaccional* por lotes.  
   
  Si se produce un error en cualquier comando en un lote transaccional, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] revierte cualquier comando el **Batch** comando ejecutado antes del comando que no se pudo y la **Batch** comando finaliza inmediatamente. Cualquier comando en el **Batch** no se ejecutó el comando que aún no se han ejecutado. Después de la **Batch** comando finaliza, el **Batch** comando informa de los errores producidos durante el comando con errores.  
   
  **No transaccional**  
- Si el **transacciones** atributo está establecido en false, el **Batch** comando ejecuta cada comando incluido en el **Batch** comando en una transacción independiente: un  *no transaccionales* por lotes. Si se produce un error en cualquier comando en un lote no transaccional, el **Batch** comando sigue ejecutando los comandos posteriores que produjo el error. Después de la **Batch** comando intenta ejecutar todos los comandos que el **por lotes** contiene el comando, el **Batch** comando informa de los errores producidos.  
+ Si el **transacciones** atributo está establecido en false, el **Batch** comando ejecuta cada comando incluido en el **Batch** otra transacción, un comando  *no transaccionales* por lotes. Si se produce un error en cualquier comando en un lote no transaccional, el **Batch** comando sigue ejecutando los comandos posteriores que produjo el error. Después de la **Batch** comando intenta ejecutar todos los comandos que el **por lotes** contiene el comando, el **Batch** comando informa de los errores producidos.  
   
  Todos los resultados devueltos por los comandos contenidos en un **Batch** comando se devuelven en el mismo orden en que se encuentran los comandos en el **Batch** comando. Los resultados devueltos por una **Batch** comando varían en función de si el **Batch** comando es transaccional o no transaccional.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
@@ -21,12 +20,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcc10aefddfe657e038f524f90075ae1fae0ce23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eba894a08df8a491df428cd5f34b4c9850ffae0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216315"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205928"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   Los filtros de filas con parámetros permiten enviar diferentes particiones de datos a diferentes suscriptores sin necesidad de crear varias publicaciones (los filtros con parámetros se denominaban filtros dinámicos en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Una partición es un subconjunto de filas de una tabla; dependiendo de la configuración elegida al crear un filtro de filas con parámetros, cada fila de una tabla publicada puede pertenecer a una sola partición (lo que produce particiones no superpuestas) o a dos o más particiones (lo que produce particiones superpuestas).  
@@ -38,7 +37,7 @@ ms.locfileid: "48216315"
  Para definir o modificar un filtro de fila con parámetros, vea [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Cómo funcionan los filtros con parámetros  
- Un filtro de fila con parámetros utiliza una cláusula WHERE para seleccionar los datos apropiados para publicar. En vez de especificar un valor literal en la cláusula (como ocurre con un filtro de fila estático), se especifica una o las dos funciones del sistema siguientes: SUSER_SNAME() y HOST_NAME(). También se pueden utilizar funciones definidas por el usuario, pero deben incluir SUSER_SNAME() o HOST_NAME() en el cuerpo de la función, o evaluar una de estas funciones del sistema (como `MyUDF(SUSER_SNAME()`). Si una función definida por el usuario incluye SUSER_SNAME() o HOST_NAME() en el cuerpo de la función, no se pueden pasar parámetros a la función.  
+ Un filtro de fila con parámetros utiliza una cláusula WHERE para seleccionar los datos apropiados para publicar. En vez de especificar un valor literal en la cláusula (como ocurre con un filtro de fila estático), se especifica una o las dos funciones del sistema siguientes: SUSER_SNAME () y HOST_NAME (). También se pueden utilizar funciones definidas por el usuario, pero deben incluir SUSER_SNAME() o HOST_NAME() en el cuerpo de la función, o evaluar una de estas funciones del sistema (como `MyUDF(SUSER_SNAME()`). Si una función definida por el usuario incluye SUSER_SNAME() o HOST_NAME() en el cuerpo de la función, no se pueden pasar parámetros a la función.  
   
  Las funciones del sistema SUSER_SNAME() y HOST_NAME() no son específicas para la replicación de mezcla, pero la replicación de mezcla las utiliza para el filtrado con parámetros:  
   
@@ -94,8 +93,8 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  Por ejemplo, a la empleada Pamela Ansman-Wolfe se le ha asignado el identificador 280. Especifique el valor de identificador de empleado (280 en este ejemplo) como valor de HOST_NAME() al crear una suscripción para esta empleada. Cuando el Agente de mezcla se conecte al publicador, comparará el valor devuelto por HOST_NAME() con los valores de la tabla y descargará únicamente la fila que contiene el valor 280 en la columna **EmployeeID** .  
   
-> [!IMPORTANT]  
->  La función HOST_NAME () devuelve un `nchar` valor, lo que debe usar CONVERT si la columna en la cláusula de filtro es de tipo de datos numérico, como en el ejemplo anterior. Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de los filtros de fila con parámetros, como `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En su lugar, se recomienda usar el método que se muestra en el ejemplo: `EmployeeID = CONVERT(int,HOST_NAME())`. Esta cláusula se puede usar para la **@subset_filterclause** parámetro de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), pero normalmente no se puede usar el Asistente para nueva publicación (el asistente ejecuta la cláusula de filtro para validarlo, que se produce un error porque el nombre del equipo no puede convertirse en un `int`). Si usa el Asistente para nueva publicación, se recomienda especificar `CONVERT(nchar,EmployeeID) = HOST_NAME()` en el asistente y, a continuación, usar [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) para cambiar la cláusula a `EmployeeID = CONVERT(int,HOST_NAME())` antes de crear una instantánea de la publicación.  
+> [!IMPORTANT]
+>  La función HOST_NAME() devuelve un valor `nchar`, por lo que debe usar CONVERT si la columna de la cláusula del filtro es de tipo de datos numérico, como en el ejemplo anterior. Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de los filtros de fila con parámetros, como `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En su lugar, se recomienda usar el método que se muestra en el ejemplo: `EmployeeID = CONVERT(int,HOST_NAME())`. Esta cláusula se puede usar para la **@subset_filterclause** parámetro de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), pero normalmente no se puede usar el Asistente para nueva publicación (el asistente ejecuta la cláusula de filtro para validarlo, que se produce un error porque el nombre del equipo no puede convertirse en un `int`). Si usa el Asistente para nueva publicación, se recomienda especificar `CONVERT(nchar,EmployeeID) = HOST_NAME()` en el asistente y, a continuación, usar [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) para cambiar la cláusula a `EmployeeID = CONVERT(int,HOST_NAME())` antes de crear una instantánea de la publicación.  
   
  **Para reemplazar el valor de HOST_NAME()**  
   
@@ -120,7 +119,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Para establecer opciones de filtrado, vea [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>Configurar 'use partition groups' y 'keep partition changes'  
- Las opciones **use partition groups** y **keep partition changes** mejoran el rendimiento de la sincronización para las publicaciones con artículos filtrados, ya que almacenan metadatos adicionales en la base de datos de publicaciones. La opción **use partition groups** proporciona una mayor mejora en el rendimiento mediante la característica de particiones precalculadas. Esta opción está establecida en `true` de forma predeterminada si los artículos de la publicación cumplen un conjunto de requisitos. Para obtener más información sobre estos requisitos, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](parameterized-filters-optimize-for-precomputed-partitions.md). Si los artículos no cumplen los requisitos para usar particiones precalculadas, la **conservar los cambios de partición** opción se establece en `true`.  
+ Las opciones **use partition groups** y **keep partition changes** mejoran el rendimiento de la sincronización para las publicaciones con artículos filtrados, ya que almacenan metadatos adicionales en la base de datos de publicaciones. La opción **use partition groups** proporciona una mayor mejora en el rendimiento mediante la característica de particiones precalculadas. Esta opción se establece de manera predeterminada en `true` si los artículos de la publicación cumplen una serie de requisitos. Para obtener más información sobre estos requisitos, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](parameterized-filters-optimize-for-precomputed-partitions.md). Si los artículos no cumplen los requisitos para usar particiones precalculadas, la **conservar los cambios de partición** opción se establece en `true`.  
   
 ### <a name="setting-partition-options"></a>Configurar 'partition options'  
  Al crear un artículo, se especifica un valor para la propiedad **partition options** , en función de cómo van a compartir los suscriptores los datos de la tabla filtrada. Es posible asignar a la propiedad uno de cuatro valores usando [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)y el cuadro de diálogo **Propiedades del artículo** . La propiedad se puede establecer en uno de dos valores en los cuadros de diálogo **Agregar filtro** o **Editar filtro** , disponibles desde el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación** . La tabla siguiente resume los valores disponibles:  

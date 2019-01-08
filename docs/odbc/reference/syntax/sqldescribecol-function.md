@@ -20,19 +20,19 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0240d5fe1f701715f11adc4f68e80abed896d704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742693"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523809"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol (función)
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
- **SQLDescribeCol** devuelve el descriptor de resultado: nombre de columna, tipo, tamaño de la columna, dígitos decimales y la nulabilidad, para una columna en el resultado establecido. Esta información también está disponible en los campos de IRD.  
+ **SQLDescribeCol** devuelve el descriptor de resultado - nombre de columna, tipo, tamaño de la columna, dígitos decimales y nulabilidad - para una columna del conjunto de resultados. Esta información también está disponible en los campos de IRD.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -75,13 +75,13 @@ SQLRETURN SQLDescribeCol(
   
  Cuando *ColumnNumber* es igual a 0 (para una columna de marcador), se devuelve SQL_BINARY en  *\*DataTypePtr* los marcadores de longitud variable. (SQL_INTEGER se devuelve si se utilizan marcadores por una aplicación ODBC 3. *x* la aplicación funciona con un ODBC 2. *x* controlador o por un ODBC 2. *x* la aplicación funciona con una aplicación ODBC 3. *x* controlador.)  
   
- Para obtener más información sobre estos tipos de datos, vea [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) en Apéndice D: tipos de datos. Para obtener información acerca de los tipos de datos SQL específicas del controlador, consulte la documentación del controlador.  
+ Para obtener más información sobre estos tipos de datos, vea [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) en el apéndice D: Tipos de datos. Para obtener información acerca de los tipos de datos SQL específicas del controlador, consulte la documentación del controlador.  
   
  *ColumnSizePtr*  
- [Salida] Puntero a un búfer en el que se va a devolver el tamaño (en caracteres) de la columna del origen de datos. Si no se puede determinar el tamaño de columna, el controlador devuelve 0. Para obtener más información sobre el tamaño de la columna, vea [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en Apéndice D: tipos de datos.  
+ [Salida] Puntero a un búfer en el que se va a devolver el tamaño (en caracteres) de la columna del origen de datos. Si no se puede determinar el tamaño de columna, el controlador devuelve 0. Para obtener más información sobre el tamaño de la columna, vea [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en el apéndice D: Tipos de datos.  
   
  *DecimalDigitsPtr*  
- [Salida] Puntero a un búfer en el que se va a devolver el número de dígitos decimales de la columna del origen de datos. Si no se puede determinar el número de dígitos decimales o no aplicable, el controlador devuelve 0. Para obtener más información sobre los dígitos decimales, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en Apéndice D: tipos de datos.  
+ [Salida] Puntero a un búfer en el que se va a devolver el número de dígitos decimales de la columna del origen de datos. Si no se puede determinar el número de dígitos decimales o no aplicable, el controlador devuelve 0. Para obtener más información sobre los dígitos decimales, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en el apéndice D: Tipos de datos.  
   
  *NullablePtr*  
  [Salida] Puntero a un búfer en el que se va a devolver un valor que indica si la columna permite valores NULL. Este valor se lee desde el campo SQL_DESC_NULLABLE de IRD. El valor puede ser:  

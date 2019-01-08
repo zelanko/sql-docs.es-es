@@ -1,24 +1,23 @@
 ---
-title: 'Paso 1: Generar la utilidad de implementación | Microsoft Docs'
+title: 'Paso 1: Creación de la utilidad de implementación | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2bbae058a0e3ecacaa4be9204a822451e1a0602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8be4778dc8ca28372132e3ca9447d5804454195
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216016"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356347"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>Paso 1: generar la utilidad de implementación
+# <a name="step-1-building-the-deployment-utility"></a>Paso 1: Generar la utilidad de implementación
   En esta tarea, configurará y generará una utilidad de implementación para el proyecto Deployment Tutorial.  
   
  Antes de generar la utilidad de implementación, debe modificar las propiedades del proyecto Deployment Tutorial. Usará el cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial) para configurar estas propiedades. En este cuadro de diálogo, debe habilitar la capacidad de actualizar configuraciones durante la implementación y especificar que el proceso de creación crea una utilidad de implementación. Después de establecer las propiedades, generará el proyecto.  
@@ -49,7 +48,7 @@ ms.locfileid: "48216016"
   
 4.  En la ventana de resultados, compruebe la siguiente información:  
   
-     Generación iniciada: proyecto de SQL Integration Services: Incremental...  
+     Compilación iniciada: Proyecto de SQL Integration Services: Incremental...  
   
      Creando la utilidad de implementación...  
   
@@ -57,14 +56,14 @@ ms.locfileid: "48216016"
   
      Generación completa -- 0 errores, 0 advertencias  
   
-     ========== Compilación: 0 correcto, 0 errores, 1 actualizados, 0 omitidos ==========  
+     === La compilación: 0 correctos, 0 incorrectos, 1 actualizados, 0 omitidos ===  
   
 5.  En el menú **Archivo** , haga clic en **Salir**. Si se le pregunta si quiere guardar los cambios en los elementos de Deployment Tutorial, haga clic en **Sí**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Paso 2: Comprobar el paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una utilidad de implementación](../../2014/integration-services/create-a-deployment-utility.md)  

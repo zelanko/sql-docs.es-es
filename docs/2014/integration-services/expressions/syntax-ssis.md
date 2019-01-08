@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
@@ -14,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c1b1be45aff03e3e4e0c0358c3b3eb9903e718d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 809ce46e388dcc96a407e70cf5eb33c4e5afa44f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189305"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351005"
 ---
 # <a name="syntax-ssis"></a>Sintaxis (SSIS)
   La sintaxis de expresiones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es similar a la sintaxis de los lenguajes C y C#. Las expresiones incluyen elementos como identificadores (columnas y variables), literales, operadores y funciones. En este tema se resumen los requisitos únicos de la sintaxis del evaluador de expresiones cuando se aplican a distintos elementos de una expresión.  
@@ -27,7 +26,7 @@ ms.locfileid: "48189305"
 > [!NOTE]  
 >  En las versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], había un límite de 4000 caracteres para el resultado de la evaluación de una expresión cuando el resultado tenía el tipo de datos DT_WSTR o DT_STR de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se ha quitado este límite.  
   
- Para conocer expresiones de ejemplo que usen funciones y operadores específicos, vea el tema sobre cada operador y función en los temas: [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md).  
+ Para expresiones de ejemplo que usan las funciones y operadores específicos, vea el tema acerca de cada operador y función en los temas: [Operadores &#40;expresión de SSIS&#41; ](operators-ssis-expression.md) y [funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md).  
   
  Para ver expresiones de ejemplo que usen varios operadores y funciones, así como identificadores y literales, vea [Ejemplos de expresiones avanzadas de Integration Services](examples-of-advanced-integration-services-expressions.md).  
   
@@ -77,12 +76,12 @@ ms.locfileid: "48189305"
  Para obtener más información, vea [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Usar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
+ [utilizar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](http://go.microsoft.com/fwlink/?LinkId=217683), en pragmaticworks.com  
+-   Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://go.microsoft.com/fwlink/?LinkId=217683), en pragmaticworks.com  
   
--   Artículo técnico, sobre [ejemplos de expresiones SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
+-   Artículo técnico, sobre [ejemplos de expresiones SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
   
   

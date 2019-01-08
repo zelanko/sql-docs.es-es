@@ -11,12 +11,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206535"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515454"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Crear predicciones (Tutorial básico de minería de datos)
   Después de haber probado la precisión de los modelos de minería de datos y esté satisfecho con los resultados, a continuación, puede generar predicciones con el generador de consultas de predicción en el **predicción de modelo de minería de datos** ficha en la minería de datos Diseñador.  
@@ -157,7 +157,7 @@ ms.locfileid: "48206535"
   
         2.  Escriba un nombre para la tabla que contendrá los resultados de la consulta.  
   
-        3.  Utilice la opción **agregar a DSV**, para crear la tabla y agregarla a una vista del origen de datos existente. Esto es útil si desea conservar todas las tablas relacionadas para un modelo, como los datos de entrenamiento, los datos del origen de predicción y los resultados de la consulta, en la misma vista del origen de datos.  
+        3.  Utilice la opción **agregar a DSV**, para crear la tabla y agregarla a una vista del origen de datos existente. Esto es útil si desea conservar todas las tablas relacionadas para un modelo, como datos de entrenamiento, datos de origen de predicción y consulta los resultados de la misma vista del origen de datos.  
   
         4.  Utilice la opción **sobrescribir si existe**, para actualizar una tabla existente con los resultados más recientes.  
   

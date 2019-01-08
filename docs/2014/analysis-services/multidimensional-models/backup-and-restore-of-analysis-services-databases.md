@@ -22,12 +22,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52acf8b0d2ebe628deeac19f994f53d25861452c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48fafd92104745ac438c212847e9b2976e84db6d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170305"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352691"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye copias de seguridad y restauración para poder recuperar una base de datos y sus objetos de un momento determinado. Copias de seguridad y restauración también es una técnica válida para migrar bases de datos a servidores actualizados, mover bases de datos entre servidores o implementar una base de datos en un servidor de producción. Para la recuperación de datos, si aún no tiene un plan de copias de seguridad y los datos son importantes, debe diseñar e implementar un plan lo antes posible.  
@@ -36,7 +36,7 @@ ms.locfileid: "48170305"
   
  Para realizar una copia de seguridad completa que incluya los datos de origen, debe hacer una copia de seguridad de la base de datos que contiene los datos de detalle. Concretamente, si usa el almacenamiento de base de datos ROLAP o DirectQuery, los datos detallados se almacenan en una base de datos relacional de SQL Server que es distinta de la base de datos de Analysis Services. De lo contrario, si todos los objetos son tabulares o multidimensionales, la copia de seguridad de Analysis Services incluirá los metadatos y los datos de origen.  
   
- Una ventaja evidente de las copias de seguridad automáticas es que la instantánea de los datos siempre estará tan actualizada como determina la frecuencia de la copia de seguridad automática. Las programaciones automatizadas garantizan que no se olvida efectuar copias de seguridad. También puede automatizarse la restauración de una base de datos; ésta puede ser una buena forma de hacer replicaciones de los datos, pero no debe olvidar realizar la copia de seguridad del archivo de clave de cifrado en la instancia donde se hace la replicación. La característica de sincronización se ocupa de la replicación de las bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero solo para los datos obsoletos. Todas las características aquí mencionadas pueden implementarse a través de la interfaz de usuario, por medio de comandos XML/A o mediante programación que se ejecuta a través de AMO. Para obtener más información acerca de las estrategias de copia de seguridad, vea el tema acerca de las [estrategias de copia de seguridad con SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81888).  
+ Una ventaja evidente de las copias de seguridad automáticas es que la instantánea de los datos siempre estará tan actualizada como determina la frecuencia de la copia de seguridad automática. Las programaciones automatizadas garantizan que no se olvida efectuar copias de seguridad. También puede automatizarse la restauración de una base de datos; ésta puede ser una buena forma de hacer replicaciones de los datos, pero no debe olvidar realizar la copia de seguridad del archivo de clave de cifrado en la instancia donde se hace la replicación. La característica de sincronización se ocupa de la replicación de las bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero solo para los datos obsoletos. Todas las características aquí mencionadas pueden implementarse a través de la interfaz de usuario, por medio de comandos XML/A o mediante programación que se ejecuta a través de AMO. Para obtener más información acerca de las estrategias de copia de seguridad, vea el tema acerca de las [estrategias de copia de seguridad con SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81888).  
   
  En este tema se incluyen las secciones siguientes:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48170305"
  Para obtener más información sobre la restauración de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vea [Opciones de restauración](restore-options.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Copia de seguridad, restaurar, sincronizar y las bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
+ [Restaurar, sincronizar y realizar copias de seguridad de bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [Analysis Services PowerShell](../analysis-services-powershell.md)  
   
   

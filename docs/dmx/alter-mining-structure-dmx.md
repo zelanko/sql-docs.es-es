@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145930"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545419"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +128,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>Expresiones de criterios de filtro  
  Puede definir un filtro que restrinja los casos que se utilizan en el modelo de minería de datos. El filtro se puede aplicar a las columnas de la tabla de casos, a las filas de la tabla anidada, o a ambas.  
   
- Las expresiones de criterios de filtro son predicados DMX simplificados, similares a una cláusula WHERE. Las expresiones de filtro se reducen a fórmulas que utilizan operadores matemáticos básicos, escalares y nombres de columna. La excepción la constituye el operador EXISTS; se evalúa como TRUE si la subconsulta devuelve al menos una fila. Los predicados se pueden combinar mediante los operadores lógicos comunes: AND, OR y NOT.  
+ Las expresiones de criterios de filtro son predicados DMX simplificados, similares a una cláusula WHERE. Las expresiones de filtro se reducen a fórmulas que utilizan operadores matemáticos básicos, escalares y nombres de columna. La excepción la constituye el operador EXISTS; se evalúa como TRUE si la subconsulta devuelve al menos una fila. Los predicados se pueden combinar mediante el uso de los operadores lógicos comunes: AND, OR y no.  
   
  Para obtener más información acerca de los filtros utilizados con los modelos de minería de datos, vea [filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
@@ -143,10 +143,10 @@ USING <algorithm> [(<parameter list>)]
  La sintaxis de la lista de parámetros es:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
-## <a name="example-1-add-a-model-to-a-structure"></a>Ejemplo 1: agregar un modelo a una estructura  
+## <a name="example-1-add-a-model-to-a-structure"></a>Ejemplo 1: Agregar un modelo a una estructura  
  En el ejemplo siguiente se agrega un modelo de minería de datos Bayes Naive a la **New Mailing** estructura de minería de datos y los límites indica el número máximo de atributo a 50.  
   
 ```  
@@ -161,7 +161,7 @@ ADD MINING MODEL [Naive Bayes]
 USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)  
 ```  
   
-## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Ejemplo 2: agregar un modelo filtrado a una estructura  
+## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Ejemplo 2: Agregar un modelo filtrado a una estructura  
  En el ejemplo siguiente se agrega un modelo de minería de datos, `Naive Bayes Women`, a la **New Mailing** estructura de minería de datos. El nuevo modelo tiene la misma estructura básica que el modelo de minería de datos que se agregó en el ejemplo 1; sin embargo, este modelo restringe los casos de la estructura de minería de datos a las clientas con una edad superior a 50 años.  
   
 ```  
@@ -177,7 +177,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Ejemplo 3: agregar un modelo filtrado a una estructura con una tabla anidada  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Ejemplo 3: Agregar un modelo filtrado a una estructura con una tabla anidada  
  En el ejemplo siguiente se agrega un modelo de minería de datos a una versión modificada de la estructura de minería de datos Market Basket. La estructura de minería de datos usada en el ejemplo se ha modificado para agregar un **región** columna, que contiene los atributos de la región del cliente, y un **Income Group** columna, que clasifica los ingresos del cliente mediante el uso de los valores **alta**, **moderado**, o **bajo**.  
   
  La estructura de minería de datos también incluye una tabla anidada que contiene los artículos comprados por el cliente.  

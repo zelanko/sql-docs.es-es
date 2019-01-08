@@ -14,18 +14,18 @@ ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b5a7e09a6dd9bbcc50ddbaf70b911260e96cde4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 197d3e1d36f8513821cec9630cade8f52681a43d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214685"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359817"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
   En el modo de confirmación manual, al llamar a **SQLFreeHandle** en un identificador de instrucción con una transacción abierta se produce una operación de reversión de cambios pendientes a la base de datos. Al llamando a **SQLFreeHandle** en un identificador de instrucción siempre se cierra cualquier cursor abierto y se descartan los resultados pendientes, liberando todos los recursos asociados con el identificador de instrucción.  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLFreeHandle](http://go.microsoft.com/fwlink/?LinkId=59345)   
+ [Función SQLFreeHandle](https://go.microsoft.com/fwlink/?LinkId=59345)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

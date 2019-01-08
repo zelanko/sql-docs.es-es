@@ -14,12 +14,12 @@ ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1e8025af41a876926273c3134deebf46766fb9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76517ac2ded567877d542be688aa47abeca21c1c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528935"
 ---
 # <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo (controlador de Paradox)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47752895"
   
  **SQLGetInfo** es compatible con el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica el modo en que el controlador trata directamente los archivos en un origen de datos:  
   
--   SQL_FILE_NOT_SUPPORTED: El controlador no es un controlador de nivel único.  
+-   SQL_FILE_NOT_SUPPORTED - el controlador no es un controlador de nivel único.  
   
--   SQL_FILE_TABLE: Un controlador de nivel único trata los archivos de origen de datos como tablas.  
+-   SQL_FILE_TABLE - un controlador de nivel único trata los archivos de origen de datos como tablas.  
   
--   SQL_FILE_QUALIFIER: Un controlador de nivel único trata los archivos en un origen de datos como un calificador.  
+-   SQL_FILE_QUALIFIER - un controlador de nivel único trata los archivos en un origen de datos como un calificador.  
   
  El controlador ODBC devuelve SQL_FILE_TABLE porque cada archivo es una tabla.  
   

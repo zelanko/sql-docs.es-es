@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.computermgr.cert.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 009ef6454246682a91e14dd3ffa391f35b011d34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119315"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801898"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Propiedades de Protocolos de MSSQLSERVER (pestaña Certificado)
   Utilice la pestaña **Certificado** del cuadro de diálogo **Propiedades de Protocolos de MSSQLSERVER** para seleccionar un certificado para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o ver las propiedades de un certificado. Todos los campos están en blanco hasta que se selecciona un certificado.  
@@ -28,7 +27,7 @@ ms.locfileid: "48119315"
  Los certificados se almacenan localmente para los usuarios del equipo. Para cargar un certificado que se va a utilizar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe ejecutar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la misma cuenta de usuario que el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="page-header"></a>Encabezado de página  
- **Ver**  
+ **Vista**  
  Proporciona acceso a detalles adicionales acerca del certificado. No está disponible hasta que se selecciona un certificado en el cuadro **Certificado** . Para obtener información adicional acerca de los detalles del certificado, vea la documentación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Desactivar**  

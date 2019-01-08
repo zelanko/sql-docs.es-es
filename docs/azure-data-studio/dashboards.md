@@ -1,7 +1,8 @@
 ---
-title: Obtener acceso rápidamente a información y tareas comunes en Azure Data Studio | Microsoft Docs
-description: Obtenga información acerca de cómo mostrar widgets precisos en Azure Data Studio.
-ms.custom: tools|sos
+title: Obtener acceso rápidamente a información y tareas comunes
+titleSuffix: Azure Data Studio
+description: Obtenga información acerca de cómo mostrar widgets en el panel de la base de datos en Azure Data Studio.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: b163d110353d07811f0feb991772c90053651659
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356198"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030489"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Paneles en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -42,7 +43,7 @@ Después de seguir este tutorial, siga leyendo para obtener más información so
 El control flotante detalles de información proporciona información más detallada de un widget de información relacionados. 
 - Un widget de Insight representa una vista de resumen de un vistazo con recuento, línea, etcetera de gráfico. 
 - El control flotante detalles de información proporciona detalles "explorar", mostrar información más detallada sobre los datos para cada elemento aparece en el widget de información de alto nivel. 
-  - El contenido del control flotante de detalles se define con una consulta independiente de SQL para consultar del widget principal. 
+  - El contenido del control flotante de detalles se define con una consulta independiente de SQL para consultar del widget principal.
 
 No es necesario para una consulta de detalles de Insight conjunto, pero el diseño es estándar.
 - La mitad superior de la vista siempre es una vista "Resumen" 2 columnas. Para usar las columnas que se definen mediante las propiedades "label" y "value" de la configuración de JSON
@@ -88,11 +89,11 @@ Ejemplo de configuración de control flotante Insight detalles
 |detalles|objeto JSON|||propiedad obligatoria para definir las definiciones de detalle de información dentro de su estructura||
 |queryFile|string|||la ruta de acceso de archivo de consulta de sql de insight detalle y el nombre de archivo relativa a la ubicación de package.json||
 |etiqueta|objeto JSON|||propiedad obligatoria para definir cada elemento de línea en la vista de lista de resumen|en el futuro, el nombre de esta propiedad para cambiar al igual que 'summaryList'|
-|icono|string|||indicar el nombre del icono para lectura para cada elemento de vista de lista de resumen.|se documentará lista (tbd) de los iconos compatibles|
+|icono|string|||indicar el nombre del icono para representar para cada elemento de vista de lista de resumen.|se documentará lista (tbd) de los iconos compatibles|
 |column|string|||indicar el nombre de la primera columna en la vista de lista de resumen del conjunto de resultados de consulta|en el futuro se cambiará el nombre de esta propiedad en un nombre más intuitivo|
-|value|string|||indicar el nombre de la segunda columna en la vista de lista de resumen del conjunto de resultados de consulta. El valor de esta columna se usa para comprobar las condiciones y establezca el color de punto de color de cada elementos vista de lista de resumen|en el futuro se cambiará el nombre de esta propiedad en algo más intuitivo|
+|value|string|||indicar el nombre de la segunda columna en la vista de lista de resumen del conjunto de resultados de consulta. El valor de esta columna se utiliza para comprobar las condiciones y establecer el color de cada punto de color de elementos de vista de lista de resumen|en el futuro se cambiará el nombre de esta propiedad en algo más intuitivo|
 |condición|objeto JSON|||define la comprobación de condición de valor de la columna y determinar el color de cada elemento de vista de lista de resumen||
-|if|string|siempre, equals, notEquals, greaterThan, lessThan, greaterThanOrEqauls, lessThanOrEquals||operador de comprobación de condición|en el futuro se cambiará el nombre de propiedad al operador|
+|if|string|siempre, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||operador de comprobación de condición|en el futuro se cambiará el nombre de propiedad al operador|
 |equals|string|||valor de comprobación de condición|en el futuro cambiará el nombre de esta propiedad en 'value'|
 
 ## <a name="insight-actions"></a>Acciones de Insight
@@ -104,7 +105,7 @@ Uso de [!INCLUDE[name-sos](../includes/name-sos-short.md)]de configuración de a
 
 ## <a name="sample-insight-action-definition"></a>Definición de la acción de la información de ejemplo
 
-```"actions"{}``` define una acción de insight. Acción puede definirse a través de un ámbito específico, como ```"server"```, ```"database"``` y así sucesivamente y [!INCLUDE[name-sos](../includes/name-sos-short.md)] pasa la información de contexto de conexión actual a la acción. 
+```"actions"{}``` define una acción de insight. Acción puede definirse a través de un ámbito específico, como ```"server"```, ```"database"``` y así sucesivamente y [!INCLUDE[name-sos](../includes/name-sos-short.md)] pasa la información de contexto de conexión actual a la acción.
 
 Por ejemplo, cuando se inicia la acción de restauración de base de datos WideWorldImporters, ```"database": "${Database}"``` definición indica que se pase ```Database``` valor de columna en el resultado de la consulta a la acción de restauración. A continuación, restaure el inicio de una acción para la base de datos. ```"types"``` es una matriz json y pueden aparecer varias acciones en la matriz. Básicamente, se convierte en un menú contextual en el cuadro de diálogo Detalles de la información que el usuario puede haga clic en y realice la acción. 
 

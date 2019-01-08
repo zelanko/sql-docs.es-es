@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de regresión logística de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo de regresión logística de Microsoft | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ffe5299530f75706a5d7c348bd39d5cc2e883641
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a07998d0b0e1fd5b9123c553f650f00e23e22223
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017022"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530178"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión logística de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34017022"
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementación del algoritmo de regresión logística de Microsoft  
  Supongamos que la columna de predicción solo contiene dos estados, pero que aun así desea realizar un análisis de regresión, relacionando las columnas de entrada con la probabilidad de que la columna de predicción contenga un estado específico. El siguiente diagrama muestra los resultados que obtendrá si asigna 1 y 0 a los estados de la columna de predicción, calcula la probabilidad de que la columna contenga un estado específico y realiza una regresión lineal en una variable de entrada.  
   
- ![Mal modelar datos utilizando regresión lineal](../../analysis-services/data-mining/media/logistic-linear-regression.gif "mal modelar datos utilizando regresión lineal")  
+ ![Modelo incorrecto creado con la regresión lineal de datos](../../analysis-services/data-mining/media/logistic-linear-regression.gif "mal modelar datos con la regresión lineal")  
   
  El eje x contiene los valores de una columna de entrada. El eje y contiene las probabilidades de que la columna de predicción tenga un estado o el otro. El problema que puede surgir es que la regresión lineal no limite la columna a los valores 0 y 1, a pesar de que son los valores máximo y mínimo de la columna. Una forma de resolver el problema es llevar a cabo una regresión logística. En vez de crear una línea recta, el análisis de regresión logística crea una curva con forma de "S" que contiene las restricciones máxima y mínima. Por ejemplo, el siguiente diagrama muestra los resultados que se obtienen si lleva a cabo una regresión logística con los mismos datos utilizados en el ejemplo anterior.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "34017022"
 ### <a name="scoring-inputs"></a>Entradas de puntuación  
  La*puntuación* en el contexto de un modelo de red neuronal o de regresión logística implica el proceso de convertir los valores que están presentes en los datos en un conjunto de valores que utilizan la misma escala y, por consiguiente, se pueden comparar entre sí. Por ejemplo, suponga que las entradas para los ingresos abarcan de 0 a 100.000 mientras que las entradas para [Número de hijos] abarcan de 0 a 5. Este proceso de conversión permite comparar la importancia de cada entrada sin tener en cuenta la diferencia en los valores.  
   
- Para cada estado que aparece en el conjunto de entrenamiento, el modelo genera una entrada. Para las entradas discretas o de datos discretos, se crea una entrada adicional para representar el estado Missing, si aparece al menos una vez en el conjunto de entrenamiento. En las entradas continuas, se crean al menos dos nodos de entrada: uno para los valores Missing, si están presentes en los datos de entrenamiento, y una entrada para todos los valores existentes o no nulos. Cada entrada se escala a un formato numérico mediante el método de normalización de puntuación-z, `(x – μ)\StdDev`.  
+ Para cada estado que aparece en el conjunto de entrenamiento, el modelo genera una entrada. Para las entradas discretas o de datos discretos, se crea una entrada adicional para representar el estado Missing, si aparece al menos una vez en el conjunto de entrenamiento. En las entradas continuas, se crean al menos dos nodos de entrada: uno para los valores Missing, si están presentes en los datos de entrenamiento, y una entrada para todos los valores existentes o no nulos. Cada entrada se escala a un formato numérico mediante el método de normalización de puntuación-z, `(x - μ)\StdDev`.  
   
  Durante la normalización de puntuación-z, la media (μ) y la desviación estándar se obtienen sobre el conjunto de entrenamiento completo.  
   
  **Valores continuos**  
   
- El valor está presente:   `(X – μ)/σ ` (X es el valor real que se va a codificar)  
+ Valor está presente:   `(X - μ)/σ ` (X es el valor real que se está codificando)  
   
  El valor está ausente:    `-   μ/σ `  (mu negativo dividido por sigma)  
   
@@ -53,9 +53,9 @@ ms.locfileid: "34017022"
   
  StdDev  `= sqrt(p\(1-p))`  
   
- El valor está presente:     `\(1 – μ)/σ` (uno menos mu dividido por sigma)  
+ Valor está presente:     `\(1 - μ)/σ` (Uno menos mu dividido por sigma)  
   
- El valor está ausente:     `(– μ)/σ` (mu negativo dividido por sigma)  
+ El valor está ausente:     `(- μ)/σ` (mu negativo dividido por sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Descripción de los coeficientes de regresión logística  
  Hay varios métodos en la literatura estadística para realizar la regresión logística, pero una parte importante de todos ellos consiste en evaluar el ajuste del modelo. Se han propuesto diversas estadísticas fáciles de ajustar, entre ellas el cociente de probabilidades y los patrones de covariable. La explicación de cómo medir el ajuste de un modelo escapa del ámbito de este tema; sin embargo, puede recuperar el valor de los coeficientes en el modelo y utilizarlos para diseñar sus propias medidas de ajuste.  
@@ -73,9 +73,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- Para cada valor de salida, esta consulta devuelve los coeficientes y un identificador que señala al nodo de entrada relacionado. También devuelve una fila que contiene el valor de la salida y la intersección. Cada entrada X tiene su propio coeficiente (Ci), pero la tabla anidada también contiene un coeficiente "libre" (Co), calculado según la fórmula siguiente:  
+ Para cada valor de salida, esta consulta devuelve los coeficientes y un identificador que señala al nodo de entrada relacionado. También devuelve una fila que contiene el valor de la salida y la intersección. Cada entrada X tiene su propio coeficiente (Ci), pero la tabla anidada también contiene un coeficiente "libre" (Co), calculado de acuerdo con la siguiente fórmula:  
   
- `F(X) = X1*C1 + X2*C2 + … +Xn*Cn + X0`  
+ `F(X) = X1*C1 + X2*C2 + ... +Xn*Cn + X0`  
   
  Activación: `exp(F(X)) / (1 + exp(F(X)) )`  
   
@@ -128,7 +128,7 @@ WHERE NODE_TYPE = 23
  Se aplica a las columnas de la estructura de minería de datos.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que la columna se tratará como si tuviera dos estados posibles: **Missing** y **Existing**. Un valor NULL es un valor ausente.  
+ Significa que la columna se tratará como si tuviera dos estados posibles: **Falta** y **existente**. Un valor NULL es un valor ausente.  
   
  Se aplica a la columna del modelo de minería de datos.  
   
@@ -138,15 +138,15 @@ WHERE NODE_TYPE = 23
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de regresión logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite los tipos de contenido de columna de entrada, tipos de contenido de columna de predicción y marcas de modelado específicos que se enumeran en la siguiente tabla. Para más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Columna|Tipos de contenido|  
+|columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuo, discreto, de datos discretos, clave, tabla|  
 |Atributo de predicción|Continuo, discreto, de datos discretos|  
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de regresión logística de Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Ejemplos de consultas de modelo de regresión lineal](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de regresión logística & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Ejemplos de consultas de modelos de regresión lineal](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

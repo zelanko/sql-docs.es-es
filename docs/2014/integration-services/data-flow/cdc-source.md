@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bf104479ab03525ed648d73911931263206d07b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af2f56c92947cd8e210b8532cb6899c52486707e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063095"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349811"
 ---
 # <a name="cdc-source"></a>origen de CDC
   El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
@@ -46,11 +45,11 @@ ms.locfileid: "48063095"
 ## <a name="error-handling"></a>Tratamiento de errores  
  El origen de CDC tiene una salida de error. La salida de error del componente incluye las columnas de salida siguientes:  
   
--   **Código de error**: el valor es siempre -1.  
+-   **Código de error**: El valor es siempre -1.  
   
--   **Columna de error**: la columna de origen que produce el error (para los errores de conversión).  
+-   **Columna de error**: La columna de origen que produce el error (para errores de conversión).  
   
--   **Columnas de fila de error**: datos de registro que ocasionan el error.  
+-   **Columnas de la fila de error**: Los datos del registro que ocasionan el error.  
   
  Según la configuración del comportamiento de los errores, el origen CDC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error. Para más información, vea [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
   
@@ -100,9 +99,9 @@ use <cdc-enabled-database-name>
   
 -   [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de CDC &#40;página columnas&#41;](../cdc-source-editor-columns-page.md)  
+-   [Editor de origen de CDC &#40;página Columnas&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Editor de origen de CDC &#40;página de salida de Error&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Editor de origen de CDC &#40;página Salida de error&#41;](../cdc-source-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** contiene las propiedades que se pueden establecer mediante programación.  
   
@@ -116,16 +115,16 @@ use <cdc-enabled-database-name>
   
 -   [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de CDC &#40;página columnas&#41;](../cdc-source-editor-columns-page.md)  
+-   [Editor de origen de CDC &#40;página Columnas&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Editor de origen de CDC &#40;página de salida de Error&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Editor de origen de CDC &#40;página Salida de error&#41;](../cdc-source-editor-error-output-page.md)  
   
--   [Propiedades personalizadas del origen de CDC](cdc-source-custom-properties.md)  
+-   [CDC Source Custom Properties](cdc-source-custom-properties.md)  
   
 -   [Extraer datos de modificaciones mediante el origen de CDC](cdc-source.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada del blog, sobre [Modos de procesamiento para el origen CDC](http://go.microsoft.com/fwlink/?LinkId=242541), en mattmasson.com.  
+-   Entrada del blog, sobre [Modos de procesamiento para el origen CDC](https://go.microsoft.com/fwlink/?LinkId=242541), en mattmasson.com.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Definir un miembro predeterminado | Documentos de Microsoft
+title: Definir un miembro predeterminado | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e112d0cfdd1e4558dcad1888531774357ce0102a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516728"
 ---
-# <a name="attribute-properties---define-a-default-member"></a>Propiedades de atributo: definir a un miembro predeterminado
+# <a name="attribute-properties---define-a-default-member"></a>Propiedades de atributos: Definir un miembro predeterminado
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   El miembro predeterminado de una jerarquía de atributo se usa para evaluar expresiones cuando una jerarquía de atributo no se incluye en una consulta. El miembro predeterminado se omite cuando una consulta incluye una jerarquía de atributo o una jerarquía de usuario que contiene el atributo que da origen a la jerarquía de atributo. Esto se debe a que se utiliza el miembro especificado en la consulta.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "34020922"
   
  La configuración **DefaultMember** de un atributo se aplica en todas las jerarquías en las que interviene el atributo. No puede utilizar configuraciones diferentes para jerarquías distintas de una dimensión. Por ejemplo, si el miembro [1998] es el miembro predeterminado para el atributo [Year], esta configuración se aplica en todas las jerarquías de la dimensión. En este caso, la configuración **DefaultMember** no puede ser [1998] en una jerarquía y [1997] en otra.  
   
- Si se define un miembro predeterminado en un nivel específico de una jerarquía que no se agrega de forma natural, deberán definirse los miembros predeterminados de todos los niveles superiores a dicho nivel de la jerarquía. Por ejemplo, en la jerarquía All-Countries–Climate, no puede definirse un miembro predeterminado para Climate a menos que defina un miembro predeterminado para Countries. En caso contrario se producirían errores en tiempo de consulta.  
+ Si se define un miembro predeterminado en un nivel específico de una jerarquía que no se agrega de forma natural, deberán definirse los miembros predeterminados de todos los niveles superiores a dicho nivel de la jerarquía. Por ejemplo, en la jerarquía All-países-clima, no se puede definir a un miembro predeterminado para Climate a menos que defina a un miembro predeterminado para Countries. En caso contrario se producirían errores en tiempo de consulta.  
   
- Si los niveles de una jerarquía se agregan de forma natural, podrá definirse un miembro predeterminado para los atributos de la jerarquía con independencia de los demás atributos de la jerarquía. Por ejemplo, en la jerarquía Country–Province–City, puede definirse un miembro predeterminado para City, como [City].[Montreal] sin definir el miembro predeterminado para Province o Country.  
+ Si los niveles de una jerarquía se agregan de forma natural, podrá definirse un miembro predeterminado para los atributos de la jerarquía con independencia de los demás atributos de la jerarquía. Por ejemplo, en la jerarquía provincia país-región-ciudad, puede definir a un miembro predeterminado para City, como [City]. [Montreal] sin definir el miembro predeterminado para Province o Country.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar el & #40; Todas las & #41; Nivel de las jerarquías de atributo](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurar el nivel &#40;All&#41; para las jerarquías de atributo](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

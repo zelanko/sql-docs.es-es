@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b319f6065c31a33f30469a73286491c1d641dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601123"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822579"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

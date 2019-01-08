@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - xsi:nil attribute
@@ -35,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95989f956f01039cec5bbbc3ab61417981a094f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053305"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365857"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertar datos con diagramas de actualización XML (SQLXML 4.0)
   Un diagrama de actualización indica una operación de inserción cuando una instancia de registro aparece en el  **\<después >** bloque pero no en las correspondientes  **\<antes >** bloque. En este caso, el diagrama de actualización inserta el registro en el  **\<después >** bloque en la base de datos.  
@@ -158,7 +156,7 @@ ms.locfileid: "48053305"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Insertar varios registros utilizando un diagrama de actualización  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>b. Insertar varios registros utilizando un diagrama de actualización  
  Este diagrama de actualización agrega dos nuevos registros de turno a la tabla HumanResources.Shift. El diagrama de actualización no especifica opcional  **\<antes >** bloque.  
   
 ```  
@@ -213,7 +211,7 @@ ms.locfileid: "48053305"
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los nombres de tabla pueden incluir un espacio, como la tabla Order Details de la base de datos Northwind. Sin embargo, esto no es válido en los caracteres XML válidos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificadores, pero no identificadores XML válidos pueden codificarse utilizando ' __xHHHH\_\_' como valor de codificación, donde HHHH representa el código UCS-2 hexadecimal de cuatro dígitos de el carácter en el orden de primero bit más significativo.  
   
 > [!NOTE]  
->  Este ejemplo usa la base de datos de ejemplo Northwind. Puede instalar la base de datos Northwind mediante el uso de un script SQL disponible para su descarga desde esta [sitio Web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=30196).  
+>  Este ejemplo usa la base de datos de ejemplo Northwind. Puede instalar la base de datos Northwind mediante el uso de un script SQL disponible para su descarga desde esta [sitio Web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=30196).  
   
  Además, el nombre del elemento debe incluirse entre corchetes ([]). Dado que los caracteres [y] no son válidos en XML, debe codificarlos como _x005B\_ y _x005D\_, respectivamente. (Si utiliza un esquema de asignación, puede especificar nombres de elemento que no contengan caracteres no válidos, como espacios en blanco. El esquema de asignación realiza la asignación necesaria; por lo tanto, no necesita codificar estos caracteres.)  
   
@@ -632,8 +630,8 @@ CustOrder(OrderID, EmployeeID, OrderType)
  <ProductModel>  
     <Name>Mountain-100</Name>  
     <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-        <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-              xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+        <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+              xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
               xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
               xmlns:html="http://www.w3.org/1999/xhtml"   
               xmlns="">  
@@ -688,7 +686,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
      <xsd:complexType>  
        <xsd:sequence>  

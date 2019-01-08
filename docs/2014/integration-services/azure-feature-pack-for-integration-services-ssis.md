@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL11.SSIS.AZURE.F1
@@ -14,12 +13,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c815b6d3dd2a70e484575fc49f90186f1273ba7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 771b7425ca166a05eb5290f576a7fa2cad3f19be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106695"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787049"
 ---
 # <a name="azure-feature-pack"></a>Feature Pack de Azure
 Feature Pack de SQL Server Integration Services (SSIS) para Azure es una extensión que proporciona los componentes que se muestran en esta página para que SSIS se conecte a los servicios de Azure, para transferir datos entre Azure y orígenes de datos locales, y para procesar los datos almacenados en Azure.
@@ -32,7 +31,7 @@ Feature Pack de SQL Server Integration Services (SSIS) para Azure es una extensi
   
     -   [Administrador de conexiones de suscripciones de Azure](connection-manager/azure-subscription-connection-manager.md)  
     
-    -   [Administrador de conexiones de Azure Data Lake Store ](../../2014/integration-services/azure-data-lake-store-connection-manager.md)
+    -   [Administrador de conexiones de Azure Data Lake Store](../../2014/integration-services/azure-data-lake-store-connection-manager.md)
     
     -   [Administrador de conexiones de Azure Resource Manager](../../2014/integration-services/azure-resource-manager-connection-manager.md)
     

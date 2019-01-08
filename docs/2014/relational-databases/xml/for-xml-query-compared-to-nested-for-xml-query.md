@@ -13,12 +13,12 @@ ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8aab52401c438dc9428e082ab66307d3961a8f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491c0a0084e334cabe7b0eb7648b50aed46a3abc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122025"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545570"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Comparación de la consulta FOR XML con la consulta FOR XML anidada
   En este tema se compara una consulta FOR XML de nivel único con una consulta FOR XML anidada. Una de las ventajas de usar consultas FOR XML anidadas es que puede especificar una combinación de XML centrado en atributos y un XML centrado en elementos para los resultados de la consulta. En este ejemplo se demuestra.  
@@ -90,7 +90,7 @@ ORDER BY ProductCategoryID
 FOR XML AUTO, TYPE  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 < ProdCat ProductCategoryID="1" CategoryName="Bikes" />  
@@ -193,9 +193,9 @@ FOR XML AUTO, TYPE
                 ProductName="Mountain-100 Silver, 42" Color="Silver" />  
       <Production.Product ProductID="773"   
                 ProductName="Mountain-100 Silver, 44" Color="Silver" />  
-        …  
+        ...  
     </ProductModel>  
-     …  
+     ...  
 ```  
   
  Si quita la directiva `ELEMENTS` de la consulta `FOR XML` anidada que genera subcategorías de productos, todo el resultado está centrado en atributos. Después puede escribir esta consulta sin anidar. La adición de `ELEMENTS` da lugar a un XML parcialmente centrado en atributos y parcialmente centrado en elementos. Este resultado no se puede generar en un solo nivel, consulta FOR XML.  

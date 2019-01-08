@@ -1,5 +1,5 @@
 ---
-title: Crear o personalizar una biblioteca de fuentes de datos (PowerPivot para SharePoint) | Documentos de Microsoft
+title: Crear o personalizar una biblioteca de fuentes de datos (PowerPivot para SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71c051d64a40f38a6514301ca3353e7627c67aaf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021259"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519098"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Crear o personalizar una biblioteca de fuentes de distribución de datos (PowerPivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34021259"
   
 1.  Haga clic en **Acciones de sitio** en la esquina superior izquierda de la página.  
   
-2.  Haga clic en **Más opciones**...  
+2.  Haga clic en **más opciones**...  
   
 3.  En Bibliotecas, haga clic en **Biblioteca de fuentes de distribución de datos**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34021259"
   
  Los siguientes pasos se deben repetir para cada biblioteca en la que desee crear o modificar los documentos de registro de fuentes de distribución de datos.  
   
-#### <a name="step-1-enable-content-type-management"></a>Paso 1: habilitar la administración de tipos de contenido  
+#### <a name="step-1-enable-content-type-management"></a>Paso 1: Habilitar la administración del tipo de contenido  
   
 1.  Abra la biblioteca de documentos para la que desee habilitar varios tipos de contenido.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34021259"
   
 7.  Haga clic en **Aceptar**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Paso 2: agregar el tipo de contenido de documento de servicio de datos  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Paso 2: Agregar el tipo de contenido del documento de servicio de datos  
   
 1.  En la sección Tipos de contenido, haga clic en **Agregar a partir de tipos de contenido de sitio**. Si no ve esta página, regrese al sitio, haga clic en **Biblioteca** en Herramientas de biblioteca y, a continuación, haga clic en **Configuración de la biblioteca**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34021259"
   
 5.  Haga clic en **Aceptar**.  
   
-#### <a name="step-3-verify-data-service-document-configuration"></a>Paso 3: comprobar la configuración del documento de servicio de datos  
+#### <a name="step-3-verify-data-service-document-configuration"></a>Paso 3: Comprobar la configuración de documento de servicio de datos  
   
 1.  Abra la página principal del sitio.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "34021259"
   
 ## <a name="see-also"></a>Vea también  
  [Uso de fuentes de distribución de datos &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [Eliminar una biblioteca de fuentes de datos de Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [Eliminar una biblioteca de fuente de distribución de datos Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [Administración y configuración del servidor de Power Pivot en Administración central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Fuentes de distribución de datos de PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

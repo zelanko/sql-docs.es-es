@@ -23,12 +23,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0faae3cec2d71c28056a384b196a9b46929d5d6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792113"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527511"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_db\_optimización\_recomendaciones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47792113"
 | **motivo** | **nvarchar(4000)** | Motivo de por qué se ha proporcionado esta recomendación. |
 | **válido\_puesto que** | **datetime2** | La primera vez que se generó esta recomendación. |
 | **última\_actualizar** | **datetime2** | La última vez que se generó esta recomendación. |
-| **state** | **nvarchar(4000)** | Documento JSON que describe el estado de la recomendación. Están disponibles los campos siguientes:<br />-   `currentValue` -estado actual de la recomendación.<br />-   `reason` – constante que describe por qué es la recomendación en el estado actual.|
+| **state** | **nvarchar(4000)** | Documento JSON que describe el estado de la recomendación. Están disponibles los campos siguientes:<br />-   `currentValue` -estado actual de la recomendación.<br />-   `reason` -constante que describe por qué es la recomendación en el estado actual.|
 | **es\_ejecutable\_acción** | **bit** | 1 = la recomendación se puede ejecutar en la base de datos a través de [!INCLUDE[tsql_md](../../includes/tsql-md.md)] secuencia de comandos.<br />0 = no se puede ejecutar la recomendación en la base de datos (por ejemplo: recomendación de información única o revertido) |
 | **es\_revertable\_acción** | **bit** | 1 = la recomendación puede supervisarse y revertir el motor de base de datos automáticamente.<br />0 = no puede ser supervisada y revierte automáticamente la recomendación. La mayoría &quot;ejecutable&quot; acciones serán &quot;revertable&quot;. |
 | **ejecutar\_acción\_iniciar\_tiempo** | **datetime2** | Fecha en que se aplica la recomendación. |
@@ -80,7 +80,7 @@ Documento JSON en `state` columna contiene la razón que describe por qué es la
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` opción está deshabilitada por el usuario durante el proceso de comprobación. Habilitar `FORCE_LAST_GOOD_PLAN` mediante la opción [ALTER DATABASE establece AUTOMATIC_TUNING &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) instrucción o forzar el plan manualmente mediante la secuencia de comandos en `[details]` columna. |
 | `UnsupportedStatementType` | No se puede forzar el plan en la consulta. Ejemplos de consultas no admitidos son los cursores y `INSERT BULK` instrucción. |
 | `LastGoodPlanForced` | La recomendación se aplicó correctamente. |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identifica posibles regresión del rendimiento, pero la `FORCE_LAST_GOOD_PLAN` no está habilitada la opción – vea [ALTER DATABASE establece AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Aplicar recomendación de forma manual o habilitar `FORCE_LAST_GOOD_PLAN` opción. |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identifica la regresión del rendimiento potencial, pero la `FORCE_LAST_GOOD_PLAN` opción no está habilitada, consulte [ALTER DATABASE establece AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Aplicar recomendación de forma manual o habilitar `FORCE_LAST_GOOD_PLAN` opción. |
 | `VerificationAborted`| Proceso de comprobación se ha anulado debido al reinicio o limpieza de la consulta Store. |
 | `VerificationForcedQueryRecompile`| Se recompila la consulta porque no hay ninguna mejora significativa del rendimiento. |
 | `PlanForcedByUser`| Usuario manualmente el plan de uso forzados [sp_query_store_force_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedimiento. |

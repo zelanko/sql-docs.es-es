@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.attachdatabase.f1
@@ -16,15 +15,15 @@ ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f0e1f168a94dc9584e28545e0530a700309e438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b4c9a3160224078b908059c3902e66ef59608bac
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095675"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354987"
 ---
 # <a name="attach-a-database"></a>Adjuntar una base de datos
-  En este tema se describe cómo adjuntar una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede usar esta característica para copiar, mover o actualizar una base de datos de SQL Server.  
+  En este tema se describe cómo adjuntar una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede usar esta característica para copiar, mover o actualizar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **En este tema**  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48095675"
   
 -   **Seguimiento:**  [Después de actualizar una base de datos](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -55,19 +54,19 @@ ms.locfileid: "48095675"
 -   Cuando se adjunta una base de datos, si los archivos MDF y LDF se encuentran en directorios diferentes y una de las rutas de acceso incluye \\\\?\GlobalRoot, se producirá un error en la operación.  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
- Se recomienda mover las bases de datos mediante el procedimiento de reubicación programada ALTER DATABASE, en lugar del método separar y adjuntar. Para más información, consulte [Move User Databases](move-user-databases.md).  
+Se recomienda mover las bases de datos mediante el uso de la `ALTER DATABASE` procedimiento de reubicación planeada, en lugar de usar separar y adjuntar. Para más información, consulte [Move User Databases](move-user-databases.md).  
   
 ###  <a name="Security"></a> Seguridad  
- Los permisos de acceso a archivos se establecen durante una serie de operaciones de base de datos, incluidas las operaciones de desasociar o adjuntar una base de datos. Para obtener información sobre los permisos de archivo que se establecen siempre que se separa y se adjunta una base de datos, vea [Proteger archivos de datos y de registro](http://technet.microsoft.com/library/ms189128.aspx) en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+Los permisos de acceso a archivos se establecen durante una serie de operaciones de base de datos, incluidas las operaciones de desasociar o adjuntar una base de datos. Para obtener información sobre los permisos de archivo que se establecen siempre que se separa y se adjunta una base de datos, vea [Proteger archivos de datos y de registro](https://technet.microsoft.com/library/ms189128.aspx) en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
- Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos. Para obtener más información sobre cómo adjuntar bases de datos y sobre los cambios que se realizan en los metadatos al adjuntar una base de datos, vea [Adjuntar y separar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md).  
+Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos. Para obtener más información sobre cómo adjuntar bases de datos y sobre los cambios que se realizan en los metadatos al adjuntar una base de datos, vea [Adjuntar y separar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md).  
   
 ####  <a name="Permissions"></a> Permissions  
- Requiere el permiso CREATE DATABASE, CREATE ANY DATABASE o ALTER ANY DATABASE.  
+Requiere el permiso `CREATE DATABASE`, `CREATE ANY DATABASE` o `ALTER ANY DATABASE`.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### <a name="to-attach-a-database"></a>Para adjuntar una base de datos  
+### <a name="to-attach-a-database"></a>Para adjuntar una base de datos  
   
 1.  En el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, después, expándala.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48095675"
      `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    >  Si intenta seleccionar una base de datos que ya ha sido adjuntada se producirá un error.  
+    > Si intenta seleccionar una base de datos que ya ha sido adjuntada se producirá un error.  
   
      **Bases de datos que se van a adjuntar**  
      Muestra información sobre las bases de datos seleccionadas.  
@@ -120,10 +119,10 @@ ms.locfileid: "48095675"
      Quita el archivo seleccionado de la cuadrícula **Bases de datos que se van a adjuntar** .  
   
      **"** *<database_name>* **" detalles de la base de datos**  
-     Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** (**…**).  
+     Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** (**...**).  
   
     > [!NOTE]  
-    >  Si un archivo no existe, la columna **Mensaje** muestra "No se encontró". Si un archivo de registro no se encuentra, indica que se halla en otro directorio o que se ha eliminado. En tal caso, debe actualizar la ruta de acceso del archivo en la cuadrícula **Detalles de la base de datos** para que señale la ubicación correcta o eliminar el archivo de registro de la cuadrícula. Si un archivo de datos .ndf no se encuentra, debe actualizar su ruta de acceso en la cuadrícula para que señale la ubicación correcta.  
+    > Si un archivo no existe, la columna **Mensaje** muestra "No se encontró". Si un archivo de registro no se encuentra, indica que se halla en otro directorio o que se ha eliminado. En tal caso, debe actualizar la ruta de acceso del archivo en la cuadrícula **Detalles de la base de datos** para que señale la ubicación correcta o eliminar el archivo de registro de la cuadrícula. Si un archivo de datos .ndf no se encuentra, debe actualizar su ruta de acceso en la cuadrícula para que señale la ubicación correcta.  
   
      **Nombre del archivo original**  
      Muestra el nombre del archivo adjunto que pertenece a la base de datos.  
@@ -139,31 +138,30 @@ ms.locfileid: "48095675"
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### <a name="to-attach-a-database"></a>Para adjuntar una base de datos  
+### <a name="to-attach-a-database"></a>Para adjuntar una base de datos  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  Desde la barra Estándar, haga clic en **Nueva consulta**.  
+2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
-3.  Use la instrucción [CREATE DATABASE](/sql/t-sql/statements/create-database-sql-server-transact-sql) con la cláusula FOR ATTACH.  
+3.  Use la [CREATE DATABASE](/sql/t-sql/statements/create-database-sql-server-transact-sql) instrucción con el `FOR ATTACH` cerrar.  
   
      Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se adjuntan los archivos de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] y se cambia el nombre de la base de datos a `MyAdventureWorks`.  
   
-    ```  
+    ```sql  
     CREATE DATABASE MyAdventureWorks   
         ON (FILENAME = 'C:\MySQLServer\AdventureWorks_Data.mdf'),   
         (FILENAME = 'C:\MySQLServer\AdventureWorks_Log.ldf')   
         FOR ATTACH;  
-  
     ```  
   
     > [!NOTE]  
-    >  También puede usar los procedimientos almacenados [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql) o [sp_attach_single_file_db](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql) . Sin embargo, estos procedimientos almacenados se quitarán en una versión futura de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, se recomienda usar CREATE DATABASE … FOR ATTACH en lugar.  
+    > También puede usar los procedimientos almacenados [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql) o [sp_attach_single_file_db](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql) . Sin embargo, estos procedimientos almacenados se quitarán en una versión futura de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Se recomienda que utilice CREATE DATABASE... FOR ATTACH en lugar.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de actualizar una base de datos de SQL Server  
- Después de actualizar una base de datos mediante el método de adjuntarla, la base de datos queda disponible inmediatamente y se actualiza automáticamente. Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados.  
+##  <a name="FollowUp"></a> Sigue: Después de actualizar una base de datos de SQL Server  
+ Después de actualizar una base de datos mediante el método de adjuntar, la base de datos queda disponible inmediatamente y se actualiza automáticamente. Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados.  
   
- Si el nivel de compatibilidad de una base de datos de usuario es 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad es 90 antes de la actualización, en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
+Si el nivel de compatibilidad de una base de datos de usuario es 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad es 90 antes de la actualización, en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
 ## <a name="see-also"></a>Vea también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   

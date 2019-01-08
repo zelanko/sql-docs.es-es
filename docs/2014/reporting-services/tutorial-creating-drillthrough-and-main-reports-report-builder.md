@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear informes principales y de obtención de detalles (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Crear informes principales (generador de informes) y obtención de detalles | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093825"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512549"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
   Este tutorial le enseña cómo crear dos tipos de informes: un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. En la siguiente ilustración se muestran los informes que creará.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- La siguiente ilustración muestra cómo el valor de campo, Games and Toys, del informe principal muestra el título del informe detallado. Los datos de la obtención de detalles pertenecen a la categoría de producto de Games and Toys.  
+ La siguiente ilustración muestra cómo el valor de campo, Games and Toys en el informe principal se muestra en el título del informe de obtención de detalles. Los datos de la obtención de detalles pertenecen a la categoría de producto de Games and Toys.  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48093825"
 10. Haga clic en **Tipo de credenciales**.  
   
     > [!NOTE]  
-    >  Dependiendo de cómo se configuran los permisos en el origen de datos, podría necesitar cambiar las opciones de autenticación predeterminadas. Para más información, vea [Security &#40;Report Builder&#41;](report-builder/security-report-builder.md).  
+    >  Dependiendo de cómo se configuran los permisos en el origen de datos, podría necesitar cambiar las opciones de autenticación predeterminadas. Para más información, vea [Seguridad &#40;Generador de informes&#41;](report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48093825"
   
 #### <a name="to-create-query-filters"></a>Crear filtros de consulta  
   
-1.  En la página **Diseñar una consulta** , en el panel Metadatos, haga clic en el botón **(…)**.  
+1.  En la página **Diseñar una consulta**, en el panel Metadatos, haga clic en el botón **(...)**.  
   
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48093825"
   
 5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea**, en **Distribuidor**y, después, en **Aceptar**.  
   
-     La consulta incluye ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
+     La consulta contiene ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
   
 6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
   
@@ -443,7 +443,7 @@ ms.locfileid: "48093825"
   
 #### <a name="to-create-query-filters"></a>Crear filtros de consulta  
   
-1.  En la página **Diseñar una consulta** , en la sección de cubo del panel Metadatos, haga clic en el botón de puntos suspensivos **(…)**.  
+1.  En la página **Diseñar una consulta**, en la sección de cubo del panel Metadatos, haga clic en el botón de puntos suspensivos **(...)**.  
   
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
@@ -462,7 +462,7 @@ ms.locfileid: "48093825"
   
 5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea** y en **Distribuidor**y, después, en **Aceptar**.  
   
-     La consulta incluye ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
+     La consulta contiene ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
   
 6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
   
@@ -562,7 +562,7 @@ ms.locfileid: "48093825"
   
 1.  En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
-     El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente manera: la primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de la categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`y la fila cuarta contiene los totales.  
+     El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente forma: La primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`) y la cuarta fila contiene los totales.  
   
 2.  Haga clic en **Siguiente**.  
   
@@ -685,7 +685,7 @@ ms.locfileid: "48093825"
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Ventas por categoría de producto de 2009: categoría En línea y Distribuidor**.  
+2.  Tipo **ventas por categoría de producto de 2009: En línea y distribuidor categoría:**.  
   
 3.  Seleccione el texto que escribió.  
   

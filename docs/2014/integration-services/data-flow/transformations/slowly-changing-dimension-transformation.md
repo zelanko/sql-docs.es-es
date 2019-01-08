@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.slowlychangingdimtrans.f1
@@ -18,12 +17,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c417f01f7256863902f4e446bcb04c0732be832c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fae586ee68a75127d5085b57f5f200498967d1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056197"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352135"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación
   La transformación Dimensión de variación lenta coordina la actualización e inserción de registros en las tablas de dimensiones de almacenamiento de datos. Por ejemplo, puede usar esta transformación para configurar las salidas de transformación que insertan y actualizan registros en la tabla DimProduct de la base de datos [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con datos de la tabla Production.Products de la base de datos OLTP AdventureWorks.  
@@ -47,7 +46,7 @@ ms.locfileid: "48056197"
   
 -   Los cambios de atributo variable sobrescriben los registros existentes. Este tipo de cambio es equivalente a un cambio del Tipo 1. La transformación Dimensión de variación lenta dirige estas filas a una salida llamada **Salida de actualizaciones de atributos variables**.  
   
--   Los cambios de atributo histórico crean nuevos registros en lugar de actualizar registros existentes. El único cambio que se permite en un registro existente es una actualización a una columna que indica si el registro está actualizado o expirado. Este tipo de cambio es equivalente a un cambio del tipo 2. La transformación Dimensión de variación lenta dirige estas filas a dos salidas: **Salida de inserciones de atributos históricos** y **Nueva salida**.  
+-   Los cambios de atributo histórico crean nuevos registros en lugar de actualizar registros existentes. El único cambio que se permite en un registro existente es una actualización a una columna que indica si el registro está actualizado o expirado. Este tipo de cambio es equivalente a un cambio del tipo 2. La transformación dimensión de variación lenta dirige estas filas a dos salidas: **Salida de inserciones de atributos históricos** y **nueva salida**.  
   
 -   Los cambios de atributo fijo indican que el valor de la columna no debe cambiar. La transformación Dimensión de variación lenta detecta cambios y puede dirigir las filas con cambios a una salida llamada **Salida de atributo fijo**.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48056197"
 |------------|-----------------|----------------------------|  
 |**Salida de actualizaciones de atributos variables**|El registro de la tabla de búsqueda se actualiza. Esta salida se usa para filas de atributos variables.|Una transformación Comando de OLE DB actualiza el registro mediante una instrucción UPDATE.|  
 |**Salida de atributo fijo**|Los valores en las filas que no deben cambiar no coinciden con los valores de la tabla de búsqueda. Esta salida se usa para filas de atributos fijos.|No se crea un flujo de datos predeterminado. Si la transformación se configura para continuar después de encontrar cambios en columnas de atributos fijos, debe crear un flujo de datos que capture estas filas.|  
-|**Salida de inserciones de atributos históricos**|La tabla de búsqueda contiene como mínimo una fila coincidente. La fila marcada como "actual" se debe marcar ahora como "expirada". Esta salida se usa para filas de atributos históricos.|Las transformaciones de Columna derivada crean columnas para la fila expirada y los indicadores de fila actual. Una transformación Comando de OLE DB actualiza el valor que se debe marcar como "expirado". La fila con los nuevos valores de columna se dirige a Nueva salida, en la que la fila se inserta y marca como "actual".|  
+|**Salida de inserciones de atributos históricos**|La tabla de búsqueda contiene como mínimo una fila coincidente. La fila marcada como “actual” se tiene que marcar ahora como “expirada”. Esta salida se usa para filas de atributos históricos.|Las transformaciones de Columna derivada crean columnas para la fila expirada y los indicadores de fila actual. Una transformación Comando de OLE DB actualiza el valor que se debe marcar como "expirado". La fila con los nuevos valores de columna se dirige a Nueva salida, en la que la fila se inserta y marca como "actual".|  
 |**Salida de actualizaciones de miembros deducidos**|Se insertan filas para miembros de dimensión deducidos. Esta salida se usa para filas de miembros deducidos.|Una transformación Comando de OLE DB actualiza el registro mediante una instrucción SQL UPDATE.|  
 |**Nueva salida**|La tabla de búsqueda no contiene filas coincidentes. La fila se agrega a la tabla de dimensiones. Esta salida se usa para nuevas filas y cambios en las filas de atributos históricos.|Una transformación Columna derivada establece el indicador de fila actual, y un destino de OLE DB inserta la fila.|  
 |**Salida sin cambios**|Los valores de la tabla de búsqueda coinciden con los valores de la fila. Esta salida se usa para filas sin cambios.|No se crea un flujo de datos predeterminado porque la transformación Dimensión de variación lenta no realiza ningún trabajo. Si desea capturar estas filas, debe crear un flujo de datos para esta salida.|  
@@ -83,7 +82,7 @@ ms.locfileid: "48056197"
  Para obtener sugerencias sobre cómo mejorar el rendimiento de la transformación Dimensión de variación lenta, vea [Características de rendimiento de flujo de datos](../data-flow-performance-features.md).  
   
 ## <a name="troubleshooting-the-slowly-changing-dimension-transformation"></a>Solucionar problemas de la transformación Dimensión de variación lenta  
- Puede registrar las llamadas realizadas por la transformación Dimensión de variación lenta a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con las conexiones, los comandos y las consultas a orígenes de datos externos realizados por la transformación Dimensión de variación lenta. Para registrar las llamadas que la transformación Dimensión de variación lenta realiza a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para obtener más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Puede registrar las llamadas realizadas por la transformación Dimensión de variación lenta a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con las conexiones, los comandos y las consultas a orígenes de datos externos realizados por la transformación Dimensión de variación lenta. Para registrar las llamadas que la transformación Dimensión de variación lenta realiza a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation"></a>Configurar la transformación Dimensión de variación lenta  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
@@ -94,7 +93,7 @@ ms.locfileid: "48056197"
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
- Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
+ Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>Configurar las salidas de la transformación Dimensión de variación lenta  
  Coordinar la actualización e inserción de registros en las tablas de dimensiones puede ser una tarea compleja, especialmente si se usan datos de tipo 1 y 2. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ofrece dos maneras de configurar las dimensiones de variación lenta:  
@@ -108,6 +107,6 @@ ms.locfileid: "48056197"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   La entrada del blog sobre cómo [optimizar el Asistente para dimensiones de variación lenta](http://go.microsoft.com/fwlink/?LinkId=199481), en blogs.msdn.com.  
+-   La entrada del blog sobre cómo [optimizar el Asistente para dimensiones de variación lenta](https://go.microsoft.com/fwlink/?LinkId=199481), en blogs.msdn.com.  
   
   

@@ -10,12 +10,12 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 402416503f927f74dcb711ac3bffb3c901f10e79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737823"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408322"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Ejecución de la consola SSMA (AccessToSQL)
 Microsoft le proporciona un sólido conjunto de comandos del archivo de secuencia de comandos y opciones de línea de comandos para ejecutar y controlar las actividades SSMA. Las secciones que detallan la misma.  
@@ -25,7 +25,7 @@ Los comandos de proyecto controlan la creación de proyectos, abrir, guardar y s
   
 **Command**  
   
-creación de nuevos proyectos: crea un nuevo proyecto SSMA.  
+creación de nuevos proyectos: Crea un nuevo proyecto SSMA.  
   
 **Script**  
   
@@ -62,7 +62,7 @@ creación de nuevos proyectos: crea un nuevo proyecto SSMA.
   
   overwrite-if-exists="<true/false>"  
   
-  project-type=”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”  
+  project-type="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"  
   
 />  
 ```  
@@ -72,7 +72,7 @@ Atributo de tipo de proyecto es **sql-server-2008** de forma predeterminada.
   
 **Command**  
   
-Abrir proyecto: abre un proyecto existente.  
+Abrir proyecto: Abre un proyecto existente.  
   
 **Script**  
   
@@ -91,11 +91,11 @@ Abrir proyecto: abre un proyecto existente.
   
 />  
 ```  
-**Nota:** aplicación de consola de SSMA para Access admite compatibilidad con versiones anteriores. Podrá abrir proyectos creados con una versión anterior de SSMA.  
+**Nota:** Aplicación de consola de SSMA para Access admite compatibilidad con versiones anteriores. Podrá abrir proyectos creados con una versión anterior de SSMA.  
   
 **Command**  
   
-Guardar proyecto: guarda el proyecto de migración.  
+Guardar proyecto: Guarda el proyecto de migración.  
   
 **Script**  
   
@@ -106,7 +106,7 @@ Guardar proyecto: guarda el proyecto de migración.
 ```  
 **Command**  
   
-proyecto de cerrar: cierra el proyecto de migración.  
+proyecto de cierre: Cierra el proyecto de migración.  
   
 **Script**  
   
@@ -149,7 +149,7 @@ Definición de servidor se recupera el atributo de nombre definido para cada con
 ```  
 **Command**  
   
-acceso de carga de base de datos: usado para cargar archivos de base de datos de access  
+carga-access-database: Utilizado para cargar archivos de base de datos de access  
   
 **Script**  
   
@@ -325,7 +325,7 @@ o Administrador de configuración de
 ## <a name="migration-script-file-commands"></a>Comandos de archivo de Script de migración  
 Los comandos de migración conversión el esquema de base de datos de destino en el esquema de origen y migra los datos al servidor de destino.  
   
-La salida de consola predeterminada para los comandos de migración es el informe de salida 'Full' con ningún informe de error detallado: solo se resumen en el nodo raíz del árbol de objeto de origen.  
+La salida de consola predeterminada para los comandos de migración es el informe de salida 'Full' con ningún informe de error detallado: Resumen solo al nodo raíz del árbol de objeto de origen.  
   
 **Command**  
   
@@ -452,7 +452,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-Vincular tablas: este comando vincula la tabla de origen (acceso) a la tabla de destino.  
+tablas de vínculos: Este comando vincula la tabla de origen (acceso) a la tabla de destino.  
   
 **Script**  
   
@@ -478,7 +478,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-tablas desvincular: este comando desvincula la tabla de origen (acceso) de la tabla de destino.  
+Desvincular: tablas: Este comando desvincula la tabla de origen (acceso) de la tabla de destino.  
   
 **Script**  
   
@@ -508,7 +508,7 @@ El comando de preparación de la migración inicia la asignación de esquema ent
   
 **Command**  
   
-esquema de asignación: asignación de esquema de base de datos de origen al esquema de destino.  
+esquema de asignación: Asignación de esquema de base de datos de origen al esquema de destino.  
   
 **Script**  
   
@@ -527,7 +527,7 @@ esquema de asignación: asignación de esquema de base de datos de origen al esq
 ## <a name="manageability-commands"></a>Comandos de facilidad de uso  
 Los comandos de facilidad de uso ayudan a sincronizar los objetos de base de datos de destino con la base de datos de origen.  
   
-La salida de consola predeterminada para los comandos de migración es el informe de salida 'Full' con ningún informe de error detallado: solo se resumen en el nodo raíz del árbol de objeto de origen.  
+La salida de consola predeterminada para los comandos de migración es el informe de salida 'Full' con ningún informe de error detallado: Resumen solo al nodo raíz del árbol de objeto de origen.  
   
 **Command**  
   

@@ -20,16 +20,16 @@ ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7994e88d5b3e5649683651f7514c39ad791fc3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 912e4d109a9e769442c65d292ff190d79705eb21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746163"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201544"
 ---
 # <a name="sqlclosecursor-function"></a>Función SQLCloseCursor
 **Conformidad**  
- Versión introdujo: ODBC 3.0 normativo: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
   
  **Resumen**  
  **SQLCloseCursor** cierra un cursor que se ha abierto en una instrucción y se descarta los resultados pendientes.  
@@ -39,7 +39,7 @@ ms.locfileid: "47746163"
 ```  
   
 SQLRETURN SQLCloseCursor(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  

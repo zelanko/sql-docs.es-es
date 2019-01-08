@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075855"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399343"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
   Las expresiones ayudan a crear informes eficaces y flexibles. Este tutorial enseña a crear e implementar expresiones que usen operadores y funciones comunes. Usará el **expresión** cuadro de diálogo para escribir expresiones que concatenan valores de nombres, buscan valores en un conjunto de datos independiente, mostrar diferentes imágenes según los valores de campo y así sucesivamente.  
@@ -66,7 +66,7 @@ ms.locfileid: "48075855"
 >  En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, elija un origen de datos y crear un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>Para crear un nuevo informe de tabla  
   
@@ -343,7 +343,7 @@ ms.locfileid: "48075855"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Para buscar valores en el conjunto de datos CountryRegion  
   
-1.  Haga clic en el título de columna **Country Region ID** y elimine el texto: ID.  
+1.  Haga clic en el **Country Region ID** título de columna y elimine el texto: ID.  
   
 2.  Haga clic con el botón derecho en la celda de datos de la columna **Country Region** y haga clic en **Expresión**.  
   
@@ -372,7 +372,7 @@ ms.locfileid: "48075855"
 11. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
 ##  <a name="Count"></a> 6. Recuento de días desde la última compra  
- Agregue una columna y, después, use la función **Ahora** o la variable global integrada `ExecutionTime` para calcular el número de días desde hoy hasta la fecha en que una persona realizó compras por última vez.  
+ Agregar una columna y, a continuación, usar el **ahora** función o el `ExecutionTime` variable global integrada para calcular el número de días desde hoy que una persona última compra.  
   
 #### <a name="to-add-the-days-ago-column"></a>Para agregar la columna Días transcurridos  
   
@@ -418,9 +418,9 @@ ms.locfileid: "48075855"
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7. Usar un indicador para mostrar la comparación de ventas  
- Agregue una nueva columna y use un indicador para mostrar si las compras hasta la fecha de una persona están por encima o por debajo del promedio de compras hasta la fecha. La función **Redondear** quita los decimales de los valores.  
+ Agregue una nueva columna y usar un indicador para mostrar si una persona año hasta la fecha (año actual) están por encima o por debajo del promedio de que compras hasta la fecha. La función **Redondear** quita los decimales de los valores.  
   
- La configuración del indicador y sus estados requiere muchos pasos. Si lo desea, en el procedimiento “Para configurar el indicador”, puede avanzar y copiar o pegar las expresiones completas de este tutorial en el cuadro de diálogo **Expresión**.  
+ La configuración del indicador y sus estados requiere muchos pasos. Si lo desea, en el procedimiento "para configurar el indicador", puede avanzar y copiar y pegar las expresiones completas de este tutorial en el **expresión** cuadro de diálogo.  
   
 #### <a name="to-add-the--or---avg-sales-column"></a>Para agregar la columna Promedio + o -  
   
@@ -522,7 +522,7 @@ ms.locfileid: "48075855"
   
 38. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="GreenBar"></a> 8. Convertir un informe en informe con barras verdes  
+##  <a name="GreenBar"></a> 8. Hacer que el informe que notificar una "barra verde"  
  Use un parámetro para especificar el color que se aplicará a filas alternativas del informe, convirtiéndolo en un informe con barras.  
   
 #### <a name="to-add-a-parameter"></a>Para agregar un parámetro  
@@ -543,9 +543,9 @@ ms.locfileid: "48075855"
   
 7.  Haga clic en **Agregar**.  
   
-8.  En el cuadro **Etiqueta**, escriba: **Amarillo**  
+8.  En el **etiqueta** , escriba: **Amarillo**  
   
-9. En el cuadro **Valor**, escriba **Amarillo**  
+9. En el cuadro **Valor** , escriba **Amarillo**  
   
 10. Haga clic en **Agregar**.  
   
@@ -601,7 +601,7 @@ ms.locfileid: "48075855"
   
 15. Si el cursor no está ya inmediatamente después de `Count(`, colóquelo ahí.  
   
-16. Elimine el paréntesis de apertura y escriba **,“Expressions”)**  
+16. Elimine el paréntesis de apertura y, a continuación, escriba **, "Expressions")**  
   
     > [!NOTE]  
     >  Expressions es el nombre del conjunto de datos en el que contabilizar las filas de datos.  
@@ -621,7 +621,7 @@ ms.locfileid: "48075855"
   
 22. Si el cursor no está ya inmediatamente después de `Parameters!RowColor.Value`, colóquelo ahí.  
   
-23. Escriba **, “White”)**  
+23. Escriba **, "White")**  
   
      La expresión completa es la siguiente: `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
@@ -708,7 +708,7 @@ ms.locfileid: "48075855"
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Los indicadores &#40;generador de informes y SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [Imágenes, cuadros de texto, rectángulos y líneas &#40;generador de informes y SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Imágenes, cuadros de texto, rectángulos y líneas &#40;Generador de informes y SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)  
   

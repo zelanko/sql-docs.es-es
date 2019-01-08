@@ -20,16 +20,16 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 169088bbd99de070bfff81ffd83f01fc0e4d44a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120172"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207694"
 ---
 # <a name="sqlcolumnprivileges-function"></a>Función SQLColumnPrivileges
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: ODBC  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ODBC  
   
  **Resumen**  
  **SQLColumnPrivileges** devuelve una lista de columnas y los privilegios asociados para la tabla especificada. El controlador devuelve la información como un conjunto de resultados en el objeto *StatementHandle*.  
@@ -143,7 +143,7 @@ SQLRETURN SQLColumnPrivileges(
 |COLUMN_NAME (ODBC 1.0)|4|Varchar no es NULL|Nombre de columna. El controlador devuelve una cadena vacía para una columna que no tiene un nombre.|  
 |OTORGANTE DE PERMISOS (ODBC 1.0)|5|Varchar|Nombre del usuario que concedió el privilegio; Es NULL si no es aplicable al origen de datos.<br /><br /> Para todas las filas en el que el valor de la columna receptor es el propietario del objeto, la columna GRANTOR será "_SYSTEM".|  
 |RECEPTOR DE (ODBC 1.0)|6|Varchar no es NULL|Nombre del usuario a quien se concedió el privilegio.|  
-|PRIVILEGIO DE (ODBC 1.0)|7|Varchar no es NULL|Identifica el privilegio de la columna. Puede ser uno de los siguientes (o de otras plataformas de los datos de origen cuando definido por la implementación):<br /><br /> SELECT: Se permite al receptor de permisos para recuperar datos de la columna.<br /><br /> INSERCIÓN: Se permite que grantee para proporcionar datos para la columna en las nuevas filas que se insertan en la tabla asociada.<br /><br /> UPDATE: Se permite al receptor de permisos para actualizar datos en la columna.<br /><br /> REFERENCIAS: Se permite que grantee para hacer referencia a la columna dentro de una restricción (por ejemplo, un único, referencial, o una restricción check de tabla).|  
+|PRIVILEGIO DE (ODBC 1.0)|7|Varchar no es NULL|Identifica el privilegio de la columna. Puede ser uno de los siguientes (o de otras plataformas de los datos de origen cuando definido por la implementación):<br /><br /> SELECCIONE: El receptor tiene permiso para recuperar datos de la columna.<br /><br /> INSERTAR: Se permite que grantee para proporcionar datos para la columna en las nuevas filas que se insertan en la tabla asociada.<br /><br /> ACTUALIZACIÓN: El receptor tiene permiso para actualizar los datos de la columna.<br /><br /> REFERENCIAS: Se permite que grantee para hacer referencia a la columna dentro de una restricción (por ejemplo, un único, referencial, o una restricción check de tabla).|  
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|Indica si se permite que grantee conceda el privilegio a otros usuarios; "Sí", "NO" o "NULL" si desconocido o no es aplicable al origen de datos.<br /><br /> Un privilegio es que pueden concederse o no se puede conceder, pero no ambos. El conjunto de resultados devuelto por **SQLColumnPrivileges** nunca contendrá dos filas para el que todas las columnas excepto la columna IS_GRANTABLE contienen el mismo valor.|  
   
 ## <a name="code-example"></a>Ejemplo de código  

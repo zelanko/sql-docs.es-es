@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], reactivating
@@ -18,12 +17,12 @@ ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7fb16b3d7cb01f955d8be8de2483807b3f9dc98f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 208f801522e53eb8d8075cced223d2d0360f257b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140406"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762457"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>Reactivar un miembro o una colección (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede reactivar un miembro que:  
@@ -45,7 +44,7 @@ ms.locfileid: "48140406"
   
 -   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], debe disponer de permiso para el área funcional **Administración de versiones** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>Para reactivar un miembro o colección  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48140406"
   
 ## <a name="see-also"></a>Vea también  
  [Desactivar o eliminar miembros usando el proceso de almacenamiento provisional &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
- [Eliminar un miembro o colección &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [Eliminar un miembro o una colección &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Colecciones &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 430851f3dec665f937933b4d446e4950a4cf624c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48e169ae33a80eec6d7c40c120713407da1ddb10
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087475"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355323"
 ---
 # <a name="user-defined-type"></a>Tipo definido por el usuario
   El ejemplo Tipo de datos definido por el usuario muestra la creación y el uso de un tipo de datos simple definido por el usuario desde Transact-SQL y desde una aplicación cliente mediante `System.Data.SqlClient`.  
@@ -25,9 +25,9 @@ ms.locfileid: "48087475"
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   .NET Framework SDK 2.0 o posterior, o Microsoft Visual Studio 2005 o posterior. Puede obtener .NET Framework SDK de forma gratuita.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48087475"
      `GO`  
   
     > [!NOTE]  
-    >  Para habilitar CLR, debe tener `ALTER SETTINGS` permiso de nivel de servidor, que se concede implícitamente a los miembros de la `sysadmin` y `serveradmin` roles fijos de servidor.  
+    >  Para habilitar CLR, debe tener el permiso de nivel de servidor `ALTER SETTINGS`, que se concede implícitamente a los miembros de los roles fijos de servidor `sysadmin` y `serveradmin`.  
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   

@@ -20,16 +20,16 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa90a3ec804717ff23c249b8a54e23665933f1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794273"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206664"
 ---
 # <a name="sqlremovedrivermanager-function"></a>Función SQLRemoveDriverManager
 **Conformidad**  
- Versión presentado: ODBC 3.0: en desuso en Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 y los sistemas operativos posteriores.  
+ Versión de introducción: ODBC 3.0: En desuso en Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 y los sistemas operativos posteriores.  
   
  **Resumen**  
  **SQLRemoveDriverManager** cambia o quita la información acerca de los componentes principales ODBC de la entrada de Odbcinst.ini en la información del sistema.  
@@ -39,7 +39,7 @@ ms.locfileid: "47794273"
 ```  
   
 BOOL SQLRemoveDriverManager(  
-     LPDWORD     pdwUsageCount);  
+     LPDWORD     pdwUsageCount);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  

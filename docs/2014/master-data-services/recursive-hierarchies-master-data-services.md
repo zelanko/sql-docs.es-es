@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b18ec687743d035e56ac3111f894add26f2b8f71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c62c04ccbfa6e4143277f09950f79e8b59a01f97
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198515"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810927"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Jerarquías recursivas (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], una jerarquía recursiva es una jerarquía derivada que incluye una relación recursiva. Una relación recursiva existe cuando una entidad tiene un atributo basado en dominio en la propia entidad.  
@@ -61,7 +60,7 @@ ms.locfileid: "48198515"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Atributos basados en dominio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Atributos basados en dominios &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Jerarquías derivadas &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   

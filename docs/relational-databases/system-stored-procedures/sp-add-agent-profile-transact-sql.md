@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_add_agent_profile
@@ -17,12 +16,12 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b5c6b2c03ff9956a58bf7da8426c87b692d5f879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670443"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752157"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  [  **@profile_id=** ] *profile_id*  
  Es el identificador asociado al perfil que se acaba de insertar. *profile_id* es **int** y es un parámetro OUTPUT opcional. Si se especifica, el valor se establece en el nuevo Id. de perfil.  
   
- [  **@profile_name=** ] **'***profile_name***'**  
+ [  **@profile_name=** ] **'**_profile_name_**'**  
  Es el nombre del perfil. *nombre_perfil* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@agent_type=** ] **'***agent_type***'**  
+ [  **@agent_type=** ] **'**_agent_type_**'**  
  Es el tipo de agente de replicación. *agent_type* es **int**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
 |Valor|Descripción|  
@@ -66,7 +65,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0** indica un perfil del sistema. **1** indica un perfil personalizado. Se pueden crear perfiles personalizados solo mediante este procedimiento almacenado; por lo tanto, el único valor válido es **1**. Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea perfiles del sistema.  
   
- [  **@description=** ] **'***descripción***'**  
+ [  **@description=** ] **'**_descripción_**'**  
  Es una descripción del perfil. *descripción* es **nvarchar (3000)**, no tiene ningún valor predeterminado.  
   
  [  **@default=** ] *predeterminada*  

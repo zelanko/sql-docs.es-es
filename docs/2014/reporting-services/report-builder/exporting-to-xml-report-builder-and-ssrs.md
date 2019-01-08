@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0f17e055f4f1ddcf7f19ba58d92c5617c891a5e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116405"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204754"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportar a XML (Generador de informes y SSRS)
   La extensión de presentación en XML devuelve un informe en formato XML. El esquema XML del informe es específico de éste y solamente contiene datos. La extensión de representación en XML no representa la información de diseño ni mantiene la paginación. El XML que genera esta extensión se puede importar a una base de datos, se puede usar como mensaje de datos XML o se puede enviar a una aplicación personalizada.  
@@ -35,7 +35,7 @@ ms.locfileid: "48116405"
 |Cuadro de texto|Se representa como un atributo o elemento dentro de su contenedor.|  
 |Rectángulo|Se representa como un elemento dentro de su contenedor.|  
 |Grupos de columnas de matriz|Se representan como elementos dentro de grupos de filas.|  
-|Mapa|Se representa como un elemento dentro del elemento de su contenedor. Las capas de mapa son elementos secundarios del mapa. Cada capa de mapa incluye los elementos y los atributos de los miembros del mapa.|  
+|Asignación|Se representa como un elemento dentro del elemento de su contenedor. Las capas de mapa son elementos secundarios del mapa. Cada capa de mapa incluye los elementos y los atributos de los miembros del mapa.|  
 |Gráfico|Se representa como un elemento dentro del elemento de su contenedor. Las series son elementos secundarios del gráfico y las categorías son los elementos secundarios de una serie. Representa todas las etiquetas de gráfico de cada valor de gráfico. Las etiquetas y los valores se incluyen como atributos.|  
 |Barra de datos|Se representan como un elemento dentro del elemento de su contenedor, de forma similar a un gráfico. Normalmente, una barra de datos no incluye jerarquías o etiquetas, solo valores.|  
 |Minigráfico|Se representan como un elemento dentro del elemento de su contenedor, de forma similar a un gráfico. Normalmente, un minigráfico no incluye jerarquías ni etiquetas, solo valores.|  
@@ -81,7 +81,7 @@ ms.locfileid: "48116405"
   
  Las definiciones del espacio de nombres y los atributos de referencia del esquema XML también se incluyen en el elemento de informe. Las variables se indican en negrita:  
   
- \<**Informe** xmlns = "**SchemaName**" xmlns: xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;3aSchema rc % = True"nombre ="ReportName">  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Los valores de las variables son los siguientes:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48116405"
 ### <a name="tables-matrices-and-lists"></a>Tablas, matrices y listas  
  Las tablas, matrices y listas se representan como un elemento. El nombre del elemento procede de la propiedad RDL DataElementName de Tablix.  
   
-#### <a name="rows-and-columns"></a>Filas y columnas  
+#### <a name="rows-and-columns"></a>Las filas y columnas  
  Las columnas se representan dentro de las filas.  
   
 #### <a name="tablix-corner"></a>Esquina de Tablix  
@@ -200,7 +200,7 @@ ms.locfileid: "48116405"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

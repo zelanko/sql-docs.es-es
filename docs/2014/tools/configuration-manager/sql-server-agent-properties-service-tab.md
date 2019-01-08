@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e85edf0da738b51aabaef66d9e52954ffcb44591
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6eb2a23761dc24243a7a10b0e4cdbeb5b9ffe58d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211095"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775447"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>Propiedades de Agente SQL Server (pestaña Servicio)
   Éste es el servicio Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
@@ -34,7 +33,7 @@ ms.locfileid: "48211095"
  **Host Name**  
  Muestra el nombre del equipo o clúster que ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Nombre**  
+ **Name**  
  Indica el nombre para mostrar del servicio.  
   
  **Id. del proceso**  
@@ -46,13 +45,13 @@ ms.locfileid: "48211095"
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
   
--   Manual: el servicio no se inicia automáticamente al iniciar el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
+-   Manual: Este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: el servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: El servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: el servicio no se puede iniciar.  
+-   Deshabilitado: No se puede iniciar el servicio.  
   
- **State**  
- Indica si el servicio está en ejecución, detenido o deshabilitado. "**…**" indica que hay un cambio de estado pendiente.  
+ **Estado**  
+ Indica si el servicio está en ejecución, detenido o deshabilitado. "**...** "indica un cambio de estado es pendiente.  
   
   

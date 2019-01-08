@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -16,12 +16,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120307"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757587"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
   Hay dos conjuntos de propiedades de columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  
@@ -41,7 +41,7 @@ ms.locfileid: "48120307"
  **Categoría Identidad**  
  Se expande para mostrar las propiedades de **Nombre** y **Base de datos** .  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre de la columna.  
   
  **Base de datos**  
@@ -83,7 +83,7 @@ ms.locfileid: "48120307"
  **Categoría General**  
  Se expande para mostrar **Nombre**, **Permitir valores NULL**, **Tipo de datos**, **Valor o enlace predeterminado**, **Longitud**, **Precisión**y **Escala**.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre de la columna. Para editar el nombre, escriba en el cuadro de texto.  
   
 > [!CAUTION]  
@@ -111,7 +111,7 @@ ms.locfileid: "48120307"
  Se expande para mostrar las propiedades restantes.  
   
  **Intercalación**  
- Muestra la configuración de intercalación para la columna seleccionada. Para cambiar esta configuración, haga clic en **Intercalación** y, a continuación, haga clic en los puntos suspensivos **(…)** que hay a la derecha del valor.  
+ Muestra la configuración de intercalación para la columna seleccionada. Para cambiar esta configuración, haga clic en **Intercalación** y, después, haga clic en los puntos suspensivos **(...)** situados a la derecha del valor.  
   
  **Categoría Especificación de columna calculada**  
  Esta opción se expande para mostrar propiedades para **Fórmula** y **Persistente**. Si la columna está calculada, también aparecerá la fórmula. Para editar la fórmula, amplíe esta categoría y edítela en la propiedad **Fórmula** .  
@@ -126,7 +126,7 @@ ms.locfileid: "48120307"
  Muestra información sobre el tipo de datos del campo con el mismo formato que la instrucción SQL CREATE TABLE. Por ejemplo, un campo que contiene una cadena de longitud variable con una longitud máxima de 20 caracteres se representa como "varchar(20)". Para cambiar esta propiedad, escriba el valor directamente.  
   
  **Descripción**  
- Muestra la descripción de la columna. Para ver la descripción completa o para editarla, haga clic en Descripción y, a continuación, haga clic en los puntos suspensivos **(…)** a la derecha de la propiedad.  
+ Muestra la descripción de la columna. Para ver la descripción completa o para editarla, haga clic en Descripción y, después, haga clic en los puntos suspensivos **(...)** situados a la derecha de la propiedad.  
   
  **Categoría Especificación de texto completo**  
  Se expande para mostrar propiedades específicas para columnas de texto completo.  

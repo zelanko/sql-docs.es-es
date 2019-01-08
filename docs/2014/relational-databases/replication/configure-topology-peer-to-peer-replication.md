@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
@@ -13,12 +12,12 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208225"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776467"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar topología (replicación punto a punto)
   Utilice la página **Configurar topología** para realizar las tareas de configuración comunes, como agregar nuevos nodos, eliminando nodos y agregar las nuevas conexiones entre los nodos existentes. El nodo que seleccionó en la página **Publicación** de este asistente se muestra en la superficie de diseño. Para especificar las opciones de configuración, haga clic con el botón secundario en un nodo, una conexión o la superficie de diseño.  
@@ -63,7 +62,7 @@ ms.locfileid: "48208225"
   
 ### <a name="options-for-each-node"></a>Opciones para cada nodo  
  **Agregar una nueva conexión del mismo nivel**  
- Agrega una conexión entre dos nodos. Por ejemplo, si agrega una conexión entre el Nodo A y el Nodo B, la replicación agrega dos suscripciones: la primera habilita el Nodo A para recibir los cambios de la publicación en el Nodo B y la segunda permite al Nodo B recibir cambios de la publicación en el Nodo A.  
+ Agrega una conexión entre dos nodos. Por ejemplo, si agrega una conexión entre el nodo A y nodo B, la replicación agrega dos suscripciones: La primera habilita el nodo A para recibir los cambios de la publicación en el nodo B y la segunda permite al nodo B recibir cambios de la publicación en el nodo A.  
   
  **Eliminar nodo del mismo nivel**  
  Quita un nodo de la topología. Por ejemplo, si quita el Nodo C, se quita la publicación en ese nodo. También se quitan las suscripciones entre el Nodo A y el Nodo C, y el Nodo B y el Nodo C. No se elimina la base de datos del Nodo C y no se deshabilitan la publicación y la distribución.  

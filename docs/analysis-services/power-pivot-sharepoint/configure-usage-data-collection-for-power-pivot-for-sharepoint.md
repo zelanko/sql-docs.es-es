@@ -1,5 +1,5 @@
 ---
-title: Configurar la recopilación de datos de uso para (PowerPivot para SharePoint | Documentos de Microsoft
+title: Configurar la recopilación de datos de uso para (Power Pivot para SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026882"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420286"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurar la recolección de datos de uso para Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34026882"
   
 4.  En la sección **Eventos para registrar** , active o desactive las casillas correspondientes para habilitar o deshabilitar los siguientes eventos de Analysis Services:  
   
-    |Evento|Description|  
+    |Evento|Descripción|  
     |-----------|-----------------|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Conexiones**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se usa para supervisar las conexiones al servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se realizan en nombre de un usuario.|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Uso de datos de carga**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se usa para supervisar las solicitudes que cargan datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la memoria del servidor. Un evento de carga se genera para los orígenes de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cargados desde una base de datos de contenido o desde la caché.|  
@@ -86,9 +86,9 @@ ms.locfileid: "34026882"
 ##  <a name="jobs"></a> Configurar los trabajos de temporizador utilizados en la recopilación de datos de uso  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se mueven a ubicaciones diferentes en el sistema de recopilación de datos de uso mediante dos trabajos de temporizador:  
   
--   El trabajo de temporizador "Importación de datos de uso de Microsoft SharePoint Foundation" mueve los datos de uso de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a la base de datos de aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+-   El trabajo de temporizador "Importación de datos de uso de Microsoft SharePoint Foundation" mueve [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] uso para el [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] base de datos de aplicación de servicio.  
   
--   El "Trabajo de temporizador de procesamiento del panel de administración de[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] " mueve los datos a un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que es el origen de datos para los informes administrativos integrados.  
+-   El "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] trabajo de temporizador de procesamiento del panel de administración" los datos a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro que es el origen de datos para los informes administrativos integrados.  
   
  Si necesita actualizar los informes administrativos que aparecen con más frecuencia en el panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , siga estos pasos.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "34026882"
  Para obtener más información sobre cómo se recopilan y almacenan los datos de uso, vea [Recopilación de datos de uso de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definir las categorías de respuesta a las consultas rápida, media y lenta a efectos de los informes  
- El rendimiento del procesamiento de las consultas se mide con las categorías predefinidas que definen un ciclo de solicitud-respuesta con el tiempo que se tarda en completarse. Las categorías predefinidas son: trivial, rápido, esperado, de ejecución prolongada y superada. Cada solicitud para un servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pertenecerá a una de las categorías en función del tiempo que tarde en completarse.  
+ El rendimiento del procesamiento de las consultas se mide con las categorías predefinidas que definen un ciclo de solicitud-respuesta con el tiempo que se tarda en completarse. Las categorías predefinidas son: Trivial, Rápida, Esperada, Larga ejecución y Superado. Cada solicitud para un servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pertenecerá a una de las categorías en función del tiempo que tarde en completarse.  
   
  La información de las respuestas a las consultas se utiliza en los informes de actividad. Dentro de los informes, cada categoría se usa de manera diferente para revelar mejor las tendencias de rendimiento del sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Las solicitudes triviales se excluyen completamente, por ejemplo, porque de ese modo se quita el ruido en los datos y se muestran las tendencias más significativas mediante las categorías restantes. Por el contrario, las estadísticas de solicitudes de ejecución prolongada o superadas se destacan en el informe para que los administradores o los propietarios de los libros puedan emprender la acción correctora inmediatamente.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "34026882"
   
  En la siguiente tabla se muestran los valores predeterminados para la configuración de la recopilación de datos de uso.  
   
-|Configuración|Valor predeterminado|Tipo|Intervalo válido|  
+|Parámetro|Valor predeterminado|Tipo|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
 |**Eventos de uso de Analysis Services** (Conexión, Carga, Descarga, Solicitudes)|\<habilitado >|Boolean|Estos valores están habilitados o deshabilitados.|  
 |**Query Reporting interval**|300 (en segundos)|Integer|De 1 a cualquier entero positivo. El valor predeterminado es 5 minutos.|  

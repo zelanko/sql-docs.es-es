@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afphivetask.f1
@@ -14,12 +13,12 @@ ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4729cdb4bfb9e2bdef3a8915d808b82453cf87d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef43e6539840e6c5eec68ad4911f72930d28591d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057715"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749497"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Tarea de Hive de HDInsight de Azure
 Utilice la **tarea de Hive de HDInsight** para ejecutar el script de Hive en un clúster de HDInsight de Azure.
@@ -38,8 +37,8 @@ Para agregar una **tarea de Hive de HDInsight de Azure**, arrástrela al Diseña
   
 5.  Hay dos maneras de especificar el script de Hive que se va a ejecutar:
   
-    1.  **Script en línea**: especifique el campo **Script** escribiendo en línea el script que quiere ejecutar en el cuadro de diálogo **Escriba el script**.
+    1.  **Secuencia de comandos en línea**: Especifique el **Script** campo escribiendo el script para ejecutarlo en línea el **escriba el Script** cuadro de diálogo.
   
-    2.  **Archivo de script**: cargue el archivo de script en Azure Blob Storage y especifique el campo **BlobName**. Si el blob no está en el contenedor ni en la cuenta de almacenamiento predeterminados asociados con el clúster de HDInsight, deben especificarse los campos **ExternalStorageAccountName** y **ExternalBlobContainer**. Para un blob externo, asegúrese de que está configurado como accesible públicamente.  
+    2.  **Archivo de script**: Cargue el archivo de script en Azure Blob Storage y especifique el **BlobName** campo. Si el blob no está en el contenedor ni en la cuenta de almacenamiento predeterminados asociados con el clúster de HDInsight, deben especificarse los campos **ExternalStorageAccountName** y **ExternalBlobContainer**. Para un blob externo, asegúrese de que está configurado como accesible públicamente.  
   
      Si se especifican ambos, se usará el archivo de script y se omitirá el script en línea.

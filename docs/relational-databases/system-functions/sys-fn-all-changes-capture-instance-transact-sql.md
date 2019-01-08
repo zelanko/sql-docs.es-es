@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 77da6b8a6b4b81f6f7d05e6a64c58834a01b65c0
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 5b2cb804718afc2eeed5aa174b2de51a33f5c3ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072059"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409072"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  A continuación, las marcas de bits se anexan al conjunto de resultados para cada columna que se identifica en el parámetro @update_flag_list. Para el **todos los cambios** contenedor, las marcas de bits serán NULL siempre si __CDC_OPERATION es tenía ', 'I' o 'UO'. Si \__CDC_OPERATION 'UN es ', la marca se establecerá en 1 ó 0, dependiendo de si la operación de actualización produjo un cambio en la columna.  
   
- En la plantilla de configuración de captura de datos modificados 'Instantiate CDC Wrapper TVFs for Schema' se muestra cómo utilizar el procedimiento almacenado sp_cdc_generate_wrapper_function para obtener scripts CREATE para todas las funciones contenedoras de las funciones de consulta definidas para un esquema. A continuación, la plantilla crea esos scripts. Para obtener más información acerca de las plantillas, consulte [Explorador de plantillas](../../ssms/template/template-explorer.md).  
+ Plantilla de configuración de captura de datos modificados 'Instantiate el CDC Wrapper TVFs for Schema' muestra cómo usar el procedimiento almacenado sp_cdc_generate_wrapper_function para obtener scripts CREATE para todas las funciones de contenedor para las funciones de consulta definidas de un esquema. A continuación, la plantilla crea esos scripts. Para obtener más información acerca de las plantillas, consulte [Explorador de plantillas](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>Vea también  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

@@ -10,12 +10,12 @@ ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: caf97b65c9c7b2a0ce49cfcf42e2f90cd0db74cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 286e7b466e4868ab698168e6ac573d7e25422829
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679393"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407852"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Trabajar con el FilesExecuting de secuencia de comandos de consola de ejemplo de la consola de SSMA (AccessToSQL)
 Se han proporcionado algunos archivos de ejemplo junto con el producto para la referencia de usuario y el uso. Esta sección describe la manera de personalizar fácilmente estos scripts para satisfacer las necesidades del usuario final.  
@@ -39,11 +39,11 @@ Los siguientes archivos de secuencia de comandos de consola de ejemplo que abarc
   
     -   Para obtener más información acerca de cómo conectarse al servidor de origen y destino, consulte [crear los archivos de conexión de servidor &#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) .  
   
--   **VariableValueFileSample.xml:** todas las variables que se han usado en la consola de ejemplo de los archivos de script y `ServersConnectionFileSample.xml` ha sido intercalan en este archivo. Para ejecutar las secuencias de comandos de consola muestra que el usuario tiene que reemplazar simplemente la variable del ejemplo valores con el usuario las definen y pasan este archivo como un argumento de línea de comandos adicionales junto con el archivo de script.  
+-   **VariableValueFileSample.xml:** Archivos de script de todas las variables que se han usado en la consola de ejemplo y `ServersConnectionFileSample.xml` ha sido intercalan en este archivo. Para ejecutar las secuencias de comandos de consola muestra que el usuario tiene que reemplazar simplemente la variable del ejemplo valores con el usuario las definen y pasan este archivo como un argumento de línea de comandos adicionales junto con el archivo de script.  
   
     Para obtener más información sobre el archivo de valores variables, consulte [crear archivos de valor Variable &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
--   **AssessmentReportGenerationSample.xml:** este ejemplo permite al usuario generar un informe de evaluación de xml que se puede usar por el usuario para el análisis antes de que empiece a convertir y migrar los datos.  
+-   **AssessmentReportGenerationSample.xml:** Este ejemplo permite al usuario generar un informe de evaluación de xml que se puede usar por el usuario para el análisis antes de que empiece a convertir y migrar los datos.  
   
     En el `generate-assessment-report` el usuario debe cambiar obligatoriamente el valor de la variable de comando (consulte **VariableValueFileSample.xml**) en el `object-name` atributo por el nombre de la base de datos está en uso por el usuario. Según el tipo de objeto especificado, el `object-type` valor también debe cambiarse.  
   
@@ -55,12 +55,12 @@ Los siguientes archivos de secuencia de comandos de consola de ejemplo que abarc
     > -   Asegúrese de que el argumento de línea de comandos del archivo de valor de la variable se pasa a la aplicación de consola y VariableValueFileSample.xml se actualiza con el usuario especificado valores.  
     > -   Asegúrese de que el argumento de línea de comandos de archivo de conexión de servidor se pasa a la aplicación de consola y el ServersConnectionFileSample.xml se actualiza con los valores de parámetro de servidor correcto.  
   
--   **ConversionAndDataMigrationSample.xml:** este ejemplo permite al usuario realizar una migración de extremo a extremo de la conversión a la migración de datos. A continuación se enumera la lista de valores de atributo obligatorio que tendrán que cambiar:  
+-   **ConversionAndDataMigrationSample.xml:** Este ejemplo permite al usuario realizar una migración de extremo a extremo de la conversión a la migración de datos. A continuación se enumera la lista de valores de atributo obligatorio que tendrán que cambiar:  
   
     |Nombre de comando|Descripción|Attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Asignación de esquema de base de datos de origen al esquema de destino.|`source-schema:` Especifica la base de datos de origen que requiere que para se va a convertir.<br /><br />`sql-server-schema`: Especifica la base de datos de destino que se pueden migrar a|  
-    |`convert-schema`|Realiza la conversión de esquema de origen al esquema de destino.<br /><br />Si el usuario tiene que evaluar varios objetos de bases de datos y puede especificar varios `metabase-object` nodos como se muestra en el `convert-schema` de ejemplo 4 del comando del archivo de script de la consola de ejemplo.|`object-name`: Especifique la base de datos de origen o el nombre que requiere que para se va a convertir de objeto. Asegúrese de que el correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`|  
+    |`convert-schema`|Realiza la conversión de esquema de origen al esquema de destino.<br /><br />Si el usuario tiene que evaluar varios objetos de bases de datos y puede especificar varios `metabase-object` nodos como se muestra en el `convert-schema` de ejemplo 4 del comando del archivo de script de la consola de ejemplo.|`object-name`: Especificar la base de datos de origen / objeto de nombre que requiere que para se va a convertir. Asegúrese de que el correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`|  
     |`synchronize-target`|Los objetos de destino se sincroniza con la base de datos de destino.<br /><br />Si el usuario tiene que evaluar varios objetos de bases de datos y puede especificar varios `metabase-object` nodos como se muestra en el `synchronize-target` 3 de ejemplo del comando del archivo de script de la consola de ejemplo.|`object-name:` Especificar la base de datos de sql server / objeto de nombre que requiere que para se va a crear. Asegúrese de que el correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`|  
     |`migrate-data`|Migra los datos de origen al destino.<br /><br />Si el usuario tiene que evaluar varios objetos de bases de datos y puede especificar varios `metabase-object` nodos como se muestra en el `migrate-data` de ejemplo 2 del comando del archivo de script de la consola de ejemplo.|`object-name:` Especifica la base de datos de origen / tables nombre que requiere para la migración. Asegúrese de que el correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`|  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
@@ -13,12 +12,12 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afdab0c6817e65e1562a6768394d842a8e944c8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00910fdb6800921a2c6eeae79340eb5d2a79db20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129177"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756367"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar si los datos modificados están preparados
   En el flujo de control de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de los datos modificados, la segunda tarea consiste en asegurarse de que éstos están listos para el intervalo seleccionado. Este paso es necesario porque el proceso de captura asincrónico podría no haber procesado todavía todos los cambios hasta el extremo seleccionado.  
@@ -200,7 +199,7 @@ ms.locfileid: "48129177"
         > [!NOTE]  
         >  El método `Thread.Sleep` espera un argumento especificado en milisegundos.  
   
-7.  Deje la línea de código que devuelve predeterminada `DtsExecResult.Success` de la ejecución de la secuencia de comandos.  
+7.  Deje la línea de código predeterminada que devuelve `DtsExecResult.Success` de la ejecución del script.  
   
 8.  Cierre el entorno de desarrollo de script y el **Editor de la tarea Script**.  
   
@@ -276,7 +275,7 @@ ms.locfileid: "48129177"
   
 6.  En el **Editor de la tarea Script**, en la página **Script** , haga clic en **Modificar script** para abrir el entorno de desarrollo de script.  
   
-7.  En el procedimiento Main, escriba código para registrar un error mediante una llamada a la `Dts.Log` método, o para generar un evento llamando a uno de los métodos de la `Dts.Events` interfaz. Para informar del error al paquete, devuelva `Dts.TaskResult = Dts.Results.Failure`.  
+7.  En el procedimiento Main, escriba el código para registrar un error llamando al método `Dts.Log` o el código para provocar un evento llamando a uno de los métodos de la interfaz `Dts.Events`. Para informar del error al paquete, devuelva `Dts.TaskResult = Dts.Results.Failure`.  
   
      El ejemplo siguiente muestra cómo escribir un mensaje en el registro. Para obtener más información, consulte [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md), [Raising Events in the Script Task](../extending-packages-scripting/task/raising-events-in-the-script-task.md)y [Returning Results from the Script Task](../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
@@ -335,6 +334,6 @@ ms.locfileid: "48129177"
 ## <a name="next-step"></a>Paso siguiente  
  Después de determinar que los datos modificados están listos, el paso siguiente consiste en preparar la consulta de los mismos.  
   
- **Siguiente tema:** [Preparar para consultar datos modificados](prepare-to-query-for-the-change-data.md)  
+ **Tema siguiente:** [Preparar para consultar datos modificados](prepare-to-query-for-the-change-data.md)  
   
   

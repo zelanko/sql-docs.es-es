@@ -15,12 +15,12 @@ ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ee7bb13e8a9fa4826297cd0c55b82881aee5296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959263ce45c5f15adab12625d8af10148d98dc22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198085"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520711"
 ---
 # <a name="script-task-editor-script-page"></a>Editor de la tarea Script (página Script)
   Use la página **Script** del cuadro de diálogo **Editor de la tarea Script** para establecer las propiedades del script y para especificar las variables a las que se puede tener acceso desde el mismo.  
@@ -44,13 +44,13 @@ ms.locfileid: "48198085"
  Si cambia el nombre del método en el proyecto VSTA, deberá cambiar el valor de la propiedad **EntryPoint** .  
   
  **Variables de solo lectura**  
- Escriba una lista separada por comas de variables de solo lectura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos (**…**) y seleccione las variables en el cuadro de diálogo **Seleccionar variables** .  
+ Escriba una lista separada por comas de variables de solo lectura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos (**…**) y seleccione las variables en el cuadro de diálogo **Seleccionar variables**.  
   
 > [!NOTE]  
 >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
   
  **Variables de lectura/escritura**  
- Escriba una lista separada por comas de variables de lectura y escritura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos (**…**) y seleccione las variables en el cuadro de diálogo **Seleccionar variables** .  
+ Escriba una lista separada por comas de variables de lectura y escritura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos (**…**) y seleccione las variables en el cuadro de diálogo **Seleccionar variables**.  
   
 > [!NOTE]  
 >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
@@ -59,12 +59,12 @@ ms.locfileid: "48198085"
  Abre la VSTA IDE donde puede crear o modificar el script.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Página general](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea script &#40;página General&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
- [Página expresiones](expressions/expressions-page.md)   
- [Ejemplos de tarea script](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [General Page](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea Script &#40;página General&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Página Expresiones](expressions/expressions-page.md)   
+ [Ejemplos de tarea Script](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

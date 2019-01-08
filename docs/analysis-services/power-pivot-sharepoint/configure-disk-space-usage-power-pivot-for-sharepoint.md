@@ -1,5 +1,5 @@
 ---
-title: Configurar el uso de espacio en disco (PowerPivot para SharePoint) | Documentos de Microsoft
+title: Configurar el uso de espacio en disco (Power Pivot para SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24d96feb0e57bf0b1c62532cca63ddf07f96f21c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fa6090a675326db06491d54b82a6844363ee3e9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024752"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409202"
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurar el uso del espacio en disco (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "34024752"
   
 3.  En Uso de disco, establezca un valor (en gigas) para **Espacio total en disco** para configurar un límite superior en la cantidad de espacio usado para el almacenamiento en caché. El valor predeterminado es 0, lo que permite que Analysis Services use todo el espacio en disco disponible.  
   
-4.  En Uso de disco, en **Eliminar las bases de datos almacenadas en caché en las últimas ‘n’ horas** , especifique los criterios para el uso más reciente para vaciar la memoria caché cuando el espacio en disco llegue al límite máximo.  
+4.  Uso de disco, en el **eliminar almacenadas en caché las bases de datos en las últimas ' n ' horas** , especifique los criterios de último uso para vaciar la memoria caché cuando el espacio de disco es el límite máximo.  
   
      El valor predeterminado es 4 horas, lo que significa que todas las bases de datos que han estado inactivas durante cuatro horas o más se eliminan del sistema de archivos. Las bases de datos que están inactivas pero siguen en memoria se descargan y se eliminan del sistema de archivos.  
   

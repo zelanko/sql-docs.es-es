@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.f1
@@ -16,12 +15,12 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42b8ba863f4fbe8c5ce444cd253ea06aec0c7480
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5b5d52b1f4b2c2c260854230b53ccbe99aa641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050021"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766547"
 ---
 # <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea
   La tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] procesa objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como modelos tabulares, cubos, dimensiones y modelos de minería de datos.  
@@ -69,7 +68,7 @@ ms.locfileid: "48050021"
   
 -   [Editor de la tarea de procesamiento de Analysis Services &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea de procesamiento de Analysis Services &#40;página de Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Editor de la tarea de procesamiento de Analysis Services &#40;página Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

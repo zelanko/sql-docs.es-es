@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350529"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544184"
 ---
 # <a name="visual-c-extensions"></a>Extensiones de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>La interfaz IADORecordBinding
@@ -34,7 +34,7 @@ ms.locfileid: "51350529"
 ## <a name="binding-entries"></a>Entradas de enlace
  Las extensiones de Visual C++ para ADO asignan los campos de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto a las variables de C o C++. La definición de una asignación entre un campo y una variable se denomina un *enlace entrada*. Las macros proporcionan entradas de enlace de datos numéricos, de longitud fija y de longitud variable. Las entradas de enlace y las variables de C o C++ se declaran en una clase derivada de la clase de extensiones de Visual C++, **CADORecordBinding**. El **CADORecordBinding** clase definen internamente las macros de entrada de enlace.
 
- ADO asigna internamente los parámetros de estas macros para OLE DB **DBBINDING** estructurar y crea OLE DB **descriptor de acceso** objeto para administrar el movimiento y la conversión de datos entre los campos y variables. OLE DB define los datos como que consta de tres partes: un *búfer* donde se almacenan los datos; un *estado* que indica si un campo se almacenó correctamente en el búfer o cómo debe restaurarse la variable el campo. y el *longitud* de los datos. (Consulte [obtener y establecer los datos (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)en referencia del programador de OLE DB, para obtener más información.)
+ ADO asigna internamente los parámetros de estas macros para OLE DB **DBBINDING** estructurar y crea OLE DB **descriptor de acceso** objeto para administrar el movimiento y la conversión de datos entre los campos y variables. OLE DB define los datos como que consta de tres partes: Un *búfer* donde se almacenan los datos; un *estado* que indica si un campo se almacenó correctamente en el búfer o cómo debe restaurarse la variable en el campo; y el *longitud* de los datos. (Consulte [obtener y establecer los datos (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)en referencia del programador de OLE DB, para obtener más información.)
 
 ## <a name="header-file"></a>Archivo de encabezado
  En la aplicación para poder usar las extensiones de Visual C++ para ADO, incluya el siguiente archivo:
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  Familias de macros se proporcionan para los datos de longitud fija, como **adDate** o **adBoolean**; numérico datos, como **excepto adVarNumeric**, **son también tipos**, o **longitud fija**; y datos de longitud variable, como **cada**, **parámetros** o **adVarBinary**. Todos los tipos numéricos, excepto para **adVarNumeric**, son también tipos de longitud fija. Cada familia tiene diferentes conjuntos de parámetros para que se puede excluir la información de enlace que no es de interés.
 
- Para obtener más información, consulte [Apéndice A: tipos de datos](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de referencia de la base de datos del programador de OLE.
+ Para obtener más información, consulte [Apéndice A: Tipos de datos](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de referencia del programador OLE DB.
 
 ### <a name="begin-binding-entries"></a>Empezar a entradas de enlace
  **BEGIN ADO Binding**(*clase*)
@@ -139,7 +139,7 @@ Update(CADORecordBinding *binding)
 |**adFldSignMismatch**|5|El valor tiene signo y el tipo de datos de la variable es sin signo.|
 |**adFldDataOverFlow**|6|Valor es mayor que se pueden almacenar en el tipo de datos.|
 |**adFldCantCreate**|7|Tipo de columna desconocido y el campo ya está abierta.|
-|**adFldUnavailable**|8|No se pudo determinar el valor del campo, por ejemplo, en un campo nuevo y sin asignar con ningún valor predeterminado.|
+|**adFldUnavailable**|8|Valor del campo no se pudo determinar por ejemplo, en un campo nuevo y sin asignar con ningún valor predeterminado.|
 |**adFldPermissionDenied**|9|Al actualizar, no tiene permiso para escribir datos.|
 |**adFldIntegrityViolation**|10|Al actualizar, el valor de campo infringiría la integridad de la columna.|
 |**adFldSchemaViolation**|11|Al actualizar, el valor del campo infringiría el esquema de columna.|

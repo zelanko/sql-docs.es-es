@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
@@ -13,12 +12,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 2fd8083c7043d5aeb7259e6a284b28ae66c82a02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119843"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756971"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar un intervalo de datos modificados
   En el flujo de control de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la primera tarea consiste en calcular los extremos del intervalo de cambios. Estos extremos son valores `datetime` y se almacenarán en variables de paquete para su uso posterior en el paquete.  
@@ -101,7 +100,7 @@ ms.locfileid: "49119843"
 3.  En la página **Conjunto de resultados** del **Editor de la tarea Ejecutar SQL**, asigne el resultado de ExtractStartTime a la variable de paquete ExtractStartTime y el resultado de ExtractEndTime a la variable de paquete ExtractEndTime.  
   
     > [!NOTE]  
-    >  Cuando usa una expresión para establecer el valor de un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, la expresión se evalúa cada vez que se tiene acceso el valor de la variable.  
+    >  Al usar una expresión para establecer el valor de una variable de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], dicha expresión se evalúa cada vez que se accede al valor de la variable.  
   
 ## <a name="next-step"></a>Paso siguiente  
  Una vez calculados los puntos inicial y final de un intervalo de cambios, el paso siguiente consiste en determinar si están listos los datos modificados.  

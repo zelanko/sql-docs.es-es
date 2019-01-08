@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de agrupación en clústeres de secuencia de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo de clústeres de secuencia de Microsoft | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf5f652cc2cec77fdbcb488710886441788a0631
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016472"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418386"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de secuencia de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "34016472"
  El valor predeterminado es 64.  
   
  MAXIMUM_STATES  
- Especifica el número máximo de estados que admite el algoritmo para un atributo sin secuencia. Si el número de estados que tiene un atributo sin secuencia es mayor que el número máximo de estados, el algoritmo usará los estados más populares del atributo y tratará los restantes como **Missing**.  
+ Especifica el número máximo de estados que admite el algoritmo para un atributo sin secuencia. Si el número de Estados para un atributo sin secuencia es mayor que el número máximo de Estados, el algoritmo utiliza los estados más populares del atributo y tratará los restantes **falta**.  
   
  El valor predeterminado es 100.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34016472"
  Se aplica a la columna de estructura de minería de datos.  
   
  MODEL_EXISTENCE_ONLY  
- Significa que la columna se tratará como si tuviera dos estados posibles: **Missing** y **Existing**. Un valor NULL se trata como un valor **Missing** .  
+ Significa que la columna se tratará como si tuviera dos estados posibles: **Falta** y **existente**. Un valor NULL se trata como un valor **Missing** .  
   
  Se aplica a la columna de modelo de minería de datos.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "34016472"
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Columna|Tipos de contenido|  
+|columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table y Ordered|  
 |Atributo de predicción|Continuous, Cyclical, Discrete, Discretized, Table y Ordered|  
@@ -137,8 +137,8 @@ ms.locfileid: "34016472"
 -   El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite la obtención de detalles y el uso de modelos de minería de datos OLAP y de dimensiones de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmo de clústeres de secuencia de Microsoft](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Ejemplos de consultas de modelo de clústeres de secuencia](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenido del modelo de minería de datos para modelos de agrupación en clústeres de secuencia & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Ejemplos de consultas de modelos de clústeres de secuencia](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

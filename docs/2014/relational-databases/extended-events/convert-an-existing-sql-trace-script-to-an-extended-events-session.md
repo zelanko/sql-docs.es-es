@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace, convert script to extended events
@@ -14,12 +13,12 @@ ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1affac058c5df7ba5c8329cc6435be6a1f0681a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062525"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766937"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos.
   Si tiene un script existente de Seguimiento de SQL que desea convertir a una sesión de eventos extendidos, puede usar los procedimientos de este tema para crear una sesión de eventos extendidos equivalente. Con la información de las tablas del sistema trace_xe_action_map y trace_xe_event_map, puede recopilar la información que necesita para realizar la conversión.  
@@ -40,7 +39,7 @@ ms.locfileid: "48062525"
   
 2.  Obtenga el identificador del seguimiento. Para ello, utilice la consulta siguiente:  
   
-    ```  
+    ```sql
     SELECT * FROM sys.traces;  
     GO  
     ```  
@@ -55,7 +54,7 @@ ms.locfileid: "48062525"
     > [!NOTE]  
     >  En este ejemplo, se utiliza el identificador de seguimiento para el seguimiento predeterminado (1).  
   
-    ```  
+    ```sql
     USE MASTER;  
     GO  
     DECLARE @trace_id int;  
@@ -82,7 +81,7 @@ ms.locfileid: "48062525"
   
     3.  Utilice la consulta siguiente para identificar los campos de datos correctos que va a utilizar para los eventos identificados en el paso anterior. La consulta muestra los campos de datos de eventos extendidos en la columna "event_field". En la consulta, reemplace *<nombre_evento>* por el nombre de un evento especificado en el paso anterior.  
   
-        ```  
+        ```sql
         SELECT xp.name package_name, xe.name event_name  
            ,xc.name event_field, xc.description  
         FROM sys.trace_xe_event_map AS em  
@@ -103,7 +102,7 @@ ms.locfileid: "48062525"
   
 1.  Agregue instrucciones para crear la sesión de eventos, reemplazando*nombre_de_sesión* por el nombre que quiere usar para la sesión de eventos extendidos.  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [Session_Name] ON SERVER;  
     CREATE EVENT SESSION [Session_Name]  
@@ -130,7 +129,7 @@ ms.locfileid: "48062525"
   
      Para convertir esto en el equivalente de eventos extendidos, se agregan los eventos sqlserver.sp_statement_starting y sqlserver.sp_statement_completed con una lista de acciones. Las instrucciones de predicado se incluyen como cláusulas WHERE.  
   
-    ```  
+    ```sql
     ADD EVENT sqlserver.sp_statement_starting  
        (ACTION  
           (  
@@ -156,9 +155,9 @@ ms.locfileid: "48062525"
        )  
     ```  
   
-3.  Agregue el destino de archivo asincrónico, reemplazando las rutas de acceso de archivo por la ubicación donde desea guardar la salida. Cuando especifique el destino de archivo, debe incluir una ruta de acceso del archivo de registro y del archivo de metadatos.  
+3.  Agregue el destino de archivo asincrónico, reemplazando las rutas de acceso de archivo por la ubicación donde quiere guardar la salida. Cuando especifique el destino de archivo, debe incluir una ruta de acceso del archivo de registro y del archivo de metadatos.  
   
-    ```  
+    ```sql
     ADD TARGET package0.asynchronous_file_target(  
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
@@ -167,7 +166,7 @@ ms.locfileid: "48062525"
   
 1.  Puede usar la función sys.fn_xe_file_target_read_file para ver la salida. Para ello, ejecute la consulta siguiente, reemplazando las rutas de acceso de archivo por las rutas de acceso que haya especificado:  
   
-    ```  
+    ```sql
     SELECT *, CAST(event_data as XML) AS 'event_data_XML'  
     FROM sys.fn_xe_file_target_read_file('c:\temp\ExtendedEventsStoredProcs*.xel', 'c:\temp\ExtendedEventsStoredProcs*.xem', NULL, NULL);  
   
@@ -178,7 +177,7 @@ ms.locfileid: "48062525"
   
      Para obtener más información sobre la función sys.fn_xe_file_target_read_file, vea [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [session_name] ON SERVER;  
     CREATE EVENT SESSION [session_name]  
@@ -214,7 +213,7 @@ ms.locfileid: "48062525"
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```sql
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
    DROP EVENT SESSION [session_name] ON SERVER;  
 CREATE EVENT SESSION [session_name]  

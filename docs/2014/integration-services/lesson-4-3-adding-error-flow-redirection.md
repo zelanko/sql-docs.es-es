@@ -1,22 +1,21 @@
 ---
-title: 'Paso 3: Agregar redirección de flujo de errores | Microsoft Docs'
+title: 'Paso 3: Agregar redirección de flujo de Error | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 217aa8a702d636b920be157974a5d90e695ad191
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff729a43f1dbc414ba6a67a0c80e9f17e4d0cc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051315"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747927"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Paso 3: Agregar redirección de flujo de errores
   Como se ha mostrado en la tarea anterior, la transformación Lookup Currency Key no puede generar una coincidencia cuando la transformación intenta procesar el archivo plano de ejemplo dañado que ha generado un error. Puesto que la transformación utiliza la configuración de salida de error predeterminada, cualquier error da lugar a un error de la transformación. Cuando se produce un error en la transformación, también se produce un error en el resto del paquete.  
@@ -97,6 +96,6 @@ ms.locfileid: "48051315"
 13. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de transformación Script** .  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Paso 4: agregar un destino de archivo sin formato] (lesson-4-4-adding-a-flat-file-destination.md  
+ [Paso 4: Agregar un destino de archivo sin formato] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

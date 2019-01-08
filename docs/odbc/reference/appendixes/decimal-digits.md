@@ -16,12 +16,12 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abb7c01b2495ad58c14ca7e2aefede233213f963
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694453"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506083"
 ---
 # <a name="decimal-digits"></a>Dígitos decimales
 El *dígitos decimales* de datos decimal y numeric tipos se define como el número máximo de dígitos a la derecha del separador decimal, o la escala de los datos. Columnas de número de punto flotante aproximadas o los parámetros, la escala está definida porque el número de dígitos a la derecha del separador decimal no es fijo. Para los datos de fecha y hora o el intervalo que contiene un componente de segundos, los dígitos decimales se define como el número de dígitos a la derecha del separador decimal en el componente de segundos de los datos.  
@@ -44,7 +44,7 @@ El *dígitos decimales* de datos decimal y numeric tipos se define como el núme
   
  Los valores devueltos para los dígitos decimales no corresponden a los valores de cualquier campo descriptor uno. Los valores pueden proceder de la SQL_DESC_SCALE o el campo SQL_DESC_PRECISION, según el tipo de datos, como se muestra en la tabla siguiente.  
   
-|Tipo SQL|Campo descriptor corresponde a<br /><br /> dígitos decimales|  
+|Tipo SQL|Campo descriptor corresponde a<br /><br /> Dígitos decimales|  
 |--------------|----------------------------------------------------------|  
 |Todos los tipos de caracteres y binarios|n/d|  
 |Todos los tipos numéricos exactos|SCALE|  

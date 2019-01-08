@@ -11,12 +11,12 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123258"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393758"
 ---
 # <a name="managing-report-parts"></a>Administrar elementos de informe
   A partir [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], elementos de informe pueden ser publicados en los servidores de informes y volver a utilizar en otros informes y otros usuarios si tienen los permisos adecuados.  
@@ -89,13 +89,13 @@ ms.locfileid: "48123258"
     > [!IMPORTANT]  
     >  En cada uno de estos pasos, es importante asegurarse de que los elementos de informe se reutilizan en los informes de ubicaciones y usuarios de confianza.  
   
--   Los elementos de informe utilizan las mismas directivas de permisos que el tipo de elemento "Recurso" existente. Dentro de una carpeta, no hay diferenciación entre los elementos de recurso tradicionales y los elementos de informe desde la perspectiva de la herencia de la seguridad. El elemento de informe heredará la misma directiva de permisos que las imágenes de la misma carpeta. Cuando se necesita esta distinción, la seguridad del nivel de elemento se puede configurar para los elementos de informe que se desee. O bien, los elementos de informe deberían estar en carpetas independientes que tengan configurados los permisos correctos.  
+-   Los elementos de informe usan las mismas directivas de permisos que el tipo de elemento "Recurso" existente. Dentro de una carpeta, no hay diferenciación entre los elementos de recurso tradicionales y los elementos de informe desde la perspectiva de la herencia de la seguridad. El elemento de informe heredará la misma directiva de permisos que las imágenes de la misma carpeta. Cuando se necesita esta distinción, la seguridad del nivel de elemento se puede configurar para los elementos de informe que se desee. O bien, los elementos de informe deberían estar en carpetas independientes que tengan configurados los permisos correctos.  
   
 ## <a name="see-also"></a>Vea también  
- [Elementos de informe y conjuntos de datos en el generador de informes](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Elementos de informe y conjuntos de datos en el Generador de informes](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Página Propiedades generales, elementos de informe &#40;el Administrador de informes&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Página Mover elementos &#40;el Administrador de informes&#41;](../move-items-page-report-manager.md)   
- [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Solucionar problemas de elementos de informe &#40;generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   

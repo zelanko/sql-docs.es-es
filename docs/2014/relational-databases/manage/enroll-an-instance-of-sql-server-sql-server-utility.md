@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
@@ -20,12 +20,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 382b2212ef32e47b0045285ad497f2d476099c79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152735"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762487"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscribir una instancia de SQL Server (Utilidad de SQL Server)
   Inscriba una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente para supervisar su rendimiento y configuración como una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El punto de control de la utilidad (UCP) recopila información de configuración y rendimiento de las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada 15 minutos. Esta información se almacena en el almacén de administración de datos de la utilidad (UMDW) en el UCP; el nombre del archivo UMDW es sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comparan con directivas para ayudar a identificar cuellos de botella en el uso de recursos y oportunidades de consolidación.  
@@ -87,12 +87,12 @@ ms.locfileid: "48152735"
 -   [Inscripción de la instancia de SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introducción al Asistente Inscribir instancia  
- Para iniciar el asistente, expanda el árbol explorador de la utilidad en un punto de control de la utilidad, haga clic con el botón derecho en **Instancias administradas**y seleccione **Agregar instancia administrada…**.  
+ Para iniciar el asistente, expanda el árbol explorador de la utilidad en un punto de control de la utilidad, haga clic con el botón derecho en **Instancias administradas** y seleccione **Agregar instancia administrada...**.  
   
  Para continuar, haga clic en **Siguiente**.  
   
 ##  <a name="Instance_name"></a> Especificar la instancia de SQL Server  
- Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el diálogo de conexión, haga clic en **Conectar…**. Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el diálogo de conexión, haga clic en **Conectar...**. Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Para continuar, haga clic en **Siguiente**.  
   
@@ -145,9 +145,9 @@ ms.locfileid: "48152735"
   
  Configuración de la instancia administrada:  
   
--   Nombre de instancia de SQL Server: NombreEquipo\NombreInstancia  
+-   Nombre de instancia SQL Server: Nombredeequipo\nombredeinstancia  
   
--   Cuenta del conjunto de recopilación de la utilidad: NombreDominio\NombreUsuario  
+-   Conjunto de recopilación de utilidad: Nombredominio\nombreusuario  
   
  Para continuar, haga clic en **Siguiente**.  
   
@@ -169,12 +169,12 @@ ms.locfileid: "48152735"
 >   
 >  Se ha producido una excepción al ejecutar una instrucción o lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Información adicional: no se ha podido obtener información sobre el grupo o usuario '\<nombreDeDominio\nombreDeCuenta>' de Windows NT, código de error 0x5. (Microsoft SQL Server, Error: 15404)  
+>  Información adicional:  No se pudo obtener información sobre el grupo o usuario de Windows NT '\<Nombrededominio\nombredecuenta >', código de error 0 x 5. (Microsoft SQL Server, Error: 15404)  
 >   
 >  Para obtener más información sobre cómo solucionar este error, vea [Solucionar problemas de la Utilidad de SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
 > [!IMPORTANT]  
->  No cambie las propiedades del conjunto de recopilación "Información de la utilidad" en una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y no active ni desactive manualmente la recopilación de datos, ya que la recopilación de datos la controla un trabajo del agente de la Utilidad.  
+>  No cambie las propiedades del conjunto de recopilación "Información de la utilidad" en una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no active ni desactive manualmente la recopilación de datos, ya que la recopilación de datos la controla un trabajo del agente de la Utilidad.  
   
  Después de completar el asistente para inscribir instancia, haga clic en el nodo **Instancias administradas** en el panel **Navegación del Explorador de Utilidad** en SSMS. Las instancias inscritas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestran en la vista de lista en panel **Contenido del explorador de la utilidad** .  
   

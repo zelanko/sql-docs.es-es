@@ -1,11 +1,10 @@
 ---
-title: 'Clase de eventos Progress Report: Online Index Operation | Microsoft Docs'
+title: 'Informe de progreso: Clase de eventos Online Index Operation | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a366fe0d64943506160a748f56a43bf7f2b44c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124585"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756127"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Online Index Operation (clase de eventos)
-  La clase de eventos Progress Report: Online Index Operation indica el progreso de una operación de generación de índice en línea mientras el proceso de generación está en ejecución.  
+# <a name="progress-report-online-index-operation-event-class"></a>Informe de progreso: Clase de eventos Online Index Operation
+  El informe de progreso: Clase de evento de operación de índice en línea indica el progreso de una operación de generación de índice en línea mientras se está ejecutando el proceso de compilación.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Columnas de datos de la clase de eventos Progress Report: Online Index Operation  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Informe de progreso: Columnas de datos de clase de evento de operación de índice en línea  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -37,8 +36,8 @@ ms.locfileid: "48124585"
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |Duration|`bigint`|Tiempo (en microsegundos) que tarda el evento.|13|Sí|  
 |EndTime|`datetime`|Hora a la que se completó la operación de índice en línea.|15|Sí|  
-|EventClass|`int`|Tipo de evento = 190.|27|no|  
-|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|no|  
+|EventClass|`int`|Tipo de evento = 190.|27|No|  
+|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
 |EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 1=Inicio<br /><br /> 2=Empieza la ejecución de la fase 1<br /><br /> 3=Finaliza la ejecución de la fase 1<br /><br /> 4=Empieza la ejecución de la fase 2<br /><br /> 5=Finaliza la ejecución de la fase 2<br /><br /> 6=Recuento de filas insertadas<br /><br /> 7=Listo<br /><br /> La fase 1 hace referencia al objeto base (índice clúster o montón) o si la operación del índice solo implica a un índice no clúster. La fase 2 se usa cuando una operación de compilación de índice implica tanto al índice original recompilado como a índices no clúster adicionales.  Por ejemplo, si un objeto tiene un índice clúster y varios índices no clúster, 'rebuild all' recompilaría todos los índices. El objeto base (el índice clúster) se recompila en la fase 1 y, a continuación, todos los índices no clúster se recompilan en la fase 2.|21|Sí|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -52,7 +51,7 @@ ms.locfileid: "48124585"
 |ObjectName|`nvarchar`|Nombre del objeto al que se hace referencia.|34|Sí|  
 |PartitionId|`bigint`|Identificador de la partición que se está generando.|65|Sí|  
 |PartitionNumber|`int`|Número normal de la partición que se está generando.|25|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
+|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento.|14|Sí|  

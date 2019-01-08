@@ -15,12 +15,12 @@ ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b41c5404ebd27b03ee044a69c987b0f484f62b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 603b1d22370a32808460aa3e725e5f26e0f62dc0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049485"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404190"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
   Puede usar el Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear una estructura de minería de datos que utilice datos de un modelo multidimensional. Los modelos de minería de datos basados en los cubos OLAP pueden utilizar las columnas y los valores de las tablas de hechos, las dimensiones y los grupos de medida como atributos para el análisis.  
@@ -71,9 +71,9 @@ ms.locfileid: "48049485"
   
      Si agrega datos anidados, deberá especificar dos columnas adicionales:  
   
-    -   La clave de la tabla anidada: aparecerá ya seleccionada en la página **Seleccionar la clave de la tabla anidada**.  
+    -   La clave de la tabla anidada: Esto aparecerá ya seleccionada en la página, **seleccione clave de tabla anidada**.  
   
-    -   Los atributos y las medidas que se van a utilizar para el análisis: la página **Seleccionar las columnas de la tabla anidada**proporciona una lista de las medidas y atributos de la selección de la tabla anidada.  
+    -   Los atributos o atributos que se usarán para el análisis: La página, **seleccionar las columnas de tabla anidada**proporciona una lista de medidas y atributos de la selección de tabla anidada.  
   
         -   Para cada atributo que incluya en el modelo, active la casilla de la columna izquierda.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48049485"
   
         -   Si desea incluir la columna como uno de los atributos de predicción para el modelo, seleccione **Predicción**.  
   
-        -   Los elementos incluidos en la estructura pero que no se especifica como una entrada o atributo de predicción se agrega a la estructura con la marca `Ignore`; Esto significa que los datos se procesan al generar el modelo pero no se utiliza en el análisis y solo está disponible para recuperación ante desastres illthrough. Esto puede resultar útil si desea incluir detalles, como los nombres de los clientes, que no desea utilizar en el análisis.  
+        -   Los elementos incluidos en la estructura pero que no se han especificado como atributos de entrada o de predicción se agregarán a la estructura con la marca `Ignore`; esto significa que los datos se procesan al generar el modelo pero no se utilizan en el análisis, y solo están disponibles para la obtención de detalles. Esto puede ser útil si desea incluir detalles como los nombres de cliente pero no desea utilizar en el análisis.  
   
      Haga clic en **Finalizar** para cerrar la parte del asistente que trabaja con las tablas anidadas. Puede repetir el proceso para agregar varias columnas anidadas.  
   
@@ -96,17 +96,17 @@ ms.locfileid: "48049485"
   
      La segmentación del cubo le permite restringir los datos utilizados para generar el modelo. Por ejemplo, puede generar modelos independientes para cada región realizando la segmentación por la jerarquía Geography y  
   
-    -   **Dimensión**: elija una dimensión relacionada en la lista desplegable.  
+    -   **Dimensión**: Elija una dimensión relacionada en la lista desplegable.  
   
-    -   **Jerarquía**: seleccione el nivel de la jerarquía de dimensiones en el que desea aplicar el filtro. Por ejemplo, si realiza la segmentación por la dimensión [Geography], seleccionará un nivel de jerarquía como [Region Country Name].  
+    -   **Jerarquía**:  Seleccione el nivel de la jerarquía de dimensión a la que desea aplicar el filtro. Por ejemplo, si realiza la segmentación por la dimensión [Geography], seleccionará un nivel de jerarquía como [Region Country Name].  
   
-    -   **Operador**: seleccione un operador de la lista.  
+    -   **Operador**: Elija un operador en la lista.  
   
-    -   **Expresión de filtro**: escriba un valor o una expresión que se usará como condición de filtro, o utilice la lista desplegable para seleccionar un valor en la lista de miembros en el nivel especificado de la jerarquía.  
+    -   **Expresión de filtro**: Escriba un valor o expresión que se usará como condición de filtro, o utilice la lista desplegable para seleccionar un valor de la lista de los miembros del nivel especificado de la jerarquía.  
   
          Por ejemplo, si seleccionó [Geography] como dimensión y [Region Country Name] como nivel de jerarquía, la lista desplegable contendrá todos los países válidos que puede usar como condición de filtro. Puede hacer selecciones múltiples. Como resultado, los datos de la estructura de minería de datos estarán limitados a los datos del cubo de estas áreas geográficas.  
   
-    -   **Parámetros**: omita esta casilla. Este cuadro de diálogo admite varios escenarios de filtrado de cubos y esta opción no es relevante para generar una estructura de minería de datos.  
+    -   **Parámetros**: Omita esta casilla. Este cuadro de diálogo admite varios escenarios de filtrado de cubos y esta opción no es relevante para generar una estructura de minería de datos.  
   
      Haga clic en **Siguiente**.  
   
@@ -126,9 +126,9 @@ ms.locfileid: "48049485"
   
     -   Algoritmo de reglas de asociación de Microsoft  
   
-     **Crear dimensión de modelo de minería de datos**: seleccione esta casilla y proporcione un nombre de tipo para la dimensión de modelo de minería de datos. Al utilizar esta opción, se crea una nueva dimensión dentro del cubo original utilizado para generar la estructura de minería de datos. Puede utilizar esta dimensión para explorar los datos en profundidad y realizar un análisis más exhaustivo. Dado que la dimensión está situada dentro del cubo, esta se asignará automáticamente a la dimensión de los datos de los casos.  
+     **Crear dimensión de modelo de minería de datos**: Active esta casilla y proporcione un nombre de tipo para la dimensión de modelo de minería de datos. Al utilizar esta opción, se crea una nueva dimensión dentro del cubo original utilizado para generar la estructura de minería de datos. Puede utilizar esta dimensión para explorar los datos en profundidad y realizar un análisis más exhaustivo. Dado que la dimensión está situada dentro del cubo, esta se asignará automáticamente a la dimensión de los datos de los casos.  
   
-     **Crear el cubo con la dimensión del modelo de minería de datos**: seleccione esta casilla y especifique un nombre para el nuevo cubo. Al utilizar esta opción, se creará un nuevo cubo que contiene tanto las dimensiones existentes que se usaron para generar la estructura como la nueva dimensión de minería de datos que contiene los resultados del modelo.  
+     **Crear el cubo con la dimensión del modelo de minería de datos**: Active esta casilla y proporcione un nombre para el nuevo cubo. Al utilizar esta opción, se creará un nuevo cubo que contiene tanto las dimensiones existentes que se usaron para generar la estructura como la nueva dimensión de minería de datos que contiene los resultados del modelo.  
   
 ## <a name="see-also"></a>Vea también  
  [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md)  

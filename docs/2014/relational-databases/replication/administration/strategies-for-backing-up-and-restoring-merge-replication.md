@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], merge replication
@@ -16,12 +15,12 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01e0d1d3214d9502d3c4a8db91cd16617dd9472a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220895"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757496"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estrategias para hacer copias de seguridad y restaurar la replicación de mezcla
   Para la replicación de mezcla, cree periódicamente una copia de seguridad de las siguientes bases de datos:  
@@ -55,14 +54,14 @@ ms.locfileid: "48220895"
   
 -   Si la publicación no está filtrada, debe poder actualizar la base de datos de publicaciones sincronizándola con el suscriptor más actualizado.  
   
--   Si la publicación está filtrada, es posible que no pueda actualizar la base de datos de publicaciones. Considere una tabla dividida de forma que cada suscripción reciba únicamente datos de clientes de una región: norte, este, sur y oeste. Si hay al menos un suscriptor para cada partición de datos, al sincronizar cada partición con un suscriptor se debería actualizar la base de datos de publicaciones. Sin embargo, si los datos de la partición oeste, por ejemplo, no se han replicado en ningún suscriptor, no se podrán actualizar estos datos en el publicador.  
+-   Si la publicación está filtrada, es posible que no pueda actualizar la base de datos de publicaciones. Considere una tabla que se crean particiones de forma que cada suscripción recibe los datos del cliente sólo de una sola región: Norte, este, sur y oeste. Si hay al menos un suscriptor para cada partición de datos, al sincronizar cada partición con un suscriptor se debería actualizar la base de datos de publicaciones. Sin embargo, si los datos de la partición oeste, por ejemplo, no se han replicado en ningún suscriptor, no se podrán actualizar estos datos en el publicador.  
   
 > [!IMPORTANT]  
 >  La sincronización de una base de datos de publicaciones con una base de datos de suscripciones puede dar como resultado la restauración de las tablas publicadas hasta un momento más reciente que el de las otras tablas no publicadas restauradas de la copia de seguridad.  
   
  Si se sincroniza con un suscriptor que esté ejecutando una versión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la suscripción no podrá ser anónima; deberá ser una suscripción de cliente o de servidor (denominadas suscripciones locales y globales en versiones anteriores).  
   
- Para sincronizar una suscripción de inserción, vea [Sincronizar una suscripción de inserción](../synchronize-a-push-subscription.md) y [Sincronizar una suscripción de extracción](../synchronize-a-pull-subscription.md).  
+ Para sincronizar una suscripción de inserción, vea [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) y [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Reinicializar todas las suscripciones  
  La reinicialización de todas las suscripciones garantiza que el estado de todos los suscriptores sea coherente con la base de datos de publicaciones restaurada. Este enfoque debe utilizarse si desea restaurar una topología completa a su estado anterior, representado por la copia de seguridad de una base de datos de publicaciones determinada. Por ejemplo, puede reinicializar todas las suscripciones si desea restaurar una base de datos a un momento anterior como un mecanismo para recuperarse de una operación por lotes realizada incorrectamente.  

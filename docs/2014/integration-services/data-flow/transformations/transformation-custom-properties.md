@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -42,12 +41,12 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d5e885e1429507b2ae86759a1a34cd68c61d622
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 890ea72e56eb2fa8e54a06ef115a9e7e73c96dfb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206895"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750658"
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
   Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -71,7 +70,7 @@ ms.locfileid: "48206895"
 |[Columna derivada](#derived)|[Dinamización](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>Transformaciones sin propiedades personalizadas  
- Las transformaciones siguientes no tienen ninguna propiedad personalizada en los niveles de componentes, entradas o salidas: [transformación Mezclar](merge-transformation.md), [transformación Multidifusión](multicast-transformation.md)y [transformación Unión de todo](union-all-transformation.md). Utilizan solo las propiedades comunes a todos los componentes de flujo de datos.  
+ Las transformaciones siguientes no tienen ninguna propiedad personalizada en la entrada, el componente o niveles de salida: [Transformación mezclar](merge-transformation.md), [transformación multidifusión](multicast-transformation.md), y [unión transformación todo](union-all-transformation.md). Utilizan solo las propiedades comunes a todos los componentes de flujo de datos.  
   
 ##  <a name="aggregate"></a> Propiedades personalizadas de la transformación Agregado  
  La transformación Agregado tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
@@ -82,16 +81,16 @@ ms.locfileid: "48206895"
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Integer|Valor comprendido entre 1 y 100 que especifica el porcentaje en el que se puede ampliar la memoria durante la agregación. El valor predeterminado de esta propiedad es **25**.|  
 |CountDistinctKeys|Integer|Valor que especifica el número exacto de recuentos distintos que la agregación puede escribir. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene precedencia.|  
-|CountDistinctScale|Integer (enumeración)|Valor que describe el número aproximado de valores distintos en una columna que la agregación puede contar. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de CountDistinctScale. El uso de la opción **No especificado** (0) puede afectar al rendimiento en conjuntos de datos grandes.|  
+|CountDistinctScale|Integer (enumeración)|Valor que describe el número aproximado de valores distintos en una columna que la agregación puede contar. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de CountDistinctScale. El uso de la opción **No especificado** (0) puede afectar al rendimiento en conjuntos de datos grandes.|  
 |Claves|Integer|Valor que especifica el número exacto de claves Group By que la agregación escribe. Si se especifica un valor de KeyScale, el valor de Keys tiene precedencia.|  
-|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de KeyScale.|  
+|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de KeyScale.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de la salida de transformación Agregado. Todas las propiedades son de lectura y escritura.  
   
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |Claves|Integer|Valor que especifica el número exacto de las claves Group By que la agregación puede escribir. Si se especifica un valor de KeyScale, el valor de Keys tiene precedencia.|  
-|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de KeyScale.|  
+|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de KeyScale.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Agregado. Todas las propiedades son de lectura y escritura.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "48206895"
 |AggregationComparisonFlags|Integer|Valor que especifica cómo compara la transformación Agregado los datos de cadena de una columna. Para más información, consulte [Comparing String Data](../comparing-string-data.md).|  
 |AggregationType|Integer (enumeración)|Valor que especifica la operación de la agregación que se va a realizar en la columna. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Recuento** (1)<br /><br /> **Contar todos** (2)<br /><br /> **CountDistinct** (3)<br /><br /> **Suma** (4)<br /><br /> **Promedio** (5)<br /><br /> **Máximo** (7)<br /><br /> **Mínimo** (6)<br /><br /> **Agrupar por** (0)|  
 |CountDistinctKeys|Integer|Cuando el tipo de agregación es **Count distinct**, valor que especifica el número exacto de claves que la agregación puede escribir. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene precedencia.|  
-|CountDistinctScale|Integer (enumeración)|Cuando el tipo de agregación es **Count distinct**, un valor que describe aproximadamente cuántos valores de clave puede escribir la agregación. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de CountDistinctScale.|  
+|CountDistinctScale|Integer (enumeración)|Cuando el tipo de agregación es **Count distinct**, un valor que describe aproximadamente cuántos valores de clave puede escribir la agregación. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de CountDistinctScale.|  
 |IsBig|Boolean|Valor que indica si la columna contiene un valor mayor que cuatro mil millones o un valor con más precisión que un valor de coma flotante de precisión doble. El valor puede ser 0 o 1. 0 indica que IsBig es `False` y la columna no contiene un valor grande o preciso. El valor predeterminado de esta propiedad es 1.|  
   
  La entrada y las columnas de entrada de la transformación Agregado no tienen ninguna propiedad personalizada.  
@@ -171,7 +170,7 @@ ms.locfileid: "48206895"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|copyColumnId|Integer|El `LineageID` de la columna de entrada desde el que se copia la columna de salida.|  
+|copyColumnId|Integer|`LineageID` de la columna de entrada de la que se copia la columna de resultados.|  
   
  La entrada, las columnas de entrada y la salida de transformación Copiar columna no tienen ninguna propiedad personalizada.  
   
@@ -184,8 +183,8 @@ ms.locfileid: "48206895"
   
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar, que sí distinguen la configuración regional. El valor predeterminado de esta propiedad es `False`. Para obtener más información, consulte [Fast Parse](../../fast-parse.md) y [Standard Parse](../../standard-parse.md). .<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Conversión de datos**, pero se puede establecer con el **Editor avanzado**.|  
-|SourceInputColumnLineageId|Integer|El `LineageID` de la columna de entrada que es el origen de la columna de salida.|  
+|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar, que sí distinguen la configuración regional. El valor predeterminado de esta propiedad es `False`. Para obtener más información, consulte [Fast Parse](../../fast-parse.md) y [Standard Parse](../../standard-parse.md). .<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación conversión de datos**, pero se puede establecer utilizando la **Editor avanzado**.|  
+|SourceInputColumnLineageId|Integer|`LineageID` de la columna de entrada que es el origen de la columna de resultados.|  
   
  La entrada, las columnas de entrada y la salida de transformación Conversión de datos no tienen ninguna propiedad personalizada.  
   
@@ -248,7 +247,7 @@ ms.locfileid: "48206895"
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |ExpectBOM|Boolean|Valor que especifica si la transformación Importar columna espera una marca de orden de bytes (BOM). Solo se espera una marca BOM si los datos tienen el tipo de datos DT_NTEXT.|  
-|FileDataColumnID|Integer|Valor que identifica la columna que contiene los datos que la transformación inserta en el flujo de datos. En la columna de datos que se va a insertar, esta propiedad tiene un valor igual a 0; en la columna que contiene las rutas de acceso del archivo de origen, esta propiedad contiene el `LineageID` de la columna de datos que se va a insertar.|  
+|FileDataColumnID|Integer|Valor que identifica la columna que contiene los datos que la transformación inserta en el flujo de datos. En la columna de datos que se van a insertar, esta propiedad tiene el valor 0; en la columna que contiene las rutas de acceso del archivo de origen, esta propiedad contiene el `LineageID` de la columna de datos que se va a insertar.|  
   
  La entrada, la salida y las columnas de salida de transformación Importar columna no tienen ninguna propiedad personalizada.  
   
@@ -262,8 +261,8 @@ ms.locfileid: "48206895"
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |Delimiters|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;), signo de número (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
-|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede establecer con el **Editor avanzado**.|  
-|MaxMemoryUsage|Integer|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede establecer con el **Editor avanzado**.|  
+|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Agrupación aproximada**, pero se puede establecer utilizando la **Editor avanzado**.|  
+|MaxMemoryUsage|Integer|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Agrupación aproximada**, pero se puede establecer utilizando la **Editor avanzado**.|  
 |MinSimilarity|Doble|Umbral de similitud que la transformación utiliza para identificar los duplicados, expresado como un valor entre 0 y 1.  El valor predeterminado de esta propiedad es 0.8.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de entrada de la transformación Agrupación aproximada. Todas las propiedades son de lectura y escritura.  
@@ -296,12 +295,12 @@ ms.locfileid: "48206895"
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Especifica si se debería crear una copia de la tabla de referencia para la construcción del índice de búsqueda aproximada y las búsquedas subsiguientes. El valor predeterminado de esta propiedad es `True`.|  
 |Delimiters|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;). almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
-|DropExistingMatchIndex|Boolean|Valor que especifica si el índice de coincidencia especificado en MatchIndexName se elimina cuando MatchIndexOptions no se establece en ReuseExistingIndex. El valor predeterminado para esta propiedad es `True`.|  
-|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede establecer con el **Editor avanzado**.|  
+|DropExistingMatchIndex|Boolean|Valor que especifica si el índice de coincidencia especificado en MatchIndexName se elimina cuando MatchIndexOptions no se establece en ReuseExistingIndex. El valor predeterminado de esta propiedad es `True`.|  
+|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede establecer utilizando la **Editor avanzado**.|  
 |MatchIndexName|String|Nombre del índice de coincidencia. El índice de coincidencia es la tabla en la que la transformación crea y guarda el índice que utiliza. Si se reutiliza el índice de coincidencia, MatchIndexName especifica el índice que se reutilizará. MatchIndexName debe ser un nombre de identificador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] válido. Por ejemplo, si el nombre contiene espacios, debe escribirse entre corchetes.|  
 |MatchIndexOptions|Integer (enumeración)|Valor que especifica cómo administra la transformación el índice de coincidencia. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|Integer|Tamaño máximo permitido de la caché para la tabla de búsqueda. El valor predeterminado de esta propiedad es **0**, lo que significa que el tamaño de la memoria caché no tiene límite.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede establecer con el **Editor avanzado**.|  
-|MaxOutputMatchesPerInput|Integer|Número máximo de coincidencias que la transformación puede devolver para cada fila de entrada. El valor predeterminado de esta propiedad es **1**.<br /><br /> Nota: Los valores mayores que 100 solo se pueden especificar con el **Editor avanzado**.|  
+|MaxMemoryUsage|Integer|Tamaño máximo permitido de la caché para la tabla de búsqueda. El valor predeterminado de esta propiedad es **0**, lo que significa que el tamaño de la memoria caché no tiene límite.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede establecer utilizando la **Editor avanzado**.|  
+|MaxOutputMatchesPerInput|Integer|Número máximo de coincidencias que la transformación puede devolver para cada fila de entrada. El valor predeterminado de esta propiedad es **1**.<br /><br /> Nota: Los valores mayores que 100 solo se puede especificar mediante el uso de la **Editor avanzado**.|  
 |MinSimilarity|Integer|El umbral de similitud que la transformación usa en el nivel de componente, especificado como un valor entre 0 y 1. Solo las filas mayores que el umbral se consideran coincidencias.|  
 |ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
 |ReferenceTableName|String|Nombre de la tabla de búsqueda. El nombre debe ser un nombre de identificador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] válido. Por ejemplo, si el nombre contiene espacios, debe escribirse entre corchetes.|  
@@ -343,7 +342,7 @@ ms.locfileid: "48206895"
 |DefaultCodePage|Integer|Página de códigos predeterminada que se usa cuando no hay información disponible de la misma en el origen de datos.|  
 |MaxMemoryUsage|Integer|Tamaño máximo permitido de la caché para la tabla de búsqueda. El valor predeterminado de esta propiedad es **25**, lo que significa que el tamaño de la memoria caché no tiene límite.|  
 |MaxMemoryUsage64|Integer|Tamaño de caché máximo para la tabla de búsqueda en un equipo de 64 bits.|  
-|NoMatchBehavior|Integer (enumeración)|Valor que especifica si las filas que no tienen entradas coincidentes del conjunto de datos de referencia se tratan como errores.<br /><br /> Cuando la propiedad se establece en `Treat rows with no matching entries as errors` (0), las filas sin entradas coincidentes se tratan como errores. Puede especificar lo que debería pasar cuando se produce este tipo de error con la página **Salida de error** del cuadro de diálogo **Editor de transformación Búsqueda** . Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../lookup-transformation-editor-error-output-page.md).<br /><br /> Cuando la propiedad se establece en `Send rows with no matching entries to the no match output` (1), las filas no se tratan como errores.<br /><br /> El valor predeterminado es `Treat rows with no matching entries as errors` (0).|  
+|NoMatchBehavior|Integer (enumeración)|Valor que especifica si las filas que no tienen entradas coincidentes del conjunto de datos de referencia se tratan como errores.<br /><br /> Cuando la propiedad se establece en `Treat rows with no matching entries as errors` (0), las filas sin entradas coincidentes se tratan como errores. Puede especificar lo que debería pasar cuando se produce este tipo de error con la página **Salida de error** del cuadro de diálogo **Editor de transformación Búsqueda** . Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../lookup-transformation-editor-error-output-page.md).<br /><br /> Cuando la propiedad está establecida en `Send rows with no matching entries to the no match output` (1), las filas no se tratan como errores.<br /><br /> El valor predeterminado es `Treat rows with no matching entries as errors` (0).|  
 |ParameterMap|String|Lista delimitada por puntos y comas de identificadores de linaje que se asignan a los parámetros que se usan en la instrucción `SqlCommand`.|  
 |ReferenceMetadataXML|String|Metadatos para las columnas en la tabla de búsqueda que la transformación copia en su salida.|  
 |SqlCommand|String|La instrucción SELECT que rellena la tabla de búsqueda.|  
@@ -374,7 +373,7 @@ ms.locfileid: "48206895"
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |JoinType|Integer (enumeración)|Especifica si la combinación es una combinación interna (2), externa izquierda (1) o completa (0).|  
-|MaxBuffersPerInput|Integer|Ya no tendrá que configurar el valor de la `MaxBuffersPerInput` propiedad porque Microsoft ha realizado modificaciones que reducen el riesgo de que la transformación combinación de mezcla utilice demasiada memoria. Este problema se producía a veces cuando varias entradas de la Combinación de mezcla generaban datos a velocidades desiguales.|  
+|MaxBuffersPerInput|Integer|Ya no tiene que configurar el valor de la propiedad `MaxBuffersPerInput` porque Microsoft ha realizado modificaciones que reducen el riesgo de que la transformación Combinación de mezcla utilice demasiada memoria. Este problema se producía a veces cuando varias entradas de la Combinación de mezcla generaban datos a velocidades desiguales.|  
 |NumKeyColumns|Integer|Número de columnas que se utilizan en la combinación.|  
 |TreatNullsAsEqual|Boolean|Valor que especifica si la transformación trata los valores nulos como valores iguales. El valor predeterminado de esta propiedad es `True`. Si el valor de la propiedad es `False`, la transformación trata los valores nulos como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
@@ -382,7 +381,7 @@ ms.locfileid: "48206895"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|InputColumnID|Integer|El `LineageID` de la columna de entrada desde el que los datos se copian en esta columna de salida.|  
+|InputColumnID|Integer|`LineageID` de la columna de entrada desde la que los datos se copian en esta columna de resultados.|  
   
  La entrada, las columnas de entrada y la salida de transformación Combinación de mezcla no tienen ninguna propiedad personalizada.  
   
@@ -440,14 +439,14 @@ ms.locfileid: "48206895"
   
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|PivotUsage|Integer (enumeración)|Uno de los siguientes valores que especifican el rol de una columna cuando se dinamiza el conjunto de datos:<br /><br /> **0**: la columna no se dinamiza y los valores de columna se pasan a la salida de transformación.<br /><br /> **1**: la columna forma parte de la clave fija que identifica una o varias filas como parte de un conjunto. Todas las filas de entrada con la misma clave fija se combinan en una sola fila de salida.<br /><br /> **2**: la columna es una columna dinamizada. A partir de cada valor de columna se crea al menos una columna.<br /><br /> **3**: los valores de esta columna se colocan en columnas que se crean como resultado de la dinamización.|  
+|PivotUsage|Integer (enumeración)|Uno de los siguientes valores que especifican el rol de una columna cuando se dinamiza el conjunto de datos:<br /><br /> **0**: La columna no se dinamiza y los valores de la columna se pasan a la salida de transformación.<br /><br /> **1**: La columna forma parte de la clave fija que identifica una o más filas como parte de un conjunto. Todas las filas de entrada con la misma clave fija se combinan en una sola fila de salida.<br /><br /> **2**: La columna es una columna dinamizada. A partir de cada valor de columna se crea al menos una columna.<br /><br /> **3**: Los valores de esta columna se colocan en columnas que se crean como resultado de la dinamización.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Dinámica. Todas las propiedades son de lectura y escritura.  
   
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|String|Uno de los valores posibles de la columna que se marca como la clave dinámica por el valor de su propiedad PivotUsage.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.|  
-|SourceColumn|Integer|El `LineageID` de una columna de entrada que contiene un valor dinamizado o -1. El valor -1 indica que la columna no se utiliza en una operación dinámica.|  
+|SourceColumn|Integer|`LineageID` de una columna de entrada que contiene un valor dinamizado o -1. El valor -1 indica que la columna no se utiliza en una operación dinámica.|  
   
  Para obtener más información, vea [Transformación dinámica](pivot-transformation.md).  
   
@@ -513,7 +512,7 @@ ms.locfileid: "48206895"
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|String|Cláusula WHERE de la instrucción SELECT que selecciona la fila actual entre las filas con la misma clave empresarial.|  
 |EnableInferredMember|Boolean|Valor que especifica si se detectan las actualizaciones de miembros deducidos. El valor predeterminado de esta propiedad es `True`.|  
-|FailOnFixedAttributeChange|Boolean|Valor que especifica si se produce un error en la transformación cuando las columnas de fila con atributos fijos contienen cambios o también se produce un error en la búsqueda en la tabla de dimensiones. Si espera que las filas entrantes contengan registros nuevos, establezca este valor en `True` para realizar la transformación continúe después de que se produce un error en la búsqueda, porque la transformación utiliza el error para identificar los registros nuevos. El valor predeterminado de esta propiedad es `False`.|  
+|FailOnFixedAttributeChange|Boolean|Valor que especifica si se produce un error en la transformación cuando las columnas de fila con atributos fijos contienen cambios o también se produce un error en la búsqueda en la tabla de dimensiones. Si espera que las filas entrantes contengan registros nuevos, establezca este valor en `True` para hacer que la transformación continúe después de que se produzca el error en la búsqueda, porque la transformación utiliza el error para identificar los registros nuevos. El valor predeterminado de esta propiedad es `False`.|  
 |FailOnLookupFailure|Boolean|Valor que especifica si se produce un error en la transformación cuando se produce un error en una búsqueda de un registro existente. El valor predeterminado de esta propiedad es `False`.|  
 |IncomingRowChangeType|Integer|Valor que especifica si todas las filas entrantes son filas nuevas, o si la transformación debería detectar el tipo de cambio.|  
 |InferredMemberIndicator|String|Nombre de columna del miembro deducido.|  
@@ -524,7 +523,7 @@ ms.locfileid: "48206895"
   
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|ColumnType|Integer (enumeración)|Tipo de actualización de la columna. Los valores son: **Atributo variable** (2), **Atributo fijo** (4), **Atributo histórico** (3), **Clave** (1) y **Otro** (0).|  
+|ColumnType|Integer (enumeración)|Tipo de actualización de la columna. Los valores son: **Cambiar el atributo** (2), **se ha corregido el atributo** (4), **atributo histórico** (3), **clave** (1), y **otros** (0).|  
   
  La entrada, las salidas y las columnas de resultados de la transformación Dimensión de variación lenta no tienen ninguna propiedad personalizada.  
   
@@ -570,7 +569,7 @@ ms.locfileid: "48206895"
 |NeedRefenceData|Boolean|Valor que especifica si la transformación utiliza una lista de condiciones de exclusión almacenada en una tabla de referencia. El valor predeterminado de esta propiedad es `False`.|  
 |OutTermColumn|String|Nombre de la columna que contiene las condiciones de la exclusión.|  
 |OutTermTable|String|Nombre de la tabla que contiene la columna con las condiciones de la exclusión.|  
-|ScoreType|Integer|Valor que especifica el tipo de cuenta que asociar al término. Los valores válidos son 0, que indica la frecuencia, y 1, que indica una puntuación TFIDF. La puntuación TFIDF es el producto de la frecuencia del término y la frecuencia inversa del documento, definida de esta forma: TFIDF de un término T = (frecuencia de T) \* registro ( (n.º de filas de entrada) / (n.º de filas con T) ). El valor predeterminado de esta propiedad es **0**.|  
+|ScoreType|Integer|Valor que especifica el tipo de cuenta que asociar al término. Los valores válidos son 0, que indica la frecuencia, y 1, que indica una puntuación TFIDF. La puntuación TFIDF es el producto de término y frecuencia inversa de documento, definido como: TFIDF de un término T = (frecuencia de T) \* log ((#rows de entrada) / (#rows con T)). El valor predeterminado de esta propiedad es **0**.|  
 |WordOrPhrase|Integer|Valor que especifica el tipo de término. Los valores válidos son 0, que solamente indica palabras; 1, que solamente indica sintagmas nominales; y 2, que indica palabras y sintagmas nominales. El valor predeterminado de esta propiedad es **0**.|  
   
  La entrada, las columnas de entrada, la salida y las columnas de salida de transformación Extracción de términos no tienen ninguna propiedad personalizada.  
@@ -598,7 +597,7 @@ ms.locfileid: "48206895"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|CustomLineageID|Integer|El `LineageID` de la columna de entrada correspondiente si la `InputColumnType` de esa columna es 0 o 2.|  
+|CustomLineageID|Integer|`LineageID` de la columna de entrada correspondiente si `InputColumnType` de esa columna tiene 0 ó 2 años.|  
   
  La entrada y la salida de transformación Búsqueda de términos no tienen ninguna propiedad personalizada.  
   
@@ -621,7 +620,7 @@ ms.locfileid: "48206895"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|PivotKey|Boolean|Indica si los valores de la `PivotKeyValue` propiedad de las columnas de entrada se escriben en esta columna de salida.<br /><br /> En el escenario Anulación de dinamización descrito en [Transformación Anulación de dinamización](unpivot-transformation.md), el nombre de la columna de valor dinámico es **Product** y designa la nueva columna **Product** en la que se anula la dinamización de las columnas Ham, Coke, Milk, Beer y Chips.|  
+|PivotKey|Boolean|Indica si los valores de la propiedad `PivotKeyValue` de las columnas de entrada se escriben en esta columna de resultados.<br /><br /> En el escenario Anulación de dinamización descrito en [Transformación Anulación de dinamización](unpivot-transformation.md), el nombre de la columna de valor dinámico es **Product** y designa la nueva columna **Product** en la que se anula la dinamización de las columnas Ham, Coke, Milk, Beer y Chips.|  
   
  La entrada y la salida de transformación Anulación de dinamización no tienen ninguna propiedad personalizada.  
   

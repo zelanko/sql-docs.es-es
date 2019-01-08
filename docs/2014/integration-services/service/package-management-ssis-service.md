@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
@@ -25,12 +24,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbe4a733479e23e8630e3bbc043ba5dcbf30c1bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: beee5a99f345a4f70f31bfec78b4fb6d9280ab0a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091495"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761297"
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
   La administración de paquetes implica tareas entre las que se incluyen las siguientes:  
@@ -45,7 +44,7 @@ ms.locfileid: "48091495"
 >  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] admite el servicio para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
   
 ## <a name="package-store"></a>Almacén de paquetes  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona dos carpetas de nivel superior para acceder a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes: **paquetes en ejecución** y **paquetes almacenados**. En la carpeta **Paquetes en ejecución** se muestran los paquetes que se están ejecutando en el servidor. En la carpeta **Paquetes almacenados** se enumeran los paquetes que están guardados en el almacén de paquetes. Estos son los únicos paquetes que administra el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El almacén de paquetes puede constar de la base de datos msdb y las carpetas del sistema de archivos enumeradas en el archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El archivo de configuración especifica la base de datos msdb y las carpetas del sistema de archivos que se van a administrar. También puede haber paquetes almacenados en otras partes del sistema de archivos que no sean administrados por el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona dos carpetas de nivel superior para acceder a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes: **Los paquetes en ejecución** y **paquetes almacenado**. En la carpeta **Paquetes en ejecución** se muestran los paquetes que se están ejecutando en el servidor. En la carpeta **Paquetes almacenados** se enumeran los paquetes que están guardados en el almacén de paquetes. Estos son los únicos paquetes que administra el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El almacén de paquetes puede constar de la base de datos msdb y las carpetas del sistema de archivos enumeradas en el archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El archivo de configuración especifica la base de datos msdb y las carpetas del sistema de archivos que se van a administrar. También puede haber paquetes almacenados en otras partes del sistema de archivos que no sean administrados por el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Los paquetes que se guardan en msdb quedan almacenados en una tabla denominada sysssispackages. Cuando se guardan paquetes en msdb, también se pueden agrupar en carpetas lógicas. Las carpetas lógicas pueden ayudarle a organizar los paquetes según su fin, o bien a filtrar los paquetes en la tabla sysssispackages. Puede crear carpetas lógicas con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. De manera predeterminada, todas las carpetas lógicas que se agregan a msdb se incluyen automáticamente en el almacén de paquetes.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48091495"
   
  La carpeta **Paquetes en ejecución** no contiene subcarpetas y no es extensible.  
   
- De forma predeterminada, la carpeta **Paquetes almacenados** contiene dos carpetas: **Sistema de archivos** y **MSDB**. En la carpeta **Sistema de archivos** se enumeran los paquetes que se guardan en el sistema de archivos. La ubicación de estos archivos se especifica en el archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La carpeta predeterminada es la carpeta Paquetes, ubicada en %Archivos de programa%\Microsoft SQL Server\100\DTS. En la carpeta **MSDB** se muestran los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] guardados en la base de datos msdb de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor. La tabla sysssispackages contiene los paquetes que se guardan en msdb.  
+ De forma predeterminada, el **paquetes almacenados** carpeta contiene dos carpetas: **Sistema de archivos** y **MSDB**. En la carpeta **Sistema de archivos** se enumeran los paquetes que se guardan en el sistema de archivos. La ubicación de estos archivos se especifica en el archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La carpeta predeterminada es la carpeta Paquetes, ubicada en %Archivos de programa%\Microsoft SQL Server\100\DTS. En la carpeta **MSDB** se muestran los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] guardados en la base de datos msdb de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor. La tabla sysssispackages contiene los paquetes que se guardan en msdb.  
   
  Para ver la lista de paquetes del almacén de paquetes, debe abrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y conectarse a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [View Integration Services Packages in SQL Server Management Studio &#40;SSIS Service&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md).  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48091495"
   
 -   [Importar y exportar paquetes &#40;servicio SSIS&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [Ver paquetes en SQL Server Management Studio de Integration Services &#40;servicio SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [Ver paquetes de Integration Services en SQL Server Management Studio &#40;servicio SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Servicio Integration Services &#40;servicio SSIS&#41;](integration-services-service-ssis-service.md)  

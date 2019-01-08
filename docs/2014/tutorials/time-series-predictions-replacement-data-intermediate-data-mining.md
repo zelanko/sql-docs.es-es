@@ -11,18 +11,18 @@ ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7c23bec5925dbc33d2db7a547daf02f42a6cd7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120287"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419046"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Predicciones de serie temporal que usan datos de reemplazo (Tutorial intermedio de minería de datos)
   En esta tarea, se creará un nuevo modelo basado en datos de ventas mundiales. A continuación, se creará una consulta de predicción que aplica el modelo de ventas mundial a una de las regiones individuales.  
   
 ## <a name="building-a-general-model"></a>Crear un modelo general  
- Recuerde que el análisis de los resultados del modelo de minería de datos original reveló grandes diferencias entre ciertas regiones y entre las líneas de productos. Por ejemplo, las ventas de Norteamérica fueron buenas para el modelo M200, mientras que las ventas del modelo T1000 no fueron tan bien. Sin embargo, el análisis se complica por el hecho de que alguna serie no tenía muchos datos o que los datos empezaban en otro momento. También faltaban algunos datos.  
+ Recuerde que el análisis de los resultados del modelo de minería de datos original reveló grandes diferencias entre ciertas regiones y entre las líneas de productos. Por ejemplo, las ventas de Norteamérica fueron buenas para el modelo M200, mientras que las ventas del modelo T1000 no fueron tan bien. Sin embargo, el análisis se complica por el hecho de que algunas series no tenían muchos datos o datos que se inicia en un punto diferente en el tiempo. También faltaban algunos datos.  
   
  ![Serie que predice la cantidad de M200 y T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie que predice la cantidad de M200 y T1000")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48120287"
   
 2.  En el Asistente para minería de datos, realice las selecciones siguientes:  
   
-    -   Algoritmo: serie temporal de Microsoft  
+    -   Algoritmo: Serie temporal de Microsoft  
   
     -   Use el origen de datos que creó anteriormente en esta lección avanzada como origen para el modelo. Consulte [avanzada predicciones de serie temporal &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48120287"
   
     -   Elija las columnas siguientes para la clave de serie y la clave temporal:  
   
-         Hora clave: ReportingDate  
+         Clave temporal: ReportingDate  
   
-         Clave: región  
+         Clave: Region  
   
     -   Elija las columnas siguientes para `Input` y `Predict`:  
   
@@ -162,7 +162,7 @@ AND
  [Comparar las predicciones para los modelos de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de consultas de modelo de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Ejemplos de consultas de modelos de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

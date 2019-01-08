@@ -11,12 +11,12 @@ ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4332d78fef98d653029d0913c6b7da8cfe5a75f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048261"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504689"
 ---
 # <a name="dmx-templates"></a>Plantillas DMX
   Las plantillas de minería de datos ayudan a crear rápidamente consultas sofisticadas. Aunque la sintaxis general de las consultas DMX está bien documentada, el uso de plantillas facilita la creación de consultas haciendo clic y apuntando a los argumentos y orígenes de datos.  
@@ -29,7 +29,7 @@ ms.locfileid: "48048261"
   
 3.  En la página, **Seleccionar modelo**, haga clic en **avanzadas**.  
   
-     **Sugerencia:** si va a crear una consulta de predicción en un modelo, puede seleccionar el modelo primero y, a continuación, haga clic en **avanzadas**, para rellenar previamente la plantilla con el nombre del modelo.  
+     **Sugerencia:** Si va a crear una consulta de predicción en un modelo, puede seleccionar el modelo primero y, a continuación, haga clic en **avanzadas**, para rellenar previamente la plantilla con el nombre del modelo.  
   
 4.  En el **Editor minería de datos avanzada consulta**, haga clic en **plantillas DMX**y seleccione una plantilla.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48048261"
   
  **Crear**  
   
- Use estas plantillas para crear modelos o estructuras de datos personalizados. No está limitado a los modelos que admiten los asistentes; puede usar cualquier algoritmo de minería de datos compatible con la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a la que está conectado, incluidos los algoritmos de complementos.  
+ Use estas plantillas para crear modelos o estructuras de datos personalizados. No se limita a los modelos admitidos por los asistentes; puede usar cualquier algoritmo de minería de datos admitido por la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que están conectados, incluidos los algoritmos de complemento.  
   
 -   Modelo de minería de datos  
   

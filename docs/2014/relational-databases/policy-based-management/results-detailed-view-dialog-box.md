@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.results.f1
@@ -13,12 +13,12 @@ ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c304f672ddcead8ac2077f27d02b65033c4b1b77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143435"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762217"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Cuadro de diálogo Vista detallada de resultados
   Este cuadro de diálogo muestra los resultados de la evaluación de una directiva cuando se ejecuta una mediante el cuadro de diálogo **Evaluar directivas** y se hace hacer clic en **Ver**. Este cuadro de diálogo es de solo lectura y le ayuda a entender qué parte de una expresión de propiedad podría no ser correcta.  

@@ -15,12 +15,12 @@ ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66777a5db1812d1a63e100d4a02522bc1ac3b43a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ea74f0361d5152ade31a91424d594d376e513f8
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092864"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267900"
 ---
 # <a name="event-file-target"></a>Event File Target
   El destino de archivo de eventos es un destino que escribe búferes completos en el disco.  
@@ -34,7 +34,7 @@ ms.locfileid: "48092864"
 |max_rollover_files|Cualquier entero de 32 bits. Este valor es opcional.|El número máximo de archivos que se desean conservar en el sistema de archivos. El valor predeterminado es 5.|  
 |increment|Cualquier entero de 32 bits. Este valor es opcional.|El crecimiento incremental, en megabytes (MB), para el archivo. Si no se especifica, el valor predeterminado para el incremento es dos veces el tamaño del búfer de la sesión.|  
   
- La primera vez que se crea un destino de archivo de eventos, al nombre de archivo que especifique se le anexa _0\_ y un valor entero largo. El valor entero se calcula como el número de milisegundos entre el 1 de enero de 1600 y la fecha y la hora en que se crea el archivo. Los archivos de sustitución incremental siguientes también utilizan este formato. Al examinar el valor del entero largo, puede determinar el archivo más actual. En el ejemplo siguiente se muestra cómo se denominan los archivos de sustitución incremental en un escenario en el que la opción de nombre de archivo se especifica como C:\OutputFiles\MyOutput.xel:  
+ La primera vez que se crea un destino de archivo de eventos, al nombre de archivo que especifique se le anexa _0\_ y un valor entero largo. El valor entero se calcula como el número de milisegundos entre el 1 de enero de 1601 y la fecha y hora se crea el archivo. Los archivos de sustitución incremental siguientes también utilizan este formato. Al examinar el valor del entero largo, puede determinar el archivo más actual. En el ejemplo siguiente se muestra cómo se denominan los archivos de sustitución incremental en un escenario en el que la opción de nombre de archivo se especifica como C:\OutputFiles\MyOutput.xel:  
   
 -   primer archivo creado - C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   

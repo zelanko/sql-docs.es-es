@@ -16,15 +16,15 @@ ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28d7dc1fe18ff942594b070074df853c196d98f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a19c663fe646c50a977b23e219580e3d7e280945
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150395"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502957"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definir una vista del origen de datos (Analysis Services)
-  Una vista del origen de datos contiene el modelo lógico del esquema que utilizan los objetos de bases de datos multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , a saber, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
+  Una vista del origen de datos contiene el modelo lógico del esquema utilizado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos multidimensional objetos a saber, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
   
 -   Contiene los metadatos que representan objetos seleccionados de uno o varios orígenes de datos subyacentes, o los metadatos que se usarán para generar un almacén de datos relacional subyacente si emplea el enfoque de arriba abajo para la generación de esquemas.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "48150395"
 ##  <a name="bkmk_secondaryDS"></a> Agregar un origen de datos secundario  
  Al definir una vista del origen de datos con tablas, vistas o columnas de varios orígenes de datos, el primer origen de datos desde el que agrega objetos a la vista del origen de datos se designa como origen de datos principal (una vez que se ha definido, no se puede cambiar). Después de definir una vista del origen de datos basada en objetos de un solo origen de datos, puede agregar objetos de otros orígenes de datos.  
   
- Si un procesamiento OLAP o una consulta de minería de datos requiere datos de varios orígenes de datos en una sola consulta, el origen de datos principal debe admitir consultas remotas mediante `OpenRowset`. Normalmente, será un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, si designa una dimensión OLAP que contenga atributos enlazados a columnas de varios orígenes de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generará una consulta `OpenRowset` para llenar esta dimensión durante el procesamiento. Sin embargo, si un objeto OLAP se puede rellenar o minería de datos de consulta puede resolver desde un único origen de datos, una `OpenRowset` no se construirá la consulta. En ciertas situaciones, podría definir relaciones de atributo entre atributos para que no sea necesaria una consulta `OpenRowset`. Para más información sobre las relaciones de atributos, vea [Relaciones de atributos](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) y [Definir relaciones de atributo](attribute-relationships-define.md).  
+ Si una consulta de procesamiento OLAP o de minería de datos requiere datos de varios orígenes de datos en una sola consulta, el origen de datos principal debe admitir consultas remotas mediante `OpenRowset`. Normalmente, será un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, si designa una dimensión OLAP que contenga atributos enlazados a columnas de varios orígenes de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generará una consulta `OpenRowset` para llenar esta dimensión durante el procesamiento. Sin embargo, si un objeto OLAP se puede llenar o una consulta de minería de datos se puede resolver desde un solo origen de datos, no se creará una consulta `OpenRowset`. En ciertas situaciones, podría definir relaciones de atributo entre atributos para que no sea necesaria una consulta `OpenRowset`. Para más información sobre las relaciones de atributos, vea [Relaciones de atributos](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) y [Definir relaciones de atributo](attribute-relationships-define.md).  
   
- Para agregar tablas y columnas de un segundo origen de datos, haga doble clic en la DSV en el Explorador de soluciones para abrirla en el Diseñador de vistas del origen de datos y, a continuación, use el cuadro de diálogo Agregar o quitar tablas para incluir objetos de otros orígenes de datos que estén definidos en el proyecto. Para obtener más información, vea [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
+ Para agregar tablas y columnas de un segundo origen de datos, haga doble clic en la DSV en el Explorador de soluciones para abrirla en el Diseñador de vistas del origen de datos y, a continuación, use el cuadro de diálogo Agregar o quitar tablas para incluir objetos de otros orígenes de datos que estén definidos en el proyecto. Para más información, vea [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
 ##  <a name="bkmk_NameMatch"></a> Especificar criterios de coincidencia de nombres para las relaciones  
  Cuando se crea una DSV, se crean relaciones entre las tablas basadas en las restricciones de clave externa del origen de datos. Estas relaciones son necesarias para que el motor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genere las consultas adecuadas de minería de datos y de procesamiento OLAP. A veces, sin embargo, el origen de datos tiene varias tablas que no tienen restricciones de clave externa. Si el origen de datos no tiene restricciones de clave externa, el Asistente para vistas del origen de datos le pide que defina el modo en que desea que el asistente trate de hacer coincidir los nombres de columna de las diferentes tablas.  
@@ -132,7 +132,7 @@ ms.locfileid: "48150395"
 >  Cuando complete el Asistente para vistas del origen de datos, puede agregar o quitar relaciones en el panel de esquema del Diseñador de vistas del origen de datos. Para más información, vea [Definir relaciones lógicas en una vista del origen de datos &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar o quitar tablas o vistas de datos de una vista del origen &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
+ [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [Definir claves principales lógicas en una vista del origen de datos &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Definir consultas con nombre en una vista del origen de datos &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   

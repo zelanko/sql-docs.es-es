@@ -13,19 +13,19 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 19991410178a97b64d427feb56ce622e06c76570
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506133"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Quitar la creación de reflejo de la base de datos (SQL Server)
   En este tema se describe cómo quitar la creación de reflejo de una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  El propietario de la base de datos puede detener manualmente en cualquier momento una sesión de creación de reflejo de la base de datos quitando el reflejo de la base de datos.  
   
  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48071595"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: quitar la creación de reflejo de la base de datos  
+##  <a name="FollowUp"></a> Sigue: Quitar la creación de reflejo de la base de datos  
   
 > [!NOTE]  
 >  Para obtener más información sobre las repercusiones de quitar la creación de reflejo, vea [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "48071595"
     ```  
   
     > [!IMPORTANT]  
-    >  Si recupera esta base de datos, habrá dos bases de datos divergentes en línea con el mismo nombre. Por consiguiente, debe garantizar que los clientes tengan acceso solamente a una de ellas, generalmente la base de datos principal más reciente.  
+    >  Si recupera esta base de datos, habrá dos bases de datos divergentes en línea con el mismo nombre. Por tanto, debe garantizar que los clientes solo puedan acceder a una de ellas, generalmente la base de datos principal más reciente.  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48071595"
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
--   [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Ejemplo: Configurar la creación de reflejo mediante certificados de la base de datos &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

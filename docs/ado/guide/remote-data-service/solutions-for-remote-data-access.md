@@ -13,12 +13,12 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 302a43238c755890e9fd106d8784eabdd0361d88
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a761267c3d25619b58f23e2e7b6396f0e9b43958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558622"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535795"
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluciones de acceso a datos remotos
 ## <a name="the-issue"></a>El problema  
@@ -34,14 +34,14 @@ ms.locfileid: "51558622"
  En este ejemplo, la aplicación nunca conectado directamente al origen de datos; IIS se ha hecho. Y IIS tiene acceso a los datos por medio de ADO.  
   
 > [!NOTE]
->  La aplicación cliente/servidor no tiene que estar basado en Internet o una intranet (es decir, basada en Web), puede constar únicamente de programas compilados en una red de área local. Sin embargo, el caso típico es una aplicación basada en Web.  
+>  La aplicación cliente/servidor no tiene que estar basado en Internet o una intranet (es decir, basada en Web): puede constar únicamente de programas compilados en una red de área local. Sin embargo, el caso típico es una aplicación basada en Web.  
   
  Dado que algunos controles visuales, como una cuadrícula, la casilla de verificación o la lista, pueden usar la información devuelta, debe usarse fácilmente la información devuelta por un control visual.  
   
  Desea una interfaz de programación de aplicaciones sencilla y eficaz que es compatible con sistemas de tres niveles y devuelve la información como fácilmente como si se recuperó en un sistema de dos niveles. Servicio de datos remoto (RDS) es esta interfaz.  
   
 ## <a name="the-solution"></a>Solución  
- RDS define un modelo de programación, la secuencia de actividades necesarias para tener acceso a y actualizar un origen de datos: para tener acceso a datos a través de un intermediario, como Internet Information Services (IIS). El modelo de programación Resume toda la funcionalidad de RDS.  
+ RDS define un modelo de programación: la secuencia de actividades necesarias para tener acceso a y actualizar un origen de datos: para tener acceso a datos a través de un intermediario, como Internet Information Services (IIS). El modelo de programación Resume toda la funcionalidad de RDS.  
   
 ## <a name="see-also"></a>Vea también  
  [Modelo de programación de RDS básica](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   

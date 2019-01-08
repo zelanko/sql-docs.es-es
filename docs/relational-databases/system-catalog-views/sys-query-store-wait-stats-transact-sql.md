@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169145"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521252"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
 
@@ -40,8 +40,8 @@ ms.locfileid: "49169145"
 |**runtime_stats_interval_id**|**bigint**|Clave externa. Se une a [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Tipos de espera se clasifican según la tabla siguiente y, a continuación, se agrega el tiempo de espera en estas categorías de espera. Distintas categorías de espera requieren un análisis de seguimiento diferente para resolver el problema, pero espera tipos desde el mismo cliente potencial de categoría a las experiencias de solución de problemas similares y proporcionar la consulta afectada además a la espera es la pieza que falta para completar el mayoría de las investigaciones de estas correctamente.|
 |**wait_category_desc**|**nvarchar(128)**|Para obtener la descripción textual del campo de categoría de espera, consulte la siguiente tabla.|
-|**execution_type**|**tinyint**|Determina el tipo de ejecución de la consulta:<br /><br /> 0: ejecución normal (finalizada correctamente)<br /><br /> 3 – cliente iniciada anulada ejecución<br /><br /> 4 - excepción anula la ejecución|  
-|**execution_type_desc**|**nvarchar(128)**|Descripción textual del campo de tipo de ejecución:<br /><br /> 0: normal<br /><br /> 3 – anulada<br /><br /> 4 - excepción|  
+|**execution_type**|**tinyint**|Determina el tipo de ejecución de la consulta:<br /><br /> 0 - ejecución normal (finalizada correctamente)<br /><br /> 3 - cliente iniciada anulada ejecución<br /><br /> 4 - excepción anula la ejecución|  
+|**execution_type_desc**|**nvarchar(128)**|Descripción textual del campo de tipo de ejecución:<br /><br /> 0 - normal<br /><br /> 3: anulada<br /><br /> 4 - excepción|  
 |**total_query_wait_time_ms**|**bigint**|Total `CPU wait` para el plan de consulta dentro del intervalo de agregación de tiempo y categoría (comunicado en milisegundos) de espera.|
 |**avg_query_wait_time_ms**|**float**|Promedio de duración para el plan de consulta por ejecución dentro de la categoría de espera y de intervalo de agregación (comunicada en milisegundos) de espera.|
 |**last_query_wait_time_ms**|**bigint**|Último espere la duración del plan de consulta dentro del intervalo de agregación y categoría (comunicado en milisegundos) de espera.|
@@ -55,7 +55,7 @@ ms.locfileid: "49169145"
   
 |Valor entero|Categoría de espera|Incluyen tipos de espera en la categoría|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
+|**0**|**Unknown**|Desconocido |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Subproceso de trabajo**|THREADPOOL|
 |**3**|**Bloqueo**|LCK_M_ %|

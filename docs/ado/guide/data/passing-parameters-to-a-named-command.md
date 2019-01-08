@@ -14,12 +14,12 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773393"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505712"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Pasar parámetros a un comando con nombre
 Al igual que el resultado del comando se pasa como un *out* variable del comando con nombre, parámetros sido para un comando con parámetros puede pasado como *en* variables para el comando con nombre.  
@@ -77,13 +77,13 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- Tenga en cuenta que todos los parámetros de entrada deben preceder a cualquier variable de salida y los tipos de datos de parámetros deben coincidir o se pueden convertir a los de los campos correspondientes. La siguiente instrucción:  
+ Tenga en cuenta que todos los parámetros de entrada deben preceder a cualquier variable de salida y los tipos de datos de parámetros deben coincidir o se pueden convertir a los de los campos correspondientes. La instrucción siguiente:  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- : se producirá un error de tipos de datos no coincidentes, porque el parámetro de entrada necesario es de un **cadena** tipo, no de un **entero** tipo.  
+ -se producirá un error de tipos de datos no coincidentes, porque el parámetro de entrada necesario es de un **cadena** tipo, no de un **entero** tipo.  
   
  La siguiente llamada:  
   
@@ -91,7 +91,7 @@ objConn.GetOrdersOf 12345, objRs
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- : es válido, pero dará como resultado un conjunto porque ningún registro de este tipo existe en la base de datos de resultados vacío.  
+ -es válido, pero dará como resultado un conjunto porque ningún registro de este tipo existe en la base de datos de resultados vacío.  
   
 ## <a name="see-also"></a>Vea también  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

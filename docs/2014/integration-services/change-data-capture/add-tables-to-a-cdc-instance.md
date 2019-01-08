@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - addTabs
@@ -13,12 +12,12 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f437cf8a54efcd84f01757b72b278f14a524a8d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f82b6f68d7186d35fd1657cd56c4aa23fcf82b3e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107715"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769057"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Agregar tablas a una instancia CDC
   Use el cuadro de diálogo Selección de tablas para agregar tablas adicionales del origen de Oracle a la instancia CDC. Las tablas seleccionadas se agregarán a la lista de la pestaña **Tablas** del editor de propiedades.  
@@ -28,14 +27,14 @@ ms.locfileid: "48107715"
  **Para buscar tablas específicas**  
  Escriba los criterios de búsqueda como se indica aquí y, después, haga clic en **Buscar**:  
   
--   **Esquema**: seleccione un esquema de base de datos de la lista. En la lista solo se incluirán las tablas que tengan dicho esquema.  
+-   **Esquema**: Seleccione un esquema de base de datos de la lista. En la lista solo se incluirán las tablas que tengan dicho esquema.  
   
--   **Patrón de nombre de tabla**: escriba cualquier cadena de caracteres. Solo se mostrarán las tablas que incluyan la cadena de caracteres especificada.  
+-   **Patrón de nombre de tabla**: Escriba cualquier cadena de caracteres. Solo se mostrarán las tablas que incluyan la cadena de caracteres especificada.  
   
 > [!NOTE]  
 >  Puede especificar criterios en uno o ambos campos.  
   
--   **Mostrar las 1000 primeras tablas coincidentes**: de forma predeterminada, esta casilla está activada. Limita la presentación a las 1000 primeras tablas coincidentes. Si se desactiva la casilla, se mostrarán todas las tablas que cumplan los criterios. Si hay un gran número de tablas, se puede tardar mucho tiempo en mostrar la lista.  
+-   **Mostrar las 1000 primeras tablas coincidentes**: De forma predeterminada, se selecciona esta casilla de verificación. Limita la presentación a las 1000 primeras tablas coincidentes. Si se desactiva la casilla, se mostrarán todas las tablas que cumplan los criterios. Si hay un gran número de tablas, se puede tardar mucho tiempo en mostrar la lista.  
   
  **Para seleccionar las tablas que se van a incluir en la instancia CDC**  
  Haga clic en la casilla situada junto a cualquiera de las tablas que quiera incluir y, después, haga clic en **Agregar**. Las tablas se agregarán a la lista de la página **Seleccionar tablas y columnas** del Asistente para nueva instancia.  
@@ -50,7 +49,7 @@ ms.locfileid: "48107715"
   
 ## <a name="see-also"></a>Vea también  
  [Cómo editar las propiedades de la instancia CDC](how-to-edit-the-cdc-instance-properties.md)   
- [Cómo administrar una instancia CDC](manage-a-cdc-instance.md)   
- [Seleccionar tablas de Oracle para capturar cambios ](select-oracle-tables-for-capturing-changes.md)  
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
+ [Seleccionar tablas de Oracle para capturar cambios](select-oracle-tables-for-capturing-changes.md)  
   
   

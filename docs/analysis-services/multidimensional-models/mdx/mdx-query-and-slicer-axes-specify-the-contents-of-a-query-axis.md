@@ -1,5 +1,5 @@
 ---
-title: Especificar el contenido de un eje de consulta (MDX) | Documentos de Microsoft
+title: Especificar el contenido de un eje de consulta (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bceafa9fb8ddd89162deca105404c317001a86bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 38a48fd99ae9a03599914a1dfdac0bf204301c4c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026812"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399578"
 ---
-# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Consulta MDX y ejes de segmentación de datos - especificar el contenido de un eje de consulta
+# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Consulta MDX y ejes de segmentación: definición del contenido de un eje de consulta
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Los ejes de consulta especifican los límites de un conjunto de celdas devuelto por una instrucción SELECT de Expresiones multidimensionales (MDX). Al especificar los límites de un conjunto de celdas puede restringir los datos devueltos que son visibles para el cliente.  
   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
   
 ```  
   
- La palabra clave NON EMPTY, utilizada antes de la definición específica, es una forma sencilla de quitar todas las tuplas vacías de un eje. Por ejemplo, en los ejemplos que hemos visto hasta ahora no hay datos en el cubo desde agosto de 2004 en adelante. Para quitar todas las filas del conjunto que no tienen ningún dato en ninguna columna, agregue simplemente NON EMPTY antes del conjunto en la definición del eje de filas como sigue:  
+ La palabra clave NON EMPTY, utilizada antes de la definición específica, es una forma sencilla de quitar todas las tuplas vacías de un eje. Por ejemplo, en los ejemplos que hemos visto hasta ahora hay ningún dato en el cubo desde agosto de 2004 y versiones posteriores. Para quitar todas las filas del conjunto que no tienen ningún dato en ninguna columna, agregue simplemente NON EMPTY antes del conjunto en la definición del eje de filas como sigue:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -112,6 +112,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Especificar el contenido de un eje segmentador & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Especificar el contenido de un eje de división en sectores &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

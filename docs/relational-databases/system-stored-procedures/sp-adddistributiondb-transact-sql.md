@@ -5,8 +5,7 @@ ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistributiondb_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2ba920af692d85cbe8df1df69169fcde01a5c78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610123"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765807"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**] *base de datos '*  
  Es el nombre de la base de datos de distribución que se va a crear. *base de datos* es **sysname**, no tiene ningún valor predeterminado. Si la base de datos especificada ya existe y no está ya marcada como base de datos de distribución, entonces los objetos necesarios para habilitar la distribución están instalados y la base de datos está marcada como base de datos de distribución. Si la base de datos especificada ya está habilitada como base de datos de distribución, se obtiene un error.  
   
- [  **@data_folder=**] **' *** data_folder'*  
+ [  **@data_folder=**] **'**_data_folder'_  
  Es el nombre del directorio usado para almacenar el archivo de datos de la base de datos de distribución. *data_folder* es **nvarchar (255)**, su valor predeterminado es null. Si es NULL, se utiliza el directorio de datos para esa instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
- [  **@data_file=**] **'***data_file***'**  
+ [  **@data_file=**] **'**_data_file_**'**  
  Es el nombre del archivo de base de datos. *data_file* es **nvarchar (255)**, su valor predeterminado es **base de datos**. Si es NULL, el procedimiento almacenado crea un nombre de archivo que utiliza el nombre de la base de datos.  
   
  [  **@data_file_size=**] *data_file_size*  
  Es el tamaño inicial del archivo de datos en megabytes (MB). *data_file_size*s **int**, su valor predeterminado es 5 MB.  
   
- [  **@log_folder=**] **'***log_folder***'**  
+ [  **@log_folder=**] **'**_log_folder_**'**  
  Es el nombre del directorio del archivo de registro de la base de datos. *log_folder* es **nvarchar (255)**, su valor predeterminado es null. Si es NULL, se utiliza el directorio de datos para esa instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
- [  **@log_file=**] **'***ArchivoDeRegistro***'**  
+ [  **@log_file=**] **'**_ArchivoDeRegistro_**'**  
  Es el nombre del archivo de registro. *ArchivoDeRegistro* es **nvarchar (255)**, su valor predeterminado es null. Si es NULL, el procedimiento almacenado crea un nombre de archivo que utiliza el nombre de la base de datos.  
   
  [  **@log_file_size=**] *log_file_size*  
@@ -88,10 +87,10 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@security_mode=**] *security_mode*  
  Es el modo de seguridad que se debe utilizar al conectarse con el distribuidor. *security_mode* es **int**, su valor predeterminado es 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación; **1** especifica la autenticación integrada de Windows.  
   
- [  **@login=**] **'***inicio de sesión***'**  
+ [  **@login=**] **'**_inicio de sesión_**'**  
  Es el nombre de inicio de sesión utilizado al conectarse al distribuidor para crear la base de datos de distribución. Esto es necesario si *security_mode* está establecido en **0**. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
- [  **@password=**] **'***contraseña***'**  
+ [  **@password=**] **'**_contraseña_**'**  
  Es la contraseña utilizada para conectarse al distribuidor. Esto es necesario si *security_mode* está establecido en **0**. *contraseña* es **sysname**, su valor predeterminado es null.  
   
  [  **@createmode=**] *createmode*  

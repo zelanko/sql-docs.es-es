@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
@@ -13,12 +12,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a62e70239db5688fc37b34f3b11752f43178d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce643cbaa6cfade08b84894bdd1af9b24533392b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750118"
 ---
 # <a name="general-page"></a>Página General
   Utilice la página **General** de la página **Diseñadores de Integration Services** en el cuadro de diálogo **Opciones** con el fin de especificar las opciones para cargar, mostrar y actualizar los paquetes.  
@@ -37,7 +36,7 @@ ms.locfileid: "48151033"
  Seleccione esta opción para mostrar una advertencia cuando se carga un paquete que está sin firmar.  
   
  **Mostrar etiquetas de restricción de precedencia**  
- Seleccione qué etiqueta (Correcto, Error o Conclusión) mostrar en restricciones de precedencia al mostrar los paquetes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ Seleccione la etiqueta que quiere que se muestre (Correcto, Error o Conclusión) en restricciones de precedencia al visualizar paquetes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **Lenguaje de scripting**  
  Seleccione el lenguaje de scripting predeterminado para las nuevas tareas Script y los componentes Script.  

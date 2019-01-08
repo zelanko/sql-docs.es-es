@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9d3b323be70911881b99f055503d12bb6b79988d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762827"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   El Agente de mezcla de replicación es una utilidad ejecutable que aplica la instantánea inicial contenida en las tablas de base de datos a los Suscriptores. También mezcla los cambios incrementales de los datos que tienen lugar en el publicador después de la creación de la instantánea inicial y reconcilia los conflictos según las reglas configuradas por el usuario o mediante un solucionador personalizado creado por el usuario.  
@@ -64,7 +63,7 @@ ms.locfileid: "50237111"
 [-InternetLogininternet_login]  
 [-InternetPasswordinternet_password]  
 [-InternetProxyLogininternet_proxy_login]  
-[–InternetProxyPasswordinternet_proxy_password]  
+[-InternetProxyPasswordinternet_proxy_password]  
 [-InternetProxyServerinternet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeoutinternet_timeout]  
@@ -171,7 +170,7 @@ ms.locfileid: "50237111"
 |**2**|Especifica que se usa SSL y que se ha comprobado el certificado.|  
 
  > [!NOTE]  
- >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para el agente pueda conectarse correctamente al establecer EncryptionLevel - 2, crear un alias en el servidor SQL local. El parámetro 'Nombre de Alias' debe ser el nombre del servidor y el parámetro 'Server' debe establecerse en el nombre completo de SQL Server.
+ >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para que el agente se conecte correctamente al establecer -EncryptionLevel en 2, cree un alias en la instancia local de SQL Server. El parámetro "Alias Name" debe ser el nombre del servidor, mientras que el parámetro "Server" se debe establecer en el nombre completo de la instancia de SQL Server.
   
  Para obtener más información, vea [Información general sobre seguridad &#40;replicación&#41;](../security/security-overview-replication.md).  
   
@@ -243,7 +242,7 @@ ms.locfileid: "50237111"
  **-InternetProxyLogin**  *internet_proxy_login*  
  Especifica el nombre de inicio de sesión utilizado para conectarse a un servidor proxy definido en *internet_proxy_server*que requiere autenticación.  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  Especifica la contraseña utilizada para conectarse a un servidor proxy definido en *internet_proxy_server*que requiere autenticación.  
   
  **-InternetProxyServer**  *internet_proxy_server*  

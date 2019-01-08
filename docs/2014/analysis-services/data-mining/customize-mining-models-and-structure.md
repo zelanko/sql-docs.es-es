@@ -18,12 +18,12 @@ ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77be91eddebedcdad79f18dfd499cc26778560db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198841"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407892"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personalizar la estructura y los modelos de minería de datos
   Después de seleccionar un algoritmo que satisfaga sus necesidades empresariales, puede personalizar el modelo de minería de datos de las maneras siguientes para intentar mejorar los resultados.  
@@ -57,12 +57,12 @@ ms.locfileid: "48198841"
   
 -   Quitar las columnas que tienen muchos valores únicos, o las columnas que son en realidad datos de referencia y no resultan de utilidad para el análisis, como las direcciones o el segundo nombre.  
   
- No necesita quitar físicamente las columnas de la estructura de minería de datos; basta con marcar la columna como **Omitir**. La columna se quita del modelo de minería de datos, pero otros modelos de minería de datos de la estructura aún podrán utilizarla o hacer referencia a ella en una consulta de obtención de datos.  
+ No necesita quitar físicamente las columnas de la estructura de minería de datos. basta con marcar la columna como **omitir**. La columna se quita del modelo de minería de datos, pero otros modelos de minería de datos de la estructura aún podrán utilizarla o hacer referencia a ella en una consulta de obtención de datos.  
   
 ### <a name="creating-aliases-for-model-columns"></a>Crear alias para las columnas de modelo  
  Cuando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea el modelo de minería de datos, usa los mismos nombres de columna que se encuentran en la estructura de minería de datos. Puede agregar un alias a cualquier columna del modelo de minería de datos. Esto podría facilitar la comprensión del uso o el contenido de la columna, o hacer el nombre más corto para su comodidad en la creación de consultas. Los alias también son útiles si desea crear una copia de una columna y asignarle un nombre descriptivo.  
   
- Cree un alias modificando la `Name` propiedad de la columna de modelo de minería de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continúa usando el nombre original como el identificador de la columna y el nuevo valor que escribe para `Name` se convierte en el alias de columna y aparece en la cuadrícula entre paréntesis junto al uso de la columna.  
+ Cree un alias modificando la propiedad `Name` de la columna de minería de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continúa usando el nombre original como el identificador de la columna y el nuevo valor que escribe para `Name` se convierte en el alias de columna y aparece en la cuadrícula entre paréntesis junto al uso de la columna.  
   
  ![columnas del modelo de alias en la minería de datos](../media/modelcolumnalias-income.gif "columnas del modelo de alias en la minería de datos")  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48198841"
 |CLUSTER_SEED|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Las marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
@@ -134,7 +134,7 @@ ms.locfileid: "48198841"
 |STOPPING_TOLERANCE|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Arquitectura física &#40;Analysis Services - minería de datos&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

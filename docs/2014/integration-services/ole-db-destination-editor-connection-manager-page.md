@@ -15,12 +15,12 @@ ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5db99f475b1fc1a71d36f8643dea56f99d00d0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7688f3979f935b6d461c47fe2747eb7718835f01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504700"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Editor de destino de OLE DB (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de OLE DB** para seleccionar la conexión OLE DB del destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -44,7 +44,7 @@ ms.locfileid: "48188345"
 |------------|-----------------|  
 |Tabla o vista|Carga los datos en una tabla o vista del destino OLE DB.|  
 |Carga rápida de tabla o vista|Carga los datos en una tabla o vista del destino OLE DB y utiliza la opción de carga rápida. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](data-flow/ole-db-destination.md).|  
-|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada con**: [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Carga rápida de variable de nombre de tabla o nombre de vista|Especifica el nombre de la tabla o la vista en una variable y utiliza la opción de carga rápida para cargar los datos. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](data-flow/ole-db-destination.md).|  
 |Comando SQL|Carga los datos en el destino OLE DB mediante una consulta SQL.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48188345"
 > [!NOTE]  
 >  Al hacer clic en **Nueva**, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] genera una instrucción predeterminada CREATE TABLE basada en el origen de datos conectado. La instrucción predeterminada CREATE TABLE no incluirá el atributo FILESTREAM, aunque la tabla de origen tenga una columna con el atributo FILESTREAM declarado. Para ejecutar un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con el atributo FILESTREAM, implemente en primer lugar el almacenamiento de FILESTREAM en la base de datos de destino. A continuación, agregue el atributo FILESTREAM a la instrucción CREATE TABLE en el cuadro de diálogo **Crear tabla** . Para más información, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-### <a name="data-access-mode--table-or-view--fast-load"></a>Modo de acceso a datos = Carga rápida de tabla o vista  
+### <a name="data-access-mode--table-or-view---fast-load"></a>Modo de acceso a datos = Carga rápida de tabla o vista  
  **Nombre de la tabla o la vista**  
  Seleccione una tabla o una vista de la base de datos con esta lista, o bien haga clic en **Nuevo**para crear una tabla.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48188345"
  **Nombre de variable**  
  Seleccione la variable que contiene el nombre de la tabla o vista.  
   
-### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Modo de acceso a datos = Carga rápida de variable de nombre de tabla o nombre de vista  
+### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Modo de acceso a datos = Carga rápida de variable de nombre de tabla o nombre de vista  
  **Nombre de variable**  
  Seleccione la variable que contiene el nombre de la tabla o vista.  
   
@@ -158,9 +158,9 @@ ms.locfileid: "48188345"
  Comprueba la sintaxis del texto de la consulta.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino de OLE DB &#40;página asignaciones&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [Editor de destino de OLE DB &#40;página de salida de Error&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de destino de OLE DB &#40;página Asignaciones&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [Editor de destino de OLE DB &#40;página Salida de error&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Cargar datos mediante el destino de OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

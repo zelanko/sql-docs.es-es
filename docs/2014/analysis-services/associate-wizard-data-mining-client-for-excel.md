@@ -14,12 +14,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9288c6a4f01cff6c3c4a19ff79a1d49775035cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179435"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400478"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Asistente para asociación (Cliente de minería de datos para Excel)
   ![Asistente para asociación en la cinta de opciones minería de datos](media/dmc-associate.gif "asociar el Asistente en la cinta de opciones minería de datos")  
@@ -62,7 +62,7 @@ ms.locfileid: "48179435"
   
     -   Si reduce la probabilidad de una regla, reduce los requisitos que debe cumplir una combinación para que se considere importante en el contexto del conjunto completo de datos.  
   
-     **Sugerencia:** es una buena idea crear varios modelos de minería de datos mediante combinaciones diferentes de compatibilidad y probabilidad. Para realizar un seguimiento de los valores usados para cada modelo, puede usar el **documentar modelo** asistente, disponible en el cliente de minería de datos para Excel y usar el **Detailed** opción del informe. Para obtener más información, consulte [documentar modelos de minería de datos &#40;complementos minería de datos para Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
+     **Sugerencia:** Es una buena idea crear varios modelos de minería de datos mediante combinaciones diferentes de compatibilidad y probabilidad. Para realizar un seguimiento de los valores usados para cada modelo, puede usar el **documentar modelo** asistente, disponible en el cliente de minería de datos para Excel y usar el **Detailed** opción del informe. Para obtener más información, consulte [documentar modelos de minería de datos &#40;complementos minería de datos para Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
 6.  Si lo desea, haga clic en **parámetros** para cambiar los parámetros del algoritmo y personalizar el comportamiento del modelo de minería de datos.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48179435"
   
          La obtención de detalles es útil, por ejemplo, si desea hacer clic en un conjunto de elementos determinado y ver los datos de origen.  
   
-    -   **Usar modelo temporal**. Seleccione esta opción si no desea que el modelo se guarde en el servidor. Se eliminan los modelos temporales al cerrar Excel.  
+    -   **Usar modelo temporal**. Seleccione esta opción si no desea que el modelo guardado en el servidor. Se eliminan los modelos temporales al cerrar Excel.  
   
 9. El asistente analiza todas las combinaciones posibles y crea un informe que contiene conjuntos de elementos y reglas.  
   

@@ -15,12 +15,12 @@ ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f7bb152f19bd2ed5e482cff2e57806c1653ef415
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1536c2fbb40fa44140cb7470db310ef633f67ede
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227735"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506796"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete
   Utilice el cuadro de diálogo **Importar paquete** , disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para importar un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y para establecer o modificar el nivel de protección del paquete.  
@@ -60,11 +60,11 @@ ms.locfileid: "48227735"
  También puede cambiar el nombre del paquete si lo desea. El nombre predeterminado es el nombre del paquete que se importará.  
   
  **Nivel de protección**  
- Haga clic en el botón Examinar **(…)** y, en el cuadro de diálogo **Nivel de protección de paquetes** , actualice el nivel de protección. Para más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Haga clic en el botón Examinar **(…)** y, en el cuadro de diálogo **Nivel de protección de paquetes**, actualice el nivel de protección. Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Guardar copia del paquete](../../2014/integration-services/save-copy-of-package.md)   
- [Referencia de interfaz de usuario del cuadro de diálogo de paquete de exportación](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Guardar paquetes](save-packages.md)   
  [Importar y exportar paquetes &#40;servicio SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   

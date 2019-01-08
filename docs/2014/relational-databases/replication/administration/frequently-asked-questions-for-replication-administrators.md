@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, frequently asked questions
@@ -14,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30058e297e22ed63a9e22a4755f22c4cc35ab213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105165"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748735"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Preguntas más frecuentes para administradores de replicación
   Las siguientes preguntas y respuestas proporcionan instrucciones sobre las diversas tareas que deben ejecutar los administradores de bases de datos replicadas.  
@@ -122,7 +121,7 @@ ms.locfileid: "48105165"
   
 -   La definición de un objeto, como una instrucción CREATE TABLE. De manera predeterminada, la replicación copia las definiciones de todos los objetos replicados en el suscriptor.  
   
--   El espacio de nombres dentro del que se crea un objeto: \<base de datos>.\<esquema>.\<objeto>. Los esquemas se definen mediante la instrucción CREATE SCHEMA.  
+-   El espacio de nombres dentro del cual se crea un objeto: \<Base de datos >. \<Esquema >. \<Objeto >. Los esquemas se definen mediante la instrucción CREATE SCHEMA.  
   
 -   La replicación tiene el siguiente comportamiento predeterminado en el Asistente para nueva publicación con respecto a los esquemas y a la propiedad de objetos:  
   
@@ -185,7 +184,7 @@ ms.locfileid: "48105165"
  Primero, quite el artículo de la publicación mediante [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, y después quítelo de la base de datos mediante `DROP <Object>`. No se pueden quitar artículos de publicaciones transaccionales o de instantáneas después de que se hayan agregado suscripciones; es preciso quitar primero las suscripciones. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>¿Cómo se agregan o quitan columnas de una tabla publicada?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite una amplia variedad de cambios de esquema en objetos publicados, lo que incluye agregar y quitar columnas. Por ejemplo, ejecute ALTER TABLE... DROP COLUMN en el publicador y la instrucción se replica en los suscriptores y, a continuación, se ejecuta para quitar la columna. Los suscriptores que ejecutan versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] admiten agregar y quitar columnas a través de los procedimientos almacenados [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) y [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite una amplia variedad de cambios de esquema en objetos publicados, lo que incluye agregar y quitar columnas. Por ejemplo, ejecute ALTER TABLE ... DROP COLUMN en el publicador y la instrucción se replica en los suscriptores y, a continuación, se ejecuta para quitar la columna. Los suscriptores que ejecutan versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] admiten agregar y quitar columnas a través de los procedimientos almacenados [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) y [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Mantenimiento de la replicación  
   
@@ -208,7 +207,7 @@ ms.locfileid: "48105165"
  Las acciones necesarias para quitar la replicación de una base de datos dependen de si la base de datos tenía la función de base de datos de publicaciones, base de datos de suscripciones o ambas.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>¿Cómo se determina si existen transacciones o filas para replicar?  
- Para la replicación transaccional, utilice procedimientos almacenados o la pestaña **Comandos sin distribuir** del Monitor de replicación. Para más información, vea [Ver comandos replicados y otra información en la base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41](../monitor/view-replicated-commands-and-information-in-distribution-database.md) y [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Para la replicación transaccional, utilice procedimientos almacenados o la pestaña **Comandos sin distribuir** del Monitor de replicación. Para más información, vea [Ver comandos replicados y otra información en la base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) y [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
  Para la replicación de mezcla, utilice el procedimiento almacenado **sp_showpendingchanges**. Para más información, vea [sp_showpendingchanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql).  
   
@@ -229,7 +228,7 @@ ms.locfileid: "48105165"
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>¿Funciona la replicación junto con la agrupación en clústeres?  
  Sí. No tienen que tenerse en cuenta consideraciones especiales porque todos los datos se almacenan en un conjunto de discos en el clúster.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración &#40;replicación&#41;](administration-replication.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   

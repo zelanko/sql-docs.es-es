@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services], for transactions
@@ -13,12 +12,12 @@ ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3ec3832046147ef500f61f600f8cdc9221120f59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66e545b5c02ad513724f44b1e6ed22ab94625b8e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066405"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778187"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Anotar una transacción (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], agregue una anotación a una transacción si desea proporcionar más información sobre la transacción con fines históricos.  
@@ -30,7 +29,7 @@ ms.locfileid: "48066405"
   
 -   Para agregar transacciones que creó, debe contar con el permiso para obtener acceso al área funcional de **Explorador** y tener como mínimo el permiso **Actualizar** para el objeto del modelo al que desea agregar anotaciones.  
   
--   Para agregar anotaciones a las transacciones para todos los usuarios, debe tener permiso de acceso al área funcional **Administración de versiones** y ser administrador de modelos. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Para agregar anotaciones a las transacciones para todos los usuarios, debe tener permiso de acceso al área funcional **Administración de versiones** y ser administrador de modelos. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>Para agregar anotaciones a una transacción en el Explorador  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48066405"
 5.  Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Las anotaciones &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
+ [Anotaciones &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
  [Transacciones &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
   

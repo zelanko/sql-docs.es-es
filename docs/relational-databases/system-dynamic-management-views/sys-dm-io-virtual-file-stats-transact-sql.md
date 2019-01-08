@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d55d63b9cfbf501750522f3f5d0ca68757ae1ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741863"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407302"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -101,7 +101,7 @@ Id. del archivo. *file_ID* es de tipo int, no tiene ningún valor predeterminado
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. Devolver estadísticas para un archivo de registro
 
-**Se aplica a:** (a partir de 2008) de SQL Server, Azure SQL Database
+**Se aplica a:** SQL Server (a partir de 2008), Azure SQL Database
 
  El ejemplo siguiente devuelve todas las estadísticas para el archivo de registro en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
@@ -110,13 +110,13 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Devolver estadísticas para el archivo de tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>b. Devolver estadísticas para el archivo de tempdb
 
-**Se aplica a:** Azure SQL Data Warehouse
+**Se aplica a:** Almacenamiento de datos SQL de Azure
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
-WHERE database_name = ‘tempdb’ AND file_id = 2;
+WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 

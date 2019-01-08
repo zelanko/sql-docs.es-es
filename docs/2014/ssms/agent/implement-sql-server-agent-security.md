@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -15,12 +15,12 @@ ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af4556f5acf21616ebfd94cf038b8f453263a34c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210805"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754237"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementar la seguridad del Agente SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente le permite al administrador de la base de datos ejecutar cada paso de trabajo en un contexto seguro que solo tiene los permisos necesarios para realizar ese paso de trabajo, que está determinado por un servidor proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para establecer los permisos para un paso de trabajo concreto, cree un proxy que disponga de los permisos necesarios y, a continuación, asigne ese proxy al paso de trabajo. Se puede especificar un servidor proxy en más de un paso de trabajo. Para los pasos de trabajo que necesitan los mismos permisos se utiliza el mismo proxy.  
@@ -57,21 +57,21 @@ ms.locfileid: "48210805"
   
 -   No especifique la cuenta de administración de NT como una cuenta de servicio o una cuenta de proxy.  
   
--   Tenga en cuenta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen acceso a activos entre sí. Los dos servicios comparten un único espacio del proceso y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un administrador del sistema en el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Tenga en cuenta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen acceso a activos entre sí. Los dos servicios comparten un único espacio del proceso y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un administrador del sistema en el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Cuando un servidor de destino (TSX) se registra con un servidor principal (MSX), los administradores del sistema del servidor principal obtienen el control total en la instancia del servidor de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   ACE es una extensión y no se puede invocar a sí misma. La invocación de ACE la realiza Chainer ScenarioEngine.exe, también conocido como Microsoft.SqlServer.Chainer.Setup.exe, u otro proceso de host.  
   
--   ACE depende de las DLL de configuración siguientes DLL pertenecientes a SSDP, ya que ACE llama a las siguientes API de DLL:  
+-   ACE depende de las DLL de configuración siguientes pertenecientes a SSDP, ya que ACE llama a las siguientes API de DLL:  
   
-    -   **SCO** : Microsoft.SqlServer.Configuration.Sco.dll, incluidas las nuevas validaciones de SCO para las cuentas virtuales  
+    -   **SCO**: Microsoft.SqlServer.Configuration.Sco.dll, incluidas las nuevas validaciones de SCO para las cuentas virtuales  
   
-    -   **Cluster** : Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Clúster**: Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** : Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC**: Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **Extension** : Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Extensión**: Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>Vea también  
  [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md)   

@@ -18,12 +18,12 @@ ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 598a0dcfd221add02cf09297687cff17c897c4e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b127b3dac76663e77b7ce0fa4faa76a91628ccc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076545"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507779"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabajar con diagramas en el Diseñador de vistas del origen de datos (Analysis Services)
   Un diagrama de vista del origen de datos (DSV) es una representación visual de los objetos de una DSV. Puede trabajar con el diagrama de forma interactiva para agregar, ocultar, eliminar o modificar objetos específicos. También puede crear varios diagramas en la misma DSV para resaltar un subconjunto de los objetos.  
@@ -47,7 +47,7 @@ ms.locfileid: "48076545"
   
  Para crear un diagrama, haga clic con el botón derecho en cualquier lugar del panel **Organizador de diagramas** y haga clic en **Nuevo diagrama**.  
   
- Al definir inicialmente una vista del origen de datos (DSV) en un proyecto de Analysis Services, todas las tablas y vistas agregadas a la vista del origen de datos se agregan a la \<todas las tablas > diagrama. Este diagrama se muestra en el panel Organizador de diagramas del Diseñador de vistas del origen de datos. Las tablas de este diagrama (así como sus columnas y relaciones) se enumeran en el panel Tablas. Las tablas de este diagrama (así como sus columnas y relaciones) se muestran gráficamente en el panel Esquema. Sin embargo, como agregar tablas, vistas y consultas con nombre para el \<todas las tablas > diagrama, el número total de objetos en este diagrama dificulta visualizar las relaciones, se agregan al diagrama especialmente como varias tablas de hechos y dimensiones las tablas se relacionan con varias tablas de hechos.  
+ Al definir inicialmente una vista del origen de datos (DSV) en un proyecto de Analysis Services, todas las tablas y vistas agregadas a la vista del origen de datos se agregan a la \<todas las tablas > diagrama. Este diagrama se muestra en el panel Organizador de diagramas del Diseñador de vistas del origen de datos. Las tablas de este diagrama (así como sus columnas y relaciones) se enumeran en el panel Tablas. Las tablas de este diagrama (así como sus columnas y relaciones) se muestran gráficamente en el panel Esquema. Sin embargo, como agregar tablas, vistas y consultas con nombre para el \<todas las tablas > diagrama, el número total de objetos en este diagrama dificulta visualizar las relaciones, especialmente como se agregan al diagrama de varias tablas de hechos y dimension las tablas se relacionan con varias tablas de hechos.  
   
  Para que la visualización resulte más fácil si solo desea ver un subconjunto de las tablas de la vista del origen de datos, puede definir subdiagramas (que se denominan simplemente diagramas), formados por subconjuntos seleccionados de tablas, vistas y consultas con nombre de la vista del origen de datos. Puede utilizar los diagramas para agrupar elementos en la vista del origen de datos en función de sus necesidades empresariales o de soluciones.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48076545"
   
      Para centrar la presentación de una tabla que ya está incluida en el diagrama, seleccione la tabla en el panel **Tablas** .  
   
--   Localizador de tablas del panel **Diagrama** : el localizador de tablas es un icono de flecha de 4 direcciones que se encuentra en la intersección de las barras de desplazamiento horizontal y vertical, en la esquina inferior derecha del panel **Diagrama** . Abre una representación en miniatura del diagrama actual en el panel Diagrama. Puede usar esta miniatura para cambiar la vista del panel Diagrama a cualquier ubicación del diagrama.  
+-   Localizador de tablas en **diagrama** localizador del panel, la tabla es un icono de flecha de 4 puntas situado en la intersección de las barras de desplazamiento horizontal y vertical en la esquina inferior derecha de la **diagrama** panel. Abre una representación en miniatura del diagrama actual en el panel Diagrama. Puede usar esta miniatura para cambiar la vista del panel Diagrama a cualquier ubicación del diagrama.  
   
--   Use el cuadro de diálogo **Buscar tabla** : haga clic con el botón derecho en un área abierta del panel Diagrama y, después, haga clic en **Buscar tabla**. O bien, haga clic en el comando **Buscar tabla** de la barra de herramientas o del menú **Vista del origen de datos** .  
+-   Use la **Buscar tabla** diálogo cuadro-Right click en un área abierta del panel Diagrama y haga clic en **Buscar tabla**. O bien, haga clic en el comando **Buscar tabla** de la barra de herramientas o del menú **Vista del origen de datos** .  
   
      Puede escribir cadenas y caracteres comodín en el cuadro Filtro para ver subconjuntos de las tablas del diagrama.  
   
@@ -91,6 +91,6 @@ ms.locfileid: "48076545"
   
 ## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services - datos multidimensionales&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

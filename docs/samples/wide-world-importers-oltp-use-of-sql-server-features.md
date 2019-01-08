@@ -11,12 +11,12 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 629494b298f9eacee0b7217522698897be401e04
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 866b32abbc7f7e754b11fd286dd0c35eeeb92165
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669896"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400702"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Uso de capacidades y características de SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ WideWorldImporters está diseñada para presentar muchas de las características
 |Característica de SQL Server o la funcionalidad|Uso de WideWorldImporters|
 |-----------------------------|---------------------|
 |Tablas temporales|Hay muchas tablas temporales, incluidas todas las tablas de referencia de estilo de búsqueda y las entidades principales como StockItems, los clientes y proveedores. Uso de las tablas temporales permite cómodamente realizar un seguimiento de la historia de estas entidades.|
-|Las llamadas de AJAX para JSON|Con frecuencia, la aplicación usa llamadas AJAX para consultar estas tablas: personas, los clientes, proveedores y StockItems. Las llamadas devuelven las cargas de JSON (es decir, que se devuelven formato de los datos como datos JSON). Consulte, por ejemplo, el procedimiento almacenado `Website.SearchForCustomers`.|
+|Las llamadas de AJAX para JSON|Con frecuencia, la aplicación usa llamadas AJAX para consultar estas tablas: Las personas, los clientes, proveedores y StockItems. Las llamadas devuelven las cargas de JSON (es decir, que se devuelven formato de los datos como datos JSON). Consulte, por ejemplo, el procedimiento almacenado `Website.SearchForCustomers`.|
 |Contenedores de propiedad/valor JSON|Un número de tablas tiene columnas que contienen datos JSON para ampliar los datos relacionales en la tabla. Por ejemplo, `Application.SystemParameters` tiene una columna para la configuración de la aplicación y `Application.People` tiene una columna para las preferencias de usuario del registro. Utilizan estas tablas una `nvarchar(max)` columna para registrar los datos JSON, junto con una restricción CHECK mediante la función integrada `ISJSON` para asegurarse de la columna de valores son válidos en JSON.|
 |Seguridad de nivel de fila (RLS)|Seguridad de nivel de fila (RLS) se usa para limitar el acceso a la tabla Customers, según la pertenencia al rol. Cada territorio de ventas tiene un rol y un usuario. Para ver esto en acción, use el script correspondiente en el ejemplo script.zip, que forma parte de la [versión del ejemplo](https://go.microsoft.com/fwlink/?LinkID=800630).|
 |análisis operativo en tiempo real|(Versión completa de la base de datos) Las tablas transaccionales core `Sales.InvoiceLines` y `Sales.OrderLines` ambos tienen un índice de almacén de columnas no agrupado para admitir la ejecución eficaz de las consultas analíticas en la base de datos transaccional con un impacto mínimo en la carga de trabajo operativa. Ejecutando análisis y las transacciones en la misma base de datos también se conoce como [de procesamiento de transaccional/analítico híbrido (HTAP)](https://wikipedia.org/wiki/Hybrid_Transactional/Analytical_Processing_(HTAP)). Para ver esto en acción, use el script correspondiente en el ejemplo script.zip, que forma parte de la [versión del ejemplo](https://go.microsoft.com/fwlink/?LinkID=800630).|

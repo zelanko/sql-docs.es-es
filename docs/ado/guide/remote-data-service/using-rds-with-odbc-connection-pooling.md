@@ -13,12 +13,12 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a65472e57d5ecc15f0e7302aa2f0b7972e5e7c78
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559602"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506351"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Uso de RDS con la agrupación de conexiones de ODBC
 Si usa un origen de datos ODBC, puede usar la opción en Internet Information Services (IIS) de agrupación de conexiones para conseguir un procesamiento de alto rendimiento de carga del cliente. Agrupación de conexiones es un administrador de recursos para las conexiones, mantiene el estado abierto en conexiones que se utilizan con frecuencia.  
@@ -49,7 +49,7 @@ Si usa un origen de datos ODBC, puede usar la opción en Internet Information Se
   
 2.  Haga doble clic en continuar.  
   
-3.  En el servidor de Microsoft SQL Server, cuadro de diálogo Opciones, seleccione Cambiar soporte de red y, a continuación, haga clic en continuar.  
+3.  En Microsoft SQL Server-cuadro de diálogo Opciones, seleccione Cambiar soporte de red y, a continuación, haga clic en continuar.  
   
 4.  Asegúrese de que la casilla de verificación Sockets TCP/IP está activada y haga clic en Aceptar.  
   

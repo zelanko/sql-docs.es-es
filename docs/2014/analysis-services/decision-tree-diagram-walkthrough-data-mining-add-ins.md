@@ -16,12 +16,12 @@ ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b98c237b7cc8aaf58c177ee151e7a1398a4fd5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079715"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391238"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Tutorial de diagrama de árbol de decisión (complementos de minería de datos)
   Si ha creado un modelo de árbol de decisión, podrá crear un diagrama personalizado en Visio con la forma Árbol de decisión o la forma Red de dependencias. En este tema se describe las personalizaciones que puede realizar con el **árbol de decisión** forma y estos controles:  
@@ -55,7 +55,7 @@ ms.locfileid: "48079715"
   
 6.  En el **seleccionar el árbol de decisión** página, elija un árbol individual para mostrar.  
   
-     Los árboles dan forma a las interacciones que conducen a un resultado determinado que haya modelado; por consiguiente, incluso aunque el modelo contenga varios resultados, solamente podrá mostrar un árbol de cada vez.  
+     Un árbol modela las interacciones que conducen a un resultado determinado que haya modelado; por lo tanto, incluso si el modelo contiene varios resultados, puede mostrar un único árbol a la vez.  
   
 7.  En el **seleccionar el árbol de decisión** cuadro de diálogo, también puede establecer estas opciones de presentación:  
   

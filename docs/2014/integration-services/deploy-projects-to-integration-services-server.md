@@ -11,12 +11,12 @@ ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e701bb22a2350d90fdaf4ab461aa70063eab97b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120965"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408182"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Implementación de paquetes en el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], puede implementar los proyectos en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite administrar paquetes, ejecutar paquetes y configurar valores de tiempo de ejecución para paquetes usando entornos.  
@@ -28,9 +28,9 @@ ms.locfileid: "48120965"
   
  Para implementar un proyecto en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , debe completar las tareas siguientes:  
   
-1.  Crear un catálogo de SSISDB, si no lo tiene todavía. Para obtener más información, vea [Crear el catálogo de SSIS](catalog/ssis-catalog.md).  
+1.  Crear un catálogo de SSISDB, si aún no lo ha hecho. Para obtener más información, vea [Crear el catálogo de SSIS](catalog/ssis-catalog.md).  
   
-2.  Convierta el proyecto al modelo de implementación de proyectos ejecutando el **Asistente para conversión de proyectos de Integration Services** . Para obtener más información, vea las instrucciones siguientes: [Para convertir un proyecto al modelo de implementación de proyectos](#convert)  
+2.  Convierta el proyecto al modelo de implementación de proyectos ejecutando el **Asistente para conversión de proyectos de Integration Services** . Para obtener más información, vea las instrucciones siguientes: [Para convertir un proyecto en el modelo de implementación del proyecto](#convert)  
   
     -   Si creó el proyecto en [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)], de forma predeterminada el proyecto utiliza el modelo de implementación de proyectos.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48120965"
   
 ##  <a name="convert"></a> Para convertir un proyecto al modelo de implementación de proyectos  
   
-1.  Abra el proyecto en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]y, en el Explorador de soluciones, haga clic con el botón derecho en el proyecto y seleccione **Convertir al modelo de implementación de proyectos**.  
+1.  Abra el proyecto en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]y, en el Explorador de soluciones, haga clic con el botón derecho en el proyecto y haga clic en **Convertir en el modelo de implementación de proyectos**.  
   
      -o bien-  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48120965"
   
      -o bien-  
   
-     En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** nodo en el Explorador de objetos y busque la carpeta de proyectos para el proyecto que desea implementar. Haga clic con el botón derecho en la carpeta **Proyectos** y, después, haga clic en **Implementar proyecto**.  
+     En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda el nodo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** en el Explorador de objetos y busque la carpeta Proyectos correspondiente al proyecto que quiere implementar. Haga clic con el botón derecho en la carpeta **Proyectos** y, después, haga clic en **Implementar proyecto**.  
   
      -o bien-  
   

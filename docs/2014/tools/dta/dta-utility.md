@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -21,12 +20,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edafb305050b36798990ecea21b08dde42e3f068
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091743"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770717"
 ---
 # <a name="dta-utility"></a>dta, utilidad
   La utilidad **dta** es la versión del símbolo del sistema del Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
@@ -41,7 +40,7 @@ ms.locfileid: "48091743"
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -ddatabase_name ]   
       [ -Tltable_list | -Tf table_list_file ]  
@@ -103,13 +102,13 @@ ms.locfileid: "48091743"
  Especifica el nombre de cada base de datos que se va a optimizar. La primera base de datos es la base de datos predeterminada. Puede especificar varias bases de datos separando los nombres de la base de datos con comas, por ejemplo:  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
- De forma alternativa, puede especificar varias bases de datos si usa el argumento **-D** para cada nombre de base de datos, por ejemplo:  
+ Como alternativa, puede especificar varias bases de datos mediante el **-D** nombre de argumento para cada base de datos, por ejemplo:  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  El argumento **-D** es obligatorio. Si el argumento **-D** no se ha especificado, **dta** se conecta inicialmente con la base de datos que se ha especificado con la primera cláusula `USE database_name` en la carga de trabajo. Si no hay ninguna cláusula explícita `USE database_name` en la carga de trabajo, debe usar el argumento **-d** .  
@@ -135,7 +134,7 @@ dta -d AdventureWorks2012 ...
   
  Si se especifican varios nombres de bases de datos, **dta** devuelve un error. El argumento **-d** es opcional.  
   
- Si utiliza un archivo de entrada XML, puede especificar la primera base de datos que **dta** se conecta mediante el `DatabaseToConnect` elemento que se encuentra bajo la `TuningOptions` elemento. Para obtener más información, consulte [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Si utiliza un archivo de entrada XML, puede especificar la primera base de datos que **dta** se conecta mediante el `DatabaseToConnect` elemento que se encuentra bajo la `TuningOptions` elemento. Para obtener más información, vea [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Si solo optimiza una base de datos, el argumento **-d** proporciona una funcionalidad similar a la del argumento **-d** de la utilidad **sqlcmd** , pero no ejecuta la instrucción USE *database_name* . Para obtener más información, consulte [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -149,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |Parámetro|Valor predeterminado|  
 |---------------|-------------------|  
-|*database_name*|*database_name* especificado con la opción **–D**|  
+|*database_name*|*database_name* especificado con el **-D** opción|  
 |*owner_name*|**dbo**<br /><br /> Nota: *owner_name* debe ser **dbo**. Si se especifica otro valor, la ejecución de **dta** es errónea y devuelve un error.|  
 |*table_name*|None|  
   
@@ -203,10 +202,10 @@ dta -d AdventureWorks2012 ...
  Especifica un identificador numérico para la sesión de optimización. Si no se especifica, **dta** genera un número de identificación. Puede usar este identificador para ver la información de las sesiones de optimización existentes. Si no especifica un valor para **-ID**, debe especificar un nombre de sesión con **-s**.  
   
  **-ip**  
- Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n** .  
+ Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la **- n** opción.  
   
  **-ipf**  
- Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para todas las bases de datos. Este valor se puede cambiar mediante la opción **- n** .  
+ Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para todas las bases de datos. Este valor se puede cambiar mediante la **- n** opción.  
   
  **-if** *workload_file*  
  Especifica el nombre y la ruta del archivo de carga de trabajo que se desea usar como entrada para la optimización. El archivo debe estar en uno de estos formatos: .trc (archivo de seguimiento de SQL Server Profiler) o .log (archivo de Seguimiento de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Debe especificarse un archivo de carga de trabajo o una tabla de carga de trabajo.  
@@ -218,7 +217,7 @@ dta -d AdventureWorks2012 ...
   
 |Parámetro|Valor predeterminado|  
 |---------------|-------------------|  
-|*database_name*|*database_name* especificado con la opción **–D** .|  
+|*database_name*|*database_name* especificado con **-D** opción.|  
 |*owner_name*|**dbo**.|  
 |*table_name*|Ninguno.|  
   
@@ -344,7 +343,7 @@ dta -n number_of_events -A 0
  En este ejemplo se usa una conexión segura (`-E`) para conectar con la base de datos **tpcd1G** en MyServer para analizar una carga de trabajo y crear recomendaciones. Escribe la salida en un archivo de script denominado script.sql. Si script.sql ya existe, **dta** sobrescribirá el archivo porque se ha especificado el argumento `-F` . La sesión de optimización se ejecuta durante un período de tiempo ilimitado para garantizar un completo análisis de la carga de trabajo (`-A 0`). La recomendación debe proporcionar una mejora mínima del 5% (`-m 5`). **dta** debe incluir índices y vistas indexadas en su recomendación final (`-fa IDX_IV`).  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. Limitar la utilización del disco**  
@@ -352,7 +351,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  Este ejemplo limita el tamaño total de la base de datos, que incluye los datos sin procesar y los índices adicionales, hasta 3 gigabytes (GB) (`-B 3000`) y dirige la salida a d:\result_dir\script1.sql. Se ejecuta durante 1 hora como máximo (`-A 60`).  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. Limitar el número de consultas optimizadas**  
@@ -360,7 +359,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  Este ejemplo limita el número de consultas leídas desde el archivo orders_wkld.sql hasta un máximo de 10 (`-n 10`) y se ejecuta durante 15 minutos (`-A 15`), lo que se dé primero. Para asegurarse de que se optimizan las 10 consultas, especifique un tiempo de optimización ilimitado con `-A 0`. Si el tiempo es importante, especifique un límite de tiempo adecuado estableciendo el número de minutos que está disponible para optimizar con el argumento `-A` como se muestra en este ejemplo.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. Optimizar tablas específicas enumeradas en un archivo**  
@@ -386,11 +385,11 @@ AdventureWorks2012.Production.Product  2000000
  El tiempo de optimización es de 2 horas (`-A 120`) y la salida se escribe en un archivo XML (`-ox XMLTune.xml`).  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de utilidad de símbolo del sistema &#40;motor de base de datos&#41;](../command-prompt-utility-reference-database-engine.md)   
- [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -13,17 +13,17 @@ ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acb86931d7343d375718efbae0186c67d7a38156
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04b1afa7f9902d0e1510aaab5f84f96b4b01eacc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519923"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funciones de predicción a un modelo
   Para crear una consulta de predicción, antes debe seleccionar el modelo de minería de datos en el que se basará la consulta. Puede seleccionar cualquier modelo de minería de datos que esté incluido en el proyecto actual.  
   
- Cuando haya seleccionado un modelo, agregue una *función de predicción* a la consulta. Es importante saber que las funciones de predicción se usan para muchos propósitos. Puede predecir valores, pero también puede obtener estadísticas relacionadas, así como la información utilizada para generar la predicción. Las funciones de predicción pueden devolver los siguientes tipos de valores:  
+ Cuando haya seleccionado un modelo, agregue una *función de predicción* a la consulta. Es importante comprender que las funciones de predicción se usan para muchos propósitos: Sí, puede predecir valores, pero también puede obtener estadísticas relacionadas, así como información que se usó para generar la predicción. Las funciones de predicción pueden devolver los siguientes tipos de valores:  
   
 -   El nombre del atributo de predicción y el valor que se predice.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48106685"
     |||  
     |-|-|  
     |**\<nombre del modelo >**|Seleccione esta opción para incluir los valores del modelo de minería de datos en la salida. Solo puede agregar nuevas columnas de predicción.<br /><br /> Cuando se agrega una columna del modelo, el resultado devuelto es la lista de valores no distintivos de esa columna.<br /><br /> Las columnas que agrega con esta opción se incluyen en la parte SELECT de la instrucción DMX resultante.|  
-    |**Prediction Function**|Seleccione esta opción para examinar una lista de funciones de predicción.<br /><br /> Los valores o funciones que seleccione se agregan a la parte SELECT de la instrucción DMX resultante.<br /><br /> La lista de funciones de predicción no se filtra ni se restringe por el tipo de modelo que ha seleccionado. Por consiguiente, si tiene alguna duda sobre si la función se admite para el tipo actual del modelo, basta con agregar la función a la lista y verla si hay un error.<br /><br /> Los elementos de lista que van precedidos por $ (como $AdjustedProbability) representan las columnas de la tabla anidada que se genera cuando se utiliza la función, `PredictHistogram`. Estos son los métodos abreviados que puede usar para devolver una columna y no una tabla anidada.|  
+    |**Prediction Function**|Seleccione esta opción para examinar una lista de funciones de predicción.<br /><br /> Los valores o funciones que seleccione se agregan a la parte SELECT de la instrucción DMX resultante.<br /><br /> La lista de funciones de predicción no se filtra ni se restringe por el tipo de modelo que ha seleccionado. Por consiguiente, si tiene alguna duda sobre si la función se admite para el tipo actual del modelo, basta con agregar la función a la lista y verla si hay un error.<br /><br /> Los elementos de lista que van precedidos por $ (como $AdjustedProbability) representan las columnas de la tabla anidada que se genera cuando se utiliza la función `PredictHistogram`. Estos son los métodos abreviados que puede usar para devolver una columna y no una tabla anidada.|  
     |**Expresión personalizada**|Seleccione esta opción para escribir una expresión personalizada y asignar después un alias a la salida.<br /><br /> La expresión personalizada se agrega a la parte SELECT de la consulta de predicción resultante DMX.<br /><br /> Esta opción es útil si desea agregar el texto de la salida a cada fila, llamar a funciones de VB o llamar a procedimientos almacenados personalizados.<br /><br /> Para más información sobre cómo usar funciones de Excel y VBA desde DMX, vea [Funciones de VBA en MDX y DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Después de agregar cada función o expresión, cambie a la vista DMX para ver cómo se agrega la función dentro de la instrucción DMX.  
@@ -77,7 +77,7 @@ ms.locfileid: "48106685"
     > [!WARNING]  
     >  El generador de consultas de predicción no valida el DMX hasta que haga clic en **Resultados**. A menudo, encontrará que la expresión que genera el generador de consultas DMX es no válida. Algunas de las causas habituales son que se hace referencia a una columna que no está relacionada con la columna de predicción o bien que se intenta predecir una columna de una tabla anidada, lo que requiere una instrucción sub-SELECT. En este momento puede cambiar a la vista DMX y continuar modificando la instrucción.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Ejemplo: crear una consulta en un modelo de clústeres  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Ejemplo: Crear una consulta en un modelo de agrupación en clústeres  
   
 1.  Si no tiene un modelo de clústeres disponible para crear esta consulta de ejemplo, cree el modelo, [TM_Clustering], con el [Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48106685"
     |----------------|--------------|-------------|-------------|  
     |0|Clúster 8|954|953.948638926372|  
   
- Si desea agregar otras cláusulas en otra parte de la instrucción, por ejemplo, si desea agregar la cláusula WHERE, no puede agregarla con la cuadrícula; primero deberá cambiar a la vista DMX.  
+ Si desea agregar otras cláusulas en otra parte en la instrucción: por ejemplo, si desea agregar una cláusula WHERE: no se puede agregar mediante el uso de la cuadrícula; en primer lugar debe cambiar a la vista DMX.  
   
 ## <a name="see-also"></a>Vea también  
  [Consultas de minería de datos](data-mining-queries.md)  

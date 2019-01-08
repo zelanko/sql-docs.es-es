@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -15,12 +15,12 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbfc4b20c774becb45570c6ec00c1427a1a87be2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760757"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar un operador para notificaciones de error
   Un operador para notificaciones de error es un usuario que recibe la alerta si ésta no llega al operador designado. En este tema se describe cómo establecer un operador para notificaciones de error para recibir notificaciones de alerta del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el uso de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "48210565"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -59,14 +59,14 @@ ms.locfileid: "48210565"
 1.  En el **Explorador de objetos** , haga clic en el signo más para expandir el servidor que contiene el operador del Agente SQL Server que desea designar como operador para notificaciones de error.  
   
 2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **Propiedades**.  
-  
-3.  En el cuadro de diálogo **Propiedades de Agente SQL Server –***nombre_de_servidor*, en **Seleccionar una página**, seleccione **Sistema de alerta**.  
-  
+
+3.  En el **propiedades de agente SQL Server -**_nombre_servidor_ cuadro de diálogo **seleccionar una página**, seleccione **sistema de alerta**.  
+ 
 4.  En **Operador para notificaciones de error**, seleccione **Habilitar operador para notificaciones de error**.  
   
 5.  En la lista **Operador** , seleccione el operador que desee que sea el operador para notificaciones de error.  
   
-6.  Active alguna o la totalidad de las siguientes casillas para especificar cómo se notificará al operador: **Correo electrónico**, **Buscapersonas**o **Net send**.  
+6.  Seleccione alguna o la totalidad de las siguientes casillas para especificar cómo se notificará al operador: **Correo electrónico**, **buscapersonas**, o **Net send**.  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   

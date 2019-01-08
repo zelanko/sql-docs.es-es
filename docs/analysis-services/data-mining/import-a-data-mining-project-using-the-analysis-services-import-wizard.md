@@ -1,5 +1,5 @@
 ---
-title: Importar un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services | Documentos de Microsoft
+title: Importar un proyecto de minería de datos mediante el Asistente para importación de Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 85c2dcce84447c1a6c9d3baa3dcd99cd01e877bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52e98d6916b66c4ab26b2791d023d25bffc4cab8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014992"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525497"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Cantidad un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34014992"
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importar los orígenes de datos, estructuras de minería de datos y modelos de minería de datos de un proyecto de minería de datos existente  
  Al usar la plantilla de proyecto **Importar del servidor (multidimensional y minería de datos)**, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea un nuevo proyecto de minería de datos y después copia los metadatos del proyecto especificado de minería de datos. El nuevo proyecto contiene los mismos orígenes de datos, vistas del origen de datos, estructuras de minería de datos y modelos de minería de datos que la base de datos de los que los importó. Sin embargo, el proyecto no se puede utilizar hasta que se haya actualizado ciertas propiedades y haya procesado los objetos según se indica:  
   
--   Los propios datos no se copian del servidor de origen al nuevo proyecto de minería de datos, solo se importan las definiciones de los orígenes de datos y las vistas del origen de datos. Por consiguiente, cuando el proceso de importación haya finalizado y los objetos se hayan creado, debe rellenar los objetos con datos entrenando los modelos dependientes y las estructuras de minería de datos. Puede utilizar el comando **Procesar todo** del Diseñador de minería de datos para entrenar los modelos y las estructuras.  
+-   Los datos en sí no se copian desde el servidor de origen para la minería de datos nuevo proyecto solo que se importan las definiciones de los orígenes de datos y vistas del origen de datos. Por consiguiente, cuando el proceso de importación haya finalizado y los objetos se hayan creado, debe rellenar los objetos con datos entrenando los modelos dependientes y las estructuras de minería de datos. Puede utilizar el comando **Procesar todo** del Diseñador de minería de datos para entrenar los modelos y las estructuras.  
   
 -   Si importa un proyecto creado en una versión anterior de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el origen de datos puede utilizar proveedores que no estén instalados en el servidor en el que vaya a importar el proyecto. Si surgen errores al procesar las estructuras de minería de datos importadas, haga clic con el botón derecho en cada origen de datos y seleccione **Abrir diseñador** para modificar la cadena de conexión y revisar las propiedades del proveedor.  
   

@@ -13,12 +13,12 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13a1b980174fa04428b1c9d525554501360db1cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b9fbcb4aa054d261d47bea61edf1d1815cba27f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169025"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401038"
 ---
 # <a name="table-properties-ssas-tabular"></a>Propiedades de la tabla (SSAS tabular)
   En este tema se describen las propiedades de la tabla del modelo. Las propiedades que se describen aquí son diferentes de las del cuadro de diálogo Editar propiedades de tabla, que definen qué columnas del origen se importan.  
@@ -34,7 +34,7 @@ ms.locfileid: "48169025"
   
 |Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
-|**Nombre de conexión**|\<nombre de la conexión >|Nombre de la conexión con el origen de datos de la tabla.<br /><br /> Para modificar la conexión, haga clic en el botón.|  
+|**Nombre de conexión**|\<nombre de la conexión >|El nombre de la conexión al origen de datos de la tabla.<br /><br /> Para modificar la conexión, haga clic en el botón.|  
 |**Oculto**|False|Especifica si la tabla se oculta en las listas de campos del cliente de informes.|  
 |**Particiones**||Las particiones de la tabla no se muestran en la ventana **Propiedades** . Para ver, crear o modificar las particiones, haga clic en el botón para abrir el Administrador de particiones.|  
 |**Datos de origen**||El origen de datos de la tabla no se pueden mostrar en la ventana **Propiedades** . Para ver o modificar los datos de origen, haga clic en el botón para abrir el cuadro de diálogo Editar propiedades de tabla.|  

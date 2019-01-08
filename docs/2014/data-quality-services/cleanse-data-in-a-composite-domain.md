@@ -10,12 +10,12 @@ ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1302a354255c6b98a46cd2c1aef234fe3f1c5f67
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 4d8fd1e95d3058f9375a109a27effee24335e840
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029263"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410072"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpiar datos en un dominio compuesto
   Este tema proporciona información sobre la limpieza de dominios compuestos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de dos o más dominios individuales y se asigna a un campo de datos que consta de varios términos relacionados. Todos los dominios que forman un dominio compuesto deben tener un área de conocimiento común. Para obtener información detallada acerca de los dominios compuestos, vea [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -36,9 +36,9 @@ ms.locfileid: "51029263"
 ##  <a name="CDCorrection"></a> Corrección de datos mediante reglas entre dominios definitivas  
  Las reglas entre dominios existentes en un dominio compuesto permiten crear reglas que indican la relación que hay entre los dominios que conforman dicho dominio compuesto. Las reglas entre dominios se tienen en cuenta cuando se ejecuta la actividad de limpieza en los datos de origen y resultan involucrados dominios compuestos. Además de permitirle conocer la validez de una regla entre dominios, la cláusula *Then* definitiva **El valor es igual a**de una regla entre dominios también corrige los datos durante la actividad de limpieza de datos.  
   
- Consideremos el siguiente ejemplo: existe un dominio compuesto, Product, con tres dominios individuales: ProductName, CompanyName y ProductVersion. Cree la siguiente regla entre dominios definitiva:  
+ Considere el siguiente ejemplo: hay un dominio compuesto, Product, con tres dominios individuales: ProductName, CompanyName y ProductVersion. Cree la siguiente regla entre dominios definitiva:  
   
- SI en el dominio ‘CompanyName’ el valor contiene *Microsoft* y en el dominio ‘ProductName’ el valor es igual a *Office* y en ‘ProductVersion’ el valor es igual a *2010* ENTONCES en el dominio ‘ProductName’ el valor es igual a *Microsoft Office 2010*.  
+ SI en el dominio "CompanyName" el valor contiene *Microsoft* y en el dominio "ProductName" el valor es igual a *Office* y en "ProductVersion" el valor es igual a *2010* ENTONCES en el dominio "ProductName" el valor es igual a *Microsoft Office 2010*.  
   
  Cuando se ejecuta esta regla entre dominios, los datos de origen (ProductName) se corrigen a los datos siguientes después de la actividad de limpieza:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "51029263"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Cuando pruebe la cláusula *Then* definitiva **El valor es igual a**de la regla entre dominios, el cuadro de diálogo **Probar regla de dominio compuesto** contendrá una columna nueva, **Corregir a**, que mostrará los datos correctos. En un proyecto de limpieza de datos de calidad, esta regla entre dominios definitiva cambia los datos con una confianza plena, y en la columna **Motivo** se muestra el siguiente mensaje: corregido por la regla "*\<nombre de la regla entre dominios>*". Para obtener más información acerca de las reglas entre dominios, vea [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Cuando pruebe la cláusula *Then* definitiva **El valor es igual a**de la regla entre dominios, el cuadro de diálogo **Probar regla de dominio compuesto** contendrá una columna nueva, **Corregir a**, que mostrará los datos correctos. En un proyecto de calidad limpieza de datos, esta regla entre dominios definitiva cambia los datos con confianza del 100% y el **motivo** columna muestra el mensaje siguiente: Corregido por la regla '*\<nombre de la regla entre dominios >*'. Para obtener más información acerca de las reglas entre dominios, vea [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La regla entre dominios definitiva no funcionará en dominios compuestos que estén adjuntados al servicio de datos de referencia.  

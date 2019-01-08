@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92641d34920b0ef7ea7a9e7ad929e6976d644ffe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064201"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415642"
 ---
 # <a name="view-statistics-properties"></a>Ver propiedades de estadísticas
   Puede mostrar las estadísticas de optimización de consultas actuales para una tabla o vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los objetos de estadísticas incluyen un encabezado con metadatos sobre las estadísticas, un histograma con la distribución de valores de la primera columna de clave del objeto de estadísticas y un vector de la densidad para medir la correlación entre las columnas. Para obtener más información sobre histogramas y vectores de densidad, vea [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
@@ -37,7 +37,7 @@ ms.locfileid: "48064201"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48064201"
   
 2.  Haga clic en el signo más para expandir la carpeta **Tablas** .  
   
-3.  Haga clic en el signo más para expandir la tabla en la que desea ver las propiedades de las estadísticas.  
+3.  Haga clic en el signo más para expandir la tabla en la que quiere ver las propiedades de las estadísticas.  
   
 4.  Haga clic en el signo más para expandir la carpeta **Estadísticas** .  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48064201"
      Muestra el nombre del objeto de base de datos donde se almacenan las estadísticas.  
   
      **Estadísticas para INDEXnombre_de_estadísticas**  
-     Este cuadro de texto muestra las propiedades devueltas del objeto de estadísticas. Estas propiedades se dividen en tres secciones: encabezado de estadísticas, vector de densidad e histograma.  
+     Este cuadro de texto muestra las propiedades devueltas del objeto de estadísticas. Estas propiedades se dividen en tres secciones: Encabezado de estadísticas, Vector de densidad e histograma.  
   
      La siguiente información se describen las columnas devueltas en el conjunto de resultados para el encabezado de estadísticas.  
   
-     **Nombre**  
+     **Name**  
      Nombre del objeto de estadísticas.  
   
      **Actualizado**  
@@ -106,7 +106,7 @@ ms.locfileid: "48064201"
      La siguiente información describe las columnas devueltas en el conjunto de resultados del vector de densidad.  
   
      **Toda la densidad**  
-     La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Con el prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6) (4, 4, 6) (4, 5, 6) (4, 5, 7). Con el prefijo (A, B), los mismos valores de columna tienen estas listas de valores distintos: (3, 5), (4, 4) y (4, 5).  
+     La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Si se usa el prefijo (B, B, C), cada una de estas listas será una lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Si se usa el prefino (A, B) los valores de la misma columna tendrán estas listas de valores distintos: (3, 5), (4, 4) y (4, 5).  
   
      **Promedio de longitud**  
      Promedio de longitud, en bytes, para almacenar una lista de los valores de columna del prefijo de columna. Por ejemplo, si cada valor de la lista (3, 5, 6) necesita 4 bytes, la longitud es 12 bytes.  

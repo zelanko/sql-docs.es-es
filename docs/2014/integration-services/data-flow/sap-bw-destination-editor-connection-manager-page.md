@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46572a9fac9e3d1749c65acf9370718fbc8b3dd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4d8da5c0b352964fe9017be902557e29e1e2ed3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125515"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781427"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de destino de SAP BW (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de SAP BW** para seleccionar un administrador de conexiones de SAP BW que va a usar el destino SAP BW. En esta página, puede seleccionar los parámetros para cargar los datos en el sistema SAP Netweaver BW.  
@@ -80,7 +79,7 @@ ms.locfileid: "48125515"
  Permite escribir el nombre del servidor o la dirección IP del host de puerta de enlace. Normalmente, el nombre o la dirección IP es el mismo que el del servidor de aplicaciones SAP.  
   
  **Servicio de puerta de enlace**  
- Escriba el nombre del servicio de puerta de enlace, en el formato `sapgwNN`, donde `NN` es el número del sistema.  
+ Escriba el nombre del servicio de puerta de enlace, con el formato `sapgwNN`, donde `NN` es el número del sistema.  
   
  **Id. de programa**  
  Permite escribir el identificador de programa asociado al destino RFC.  
@@ -111,7 +110,7 @@ ms.locfileid: "48125515"
 |**InfoPackage**|Cree un InfoPackage nuevo con el cuadro de diálogo **Crear InfoPackage** . Para obtener más información sobre este cuadro de diálogo, vea [Create InfoPackage](create-infopackage.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de destino de SAP BW &#40;página asignaciones&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [Editor de destino de SAP BW &#40;página Asignaciones&#41;](sap-bw-destination-editor-mappings-page.md)   
  [Editor de destino de SAP BW &#40;página Salida de error&#41;](sap-bw-destination-editor-error-output-page.md)   
  [Editor de destino de SAP BW &#40;página Opciones avanzadas&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

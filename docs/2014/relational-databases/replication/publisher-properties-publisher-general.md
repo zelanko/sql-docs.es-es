@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.pubproperties.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fee9e9c98f06590978ddbe3a0a136ce275f0a4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30045c5a124792c7e7b6b7caa87977c87f22a0b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157017"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778987"
 ---
 # <a name="publisher-properties---publisher-general"></a>Propiedades del publicador (Publicador, General)
   La página **General** del cuadro de diálogo **Propiedades del publicador** muestra información de solo lectura sobre el distribuidor y la base de datos de distribución usada por el publicador. Para cambiar el distribuidor o la base de datos de distribución de un publicador:  

@@ -11,15 +11,15 @@ ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50ddca5c3cdb1b7e314ccc6650bbd8fcc3ed3841
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113445"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411682"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinar el modo de servidor de una instancia de Analysis Services
-  Analysis Services se puede instalar en uno de estos tres modos de servidor: multidimensional y de minería de datos (valor predeterminado), PowerPivot para SharePoint, y tabular. El modo de servidor de una instancia de Analysis Services se determina durante la instalación al elegir las opciones para instalar el servidor.  
+  Analysis Services puede instalarse en uno de los tres modos de servidor: multidimensional y minería de datos (predeterminado), PowerPivot para SharePoint y tabular. El modo de servidor de una instancia de Analysis Services se determina durante la instalación al elegir las opciones para instalar el servidor.  
   
  El modo de servidor determina el tipo de solución que se crea e implementa. Si no ha instalado el software de servidor y desea saber en qué modo se instaló el servidor, puede utilizar la información de este tema para determinar el modo. Para obtener más información sobre las características disponibles en un modo específico, vea [Comparar soluciones tabulares y multidimensionales &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -34,10 +34,10 @@ ms.locfileid: "48113445"
  También puede comprobar la propiedad de `DeploymentMode` en el archivo msmdsrv.ini que se incluye en cada instancia de Analysis Services. El valor de esta propiedad identifica el modo del servidor. Los valores válidos son 0 (Multidimensional), 1 (SharePoint), o 2 (Tabular). Debe ser administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (es decir, miembro del rol de servidor) para abrir el archivo msmdsrv.ini. Este archivo contiene XML estructurado. Puede utilizar el Bloc de notas u otro editor de texto para ver el archivo.  
   
 > [!CAUTION]  
->  No cambie el valor de la `DeploymentMode` propiedad. No se puede cambiar la propiedad de forma manual una vez instalado el servidor.  
+>  No cambie el valor de la propiedad `DeploymentMode`. No se puede cambiar la propiedad de forma manual una vez instalado el servidor.  
   
 ## <a name="about-the-deploymentmode-property"></a>Acerca de la propiedad DeploymentMode  
- La propiedad `DeploymentMode` determina el contexto operativo de una instancia de servidor de Analysis Services. Esta propiedad se denomina ‘modo de servidor’ en los cuadros de diálogo, los mensajes y la documentación. El programa de instalación inicializa esta propiedad en función de cómo se instale Analysis Services. Esta propiedad debe considerarse interna únicamente y siempre se usa el valor especificado por el programa de instalación.  
+ La propiedad `DeploymentMode` determina el contexto operativo de una instancia de servidor de Analysis Services. Esta propiedad se denomina 'modo de servidor"en los cuadros de diálogo, mensajes y documentación. El programa de instalación inicializa esta propiedad en función de cómo se instale Analysis Services. Esta propiedad debe considerarse interna únicamente y siempre se usa el valor especificado por el programa de instalación.  
   
  Los valores válidos de esta propiedad incluyen los siguientes:  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48113445"
  [Instalar Analysis Services en modo Tabular](install-windows/install-analysis-services.md)   
  [Instalar Analysis Services en el modo de minería de datos y multidimensional](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot para SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Conectarse a Analysis Services](connect-to-analysis-services.md)   
- [Soluciones de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)   
+ [Conectar a Analysis Services](connect-to-analysis-services.md)   
+ [Soluciones de modelos tabulares &#40;SSAS tabular&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [Soluciones de modelos multidimensionales &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Los modelos de minería de datos &#40;Analysis Services - minería de datos&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

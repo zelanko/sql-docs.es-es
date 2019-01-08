@@ -15,12 +15,12 @@ ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a251b8599ba194a151790c2a781e49c643b00048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a70bcc9e853908022147ef02e9d2019179c90875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089035"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545486"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Editor de destino de SQL (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de SQL** para especificar opciones avanzadas de inserción masiva.  
@@ -68,9 +68,9 @@ ms.locfileid: "48089035"
  Escriba los nombres de las columnas de orden. Las columnas se pueden ordenar en sentido ascendente o descendente. Si utiliza varias columnas de orden, delimite la lista con comas.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de SQL &#40;página Administrador de conexiones&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [Editor de destino de SQL &#40;página asignaciones&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [Editor de destino de SQL &#40;página Asignaciones&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [Realizar una carga masiva de datos mediante el destino de SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

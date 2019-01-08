@@ -10,15 +10,15 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a03d8d9aa407fd57f658c76a035650952648dcfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5599bbb0aa1736ba5c88904ae5152a0d73856dc5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063765"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364327"
 ---
 # <a name="connecting-to-a-azure-sql-database-using-sql-server-native-client"></a>Conexión a una Azure SQL Database con SQL Server Native Client
-  Para obtener un ejemplo que muestra cómo conectarse a un [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vea [desarrollo: temas de procedimientos (Microsoft Azure SQL Database)](http://msdn.microsoft.com/library/ee621787.aspx).  
+  Para obtener un ejemplo que muestra cómo conectarse a un [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vea [desarrollo: Temas de procedimientos (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Problemas conocidos para conectarse a una SQL Database  
  A continuación se describen problemas conocidos para conectarse a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  

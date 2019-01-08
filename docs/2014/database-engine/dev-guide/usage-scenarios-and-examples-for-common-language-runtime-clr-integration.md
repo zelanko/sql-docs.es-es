@@ -19,17 +19,17 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8144c1b4008f7c0a7d8280392ee421d5cb0f0a77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 550483f71344a790225a2d22b1caf09cee16b9f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126881"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360477"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Escenarios de uso y ejemplos para la integración de Common Language Runtime (CLR)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye aplicaciones de ejemplo, ejemplos de paquete y numerosos ejemplos de código que se pueden usar para aprender las características de programación de la integración con Common Language Runtime (CLR).  
   
- Para proyectos de Visual Studio completados implementan estos ejemplos y materiales adicionales, visite [Microsoft SQL Server Community Projects & Samples de CodePlex](http://go.microsoft.com/fwlink/?LinkID=193935).  
+ Para proyectos de Visual Studio completados implementan estos ejemplos y materiales adicionales, visite [Microsoft SQL Server Community Projects & Samples de CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
 |Nombre|Descripción|  
 |----------|-----------------|  

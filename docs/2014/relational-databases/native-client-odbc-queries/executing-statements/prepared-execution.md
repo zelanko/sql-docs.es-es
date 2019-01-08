@@ -17,15 +17,15 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 508d4083549cf1c6db6209be08d23b3fad054845
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207945"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354226"
 ---
 # <a name="prepared-execution"></a>Ejecución preparada
-  La API de ODBC define la ejecución preparada como una manera de reducir la sobrecarga de análisis y compilación asociada a la ejecución reiterativa de una instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La aplicación genera una cadena de caracteres que contiene una instrucción SQL y, a continuación, la ejecuta en dos fases. Llama a [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) una vez que la instrucción que se analizará y compilará en un plan de ejecución el [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. A continuación, llama **SQLExecute** para cada ejecución del plan de ejecución preparada. De esta forma, se guarda la sobrecarga de análisis y compilación en cada ejecución. Las aplicaciones suelen usar la ejecución preparada para ejecutar repetidamente una misma instrucción SQL parametrizada.  
+  La API de ODBC define la ejecución preparada como una manera de reducir la sobrecarga de análisis y compilación asociada a la ejecución reiterativa de una instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La aplicación genera una cadena de caracteres que contiene una instrucción SQL y, a continuación, la ejecuta en dos fases. Llama a [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) una vez que la instrucción que se analizará y compilará en un plan de ejecución el [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. A continuación, llama **SQLExecute** para cada ejecución del plan de ejecución preparada. De esta forma, se guarda la sobrecarga de análisis y compilación en cada ejecución. Las aplicaciones suelen usar la ejecución preparada para ejecutar repetidamente una misma instrucción SQL parametrizada.  
   
  Para la mayoría de las bases de datos, la ejecución preparada es más rápida que la ejecución directa de instrucciones que se ejecutan más de tres o cuatro veces, principalmente porque la instrucción se compila solo una vez, mientras que las instrucciones ejecutadas directamente se compilan cada vez que se ejecutan. La ejecución preparada también puede proporcionar una reducción del tráfico de red porque el controlador puede enviar un identificador de plan de ejecución y los valores de los parámetros, en lugar de una instrucción SQL completa, al origen de datos cada vez que se ejecuta la instrucción.  
   

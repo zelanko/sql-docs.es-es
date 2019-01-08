@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39c56fa962f1a39019d63918c52a1e7e21da94ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a16f1bae7c824d61d379e79b983077db44069709
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138535"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377885"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Agregar compatibilidad con la depuración de una tarea personalizada
   El motor de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite suspender paquetes, tareas y otros tipos de contenedores durante la ejecución mediante puntos de interrupción. El uso de puntos de interrupción le permite revisar y corregir los errores que impiden que la aplicación o tareas se ejecuten correctamente. La arquitectura de punto de interrupción permite al cliente evaluar el valor en tiempo de ejecución de los objetos del paquete en los puntos definidos de ejecución mientras se suspende el procesamiento de la tarea.  
@@ -342,7 +340,7 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Depurar el flujo de control](../../troubleshooting/debugging-control-flow.md)  

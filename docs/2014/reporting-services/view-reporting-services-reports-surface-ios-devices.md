@@ -17,18 +17,18 @@ ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8f458589e995162a8753270fbdebe9554a44122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cc1725bc1cad98033fbc4c47c1611e7c8b35f32
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188825"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360237"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Ver informes de Reporting Services en dispositivos de Microsoft Surface y de Apple iOS
   En este artículo se describen las características y los flujos de trabajo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admitidos para dispositivos de Microsoft Surface, y para dispositivos con Apple iOS 6 y Apple Safari como el iPad.  
   
 ## <a name="view-and-interact-with-reports"></a>Ver e interactuar con informes  
- A partir de [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite la visualización e interactividad básica con informes en dispositivos de Microsoft Surface y con Apple iOS 6 y el explorador Apple Safari como el iPad. También puede publicar informes mediante dispositivos de Microsoft Surface.  
+ A partir de [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite la visualización e interactividad básica con informes en dispositivos de Microsoft Surface, y en dispositivos con Apple iOS 6 y con el explorador Apple Safari como el iPad. También puede publicar informes mediante dispositivos de Microsoft Surface.  
   
  ![Escritorio del IPad](media/videothumbnail.jpg "escritorio del IPad")  
 Vea una demostración de cómo ver informes en un iPad.  
@@ -39,9 +39,9 @@ Vea una demostración de cómo ver informes en un iPad.
   
 -   Si se trata de un servidor de informes en modo nativo, instale [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] o posterior.  
   
-     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] está disponible para su descarga desde el [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=35575).  
+     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] está disponible para su descarga desde el [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35575).  
   
--   Para un servidor de informes de modo de SharePoint, instale [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] o una versión posterior de la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complemento para productos de SharePoint.  
+-   Si es un servidor de informes en modo de SharePoint, instale la versión [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] o posterior del complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint.  
   
  **Para ver e interactuar con un informe en un dispositivo iPad o dispositivo Microsoft Surface**  
   
@@ -49,18 +49,18 @@ Vea una demostración de cómo ver informes en un iPad.
   
 2.  Abra el informe realizando una de las acciones siguientes.  
   
-    -   **Iniciar desde correo electrónico:** desde un correo electrónico creado por un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suscripción, puntee en la dirección URL del informe. El informe se abrirá en el explorador.  
+    -   **Iniciar desde correo electrónico:** Desde un correo electrónico creado por una suscripción de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], puntee en la dirección URL del informe. El informe se abrirá en el explorador.  
   
-    -   **Iniciar desde el servidor de informes:** busque el directorio en el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de informes y, a continuación, puntee en el nombre del informe para abrir el informe.  
+    -   **Iniciar desde el servidor de informes:** Busque el directorio en el servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y pulse en el nombre del informe para abrirlo.  
   
-    -   **Iniciar desde una biblioteca de documentos de SharePoint:** vaya a una biblioteca de documentos de SharePoint que contiene [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] informes y, a continuación, puntee en el nombre del informe. Puede ver e interactuar con el informe.  
+    -   **Iniciar desde una biblioteca de documentos de SharePoint:** Vaya a una biblioteca de documentos de SharePoint que contenga informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y después pulse en el nombre del informe. Puede ver e interactuar con el informe.  
   
         > [!IMPORTANT]  
         >  Para el iPad, asegúrese de que la propiedad **Exploración privada** de Safari esté desactivada.  
   
-    -   **Elemento web de SharePoint:** si se ha agregado el elemento web a una página de SharePoint, puede ver [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] informes.  
+    -   **Elemento web de SharePoint:** Si el elemento web se agregó a una página de SharePoint, puede ver informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-3.  También puede abrir el informe en el dispositivo de Microsoft Surface utilizando el Administrador de informes. Vaya al directorio en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] el Administrador de informes y, a continuación, puntee en el nombre del informe para abrir el informe.  
+3.  También puede abrir el informe en el dispositivo de Microsoft Surface utilizando el Administrador de informes. Busque el directorio en el Administrador de informes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y, a continuación, puntee en el nombre del informe para abrirlo.  
   
     > [!IMPORTANT]  
     >  No se admite ver informes del Administrador de informes en un iPad.  
@@ -89,7 +89,7 @@ Vea una demostración de cómo ver informes en un iPad.
   
     -   Exporte el informe punteando en el icono del **menú desplegable Exportar** y punteando después en un formato de archivo.  
   
-        -   Si está viendo el informe en un dispositivo de Microsoft Surface, puede exportar el informe a uno de los formatos siguientes.  
+        -   Si está viendo el informe en un dispositivo Microsoft Surface, puede exportar el informe a uno de los siguientes formatos.  
   
             -   Archivo XML con datos de informe  
   
@@ -112,7 +112,7 @@ Vea una demostración de cómo ver informes en un iPad.
   
  En general, se recomienda no utilizar RSWindowsBasic en entornos sin conexión https, porque este tipo de autenticación no proporciona confidencialidad para las credenciales transmitidas.  
   
- Para obtener más información acerca de la autenticación RSWindowsNTLM y RSWindowsBasic, vea [autenticación con el servidor de informes](security/authentication-with-the-report-server.md).  
+ Para obtener más información sobre las autenticaciones RSWindowsNTLM y RSWindowsBasic, vea [Authentication with the Report Server](security/authentication-with-the-report-server.md).  
   
 ## <a name="uploading-reports"></a>Cargar informes  
  Puede publicar informes desde un dispositivo de Microsoft Surface mediante uno de los métodos siguientes si dispone de los permisos adecuados.  
@@ -125,20 +125,20 @@ Vea una demostración de cómo ver informes en un iPad.
 -   Cargar un archivo de definición de informe en la base de datos del servidor de informes abriendo el Administrador de informes y punteando en **Cargar archivo**.  
   
 ## <a name="additional-information"></a>Información adicional  
- Para obtener más información sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y los exploradores admitidos, vea:  
+ Para obtener más información acerca de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y los exploradores admitidos, vea:  
   
 -   [Planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  Para obtener más información acerca de Microsoft Business Intelligence y los dispositivos móviles, vea lo siguiente:  
   
--   [Información general de dispositivos móviles y SharePoint 2013](http://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161351(v=office.15).aspx).  
+-   [Información general de dispositivos móviles y SharePoint 2013](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161351(v=office.15).aspx).  
   
--   [Admite los exploradores de dispositivos móviles en SharePoint 2013](http://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
+-   [Admite los exploradores de dispositivos móviles en SharePoint 2013](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
   
--   [Ver informes y cuadros de mandos en dispositivos iPad de Apple (SharePoint Server 2010)](http://technet.microsoft.com/library/hh697482.aspx) (http://technet.microsoft.com/library/hh697482.aspx).  
+-   [Ver informes y cuadros de mandos en dispositivos iPad de Apple (SharePoint Server 2010)](https://technet.microsoft.com/library/hh697482.aspx) (https://technet.microsoft.com/library/hh697482.aspx).  
   
--   [Ver informes de Reporting Services en un iPad (vídeo)](http://technet.microsoft.com/sqlserver/jj873792.aspx) (http://technet.microsoft.com/sqlserver/jj873792.aspx).  
+-   [Ver informes de Reporting Services en un iPad (vídeo)](https://technet.microsoft.com/sqlserver/jj873792.aspx) (https://technet.microsoft.com/sqlserver/jj873792.aspx).  
   
--   [Visualización de informes de Reporting Services en un dispositivo de RT de Microsoft Surface (vídeo)](http://technet.microsoft.com/sqlserver/dn146017)  
+-   [Visualización de informes de Reporting Services en un dispositivo de RT de Microsoft Surface (vídeo)](https://technet.microsoft.com/sqlserver/dn146017)  
   
   

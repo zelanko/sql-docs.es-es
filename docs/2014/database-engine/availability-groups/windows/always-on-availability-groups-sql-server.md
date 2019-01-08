@@ -16,12 +16,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e560cae97a647b484bc75936db31434dc08864a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1e86eec76a94a3858ede48fc0fb1b0703de4508
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177015"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356254"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Grupos de disponibilidad AlwaysOn (SQL Server)
   La característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Incorporada en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] maximiza la disponibilidad de un conjunto de bases de datos de usuario para una empresa. Un *grupo de disponibilidad* admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como *bases de datos de disponibilidad*, que realizan la conmutación por error conjuntamente. Un grupo de disponibilidad admite un conjunto de bases de datos principales de lectura y escritura y de uno a ocho conjuntos de bases de datos secundarias correspondientes. Opcionalmente, las bases de datos secundarias pueden estar disponibles para el acceso de solo lectura o para algunas operaciones de copia de seguridad.  
@@ -49,9 +49,9 @@ ms.locfileid: "48177015"
   
 -   Permite configurar una réplica de disponibilidad determinada que admite una o dos de las funciones secundarias activas siguientes:  
   
-    -   Tener acceso de conexión de solo lectura, que permite conexiones de solo lectura a la réplica para obtener acceso y leer sus bases de datos cuando se ejecuta como una réplica secundaria. Para obtener más información, consulte [secundarias activas: réplicas secundarias legibles; Grupos de disponibilidad Always On](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   Tener acceso de conexión de solo lectura, que permite conexiones de solo lectura a la réplica para obtener acceso y leer sus bases de datos cuando se ejecuta como una réplica secundaria. Para obtener más información, consulte [secundarias activas: Réplicas secundarias legibles; Grupos de disponibilidad Always On](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
-    -   Realizar operaciones de copia de seguridad en sus bases de datos cuando se ejecuta como una réplica secundaria. Para obtener más información, consulte [secundarias activas: copia de seguridad en réplicas secundarias](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   Realizar operaciones de copia de seguridad en sus bases de datos cuando se ejecuta como una réplica secundaria. Para obtener más información, consulte [secundarias activas: Copia de seguridad en réplicas secundarias](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
      Con capacidades secundarias activas se mejora la eficiencia de los procesos de TI y se reducen los costos mediante la mejor utilización de los recursos del hardware secundario. Además, las aplicaciones de lectura de descarga y los trabajos de copia de seguridad de las réplicas secundarias ayudan a mejorar el rendimiento de la réplica primaria.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48177015"
   
         -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] inicia una conmutación manual por error en un grupo de disponibilidad. Dependiendo de la configuración y el estado de la réplica secundaria que se especifique como destino de la conmutación por error, el asistente puede realizar una conmutación por error manual planeada o forzada. Para obtener más información, consulte [usar el error a través de asistente grupo de disponibilidad; SQL Server Management Studio; ](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   El [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] supervisa los grupos de disponibilidad AlwaysOn, réplicas de disponibilidad y bases de datos de disponibilidad y evalúa los resultados de directivas de AlwaysOn. Para obtener más información, consulte [utilice el panel de AlwaysOn SQL Server Management Studio; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] supervisa los grupos de disponibilidad AlwaysOn, las réplicas de disponibilidad y las bases de datos de disponibilidad y evalúa los resultados de las directivas de AlwaysOn. Para obtener más información, consulte [utilice el panel de AlwaysOn SQL Server Management Studio; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
     -   El panel Detalles del Explorador de objetos muestra información básica acerca de los grupos de disponibilidad existentes. Para obtener más información, consulte [usar los detalles del explorador de objetos al grupo de disponibilidad de Monitor; SQL Server Management Studio; ](use-object-explorer-details-to-monitor-availability-groups.md).  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48177015"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  Para obtener información sobre las restricciones y limitaciones del uso de otras características con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [grupos de disponibilidad AlwaysOn: interoperabilidad. SQL Server. ](always-on-availability-groups-interoperability-sql-server.md).  
+>  Para obtener información sobre las restricciones y limitaciones del uso de otras características con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [grupos de disponibilidad AlwaysOn: Interoperabilidad; SQL Server. ](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -151,19 +151,19 @@ ms.locfileid: "48177015"
   
 -   **Blogs:**  
   
-     [SQL Server siempre blogs del equipo: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs del equipo de AlwaysOn de SQL Server: El blog del equipo de AlwaysOn oficial SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server de CSS](http://blogs.msdn.com/b/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vídeos:**  
   
-     [Microsoft SQL Server Code-Named "Denali", Serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de próxima generación](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" AlwaysOn Series, parte 1: Introducción a la solución de alta disponibilidad de siguiente generación](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn Series, parte 2: Creación de una solución esencial de alta disponibilidad utilizando AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Notas del producto:**  
   
-     [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

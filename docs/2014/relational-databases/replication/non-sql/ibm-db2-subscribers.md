@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
@@ -17,12 +16,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedd4c228f540cd4277b4f77750e797b70424c30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155365"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356659"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite suscripciones de inserción a IBM DB2/AS 400, DB2/MVS y DB2/Universal Database a través de los proveedores de OLE DB incluidos con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
@@ -32,11 +31,11 @@ ms.locfileid: "48155365"
   
 1.  Instale la versión más reciente del proveedor OLE DB de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para DB2 en el distribuidor:  
   
-    -   Si usas [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], en el [descargas de SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=149256) página Web, en el **descargas relacionadas** sección, haga clic en el vínculo a la versión más reciente de Microsoft SQL Server 2008 Feature Pack. En la página web **Microsoft SQL Server 2008 Feature Pack** , busque **Microsoft OLE DB Provider for DB2**(Proveedor Microsoft OLE DB para DB2).  
+    -   Si usa [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], en la página web de [descargas de SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=149256) , en la sección de **descargas relacionadas** , haga clic en el vínculo a la versión más reciente de Microsoft SQL Server 2008 Feature Pack. En la página web **Microsoft SQL Server 2008 Feature Pack** , busque **Microsoft OLE DB Provider for DB2**(Proveedor Microsoft OLE DB para DB2).  
   
     -   Si usa [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard Edition, instale la versión más reciente del servidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS), que contiene el proveedor.  
   
-     Además de instalar el proveedor, le recomendamos que instale la herramienta de acceso a datos, que se usa en el paso siguiente (se instala de forma predeterminada con la descarga de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Para obtener más información sobre la instalación y uso de la Herramienta de acceso a datos, vea la documentación del proveedor o de HIS.  
+     Además de instalar el proveedor, se recomienda instalar la Herramienta de acceso a datos, que se utiliza en el paso siguiente (se instala de manera predeterminada con la descarga de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Para obtener más información sobre la instalación y uso de la Herramienta de acceso a datos, vea la documentación del proveedor o de HIS.  
   
 2.  Cree una cadena de conexión para el suscriptor. La cadena de conexión se puede crear en cualquier editor de texto, pero se recomienda utilizar la Herramienta de acceso a datos. Para crear la cadena en la Herramienta de acceso a datos:  
   

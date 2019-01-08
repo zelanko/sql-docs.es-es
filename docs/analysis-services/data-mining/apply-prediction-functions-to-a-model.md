@@ -1,5 +1,5 @@
 ---
-title: Aplicar funciones de predicción a un modelo | Documentos de Microsoft
+title: Aplicar funciones de predicción a un modelo | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7cd44eb2e5d5449283d1e222b854d065a72e15ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014882"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540661"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funciones de predicción a un modelo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "34014882"
     > [!WARNING]  
     >  El generador de consultas de predicción no valida el DMX hasta que haga clic en **Resultados**. A menudo, encontrará que la expresión que genera el generador de consultas DMX es no válida. Algunas de las causas habituales son que se hace referencia a una columna que no está relacionada con la columna de predicción o bien que se intenta predecir una columna de una tabla anidada, lo que requiere una instrucción sub-SELECT. En este momento puede cambiar a la vista DMX y continuar modificando la instrucción.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Ejemplo: crear una consulta en un modelo de clústeres  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Ejemplo: Crear una consulta en un modelo de agrupación en clústeres  
   
 1.  Si no tiene un modelo de clústeres disponible para crear esta consulta de ejemplo, cree el modelo, [TM_Clustering], con el [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34014882"
     |----------------|--------------|-------------|-------------|  
     |0|Clúster 8|954|953.948638926372|  
   
- Si desea agregar otras cláusulas en otra parte de la instrucción, por ejemplo, si desea agregar la cláusula WHERE, no puede agregarla con la cuadrícula; primero deberá cambiar a la vista DMX.  
+ Si desea agregar otras cláusulas en otra parte en la instrucción: por ejemplo, si desea agregar una cláusula WHERE: no se puede agregar mediante el uso de la cuadrícula; en primer lugar debe cambiar a la vista DMX.  
   
 ## <a name="see-also"></a>Vea también  
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)  

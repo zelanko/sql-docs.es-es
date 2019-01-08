@@ -11,12 +11,12 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145231"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368517"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Proveedores de datos usados para las conexiones de Analysis Services
   Analysis Services proporciona tres proveedores de datos para el acceso al servidor y a datos. Todas las aplicaciones que se conectan a Analysis Services lo hacen mediante uno de estos proveedores. Dos de los proveedores, ADOMD.NET y Objetos de administración de Analysis Services (AMO), son proveedores de datos administrados. El proveedor OLE DB de Analysis Services (MSOLAP DLL) es un proveedor de datos nativo.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145231"
   
  El número de compilación principal de la versión inicial de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] es 12.0.2000.9.  
   
- Para más información acerca de cómo obtener información sobre la versión y la compilación, vea [Cómo determinar la versión y la edición de SQL Server y sus componentes](http://support.microsoft.com/kb/321185).  
+ Para más información acerca de cómo obtener información sobre la versión y la compilación, vea [Cómo determinar la versión y la edición de SQL Server y sus componentes](https://support.microsoft.com/kb/321185).  
   
 ##  <a name="bkmk_LibUpdate"></a> Cómo determinar la versión de los proveedores de datos de Analysis Services  
  Los proveedores de datos se instalan con Analysis Services, así como con las aplicaciones cliente que habitualmente se conectan a bases de datos de Analysis Services, como Excel.  
@@ -74,7 +74,7 @@ ms.locfileid: "50145231"
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>Buscar los proveedores de datos en el sitio de descarga  
   
-1.  Vaya al [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/p/?LinkID=296473).  
+1.  Vaya al [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=296473).  
   
 2.  Expanda **Instrucciones de instalación**.  
   

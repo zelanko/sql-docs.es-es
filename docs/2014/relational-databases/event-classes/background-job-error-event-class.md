@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d997265cd0e6ac0f471376c68bc7525c7ce7a5ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b95db663ea56f8dd43ed1091169f8117292033c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198575"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797097"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error [clase de eventos]
   La clase de eventos **Background Job Error** se produce cuando un trabajo en segundo plano finaliza de forma anómala. Esta condición podría requerir la atención de un administrador del sistema.  
@@ -32,8 +31,8 @@ ms.locfileid: "48198575"
 |**DatabaseID**|**int**|Id. de la base de datos especificada por el trabajo. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |**Error**|**int**|Número de error del último intento (solo**EventSubClass** 1).|31|Sí|  
-|**EventClass**|**int**|Tipo de evento = 193.|27|no|  
-|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|no|  
+|**EventClass**|**int**|Tipo de evento = 193.|27|No|  
+|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
 |**EventSubClass**|**int**|Tipo de la subclase de eventos.<br /><br /> 1 = Abandono del trabajo en segundo plano después de un error.<br /><br /> 2 = Trabajo en segundo plano quitado; la cola está llena.<br /><br /> 3 = El trabajo en segundo plano devolvió un error.|21|Sí|  
 |**IndexID**|**int**|Id. del índice del objeto afectado por el evento. Para determinar el Id. de índice de un objeto, utilice la columna **indid** de la tabla del sistema **sysindexes** .|24|Sí|  
 |**IntegerData**|**int**|Número de intentos del trabajo (solo**EventSubClass** 1).|25|Sí|  

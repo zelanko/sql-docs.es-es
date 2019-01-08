@@ -11,12 +11,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 53349b7a4536c6f757b65a60bbd5a82691f9969e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 370ab6ef7a8376098c7af763c6db8895fb004bad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082305"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371587"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Conceder permisos a los usuarios y alertar a los administradores
   Para que los usuarios y administradores de alertas puedan crear, modificar, eliminar y ver las alertas de datos, se les deben conceder permisos de SharePoint. No hay que usar permisos especiales con la característica de alertas de datos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (se usan los permisos integrados de SharePoint).  
@@ -25,7 +25,7 @@ ms.locfileid: "48082305"
   
  **Administradores de alertas**: se debe incluir el permiso de SharePoint Administrar alerta. De forma predeterminada, solo en nivel de permiso Control total incluye este permiso para los sitios creados con la plantilla de sitio Sitio de equipo. Si utiliza otras plantillas de sitio, verá lista diferentes de grupos de SharePoint predeterminados. Puede agregar el permiso Administrar alertas a uno de los niveles de permisos integrados o crear un nivel de permiso personalizado con el permiso requerido para permitir que los administradores de alertas vean y eliminen las alertas de datos.  
   
- Para más información sobre los permisos de SharePoint, vea [Permisos de usuario y niveles de permisos (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx).  
+ Para más información sobre los permisos de SharePoint, vea [Permisos de usuario y niveles de permisos (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx).  
   
 ### <a name="to-grant-permissions"></a>Para conceder permisos  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48082305"
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;modo integrado de Reporting Services en SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Alertas de datos de Reporting Services](../ssms/agent/alerts.md)  
   
   

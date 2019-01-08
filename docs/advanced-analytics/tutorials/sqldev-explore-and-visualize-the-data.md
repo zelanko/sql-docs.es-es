@@ -1,6 +1,6 @@
 ---
-title: Lección 1 explorar y visualizar datos mediante R y T-SQL (SQL Server Machine Learning) | Microsoft Docs
-description: Tutorial que muestra cómo insertar código de R en SQL Server los procedimientos almacenados y funciones de Transact-SQL
+title: 'Lección 1 explorar y visualizar datos mediante R y T-SQL: SQL Server Machine Learning'
+description: Tutorial que muestra cómo explorar y visualizar datos de SQL Server mediante funciones de R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032222"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645504"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lección 1: Explorar y visualizar los datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ En el conjunto de datos público original, los identificadores de taxis y los re
 
 **Identificadores de taxis**
   
--   La columna _medallion_ representa el número de identificador único del taxi.
+-   El _medallion_ columna representa el número de Id. único del taxi.
   
 -   El _hack\_licencia_ columna contiene el número de licencia del conductor del taxi (anónimo).
   
@@ -67,7 +67,7 @@ Para crear el trazado, use [rxHistogram](https://docs.microsoft.com/machine-lear
 
 2. Pegue el siguiente script para crear un procedimiento almacenado que traza el histograma. En este ejemplo se denomina **RPlotRxHistogram*.
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -108,7 +108,7 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ejecute la instrucción siguiente:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -119,7 +119,7 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
   
 2.  Abra un símbolo del sistema de PowerShell y ejecute el siguiente comando, que proporciona el nombre de instancia adecuado, el nombre de base de datos, nombre de usuario y las credenciales como argumentos. Para aquellos que usen las identidades de Windows, puede reemplazar **- U** y **-P** con **-T**.
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -134,7 +134,7 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
   
     -   Escriba **Y** si quiere guardar los parámetros de salida para un uso posterior.
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -146,7 +146,7 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
   
     **Resultado**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -170,7 +170,7 @@ Este procedimiento almacenado se usa el **Hist** función para crear el histogra
 
 2. Pegue el siguiente script para crear un procedimiento almacenado que traza el histograma. En este ejemplo se denomina **RPlotHist** .
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -244,13 +244,13 @@ Este procedimiento almacenado se usa el **Hist** función para crear el histogra
 
 Ejecute la instrucción siguiente para exportar datos de trazado binario a formatos de archivo JPEG y PDF.
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **Resultado**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 

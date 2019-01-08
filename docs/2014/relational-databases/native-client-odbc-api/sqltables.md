@@ -14,12 +14,12 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90ae76e10c4f9ceab4f7185de6448f6add944b5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111496"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357399"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar SQLTables en un cursor actualizable (dinámico o conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, que indica que se ha cambiado el tipo de cursor.  
@@ -28,7 +28,7 @@ ms.locfileid: "48111496"
   
  Para notificar catálogos disponibles, esquemas y tipos de tabla, SQLTables hace un uso especial de las cadenas vacías (punteros de bytes de longitud cero). Las cadenas vacías no son valores predeterminados (punteros NULL).  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *CatalogName* parámetro: *nombre_servidor_vinculado.nombre_catálogo*.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *CatalogName* parámetro: *Nombre_servidor_vinculado.nombre_catálogo*.  
   
  SQLTables devuelve información sobre las tablas cuyo nombres coinciden con *TableName* y son propiedad del usuario actual.  
   
@@ -54,7 +54,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLTables](http://go.microsoft.com/fwlink/?LinkId=59374)   
+ [Función SQLTables](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

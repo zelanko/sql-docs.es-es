@@ -1,5 +1,5 @@
 ---
-title: Preguntas más frecuentes de actualización e instalación de SQL Server Machine Learning | Microsoft Docs
+title: Actualización e instalación preguntas más frecuentes (P+F) - servicios de SQL Server Machine Learning
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: dd92ba0e080da0dd8ed387ae0a9f3d431232c896
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712307"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432858"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Preguntas más frecuentes de actualización e instalación de SQL Server Machine Learning o R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ Este tema proporciona respuestas a algunas preguntas comunes acerca de la instal
 + Algunos problemas se producen solo con las actualizaciones de versiones preliminares. Por lo tanto, recomendamos identifique primero la versión y edición antes de leer las notas de la. Para obtener información de versión, ejecute `@@VERSION` en una consulta de SQL Server Management Studio.
 + Actualice a la versión más reciente o una versión de servicio tan pronto como sea posible para resolver los problemas que se han solucionado en versiones recientes.
 
-**Se aplica a:** SQL Server 2016 R Services, SQL Server 2017 de Machine Learning Services (en bases de datos)
+**Se aplica a:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (en bases de datos)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Requisitos y restricciones en las versiones anteriores de SQL Server 2016 
 

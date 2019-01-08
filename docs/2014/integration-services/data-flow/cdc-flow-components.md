@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 306d810d844140caf0d3ee0e5cfe04fcae55e3fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120143"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360007"
 ---
 # <a name="cdc-flow-components"></a>Componentes del flujo de CDC
   Los componentes de la captura de datos modificados de Attunity para Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] ayudan a los desarrolladores de SSIS en su trabajo con CDC y reducen la complejidad de los paquetes CDC.  
@@ -37,11 +36,11 @@ ms.locfileid: "49120143"
   
  [Divisor CDC](cdc-splitter.md)  
   
-## <a name="installation"></a>Installation  
+## <a name="installation"></a>Instalación  
  En esta sección se describen los procedimientos de instalación de los componentes CDC para Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)].  
   
 ### <a name="version-support"></a>Compatibilidad de versiones  
- Los componentes CDC para SSIS admiten los siguientes productos de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Los componentes CDC para SSIS admiten los siguientes productos de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   Microsoft [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
   
@@ -71,7 +70,7 @@ ms.locfileid: "49120143"
  Si usa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] para el desarrollo de paquetes, asegúrese de que [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está cerrado antes de ejecutar el asistente para la desinstalación.  
   
 ## <a name="benefits"></a>Ventajas  
- Con los componentes CDC para los componentes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], los desarrolladores de SSIS pueden compilar fácilmente paquetes SSIS que procesen datos modificados. Estos componentes mejoran la capacidad de los desarrolladores de SSIS para usar CDC y reducir la complejidad de los paquetes CDC.  
+ Con los componentes CDC para los componentes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , los desarrolladores de SSIS pueden compilar fácilmente paquetes SSIS que procesen datos modificados. Estos componentes mejoran la capacidad de los desarrolladores de SSIS para usar CDC y reducir la complejidad de los paquetes CDC.  
   
  Los componentes CDC de SSIS se usan para proporcionar los datos modificados de forma que se facilite su procesamiento para la replicación, la carga de un almacén de datos, la actualización de dimensiones que cambian lentamente para OLAP, la auditoría de cambios o para otros usos posibles. El tipo de procesamiento adicional que se va a usar lo determina el desarrollador de SSIS.  
   
@@ -197,7 +196,7 @@ ms.locfileid: "49120143"
   
 -   [Divisor CDC](cdc-splitter.md)  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Dirigir el flujo CDC según el tipo de cambio](direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
@@ -205,17 +204,17 @@ ms.locfileid: "49120143"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada del blog, sobre [CDC en SSIS para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242543), en mattmasson.com.  
+-   Entrada del blog, sobre [CDC en SSIS para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543), en mattmasson.com.  
   
--   Entrada del blog sobre la configuración del servicio CDC, [CDC para Oracle en SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827), en blogs.msdn.com.  
+-   Entrada del blog sobre la configuración del servicio CDC, [CDC para Oracle en SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827), en blogs.msdn.com.  
   
--   Artículo técnico [Instalar la captura de datos modificados Microsoft SQL Server 2012 para Oracle de Attunity](http://go.microsoft.com/fwlink/?LinkId=252958), en social.technet.microsoft.com.  
+-   Artículo técnico [Instalar la captura de datos modificados Microsoft SQL Server 2012 para Oracle de Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), en social.technet.microsoft.com.  
   
--   Artículo técnico [Solucionar problemas de configuración de la captura de datos modificados de Microsoft para Oracle de Attunity](http://go.microsoft.com/fwlink/?LinkId=252960), en social.technet.microsoft.com.  
+-   Artículo técnico [Solucionar problemas de configuración de la captura de datos modificados de Microsoft para Oracle de Attunity](https://go.microsoft.com/fwlink/?LinkId=252960), en social.technet.microsoft.com.  
   
--   Artículo técnico [Solucionar problemas de errores de instancias de CDC de la captura de datos modificados de Microsoft para Oracle de Attunity](http://go.microsoft.com/fwlink/?LinkId=252961), en social.technet.microsoft.com.  
+-   Artículo técnico [Solucionar problemas de errores de instancias de CDC de la captura de datos modificados de Microsoft para Oracle de Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), en social.technet.microsoft.com.  
   
--   Vídeo sobre [CDC para bases de datos de Oracle con SQL Server Integration Services 2012 (vídeo de SQL Server)](http://technet.microsoft.com/sqlserver/jj218898)en technet.microsoft.com.  
+-   Vídeo sobre [CDC para bases de datos de Oracle con SQL Server Integration Services 2012 (vídeo de SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)en technet.microsoft.com.  
   
 ## <a name="see-also"></a>Vea también  
  [Tarea Control CDC](../control-flow/cdc-control-task.md)  

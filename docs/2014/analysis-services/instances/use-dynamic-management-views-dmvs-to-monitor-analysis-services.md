@@ -11,12 +11,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 9047458e09e5dd24fa255122d06d211d2c315877
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148130"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376617"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Usar vistas de administración dinámica (DMV) para supervisar Analysis Services
   Las vistas de administración dinámica (DMV) de Analysis Services son estructuras de consulta que exponen información sobre las operaciones del servidor local y el estado del servidor. La estructura de consulta es una interfaz para los conjuntos de filas de esquema que devuelven metadatos y la información de supervisión acerca de una instancia de Analysis Services.  
@@ -47,9 +47,9 @@ SELECT * FROM $System.<schemaRowset>
  Las consultas DMV son una alternativa a la ejecución de comandos de detección XML/A. Para la mayoría de los administradores, escribir una consulta DMV es más sencillo porque la sintaxis de la consulta se basa en SQL. Además, el conjunto de resultados se devuelve en formato tabular que es más fácil de leer y de copiar.  
   
 ##  <a name="bkmk_ex"></a> Ejemplos y escenarios  
- Una consulta DMV puede ayudarle a responder preguntas sobre las sesiones activas y las conexiones, y qué objetos están utilizando la mayoría de la CPU o de la memoria en un momento concreto. En esta sección se proporcionan ejemplos de escenarios en los que las consultas DMV se usan con más frecuencia. También puede revisar la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) para consultar las características adicionales sobre cómo usar las consultas DMV para supervisar una instancia de servidor.  
+ Una consulta DMV puede ayudarle a responder preguntas sobre las sesiones activas y las conexiones, y qué objetos están utilizando la mayoría de la CPU o de la memoria en un momento concreto. En esta sección se proporcionan ejemplos de escenarios en los que las consultas DMV se usan con más frecuencia. También puede revisar la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) para consultar las características adicionales sobre cómo usar las consultas DMV para supervisar una instancia de servidor.  
   
- `Select * from $System.discover_object_activity` /** Esta consulta informa de la actividad de los objetos desde que el servicio se ha iniciado por última vez. Para ver consultas de ejemplo basadas en esta DMV, vea [Nuevo System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)(Nuevo System.Discover_Object_Activity).  
+ `Select * from $System.discover_object_activity` /** Esta consulta informa de la actividad de los objetos desde que el servicio se ha iniciado por última vez. Para ver consultas de ejemplo basadas en esta DMV, vea [Nuevo System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)(Nuevo System.Discover_Object_Activity).  
   
  `Select * from $System.discover_object_memory_usage` /** Esta consulta informa del consumo de memoria de cada objeto.  
   
@@ -99,7 +99,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Si una DMV no está disponible para un conjunto de filas determinado, el servidor devuelve el siguiente error: "el \<schemarowset > el servidor no reconoció el tipo de solicitud". El resto de los errores indica problemas con la sintaxis.  
+>  Si una DMV no está disponible para un conjunto de filas determinado, el servidor devuelve el error siguiente: "El \<schemarowset > el servidor no reconoció el tipo de solicitud". El resto de los errores indica problemas con la sintaxis.  
   
 |Conjunto de filas|Descripción|  
 |------------|-----------------|  
@@ -164,8 +164,8 @@ ORDER BY TABLE_NAME ASC
 |[Conjunto de filas MDSCHEMA_SETS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Devuelve una lista de los conjuntos definidos en la conexión actual.|  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [Nuevo System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [Nueva función SYSTEMRESTRICTEDSCHEMA para conjuntos de filas restringidas y DMV](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [Nuevo System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [Nueva función SYSTEMRESTRICTEDSCHEMA para conjuntos de filas restringidas y DMV](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

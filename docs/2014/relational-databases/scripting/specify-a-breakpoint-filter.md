@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09fd45e648833f2d46c258a1806e8c424634b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e35da51b4af9e653fd6cdbad77704676941c49b3
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219575"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328715"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar un filtro del punto de interrupción
   Un filtro del punto de interrupción limita el punto de interrupción de manera que solo actúe en los equipos, procesos del sistema operativo y subprocesos especificados. Los filtros del punto de interrupción suelen utilizarse al depurar aplicaciones en paralelo.  
@@ -40,9 +38,9 @@ ms.locfileid: "48219575"
   
     -   `MachineName` es el equipo que ejecuta la instancia del Motor de base de datos.  
   
-    -   `ProcessID`, y `ProcessName` son el proceso de sistema operativo que ejecuta la instancia del motor de base de datos.  
+    -   `ProcessID` y `ProcessName` son el proceso del sistema operativo que ejecuta la instancia del Motor de base de datos.  
   
-    -   `ThreadID` y `ThreadName` son el subproceso del sistema operativo que ejecuta el [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes, procedimiento o función en la instancia del motor de base de datos.  
+    -   `ThreadID` y `ThreadName` son el subproceso del sistema operativo que ejecuta el lote, procedimiento o función de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la instancia del Motor de base de datos.  
   
 3.  Haga clic en **Aceptar** para implementar los cambios o en **Cancelar** para salir sin aplicar los cambios.  
   
@@ -50,5 +48,3 @@ ms.locfileid: "48219575"
  [Especificar una condición de punto de interrupción](specify-a-breakpoint-condition.md)   
  [Especificar un número de llamadas](specify-a-hit-count.md)   
  [Especificar una acción del punto de interrupción](specify-a-breakpoint-action.md)  
-  
-  

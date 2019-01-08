@@ -12,24 +12,24 @@ ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96e727752ab7c0023efeed63e478f9d39cd27207
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b679c93d8e946092518ca9bc020c3fbcfca834d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097755"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366767"
 ---
 # <a name="hello-world-sample"></a>Ejemplo de Hola a todos
   El ejemplo Hola a todos muestra las operaciones básicas relacionadas con la creación, implementación y prueba de un procedimiento almacenado simple basado en la integración de Common Language Runtime (CLR). En este ejemplo se muestra también cómo se devuelven datos a través de un registro, que el procedimiento almacenado construye y devuelve dinámicamente al autor de la llamada.  
   
- El `HelloWorld` procedimiento almacenado devuelve la cadena "Hola mundo!" un conjunto de resultados que consta de una fila. En este ejemplo se muestra algunos usos de las clases [Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573) y [ Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571).  
+ El `HelloWorld` procedimiento almacenado devuelve la cadena "Hola mundo!" un conjunto de resultados que consta de una fila. En este ejemplo se muestra algunos usos de las clases [Microsoft.SqlServer.Server.SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft.SqlServer.Server.SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) y [ Microsoft.SqlServer.Server.Pipe](https://go.microsoft.com/fwlink/?LinkID=193571).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   .NET Framework SDK 2.0 o posterior, o Microsoft Visual Studio 2005 o posterior. Puede obtener .NET Framework SDK de forma gratuita.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "48097755"
      `GO`  
   
     > [!NOTE]  
-    >  Para habilitar CLR, debe tener `ALTER SETTINGS` permiso de nivel de servidor, que se concede implícitamente a los miembros de la `sysadmin` y `serveradmin` roles fijos de servidor.  
+    >  Para habilitar CLR, debe tener el permiso de nivel de servidor `ALTER SETTINGS`, que se concede implícitamente a los miembros de los roles fijos de servidor `sysadmin` y `serveradmin`.  
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es un administrador para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia utiliza, debe tener un administrador le conceda **CreateAssembly** permiso para completar la instalación.  
+-   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está utilizando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   

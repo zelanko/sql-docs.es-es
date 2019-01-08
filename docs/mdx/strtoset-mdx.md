@@ -1,5 +1,5 @@
 ---
-title: StrToSet (MDX) | Documentos de Microsoft
+title: StrToSet (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7184dc872624f6589ec6e93911b39c9f8b4e4aa3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ee1e0cbeaa4e33be223e1b777ff243b5c3ef2d01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742984"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524411"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
 
-  Devuelve el conjunto especificado por una cadena con formato de Expresiones multidimensionales (MDX).  
+  Devuelve el conjunto especificado por una cadena con formato de expresiones multidimensionales MDX.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,10 +32,10 @@ StrToSet(Set_Specification [,CONSTRAINED] )
  *Set_Specification*  
  Expresión de cadena válida que especifica, directa o indirectamente, un conjunto.  
   
-## <a name="remarks"></a>Notas  
- El **StrToSet** función devuelve el conjunto especificado en la expresión de cadena. El **StrToSet** función normalmente se utiliza con funciones definidas por el usuario para devolver una especificación de conjunto desde una función externa a una instrucción MDX, o cuando se parametriza una consulta MDX.  
+## <a name="remarks"></a>Comentarios  
+ El **StrToSet** función devuelve el conjunto especificado en la expresión de cadena. El **StrToSet** función normalmente se utiliza con funciones definidas por el usuario para devolver una especificación de conjunto desde una función externa a una instrucción MDX o cuando se parametriza una consulta MDX.  
   
--   Cuando se utiliza la marca CONSTRAINED, la especificación de conjunto debe contener nombres de miembro calificados u o un conjunto de tuplas que contiene nombres de miembro calificados o incluido entre llaves {}. Esta marca se utiliza para reducir el riesgo de ataques por inyección de código a través de la cadena especificada. Si se proporciona una cadena que no se resuelve directamente en nombres de miembro calificados o no calificados, aparece el siguiente error: "Se infringieron las restricciones impuestas por la marca CONSTRAINED en la función STRTOSET."  
+-   Cuando se utiliza la marca CONSTRAINED, la especificación de conjunto debe contener nombres de miembro calificados u o un conjunto de tuplas que contiene los nombres de miembro calificados o no calificados entre llaves {}. Esta marca se utiliza para reducir el riesgo de ataques por inyección de código a través de la cadena especificada. Si no se proporciona una cadena no es nombres de miembros directamente resolverse en o no calificado, aparece el siguiente error: "Las restricciones impuestas por la CONSTRAINED se han infringido la marca en la función STRTOSET."  
   
 -   Cuando no se utiliza la marca CONSTRAINED, la especificación de conjunto especificada se puede resolver en una expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   

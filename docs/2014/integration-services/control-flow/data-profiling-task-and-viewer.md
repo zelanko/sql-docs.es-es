@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about data profiling
@@ -15,12 +14,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a20b4b2ddaee99a9ce6f2f9efa5ffc5dbbc206a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f656d900051a70998ba00ed54e3e5a2fb545716a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119923"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367097"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Visor y tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos proporciona la funcionalidad para generar perfiles de datos dentro del proceso de extracción, transformación y carga de datos. El uso de esta tarea le permitirá:  
@@ -49,17 +48,17 @@ ms.locfileid: "48119923"
   
 -   La distribución de los valores en la columna Ciudad.  
   
--   La solidez de la dependencia funcional entre la columna Estado y la columna Código postal; es decir, el estado siempre debería ser el mismo para un valor de código postal determinado.  
+-   La intensidad de la dependencia funcional entre la columna Estado y la columna Código postal; es decir, el estado siempre tendría que ser el mismo para un valor de código postal determinado.  
   
  Las estadísticas proporcionadas por un perfil de datos le ofrecen la información que necesita para minimizar de forma eficaz los problemas de calidad derivados del uso de los datos de origen.  
   
 ## <a name="integration-services-and-data-profiling"></a>Integration Services y generación de perfiles de datos  
  En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el proceso de generación de perfiles de datos consta de los pasos siguientes:  
   
- **Paso 1: Preparar la tarea de generación de perfiles de datos**  
+ **Paso 1: Configurar la tarea de generación de perfiles de datos**  
  La tarea de generación de perfiles de datos es una tarea que se utiliza para configurar los perfiles que se desean calcular. A continuación, se ejecuta el paquete que contiene la tarea de generación de perfiles de datos para calcular los perfiles. La tarea guarda el perfil generado en formato XML en un archivo o en una variable de paquete.  
   
- **Para obtener más información:** [Configuración de la Tarea de generación de perfiles de datos](data-profiling-task.md)  
+ **Para obtener más información:** [Configuración de la tarea de generación de perfiles de datos](data-profiling-task.md)  
   
  **Paso 2: Revisar los perfiles calculados por la tarea de generación de perfiles de datos**  
  Para ver los perfiles de datos calculados por la tarea de generación de perfiles de datos, se envía la salida a un archivo y, a continuación, se utiliza el Visor de perfil de datos. Este visor es una utilidad independiente que muestra el perfil generado tanto en formato resumen como en formato detallado, y que también permite la obtención de detalles.  
@@ -70,6 +69,6 @@ ms.locfileid: "48119923"
  La tarea de generación de perfiles de datos no tiene características integradas que le permitan utilizar lógica condicional para conectar esta tarea a las tareas de nivel inferior según el perfil generado. Sin embargo, puede agregar fácilmente esta lógica, con una pequeña cantidad de programación, en una tarea Script. Por ejemplo, la tarea Script puede realizar una consulta XPath en el archivo de salida de la tarea de generación de perfiles de datos. La consulta podría determinar si el porcentaje de valores nulos en una columna determinada supera un cierto umbral. Si el porcentaje supera el umbral, puede interrumpir el paquete y resolver el problema en los datos de origen antes de continuar. Para obtener más información, vea [Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes](incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Esquema del generador de perfiles de datos](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [Esquema del generador de perfiles de datos](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

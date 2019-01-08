@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, disabling
@@ -13,21 +12,21 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f58c39f80a1fe34314cd2043ca3a7d94e78471fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761427"
 ---
 # <a name="disable-resource-governor"></a>Deshabilitar el regulador de recursos
   Puede deshabilitar el regulador de recursos utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [permisos](#Permissions)  
   
--   **Para deshabilitar el regulador de recursos, mediante:**  [Explorador de objetos](#RGOffObjEx), [Propiedades del regulador de recursos](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
+-   **Para deshabilitar el regulador de recursos, mediante:**  [Explorador de objetos](#RGOffObjEx), [propiedades del Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Deshabilitar el regulador de recursos tiene como consecuencia lo siguiente:  
   
 -   No se ejecuta la función clasificadora.  

@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec91d276308b38a16763dc824989d28fd66fd837
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595655"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591189"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,18 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name =** ] **'***object_statement***'**  
- Es el nombre del objeto de la base de datos actual, o una instrucción, cuyos permisos se van a presentar. *object_statement* es **nvarchar(776)**, su valor predeterminado es NULL, que devuelve todos los permisos de objetos e instrucciones. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario *propietario ***.*** objeto*.  
+ [  **@name =** ] **'**_object_statement_**'**  
+ Es el nombre del objeto de la base de datos actual, o una instrucción, cuyos permisos se van a presentar. *object_statement* es **nvarchar(776)**, su valor predeterminado es NULL, que devuelve todos los permisos de objetos e instrucciones. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario _propietario_**.** _objeto_.  
   
  Si *object_statement* es una instrucción, puede ser una instrucción CREATE.  
   
- [  **@username =** ] **'***security_account***'**  
+ [  **@username =** ] **'**_security_account_**'**  
  Es el nombre de la entidad de seguridad para la que se muestran los permisos. *security_account* es **sysname**, su valor predeterminado es null, que devuelve todas las entidades de la base de datos actual. *security_account* debe existir en la base de datos actual.  
   
- [  **@grantorname =** ] **'***grantor***'**  
+ [  **@grantorname =** ] **'**_otorgante de permisos_**'**  
  Es el nombre de la entidad de seguridad que ha concedido los permisos. *otorgante de permisos* es **sysname**, su valor predeterminado es NULL, que devuelve toda la información de permisos concedidos por la entidad de seguridad de la base de datos.  
   
- [  **@permissionarea =** ] **'***tipo***'**  
+ [  **@permissionarea =** ] **'**_tipo_**'**  
  Es una cadena de caracteres que indica si se muestran los permisos de objeto (cadena de caracteres **o**), los permisos de instrucción (cadena de caracteres **s**), o ambos (**os**). *tipo* es **varchar (10)**, su valor predeterminado es **os**. *tipo* puede ser cualquier combinación de **o** y **s**, con o sin comas o espacios en blanco entre **o** y **s**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -108,7 +108,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>B. Presentar los permisos de un usuario  
+### <a name="b-listing-the-permissions-for-a-user"></a>b. Presentar los permisos de un usuario  
  En el siguiente ejemplo se presentan todos los permisos que el usuario `Judy` tiene en la base de datos actual.  
   
 ```  

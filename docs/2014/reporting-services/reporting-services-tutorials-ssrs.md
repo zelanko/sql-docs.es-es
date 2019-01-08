@@ -13,12 +13,12 @@ ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b809b633bb040755ac3d211b33804fd469fcb0a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1742c706d4a89999c28c5cb29d260eed2c0d0334
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104595"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362407"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Tutoriales de Reporting Services (SSRS)
   Esta sección contiene los tutoriales de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -39,9 +39,9 @@ ms.locfileid: "48104595"
  Siga los pasos de este tutorial para aprender a crear un informe detallado con parámetros y un filtro usando el control ReportViewer.  
   
 ## <a name="see-also"></a>Vea también  
- [Adventure Works para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=245471)   
- [Ejemplos de Reporting Services en CodePlex (http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
- [WIKI de TechNet: SQL Server 2012 Samples ()http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
- [(De picnic Dataset (datos de ejemplo)http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
+ [Adventure Works para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=245471)   
+ [Ejemplos de Reporting Services en CodePlex (https://go.microsoft.com/fwlink/?LinkId=198283)](https://go.microsoft.com/fwlink/?LinkId=198283)   
+ [WIKI de TechNet: SQL Server 2012 Samples (https://go.microsoft.com/fwlink/?linkID=220734)](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [(De picnic Dataset (datos de ejemplo)https://go.microsoft.com/fwlink/?linkID=219108)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

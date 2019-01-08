@@ -17,12 +17,12 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b22d42d48b3357cc004c89886ebaaaca42c35f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dfc8e272479c9fb2a3a5082624bdda926547212
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084665"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372507"
 ---
 # <a name="process-large-reports"></a>Procesar informes grandes
   Los informes de gran tamaño presentan determinados problemas de procesamiento y requieren determinadas configuraciones para que se ejecuten correctamente. Estos informes no deben ejecutarse a petición a menos que estén configurados para admitir paginación.  
@@ -34,12 +34,12 @@ ms.locfileid: "48084665"
   
  En el caso de informes que incluyen datos volátiles, el tamaño puede variar drásticamente de una ejecución a otra del informe. En este caso, debe supervisar el origen de datos para determinar cómo afecta la volatilidad de los datos al informe y si es preciso seguir los pasos que se exponen en este tema.  
   
- Para obtener más información y sugerencias sobre cómo diagnosticar errores de tiempo de espera y errores de memoria insuficiente, vea el artículo sobre [cómo diagnosticar problemas cuando se ejecutan informes en el servidor de informes](http://go.microsoft.com/fwlink/?LinkId=85634) en blogs.msdn.com.  
+ Para obtener más información y sugerencias sobre cómo diagnosticar errores de tiempo de espera y errores de memoria insuficiente, vea el artículo sobre [cómo diagnosticar problemas cuando se ejecutan informes en el servidor de informes](https://go.microsoft.com/fwlink/?LinkId=85634) en blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Recomendaciones para la configuración  
  Entre las recomendaciones para la ejecución de informes, la representación de informes y el acceso a los informes, se contemplan los siguientes aspectos:  
   
--   El informe debe diseñarse para que admita paginación. El servidor de informes envía los informes página por página. Si el informe incluye paginación, podrá controlar el volumen de datos que se envía al explorador. Para obtener más información, consulte [cargar previamente la memoria caché &#40;el Administrador de informes&#41;](preload-the-cache-report-manager.md).  
+-   El informe debe diseñarse para que admita paginación. El servidor de informes envía los informes página por página. Si el informe incluye paginación, podrá controlar el volumen de datos que se envía al explorador. Para obtener más información, vea [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](preload-the-cache-report-manager.md).  
   
 -   El informe debe configurarse para que se ejecute como una instantánea de informe programado y evitar que se ejecute a petición. No establezca un valor de tiempo de espera para la ejecución del informe. Ejecute el informe durante las horas de menor actividad.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "48084665"
   
 ## <a name="see-also"></a>Vea también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Establecer las propiedades de procesamiento de informes](set-report-processing-properties.md)   
+ [Establecer las propiedades del procesamiento de informes](set-report-processing-properties.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
  [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](preload-the-cache-report-manager.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
@@ -17,12 +16,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b518a0044c4d4778fa2b94a6643c805e7c19ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096665"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356278"
 ---
 # <a name="table-properties"></a>Propiedades de tabla
   En este tema se describen las propiedades de la tabla que se muestran en el cuadro de diálogo Propiedades de tabla en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información sobre cómo mostrar estas propiedades, vea [Ver la definición de tabla](view-the-table-definition.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "48096665"
  **Fecha de creación**  
  Fecha y hora de creación de la tabla.  
   
- **Nombre**  
+ **Name**  
  Nombre de la tabla.  
   
  **Esquema**  
@@ -66,7 +65,7 @@ ms.locfileid: "48096665"
  Indica si el objeto se ha creado con la opción de identificador entre comillas establecida en ON. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
  **Extensión de bloqueo**  
- Indica la granularidad de la extensión de bloqueo de la tabla. Para obtener más información acerca del bloqueo del motor de base de datos, vea [Guía de las versiones de fila y el bloqueo de transacciones de SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). Los valores posibles son:  
+ Indica la granularidad de la extensión de bloqueo de la tabla. Para obtener más información acerca del bloqueo del motor de base de datos, vea [Guía de las versiones de fila y el bloqueo de transacciones de SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Los valores posibles son:  
   
  AUTO  
  Esta opción permite al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] seleccionar la granularidad de la escala de bloqueo que sea adecuada para el esquema de tabla.  
@@ -136,7 +135,7 @@ ms.locfileid: "48096665"
  Los valores posibles son `True` y `False`.  
   
  **Grupo de archivos de flujo de archivos**  
- Especifique el nombre del grupo de archivos de datos FILESTREAM si la tabla tiene un `varbinary(max)` columna que tiene el atributo FILESTREAM. El valor predeterminado es el grupo de archivos de datos de FILESTREAM predeterminado.  
+ Especifique el nombre del grupo de archivos de datos FILESTREAM si la tabla tiene una columna `varbinary(max)` con el atributo FILESTREAM. El valor predeterminado es el grupo de archivos de datos de FILESTREAM predeterminado.  
   
  Si la tabla no contiene datos de FILESTREAM, el campo estará en blanco.  
   

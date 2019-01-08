@@ -13,21 +13,21 @@ ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 604a290e0f8ac64c9edbcba72c488c0ad67f7b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25fd4b521ba46e2a4e47dea9e7c2fd962d3c8895
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167055"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364137"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Opciones (Generador de informes)
-  Seleccione **Opciones** en el cuadro de diálogo **Propiedades del conjunto de datos** para cambiar opciones de datos, como las opciones de intercalación y el tratamiento de subtotales como datos detallados, para la consulta. Para obtener más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md) en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+  Seleccione **Opciones** en el cuadro de diálogo **Propiedades del conjunto de datos** para cambiar opciones de datos, como las opciones de intercalación y el tratamiento de subtotales como datos detallados, para la consulta. Para obtener más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md) en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
  Las opciones de datos que forman parte de una definición de conjunto de datos compartido en el servidor de informes afectan a todos los informes que usan el conjunto de datos compartido. Puede invalidar las opciones para el conjunto de datos compartido una vez agregado a un informe. Estos cambios solo afectan al informe en el que se definen.  
   
  Las opciones de datos para un conjunto de datos incrustado solo afectan al informe en el que se definen.  
   
- Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opciones  
  **Intercalación**  

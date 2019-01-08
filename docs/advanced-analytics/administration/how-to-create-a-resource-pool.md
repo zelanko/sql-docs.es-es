@@ -1,5 +1,6 @@
 ---
-title: Cómo crear un grupo de recursos para SQL Server Machine Learning | Microsoft Docs
+title: Cómo crear un grupo de recursos para R y Python - SQL Server Machine Learning Services
+description: Definir un grupo de recursos de SQL Server para los procesos de R o Python en una instancia de motor de base de datos de SQL Server 2016 o SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 12b21a37e66351cb84b6de246f3b398a1d20bfd3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: c0fcc673e61f2ee188b169a2d46f1da6a4ffd2df
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100579"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596866"
 ---
 # <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Cómo crear un grupo de recursos para el aprendizaje automático en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,8 +28,6 @@ El proceso incluye varios pasos:
 4.  Cree una función de clasificación para identificar las solicitudes de script externo.
 5.  Compruebe que el nuevo grupo de recursos externos está capturando los trabajos de R o Python desde las cuentas o los clientes especificados.
 
-**Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] y [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
 ##  <a name="bkmk_ReviewStatus"></a> Estado de revisión de los grupos de recursos existentes
   
 1.  Utilice una instrucción como la siguiente para comprobar los recursos asignados al grupo predeterminado para el servidor.
@@ -39,7 +38,7 @@ El proceso incluye varios pasos:
 
     **Resultados de ejemplo**
 
-    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|predeterminados|0|100|0|100|100|0|0|
 
@@ -51,7 +50,7 @@ El proceso incluye varios pasos:
 
     **Resultados de ejemplo**
 
-    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|predeterminados|100|20|0|2|
  
@@ -161,7 +160,7 @@ Para comprobar que se han realizado los cambios, debe comprobar la configuració
 
     **Resultados de ejemplo**
 
-    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
     |1|interno|Media|25|0|0|0|0|1|2|
     |2|predeterminados|Media|25|0|0|0|0|2|2|
@@ -175,7 +174,7 @@ Para comprobar que se han realizado los cambios, debe comprobar la configuració
 
     **Resultados de ejemplo**
     
-    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|predeterminados|100|20|0|2|
     |256|ds_ep|100|40|0|1|

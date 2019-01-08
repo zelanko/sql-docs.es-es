@@ -33,12 +33,12 @@ ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fdd7ff7f21bcf0dbd761e745fc1fcd42f7e2d3d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 315635739984bd76d79ff3a36b32f09783aecae3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084615"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371447"
 ---
 # <a name="cube-properties"></a>Propiedades del cubo
   Los cubos tienen varias propiedades que se pueden establecer para modificar el comportamiento del cubo. Estas propiedades se resumen en la tabla siguiente.  
@@ -70,7 +70,7 @@ ms.locfileid: "48084615"
 |`Visible`|Determina la visibilidad del cubo|  
   
 > [!NOTE]  
->  Para obtener más información acerca de cómo establecer valores para la propiedad ErrorConfiguration cuando se trabaja con valores nulos y otros problemas de integridad de datos, vea [controlar problemas de integridad de datos en Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Para obtener más información acerca de cómo establecer valores para la propiedad ErrorConfiguration cuando se trabaja con valores nulos y otros problemas de integridad de datos, vea [controlar problemas de integridad de datos en Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Vea también  
  [Almacenamiento en caché automático &#40;particiones&#41;](partitions-proactive-caching.md)  

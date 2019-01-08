@@ -11,12 +11,12 @@ ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0db138c140b0f5e51a148a3114ad6f0a7054f8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49feffa82a1ae20735a2b9b70982782c3562c9cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166955"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370097"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Definir los colores de un gráfico mediante una paleta (Generador de informes y SSRS)
   Para cambiar la paleta de colores de un gráfico, puede seleccionar una paleta predefinida o definir una paleta personalizada. Las paletas personalizadas son específicas de cada informe.  
@@ -45,11 +45,11 @@ ms.locfileid: "48166955"
   
 3.  En el **gráfico** sección, para el `Palette` propiedad, seleccione **personalizado**.  
   
-4.  En la propiedad CustomPaletteColors, haga clic en el botón Editar colección (**…**). Se abre el **Editor de la colección ReportColorExpression** .  
+4.  En la propiedad CustomPaletteColors, haga clic en el botón Editar colección (**...**). Se abre el **Editor de la colección ReportColorExpression** .  
   
 5.  Haga clic **Agregar** para agregar un color. Seleccione un color de la lista desplegable o seleccione Expresión y especifique un valor hexadecimal para un color específico, como ff6600 para "Anaranjado".  
   
-     Para obtener más información sobre los valores hexadecimales, vea [Color Table](http://go.microsoft.com/fwlink/?linkid=9258) en MSDN.  
+     Para obtener más información sobre los valores hexadecimales, vea [Color Table](https://go.microsoft.com/fwlink/?linkid=9258) en MSDN.  
   
 6.  Haga clic **Agregar** para agregar más colores a la paleta.  
   

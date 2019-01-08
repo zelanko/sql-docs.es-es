@@ -1,22 +1,22 @@
 ---
-title: Cómo llamar a Java desde SQL | Microsoft Docs
+title: 'Cómo llamar a Java desde SQL: SQL Server Machine Learning Services'
 description: Obtenga información sobre cómo llamar a las clases de Java desde procedimientos almacenados de SQL Server mediante la extensión del lenguaje en SQL Server 2019 de programación Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08af5a18b827c783515ecd3b4ba4a802c3472f93
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715433"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644764"
 ---
-# <a name="how-to-call-java-from-sql-server-2019"></a>Cómo llamar a Java desde SQL Server 2019
+# <a name="how-to-call-java-from-sql-server-2019-preview"></a>Cómo llamar a Java de la versión preliminar de SQL Server 2019
 
 Cuando se usa el [extensión del lenguaje Java](extension-java.md), [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) sistema al procedimiento almacenado es la interfaz utilizada para llamar a la ejecución de Java. Permisos en la base de datos se aplican a la ejecución de código de Java.
 
@@ -33,7 +33,7 @@ En este artículo se explica los detalles de implementación para las clases de 
 * "params" se usa para pasar parámetros a una clase de Java. Llamar a un método que requiere argumentos no se admite, lo que hace que los parámetros de la única manera de pasar los valores de argumento al método. 
 
 > [!Note]
-> Esta nota redefine admitidas y operaciones específicas de Java en CTP 2.0.
+> Esta nota redefine admitidas y operaciones específicas de Java en CTP 2.x.
 > * En el procedimiento almacenado, se admiten parámetros de entrada. No son parámetros de salida.
 > * Streaming con el parámetro sp_execute_external_script **@r_rowsPerRead** no se admite.
 > * Creación de particiones mediante **@input_data_1_partition_by_columns** no se admite.
@@ -41,7 +41,7 @@ En este artículo se explica los detalles de implementación para las clases de 
 
 ## <a name="call-spexecuteexternalscript"></a>Llamada a sp_execute_external_script
 
-El [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) sistema al procedimiento almacenado es la interfaz utilizada para llamar a la ejecución de Java. El ejemplo siguiente muestra un uso de la extensión de Java y los parámetros para especificar la ruta de acceso, el script y el código personalizado de sp_execute_external_script.
+Se aplica a Windows y Linux, el [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) sistema al procedimiento almacenado es la interfaz utilizada para llamar a la ejecución de Java. El ejemplo siguiente muestra un uso de la extensión de Java y los parámetros para especificar la ruta de acceso, el script y el código personalizado de sp_execute_external_script.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -152,6 +152,8 @@ Este NullMap debe rellenarse con el número esperado de columnas y filas que se 
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
 
 ## <a name="next-steps"></a>Pasos siguientes
 

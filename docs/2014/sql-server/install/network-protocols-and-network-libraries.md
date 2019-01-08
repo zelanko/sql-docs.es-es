@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ed7ab99c94a2b6618a97d4e167344b0ca2cb0f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056337"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371827"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolos de red y bibliotecas de red
   Un servidor puede escuchar en, o supervisar, varios protocolos de red al mismo tiempo. Sin embargo, cada protocolo debe estar configurado. Si un protocolo concreto no está configurado, el servidor no podrá escuchar en dicho protocolo. Después de la instalación, podrá cambiar las configuraciones de protocolo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,16 +34,16 @@ ms.locfileid: "48056337"
 ## <a name="default-sql-server-network-configuration"></a>Configuración de red de SQL Server predeterminada  
  Se configura una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el puerto TCP/IP 1433 y la canalización con nombre \\\\.\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se configuran para puertos dinámicos TCP, con un número de puerto asignado por el sistema operativo.  
   
- Si no puede utilizar direcciones de puerto dinámicas (por ejemplo, cuando las conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben pasar por un servidor de firewall configurado pasar a través de direcciones de puerto específicas). Seleccione un número de puerto sin asignar. La Internet Assigned Numbers Authority administra las asignaciones del número de puerto, que se muestran en [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
+ Si no puede utilizar direcciones de puerto dinámicas (por ejemplo, cuando las conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben pasar por un servidor de firewall configurado pasar a través de direcciones de puerto específicas). Seleccione un número de puerto sin asignar. La Internet Assigned Numbers Authority administra las asignaciones del número de puerto, que se muestran en [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844).  
   
  Para mejorar la seguridad, la conectividad de red no se habilita totalmente al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para habilitar, deshabilitar y configurar protocolos de red después de completar la instalación, utilice el área Configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="server-message-block-protocol"></a>Protocolo Bloque de mensajes del servidor  
  Los servidores de la red perimétrica deben tener todos los protocolos innecesarios deshabilitados, incluido el bloque de mensajes del servidor (SMB). Los servidores web y los servidores del Sistema de nombres de dominio (DNS) no necesitan SMB. Este protocolo debería deshabilitarse para contrarrestar la amenaza de enumeración de usuarios.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Si deshabilita el Bloque de mensajes de servidor, se bloqueará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Servicio de clúster de Windows para tener acceso al recurso compartido de archivos remoto. No deshabilite SMB si hace algo de lo siguiente o prevé hacerlo:  
->   
+> 
 >  -   Usar el modo de quórum de la mayoría del recurso compartido de archivos y el Nodo de clúster de Windows  
 > -   Especificar un recurso compartido de archivos SMB como directorio de datos durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 > -   Crear un archivo de base de datos en un recurso compartido de archivos SMB  

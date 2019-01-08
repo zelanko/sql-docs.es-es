@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 159dd55d8573af5b23dcb71c3393539fa8a0ac37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160135"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367737"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar y volver a generar índices
   En este tema se describe cómo reorganizar o volver a generar un índice fragmentado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mantiene los índices automáticamente cada vez que se realizan operaciones de inserción, actualización o eliminación en los datos subyacentes. Con el tiempo, estas modificaciones pueden hacer que la información del índice se disperse por la base de datos (se fragmente). La fragmentación ocurre cuando los índices tienen páginas en las que la ordenación lógica, basada en el valor de clave, no coincide con la ordenación física dentro del archivo de datos. Los índices muy fragmentados pueden reducir el rendimiento de la consulta y ralentizar la respuesta de la aplicación.  
@@ -64,7 +64,7 @@ ms.locfileid: "48160135"
   
      [Transact-SQL](#TsqlProcedureReorg)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Fragmentation"></a> Detectar la fragmentación  
  El primer paso necesario para detectar qué método de desfragmentación utilizar es analizar el índice a fin de determinar la magnitud de la fragmentación. Si usa la función del sistema [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql), podrá detectar la fragmentación de un índice específico, de todos los índices de una tabla o vista indexada, de todos los índices de una base de datos o de todos los índices de todas las bases de datos. Para los índices con particiones, **sys.dm_db_index_physical_stats** también proporciona información de la fragmentación para cada partición.  
@@ -106,11 +106,11 @@ ms.locfileid: "48160135"
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Para comprobar la fragmentación de un índice  
   
-1.  En el Explorador de objetos, expanda la base de datos que contiene la tabla en la que desea comprobar la fragmentación de un índice.  
+1.  En el Explorador de objetos, expanda la base de datos que contiene la tabla en la que quiera comprobar la fragmentación de un índice.  
   
 2.  Expanda la carpeta **Tablas** .  
   
-3.  Expanda la tabla en la que desea comprobar la fragmentación de un índice.  
+3.  Expanda la tabla en la que quiera comprobar la fragmentación de un índice.  
   
 4.  Expanda la carpeta **Índices** .  
   
@@ -311,6 +311,6 @@ ms.locfileid: "48160135"
  Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
 ## <a name="see-also"></a>Vea también  
- [Prácticas recomendadas de desfragmentación de índices de Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
+ [Prácticas recomendadas de desfragmentación de índices de Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Apéndice E: funciones escalares | Microsoft Docs'
+title: 'Apéndice E: Funciones escalares | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631863"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540509"
 ---
 # <a name="appendix-e-scalar-functions"></a>Apéndice E: Funciones escalares
 ODBC especifica los siguientes tipos de funciones escalares, con información detallada sobre cada uno de estos tipos de función proporcionados en las secciones correspondientes de este apéndice. Las descripciones de la función incluir sintaxis asociada.  
@@ -39,7 +39,7 @@ ODBC especifica los siguientes tipos de funciones escalares, con información de
   
 -   [Función de conversión de SQL-92](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- ODBC no impone un tipo de datos para los valores devueltos de funciones escalares porque las funciones suelen ser específico del origen de datos. Las aplicaciones deben usar la función escalar de CONVERT siempre que sea posible forzar la conversión de tipos de datos.  
+ ODBC no impone un tipo de datos para los valores devueltos de funciones escalares, porque a menudo, las funciones son específicas del origen de datos. Las aplicaciones deben usar la función escalar de CONVERT siempre que sea posible forzar la conversión de tipos de datos.  
   
 ## <a name="odbc-and-sql-92-scalar-functions"></a>Funciones escalares de ODBC y SQL-92  
  Las tablas de este apéndice incluyen funciones que se han agregado en ODBC 3.0 para alinearse con SQL-92. Las funciones de agregado para un tipo concreto de una función escalar, como se define en ODBC, se indican en cada sección.  

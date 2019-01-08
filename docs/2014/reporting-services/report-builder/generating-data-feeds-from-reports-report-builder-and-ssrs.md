@@ -11,17 +11,17 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6d02f24574d6a49edcdbeca2ccfc6fea95893356
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff83364a11c50ce5403b434052bdb28d53aaf2b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224215"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377597"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generar fuentes de distribución de datos a partir de informes (Generador de informes y SSRS)
-  El [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensión de representación Atom genera un documento de servicio de Atom que enumera las fuentes de datos disponibles en un informe y las fuentes de los datos de los datos de las regiones en un informe. Esta extensión se usa para generar las fuentes de distribución de datos compatibles con Atom que son legibles y se pueden intercambiar con las aplicaciones que pueden usar las fuentes de distribución de datos generadas en los informes. Por ejemplo, puede utilizar la extensión de representación Atom para las fuentes de distribución de datos generadas que después puede utilizar en el cliente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  La extensión de representación de Atom de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] genera un documento de servicio de Atom que enumera las fuentes de distribución de datos disponibles en un informe y las fuentes de distribución de datos de las regiones de datos de un informe. Esta extensión se usa para generar las fuentes de distribución de datos compatibles con Atom que son legibles y se pueden intercambiar con las aplicaciones que pueden usar las fuentes de distribución de datos generadas en los informes. Por ejemplo, puede utilizar la extensión de representación Atom para las fuentes de distribución de datos generadas que después puede utilizar en el cliente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- El documento de servicio Atom enumera al menos una fuente de distribución de datos de cada región de datos de un informe. Según el tipo de región de datos y los datos que se muestra la región de datos, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puede generar varias fuentes de datos de una región de datos. Por ejemplo, una matriz o gráfico pueden proporcionar varias fuentes de distribución de datos. Cuando la extensión de representación Atom crea el documento de servicio Atom, se crea un identificador único para cada fuente de distribución de datos y el identificador se usa en la dirección URL para tener acceso al contenido de la fuente de distribución de datos.  
+ El documento de servicio Atom enumera al menos una fuente de distribución de datos de cada región de datos de un informe. Según el tipo de región de datos y los datos que esta muestra, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] podría generar varias fuentes de distribución de datos a partir de una región de datos. Por ejemplo, una matriz o gráfico pueden proporcionar varias fuentes de distribución de datos. Cuando la extensión de representación Atom crea el documento de servicio Atom, se crea un identificador único para cada fuente de distribución de datos y el identificador se usa en la dirección URL para tener acceso al contenido de la fuente de distribución de datos.  
   
  La extensión de representación Atom genera los datos de una fuente de distribución de datos de forma similar al modo en que la extensión de representación de valores separados por comas (CSV) representa los datos en un archivo CSV. Al igual que un archivo CSV, la fuente de distribución de datos es una representación plana de los datos del informe. Por ejemplo, una tabla con un grupo de filas que sume las ventas dentro de un grupo repite la suma en cada fila de datos y no hay ninguna fila independiente que solo contenga la suma.  
   
@@ -57,21 +57,21 @@ ms.locfileid: "48224215"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- El documento de servicio de Atom generado con este informe incluye dos fuentes de distribución de datos, una para cada una de las columnas dinámicas del mismo nivel: Territory y Year. El diagrama siguiente muestra el contenido de cada fuente de distribución de datos.  
+ El documento de servicio de Atom generado con este informe incluye dos fuentes de datos, uno para cada una de las columnas dinámicas del mismo nivel: Territorio y año. El diagrama siguiente muestra el contenido de cada fuente de distribución de datos.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
 
   
 ##  <a name="DataFeeds"></a> Fuentes de distribución de datos  
- La fuente de distribución de datos es un archivo XML que tiene un formato tabular coherente que no cambia con el tiempo y datos variables que pueden ser diferentes cada vez que se ejecuta el informe. Las fuentes de distribución de datos generados por [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] están en el mismo formato que las generadas por ADO.NET Data Services.  
+ La fuente de distribución de datos es un archivo XML que tiene un formato tabular coherente que no cambia con el tiempo y datos variables que pueden ser diferentes cada vez que se ejecuta el informe. Las fuentes de distribución de datos que genera [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] están en el mismo formato que las generadas por ADO.NET Data Services.  
   
  Una fuente de distribución de datos contiene dos secciones: encabezado y datos. La especificación de Atom define los elementos en cada sección. El encabezado incluye información como el esquema de codificación de caracteres para utilizar con las fuentes de distribución de datos.  
   
 ### <a name="header-section"></a>Sección de encabezado  
  El siguiente código XML muestra la sección de encabezado de una fuente de distribución de datos.  
   
- `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
+ `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
   
  `<title type="text"></title>`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48224215"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- El siguiente XML muestra un <`entry`> elemento de ese informe en una fuente de datos. Tenga en cuenta que el <`entry`> elemento incluye los totales de ventas y pedidos para el grupo y los totales de ventas y pedidos de todos los grupos. El elemento <`entry`> incluye todos los valores en el informe.  
+ El código XML siguiente muestra un elemento <`entry`> de ese informe en una fuente de distribución de datos. Observe que el elemento <`entry`> incluye los totales de las ventas y pedidos del grupo y los totales de ventas y pedidos de todos los grupos. El elemento <`entry`> incluye todos los valores en el informe.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48224215"
   
  Las filas de datos de las regiones de datos anidadas suelen ser anchas, sobre todo si las tablas anidadas y las matrices incluyen grupos y totales. Podría encontrar de utilidad exportar el informe a una fuente de distribución de datos y ver esta para comprobar que los datos generados son lo que esperaba.  
   
- Cuando la extensión de representación Atom crea el documento de servicio Atom, se crea un identificador único para la fuente de distribución de datos y el identificador se usa en la dirección URL para ver el contenido de la misma. El documento de servicio de Atom de ejemplo mostrado anteriormente, incluye la dirección URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1". La dirección URL identifica el informe (resumen de ventas de producto), el formato de representación de Atom (ATOM) y el nombre de la fuente de distribución de datos (xAx0x1).  
+ Cuando la extensión de representación Atom crea el documento de servicio Atom, se crea un identificador único para la fuente de distribución de datos y el identificador se usa en la dirección URL para ver el contenido de la misma. El documento de servicio de Atom de ejemplo mostrado anteriormente, incluye la dirección URL <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1>". La dirección URL identifica el informe (resumen de ventas de producto), el formato de representación de Atom (ATOM) y el nombre de la fuente de distribución de datos (xAx0x1).  
   
  Los nombres de los elementos de informe tienen como valor predeterminado los nombres de los elementos de lenguaje RDL (Report Definition Language) de los elementos de informe y, a menudo, no son intuitivos ni fáciles recordar. Por ejemplo, el nombre predeterminado de la primera matriz colocada en un informe es Tablix 1. Las fuentes de distribución de datos usan estos nombres.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48224215"
 
   
 ## <a name="see-also"></a>Vea también  
- [Exportar a un archivo CSV &#40;generador de informes y SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+ [Exportar a un archivo CSV &#40;Generador de informes y SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
  [Exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

@@ -13,15 +13,15 @@ ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63af147462b9414bd85d0a301e908df4c774c7b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa36e392046abca935a1b67c4ee459a8b15939e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138205"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376877"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tarea 7: agregar la transformación Limpieza de DQS al flujo de datos
-  En esta tarea, agregará la transformación Limpieza de DQS al flujo de datos para limpiar los datos de proveedor de entrada mediante DQS. Consulte **[transformación limpieza de DQS](http://msdn.microsoft.com/library/ee677619.aspx)** para obtener más información acerca de la transformación.  
+  En esta tarea, agregará la transformación Limpieza de DQS al flujo de datos para limpiar los datos de proveedor de entrada mediante DQS. Consulte **[transformación limpieza de DQS](https://msdn.microsoft.com/library/ee677619.aspx)** para obtener más información acerca de la transformación.  
   
 1.  Haga clic en **limpieza de DQS** en el **de flujo de datos** ficha y haga clic en **cambiar el nombre**. Tipo **limpiar datos de proveedor**y presione **ENTRAR**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48138205"
 12. Haga clic en **Aceptar** para cerrar el **Editor de transformación limpieza de DQS** cuadro de diálogo.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 8: Agregar la transformación División condicional para dividir el resultado de la limpieza](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Tarea 8: Agregar la transformación División condicional para dividir el resultado de limpieza](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

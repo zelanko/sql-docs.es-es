@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226605"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366817"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Paso 2: Crear un archivo dañado
   Para demostrar los errores de configuración y el control de los errores de transformación, debe crear un archivo plano de ejemplo que, cuando se procese, genere un error en un componente.  
@@ -29,7 +28,7 @@ ms.locfileid: "48226605"
   
      Los datos de ejemplo se incluyen con los paquetes de lecciones de SSIS. Para descargar los datos de ejemplo y los paquetes de lecciones, haga lo siguiente.  
   
-    1.  Navegue a los [ejemplos del producto Integration Services](http://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Haga clic en la pestaña **DOWNLOADS** .  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48226605"
     >  El número 27 es el Id. del componente. Este valor se asigna al generar el flujo de datos, y es posible que el valor del paquete sea diferente.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Paso 3: Agregar redirección de flujo de errores](lesson-4-3-adding-error-flow-redirection.md)  
+ [Paso 3: Agregar redirección de flujo de Error](lesson-4-3-adding-error-flow-redirection.md)  
   
   

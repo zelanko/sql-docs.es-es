@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - logs [Integration Services], custom
@@ -17,12 +15,12 @@ ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e379a376dab86259a4efa66c6cd3bf7ef14f26c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99eff9181699ed08c7293e2dddf98d5aca2777c6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093705"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358268"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Registrar y definir entradas de registro en un componente de flujo de datos
   Los componentes de flujo de datos personalizados pueden publicar mensajes en una entrada de registro existente con el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. También pueden presentar información al usuario con el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> o métodos similares de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Sin embargo, este enfoque supone la sobrecarga de provocar y controlar eventos adicionales y obliga al usuario a buscar los mensajes que le pueden interesar entre todos los mensajes informativos detallados. Puede utilizar una entrada de registro personalizada tal como se describe a continuación para proporcionar información de registro personalizada etiquetada de forma diferenciada a los usuarios del componente.  
@@ -61,11 +59,11 @@ End Sub
   
  La enumeración <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency> proporciona una sugerencia al motor en tiempo de ejecución sobre la frecuencia con que se registrará el evento:  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>: el evento solamente se registra en ocasiones, no durante cada ejecución.  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>: Evento se registra únicamente a veces, no durante cada ejecución.  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>: el evento se registra un número constante de veces durante cada ejecución.  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>: Evento se registra un número constante de veces durante cada ejecución.  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>: el evento se registra un número de veces proporcional a la cantidad de trabajo completado.  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>: Evento se registra un número de veces proporcionales a la cantidad de trabajo completado.  
   
  En el ejemplo anterior se utiliza <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT> porque el componente espera registrar una entrada una vez por ejecución.  
   
@@ -99,7 +97,7 @@ End Sub
   
  Cuando el usuario ejecuta el paquete, después de seleccionar "My Custom Component Log Entry" en el cuadro de diálogo **Registro**, el registro contendrá una entrada claramente etiquetada como "User::My Custom Component Log Entry". Esta nueva entrada de registro contiene el texto de la instrucción SQL, la marca de tiempo y cualquier dato adicional registrado por el programador.  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Registro de Integration Services &#40;SSIS&#41;](../../performance/integration-services-ssis-logging.md)  

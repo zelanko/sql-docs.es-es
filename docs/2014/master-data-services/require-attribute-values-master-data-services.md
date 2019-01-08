@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
@@ -14,12 +13,12 @@ ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1e4c2932102892326ad159d5db1901873d1f22d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c635c6083c42be3d1e3eb84afc8f188b0bdf94a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761407"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Requerir valores de atributo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], requiera valores de atributo cuando desee asegurarse de que los datos maestros están completos.  
@@ -32,7 +31,7 @@ ms.locfileid: "48072825"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-require-attribute-values"></a>Requerir los valores de atributo  
   
@@ -77,7 +76,7 @@ ms.locfileid: "48072825"
     -   [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Las reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Jerarquías derivadas &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
   

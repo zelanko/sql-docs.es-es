@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subproperties.subscriber.f1
@@ -15,12 +14,12 @@ ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44047907e0e572eb19dcd5c886de363e7648ae78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9fa0e53e7bccdadf6d1aefdde9b716ad0a75c22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226800"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761673"
 ---
 # <a name="subscription-properties---subscriber"></a>Propiedades de suscripción: suscriptor
   El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite ver y establecer las propiedades de las suscripciones de extracción.  
@@ -76,7 +75,7 @@ ms.locfileid: "48226800"
   
 ## <a name="options-for-merge-subscriptions"></a>Opciones para suscripciones de mezcla  
  **Definición de partición (HOST_NAME)**  
- Para una publicación que utiliza filtros con parámetros, la replicación de mezcla evalúa una de las dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para una publicación que utiliza filtros con parámetros, la replicación de mezcla evalúa una de sistema de dos funciones (o ambas si el filtro hace referencia a ambas funciones) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME ()** o **HOST_NAME ()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de suscripción** y **Prioridad**  
  Muestra si la suscripción es una suscripción de cliente o de servidor (no podrá cambiarse una vez creada la suscripción). Las suscripciones de servidor pueden volver a publicar datos en otros suscriptores y es posible asignarles una prioridad para la resolución de conflictos.  

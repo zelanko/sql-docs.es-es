@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Publicación de datos con la replicación de mezcla | Microsoft Docs'
+title: 'Lección 1: Publicación de datos con replicación de mezcla | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 65debc2ad15045984f43e05d0afcf3011c50f2b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2160f4e2a204f1e1e6b90da9949bd356bc9b7cf5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112915"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589269"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lección 1: Publicar datos con la replicación de mezcla
   En esta lección, creará una publicación de combinación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto de las tablas **Employee**, **SalesOrderHeader**y **SalesOrderDetail** en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Estas tablas están filtradas con filtros de fila con parámetros para que cada suscripción contenga una partición única de los datos. También agregará el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el Agente de mezcla a la lista de acceso a la publicación (PAL). Para realizar este tutorial, es preciso que haya finalizado el anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
@@ -84,7 +84,7 @@ ms.locfileid: "48112915"
   
 21. Seleccione **Crear una instantánea inmediatamente**, desactive **Programar el Agente de instantáneas para ejecutarse**y, a continuación, haga clic en **Siguiente**.  
   
-22. En la página Seguridad del agente, haga clic en **Configuración de seguridad**, escriba \<*Nombre_De_Equipo>***\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y haga clic en **Aceptar**. Haga clic en **Finalizar**.  
+22. En la página Seguridad del agente, haga clic en **Configuración de seguridad**, escriba \<_nombreDeEquipo>_**\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y haga clic en **Aceptar**. Haga clic en **Finalizar**.  
   
 23. En la página Finalización del asistente, escriba **AdvWorksSalesOrdersMerge** en el cuadro **Nombre de publicación** y, a continuación, haga clic en **Finalizar**.  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48112915"
   
 3.  Seleccione la página **Lista de acceso a la publicación** y haga clic en **Agregar**.  
   
-4.  En el cuadro de diálogo Agregar acceso de publicación, seleccione *<Nombre_De_Equipo>***\repl_merge** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo Agregar acceso de publicación, seleccione _<nombre_equipo>_**\repl_merge** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha creado correctamente la publicación de combinación. A continuación se suscribirá a esta publicación. Consulte la [Lección 2: Crear una suscripción a la publicación de combinación](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
+ Ha creado correctamente la publicación de combinación. A continuación se suscribirá a esta publicación. Consulte [lección 2: Crear una suscripción a la publicación de combinación](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Filtrar datos publicados](publish/filter-published-data.md)   

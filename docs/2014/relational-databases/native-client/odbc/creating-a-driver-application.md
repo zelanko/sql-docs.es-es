@@ -23,19 +23,19 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a37b10e3df4bad15aa2d9fdcb23157cd8a1456a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192861"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362177"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>Crear una aplicación de controlador ODBC de SQL Server Native Client
   La arquitectura de ODBC tiene cuatro componentes que se encargan de realizar las funciones siguientes.  
   
 |Componente|Función|  
 |---------------|--------------|  
-|Aplicación|Llama a las funciones ODBC para comunicarse con un origen de datos ODBC, envía instrucciones SQL y procesa los conjuntos de resultados.|  
+|Application|Llama a las funciones ODBC para comunicarse con un origen de datos ODBC, envía instrucciones SQL y procesa los conjuntos de resultados.|  
 |Administrador de controladores|Administra la comunicación entre una aplicación y todos los controladores ODBC usados por la aplicación.|  
 |Controlador|Procesa todas las llamadas de función ODBC desde la aplicación, se conecta a un origen de datos, pasa instrucciones SQL de la aplicación al origen de datos y devuelve resultados a la aplicación. Si es necesario, el controlador traduce el SQL de ODBC de la aplicación al SQL nativo usado por el origen de datos.|  
 |Origen de datos|Contiene toda la información que un controlador necesita para obtener acceso a una determinada instancia de datos en un DBMS.|  
@@ -107,7 +107,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- Una decisión de diseño que se realiza al principio del proceso de generación de una aplicación es si la aplicación necesita tener varias llamadas ODBC pendientes al mismo tiempo. Hay dos métodos para admitir varias llamadas ODBC simultáneas, que se describen en los temas restantes en esta sección. Para obtener más información, consulte el [referencia del programador de ODBC](http://go.microsoft.com/fwlink/?LinkId=45250).  
+ Una decisión de diseño que se realiza al principio del proceso de generación de una aplicación es si la aplicación necesita tener varias llamadas ODBC pendientes al mismo tiempo. Hay dos métodos para admitir varias llamadas ODBC simultáneas, que se describen en los temas restantes en esta sección. Para obtener más información, consulte el [referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250).  
   
 ## <a name="in-this-section"></a>En esta sección  
   

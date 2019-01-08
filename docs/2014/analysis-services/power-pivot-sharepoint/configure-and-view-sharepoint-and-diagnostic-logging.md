@@ -11,15 +11,15 @@ ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7099282f8fef9d8d029249ba5637eba6fa6bf1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188355"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354703"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurar y ver archivos de registro de SharePoint y el registro de diagnósticos (PowerPivot para SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] los mensajes, eventos y las operaciones del servidor se registran en los archivos de registro de SharePoint. Use la información de este tema para configurar los niveles de registro y ver la información del archivo de registro. Puede controlar qué eventos de servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se registran en el archivo. También puede controlar la gravedad de los mensajes que se registran. Para obtener más información, consulte [configurar la recolección de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se graban en archivos de registro de SharePoint. Use la información de este tema para configurar los niveles de registro y ver la información del archivo de registro. Puede controlar qué eventos de servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se registran en el archivo. También puede controlar la gravedad de los mensajes que se registran. Para obtener más información, consulte [configurar la recolección de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  En este tema:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48188355"
   
 4.  Expanda la categoría y seleccione categorías individuales.  
   
-     **Solicitud de página de aplicación** especifica los eventos desencadenados por la aplicación de servicio al localizar un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para cargar un origen de datos de PowerPivot y comunicarse con otros servidores de la granja de servidores.  
+     **Solicitud de página de aplicación** especifica los eventos desencadenados por la aplicación de servicio al localizar un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para cargar un origen de datos PowerPivot y comunicarse con otros servidores de la granja.  
   
      **Procesamiento de solicitudes** especifica los eventos que desencadenan las solicitudes de consultas a un origen de datos PowerPivot cargado en un servidor de la granja.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48188355"
   
 -   En el caso de los errores que proporcionan un identificador de correlación, cópielo y utilícelo como término de búsqueda en el archivo de registro.  
   
--   Busque el estado del error "High" o "Exception". Busque “PowerPivot Service”.  
+-   Busque el estado del error "High" o "Exception". Busque "PowerPivot Service".  
   
 -   Si sabe cuándo se produjo el error, utilice la información de fecha y hora para restringir el ámbito de entradas por las que debe desplazarse.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48188355"
   
  Las siguientes instrucciones incluyen vínculos a visores de registros ULS de SharePoint frecuentes que puede descargar de Codeplex.  
   
-1.  Vaya a [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) o [SharePoint ULS Log Viewer](http://go.microsoft.com/fwlink/?LinkId=150052) en el sitio de Codeplex.  
+1.  Vaya a [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) o [SharePoint ULS Log Viewer](https://go.microsoft.com/fwlink/?LinkId=150052) en el sitio de Codeplex.  
   
 2.  Haga clic en la pestaña **Downloads** .  
   
@@ -120,9 +120,9 @@ ms.locfileid: "48188355"
 |Procesar|Área|Categoría|Nivel|de mensaje|Detalles|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|Servicio PowerPivot|Uso|Verbose|No hay ninguna estadística de solicitudes actuales, nada para registrar.|En los intervalos predefinidos, el servicio notifica las estadísticas de respuesta de las consultas como un evento de uso al sistema de recopilación de datos de uso. Este mensaje indica que no hubo ninguna estadística de consulta que notificar.|  
-|w3wp.exe|servicio PowerPivot|Front end web|Verbose|Empezar a buscar un servidor de aplicaciones para el origen de datos =\<*ruta de acceso*>|Cuando se recibe una solicitud de conexión, el servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponible para administrar la solicitud. Si hay solo un servidor en la granja, el servidor local acepta la solicitud en todos los casos.|  
-|w3wp.exe|servicio PowerPivot|Front end web|Verbose|La búsqueda del servidor de aplicaciones tuvo éxito.|La solicitud se asignó a una aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|servicio PowerPivot|Front end web|Verbose|Redireccionar la solicitud para el \< *origen de datos de PowerPivot*> a la [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|La solicitud se reenvió al [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|Servicio PowerPivot|Front end web|Verbose|Empezar a buscar un servidor de aplicaciones para el origen de datos =\<*ruta de acceso*>|Cuando se recibe una solicitud de conexión, el servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponible para administrar la solicitud. Si hay solo un servidor en la granja, el servidor local acepta la solicitud en todos los casos.|  
+|w3wp.exe|Servicio PowerPivot|Front end web|Verbose|La búsqueda del servidor de aplicaciones tuvo éxito.|La solicitud se asignó a una aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|w3wp.exe|Servicio PowerPivot|Front end web|Verbose|Redireccionar la solicitud para el \< *origen de datos de PowerPivot*> a la [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|La solicitud se reenvió al [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
 |w3wp.exe|Servicio PowerPivot|Procesamiento de solicitudes|Verbose|Redireccionar la solicitud para el nombre de usuario\<*usuario de SharePoint*> a la base de datos|Una conexión suplantada con el origen de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se creó en nombre del usuario de SharePoint.|  
   
 ## <a name="see-also"></a>Vea también  

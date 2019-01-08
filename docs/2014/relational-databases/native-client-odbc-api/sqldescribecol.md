@@ -14,17 +14,17 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4def24dac95db8cf86d0a23bd1e0f7a951d4e9e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054995"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369847"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   Las instrucciones ejecutadas, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no necesita consultar el servidor para describir las columnas de un conjunto de resultados. En este caso, `SQLDescribeCol` no provoca un ida y vuelta del servidor. Al igual que [SQLColAttribute](sqlnumresultcols.md), al llamar a `SQLDescribeCol` en preparado, pero las instrucciones ejecutadas no genera un ida y vuelta del servidor.  
   
- Cuando una instrucción o lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] devuelve varios conjuntos de filas de resultados, es posible que una columna, a la que se hace referencia mediante un ordinal, se cree en una tabla independiente o haga referencia a una columna completamente diferente del conjunto de resultados. `SQLDescribeCol` debe llamarse para cada conjunto. Cuando el conjunto de resultados cambie, la aplicación debe volver a enlazar los valores de datos antes de capturar los resultados de la fila. Para obtener más información sobre el control de resultados múltiples conjuntos, vea [SQLMoreResults](sqlmoreresults.md).  
+ Cuando una instrucción o lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] devuelve varios conjuntos de filas de resultados, es posible que una columna, a la que se hace referencia mediante un ordinal, se cree en una tabla independiente o haga referencia a una columna completamente diferente del conjunto de resultados. `SQLDescribeCol` debe llamarse para cada conjunto. Cuando el conjunto de resultados cambie, la aplicación debe volver a enlazar los valores de datos antes de capturar los resultados de la fila. Para obtener más información sobre cómo administrar la devolución de varios conjuntos de resultados, vea [SQLMoreResults](sqlmoreresults.md).  
   
  Los atributos de columna solo se notifican para el primer conjunto de resultados cuando un lote preparado de instrucciones SQL genera varios conjuntos de resultados.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48054995"
  `SQLDescribeCol` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [SQLDescribeCol (función)](http://go.microsoft.com/fwlink/?LinkID=59338)   
+ [SQLDescribeCol (función)](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

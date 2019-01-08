@@ -11,15 +11,15 @@ ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5088c22fed14e099f77f1ddcc1b7158f9e6f04f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e391bc85bc74ac9bd7394161298b190426926ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202785"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362697"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>Instalar las características de SQL Server BI con SharePoint (PowerPivot y Reporting Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden integrarse con una granja de SharePoint de Microsoft para habilitar las características de Business Intelligence (BI) en SharePoint. Las características incluyen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] se utiliza para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] acceso a datos en una granja de SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] es el motor de datos para los libros creados en [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel y accesibles desde una biblioteca de SharePoint. Una vez que guarde un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro en SharePoint, puede usar como origen de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] informes.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se pueden integrar con una granja de Microsoft SharePoint para habilitar las características de Business Intelligence (BI) en SharePoint. Entre las características se incluyen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] se utiliza para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] acceso a datos en una granja de SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] es el motor de datos para los libros creados en [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel y accesibles desde una biblioteca de SharePoint. Una vez que guarde un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en SharePoint, puede utilizarlo como origen de datos para los informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
  Algunos de los pasos de instalación y configuración necesarios para SharePoint 2010 son diferentes de los requeridos para SharePoint 2013. Algunos de los temas de esta sección se aplican a ambas versiones de SharePoint.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "48202785"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- ![Tenga en cuenta](../../../2014/reporting-services/media/rs-fyinote.png "Nota") para las notas de la versión actual, vea [notas de versión de SQL server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
+ ![Tenga en cuenta](../../../2014/reporting-services/media/rs-fyinote.png "Nota") para las notas de la versión actual, vea [notas de versión de SQL server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 ##  <a name="bkmk_top"></a> En este tema  
   
@@ -53,73 +53,73 @@ ms.locfileid: "48202785"
 ##  <a name="bkmk_bi_scenarios"></a> Escenarios de BI de SQL Server y SharePoint 2013  
  En esta sección se resumen los distintos niveles de características de BI que puede instalar y configurar.  
   
- Excel Services en SharePoint 2013 incluye funcionalidad de modelo de datos para habilitar la interacción con un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en el explorador. Para la funcionalidad de modelo de datos básica no es necesario implementar el [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] complemento 2013 en la granja de servidores. Solo se necesita instalar un servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint y registrarlo dentro de la configuración de **Modelo de datos** de Excel Services.  
+ Excel Services en SharePoint 2013 incluye funcionalidad de modelo de datos para habilitar la interacción con un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en el explorador. Para la funcionalidad básica de modelo de datos no es necesario implementar el complemento [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 en la granja. Solo se necesita instalar un servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint y registrarlo dentro de la configuración de **Modelo de datos** de Excel Services.  
   
- Implementar el [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] complemento 2013 habilita funcionalidad adicional y características en la granja de SharePoint. Las características adicionales incluyen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] galería, programar la actualización de datos y el panel de administración de PowerPivot. Vea la tabla para obtener información adicional.  
+ La implementación del complemento [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 habilita funcionalidad y características adicionales en la granja de servidores de SharePoint. Entre las características adicionales se incluyen Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Actualización de datos programada y Panel de administración de PowerPivot. Vea la tabla para obtener información adicional.  
   
 ||Nivel|Características|Instalar o configurar|  
 |-|-----------|--------------|--------------------------|  
 |1|Solo SharePoint|Características nativas de Excel Services|Excel Services y otros servicios incluidos con SharePoint Server 2013.|  
 |**2**|SharePoint con Analysis Services en modo de SharePoint|Libros PowerPivot interactivos en el explorador|Instalar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint.<br /><br /> Registrar servidor de Analysis Services en Excel Services.|  
-|**3**|SharePoint con Reporting Services en modo de SharePoint|Power View|Instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.<br /><br /> Instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complemento **(rsSharePoint.msi)** para SharePoint. Para obtener más información, consulte [instalar o desinstalar el complemento Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
-|**4**|Todas las características de PowerPivot|Acceso a libros como un origen de datos desde fuera de la granja de servidores.<br /><br /> Programar actualizaciones de datos.<br /><br /> Galería de PowerPivot.<br /><br /> Panel de administración.<br /><br /> Tipo de contenido de archivo de vínculo de BISM.|Implementar el complemento PowerPivot para SharePoint 2013 **(spPowerPivot.msi)**. Para obtener más información, vea:<br /><br /> [Instalar o desinstalar PowerPivot para SharePoint complemento &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> Para obtener información sobre cómo descargar **spPowerPivot.msi**, vea [Descargar SQL Server 2014 PowerPivot para SharePoint](http://go.microsoft.com/fwlink/?LinkID=296473).|  
+|**3**|SharePoint con Reporting Services en modo de SharePoint|Power View|Instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.<br /><br /> Instalar el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **(rsSharePoint.msi)** para SharePoint. Para obtener más información, consulte [instalar o desinstalar el complemento Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
+|**4**|Todas las características de PowerPivot|Acceso a libros como un origen de datos desde fuera de la granja de servidores.<br /><br /> Programar actualizaciones de datos.<br /><br /> Galería de PowerPivot.<br /><br /> Panel de administración.<br /><br /> Tipo de contenido de archivo de vínculo de BISM.|Implementar el complemento PowerPivot para SharePoint 2013 **(spPowerPivot.msi)**. Para obtener más información, vea:<br /><br /> [Instalar o desinstalar PowerPivot para SharePoint complemento &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> Para obtener información sobre cómo descargar **spPowerPivot.msi**, vea [Descargar SQL Server 2014 PowerPivot para SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|  
   
- Para obtener más información sobre cómo habilitar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] características, vea [The SQL Server BI historia para SharePoint 2013](http://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (http://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx).  
+ Para obtener más información sobre cómo habilitar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] características, vea [The SQL Server BI historia para SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx).  
   
 ##  <a name="bkmk_install_sharepoint2013_overview"></a> Información general de la instalación  
- Si desea utilizar ambos [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ejecute el Asistente para la instalación de SQL Server dos veces. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] son opciones diferentes de la **rol de instalación** página del Asistente de instalación de SQL Server.  
+ Si desea usan tanto [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] como [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ejecute dos veces el Asistente para la instalación de SQL Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] son opciones diferentes de la **rol de instalación** página del Asistente de instalación de SQL Server.  
   
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] admite SharePoint 2010 y SharePoint 2013; Sin embargo se usa un proceso de instalación y arquitectura diferente según la versión de SharePoint.  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] admite SharePoint 2010 y SharePoint 2013; sin embargo, se utilizan una arquitectura y un proceso de instalación distintos en función de la versión de SharePoint.  
   
  A continuación se muestra un resumen de los pasos de instalación para implementar características de BI de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un único servidor:  
   
  **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013**  
   
- Para **SharePoint 2013**, el [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] se puede ejecutar la instalación en un servidor que no tiene productos SharePoint instalados. El [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] arquitectura para SharePoint 2013, se ejecuta **fuera** la granja de SharePoint y puede instalar en un servidor que también contiene una instalación de SharePoint o se puede instalar un servidor que no contiene un Instalación de SharePoint.  
+ En **SharePoint 2013**, la instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] se puede ejecutar en un servidor que no tiene productos SharePoint instalados. La arquitectura de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se usa para SharePoint 2013 se ejecuta **fuera** de la granja de servidores de SharePoint y se puede instalar en un servidor que también contiene una instalación de SharePoint o bien se puede instalar en un servidor que NO contenga una instalación de SharePoint.  
   
 1.  Instale SharePoint Server 2013 y habilite Excel Services.  
   
 2.  Instale [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint y conceda a las cuentas de servicios y de granja de SharePoint derechos de administrador del servidor en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-     Ambas versiones de SharePoint, el [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inicia el proceso de instalación seleccionando la instalación del rol **SQL Server PowerPivot para SharePoint** en el Asistente para instalación de SQL Server o utilizando un símbolo del sistema de SQL Server instalación.  
+     En ambas versiones de SharePoint, el proceso de instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se inicia con la selección de la instalación del rol **SQL Server PowerPivot para SharePoint** en el Asistente para la instalación de SQL Server o utilizando una instalación desde el símbolo del sistema de SQL Server.  
   
      ![Rol de instalación](../../../2014/sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "rol de instalación")  
   
-3.  Para SharePoint 2013, puede ampliar el [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] características y experiencia. Descargue y ejecute **spPowerPivot.msi** para agregar compatibilidad de procesamiento, colaboración y administración de actualizaciones de datos del servidor para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro. Para obtener más información, vea [Microsoft SQL Server 2014 PowerPivot para Microsoft® SharePoint](http://go.microsoft.com/fwlink/?LinkID=324854).  
+3.  Para SharePoint 2013, puede ampliar las características y la experiencia de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Descargue y ejecute **spPowerPivot.msi** para agregar compatibilidad con procesamiento, colaboración y administración de actualización de datos del servidor para los libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener más información, vea [Microsoft SQL Server 2014 PowerPivot para Microsoft® SharePoint](https://go.microsoft.com/fwlink/?LinkID=324854).  
   
-     Ejecute el [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] paquete de instalación de 2013 **spPowerPivot.msi** en cada servidor de la granja de SharePoint para asegurarse de la versión correcta de los datos se instalan proveedores.  
+     Ejecute el paquete de instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 **spPowerPivot.msi** en cada servidor de la granja de SharePoint para asegurarse de que se instala la versión correcta de los proveedores de datos.  
   
-4.  Para configurar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013, use **PowerPivot para SharePoint 2013** herramienta.  
+4.  Para configurar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013, use la herramienta **Configuración de PowerPivot para SharePoint 2013** .  
   
-     El Asistente para instalación de SQL Server instala dos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] herramientas de configuración. Una de las herramientas de configuración admite SharePoint 2013 y la otra admite SharePoint 2010.  
+     El asistente para la instalación de SQL Server instala dos herramientas de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Una de las herramientas de configuración admite SharePoint 2013 y la otra admite SharePoint 2010.  
   
      ![dos herramientas de configuración de PowerPivot](../../../2014/analysis-services/media/as-powerpivot-configtools-bothicons.gif "dos herramientas de configuración de PowerPivot")  
   
-5.  Configure Excel Services en SharePoint Server 2013 para usar la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener más información, vea la sección "Configurar la integración básica de Analysis Services SharePoint" en [PowerPivot para SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).y [(SharePoint Server de la configuración del modelo de datos de administración de servicios de Excel 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
+5.  Configure Excel Services en SharePoint Server 2013 para usar la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obtener más información, vea la sección "Configurar la integración básica de Analysis Services SharePoint" en [PowerPivot para SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).y [(SharePoint Server de la configuración del modelo de datos de administración de servicios de Excel 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).  
   
-6.  Para obtener más información, consulte [PowerPivot para SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+6.  Para obtener más información, vea [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010**  
   
- En SharePoint 2010, es necesario que la instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint se ejecute en un servidor en el que se instalará SharePoint 2010 o que ya lo tenga instalado. El [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] arquitectura para SharePoint 2010 se ejecuta **dentro de** la granja y requiere SharePoint en el servidor que [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint está instalado.  
+ En SharePoint 2010, es necesario que la instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint se ejecute en un servidor en el que se instalará SharePoint 2010 o que ya lo tenga instalado. La arquitectura de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010 se ejecuta **dentro** de la granja y requiere SharePoint en el servidor en el que se ha instalado [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.  
   
 1.  Instale [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint y conceda a las cuentas de servicios y de granja de SharePoint derechos de administrador del servidor en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      Las implementaciones de SharePoint 2010 no admiten spPowerPivot.msi, y el archivo .msi **no** es necesario con SharePoint 2010.  
   
-     Ambas versiones de SharePoint, el [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inicia el proceso de instalación seleccionando la instalación del rol **SQL Server PowerPivot para SharePoint** en el Asistente para instalación de SQL Server o utilizando un símbolo del sistema de SQL Server instalación.  
+     En ambas versiones de SharePoint, el proceso de instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se inicia con la selección de la instalación del rol **SQL Server PowerPivot para SharePoint** en el Asistente para la instalación de SQL Server o utilizando una instalación desde el símbolo del sistema de SQL Server.  
   
-2.  El Asistente para instalación de SQL Server instala dos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] herramientas de configuración. Una de las herramientas de configuración admite SharePoint 2013 y la otra admite SharePoint 2010.  
+2.  El asistente para la instalación de SQL Server instala dos herramientas de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Una de las herramientas de configuración admite SharePoint 2013 y la otra admite SharePoint 2010.  
   
-     Para configurar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010, use el **herramienta de configuración de PowerPivot** .  
+     Para configurar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010, use la **Herramienta de configuración de PowerPivot** .  
   
 3.  Para obtener más información, vea [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md).  
   
  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  para SharePoint 2010 y 2013  
   
-1.  La instalación para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en SharePoint modo se ha modificado desde la versión anterior.  
+1.  La instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de SharePoint no ha cambiado respecto a la versión anterior.  
   
-     El [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] los pasos de instalación de SharePoint 2010 y SharePoint 2013 son muy similares. Notas importantes con respecto a las versiones de SharePoint:  
+     Los pasos de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para SharePoint 2010 y SharePoint 2013 son muy similares. Notas importantes con respecto a las versiones de SharePoint:  
   
     -   Vea las combinaciones admitidas de lo siguiente:  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48202785"
   
     2.  Instalar el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint (rsSharePoint.msi). Consulte [instalar o desinstalar el complemento Servicios de informes para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Para la versión actual de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complemento para SharePoint, vea [dónde encontrar el complemento de Reporting Services para productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
-    3.  Configurar la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servicio de SharePoint y al menos un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicación de servicio. Para obtener más información, vea la sección "Crear una aplicación Reporting Services Service" en [instalar Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
+    3.  Configurar el servicio SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y crear al menos una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea la sección "Crear una aplicación Reporting Services Service" en [instalar Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
   
 ##  <a name="bkm_database_attach"></a> Introducción a adjuntar la base de actualización y SharePoint 2013  
  SharePoint 2013 no admite la actualización en contexto. Sin embargo, **se admite actualizar y adjuntar la base de datos**.  
@@ -148,7 +148,7 @@ ms.locfileid: "48202785"
   
 2.  Complete el procedimiento para actualizar y adjuntar una base de datos de SharePoint, y migre las bases de datos de contenido de PowerPivot a la granja de SharePoint 2013.  
   
-3.  Instalar una instancia de SQL Server Analysis Services en modo de SharePoint y conceda la cuentas de servicios y de granja de SharePoint, los derechos de administrador del servidor en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+3.  Instale una instancia de SQL Server Analysis Services en modo de SharePoint y conceda a las cuentas de servicios y de granja de SharePoint derechos de administrador del servidor en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 4.  Instale el paquete de instalación de PowerPivot para SharePoint 2013 **spPowerPivot.msi** en todos los servidores de la granja de SharePoint.  
   
@@ -161,11 +161,11 @@ ms.locfileid: "48202785"
   
 -   [Migración de PowerPivot a SharePoint 2013](../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)  
   
--   [Información general del proceso de actualización a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688).  
+-   [Información general del proceso de actualización a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [Limpiar un entorno antes de realizar una actualización a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Limpiar un entorno antes de realizar una actualización a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [Actualizar bases de datos de SharePoint 2010 a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Actualizar bases de datos de SharePoint 2010 a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
 ## <a name="see-also"></a>Vea también  
  [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   

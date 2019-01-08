@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 611a7545bfe13a2c9d835abee021c3117be846cd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14001680cd4cf92086ab797f77e2233222d36b67
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657754"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590719"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve una fila por cada parámetro de una función o procedimiento almacenado definido por el usuario al que puede tener acceso el usuario actual de la base de datos actual. Para las funciones, esta vista también devuelve una fila con información del valor devuelto.  
   
- Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA. *** view_name*.  
+ Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA.** _view_name_.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|Nombre del catálogo de la rutina de la cual éste es un parámetro.|  
-|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema de la rutina de la cual éste es un parámetro.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema de la rutina de la cual éste es un parámetro.<br /><br /> <strong>\*\* Importante \* \*</strong>  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**SPECIFIC_NAME**|**nvarchar (** 128 **)**|Nombre de la rutina de la cual éste es un parámetro.|  
 |**ORDINAL_POSITION**|**int**|Posición ordinal del parámetro que empieza en 1. para el valor devuelto de una función, es un 0.|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|Devuelve IN si es un parámetro de entrada, OUT si es un parámetro de salida e INOUT si es un parámetro de entrada/salida.|  

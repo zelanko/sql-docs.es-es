@@ -12,12 +12,12 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96171211f08ae5348dfb183dc20abaaa66b3fb6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 820e418e9de194c038ca8b9fcd0dbed2db18bab7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182496"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364297"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Ejemplo de manipulación de cadenas que detectan caracteres complementarios
   Este ejemplo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el procesamiento de cadenas de caracteres complementarios. En este ejemplo se muestra la implementación de cinco funciones de cadena de Transact-SQL que proporcionan las mismas funciones de manipulación de cadenas que las funciones integradas, pero con una función adicional que reconoce caracteres complementarios para controlar cadenas de caracteres Unicode y complementarios. Las cinco funciones son lens(), `lefts(), rights(), subs()` y `replace_s()` que son equivalentes a las funciones integradas `LEN(), LEFT(), RIGHT(), SUBSTRING()` y `REPLACE()` funciones de cadena.  
@@ -25,9 +25,9 @@ ms.locfileid: "48182496"
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   .NET Framework SDK 2.0 o posterior, o Microsoft Visual Studio 2005 o posterior. Puede obtener .NET Framework SDK de forma gratuita.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48182496"
      `GO`  
   
     > [!NOTE]  
-    >  Para habilitar CLR, debe tener `ALTER SETTINGS` permiso de nivel de servidor, que se concede implícitamente a los miembros de la `sysadmin` y `serveradmin` roles fijos de servidor.  
+    >  Para habilitar CLR, debe tener el permiso de nivel de servidor `ALTER SETTINGS`, que se concede implícitamente a los miembros de los roles fijos de servidor `sysadmin` y `serveradmin`.  
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   

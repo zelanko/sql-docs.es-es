@@ -22,12 +22,12 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8dafc5dce762810b2348d41e84fd71fcdb2e436
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b234aba562c095d2861bddec5310cf321b5d331
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832533"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591069"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,20 +55,20 @@ sys.sp_cdc_enable_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@source_schema =** ] **'***source_schema***'**  
+ [  **@source_schema =** ] **'**_source_schema_**'**  
  Es el nombre del esquema al que pertenece la tabla de origen. *source_schema* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
- [  **@source_name =** ] **'***source_name***'**  
+ [  **@source_name =** ] **'**_source_name_**'**  
  Es el nombre de la tabla de origen en la que se habilita la captura de datos de cambio. *source_name* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
  *source_name* debe existir en la base de datos actual. Las tablas de la **cdc** esquema no se puede habilitar para la captura de datos modificados.  
   
- [  **@role_name =** ] **'***role_name***'**  
+ [  **@role_name =** ] **'**_role_name_**'**  
  Es el nombre del rol de base de datos usado para obtener acceso a los datos de cambio. *role_name* es **sysname** y deben especificarse. Si se establece explícitamente en NULL, no se utiliza ningún rol de acceso para limitar el acceso a los datos modificados.  
   
  Se utiliza el rol si ya existe. Si el rol no existe, se intenta crear un rol de base de datos con el nombre especificado. Antes de intentar crear el rol, se recortan los espacios en blanco a la derecha de la cadena del nombre del rol. Si el autor de la llamada no está autorizado a crear un rol dentro de la base de datos, se producirá un error en la operación del procedimiento almacenado.  
   
- [  **@capture_instance =** ] **'***capture_instance***'**  
+ [  **@capture_instance =** ] **'**_capture_instance_**'**  
  Es el nombre de la instancia de captura que se usa para denominar los objetos de captura de datos de cambio específicos de una instancia. *capture_instance* es **sysname** y no puede ser NULL.  
   
  Si no se especifica, el nombre se deriva del nombre de esquema de origen más el nombre de la tabla de origen en el formato *schemaname_sourcename*. *capture_instance* no puede superar los 100 caracteres y debe ser único dentro de la base de datos. Especificado o derivado, *capture_instance* se recortan los espacios en blanco a la derecha de la cadena.  
@@ -84,10 +84,10 @@ sys.sp_cdc_enable_table
   
  Si *supports_net_changes* está establecido en 1, *index_name* debe especificarse, o la tabla de origen debe tener definida una clave principal.  
   
- [  **@index_name =** ] **' *** index_name*'  
+ [  **@index_name =** ] **'**_index_name_'  
  Nombre de un índice único que se va a usar para identificar de manera inequívoca las filas de la tabla de origen. *index_name* es **sysname** y puede ser NULL. Si se especifica, *index_name* debe ser un índice único válido en la tabla de origen. Si *index_name* se especifica, las columnas de índice identificadas tiene prioridad sobre las columnas de clave principales definidas como el identificador de fila único para la tabla.  
   
- [  **@captured_column_list =** ] **'***captured_column_list***'**  
+ [  **@captured_column_list =** ] **'**_captured_column_list_**'**  
  Identifica las columnas de la tabla de origen que se incluirán en la tabla de cambios. *captured_column_list* es **nvarchar (max)** y puede ser NULL. Si es NULL, se incluyen todas las columnas en la tabla de cambios.  
   
  Los nombres de columna deben ser columnas válidas de la tabla de origen. Las columnas definidas en un índice de clave principal o las columnas definidas en un índice al que hace referencia *index_name* debe incluirse.  
@@ -96,12 +96,12 @@ sys.sp_cdc_enable_table
   
  *captured_column_list* no puede contener los siguientes nombres de columna reservados: **__ $start_lsn**, **__ $end_lsn**, **__ $seqval**, **__ $ operación**, y **__ $update_mask**.  
   
- [  **@filegroup_name =** ] **'***filegroup_name***'**  
+ [  **@filegroup_name =** ] **'**_filegroup_name_**'**  
  Es el grupo de archivos que se va a usar en la tabla de cambios creada para la instancia de captura. *filegroup_name* es **sysname** y puede ser NULL. Si se especifica, *filegroup_name* debe definirse para la base de datos actual. Si es NULL, se usa el grupo de archivos predeterminado.  
   
  Se recomienda crear un grupo de archivos independiente para las tablas de cambios de la captura de datos modificados.  
   
- [  **@allow_partition_switch=** ] **'***allow_partition_switch***'**  
+ [  **@allow_partition_switch=** ] **'**_allow_partition_switch_**'**  
  Indica si el comando SWITCH PARTITION de ALTER TABLE se puede ejecutar en una tabla que esté habilitada para la captura de datos de cambio. *allow_partition_switch* es **bit**, su valor predeterminado es 1.  
   
  Para las tablas sin particiones, el valor del modificador es siempre 1 y se omite el valor real. Si el modificador está establecido explícitamente en 0 para una tabla sin particiones, se genera la advertencia 22857 para indicar que se ha omitido el valor del modificador. Si el modificador está establecido explícitamente en 0 para una tabla con particiones, se genera la advertencia 22356 para indicar que se denegarán las operaciones de modificador de partición en la tabla de origen. Por último, si el valor del modificador está establecido explícitamente en 1 o permite tener como valor predeterminado 1 y la tabla habilitada tiene particiones, se genera la advertencia 22855 para indicar que los modificadores de partición no se bloquearán. Si se realiza alguna operación de modificador de partición, la captura de datos modificados no realizará el seguimiento de los cambios resultantes de dicha operación. Esto producirá incoherencia en los datos cuando se utilicen los datos modificados.  
@@ -147,7 +147,7 @@ EXECUTE sys.sp_cdc_enable_table
 GO  
 ```  
   
-### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>B. Habilitar la captura de datos de cambio especificando parámetros opcionales adicionales  
+### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>b. Habilitar la captura de datos de cambio especificando parámetros opcionales adicionales  
  En el siguiente ejemplo se habilita la captura de datos modificados para la tabla `HumanResources.Department`. Se especifican todos los parámetros excepto `@allow_partition_switch`.  
   
 ```  

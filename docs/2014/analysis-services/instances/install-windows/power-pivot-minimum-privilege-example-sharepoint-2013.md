@@ -11,18 +11,18 @@ ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99ca1f404297c9897fde4c257872c6088d540654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b79b9c6662b40b860cfacd85d77b09dbfb04117d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193945"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368397"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Ejemplo de configuración con privilegios mínimos de PowerPivot para SharePoint 2013
   En este tema se describe una configuración de ejemplo de PowerPivot para SharePoint 2013 con privilegios mínimos. La configuración emplea una cuenta diferente para cada uno de los tres componentes y cada cuenta tiene el nivel mínimo de privilegios.  
   
 ## <a name="summary-of-accounts"></a>Resumen de cuentas  
- PowerPivot para SharePoint 2013 admite el uso de la cuenta de servicio de red para la cuenta de servicio de Analysis Services. La cuenta de servicio de red no es un escenario admitido con SharePoint 2010. Para obtener más información sobre las cuentas de servicio, consulte [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot para SharePoint 2013 admite el uso de la cuenta de servicio de red para la cuenta de servicio de Analysis Services. La cuenta de servicio de red no es un escenario admitido con SharePoint 2010. Para obtener más información sobre las cuentas de servicio, consulte [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
   
  En la tabla siguiente se resumen las tres cuentas usadas en este ejemplo de configuración con privilegios mínimos.  
   

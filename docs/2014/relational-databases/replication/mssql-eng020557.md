@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020557 error
@@ -13,12 +12,12 @@ ms.assetid: c43c6952-5b60-4347-b881-11a0004dce24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7701a709d9415c660ad63a70c8cfbb3bfafd0878
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc61a235cbfd96812e632dfd56f6ef1cbdabb4b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193965"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357328"
 ---
 # <a name="mssqleng020557"></a>MSSQL_ENG020557
     
@@ -50,7 +49,7 @@ ms.locfileid: "48193965"
   
 -   Si se producen errores al crear o aplicar una instantánea, compruebe los archivos del directorio de la instantánea.  
   
--   Si el error persiste, aumente el registro del agente y especifique un archivo de salida para el registro. Dependiendo del contexto del error, esto puede proporcionar los pasos que conducen al error y a mensajes de error adicionales. Para obtener más información acerca de la configuración del registro para replicación, vea el artículo [312292](http://support.microsoft.com/kb/312292)de Microsoft Knowledge Base.  
+-   Si el error persiste, aumente el registro del agente y especifique un archivo de salida para el registro. Dependiendo del contexto del error, esto puede proporcionar los pasos que conducen al error y a mensajes de error adicionales. Para obtener más información acerca de la configuración del registro para replicación, vea el artículo [312292](https://support.microsoft.com/kb/312292)de Microsoft Knowledge Base.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)  

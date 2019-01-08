@@ -13,15 +13,15 @@ ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8da6fab7797154cdb59ee83993499607f515550a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08dc61c366937c3f1b4f90e009bf8a2460a7e4d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365907"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Tipos de gráficos (Generador de informes y SSRS)
-  Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se va a presentar. Esto determinará en qué medida se podrán interpretar correctamente los datos cuando se trasladen al gráfico. Por ejemplo, si el conjunto de datos contiene muchos puntos de datos expresados en relación con el tamaño del gráfico, es posible que resulte más adecuado presentarlos en un gráfico de áreas, de líneas o de dispersión. Para obtener una explicación sobre cómo preparar los datos según el tipo de gráfico seleccionado, consulte [gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
+  Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se va a presentar. Esto determinará en qué medida se podrán interpretar correctamente los datos cuando se trasladen al gráfico. Por ejemplo, si el conjunto de datos contiene muchos puntos de datos expresados en relación con el tamaño del gráfico, es posible que resulte más adecuado presentarlos en un gráfico de áreas, de líneas o de dispersión. Para obtener más información sobre cómo preparar los datos en función del tipo de gráfico seleccionado, vea [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -31,26 +31,26 @@ ms.locfileid: "48098865"
   
  Puede cambiar el tipo de gráfico después de haberlo creado. Para más información, vea [Cambiar un tipo de gráfico &#40;Generador de informes y SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Hay disponible ejemplos de muchos de estos tipos de gráficos como informes de ejemplo. Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Hay disponible ejemplos de muchos de estos tipos de gráficos como informes de ejemplo. Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Tipo de gráfico|Muestra datos de proporción|Muestra datos de acciones|Muestra datos lineales|Muestra datos de varios valores|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
-|[Gráficos de áreas &#40;generador de informes y SSRS&#41;](area-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")||  
-|[Los gráficos de barras &#40;generador de informes y SSRS&#41;](bar-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")||  
+|[Gráficos de áreas &#40;Generador de informes y SSRS&#41;](area-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")||  
+|[Gráficos de barras &#40;Generador de informes y SSRS&#41;](bar-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")||  
 |[Barras de datos](sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")||  
-|[Gráficos de columnas &#40;generador de informes y SSRS&#41;](column-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")||  
-|[Gráficos de líneas &#40;generador de informes y SSRS&#41;](line-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")||  
-|[Los gráficos circulares &#40;generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")||||  
-|[Gráficos polares &#40;generador de informes y SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")||||  
-|[Rangos de intervalos &#40;generador de informes y SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|  
-|[Gráficos de dispersión &#40;generador de informes y SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")||![Disponible](../media/greencheck.gif "Disponible")||  
-|[Gráficos de formas &#40;generador de informes y SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")||||  
+|[Gráficos de columnas &#40;Generador de informes y SSRS&#41;](column-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")||  
+|[Gráficos de líneas &#40;Generador de informes y SSRS&#41;](line-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")||  
+|[Gráficos circulares &#40;Generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")||||  
+|[Gráficos polares &#40;Generador de informes y SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")||||  
+|[Rangos de intervalos &#40;Generador de informes y SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|  
+|[Gráficos de dispersión &#40;Generador de informes y SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")||![Disponible](../media/greencheck.gif "Disponible")||  
+|[Gráficos de formas &#40;Generador de informes y SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")||||  
 |[Minigráficos](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|  
-|[Gráficos de cotizaciones &#40;generador de informes y SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![Disponible](../media/greencheck.gif "Disponible")||![Disponible](../media/greencheck.gif "Disponible")|  
+|[Gráficos de cotizaciones &#40;Generador de informes y SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![Disponible](../media/greencheck.gif "Disponible")||![Disponible](../media/greencheck.gif "Disponible")|  
   
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Agregar un gráfico a un informe &#40;generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

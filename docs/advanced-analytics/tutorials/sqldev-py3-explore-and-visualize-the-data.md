@@ -1,5 +1,5 @@
 ---
-title: Lección 1 explorar y visualizar datos mediante Python y T-SQL (SQL Server Machine Learning) | Microsoft Docs
+title: 'Lección 1 explorar y visualizar datos mediante Python y T-SQL: SQL Server Machine Learning'
 description: Tutorial que muestra cómo incrustar Python en SQL Server los procedimientos almacenados y funciones de Transact-SQL
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e92b2e1a5d4d5e1ad6990ffafa1a1cfcfbb9d806
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030991"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645344"
 ---
 # <a name="explore-and-visualize-the-data"></a>Explorar y visualizar los datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ El procedimiento almacenado devuelve un número de serie de Python `figure` obje
     - El script de Python es bastante simple: **matplotlib** `figure` objetos sirven para hacer que el trazado de dispersión y de histograma, y estos objetos se serializan utilizando la `pickle` biblioteca.
     - El objeto de gráficos de Python se serializa a un **pandas** trama de datos de salida.
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -135,13 +135,13 @@ El procedimiento almacenado devuelve un número de serie de Python `figure` obje
 
 2. Ahora puede ejecutar el procedimiento almacenado sin argumentos para generar un trazado de los datos codificados de forma rígida como consulta de entrada.
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. Los resultados deben ser algo parecido a esto:
   
-    ```
+    ```sql
     plot
     0xFFD8FFE000104A4649...
     0xFFD8FFE000104A4649...

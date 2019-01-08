@@ -13,19 +13,19 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8a04fb5ec226f346e9fe5fa2259361c1a29230ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f63a76234d4d3e394b838cb99b99e4607ea765de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182795"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363287"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Elementos de informe en el Diseñador de informes (SSRS)
   En el Diseñador de informes, después de crear tablas, gráficos y otros elementos de informe en un proyecto, puede publicarlos como *elementos de informe* en un servidor de informes o en el sitio de SharePoint integrado con un servidor de informes para que usted y otros usuarios puedan reutilizarlos en otros informes.  
   
- En general, los elementos de informe funcionan de la misma manera en el Diseñador de informes y en el Generador de informes. Para obtener información acerca de la funcionalidad básica, consulte [elementos de informe &#40;generador de informes y SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) en el [documentación del generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
+ En general, los elementos de informe funcionan de la misma manera en el Diseñador de informes y en el Generador de informes. Para obtener información acerca de la funcionalidad básica, consulte [elementos de informe &#40;generador de informes y SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) en el [documentación del generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
- Hay diferencias fundamentales en el modo en que los elementos de informe se usan en el Diseñador de informes. Una diferencia principal es el flujo de trabajo. El Generador de informes habilita la creación colaborativa: creo un elemento de informe y lo publico. Puede reutilizarlo, modificarlo y volver a publicarlo. En el Diseñador de informes la publicación es unidireccional: se puede publicar un elemento de informe en el Diseñador de informes y reutilizarlo. Pero no se puede reutilizar un elemento de informe existente en un informe en el Diseñador de informes. En este tema se elaboran estas diferencias, después de una información general rápida de los elementos de informe.  
+ Hay diferencias fundamentales en el modo en que los elementos de informe se usan en el Diseñador de informes. Una diferencia principal es el flujo de trabajo. El generador de informes habilita la creación colaborativa: Crear un elemento de informe y publicarlo. Puede reutilizarlo, modificarlo y volver a publicarlo. En el Diseñador de informes, la publicación es unidireccional: ¿Puedo publicar un elemento de informe del Diseñador de informes, y puede volver a usar. Pero no se puede reutilizar un elemento de informe existente en un informe en el Diseñador de informes. En este tema se elaboran estas diferencias, después de una información general rápida de los elementos de informe.  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo de vida de la publicación de un elemento de informe  
  ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -67,7 +67,7 @@ ms.locfileid: "48182795"
   
 -   Listas  
   
- Si va a publicar un elemento informe que muestra datos, como una tabla, matriz o gráfico, puede basarlo en un conjunto de datos compartido; de lo contrario, al publicar el elemento de informe, el conjunto de datos del que depende se guarda como un conjunto de datos incrustado. Los conjuntos de datos Incrustados pueden estar basados en orígenes del datos incrustados, pero las credenciales no se almacenan en orígenes de datos incrustados. Así, si el elemento de informe depende de un conjunto de datos incrustado que utiliza un origen de datos incrustados, cualquiera que reutilice este elemento de informe tendrá que proporcionar las credenciales para el origen de datos incrustados. Para evitar esto, base los conjuntos de datos incrustados en orígenes de datos compartidos con credenciales almacenadas. Para obtener más información, consulte [elementos de informe y conjuntos de datos en el generador de informes](../report-data/report-parts-and-datasets-in-report-builder.md) en el [documentación del generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
+ Si va a publicar un elemento informe que muestra datos, como una tabla, matriz o gráfico, puede basarlo en un conjunto de datos compartido; de lo contrario, al publicar el elemento de informe, el conjunto de datos del que depende se guarda como un conjunto de datos incrustado. Los conjuntos de datos Incrustados pueden estar basados en orígenes del datos incrustados, pero las credenciales no se almacenan en orígenes de datos incrustados. Así, si el elemento de informe depende de un conjunto de datos incrustado que utiliza un origen de datos incrustados, cualquiera que reutilice este elemento de informe tendrá que proporcionar las credenciales para el origen de datos incrustados. Para evitar esto, base los conjuntos de datos incrustados en orígenes de datos compartidos con credenciales almacenadas. Para obtener más información, consulte [elementos de informe y conjuntos de datos en el generador de informes](../report-data/report-parts-and-datasets-in-report-builder.md) en el [documentación del generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
  La publicación de un elemento de informe en el Diseñador de informes es un proceso en dos pasos:  
   

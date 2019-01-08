@@ -26,24 +26,24 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b5e644e2e255e23cc00d71f4434a4d0f9b861985
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810281"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376187"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
-  Importe un archivo de exportación de la aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una nueva instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Importe un archivo de aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una instancia nueva de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  El proceso de importación compila una nueva DAC en dos fases.  
   
 1.  La importación crea una nueva DAC y la base de datos asociada mediante la definición de DAC almacenada en el archivo de exportación de la misma manera que una implementación de DAC crea una nueva DAC a partir de la definición de un archivo de paquete DAC.  
   
 2.  La importación masiva copia los datos del archivo de exportación.  
   
- Hay una aplicación de ejemplo en las prácticas de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que se pueden usar para probar la exportación e importación de DAC y bases de datos. Para obtener instrucciones acerca de cómo descargar y usar el ejemplo, vea [Importación y exportación de bases de datos para base de datos de Windows Azure SQL](http://go.microsoft.com/fwlink/?LinkId=219404).  
+ Hay una aplicación de ejemplo en las prácticas de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que se pueden usar para probar la exportación e importación de DAC y bases de datos. Para obtener instrucciones acerca de cómo descargar y usar el ejemplo, vea [Importación y exportación de bases de datos para base de datos de Windows Azure SQL](https://go.microsoft.com/fwlink/?LinkId=219404).  
   
 ## <a name="sql-server-utility"></a>Utilidad de SQL Server  
  Si importa una DAC en una instancia administrada del motor de base de datos, la DAC importada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicaciones de capa de datos implementadas** details page.  
@@ -91,18 +91,18 @@ ms.locfileid: "43810281"
   
  **Opciones**  
   
--   **No volver a mostrar esta página.** - Active esta casilla para que la página Introducción deje de mostrarse en el futuro.  
+-   **No volver a mostrar esta página.** - Active la casilla para que la página Introducción deje de mostrarse en el futuro.  
   
--   **Siguiente** ; continúe en la página **Importar configuración** .  
+-   **Siguiente**: continúa a la página **Importar configuración**.  
   
--   **Cancelar** : cancela la operación y cierra el asistente.  
+-   **Cancelar**: cancela la operación y cierra el asistente.  
   
 ###  <a name="Import_settings"></a> Página Importar configuración  
  Use esta página para especificar la ubicación del archivo .bacpac para importar.  
   
--   **Importar desde el disco local** ; haga clic en **Examinar…** para navegar por el equipo local, o especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
+-   **Importar desde el disco local**: haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
   
--   **Importar desde Windows Azure** ; importe un archivo BACPAC de un contenedor de Windows Azure. Debe conectarse a un contenedor de Windows Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. El archivo temporal se creará en la ubicación especificada y permanecerá allí una vez finalizada la operación.  
+-   **Importar desde Windows Azure** -importa un archivo BACPAC desde un contenedor de Windows Azure. Debe conectarse a un contenedor de Windows Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. El archivo temporal se creará en la ubicación especificada y permanecerá allí una vez finalizada la operación.  
   
      Al examinar Windows Azure, podrá intercambiar entre los contenedores de una cuenta única. Debe especificar un único archivo .bacpac para continuar con la operación de importación. Tenga en cuenta que puede ordenar columnas por **Nombre**, **Tamaño**o **Fecha de modificación**.  
   
@@ -113,21 +113,21 @@ ms.locfileid: "43810281"
   
  **Para una instancia local de SQL Server:**  
   
--   **Nombre de la nueva base de datos** ; proporcione un nombre para la base de datos importada.  
+-   **Nombre de la nueva base de datos**: proporcione un nombre para la base de datos importada.  
   
--   **Ruta de acceso del archivo de datos** , especifica un directorio local para los archivos de datos. Haga clic en **Examinar…** para navegar por el equipo local, o especifique la ruta de acceso en el espacio proporcionado.  
+-   **Ruta de acceso del archivo de datos**: proporcione un directorio local para los archivos de datos. Haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado.  
   
--   **Ruta de acceso del archivo de registro** ; especifique un directorio local para los archivos de registro. Haga clic en **Examinar…** para navegar por el equipo local, o especifique la ruta de acceso en el espacio proporcionado.  
+-   **Ruta de acceso del archivo de registro**: especifique un directorio local para los archivos de registro. Haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado.  
   
  Para continuar, haga clic en **Siguiente**.  
   
  **Para una base de datos SQL:**  
   
--   **Nombre de la nueva base de datos** ; proporcione un nombre para la base de datos importada.  
+-   **Nombre de la nueva base de datos**: proporcione un nombre para la base de datos importada.  
   
--   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: especifique [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obtener más información acerca de las [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea este sitio web de [base de datos SQL](http://www.windowsazure.com/home/tour/database/) .  
+-   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -especificar [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obtener más información acerca de las [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea este sitio web de [base de datos SQL](http://www.windowsazure.com/home/tour/database/) .  
   
--   **Tamaño máximo de la base de datos (GB)** ; use el menú desplegable para especificar el tamaño máximo de la base de datos.  
+-   **Tamaño máximo de la base de datos (GB)** -Use el menú desplegable para especificar el tamaño máximo de la base de datos.  
   
  Para continuar, haga clic en **Siguiente**.  
   

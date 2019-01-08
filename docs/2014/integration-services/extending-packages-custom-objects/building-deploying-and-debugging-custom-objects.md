@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
@@ -14,12 +12,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7257973db070b0f06cc48d217f232be2f81efeb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22b7d07752c6a9df5f0b100c0d16b78a86125f04
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159715"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362857"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Generar, implementar y depurar objetos personalizados
   Después de haber escrito el código para un objeto personalizado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], debe generar, implementar e integrar el ensamblado en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] para que esté disponible para su uso en paquetes, y probarlo y depurarlo.  
@@ -61,7 +59,7 @@ ms.locfileid: "48159715"
 ##  <a name="building"></a> Generar el ensamblado  
  Después de firmar el proyecto, debe generar o volver a generar el proyecto o la solución utilizando los comandos disponibles en el menú **Generar** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. La solución puede contener un proyecto independiente para una interfaz de usuario personalizada, que también se debe firmar con un nombre seguro y se puede generar al mismo tiempo.  
   
- El método más cómodo para realizar los dos pasos siguientes, desplegar el ensamblado e instalarlo en la memoria caché de ensamblados global, es crear script de estos pasos como un evento posterior a la generación en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Los eventos de compilación están disponibles en la página **Compilar** de Propiedades del proyecto para un proyecto de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y en la página **Eventos de compilación** para un proyecto de C#. Es necesaria la ruta de acceso completa para las utilidades de símbolo del sistema como **gacutil.exe**. Son necesarias comillas alrededor de las rutas de acceso que contienen espacios en blanco y alrededor de macros como $(TargetPath) que se expanden a rutas de acceso que contienen espacios en blanco.  
+ El método más sencillo para realizar los dos pasos siguientes (implementar el ensamblado e instalarlo en la memoria caché de ensamblados global) es crear un script con estos pasos como un evento posterior a la compilación en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Los eventos de compilación están disponibles en la página **Compilar** de Propiedades del proyecto para un proyecto de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y en la página **Eventos de compilación** para un proyecto de C#. Es necesaria la ruta de acceso completa para las utilidades de símbolo del sistema como **gacutil.exe**. Son necesarias comillas alrededor de las rutas de acceso que contienen espacios en blanco y alrededor de macros como $(TargetPath) que se expanden a rutas de acceso que contienen espacios en blanco.  
   
  A continuación figura un ejemplo de una línea de comandos del evento posterior a la generación para un proveedor de registro personalizado:  
   
@@ -153,7 +151,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  Vuelva al paquete en pausa y continúe más allá del punto de interrupción o haga clic en **Aceptar** para descartar el cuadro de mensaje generado por la tarea Script, y continuar con la ejecución y depuración del paquete.  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Desarrollar objetos personalizados para Integration Services](developing-custom-objects-for-integration-services.md)   

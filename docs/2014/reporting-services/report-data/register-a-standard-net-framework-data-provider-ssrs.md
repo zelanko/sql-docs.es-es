@@ -18,12 +18,12 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 24482f0120f9d33fc4fe9442b770d7ca8656ac80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a4cd4b35fc0a788137d2a82c7082dfe26b0c45e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107365"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364007"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar un proveedor de datos estándar de .NET Framework (SSRS)
   Para usar un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] de terceros para recuperar datos de un conjunto de datos de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , es necesario implementar y registrar el ensamblado del proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] en dos ubicaciones: en el cliente de creación de informes y en el servidor de informes. En el cliente de creación de informes, debe registrar el proveedor de datos como un tipo de origen de datos y asociarlo a un diseñador de consultas. A continuación, puede seleccionar este proveedor de datos como un tipo de origen de datos al crear un conjunto de datos de informe. El diseñador de consultas asociado se abre para ayudarle a crear consultas para este tipo de origen de datos. En el servidor de informes, debe registrar el proveedor de datos como un tipo de origen de datos. A continuación, puede procesar los informes publicados que recuperan datos de un origen de datos con este proveedor de datos.  
@@ -39,15 +39,15 @@ ms.locfileid: "48107365"
   
 1.  Navegue hasta la ubicación predeterminada del directorio bin del servidor de informes donde desea usar el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . La ubicación predeterminada del directorio bin del servidor de informes es *\<unidad>*:\Archivos de programa\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
-2.  Copie el ensamblado desde la ubicación de almacenamiento provisional en el directorio bin del servidor de informes. Otra opción es cargar el ensamblado en la caché de ensamblados global (GAC). Para obtener más información, vea [Trabajar con ensamblados y la Caché de ensamblados global](http://go.microsoft.com/fwlink/?linkid=63912) en la documentación del SDK de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] en MSDN.  
+2.  Copie el ensamblado desde la ubicación de almacenamiento provisional en el directorio bin del servidor de informes. Otra opción es cargar el ensamblado en la caché de ensamblados global (GAC). Para obtener más información, vea [Trabajar con ensamblados y la Caché de ensamblados global](https://go.microsoft.com/fwlink/?linkid=63912) en la documentación del SDK de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] en MSDN.  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-server"></a>Para registrar un proveedor de datos de .NET en el servidor de informes  
   
 1.  Haga una copia de seguridad del archivo RSReportServer.config en el directorio principal ReportServer para bin.  
   
-2.  Abra RSReportServer.config. Puede abrir el archivo de configuración con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un editor de texto simple, como el Bloc de notas.  
+2.  Abra RSReportServer.config. Puede abrir el archivo de configuración con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un editor de texto simple como el Bloc de notas.  
   
-3.  Busque el `Data` elemento en el archivo RSReportServer.config. Se debe crear una entrada para el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] en la siguiente ubicación:  
+3.  Busque el elemento `Data` en el archivo RSReportServer.config. Se debe crear una entrada para el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] en la siguiente ubicación:  
   
     ```  
     <Extensions>  
@@ -61,7 +61,7 @@ ms.locfileid: "48107365"
   
     |Attribute|Descripción|  
     |---------------|-----------------|  
-    |`Name`|Proporcione un nombre único para el proveedor de datos (por ejemplo, **miProveedorDeDatosDeNET**). La longitud máxima para el atributo `Name` es de 255 caracteres. El nombre debe ser único entre todas las entradas en el `Extension` elemento de un archivo de configuración. El valor incluido aquí aparece en la lista desplegable de tipos de orígenes de datos al crear un origen de datos.|  
+    |`Name`|Proporcione un nombre único para el proveedor de datos (por ejemplo, **miProveedorDeDatosDeNET**). La longitud máxima para el atributo `Name` es de 255 caracteres. El nombre debe ser único entre todas las entradas en el elemento `Extension` del archivo de configuración. El valor incluido aquí aparece en la lista desplegable de tipos de orígenes de datos al crear un origen de datos.|  
     |`Type`|Escriba una lista separada por comas donde se incluya el espacio de nombres completo de la clase que implementa la interfaz <xref:System.Data.IDbConnection> , seguido del nombre del ensamblado del proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sin incluir la extensión de nombre de archivo .dll).|  
   
      Por ejemplo, la entrada puede ser similar a la siguiente para una DLL implementada en el directorio bin del servidor de informes:  
@@ -84,7 +84,7 @@ ms.locfileid: "48107365"
   
 3.  Busque el elemento `CodeGroup` en el archivo rssrvpolicy.config.  
   
-4.  Agregar un grupo de código para el ensamblado de proveedor de datos que concede `FullTrust` permiso. El grupo de códigos puede ser similar al siguiente:  
+4.  Agregue un grupo de códigos para el ensamblado del proveedor de datos que concede el permiso `FullTrust`. El grupo de códigos puede ser similar al siguiente:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -112,7 +112,7 @@ ms.locfileid: "48107365"
   
 1.  Navegue hasta la ubicación predeterminada del directorio PrivateAssemblies del cliente del Diseñador de informes donde desea usar el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . La ubicación predeterminada del directorio PrivateAssemblies es *\<unidad>*:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-2.  Copie el ensamblado desde la ubicación de almacenamiento provisional en el directorio PrivateAssemblies del cliente del Diseñador de informes. Otra opción es cargar el ensamblado en la caché de ensamblados global (GAC). Para obtener más información, vea [Trabajar con ensamblados y la Caché de ensamblados global](http://go.microsoft.com/fwlink/?linkid=63912) en la documentación del SDK de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] en MSDN.  
+2.  Copie el ensamblado desde la ubicación de almacenamiento provisional en el directorio PrivateAssemblies del cliente del Diseñador de informes. Otra opción es cargar el ensamblado en la caché de ensamblados global (GAC). Para obtener más información, vea [Trabajar con ensamblados y la Caché de ensamblados global](https://go.microsoft.com/fwlink/?linkid=63912) en la documentación del SDK de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] en MSDN.  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-designer-client"></a>Para registrar un proveedor de datos de .NET en el cliente del Diseñador de informes  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48107365"
   
     |Attribute|Descripción|  
     |---------------|-----------------|  
-    |`Name`|Proporcione un nombre único para el proveedor de datos (por ejemplo, **miProveedorDeDatosDeNET**). La longitud máxima para el atributo `Name` es de 255 caracteres. El nombre debe ser único entre todas las entradas en el `Extension` elemento de un archivo de configuración. El valor incluido aquí aparece en la lista desplegable de tipos de orígenes de datos al crear un origen de datos nuevo.|  
+    |`Name`|Proporcione un nombre único para el proveedor de datos (por ejemplo, **miProveedorDeDatosDeNET**). La longitud máxima para el atributo `Name` es de 255 caracteres. El nombre debe ser único entre todas las entradas en el elemento `Extension` del archivo de configuración. El valor incluido aquí aparece en la lista desplegable de tipos de orígenes de datos al crear un origen de datos nuevo.|  
     |`Type`|Escriba una lista separada por comas donde se incluya el espacio de nombres completo de la clase que implementa la interfaz <xref:System.Data.IDbConnection> , seguido del nombre del ensamblado del proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sin incluir la extensión de nombre de archivo .dll).|  
   
      Por ejemplo, la entrada puede ser similar a la siguiente para una DLL implementada en el directorio PrivateAssemblies de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] :  
@@ -159,7 +159,7 @@ ms.locfileid: "48107365"
     </Extensions>  
     ```  
   
-6.  Agregue la siguiente entrada al archivo RSReportDesigner.config bajo el `Designer` elemento. Debe reemplazar solamente el `Name` atributo con el nombre que proporcionó en las entradas anteriores.  
+6.  Agregue la siguiente entrada al archivo RSReportDesigner.config en el elemento `Designer`. Debe reemplazar solamente el atributo `Name` por el nombre proporcionado en las entradas anteriores.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -169,11 +169,11 @@ ms.locfileid: "48107365"
   
 1.  Haga una copia de seguridad del archivo RSPreviewPolicy.config en el directorio PrivateAssemblies.  
   
-2.  Abra RSPreviewPolicy.config con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un editor de texto simple, como el Bloc de notas.  
+2.  Abra RSPreviewPolicy.config con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un editor de texto simple como el Bloc de notas.  
   
 3.  Busque el elemento `CodeGroup` en el archivo RSPreviewPolicy.config.  
   
-4.  Agregar un grupo de código para el [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ensamblado del proveedor de datos que concede `FullTrust` permiso. El grupo de códigos puede ser similar al siguiente:  
+4.  Agregue un grupo de códigos para el ensamblado del proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que concede el permiso `FullTrust`. El grupo de códigos puede ser similar al siguiente:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -192,7 +192,7 @@ ms.locfileid: "48107365"
  La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que puede seleccionar para el proveedor de datos.  
   
 ### <a name="verifying-the-deployment-and-registration-on-the-report-designer-client"></a>Comprobar la implementación y el registro en el cliente del Diseñador de informes  
- Para poder comprobar la implementación, debe cerrar todas las instancias de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] en el equipo local. Una vez haya finalizado todas las sesiones actuales, puede comprobar si su proveedor de datos se implementó correctamente en el Diseñador de informes mediante la creación de un nuevo proyecto de informe en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. El proveedor de datos se debe incluir en la lista de tipos de orígenes de datos disponibles al crear un conjunto de datos nuevo para el informe.  
+ Para poder comprobar la implementación, debe cerrar todas las instancias de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] en el equipo local. Una vez que haya finalizado todas las sesiones actuales, puede comprobar si el proveedor de datos se implementó correctamente para el Diseñador de informes si crea un proyecto de informe nuevo en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. El proveedor de datos se debe incluir en la lista de tipos de orígenes de datos disponibles al crear un conjunto de datos nuevo para el informe.  
   
 ## <a name="platform-considerations"></a>Consideraciones sobre las plataformas  
  En una plataforma de 64 bits (x64), [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] se ejecuta en el modo WOW de 32 bits. Si crea informes en una plataforma x64, necesita tener proveedores de datos de 32 bits instalados en el cliente de creación de informes para obtener vistas previas de los informes. Si publica el informe en el mismo sistema, necesita proveedores de datos x64 para ver el informe con el Administrador de informes.  

@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834493"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591589"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  Número de identificación del trabajo al que se va a agregar la programación. *job_id* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  Nombre del trabajo al que se va a agregar la programación. *job_name* es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [  **@name=** ] **'***nombre***'**  
+ [  **@name=** ] **'**_nombre_**'**  
  Nombre de la programación. *nombre* es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  Tiempo en un día entre *active_start_date* y *active_end_date* para comenzar la ejecución del trabajo. *active_start_time* es **int**, no tiene ningún valor predeterminado. La hora tiene el formato HHMMSS en un reloj de 24 horas.  
   
- [ **@active_end_time=***active_end_time*  
+ [  **@active_end_time=**_active_end_time_  
  Tiempo en un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de trabajo. *active_end_time* es **int**, no tiene ningún valor predeterminado. La hora tiene el formato HHMMSS en un reloj de 24 horas.  
   
- [  **@schedule_id=***schedule_id***salida**  
+ [  **@schedule_id=**_schedule_id_**salida**  
  Número de identificación asignado a la programación si se ha creado correctamente. *schedule_id* es una variable de salida de tipo **int**, no tiene ningún valor predeterminado.  
   
- [ **@schedule_uid**=] *valor schedule_uid *** salida**  
+ [ **@schedule_uid**=] _valor schedule_uid_**salida**  
  Es un identificador único para la programación. *valor schedule_uid* es una variable de tipo **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

@@ -21,12 +21,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13352451c31822acdc9fea70965b22c6269577f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152037"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375947"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
   Las notificaciones de consulta se introdujeron con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Las notificaciones de consulta, creadas a partir de la infraestructura de Service Broker introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], permiten notificar a las aplicaciones si los datos han cambiado. Esta característica resulta especialmente útil para las aplicaciones que proporcionan una caché de información de una base de datos, como una aplicación web, y necesitan recibir notificaciones si se modifican los datos de origen.  
@@ -58,11 +58,11 @@ ms.locfileid: "48152037"
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  El servicio debe usar el contrato predefinido `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, tal y como se indicó anteriormente.  
+>  El servicio debe usar el contrato predefinido `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, tal y como se indicó anteriormente.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite notificaciones al consumidor a la modificación del conjunto de filas. El consumidor recibe notificaciones en cada fase de modificación del conjunto de filas y ante cualquiera intento de modificación.  
@@ -113,7 +113,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Si los valores de SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT y SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS son distintos de NULL, el encabezado TDS de notificación de consulta que contiene los tres atributos definidos anteriormente se enviará al servidor cada vez que se ejecute el comando. Si alguno de estos valores es NULL, el encabezado no se envía y se devuelve SQL_SUCCESS_WITH_INFO. La validación se produce en [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, y **SqlExecute**, todo se producirán errores si los atributos no son válidos. Del mismo modo, cuando estos atributos de notificación de consulta se establecen para versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se produce un error de ejecución con SQL_SUCCESS_WITH_INFO.  
+ Si los valores de SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT y SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS son distintos de NULL, el encabezado TDS de notificación de consulta que contiene los tres atributos definidos anteriormente se enviará al servidor cada vez que se ejecute el comando. Si alguno de estos valores es NULL, el encabezado no se envía y se devuelve SQL_SUCCESS_WITH_INFO. La validación se produce en [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, y **SqlExecute**, todo se producirán errores si los atributos no son válidos. Del mismo modo, cuando estos atributos de notificación de consulta se establecen para versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se produce un error de ejecución con SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  La preparación de instrucciones no hará que se inicie nunca la suscripción; la ejecución de la instrucción sí que puede iniciar la suscripción.  

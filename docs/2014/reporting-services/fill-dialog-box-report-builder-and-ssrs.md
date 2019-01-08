@@ -20,19 +20,19 @@ ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35c8786c571936a27570166c8d331cbd2a641b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329cad1c2d60b40d3f8e448a1ea92b8ee5bebfb9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204655"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591439"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Relleno (Generador de informes y SSRS)
   En la pestaña **Relleno** , puede especificar opciones de color para el fondo de una o varias celdas dentro de una región de datos o de un cuadro de texto.  
   
 ## <a name="options"></a>Opciones  
  **Color de relleno**  
- Haga clic en el botón de color para seleccionar un color de relleno para el rectángulo. Haga clic en el **Expression***(fx)* botón para editar la expresión, que puede ser un valor hexadecimal para el color RGB o uno de los nombres de colores predefinidos que se proporcionan en el **expresión** cuadro de diálogo. Para ver una lista de los colores predefinidos, seleccione **Web** en el panel **Elemento**. Los nombres de colores del panel **Título** pueden escribirse en el panel de texto de expresiones. No use el signo igual (=) ni comillas ("") cuando escriba el nombre del color.  
+ Haga clic en el botón de color para seleccionar un color de relleno para el rectángulo. Haga clic en el botón **Expresión**_(fx)_ para editar la expresión, que puede ser un valor hexadecimal para el color RGB o uno de los nombres de colores predefinidos del cuadro de diálogo **Expresión** . Para ver una lista de los colores predefinidos, seleccione **Web** en el panel **Elemento**. Los nombres de colores del panel **Título** pueden escribirse en el panel de texto de expresiones. No use el signo igual (=) ni comillas ("") cuando escriba el nombre del color.  
   
  **Seleccione el origen de imagen**  
  Indique dónde se encuentra almacenada la imagen para que, a la hora de representar el informe, el procesador de informes pueda mostrarla.  
@@ -61,7 +61,7 @@ ms.locfileid: "48204655"
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Aplicar formato a texto y marcadores de posición &#40;generador de informes y SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Imágenes &#40;generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Imágenes &#40;Generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

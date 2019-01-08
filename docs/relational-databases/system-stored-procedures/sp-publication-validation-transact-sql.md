@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publication_validation
@@ -17,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f90e172030193cf3ae1209829aa58512cf56fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608683"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591409"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publication=**] **' *** publicación '*  
+ [**@publication=**] **'**_publicación '_  
  Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -51,9 +50,9 @@ sp_publication_validation [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**0**|Realiza una suma de comprobación compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: Cuando un artículo se filtra horizontalmente, se realiza una operación de recuento de filas en lugar de una operación de suma de comprobación.|  
+|**0**|Realiza una suma de comprobación compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: Cuando un artículo se filtra horizontalmente, se realiza una operación de recuento de filas en vez de una operación de suma de comprobación.|  
 |**1** (predeterminado)|Realiza solamente un recuento de filas.|  
-|**2**|Realiza un recuento de filas y una suma de comprobación binaria.<br /><br /> Nota: Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se lleva a cabo los suscriptores de la versión 7.0, solo una validación del recuento de filas.|  
+|**2**|Realiza un recuento de filas y una suma de comprobación binaria.<br /><br /> Nota: Para suscriptores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0, solo se realiza la validación de recuento de filas.|  
   
  [**@full_or_fast=**] *full_or_fast*  
  Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint** y puede tener uno de los siguientes valores.  
@@ -67,8 +66,8 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  Indica si el agente de distribución se debe cerrar inmediatamente después de terminar la validación. *shutdown_agent* es **bit**, su valor predeterminado es **0**. Si **0**, el agente de replicación no se cierra. Si **1**, el agente de replicación se cierra después de valida el último artículo.  
   
- [ **@publisher** =] **'***publisher***'**  
- Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* es **sysname**, su valor predeterminado es null.  
+ [ **@publisher** =] **'**_publisher_**'**  
+ Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no debe usarse al solicitar la validación en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

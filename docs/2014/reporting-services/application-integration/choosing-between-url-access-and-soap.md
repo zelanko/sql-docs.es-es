@@ -17,12 +17,12 @@ ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f14a643842bb3cb8029cbd4ac1c0e53c9b0ab334
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34b6f109ab102f39908639f6182c25ca4cbb60e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081701"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363897"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Elegir entre el acceso URL y SOAP
   Integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en aplicaciones personalizadas puede resultar complicado. El reto, sin embargo, no es la complejidad del modelo de programación o API, sino las muchas maneras posibles de integrarlo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se diseñó desde el principio como una plataforma para programadores y, como tal, se ha creado teniendo en mente la flexibilidad de la programación. Con la flexibilidad viene la necesidad de tomar decisiones importantes sobre cómo integrar la funcionalidad de la administración y navegación en informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones empresariales existentes.  
@@ -30,7 +30,7 @@ ms.locfileid: "48081701"
  ![Escenarios de programación de Reporting Services](../../../2014/reporting-services/media/bk-ext-04.gif "escenarios de programación de Reporting Services")  
 La programación de Reporting Services admite una amplia variedad de escenarios.  
   
- Hay dos maneras de integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones personalizadas: el acceso URL y la API SOAP de Reporting Services. Cuál usar depende de varios factores. En algunos casos, integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones empresariales personalizadas requiere el uso tanto del acceso URL como de SOAP. Debería formular las preguntas siguientes:  
+ Hay dos formas de integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en aplicaciones personalizadas: Acceso URL y la API de SOAP de Reporting Services. Cuál usar depende de varios factores. En algunos casos, integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones empresariales personalizadas requiere el uso tanto del acceso URL como de SOAP. Debería formular las preguntas siguientes:  
   
 -   ¿Qué tipo de funcionalidad de informes empresariales requieren usted o sus usuarios finales? ¿Necesita una manera simple de iniciar y navegar por los informes, o más características avanzadas de administración de servidores de informes con la solución empresarial personalizada?  
   
@@ -51,7 +51,7 @@ La programación de Reporting Services admite una amplia variedad de escenarios.
   
  En la mayoría de los casos, para satisfacer las necesidades de funcionalidad de informe se requieren tanto el acceso URL como las llamadas a SOAP. SOAP se usa al conectarse inicialmente a la base de datos del servidor de informes y presentar la lista disponible de informes en una interfaz de usuario, mientras que el acceso URL se utiliza para obtener realmente acceso y navegar por informes individuales.  
   
- Para obtener un ejemplo de cómo combinar el acceso URL y el servicio web para proporcionar informes integrados, vea [SQL Server Reporting Services Product Samples (Ejemplos del producto SQL Server Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Para obtener un ejemplo de cómo combinar el acceso URL y el servicio web para proporcionar informes integrados, vea [SQL Server Reporting Services Product Samples (Ejemplos del producto SQL Server Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Vea también  
  [Integración de Reporting Services en las aplicaciones](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   

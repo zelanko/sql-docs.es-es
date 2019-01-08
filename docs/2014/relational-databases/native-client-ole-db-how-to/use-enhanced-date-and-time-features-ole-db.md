@@ -10,25 +10,25 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31bdf5f2b1e435496f2b00f141a7387f9e7560eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363817"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Utilizar las características mejoradas de fecha y hora (OLE DB)
   En este ejemplo, se muestra cómo usar las características de fecha y hora que se incluyeron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. El ejemplo usa los cuatro nuevos tipos de fecha y hora (`date`, **tiempo**, `datetime2`, y `datetimeoffset`) para ejecutar comandos con parámetros y recuperar los resultados de conjunto de filas.  
   
- Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  
+ Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Ejemplo  
  La primera lista de código  ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea un procedimiento almacenado que se usa en el ejemplo.  
   
- Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
  La tercera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina el procedimiento almacenado que se usa en el ejemplo.  
   

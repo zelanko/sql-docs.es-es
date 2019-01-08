@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.srvinfopg.f1
@@ -13,12 +12,12 @@ ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 204e435a512d7524cdf1cf946c0e45c67f929f36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a65b9b50c3b57afc055022392681a946be605c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057995"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794947"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Página Configuración del servidor de Master Data Services (Administrador de configuración)
   Utilice la página **Configuración del servidor** para ver información de configuración del equipo del servidor local.  

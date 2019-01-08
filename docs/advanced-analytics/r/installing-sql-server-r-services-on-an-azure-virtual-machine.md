@@ -1,5 +1,5 @@
 ---
-title: Instale SQL Server Machine Learning Services con R y Python en una máquina virtual de Azure | Microsoft Docs
+title: 'Instale el lenguaje R y las características de Python en una máquina virtual de Azure: SQL Server Machine Learning Services'
 description: Ejecutar soluciones en una máquina virtual de SQL Server en la nube de Azure de aprendizaje automático y ciencia de datos de R y Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e416b99c3d4597cb2fe9346819184be43cd98402
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 6216142708a201a1ad720ab4e1e659c507744195
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512700"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432308"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Instale SQL Server Machine Learning Services con R y Python en una máquina virtual de Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

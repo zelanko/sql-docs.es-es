@@ -13,12 +13,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4034beae4e022379de1cb9cac83f982f512bdc7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688303"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405922"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selección y configuración de objetos afectados (OracleToSQL)
 En esta página puede seleccionar tablas y claves externas, los cambios en el que se deben comparar cuando SSMA comprueba los resultados de ejecución para los objetos que haya elegido en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -43,14 +43,14 @@ La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionad
   
 -   Default  
   
--   Identidad  
+-   identidad  
   
 -   Admisión de valores NULL  
   
 ## <a name="sql"></a>SQL  
 Pestaña SQL contiene la tabla"crear" SQL de la tabla seleccionada.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Datos  
 Pestaña de datos muestra los datos presentes en la tabla seleccionada.  
   
 ## <a name="properties"></a>Propiedades  

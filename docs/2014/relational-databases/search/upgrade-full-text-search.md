@@ -16,12 +16,12 @@ ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9a9a8db6c84bfde40ec7c71012d4cc528d57efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163545"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363647"
 ---
 # <a name="upgrade-full-text-search"></a>Actualizar la búsqueda de texto completo
   La actualización de la búsqueda de texto completo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se realiza durante la instalación y al adjuntar, restaurar o copiar archivos de base de datos y catálogos de texto completo de la versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el Asistente para copiar bases de datos.  
@@ -126,7 +126,7 @@ ms.locfileid: "48163545"
 ## <a name="backup-and-imported-full-text-catalogs"></a>Las copias de seguridad y los catálogos de texto completo importados  
  En los catálogos de texto completo que se vuelven a generar o que se restablecen durante la actualización (y para los nuevos catálogos de texto completo), el catálogo de texto completo es un concepto lógico y no reside en ningún grupo de archivos. Por consiguiente, para hacer una copia de seguridad de un catálogo de texto completo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], debe identificar cada grupo de archivos que contenga un índice de texto completo del catálogo y hacer una copia de seguridad de cada uno de ellos, uno por uno. Para obtener más información, vea [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
- Para los catálogos de texto completo importados de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el catálogo de texto completo sigue siendo un archivo de base de datos en su propio grupo de archivos. Se sigue aplicando el proceso de copia de seguridad de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para los catálogos de texto completo, con la salvedad de que el servicio MSFTESQL no existe en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información sobre el proceso de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vea [Backing Up and Restoring Full-Text Catalogs (Copia de seguridad y restauración de catálogos de texto completo)](http://go.microsoft.com/fwlink/?LinkId=209154) en los Libros en pantalla de SQL Server 2005.  
+ Para los catálogos de texto completo importados de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el catálogo de texto completo sigue siendo un archivo de base de datos en su propio grupo de archivos. Se sigue aplicando el proceso de copia de seguridad de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para los catálogos de texto completo, con la salvedad de que el servicio MSFTESQL no existe en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información sobre el proceso de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vea [Backing Up and Restoring Full-Text Catalogs (Copia de seguridad y restauración de catálogos de texto completo)](https://go.microsoft.com/fwlink/?LinkId=209154) en los Libros en pantalla de SQL Server 2005.  
   
 ##  <a name="Upgrade_Db"></a> Migrar índices de texto completo al actualizar una base de datos [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Los archivos de base de datos y los catálogos de texto completo de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden actualizar a una instancia del servidor de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existente mediante operaciones de anexión o restauración, o con el Asistente para copiar bases de datos. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] los índices de texto completo, si los hubiera, se importan, se restablecen o se vuelven a compilar. La propiedad de servidor **upgrade_option** controla cuál de las opciones de actualización de texto completo usa la instancia del servidor durante estas actualizaciones de bases de datos.  
@@ -135,9 +135,9 @@ ms.locfileid: "48163545"
   
  **Para cambiar el comportamiento de la actualización de texto completo en una instancia del servidor**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use la acción **upgrade\_option** de [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use la **actualizar\_opción** acción de [sp\_fulltext\_servicio](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use la **Opción de actualización de texto completo** del cuadro de diálogo **Propiedades del servidor** . Para obtener más información, vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use la **opción de actualización de texto completo** de la **las propiedades del servidor** cuadro de diálogo. Para obtener más información, vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="Considerations_for_Restore"></a> Consideraciones sobre la restauración de un catálogo de texto completo de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Una forma de actualizar los datos de texto completo de una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste en restaurar una copia de seguridad completa de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -148,7 +148,7 @@ ms.locfileid: "48163545"
   
 -   Si el catálogo de texto completo está sin conexión, se producirá un error en la copia de seguridad.  
   
- Para obtener más información sobre las copias de seguridad y la restauración de catálogos de texto completo de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vea [Backing Up and Restoring Full-Text Catalogs (Copia de seguridad y restauración de catálogos de texto completo)](http://go.microsoft.com/fwlink/?LinkId=121052) y [File Backup and Restore and Full-Text Catalogs (Copia de seguridad y restauración de archivos y catálogos de texto completo)](http://go.microsoft.com/fwlink/?LinkId=121053)en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+ Para obtener más información sobre las copias de seguridad y la restauración de catálogos de texto completo de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vea [Backing Up and Restoring Full-Text Catalogs (Copia de seguridad y restauración de catálogos de texto completo)](https://go.microsoft.com/fwlink/?LinkId=121052) y [File Backup and Restore and Full-Text Catalogs (Copia de seguridad y restauración de archivos y catálogos de texto completo)](https://go.microsoft.com/fwlink/?LinkId=121053)en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  Cuando la base de datos se restaura en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se crea un nuevo archivo de base de datos para el catálogo de texto completo. El nombre predeterminado de este archivo es ftrow_*catalog-name*.ndf. Por ejemplo, si *catalog-name* es `cat1`, el nombre predeterminado del archivo de base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Pero si el nombre predeterminado ya se usa en el directorio de destino, el nuevo archivo de base de datos se denominará `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, donde *GUID* es el identificador único global del nuevo archivo.  
   

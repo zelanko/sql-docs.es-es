@@ -14,17 +14,17 @@ ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 02e923299ba7a82f2af27395bc55ae15de4bb1d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a5c489125d4a35b5c886ba6d6304b22ceec5c4a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164955"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375357"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Crear un componente de tiempo de ejecución de elemento de informe personalizado
   El componente de tiempo de ejecución de elemento de informe personalizado se implementa como un componente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] mediante cualquier lenguaje compatible con CLS y el procesador de informes lo llama en tiempo de ejecución. Las propiedades para el componente de tiempo de ejecución en el entorno de diseño se definen modificando el componente de tiempo de diseño correspondiente del elemento de informe personalizado.  
   
- Para obtener un ejemplo de un elemento de informe personalizado totalmente implementado, vea [Ejemplos del producto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Para obtener un ejemplo de un elemento de informe personalizado totalmente implementado, vea [Ejemplos del producto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="definition-and-instance-objects"></a>Objetos de definición e instancia  
  Antes de implementar un elemento de informe personalizado, es importante entender la diferencia entre *objetos de definición* y *objetos de instancia*. Los objetos de definición proporcionan la representación RDL del elemento de informe personalizado mientras que objetos de instancia son las versiones evaluadas de los objetos de definición. Hay solo un objeto de definición para cada elemento en el informe. Al tener acceso a las propiedades en un objeto de definición que contiene expresiones, obtendrá una cadena de expresión no evaluada. Los objetos de instancia contienen las versiones evaluadas de los objetos de definición y pueden tener una relación uno a varios con el objeto de definición de un elemento. Por ejemplo, si un informe tiene una región de datos <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> que contiene un <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> en una fila de detalle, solo habrá un objeto de definición, pero habrá un objeto de instancia para cada fila en la región de datos.  
@@ -137,6 +137,6 @@ namespace Microsoft.Samples.ReportingServices
  [Arquitectura de elementos de informe personalizados](custom-report-item-architecture.md)   
  [Creación de un componente de tiempo de diseño de elemento de informe personalizado](creating-a-custom-report-item-design-time-component.md)   
  [Bibliotecas de clases de elemento de informe personalizado](custom-report-item-class-libraries.md)   
- [Implementación de un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)  
+ [Cómo: Implementar un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)  
   
   

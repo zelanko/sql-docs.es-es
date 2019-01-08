@@ -22,12 +22,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7f71384b89be479d8388e4af8e897f384f2b141
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a132395bbd95997832e2a1df6948179cb2ffe8aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198705"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353630"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Cálculos en modelos multidimensionales
   Use la pestaña **Cálculos** del Diseñador de cubos para crear miembros calculados, conjuntos con nombre y otros cálculos de expresiones multidimensionales (MDX).  
@@ -41,7 +41,7 @@ ms.locfileid: "48198705"
 -   El panel de las expresiones de cálculo admite una vista de formulario y otra de script.  
   
 > [!NOTE]  
->  Para obtener más información acerca de la generación de scripting MDX, vea la [introducción a scripting de MDX en Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892)y consulte la sección sobre recursos adicionales en la página [SQL Server 2005 – Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) (en inglés) del sitio web de Microsoft TechNet. Para obtener más información acerca de los problemas de rendimiento relacionados con el diseño de cubos, vea la [guía de rendimiento de SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+>  Para obtener más información acerca del scripting de MDX, vea [Introducción a Scripting de MDX en Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)y consulte la sección recursos adicionales sobre la [SQL Server 2005: Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) página en el Sitio Web de Microsoft TechNet. Para obtener más información acerca de los problemas de rendimiento relacionados con el diseño de cubos, vea la [guía de rendimiento de SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="creating-a-new-calculation"></a>Crear un cálculo  
  Para crear un cálculo, en la pestaña **Cálculos** del Diseñador de cubos, en el menú **Cubo** , haga clic en **Nuevo miembro calculado**, **Nuevo conjunto con nombre**, o **Nuevo comando de script**, según el tipo de cálculo que desee crear. También se puede hacer clic en cualquiera de los botones correspondientes de la barra de herramientas, o bien hacer clic con el botón derecho en cualquier punto del panel **Organizador de scripts** y, después, hacer clic en uno de los comandos del menú contextual. Esta acción agrega un nuevo cálculo al panel **Organizador de script** y muestra los campos correspondientes del formulario de cálculos del panel de las expresiones de cálculo. Si crea un nuevo script, esta acción abre la Vista de script del panel de las expresiones de cálculo. Para más información sobre cómo crear los tres tipos de cálculos, vea [Crear miembros calculados](create-calculated-members.md), [Crear conjuntos con nombre](create-named-sets.md)y [Definir asignaciones y otros comandos de script](define-assignments-and-other-script-commands.md).  

@@ -10,17 +10,17 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9af1d66612485f3a790de1ebc8149b7a9e374103
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178265"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360417"
 ---
 # <a name="sql-server-index-design-guide"></a>Guía de diseño de índices de SQL Server
   Los índices mal diseñados y la falta de índices constituyen las principales fuentes de atascos en aplicaciones de base de datos. El diseño eficaz de los índices tiene gran importancia para conseguir un buen rendimiento de una base de datos y una aplicación. Esta guía de diseño de índices de SQL Server contiene información y prácticas recomendadas que le ayudarán a diseñar índices eficaces que resuelvan las necesidades de la aplicación.  
   
-**Se aplica a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a través de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] a menos que se indique lo contrario.  
+**Se aplica a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , a menos que se especifique lo contrario.  
   
  En esta guía se da por supuesto que el lector tiene información general sobre los tipos de índice disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una descripción general de los tipos de índice, vea [Tipos de índice](../relational-databases/indexes/indexes.md).  
   
@@ -152,7 +152,7 @@ ms.locfileid: "48178265"
   
 -   Realizar consultas de forma más rápida y eficiente. Cuando las consultas tienen acceso a varias particiones de un índice, el optimizador de consultas puede procesar particiones individuales simultáneamente y excluir particiones que no están afectadas por la consulta.  
   
- Para obtener más información, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Para obtener más información, vea [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Directrices para diseñar el criterio de ordenación de los índices  
  Al definir índices, debe tenerse en cuenta si los datos de la columna de clave de índice se almacenan en orden ascendente o descendente. El orden ascendente es el predeterminado y mantiene la compatibilidad con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La sintaxis de las instrucciones CREATE INDEX, CREATE TABLE y ALTER TABLE admite las palabras clave ASC (ascendente) y DESC (descendente) en columnas individuales de índices y restricciones.  
@@ -389,7 +389,7 @@ INCLUDE (FileName);
   
     -   Cambiar la nulabilidad de NOT NULL a NULL.  
   
-    -   Aumente la longitud de `varchar`, `nvarchar`, o `varbinary` columnas.  
+    -   Aumentar la longitud de las columnas `varchar`, `nvarchar` o `varbinary`.  
   
         > [!NOTE]  
         >  También se aplican restricciones de modificación a las columnas de clave de índice.  
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "icono de flecha usado con el vínculo volver al principio") [en esta guía](#Top)  
   
 ##  <a name="Additional_Reading"></a> Lecturas adicionales  
- [Mejorar el rendimiento con vistas indizadas de SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+ [Mejorar el rendimiento con vistas indizadas de SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
  [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   

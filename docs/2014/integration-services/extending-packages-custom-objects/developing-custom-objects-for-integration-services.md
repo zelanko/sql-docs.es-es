@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom user interface [Integration Services]
@@ -15,12 +13,12 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c291f88128442431c0a6e60250600d8866519fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cabe3abc2a6ce962a101f8dd2910bd37125f9eea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125615"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353180"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desarrollar objetos personalizados para Integration Services
   Cuando los objetos de flujo de datos y flujo de control que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no cumplen completamente los requisitos, puede desarrollar muchos tipos de objetos personalizados, entre los que se incluyen:  
@@ -93,7 +91,7 @@ ms.locfileid: "48125615"
 ## <a name="providing-a-custom-user-interface"></a>Proporcionar una interfaz de usuario personalizada  
  Para permitir a los usuarios de su objeto personalizado configurar sus propiedades, puede que tenga que desarrollar también una interfaz de usuario personalizada. En aquellos casos donde no se requiere una interfaz de usuario personalizada de forma estricta, puede que decida crear una para proporcionar una interfaz más fácil de comprender que el editor predeterminado.  
   
- En un proyecto o ensamblado personalizado de la interfaz de usuario, generalmente tiene dos clases: una clase que implementa una interfaz [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para las interfaces de usuario para el tipo específico de objeto personalizado y el formulario Windows Forms que se muestra para recopilar información del usuario. Las interfaces que implementa tienen solo unos cuantos métodos y una interfaz de usuario personalizada que no es difícil de desarrollar.  
+ Un proyecto o ensamblado personalizado de la interfaz de usuario suele tener dos clases: una clase que implementa una interfaz [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para las interfaces de usuario para el tipo específico de objeto personalizado y el formulario de Windows Forms que se muestra para recopilar información del usuario. Las interfaces que implementa tienen solo unos cuantos métodos y una interfaz de usuario personalizada que no es difícil de desarrollar.  
   
 > [!NOTE]  
 >  Muchos proveedores de registro de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tienen una interfaz de usuario personalizada que implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> y reemplaza el cuadro de texto **Configuración** con una lista desplegable que filtra los administradores de conexión disponibles. Sin embargo, las interfaces de usuario personalizadas para los proveedores de registro personalizados no se implementan en esta versión de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Especificar un valor para la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> no tiene ningún efecto.  
@@ -110,9 +108,9 @@ ms.locfileid: "48125615"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de Blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references (El proceso de compilación de la solución de Visual Studio muestra una advertencia acerca de la dependencia indirecta del ensamblado de .NET Framework debido a referencias SSIS)](http://go.microsoft.com/fwlink/?LinkId=215662) en blogs.msdn.com.  
+-   Entrada de Blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references (El proceso de compilación de la solución de Visual Studio muestra una advertencia acerca de la dependencia indirecta del ensamblado de .NET Framework debido a referencias SSIS)](https://go.microsoft.com/fwlink/?LinkId=215662) en blogs.msdn.com.  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Conservar objetos personalizados](persisting-custom-objects.md)   

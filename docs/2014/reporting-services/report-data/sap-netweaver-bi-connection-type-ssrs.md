@@ -11,12 +11,12 @@ ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8eb5d5f003076a9a883363f5da4bb7d2bf501577
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af69191452137761cfaa49d6add0ad39ad3ccdde
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084765"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363667"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo de conexión de SAP NetWeaver BI (SSRS)
   Para incluir en un informe datos de un origen de datos de SAP NetWeaver® Business Intelligence externo, debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Este tipo de origen de datos integrado está basado en la extensión de datos del proveedor de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 para [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -72,17 +72,17 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Extended"></a> Propiedades de campo extendidas  
- El origen de datos [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] admite propiedades de campo extendidas. Propiedades de campo extendidas son propiedades además `Value` y `IsMissing` que se definen para un campo de conjunto de datos mediante la extensión de procesamiento de datos. Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes para varios orígenes de datos. Las propiedades personalizadas son únicas para cada origen de datos.  
+ El origen de datos [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades (además de `Value` e `IsMissing`) que la extensión de procesamiento de datos define para un campo de conjunto de datos. Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes para varios orígenes de datos. Las propiedades personalizadas son únicas para cada origen de datos.  
   
 ### <a name="working-with-field-properties"></a>Trabajar con propiedades de campo  
- Las propiedades de campo extendidas no aparecen en el panel Datos de informe como elementos que se puedan arrastrar al diseño del informe. En su lugar, arrastre el campo primario de la propiedad al informe y, a continuación, cambie la propiedad predeterminada de `Value` a la propiedad que desea usar. Por ejemplo, si se crease el nombre de campo **Calendar Year/Month Level 01** en un diseñador de consultas MDX colocando un nivel del panel Metadatos en el panel Consulta, se usaría la sintaxis siguiente para hacer referencia a la propiedad extendida personalizada **Nombre largo** en una expresión:  
+ Las propiedades de campo extendidas no aparecen en el panel Datos de informe como elementos que se puedan arrastrar al diseño del informe. En su lugar, se arrastra al informe el campo primario de la propiedad y, después, se cambia la propiedad predeterminada de `Value` a la propiedad que se desee utilizar. Por ejemplo, si se crease el nombre de campo **Calendar Year/Month Level 01** en un diseñador de consultas MDX colocando un nivel del panel Metadatos en el panel Consulta, se usaría la sintaxis siguiente para hacer referencia a la propiedad extendida personalizada **Nombre largo** en una expresión:  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- El nombre de la propiedad de campo extendida aparecerá en la información sobre herramientas al mantener el mouse encima de un campo del panel Metadatos. Para obtener más información acerca de los diseñadores de consultas que puede usar para explorar los datos subyacentes, vea [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
+ El nombre de la propiedad de campo extendida aparecerá en la información sobre herramientas al mantener el mouse encima de un campo del panel Metadatos. Para obtener más información acerca de los diseñadores de consultas que se pueden utilizar para explorar los datos subyacentes, vea [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
   
 > [!NOTE]  
->  Solo existirán valores para las propiedades de campo extendidas si el origen de datos ofrece estos valores cuando el informe se ejecuta y recupera los datos de sus conjuntos de datos. A continuación, puede hacer referencia a esos `Field` valores de propiedad de cualquier expresión mediante la sintaxis descrita más adelante. No obstante, dado que estos campos son específicos de este proveedor de datos y no son parte del lenguaje RDL (Report Definition Language), los cambios que se realicen en estos valores no se guardarán con la definición de informe.  
+>  Solo existirán valores para las propiedades de campo extendidas si el origen de datos ofrece estos valores cuando el informe se ejecuta y recupera los datos de sus conjuntos de datos. En ese caso, podrá hacer referencia a esos valores de propiedad `Field` desde cualquier expresión mediante la sintaxis descrita más adelante. No obstante, dado que estos campos son específicos de este proveedor de datos y no son parte del lenguaje RDL (Report Definition Language), los cambios que se realicen en estos valores no se guardarán con la definición de informe.  
   
  Para hacer referencia a propiedades extendidas predefinidas en una expresión, se utiliza la sintaxis siguiente:  
   
@@ -118,7 +118,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Remarks"></a> Comentarios  
  Este proveedor de datos no admite todos los modos de entrega de informes. No se admite la entrega de informes a través de suscripciones controladas por datos para esta extensión de procesamiento de datos. Para más información, vea [Usar un origen de datos externo para obtener información de los suscriptores &#40;suscripción controlada por datos&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
- Para obtener más información, vea el tema sobre cómo [usar SQL Server 2008 Reporting Services con SAP NetWeaver Business Intelligence](http://go.microsoft.com/fwlink/?LinkId=167352).  
+ Para obtener más información, vea el tema sobre cómo [usar SQL Server 2008 Reporting Services con SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
   
   
   

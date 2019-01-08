@@ -10,12 +10,12 @@ ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 314f90a482091823efae4430dbdc2d62ad7b34f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073915"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352420"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para utilizar las tablas con optimización para memoria
   Además el [requisitos de Hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), los siguientes son requisitos para usar OLTP en memoria:  
@@ -32,11 +32,11 @@ ms.locfileid: "48073915"
   
 -   El procesador debe admitir la instrucción **cmpxchg16b** para utilizar OLTP en memoria. Todos los procesadores de 64 bits modernos admiten la instrucción **cmpxchg16b**.  
   
-     Si usa una aplicación de host de máquina virtual y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un error provocado por un procesador anterior, compruebe si la aplicación tiene una opción de configuración para permitir **cmpxchg16b**. Si no, puede usar Hyper-V, que admite **cmpxchg16b** sin necesidad de modificar ninguna opción de configuración.  
+     Si utiliza una aplicación host de VM y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un error provocado por un procesador anterior, compruebe si la aplicación tiene una opción de configuración para permitir **cmpxchg16b**. Si no, puede usar Hyper-V, que admite **cmpxchg16b** sin necesidad de modificar ninguna opción de configuración.  
   
--   Para instalar OLTP en memoria, seleccione **servicios de motor de base de datos** al instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+-   Para instalar OLTP en memoria, seleccione **Servicios de Motor de base de datos** cuando instale [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-     Para instalar la generación de informes ([determinar si una tabla o procedimiento almacenado debe ser pasar a OLTP en memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) y [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (para administrar OLTP en memoria mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Explorador de objetos), seleccione **administración Herramientas: básica** o **las herramientas de administración: Advanced** al instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+     Para instalar la generación de informes ([determinar si una tabla o procedimiento almacenado debe ser pasar a OLTP en memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) y [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (para administrar OLTP en memoria mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Explorador de objetos), seleccione **administración Herramientas-Basic** o **las herramientas de administración-avanzada** al instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Información importante sobre el uso de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
@@ -46,14 +46,14 @@ ms.locfileid: "48073915"
   
 -   Los archivos de puntos de comprobación no se deben eliminar manualmente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza automáticamente la recolección de elementos no utilizados en los archivos de puntos de comprobación innecesarios. Para obtener más información, vea la explicación sobre la combinación de archivos delta y datos de [durabilidad de las tablas con optimización para memoria](durability-for-memory-optimized-tables.md).  
   
--   En esta primera versión de OLTP en memoria (en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), la única forma de quitar un grupo de archivos optimizados para memoria es colocar la base de datos.  
+-   En esta primera versión de OLTP en memoria (en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), la única forma de quitar un grupo de archivos optimizados para memoria es eliminar la base de datos.  
   
--   Si intenta eliminar un lote grande de filas mientras haya una carga de trabajo de inserción o actualización que afecte al intervalo de filas que intenta eliminar, lo más probable es que la eliminación no se realice correctamente. La solución alternativa es detener la carga de trabajo de inserción o actualización antes de eliminar. Por otra parte, también puede configurar la transacción en transacciones más pequeñas, lo que comporta menos riesgos de interrupción por cargas de trabajo simultánea. Como con todas las operaciones de escritura en tablas optimizadas para memoria, debe usar lógica de reintento ([Guidelines for Retry Logic para las transacciones en tablas optimizadas para memoria](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
+-   Si intenta eliminar un lote grande de filas mientras haya una carga de trabajo de inserción o actualización que afecte al intervalo de filas que intenta eliminar, lo más probable es que la eliminación no se realice correctamente. La solución alternativa es detener la carga de trabajo de inserción o actualización antes de eliminar. Por otra parte, también puede configurar la transacción en transacciones más pequeñas, lo que comporta menos riesgos de interrupción por cargas de trabajo simultánea. Como con todas las operaciones de escritura en tablas optimizadas para memoria, debe usar lógica de reintento ([Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
   
--   Si crea una o más bases de datos con tablas optimizadas para memoria, debe habilitar la inicialización instantánea de archivos (conceda el derecho de usuario SE_MANAGE_VOLUME_NAME a la cuenta de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin la inicialización instantánea de archivos, los archivos de almacenamiento optimizados para memoria (datos y archivos delta) se inicializarán en el momento de la creación, lo cual puede tener un impacto negativo en el rendimiento de la carga de trabajo. Para obtener más información sobre la inicialización instantánea de archivos, vea [Inicialización de archivos de base de datos](../databases/database-instant-file-initialization.md). Para obtener información sobre cómo habilitar la inicialización instantánea de archivos, vea [Cómo y por qué habilitar la inicialización instantánea de archivos](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
+-   Si crea una o más bases de datos con tablas optimizadas para memoria, debe habilitar la inicialización instantánea de archivos (conceda el derecho de usuario SE_MANAGE_VOLUME_NAME a la cuenta de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin la inicialización instantánea de archivos, los archivos de almacenamiento optimizados para memoria (datos y archivos delta) se inicializarán en el momento de la creación, lo cual puede tener un impacto negativo en el rendimiento de la carga de trabajo. Para obtener más información sobre la inicialización instantánea de archivos, vea [Inicialización de archivos de base de datos](../databases/database-instant-file-initialization.md). Para obtener información sobre cómo habilitar la inicialización instantánea de archivos, vea [Cómo y por qué habilitar la inicialización instantánea de archivos](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
-## <a name="did-this-article-help-you-were-listening"></a>¿Le ayudó este artículo? Le escuchamos  
- ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [ sqlfeedback@microsoft.com ](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>¿Le ayudó este artículo? Estamos escuchando  
+ ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
   
 ## <a name="see-also"></a>Vea también  
  [OLTP en memoria &#40;optimización en memoria&#41;](in-memory-oltp-in-memory-optimization.md)  

@@ -12,12 +12,12 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51f83f4bc0cfc60a2e8137407a7efc9635dd9f70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229225"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368597"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
   Este tema describe la funcionalidad SQLGetDescRec específica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -31,7 +31,7 @@ ms.locfileid: "48229225"
   
 |Parámetro|Parámetro con valores de tabla|Columnas de parámetros con valores de tabla y otros parámetros|  
 |---------------|-----------------------------|----------------------------------------------------------|  
-|*Nombre*|El nombre del parámetro formal de una llamada de procedimiento almacenado; de lo contrario, una cadena de longitud 0.|El nombre de la columna de parámetros con valores de tabla.|  
+|*Name*|El nombre del parámetro formal de una llamada de procedimiento almacenado; de lo contrario, una cadena de longitud 0.|El nombre de la columna de parámetros con valores de tabla.|  
 |*TypePtr*|SQL_DESC_TYPE. Para los parámetros con valores de tabla, es SQL_SS_TABLE.|SQL_DESC_TYPE|  
 |*SubTypePtr*|No definido|SQL_DESC_DATETIME_INTERVAL_CODE (para registros de tipo SQL_DATETIME o SQL_INTERVAL).|  
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
@@ -59,7 +59,7 @@ ms.locfileid: "48229225"
  `SQLGetDescRec` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [SQLGetDescRec](http://go.microsoft.com/fwlink/?LinkId=80707)   
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
   
   

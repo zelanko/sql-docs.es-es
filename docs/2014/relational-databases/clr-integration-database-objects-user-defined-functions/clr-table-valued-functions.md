@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0463360db65621a90f270c2eedb87972c6bd986b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0fa6b877b0c4f9dd2754301c9b2e47964b1ad9e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088555"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979461"
 ---
 # <a name="clr-table-valued-functions"></a>Funciones con valores de tabla en CLR
   Una función con valores de tabla es una función definida por el usuario que devuelve una tabla.  
@@ -42,14 +42,14 @@ ms.locfileid: "48088555"
  Implemente las funciones con valores de tabla como métodos de una clase en un ensamblado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. El código de las funciones con valores de tabla debe implementar la interfaz `IEnumerable`. La interfaz `IEnumerable` se define en .NET Framework. Los tipos que representan matrices y colecciones en .NET Framework ya implementan la interfaz `IEnumerable`. De esta forma resulta más fácil escribir funciones con valores de tabla que conviertan una colección o una matriz en un conjunto de resultados.  
   
 ## <a name="table-valued-parameters"></a>Parámetros con valores de tabla  
- Los parámetros con valores de tabla son tipos de tabla definidos por el usuario que se pasan a un procedimiento o función, y proporcionan un modo eficaz de pasar varias filas de datos al servidor. Los parámetros con valores de tabla presentan una funcionalidad similar a la de las matrices de parámetros, pero proporcionan más flexibilidad y una mayor integración con [!INCLUDE[tsql](../../includes/tsql-md.md)]. También proporcionan la posibilidad de obtener mayor rendimiento. Los parámetros con valores de tabla también ayudan a reducir el número de viajes de ida y vuelta (round trip) al servidor. En lugar de enviar varias solicitudes al servidor, como en el caso de una lista de parámetros escalares, los datos pueden enviarse al servidor como un parámetro con valores de tabla. Un tipo de tabla definido por el usuario no puede pasarse como un parámetro con valores de tabla a un procedimiento almacenado administrado o a una función que se ejecuta en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como tampoco puede devolverse desde dicho procedimiento o función. Para más información sobre los parámetros con valores de tabla, vea[Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Los parámetros con valores de tabla son tipos de tabla definidos por el usuario que se pasan a un procedimiento o función, y proporcionan un modo eficaz de pasar varias filas de datos al servidor. Los parámetros con valores de tabla presentan una funcionalidad similar a la de las matrices de parámetros, pero proporcionan más flexibilidad y una mayor integración con [!INCLUDE[tsql](../../includes/tsql-md.md)]. También proporcionan la posibilidad de obtener mayor rendimiento. Los parámetros con valores de tabla también ayudan a reducir el número de viajes de ida y vuelta (round trip) al servidor. En lugar de enviar varias solicitudes al servidor, como en el caso de una lista de parámetros escalares, los datos pueden enviarse al servidor como un parámetro con valores de tabla. Un tipo de tabla definido por el usuario no puede pasarse como un parámetro con valores de tabla a un procedimiento almacenado administrado o a una función que se ejecuta en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como tampoco puede devolverse desde dicho procedimiento o función. Para más información sobre los parámetros con valores de tabla, vea[Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Parámetros de salida y funciones con valores de tabla  
  Se puede devolver información de funciones con valores de tabla mediante el uso de parámetros de salida. El parámetro correspondiente en el código de implementación de la función con valores de tabla debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida del mismo modo en que lo hace Visual C#. Debe especificar el parámetro por referencia y aplicar la \<Out() > atributo para representar un parámetro de salida, como en el siguiente ejemplo:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)  
 ```  
   
@@ -174,8 +174,8 @@ WHERE T.Category = N'Logon/Logoff';
 go  
 ```  
   
-## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Ejemplo: devolver los resultados de una consulta SQL Server  
- En el siguiente ejemplo se muestra una función con valores de tabla que consulta una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este ejemplo se utiliza la base de datos AdventureWorks Light de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Consulte [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) para obtener más información sobre la descarga de AdventureWorks.  
+## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Ejemplo: Devolver los resultados de una consulta de SQL Server  
+ En el siguiente ejemplo se muestra una función con valores de tabla que consulta una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este ejemplo se utiliza la base de datos AdventureWorks Light de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Consulte [ http://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843) para obtener más información sobre la descarga de AdventureWorks.  
   
  Asigne a su archivo de código fuente el nombre FindInvalidEmails.cs o FindInvalidEmails.vb.  
   

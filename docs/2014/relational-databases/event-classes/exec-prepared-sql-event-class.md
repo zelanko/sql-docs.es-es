@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4cbf619c33963980b4b6c975a817d601317ae82c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d4559c13091f809cc222128d0f9e991ea424628
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122435"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808027"
 ---
 # <a name="exec-prepared-sql-event-class"></a>Exec Prepared SQL, clase de eventos
   La clase de eventos Exec Prepared SQL indica que SqlClient, ODBC, OLE DB o DB-Library ha ejecutado una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.  
@@ -44,7 +43,7 @@ ms.locfileid: "48122435"
 |NTDomainName|`nvarchar`|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |IdSolicitud|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
+|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  

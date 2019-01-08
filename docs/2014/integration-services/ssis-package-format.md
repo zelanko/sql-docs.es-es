@@ -11,19 +11,19 @@ ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43c0662c9084c654b4138a8443f1e2e98eaec376
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3df60e0708ae86cf1aa5bde48e8a734140c38789
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200025"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366427"
 ---
 # <a name="ssis-package-format"></a>Formato de paquetes SSIS
-  En la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], se han realizado cambios significativos en el formato de paquetes (archivo .dtsx) para que sea más fácil leer el formato y comparar paquetes. También puede combinar de forma más confiable paquetes que no contienen cambios en conflicto o cambios almacenados en formato binario.  
+  En la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], se han realizado cambios significativos en el formato de paquetes (archivo .dtsx) para que sea más fácil leer el formato y comparar paquetes. También puede combinar de forma más confiable paquetes que no contienen los cambios en conflicto o cambios almacenados en formato binario.  
   
- Para ver el formato de archivo del paquete actual DTSX, vea [\[MS-DTSX\]: Data Transformation Services Package XML File Format Specification ([MS-DTSX]: Especificación del formato de archivo XML de paquete de servicios de transformación de datos)](http://go.microsoft.com/fwlink/?LinkId=233251).  
+ Para ver el formato de archivo de paquete actual DTSX, vea [ \[MS-DTSX\]: Especificación de formato de archivo XML de paquete de servicios de transformación de datos](https://go.microsoft.com/fwlink/?LinkId=233251).  
   
- En la lista siguiente se mencionan los cambios de formato de archivo. Para ver ejemplos de código de estos cambios, vea [Cambios de formato de paquetes en SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=233255)  
+ En la lista siguiente se mencionan los cambios de formato de archivo. Para ver ejemplos de código de estos cambios, vea [Cambios de formato de paquetes en SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255)  
   
 -   Las convenciones de formato se han aplicado para que sea más fácil leer y comprender el archivo .dtsx.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "48200025"
   
 -   La mayoría de los objetos dentro de un paquete al que se puede hacer referencia mediante otros objetos ahora tienen un atributo `refId` definido en el paquete XML. En lugar los identificadores de linaje de almacenamiento, ahora se guarda `refID`. Los identificadores de linaje todavía se utilizan en tiempo de ejecución y se vuelven a generar al cargar el paquete.  
   
-     El `refId` valor es una cadena única que es legible y fácil comprensión, comparará con GUID o valores enteros. La cadena es similar a los valores de ruta de acceso que se usan para las configuraciones de paquetes en versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+     El valor de `refId` es una cadena única que es legible y de fácil comprensión, comparará con GUID o los valores enteros. La cadena es similar a los valores de ruta de acceso que se usan para las configuraciones de paquetes en versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Si va a combinar los cambios entre las dos versiones de un paquete, el `refId` puede utilizarse en operaciones de búsqueda y reemplazo para asegurarse de que todas las referencias a ese objeto se han actualizado correctamente.  
+     Si se mezclan los cambios entre dos versiones de un paquete, `refId` se puede utilizar en operaciones de búsqueda y reemplazo para asegurarse de que todas las referencias al objeto se han actualizado correctamente.  
   
 -   La información de diseño se encuentra en una sección de CDATA.  
   

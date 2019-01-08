@@ -10,12 +10,12 @@ ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d55a1a8bef5e3d4a74aa2bb09c27e3f7c2a8dc82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066815"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591839"
 ---
 # <a name="manage-full-text-indexes"></a>Administrar índices de texto completo
      
@@ -35,9 +35,9 @@ ms.locfileid: "48066815"
   
     |Página|Descripción|  
     |----------|-----------------|  
-    |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de los cambios**<br /><br /> **Lista de propiedades de búsqueda**<br /><br /> <br /><br /> Para obtener más información, consulte [propiedades del índice de texto completo &#40;página General&#41;](full-text-index-properties-general-page.md).|  
-    |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, consulte [propiedades del índice de texto completo &#40;página columnas&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
-    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Importante \* \***  después de salir el **propiedades del índice de texto completo** cuadro de diálogo, cualquier programación recién creado está asociado con un trabajo del Agente SQL Server (iniciar rellenado Incremental de tablas en *database_name*. *table_name*).|  
+    |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de los cambios**<br /><br /> **Lista de propiedades de búsqueda**<br /><br /> <br /><br /> Para obtener más información, vea [Propiedades del índice de texto completo &#40;página General&#41;](full-text-index-properties-general-page.md).|  
+    |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, vea [Propiedades del índice de texto completo &#40;página Columnas&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
+    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../relational-databases/indexes/indexes.md).<br /><br /> <strong>\*\* Importante \* \*</strong>  después de salir el **propiedades del índice de texto completo** cuadro de diálogo, cualquier programación recién creado está asociado con un trabajo del Agente SQL Server (iniciar rellenado Incremental de tablas en *database_name*. *table_name*).|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] para guardar cualquier cambio y salir del cuadro de diálogo **Propiedades del índice de texto completo**.  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145310"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418706"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Propiedades de celdas MDX: uso de las propiedades de celda
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002)   La celda puede actualizarse con una instrucción de actualización. La actualización puede no realizarse correctamente si se actualiza una celda hoja no habilitada para escritura.|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001)   La celda no puede actualizarse porque tiene un miembro calculado entre sus coordenadas; la celda se ha recuperado con un conjunto en la cláusula WHERE. Las celdas pueden actualizarse incluso si tienen una fórmula que incida en el valor de una celda, o si hay una celda calculada activa (en algún punto de la ruta de agregación). Con este escenario, es posible que el valor final de la celda no sea el valor actualizado, puesto que el cálculo afecta al resultado.|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002)   La celda no puede actualizarse porque no se pueden actualizar las medidas que no son de tipo Sum (count, min, max, distinct count, semi-additive).|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003)   La celda no puede actualizarse porque no existe como tal en la intersección de una medida y un miembro de dimensión no relacionado con el grupo de medida de la medida.|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0 x 10000003) la celda no puede actualizarse porque no existe como tal en la intersección de una medida y un miembro de dimensión no relacionados con el grupo de medida de la medida.|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005)   La celda no puede actualizarse porque está protegida.|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006)   Reservado para uso futuro.|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007)   La celda no puede actualizarse por motivos internos.|  

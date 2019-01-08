@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a0f8896903c2a7f817efcfa8dcc238ce0532f90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bdea2df98fbc9dbead9e1dab878a617df97a416e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151905"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355614"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn (SQL Server)
   En este tema se describen las consideraciones para implementar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], incluidos los requisitos previos, restricciones y recomendaciones para equipos host, los clústeres de conmutación por error de Windows Server (WSFC), las instancias del servidor y los grupos de disponibilidad. Para cada uno de estos componentes, se indican los criterios de seguridad y permisos necesarios, si existen.  
@@ -39,12 +39,12 @@ ms.locfileid: "48151905"
   
 ||Característica dependiente|Revisión|Vínculo|  
 |------|-----------------------|------------|----------|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|La revisión para .Net 3.5 SP1 agrega compatibilidad con las características SQL Client para AlwaysOn de intención de lectura, solo lectura y conmutación por error de multisubred. La revisión tiene que instalarse en cada servidor de informes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|KB 2654347: [Revisión para .Net 3.5 SP1 para agregar compatibilidad con las características AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|La revisión para .Net 3.5 SP1 agrega compatibilidad con las características SQL Client para AlwaysOn de intención de lectura, solo lectura y conmutación por error de multisubred. La revisión tiene que instalarse en cada servidor de informes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Revisión para .net 3.5 SP1 para agregar compatibilidad con las características AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 ##  <a name="SystemReqsForAOAG"></a> Requisitos del sistema de Windows y recomendaciones  
   
   
-###  <a name="SystemRequirements"></a> Lista de comprobación: requisitos (sistema de Windows)  
+###  <a name="SystemRequirements"></a> Lista de comprobación: Requisitos (sistema de Windows)  
  Para admitir la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , asegúrese de que cada equipo que vaya a participar en uno o varios grupos de disponibilidad cumpla los requisitos básicos siguientes:  
   
 ||Requisito|Vínculo|  
@@ -61,29 +61,29 @@ ms.locfileid: "48151905"
 ####  <a name="WinHotfixes"></a> Revisiones de Windows que admiten los grupos de disponibilidad AlwaysOn (Windows System)  
  Dependiendo de la topología de clúster, podrían aplicarse varias revisiones adicionales de Windows Server 2008 Service Pack 2 (SP2) o Windows Server 2008 R2 para admitir [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. En la tabla siguiente se identifican estas revisiones. Las revisiones pueden instalarse en cualquier orden.  
   
-||Se aplica a Windows 2008 SP2|Se aplica a Windows 2008 R2 SP1|Incluido en Windows 2012|Para admitir…|Revisión|Vínculo|  
+||Se aplica a Windows 2008 SP2|Se aplica a Windows 2008 R2 SP1|Incluido en Windows 2012|Compatibilidad con...|Revisión|Vínculo|  
 |------|---------------------------------|------------------------------------|------------------------------|-----------------|------------|----------|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|√|√|Sí|**Configuración de quórum óptimo de WSFC**|En cada nodo de WSFC, asegúrese de que esté instalada la revisión descrita en el artículo 2494036 de Knowledge Base.<br /><br /> Esta revisión admite quórum óptimo de configuración con los destinos no automáticos de conmutación por error. Esta funcionalidad mejora los clústeres de varios sitios que permite seleccionar a qué nodos se vota.|KB 2494036:  [Hay disponible una revisión que permite configurar un nodo del clúster que no tiene los votos de quórum en Windows Server 2008 y Windows Server 2008 R2](http://support.microsoft.com/kb/2494036)<br /><br /> Para obtener información sobre la votación del cuórum, vea [Configuración de los votos y modos de cuórum WSFC &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|√|√|Sí|**Uso más eficaz del ancho de banda de red**|En cada nodo WSFC, asegúrese de que esté instalada la revisión descrita en el artículo 2616514 de Knowledge Base.<br /><br /> Sin esta revisión, el servicio Cluster envía notificaciones innecesarias del Registro entre los nodos del clúster. Este comportamiento limita el ancho de banda de red, que es un problema grave para [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)].|KB 2616514:  [El servicio de clúster envía notificaciones de cambio de claves del Registro innecesarias entre los nodos del clúster en Windows Server 2008 o en Windows Server 2008 R2](http://support.microsoft.com/kb/2616514)|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")||√|No aplicable|**Prueba en los discos que no están disponibles para todos los nodos WSFC del almacenamiento VPD**|Si un nodo de WSFC ejecuta Windows Server 2008 R2 Service Pack 1 (SP1) y la prueba de almacenamiento Validar datos vitales de producto (VPD) de dispositivo SCSI produce errores una vez que se ejecuta incorrectamente en los discos que están en línea y no disponibles para todos los nodos del clúster de WSFC, instale de la revisión descrita en el artículo 2531907 de Knowledge Base.<br /><br /> Esta revisión elimina las advertencias o errores incorrectos en el informe de validación cuando los discos están en línea.|KB 2531907:  [La prueba Validar datos vitales de producto (VPD) de dispositivo SCSI produce un error después de instalar Windows Server 2008 R2 SP1](http://support.microsoft.com/kb/2531907)|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")||√|Sí|**Rápida conmutación por error a las réplicas locales**|Si un nodo de WSFC ejecuta Windows Server 2008 R2 Service Pack 1 (SP1), asegúrese de que la revisión descrita en el artículo 2687741 de Knowledge Base esté instalada.<br /><br /> Esta revisión mejora el rendimiento de la conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] a las réplicas locales.|2687741 KB:  [Una revisión que mejora el rendimiento “del grupo de AlwaysOn disponibilidad de la función” en SQL Server 2012 está disponible en Windows Server 2008 R2](http://support.microsoft.com/KB/2687741)|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|√|√|Sí|**Almacenamiento asimétrico, para las instancias de clúster de conmutación por error (FCI)**|Si las instancias de clúster de conmutación por error (FCI) van a estar habilitadas para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], instale la revisión 976097 de Windows Server 2008.<br /><br /> Esta revisión habilita el complemento Microsoft Management Console (MMC) de administración de clúster de conmutación por error para admitir los discos asimétricos de almacenamiento compartido que están disponibles en solo algunos de los nodos de WSFC.|KB 976097:  [Revisión para agregar compatibilidad con los almacenamientos asimétricos al complemento MMC de administración de clústeres de conmutación por error para un clúster de conmutación por error que ejecute Windows Server 2008 o Windows Server 2008 R2](http://support.microsoft.com/kb/976097)<br /><br /> [Guía de arquitectura de AlwaysOn: Generar una alta disponibilidad y la solución de recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](http://technet.microsoft.com/library/jj215886.aspx)|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|√|√|No aplicable|**Protocolo de seguridad de Internet (IPsec)**|Si un entorno usa conexiones IPsec, puede experimentar un retraso prolongado (aproximadamente de dos o tres minutos) cuando un equipo cliente restablece la conexión IPsec con un nombre de red virtual (en este contexto, para conectarse al agente de escucha del grupo de disponibilidad). Si usa conexiones IPsec, recomendamos que revise los escenarios específicos detallados en el artículo de Knowledge Base (KB 980915).|KB 980915:  [Se produce un retraso prolongado cuando se vuelve a conectar una conexión de IPsec desde un equipo que ejecuta Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 o Windows Server 2008 R2](http://support.microsoft.com/kb/980915)|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|√|√|Sí|**IPv6**|Si usa IPv6, recomendamos que revise los escenarios específicos detallados en el artículo de Knowledge Base 2578103 o 2578113, en función de su sistema operativo Windows Server.<br /><br /> Si la topología de Windows Server usa IP versión 6 (IPv6), el servicio de clúster WSFC requiere en torno a 30 segundos para la conmutación por error de la dirección IP IPv6. Esto hace que los clientes esperen aproximadamente 30 segundos para volver a conectarse a la dirección IP IPv6.|KB 2578103 (Windows Server 2008):  [El servicio de clúster tarda en torno a 30 segundos en la conmutación por error de las direcciones IP IPv6 en Windows Server 2008](http://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2):  **Windows Server 2008 R2:** [El servicio de clúster tarda en torno a 30 segundos en la conmutación por error de las direcciones IP IPv6 en Windows Server 2008 R2](http://support.microsoft.com/kb/2578113)|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|√|√|Sí|**Ningún enrutador entre clúster y aplicación de servidor**|Si no hay ningún enrutador entre el clúster de conmutación por error y el servidor de aplicaciones, el servicio de Cluster Server realiza con lentitud la conmutación por error de los recursos relacionados con la red. Esto retrasa las conexiones de cliente después de producirse la conmutación por error del grupo de disponibilidad. Si no hay un enrutador, se recomienda revisar los escenarios concretos detallados en el artículo de Knowledge Base 2582281 e instalar la revisión, si es aplicable a su entorno.|KB 2582281:  [Reducir la operación de conmutación por error si no existe un enrutador entre el clúster y un servidor de aplicaciones](http://support.microsoft.com/kb/2582281)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Sí|Sí|Sí|**Configuración de quórum óptimo de WSFC**|En cada nodo de WSFC, asegúrese de que esté instalada la revisión descrita en el artículo 2494036 de Knowledge Base.<br /><br /> Esta revisión admite quórum óptimo de configuración con los destinos no automáticos de conmutación por error. Esta funcionalidad mejora los clústeres de varios sitios que permite seleccionar a qué nodos se vota.|KB 2494036:  [Hay disponible una revisión que le permiten configurar un nodo de clúster que no tiene los votos de quórum en Windows Server 2008 y Windows Server 2008 R2](https://support.microsoft.com/kb/2494036)<br /><br /> Para obtener información sobre la votación del cuórum, vea [Configuración de los votos y modos de cuórum WSFC &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Sí|Sí|Sí|**Uso más eficaz del ancho de banda de red**|En cada nodo WSFC, asegúrese de que esté instalada la revisión descrita en el artículo 2616514 de Knowledge Base.<br /><br /> Sin esta revisión, el servicio Cluster envía notificaciones innecesarias del Registro entre los nodos del clúster. Este comportamiento limita el ancho de banda de red, que es un problema grave para [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)].|KB 2616514:  [El servicio de clúster envía notificaciones de cambio de clave del registro innecesarias entre los nodos del clúster en Windows Server 2008 o Windows Server 2008 R2](https://support.microsoft.com/kb/2616514)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")||Sí|No aplicable|**Prueba en los discos que no están disponibles para todos los nodos WSFC del almacenamiento VPD**|Si un nodo de WSFC ejecuta Windows Server 2008 R2 Service Pack 1 (SP1) y la prueba de almacenamiento Validar datos vitales de producto (VPD) de dispositivo SCSI produce errores una vez que se ejecuta incorrectamente en los discos que están en línea y no disponibles para todos los nodos del clúster de WSFC, instale de la revisión descrita en el artículo 2531907 de Knowledge Base.<br /><br /> Esta revisión elimina las advertencias o errores incorrectos en el informe de validación cuando los discos están en línea.|KB 2531907:  [Validar SCSI dispositivo Product Data (VPD) de prueba produce un error después de instalar Windows Server 2008 R2 SP1](https://support.microsoft.com/kb/2531907)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")||Sí|Sí|**Rápida conmutación por error a las réplicas locales**|Si un nodo de WSFC ejecuta Windows Server 2008 R2 Service Pack 1 (SP1), asegúrese de que la revisión descrita en el artículo 2687741 de Knowledge Base esté instalada.<br /><br /> Esta revisión mejora el rendimiento de la conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] a las réplicas locales.|KB 2687741:  [Una revisión que mejora el rendimiento de la característica "Grupo de disponibilidad AlwaysOn" en SQL Server 2012 está disponible en Windows Server 2008 R2](https://support.microsoft.com/KB/2687741)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Sí|Sí|Sí|**Asimétrica almacenamiento-para instancias de clúster de conmutación por error (FCI)**|Si las instancias de clúster de conmutación por error (FCI) van a estar habilitadas para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], instale la revisión 976097 de Windows Server 2008.<br /><br /> Esta revisión permite el complemento de administración de clúster de conmutación por error de Microsoft Management Console (MMC) admitir discos de almacenamiento compartido asimétricos que están disponibles en sólo algunos de los nodos WSFC.|KB 976097:  [Revisión para agregar compatibilidad con los almacenamientos asimétricos para el complemento MMC de administración de clúster de conmutación por error para un clúster de conmutación por error que se está ejecutando Windows Server 2008 o Windows Server 2008 R2](https://support.microsoft.com/kb/976097)<br /><br /> [Guía de arquitectura de AlwaysOn: Creación de una alta disponibilidad y la solución de recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://technet.microsoft.com/library/jj215886.aspx)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Sí|Sí|No aplicable|**Protocolo de seguridad de Internet (IPsec)**|Si un entorno usa conexiones IPsec, puede experimentar un retraso prolongado (aproximadamente de dos o tres minutos) cuando un equipo cliente restablece la conexión IPsec con un nombre de red virtual (en este contexto, para conectarse al agente de escucha del grupo de disponibilidad). Si usa conexiones IPsec, recomendamos que revise los escenarios específicos detallados en el artículo de Knowledge Base (KB 980915).|KB 980915:  [Se produce un retraso prolongado cuando se vuelve a conectar una conexión de IPSec desde un equipo que ejecuta Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 o Windows Server 2008 R2](https://support.microsoft.com/kb/980915)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Sí|Sí|Sí|**IPv6**|Si usa IPv6, recomendamos que revise los escenarios específicos detallados en el artículo de Knowledge Base 2578103 o 2578113, en función de su sistema operativo Windows Server.<br /><br /> Si la topología de Windows Server usa IP versión 6 (IPv6), el servicio de clúster WSFC requiere en torno a 30 segundos para la conmutación por error de la dirección IP IPv6. Esto hace que los clientes esperen aproximadamente 30 segundos para volver a conectarse a la dirección IP IPv6.|KB 2578103 (Windows Server 2008):  [El servicio de clúster tarda unos 30 segundos en conmutar las direcciones IP IPv6 en Windows Server 2008](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2):  **Windows Server 2008 R2:** [El servicio de clúster tarda unos 30 segundos en conmutar las direcciones IP IPv6 en Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Sí|Sí|Sí|**Ningún enrutador entre clúster y aplicación de servidor**|Si no hay ningún enrutador entre el clúster de conmutación por error y el servidor de aplicaciones, el servicio de Cluster Server realiza con lentitud la conmutación por error de los recursos relacionados con la red. Esto retrasa las conexiones de cliente después de producirse la conmutación por error del grupo de disponibilidad. Si no hay un enrutador, se recomienda revisar los escenarios concretos detallados en el artículo de Knowledge Base 2582281 e instalar la revisión, si es aplicable a su entorno.|KB 2582281:  [Reducir la operación de conmutación por error si no existe un enrutador entre el clúster y un servidor de aplicaciones](https://support.microsoft.com/kb/2582281)|  
   
 ###  <a name="ComputerRecommendations"></a> Recomendaciones para equipos que hospedan réplicas de disponibilidad (sistema de Windows)  
   
--   **Sistemas comparables:**  en un grupo de disponibilidad determinado, todas las réplicas de disponibilidad deben ejecutarse en sistemas comparables que puedan controlar cargas de trabajo idénticas.  
+-   **Sistemas comparables:**  Para un grupo de disponibilidad determinado, todas las réplicas de disponibilidad deben ejecutarse en sistemas comparables que puedan controlar cargas de trabajo idénticas.  
   
--   **Adaptadores de red dedicados:**  para obtener el mejor rendimiento, use un adaptador de red (tarjeta de interfaz de red) dedicado para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+-   **Adaptadores de red dedicados:**  Para obtener el mejor rendimiento, utilice un adaptador de red (tarjeta de interfaz de red) dedicado para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
--   **Espacio en disco suficiente:**  todos los equipos en los que una instancia del servidor hospeda una réplica de disponibilidad deben poseer suficiente espacio en disco para todas las bases de datos del grupo de disponibilidad. Tenga en cuenta que según crecen las bases de datos principales, las correspondientes bases de datos secundarias aumentan la misma cantidad.  
+-   **Suficiente espacio en disco:**  Todos los equipos en los que una instancia del servidor hospeda una réplica de disponibilidad deben poseer suficiente espacio en disco para todas las bases de datos del grupo de disponibilidad. Tenga en cuenta que según crecen las bases de datos principales, las correspondientes bases de datos secundarias aumentan la misma cantidad.  
   
 ###  <a name="PermissionsWindows"></a> Permisos (sistema de Windows)  
  Para administrar un clúster de WSFC, el usuario debe ser administrador del sistema en cada nodo de clúster.  
   
- Para obtener más información sobre la cuenta para la administración del clúster, vea [Apéndice A: requisitos para un clúster de conmutación por error](http://technet.microsoft.com/library/dd197454\(WS.10\).aspx).  
+ Para obtener más información acerca de la cuenta para administrar el clúster, consulte [Apéndice A: Requisitos para un clúster de conmutación por error](https://technet.microsoft.com/library/dd197454\(WS.10\).aspx).  
   
 ###  <a name="RelatedTasksWindows"></a> Tareas relacionadas (sistema de Windows)  
   
@@ -97,9 +97,9 @@ ms.locfileid: "48151905"
   
 2.  Importe el módulo FailoverClusters.  
   
-3.  Utilice la `Get-ClusterResource` cmdlet para encontrar el recurso de nombre de red y, después, usar `Set-ClusterParameter` cmdlet para establecer el `HostRecordTTL` valor, como se indica a continuación:  
+3.  Use el cmdlet `Get-ClusterResource` para buscar el recurso de nombre de red y use después el cmdlet `Set-ClusterParameter` para establecer el valor `HostRecordTTL`, de la manera siguiente:  
   
-     Get-ClusterResource “*\<nombreRecursoRed>*” | Set-ClusterParameter HostRecordTTL *\<tiempoEnSegundos>*  
+     Get-ClusterResource "*\<nombreRecursoRed>*" | Set-ClusterParameter HostRecordTTL *\<tiempoEnSegundos>*  
   
      En el ejemplo siguiente de PowerShell se establece el HostRecordTTL en 300 segundos para un recurso de nombre de red denominado “`SQL Network Name (SQL35)`”.  
   
@@ -111,30 +111,30 @@ ms.locfileid: "48151905"
     ```  
   
     > [!TIP]  
-    >  Cada vez que abre una nueva ventana de PowerShell, deberá importar el `FailoverClusters` módulo.  
+    >  Cada vez que abre una nueva ventana de PowerShell, necesita importar el módulo `FailoverClusters`.  
   
 ##### <a name="related-content-powershell"></a>Contenido relacionado (PowerShell)  
   
--   [Clustering and High-Availability (Clústeres y alta disponibilidad)](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (blog del equipo de Agrupacion de clústeres de conmutación por error y equilibrio de carga de red)  
+-   [Clustering and High-Availability (Clústeres y alta disponibilidad)](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (blog del equipo de Agrupacion de clústeres de conmutación por error y equilibrio de carga de red)  
   
--   [Introducción a Windows PowerShell en un clúster de conmutación por error](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Introducción a Windows PowerShell en un clúster de conmutación por error](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Comandos de recursos de clúster y cmdlets equivalentes de Windows PowerShell](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Comandos de recursos de clúster y cmdlets equivalentes de Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> Contenido relacionado (sistema Windows)  
   
--   [Configurar los valores de DNS en un clúster de conmutación por error de varios sitios](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [Configurar los valores de DNS en un clúster de conmutación por error de varios sitios](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [Registro DNS con el recurso de nombre de red](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [Registro DNS con el recurso de nombre de red](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
--   [Windows 2008 R2 conmutación por error de agrupación en clústeres multisitio](http://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)  
+-   [Windows 2008 R2 conmutación por error de agrupación en clústeres multisitio](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)  
   
 ##  <a name="ServerInstance"></a> Requisitos previos y restricciones de las instancias de SQL Server  
  Cada grupo de disponibilidad requiere un conjunto de asociados de conmutación por error, conocido como *réplicas de disponibilidad*, que se hospedan en instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Una instancia del servidor determinada puede ser una *instancia independiente* o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*instancia de clúster de conmutación por error* (FCI).  
   
  
   
-###  <a name="PrerequisitesSI"></a> Lista de comprobación: requisitos previos (instancia del servidor)  
+###  <a name="PrerequisitesSI"></a> Lista de comprobación: Requisitos previos (instancia de servidor)  
   
 ||Requisito previo|Vínculos|  
 |-|------------------|-----------|  
@@ -146,7 +146,7 @@ ms.locfileid: "48151905"
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Habilite la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia de servidor que hospeda una réplica de disponibilidad para cualquier grupo de disponibilidad. En un equipo determinado, puede habilitar tantas instancias de servidor de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] como admita la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> **\*\* Importante \*\*** Si elimina y vuelve a crear un clúster de WSFC, debe deshabilitar y volver a habilitar la característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia del servidor habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en el clúster de WSFC original.|  
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Cada instancia del servidor requiere un extremo de creación de reflejo de la base de datos. Observe que todas las réplicas de disponibilidad, asociados de creación de reflejo de la base de datos y testigos de la instancia del servidor comparten este extremo.<br /><br /> Si una instancia de servidor seleccionada para hospedar una réplica de disponibilidad se ejecuta bajo una cuenta de usuario de dominio y no tiene todavía un punto de conexión de creación de reflejo de la base de datos, el [Asistente para nuevo grupo de disponibilidad](use-the-availability-group-wizard-sql-server-management-studio.md) (o el [asistente Agregar réplica a grupo de disponibilidad](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) puede crear el punto de conexión y conceder el permiso CONNECT a la cuenta de servicio de la instancia de servidor. Sin embargo, si el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta como una cuenta integrada (como sistema local, servicio local o servicio de red), o una cuenta que no es de dominio, debe usar certificados para la autenticación de extremos y el asistente no podrá crear un extremo de creación de reflejo de la base de datos en la instancia de servidor. En este caso, se recomienda crear los extremos de creación de reflejo de la base de datos manualmente antes de iniciar el asistente.<br /><br /> **\*\* Nota de seguridad \*\*** La seguridad de transporte para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es la misma que para la creación de reflejo de la base de datos.|[El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Seguridad de transporte para la creación de reflejo de base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Si va a agregar cualquier base de datos que usa FILESTREAM a un grupo de disponibilidad, asegúrese de que FILESTREAM está habilitado en cada instancia de servidor que hospedará una réplica de disponibilidad para el grupo de disponibilidad.|[Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Si las bases de datos independientes se agregará a un grupo de disponibilidad, asegúrese de que el `contained database authentication` servidor opción está establecida en `1` en cada instancia del servidor que hospedará una réplica de disponibilidad del grupo de disponibilidad.|[contained database authentication (opción de configuración del servidor)](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Opciones de configuración de servidor &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Si va a agregar cualquier base de datos independiente a un grupo de disponibilidad, asegúrese de que la opción de servidor `contained database authentication` esté establecida en `1` en cada instancia del servidor que hospedará una réplica de disponibilidad para el grupo de disponibilidad.|[contained database authentication (opción de configuración del servidor)](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Opciones de configuración de servidor &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
   
 ###  <a name="ThreadUsage"></a> Uso de subprocesos por parte de los grupos de disponibilidad  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tiene los siguientes requisitos para los subprocesos de trabajo:  
@@ -171,7 +171,7 @@ ms.locfileid: "48151905"
   
     -   Una copia de seguridad en una réplica secundaria contiene un subproceso en la réplica principal mientras dura la operación de copia de seguridad.  
   
- Para más información, vea [Series de aprendizaje de AlwaysON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (un blog de los ingenieros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de CSS).  
+ Para obtener más información, consulte [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (un CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Blog de ingenieros).  
   
 ###  <a name="PermissionsSI"></a> Permisos (instancia del servidor)  
   
@@ -190,7 +190,7 @@ ms.locfileid: "48151905"
   
 ###  <a name="RelatedContentSI"></a> Contenido relacionado (instancia del servidor)  
   
--   [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Recomendaciones de conectividad de red  
  Se recomienda que utilice los mismos vínculos de red para las comunicaciones entre los miembros del clúster de WSFC y las comunicaciones entre las réplicas de disponibilidad.  El uso de vínculos de red independientes puede provocar comportamientos inesperados si alguno de los vínculos da error (incluso de forma intermitente).  
@@ -206,21 +206,21 @@ ms.locfileid: "48151905"
 ###  <a name="RestrictionsFCI"></a> Restricciones (FCI)  
   
 > [!NOTE]  
->  A partir de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], las instancias del clúster de conmutación por error de AlwaysOn admiten los volúmenes compartidos en clúster (CSV) en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] y [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Para obtener más información sobre CSV, vea [Descripción de Volúmenes compartidos de clúster en un clúster de conmutación por error](http://technet.microsoft.com/library/dd759255.aspx).  
+>  A partir de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], las instancias del clúster de conmutación por error de AlwaysOn admiten los volúmenes compartidos en clúster (CSV) en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] y [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Para obtener más información sobre CSV, vea [Descripción de Volúmenes compartidos de clúster en un clúster de conmutación por error](https://technet.microsoft.com/library/dd759255.aspx).  
   
--   **Los nodos de clúster de una FCI solo pueden hospedar una réplica para un grupo de disponibilidad determinado**  : Si agrega una réplica de disponibilidad en una FCI, los nodos de clúster de WSFC que sean posibles propietarios de FCI no pueden hospedar otra réplica para el mismo grupo de disponibilidad.  
+-   **Los nodos del clúster de una FCI pueden hospedar una única réplica para un grupo de disponibilidad determinado:**  Si agrega una réplica de disponibilidad en una FCI, los nodos del clúster WSFC que sean posibles propietarios FCI no pueden hospedar otra réplica para el mismo grupo de disponibilidad.  
   
      Además, todas las demás réplicas deben hospedarse en una instancia de SQL Server 2012 que resida en otro nodo de WSFC en el mismo clúster de WSFC. La única excepción es que mientras se migra a otro clúster de WSFC, un grupo de disponibilidad puede ocupar temporalmente dos clústeres.  
   
--   **Las FCI no admiten la conmutación automática por error por grupos de disponibilidad**  : Las FCI no admiten la conmutación automática por error por grupos de disponibilidad; por tanto, todas las réplicas de disponibilidad hospedadas por una FCI solo se pueden configurar para la conmutación por error manual.  
+-   **Las fci no admiten la conmutación automática por error grupos de disponibilidad:**  Las fci no admiten la conmutación automática por error por grupos de disponibilidad, por lo que cualquier réplica de disponibilidad hospedadas por una FCI puede configurarse para conmutación por error manual solo.  
   
--   **Cambiar el nombre de red de FCI:**  si necesita cambiar el nombre de red de una FCI que hospede una réplica de disponibilidad, tendrá que quitar la réplica del grupo de disponibilidad y, después, agregar la réplica de nuevo al grupo de disponibilidad. No puede quitar la réplica principal, de modo que si cambia el nombre de una FCI que hospeda la réplica principal, debe conmutar por error a una réplica secundaria, después quitar la réplica principal anterior y volver a agregarla. Observe que cambiar el nombre de una FCI puede modificar la dirección URL del extremo de creación de reflejo de la base de datos. Al agregar la réplica asegúrese de especificar la dirección URL del extremo actual.  
+-   **Cambiar el nombre de red FCI:**  Si necesita cambiar el nombre de red de una FCI que hospeda una réplica de disponibilidad, deberá quitar la réplica de su grupo de disponibilidad y, a continuación, agregar la réplica de nuevo al grupo de disponibilidad. No puede quitar la réplica principal, de modo que si cambia el nombre de una FCI que hospeda la réplica principal, debe conmutar por error a una réplica secundaria, después quitar la réplica principal anterior y volver a agregarla. Observe que cambiar el nombre de una FCI puede modificar la dirección URL del extremo de creación de reflejo de la base de datos. Al agregar la réplica asegúrese de especificar la dirección URL del extremo actual.  
   
-###  <a name="PrerequisitesFCI"></a> Lista de comprobación: requisitos previos (FCI)  
+###  <a name="PrerequisitesFCI"></a> Lista de comprobación: Requisitos previos (FCI)  
   
 ||Requisito previo|Vínculo|  
 |-|------------------|----------|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Antes de usar una FCI para hospedar una réplica de disponibilidad, asegúrese de que el administrador del sistema haya instalado la revisión de Windows Server 2008 descrita en el artículo 976097 de Knowledge Base. Esta revisión habilita el complemento Microsoft Management Console (MMC) de administración de clúster de conmutación por error para admitir los discos asimétricos de almacenamiento compartido que están disponibles en solo algunos de los nodos de WSFC.|KB 976097:  [Revisión para agregar compatibilidad con los almacenamientos asimétricos al complemento MMC de administración de clústeres de conmutación por error para un clúster de conmutación por error que ejecute Windows Server 2008 o Windows Server 2008 R2](http://support.microsoft.com/kb/976097)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Antes de usar una FCI para hospedar una réplica de disponibilidad, asegúrese de que el administrador del sistema haya instalado la revisión de Windows Server 2008 descrita en el artículo 976097 de Knowledge Base. Esta revisión permite el complemento de administración de clúster de conmutación por error de Microsoft Management Console (MMC) admitir discos de almacenamiento compartido asimétricos que están disponibles en sólo algunos de los nodos WSFC.|KB 976097:  [Revisión para agregar compatibilidad con los almacenamientos asimétricos para el complemento MMC de administración de clúster de conmutación por error para un clúster de conmutación por error que se está ejecutando Windows Server 2008 o Windows Server 2008 R2](https://support.microsoft.com/kb/976097)|  
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Asegúrese de que cada instancia de clúster de conmutación por error (FCI) de SQL Server posee el almacenamiento compartido necesario según la instalación estándar de la instancia de clúster de conmutación por error de SQL Server.||  
   
 ###  <a name="RelatedTasksFCIs"></a> Tareas relacionadas (FCI)  
@@ -235,23 +235,23 @@ ms.locfileid: "48151905"
   
 -   [Agrupación en clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Guía de arquitectura de AlwaysOn: Generar una alta disponibilidad y la solución de recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [Guía de arquitectura de AlwaysOn: Creación de una alta disponibilidad y la solución de recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Requisitos previos y restricciones de los grupos de disponibilidad  
 
   
 ###  <a name="RestrictionsAG"></a> Restricciones (grupos de disponibilidad)  
   
--   **Las réplicas de disponibilidad se deben hospedar en nodos diferentes de un clúster de WSFC**  : Para un grupo de disponibilidad determinado, las réplicas de disponibilidad deben hospedarse en instancias de servidor que se ejecutan en nodos diferentes del mismo clúster de WSFC. La única excepción es que mientras se migra a otro clúster de WSFC, un grupo de disponibilidad puede ocupar temporalmente dos clústeres.  
+-   **Las réplicas de disponibilidad deben hospedarse en distintos nodos de un clúster de WSFC:**  Para un grupo de disponibilidad determinado, las réplicas de disponibilidad deben hospedarse en las instancias del servidor que se ejecutan en nodos diferentes del mismo clúster de WSFC. La única excepción es que mientras se migra a otro clúster de WSFC, un grupo de disponibilidad puede ocupar temporalmente dos clústeres.  
   
     > [!NOTE]  
     >  Cada una de las diferentes máquinas virtuales de un mismo equipo físico puede hospedar una réplica de disponibilidad para el mismo grupo de disponibilidad, porque cada máquina virtual actúa como un equipo independiente.  
   
--   **Nombre único de grupo de disponibilidad:**  cada nombre de grupo de disponibilidad debe ser único en el clúster de WSFC. La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
+-   **Nombre del grupo de disponibilidad único:**  Cada nombre de grupo de disponibilidad debe ser único en el clúster WSFC. La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
   
--   **Réplicas de disponibilidad**  : Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Todas las réplicas pueden ejecutarse en el modo de confirmación asincrónica o hasta tres de ellas pueden ejecutarse en el modo de confirmación sincrónica (una réplica principal con dos réplicas secundarias sincrónicas).  
+-   **Réplicas de disponibilidad:**  Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Todas las réplicas pueden ejecutarse en el modo de confirmación asincrónica o hasta tres de ellas pueden ejecutarse en el modo de confirmación sincrónica (una réplica principal con dos réplicas secundarias sincrónicas).  
   
--   **Número máximo de grupos de disponibilidad y bases de datos de disponibilidad por equipo:** el número real de bases de datos y grupos de disponibilidad que puede colocar en un equipo (virtual o físico) depende del hardware y de la carga de trabajo, pero no existe ningún límite forzoso. Microsoft ha probado exhaustivamente con 10 grupos de disponibilidad y 100 bases de datos por equipo físico. Los signos de sistemas sobrecargados pueden incluir, pero no limitarse a los siguientes: agotamiento de subprocesos de trabajo, tiempos de respuesta lentos para vistas del sistema y DMV de AlwaysOn o volcados del sistema del distribuidor detenidos. Asegúrese de comprobar minuciosamente el entorno con una carga de trabajo similar a la que usará en producción para asegurarse de que puede controlar la capacidad de carga de trabajo máxima con sus contratos de nivel de servicio de aplicación. Cuando evalúe los contratos de nivel de servicio, no olvide tener en cuenta la carga en condiciones de error además de los tiempos de respuesta esperados.  
+-   **Número máximo de grupos de disponibilidad y bases de datos de disponibilidad por equipo:** El número real de bases de datos y grupos de disponibilidad que puede colocar en un equipo (equipo físico o máquina virtual) depende del hardware y de la carga de trabajo, pero no hay ningún límite impuesto. Microsoft ha probado exhaustivamente con 10 grupos de disponibilidad y 100 bases de datos por equipo físico. Los signos de sistemas sobrecargados pueden incluir, pero no limitarse a los siguientes: agotamiento de subprocesos de trabajo, tiempos de respuesta lentos para vistas del sistema y DMV de AlwaysOn o volcados del sistema del distribuidor detenidos. Asegúrese de comprobar minuciosamente el entorno con una carga de trabajo similar a la que usará en producción para asegurarse de que puede controlar la capacidad de carga de trabajo máxima con sus contratos de nivel de servicio de aplicación. Cuando evalúe los contratos de nivel de servicio, no olvide tener en cuenta la carga en condiciones de error además de los tiempos de respuesta esperados.  
   
 -   **No use el Administrador de clústeres de conmutación por error para manipular grupos de disponibilidad:**  
   
@@ -306,7 +306,7 @@ ms.locfileid: "48151905"
   
  
   
-###  <a name="RequirementsDb"></a> Lista de comprobación: requisitos (bases de datos de disponibilidad)  
+###  <a name="RequirementsDb"></a> Lista de comprobación: Requisitos (bases de datos de disponibilidad)  
  Para poder agregarse a un grupo de disponibilidad, una base de datos debe:  
   
 ||Requisitos|Vínculo|  
@@ -321,7 +321,7 @@ ms.locfileid: "48151905"
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|No pertenecer a ningún grupo de disponibilidad existente|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**group_database_id** = NULL)|  
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|No estar configurada para la creación de reflejo de la base de datos.|[sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) (si la base de datos no participa en la creación de reflejo, todas las columnas con el prefijo “mirroring_” son NULL).|  
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Para poder agregar una base de datos que usa FILESTREAM a un grupo de disponibilidad, asegúrese de que FILESTREAM está habilitado en cada instancia del servidor que hospeda o que hospedará una réplica de disponibilidad para el grupo de disponibilidad.|[Habilitar y configurar FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
-|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Antes de agregar una base de datos independiente a un grupo de disponibilidad, asegúrese de que el `contained database authentication` servidor opción está establecida en `1` en cada servidor que hospeda la instancia o que hospedará una réplica de disponibilidad del grupo de disponibilidad.|[contained database authentication (opción de configuración del servidor)](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Opciones de configuración de servidor &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
+|![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Antes de agregar una base de datos independiente a un grupo de disponibilidad, asegúrese de que la opción de servidor `contained database authentication` está establecida en `1` en cada instancia del servidor que hospeda o que hospedará una réplica de disponibilidad para el grupo de disponibilidad.|[contained database authentication (opción de configuración del servidor)](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Opciones de configuración de servidor &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] funciona con cualquier nivel de compatibilidad con bases de datos.  
@@ -330,11 +330,11 @@ ms.locfileid: "48151905"
   
 -   Si la ruta de acceso de archivo (incluida la letra de unidad) de una base de datos secundaria es diferente de la ruta de acceso de la base de datos principal correspondiente, se aplican las restricciones siguientes:  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:**  La opción **Completa** no es compatible (en el tema[Página Seleccionar sincronización de datos iniciales](select-initial-data-synchronization-page-always-on-availability-group-wizards.md) ).  
+    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:**  El **completa** no se admite la opción (en el[seleccione página de sincronización de datos inicial](select-initial-data-synchronization-page-always-on-availability-group-wizards.md) página),  
   
-    -   **RESTORE WITH MOVE:**  para crear las bases de datos secundarias, se debe aplicar RESTORE WITH MOVE a los archivos de base de datos en cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda una réplica secundaria.  
+    -   **RESTAURACIÓN CON MOVIMIENTO:**  Para crear las bases de datos secundaria, los archivos de base de datos deben ser RESTORE WITH MOVE para cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda una réplica secundaria.  
   
-    -   **Impacto en las operaciones de agregar archivos:**  una operación posterior de agregar archivos a la réplica principal podría producir un error en las bases de datos secundarias. Este error puede causar la suspensión de las bases de datos secundarias. Esto, a su vez, hace que las réplicas secundarias entren en el estado NOT SYNCHRONIZING.  
+    -   **Impacto en las operaciones de agregar archivos:**  Una operación posterior de agregar archivos en la réplica principal podría producir un error en las bases de datos secundaria. Este error puede causar la suspensión de las bases de datos secundarias. Esto, a su vez, hace que las réplicas secundarias entren en el estado NOT SYNCHRONIZING.  
   
         > [!NOTE]  
         >  Para más información sobre cómo responder a una operación de adición de archivos errónea, vea [Solucionar problemas relativos a una operación de agregar archivos con error &#40;grupos de disponibilidad AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md).  
@@ -357,11 +357,11 @@ ms.locfileid: "48151905"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn SQL Server: El blog del equipo de AlwaysOn oficial SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
--   [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

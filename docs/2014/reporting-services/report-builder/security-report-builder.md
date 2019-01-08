@@ -11,12 +11,12 @@ ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c33524c5b526a0523fe866b6307e00cd52cf8003
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 2ceecfb802437cc699dd84a6f935741a24b30e45
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905819"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357672"
 ---
 # <a name="security-report-builder"></a>Seguridad (Generador de informes)
   El Generador de informes es una aplicación cliente de creación de informes diseñada para que funcione con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El servidor de informes se puede configurar para funcione en modo nativo como un servidor independiente o en modo integrado de SharePoint, para que admita los informes de un sitio de SharePoint.  
@@ -46,7 +46,7 @@ ms.locfileid: "48905819"
   
      Para ver o publicar elementos en un servidor de informes, los conjuntos de permisos que se aplican a los elementos y las operaciones relacionados con los informes se organizan en roles. El administrador de un servidor de informes asigna a cada usuario a uno o varios roles. Por ejemplo, el rol predefinido Explorador permite ver informes, carpetas, modelos y recursos.  
   
-     Si no puede conectarse o desplazarse a un servidor de informes, póngase en contacto con el administrador del servidor de informes. Para más información, vea [Seguridad y protección de Reporting Services](../security/reporting-services-security-and-protection.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+     Si no puede conectarse o desplazarse a un servidor de informes, póngase en contacto con el administrador del servidor de informes. Para más información, vea [Seguridad y protección de Reporting Services](../security/reporting-services-security-and-protection.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   Servidor de informes configurado en el modo integrado de SharePoint  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48905819"
   
  Para que otros usuarios puedan desplazarse a elementos que ha publicado para compartirlos, y puedan buscarlos, debe trabajar con el administrador del servidor de informes para establecer una organización de carpetas que proporcione acceso a los usuarios. Los permisos deben proporcionar acceso de creación de informes y de ejecución de informes publicados.  
   
- Para obtener más información, consulte los siguientes temas en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Para obtener más información, consulte los siguientes temas en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Roles y permisos &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48905819"
   
  En el momento del diseño de informe, las credenciales se utilizan para ejecutar consultas de conjunto de datos y obtener la vista previa del informe. En tiempo de ejecución, las credenciales se utilizan para ejecutar el informe y almacenar en caché los resultados de la consulta. También puede almacenar en memoria caché por separado los resultados de la consulta del conjunto de datos compartido. Las credenciales del tiempo de diseño y las del tiempo de ejecución pueden ser distintas. Para más información, vea [Especificar credenciales en el Generador de informes](../specify-credentials-in-report-builder.md).  
   
- Para obtener más información acerca de cómo proteger los datos, consulte el siguiente tema en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Para obtener más información acerca de cómo proteger los datos, consulte el siguiente tema en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
@@ -115,9 +115,9 @@ ms.locfileid: "48905819"
   
 -   No utilice parámetros basados en parámetros de consulta y que son de tipo **Texto** , a menos que proporcione valores válidos. Una lista de valores disponibles ayuda al usuario a elegir solo valores válidos. Sin una lista de valores disponibles, no se pueden restringir los valores que puede especificar un usuario.  
   
--   No utilice el global [& UserID] para proteger datos privados. Como parámetro de informe, este valor se puede especificar en una dirección URL de informe mediante sintaxis de acceso a dirección URL. El uso de este valor en una expresión en un conjunto de datos compartido evita que el conjunto de datos se almacene en memoria caché. Para más información, vea [Referencia de parámetros de acceso URL](../url-access-parameter-reference.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   No utilice el global [& UserID] para proteger datos privados. Como parámetro de informe, este valor se puede especificar en una dirección URL de informe mediante sintaxis de acceso a dirección URL. El uso de este valor en una expresión en un conjunto de datos compartido evita que el conjunto de datos se almacene en memoria caché. Para más información, vea [Referencia de parámetros de acceso URL](../url-access-parameter-reference.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
- Después de la publicación de elementos en un servidor de informes, el administrador del servidor de informes puede contribuir a protegerlos asignando seguridad del nivel de rol o seguridad del nivel de carpeta y elemento. Para más información, vea [Proteger informes y recursos](../security/secure-reports-and-resources.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Después de la publicación de elementos en un servidor de informes, el administrador del servidor de informes puede contribuir a protegerlos asignando seguridad del nivel de rol o seguridad del nivel de carpeta y elemento. Para más información, vea [Proteger informes y recursos](../security/secure-reports-and-resources.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
  
   

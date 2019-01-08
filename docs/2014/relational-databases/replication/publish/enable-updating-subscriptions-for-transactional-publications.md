@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -15,12 +14,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2a0f5aa667378b6be308b8072c03a6722a988c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2998ac4c51ea4ea7b289e4ef769acf0f3991f53
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194705"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784897"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Habilitar suscripciones actualizables para publicaciones transaccionales
   En este tema se describe cómo habilitar suscripciones de actualización para publicaciones transaccionales en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "48194705"
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
@@ -38,7 +37,7 @@ ms.locfileid: "48194705"
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  Habilite suscripciones de actualización para publicaciones transaccionales en la página **Tipo de publicación** del Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Crear una publicación](create-a-publication.md). No se pueden habilitar suscripciones de actualización después de crear la publicación.  
   
- Para utilizar suscripciones de actualización, debe configurar también opciones en el Asistente para nuevas suscripciones. Para más información, consulte [Crear una suscripción actualizable en una publicación transaccional](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+ Para utilizar suscripciones de actualización, debe configurar también opciones en el Asistente para nuevas suscripciones. Para obtener más información, consulte [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
   
 #### <a name="to-enable-updating-subscriptions"></a>Para habilitar las suscripciones de actualización  
   
@@ -110,7 +109,7 @@ ms.locfileid: "48194705"
  [Tipos de publicaciones para la replicación transaccional](../transactional/publication-types-for-transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Crear una suscripción actualizable en una publicación transaccional](../create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Usar sqlcmd con variables de script](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

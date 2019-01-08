@@ -1,32 +1,31 @@
 ---
-title: 'Paso 1: Crear un nuevo proyecto de Integration Services | Microsoft Docs'
+title: 'Paso 1: Crear una nueva integración Services proyecto | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 363c3c86c9c98c17d937b1ea766fd2015f985218
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eff00a91c6fff1caee5e5fc41dd6d59f8635f78f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147145"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377417"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>Paso 1: Crear un nuevo proyecto de Integration Services
-  El primer paso al crear un paquete en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es crear un proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Este proyecto incluye las plantillas para los objetos —orígenes de datos, vistas de orígenes de datos y paquetes— que se utilizan en una solución de transformación de datos.  
+  El primer paso al crear un paquete en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es crear un proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . En este proyecto, se incluyen las plantillas de los objetos (orígenes de datos, vistas de orígenes de datos y paquetes) que se usan en una solución de transformación de datos.  
   
  Los paquetes que creará en este tutorial de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] interpretan los valores de los datos dependientes de la configuración regional. Si no tiene configurado el equipo para usar la opción de configuración regional Inglés (Estados Unidos), debe establecer propiedades adicionales en el paquete. Los paquetes utilizados en las lecciones 2 a 5 se copian del paquete creado en la lección 1, y no necesita actualizar las propiedades dependientes de la configuración regional en los paquetes copiados.  
   
 > [!NOTE]  
 >  Este tutorial necesita Microsoft SQL Server Data Tools.  
 >   
->  Para obtener más información acerca de cómo instalar SQL Server Data Tools, vea [Descarga de SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
+>  Para obtener más información acerca de cómo instalar SQL Server Data Tools, vea [Descarga de SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
   
 ### <a name="to-create-a-new-integration-services-project"></a>Para crear un proyecto de Integration Services  
   

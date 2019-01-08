@@ -11,12 +11,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77e4b6ba8f70c826dcfdf5a89fc9c577d587a3f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181375"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419856"
 ---
 # <a name="roles-ssas-tabular"></a>Roles (SSAS tabular)
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Cada rol contiene miembros, por nombre de usuario de Windows o por grupo de Windows, y permisos (de lectura, de procesamiento, de administrador). Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila.  
@@ -56,7 +56,7 @@ ms.locfileid: "48181375"
 > [!NOTE]  
 >  Los roles definidos para un modelo configurado para el modo DirectQuery no pueden usar filtros de fila; sin embargo, se aplicarán los permisos definidos para cada rol.  
   
-##  <a name="bkmk_permissions"></a> Permisos  
+##  <a name="bkmk_permissions"></a> Permissions  
  Cada rol tiene un único permiso de base de datos definido (excepto en el caso del permiso de lectura y procesamiento combinado). De forma predeterminada, los roles tienen el permiso Ninguno. Es decir, una vez que se agreguen los miembros al rol con el permiso Ninguno, estos no podrán modificar la base de datos, ejecutar una operación de proceso, consultar los datos ni ver la base de datos a menos que se conceda un permiso diferente.  
   
  Un grupo o usuario de Windows puede ser miembro de varios roles, cada uno de ellos con un permiso distinto. Cuando un usuario es miembro de varios roles, los permisos definidos para cada uno de ellos son acumulativos. Por ejemplo, si un usuario es miembro de un rol que tiene el permiso de lectura y de otro que tiene el permiso Ninguno, dicho usuario tendrá permisos de lectura.  
@@ -76,14 +76,14 @@ ms.locfileid: "48181375"
   
  Los filtros de fila solo se pueden definir para los roles que tengan permisos de lectura y de lectura y procesamiento. De forma predeterminada, si no se define un filtro de fila para una tabla determinada, los miembros de un rol que tenga permisos de lectura o de lectura y procesamiento pueden consultar todas las filas de la tabla, a menos que se aplique un filtro cruzado de otra tabla.  
   
- Una vez definido un filtro de fila para una tabla determinada, una fórmula DAX, que debe devolver un valor TRUE/FALSE, será la que defina las filas que pueden ser consultadas por los miembros de ese rol en especial. Las filas no incluidas en la fórmula DAX no podrán ser consultadas. Por ejemplo, en el caso de los miembros del rol Sales, si la tabla Customers tiene la expresión de filtro de fila *=Customers [Country] = “USA”*, solo los miembros de dicho rol podrán ver clientes de EE. UU.  
+ Una vez definido un filtro de fila para una tabla determinada, una fórmula DAX, que debe devolver un valor TRUE/FALSE, será la que defina las filas que pueden ser consultadas por los miembros de ese rol en especial. Las filas no incluidas en la fórmula DAX no podrán ser consultadas. Por ejemplo, para los miembros del rol Sales, la tabla Customers con la fila de la siguiente expresión de filtro, *= Customers [Country] = "USA"*, los miembros del rol Sales, solo podrán ver clientes de Estados Unidos.  
   
  Los filtros de fila se aplican a las filas especificadas y también a las filas relacionadas. Si una tabla tiene varias relaciones, los filtros aplican seguridad a la relación que está activa. Los filtros de fila se intersecarán con otros filtros de fila definidos para las tablas relacionadas, por ejemplo:  
   
 |Table|DAX expression|  
 |-----------|--------------------|  
-|Region|=Region[Country]=”USA”|  
-|ProductCategory|=ProductCategory[Name]=”Bicycles”|  
+|Region|= Región [Country] = "USA"|  
+|ProductCategory|= ProductCategory [nombre] = "Bicicletas"|  
 |Transactions|=Transactions[Year]=2008|  
   
  El efecto neto de estos permisos en la tabla Transactions es que los miembros podrán consultar las filas de datos en las que el cliente sea de los EE. UU., la categoría de producto sea bicycles y el año sea 2008. Los usuarios no podrán consultar ninguna de las transacciones que no cumplan las tres condiciones anteriores, a menos que sean miembros de otro rol que les conceda estos permisos.  
@@ -136,11 +136,11 @@ ms.locfileid: "48181375"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Crear y administrar Roles &#40;Tabular de SSAS&#41;](create-and-manage-roles-ssas-tabular.md)|Las tareas de este tema explican cómo crear y administrar roles mediante el cuadro de diálogo **Administrador de roles** del diseñador de modelos.|  
+|[Crear y administrar roles &#40;SSAS tabular&#41;](create-and-manage-roles-ssas-tabular.md)|Las tareas de este tema explican cómo crear y administrar roles mediante el cuadro de diálogo **Administrador de roles** del diseñador de modelos.|  
   
 ## <a name="see-also"></a>Vea también  
- [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)   
- [Analizar en Excel &#40;Tabular de SSAS&#41;](analyze-in-excel-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md)   
+ [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md)   
  [Función USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [La función LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [Función CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  

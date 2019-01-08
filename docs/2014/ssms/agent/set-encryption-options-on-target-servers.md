@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, encryption
@@ -14,12 +14,12 @@ ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f548d2de0206ae324bd9aede95c4375119a8aad2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9443319c17c2148284d606aebcad89db38de12eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143985"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781477"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Establecer opciones de cifrado en servidores de destino
   Si no puede usar un certificado para comunicaciones cifradas con Capa de sockets seguros (SSL) entre servidores principales y alguno o todos los servidores de destino, pero desea cifrar el canal entre ellos, configure el servidor de destino para usar el nivel de seguridad necesario.  

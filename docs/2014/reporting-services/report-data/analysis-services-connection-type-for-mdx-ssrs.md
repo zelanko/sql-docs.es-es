@@ -11,12 +11,12 @@ ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2854a9742a7d864a73624a4676b6c0778ee182a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66d64b8a96831adb0125d7f739095199e4ad3c6a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222745"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355092"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Tipo de conexión de Analysis Services para MDX (SSRS)
   Para incluir en el informe datos de un cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Este tipo de origen de datos integrado está basado en la extensión de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede recuperar metadatos sobre dimensiones, jerarquías, niveles, indicadores clave de rendimiento (KPI), medidas y atributos desde un cubo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para usarlos como datos de informe.  
@@ -49,7 +49,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   Pedir las credenciales al usuario. Esta opción solo admite la seguridad integrada de Windows.  
   
--   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
+-   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
   
  Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en Generador de informes](../specify-credentials-in-report-builder.md).  
   
@@ -72,14 +72,14 @@ data source=<server name>;initial catalog=<database name>
   
  Durante el diseño, ejecute la consulta para ver un conjunto de resultados. Los resultados de la consulta se recuperan automáticamente como un conjunto de filas planas. Las columnas del conjunto de resultados de una consulta rellenan la colección de campos de un conjunto de datos. Después de crear la consulta, vea la colección de campos del conjunto de datos generada a partir de los metadatos en el panel Datos de informe. Cuando el informe se ejecuta, los datos reales se devuelven desde el origen de datos externo.  
   
- La extensión de procesamiento de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo de conjunto de datos extendidas. Éstos son valores disponibles del origen de datos externo, pero no aparecen en el panel Datos de informe. Puede usar las propiedades de campo extendidas admitidas por la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extensión de procesamiento de datos en el informe a través de los integrados `Fields` colección. Para las propiedades que tengan valores en el origen de datos, se puede tener acceso a valores de propiedad predefinidos como `FormattedValue`, `Color` o `UniqueName`. Para más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+ La extensión de procesamiento de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo de conjunto de datos extendidas. Éstos son valores disponibles del origen de datos externo, pero no aparecen en el panel Datos de informe. En el informe se pueden usar las propiedades de campo extendidas admitidas por la extensión de procesamiento de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a través de la colección integrada `Fields`. Para las propiedades que tengan valores en el origen de datos, se puede tener acceso a valores de propiedad predefinidos como `FormattedValue`, `Color` o `UniqueName`. Para obtener más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
   
 ##  <a name="Parameters"></a> Parámetros  
  Para incluir parámetros de consulta, cree un filtro en el área de filtro del diseñador de consultas y marque el filtro como un parámetro. Para cada filtro, se crea automáticamente un conjunto de datos para proporcionar los valores disponibles. De forma predeterminada, estos conjuntos de datos no aparecen en el panel Datos de informe. Para más información, vea [Definir parámetros en el diseñador de consultas MDX para Analysis Services &#40;Generador de informes y SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) y [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;Generador de informes y SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
- De forma predeterminada, cada parámetro de informe tiene el tipo de datos **Text**. Una vez creados los parámetros de informe, podría suceder que tenga que cambiar los valores predeterminados. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ De forma predeterminada, cada parámetro de informe tiene el tipo de datos **Text**. Una vez creados los parámetros de informe, podría suceder que tenga que cambiar los valores predeterminados. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
   
@@ -88,7 +88,7 @@ data source=<server name>;initial catalog=<database name>
   
  También puede recuperar datos de un cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del tipo de origen de datos OLE DB. Para obtener más información, vea [Tipo de conexión OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md).  
   
- Para más información sobre la compatibilidad de versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Para más información sobre la compatibilidad de versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312).  
   
   
   
@@ -107,10 +107,10 @@ data source=<server name>;initial catalog=<database name>
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
   
- [Propiedades de campo extendidas para un análisis de servicios de base de datos &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
+ [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  Proporciona información sobre los campos adicionales disponibles a través del proveedor de datos XMLA.  
   
- [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
   
   

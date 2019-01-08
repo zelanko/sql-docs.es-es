@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
@@ -26,22 +25,22 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f0b1fc213fb1916421b1c9b0f02bb82b5553770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0108e55f6038b234d78f3fd66d9bae243af28a9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123011"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357356"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
   La transformación Agrupación aproximada realiza tareas de limpieza de datos, identificando filas de datos que probablemente se van a duplicar y seleccionando una fila de datos canónica para utilizarla en la normalización de los datos.  
   
 > [!NOTE]  
->  Para más detalles sobre la transformación Agrupación aproximada, incluyendo las limitaciones de rendimiento y memoria, vea las notas del producto [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005 (Búsqueda y agrupación aproximada en SQL Server Integration Services 2005)](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  Para más detalles sobre la transformación Agrupación aproximada, incluyendo las limitaciones de rendimiento y memoria, vea las notas del producto [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005 (Búsqueda y agrupación aproximada en SQL Server Integration Services 2005)](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  La transformación de Búsqueda aproximada requiere una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para crear las tablas temporales de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que necesita el algoritmo de la transformación para realizar su trabajo. La conexión debe establecerla un usuario que tenga permiso para crear tablas en la base de datos.  
   
- Para configurar la transformación, debe seleccionar las columnas de entrada que desee utilizar para identificar duplicados y el tipo de coincidencia, aproximada o exacta, para cada columna. Una coincidencia exacta garantiza que solo se agruparán las filas de la columna que tengan valores idénticos. La coincidencia exacta se puede aplicar a columnas con cualquier tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , excepto DT_TEXT, DT_NTEXT y DT_IMAGE. Una coincidencia aproximada agrupa filas que tienen aproximadamente el mismo valor. El método para la coincidencia aproximada de los datos se basa en la puntuación de similitud especificada por el usuario. Para la coincidencia aproximada, solo se pueden utilizar columnas con tipos de datos DT_WSTR y DT_STR. Para más información, consulte [Integration Services Data Types](../integration-services-data-types.md).  
+ Para configurar la transformación, tiene que seleccionar las columnas de entrada que quiera usar para identificar duplicados y el tipo de coincidencia, aproximada o exacta, para cada columna. Una coincidencia exacta garantiza que solo se agruparán las filas de la columna que tengan valores idénticos. La coincidencia exacta se puede aplicar a columnas con cualquier tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , excepto DT_TEXT, DT_NTEXT y DT_IMAGE. Una coincidencia aproximada agrupa filas que tienen aproximadamente el mismo valor. El método para la coincidencia aproximada de los datos se basa en la puntuación de similitud especificada por el usuario. Para la coincidencia aproximada, solo se pueden utilizar columnas con tipos de datos DT_WSTR y DT_STR. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md).  
   
  La salida de transformación incluye todas las columnas de entrada, una o más columnas con datos normalizados, y una columna que contiene la puntuación de similitud. La puntuación es un valor decimal entre 0 y 1. La fila canónica tiene una puntuación de 1. Las otras filas de la agrupación aproximada tienen puntuaciones que indican su nivel de coincidencia con la fila canónica. Cuanto más se acerque el resultado a 1, mayor será la coincidencia entre la fila y la fila canónica. Si la agrupación aproximada contiene filas que son duplicados exactos de la fila canónica, dichas filas también tienen una puntuación de 1. La transformación no quita las filas duplicadas. Se agrupan creando una clave que relaciona la fila canónica con las filas similares.  
   
@@ -86,9 +85,9 @@ ms.locfileid: "48123011"
   
 -   [Editor de transformación Agrupación aproximada &#40;pestaña Administrador de conexiones&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Editor de transformación Agrupación aproximada &#40;pestaña columnas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Editor de transformación Agrupación aproximada &#40;pestaña Columnas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Editor de transformación Agrupación aproximada &#40;ficha Opciones avanzadas&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación Agrupación aproximada &#40;pestaña Avanzadas&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48123011"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obtener información detallada sobre cómo establecer propiedades de esta tarea, haga clic en uno de los temas siguientes:  
   
--   [Identificación de filas de datos similares con la transformación Agrupación aproximada](fuzzy-grouping-transformation.md)  
+-   [Identificar filas de datos similares mediante la transformación Agrupación aproximada](fuzzy-grouping-transformation.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   

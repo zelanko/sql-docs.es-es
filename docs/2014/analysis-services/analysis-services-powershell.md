@@ -11,12 +11,12 @@ ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8effab0536063466efe25161949a0efeebd0038b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cec716534e6cffa7cc44aafb96ec0541e49d6e48
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162557"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355915"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] incluye cmdlets y un proveedor de Analysis Services PowerShell (SQLAS) que permite usar Windows PowerShell para navegar, administrar y consultar objetos de Analysis Services.  
@@ -43,7 +43,7 @@ Para obtener más información sobre sintaxis y ejemplos, vea [Analysis Services
 ##  <a name="bkmk_prereq"></a> Requisitos previos  
  Windows PowerShell 2.0 debe estar instalado. Se instaló de forma predeterminada en las versiones más recientes de los sistemas operativos Windows. Para obtener más información, consulte [instalar Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx)
 
-<!-- ff637750.aspx above is linked to by:  (http://go.microsoft.com/fwlink/?LinkId=227613). -->
+<!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
   
  Debe instalar una característica de SQL Server que incluya el módulo SQL Server PowerShell (SQLPS) y las bibliotecas de cliente. La manera más fácil de hacerlo es instalar SQL Server Management Studio, que incluye automáticamente la característica PowerShell y las bibliotecas de cliente. El módulo SQL Server PowerShell (SQLPS) contiene los proveedores y cmdlets de PowerShell para todas las características de SQL Server, incluido el módulo SQLASCmdlets y el proveedor SQLAS utilizados para navegar por la jerarquía de objetos de Analysis Services.  
   
@@ -59,23 +59,23 @@ Para obtener más información sobre sintaxis y ejemplos, vea [Analysis Services
 |Contexto|Disponibilidad de las características de PowerShell|  
 |-------------|-------------------------------------|  
 |Bases de datos e instancias multidimensionales|Se admite para la administración remota y local.<br /><br /> Merge-partition requiere una conexión local.|  
-|Bases de datos e instancias tabulares|Se admite para la administración remota y local.<br /><br /> Para obtener más información, vea un blog de agosto de 2011 [administrar modelos tabulares con PowerShell](http://go.microsoft.com/fwlink/?linkID=227685).|  
+|Bases de datos e instancias tabulares|Se admite para la administración remota y local.<br /><br /> Para obtener más información, vea un blog de agosto de 2011 [administrar modelos tabulares con PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |Bases de datos e instancias de PowerPivot para SharePoint|Compatibilidad limitada. Puede utilizar las conexiones HTTP y el proveedor SQLAS para ver información de las bases de datos y las instancias.<br /><br /> Sin embargo, no se admite el uso de los cmdlets. No debe utilizar Analysis Services PowerShell para las copias de seguridad y restauración de bases de datos PowerPivot en memoria, ni debe agregar o quitar roles, procesar datos o ejecutar script XMLA arbitrario.<br /><br /> Para la configuración, PowerPivot para SharePoint tiene una compatibilidad integrada con PowerShell que se proporciona por separado. Para obtener más información, consulte [referencia de PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
-|Conexiones nativas a cubos locales<br /><br /> “Data Source=c:\backup\test.cub”|No compatible.|  
+|Conexiones nativas a cubos locales<br /><br /> "Datos Source=c:\backup\test.cub"|No compatible.|  
 |Conexiones HTTP a archivos de conexión de modelos semánticos BI (.bism) en SharePoint<br /><br /> "Origen de datos =http://server/shared_docs/name.bism"|No compatible.|  
-|Conexiones incrustadas a bases de datos PowerPivot<br /><br /> “Data Source=$Embedded$”|No compatible.|  
-|Contexto del servidor local en los procedimientos almacenados de Analysis Services<br /><br /> “Data Source=*”|No compatible.|  
+|Conexiones incrustadas a bases de datos PowerPivot<br /><br /> "Origen de datos = $Embedded$"|No compatible.|  
+|Contexto del servidor local en los procedimientos almacenados de Analysis Services<br /><br /> "Origen de datos = *"|No compatible.|  
   
 ##  <a name="bkmk_auth"></a> Requisitos de autenticación y consideraciones de seguridad  
  Al conectarse a Analysis Services, debe realizar la conexión utilizando una identidad de usuario de Windows. En su mayor parte, una conexión se realiza utilizando la seguridad integrada de Windows, donde la identidad del usuario actual establece el contexto de seguridad en el que se realizan las operaciones de servidor. Sin embargo, están disponibles métodos de autenticación adicionales cuando se configura el acceso a Analysis Services a través de HTTP. En esta sección se explica cómo el tipo de conexión determina qué opciones de autenticación se pueden usar.  
   
  Las conexiones a Analysis Services se caracterizan como conexiones nativas o conexiones HTTP. Una conexión nativa es una conexión directa de una aplicación cliente con el servidor. En una sesión de PowerShell, el cliente de PowerShell utiliza el proveedor OLE DB para la conexión directa de Analysis Services con una instancia de Analysis Services. Una conexión nativa se realiza siempre utilizando la seguridad integrada de Windows, donde Analysis Services PowerShell se ejecuta como el usuario actual. Analysis Services no admite la suplantación. Si desea realizar una operación como un usuario específico, debe iniciar la sesión de PowerShell como ese usuario.  
   
- Las conexiones HTTP se realizan indirectamente a través de IIS, permitiendo opciones adicionales de autenticación, como la autenticación básica, para conectarse a una instancia de Analysis Services. Como IIS admite la suplantación, se puede proporcionar una cadena de conexión que incluya credenciales que IIS utilizará para realizar la suplantación cuando se realice una conexión. Para proporcionar credenciales, puede utilizar el parámetro –Credential.  
+ Las conexiones HTTP se realizan indirectamente a través de IIS, permitiendo opciones adicionales de autenticación, como la autenticación básica, para conectarse a una instancia de Analysis Services. Como IIS admite la suplantación, se puede proporcionar una cadena de conexión que incluya credenciales que IIS utilizará para realizar la suplantación cuando se realice una conexión. Para proporcionar las credenciales, puede usar el parámetro - Credential.  
   
- **Mediante el parámetro – Credential en PowerShell**  
+ **Mediante el parámetro - Credential en PowerShell**  
   
- El parámetro –Credential toma un objeto PSCredential que especifica un nombre de usuario y una contraseña. En Analysis Services PowerShell, el parámetro –Credential está disponible para los cmdlets que realizan una solicitud de conexión a Analysis Services, en oposición a los cmdlets que se ejecutan dentro del contexto de una conexión existente. Entre los cmdlets que realizan una solicitud de conexión se hallan Invoke-ASCmd, Backup-ASDatabase y Restore-ASDatabase. Para estos cmdlets, se puede utilizar el parámetro –Credential en el supuesto de que se cumplan los criterios siguientes:  
+ -Credential parámetro toma un objeto PSCredential que especifica un nombre de usuario y una contraseña. En Analysis Services PowerShell,-Credential parámetro está disponible para los cmdlets que realizan una solicitud de conexión a Analysis Services, en lugar de los cmdlets que se ejecutan dentro del contexto de una conexión existente. Entre los cmdlets que realizan una solicitud de conexión se hallan Invoke-ASCmd, Backup-ASDatabase y Restore-ASDatabase. Para estos cmdlets,-Credential parámetro puede usarse, suponiendo que se cumplen los criterios siguientes:  
   
 1.  El servidor se configura para el acceso a través de HTTP, lo que significa que IIS administra la conexión, lee el nombre de usuario y la contraseña, y suplanta la identidad del usuario al conectarse a Analysis Services. Para obtener más información, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
@@ -87,10 +87,10 @@ Para obtener más información sobre sintaxis y ejemplos, vea [Analysis Services
   
 ```  
 PS SQLSERVER:\SQLAS\HTTP_DS> $cred = Get-credential adventureworks\dbadmin  
-PS SQLSERVER:\SQLAS\HTTP_DS> Invoke-ASCmd –Inputfile:”c:\discoverconnections.xmla” –Credential:$cred  
+PS SQLSERVER:\SQLAS\HTTP_DS> Invoke-ASCmd -Inputfile:"c:\discoverconnections.xmla" -Credential:$cred  
 ```  
   
- Cuando se utiliza la autenticación básica, debe utilizar siempre HTTPS con SSL para que el nombre de usuario y las contraseñas se envíen mediante una conexión cifrada. Para obtener más información, consulte [configurar capa de Sockets seguros en IIS 7.0](http://go.microsoft.com/fwlink/?linkID=184299) y [configurar la autenticación básica (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=230776).  
+ Cuando se utiliza la autenticación básica, debe utilizar siempre HTTPS con SSL para que el nombre de usuario y las contraseñas se envíen mediante una conexión cifrada. Para obtener más información, consulte [configurar capa de Sockets seguros en IIS 7.0](https://go.microsoft.com/fwlink/?linkID=184299) y [configurar la autenticación básica (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=230776).  
   
  Recuerde que las credenciales, las consultas, y los comandos que se proporcionan en PowerShell se pasan sin cambiar a la capa de transporte. La inclusión de contenido confidencial en los scripts aumenta el riesgo de un ataque malintencionado por inyección.  
   
@@ -135,33 +135,33 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
 -   Ejecute el cmdlet del módulo Import para cargar el SQLPS que incluye toda la funcionalidad de Analysis Services PowerShell. Si no puede importar el módulo, puede cambiar temporalmente la directiva de ejecución a unrestricted con el fin de cargar el módulo. Para más información, vea [Importar el módulo SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
   
     ```  
-    Import-module “sqlps”  
+    Import-module "sqlps"  
     ```  
   
-     O bien, use `import-module “sqlps” –disablenamechecking` para quitar la advertencia sobre los nombres de verbo no aprobados.  
+     O bien, use `import-module "sqlps" -disablenamechecking` para quitar la advertencia sobre los nombres de verbo no aprobados.  
   
 -   Para cargar solo los cmdlets de Analysis Services específicos de la tarea, sin el proveedor de Analysis Services o el cmdlet Invoke-ASCmd, puede cargar el módulo SQLASCmdlets como una operación independiente.  
   
     ```  
-    Import-module “sqlascmdlets”  
+    Import-module "sqlascmdlets"  
     ```  
   
 ###  <a name="bkmk_remote"></a> Habilitar la administración remota  
- Para poder utilizar Analysis Services PowerShell con una instancia remota de Analysis Services, primero debe habilitar la administración remota y el uso compartido de archivos. El siguiente error indica un problema de configuración del firewall: “El servidor RPC no está disponible. (Excepción de HRESULT: 0x800706BA) ".  
+ Para poder utilizar Analysis Services PowerShell con una instancia remota de Analysis Services, primero debe habilitar la administración remota y el uso compartido de archivos. El siguiente error indica un problema de configuración de firewall: "El servidor de RPC no está disponible. (Excepción de HRESULT: 0x800706ba) ".  
   
 1.  Compruebe que el equipo local y los equipos remotos tienen las versiones de [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] de las herramientas de servidor y de cliente.  
   
 2.  En el servidor remoto que hospeda una instancia de Analysis Services, abra el puerto TCP 2383 en Firewall de Windows. Si instaló Analysis Services como una instancia con nombre o con un puerto personalizado, el número de puerto será diferente. Para obtener más información, consulte [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-3.  En el servidor remoto, compruebe que los siguientes servicios se han iniciado: servicio Llamada a procedimiento remoto (RPC), servicio del asistente NetBIOS TCP/IP, servicio Instrumental de administración de Windows (WMI), Servicio de administración remota de Windows (WS-Management).  
+3.  En el servidor remoto, compruebe que se han iniciado los siguientes servicios:  Servicio remoto de llamada a procedimiento (RPC), servicio auxiliar de NetBIOS de TCP/IP, el servicio de Windows Management Instrumentation (WMI), el servicio Administración remota de Windows (WS-Management).  
   
 4.  En el servidor remoto, inicie el complemento Editor de objetos de directiva de grupo (gpedit.msc).  
   
 5.  Abra sucesivamente Configuración del equipo, Plantillas administrativas, Red, Conexiones de red,Firewall de Windows y, por último, Perfil de dominio.  
   
-6.  Haga doble clic en **Firewall de Windows: permitir excepción de administración remota entrante**, seleccione **habilitado**y, a continuación, haga clic en **Aceptar**.  
+6.  Haga doble clic en **Firewall de Windows: Permitir excepción de administración remota entrante**, seleccione **habilitado**y, a continuación, haga clic en **Aceptar**.  
   
-7.  Haga doble clic en **Firewall de Windows: permitir excepción compartir impresoras y archivos de entrada**, seleccione **habilitado**y, a continuación, haga clic en **Aceptar**.  
+7.  Haga doble clic en **Firewall de Windows: Permitir excepción compartir impresoras y archivos de entrada**, seleccione **habilitado**y, a continuación, haga clic en **Aceptar**.  
   
 8.  En el equipo local que tiene las herramientas de cliente, use los siguientes cmdlets para comprobar la administración remota, sustituyendo el nombre de servidor real por el *nombre del servidor remoto* marcador de posición. Omita el nombre de instancia si Analysis Services se instala como la instancia predeterminada. Debe haber importado previamente el módulo SQLPS para que el comando funcione.  
   
@@ -196,24 +196,24 @@ PS SQLSERVER\sqlas:> cd localhost\default
 PS SQLSERVER\sqlas\localhost\default:> dir  
 ```  
   
- Debe ver las colecciones siguientes: ensamblados, bases de datos, roles y seguimientos. Si continúa utilizando `cd` y `dir`, puede ver el contenido de cada colección.  
+ Debería ver las siguientes colecciones: Los ensamblados, las bases de datos, Roles y seguimientos. Si continúa utilizando `cd` y `dir`, puede ver el contenido de cada colección.  
   
  **Conexiones HTTP a Analysis Services**  
   
  ![Conexión de HTTP a Analysis Services](media/ssas-powershell-httpconnection.gif "conexión HTTP a Analysis Services")  
   
- Las conexiones HTTP son útiles si se ha configurado el servidor para el acceso HTTP con las instrucciones de este tema: [configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ Las conexiones HTTP son útiles si ha configurado el servidor para el acceso HTTP con las instrucciones de este tema: [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
  Suponiendo que una dirección URL del servidor de http://localhost/olap/msmdpump.dll, una conexión podría ser similar al siguiente:  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
-PS SQLSERVER\sqlas\http_ds:> $Url=Encode-SqlName “http://localhost/olap/msmdpump.dll”  
+PS SQLSERVER\sqlas\http_ds:> $Url=Encode-SqlName "http://localhost/olap/msmdpump.dll"  
 PS SQLSERVER\sqlas\http_ds:> cd $Url  
 PS SQLSERVER\sqlas\http_ds\http%3A%2F%2Flocalhost%2olap%2msmdpump%2Edll:> dir  
 ```  
   
- Debe ver las colecciones siguientes: ensamblados, bases de datos, roles y seguimientos. Si no puede ver el contenido de estas colecciones, compruebe la configuración de la autenticación en el directorio virtual OLAP. Asegúrese de que el acceso anónimo está deshabilitado. Si utiliza la autenticación de Windows, asegúrese de que la cuenta de usuario de Windows tiene permisos administrativos en la instancia de Analysis Services.  
+ Debería ver las siguientes colecciones: Los ensamblados, las bases de datos, Roles y seguimientos. Si no puede ver el contenido de estas colecciones, compruebe la configuración de la autenticación en el directorio virtual OLAP. Asegúrese de que el acceso anónimo está deshabilitado. Si utiliza la autenticación de Windows, asegúrese de que la cuenta de usuario de Windows tiene permisos administrativos en la instancia de Analysis Services.  
   
 ###  <a name="bkmk_admin"></a> Administrar el servicio  
  Compruebe que el servicio se está ejecutando. Devuelve el estado, el nombre y el nombre para mostrar de servicios de SQL Server, incluido Analysis Services (MSSQLServerOLAPService) y el motor de base de datos.  
@@ -246,28 +246,28 @@ Restart-service mssqlserverolapservice
 2.  `Get-command` devuelve una lista de los once cmdlets de Analysis Services PowerShell:  
   
     ```  
-    get-command –module SQLASCmdlets  
+    get-command -module SQLASCmdlets  
     ```  
   
 3.  `Get-member` devuelve las propiedades o los métodos de un servicio o un proceso.  
   
     ```  
-    Get-service mssqlserverolapservice | get-member –type Property  
+    Get-service mssqlserverolapservice | get-member -type Property  
     ```  
   
     ```  
-    Get-service mssqlserverolapservice | get-member –type Method  
+    Get-service mssqlserverolapservice | get-member -type Method  
     ```  
   
     ```  
-    Get-process msmdsrv | get-member –type Property  
+    Get-process msmdsrv | get-member -type Property  
     ```  
   
 4.  `Get-member` también se puede utilizar para devolver las propiedades o los métodos de un objeto (por ejemplo, los métodos AMO en el objeto de servidor) mediante el proveedor SQLAS para especificar la instancia de servidor.  
   
     ```  
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = New-Object Microsoft.AnalysisServices.Server  
-    PS SQLSERVER:\sqlas\localhost\default > $serverObj = | get-member –type Method  
+    PS SQLSERVER:\sqlas\localhost\default > $serverObj = | get-member -type Method  
     ```  
   
 5.  `Get-PSdrive` devuelve una lista de los proveedores instalados actualmente. Si importó el módulo SQLPS, verá el proveedor `SQLServer` en la lista (SQLAS forma parte del proveedor SQLServer y nunca aparece de forma independiente en la lista):  
@@ -278,7 +278,7 @@ Restart-service mssqlserverolapservice
   
 ## <a name="see-also"></a>Vea también  
  [Instalar SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
- [Administrar modelos tabulares con PowerShell (blog)](http://go.microsoft.com/fwlink/?linkID=227685)   
+ [Administrar modelos tabulares con PowerShell (blog)](https://go.microsoft.com/fwlink/?linkID=227685)   
  [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, deleting
@@ -16,19 +16,19 @@ ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf0ba5a2ec689f152431af0495f7ee44d7ad5e10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e777fc76a49e7d4ec645133808787e25a702348f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117585"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367117"
 ---
 # <a name="delete-one-or-more-jobs"></a>Eliminar uno o más trabajos
   En este tema se describe cómo eliminar trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server.  
   
  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  Solo podrá eliminar los trabajos que posea, a menos que sea miembro del rol fijo de servidor **sysadmin** .  
@@ -85,7 +85,7 @@ ms.locfileid: "48117585"
 ##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
  **Para eliminar varios trabajos**  
   
- Use la `JobCollection` clase mediante el uso de un lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilice la clase `JobCollection` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
 
   

@@ -1,22 +1,21 @@
 ---
-title: 'Lección 1: Preparar la creación del conjunto de implementación | Microsoft Docs'
+title: 'Lección 1: Preparar la creación del paquete de implementación | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11c76b725c8b4a076c49cf8e0742ca95475322fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4549800144012991b4d154eecb2f9bd67dee352
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092236"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364907"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>Lección 1: Preparar la creación del paquete de implementación
   En esta lección, creará las carpetas de trabajo y la variables de entorno que admiten el tutorial, creará un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , agregará varios paquetes y sus archivos auxiliares al proyecto e implementará las configuraciones en los paquetes.  
@@ -32,7 +31,7 @@ ms.locfileid: "48092236"
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  Esta lección contiene las siguientes tareas:  
   
--   [Paso 1: crear carpetas de trabajo y variables de entorno](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+-   [Paso 1: Creación de carpetas de trabajo y Variables de entorno](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
 -   [Paso 2: Crear el proyecto de implementación](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
@@ -43,8 +42,8 @@ ms.locfileid: "48092236"
 -   [Paso 5: Probar los paquetes actualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
- [Paso 1: Crear carpetas de trabajo y variables de entorno](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+ [Paso 1: Creación de carpetas de trabajo y Variables de entorno](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
   

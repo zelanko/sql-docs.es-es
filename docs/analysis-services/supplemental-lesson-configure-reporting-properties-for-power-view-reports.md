@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e9122ab6f783e6b845c1a961c133d66e58e933e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033434"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544281"
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Complementario lección: configurar propiedades de informes para informes de Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,17 +33,17 @@ Para completar esta lección complementaria concreta, también debe tener lo sig
 ## <a name="model-properties-that-affect-reporting"></a>Propiedades de modelo que afectan a los informes  
 Al crear un modelo tabular, hay ciertas propiedades que puede establecer en tablas y columnas individuales para mejorar la experiencia de informes del usuario final en Power View. Además, puede crear datos de modelo adicionales para permitir la visualización de datos y otras características específicas del cliente de informes. Para el Adventure Works Internet Sales Model de ejemplo, aquí se enumeran algunos de los cambios que hará:  
   
--   **Agregar datos nuevos** : al agregar datos nuevos en una columna calculada con una fórmula DAX, se crea información de fecha en un formato más fácil de mostrar en los gráficos.  
+-   **Agregar nuevos datos** -agregar nuevos datos en una columna calculada mediante una fórmula DAX crea información de fecha en un formato que sea más fácil de mostrar en los gráficos.  
   
 -   **Ocultar las tablas y las columnas que no son útiles para el usuario final** : la propiedad **Hidden** controla si las tablas y las columnas de tabla se muestran en el cliente de informes. Los elementos que están ocultos siguen siendo parte del modelo y permanecen disponibles para las consultas y los cálculos.  
   
--   **Habilitar las tablas de un clic** : de manera predeterminada, no ocurre nada si un usuario final hace clic en una tabla en la lista de campos. Para cambiar este comportamiento de modo que al hacer clic en la tabla, se agregue al informe, establecerá Conjunto de campos predeterminado en cada columna que desee incluir en la tabla. Esta propiedad se establece en las columnas de tabla que los usuarios finales es probable que deseen usar.  
+-   **Habilitar las tablas con un solo clic** : de forma predeterminada, se realiza ninguna acción si un usuario final hace clic en una tabla en la lista de campos. Para cambiar este comportamiento de modo que al hacer clic en la tabla, se agregue al informe, establecerá Conjunto de campos predeterminado en cada columna que desee incluir en la tabla. Esta propiedad se establece en las columnas de tabla que los usuarios finales es probable que deseen usar.  
   
 -   **Establecer agrupación cuando sea necesario** : la propiedad **Mantener filas únicas** determina si los valores de la columna se deben agrupar por valores en un campo diferente, como un campo identificador. En las columnas que contienen valores duplicados, como Customer Name (por ejemplo, varios clientes denominados John Smith), es importante agrupar (mantener filas únicas) en el campo **Identificador de fila** para proporcionar a los usuarios finales los resultados correctos.  
   
 -   **Establecer tipos de datos y formatos de datos** : de manera predeterminada, Power View aplica las reglas según el tipo de datos de columna a fin de determinar si el campo puede usarse como una medida. Dado que cada visualización de datos en Power View también tiene reglas sobre dónde se pueden colocar las medidas y las no medidas, es importante establecer el tipo de datos en el modelo o invalidar el predeterminado para lograr el comportamiento que quiera para el usuario final.  
   
--   Establezca la propiedad**Short by Column** : la propiedad **Sort By Column** especifica si los valores de la columna se deben ordenar por valores en un campo diferente. Por ejemplo, en la columna Month Calendar que contiene el nombre de mes, ordene por la columna Month Number.  
+-   **Establecer el criterio de ordenación por columna** propiedad - la **ordenar por columna** propiedad especifica si los valores de la columna se deben ordenar por valores en un campo diferente. Por ejemplo, en la columna Month Calendar que contiene el nombre de mes, ordene por la columna Month Number.  
   
 ## <a name="hide-tables-from-client-tools"></a>Ocultar las tablas de las herramientas de cliente  
 Dado que hay una columna calculada Product Category y otra Product Subcategory en la tabla calculated Product, no es necesario tener visibles las tablas Product Category y Product Subcategory para las aplicaciones cliente.  
@@ -129,7 +129,7 @@ Para obtener información detallada acerca de las propiedades de comportamiento 
 7.  Repita estos pasos con la tabla **Product** , seleccionando la columna **Product Id** como identificador de fila y la columna **Product Name** en el cuadro de lista **Mantener filas únicas** . En **Etiqueta predeterminada**, seleccione **Product Alternate Id**.  
   
 ## <a name="reporting-properties-for-columns"></a>Propiedades de informe para las columnas  
-Hay varias propiedades de columna básicas y propiedades de informe específicos en las columnas que puede establecer para mejorar la experiencia de informes de modelo. Por ejemplo, puede no ser necesario que los usuarios vena cada columna de cada tabla. Igual que ocultó las tablas Product Category y Product Subcategory antes, mediante la propiedad Hidden de una columna puede ocultar columnas concretas de una tabla que de otro modo se mostrarían. Otras propiedades, como Data Format y Sort by Column, también pueden afectar al modo en que los datos de columna pueden aparecer en los informes. Establecerá algunas de esas columnas concretas ahora. Otras columnas no requieren ninguna acción y no se muestran a continuación.  
+Hay varias propiedades de columna básicas y propiedades de informe específicos en las columnas que puede establecer para mejorar la experiencia de informes de modelo. Por ejemplo, puede no ser necesario que los usuarios vena cada columna de cada tabla. Igual que ocultó las tablas Product Category y Product Subcategory antes, mediante el uso de la propiedad Hidden de una columna, puede ocultar columnas concretas de una tabla que se muestra en caso contrario. Otras propiedades, como Data Format y Sort by Column, también pueden afectar al modo en que los datos de columna pueden aparecer en los informes. Establecerá algunas de esas columnas concretas ahora. Otras columnas no requieren ninguna acción y no se muestran a continuación.  
   
 Solo establecerá algunas propiedades de columna distintas aquí, pero hay muchas otras. Para obtener más información acerca de la columna de propiedades de informes, consulte [propiedades de columna](../analysis-services/tabular-models/column-properties-ssas-tabular.md) en libros en pantalla de SQL Server.  
   
@@ -143,7 +143,7 @@ Solo establecerá algunas propiedades de columna distintas aquí, pero hay mucha
   
 4.  Repita estos pasos, estableciendo la columna siguiente y las propiedades de informes para cada tabla especificada. Deje las demás propiedades con su configuración predeterminada.  
   
-    Nota: Para todas las columnas de fecha, asegúrese de que **Tipo de datos** sea **Fecha**.  
+    Nota: Para todas las columnas de fecha, asegúrese de que **tipo de datos** es **fecha**.  
   
     **Customer**  
   
@@ -155,7 +155,7 @@ Solo establecerá algunas propiedades de columna distintas aquí, pero hay mucha
     **Date**  
   
     > [!NOTE]  
-    > Dado que la tabla Date se seleccionó como la tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7, Marcar como tabla de fechas, y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información acerca de cómo especificar una tabla de fechas, vea [especificar marcar como tabla de fechas con inteligencia de tiempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en libros en pantalla de SQL Server.  
+    > Dado que la tabla Date se seleccionó como tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7: Marcar como tabla de fechas y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información acerca de cómo especificar una tabla de fechas, vea [especificar marcar como tabla de fechas con inteligencia de tiempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en libros en pantalla de SQL Server.  
   
     |columna|Property|Valor|  
     |----------|------------|---------|  

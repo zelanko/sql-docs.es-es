@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e7b1be922673978ee512fac105a89670a6764f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83902f57b758089235abafc9f8289b6f9fdb8653
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140585"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361607"
 ---
-# <a name="step-3-adding-packages-and-other-files"></a>Paso 3: agregar paquetes y otros archivos
+# <a name="step-3-adding-packages-and-other-files"></a>Paso 3: Agregar paquetes y otros archivos
   En esta tarea, agregará paquetes existentes, archivos auxiliares que admitan paquetes individuales y un archivo Léame al proyecto Deployment Tutorial que ha creado en la tarea anterior. Por ejemplo, agregará un archivo de datos XML que contiene los datos de un paquete y un archivo de texto que proporciona información del archivo Léame sobre todos los paquetes del proyecto.  
   
  Cuando se implementan paquetes a un entorno de prueba o producción, normalmente no se incluyen los archivos de datos en la implementación, sino que se utilizan configuraciones para actualizar las rutas de acceso de los orígenes de datos para tener acceso a las versiones de prueba o producción de las bases de datos o los archivos de datos. Para explicar las instrucciones, este tutorial incluye archivos de datos en la implementación de paquetes.  
@@ -52,7 +51,7 @@ ms.locfileid: "48140585"
   
 4.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.  
   
-5.  Haga clic en el botón Examinar **(…)** , vaya a C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, seleccione **DataTransfer.dtsx**y luego haga clic en **Abrir**.  
+5.  Haga clic en el botón Examinar **(…)**, vaya a C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, seleccione **DataTransfer.dtsx** y, después, haga clic en **Abrir**.  
   
 6.  Haga clic en **Aceptar**.  
   
@@ -71,6 +70,6 @@ ms.locfileid: "48140585"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Paso 4: Agregar configuraciones de paquetes](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
   

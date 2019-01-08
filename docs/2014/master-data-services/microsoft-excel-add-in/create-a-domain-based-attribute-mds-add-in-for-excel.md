@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c1dc3110f35d79d0e100ac90b52b303b0e750fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a52df417f41e2ba7a71152ededc0d2846f43956
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158345"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798093"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Crear un atributo basado en dominio (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], los administradores pueden crear un atributo basado en dominio si quieren restringir los valores de una columna a un conjunto específico de valores.  
@@ -31,7 +30,7 @@ ms.locfileid: "48158345"
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales del **Explorador** y de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   El modelo y la entidad deben existir.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48158345"
 -   Para agregar y eliminar los valores en la lista restringida, cargue la entidad en la que el atributo se basa. Para obtener más información sobre la carga de entidades, vea [cargar datos de MDS en Excel](export-data-to-excel-from-master-data-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Atributos basados en dominio &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
+ [Atributos basados en dominios &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
  [Crear una entidad &#40;Complemento MDS para Excel&#41;](create-an-entity-mds-add-in-for-excel.md)   
  [Generar un modelo &#40;complemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   

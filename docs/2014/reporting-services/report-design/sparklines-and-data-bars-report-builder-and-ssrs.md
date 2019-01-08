@@ -14,19 +14,19 @@ ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 29af878e4e0173b6c926ae2bbbb29fe39ee2ca55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b729d5fb711a855c0edbdac14101e1e04c3bc83f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074815"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362537"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Minigráficos y barras de datos (Generador de informes y SSRS)
   Los minigráficos y las barras de datos son gráficos simples y pequeños que contienen mucha información en poco espacio, a menudo conjuntamente con texto. Los minigráficos y las barras de datos se utilizan a menudo en las tablas y matrices. Su importancia radica en que permiten ver muchos datos juntos y compararlos rápidamente uno encima de otro, en lugar de verlos de forma individual. Facilitan la visualización de los valores atípicos, las filas que no se muestran como las demás. Aunque son pequeños, cada minigráfico suele representar varios puntos de datos, con frecuencia, a lo largo del tiempo. Las barras de datos representan varios puntos de datos, pero normalmente solo muestran uno. Cada minigráfico suele presentar una única serie. No puede agregar un minigráfico a un grupo de detalles en una tabla. Dado que los minigráficos presentan los datos agregados, deben estar en una celda que esté asociada a un grupo. Los minigráficos y las barras de datos tienen los mismos elementos de gráfico básicos de las categorías, series y valores, pero carecen de leyendas, líneas de eje, etiquetas o marcas de graduación.  
   
  ![rs_SparklineExample](../media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Para empezar a trabajar rápidamente con elementos de informe, vea [Tutorial: Agregar un minigráfico a un informe &#40;Generador de informes&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md) y los vídeos [How to: Create a Sparkline in a Table](http://go.microsoft.com/fwlink/?LinkId=197092) (Cómo crear un minigráfico en una tabla) y [Sparklines, Bar Charts, and Indicators in Report Builder](http://technet.microsoft.com/bi/video/ff877165) (Minigráficos, gráficos de barras e indicadores del Generador de informes).  
+ Para empezar rápidamente con minigráficos, vea [Tutorial: Agregar un minigráfico a un informe &#40;Report Builder&#41; ](../tutorial-add-a-sparkline-to-your-report-report-builder.md) y los vídeos [Cómo: Crear un minigráfico en una tabla](https://go.microsoft.com/fwlink/?LinkId=197092) y [minigráficos, gráficos de barras e indicadores del generador de informes de](https://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
 >  Puede publicar minigráficos y barras de datos con su lista, matriz o tabla primaria por separado de un informe como elementos de informe. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -37,15 +37,15 @@ ms.locfileid: "48074815"
 ##  <a name="KindsofSparklines"></a> Tipos de minigráficos  
  Puede crear casi tantos tipos de minigráficos como gráficos normales. En general, no puede crear minigráfico 3D. Puede crear versiones de minigráfico de estos gráficos completos:  
   
--   [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md): los gráficos de columnas básicas, apiladas y 100 % apiladas.  
+-   [Gráficos de columnas &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md): los gráficos de columnas básicas, apiladas y 100 % apiladas.  
   
--   [Gráficos de líneas &#40;Generador de informes y SSRS&#41;](line-charts-report-builder-and-ssrs.md): todos los gráficos de líneas excepto el de 3D.  
+-   [Gráficos de líneas &#40;generador de informes y SSRS&#41;](line-charts-report-builder-and-ssrs.md): todos los gráficos de líneas excepto el de 3D.  
   
--   [Gráficos de áreas &#40;Generador de informes y SSRS&#41;](area-charts-report-builder-and-ssrs.md): todos los gráficos de áreas excepto el de 3D  
+-   [Gráficos de áreas &#40;generador de informes y SSRS&#41;](area-charts-report-builder-and-ssrs.md): todos los gráficos de áreas excepto el de 3D.  
   
--   [Gráficos circulares &#40;Generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md): gráficos de anillos, planos y 3D, pero no las demás formas, por ejemplo, gráficos de embudo y de pirámide.  
+-   [Los gráficos circulares &#40;generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md): gráficos de anillos, planos y 3D, pero no las demás formas, por ejemplo gráficos de embudo y de pirámide.  
   
--   [Rangos de intervalos &#40;Generador de informes y SSRS&#41;](range-charts-report-builder-and-ssrs.md): los gráficos de cotizaciones, de vela, de barras de error y los diagramas de caja.  
+-   [Rangos de intervalos &#40;generador de informes y SSRS&#41;](range-charts-report-builder-and-ssrs.md): los gráficos de cotizaciones, de vela, de barras de error y los diagramas de caja.  
   
 ##  <a name="DataBars"></a> Barras de datos  
  Las barras de datos suelen representar un único punto de datos, aunque pueden representar varios, al igual que los gráficos de barras normales. A menudo contienen varias series sin categoría o tienen agrupaciones de serie.  
@@ -56,9 +56,9 @@ ms.locfileid: "48074815"
   
  Puede crear versiones de barras de datos de estos gráficos completos:  
   
--   [Gráficos de barras &#40;Generador de informes y SSRS&#41;](bar-charts-report-builder-and-ssrs.md): gráficos de barras básicas, apiladas y 100 % apiladas.  
+-   [Los gráficos de barras &#40;generador de informes y SSRS&#41;](bar-charts-report-builder-and-ssrs.md): gráficos de barras básicas, apiladas y 100 % a piladas.  
   
--   [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md): gráficos de columnas básicas, apiladas y 100 % apiladas. Los gráficos de columnas pueden ser minigráficos o barras de datos.  
+-   [Gráficos de columnas &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md): gráficos de columnas básicas, apiladas y 100 % apiladas. Los gráficos de columnas pueden ser minigráficos o barras de datos.  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48074815"
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="UnderstandScope"></a> Descripción de los datos proporcionados a un minigráfico o barra de datos  
- La adición de un minigráfico o barra de datos a una tabla o matriz se conoce como *anidar* una región de datos en otra. La anidación significa que los datos proporcionados a un minigráfico o barra de datos son controlados por el conjunto de datos en el que se basa la tabla o la matriz y por su ubicación en la tabla o matriz. Para obtener más información, vea [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
+ La adición de un minigráfico o barra de datos a una tabla o matriz se conoce como *anidar* una región de datos en otra. La anidación significa que los datos proporcionados a un minigráfico o barra de datos son controlados por el conjunto de datos en el que se basa la tabla o la matriz y por su ubicación en la tabla o matriz. Para más información, vea [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
   
 ##  <a name="ConvertSparklinetoChart"></a> Convertir un minigráfico o una barra de datos en un gráfico completo  
  Dado que los minigráficos y las barras de datos son un tipo de gráfico, si decide que prefiere tener toda la funcionalidad de un gráfico completo, puede realizar la conversión a un gráfico completo haciendo clic con el botón derecho en el gráfico y seleccionando **Convertir a gráfico completo**. Al hacerlo, las líneas de ejes, las etiquetas, las marcas de graduación y la leyenda se agregan automáticamente.  
@@ -85,35 +85,35 @@ ms.locfileid: "48074815"
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Agregar minigráficos y barras de datos &#40;generador de informes y SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Agregar minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
- [Alinear los datos en un gráfico en una tabla o matriz &#40;generador de informes y SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Alinear los datos en un gráfico en una tabla o una matriz &#40;Generador de informes y SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
 ### <a name="other-how-to-topics-for-charts"></a>Otros temas de procedimientos para los gráficos  
  Puesto que los minigráficos y las barras de datos son un tipo de gráfico, los siguientes temas de procedimientos para gráficos también podrían resultarle útiles:  
   
- [Agregar un gráfico a un informe &#40;generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
  [Agregar puntos vacíos al gráfico &#40;generador de informes y SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
- [Agregar o quitar márgenes de un gráfico &#40;generador de informes y SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Agregar o quitar márgenes de un gráfico &#40;Generador de informes y SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Cambiar un tipo de gráfico &#40;generador de informes y SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
+ [Cambiar un tipo de gráfico &#40;Generador de informes y SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
   
- [Definir los colores de un gráfico mediante una paleta &#40;generador de informes y SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [Definir los colores de un gráfico mediante una paleta &#40;Generador de informes y SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
  [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
- [Especificar una escala logarítmica &#40;generador de informes y SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Especificar una escala logarítmica &#40;Generador de informes y SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
- [Especifique un intervalo de eje &#40;generador de informes y SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
  [Especificar colores coherentes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tutorial: Agregar un minigráfico a un informe &#40;generador de informes&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
- [Minigráficos, gráficos de barras e indicadores en el generador de informes (vídeo)](http://technet.microsoft.com/bi/video/ff877165)   
- [Cómo: crear un minigráfico en una tabla (vídeo)](http://go.microsoft.com/fwlink/?LinkId=197092)  
+ [Minigráficos, gráficos de barras e indicadores en el generador de informes (vídeo)](https://technet.microsoft.com/bi/video/ff877165)   
+ [Cómo: Crear un minigráfico en una tabla (vídeo)](https://go.microsoft.com/fwlink/?LinkId=197092)  
   
   

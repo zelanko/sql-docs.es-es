@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
@@ -17,12 +16,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4119b2ef17bcb735669d25662972ae4c79bbae31
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 546b52e8e0cc944e279e976bc4709d9fcee076f7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906415"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369967"
 ---
 # <a name="data-profiling-task"></a>Tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos calcula diversos perfiles que le ayudan a familiarizarse con un origen de datos y a identificar en los datos problemas que deban corregirse.  
@@ -30,7 +29,7 @@ ms.locfileid: "48906415"
  Puede utilizar la tarea de generación de perfiles de datos dentro de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para generar perfiles de datos que están almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e identificar posibles problemas de calidad de los datos.  
   
 > [!NOTE]  
->  En este tema solo se describe las características y requisitos de la tarea de generación de perfiles de datos. Para obtener un tutorial sobre cómo usar la tarea de generación de perfiles de datos, vea la sección [Visor y tarea de generación de perfiles de datos](data-profiling-task-and-viewer.md).  
+>  En este tema únicamente se describen las características y requisitos de la tarea de generación de perfiles de datos. Para obtener un tutorial sobre cómo usar la tarea de generación de perfiles de datos, vea la sección [Visor y tarea de generación de perfiles de datos](data-profiling-task-and-viewer.md).  
   
 ## <a name="requirements-and-limitations"></a>Requisitos y limitaciones  
  La tarea de generación de perfiles de datos solo funciona con datos que estén almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta tarea no funciona con orígenes de datos de otros fabricantes o basados en archivos.  
@@ -117,7 +116,7 @@ ms.locfileid: "48906415"
 |**DataProfilingTaskTrace**|Proporciona información descriptiva sobre el estado de la tarea. Los mensajes incluyen la información siguiente:<br /><br /> Inicio de las solicitudes de procesamiento<br /><br /> Inicio de la consulta<br /><br /> Query End<br /><br /> Finalización de la solicitud de cálculo|  
   
 ## <a name="output-and-its-schema"></a>Salida y su esquema  
- La tarea de generación de perfiles de datos genera los perfiles seleccionados en XML y se estructura según el esquema DataProfile.xsd. Puede especificar si este XML generado se guarda en un archivo o en una variable de paquete. Puede ver este esquema en línea en [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Desde la página web puede guardar una copia local del esquema. A continuación, puede ver la copia local del esquema en Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] u otro editor de esquemas, en un editor XML o en un editor de texto, como el Bloc de notas.  
+ La tarea de generación de perfiles de datos genera los perfiles seleccionados en XML y se estructura según el esquema DataProfile.xsd. Puede especificar si este XML generado se guarda en un archivo o en una variable de paquete. Puede ver este esquema en línea en [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Desde la página web puede guardar una copia local del esquema. A continuación, puede ver la copia local del esquema en Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] u otro editor de esquemas, en un editor XML o en un editor de texto, como el Bloc de notas.  
   
  Este esquema de información sobre la calidad de los datos podría ser útil para:  
   
@@ -125,7 +124,7 @@ ms.locfileid: "48906415"
   
 -   Generar herramientas personalizadas para trabajar con información sobre la calidad de los datos.  
   
- El espacio de nombres de destino se identifica en el esquema como [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ El espacio de nombres de destino se identifica en el esquema como [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Salida en el flujo de trabajo condicional de un paquete  
  Los componentes que generan perfiles de datos no incluyen funcionalidad integrada para implementar la lógica condicional en el flujo de trabajo del paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basándose en el resultado de la tarea de generación de perfiles de datos. Sin embargo, puede agregar fácilmente esta lógica en una tarea Script con una cantidad de programación mínima. Este código realizaría una consulta XPath en el XML generado y, a continuación, guardaría el resultado en una variable de paquete. Las restricciones de precedencia que conectan la tarea Script con las tareas subsiguientes pueden utilizar una expresión para determinar el flujo de trabajo. Por ejemplo, la tarea Script detecta que el porcentaje de valores NULL de una columna supera un cierto umbral. Cuando esta condición sea True, quizá desee interrumpir el paquete y resolver el problema antes de continuar.  

@@ -18,12 +18,12 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd212f45e02ddce4c64a8b4a7d664ddaedf8090a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666833"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591549"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Declarar la aplicación&#39;s versión de ODBC
 Antes de que una aplicación asigna una conexión, se debe establecer el atributo de entorno SQL_ATTR_ODBC_VERSION. Este atributo indica que la aplicación sigue el 2 de ODBC. *x* u ODBC 3. *x* especificación al usar los siguientes elementos:  
@@ -43,7 +43,7 @@ Antes de que una aplicación asigna una conexión, se debe establecer el atribut
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***argumento en SQLTables**.   En ODBC 2. *x*, los caracteres comodín ("%" y "_") en el *CatalogName* argumento se tratan literalmente. En ODBC 3. *x*, se tratan como caracteres comodín. Por lo tanto, una aplicación que sigue a la API ODBC 2. *x* especificación no puede utilizar tal y como caracteres comodín y no realiza escape de ellos cuando se usen como literales. Una aplicación que sigue el ODBC 3. *x* especificación puede usarlas como caracteres comodín o ponerlos y usarlos como literales. Para obtener más información, consulte [argumentos en funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   _CatalogName_**argumento en SQLTables**. En ODBC 2. *x*, los caracteres comodín ("%" y "_") en el *CatalogName* argumento se tratan literalmente. En ODBC 3. *x*, se tratan como caracteres comodín. Por lo tanto, una aplicación que sigue a la API ODBC 2. *x* especificación no puede utilizar tal y como caracteres comodín y no realiza escape de ellos cuando se usen como literales. Una aplicación que sigue el ODBC 3. *x* especificación puede usarlas como caracteres comodín o ponerlos y usarlos como literales. Para obtener más información, consulte [argumentos en funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  El 3 de ODBC *.x* mientras que el Administrador de controladores ODBC 3 *.x* controladores comprobar la versión de la especificación de ODBC que se escribe una aplicación y responder según corresponda. Por ejemplo, si la aplicación sigue a la API ODBC 2. *x* especificación y llama a **SQLExecute** antes de llamar a **SQLPrepare**, el 3 de ODBC *.x* Administrador de controladores devuelve SQLSTATE S1010 () Error de secuencia de función). Si la aplicación sigue el ODBC 3 *.x* especificación, el Administrador de controladores devuelve SQLSTATE HY010 (función de error de secuencia). Para obtener más información, consulte [compatibilidad con versiones anteriores y el cumplimiento de estándares](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   

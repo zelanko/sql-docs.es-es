@@ -11,14 +11,14 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143655"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367157"
 ---
-# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lección 1: Crear la cuenta y el contenedor de Azure Storage
+# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lección 1: Crear la cuenta y el contenedor de Almacenamiento de Windows Azure
   Antes de comenzar a almacenar archivos de datos de SQL Server en Azure Storage, primero debe crear una cuenta de Azure Storage, un contenedor de blobs y una firma de acceso compartido. La lección 1 le guía por los pasos necesarios para iniciar sesión en el portal de administración de Windows Azure, y para crear una cuenta de almacenamiento, un contenedor de blobs y una firma de acceso compartido.  
   
  De forma predeterminada, solo el propietario de la cuenta de almacenamiento puede obtener acceso a los blobs, las tablas y las colas dentro de esa cuenta. Para tener acceso a estos recursos mediante esta nueva mejora de SQL Server sin compartir la clave de acceso de la cuenta de almacenamiento, es necesario hacer lo siguiente:  
@@ -29,7 +29,7 @@ ms.locfileid: "48143655"
   
 -   Utilice una directiva de acceso almacenada para administrar las firmas de acceso compartido de un contenedor o sus blobs. La directiva de acceso almacenado le ofrece una medida adicional de control sobre sus firmas de acceso compartido y también proporciona medios directos para revocarlas.  
   
- Para obtener más información, consulte [administrar el acceso a los recursos de almacenamiento de Windows Azure](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
+ Para obtener más información, consulte [administrar el acceso a los recursos de almacenamiento de Windows Azure](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
 ## <a name="create-storage-account"></a>Crear una cuenta de almacenamiento  
  Para crear una cuenta de almacenamiento en el Portal de administración de Windows Azure, siga estos pasos:  
@@ -58,7 +58,7 @@ ms.locfileid: "48143655"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  Para crear un contenedor mediante programación, también puede usar las API de REST. Para obtener más información, consulte [crear contenedor](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) y también [referencia de API de REST de servicios de Windows Azure Storage](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
+>  Para crear un contenedor mediante programación, también puede usar las API de REST. Para obtener más información, consulte [crear contenedor](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx) y también [referencia de API de REST de servicios de Windows Azure Storage](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
   
  **Lección siguiente:**  
   

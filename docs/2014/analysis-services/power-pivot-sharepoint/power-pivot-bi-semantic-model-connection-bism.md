@@ -11,35 +11,35 @@ ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7816d4cebb8ad8344c240a7c5a32229e0b07105f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a527ad5c165ff7b155b04627a41062a2b553c62b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191595"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362248"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Conexión de modelo semántico de BI PowerPivot (.bism)
-  Una conexión de modelo semántico de BI (.bism) es una conexión portátil que conecta Excel o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] informa a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos modelo tabular o un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia en modo multidimensional. Si está familiarizado con los archivos de conexión de datos de office (.odc), observará una similitud en la forma en que se define y se utiliza un archivo de conexión .bism.  
+  Una conexión de modelo semántico de BI (.bism) es una conexión portátil que conecta Excel o informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] con una base de datos de modelo tabular de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo multidimensional. Si está familiarizado con los archivos de conexión de datos de office (.odc), observará una similitud en la forma en que se define y se utiliza un archivo de conexión .bism.  
   
- Las conexiones de modelos semánticos de BI se crean y se obtiene acceso a ellas a través de SharePoint. La creación de conexiones de modelo semántico de BI habilita comandos de inicio rápido en una conexión de modelo semántico de BI de una biblioteca. Los comandos de inicio rápido abren un nuevo libro de Excel o las opciones para modificar el archivo de conexión. Si [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está instalado, también verá un comando para crear un [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] informes.  
+ Las conexiones de modelos semánticos de BI se crean y se obtiene acceso a ellas a través de SharePoint. La creación de conexiones de modelo semántico de BI habilita comandos de inicio rápido en una conexión de modelo semántico de BI de una biblioteca. Los comandos de inicio rápido abren un nuevo libro de Excel o las opciones para modificar el archivo de conexión. Si [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está instalado, también verá un comando para crear un informe de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
  ![Comando de inicio rápido de la captura de pantalla de BISM](../media/ssas-bism-quicklaunch.gif "comando de inicio rápido de la captura de pantalla de BISM")  
   
 ##  <a name="bkmk_prereq"></a> Bases de datos admitidas  
  Las conexiones del modelo semántico de BI apuntan a datos del modelo tabular. Hay tres orígenes para estos datos:  
   
--   Una base de datos de modelo tabular que se ejecuta en una instancia independiente de Analysis Services en el modo de servidor tabular. Una implementación de una instancia de Analysis Services independiente es externa a la granja. El acceso a orígenes de datos fuera de la granja requiere permisos adicionales, acerca de los cuales puede leer en este tema: [Crear una conexión de modelo semántico de BI a una base de datos de modelo tabular](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Una base de datos de modelo tabular que se ejecuta en una instancia independiente de Analysis Services en el modo de servidor tabular. Una implementación de una instancia de Analysis Services independiente es externa a la granja. Acceso a orígenes de datos fuera de la granja requiere permisos adicionales, que puede leer acerca de este tema: [Crear una conexión de modelo semántico de BI a una base de datos de modelo Tabular](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
--   Libros PowerPivot guardados en SharePoint. Las bases de datos incrustadas de PowerPivot en los libros de Excel son equivalentes a las bases de datos de modelos tabulares que se ejecutan en un servidor de modo tabular independiente de Analysis Services. Si ya utiliza PowerPivot para Excel y PowerPivot para SharePoint, puede definir una conexión de modelo semántico de BI que señale a los libros PowerPivot en una biblioteca de SharePoint y crear [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] informes con datos de PowerPivot existentes.  Puede utilizar los libros creados en las versiones para SQL Server 2008 R2 o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de PowerPivot para Excel.  
+-   Libros PowerPivot guardados en SharePoint. Las bases de datos incrustadas de PowerPivot en los libros de Excel son equivalentes a las bases de datos de modelos tabulares que se ejecutan en un servidor de modo tabular independiente de Analysis Services. Si ya utiliza PowerPivot para Excel y PowerPivot para SharePoint, puede definir una conexión de modelo semántico de BI que señale a los libros PowerPivot en una biblioteca de SharePoint y crear informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] con los datos PowerPivot existentes.  Puede utilizar los libros creados en las versiones para SQL Server 2008 R2 o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de PowerPivot para Excel.  
   
--   Un modelo de datos multidimensional en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia.  
+-   Un modelo de datos multidimensional en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Para obtener una comparación de los orígenes de datos, consulte el contenido de la comunidad [Presentación del Modelo semántico de BI de SQL Server 2012 (BISM)](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/).  
   
 ## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>Descripción de la secuencia de conexión en las conexiones semánticas de BI  
  En esta sección se explica el comportamiento de una conexión entre varias aplicaciones cliente, como la aplicación de escritorio Excel o el cliente de informes de la vista avanzada de SharePoint, y una base de datos modelo tabular que se encuentra dentro o fuera de la granja de servidores de SharePoint.  
   
- Todas las conexiones que tienen como destino una base de datos modelo tabular se establecen con las credenciales del usuario que solicita los datos. Sin embargo, los mecanismos de esa conexión variarán dependiendo de si se trata de una conexión que se establece dentro una granja, si se trata una conexión de uno o dos saltos y si Kerberos está habilitado. Para más información sobre las conexiones autenticadas entre SharePoint y orígenes de datos back-end, vea [Autenticación de salto doble: Por qué NTLM no funciona y Kerberos sí](http://go.microsoft.com/fwlink/?LinkId=237137)(Autenticación de salto doble: Por qué NTLM no funciona y Kerberos sí).  
+ Todas las conexiones que tienen como destino una base de datos modelo tabular se establecen con las credenciales del usuario que solicita los datos. Sin embargo, los mecanismos de esa conexión variarán dependiendo de si se trata de una conexión que se establece dentro una granja, si se trata una conexión de uno o dos saltos y si Kerberos está habilitado. Para obtener más información sobre las conexiones autenticadas entre SharePoint y el back-end de orígenes de datos, vea [autenticación de salto doble: ¿Por qué se produce un error en NTLM y Kerberos funciona](https://go.microsoft.com/fwlink/?LinkId=237137).  
   
  **Establecer conexión desde Excel con datos tabulares de una red**  
   
@@ -55,11 +55,11 @@ ms.locfileid: "48191595"
   
  Las conexiones entre la vista avanzada y una base de datos modelo tabular sigue una secuencia de autenticación de dos saltos, en la que la identidad del usuario se transmite desde el cliente a SharePoint y, a continuación, desde SharePoint a una base de datos modelo de tabular back-end de Analysis Services que se ejecuta fuera de la granja. La biblioteca cliente ADOMD.NET que controla la solicitud de conexión siempre intenta usar Kerberos en el primer intento. Si se configura Kerberos, la identidad del usuario se suplanta en la conexión a la base de datos modelo tabular, y la conexión se realiza correctamente.  
   
- Si no se configura Kerberos y se produce un error en la solicitud, Reporting Services hace un segundo intento. En este escenario, la biblioteca cliente se conecta a Analysis Services utilizando la identidad del servicio de Reporting Services y la autenticación NTLM. La identidad del usuario de Power View se pasa en la cadena de conexión utilizando la `effectiveusername` parámetro.  
+ Si no se configura Kerberos y se produce un error en la solicitud, Reporting Services hace un segundo intento. En este escenario, la biblioteca cliente se conecta a Analysis Services utilizando la identidad del servicio de Reporting Services y la autenticación NTLM. La identidad del usuario de la vista avanzada se pasa en la cadena de conexión utilizando el parámetro `effectiveusername`.  
   
  Solo un miembro del rol del administrador del sistema de la instancia de Analysis Services tiene permiso para realizar una conexión con el parámetro de `effectiveusername` y para suplantar a otro usuario en la instancia de servidor. Por esta razón, la cuenta de ejecución del servicio compartido de Reporting Services debe tener derechos administrativos en la instancia de Analysis Services.  Para obtener instrucciones sobre cómo conceder permisos administrativos a la cuenta de servicio, vea el tema [Crear una conexión de modelo semántico de BI a una base de datos de modelo tabular](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
- En la siguiente ilustración se muestra una secuencia de conexión que usa la misma identidad de usuario de Windows en cada conexión. En la última conexión a Analysis Services, la conexión se realiza mediante la identidad de aplicación de servicio de Reporting Services, pasando la identidad de usuario de Windows mediante `effectiveusername`.  
+ En la siguiente ilustración se muestra una secuencia de conexión que usa la misma identidad de usuario de Windows en cada conexión. En la última conexión a Analysis Services, la conexión se realiza mediante la identidad de la aplicación de servicio de Reporting Services, que pasa la identidad del usuario de Windows a través de `effectiveusername`.  
   
  ![Conexión con suplantación a la base de datos tabular](../media/ssas-powerpivotbismconnection-2.gif "conexión con suplantación a la base de datos tabular")  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48191595"
   
  [Crear una conexión de modelo semántico de BI a una base de datos de modelo tabular](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
- [Uso de una conexión de modelo semántico de BI en Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
+ [Usar una conexión de modelo semántico de BI en Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   

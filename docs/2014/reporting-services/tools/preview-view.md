@@ -15,18 +15,18 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 89bea23ea4add737dbd9edf9a02d147abb35adbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206775"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354029"
 ---
 # <a name="preview-view"></a>Vista previa, vista
   Use la **Vista previa** para mostrar el informe representado. Antes de abrir un informe en Vista previa, el Diseñador de informes lo ejecuta localmente. En el modo de vista previa, el informe se procesa por completo. Si el informe tiene una consulta compleja o una gran cantidad de datos, es posible que se necesiten algunos minutos para que se complete la vista previa la primera vez que la muestre. Para los cambios posteriores que solo afectan al formato del informe, la vista previa utiliza datos en caché.  
   
 > [!IMPORTANT]  
->  Cuando [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] se ejecuta como RemoteApp, no se pueden mostrar los informes en la **Vista previa** en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Los programas RemoteApp son programas a los que se tiene acceso remoto mediante Servicios de Escritorio remoto. Para obtener más información, vea [Guía paso a paso sobre RemoteApp de TS](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
+>  Cuando [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] se ejecuta como RemoteApp, no se pueden mostrar los informes en la **Vista previa** en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Los programas RemoteApp son programas a los que se tiene acceso remoto mediante Servicios de Escritorio remoto. Para obtener más información, vea [Guía paso a paso sobre RemoteApp de TS](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
   
 ## <a name="options"></a>Opciones  
  Use la barra de herramientas para administrar las funciones de vista previa.  

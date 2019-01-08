@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - overflow-field annotation
@@ -33,12 +31,12 @@ ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 981cca7f393b4f576bd2d3f11358fcd6491c9f24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16692ea8cac91960bd7f940f59c018d663f418dd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075045"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357452"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Ejemplos de carga masiva XML (SQLXML 4.0)
   En los ejemplos siguientes se muestra la funcionalidad de la carga masiva XML en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cada ejemplo se proporcionan un esquema XSD y su esquema XDR equivalente.  
@@ -200,7 +198,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Cargar datos XML de forma masiva en varias tablas  
+## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>b. Cargar datos XML de forma masiva en varias tablas  
  En este ejemplo, el documento XML consta de los  **\<cliente >** y  **\<orden >** elementos.  
   
 ```  
@@ -458,7 +456,7 @@ OrderDetail (OrderID, ProductID)
   
  En este caso, la carga masiva XML identifica la relación de clave principal y clave externa entre las tablas. En primer lugar, la carga masiva inserta los registros en las tablas con la clave principal y, a continuación, propaga el valor de identidad generado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a las tablas con columnas de clave externa. En el siguiente ejemplo, la carga masiva XML inserta datos en las tablas en el orden que se indica a continuación:  
   
-1.  Product  
+1.  Producto  
   
 2.  Ord  
   
@@ -1253,7 +1251,7 @@ End Sub
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
     <xsd:complexType>  
       <xsd:sequence>  
@@ -1290,8 +1288,8 @@ End Sub
     <ProductModel ProductModelID="2005">  
         <Name>Mountain-100 (2005 model)</Name>  
         <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-            <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-                  xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+            <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+                  xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
                   xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
                   xmlns:html="http://www.w3.org/1999/xhtml"   
                   xmlns="">  

@@ -14,12 +14,12 @@ ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f2476ebb3997db16c8ffebdd0aac2d6eebe9a68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182695"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357736"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Crear una aplicación de proveedor OLE DB de SQL Server Native Client
   Creación de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicación del proveedor OLE DB de Native Client incluye los siguientes pasos:  
@@ -31,7 +31,7 @@ ms.locfileid: "48182695"
 3.  Procesar los resultados.  
   
 > [!NOTE]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [cryptoAPI de Win32](http://go.microsoft.com/fwlink/?LinkId=9504).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [cryptoAPI de Win32](https://go.microsoft.com/fwlink/?LinkId=9504).  
   
 ## <a name="in-this-section"></a>En esta sección  
   

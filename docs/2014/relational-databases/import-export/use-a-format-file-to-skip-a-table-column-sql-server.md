@@ -13,12 +13,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc1101225eae5fd02eec2ee7c29e8ca21a778370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188225"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373137"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Usar un archivo de formato para omitir una columna de tabla  (SQL Server)
   En este tema se describen los archivos de formato. Se puede utilizar un archivo de formato para omitir la importación de una columna de tabla cuando el campo no existe en el archivo de datos. Un archivo de datos solo puede contener menos campos que el número de columnas en la tabla si las columnas omitidas tienen un valor nulo y/o contienen un valor predeterminado.  
@@ -134,7 +134,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -156,7 +156,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -188,7 +188,7 @@ GO
 #### <a name="using-bulk-import-on-a-view"></a>Utilizar BULK IMPORT en una vista  
  En el siguiente ejemplo se crea `v_myTestSkipCol` en la tabla `myTestSkipCol` . Esta vista omite la segunda columna de la tabla, `Col2`. Después, en el ejemplo se usa `BULK INSERT` para importar el archivo de datos `myTestSkipCol2.dat` a la vista.  
   
- En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , ejecute el siguiente código:  
+ En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], ejecute el siguiente código:  
   
 ```  
 CREATE VIEW v_myTestSkipCol AS  

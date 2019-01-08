@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [Analysis Services]
@@ -12,12 +12,12 @@ ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a87cde46f7382392764abc4836fc9dd50381c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 832e49db5221c2e978cac584e8f1e406d33be30f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227345"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366117"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
   En este tema se describe cómo crear y definir los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server.  
@@ -36,11 +36,11 @@ ms.locfileid: "48227345"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Si el paso de trabajo utiliza un comando de Analysis Services, la instrucción de comando debe ser un método **Execute** de XML for Analysis Services. Puede que la instrucción no contenga un sobre SOAP (Protocolo simple de acceso a objetos) completo o un método **Discover** de XML for Analysis Services. Mientras [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite sobres SOAP (Protocolo simple de acceso a objetos) completos y el método **Discover** , los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no los admiten. Para más información sobre XML for Analysis Services, consulte [Información general de XML for Analysis (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
+-   Si el paso de trabajo utiliza un comando de Analysis Services, la instrucción de comando debe ser un método **Execute** de XML for Analysis Services. Puede que la instrucción no contenga un sobre SOAP (Protocolo simple de acceso a objetos) completo o un método **Discover** de XML for Analysis Services. Mientras [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite sobres SOAP (Protocolo simple de acceso a objetos) completos y el método **Discover** , los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no los admiten. Para más información sobre XML for Analysis Services, consulte [Información general de XML for Analysis (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx).  
   
 -   Si el paso de trabajo utiliza una consulta de Analysis Services, la instrucción de consulta debe ser una consulta de expresiones multidimensionales (MDX). Para obtener más información acerca de MDX, vea [aspectos básicos de consultas MDX &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48227345"
   
 -   Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden escribir la salida de un paso de trabajo en un archivo. Si ejecutan el paso de trabajo usuarios miembros del rol de base de datos **SQLAgentUserRole** en la base de datos **msdb** , solo se podrá escribir la salida en una tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escribe la salida del paso de trabajo en la tabla **sysjobstepslog** de la base de datos **msdb** .  
   
--   Para obtener información detallada, vea [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+-   Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Usar SQL Server Management Studio  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48227345"
         @job_name = N'Weekly Sales Data Backup',  
         @step_name = N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database ',  
         @subsystem = N'ANALYSISCOMMAND',  
-        @command = N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+        @command = N' <Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
@@ -168,6 +168,6 @@ ms.locfileid: "48227345"
 ##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
  **Para crear un paso de trabajo para script de PowerShell**  
   
- Utilice la clase `JobStep` con un lenguaje de programación que seleccione, por ejemplo XMLA o MDX. Para más información, consulte [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilice la clase `JobStep` con un lenguaje de programación que seleccione, por ejemplo XMLA o MDX. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

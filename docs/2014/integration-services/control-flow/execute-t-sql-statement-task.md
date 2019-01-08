@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executetsqlstatementtask.f1
@@ -17,12 +16,12 @@ ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2ad857b2174528db8f6c2d7c8453b956129686d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c578c07c1e20331d2b2b302619cfc95b9463a639
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058508"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767317"
 ---
 # <a name="execute-t-sql-statement-task"></a>Tarea Ejecutar instrucción T-SQL
   La tarea Ejecutar instrucción T-SQL ejecuta instrucciones Transact-SQL. Para más información, vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) y [Consultas de Integration Services &#40;SSIS&#41;](../integration-services-ssis-queries.md).  

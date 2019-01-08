@@ -22,21 +22,21 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529544"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implementar una aplicación de capa de datos
   Puede implementar una aplicación de capa de datos (DAC) desde un paquete DAC en una instancia existente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante un asistente o un script de PowerShell. El proceso de implementación registra una instancia de DAC almacenando la definición de la DAC en la base de datos del sistema **msdb** (**maestra** en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea una base de datos y, después, rellena la base de datos con todos los objetos de base de datos definidos en la DAC.  
   
--   **Antes de empezar:**  [Utilidad de SQL Server](#SQLUtility), [Opciones y configuración de bases de datos](#DBOptSettings), [Limitaciones y restricciones](#LimitationsRestrictions), [Requisitos previos](#Prerequisites), [Seguridad](#Security), [Permisos](#Permissions)  
+-   **Antes de empezar:**  [Utilidad de SQL Server](#SQLUtility), [opciones y configuración de la base de datos](#DBOptSettings), [limitaciones y restricciones](#LimitationsRestrictions), [requisitos previos](#Prerequisites), [seguridad](#Security), [Permisos](#Permissions)  
   
--   **Para implementar una DAC con:**  [Asistente Implementar aplicación de capa de datos](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **Para implementar una DAC, mediante:**  [El Asistente para aplicaciones de capa de datos de implementación](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
-##  <a name="BeforeBegin"></a> Antes de empezar  
+##  <a name="BeforeBegin"></a> Antes de comenzar  
  El mismo paquete DAC se puede implementar varias veces en una instancia única de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , sin embargo las implementaciones se deben ejecutar de una en una. El nombre de instancia de DAC que se especificó para cada implementación debe ser único en la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ###  <a name="SQLUtility"></a> Utilidad de SQL Server  
@@ -55,7 +55,7 @@ ms.locfileid: "48104935"
  Una DAC puede implementarse en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que ejecute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. Si crea una DAC usando una versión posterior, la DAC puede contener objetos no admitidos por [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No puede implementar dicha DAC en instancias de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
- Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos paquetes contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un paquete desde un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como por ejemplo procedimientos almacenados u otro código definido por el usuario. Para más información sobre cómo realizar estas comprobaciones, consulte [Validar un paquete de DAC](validate-a-dac-package.md).  
+ Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos paquetes contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un paquete desde un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como por ejemplo procedimientos almacenados u otro código definido por el usuario. Para obtener más información acerca de cómo realizar estas comprobaciones, vea [Validate a DAC Package](validate-a-dac-package.md).  
   
 ###  <a name="Security"></a> Seguridad  
  Para mejorar la seguridad, los inicios de sesión de la autenticación de SQL Server están almacenados en un paquete DAC sin ninguna contraseña. Cuando el paquete se implementa o actualiza, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
@@ -68,7 +68,7 @@ ms.locfileid: "48104935"
   
 1.  En el **Explorador de objetos**, expanda el nodo de la instancia en la que desee implementar la DAC.  
   
-2.  Haga clic con el botón derecho en el nodo **Bases de datos** y seleccione **Implementar aplicación de capa de datos…**  
+2.  Haga clic con el botón derecho en el nodo **Bases de datos** y seleccione **Implementar aplicación de capa de datos...**  
   
 3.  Complete los cuadros de diálogo del asistente:  
   
@@ -189,13 +189,13 @@ ms.locfileid: "48104935"
   
 1.  Cree un objeto SMO Server y establézcalo en la instancia en la que desea implementar la DAC.  
   
-2.  Abra un `ServerConnection` de objetos y conectarse a la misma instancia.  
+2.  Abra un objeto `ServerConnection` y conéctese a la misma instancia.  
   
 3.  Use `System.IO.File` para cargar el archivo de paquete DAC.  
   
 4.  Use `add_DacActionStarted` y `add_DacActionFinished` para suscribirse a los eventos de implementación de DAC.  
   
-5.  Establecer el `DatabaseDeploymentProperties`.  
+5.  Establezca `DatabaseDeploymentProperties`.  
   
 6.  Use el método `DacStore.Install` para implementar la DAC.  
   

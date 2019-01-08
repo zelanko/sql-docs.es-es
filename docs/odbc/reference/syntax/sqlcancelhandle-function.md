@@ -15,18 +15,18 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a814b15255a485bf6fbc28ad31d4e789f8482447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662123"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391708"
 ---
 # <a name="sqlcancelhandle-function"></a>Función SQLCancelHandle
 **Conformidad**  
- Versión introdujo: ODBC 3.8  
+ Versión de introducción: ODBC 3.8  
   
- Cumplimiento de estándares: ninguno  
+ Cumplimiento de estándares: None  
   
  Se espera que la mayoría ODBC 3.8 (y versiones posteriores) de los controladores implementará esta función. Si un controlador no es así, una llamada a **SQLCancelHandle** con una conexión se controlan en el *controlar* parámetro devolverá SQL_ERROR con un mensaje y SQLSTATE de IM001 ' controlador no admite esta función '' una llamada para **SQLCancelHandle** con una instrucción controlar como el *controlar* parámetro se asignarán a una llamada a **SQLCancel** por el Administrador de controladores y se pueden procesar si el controlador implementa **SQLCancel**. Puede usar una aplicación **SQLGetFunctions** para determinar si un controlador es compatible con **SQLCancelHandle**.  
   

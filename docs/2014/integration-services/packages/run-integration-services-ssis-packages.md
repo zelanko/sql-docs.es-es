@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
@@ -19,12 +18,12 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7138207d6f612fa8ee9075b9994e9d8f4f63e552
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b54c533fd86c780f69583acc2a329d7f348502c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158865"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799010"
 ---
 # <a name="execution-of-projects-and-packages"></a>Ejecución de proyectos y paquetes
   Para ejecutar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede utilizar una de las herramientas en función de dónde se almacenan los paquetes. Las herramientas se enumeran en la tabla a continuación.  
@@ -35,14 +34,14 @@ ms.locfileid: "48158865"
   
 |Herramienta|Paquetes que están almacenados en el servidor de Integration Services|Paquetes que están almacenados en el almacén de paquetes SSIS o en la base de datos msdb|Paquetes que están almacenados en el sistema de archivos, fuera de la ubicación que forma parte del almacén de paquetes SSIS|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
-|**SQL Server Data Tools**|no|no<br /><br /> Pero puede agregar un paquete existente a un proyecto del almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] , que incluye la base de datos msdb. La inclusión de un paquete existente en el proyecto de este modo crea una copia local del paquete en el sistema de archivos.|Sí|  
-|**SQL Server Management Studio, cuando está conectado a una instancia del motor de base de datos que hospeda el servidor de Integration Services**<br /><br /> Para obtener más información, consulte [Execute Package Dialog Box](../execute-package-dialog-box.md).|Sí|no<br /><br /> Sin embargo, puede importar un paquete al servidor desde estas ubicaciones.|no<br /><br /> Sin embargo, puede importar un paquete al servidor desde el sistema de archivos.|  
-|**SQL Server Management Studio, cuando está conectado al servicio Integration Services que administra el almacén de paquetes SSIS**|no|Sí|no<br /><br /> Sin embargo, puede importar un paquete al almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] desde el sistema de archivos.|  
+|**SQL Server Data Tools**|No|No<br /><br /> Pero puede agregar un paquete existente a un proyecto del almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] , que incluye la base de datos msdb. La inclusión de un paquete existente en el proyecto de este modo crea una copia local del paquete en el sistema de archivos.|Sí|  
+|**SQL Server Management Studio, cuando está conectado a una instancia del motor de base de datos que hospeda el servidor de Integration Services**<br /><br /> Para obtener más información, consulte [Execute Package Dialog Box](../execute-package-dialog-box.md).|Sí|No<br /><br /> Sin embargo, puede importar un paquete al servidor desde estas ubicaciones.|No<br /><br /> Sin embargo, puede importar un paquete al servidor desde el sistema de archivos.|  
+|**SQL Server Management Studio, cuando está conectado al servicio Integration Services que administra el almacén de paquetes SSIS**|No|Sí|No<br /><br /> Sin embargo, puede importar un paquete al almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] desde el sistema de archivos.|  
 |**dtexec**<br /><br /> Para más información, consulte [dtexec Utility](dtexec-utility.md).|Sí|Sí|Sí|  
-|**dtexecui**<br /><br /> Para más información, vea [Referencia de la interfaz de usuario de la Utilidad de ejecución de paquetes &#40;DtExecUI&#41;](execute-package-utility-dtexecui-ui-reference.md)|no|Sí|Sí|  
+|**dtexecui**<br /><br /> Para más información, vea [Referencia de la interfaz de usuario de la Utilidad de ejecución de paquetes &#40;DtExecUI&#41;](execute-package-utility-dtexecui-ui-reference.md)|No|Sí|Sí|  
 |**Agente SQL Server**<br /><br /> Use un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programar un paquete.<br /><br /> Para más información, consulte [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md).|Sí|Sí|Sí|  
-|**Procedimiento almacenado integrado**<br /><br /> Para más información, vea [catalog.start_execution &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)|Sí|no|no|  
-|**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sí|no|no|  
+|**Procedimiento almacenado integrado**<br /><br /> Para más información, vea [catalog.start_execution &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)|Sí|No|No|  
+|**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sí|No|No|  
 |**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Dts.Runtime>|No actualmente|Sí|Sí|  
   
 ## <a name="execution-and-logging"></a>Ejecución y registro  

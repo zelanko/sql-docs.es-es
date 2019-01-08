@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.f1
@@ -16,12 +15,12 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 806752a22315586ecd730dad89761a079dc7038e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463dd8395fd8cd4b696ef54c0a4b0523da0fadd8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064185"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360377"
 ---
 # <a name="bulk-insert-task"></a>Inserción masiva, tarea
   La tarea Inserción masiva proporciona una forma muy eficaz de copiar grandes cantidades de datos a una tabla o vista de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, suponga que su empresa almacena una lista de productos de un millón de filas en un sistema central, pero el sistema de comercio electrónico de la empresa usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para rellenar páginas web. Debe actualizar la tabla de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas las noches con la lista maestra de productos del gran sistema. Para ello, debe guardar la lista de productos con un formato delimitado por tabuladores y utilizar la tarea Inserción masiva para copiar los datos directamente a la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -90,11 +89,11 @@ ms.locfileid: "48064185"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea de inserción de forma masiva &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Inserción masiva &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea de inserción de forma masiva &#40;página de conexión&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [Editor de la tarea Inserción masiva &#40;página Conexión&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [Editor de la tarea de inserción de forma masiva &#40;página de opciones&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [Editor de la tarea Inserción masiva &#40;página Opciones&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -112,10 +111,10 @@ ms.locfileid: "48064185"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico, sobre la [posible aparición del error "No se puede preparar la inserción masiva de SSIS para la inserción de datos" en sistemas habilitados para UAC](http://go.microsoft.com/fwlink/?LinkId=233693), en support.microsoft.com.  
+-   Artículo técnico, sobre la [posible aparición del error "No se puede preparar la inserción masiva de SSIS para la inserción de datos" en sistemas habilitados para UAC](https://go.microsoft.com/fwlink/?LinkId=233693), en support.microsoft.com.  
   
--   Artículo técnico, [The Data Loading Performance Guide](http://go.microsoft.com/fwlink/?LinkId=233700), en msdn.microsoft.com.  
+-   Artículo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), en msdn.microsoft.com.  
   
--   Artículo técnico sobre cómo [usar SQL Server Integration Services para la carga masiva de datos](http://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
+-   Artículo técnico sobre cómo [usar SQL Server Integration Services para la carga masiva de datos](https://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
   
   

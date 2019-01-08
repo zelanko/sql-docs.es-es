@@ -20,14 +20,14 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 656fb3e4a0eca7ec791050d7be7fcef5e774fbae
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 78d118a8d0e5edabe48715c2b5c8b0b547bee7c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072319"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354616"
 ---
-# <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services
+# <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Para incluir datos en un informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , es preciso que antes cree *orígenes de datos* y *conjuntos de datos*. En este tema, se describe el tipo de orígenes de datos y cómo crear orígenes de datos, además se ofrece información importante relacionada con las credenciales de los orígenes de datos. Un origen de datos incluye el tipo de origen de datos, la información de conexión y el tipo de credenciales que se han de usar. Hay dos tipos de orígenes de datos: incrustados y compartidos. Un origen de datos incrustado se define en el informe y se usa solo en ese informe. Un origen de datos compartido se define independientemente de un informe y se puede usar en varios informes. Para obtener más información, vea [Conexiones de datos u orígenes de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) y [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ||  
@@ -42,7 +42,7 @@ ms.locfileid: "49072319"
 ##  <a name="bkmk_data_sources"></a> Orígenes de datos incrustados y compartidos  
  La diferencia entre los orígenes de datos incrustados y compartidos es la manera en que se crean, almacenan y administran.  
   
--   En el Diseñador de informes, cree orígenes de datos incrustados o compartidos como parte de un proyecto de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Puede controlar si va a utilizarlos localmente para la obtención de una vista previa o implementarlos como parte del proyecto en un servidor de informes o un sitio de SharePoint. Puede utilizar las extensiones de datos personalizadas que se han instalado en el equipo y en el servidor de informes o un sitio de SharePoint donde se implementan los informes.  
+-   En el Diseñador de informes, cree orígenes de datos incrustados o compartidos como parte de un proyecto de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Puede controlar si va a utilizarlos localmente para la obtención de una vista previa o implementarlos como parte del proyecto en un servidor de informes o un sitio de SharePoint. Puede utilizar las extensiones de datos personalizadas que se han instalado en el equipo y en el servidor de informes o un sitio de SharePoint donde se implementan los informes.  
   
      Los administradores del sistema pueden instalar y configurar extensiones de procesamiento de datos y proveedores de datos de .NET Framework adicionales. Para obtener más información, vea [Extensiones de procesamiento de datos y proveedores de datos de .NET Framework &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "49072319"
   
 -   ODBC  
   
--   Modelo semántico de Microsoft BI para Power View: en un sitio de SharePoint que se haya configurado para una galería de PowerPoint y [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], está disponible este tipo de origen de datos. Este tipo de origen de datos solo se usa para presentaciones de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]. Para obtener más información, vea [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Modelo semántico de Microsoft BI para Power View: en un sitio de SharePoint que se haya configurado para una Galería de PowerPivot y [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], está disponible este tipo de origen de datos. Este tipo de origen de datos solo se usa para presentaciones de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea [compilar el Perfect BI Semantic Tabular Models para Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Para obtener una lista completa de los orígenes de datos y las versiones que admite [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -129,15 +129,15 @@ ms.locfileid: "49072319"
 |---------------------|-----------------|---------------------|  
 |Base de datos de SQL Server en el servidor local|`data source="(local)";initial catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`. Para obtener más información, vea [Tipo de conexión de SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md).|  
 |Base de datos de SQL Server en el servidor local|`data source="(local)";initial catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`.|  
-|Instancia de SQL Server<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`.|  
+|Instancia de SQL Server<br /><br /> Base de datos|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`.|  
 |Base de datos de SQL Server Express|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`.|  
 |[!INCLUDE[ssSDS](../includes/sssds-md.md)] en la nube|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Establezca el tipo de origen de datos en `Windows Azure SQL Database`. Para obtener más información, vea [Tipo de conexión SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
 |Almacenamiento de datos paralelo de SQL Server|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Establezca el tipo de origen de datos en `Microsoft SQL Server Parallel Data Warehouse`. Para obtener más información, vea [Tipo de conexión Almacenamiento de datos paralelo de SQL Server &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Base de datos de Analysis Services en el servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Establezca el tipo de origen de datos en `Microsoft SQL Server Analysis Services`. Para más información, vea [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) o [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Base de datos de modelo tabular de Analysis Services con una perspectiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Establezca el tipo de origen de datos en `Microsoft SQL Server Analysis Services`. Especifique el nombre de la perspectiva en la configuración cube=. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
+|Base de datos de modelo tabular de Analysis Services con una perspectiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Establezca el tipo de origen de datos en `Microsoft SQL Server Analysis Services`. Especifique el nombre de la perspectiva en la configuración cube=. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
 |Origen de datos de modelo de informe en un servidor de informes configurado en modo nativo|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Especifique la dirección URL del servidor de informes o de la biblioteca de documentos, y la ruta de acceso al modelo publicado en el espacio de nombres de la carpeta del servidor de informes o de la carpeta de la biblioteca de documentos. Para más información, vea [Conexión de modelo de informe &#40;SSRS&#41;](report-data/report-model-connection-ssrs.md).|  
 |Origen de datos de modelo de informe en un servidor de informes configurado en el modo integrado de SharePoint|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Especifique la dirección URL del servidor de informes o de la biblioteca de documentos, y la ruta de acceso al modelo publicado en el espacio de nombres de la carpeta del servidor de informes o de la carpeta de la biblioteca de documentos.|  
-|Servidor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Configure el tipo de origen de datos en `OLE DB Provider for OLAP Services 8.0`.<br /><br /> Puede conseguir una conexión más rápida con orígenes de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] si establece la propiedad `ConnectTo` en `8.0`. Para establecer esta propiedad, use la pestaña **Propiedades avanzadas** del cuadro de diálogo **Propiedades de conexión** .|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Configure el tipo de origen de datos en `OLE DB Provider for OLAP Services 8.0`.<br /><br /> Puede conseguir una conexión más rápida con orígenes de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] si establece la propiedad `ConnectTo` en `8.0`. Para establecer esta propiedad, use la pestaña **Propiedades avanzadas** del cuadro de diálogo **Propiedades de conexión** .|  
 |Servidor Oracle|`data source=myserver`|Configure el tipo de origen de datos en `Oracle`. También es necesario instalar las herramientas de cliente de Oracle tanto en el equipo del Diseñador de informes como en el servidor de informes. Para obtener más información, vea [Tipo de conexión de Oracle &#40;SSRS&#41;](report-data/oracle-connection-type-ssrs.md).|  
 |Origen de datos SAP Netweaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Configure el tipo de origen de datos en `SAP NetWeaver BI`. Para obtener más información, vea [Tipo de conexión de SAP NetWeaver BI &#40;SSRS&#41;](report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Origen de datos de Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Configure el tipo de origen de datos en `Hyperion Essbase`. Para obtener más información, vea [Tipo de conexión de Hyperion Essbase &#40;SSRS&#41;](report-data/hyperion-essbase-connection-type-ssrs.md).|  
@@ -156,7 +156,7 @@ ms.locfileid: "49072319"
 ##  <a name="bkmk_Expressions_in_connection_strings"></a> Cadenas de conexión basadas en expresiones  
  Las cadenas de conexión basadas en expresiones se evalúan en tiempo de ejecución. Por ejemplo, puede especificar el origen de datos como un parámetro, incluir la referencia de parámetro en la cadena de conexión y permitir al usuario elegir un origen de datos para el informe. Por ejemplo, imagine que una empresa multinacional tiene servidores de datos en varios países. Con una cadena de conexión basada en una expresión, un usuario que ejecute un informe de ventas puede seleccionar un origen de datos para un país determinado antes de ejecutar el informe.  
   
- El ejemplo siguiente ilustra el uso de una expresión de origen de datos en una cadena de conexión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En el ejemplo se da por hecho que se ha creado un parámetro de informe denominado `ServerName`:  
+ El ejemplo siguiente ilustra el uso de una expresión de origen de datos en una cadena de conexión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . En el ejemplo se da por hecho que se ha creado un parámetro de informe denominado `ServerName`:  
   
 ```  
 ="data source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks"  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -26,12 +24,12 @@ ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0475bbe29899e6e282104610cdc2a6c96701ff82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bb622b121eaa73beab2e8a619f555d08142c3c0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369007"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Ampliar el flujo de datos con el componente de script
   El componente de script amplía las funcionalidades de flujo de datos de los paquetes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] con código personalizado escrito en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# que se compila y ejecuta en tiempo de ejecución del paquete. El componente de script simplifica el desarrollo de un origen, transformación o destino de flujo de datos personalizado cuando los orígenes, las transformaciones y los destinos incluidos en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no se adaptan totalmente a sus requisitos. Después de configurar el componente con las entradas y salidas esperadas, éste escribe todo el código de infraestructura necesario, lo que le permite centrarse exclusivamente en el código requerido para su procesamiento personalizado.  
@@ -72,7 +70,7 @@ ms.locfileid: "48071865"
  [Ejemplos de componente de script adicionales](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  Estos sencillos ejemplos explican y muestran algunos usos posibles del componente de script.  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para las últimas descargas, artículos, ejemplos y vídeos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], así como soluciones seleccionadas de la Comunidad, visite la [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] página en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, los artículos, los ejemplos y los vídeos más recientes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Componente de script](../../data-flow/transformations/script-component.md)   

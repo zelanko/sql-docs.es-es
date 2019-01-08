@@ -16,12 +16,12 @@ ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4dd5b6f8a241d3173cdca8b03cce4fb9a373b8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34de23fca71f4dc7949a04a36323d19d35826fa9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196045"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359827"
 ---
 # <a name="database-dimension-properties"></a>Propiedades de la dimensión de base de datos
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], las características de una dimensión se definen mediante los metadatos de la dimensión, basándose en la configuración de varias propiedades de dimensión y en los atributos o jerarquías que están incluidas en la dimensión. En la siguiente tabla se describen las propiedades de dimensión de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -51,12 +51,12 @@ ms.locfileid: "48196045"
 |`WriteEnabled`|Indica si las reescrituras de dimensión están disponibles (sujetas a permisos de seguridad).|  
   
 > [!NOTE]  
->  Para obtener más información acerca de cómo establecer valores para las propiedades ErrorConfiguration y UnknownMember cuando se trabaja con valores nulos y otros problemas de integridad de datos, vea [controlar problemas de integridad de datos en Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Para obtener más información acerca de cómo establecer valores para las propiedades ErrorConfiguration y UnknownMember cuando se trabaja con valores nulos y otros problemas de integridad de datos, vea [controlar problemas de integridad de datos en Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Vea también  
- [Atributos y jerarquías de atributo](attributes-and-attribute-hierarchies.md)   
+ [Atributos y jerarquías de atributos](attributes-and-attribute-hierarchies.md)   
  [Jerarquías de usuario](user-hierarchies.md)   
  [Relaciones de dimensión](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

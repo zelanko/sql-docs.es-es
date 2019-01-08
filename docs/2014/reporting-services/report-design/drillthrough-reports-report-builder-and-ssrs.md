@@ -11,12 +11,12 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8199d7fc40da29c9fc0657ddcc242252eeace9c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a042f9f28b9be59f3f72773ae745308fe160853d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057507"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369438"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Informes detallados (Generador de informes y SSRS)
   Un informe detallado es un informe que los usuarios abren al hacer clic en un vínculo de otro informe. Este tipo de informes suele incluir información detallada acerca de los elementos del informe de resumen original. Por ejemplo, en esta ilustración, el informe de resumen de ventas enumera los pedidos de ventas y los totales. Cuando el usuario hace clic en un número de pedido de la lista resumida, se abre otro informe con los detalles del pedido en cuestión.  
@@ -28,7 +28,7 @@ ms.locfileid: "48057507"
 > [!NOTE]  
 >  Cuando trabaja con el Generador de informes, para ver el informe detallado que se abre al hacer clic en el vínculo de obtención de detalles del informe principal, debe estar conectado a un servidor de informes.  
   
- Para empezar a usar rápidamente los informes detallados, vea [Tutorial: Crear informes principales y de obtención de detalles &#40;Generador de informes&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). El informe detallado también figura en dos soluciones de Business Intelligence, a saber, las concernientes a [informes de BI: informes y escenario de suscripciones](http://technet.microsoft.com/bi/ff769487.aspx) y las relativas a [paneles corporativos: solución de ventas](http://technet.microsoft.com/bi/ff643005.aspx)  
+ Para empezar a trabajar rápidamente con informes de obtención de detalles, consulte [Tutorial: Crear informes principales y obtención de detalles &#40;generador de informes&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Informe de obtención de detalles también se incluye en dos soluciones de business intelligence, [informes de BI: Escenario de informes y suscripciones](https://technet.microsoft.com/bi/ff769487.aspx) y [paneles corporativos: Solución de ventas](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -52,6 +52,6 @@ ms.locfileid: "48057507"
  Para ver un informe de resumen con vínculos de obtención de detalles una vez publicado, debe asegurarse de que los informes detallados residan en el mismo servidor de informes que el informe de resumen. En todos los casos, los usuarios deben tener permisos sobre el informe detallado para poder verlo.  
   
 ## <a name="see-also"></a>Vea también  
- [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;generador de informes y SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

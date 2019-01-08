@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f415816f935e03b6b533fded2fb00760a101526d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec58691ab78fdf7c57871805bb095ca48f221da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100191"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373407"
 ---
 # <a name="implementation-of-child-packages"></a>Implementación de paquetes secundarios
   Cuando implementa el equilibrio de carga mediante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], los paquetes secundarios se instalan en otros servidores para aprovechar el tiempo de servidor o CPU disponible. Para crear y ejecutar los paquetes secundarios, es necesario realizar los pasos siguientes:  
@@ -56,7 +56,7 @@ ms.locfileid: "48100191"
   
 -   Ejecutar el trabajo individual del Agente SQL Server en el equipo remoto a través de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para asegurarse de que el paquete se ejecuta.  
   
- Para obtener información sobre cómo solucionar problemas de los paquetes que se ejecutan desde trabajos del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vea el artículo acerca de [un paquete de SSIS no se ejecuta al llamarlo desde un paso de trabajo del Agente SQL Server](http://support.microsoft.com/kb/918760) en Support Knowledge Base de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
+ Para obtener información sobre cómo solucionar problemas de los paquetes que se ejecutan desde trabajos del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vea el artículo acerca de [un paquete de SSIS no se ejecuta al llamarlo desde un paso de trabajo del Agente SQL Server](https://support.microsoft.com/kb/918760) en Support Knowledge Base de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
  El Agente SQL Server comprueba el acceso al subsistema de un proxy y da acceso al proxy cada vez que se ejecuta el paso de trabajo.  
   
@@ -68,8 +68,8 @@ ms.locfileid: "48100191"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada de blog sobre [SSIS y cómo obtener acceso a variables en un paquete primario](http://go.microsoft.com/fwlink/?LinkId=257729), en consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://go.microsoft.com/fwlink/?LinkId=257729), en consultingblogs.emc.com.  
   
--   Entrada de blog sobre [SSIS y si se deben ejecutar paquetes secundarios en proceso o fuera de proceso](http://go.microsoft.com/fwlink/?LinkId=220819), en consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: ¿Debe ejecutar los paquetes secundarios en proceso o fuera de proceso? ](https://go.microsoft.com/fwlink/?LinkId=220819), en consultingblogs.emc.com.  
   
   

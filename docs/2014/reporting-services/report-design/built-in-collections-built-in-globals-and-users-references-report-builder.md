@@ -11,12 +11,12 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bdc0c39d8b475ed90eba778ad46981c5ff4a2875
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80287951be04d9d8381db0f05810e103c8bedfb8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166645"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356631"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referencias a campos globales y de usuario integrados (Generador de informes y SSRS)
   La colección de campos integrados, que incluye las colecciones `Globals` y `User`, representa valores globales proporcionados por Reporting Services al procesar un informe. La colección `Globals` proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección `User` proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  
@@ -25,7 +25,7 @@ ms.locfileid: "48166645"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Usar la colección Globals  
- El `Globals` colección contiene las variables globales para el informe. En la superficie de diseño, estas variables aparecen con el prefijo & (y comercial); por ejemplo, `[&ReportName]`. En la tabla siguiente se describe los miembros de la `Globals` colección.  
+ La colección `Globals` contiene las variables globales del informe. En la superficie de diseño, estas variables aparecen con el prefijo & (y comercial); por ejemplo, `[&ReportName]`. En la siguiente tabla, se describen los miembros de la colección `Globals`.  
   
 |**Miembro**|**Tipo**|**Descripción**|  
 |----------------|--------------|---------------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "48166645"
 |OverallTotalPages|`Integer`|Número total de páginas de todo el informe. ResetPageNumber no afecta a este valor.<br /><br /> OverallTotalPages solo se puede usar en una expresión en un encabezado o pie de página.|  
 |RenderFormat|`RenderFormat`|Información sobre la solicitud de representación actual.<br /><br /> Para obtener más información, vea la sección "RenderFormat" más adelante.|  
   
- Los miembros de la `Globals` colección devolver un tipo variant. Si desea usar un miembro de esta colección en una expresión que requiere un tipo de datos específico, primero deberá convertir la variable. Por ejemplo, para convertir los datos de tipo variant de la fecha y hora de ejecución a formato de fecha, utilice `=CDate(Globals!ExecutionTime)`. Para obtener más información, consulte [Data Types in Expressions &#40;generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ Los miembros de la colección `Globals` devuelven datos de tipo variant. Si desea usar un miembro de esta colección en una expresión que requiere un tipo de datos específico, primero deberá convertir la variable. Por ejemplo, para convertir los datos de tipo variant de la fecha y hora de ejecución a formato de fecha, utilice `=CDate(Globals!ExecutionTime)`. Para obtener más información, vea [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 ### <a name="renderformat"></a>RenderFormat  
  En esta tabla se describen los miembros de `RenderFormat`.  
@@ -69,16 +69,16 @@ ms.locfileid: "48166645"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Usar la colección User  
- El `User` colección contiene datos sobre el usuario que ejecuta el informe. Puede usar esta colección para filtrar los datos que aparecen en un informe; por ejemplo, para mostrar solo los datos del usuario actual o para mostrar el identificador de usuario (UserID) en el título de un informe. En la superficie de diseño, estas variables aparecen con el prefijo & (y comercial); por ejemplo, `[&UserID]`.  
+ La colección `User` contiene datos acerca del usuario que ejecuta el informe. Puede usar esta colección para filtrar los datos que aparecen en un informe; por ejemplo, para mostrar solo los datos del usuario actual o para mostrar el identificador de usuario (UserID) en el título de un informe. En la superficie de diseño, estas variables aparecen con el prefijo & (y comercial); por ejemplo, `[&UserID]`.  
   
- En la tabla siguiente se describe los miembros de la `User` colección.  
+ En la siguiente tabla, se describen los miembros de la colección `User`.  
   
 |**Miembro**|**Tipo**|**Descripción**|  
 |----------------|--------------|---------------------|  
 |`Language`|`String`|Idioma del usuario que ejecuta el informe. Por ejemplo, `en-US`.|  
 |`UserID`|`String`|Identificador del usuario que ejecuta el informe. Si está utilizando la autenticación de Windows, este valor será la cuenta de dominio del usuario actual. El valor viene determinado por la extensión de seguridad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , que puede utilizar la autenticación de Windows o una autenticación personalizada.|  
   
- Para obtener más información sobre el uso de varios idiomas en un informe, vea "Consideraciones de diseño de soluciones para las implementaciones plurilingües o globales" en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?LinkId=120955).  
+ Para obtener más información sobre el uso de varios idiomas en un informe, vea "Consideraciones de diseño de soluciones para las implementaciones plurilingües o globales" en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?LinkId=120955).  
   
 ### <a name="using-locale-settings"></a>Usar la configuración regional  
  Para determinar la apariencia de un informe, puede usar expresiones que hagan referencia a la configuración regional en un equipo cliente mediante el valor de `User.Language`. Por ejemplo, puede crear un informe que utilice una expresión de consulta diferente basada en el valor de configuración regional. La consulta puede cambiar para obtener información traducida de otra columna según el idioma devuelto. También se puede utilizar una expresión en la configuración de idioma del informe o elementos del informe basados en esta variable.  
@@ -93,7 +93,7 @@ ms.locfileid: "48166645"
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Expresión &#40;cuadro de diálogo del Generador de informes&#41;](../expression-dialog-box-report-builder.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Aplicar formato a números y fechas &#40;generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

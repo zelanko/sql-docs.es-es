@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a06dfa03442cfbcff2f8815f9c946afbd9ff771c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 127f39075a1b84b1250a27003efeb28083d1adbd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513187"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Cómo configurar el Coordinador de transacciones distribuidas de Microsoft (MSDTC) en Linux
 
@@ -101,7 +101,7 @@ Es importante configurar el firewall antes de configurar el enrutamiento del pue
 
 ## <a name="configure-port-routing"></a>Configurar el enrutamiento de puerto
 
-Configurar la tabla de enrutamiento del servidor de Linux para que la comunicación de RPC en el puerto 135 se redirige a SQL Server **network.rpcport**. Las reglas de iptable pueden no conservarse durante los reinicios, por lo que los siguientes comandos también proporcionan instrucciones para restaurar las reglas tras un reinicio.
+Configurar la tabla de enrutamiento del servidor de Linux para que la comunicación de RPC en el puerto 135 se redirige a SQL Server **network.rpcport**. Mecanismo de configuración de puertos reenvío en distribución diferentes puede diferir. En las distribuciones que no usan servicios firewalld, las reglas de iptable son un mecanismo eficaz para lograr esto. Ejemplo de este tipo distrubution son Ubuntu 16.04 y v12 SUSE Enterprise Linux. Las reglas de iptable pueden no conservarse durante los reinicios, por lo que los siguientes comandos también proporcionan instrucciones para restaurar las reglas tras un reinicio.
 
 1. Crear reglas de enrutamiento para el puerto 135. En el ejemplo siguiente, se dirige el puerto 135 para el puerto RPC, 13500, definido en la sección anterior. Reemplace `<ipaddress>` con la dirección IP del servidor.
 
@@ -132,10 +132,16 @@ Configurar la tabla de enrutamiento del servidor de Linux para que la comunicaci
    iptables-restore < /etc/iptables.conf
    ```
 
-El **iptables guardar** y **iptables restauración** comandos proporcionan un mecanismo básico para guardar y restaurar las entradas de iptables. Según la distribución de Linux, hay podría ser más avanzadas o automatizar las opciones disponibles. Por ejemplo, es una alternativa de Ubuntu la **iptables persistente** paquete para realizar entradas persistente. O para Red Hat Enterprise Linux, es posible que pueda usar el servicio firewalld (a través de la utilidad de configuración del firewall cmd con – agregar-reenviar-puerto u opciones similares) para crear reglas en lugar de usar iptables de reenvío de puerto persistente.
+El **iptables guardar** y **iptables restauración** comandos proporcionan un mecanismo básico para guardar y restaurar las entradas de iptables. Según la distribución de Linux, hay podría ser más avanzadas o automatizar las opciones disponibles. Por ejemplo, es una alternativa de Ubuntu la **iptables persistente** paquete para realizar entradas persistente. 
+
+En las distribuciones que utilizan service firewalld, el mismo servicio puede utilizarse para ambos apertura del puerto en el servidor y el reenvío de puerto interno. Por ejemplo, en Red Hat Enterprise Linux, debe usar el servicio de firewalld (a través de la utilidad de configuración del firewall cmd-agregar-reenviar-puerto u opciones similares) para crear y administrar las reglas en lugar de usar iptables de reenvío de puerto persistente.
+
+```bash
+firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
+```
 
 > [!IMPORTANT]
-> Los pasos anteriores suponen una dirección IP fija. Si cambia la dirección IP para la instancia de SQL Server (debido a una intervención manual o DHCP), debe quitar y volver a crear las reglas de enrutamiento. Si necesita volver a crear o eliminar reglas de enrutamiento existentes, puede usar el siguiente comando para quitar el antiguo `RpcEndPointMapper` reglas:
+> Los pasos anteriores suponen una dirección IP fija. Si cambia la dirección IP para la instancia de SQL Server (debido a una intervención manual o DHCP), debe quitar y volver a crear las reglas de enrutamiento si se hubieran creado con iptables. Si necesita volver a crear o eliminar reglas de enrutamiento existentes, puede usar el siguiente comando para quitar el antiguo `RpcEndPointMapper` reglas:
 > 
 > ```bash
 > iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done

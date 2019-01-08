@@ -18,15 +18,15 @@ ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cee9f40b308c545a9ebc74f2e4f1a88618d5008
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fee423c1000d2be7ebc70f2cfb40e3d83ba24150
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208285"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370987"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Agregar expresiones a las restricciones de precedencia
-  Una restricción de precedencia puede utilizar una expresión para definir la restricción entre dos aplicaciones ejecutables: el ejecutable de precedencia y el ejecutable restringido. Los ejecutables pueden ser tareas o contenedores. La expresión se puede usar por sí sola o combinada con el resultado de la ejecución del ejecutable de precedencia. El resultado de la ejecución de un ejecutable es su ejecución correcta o un error. Cuando configura el resultado de ejecución de una restricción de precedencia, puede establecer el resultado de ejecución en `Success`, `Failure` o `Completion`. `Success` exige la ejecución correcta del ejecutable de precedencia, `Failure` requiere que el ejecutable de precedencia genere un error y `Completion` indica que el ejecutable restringido se debe ejecutar independientemente de si la tarea de precedencia se ejecuta correctamente o genera un error. Para más información, consulte [Precedence Constraints](control-flow/precedence-constraints.md).  
+  Una restricción de precedencia puede utilizar una expresión para definir la restricción entre dos aplicaciones ejecutables: el ejecutable de precedencia y el ejecutable restringido. Los ejecutables pueden ser tareas o contenedores. La expresión se puede usar por sí sola o combinada con el resultado de la ejecución del ejecutable de precedencia. El resultado de la ejecución de un ejecutable es su ejecución correcta o un error. Cuando configura el resultado de ejecución de una restricción de precedencia, puede establecer el resultado de ejecución en `Success`, `Failure` o `Completion`. `Success` exige la ejecución correcta del ejecutable de precedencia, `Failure` requiere que el ejecutable de precedencia genere un error y `Completion` indica que el ejecutable restringido se debe ejecutar independientemente de si la tarea de precedencia se ejecuta correctamente o genera un error. Para obtener más información, vea [Restricciones de precedencia](control-flow/precedence-constraints.md).  
   
  La expresión debe evaluarse como `True` o `False` y debe ser una expresión válida de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. La expresión puede usar literales, variables del sistema y personalizadas, y las funciones y operadores que proporciona la gramática de expresiones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Por ejemplo, la expresión `@Count == SQRT(144) + 10` usa la variable `Count`, la función SQRT y los operadores igual (==) y sumar (+). Para más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48208285"
   
  ![Restricciones de precedencia entre dos tareas](media/mw-dts-03.gif "Precedence constraint between two tasks")  
   
- Los ejecutables también se pueden vincular mediante varias restricciones de precedencia que contienen diferentes expresiones. Por ejemplo, en la siguiente ilustración, las tareas B y C están vinculadas a la tarea A por restricciones de precedencia que usan resultados de ejecución y expresiones. Ambos valores de restricción se establecen en `Success.` una restricción de precedencia incluye la expresión `@X >== @Z`, y la otra restricción de precedencia incluye la expresión `@X < @Z`. Según los valores de la variable `X` y la variable `Z`, se ejecuta la tarea C o la tarea B.  
+ Los ejecutables también se pueden vincular mediante varias restricciones de precedencia que contienen diferentes expresiones. Por ejemplo, en la siguiente ilustración, las tareas B y C están vinculadas a la tarea A por restricciones de precedencia que usan resultados de ejecución y expresiones. Ambos valores de restricción se establecen en `Success.` Una restricción de precedencia incluye la expresión `@X >== @Z`, y la otra restricción de precedencia la expresión `@X < @Z`. Según los valores de la variable `X` y la variable `Z`, se ejecuta la tarea C o la tarea B.  
   
  ![Expresiones en restricciones de precedencia](media/mw-dts-04.gif "Expressions on precedence constraints")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48208285"
 -   [Establecer las propiedades de una restricción de precedencia](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artículo técnico, sobre [ejemplos de expresiones SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
+ Artículo técnico, sobre [ejemplos de expresiones SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vea también  
  [Varias restricciones de precedencia](../../2014/integration-services/multiple-precedence-constraints.md)   

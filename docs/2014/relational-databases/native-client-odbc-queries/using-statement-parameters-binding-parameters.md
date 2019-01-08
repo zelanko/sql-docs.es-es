@@ -20,12 +20,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 071ef09e796f5b44076c4b6d00b780f2822e7168
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227915"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351322"
 ---
 # <a name="binding-parameters"></a>Enlazar parámetros
   Cada marcador de parámetros de una instrucción SQL debe estar asociado o enlazado a una variable de la aplicación antes de que se pueda ejecutar la instrucción. Esto se realiza mediante una llamada a la [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) función. **SQLBindParameter** describe la variable de programa (dirección, tipo de datos C etc.) para el controlador. También identifica el marcador de parámetros indicando su valor ordinal y, a continuación, describe las características del objeto SQL que representa (tipo de datos SQL, precisión, etc.).  
@@ -56,7 +56,7 @@ ms.locfileid: "48227915"
   
  Solo se admiten parámetros con nombre cuando se usa el [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` instrucción o la secuencia de escape ODBC CALL para ejecutar un procedimiento almacenado.  
   
- Si `SQL_DESC_NAME` está establecido para un parámetro de procedimiento almacenado, todos los parámetros de procedimiento almacenado de la consulta también deben establecer `SQL_DESC_NAME`.  Si se usan literales en llamadas a procedimientos almacenados, que los parámetros tienen `SQL_DESC_NAME` establecido, los literales deben utilizar el formato *' nombre*=*valor*', donde *nombre* es el nombre de parámetro de procedimiento almacenado (por ejemplo, @p1). Para obtener más información, consulte [enlazar parámetros por nombre (parámetros con nombre)](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ Si `SQL_DESC_NAME` está establecido para un parámetro de procedimiento almacenado, todos los parámetros de procedimiento almacenado de la consulta también deben establecer `SQL_DESC_NAME`.  Si se usan literales en llamadas a procedimientos almacenados, que los parámetros tienen `SQL_DESC_NAME` establecido, los literales deben utilizar el formato *' nombre*=*valor*', donde *nombre* es el nombre de parámetro de procedimiento almacenado (por ejemplo, @p1). Para obtener más información, consulte [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Vea también  
  [Usar parámetros de instrucciones](using-statement-parameters.md)  

@@ -15,12 +15,12 @@ ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 788aead525e8a4d21728de60a2162aafb5d286cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e0ceb2ef7e152829cbb6bd33cdcb3d0812a69bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163295"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355656"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Abrir el Diseñador de tablas (Visual Database Tools)
   El Diseñador de tablas es una herramienta visual que permite diseñar y visualizar tablas de bases de datos a las que se está conectado. Puede utilizar el Diseñador de tablas para crear, editar o eliminar tablas, columnas, claves, índices, relaciones y restricciones.  
@@ -34,7 +34,7 @@ ms.locfileid: "48163295"
      El menú **Diseñador de tablas** se agregará al menú principal y se abrirán los paneles del diseñador.  
   
 > [!NOTE]  
->  Si está conectado a una base de datos de SQL Azure, la opción de nueva tabla iniciará un script de plantilla de creación de tabla. Modifique los parámetros y, a continuación, ejecute el script para crear una nueva tabla. Para obtener más información, vea [Introducción a SQL Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
+>  Si está conectado a una base de datos de SQL Azure, la opción de nueva tabla iniciará un script de plantilla de creación de tabla. Modifique los parámetros y, a continuación, ejecute el script para crear una nueva tabla. Para obtener más información, vea [Introducción a SQL Azure](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
 ### <a name="open-an-existing-table"></a>Abrir una tabla existente  
   

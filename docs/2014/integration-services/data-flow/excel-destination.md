@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldest.f1
@@ -16,12 +15,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 62d9e4fa02be43f28db09228b8c9a70cccc54396
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905249"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375607"
 ---
 # <a name="excel-destination"></a>Destino de Excel
   El destino de Excel carga datos en hojas de cálculo o rangos en libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -41,13 +40,13 @@ ms.locfileid: "48905249"
 ## <a name="usage-considerations"></a>Consideraciones de uso  
  El Administrador de conexiones con Excel usa el Proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para Jet 4.0 y el controlador ISAM (Método de acceso secuencial indexado) de Excel asociado para conectar con orígenes Excel de datos y leer y escribir datos en ellos.  
   
- Muchos artículos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base documentan el comportamiento de este proveedor y el controlador. Aunque estos artículos no son específicos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ni de Servicios de transformación de datos (su predecesor), posiblemente le interese conocer determinados comportamientos que pueden provocar resultados inesperados. Para obtener información general sobre el uso y el comportamiento del controlador de Excel, vea [Cómo usar ADO con datos de Excel procedentes de Visual Basic o VBA](http://support.microsoft.com/kb/257819).  
+ Muchos artículos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base documentan el comportamiento de este proveedor y el controlador. Aunque estos artículos no son específicos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ni de Servicios de transformación de datos (su predecesor), posiblemente le interese conocer determinados comportamientos que pueden provocar resultados inesperados. Para obtener información general sobre el uso y el comportamiento del controlador de Excel, vea [HOWTO: Usar ADO con datos de Excel desde Visual Basic o VBA](https://support.microsoft.com/kb/257819).  
   
  Los siguientes comportamientos del proveedor Jet que se incluye con el controlador de Excel pueden provocar resultados inesperados al guardar datos en un destino de Excel.  
   
 -   **Guardar datos de texto**. Cuando el controlador de Excel guarda valores de datos de texto en un destino de Excel, el controlador precede el texto en cada celda con el carácter de comilla simple (') para garantizar que los valores guardados se interpreten como valores de texto. Si posee o desarrolla otras aplicaciones que leen o procesan los datos guardados, es posible que necesite un tratamiento especial para el carácter de comilla simple que precede cada valor de texto.  
   
-     Si desea información sobre cómo evitar incluir las comillas simples, consulte esta entrada de blog, [Se añade una comilla simple a todas las cadenas al transformar los datos a Excel cuando se utiliza el componente de flujo de datos de destino Excel en un paquete SSIS](http://go.microsoft.com/fwlink/?LinkId=400876), en msdn.com.  
+     Si desea información sobre cómo evitar incluir las comillas simples, consulte esta entrada de blog, [Se añade una comilla simple a todas las cadenas al transformar los datos a Excel cuando se utiliza el componente de flujo de datos de destino Excel en un paquete SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), en msdn.com.  
   
 -   **Guardar datos de memorando (ntext)**. Para poder guardar correctamente cadenas de más de 255 caracteres en una columna de Excel, el controlador debe reconocer el tipo de datos de la columna de destino como **memorando** y no como **cadena**. Si la tabla de destino ya contiene filas de datos, las primeras filas que pruebe el controlador deberán contener por lo menos una instancia de un valor de más de 255 caracteres en la columna de memorando. Si la tabla de destino se crea durante el diseño del paquete o en tiempo de ejecución, a continuación, la instrucción CREATE TABLE debe usar LONGTEXT (o uno de sus sinónimos) como el tipo de datos de la columna de memorando.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "48905249"
   
  Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
   
@@ -106,11 +105,11 @@ ms.locfileid: "48905249"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada de blog, [Excel en Integration Services, parte 1 de 3: conexiones y componentes](http://go.microsoft.com/fwlink/?LinkId=217674), en dougbert.com  
+-   Entrada de blog, [Excel en Integration Services, parte 1 de 3: Conexiones y componentes](https://go.microsoft.com/fwlink/?LinkId=217674), en dougbert.com  
   
--   Entrada de blog, [Excel en Integration Services, parte 2 de 3: tablas y tipos de datos](http://go.microsoft.com/fwlink/?LinkId=217675), en dougbert.com.  
+-   Entrada de blog, [Excel en Integration Services, parte 2 de 3: Tipos de datos y tablas](https://go.microsoft.com/fwlink/?LinkId=217675), en dougbert.com.  
   
--   Entrada de blog, [Excel en Integration Services, parte 3 de 3: problemas y alternativas](http://go.microsoft.com/fwlink/?LinkId=217676), en dougbert.com.  
+-   Entrada de blog, [Excel en Integration Services, parte 3 de 3: Problemas y alternativas](https://go.microsoft.com/fwlink/?LinkId=217676), en dougbert.com.  
   
 ## <a name="see-also"></a>Vea también  
  [Origen de Excel](excel-source.md)   

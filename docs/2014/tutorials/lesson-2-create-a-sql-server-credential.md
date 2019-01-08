@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Crear una credencial de SQL Server | Microsoft Docs'
+title: 'Lección 2: Crear una credencial SQL Server | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9bac1f166472fa6f4285779f2054d7121133693f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1a59c1e32773ddc022319a9357ea61802864a77
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194575"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372587"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lección 2: Crear una credencial de SQL Server
-  **Credencial:** una credencial de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server.  En este caso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procesos de copia de seguridad y restauración usan credenciales para autenticarse al servicio de almacenamiento de blobs de Windows Azure. La credencial contiene los valores de nombre y la **clave de acceso** de la cuenta de almacenamiento. Una vez creada la credencial, se debe especificar en la opción WITH CREDENTIAL al emitir las instrucciones BACKUP y RESTORE. Para obtener más información sobre cómo ver, copiar o regenerar **access keys**de cuentas de almacenamiento, vea [Ver, copiar y regenerar las claves de acceso de una cuenta de almacenamiento de Windows Azure](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+  **Credencial:** Una credencial de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server.  Aquí, los procesos de copia de seguridad y restauración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usan credenciales para autenticarse en el servicio de almacenamiento Blob de Windows Azure. La credencial contiene los valores de nombre y la **clave de acceso** de la cuenta de almacenamiento. Una vez creada la credencial, se debe especificar en la opción WITH CREDENTIAL al emitir las instrucciones BACKUP y RESTORE. Para obtener más información sobre cómo ver, copiar o regenerar **access keys**de cuentas de almacenamiento, vea [Ver, copiar y regenerar las claves de acceso de una cuenta de almacenamiento de Windows Azure](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- Para obtener información general acerca de las credenciales, vea [credenciales](../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ Para obtener información general sobre las credenciales, vea [Credenciales](../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- Para obtener información sobre otros ejemplos donde se usan las credenciales, vea [crear un Proxy del Agente SQL Server](../ssms/agent/create-a-sql-server-agent-proxy.md).  
+ Para obtener información sobre otros ejemplos donde se usan credenciales, vea [Crear un proxy del Agente SQL Server](../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 > [!IMPORTANT]  
->  Los requisitos para crear una credencial de SQL Server que se describe a continuación son específicos para procesos de copia de seguridad de SQL Server ([copias de seguridad de SQL Server a URL](../relational-databases/backup-restore/sql-server-backup-to-url.md), y [Copia de seguridad administrada de SQL Server en Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). Cuando SQL Server obtiene acceso al Almacenamiento de Azure para escribir o leer copias de seguridad, usa el nombre de la cuenta de almacenamiento y la información de la clave de acceso.  Para obtener más información sobre cómo crear credenciales para almacenar archivos de base de datos de almacenamiento de Azure, consulte [lección 3: crear una credencial de SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  Los requisitos para crear una credencial de SQL Server que se describe a continuación son específicos para procesos de copia de seguridad de SQL Server ([copias de seguridad de SQL Server a URL](../relational-databases/backup-restore/sql-server-backup-to-url.md), y [Copia de seguridad administrada de SQL Server en Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). Cuando SQL Server obtiene acceso al Almacenamiento de Azure para escribir o leer copias de seguridad, usa el nombre de la cuenta de almacenamiento y la información de la clave de acceso.  Para obtener más información sobre cómo crear credenciales para almacenar archivos de base de datos de almacenamiento de Azure, consulte [lección 3: Crear una credencial SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="create-a-sql-server-credential"></a>Crear una credencial de SQL Server  
  Para crear una credencial de SQL Server, siga estos pasos:  
@@ -41,8 +41,8 @@ ms.locfileid: "48194575"
   
     ```  
     CREATE CREDENTIAL mycredential   
-    WITH IDENTITY= 'mystorageaccount' – this is the name of the storage account you specified when creating a storage account (See Lesson 1)   
-    , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account (See Lesson 1)  
+    WITH IDENTITY= 'mystorageaccount' - this is the name of the storage account you specified when creating a storage account (See Lesson 1)   
+    , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account (See Lesson 1)  
   
     ```  
   

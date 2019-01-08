@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f20575da48685a2f6c2b990169da1baba54ed667
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9397dd268d767fd8c4bad9056455c21b9be65398
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212115"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769777"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Desinstalar PowerPivot para SharePoint
   Desinstalar una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] es una operación de varios pasos que incluye la preparación para desinstalar, quitar características y soluciones de la granja de servidores, y quitar archivos de programa y valores del Registro.  
@@ -31,13 +30,13 @@ ms.locfileid: "48212115"
   
 -   [Paso 2: Quitar características y soluciones de SharePoint](#bkmk_remove)  
   
--   [Paso 3: Ejecutar el programa de instalación de SQL Server para quitar programas del equipo local](#bkmk_uninstall)  
+-   [Paso 3: Ejecute el programa de instalación SQL Server para quitar programas del equipo Local](#bkmk_uninstall)  
   
 -   [Paso 4: Desinstalar PowerPivot para SharePoint complemento](#bkmk_addin)  
   
 -   [Paso 5: Comprobar la desinstalación](#verify)  
   
--   [Paso 6: Lista de comprobación posterior a la desinstalación](#bkmk_post)  
+-   [Paso 6: Lista de comprobación posteriores a la desinstalación](#bkmk_post)  
   
 ##  <a name="prereq"></a> Requisitos previos  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48212115"
 -   Debe ser administrador del sistema de Analysis Services y miembro del grupo local Administradores para desinstalar Analysis Services y [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
 ##  <a name="bkmk_before"></a> Paso 1: Lista de comprobación previa a la desinstalación  
- El acceso a datos de PowerPivot se deshabilitará una vez que se quite de la granja de servidores el software que admite las consultas y el procesamiento de datos. Como un primer paso, debe eliminar de forma preferente los archivos y bibliotecas que dejarán de funcionar. Esto le permite resolver cualquier duda o preocupación sobre la 'ausencia de datos antes de desinstalar el software.  
+ El acceso a datos de PowerPivot se deshabilitará una vez que se quite de la granja de servidores el software que admite las consultas y el procesamiento de datos. Como un primer paso, debe eliminar de forma preferente los archivos y bibliotecas que dejarán de funcionar. Esto permite resolver cualquier duda o preocupación sobre la "ausencia de datos" antes de desinstalar el software.  
   
 1.  Elimine todos los libros PowerPivot, documentos y bibliotecas que estén asociados con PowerPivot para SharePoint. Ni las bibliotecas ni los documentos funcionarán una vez se desinstale el software.  
   
@@ -67,13 +66,13 @@ ms.locfileid: "48212115"
 ##  <a name="bkmk_remove"></a> Paso 2: Quitar características y soluciones de SharePoint  
  Use la Herramienta de configuración de PowerPivot para quitar servicios y aplicaciones PowerPivot de SharePoint.  
   
--   Debe ser administrador de granja, administrador de servidor de la instancia de Analysis Services y miembro de **db_owner** en la base de datos de configuración de la granja.  
+-   Debe ser administrador de granja, administrador de servidor de la instancia de Analysis Services y **db_owner** en la base de datos de configuración de la granja.  
   
 -   Utilice la versión adecuada de la herramienta de configuración de la versión de SharePoint. No use la herramienta con instalaciones de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
 -   Compruebe que se ejecuta el servicio de administración de SharePoint.  
   
-1.  **Ejecutar la herramienta de configuración** : tenga en cuenta que las herramientas de configuración se muestran solo cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] se instala en el servidor local. En el menú **Inicio** , seleccione **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], haga clic en **Herramientas de configuración**y, a continuación, haga clic en uno de los elementos siguientes:  
+1.  **Ejecute la herramienta de configuración:** Tenga en cuenta las herramientas de configuración se muestran solo cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local. En el **iniciar** menú, elija **todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], haga clic en **herramientas de configuración**y, a continuación, haga clic en uno de los siguientes:  
   
     -   **PowerPivot para SharePoint 2013**  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48212115"
   
 6.  Haga clic en **Validar** para comprobar si cada acción es válida. Si la opción **Validar** no está disponible, significa que todas las acciones son válidas para el sistema.  
   
-7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Cuando se hace clic en **Ejecutar**, aparece la advertencia siguiente recordándole que las acciones se procesan en modo por lotes: “Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Desea continuar?"  
+7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **ejecutar**, aparece la advertencia siguiente recordándole que las acciones se procesan en modo por lotes: "Todos los valores de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?".  
   
 8.  Haga clic en **Sí** para continuar.  
   
@@ -118,22 +117,22 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 2.  Inicie el Shell de administración de SharePoint como administrador y ejecute el siguiente comando para ver los trabajos de la cola:  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
-3.  Revise las implementaciones existentes para la siguiente información: el **Tipo** es Retracción o Implementación, el **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
+3.  Revise las implementaciones existentes para la siguiente información: **Tipo** es retracción o implementación, **archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
-4.  En las implementaciones o las retracciones relacionadas con soluciones de PowerPivot, copie el valor GUID para **JobId** y péguelo en el siguiente comando (utilice los comandos Marcar, Copiar y Pegar del menú Edición del shell para copiar el GUID):  
+4.  Las implementaciones o las retracciones relacionadas con soluciones de PowerPivot, copie el valor GUID para **JobId** y, a continuación, péguelo en el siguiente comando (use los comandos marcar, copiar y pegar en el menú de edición del Shell para copiar el GUID):  
   
     ```  
-    Stsadm –o canceldeployment –id “<GUID>”  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  Intente de nuevo la tarea en la herramienta de configuración haciendo clic en **Validar** seguido de **Ejecutar**.  
   
  Alternativamente, puede usar PowerShell para quitar características y soluciones de la granja de servidores. Para obtener más información, consulte [referencia de PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
-##  <a name="bkmk_uninstall"></a> Paso 3: Ejecutar el programa de instalación de SQL Server para quitar programas del equipo local  
+##  <a name="bkmk_uninstall"></a> Paso 3: Ejecute el programa de instalación SQL Server para quitar programas del equipo Local  
  Para eliminar los archivos de programa es necesario ejecutar el programa de instalación de SQL Server a fin de desinstalar el software. La desinstalación quita los archivos y las entradas del Registro creados por el programa de instalación. Puede utilizar la página Programas y características paginan para desinstalar el software. Una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] forma parte de una instalación de SQL Server.  
   
  Puede desinstalar parte de una instalación sin afectar a otras instancias de SQL Server (o características en la misma instancia) que ya estén instaladas. Por ejemplo, puede desinstalar PowerPivot para SharePoint mientras deja instalados otros componentes, como [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o el motor de base de datos.  
@@ -153,9 +152,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 1.  En Administración central, en **Administrar servicios en el servidor**, conéctese al servidor del que desinstaló PowerPivot para SharePoint.  
   
-2.  -   Si desinstaló [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, compruebe que **servicio de sistema de SQL Server PowerPivot** ya no aparecen en la lista.  
+2.  -   Si desinstaló [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, compruebe que **Servicio de sistema de SQL Server PowerPivot** ya no aparece en la lista.  
   
-    -   Si desinstaló [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, compruebe que **SQL Server Analysis Services** y **servicio de sistema de SQL Server PowerPivot** ya no aparecen en la lista.  
+    -   Si desinstaló [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, compruebe que **SQL Server Analysis Services** y **Servicio de sistema de SQL Server PowerPivot** ya no aparecen en la lista.  
   
 3.  Después de desinstalar el último servidor PowerPivot para SharePoint de la granja, haga lo siguiente:  
   
@@ -167,7 +166,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     4.  En Configuración de aplicación general, compruebe que **Panel de administración de PowerPivot** ya no aparece en la página.  
   
-##  <a name="bkmk_post"></a> Paso 6: Lista de comprobación posterior a la desinstalación  
+##  <a name="bkmk_post"></a> Paso 6: Lista de comprobación posteriores a la desinstalación  
  Utilice la siguiente lista para quitar el software y los archivos que no se eliminaron durante la desinstalación.  
   
 1.  Elimine todos los archivos de datos y subcarpetas de `C:\Program Files\Microsoft SQL Server\MSAS12.PowerPivot`y, a continuación, elimine la carpeta. Este paso también elimina los archivos almacenados previamente en memoria caché en el directorio DATA.  

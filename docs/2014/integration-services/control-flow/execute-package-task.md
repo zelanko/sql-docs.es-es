@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
@@ -17,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af7dc60469f088f2023365f638666056bdf6e412
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5927cbe753cf0035c37f9a826c6bf89e9c963ae8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129145"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365777"
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
   La tarea Ejecutar paquete amplía las capacidades empresariales de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ya que permite que los paquetes ejecuten otros paquetes como parte de un flujo de trabajo.  
@@ -57,7 +56,7 @@ ms.locfileid: "48129145"
   
  Sin embargo, a veces puede desearse que el paquete primario y los paquetes secundarios no completen su ejecución como una unidad. También es posible que no desee agregar la sobrecarga de otro proceso. Por ejemplo, si se produce un error en un proceso secundario y el procesamiento posterior del proceso primario del paquete depende de que el proceso secundario se complete correctamente, el paquete secundario deberá ejecutarse en el proceso del paquete primario.  
   
- De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en `False`, y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en `True`, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en `True`, no se puede depurar el paquete en una instalación solo de herramientas. Debe instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Instalar Integration Services](../install-windows/install-integration-services.md)  
+ De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en `False`, y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en `True`, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en `True`, no se podrá depurar el paquete si realizó únicamente una instalación de herramientas; deberá instalar el producto. Debe instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Instalar Integration Services](../install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>Extender transacciones  
  La transacción utilizada por el paquete primario puede ampliarse al paquete secundario; por tanto, puede confirmarse o revertirse el trabajo realizado por ambos paquetes. Por ejemplo, las inserciones en la base de datos realizadas por el paquete primario pueden confirmarse o revertirse en función de las inserciones en la base de datos realizadas por el paquete secundario y viceversa. Para obtener más información, vea [Inherited Transactions](../inherited-transactions.md).  
@@ -98,14 +97,14 @@ ms.locfileid: "48129145"
  Para más información, vea [Usar los valores de variables y parámetros en un paquete secundario](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Obtener acceso a variables de paquetes primarios  
- Los paquetes secundarios pueden tener acceso a variables de paquetes primarios mediante la tarea Script. Al escribir el nombre de la variable de paquete primario en la página **Script** del **Editor de la tarea Script**, no incluya **Usuario:** en el nombre de la variable. De lo contrario, el paquete secundario no podrá encontrar la variable al ejecutar el paquete primario. Para obtener más información acerca del uso de la tarea Script para tener acceso a variables del paquete principal, vea la entrada de blog sobre [SSIS y cómo obtener acceso a variables en un paquete primario](http://go.microsoft.com/fwlink/?LinkId=257729), en consultingblogs.emc.com.  
+ Los paquetes secundarios pueden tener acceso a variables de paquetes primarios mediante la tarea Script. Al escribir el nombre de la variable del paquete primario en la página **Script** del **Editor de la tarea Script**, no incluya **Usuario:** en el nombre de la variable. De lo contrario, el paquete secundario no podrá encontrar la variable al ejecutar el paquete primario. Para obtener más información sobre el uso de la tarea Script para tener acceso a variables del paquete principal, consulte esta entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://go.microsoft.com/fwlink/?LinkId=257729), en consultingblogs.emc.com.  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurar la tarea Ejecutar paquete  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea Ejecutar paquete](../execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../execute-package-task-editor.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -117,8 +116,8 @@ ms.locfileid: "48129145"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada de blog sobre [SSIS y si se deben ejecutar paquetes secundarios en proceso o fuera de proceso](http://go.microsoft.com/fwlink/?LinkId=220819), en consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: ¿Debe ejecutar los paquetes secundarios en proceso o fuera de proceso? ](https://go.microsoft.com/fwlink/?LinkId=220819), en consultingblogs.emc.com.  
   
--   Entrada de blog sobre [SSIS y cómo obtener acceso a variables en un paquete primario](http://go.microsoft.com/fwlink/?LinkId=257729), en consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://go.microsoft.com/fwlink/?LinkId=257729), en consultingblogs.emc.com.  
   
   

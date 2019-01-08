@@ -1,7 +1,8 @@
 ---
-title: Copia de seguridad y restaurar una base de datos mediante Azure Data Studio | Microsoft Docs
+title: Copia de seguridad y restaurar una base de datos
+titleSuffix: Azure Data Studio
 description: Obtenga información sobre cómo las copias de seguridad y restaurar una base de datos mediante Azure Data Studio
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355916"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207134"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Copia de seguridad y restauración mediante [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Copia de seguridad y restaurar bases de datos mediante [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para:
 > [!div class="checklist"]
@@ -33,10 +34,11 @@ Este tutorial requiere que el servidor SQL *TutorialDB*. Para crear el *Tutorial
 
 - [Conectarse y consultar con SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
+Este tutorial requiere conexión a una base de datos de SQL Server. Azure SQL Database ha automatizar las copias de seguridad, por lo que Azure Data Studio no realizar copia de seguridad de Azure SQL Database y restore. Para obtener más información, consulte [más información sobre copias de seguridad automáticas de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="backup-a-database"></a>Copia de seguridad de una base de datos
 
-1. Abra el panel de la base de datos TutorialDB (abra el **servidores** sidebar (**CTRL+G**), expanda **bases de datos**, haga clic en **TutorialDB**, y seleccione **administrar**). 
+1. Abra el panel de la base de datos TutorialDB (abra el **servidores** sidebar (**CTRL+G**), expanda **bases de datos**, haga clic en **TutorialDB**, y seleccione **administrar**).
 
 2. Abra el **base de datos de copia de seguridad** diálogo (haga clic en **copia de seguridad** en el **tareas** widget).
 
@@ -79,7 +81,7 @@ Después de hacer clic **copia de seguridad**, **base de datos de copia de segur
    ![restaurar](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
 
-En este tutorial, ha aprendido cómo:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 > * Copia de seguridad de una base de datos 
 > * Ver el estado de copia de seguridad

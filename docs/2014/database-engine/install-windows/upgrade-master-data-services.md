@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019020"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365497"
 ---
 # <a name="upgrade-master-data-services"></a>Actualizar Master Data Services
   Existen cuatro escenarios para actualizarse a Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Elija el escenario que se corresponde con su situación.  
@@ -28,12 +28,12 @@ ms.locfileid: "51019020"
   
 -   [Actualización con restauración de una base de datos desde la copia de seguridad](#restore)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   No se admite la actualización desde la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 a la versión CTP2.  
 > -   Realice una copia de la base de datos antes de realizar cualquier actualización.  
 > -   El proceso de actualización vuelve a crear los procedimientos almacenados y actualiza las tablas que usa [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Cualquier personalización que haya realizado en alguno de estos componentes se podría perder.  
 > -   Los paquetes de implementación de modelos solo se pueden usar en la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se crearon. No se puede implementar paquetes de implementación de modelo que creó en [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-> -   Puede continuar con la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 de servicios del complemento Master Data Services para Excel después de actualizar Master Data Services y Data Quality Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del complemento de Master Data Services para Excel [aquí](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   Puede continuar con la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 de servicios del complemento Master Data Services para Excel después de actualizar Master Data Services y Data Quality Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del complemento de Master Data Services para Excel [aquí](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="noengine"></a> Actualizar sin actualización del motor de base de datos  
  Este escenario se puede considerar una instalación en paralelo, porque ambos [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se instalan en paralelo, en el mismo equipo o en equipos independientes.  
@@ -90,7 +90,7 @@ ms.locfileid: "51019020"
         > [!IMPORTANT]  
         >  La aplicación web de MDS existente de una versión anterior de SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) se puede seleccionar en la versión de SQL Server versión 2014 del Administrador de configuración de Master Data Services. No debe seleccionar la aplicación web existente y en su lugar debe crear una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para MDS. De lo contrario, al intentar asociar la aplicación web a la base de datos actualizada de MDS recibirá un error que indica que no se puede tener acceso a la página solicitada porque los datos de configuración relacionados para la página no son válidos.  
         >   
-        >  Si desea utilizar el mismo nombre (alias) para la aplicación web de MDS que la aplicación web existente ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), debe eliminar primero la aplicación web y el grupo de aplicaciones asociado de IIS y crear después una aplicación web con el mismo nombre mediante la versión de SQL Server 2014 del Administrador de configuración de Master Data Services. Para obtener más información sobre cómo quitar una aplicación web y grupos de aplicaciones de IIS, vea [Quitar una aplicación (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) y [Quitar un grupo de aplicaciones (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Si desea utilizar el mismo nombre (alias) para la aplicación web de MDS que la aplicación web existente ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), debe eliminar primero la aplicación web y el grupo de aplicaciones asociado de IIS y crear después una aplicación web con el mismo nombre mediante la versión de SQL Server 2014 del Administrador de configuración de Master Data Services. Para obtener más información sobre cómo quitar una aplicación web y grupos de aplicaciones de IIS, vea [Quitar una aplicación (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) y [Quitar un grupo de aplicaciones (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 4.  Asocie ahora la nueva aplicación web a la base de datos de MDS actualizada.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "51019020"
   
  Para realizar esta tarea, complete los siguientes pasos.  
   
-1.  **Solo en el caso de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**: abra el **Panel de control** > **Programas y características** y desinstale Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] sólo**: Abra **Panel de Control** > **programas y características** y desinstale Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Actualice el motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -117,7 +117,7 @@ ms.locfileid: "51019020"
   
     4.  Finalice el asistente.  
   
-3.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] sólo**: una vez completada la actualización, agregue el **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** característica.  
+3.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] sólo**: Una vez completada la actualización, agregue el **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** característica.  
   
     1.  Abra el Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -161,7 +161,7 @@ ms.locfileid: "51019020"
         > [!IMPORTANT]  
         >  La aplicación web de MDS existente de una versión anterior de SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) se puede seleccionar en la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del Administrador de configuración de Master Data Services. No debe seleccionar la aplicación web existente y en su lugar debe crear una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para MDS. De lo contrario, al intentar asociar la aplicación web a la base de datos actualizada de MDS recibirá un error que indica que no se puede tener acceso a la página solicitada porque los datos de configuración relacionados para la página no son válidos.  
         >   
-        >  Si desea utilizar el mismo nombre (alias) para la aplicación web de MDS que la aplicación web existente ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), debe eliminar primero la aplicación web y el grupo de aplicaciones asociado de IIS y crear después una aplicación web con el mismo nombre mediante la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del Administrador de configuración de Master Data Services. Para obtener más información sobre cómo quitar una aplicación web y grupos de aplicaciones de IIS, vea [Quitar una aplicación (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) y [Quitar un grupo de aplicaciones (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Si desea utilizar el mismo nombre (alias) para la aplicación web de MDS que la aplicación web existente ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), debe eliminar primero la aplicación web y el grupo de aplicaciones asociado de IIS y crear después una aplicación web con el mismo nombre mediante la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del Administrador de configuración de Master Data Services. Para obtener más información sobre cómo quitar una aplicación web y grupos de aplicaciones de IIS, vea [Quitar una aplicación (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) y [Quitar un grupo de aplicaciones (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 6.  Asocie ahora la nueva aplicación web a la base de datos de MDS actualizada.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "51019020"
         > [!IMPORTANT]  
         >  La aplicación web de MDS existente de una versión anterior de SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) se puede seleccionar en la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del Administrador de configuración de Master Data Services. No debe seleccionar la aplicación web existente y en su lugar debe crear una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para MDS. De lo contrario, al intentar asociar la aplicación web a la base de datos actualizada de MDS recibirá un error que indica que no se puede tener acceso a la página solicitada porque los datos de configuración relacionados para la página no son válidos.  
         >   
-        >  Si desea utilizar el mismo nombre (alias) para la aplicación web de MDS que la aplicación web existente ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), debe eliminar primero la aplicación web y el grupo de aplicaciones asociado de IIS y crear después una aplicación web con el mismo nombre mediante la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del Administrador de configuración de Master Data Services. Para obtener más información sobre cómo quitar una aplicación web y grupos de aplicaciones de IIS, vea [Quitar una aplicación (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) y [Quitar un grupo de aplicaciones (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Si desea utilizar el mismo nombre (alias) para la aplicación web de MDS que la aplicación web existente ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), debe eliminar primero la aplicación web y el grupo de aplicaciones asociado de IIS y crear después una aplicación web con el mismo nombre mediante la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del Administrador de configuración de Master Data Services. Para obtener más información sobre cómo quitar una aplicación web y grupos de aplicaciones de IIS, vea [Quitar una aplicación (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) y [Quitar un grupo de aplicaciones (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 4.  Asocie ahora la aplicación web a una base de datos de MDS actualizada.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "51019020"
         > [!IMPORTANT]  
         >  La aplicación web de MDS existente de una versión anterior de SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) se puede seleccionar en la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del Administrador de configuración de Master Data Services. No debe seleccionar la aplicación web existente y en su lugar debe crear una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para MDS. De lo contrario, al intentar asociar la aplicación web a la base de datos actualizada de MDS recibirá un error que indica que no se puede tener acceso a la página solicitada porque los datos de configuración relacionados para la página no son válidos.  
         >   
-        >  Si desea utilizar el mismo nombre (alias) para la aplicación web de MDS que la aplicación web existente ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), debe eliminar primero la aplicación web y el grupo de aplicaciones asociado de IIS y crear después una aplicación web con el mismo nombre mediante la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del Administrador de configuración de Master Data Services. Para obtener más información sobre cómo quitar una aplicación web y grupos de aplicaciones de IIS, vea [Quitar una aplicación (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) y [Quitar un grupo de aplicaciones (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Si desea utilizar el mismo nombre (alias) para la aplicación web de MDS que la aplicación web existente ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), debe eliminar primero la aplicación web y el grupo de aplicaciones asociado de IIS y crear después una aplicación web con el mismo nombre mediante la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del Administrador de configuración de Master Data Services. Para obtener más información sobre cómo quitar una aplicación web y grupos de aplicaciones de IIS, vea [Quitar una aplicación (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) y [Quitar un grupo de aplicaciones (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 5.  Asocie ahora la nueva aplicación web a la base de datos de MDS actualizada.  
   
@@ -297,10 +297,10 @@ ms.locfileid: "51019020"
   
     3.  Haga clic en **Aplicar**.  
   
-## <a name="troubleshooting"></a>Solucionar problemas  
- **Problema:** al abrir el [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] se muestra la aplicación web, un mensaje de error "versión de cliente no es compatible con la versión de la base de datos".  
+## <a name="troubleshooting"></a>Solución de problemas  
+ **Problema:** Al abrir el [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] se muestra la aplicación web, un mensaje de error "versión de cliente no es compatible con la versión de la base de datos".  
   
- **Solución:** este problema se produce cuando un [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aplicación web de Master Data Manager intenta tener acceso a una base de datos que se ha actualizado a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. Debe utilizar una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en su lugar.  
+ **Solución:** Este problema se produce cuando un [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aplicación web de Master Data Manager intenta tener acceso a una base de datos que se ha actualizado a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. Debe utilizar una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en su lugar.  
   
  Este problema puede producirse también si no se ha detenido y reiniciado el **Grupo de aplicaciones de MDS** en IIS al actualizar el esquema de la base de datos de MDS. Reinicie el **Grupo de aplicaciones de MDS** para corregir el problema.  
   

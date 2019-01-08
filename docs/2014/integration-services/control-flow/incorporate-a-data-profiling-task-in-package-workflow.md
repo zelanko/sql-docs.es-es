@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
@@ -13,12 +12,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 54b106ab3f6609ab40acd8fd054d5f3369711665
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085521"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368697"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
   La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
@@ -161,7 +160,7 @@ ms.locfileid: "49085521"
     Public Class ScriptMain  
   
       Private FILENAME As String = "C:\ TEMP\DataProfile1.xml"  
-      Private PROFILE_NAMESPACE_URI As String = "http://schemas.microsoft.com/DataDebugger/"  
+      Private PROFILE_NAMESPACE_URI As String = "https://schemas.microsoft.com/DataDebugger/"  
       Private NULLCOUNT_XPATH As String = _  
         "/default:DataProfile/default:DataProfileOutput/default:Profiles" & _  
         "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()"  
@@ -216,7 +215,7 @@ ms.locfileid: "49085521"
     {  
   
       private string FILENAME = "C:\\ TEMP\\DataProfile1.xml";  
-      private string PROFILE_NAMESPACE_URI = "http://schemas.microsoft.com/DataDebugger/";  
+      private string PROFILE_NAMESPACE_URI = "https://schemas.microsoft.com/DataDebugger/";  
       private string NULLCOUNT_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()";  
       private string TABLE_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:Table";  
   
@@ -264,8 +263,8 @@ ms.locfileid: "49085521"
   
 8.  Cierre el entorno de desarrollo de script y, a continuación, el Editor de la tarea Script.  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Código alternativo: leer los resultados del perfil desde una variable  
- El procedimiento anterior muestra cómo cargar los resultados de la tarea de generación de perfiles de datos desde un archivo. Sin embargo, un método alternativo consistiría en cargar dicho resultado desde una variable de paquete. Para cargar el resultado desde una variable, debe realizar los cambios siguientes en el código de ejemplo:  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>Código alternativo: leer los resultados del perfil desde una variable  
+ El procedimiento anterior muestra cómo se carga el resultado de la tarea de generación de perfiles de datos desde un archivo. Sin embargo, un método alternativo consistiría en cargar dicho resultado desde una variable de paquete. Para cargar el resultado desde una variable, debe realizar los cambios siguientes en el código de ejemplo:  
   
 -   Llame al método `LoadXml` de la clase `XmlDocument` en lugar de llamar al método `Load`.  
   

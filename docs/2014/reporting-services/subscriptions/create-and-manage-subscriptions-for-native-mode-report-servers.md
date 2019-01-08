@@ -14,12 +14,12 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5eadf38bcdb7573cf19941535182e2cc8f87f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111505"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414792"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Crear, modificar, y eliminar suscripciones estándar (Reporting Services en modo nativo)
   Una suscripción estándar es la que crean usuarios individuales que desean recibir un informe por correo electrónico o en una carpeta compartida. Una suscripción estándar siempre se define a través del informe en el que se basa.  
@@ -27,7 +27,7 @@ ms.locfileid: "48111505"
  El usuario que crea una suscripción es su propietario. Cada usuario puede modificar o eliminar las suscripciones de las que sea propietario.  
   
 > [!NOTE]  
->  A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puede transferir la propiedad de una suscripción mediante programación. No hay ninguna interfaz de usuario que pueda utilizar para transferir la propiedad de las suscripciones. Para obtener más información, vea <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puede transferir la propiedad de una suscripción mediante programación. No hay ninguna interfaz de usuario que pueda utilizar para transferir la propiedad de las suscripciones. Para obtener más información, vea <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>.  
   
  Según los valores del archivo de configuración **RSReportServer.config** , es posible que los usuarios puedan agregar más usuarios a una suscripción (por ejemplo, un supervisor agrega las direcciones de correo electrónico de sus subordinados para que reciban una copia del informe). La posibilidad de utilizar esta función depende de si el campo Para: está visible cuando se definen las suscripciones individuales. Para obtener más información, consulte [configurar un servidor de informes para la entrega de correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48111505"
   
 -   Para utilizar la entrega a recursos compartidos de archivos, se debe haber definido la carpeta de destino. Para obtener más información, consulte [configurar un servidor de informes para la entrega de correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Antes de que pueda suscribirse a un informe, hay que configurar el origen de datos del informe de modo que utilice credenciales almacenadas o ninguna credencial. Para obtener más información, consulte [Store credenciales en un origen de datos de Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). De lo contrario, el botón **Nueva suscripción** no está disponible.  
+ Antes de que pueda suscribirse a un informe, hay que configurar el origen de datos del informe de modo que utilice credenciales almacenadas o ninguna credencial. Para obtener más información, vea [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). De lo contrario, el botón **Nueva suscripción** no está disponible.  
   
  En este tema no se explica cómo crear una suscripción controlada por datos. Para obtener instrucciones sobre cómo se crea una suscripción controlada por datos, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) o la Ayuda en pantalla de la página Crear una suscripción controlada por datos del Administrador de informes.  
   
@@ -175,9 +175,9 @@ ms.locfileid: "48111505"
  [Tareas y permisos](../security/tasks-and-permissions.md)   
  [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
- [Suscripciones controladas por datos](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Usar Mis suscripciones](use-my-subscriptions-native-mode-report-server.md)  
   
   

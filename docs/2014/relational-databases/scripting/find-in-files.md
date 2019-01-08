@@ -7,21 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.findinfiles
-- vs.findinfiles
 helpviewer_keywords:
 - Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 882e13938e85db653dbe43e859bbc582833d68d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a7b8baf1eb666e6639e7e7f47cbf6c321dc217b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114065"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328645"
 ---
 # <a name="find-in-files"></a>Buscar en archivos
   La pestaña **Buscar en archivos** de la ventana Buscar y reemplazar permite buscar en el código de un conjunto especificado de archivos una cadena o expresión. Las coincidencias que se encuentran y las acciones que se toman aparecen en la ventana Resultados de la búsqueda seleccionada en **Opciones de resultados**.  
@@ -137,5 +134,3 @@ ms.locfileid: "48114065"
   
 ## <a name="see-also"></a>Vea también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

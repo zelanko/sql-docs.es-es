@@ -13,12 +13,12 @@ ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e0c556930dc843f9a512f09f26ae9187dcd0c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c57ef0020031e944d1c482bf7ec9bc3928681a4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132515"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374667"
 ---
 # <a name="relational-query-designer-ssas"></a>Diseñador de consultas relacionales (SSAS)
   El diseñador de consultas relacionales le ayuda a crear una consulta que especifica los datos que hay que recuperar de las bases de datos relacionales de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] y del [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Use el diseñador gráfico de consultas para explorar los metadatos, crear la consulta de forma interactiva y ver los resultados de la misma.  Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
@@ -81,9 +81,9 @@ ms.locfileid: "48132515"
   
  Los agregados proporcionan resúmenes de datos y los datos se agrupan para admitir el agregado que ofrece los datos de resumen. Al utilizar un agregado en la consulta, los otros campos que devuelve se agrupan automáticamente y la consulta incluye la cláusula de SQL GROUP BY. Puede resumir los datos sin agregar un agregado utilizando solo la opción **Agrupar por** en la lista **Grupo y agregado** . Muchos de los agregados incluyen una versión que utiliza la palabra clave DISTINCT. Al incluir DISTINCT, se eliminan los valores duplicados.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../includes/tsql-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../includes/tsql-md.md)] y de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
   
- Para más información sobre [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
+ Para más información sobre [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
   
  En la siguiente tabla se enumeran los agregados y se proporciona una breve descripción de los mismos.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48132515"
 |Max|Devuelve el valor máximo en un grupo. Implementa el agregado de SQL MAX.|  
 |StDev|Devuelve la desviación estadística estándar de todos los valores de un grupo. Implementa el agregado de SQL STDEV.|  
 |StDevP|Devuelve la desviación estadística estándar para la población de todos los valores de una expresión especificada de grupo. Implementa el agregado de SQL STDEVP.|  
-|SUM|Devuelve la suma de todos los valores de un grupo. Implementa el agregado de SQL SUM.|  
+|Sum|Devuelve la suma de todos los valores de un grupo. Implementa el agregado de SQL SUM.|  
 |Var|Devuelve la varianza estadística de todos los valores del grupo. Implementa el agregado de SQL VAR.|  
 |VarP|Devuelve la varianza estadística de la población de todos los valores del grupo. Implementa el agregado de SQL VARP.|  
 |Avg Distinct|Devuelve los promedios únicos. Implementa una combinación de la agregación AVG y la palabra clave DISTINCT.|  
@@ -123,7 +123,7 @@ ms.locfileid: "48132515"
 -   **Detección automática** : alterna la característica de detección automática que crea automáticamente las relaciones entre las tablas. Si se activa la detección automática, el diseñador de consultas crea las relaciones a partir de las claves externas de las tablas; de lo contrario, debe crearlas manualmente. Al seleccionar las tablas en el panel **Vista de base de datos** , la detección automática intenta crear las relaciones automáticamente. Si activa la detección automática después de haber creado combinaciones manualmente, estas se descartarán.  
   
     > [!IMPORTANT]  
-    >  Cuando se usa con [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] no se proporcionan los metadatos necesarios para crear las combinaciones y las relaciones no se detectan automáticamente. Si una consulta recupera los datos de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], todas las combinaciones de la tabla deben crearse de forma manual.  
+    >  Cuando se usa con [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] , no se proporcionan los metadatos necesarios para crear las combinaciones y las relaciones no se pueden detectar automáticamente. Si una consulta recupera los datos de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], todas las combinaciones de la tabla deben crearse de forma manual.  
   
 -   **Agregar relación** : agrega una relación a la lista **Relación** .  
   
@@ -147,7 +147,7 @@ ms.locfileid: "48132515"
   
 -   **Tabla izquierda** : muestra el nombre de la primera tabla que forma parte de una relación de combinación.  
   
--   **Tipo de combinación** : muestra el tipo de instrucción JOIN de SQL que se usa en la consulta generada automáticamente. De forma predeterminada, si se detecta una restricción de clave externa, se utiliza INNER JOIN. Otros tipos de combinación pueden ser LEFT JOIN o RIGHT JOIN. Si no se aplica ninguno de estos tipos de combinación, la columna **Tipo de combinación** muestra **No relacionada**. No se crea ninguna combinación CROSS JOIN para las tablas no relacionadas; en su lugar, debe crear las relaciones manualmente combinando las columnas de las tablas izquierda y derecha. Para obtener más información acerca de los tipos de combinaciones, vea "UNIR Fundamentals" en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros](http://go.microsoft.com/fwlink/?LinkId=141687) en msdn.microsoft.com...  
+-   **Tipo de combinación** : muestra el tipo de instrucción JOIN de SQL que se usa en la consulta generada automáticamente. De forma predeterminada, si se detecta una restricción de clave externa, se utiliza INNER JOIN. Otros tipos de combinación pueden ser LEFT JOIN o RIGHT JOIN. Si no se aplica ninguno de estos tipos de combinación, la columna **Tipo de combinación** muestra **No relacionada**. No se crea ninguna combinación CROSS JOIN para las tablas no relacionadas; en su lugar, debe crear las relaciones manualmente combinando las columnas de las tablas izquierda y derecha. Para obtener más información acerca de los tipos de combinaciones JOIN, vea el tema sobre aspectos básicos de las combinaciones en los [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) en msdn.microsoft.com.  
   
 -   **Tabla derecha** : muestra el nombre de la segunda tabla que forma parte de una relación de combinación.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48132515"
   
  Estos datos representan los valores del origen de datos en el momento de ejecución de la consulta.  
   
- El criterio de ordenación del conjunto de resultados se determina según el orden de los datos recuperados del origen de datos. El criterio de ordenación se puede cambiar modificando el texto de la consulta directamente. Para obtener más información sobre cómo usar la cláusula GROUP BY en una consulta, vea "GROUP BY (Transact-SQL)" en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ El criterio de ordenación del conjunto de resultados se determina según el orden de los datos recuperados del origen de datos. El criterio de ordenación se puede cambiar modificando el texto de la consulta directamente. Para obtener más información sobre cómo usar la cláusula GROUP BY en una consulta, vea "GROUP BY (Transact-SQL)" en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
 ### <a name="graphical-query-designer-toolbar"></a>Barra de herramientas del diseñador gráfico de consultas  
  La barra de herramientas del diseñador gráfico de consultas ofrece los siguientes botones para ayudarle a especificar o ver los resultados de una consulta.  
@@ -263,6 +263,6 @@ uspGetWhereUsedProductID
   
  `ContactType`  
   
- Al escribir el nombre de tabla `ContactType`, es el equivalente de la creación de la instrucción SQL `SELECT * FROM ContactType`.  
+ Escribir el nombre de tabla `ContactType` es equivalente a crear la instrucción SQL `SELECT * FROM ContactType`.  
   
   

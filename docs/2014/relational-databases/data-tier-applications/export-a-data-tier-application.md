@@ -24,26 +24,26 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae726d90d71259715f9eb80619e74c7bfbf990dd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 85e3268bcca9f4800bd59fa5be541dc6f9502ef5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810891"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368707"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar una aplicación de capa de datos
   Al exportar una aplicación de capa de datos (DAC) o base de datos implementada se crea un archivo de exportación que incluye las definiciones de los objetos de la base de datos y todos los datos contenidos en las tablas. El archivo de exportación se podrá importar a otra instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación-importación se pueden combinar para migrar una DAC de una instancia a otra, crear una copia de seguridad lógica o crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  El proceso de exportación compila un archivo de exportación DAC en dos fases.  
   
-1.  La exportación genera una definición de DAC en el archivo de exportación, archivo BACPAC, de la misma forma que un extracto de DAC genera una definición de DAC en un archivo de paquete DAC. La definición de DAC exportada incluye todos los objetos de la base de datos actual. Si el proceso de exportación se ejecuta en una base de datos que se implementó originalmente a partir de una DAC y se realizaron cambios directamente en la base de datos tras la implementación, la definición exportada coincide con el objeto establecido en la base de datos, no con lo definido en la DAC original.  
+1.  La exportación genera una definición de DAC en el archivo de exportación (archivo BACPAC) de la misma forma que una extracción de DAC genera una definición de DAC en un archivo de paquete DAC. La definición de DAC exportada incluye todos los objetos de la base de datos actual. Si el proceso de exportación se ejecuta en una base de datos que se implementó originalmente a partir de una DAC y se realizaron cambios directamente en la base de datos tras la implementación, la definición exportada coincide con el objeto establecido en la base de datos, no con lo definido en la DAC original.  
   
 2.  La exportación masiva copia los datos de todas las tablas de la base de datos y los incorpora en el archivo de exportación.  
   
  El proceso de exportación establece la versión de DAC en 1.0.0.0 y la descripción de DAC en el archivo de exportación en una cadena vacía. Si la base de datos se implementó a partir de una DAC, la definición de DAC del archivo de exportación contiene el nombre asignado a DAC original; de lo contrario, el nombre de la DAC se establece el nombre de la base de datos.  
   
- Hay una aplicación de ejemplo en las prácticas de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que se pueden usar para probar la exportación e importación de DAC y bases de datos. Para obtener instrucciones acerca de cómo descargar y usar el ejemplo, vea [Importación y exportación de bases de datos para base de datos de Windows Azure SQL](http://go.microsoft.com/fwlink/?LinkId=219404).  
+ Hay una aplicación de ejemplo en las prácticas de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que se pueden usar para probar la exportación e importación de DAC y bases de datos. Para obtener instrucciones acerca de cómo descargar y usar el ejemplo, vea [Importación y exportación de bases de datos para base de datos de Windows Azure SQL](https://go.microsoft.com/fwlink/?LinkId=219404).  
   
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Una DAC o base de datos solo se puede extraer de una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior.  
@@ -62,7 +62,7 @@ ms.locfileid: "43810891"
   
 3.  Haga clic con el botón secundario en el nombre de la base de datos.  
   
-4.  Haga clic en **Tareas** y seleccione **Exportar aplicación de capa de datos**.  
+4.  Haga clic en **Tareas** y después seleccione **Exportar aplicación de capa de datos...**.  
   
 5.  Complete los cuadros de diálogo del asistente:  
   
@@ -87,12 +87,12 @@ ms.locfileid: "43810891"
   
  **Siguiente** : avanza a la página **Seleccionar paquete DAC** .  
   
- **Cancelar** ; cancela la operación y cierra el asistente.  
+ **Cancelar**: cancela la operación y cierra el asistente.  
   
 ##  <a name="Export_settings"></a> Página Exportar configuraciones  
  En esta página se puede especificar la ubicación donde se desea crear el archivo BACPAC.  
   
--   **Guardar en disco local** : crea un archivo BACPAC en un directorio del equipo local. Haga clic en **Examinar…** para navegar por el equipo local, o especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
+-   **Guardar en disco local** : crea un archivo BACPAC en un directorio del equipo local. Haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
   
 -   **Guardar en Windows Azure** : crea un archivo BACPAC en un contenedor de Windows Azure. Debe conectarse a un contenedor de Windows Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. Tenga en cuenta que el archivo temporal se creará en la ubicación especificada y permanecerá en ella una vez completada la operación.  
   
@@ -117,11 +117,11 @@ ms.locfileid: "43810891"
 ##  <a name="NetApp"></a> Mediante una aplicación de .Net Framework  
  **Para exportar una DAC mediante el método Export() en una aplicación .Net Framework**  
   
- Para obtener un ejemplo de código, descargue la aplicación de ejemplo de DAC en [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575).  
+ Para obtener un ejemplo de código, descargue la aplicación de ejemplo de DAC en [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575).  
   
 1.  Cree un objeto SMO Server y establézcalo en la instancia que contiene la DAC que se va a exportar.  
   
-2.  Abra un `ServerConnection` de objetos y conectarse a la misma instancia.  
+2.  Abra un objeto `ServerConnection` y conéctese a la misma instancia.  
   
 3.  Use el método de `Export` de tipo `Microsoft.SqlServer.Management.Dac.DacStore` para exportar la DAC. Especifique el nombre de la DAC que se exportará y la ruta de acceso a la carpeta donde se va a guardar el archivo de exportación.  
   

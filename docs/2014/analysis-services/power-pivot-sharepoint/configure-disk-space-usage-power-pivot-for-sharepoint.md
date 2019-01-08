@@ -11,12 +11,12 @@ ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069645"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354511"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurar el uso del espacio en disco (PowerPivot para SharePoint)
   Una implementación de PowerPivot para SharePoint usa el espacio en disco del equipo host para almacenar en memoria caché las bases de datos PowerPivot para obtener recargas más rápidas. Cada base de datos PowerPivot que se carga en la memoria primero se almacena en la memoria caché en el disco para que se pueda volver a cargar rápidamente más tarde para atender las nuevas solicitudes. De forma predeterminada, PowerPivot para SharePoint utiliza todo el espacio en disco disponible para almacenar en memoria caché las bases de datos, pero puede modificar este comportamiento estableciendo las propiedades que restringen cuánto espacio en disco se utiliza.  
@@ -51,11 +51,11 @@ ms.locfileid: "48069645"
   
  En el nivel de sistema, puede crear alertas de correo electrónico que notifiquen que hay poco espacio en disco. Microsoft System Center incluye una característica de alerta por correo electrónico. Para configurar las alertas, también puede utilizar un script de PowerShell, el Administrador de recursos del servidor de archivos o el Programador de tareas. Los vínculos siguientes proporcionan información útil para configurar notificaciones sobre la existencia de poco espacio en disco:  
   
--   [Novedades en el Administrador de recursos del servidor de archivos](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [Novedades en el Administrador de recursos del servidor de archivos](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guía paso a paso del Administrador de recursos del servidor de archivos para Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guía paso a paso del Administrador de recursos del servidor de archivos para Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Establecer alertas de espacio en disco insuficiente en Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Establecer alertas de espacio en disco insuficiente en Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Limitar el espacio en disco utilizado para almacenar archivos en memoria caché  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48069645"
   
 3.  En Uso de disco, establezca un valor (en gigas) para **Espacio total en disco** para configurar un límite superior en la cantidad de espacio usado para el almacenamiento en caché. El valor predeterminado es 0, lo que permite que Analysis Services use todo el espacio en disco disponible.  
   
-4.  En Uso de disco, en **Eliminar las bases de datos almacenadas en caché en las últimas ‘n’ horas** , especifique los criterios para el uso más reciente para vaciar la memoria caché cuando el espacio en disco llegue al límite máximo.  
+4.  Uso de disco, en el **eliminar almacenadas en caché las bases de datos en las últimas ' n ' horas** , especifique los criterios de último uso para vaciar la memoria caché cuando el espacio de disco es el límite máximo.  
   
      El valor predeterminado es 4 horas, lo que significa que todas las bases de datos que han estado inactivas durante cuatro horas o más se eliminan del sistema de archivos. Las bases de datos que están inactivas pero siguen en memoria se descargan y se eliminan del sistema de archivos.  
   

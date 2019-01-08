@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0952390e21d174d4d10e99f53904de4d11be6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 595add5d077136c4093776fae8e3a2f7ab04bb26
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637480"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396178"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar varias subredes grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error
 
@@ -24,7 +24,7 @@ Cuando una instancia en clúster siempre en grupo de disponibilidad (AG) o la co
 
 ## <a name="vlan-based-solution"></a>Solución basada en VLAN
  
-**Requisitos previos**: solución basada en para una VLAN, cada servidor que participe en un grupo de disponibilidad o FCI necesita dos tarjetas de red (NIC) para disponibilidad adecuada (un puerto dual de NIC sería un único punto de error en un servidor físico), por lo que se pueden asignar direcciones IP en su subred nativo, así como uno de la VLAN. Esto es además de otras necesidades de red, como iSCSI, que también necesita su propia red.
+**Requisitos previos**: Para una solución basada en VLAN, cada servidor que participe en un grupo de disponibilidad o FCI necesita dos tarjetas de red (NIC) para una disponibilidad adecuada (un puerto dual de NIC sería un único punto de error en un servidor físico), de modo que se pueden asignar direcciones IP en su subred nativo, así como uno en la VLAN. Esto es además de otras necesidades de red, como iSCSI, que también necesita su propia red.
 
 La creación de la dirección IP para el grupo de disponibilidad o FCI se realiza en la VLAN. En el ejemplo siguiente, la VLAN tiene una subred de 192.168.3. *x*, por lo que la dirección IP creada para el grupo de disponibilidad o FCI es 192.168.3.104. Nada adicional debe configurarse, ya que no hay una única dirección IP asignada al grupo de disponibilidad o FCI.
 

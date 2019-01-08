@@ -11,19 +11,19 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1f113778433e13e68b8847e5f54f1d9ae2bdc6e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b22f958a0b4bb78e297e23665db36b8c16fe74e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074479"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363147"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Agregar un parámetro de varios valores a un informe
   Puede agregar un parámetro a un informe que permita al usuario seleccionar más de un valor para el parámetro.  
   
- Puede pasar varios valores de parámetro al informe dentro de la dirección URL del informe. Para un ejemplo de dirección URL incluye un parámetro de varios valores, vea [pasar un parámetro de informe Within a URL](../pass-a-report-parameter-within-a-url.md).  
+ Puede pasar varios valores de parámetro al informe dentro de la dirección URL del informe. Para ver un ejemplo de dirección URL que incluye un parámetro de varios valores, vea [Pasar un parámetro de informe en una dirección URL](../pass-a-report-parameter-within-a-url.md).  
   
- Para obtener información sobre cómo pasar varios valores de parámetro a un procedimiento almacenado, vea [Trabajar con parámetros de selección múltiple en informes de SSRS](http://go.microsoft.com/fwlink/?LinkId=321529) en mssqltips.com.  
+ Para obtener información sobre cómo pasar varios valores de parámetro a un procedimiento almacenado, vea [Trabajar con parámetros de selección múltiple en informes de SSRS](https://go.microsoft.com/fwlink/?LinkId=321529) en mssqltips.com.  
   
 ### <a name="to-add-a-multi-value-parameter"></a>Para agregar un parámetro de varios valores  
   
@@ -45,9 +45,9 @@ ms.locfileid: "48074479"
     ```  
   
     > [!IMPORTANT]  
-    >  Si no incluye los paréntesis alrededor de la variable como se muestra arriba, el informe no se representa y aparece el error “Debe declarar la variable escalar”.  
+    >  Si no incluye los paréntesis alrededor de la variable como se indicó anteriormente, no se puede representar el informe y se muestra el error "debe declarar la variable escalar".  
   
-     Se crea automáticamente un parámetro de conjunto de datos para un conjunto de datos incrustado o un conjunto de datos compartido para la variable de consulta. Se crea automáticamente un parámetro de informe para el parámetro de conjunto de datos.  
+     Se crea automáticamente un parámetro de conjunto de datos para un conjunto de datos incrustado o compartido para la variable de consulta. Se crea automáticamente un parámetro de informe para el parámetro de conjunto de datos.  
   
 4.  En el panel **Datos de informe** , expanda el nodo **Parámetros** , haga clic con el botón derecho en el parámetro de informe que se creó automáticamente para el parámetro de conjunto de datos y, después, haga clic en **Propiedades del parámetro**.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "48074479"
     ```  
   
     > [!IMPORTANT]  
-    >  Si no incluye los paréntesis alrededor de la variable como se muestra arriba, el informe no se representa y aparece el error “Debe declarar la variable escalar”.  
+    >  Si no incluye los paréntesis alrededor de la variable como se indicó anteriormente, no se puede representar el informe y se muestra el error "debe declarar la variable escalar".  
   
-     Se crea automáticamente un parámetro de conjunto de datos para un conjunto de datos incrustado o un conjunto de datos compartido para la variable de consulta. Se crea automáticamente un parámetro de informe para el parámetro de conjunto de datos.  
+     Se crea automáticamente un parámetro de conjunto de datos para un conjunto de datos incrustado o compartido para la variable de consulta. Se crea automáticamente un parámetro de informe para el parámetro de conjunto de datos.  
   
 4.  En el panel **Datos de informe** , expanda el nodo **Parámetros** , haga clic con el botón derecho en el parámetro de informe que se creó automáticamente para el parámetro de conjunto de datos y, después, haga clic en **Propiedades del parámetro**.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48074479"
      Para más información, vea [Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe &#40;Generador de informes y SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar parámetros en cascada a un informe &#40;generador de informes y SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Agregar, cambiar o eliminar un parámetro de informe &#40;generador de informes y SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [Agregar parámetros en cascada a un informe &#40;Generador de informes y SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Agregar, cambiar o eliminar parámetros de informe &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

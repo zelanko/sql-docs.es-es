@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - warnings [SQL Server]
@@ -17,12 +15,12 @@ ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47c73cfe13a0fe611e2323694cca82738e618787
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749077"
 ---
 # <a name="creating-extended-stored-procedures"></a>Crear procedimientos almacenados extendidos
     
@@ -64,7 +62,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) es una extensión de compilador específica de Microsoft. Si el compilador no admite esta directiva, debe exportar esta función en el archivo DEF, bajo la sección EXPORTS.  
   
- Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia con el seguimiento de la marca - T260 o si un usuario con privilegios de administrador del sistema ejecuta DBCC TRACEON (260) y almacena extendido DLL de procedimiento no admite __GetXpVersion (), un mensaje de advertencia (Error 8131: el procedimiento almacenado extendido Archivo DLL '%', no exporta \__GetXpVersion().) se imprime en el registro de errores. (Tenga en cuenta que \__GetXpVersion() comienza con dos caracteres de subrayado.)  
+ Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia con el seguimiento de la marca - T260 o si un usuario con privilegios de administrador del sistema ejecuta DBCC TRACEON (260) y almacena extendido DLL de procedimiento no admite __GetXpVersion (), un mensaje de advertencia (Error 8131: Procedimiento almacenado extendido '%' DLL no exporta \__GetXpVersion().) se imprime en el registro de errores. (Tenga en cuenta que \__GetXpVersion() comienza con dos caracteres de subrayado.)  
   
  Si el archivo DLL de procedimientos almacenados extendidos exporta __GetXpVersion() pero la versión devuelta por la función es menor que la que requiere el servidor, en el registro de errores se imprime un mensaje de advertencia que indica la versión devuelta por la función y la versión esperada por el servidor. Si recibe este mensaje, se devuelve un valor incorrecto de \__GetXpVersion(), o bien se compila con una versión anterior de srv.h.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query groups
@@ -13,15 +13,15 @@ ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe04960e690ad5ba01486b1b961d045645b636bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc0f9319e4d598548111b44b1a10542773a7daa4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192695"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783827"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>Especificar condiciones para grupos (Visual Database Tools)
-  Puede limitar los grupos que aparecen en una consulta especificando una condición que se aplique a los grupos en su totalidad: una cláusula HAVING. Una vez agrupados y agregados los datos, se aplican las condiciones de la cláusula HAVING. Solo aparecen en la consulta los grupos que cumplen las condiciones.  
+  Puede limitar los grupos que aparecen en una consulta si especifica una condición que se aplique a los grupos en su totalidad: una cláusula HAVING. Una vez agrupados y agregados los datos, se aplican las condiciones de la cláusula HAVING. Solo aparecen en la consulta los grupos que cumplen las condiciones.  
   
  Por ejemplo, es posible que desee ver el precio medio de todos los libros de cada editorial en la tabla `titles` , pero únicamente cuando el precio medio supere los 10,00 USD. En ese caso, podría especificar una cláusula HAVING con una condición como `AVG(price) > 10`.  
   

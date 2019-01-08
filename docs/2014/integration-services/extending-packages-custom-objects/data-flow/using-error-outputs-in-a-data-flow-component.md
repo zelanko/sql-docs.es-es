@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,12 +23,12 @@ ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b892fda3a54752cdd7e11e758a5e4ad58a330eb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e264922c991b3c8297838d920961cd390ee0eabc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089295"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357553"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Usar las salidas de error en un componente de flujo de datos
   Se pueden agregar objetos <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> especiales denominados salidas de error a los componentes para permitir que el componente redirija las filas que no puede procesar durante la ejecución. Los problemas que un componente puede encontrar generalmente se clasifican como errores o truncamientos y son específicos de cada componente. Los componentes que proporcionan las salidas de error ofrecen a los usuarios del componente la flexibilidad para administrar las condiciones de error, para ello filtran las filas de errores fuera del conjunto de resultados, generan un error en el componente cuando se produce un problema o pasan por alto los errores y continúan.  
@@ -432,7 +430,7 @@ Public  Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As I
 End Sub  
 ```  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Control de errores en los datos](../../data-flow/error-handling-in-data.md)   

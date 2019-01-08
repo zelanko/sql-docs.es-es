@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,12 +22,12 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cab26a21658c3573a3bdfab58a50500a7245397e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be5dd85d67eb2f28ced98ef91973ca1a08f5dcbd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184417"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365757"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabajar con variables mediante programación
   Las variables son una manera de establecer valores y controlar procesos en paquetes, contenedores, tareas y controladores de eventos de forma dinámica. Las restricciones de precedencia también pueden usar variables para controlar la dirección del flujo de datos en diferentes tareas. Las variables tienen diversos usos:  
@@ -228,12 +226,12 @@ End Module
  La expresión debe ser una expresión válida que use la sintaxis de expresiones de [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Los literales se permiten en expresiones variables, además de los operadores y funciones que proporciona la sintaxis de la expresión, pero las expresiones no pueden hacer referencia a otras variables o columnas. Para más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md).  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
- Si un archivo de configuración incluye una variable personalizada, la variable puede estar actualizada en tiempo de ejecución. Esto significa que cuando el paquete se ejecuta, se reemplaza el valor de la variable originalmente en el paquete con un nuevo valor del archivo de configuración. Esta técnica del reemplazo es útil cuando se implementa un paquete en varios servidores que requieren distintos valores de variable. Por ejemplo, una variable puede especificar el número de veces que un contenedor de **bucles Para cada uno** repite su flujo de trabajo, o enumerar los destinatarios a los que un controlador de eventos envía un correo electrónico cuando se produce un error, o cambiar el número de errores que se pueden producir antes de que se genere un error en el paquete. Estas variables se proporcionan de forma dinámica en archivos de configuración para cada entorno. Por consiguiente, en archivos de configuración únicamente se permiten variables de lectura/escritura. Para más información, vea [Crear configuraciones de paquetes](../create-package-configurations.md).  
+ Si un archivo de configuración incluye una variable personalizada, la variable puede estar actualizada en tiempo de ejecución. Esto significa que cuando el paquete se ejecuta, se reemplaza el valor de la variable originalmente en el paquete con un nuevo valor del archivo de configuración. Esta técnica del reemplazo es útil cuando se implementa un paquete en varios servidores que requieren distintos valores de variable. Por ejemplo, una variable puede especificar el número de veces que un contenedor de **bucles Para cada uno** repite su flujo de trabajo, o enumerar los destinatarios a los que un controlador de eventos envía un correo electrónico cuando se produce un error, o cambiar el número de errores que se pueden producir antes de que se genere un error en el paquete. Estas variables se proporcionan de forma dinámica en archivos de configuración para cada entorno. Por consiguiente, en archivos de configuración únicamente se permiten variables de lectura/escritura. Para obtener más información, vea [Crear configuraciones de paquetes](../create-package-configurations.md).  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
- [Servicios de integración &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../use-variables-in-packages.md)  
   
   

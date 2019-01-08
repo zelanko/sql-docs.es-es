@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64c82908c0ae39146686f12e9a929d423611df85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f8b291344939bcbafa7f91080837d2302efb1d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630073"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521919"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Enlace y transferencia de datos de valores de columnas y parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "47630073"
   
  No se envían ni se reciben datos reales para el propio parámetro con valores de tabla, sino que los datos se envían y se reciben para cada una de sus columnas constitutivas. Dado que el parámetro con valores de tabla es una pseudocolumna, los parámetros de SQLBindParameter se usan para hacer referencia a atributos que otros tipos de datos, como se indica a continuación:  
   
-|Parámetro|Atributo relacionado para tipos de parámetro con valores que no son de tabla, incluidas columnas|Atributo relacionado para parámetros con valores de tabla|  
+|Parámetro|Atributo relacionado para tipos de parámetro que no son valores de tabla, incluidas las columnas|Atributo relacionado para parámetros con valores de tabla|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|SQL_DESC_PARAMETER_TYPE en IPD.<br /><br /> En el caso de las columnas de parámetros con valores de tabla, debe ser igual que el valor del propio parámetro con valores de tabla.|SQL_DESC_PARAMETER_TYPE en IPD.<br /><br /> Debe ser SQL_PARAM_INPUT.|  
-|*Tipo de valor*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en APD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en APD.<br /><br /> Debe ser SQL_C_DEFAULT o SQL_C_BINARY.|  
+|*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en APD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en APD.<br /><br /> Debe ser SQL_C_DEFAULT o SQL_C_BINARY.|  
 |*ParameterType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en IPD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en IPD.<br /><br /> Debe ser SQL_SS_TABLE.|  
 |*ColumnSize*|SQL_DESC_LENGTH o SQL_DESC_PRECISION en IPD.<br /><br /> Esto depende del valor de *ParameterType*.|SQL_DESC_ARRAY_SIZE<br /><br /> También puede establecerse mediante el uso de SQL_ATTR_PARAM_SET_SIZE cuando el foco del parámetro está establecido en el parámetro con valores de tabla.<br /><br /> En el caso de un parámetro con valores de tabla, se trata del número de filas de los búferes de columna del parámetro con valores de tabla.|  
 |*ColumnSize*|SQL_DESC_PRECISION o SQL_DESC_SCALE en IPD.|Sin usar. Esto debe ser 0.<br /><br /> Si este parámetro será no 0, SQLBindParameter generará retorno SQL_ERROR y un registro de diagnóstico con SQLSTATE = HY104 y el mensaje "no válida precisión o escala".|  

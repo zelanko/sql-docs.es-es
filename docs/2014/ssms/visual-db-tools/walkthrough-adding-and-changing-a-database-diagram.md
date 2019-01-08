@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
@@ -14,14 +14,14 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46333534aebb2991fe0dc3239264bc94f7ddb821
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195525"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822629"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Visita guiada: Agregar y modificar un diagrama de base de datos
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Tutorial: Agregar y modificar un diagrama de base de datos
   En este tutorial se muestra cómo crear y modificar un diagrama de base de datos, así como la forma de realizar cambios en la base de datos mediante el componente Diagramas de base de datos. También se explica cómo agregar tablas al diagrama, crear relaciones entre las tablas, crear restricciones e índices en las columnas y modificar el nivel de información que puede verse en cada tabla.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
@@ -44,7 +44,7 @@ ms.locfileid: "48195525"
   
 3.  Haga clic con el botón derecho en el nodo Diagramas de base de datos y elija **Nuevo diagrama de base de datos**.  
   
-     Si la base de datos no dispone de los objetos necesarios para crear diagramas, aparecerá el mensaje siguiente: **Esta base de datos no tiene uno o varios de los objetos de soporte necesarios para usar diagramas de base de datos. ¿Desea crearlos?** Elija **Sí**.  
+     Si la base de datos no tiene los objetos necesarios para crear diagramas, aparece el mensaje siguiente: **Esta base de datos no tiene uno o varios de los objetos de soporte necesarios para usar diagramas de base de datos. ¿Desea crearlos?** Elija **Sí**.  
   
      Aparecerá el cuadro de diálogo **Agregar tabla** .  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195525"
   
 1.  Haga clic con el botón secundario en la tabla `Address` . En el menú contextual, seleccione **Vista de tabla**y, a continuación, haga clic en **Estándar**.  
   
-     En la tabla con cuadrícula se muestran tres columnas: **Nombre de columna**, **Tipo de datos**y **Permitir valores NULL**.  
+     La cuadrícula de tabla muestra tres columnas: **Nombre de columna**, **tipo de datos**, y **permitir valores NULL**.  
   
 2.  Haga clic con el botón derecho en la tabla `Address` , haga clic en **Vista de tabla** y seleccione **Claves**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48195525"
   
 2.  En el **Elegir nombre** cuadro de diálogo, haga clic en **Aceptar** para aceptar el nombre predeterminado `Table1`.  
   
-     Aparecerá una nueva tabla con cuadrícula con tres columnas: **Nombre de columna**, **Tipo de datos**y **Permitir valores NULL**.  
+     Aparecerá una nueva cuadrícula de tabla con tres columnas: **Nombre de columna**, **tipo de datos**, y **permitir valores NULL**.  
   
 3.  Agregue la siguiente información para `Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48195525"
   
 2.  Arrastre `T2col1` hasta `T1col1`.  
   
-     Aparecen dos cuadros de diálogo: **Relación de clave externa** en segundo plano y **Tablas y columnas** , en primer plano.  
+     Aparecen dos cuadros de diálogo: **Relación de clave externa** en segundo plano y **tablas y columnas** en primer plano.  
   
 3.  Haga clic en **Aceptar** para guardar la nueva relación.  
   

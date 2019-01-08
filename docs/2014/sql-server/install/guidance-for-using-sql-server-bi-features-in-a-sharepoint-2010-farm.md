@@ -11,12 +11,12 @@ ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 25054c92124930d2d33b9f35eb43a1945d4a22bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9470cc5f4a0567d211e0678b32aec05d12b5b239
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197125"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374847"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Instrucciones para usar las características de SQL Server BI en una granja de servidores de SharePoint 2010
   En este tema se resume la disponibilidad de las características según las versiones y las ediciones del software que utiliza. También se explican los requisitos de instalación de SharePoint 2010 para usar determinadas características de SQL Server. Para obtener información relacionada con SharePoint 2013, vea [Deployment Topologies for SQL Server BI Features in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "48197125"
   
 -   Reporting Services incluye un complemento para los Productos de SharePoint. Las configuraciones admitidas para el complemento y el servidor de informes están disponibles en un nivel más específico del que se indica aquí. Para obtener más información, consulte [admite combinaciones de SharePoint y servidor de Reporting Services y complemento &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
--   Las herramientas de desarrollo de SharePoint solo admiten una configuración de SharePoint independiente.  Para obtener más información, consulte la documentación de SharePoint: [requisitos para desarrollar soluciones de SharePoint](http://msdn.microsoft.com/library/ee231582.aspx).  
+-   Las herramientas de desarrollo de SharePoint solo admiten una configuración de SharePoint independiente.  Para obtener más información, vea la documentación de SharePoint: [Requisitos para desarrollar soluciones de SharePoint](https://msdn.microsoft.com/library/ee231582.aspx).  
   
 ##  <a name="bkmk_vers"></a> Compatibilidad con las ediciones de SharePoint y las características de BI  
  Algunas características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence solo se admiten en ediciones concretas de los Productos de SharePoint.  
@@ -49,7 +49,7 @@ ms.locfileid: "48197125"
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complemento para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Alertas de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] |[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|  
 |Presentación general de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e integración de características con SharePoint.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard y Enterprise Edition.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] |  
   
- Para obtener más información, consulte [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473).  
+ Para obtener más información, consulte [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_sp1"></a> SharePoint 2010 Service Pack 1 (SP1)  
  Se recomienda actualizar la instalación de SharePoint 2010 a SharePoint 2010 Service Pack 1 (SP1). SharePoint SP1 se requiere en los siguientes casos:  
@@ -61,16 +61,16 @@ ms.locfileid: "48197125"
  Una de las razones principales SP1 es necesaria para las instalaciones de SharePoint con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] es la característica del motor de base de datos **sp_dboption**, que ha quedado en desuso en una versión anterior, ya no está disponible en el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versión. Para obtener más información, consulte [funcionalidad del motor de base de datos no incluida en SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>Orientación de instalación de SharePoint 2010 SP1  
- [Descargar SharePoint Server 2010 SP1](http://go.microsoft.com/fwlink/?LinkID=219697) y aplíquelo en todos los servidores de la granja de servidores.  
+ [Descargar SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697) y aplíquelo en todos los servidores de la granja de servidores.  
   
 > [!NOTE]  
->  En una granja existente, deberá usar uno de los siguientes **adicionales** actualizan pasos para completar el SharePoint SP1. Para obtener más información, consulte [problemas conocidos al instalar Office 2010 SP1 y SharePoint 2010 SP1](http://support.microsoft.com/kb/2532126) y [descripción de SharePoint Server 2010 SP1](http://support.microsoft.com/kb/2460045):  
+>  En una granja existente, deberá usar uno de los siguientes **adicionales** actualizan pasos para completar el SharePoint SP1. Para obtener más información, consulte [problemas conocidos al instalar Office 2010 SP1 y SharePoint 2010 SP1](https://support.microsoft.com/kb/2532126) y [descripción de SharePoint Server 2010 SP1](https://support.microsoft.com/kb/2460045):  
   
--   **Asistente para configuración de productos de SharePoint:** ejecutar el Asistente para completar la actualización de SP1 y la configuración.  
+-   **Asistente para configuración de productos de SharePoint:** Ejecute el asistente para completar la actualización de SP1 y la configuración.  
   
--   **Completar la actualización con psconfig:** ejecute el comando `psconfig –upgrade` para completar la actualización de SP1  
+-   **Complete la actualización con psconfig:** Ejecute el comando `psconfig -upgrade` para completar la actualización de SP1  
   
- Para obtener más información, vea la sección "actualización" de [(SharePoint Server 2010)](http://technet.microsoft.com/library/cc263093.aspx) y [centro de recursos: actualizaciones de productos de SharePoint 2010](http://technet.microsoft.com/sharepoint/ff800847.aspx)  
+ Para obtener más información, vea la sección "actualización" de [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) y [centro de recursos: Actualizaciones de productos de SharePoint 2010](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>Instalación de SharePoint con características de SQL Server BI  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48197125"
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
 ## <a name="see-also"></a>Vea también  
- [Instalación e implementación de SharePoint Server 2010](http://technet.microsoft.com/sharepoint/ee518643.aspx)   
- [Varios servidores para una granja de tres niveles (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?linkID=219834)  
+ [Instalación e implementación de SharePoint Server 2010](https://technet.microsoft.com/sharepoint/ee518643.aspx)   
+ [Varios servidores para una granja de tres niveles (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)  
   
   

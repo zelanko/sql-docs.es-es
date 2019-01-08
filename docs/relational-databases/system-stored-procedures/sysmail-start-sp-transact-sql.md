@@ -18,12 +18,12 @@ ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08a073099616898ebd4f2a5161b0fe26f4bdb688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 877fa31954cb0bf7255d831475c875fb43d002b8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826623"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210014"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sysmail_start_sp
  None  
   
 ## <a name="remarks"></a>Comentarios  
- Correo electrónico de base de datos no está habilitada o instalada[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalación. Utilice el Asistente para configuración de Correo electrónico de base de datos con el fin de habilitar e instalar los objetos de Correo electrónico de base de datos.  
+ La característica Correo electrónico de base de datos no se habilita o ni se instala con la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilice el Asistente para configuración de Correo electrónico de base de datos con el fin de habilitar e instalar los objetos de Correo electrónico de base de datos.  
   
  Este procedimiento almacenado se encuentra en la **msdb** base de datos. Este procedimiento almacenado inicia la cola de Correo electrónico de base de datos que contiene las solicitudes de mensajes salientes y habilita la activación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para el programa externo.  
   

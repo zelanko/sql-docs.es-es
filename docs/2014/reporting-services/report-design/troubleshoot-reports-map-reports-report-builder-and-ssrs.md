@@ -1,5 +1,5 @@
 ---
-title: 'Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS) | Microsoft Docs'
+title: 'Solucionar problemas de informes: Asignar informes (generador de informes y SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c4ac3f5504aef33661afd7c94cec2b63b0b64f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197417"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375347"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de informes: informes de mapa (Generador de informes y SSRS)
   Podrían producirse problemas con los mapas de un informe al agregar un mapa o una capa de mapa a un informe, personalizar un mapa o una capa de mapa existentes en un informe, obtener una vista previa de un mapa en un informe o publicar un informe con un mapa. Utilice este tema como ayuda para solucionar estos problemas.  
   
 > [!NOTE]  
@@ -173,7 +173,7 @@ ms.locfileid: "48197417"
 -   Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>¿Cuál es el valor NaN en la escala de colores?  
- `NaN` significa que no es un número. Se espera que los valores de las escalas de colores sean numéricos. Compruebe en la configuración de la distribución y el valor de texto de la leyenda las reglas asociadas a la escala de colores. Si creó los intervalos de distribución personalizados, compruebe que especificó el límite inferior en el primer intervalo y el límite superior en el último.  
+ `NaN` significa Not a number (no es un número). Se espera que los valores de las escalas de colores sean numéricos. Compruebe en la configuración de la distribución y el valor de texto de la leyenda las reglas asociadas a la escala de colores. Si creó los intervalos de distribución personalizados, compruebe que especificó el límite inferior en el primer intervalo y el límite superior en el último.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Mi escala de colores no aparece cuando ejecuto el informe.  
  La escala de colores muestra información al usuario cuando una capa de mapa especifica reglas de colores para los polígonos, líneas o puntos de toda la capa o de los elementos de mapa incrustado. Si ningún elemento de mapa especifica una regla de colores o si las reglas de colores se especifican con una leyenda en lugar del mapa de colores, el mapa de colores no aparece en el informe representado.  
@@ -194,7 +194,7 @@ ms.locfileid: "48197417"
   
 -   La proyección del mapa debe ser **Mercator**.  
   
--   Para la vista previa local, debe tener acceso a Internet. Si el informe se ejecuta desde el servidor de informes, este debe configurarse para ser compatible con el fondo de mosaico. Para obtener más información, vea la sección sobre cómo planear la compatibilidad con los mapas, en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
+-   Para la vista previa local, debe tener acceso a Internet. Si el informe se ejecuta desde el servidor de informes, este debe configurarse para ser compatible con el fondo de mosaico. Para obtener más información, vea la sección sobre cómo planear la compatibilidad con los mapas, en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
   
  Para más información sobre cómo agregar una capa de mosaico, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

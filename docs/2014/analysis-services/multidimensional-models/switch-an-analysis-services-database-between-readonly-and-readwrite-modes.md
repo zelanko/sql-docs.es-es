@@ -15,12 +15,12 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147880"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362617"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services
   Con frecuencia se producen situaciones en las que un administrador de bases de datos (dba) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere cambiar el modo de lectura/escritura de una base de datos tabular o multidimensional. Estas situaciones suelen responder a necesidades empresariales, como compartir la base de datos entre un grupo de servidores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar una mejor experiencia para el usuario.  
@@ -44,7 +44,7 @@ ms.locfileid: "50147880"
     > [!IMPORTANT]  
     >  En cuanto se separa la base de datos, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ya no puede ayudarle a obtener su ubicación.  
   
-3.  Haga clic con el botón derecho en la base de datos y seleccione **Separar…**  
+3.  Haga clic en la base de datos y seleccione **separar...**  
   
 4.  Asigne una contraseña a la base de datos que se va separar y, a continuación, haga clic en **Aceptar** para ejecutar el comando Detach.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50147880"
   
 6.  Haga clic en el **bases de datos** carpeta y seleccione **adjuntar...**  
   
-7.  En el cuadro de texto **Carpeta** , escriba la ubicación original de la carpeta de la base de datos. También puede usar el botón Examinar (**…**) para buscar la carpeta de la base de datos.  
+7.  En el cuadro de texto **Carpeta** , escriba la ubicación original de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar (**...** ) para buscar la carpeta de base de datos.  
   
 8.  Seleccione el modo de lectura/escritura para la base de datos.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50147880"
   
 4.  Copie la plantilla de script siguiente para XMLA:  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -155,11 +155,11 @@ ms.locfileid: "50147880"
   
 3.  Copie la plantilla de script siguiente para XMLA en una nueva pestaña XMLA  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, classifier function create
@@ -16,12 +15,12 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 16eb3ef5b20a2aa3d8ffc869d386e541b081752f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799683"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Crear y probar una función clasificadora definida por el usuario
   En este tema se muestra cómo crear y probar una función clasificadora definida por el usuario (UDF). Los pasos implican ejecutar instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -116,7 +115,7 @@ ms.locfileid: "48112825"
     go  
     ```  
   
-4.  Cree la función clasificadora que utiliza las funciones de hora y los valores que se pueden evaluar con las horas en la tabla de búsqueda. Para obtener información sobre cómo utilizar tablas de búsqueda en una función clasificadora, vea "Prácticas recomendadas para utilizar tablas de búsqueda en una función clasificadora" en este tema.  
+4.  Cree la función clasificadora que utiliza las funciones de hora y los valores que se pueden evaluar con las horas en la tabla de búsqueda. Para obtener información sobre cómo usar tablas de búsqueda en una función clasificadora, vea "Procedimientos recomendados para usar tablas de búsqueda en una función clasificadora" en este tema.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] incluía un conjunto expandido de funciones y tipos de datos de fecha y hora. Para obtener más información, vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  

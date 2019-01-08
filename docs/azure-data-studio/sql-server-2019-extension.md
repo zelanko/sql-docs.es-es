@@ -1,7 +1,8 @@
 ---
-title: Extensión de datos Studio SQL Server 2019 Azure (versión preliminar) | Microsoft Docs
+title: Extensión de SQL Server 2019 (versión preliminar)
+titleSuffix: Azure Data Studio
 description: Extensión de la versión preliminar de SQL Server de 2019 para Azure Data Studio
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -11,16 +12,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 6ce44d22675be344aaa1f08632e39bfdf9c190b3
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269818"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432818"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
 
-La extensión de SQL Server 2019 (versión preliminar) proporciona compatibilidad de versión preliminar para las nuevas características y herramientas de apoyo de envío [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]. Esto incluye compatibilidad con la versión preliminar [clústeres de SQL Server 2019 macrodatos](../big-data-cluster/big-data-cluster-overview.md), un enfoque integrado [experiencia de cuaderno](../big-data-cluster/notebooks-guidance.md), un PolyBase [asistente Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)y [Azure Resource Explorer](azure-resource-explorer.md).
+La extensión de SQL Server 2019 (versión preliminar) proporciona compatibilidad de versión preliminar para las nuevas características y herramientas de apoyo de envío [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esto incluye compatibilidad con la versión preliminar [clústeres de SQL Server 2019 macrodatos](../big-data-cluster/big-data-cluster-overview.md), un enfoque integrado [experiencia de cuaderno](../big-data-cluster/notebooks-guidance.md), un PolyBase [asistente Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)y [Azure Resource Explorer](azure-resource-explorer.md).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Instalar la extensión de SQL Server 2019 (versión preliminar)
 
@@ -41,6 +42,8 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 1. Seleccione **recarga** para habilitar la extensión (solo es necesario instalar una extensión por primera vez).
 
 1. Después de volver a cargar, la extensión instalará las dependencias. Puede ver el progreso en la ventana de salida, y puede tardar varios minutos.
+
+1. Las dependencias después de finalizar la instalación, cierre y vuelva a abrir Azure Data Studio. El **clúster de SQL Server macrodatos** tipo de conexión no está disponible hasta que reinicie Azure Data Studio.
 
 ## <a name="release-notes-v080"></a>Notas de la versión (v0.8.0)
 *Blocs de notas*:

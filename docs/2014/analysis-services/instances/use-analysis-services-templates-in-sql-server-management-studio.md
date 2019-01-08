@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: b2f65e31a6a1c42d4d2bfd79f6daf0139edcd49f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146755"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358427"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar las plantillas de Analysis Services en SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona un conjunto de plantillas para ayudarle a crear scripts XMLA, DMX o consultas MDX; para crear KPI en un cubo o un modelo tabular; incluir en scripts las operaciones de copia de seguridad y restauración; y otras muchas tareas. Las plantillas se encuentran en el **Explorador de plantillas** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "50146755"
      Cambie a la pestaña **Mensajes** para ver el número de registros devueltos, los errores, las instrucciones de consulta y cualquier otro mensaje que esté asociado a la ejecución de la consulta. Por ejemplo, si ejecuta una instrucción DAX con un modelo que se ejecuta en modo de consulta directa, puede ver la instrucción de Transact-SQL que el motor analítico en memoria xVelocity (VertiPaq) genera.  
   
 ##  <a name="BKMK_Building_Queries"></a> Compilar y ejecutar una consulta MDX en un modelo tabular usando una plantilla  
- Este ejemplo muestra cómo crear una consulta MDX en SQL Server Management Studio, con una base de datos de modelo tabular como origen de datos. Para repetir este ejemplo en el equipo, puede [descargar el proyecto de ejemplo de modelo tabular de Adventureworks](http://go.microsoft.com/fwlink/?LinkId=231183).  
+ Este ejemplo muestra cómo crear una consulta MDX en SQL Server Management Studio, con una base de datos de modelo tabular como origen de datos. Para repetir este ejemplo en el equipo, puede [descargar el proyecto de ejemplo de modelo tabular de Adventureworks](https://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
 >  No puede utilizar consultas MDX en modelos tabulares que se hayan implementado en el modo de consulta directa. Sin embargo, puede enviar consultas equivalentes usando consultas de la tabla DAX con el comando EVALUATE. Para obtener más información, consulte [parámetros para las consultas DAX](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx).  
@@ -214,7 +214,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Process Partition|Muestra cómo usar el comando XMLA `Batch`, combinado con el elemento `Parallel` y el comando `Process`, para procesar completamente una partición utilizando una operación por lotes paralela.|  
 ||Restaurar|Muestra cómo usar el comando XMLA `Restore` para restaurar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desde un archivo de copia de seguridad existente.|  
 ||Sincronizar|Muestra cómo usar el comando XMLA `Synchronize` para sincronizar otra base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con la base de datos actual de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], utilizando la opción SkipMembership en la etiqueta SynchronizeSecurity.|  
-|XMLA\Conjuntos de filas de esquema|Discover Schema Rowsets|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_SCHEMA_ROWSETS.|  
+|XMLA\Conjuntos de filas de esquema|Detectar conjuntos de filas de esquema|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_SCHEMA_ROWSETS.|  
 |XMLA\Estado del servidor|Conexiones|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_CONNECTIONS.|  
 ||trabajos|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_JOBS.|  
 ||Ubicaciones|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_LOCATIONS, especificando la ruta de los archivos de copia de seguridad de la ubicación.|  
@@ -223,7 +223,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Performance Counters|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_PERFORMANCE_COUNTERS.|  
 ||Sesiones|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_SESSIONS.|  
 ||Traces|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_TRACES.|  
-||Transacciones|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_TRANSACTIONS.|  
+||Transactions|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_TRANSACTIONS.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de expresiones multidimensionales &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   

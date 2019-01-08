@@ -11,17 +11,17 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: eac4792762f96ce689d7b334a3b9584032f494de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 119fa4121e6f18d9592b60b6fcb8504a1228d848
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353919"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Instalar la versión independiente del Generador de informes (Generador de informes)
-  Puede instalar el generador de informes desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack de en el [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) o una ubicación como la carpeta pública a la que tiene el ReportBuilder3_x86.msi, el paquete de Windows Installer para el generador de informes se ha descargado.  
+  Puede instalar el generador de informes desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack de en el [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) o una ubicación como la carpeta pública a la que tiene el ReportBuilder3_x86.msi, el paquete de Windows Installer para el generador de informes se ha descargado.  
   
- También puede realizar una instalación de línea de comandos del Generador de informes y especificar argumentos para personalizar la instalación. Además de los parámetros estándar intrínsecos de MSI, puede usar los parámetros personalizados que proporciona el Generador de informes: RBINSTALLDIR y REPORTSERVERURL. RBINSTALLDIR especifica la carpeta de instalación raíz para el Generador de informes. REPORTSERVERURL especifica el servidor de informes predeterminado que usa el Generador de informes para guardar los informes en el servidor.  
+ También puede realizar una instalación de línea de comandos del Generador de informes y especificar argumentos para personalizar la instalación. Además de los parámetros estándar intrínsecos de MSI, puede usar los parámetros personalizados que proporciona el generador de informes: RBINSTALLDIR y REPORTSERVERURL. RBINSTALLDIR especifica la carpeta de instalación raíz para el Generador de informes. REPORTSERVERURL especifica el servidor de informes predeterminado que usa el Generador de informes para guardar los informes en el servidor.  
   
  Si quiere realizar una instalación completamente silenciosa, sin ninguna interacción con la interfaz de usuario, especifique la opción **/quiet** . Por diseño, la marca de la opción quiet suprime los errores de instalación. Por lo tanto, es recomendable que, cuando use la opción quiet, incluya la opción **/l** que especifica el registro.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48148865"
   
 ### <a name="to-install-report-builder-from-the-download-site"></a>Instalar Generador de informes desde el sitio de descarga  
   
-1.  Vaya a [generador de informes de Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=219138) y busque la sección Generador de informes de la página Web.  
+1.  Vaya a [generador de informes de Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=219138) y busque la sección Generador de informes de la página Web.  
   
 2.  Haga clic en **X86 paquete**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48148865"
   
 ### <a name="to-install-report-builder-from-the-command-line"></a>Instalar el Generador de informes desde la línea de comandos  
   
-1.  Vaya a [generador de informes de Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=219138) y busque la sección Generador de informes.  
+1.  Vaya a [generador de informes de Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=219138) y busque la sección Generador de informes.  
   
 2.  Haga clic en **X86 paquete**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48148865"
   
      `msiexec/i ReportBuilder3_.msi /option [value] [/option [value]]`  
   
-     Las dos opciones específicas para la instalación del Generador de informes son: RBINSTALLDIR y REPORTSERVERURL. No se requiere que incluya estos argumentos en la línea de comandos. El siguiente es el comando de línea base:  
+     Las dos opciones específicas a instalar el generador de informes son: RBINSTALLDIR y REPORTSERVERURL. No se requiere que incluya estos argumentos en la línea de comandos. El siguiente es el comando de línea base:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

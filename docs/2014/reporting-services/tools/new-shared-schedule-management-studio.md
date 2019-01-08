@@ -13,12 +13,12 @@ ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 48119fdcfe2957926910faae03af27c66e719b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d94043e338ddcaeffbfc87a1cfad74e6fd854be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132215"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355550"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Nuevo Programación compartida (Management Studio)
   Use esta página para crear una programación compartida para ejecutar suscripciones e informes publicados. Las programaciones compartidas se pueden utilizar en lugar de las programaciones específicas del informe o de la suscripción. La información de programación centralizada y la capacidad de pausar y reanudar las operaciones programadas son dos características clave que distinguen las programaciones compartidas de las programaciones específicas de elemento.  
@@ -30,10 +30,10 @@ ms.locfileid: "48132215"
  Para abrir esta página, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a un servidor de informes, haga clic con el botón derecho en **Programación compartida**y seleccione **Nueva programación**. Para guardar la programación, se debe estar ejecutando el servicio del Agente SQL Server.  
   
 > [!NOTE]  
->  Esta característica no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Esta característica no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Permite escribir el nombre de la programación compartida. Este nombre aparece en listas desplegables cuando los usuarios seleccionan una programación compartida para informes y suscripciones. Asegúrese de proporcionar un nombre descriptivo que se ajuste con facilidad dentro de una lista y que distinga con facilidad una programación compartida de otra. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No utilice los caracteres siguientes al especificar un nombre:  
   
  ; ? : \@ & = +, $ / * \< >  

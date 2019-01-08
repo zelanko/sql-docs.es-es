@@ -10,18 +10,18 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6f109dcab6d7cf6280e15cdfb1bb2f5ad3b2f041
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d8afb24373cf62d4b9f8696d9c2d9370ad665796
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018150"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352301"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Una `CompoundCurve` es una recopilación de cero o más instancias de `CircularString` o `LineString` de tipos de geometría o de geografía.  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales en esta versión, incluido el `CompoundCurve` subtipo, descargue las notas del producto, [nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales en esta versión, incluido el `CompoundCurve` subtipo, descargue las notas del producto, [nuevas características espaciales de SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Se puede crear una instancia vacía de `CompoundCurve`, pero para que una `CompoundCurve` sea válida debe cumplir los siguientes criterios:  
   
@@ -102,7 +102,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>B. Declarar y crear una instancia de geometry usando una CompoundCurve en la misma instrucción  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>b. Declarar y crear una instancia de geometry usando una CompoundCurve en la misma instrucción  
  En el siguiente ejemplo, se muestra cómo declarar e inicializar una instancia de `geometry` con una `CompoundCurve`en la misma instrucción:  
   
 ```tsql  
@@ -137,7 +137,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- Produce el siguiente resultado: 12.566370… que es el equivalente de 4∏. La instancia de `CompoundCurve` del ejemplo almacena un círculo de radio 2. Ambos ejemplos de código anteriores no tuvieron que utilizar una `CompoundCurve`. Para el primer ejemplo, habría sido más fácil utilizar una instancia de `LineString` , mientras que para el segundo ejemplo habría sido más fácil una instancia de `CircularString` . Sin embargo, el ejemplo siguiente muestra un caso donde `CompoundCurve` proporciona una mejor alternativa.  
+ Produce el siguiente resultado: 12,566370 …, que equivale a 4???. La instancia de `CompoundCurve` del ejemplo almacena un círculo de radio 2. Ambos ejemplos de código anteriores no tuvieron que utilizar una `CompoundCurve`. Para el primer ejemplo, habría sido más fácil utilizar una instancia de `LineString` , mientras que para el segundo ejemplo habría sido más fácil una instancia de `CircularString` . Sin embargo, el ejemplo siguiente muestra un caso donde `CompoundCurve` proporciona una mejor alternativa.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Usar una CompoundCurve para almacenar un semicírculo  
  En el siguiente ejemplo, se utiliza una instancia de `CompoundCurve` para almacenar un semicírculo.  
@@ -179,11 +179,11 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  El resultado es el siguiente:  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
- El perímetro para el círculo dos es aproximadamente 4∏, que es el valor real del perímetro. Sin embargo, el perímetro para el círculo uno es significativamente inexacto. La instancia `CompoundCurve` del círculo uno almacena un segmento de arco circular (ABC) y dos segmentos de línea (CD, DA). La instancia `CompoundCurve` tiene que almacenar dos segmentos de arco circular (ABC, CDA) para definir un círculo. Una instancia `LineString` define el segundo conjunto de puntos (4 2, 2 4, 0 2) en la instancia `CompoundCurve` del círculo uno. Es necesario declarar explícitamente una instancia `CircularString` dentro de una `CompoundCurve`.  
+ El perímetro para el círculo dos es aproximadamente 4???, que es el valor real para el perímetro. Sin embargo, el perímetro para el círculo uno es significativamente inexacto. La instancia `CompoundCurve` del círculo uno almacena un segmento de arco circular (ABC) y dos segmentos de línea (CD, DA). La instancia `CompoundCurve` tiene que almacenar dos segmentos de arco circular (ABC, CDA) para definir un círculo. Una instancia `LineString` define el segundo conjunto de puntos (4 2, 2 4, 0 2) en la instancia `CompoundCurve` del círculo uno. Es necesario declarar explícitamente una instancia `CircularString` dentro de una `CompoundCurve`.  
   
 ## <a name="see-also"></a>Vea también  
  [STIsValid &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ee44b0524dffb85892f016581f9c6a7f480a5e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cffe029abd6774262e7aad12ad7aade07717bc80
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075835"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359287"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE en paquetes de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la instrucción SQL de una tarea Ejecutar SQL puede contener una instrucción MERGE. Esta instrucción MERGE permite llevar a cabo varias operaciones INSERT, UPDATE y DELETE en una única instrucción.  
@@ -36,7 +35,7 @@ ms.locfileid: "48075835"
   
  El resto de este tema explica algunos usos adicionales de la instrucción MERGE.  
   
- Para obtener un componente de destino de ejemplo que admite el uso de la instrucción MERGE, vea el ejemplo de la comunidad de CodePlex, [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215).  
+ Para obtener un componente de destino de ejemplo que admite el uso de la instrucción MERGE, vea el ejemplo de la comunidad de CodePlex, [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215).  
   
 ## <a name="using-merge"></a>Usar MERGE  
  Normalmente, la instrucción MERGE se usa cuando se desea aplicar ciertos cambios, como inserciones, actualizaciones y eliminaciones, de una tabla a otra. En las versiones anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], este proceso requería una transformación Búsqueda y varias transformaciones Comando de OLE DB. La transformación Búsqueda realizaba una búsqueda fila por fila para determinar si la fila era nueva o se había modificado. A continuación, las transformaciones Comando de OLE DB llevaban a cabo las operaciones INSERT, UPDATE y DELETE necesarias. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], una única instrucción MERGE puede reemplazar la transformación Búsqueda y las transformaciones Comando de OLE DB correspondientes.  
@@ -53,12 +52,12 @@ ms.locfileid: "48075835"
  La tabla FactBuyingHabits del almacenamiento de datos realiza un seguimiento de la última fecha en la que un cliente adquirió un determinado producto. Dicha tabla consta de las columnas ProductID, CustomerID y PurchaseDate. Todas las semanas, la base de datos transaccional genera una tabla PurchaseRecords que incluye las compras realizadas durante la semana. El objetivo es usar una única instrucción MERGE para combinar la información de la tabla PurchaseRecords con la de la tabla FactBuyingHabits. Para los pares de producto-cliente que no existen, la instrucción MERGE inserta nuevas filas. Para los pares de producto-cliente existentes, la instrucción MERGE actualiza la fecha de compra más reciente.  
   
 ###### <a name="track-price-history"></a>Realizar un seguimiento del historial de precios  
- La tabla DimBook representa la lista de libros en el inventario de un vendedor de libros e identifica el historial de precios de cada libro. Esta tabla tiene las siguientes columnas: ISBN, ProductID, Price, Shelf e IsCurrent. También incluye una fila para cada precio que ha tenido el libro. Una de estas filas contiene el precio actual. Para indicar la fila que contiene el precio actual, el valor de la columna IsCurrent para dicha fila se establece en 1.  
+ La tabla DimBook representa la lista de libros en el inventario de un vendedor de libros e identifica el historial de precios de cada libro. Esta tabla tiene las siguientes columnas: ISBN, ProductID, Price, estante y IsCurrent. También incluye una fila para cada precio que ha tenido el libro. Una de estas filas contiene el precio actual. Para indicar la fila que contiene el precio actual, el valor de la columna IsCurrent para dicha fila se establece en 1.  
   
  Todas las semanas, la base de datos genera una tabla denominada WeeklyChanges que contiene los cambios de precio para la semana y los libros que se han agregado durante la misma. Una única instrucción MERGE permitirá aplicar los cambios de la tabla WeeklyChanges a la tabla DimBook. Esta instrucción MERGE inserta nuevas filas para las nuevas adquisiciones de libros, y actualiza la columna IsCurrent a 0 en las filas de libros existentes cuyos precios han cambiado. Dicha instrucción también inserta nuevas filas para los libros cuyos precios han cambiado, y establece el valor de la columna IsCurrent en 1 para estas filas.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>Combinar una tabla que tiene nuevos datos con la tabla antigua  
- La base de datos modela las propiedades de un objeto mediante un “esquema abierto”, es decir, una tabla que contiene pares de nombre-valor para cada propiedad. La tabla Properties tiene tres columnas: EntityID, PropertyID y Value. La tabla NewProperties, que es una versión más reciente de dicha tabla, se debe sincronizar con la tabla Properties. Para sincronizar ambas tablas, puede utilizar una única instrucción MERGE que realice las operaciones siguientes:  
+ La base de datos modela las propiedades de un objeto mediante un “esquema abierto” (es decir, una tabla que contiene pares de nombre-valor para cada propiedad). La tabla Properties tiene tres columnas: EntityID, PropertyID y Value. La tabla NewProperties, que es una versión más reciente de dicha tabla, se debe sincronizar con la tabla Properties. Para sincronizar ambas tablas, puede utilizar una única instrucción MERGE que realice las operaciones siguientes:  
   
 -   Eliminar las propiedades de la tabla Properties que no aparezcan en la tabla NewProperties.  
   

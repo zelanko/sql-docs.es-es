@@ -20,12 +20,12 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62fb2107b74518afbf55b64057aec63c4e2eec36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38a5c58f7376fa44438dff5d6ef9e94f0c2809c0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206225"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519304"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio)
   En este tema se describe cómo realizar una conmutación por error manual planeada o conmutación por error manual forzada (conmutación por error forzada) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Si se realiza una conmutación por error a una réplica secundaria en el estado SYNCHRONIZED, el asistente realiza una conmutación por error manual planeada (sin pérdida de datos). Si se realiza una conmutación por error a una réplica secundaria en el estado UNSYNCHRONIZED o NOT SYNCHRONIZING, el asistente realiza una conmutación por error manual forzada, también denominada *conmutación por error forzada* (con posible pérdida de datos). En ambas formas de conmutación por error manual tiene lugar la transición a la réplica secundaria a la que se está conectado al rol principal. Una conmutación por error manual planeada actualmente realiza transacciones de la réplica principal anterior al rol secundario. Después de una conmutación por error forzada, cuando la réplica principal pasa a estar en línea, realiza la transición al rol secundario.  
@@ -47,10 +47,10 @@ ms.locfileid: "48206225"
   
      [Página de resultados &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Antes de la primera conmutación por error manual planeada, consulte la sección "Antes de comenzar" de [Realizar una conmutación por error manual planeada de un grupo de disponibilidad &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
- Antes de realizar la primera conmutación por error forzada, consulte las secciones "Antes de empezar" y "Seguimiento: tareas esenciales después de una conmutación por error forzada" de [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+ Antes de la primera conmutación por error forzada, consulte el "antes de empezar" y "seguimiento: Tareas esenciales después de la conmutación por error forzada"secciones [realizar un Manual de conmutación por error forzada de un grupo de disponibilidad &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48206225"
   
 4.  La información que muestra la página **Introducción** depende de si la réplica secundaria es válida para una conmutación por error planeada. Si en esta página pone "**Realice una conmutación por error planeada para este grupo de disponibilidad**", puede realizar la conmutación por error en el grupo de disponibilidad sin perder datos.  
   
-5.  En la página **Seleccione la nueva réplica principal** , puede ver el estado de la réplica principal actual y del cuórum de WSFC antes de elegir la réplica secundaria que se convertirá en la nueva réplica principal (el *destino de conmutación por error*). Para una conmutación por error manual planeada, asegúrese de seleccionar una réplica secundaria cuyo valor de **Preparación para la conmutación por error** sea "**No se produce pérdida de datos**". En el caso de una conmutación por error forzada, para todos los destinos posibles de conmutación por error este valor será “**Pérdida de datos, Advertencias(***#***)**”, donde *#* indica el número de advertencias que existe para una réplica secundaria concreta. Para ver las advertencias para un destino de la conmutación por error determinada, haga clic en su valor “Preparación para la conmutación por error”.  
+5.  En la página **Seleccione la nueva réplica principal** , puede ver el estado de la réplica principal actual y del cuórum de WSFC antes de elegir la réplica secundaria que se convertirá en la nueva réplica principal (el *destino de conmutación por error*). Para una conmutación por error manual planeada, asegúrese de seleccionar una réplica secundaria cuyo valor de **Preparación para la conmutación por error** sea "**No se produce pérdida de datos**". En el caso de una conmutación por error forzada, para todos los destinos posibles de conmutación por error este valor será "**Pérdida de datos, Advertencias(***#***)**", donde *#* indica el número de advertencias que existe para una réplica secundaria concreta. Para ver las advertencias para un destino de conmutación por error determinado, haga clic en su valor "Preparación para la conmutación por error".  
   
      Para obtener más información, vea la página [Seleccionar la nueva réplica principal](#SelectNewPrimaryReplica), más adelante en este tema.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48206225"
   
      Para más información, vea [Página Resultados &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md).  
   
-11. Después de una conmutación por error forzada, consulte la sección "Seguimiento: tareas esenciales después de una conmutación por error forzada" de [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+11. Después de una conmutación por error forzada, consulte el "seguimiento: Después de una conmutación por error forzada"de la sección en la [realizar un Manual de conmutación por error forzada de un grupo de disponibilidad &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>Ayuda para las páginas que son exclusivas para este asistente  
  En esta sección se describen las páginas que son únicas para [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)].  

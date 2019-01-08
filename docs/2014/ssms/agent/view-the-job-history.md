@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -16,12 +16,12 @@ ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83c5cee010b95d18988b7139fc43b9e1214bd51e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec79de6769f8059819ebe4e6eacaa3aff6d2dbec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128735"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364287"
 ---
 # <a name="view-the-job-history"></a>View the Job History
   En este tema se describe cómo ver el registro de historial de trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server.  
@@ -38,10 +38,10 @@ ms.locfileid: "48128735"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
- Para obtener información detallada, vea [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Usar SQL Server Management Studio  
   
@@ -82,6 +82,6 @@ ms.locfileid: "48128735"
 ##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
  **Para ver el registro de historial de trabajos**  
   
- Llame al método `EnumHistory` de la clase `Job` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Llame al método `EnumHistory` de la clase `Job` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

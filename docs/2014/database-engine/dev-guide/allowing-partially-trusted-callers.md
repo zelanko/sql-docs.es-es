@@ -17,12 +17,12 @@ ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e79e83263ab498a86a82fcdc65d56f6f8910d497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f16cadbb06d1d25000aefada172a783a5a19c79c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222971"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368107"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Permitir llamadores de confianza parcial
   Compartir bibliotecas de código es un escenario común con la integración con Common Language Runtime (CLR), donde a menudo un ensamblado o una aplicación obtienen acceso a un ensamblado que contiene un tipo definido por el usuario, un procedimiento almacenado, una función definida por el usuario, un agregado definido por el usuario, un desencadenador o una clase de utilidad. Las bibliotecas de código que se van a compartir entre varias aplicaciones se deben firmar con un nombre seguro.  
@@ -62,7 +62,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  En este ejemplo también se muestra el uso del atributo "Allow partially trusted callers" para indicar que el ensamblado Conjunto de resultados es una biblioteca a la que se puede llamar de forma segura desde otros ensamblados. Este enfoque es algo más complejo pero mucho más seguro que registrar el ensamblado de llamada utilizando el permiso UNSAFE. Es más seguro porque al registrar el ensamblado de llamada como seguro se limitan los recursos afectados fuera del servidor y se evitan daños en la integridad del mismo.  
   
- Las instrucciones de compilación de este ejemplo suponen que los archivos de código fuente están en un directorio denominado c:\samples.  Si utiliza otro directorio, tendrá que modificar los scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. El [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts también requiere la base de datos AdventureWorks. Puede descargar la base de datos de ejemplo AdventureWorks desde el [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) página principal.  
+ Las instrucciones de compilación de este ejemplo suponen que los archivos de código fuente están en un directorio denominado c:\samples.  Si utiliza otro directorio, tendrá que modificar los scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. El [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts también requiere la base de datos AdventureWorks. Puede descargar la base de datos de ejemplo AdventureWorks desde el [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) página principal.  
   
  Para compilar y ejecutar el ejemplo, pegue la primera lista de código en un archivo denominado ResultSet.cs y compile con csc /target:library ResultSet.cs.  
   
@@ -74,7 +74,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  Pegue la quinta lista de código en un archivo denominado Cleanup.sql y compile con sqlcmd -E -I -i Cleanup.sql.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 // ResultSet.cs  
@@ -879,7 +879,7 @@ namespace Microsoft.Samples.SqlServer {
 }  
 ```  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 // TestResultSet.cs  
@@ -992,7 +992,7 @@ namespace Microsoft.Samples.SqlServer {
 }  
 ```  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 -- InstallCS.sql  
@@ -1046,7 +1046,7 @@ WHERE ProductID = @ProductID;
 GO  
 ```  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 -- test.sql  
@@ -1076,7 +1076,7 @@ GO
   
 ```  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 -- Cleanup.sql  

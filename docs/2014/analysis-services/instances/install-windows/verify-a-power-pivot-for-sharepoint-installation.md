@@ -11,12 +11,12 @@ ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0830a6be96cbfdf85d53976b0a7c3ac2ec86b80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214785"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355082"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Comprobar una instalación de PowerPivot para SharePoint
   Una instancia de PowerPivot para SharePoint que instale en una granja de servidores de SharePoint se administra a través de Administración central de SharePoint. Como mínimo, puede comprobar las páginas de Administración central y de sitios de SharePoint para comprobar que están disponibles los componentes de servidor y las características de PowerPivot. Sin embargo, para comprobar una instalación por completo, debe tener un libro PowerPivot que pueda publicar en SharePoint y al que pueda tener acceso desde una biblioteca. Para realizar la prueba, puede publicar un libro de ejemplo que contenga datos PowerPivot y usarlo para confirmar que la integración de SharePoint está configurada correctamente.  
@@ -41,7 +41,7 @@ ms.locfileid: "48214785"
     5.  Haga clic en **Cerrar**y, a continuación, en **Aceptar**.  
   
         > [!NOTE]  
-        >  La documentación de la instalación de SharePoint incluye instrucciones adicionales para trabajar con los errores del servidor proxy y deshabilitar la Configuración de seguridad mejorada de Internet Explorer para poder descargar e instalar las actualizaciones. Para obtener más información, vea la sección **Realizar tareas adicionales** en [Implementar un único servidor con SQL Server](http://go.microsoft.com/fwlink/?LinkId=177754) en el sitio web de Microsoft.  
+        >  La documentación de la instalación de SharePoint incluye instrucciones adicionales para trabajar con los errores del servidor proxy y deshabilitar la Configuración de seguridad mejorada de Internet Explorer para poder descargar e instalar las actualizaciones. Para obtener más información, vea la sección **Realizar tareas adicionales** en [Implementar un único servidor con SQL Server](https://go.microsoft.com/fwlink/?LinkId=177754) en el sitio web de Microsoft.  
   
 3.  En Administración central, en Configuración del sistema, haga clic en **Administrar características de la granja**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48214785"
 ## <a name="verify-data-access-on-the-server"></a>Comprobar el acceso a datos en el servidor  
  Para comprobar el acceso a datos PowerPivot en el servidor, haga lo siguiente:  
   
-1.  [Descargue](http://go.microsoft.com/fwlink/?LinkID=219108) el ejemplo de datos Picnic que acompaña a un tutorial de Reporting Services. Utilizará el libro de ejemplo de esta descarga para comprobar el acceso a datos PowerPivot. Extraiga los archivos.  
+1.  [Descargue](https://go.microsoft.com/fwlink/?LinkID=219108) el ejemplo de datos Picnic que acompaña a un tutorial de Reporting Services. Utilizará el libro de ejemplo de esta descarga para comprobar el acceso a datos PowerPivot. Extraiga los archivos.  
   
 2.  Cargue el libro de Excel (.xlsx) en Documentos compartidos. El libro contiene los datos PowerPivot incrustados.  
   

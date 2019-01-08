@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Integration Services packages, running
@@ -16,12 +14,12 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4baf6550273218cd8d560ef9ea3950924fab544
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0cefe1fa46cda13a177f07ebcbf19c02efa8337
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138777"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370397"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Cargar y ejecutar mediante programación un paquete remoto
   Para ejecutar los paquetes remotos desde un equipo local que no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], inicie los paquetes para que se ejecuten en el equipo remoto en el que está instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para ello, haga que el equipo local use el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un servicio web o un componente remoto para iniciar los paquetes en el equipo remoto. Si intenta iniciar los paquetes remotos directamente desde el equipo local, se cargarán y se intentará ejecutar los paquetes desde el equipo local. Si el equipo local no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], no se ejecutarán los paquetes.  
@@ -46,7 +44,7 @@ ms.locfileid: "48138777"
 > [!NOTE]  
 >  El valor devuelto del procedimiento almacenado **sp_start_job** indica si el procedimiento almacenado ha podido iniciar correctamente el trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor devuelto no indica si el paquete se ha iniciado correctamente o no.  
   
- Para obtener información sobre cómo solucionar problemas de los paquetes que se ejecutan desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el artículo de Microsoft [El paquete de SSIS no se ejecuta cuando recibe una llamada de un paso de trabajo del Agente SQL Server](http://support.microsoft.com/kb/918760).  
+ Para obtener información sobre cómo solucionar problemas de los paquetes que se ejecutan desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el artículo de Microsoft [El paquete de SSIS no se ejecuta cuando recibe una llamada de un paso de trabajo del Agente SQL Server](https://support.microsoft.com/kb/918760).  
   
 ### <a name="sample-code"></a>Código muestra  
   
@@ -422,9 +420,9 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Vídeo: [Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](http://technet.microsoft.com/sqlserver/ff686764.aspx), en technet.microsoft.com  
+-   Vídeo, [Cómo: Automatizar la ejecución de paquetes SSIS mediante el Agente SQL Server (vídeo de SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), en technet.microsoft.com  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Descripción de las diferencias entre la ejecución local y remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

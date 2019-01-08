@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d4f057351f6d3c4713c616c90748c2c6e43524f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837763"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591489"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **'**_schedule_name_**'**  
  Nombre de la programación. *schedule_name* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@enabled =** ] *habilitado*  
@@ -98,7 +98,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|Horas|  
   
  [ **@freq_subday_interval =** ] *freq_subday_interval*  
- El número de *freq_subday_type* períodos que transcurren entre cada ejecución de un trabajo. *freq_subday_interval* es **int**, su valor predeterminado es **0**. Nota: el intervalo debe ser mayor que 10 segundos. *freq_subday_interval* se omite en los casos donde *freq_subday_type* es igual a **1**.  
+ El número de *freq_subday_type* períodos que transcurren entre cada ejecución de un trabajo. *freq_subday_interval* es **int**, su valor predeterminado es **0**. Nota: Intervalo debe ser mayor que 10 segundos. *freq_subday_interval* se omite en los casos donde *freq_subday_type* es igual a **1**.  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
  Aparición de un trabajo de *freq_interval* en cada mes, si *freq_interval* es 32 (relativo mensual). *freq_relative_interval* es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores. *freq_relative_interval* se omite en los casos donde *freq_type* no es igual a 32.  
@@ -130,13 +130,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [  **@active_end_time =** ] *active_end_time*  
  La hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de un trabajo. *active_end_time* es **int**, su valor predeterminado es **235959**, lo que indica 11:59:59 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [ **@owner_login_name**=] **'***owner_login_name***'**  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**  
  Nombre de la entidad de seguridad del servidor a la que pertenece la programación. *owner_login_name* es **sysname**, su valor predeterminado es NULL, lo que indica que la programación pertenece al creador.  
   
- [ **@schedule_uid**=] *valor schedule_uid *** salida**  
+ [ **@schedule_uid**=] _valor schedule_uid_**salida**  
  Es un identificador único para la programación. *valor schedule_uid* es una variable de tipo **uniqueidentifier**.  
   
- [ **@schedule_id**=] *schedule_id *** salida**  
+ [ **@schedule_id**=] _schedule_id_**salida**  
  Identificador de la programación. *schedule_id* es una variable de tipo **int**.  
   
  [ **@originating_server**=] *nombreDeServidor*  
@@ -179,7 +179,7 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. Crear una programación y adjuntarla a varios trabajos  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>b. Crear una programación y adjuntarla a varios trabajos  
  En el siguiente ejemplo se crea una programación llamada `NightlyJobs`. Los trabajos que usan esta programación se ejecutan a diario cuando la hora del servidor es `01:00`. En el ejemplo se asocia la programación a los trabajos `BackupDatabase` y `RunReports`.  
   
 > [!NOTE]  

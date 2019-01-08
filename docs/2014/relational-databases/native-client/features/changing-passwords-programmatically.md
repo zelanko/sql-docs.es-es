@@ -21,33 +21,33 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b31b8a2a1a50b1ee3c9cad37f8f5db5374c6cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229925"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370497"
 ---
 # <a name="changing-passwords-programmatically"></a>Cambiar las contraseñas mediante programación
   En versiones anteriores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], cuando expiraba una contraseña de usuario, solo el administrador podía restablecerla. A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client permite administrar la caducidad de contraseña mediante programación a través de ambos el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client y el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client y a través de los cambios realizados en el **El inicio de sesión de SQL Server** cuadros de diálogo.  
   
 > [!NOTE]  
->  Cuando sea posible, solicite a los usuarios que escriban las credenciales en tiempo de ejecución y eviten almacenarlas en un formato guardado. Si tiene que conservar las credenciales, debe cifrarlas con la [API de cifrado de Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Para obtener más información sobre el uso de contraseñas seguras, vea [Contraseñas seguras](../../security/strong-passwords.md).  
+>  Cuando sea posible, solicite a los usuarios que escriban las credenciales en tiempo de ejecución y eviten almacenarlas en un formato guardado. Si tiene que conservar las credenciales, debe cifrarlas con la [API de cifrado de Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Para obtener más información sobre el uso de contraseñas seguras, vea [Contraseñas seguras](../../security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Códigos de error de inicio de sesión de SQL Server  
  Cuando no se puede realizar una conexión debido a problemas de autenticación, uno de los códigos de error de SQL Server siguientes estará disponible para la aplicación para ayudar en el diagnóstico y recuperación.  
   
 |Código de error de SQL Server|Mensaje de error|  
 |---------------------------|-------------------|  
-|15113|Error de inicio de sesión del usuario '%. * ls'. Motivo: error de validación de contraseña. Se ha bloqueado la cuenta.|  
-|18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no se puede utilizar en este momento.|  
-|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
-|18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
-|18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
-|18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
-|18468|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. Error inesperado durante la validación de la contraseña.|  
-|18487|Error de inicio de sesión del usuario '%.*ls'. Motivo: la contraseña de la cuenta expiró.|  
-|18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: se debe cambiar la contraseña de la cuenta. |  
+|15113|Error de inicio de sesión para el usuario ' %. *. motivo ls': Error de validación de contraseña. Se ha bloqueado la cuenta.|  
+|18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no se puede utilizar en este momento.|  
+|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
+|18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
+|18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
+|18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
+|18468|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. Error inesperado durante la validación de la contraseña.|  
+|18487|Error de inicio de sesión del usuario '%.*ls'. Motivo: La contraseña de la cuenta ha expirado.|  
+|18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: Debe cambiarse la contraseña de la cuenta.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite la expiración de contraseña aunque una interfaz de usuario y mediante programación.  

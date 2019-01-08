@@ -20,12 +20,12 @@ ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0adf93355baebd7be881d46c62f649c61245af4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d554a7269b8f10f8d2d44a48bc401e866f3dce8
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680343"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785776"
 ---
 # <a name="sysdmxemapvalues-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "47680343"
  
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|El nombre de la asignación. nombre es único en el sistema local. No admite valores NULL.|  
+|NAME|**nvarchar(256)**|El nombre de la asignación. nombre es único en el sistema local. No admite valores NULL.|  
 |object_package_guid|**uniqueidentifier**|GUID del paquete que contiene la asignación. No admite valores NULL.|  
 |map_key|**int**|El valor de clave interno. No admite valores NULL.|  
-|map_value|**nvarchar(2048)**|Descripción del valor de clave. No admite valores NULL.|  
+|map_value|**nvarchar (3072)**|Descripción del valor de clave. No admite valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
@@ -46,7 +46,7 @@ ms.locfileid: "47680343"
   
 |De|En|Relación|  
 |----------|--------|------------------|  
-|dm_xe_map_values.object_package_guid<br /><br /> dm_xe_map_values.name|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Varios a uno|  
+|dm_xe_map_values.object_package_guid<br /><br /> dm_xe_map_values.name|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Varios a uno| 
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

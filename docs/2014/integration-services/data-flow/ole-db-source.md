@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -16,12 +15,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b428117cd445cf4cc8f06e588d344924394dcf02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120582"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357605"
 ---
 # <a name="ole-db-source"></a>Origen de OLE DB
   El origen de OLE DB extrae datos de varias bases de datos relacionales compatibles con OLE DB mediante una tabla de base de datos, una vista o un comando SQL. Por ejemplo, el origen de OLE DB puede extraer datos de tablas de bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -84,7 +83,7 @@ ms.locfileid: "48120582"
  Los parámetros se asignan a variables que proporcionan los valores de parámetros en tiempo de ejecución. Las variables son generalmente variables definidas por el usuario, aunque también puede usar variables del sistema que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si utiliza variables definidas por el usuario, asegúrese de establecer el tipo de datos en un tipo que sea compatible con el tipo de datos de la columna a la que hace referencia el parámetro asignado. Para más información, vea [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md).  
   
 ## <a name="troubleshooting-the-ole-db-source"></a>Solucionar problemas del origen de OLE DB  
- Puede registrar las llamadas realizadas por el origen de OLE DB a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con la carga de datos desde orígenes de datos externos que realiza el origen de OLE DB. Para registrar las llamadas realizadas por el origen de OLE DB a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para obtener más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Puede registrar las llamadas realizadas por el origen de OLE DB a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con la carga de datos desde orígenes de datos externos que realiza el origen de OLE DB. Para registrar las llamadas realizadas por el origen de OLE DB a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="configuring-the-ole-db-source"></a>Configurar el origen de OLE DB  
  Puede establecer propiedades mediante programación o a través del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
@@ -93,9 +92,9 @@ ms.locfileid: "48120582"
   
 -   [Editor de origen de OLE DB &#40;página Administrador de conexiones&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de OLE DB &#40;página columnas&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Editor de origen de OLE DB &#40;página Columnas&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Editor de origen de OLE DB &#40;página de salida de Error&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Editor de origen de OLE DB &#40;página Salida de error&#41;](../ole-db-source-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -114,11 +113,11 @@ ms.locfileid: "48120582"
 -   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Artículo wiki, sobre [SSIS con conectores Oracle](http://go.microsoft.com/fwlink/?LinkId=220670), en social.technet.microsoft.com.  
+ Artículo wiki, sobre [SSIS con conectores Oracle](https://go.microsoft.com/fwlink/?LinkId=220670), en social.technet.microsoft.com.  
   
 ## <a name="see-also"></a>Vea también  
  [Destino de OLE DB](ole-db-destination.md)   
- [Servicios de integración &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Flujo de datos](data-flow.md)  
   
   

@@ -17,17 +17,17 @@ ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d97b570ca00251e7beaf39b104d254bf3363e8ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba1efc734b49f62b1f7b3b3876a8ea0db2732da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119337"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373357"
 ---
 # <a name="implementing-a-security-extension"></a>Implementar una extensión de seguridad
   La autenticación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows constituye el sistema principal para proteger los informes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. En ciertos casos, sin embargo, puede necesitar extender el sistema de seguridad de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para organizar la seguridad personalizada en una empresa. Para ello, puede usar la plataforma de desarrollo que proporciona la API de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. En esta sección se presentará información general sobre las extensiones de seguridad en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- Para obtener información detallada sobre cómo implementar y quitar una extensión de seguridad de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vea [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Muestras de productos de SQL Server Reporting Services).  
+ Para obtener información detallada sobre cómo implementar y quitar una extensión de seguridad de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vea [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Muestras de productos de SQL Server Reporting Services).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general de extensiones de seguridad](security-extensions-overview.md)  

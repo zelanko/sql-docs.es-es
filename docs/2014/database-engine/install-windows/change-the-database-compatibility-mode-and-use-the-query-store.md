@@ -14,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9422afe49ecd31512b22995767ead61b7e9f4cce
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018470"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352516"
 ---
 # <a name="migrate-query-plans"></a>Migrar los planes de consulta
   En la mayoría de los casos, al actualizar una base de datos a la versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se obtendrá una mejora del rendimiento de las consultas. No obstante, si tiene consultas de gran importancia que se han optimizado cuidadosamente con el fin de obtener el máximo rendimiento, es probable que desee conservar los planes de consulta de dichas consultas antes de llevar a cabo la actualización mediante la creación de una guía de plan para cada una de ellas. Si tras la actualización, el optimizador de consultas elige un plan menos eficiente para una o varias de las consultas, podrá habilitar las guías de plan y obligar al optimizador de consultas a utilizar los planes previos a la actualización.  
@@ -41,7 +41,7 @@ ms.locfileid: "51018470"
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra cómo registrar un plan para una consulta antes de la actualización por medio de la creación de una guía de plan.  
   
-### <a name="step-1-collect-the-plan"></a>Paso 1: recopilar el plan  
+### <a name="step-1-collect-the-plan"></a>Paso 1: Recopilar el Plan  
  El plan de consulta registrado en la guía de plan debe estar en formato XML. Es posible generar planes de consulta en formato XML de las siguientes formas:  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Paso 2: crear la guía de plan para imponer el plan  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Paso 2: Crear la Guía de Plan para forzar el Plan  
  Utilizando el plan de consulta con formato XML (obtenido mediante cualquiera de los métodos explicados) en la guía de plan, copie y pegue el plan de consulta como un literal de cadena en la sugerencia de consulta USE PLAN especificada en la cláusula OPTION de sp_create_plan_guide.  
   
  Dentro del propio plan XML, escape las comillas (') que aparezcan en el plan antes de crear la guía de plan, insertando para ello unas segundas comillas. Por ejemplo, a un plan que contiene `WHERE A.varchar = 'This is a string'` habrá que agregarle unas segundas comillas para que el código quede `WHERE A.varchar = ''This is a string''`.  
@@ -79,16 +79,16 @@ EXECUTE sp_create_plan_guide
 @type = N'SQL',  
 @module_or_batch = NULL,  
 @params = NULL,  
-@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''http://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
+@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''https://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
     Version=''''0.5'''' Build=''''9.00.1116''''>  
     <BatchSequence><Batch><Statements><StmtSimple>  
-    …  
+    ...  
     </StmtSimple></Statements></Batch>  
     </BatchSequence></ShowPlanXML>'')';  
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Paso 3: comprobar que la guía de plan corresponde a la consulta  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Paso 3: Compruebe que la Guía de Plan se aplica a la consulta  
  Vuelva a ejecutar la consulta y examine el plan de consulta generado. Observará que el plan coincide con el plan especificado en la guía de plan.  
   
 ## <a name="see-also"></a>Vea también  

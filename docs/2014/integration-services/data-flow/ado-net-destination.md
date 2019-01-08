@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.f1
@@ -16,17 +15,17 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ebabe8a6b188c704a45ce022b430156fed17d861
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aefe3276e11cb4da2523d0e089afc7220eb07ded
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165075"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351371"
 ---
 # <a name="ado-net-destination"></a>Destino ADO NET
   El destino ADO NET carga datos en una serie de bases de datos compatibles con [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que usan una tabla o vista de base de datos. Tiene la opción de cargar estos datos en una tabla o vista existente, o bien puede crear una nueva tabla y cargar los datos en ella.  
   
- Puede usar el destino de ADO NET para conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. No se admite la conexión a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante OLE DB. Para obtener más información sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea [Instrucciones y limitaciones generales de Base de datos SQL de Azure](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ Puede usar el destino de ADO NET para conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. No se admite la conexión a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante OLE DB. Para obtener más información sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea [Instrucciones y limitaciones generales de Base de datos SQL de Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Solucionar problemas del destino ADO NET  
  Puede registrar las llamadas realizadas por el destino ADO NET a proveedores de datos externos. Puede utilizar esta nueva capacidad de registro para solucionar problemas relacionados con el almacenamiento de datos en orígenes de datos externos que realiza el destino ADO NET. Para registrar las llamadas realizadas por el destino ADO NET a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para obtener más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -50,9 +49,9 @@ ms.locfileid: "48165075"
   
 -   [Editor de destinos de ADO NET &#40;página Administrador de conexiones&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   
--   [Editor de destinos de ADO NET &#40;página asignaciones&#41;](../ado-net-destination-editor-mappings-page.md)  
+-   [Editor de destinos de ADO NET &#40;página Asignaciones&#41;](../ado-net-destination-editor-mappings-page.md)  
   
--   [Editor de destinos de ADO NET &#40;página de salida de Error&#41;](../ado-net-destination-editor-error-output-page.md)  
+-   [Editor de destinos de ADO NET &#40;página Salida de error&#41;](../ado-net-destination-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48165075"
   
 -   [Propiedades personalizadas de ADO NET](ado-net-custom-properties.md)  
   
- Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](set-the-properties-of-a-data-flow-component.md).  
+ Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](set-the-properties-of-a-data-flow-component.md).  
   
   

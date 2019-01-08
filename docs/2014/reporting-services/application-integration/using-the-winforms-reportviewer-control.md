@@ -14,12 +14,12 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 01149b1f75c78ba5ca6da467abf8955adf41f2f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54a38a78f990ff4c2cc48c7277146dd0c2a07ee2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170405"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354821"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Usar el control ReportViewer de WinForms
   Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WinForms para representarlos en una aplicación Windows.  
@@ -42,7 +42,7 @@ ms.locfileid: "48170405"
   
  Una vez agregado el control al formulario, aparecerá la etiqueta inteligente **ReportViewer Tasks** y le solicitará que seleccione un informe.  
   
- Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Una vez seleccionada la opción **\<Servidor de informes>**, aparecerán dos propiedades adicionales: **Dirección URL del servidor de informes** y **Ruta de acceso del informe**. **Dirección URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa al informe que quiere representar.  
+ Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Después de la  **\<informe de servidor >** está seleccionada la opción, aparecerán dos propiedades adicionales: **Dirección Url del servidor de informes** y **ruta de acceso de informe**. **Dirección URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa al informe que quiere representar.  
   
  ![Seleccionar informe del servidor](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Seleccionar informe del servidor")  
   
@@ -154,7 +154,7 @@ End Class
   
 3.  Vaya a la ubicación donde instaló el proyecto [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Report Samples.  
   
-     Para descargar los ejemplos de informe, vaya a [Ejemplos de informes de AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     Para descargar los ejemplos de informe, vaya a [Ejemplos de informes de AdventureWorks 2012](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
 4.  Seleccione el archivo Sales Order Detail.rdl y haga clic en el botón **Agregar**.  
   

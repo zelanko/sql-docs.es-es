@@ -12,12 +12,12 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 788e68241cb922839274834ab3415b6c1111066c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc32145fab5305a19298c4bc9043a7a68a7f2566
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182525"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353716"
 ---
 # <a name="columns-with-a-name"></a>Columnas con nombre
   A continuación se exponen las condiciones específicas en las que se asignan al XML resultante las columnas con nombre de los conjuntos de filas, con distinción entre mayúsculas de minúsculas:  
@@ -46,7 +46,7 @@ go
   
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <row PmId="7">  
@@ -75,7 +75,7 @@ SELECT 2+2 as result
 for xml PATH  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <row>  
@@ -89,7 +89,7 @@ for xml PATH
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
@@ -98,7 +98,7 @@ FOR XML PATH
 go  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <row>  
@@ -152,7 +152,7 @@ AND    E.EmployeeID=1
 FOR XML PATH, ELEMENTS XSINIL  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
@@ -184,7 +184,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <row EmpID="1">  
@@ -222,7 +222,7 @@ FOR XML PATH
   
  Como resultado, la consulta crea dos elementos <`EmpName`>. El primer elemento <`EmpName`> tiene el elemento secundario <`FirstName`> y el segundo elemento <`EmpName`> tiene los elementos secundarios <`MiddleName`> y <`LastName`>.  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <row EmpID="1">  

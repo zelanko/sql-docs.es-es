@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
@@ -15,12 +14,12 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f5ae5a48b7ace7d0c8e9fffe1e5993bfd232da8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192585"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777567"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Entregar una instantánea mediante FTP
   En este tema se describe cómo entregar una instantánea a través de FTP en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "48192585"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48192585"
   
     -   (Opcional) **@ftp_password** : la contraseña para el inicio de sesión de FTP  
   
-     Esto crea una publicación que usa FTP. Para más información, consulte [Create a Publication](create-a-publication.md).  
+     Esto crea una publicación que usa FTP. Para obtener más información, consulte [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Para habilitar la entrega de instantáneas a través de FTP para una publicación de combinación  
   
@@ -118,7 +117,7 @@ ms.locfileid: "48192585"
   
     -   (Opcional) **@ftp_password** : la contraseña para el inicio de sesión de FTP  
   
-     Esto crea una publicación que usa FTP. Para más información, consulte [Create a Publication](create-a-publication.md).  
+     Esto crea una publicación que usa FTP. Para obtener más información, consulte [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>Para crear una suscripción de extracción a una publicación transaccional o de instantáneas que usa la entrega de instantáneas a través de FTP  
   
@@ -140,11 +139,11 @@ ms.locfileid: "48192585"
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Especifique uno de los siguientes valores para **@property** y un nuevo valor de esta configuración para **@value**:  
   
-    -   `ftp_address` -la dirección del servidor FTP usada para entregar la instantánea.  
+    -   `ftp_address`: la dirección del servidor FTP usada para entregar la instantánea  
   
-    -   `ftp_port` -el puerto usado por el servidor FTP.  
+    -   `ftp_port`: el puerto usado por el servidor FTP  
   
-    -   `ftp_subdirectory` -el subdirectorio del directorio FTP predeterminado usado para la instantánea FTP.  
+    -   `ftp_subdirectory`: el subdirectorio del directorio FTP predeterminado usado para la instantánea de FTP  
   
     -   `ftp_login`: un inicio de sesión para conectar al servidor de FTP  
   
@@ -158,11 +157,11 @@ ms.locfileid: "48192585"
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique uno de los siguientes valores para **@property** y un nuevo valor de esta configuración para **@value**:  
   
-    -   `ftp_address` -la dirección del servidor FTP usada para entregar la instantánea.  
+    -   `ftp_address`: la dirección del servidor FTP usada para entregar la instantánea  
   
-    -   `ftp_port` -el puerto usado por el servidor FTP.  
+    -   `ftp_port`: el puerto usado por el servidor FTP  
   
-    -   `ftp_subdirectory` -el subdirectorio del directorio FTP predeterminado usado para la instantánea FTP.  
+    -   `ftp_subdirectory`: el subdirectorio del directorio FTP predeterminado usado para la instantánea de FTP  
   
     -   `ftp_login`: un inicio de sesión para conectar al servidor de FTP  
   

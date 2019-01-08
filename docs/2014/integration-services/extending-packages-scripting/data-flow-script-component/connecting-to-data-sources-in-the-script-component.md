@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], connecting to data sources
@@ -14,12 +12,12 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2943855784fccd869124a3dad1bc2dc72f6a8cf6
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4af1e5e1aedcd9916c1d4f6a13d0c4f63922b8b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460650"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375467"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Conectarse a orígenes de datos del componente de script
   Un administrador de conexiones es una unidad práctica que encapsula y almacena la información necesaria para conectarse a un origen de datos de un tipo determinado. Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md).  
@@ -56,7 +54,7 @@ ms.locfileid: "49460650"
   
  Para obtener más información acerca de cómo se utilizan los administradores de conexiones con el componente de script, consulte [Crear un origen con el componente de script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) y [Crear un destino con el componente de script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Conexiones de Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md)   

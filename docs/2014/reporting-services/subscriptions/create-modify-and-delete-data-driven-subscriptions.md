@@ -16,12 +16,12 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09b48e20683256eddd7d2619e8f4cbe912c6f0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fc3ab4ce541e194f9768cc710993db0119eaefd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207589"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410192"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Crear, modificar y eliminar una suscripción controlada por datos
   Una suscripción controlada por datos es una suscripción basada en consultas que obtiene los valores de los datos que se utilizan para procesar la suscripción en tiempo de ejecución. Cuando se desencadena la suscripción, se procesa una consulta para obtener información actualizada sobre destinatarios, opciones de entrega del informe, formatos de representación y valores de los parámetros. Los resultados de la consulta se combinan con la definición de la suscripción para crear una suscripción dinámica que utiliza datos que se mantienen en una base de datos de empleados, de clientes o de cualquier otro tipo que contenga información que se pueda utilizar como datos de suscriptor.  
@@ -65,7 +65,7 @@ ms.locfileid: "48207589"
   
 2.  Haga clic en la pestaña **Suscripciones** . También puede hacer clic en el vínculo **Mis suscripciones**, situado en la parte superior del administrador de informes.  
   
-3.  Seleccione la suscripción que desea modificar. El siguiente icono indica una suscripción controlada por datos: ![Icono de suscripción controlada por datos](../media/hlp-16subscriptiondd.gif "Icono de suscripción controlada por datos")  
+3.  Seleccione la suscripción que desea modificar. El siguiente icono indica que se trata de una suscripción controlada por datos: ![Icono de suscripción controlada por datos](../media/hlp-16subscriptiondd.gif "icono de suscripción controlada por datos")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Para modificar una suscripción controlada por datos existente (modo de SharePoint)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48207589"
   
 -   **Requisitos de datos** Debe disponer de acceso a un origen de datos externo que contenga la información sobre los suscriptores.  
   
--   **Requisitos de usuarios** El autor de la suscripción debe tener permiso para "Administrar informes" y "Administrar todas las suscripciones". Para obtener más información acerca de los permisos de nivel de elemento de tarea, vea [tareas y permisos](../security/tasks-and-permissions.md). El autor también debe disponer de las credenciales necesarias para obtener acceso al origen de datos externo que contiene los datos de los suscriptores.  
+-   **Requisitos de usuarios** El autor de la suscripción debe tener permiso para "Administrar informes" y "Administrar todas las suscripciones". Para más información sobre los permisos de tarea de nivel de elemento, vea [Tareas y permisos](../security/tasks-and-permissions.md). El autor también debe disponer de las credenciales necesarias para obtener acceso al origen de datos externo que contiene los datos de los suscriptores.  
   
 ##  <a name="bkmk_define_query"></a> Definir una consulta que recupera información de suscripción  
  En una suscripción controlada por datos se debe especificar una consulta o un comando que recupere los datos de los suscriptores. La consulta debería producir una fila por suscriptor. Si utiliza la extensión de entrega por correo electrónico, la consulta debería devolver un alias de correo electrónico válido para cada suscriptor. El número de entregas que se realice se basa en el número de filas que devuelva la consulta. Si el conjunto de filas contiene 10.000 filas, la suscripción entregará 10.000 informes.  
@@ -98,12 +98,12 @@ ms.locfileid: "48207589"
 ##  <a name="bkmk_run_subscription"></a> Ejecutar una suscripción  
  Configure las condiciones para procesar la suscripción. Puede configurar una programación o puede desencadenar la suscripción para que coincida con actualizaciones en una instantánea de ejecución de informes.  
   
- ![Tenga en cuenta](../media/rs-fyinote.png "Nota") aunque no hay ninguna característica en la interfaz de usuario que puede usar para ejecutar inmediatamente una suscripción, puede usar un sencillo script de Windows PowerShell para desencadenar la ejecución de una suscripción. Para obtener más información, consulte el "Script: ejecutar (desencadenar) una sola suscripción" sección de [usar PowerShell para Change y List Reporting Services Subscription Owners and Run una suscripción](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![Tenga en cuenta](../media/rs-fyinote.png "Nota") aunque no hay ninguna característica en la interfaz de usuario que puede usar para ejecutar inmediatamente una suscripción, puede usar un sencillo script de Windows PowerShell para desencadenar la ejecución de una suscripción. Para obtener más información, consulte el "Script: Sección ejecutar (desencadenar) una sola suscripción"de [usar PowerShell para Change y List Reporting Services Subscription Owners and Run una suscripción](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  La programación y las condiciones para ejecutar las suscripciones controladas por datos equivale al procesamiento de las suscripciones estándar.  
   
 ##  <a name="bkmk_manage_and_delete"></a> Administrar y eliminar una suscripción controlada por datos  
- Una suscripción controlada por datos que se está procesando no puede detenerse o eliminarse mediante la página Administrar trabajos del Administrador de informes. Por esta razón, resulta ventajoso usar una programación compartida para desencadenar la suscripción controlada por datos. De esa manera, si desea impedir temporalmente que se procese una suscripción, puede pausar la programación que la desencadena. Para obtener más información, consulte [crear y administrar suscripciones para servidores de informes de modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).  
+ Una suscripción controlada por datos que se está procesando no puede detenerse o eliminarse mediante la página Administrar trabajos del Administrador de informes. Por esta razón, resulta ventajoso usar una programación compartida para desencadenar la suscripción controlada por datos. De esa manera, si desea impedir temporalmente que se procese una suscripción, puede pausar la programación que la desencadena. Para obtener más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).  
   
  Para eliminar una suscripción controlada por datos, selecciónela en la página Mis suscripciones o en la página Suscripciones de un informe y, después, haga clic en **Eliminar**.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48207589"
 ## <a name="see-also"></a>Vea también  
  [Crear, modificar y eliminar suscripciones estándares &#40;Reporting Services en modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Suscripciones &#40;página del Administrador de informes&#41;](../subscriptions-page-report-manager.md)   
  [Mis suscripciones &#40;página del Administrador de informes&#41;](../my-subscriptions-page-report-manager.md)  

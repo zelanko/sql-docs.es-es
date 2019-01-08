@@ -16,19 +16,19 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07c13662da9a558c6c9406a7659c5529114236d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157395"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364237"
 ---
 # <a name="set-partition-writeback"></a>Establecer la reescritura de particiones
   Si habilita para escritura un grupo de medida, los usuarios finales pueden cambiar los datos del cubo mientras lo examinan; en ese caso, los cambios se guardan en una tabla diferente denominada tabla de reescritura, no en los datos del cubo ni en los datos de origen. Los usuarios finales que examinan una partición habilitada para escritura verán el efecto neto de todos los cambios en la tabla de reescritura de la partición.  
   
  Los datos de reescritura se pueden examinar o eliminar. También puede convertir los datos de reescritura en una partición. En una partición habilitada para escritura, puede utilizar los roles de cubo para conceder acceso de lectura/escritura a usuarios y grupos de usuarios y para limitar el acceso a determinadas celdas o grupos de celdas de la partición.  
   
- Para ver un vídeo corto en el que se ofrece una introducción a la reescritura, vea [Excel 2010 Writeback to Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951). Hay una explicación más detallada de esta característica en esta serie de entradas de blog: [Building a Writeback Application with Analysis Services (Compilar una aplicación de reescritura con Analysis Services) (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
+ Para ver un vídeo corto en el que se ofrece una introducción a la reescritura, vea [Excel 2010 Writeback to Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394951). Hay una explicación más detallada de esta característica en esta serie de entradas de blog: [Building a Writeback Application with Analysis Services (Compilar una aplicación de reescritura con Analysis Services) (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 > [!NOTE]  
 >  La reescritura solo se admite para bases de datos relacionales y data marts de SQL Server, y solo para modelos multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -62,7 +62,7 @@ ms.locfileid: "48157395"
   
 ## <a name="see-also"></a>Vea también  
  [Particiones habilitadas para escritura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Habilitar reescritura en un cubo OLAP en el nivel de celda en Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Habilitación y seguridad de entrada de datos con reescritura de Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Habilitar reescritura en un cubo OLAP en el nivel de celda en Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Habilitación y seguridad de la entrada de datos con reescritura de Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

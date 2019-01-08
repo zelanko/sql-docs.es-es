@@ -11,19 +11,19 @@ ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c559c9bf22cc5aff2ce75ba255055c18af649976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e7b05abcff2b5f7eae6fabb936447dd37ee6306
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096745"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377416"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Gráficos de cotizaciones (Generador de informes y SSRS)
   Los gráficos de cotizaciones están diseñados específicamente para datos financieros o científicos que usen hasta cuatro valores por punto de datos. Estos valores se corresponden con los valores máximo, mínimo, de apertura y de cierre que se usan para trazar datos de acciones financieras. Este tipo de gráfico muestra los valores de apertura y de cierre mediante marcadores, que son normalmente líneas o triángulos. En el ejemplo siguiente, los marcadores de la izquierda muestran los valores de apertura y los marcadores de la derecha muestran los valores de cierre.  
   
  ![Gráfico de cotizaciones](../media/rs-stockchart.gif "Gráfico de cotizaciones")  
   
- Un ejemplo de gráfico de cotizaciones está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Para obtener más información acerca de cómo descargar este y otros informes de ejemplo, consulte el tema sobre [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un ejemplo de gráfico de cotizaciones está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Para más información acerca de cómo descargar este y otros informes de ejemplo, consulte el tema sobre [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,9 +41,9 @@ ms.locfileid: "48096745"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona muchas fórmulas calculadas para su uso con los gráficos de cotizaciones, incluyendo indicadores de precio, indicadores de fuerza relativa, convergencia de media móvil, etc.  
   
 ## <a name="see-also"></a>Vea también  
- [Rangos de intervalos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Rangos de intervalos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Cuadro de diálogo Propiedades del eje, opciones del eje &#40;generador de informes y SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [Cuadro de diálogo Propiedades del eje, Opciones del eje &#40;Generador de informes y SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

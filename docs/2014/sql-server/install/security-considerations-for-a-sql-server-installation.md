@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
@@ -27,12 +26,12 @@ ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c486dfe6e1d41d18274bb5825c3ed63dc4598a0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093595"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762917"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Consideraciones de seguridad para una instalación de SQL Server
   La seguridad es importante para todos los productos y negocios. Si aplica las siguientes prácticas recomendadas de seguridad, puede evitar muchas vulnerabilidades de seguridad. En este tema se tratan algunas prácticas recomendadas de seguridad que deben tenerse en cuenta antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y después de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En los temas de referencia para estas características se incluyen directrices de seguridad para características específicas.  
@@ -81,7 +80,7 @@ ms.locfileid: "48093595"
 ###  <a name="isolated_services"></a> Isolate Services  
  El aislamiento de servicios reduce el riesgo de que se utilice un servicio cuya seguridad se haya vulnerado para vulnerar la seguridad de otros servicios. Para aislar los servicios, tenga en cuenta estas instrucciones:  
   
--   Ejecute los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por separado en distintas cuentas de Windows. Siempre que sea posible, utilice derechos de Windows independientes y bajos, o cuentas de usuario local para cada servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Ejecute los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por separado en distintas cuentas de Windows. Siempre que sea posible, utilice derechos de Windows independientes y bajos, o cuentas de usuario local para cada servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  Si se usa el sistema de archivos correcto, se aumenta la seguridad. En las instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debería hacer lo siguiente:  
@@ -134,7 +133,7 @@ ms.locfileid: "48093595"
   
 -   Asocie los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a las cuentas de usuario local de Windows con menos privilegios, o a las cuentas de usuario de dominio.  
   
--   Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Para obtener más información, consulte [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
  **Modo de autenticación**  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48093595"
   
  **Contraseñas seguras**  
   
--   Asigne siempre una contraseña segura a la `sa` cuenta.  
+-   Asigne una contraseña segura a la cuenta `sa`.  
   
 -   Habilite siempre la directiva de contraseñas comprobando el nivel y la fecha de expiración de la contraseña.  
   

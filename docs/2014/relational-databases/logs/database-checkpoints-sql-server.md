@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic checkpoints
@@ -27,12 +26,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b0271c21b849ee754e0050ea461c86d1f773850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f9fec2db69f28f832aa8745cf54ea0ff635f491
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058539"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354449"
 ---
 # <a name="database-checkpoints-sql-server"></a>Puntos de comprobación de base de datos (SQL Server)
   En este tema se proporciona información general de los puntos de comprobación de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un *punto de comprobación* crea un buen punto conocido desde donde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede empezar a aplicar cambios incluidos en el registro durante la recuperación después de un cierre inesperado o un bloqueo del sistema.  
@@ -46,12 +45,12 @@ ms.locfileid: "48058539"
 |Nombre|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaz|Descripción|  
 |----------|----------------------------------|-----------------|  
 |Automático|EXEC sp_configure **'`recovery interval`','*`seconds`*'**|Emite automáticamente en segundo plano para cumplir el límite de tiempo superior que sugiere la `recovery interval` opción de configuración del servidor. Los puntos de comprobación automáticos se ejecutan hasta completarse.  Los puntos de comprobación automáticos están limitados según el número de operaciones de escritura pendientes y en función de si [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta un aumento de la latencia de escritura superior a 20 milisegundos.<br /><br /> Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indirecto|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Se emiten en segundo plano para cumplir un tiempo de recuperación de destino especificado por el usuario para una determinada base de datos. El tiempo de recuperación de destino predeterminado es 0, lo que provoca que se use la heurística de puntos de comprobación automáticos en la base de datos. Si ha usado ALTER DATABASE para establecer TARGET_RECOVERY_TIME en >0, se usa este valor en vez del intervalo de recuperación especificado para la instancia de servidor.<br /><br /> Para obtener más información, vea [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Indirecto|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Se emiten en segundo plano para cumplir un tiempo de recuperación de destino especificado por el usuario para una determinada base de datos. El tiempo de recuperación de destino predeterminado es 0, lo que provoca que se use la heurística de puntos de comprobación automáticos en la base de datos. Si ha usado ALTER DATABASE para establecer TARGET_RECOVERY_TIME en >0, se usa este valor en vez del intervalo de recuperación especificado para la instancia de servidor.<br /><br /> Para obtener más información, vea [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Se emite cuando se ejecuta un comando CHECKPOINT de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El punto de comprobación manual se produce en la base de datos actual para la conexión. De forma predeterminada, los puntos de comprobación manuales se ejecutan hasta completarse. La limitación funciona de la misma forma que para los puntos de comprobación automáticos.  Opcionalmente, el parámetro *checkpoint_duration* especifica un periodo de tiempo solicitado, en segundos, para que se complete el punto de comprobación.<br /><br /> Para más información, consulte [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql).|  
 |Interno|Ninguno.|Se emite por varias operaciones de servidor, como la copia de seguridad y la creación de instantánea de base de datos, para garantizar que las imágenes de disco coinciden con el estado actual del registro.|  
   
 > [!NOTE]  
->  El `-k` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opción de configuración avanzada permite a un administrador de base de datos para limitar los comportamiento de E/S según el rendimiento del subsistema de E/S para algunos tipos de puntos de control de puntos de comprobación. El `-k` opción de configuración se aplica a los puntos de comprobación y los puntos de comprobación manuales e internos de ensayo en caso contrario.  
+>  La opción de configuración avanzada `-k`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilita a un administrador de base de datos para limitar el comportamiento de E/S de los puntos de comprobación según el rendimiento de E/S para algunos tipos de puntos de comprobación. El `-k` opción de configuración se aplica a los puntos de comprobación y los puntos de comprobación manuales e internos de ensayo en caso contrario.  
   
  Para los puntos de comprobación automáticos, manuales e internos, solo las modificaciones efectuadas después del último punto de comprobación se deben poner al día durante la recuperación de la base de datos. De este modo se reduce el tiempo necesario para recuperar una base de datos.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "48058539"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Arquitectura física del registro de transacciones](http://technet.microsoft.com/library/ms179355.aspx) (en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])  
+-   [Arquitectura física del registro de transacciones](https://technet.microsoft.com/library/ms179355.aspx) (en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])  
   
   
 ## <a name="see-also"></a>Vea también  

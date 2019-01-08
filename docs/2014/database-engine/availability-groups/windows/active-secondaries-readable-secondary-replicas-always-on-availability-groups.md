@@ -1,5 +1,5 @@
 ---
-title: 'Secundarias activas: Réplicas secundarias (grupos de disponibilidad) Always On | Microsoft Docs'
+title: 'Secundarias activas: Las réplicas secundarias legibles (grupos de disponibilidad) Always On | Microsoft Docs'
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169615"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358587"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundarias activas: Réplicas secundarias legibles (siempre en grupos de disponibilidad)
   Las funcionalidades secundarias activas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluyen compatibilidad con el acceso de solo lectura a una o varias réplicas secundarias (*réplicas secundarias legibles*). Una réplica secundaria legible permite el acceso de solo lectura a todas las bases de datos secundarias. Sin embargo, las bases de datos secundarias legibles no se establecen como de solo lectura. Son dinámicas. Una base de datos secundaria dada cambia a medida que se aplican los cambios en la base de datos principal correspondiente. En lo que respecta a las réplicas secundarias típicas, los datos, lo cual incluye las tablas con optimización para memoria durables, las bases de datos secundarias están en tiempo prácticamente real. Además, los índices de texto completo se sincronizan con las bases de datos secundarias. En muchas circunstancias, la latencia de datos entre una base de datos principal y la base de datos secundaria correspondiente suele ser de solo unos pocos segundos.  
   
  La configuración de seguridad de las bases de datos principales se mantiene en las secundarias. Esto incluye usuarios, roles de base de datos y roles de aplicación, junto con sus permisos correspondientes, y también incluye cifrado de datos transparentes (TDE) si está habilitado en la base de datos principal.  
@@ -238,7 +238,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   Para las transacciones entre contenedores, no se admiten las transacciones con el nivel de aislamiento de sesión "instantánea" que tengan acceso a tablas optimizadas para memoria. Por ejemplo,  
+-   Para las transacciones entre contenedores, las transacciones con el nivel de aislamiento de la sesión "instantánea" que las tablas optimizadas para memoria no se admite el acceso. Por ejemplo,  
   
     ```tsql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
@@ -271,9 +271,9 @@ GO
   
     |¿Réplica secundaria legible?|¿Nivel de aislamiento de instantánea o de RCSI habilitado?|Base de datos principal|Base de datos secundaria|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |no|no|Sin versiones de fila ni sobrecarga de 14 bytes|Sin versiones de fila ni sobrecarga de 14 bytes|  
-    |no|Sí|Con versiones de fila y sobrecarga de 14 bytes|Sin versiones de fila pero con sobrecarga de 14 bytes|  
-    |Sí|no|Sin versiones de fila pero con sobrecarga de 14 bytes|Con versiones de fila y sobrecarga de 14 bytes|  
+    |No|No|Sin versiones de fila ni sobrecarga de 14 bytes|Sin versiones de fila ni sobrecarga de 14 bytes|  
+    |No|Sí|Con versiones de fila y sobrecarga de 14 bytes|Sin versiones de fila pero con sobrecarga de 14 bytes|  
+    |Sí|No|Sin versiones de fila pero con sobrecarga de 14 bytes|Con versiones de fila y sobrecarga de 14 bytes|  
     |Sí|Sí|Con versiones de fila y sobrecarga de 14 bytes|Con versiones de fila y sobrecarga de 14 bytes|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Tareas relacionadas  
@@ -292,7 +292,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Blog del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn SQL Server: El blog del equipo de AlwaysOn oficial SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

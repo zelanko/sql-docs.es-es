@@ -11,23 +11,23 @@ ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a9a260261a2078ac732c9b3eba2b0c1a9f335cf4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc17daefbe5e84522fdc46ddf046403260ebf4e3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165891"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367857"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>Instalar ADOMD.NET en servidores front-end web ejecutando Administración central
   Si instala PowerPivot para SharePoint en una granja que tiene la topología de Administración central, sin Excel Services o PowerPivot para SharePoint, descargue e instale la biblioteca de cliente de Microsoft ADOMD.NET si desea acceso total a los informes integrados en el panel de administración de PowerPivot. Algunos informes del panel usan ADOMD.NET para tener acceso a los datos internos que proporcionan los datos de errores en el procesamiento de las consultas de PowerPivot y el estado del servidor en la granja.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
   
- En SharePoint 2013, el proveedor se incluye en el Feature Pack de SQL Server. Para obtener información sobre cómo descargar spPowerPivot.msi, vea [Microsoft SQL Server 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35577)  
+ En SharePoint 2013, el proveedor se incluye en el Feature Pack de SQL Server. Para obtener información sobre cómo descargar spPowerPivot.msi, vea [Microsoft SQL Server 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35577)  
   
 ### <a name="download-and-install-the-client-library"></a>Descargar e instalar la biblioteca de cliente  
   
-1.  En el [página SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=296473), busque Microsoft ADOMD.NET.  
+1.  En el [página SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=296473), busque Microsoft ADOMD.NET.  
   
 2.  Descargue el paquete x64 del programa de instalación de `SQL_AS_ADOMD.msi`.  
   

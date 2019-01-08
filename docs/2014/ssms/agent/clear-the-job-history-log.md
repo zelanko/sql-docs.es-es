@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -16,12 +16,12 @@ ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c94197add9410a0680e874f3d802c833d9ba953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c9bc55a6a5af15d6d21c4d3e7d74e2dc8296e84
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227555"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363997"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
   En este tema se describe cómo eliminar el contenido del registro de historial de trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server.  
@@ -40,10 +40,10 @@ ms.locfileid: "48227555"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
- Para obtener información detallada, vea [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Usar SQL Server Management Studio  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48227555"
 ##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
  **Para borrar el registro del historial de trabajos**  
   
- Use el método `PurgeJobHistory` de la clase `JobServer` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Use el método `PurgeJobHistory` de la clase `JobServer` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

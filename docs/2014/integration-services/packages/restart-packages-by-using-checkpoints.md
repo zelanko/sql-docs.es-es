@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 703514e884ede08db13fbb70f5fa27247e75503b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 945bb384f522aa483c490fccd92768078a2d315a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133385"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365065"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar paquetes de usando puntos de comprobación
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede reiniciar los paquetes con errores desde el punto del error, en lugar de volver a ejecutar todo el paquete. Si se configura un paquete para que utilice puntos de comprobación, la información relacionada con la ejecución del paquete se escribirá en un archivo de punto de comprobación. Cuando se vuelve a ejecutar el paquete con error, se utiliza el archivo de punto de comprobación para reiniciar el paquete desde el punto del error. Si el paquete se ejecuta correctamente, el archivo de punto de comprobación se elimina y se vuelve a crear la siguiente vez que se ejecuta el paquete.  
@@ -33,7 +32,7 @@ ms.locfileid: "48133385"
   
 -   Evita repetir la agregación de valores. Por ejemplo, un paquete que calcula muchos agregados, como promedios y sumas, utilizando una tarea Flujo de datos para realizar cada agregación, se puede reiniciar cuando el cálculo de una agregación genera un error, y solo se vuelve a calcular esa agregación.  
   
- Si un paquete está configurado para utilizar puntos de comprobación, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] captura el punto de reinicio del archivo de punto de comprobación. El tipo de contenedor que genera el error y la implementación de características como las transacciones afectan al punto de reinicio que se registra en el archivo de punto de comprobación. Los valores actuales de variables se capturan también en el archivo de punto de comprobación. Sin embargo, los valores de variables que tienen el `Object` tipo de datos no se guardan en archivos de punto de comprobación.  
+ Si un paquete está configurado para utilizar puntos de comprobación, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] captura el punto de reinicio del archivo de punto de comprobación. El tipo de contenedor que genera el error y la implementación de características como las transacciones afectan al punto de reinicio que se registra en el archivo de punto de comprobación. Los valores actuales de variables se capturan también en el archivo de punto de comprobación. Sin embargo, los valores de variables que tienen el tipo de datos `Object` no se guardan en los archivos de punto de comprobación.  
   
 ## <a name="defining-restart-points"></a>Definir puntos de reinicio  
  El contenedor host de la tarea, que encapsula una sola tarea, es la unidad atómica de trabajo más pequeña que se puede reiniciar. El contenedor de bucles Foreach y un contenedor de transacción también se tratan como unidades atómicas de trabajo.  
@@ -43,7 +42,7 @@ ms.locfileid: "48133385"
 > [!NOTE]  
 >  Utilizar puntos de comprobación y transacciones en el mismo paquete podría producir resultados inesperados. Por ejemplo, cuando un paquete genera un error y se reinicia desde un punto de comprobación, podría repetir una transacción que ya se ha confirmado correctamente.  
   
- Los datos de punto de comprobación no se guardan para los contenedores de bucles For y Foreach. Cuando se reinicia un paquete, se vuelven a ejecutar el contenedor de bucles For y Foreach y sus contenedores secundarios. Si un contenedor secundario en el bucle se ejecuta correctamente, no se graba en el archivo de punto de comprobación sino que se vuelve a ejecutar. Para obtener más información y solucionar este problema, vea [Los puntos de comprobación de SSIS no se respetan para los elementos de contenedor de bucles For y Foreach](http://go.microsoft.com/fwlink/?LinkId=241633).  
+ Los datos de punto de comprobación no se guardan para los contenedores de bucles For y Foreach. Cuando se reinicia un paquete, se vuelven a ejecutar el contenedor de bucles For y Foreach y sus contenedores secundarios. Si un contenedor secundario en el bucle se ejecuta correctamente, no se graba en el archivo de punto de comprobación sino que se vuelve a ejecutar. Para obtener más información y solucionar este problema, vea [Los puntos de comprobación de SSIS no se respetan para los elementos de contenedor de bucles For y Foreach](https://go.microsoft.com/fwlink/?LinkId=241633).  
   
  Si se reinicia el paquete, las configuraciones de paquetes no se vuelven a cargar sino que se utiliza la información de configuración escrita en el archivo de punto de comprobación. Esto asegura que, el paquete utilice las mismas configuraciones cuando se vuelva a ejecutar que cuando sufrió el error.  
   
@@ -85,9 +84,9 @@ ms.locfileid: "48133385"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   El artículo técnico sobre el [reinicio automático de paquetes SSIS tras una conmutación por error o un error](http://go.microsoft.com/fwlink/?LinkId=200407), en social.technet.microsoft.com.  
+-   El artículo técnico sobre el [reinicio automático de paquetes SSIS tras una conmutación por error o un error](https://go.microsoft.com/fwlink/?LinkId=200407), en social.technet.microsoft.com.  
   
--   El artículo de soporte técnico, [Los puntos de comprobación de SSIS no se respetan para los elementos de contenedor de bucles For y Foreach](http://go.microsoft.com/fwlink/?LinkId=241633), en support.microsoft.com.  
+-   El artículo de soporte técnico, [Los puntos de comprobación de SSIS no se respetan para los elementos de contenedor de bucles For y Foreach](https://go.microsoft.com/fwlink/?LinkId=241633), en support.microsoft.com.  
   
 ## <a name="see-also"></a>Vea también  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

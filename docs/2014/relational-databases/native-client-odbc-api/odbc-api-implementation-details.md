@@ -15,17 +15,17 @@ ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5892aa294983a453c018afc5511cee0f88eff0a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133422"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369127"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   En esta sección se documentan las funciones ODBC que exhiben comportamientos concretos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se utilizan con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. No todas las funciones ODBC se documentan aquí. Los temas individuales solamente discuten cuestiones específicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una función ODBC. No son una referencia completa de las funciones ODBC.  
   
- El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client cumple la especificación ODBC 3.51 y, si está utilizando el SDK de Windows 7, la especificación ODBC 3.8. Para obtener una referencia completa de ODBC, vea el [referencia del programador de ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) en línea.  
+ El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client cumple la especificación ODBC 3.51 y, si está utilizando el SDK de Windows 7, la especificación ODBC 3.8. Para obtener una referencia completa de ODBC, vea el [referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en línea.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

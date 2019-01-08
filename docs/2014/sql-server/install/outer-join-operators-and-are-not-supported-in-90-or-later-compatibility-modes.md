@@ -16,21 +16,21 @@ ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc4cab3fac4a49535b2178332b6e355ed95647b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d5d9ff66bb078be30fcd6e7d4b43b5e94069be0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064905"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591619"
 ---
-# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>No se admiten los operadores de combinación externa *= y =* en los modos de compatibilidad 90 o posteriores
-  El Asesor de actualizaciones ha detectado el uso de operadores de combinación externa * = y =\*. Estos operadores no se admiten en los modos de compatibilidad 90 y posteriores. Cuando actualiza, las bases de datos de usuarios conservan su modo de compatibilidad. Las instrucciones que usan estos operadores generarán un error.  
+# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>No se admiten los operadores de combinación externa \*= y =\* en los modos de compatibilidad 90 o posteriores
+  El Asesor de actualizaciones ha detectado el uso de operadores de combinación externa \*= y =\*. Estos operadores no se admiten en los modos de compatibilidad 90 y posteriores. Cuando actualiza, las bases de datos de usuarios conservan su modo de compatibilidad. Las instrucciones que usan estos operadores generarán un error.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>Acción correctora  
- Antes de cambiar el modo de compatibilidad de base de datos a 90 o posterior, modifique las instrucciones que usan los operadores de combinación externa * = y =\* utilizar palabras clave equivalentes de combinación externa. El ejemplo siguiente muestra una consulta que utiliza el operador `*=` y una consulta equivalente que utiliza las palabras clave `LEFT OUTER JOIN`.  
+ Antes de cambiar el modo de compatibilidad de base de datos a 90 o posterior, modifique las instrucciones que usan los operadores de combinación externa \*= y =\* utilizar palabras clave equivalentes de combinación externa. El ejemplo siguiente muestra una consulta que utiliza el operador `\*=` y una consulta equivalente que utiliza las palabras clave `LEFT OUTER JOIN`.  
   
 ```  
 -- This query uses an old-style outer join operator.  

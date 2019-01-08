@@ -10,26 +10,32 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d2aadb0e7c0c56c69d89bc94e0ddaacef54e837
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 98a59677267cc2692be7de7e6141e85ec415e61d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236911"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53597066"
 ---
-#<a name="appliance-feature-switches"></a>Modificadores de características del dispositivo
-El **modificador de característica** página muestra información sobre los conmutadores de característica que se presentan en Analytics Platform System AU7 y versiones posteriores. Utilice esta página de configuración para habilitar o deshabilitar características y la configuración de Analytics Platform System o actualizar. Los cambios en los valores de conmutador de característica requieren un reinicio del servicio.
+# <a name="appliance-feature-switches"></a>Modificadores de características del dispositivo
+El **modificador de característica** página muestra información sobre los conmutadores de característica que se presentan en Analytics Platform System AU7 y versiones posteriores. Utilice esta página de configuración para habilitar o deshabilitar características y la configuración de Analytics Platform System o actualizar. 
+
+> [!NOTE]
+> Los cambios en los valores de conmutador de característica requieren un reinicio del servicio.
 
 ![Cambio de características del dispositivo DWConig](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "DWConig cambio de características de dispositivo") 
 
-##<a name="autostatsenabled"></a>AutoStatsEnabled
+## <a name="autostatsenabled"></a>AutoStatsEnabled
 Controla la característica de estadísticas automática. Este modificador de característica se establece en true de forma predeterminada después de actualizar a AU7. Cualquier base de datos creada después de la actualización heredarán la creación automática y la actualización asincrónica de estadísticas. Para las bases de datos existentes, pueden permitir que los administradores de base de datos automática de estadísticas con [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Para obtener más información sobre las estadísticas, consulte [estadísticas](../relational-databases/statistics/statistics.md).
 
-##<a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
+## <a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
 Permite seleccionar la configuración de maxdop mayor que 1 para las operaciones insert o select. Opciones para esta configuración son 0, 1, 2 y 4, con el valor predeterminado es 1.
 
-##<a name="usecatalogqueries"></a>UseCatalogQueries
+##<a name="optimizecommonsubexpressions"></a>OptimizeCommonSubExpressions
+Mejora el rendimiento de las consultas mediante la eliminación de movimiento de datos de la subexpresión común en el optimizador de consultas SQL. Puede encontrar una explicación detallada de esta característica [aquí](common-sub-expression-elimination.md).
+
+## <a name="usecatalogqueries"></a>UseCatalogQueries
 Uso de los objetos de catálogo para algunas llamadas de metadatos en lugar de usar SMO ha demostrado mejora del rendimiento. Establecido en true de forma predeterminada en CU7.1, este modificador controla ese comportamiento. 
 
-##<a name="dmsprocessstopmessagetimeoutinseconds"></a>DmsProcessStopMessageTimeoutInSeconds
-Controla el tiempo de espera del servicio de movimiento de datos (DMS) para sincronizar en un sistema ocupado cuando se cancela una consulta que implique el movimiento de datos. Actualizar a AU7 establece este valor en 900 segundos (15 minutos) de forma predeterminada. El intervalo válido es 0 y 3600 segundos.
+## <a name="dmsprocessstopmessagetimeoutinseconds"></a>DmsProcessStopMessageTimeoutInSeconds
+Controla el tiempo de espera del servicio de movimiento de datos (DMS) para sincronizar en un sistema ocupado cuando se cancela una consulta que implique el movimiento de datos. Actualizar a AU7 establece este valor en 900 segundos (15 minutos) de forma predeterminada. El intervalo válido es 0 - 3600 segundos.

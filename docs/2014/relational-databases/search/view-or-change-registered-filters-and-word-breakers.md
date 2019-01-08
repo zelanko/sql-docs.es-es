@@ -15,12 +15,12 @@ ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd05102a9a146a4aa9439e86a76212872556a08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ae427f9f8d3391d8a8fcd0bff06a6ea3b97044c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071005"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375717"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Ver o cambiar los filtros y separadores de palabras registrados
   Después de instalar o desinstalar filtros o separadores de palabras en un sistema, los cambios no se aplican automáticamente en las instancias de servidor. En este tema se describe cómo ver los filtros o separadores de palabras actualmente registrados y cómo registrar filtros y separadores de palabras recién instalados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "48071005"
   
      **Para instalar y cargar IFilters de Microsoft Filter Pack**  
   
-    -   [Cómo registrar IFilters de Microsoft Filter Pack con SQL Server](http://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [Cómo registrar IFilters de Microsoft Filter Pack con SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
   
 4.  Use **sp_fulltext_service** para cargar los filtros y separadores de palabras recién instalados en la instancia del servidor, tal y como se muestra a continuación:  
   

@@ -12,15 +12,15 @@ ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff63ea72b88658d9504030612f77bb948e7462ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ef5193919d57fc5867dc45cafafd847f9767f48
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226525"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353640"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Cambiar columnas existentes a columnas XML
-  La instrucción ALTER TABLE admite el `xml` tipo de datos. Por ejemplo, puede modificar cualquier columna de tipo de cadena para el `xml` tipo de datos. Tenga en cuenta que, en estos casos, los documentos contenidos en la columna deben tener un formato correcto. Asimismo, si cambia el tipo de la columna de cadena a xml con tipo, los documentos de la columna se validarán con los esquemas XSD especificados.  
+  La instrucción ALTER TABLE admite el tipo de datos `xml`. Por ejemplo, puede cambiar cualquier columna de tipo de cadena al tipo de datos `xml`. Tenga en cuenta que, en estos casos, los documentos contenidos en la columna deben tener un formato correcto. Asimismo, si cambia el tipo de la columna de cadena a xml con tipo, los documentos de la columna se validarán con los esquemas XSD especificados.  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 nvarchar(max))  
@@ -40,7 +40,7 @@ CREATE TABLE T (Col1 int primary key, Col2 xml)
 GO  
 INSERT INTO T   
 values (1, '<p1:ProductDescription ProductModelID="1"   
-xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
             </p1:ProductDescription>')  
 GO   
 -- Make it a typed xml column by specifying a schema collection.  
@@ -55,7 +55,7 @@ GO
  En el ejemplo anterior, todas las instancias almacenadas en la columna se validan y se les asigna un tipo con los esquemas XSD de la colección especificada. Si la columna contiene una o varias instancias XML no válidas respecto al esquema especificado, la instrucción `ALTER TABLE` no se ejecutará y no podrá cambiar la columna XML sin tipo a XML con tipo.  
   
 > [!NOTE]  
->  Si una tabla es grande, modificando un `xml` columna de tipo puede ser costoso. Esto se debe a que se tiene que comprobar que el formato de cada documento es correcto y, además, se deben validar los de XML con tipo.  
+>  Si una tabla es de gran tamaño, la modificación de una columna de tipo `xml` puede resultar costosa. Esto se debe a que se tiene que comprobar que el formato de cada documento es correcto y, además, se deben validar los de XML con tipo.  
   
  Para obtener más información sobre XML con tipo, vea [Comparar XML con tipo y XML sin tipo](compare-typed-xml-to-untyped-xml.md).  
   

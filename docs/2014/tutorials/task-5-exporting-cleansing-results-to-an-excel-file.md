@@ -13,15 +13,15 @@ ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2d52304ff9a8dae16e74d9d5aa7324adb2aac4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b01c9394419a4e526969c4a8ecccaf262f576d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138175"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368217"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tarea 5: exportar los resultados de la limpieza a un archivo de Excel
-  En esta tarea, exportará los resultados de la actividad de limpieza a un archivo de Excel. Consulte [fase de exportación](http://msdn.microsoft.com/library/hh213061.aspx#Export) tema para obtener más detalles.  
+  En esta tarea, exportará los resultados de la actividad de limpieza a un archivo de Excel. Consulte [fase de exportación](https://msdn.microsoft.com/library/hh213061.aspx#Export) tema para obtener más detalles.  
   
 1.  En el panel derecho, seleccione **Excel** para el **tipo de destino**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48138175"
   
 7.  Abra el **Cleansed Supplier List.xls** y realice lo siguiente:  
   
-    1.  Asegúrese de que no haya direcciones de correo electrónico que terminen en adventure-work.com (sin el carácter 's'); para ello, busque adventure-work.com en la hoja de cálculo.  
+    1.  Asegúrese de que no hay ninguna dirección de correo electrónico que terminen en adventure-work.com (del carácter ') mediante la búsqueda de adventure-work.com en la hoja de cálculo.  
   
     2.  Vea que no haya ningún **EE.UU.** valor en el **país** columna.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48138175"
     5.  Eliminar el **validación de direcciones** columna de la hoja de cálculo y guarde el archivo de excel. Esta columna adicional corresponde al dominio de compuesto Validación de direcciones.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 6: Importar valores del proyecto Limpiar lista de proveedores](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+ [Tarea 6: Importar valores desde el proveedor proyecto limpiar lista](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

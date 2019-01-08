@@ -13,12 +13,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33aaebe7172ac637354527bb9777afe5eb9a0a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173425"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370817"
 ---
 # <a name="create-clr-functions"></a>Crear funciones CLR
   Es posible crear un objeto de base de datos dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programada en un ensamblado creado en Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los objetos de bases de datos capaces de aprovechar el modelo enriquecido de programación suministrado por Common Language Runtime son las funciones de agregado, las funciones, los procedimientos almacenados, los desencadenadores y los tipos.  
@@ -53,7 +53,7 @@ ms.locfileid: "48173425"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
 ## <a name="accessing-native-code"></a>Acceso a código nativo  
- Las funciones CLR se pueden usar para tener acceso a código nativo (no administrado), como el código escrito en C o C++, a través del uso de PInvoke desde código administrado (vea [Llamar a funciones nativas desde código administrado](http://go.microsoft.com/fwlink/?LinkID=181929) para obtener detalles). Así, puede reutilizar el código heredado como las UDF de CLR, o escribir UDF esenciales para el rendimiento en código nativo. Esto requiere usar un ensamblado UNSAFE. Vea [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) para conocer advertencias acerca del uso de ensamblados UNSAFE.  
+ Las funciones CLR se pueden usar para tener acceso a código nativo (no administrado), como el código escrito en C o C++, a través del uso de PInvoke desde código administrado (vea [Llamar a funciones nativas desde código administrado](https://go.microsoft.com/fwlink/?LinkID=181929) para obtener detalles). Así, puede reutilizar el código heredado como las UDF de CLR, o escribir UDF esenciales para el rendimiento en código nativo. Esto requiere usar un ensamblado UNSAFE. Vea [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) para conocer advertencias acerca del uso de ensamblados UNSAFE.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](create-user-defined-functions-database-engine.md)   

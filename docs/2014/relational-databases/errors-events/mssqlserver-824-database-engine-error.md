@@ -12,12 +12,12 @@ ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: baf815460951a91daad76df814cd32298d49a9fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad5619983fbbaf390c756bb21a66f80487f1c076
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208325"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370257"
 ---
 # <a name="mssqlserver824"></a>MSSQLSERVER_824
     
@@ -33,7 +33,7 @@ ms.locfileid: "48208325"
 |Texto del mensaje|SQL Server detectó un error de E/S de coherencia lógico: %ls. Ocurrió durante %S_MSG de la página %S_PGID en la base de datos con id. %d, desplazamiento %#016I64x, archivo '%ls'.  El registro de errores de SQL Server o el registro de eventos del sistema pueden contener mensajes adicionales con más detalles.|  
   
 ## <a name="explanation"></a>Explicación  
- Este error indica que Windows informa de que la página se lee correctamente desde el disco, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado algún problema en ella. Este error es similar al error 823, solo que Windows no detectó el error. Normalmente, suele indicar un problema en el subsistema de E/S, como errores en la unidad de disco, problemas de firmware, un controlador de dispositivo defectuoso, etc. Para obtener más información sobre los errores de E/S, vea el [capítulo 2 del documento sobre conceptos básicos de E/S de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=69370).  
+ Este error indica que Windows informa de que la página se lee correctamente desde el disco, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado algún problema en ella. Este error es similar al error 823, solo que Windows no detectó el error. Normalmente, suele indicar un problema en el subsistema de E/S, como errores en la unidad de disco, problemas de firmware, un controlador de dispositivo defectuoso, etc. Para obtener más información sobre los errores de E/S, vea el [capítulo 2 del documento sobre conceptos básicos de E/S de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=69370).  
   
 ## <a name="user-action"></a>Acción del usuario  
   

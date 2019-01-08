@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,12 +15,12 @@ ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d72541882ce8a084c5b96bd032a99c4ad36052b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d4a61a20dacbe24551459253f3721f9af9c96a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058745"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356700"
 ---
 # <a name="creating-a-custom-log-provider"></a>Crear un proveedor de registro personalizado
   El entorno en tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye amplias funciones de registro. Un registro permite capturar eventos que se generan durante la ejecución del paquete. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye varios proveedores de registro que permiten crear registros y almacenarlos en diversos formatos como XML, texto, base de datos o en el registro de eventos de Windows. Si uno de estos proveedores o formatos de salida no se ajusta sus necesidades, puede crear un proveedor de registro personalizado.  
@@ -75,7 +73,7 @@ public class MyLogProvider : LogProviderBase
 ## <a name="building-deploying-and-debugging-a-custom-log-provider"></a>Generar, implementar y depurar un proveedor de registro personalizado  
  Los pasos para generar, implementar y depurar un proveedor de registro personalizado en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] son muy similares a los pasos requeridos para otros tipos de objetos personalizados. Para obtener más información, consulte [Generar, implementar y depurar objetos personalizados](../building-deploying-and-debugging-custom-objects.md).  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Programar un proveedor de registro personalizado](coding-a-custom-log-provider.md)   

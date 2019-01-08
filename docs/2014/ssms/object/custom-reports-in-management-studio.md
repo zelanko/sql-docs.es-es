@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a1f66753b1ff002a43f59fb065134967e15254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208903"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354686"
 ---
 # <a name="custom-reports-in-management-studio"></a>Informes personalizados en Management Studio
   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], muchos nodos del Explorador de objetos muestran un conjunto de informes estándar creados por [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Estos informes incluyen un resumen de la información que se suele solicitar al servidor. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, los administradores pueden ejecutar los informes personalizados que se crearon en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -71,7 +71,7 @@ ms.locfileid: "48208903"
 >  Cualquier instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] válida se puede incrustar y ejecutar en un informe. La ejecución de un informe en una cuenta de usuario con privilegios elevados permite ejecutar sin problemas cualquiera de estas instrucciones incrustadas.  
   
 ## <a name="report-samples"></a>Ejemplos de informes  
- [Ejemplos de informes](http://go.microsoft.com/fwlink/?LinkId=81792), incluidos los informes estándares creados por [!INCLUDE[msCoName](../../includes/msconame-md.md)], están disponibles para su descarga. Estos ejemplos se pueden modificar mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ [Ejemplos de informes](https://go.microsoft.com/fwlink/?LinkId=81792), incluidos los informes estándares creados por [!INCLUDE[msCoName](../../includes/msconame-md.md)], están disponibles para su descarga. Estos ejemplos se pueden modificar mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Agregar un informe personalizado a Management Studio](add-a-custom-report-to-management-studio.md)   

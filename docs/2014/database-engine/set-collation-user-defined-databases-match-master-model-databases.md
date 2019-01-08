@@ -12,12 +12,12 @@ ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6aea5507c008d608b7fcc9e50c7defcdff90924d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190405"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371087"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Establecer la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos modelo y maestra
   Esta regla comprueba si las bases de datos definidas por el usuario se definen utilizando una intercalación de base de datos que es igual a la intercalación de las bases de datos maestra o modelo.  
@@ -48,9 +48,9 @@ ms.locfileid: "48190405"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Artículo de Microsoft Knowledge Base 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
+ [Artículo de Microsoft Knowledge Base 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [Cómo: instalar SQL Server 2008 desde el símbolo del sistema](http://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Cómo: Instalar a SQL Server 2008 desde el símbolo del sistema](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

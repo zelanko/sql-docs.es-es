@@ -11,12 +11,12 @@ ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d66e01079a0ab86a1456e53dd310614d3c291267
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2639f783f862e27041985ac27ff16740b47cbb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173421"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356763"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>Intercalación del servidor de motor de base de datos incompatible (Asesor de actualizaciones)
   Asesor de actualizaciones ha detectado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa una instancia de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que está configurado para utilizar una intercalación de servidor incompatible.  
@@ -44,8 +44,8 @@ ms.locfileid: "48173421"
 ## <a name="corrective-action"></a>Acción correctora  
  La propiedad de intercalación del servidor de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] no se puede cambiar. No podrá completar una actualización de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Deberá migrar la instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a un servidor nuevo que use una intercalación del servidor compatible. Para obtener más información, vea:  
   
--   [Actualizar y migrar Reporting Services](http://go.microsoft.com/fwlink/?LinkId=233227)  
+-   [Actualizar y migrar Reporting Services](https://go.microsoft.com/fwlink/?LinkId=233227)  
   
--   [Seleccionar una intercalación de SQL Server](http://go.microsoft.com/fwlink/?LinkId=233226)  
+-   [Seleccionar una intercalación de SQL Server](https://go.microsoft.com/fwlink/?LinkId=233226)  
   
   

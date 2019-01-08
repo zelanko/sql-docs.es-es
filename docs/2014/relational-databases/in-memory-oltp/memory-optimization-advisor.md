@@ -13,19 +13,19 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d616312ffec682ad7c37da62c23c4ada1eb98f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140995"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359277"
 ---
 # <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
   La herramienta de informes de rendimiento de las transacciones (vea [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) le informa sobre qué tablas de la base de datos se beneficiarían de una conversión para utilizar OLTP en memoria. Después de identificar la tabla que desea convertir para que utilice OLTP en memoria, puede usar el Asistente de optimización de memoria para que le ayude a migrar la tabla de base de datos basada en disco a OLTP en memoria.  
   
  Para empezar, conéctese a la instancia que contiene la tabla de base de datos basada en disco. Puede conectarse a una instancia de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Sin embargo, si desea realizar una operación de migración con el asistente, debe conectarse a una instancia de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] que tenga habilitada la funcionalidad de OLTP en memoria. Para obtener más información acerca de los requisitos de OLTP en memoria, vea [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
- Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Tutorial del uso del Asistente de optimización de memoria  
  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla que quiere convertir y seleccione **Asistente de optimización de memoria**. Se mostrará la página de bienvenida del **Asistente de optimización de memoria de tablas**.  
@@ -112,7 +112,7 @@ ms.locfileid: "48140995"
 ### <a name="review-index-conversion"></a>Revisar la conversión del índice  
  La página siguiente es **Revisar la conversión del índice**. El Asistente de optimización de memoria detectará si hay uno o varios índices en la tabla y rellenará la lista de columnas y el tipo de datos. Los parámetros que puede configurar en la página **Revisar la conversión del índice** son similares a los de la página anterior, **Revisar la conversión de la clave principal** .  
   
- Esta pantalla no aparecerá si la tabla tiene únicamente una clave principal y se está migrando a una tabla perdurable.  
+ Esta pantalla no aparecerá si la tabla solo tiene una clave principal y se está migrando a una tabla perdurable.  
   
  Cuando haya configurado todos los índices de la tabla, haga clic en **Siguiente**.  
   

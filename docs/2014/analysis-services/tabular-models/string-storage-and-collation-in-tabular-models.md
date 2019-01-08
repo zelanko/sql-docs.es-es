@@ -11,19 +11,19 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8b451134d621c8f151fa43ec4214317ab087918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9bc74d7ac6c1e3fb826e2a1b3ebdc0122fd2720
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072741"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353776"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Almacenamiento e intercalación de cadenas en modelos tabulares
   Las cadenas (valores de texto) se almacenan en los modelos tabulares utilizando un formato muy comprimido; debido a esta compresión, puede obtener resultados inesperados al recuperar cadenas completas o parciales. Además, dado que la configuración regional y las intercalaciones de las cadenas se heredan jerárquicamente del objeto primario más próximo, si no se define explícitamente el idioma de las cadenas, la configuración regional y la intercalación del elemento primario pueden afectar a la forma de almacenamiento de cada una de las cadenas y determinar si la cadena es única o se combina con cadenas similares tal como se define en la intercalación primaria.  
   
  En este tema se describe el mecanismo mediante el cual se comprimen y almacenan las cadenas, y se proporcionan ejemplos de cómo afectan la intercalación y el idioma a los resultados de las fórmulas de texto en los modelos tabulares.  
   
-## <a name="storage"></a>Almacenamiento  
+## <a name="storage"></a>Storage  
  En los modelos tabulares, todos los datos están muy comprimidos para que puedan almacenarse sin problemas en la memoria. En consecuencia, todas las cadenas consideradas léxicamente equivalentes se almacenan solo una vez. La primera instancia de la cadena se utiliza como la representación canónica y a partir de este momento cada cadena equivalente se indiza al mismo valor comprimido que la primera repetición.  
   
  La pregunta clave es: ¿qué constituye una cadena léxicamente equivalente? Dos cadenas se consideran léxicamente equivalentes si se pueden considerar como la misma palabra. Por ejemplo, cuando busca la palabra **violin** en inglés en un diccionario, puede encontrar la entrada **Violin** o **violin**, dependiendo de la directiva editorial del diccionario, pero generalmente considerará ambas palabras equivalentes, y no tendrá en cuenta la diferencia en el uso de mayúsculas. En un modelo tabular, el factor que determina si dos cadenas son léxicamente equivalentes no es la directiva editorial ni las preferencias del usuario, sino la configuración regional y la intercalación asignadas a la columna.  
@@ -55,7 +55,7 @@ ms.locfileid: "48072741"
 |trEE|  
 |PlAnT|  
   
- Si utiliza la columna **Classification – English**en el modelo, cuando muestre la clasificación de las plantas no verá los valores originales, con sus varios usos de mayúsculas y minúsculas, sino únicamente la primera repetición. El motivo es que todas las variantes de mayúsculas y minúsculas de **tree** se consideran equivalentes en esta intercalación y configuración regional; por lo tanto, solo se conservó una cadena y la primera instancia de esta que encuentre el sistema será la que se guarde.  
+ Si utiliza la columna **Classification - English**, en el modelo, cuando muestre la clasificación de las plantas verá no los valores originales, con sus varios usos de mayúsculas y minúsculas, pero solo la primera instancia. El motivo es que todas las variantes de mayúsculas y minúsculas de **tree** se consideran equivalentes en esta intercalación y configuración regional; por lo tanto, solo se conservó una cadena y la primera instancia de esta que encuentre el sistema será la que se guarde.  
   
 > [!WARNING]  
 >  Quizá decida que desea definir la cadena que se almacenará en primer lugar, de acuerdo con lo que considera correcto, pero esto puede resultar muy difícil. No es fácil determinar con antelación qué fila debe procesar el motor en primer lugar, dado que todos los valores se consideran iguales. En lugar de ello, si necesita establecer el valor estándar, deberá limpiar todas las cadenas antes de cargar el modelo.  
@@ -71,7 +71,7 @@ ms.locfileid: "48072741"
   
 -   La intercalación define el orden de los caracteres y su equivalencia.  
   
- Es importante resaltar que un identificador de idioma no solo identifica un idioma, sino también el país o la región donde se utiliza dicho idioma. Cada identificador de idioma también tiene una especificación de intercalación predeterminada. Para obtener más información acerca de los identificadores de idioma, vea [Id. de configuración regional asignados por Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). Puede utilizar la columna LCID Dec para obtener el identificador correcto al insertar manualmente un valor. Para más información sobre el concepto de intercalaciones en SQL, vea [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations). Para obtener información sobre los designadores de colación y los estilos de comparación para los nombres de intercalación de Windows, vea [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql). En el tema [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) se asignan los nombres de intercalación de Windows a los nombres usados para SQL.  
+ Es importante resaltar que un identificador de idioma no solo identifica un idioma, sino también el país o la región donde se utiliza dicho idioma. Cada identificador de idioma también tiene una especificación de intercalación predeterminada. Para obtener más información acerca de los identificadores de idioma, vea [Id. de configuración regional asignados por Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx). Puede utilizar la columna LCID Dec para obtener el identificador correcto al insertar manualmente un valor. Para más información sobre el concepto de intercalaciones en SQL, vea [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations). Para obtener información sobre los designadores de colación y los estilos de comparación para los nombres de intercalación de Windows, vea [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql). En el tema [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) se asignan los nombres de intercalación de Windows a los nombres usados para SQL.  
   
  Una vez creada la base de datos de modelos tabulares, todos los objetos nuevos del modelo heredarán los atributos de idioma y de intercalación de los atributos de base de datos. Esto es válido para todos los objetos. La ruta de herencia comienza en el objeto, examina el elemento primario para comprobar si se debe heredar algún atributo de idioma y de intercalación y, si no encuentra ninguno, continúa hacia la parte superior y busca los atributos de idioma e intercalación en el nivel de base de datos. En otras palabras, si no se especifican los atributos de idioma y de intercalación para un objeto, este hereda de forma predeterminada los atributos de su elemento primario más próximo.  
   

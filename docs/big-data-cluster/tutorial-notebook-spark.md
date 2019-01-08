@@ -1,18 +1,20 @@
 ---
-title: Ejecución de un cuaderno de ejemplo en un clúster de SQL Server 2019 macrodatos | Microsoft Docs
+title: Ejecutar un cuaderno de ejemplo | Microsoft Docs
+titleSuffix: SQL Server 2019 big data clusters
 description: Este tutorial muestra cómo se puede cargar un cuaderno de Spark de ejemplo en un clúster de macrodatos de 2019 de SQL Server (versión preliminar) de una ejecución.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 811c94615f0d69886f0f538357529ad3125e2925
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 55d37969ec3e03a635e948cdafb73eb1922a1795
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644233"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432558"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>Tutorial: Ejecutar un cuaderno de ejemplo en un clúster de macrodatos de SQL Server 2019
 
@@ -23,11 +25,11 @@ Este tutorial muestra cómo cargar y ejecutar un cuaderno en Azure Data Studio e
 
 ## <a id="prereqs"></a> Requisitos previos
 
-* [Implementar un clúster de macrodatos en Kubernetes](deployment-guidance.md).
-* [Instalar Data Studio de Azure y la extensión de SQL Server 2019](deploy-big-data-tools.md).
-* [Cargar datos de ejemplo en el clúster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Extensión de SQL Server 2019**
+- [Cargar datos de ejemplo en el clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>Descargue el archivo de Bloc de notas de ejemplo
 
@@ -47,7 +49,7 @@ Siga las instrucciones siguientes para cargar el archivo de Bloc de notas de eje
 
 Los pasos siguientes muestran cómo abrir el archivo de Bloc de notas en Azure Data Studio:
 
-1. En Azure Data Studio, conéctese a la puerta de enlace de Spark o HDFS del clúster de macrodatos. Para obtener más información, consulte [conectar con la puerta de enlace de Spark o HDFS](deploy-big-data-tools.md#hdfs).
+1. En Azure Data Studio, conéctese a la puerta de enlace de Spark o HDFS del clúster de macrodatos. Para obtener más información, consulte [conectar con la puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md#hdfs).
 
 1. Haga doble clic en la conexión de puerta de enlace de Spark o HDFS en el **servidores** ventana. A continuación, seleccione **Abrir Bloc de notas**.
 

@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674205"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626325"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implementar un contenedor de SQL Server en Kubernetes con Azure Kubernetes Services (AKS)
 
@@ -41,11 +41,11 @@ En el diagrama anterior, `mssql-server` es un contenedor en un [pod](https://kub
 
 En el diagrama siguiente, la `mssql-server` contenedor ha producido un error. Como el orquestador, Kubernetes garantiza establece el recuento correcto de instancias en buen estado en la réplica e inicia un nuevo contenedor de acuerdo con la configuración. El orquestador inicia un nuevo conjunto pod en el mismo nodo, y `mssql-server` se vuelve a conectar al mismo almacenamiento persistente. El servicio se conecta a volver a crearse `mssql-server`.
 
-![Diagrama del clúster de Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagrama del clúster de Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 En el diagrama siguiente, el nodo que hospeda el `mssql-server` contenedor ha producido un error. El orquestador inicia el pod nuevo en un nodo diferente, y `mssql-server` se vuelve a conectar al mismo almacenamiento persistente. El servicio se conecta a volver a crearse `mssql-server`.
 
-![Diagrama del clúster de Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagrama del clúster de Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -174,13 +174,15 @@ En este paso, creará un manifiesto para describir el contenedor en función del
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server:2017-latest
            ports:
            - containerPort: 1433
            env:
+           - name: MSSQL_PID
+             value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -209,7 +211,7 @@ En este paso, creará un manifiesto para describir el contenedor en función del
 
    Copie el código anterior en un nuevo archivo denominado `sqldeployment.yaml`. Actualice los valores siguientes: 
 
-   * `value: "Developer"`: Establece el contenedor para la ejecución de SQL Server Developer edition. Edición para desarrolladores no tiene licencia para los datos de producción. Si la implementación es para su uso en producción, establezca la edición adecuada (`Enterprise`, `Standard`, o `Express`). 
+   * MSSQL_PID `value: "Developer"`: Establece el contenedor para la ejecución de SQL Server Developer edition. Edición para desarrolladores no tiene licencia para los datos de producción. Si la implementación es para su uso en producción, establezca la edición adecuada (`Enterprise`, `Standard`, o `Express`). 
 
       >[!NOTE]
       >Para obtener más información, consulte [licencias de SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).

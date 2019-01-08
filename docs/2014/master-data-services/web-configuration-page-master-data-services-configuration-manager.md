@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
@@ -13,12 +12,12 @@ ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ebab5de453d383b20e55e52ec3d57b10cfaebcf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200876"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357773"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Página Configuración web (Master Data Services)
   Use la página **Configuración web** para crear un nuevo sitio web o una aplicación web. Una vez haya seleccionado una aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , puede especificar la base de datos de la aplicación de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] y habilitar Data Quality Services.  
@@ -48,7 +47,7 @@ ms.locfileid: "48200876"
 ## <a name="see-also"></a>Vea también  
  [Configurar la base de datos y el sitio Web de Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Requisitos de aplicaciones Web &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
- [Crear una aplicación Web de Master Data Manager &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [MDS 2014 y el Error "Servicio no disponible"](http://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
+ [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
+ [MDS 2014 y el Error "Servicio no disponible"](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

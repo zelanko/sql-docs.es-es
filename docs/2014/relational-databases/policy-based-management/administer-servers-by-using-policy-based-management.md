@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
@@ -20,12 +20,12 @@ ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91483db92422a4510a6cefd2eca7d7f1f6f3f1e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067630"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377487"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
   La administración basada en directivas es un sistema para administrar una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando los administradores de directivas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan la administración basada en directivas, utilizan [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear directivas que permitan administrar las entidades en el servidor, como la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las bases de datos u otros objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "48067630"
  En las directivas que no se cumplen, el Explorador de objetos indica una advertencia de estado crítico mediante un icono rojo junto al destino y los nodos superiores del árbol del Explorador de objetos.  
   
 > [!NOTE]  
->  Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, consulte: [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+>  Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, consulte: [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>Conceptos de la administración basada en directivas  
  La administración basada en directivas tiene tres componentes:  

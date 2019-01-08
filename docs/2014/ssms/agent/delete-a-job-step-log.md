@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -15,12 +15,12 @@ ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0870de459be9999979797579bf577cd7daab816
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070895"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377557"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   En este tema se describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -39,7 +39,7 @@ ms.locfileid: "48070895"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Cuando se eliminan pasos de trabajo, sus registros de salida respectivos también se eliminan de forma automática.  
@@ -83,7 +83,7 @@ ms.locfileid: "48070895"
  Para obtener más información, consulte [sp_delete_jobsteplog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
   
 ##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
- Use los métodos `DeleteJobStepLogs` de la clase `Job` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte[Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Use los métodos `DeleteJobStepLogs` de la clase `Job` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte[Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
 ```  
 -- Uses PowerShell to delete all job step log files that have ID values larger than 5.  

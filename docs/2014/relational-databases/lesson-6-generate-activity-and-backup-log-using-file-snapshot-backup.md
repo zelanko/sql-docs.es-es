@@ -1,5 +1,5 @@
 ---
-title: 'Lección 7: Mover los archivos de datos en Azure Storage | Microsoft Docs'
+title: 'Lección 7: Mover los archivos de datos a almacenamiento de Windows Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b49907bb7cb9c2d33d7672570f161cbd98432d45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170088"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355334"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Lección 7: Mover los archivos de datos a Azure Storage
   En esta lección, aprenderá a mover los archivos de datos a Azure Storage (pero no la instancia de SQL Server). Para seguir esta lección, no es necesario completar las lecciones 4, 5 y 6.  
@@ -33,7 +33,7 @@ ms.locfileid: "48170088"
   
 -   Ha creado una credencial de SQL Server en el equipo de origen.  
   
- A continuación, utiliza los siguientes pasos para mover los archivos de datos al Almacenamiento de Windows Azure:  
+ A continuación, utiliza los siguientes pasos para mover los archivos de datos a Azure Storage:  
   
 1.  Primero, cree una base de datos de prueba en el equipo de origen y agréguele algunos datos.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48170088"
   
     ```  
   
-3.  Cuando ejecute este código, verá este mensaje: “El archivo “TestDB1Alter” se ha modificado en el catálogo del sistema. La nueva ruta de acceso se usará la próxima vez que se inicie la base de datos.”  
+3.  Cuando ejecute este código, verá este mensaje: "El archivo"TestDB1Alter"se ha modificado en el catálogo del sistema. La nueva ruta se usará la próxima vez que se inicie la base de datos."  
   
 4.  Después, establezca la base de datos sin conexión.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "48170088"
   
     ```  
   
-5.  Ahora, deberá copiar los archivos de datos en Azure Storage mediante uno de los métodos siguientes: [herramienta AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [referencia de biblioteca de cliente de almacenamiento](https://msdn.microsoft.com/library/azure/dn261237.aspx), o un herramienta de explorador de storage de terceros.  
+5.  Ahora, debe copiar los archivos de datos a Azure Storage mediante uno de los métodos siguientes: [Herramienta AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [referencia de biblioteca de cliente de almacenamiento](https://msdn.microsoft.com/library/azure/dn261237.aspx), o una herramienta de exploración de almacenamiento de terceros.  
   
-     **Importante:** cuando se usa esta nueva mejora, asegúrese siempre de que crear un blob en páginas no un blob en bloques.  
+     **Importante:** al utilizar esta nueva mejora, asegúrese de crear siempre un blob de página y no un blob de bloque.  
   
 6.  Después, establezca la base de datos con conexión.  
   

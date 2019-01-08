@@ -13,15 +13,15 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39d8a1bdbc3a56cc03710bc6982b708235c47c45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762433"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508752"
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
-El **Recordset** objeto tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados para buscar un registro específico en función de criterios que suministran e incluso a optimizar estas operaciones de búsqueda mediante índices. Si estas características están disponibles para su uso depende del proveedor y en algunos casos, como los de la [índice](../../../ado/reference/ado-api/index-property.md) propiedad, la estructura del origen de datos propia.  
+El **Recordset** objeto tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados para buscar un registro específico en función de criterios que suministran e incluso a optimizar estas operaciones de búsqueda mediante índices. Si estas características están disponibles para su uso depende del proveedor y en algunos casos - como los de la [índice](../../../ado/reference/ado-api/index-property.md) propiedad - la estructura del origen de datos propia.  
   
 ## <a name="arranging-data"></a>Organizar datos  
  Con frecuencia, la manera más eficaz para ordenar los datos en su **Recordset** consiste en especificar una cláusula ORDER BY en el comando SQL utilizado para devolver los resultados. Sin embargo, es posible que deba cambiar el orden de los datos en un **Recordset** que ya se ha creado. Puede usar el **ordenación** propiedad para establecer el orden en que las filas de una **Recordset** se recorren. Además, el **filtro** propiedad determina qué filas son puede obtenerse al recorrer las filas.  
@@ -116,7 +116,7 @@ El **Recordset** objeto tiene características integradas que permiten reorganiz
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filtros para ver solo los registros afectados por la última **eliminar**, **Resync**, **UpdateBatch**, o **CancelBatch** llamar.|  
 |**adFilterConflictingRecords**|Filtros para ver los registros que no se pudo la última actualización por lotes.|  
-|**adFilterFetchedRecords**|Filtros para ver los registros en la memoria caché actual, es decir, los resultados de la última llamada para recuperar registros de la base de datos.|  
+|**adFilterFetchedRecords**|Filtros para ver los registros en la memoria caché actual: es decir, los resultados de la última llamada para recuperar registros de la base de datos.|  
 |**adFilterNone**|Quita el filtro actual y restaura todos los registros para su visualización.|  
 |**adFilterPendingRecords**|Los filtros para ver solo los registros que han cambiado pero que no se han enviado al servidor. Solo es aplicable a modo de actualización por lotes.|  
   

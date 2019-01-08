@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -16,12 +15,12 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f7e1927d1b35c1f4a8e7b7aef8d8c3cbfaa0b33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128815"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362628"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server
   Cuando una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] forma parte de un clúster de conmutación por error, el proceso para cambiar el nombre del servidor virtual no es el mismo que para cambiar el nombre de una instancia independiente. Para obtener más información, vea [Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -45,7 +44,7 @@ ms.locfileid: "48128815"
 ## <a name="verify-the-renaming-operation"></a>Comprobar la operación de cambio de nombre  
  Después de cambiar el nombre de un servidor virtual, las conexiones que utilizaban el nombre anterior ahora deben realizarse con el nuevo nombre.  
   
- Para comprobar que se ha completado la operación de cambio de nombre, seleccione información de `@@servername` o `sys.servers`. La función `@@servername` devolverá el nuevo nombre del servidor virtual y la tabla `sys.servers` mostrará también este nombre. Para comprobar que el proceso de conmutación por error funciona correctamente con el nuevo nombre, el usuario también debe intentar que el recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conmute por error a los otros nodos.  
+ Para comprobar que la operación de cambio de nombre ha finalizado, seleccione información de `@@servername` o `sys.servers`. La función `@@servername` devolverá el nuevo nombre del servidor virtual y la tabla `sys.servers` mostrará también este nombre. Para comprobar que el proceso de conmutación por error funciona correctamente con el nuevo nombre, el usuario también debe intentar que el recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conmute por error a los otros nodos.  
   
  Para las conexiones desde cualquier nodo del clúster se puede utilizar el nombre nuevo casi inmediatamente. Sin embargo, no se puede utilizar para las conexiones con el servidor desde un equipo cliente hasta que no esté visible para este último. El tiempo necesario para que el nuevo nombre se propague a través de la red pueden ser segundos o de 3 a 5 minutos, dependiendo de la configuración de la red; puede que se necesite más tiempo para que el nombre de servidor virtual anterior deje de estar visible en la red.  
   
@@ -58,25 +57,25 @@ ms.locfileid: "48128815"
     ```  
     ipconfig /flushdns  
     ipconfig /registerdns  
-    nbtstat –RR  
+    nbtstat -RR  
     ```  
   
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Consideraciones adicionales después de la operación de cambio de nombre  
  Después de cambiar el nombre de red en clúster del clúster de conmutación por error, hay que comprobar y seguir las siguientes instrucciones para conseguir que todos los escenarios del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funcionen.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** después de cambiar el nombre de red de una instancia de clúster de conmutación por error de [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] mediante la herramienta Administrador de clústeres de Windows, se puede producir un error en una operación futura de actualización o desinstalación. Para resolver este problema, actualice el **ClusterName** entrada del registro siguiendo las instrucciones que aparecen en la sección resolución de [esto](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Después de cambiar el nombre de red de un [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] instancia mediante la herramienta de administrador de clústeres de Windows, futura de actualización de clúster de conmutación por error o desinstalar podría producir un error. Para resolver este problema, actualice el **ClusterName** entrada del registro siguiendo las instrucciones que aparecen en la sección resolución de [esto](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002).  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :** compruebe y realice las acciones adicionales siguientes para el Servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servicio del agente:** Compruebe y realice las acciones adicionales siguientes para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio del agente:  
   
 -   Corrija la configuración del Registro si el Agente SQL se configura para el reenvío de eventos. Para obtener más información, vea [Designar un servidor de reenvío de eventos &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
--   Corregir los nombres de instancia de los servidores de destino (TSX) y el servidor maestro (MSX) cuando se cambie el nombre de red en clúster o equipos. Para obtener más información, consulte los temas siguientes:  
+-   Corregir los nombres de instancia de los servidores de destino (TSX) y el servidor maestro (MSX) cuando se cambie el nombre de red en clúster o equipos. Para obtener más información, vea los temas siguientes:  
   
     -   [Dar de baja varios servidores de destino desde un servidor maestro](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Crear un entorno multiservidor](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   Volver a configurar el trasvase de registros de modo que se use el nombre de servidor actualizado para realizar la copia de seguridad de los registros y para restaurarlos. Para obtener más información, consulte los temas siguientes:  
+-   Volver a configurar el trasvase de registros de modo que se use el nombre de servidor actualizado para realizar la copia de seguridad de los registros y para restaurarlos. Para obtener más información, vea los temas siguientes:  
   
     -   [Configurar el trasvase de registros &#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   

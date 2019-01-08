@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ef77f630142cf5b7202a30b928ac6e049584071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f87a7d2897f069f4447437dd3a837d92af18f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159991"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374757"
 ---
 # <a name="sap-bw-source"></a>Origen de SAP BW
   El origen de SAP BW es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Así, el origen de SAP BW extrae datos de un sistema SAP Netweaver BW de la versión 7 y hace que estos datos estén disponibles para el flujo de datos en un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -107,7 +106,7 @@ ms.locfileid: "48159991"
   
     -   Para la opción **E - Extraer únicamente** , proporcione el identificador de solicitud.  
   
--   Especifique las reglas de conversión de cadenas. (Por ejemplo, convertir todas las cadenas dependiendo de si el sistema SAP Netweaver BW es Unicode o no o convierta todas las cadenas a `varchar` o `nvarchar`).  
+-   Especifique las reglas de conversión de cadenas. (Por ejemplo, convierta todas las cadenas en función de si el sistema SAP Netweaver BW es Unicode o no o convierta todas las cadenas a `varchar` o a `nvarchar`).  
   
 -   Use las opciones que ha seleccionado para obtener una vista previa de los datos que se van a extraer.  
   
@@ -115,18 +114,18 @@ ms.locfileid: "48159991"
   
  Si no conoce todos los valores necesarios para configurar el origen, puede que tenga que ponerse en contacto con el administrador de SAP.  
   
- Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server 2008 Integration Services con SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
+ Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server 2008 Integration Services con SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Usar el Diseñador SSIS para configurar el origen  
  Para obtener más información sobre las propiedades del origen de SAP BW que puede establecer en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
 -   [Editor de origen de SAP BW &#40;página Administrador de conexiones&#41;](sap-bw-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de SAP BW &#40;página columnas&#41;](sap-bw-source-editor-columns-page.md)  
+-   [Editor de origen de SAP BW &#40;página Columnas&#41;](sap-bw-source-editor-columns-page.md)  
   
--   [Editor de origen de SAP BW &#40;página de salida de Error&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [Editor de origen de SAP BW &#40;página Salida de error&#41;](sap-bw-source-editor-error-output-page.md)  
   
--   [Editor de origen de SAP BW &#40;página Opciones avanzadas&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [Editor de origen de SAP BW &#40;página Avanzadas&#41;](sap-bw-source-editor-advanced-page.md)  
   
  Mientras configura el origen de SAP BW, también puede usar varios cuadros de diálogo para buscar los objetos de SAP Netweaver BW o para obtener una vista previa de los datos de origen. Para obtener más información sobre estos cuadros de diálogo, haga clic en uno de los temas siguientes:  
   

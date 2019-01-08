@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,15 +20,15 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b187a87643353f94a44173472b72478553b7110
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf7aadd37fe4493d47638bb1c99b8c382f0ffbcd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085305"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377327"
 ---
 # <a name="using-variables-in-the-script-task"></a>Utilizar variables en la tarea Script
-  Las variables permiten que la tarea Script intercambie datos con otros objetos del paquete. Para más información, vea [Integration Services &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md).  
+  Las variables permiten que la tarea Script intercambie datos con otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services-ssis-variables.md).  
   
  La tarea Script utiliza la propiedad <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> del objeto `Dts` para leer de y escribir en los objetos <xref:Microsoft.SqlServer.Dts.Runtime.Variable> del paquete.  
   
@@ -116,10 +114,10 @@ public class ScriptMain
   
 ```  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
- [Servicios de integración &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](../../integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../../use-variables-in-packages.md)  
   
   

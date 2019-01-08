@@ -24,12 +24,12 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c6bc03334003438fdefbe7feac1e321d9a2e9bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137495"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545355"
 ---
 # <a name="populate-full-text-indexes"></a>Rellenar índices de texto completo
   La creación y el mantenimiento de un índice de texto completo implica el rellenado del índice mediante un proceso denominado *rellenado* (también se denomina *rastreo*).  
@@ -45,12 +45,12 @@ ms.locfileid: "48137495"
 
   
 ### <a name="change-tracking-based-population"></a>Rellenado basado en el seguimiento de cambios  
- Si se desea, se puede usar el seguimiento de cambios para mantener un índice de texto completo después de su rellenado completo inicial. El seguimiento de cambios provoca una pequeña sobrecarga de trabajo porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene una tabla en la que realiza el seguimiento de los cambios de la tabla base desde el último rellenado. Cuando se utilizan el seguimiento de cambios, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene un registro de las filas en la tabla base o vista indizada que se han modificado las actualizaciones, eliminaciones o inserciones. Los cambios realizados en los datos con WRITETEXT y UPDATETEXT no se reflejan en el índice de texto completo y no se recopilan con el seguimiento de cambios.  
+ Si se desea, se puede usar el seguimiento de cambios para mantener un índice de texto completo después de su rellenado completo inicial. El seguimiento de cambios provoca una pequeña sobrecarga de trabajo porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene una tabla en la que realiza el seguimiento de los cambios de la tabla base desde el último rellenado. Cuando se utiliza el seguimiento de cambios, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene un registro de las filas de la tabla base o la vista indizada que se han modificado con las actualizaciones, eliminaciones o inserciones. Los cambios realizados en los datos con WRITETEXT y UPDATETEXT no se reflejan en el índice de texto completo y no se recopilan con el seguimiento de cambios.  
   
 > [!NOTE]  
->  Para las tablas que contienen un `timestamp` columna, puede utilizar los rellenados incrementales.  
+>  Para las tablas que contienen una columna `timestamp`, puede utilizar los rellenados incrementales.  
   
- Cuando se habilita el seguimiento de cambios durante la creación del índice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rellena totalmente el nuevo índice de texto completo inmediatamente después de crearlo. Después de esto, los cambios se siguen y propagan al índice de texto completo. Hay dos tipos de seguimiento de cambios: automático (opción CHANGE_TRACKING AUTO) y manual (opción CHANGE_TRACKING MANUAL). El seguimiento de cambios automático es el comportamiento predeterminado.  
+ Cuando el seguimiento de cambios está habilitado durante la creación de índices, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rellena totalmente el nuevo índice de texto completo justo después de crearse. Después de esto, los cambios se siguen y propagan al índice de texto completo. Hay dos tipos de seguimiento de cambios: automático (opción CHANGE_TRACKING AUTO) y manual (opción CHANGE_TRACKING MANUAL). El seguimiento de cambios automático es el comportamiento predeterminado.  
   
  El tipo de seguimiento de cambios determina cómo se rellena el índice de texto completo, de la forma siguiente:  
   
@@ -60,40 +60,40 @@ ms.locfileid: "48137495"
   
      **Para configurar el seguimiento de cambios con rellenado automático**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING AUTO  
   
      Para obtener más información, vea el ejemplo "E. Modificar un índice de texto completo para utilizar el seguimiento de cambios automático", posteriormente en este tema.  
   
 -   Rellenado manual  
   
-     Si especifica CHANGE_TRACKING MANUAL, el motor de búsqueda de texto completo utiliza el rellenado manual en el índice de texto completo. Una vez completado el rellenado total inicial, se realiza el seguimiento de los cambios a medida que los datos se modifiquen en la tabla base. Sin embargo, no se propagan al índice de texto completo hasta que se ejecuta una instrucción ALTER FULLTEXT INDEX… START UPDATE POPULATION . Puede utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para llamar a esta instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] de forma periódica.  
+     Si especifica CHANGE_TRACKING MANUAL, el motor de búsqueda de texto completo utiliza el rellenado manual en el índice de texto completo. Una vez completado el rellenado total inicial, se realiza el seguimiento de los cambios a medida que los datos se modifiquen en la tabla base. Pero no se propagan al índice de texto completo hasta que se ejecuta una instrucción ALTER FULLTEXT INDEX ... START UPDATE POPULATION . Puede utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para llamar a esta instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] de forma periódica.  
   
      **Para iniciar el seguimiento de cambios con rellenado manual**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING MANUAL  
   
      Para obtener más información, vea los ejemplos "C. Crear un índice de texto completo con seguimiento de cambios manual" y "D. Ejecutar un rellenado manual", posteriormente en este tema.  
   
  **Para desactivar el seguimiento de cambios**  
   
--   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING OFF  
   
 
   
 ### <a name="incremental-timestamp-based-population"></a>Rellenado basado en la marca de tiempo incremental  
  Un rellenado incremental es un mecanismo alternativo para rellenar un índice de texto completo manualmente. Puede ejecutar un llenado incremental de un índice de texto completo que tenga CHANGE_TRACKING configurado en MANUAL o en OFF. Si el primer llenado de un índice de texto completo es un llenado incremental, indiza todas las filas, lo que lo hace equivalente a un llenado completo.  
   
- El requisito para el rellenado incremental es que la tabla indizada debe tener una columna de la `timestamp` tipo de datos. Si no existe una columna de tipo `timestamp`, no puede llevarse a cabo un llenado incremental. Una solicitud para el rellenado incremental en una tabla sin un `timestamp` columna da como resultado una operación de llenado completo. Además, si alguno de los metadatos que afectan al índice de texto completo de la tabla ha cambiado desde el último rellenado, las solicitudes de rellenado incremental se implementan como rellenados completos. Esto incluye los cambios en los metadatos ocasionados al alterar la definición de una columna, índice o índice de texto completo.  
+ Para realizar un llenado incremental, es necesario que la tabla indizada tenga una columna del tipo de datos `timestamp`. Si no existe una columna de tipo `timestamp`, no puede llevarse a cabo un llenado incremental. Si se solicita un rellenado incremental en una tabla sin una columna de tipo `timestamp`, se llevará a cabo un rellenado completo. Además, si alguno de los metadatos que afectan al índice de texto completo de la tabla ha cambiado desde el último rellenado, las solicitudes de rellenado incremental se implementan como rellenados completos. Esto incluye los cambios en los metadatos ocasionados al alterar la definición de una columna, índice o índice de texto completo.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la columna `timestamp` para identificar las filas que han cambiado desde el último rellenado. El rellenado incremental actualiza entonces el índice de texto completo de las filas que se hayan agregado, eliminado o modificado desde el último rellenado o en el curso del último rellenado. Si una tabla experimenta un volumen alto de inserciones, el rellenado incremental puede ser más eficaz que el rellenado manual.  
   
- Al final de un proceso de rellenado, el motor de texto completo registra un nuevo valor de tipo `timestamp`. Este valor es el mayor `timestamp` valor que se ha encontrado el recopilador de SQL. Se usará cuando se inicie un rellenado incremental posterior.  
+ Al final de un proceso de rellenado, el motor de texto completo registra un nuevo valor de tipo `timestamp`. Este valor es el valor de `timestamp` mayor que el recopilador de SQL ha encontrado. Se usará cuando se inicie un rellenado incremental posterior.  
   
  Para ejecutar un rellenado incremental, ejecute una instrucción ALTER FULLTEXT INDEX con la cláusula START INCREMENTAL POPULATION.  
   
@@ -123,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-running-a-full-population-on-table"></a>B. Ejecutar un rellenado completo en la tabla  
+### <a name="b-running-a-full-population-on-table"></a>b. Ejecutar un rellenado completo en la tabla  
  En el ejemplo siguiente se ejecuta un rellenado completo en la tabla `Production.Document` de la base de datos de ejemplo `AdventureWorks` .  
   
 ```  
@@ -184,7 +184,7 @@ GO
      Utilice esta página para crear o administrar las programaciones para un trabajo del Agente SQL Server que inicia un rellenado de tabla incremental en la tabla base o vista indizada del índice de texto completo.  
   
     > [!IMPORTANT]  
-    >  Si la tabla base o vista no contiene una columna de la `timestamp` tipo de datos, se realiza un rellenado completo.  
+    >  Si la tabla base o la vista no contienen ninguna columna del tipo de datos `timestamp`, se realiza un rellenado completo.  
   
      Las opciones son las siguientes:  
   
@@ -200,7 +200,7 @@ GO
          De esta forma se abre el cuadro de diálogo **Nueva programación de tabla de indexación de texto completo** , donde puede modificar una programación.  
   
         > [!NOTE]  
-        >  Para obtener información acerca de cómo modificar un trabajo, consulte [modificar un trabajo](../../ssms/agent/modify-a-job.md).  
+        >  Para obtener información sobre cómo modificar un trabajo, vea [Modificar un trabajo](../../ssms/agent/modify-a-job.md).  
   
     -   Para quitar una programación, selecciónela y haga clic en **Eliminar**.  
   

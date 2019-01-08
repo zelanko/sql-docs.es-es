@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], accounts
@@ -14,23 +13,23 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d066f107460e9671d4f5840271d8c4a466eb968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081394"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798367"
 ---
 # <a name="create-a-database-mail-account"></a>Crear una nueva cuenta de Correo electrónico de base de datos
   Use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)] para crear una cuenta de Correo electrónico de base de datos.  
   
 -   **Antes de empezar:**  [Requisitos previos](#Prerequisites)  
   
--   **Para crear una cuenta de correo electrónico de base de datos con:**  [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Creación de cuenta de un correo electrónico de base de datos, utilizando:**  [Asistente para configuración de correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Pasos para configurar el Correo electrónico de base de datos](#FollowUp)  
+-   **Seguimiento:**  [Pasos siguientes para configurar el correo electrónico de base de datos](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -85,8 +84,8 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Pasos para configurar el Correo electrónico de base de datos  
+##  <a name="FollowUp"></a> Sigue: Pasos siguientes para configurar el correo electrónico de base de datos  
   
--   [Crear un perfil de correo electrónico de base de datos](create-a-database-mail-profile.md)  
+-   [Crear un perfil de Correo electrónico de base de datos](create-a-database-mail-profile.md)  
   
   

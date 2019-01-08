@@ -5,8 +5,7 @@ ms.date: 08/29/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changepublication
@@ -17,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670174"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209134"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +59,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**False**|No se pueden crear suscripciones anónimas para la publicación indicada. No se pueden cambiar para publicaciones punto a punto.|  
 |**allow_initialize_from_backup**|**true**|Los suscriptores pueden inicializar una suscripción a esta publicación desde una copia de seguridad en lugar de desde una instantánea inicial. No se puede cambiar esta propiedad para que no sean de[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicaciones.|  
 ||**False**|Los suscriptores deben utilizar la instantánea inicial. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**allow_partition_switch**|**true**|Las instrucciones ALTER TABLE...SWITCH se pueden ejecutar con la base de datos publicada. Para obtener más información, vea [Replicar tablas e índices con particiones](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**False**|Las instrucciones ALTER TABLE...SWITCH no se pueden ejecutar con la base de datos publicada.|  
+|**allow_partition_switch**|**true**|ALTER TABLE... Las instrucciones SWITCH se pueden ejecutar en la base de datos publicada. Para obtener más información, vea [Replicar tablas e índices con particiones](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**False**|ALTER TABLE... No se puede ejecutar las instrucciones SWITCH en la base de datos publicada.|  
 |**allow_pull**|**true**|Se permiten suscripciones de extracción para la publicación indicada. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**False**|No se permiten suscripciones de extracción para la publicación indicada. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**allow_push**|**true**|Se permiten suscripciones de inserción para la publicación indicada.|  
@@ -80,7 +79,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**description**||Entrada opcional en la que se describe la publicación.|  
 |**enabled_for_het_sub**|**true**|Habilita la publicación para que admita suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **enabled_for_het_sub** no se puede cambiar cuando hay suscripciones a la publicación. Es posible que deba ejecutar [procedimientos almacenados de replicación (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) para cumplir con los siguientes requisitos antes de establecer **enabled_for_het_sub** en true:<br /> - **allow_queued_tran** debe ser **false**.<br /> - **allow_sync_tran** debe ser **false**.<br /> Cambiar **enabled_for_het_sub** a **true** puede cambiar la configuración de publicación existente. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**False**|La publicación no admite suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**enabled_for_internet**|**true**|Se habilita la publicación para Internet y se puede utilizar el protocolo de transferencia de archivos (FTP) para transferir los archivos de instantáneas a un suscriptor. Los archivos de sincronización de la publicación se colocan en el directorio C:\Archivos de programa\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* no puede ser NULL. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**enabled_for_internet**|**true**|Se habilita la publicación para Internet y se puede utilizar el protocolo de transferencia de archivos (FTP) para transferir los archivos de instantáneas a un suscriptor. Los archivos de sincronización para la publicación se colocan en el directorio siguiente: C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* no puede ser NULL. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**False**|No se habilita la publicación para Internet. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_p2p**|**true**|La publicación admite la replicación punto a punto. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /> Para establecer **enabled_for_p2p** a **true**, se aplican las restricciones siguientes:<br /> - **allow_anonymous** debe ser **false**<br /> - **allow_dts** debe ser **false**.<br /> - **allow_initialize_from_backup** debe ser **true**<br /> - **allow_queued_tran** debe ser **false**.<br /> - **allow_sync_tran** debe ser **false**.<br /> - **enabled_for_het_sub** debe ser **false**.<br /> - **independent_agent** debe ser **true**.<br /> - **repl_freq** debe ser **continua**.<br /> - **replicate_ddl** debe ser **1**.|  
 ||**False**|La publicación no admite la replicación punto a punto. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -93,19 +92,19 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**False**|Se crean archivos de sincronización solo si hay nuevas suscripciones. Los suscriptores no pueden recibir los archivos de sincronización después de suscribirse hasta que el Agente de instantáneas haya comenzado y terminado.|  
 |**independent_agent**|**true**|La publicación tiene su propio Agente de distribución dedicado.|  
 ||**False**|La publicación utiliza un Agente de distribución compartido, y cada par de bases de datos de publicaciones y suscripciones tiene un agente compartido.|  
-|**p2p_continue_onconflict**|**true**|El Agente de distribución continúa procesando los cambios cuando se detecta un conflicto.<br /> **Precaución:** se recomienda que use el valor predeterminado de `FALSE`. Cuando esta opción se establece en `TRUE`, el agente de distribución intenta converger los datos en la topología aplicando la fila en conflicto del nodo que tiene el identificador de originador más alto. Este método no garantiza la convergencia. Debe asegurarse de que la topología sea coherente una vez detectado un conflicto. Para obtener más información, vea "Controlar los conflictos" en [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**p2p_continue_onconflict**|**true**|El Agente de distribución continúa procesando los cambios cuando se detecta un conflicto.<br /> **Precaución:** Se recomienda que use el valor predeterminado de `FALSE`. Cuando esta opción se establece en `TRUE`, el agente de distribución intenta converger los datos en la topología aplicando la fila en conflicto del nodo que tiene el identificador de originador más alto. Este método no garantiza la convergencia. Debe asegurarse de que la topología sea coherente una vez detectado un conflicto. Para obtener más información, vea "Controlar los conflictos" en [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 ||**False**|El Agente de distribución detiene el procesamiento de los cambios cuando detecta un conflicto.|  
 |**post_snapshot_script**||Especifica la ubicación de un archivo de script de [!INCLUDE[tsql](../../includes/tsql-md.md)] que el Agente de distribución ejecutará una vez se hayan aplicado todos los demás datos y scripts de objetos replicados durante una sincronización inicial.|  
 |**pre_snapshot_script**||Especifica la ubicación de un archivo de script de [!INCLUDE[tsql](../../includes/tsql-md.md)] que el Agente de distribución ejecutará antes de que se hayan aplicado todos los demás datos y scripts de objetos replicados durante una sincronización inicial.|  
 |**publish_to_ActiveDirectory**|**true**|Este parámetro ha quedado desusado y solo se admite para la compatibilidad de scripts con versiones anteriores. Ya no se puede agregar información de publicación a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**False**|Quita la información de publicaciones de Active Directory.|  
-|**queue_type**|**sql**|Utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar las transacciones. Esta propiedad se puede cambiar únicamente si no hay suscripciones activas.<br /><br /> Nota: Se admite para el uso de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server se ha interrumpido. Si se especifica un valor de **msmq** para *valor* produce un error.|  
+|**queue_type**|**sql**|Utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar las transacciones. Esta propiedad se puede cambiar únicamente si no hay suscripciones activas.<br /><br /> Nota: La compatibilidad para utilizar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server ha dejado de incluirse. Si se especifica un valor de **msmq** para *valor* produce un error.|  
 |**repl_freq**|**continua**|Publica la salida de todas las transacciones basadas en el registro.|  
 ||**Instantánea**|Publica solamente los eventos de sincronización programados.|  
 |**replicate_ddl**|**1**|Las instrucciones de Lenguaje de definición de datos (DDL) que se ejecutan en el publicador se replican. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0**|Las instrucciones de DDL no se replican. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La replicación de los cambios en el esquema no puede deshabilitarse al usar la replicación punto a punto.|  
-|**replicate_partition_switch**|**true**|Las instrucciones ALTER TABLE...SWITCH que se ejecutan con la base de datos publicada se deberían replicar en los suscriptores. Esta opción es válida solo si *allow_partition_switch* está establecida en TRUE. Para obtener más información, vea [Replicar tablas e índices con particiones](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**False**|Las instrucciones ALTER TABLE...SWITCH no se deberían replicar en los suscriptores.|  
+|**replicate_partition_switch**|**true**|ALTER TABLE... Las instrucciones SWITCH que se ejecutan en la base de datos publicada se deberían replicar en los suscriptores. Esta opción es válida solo si *allow_partition_switch* está establecida en TRUE. Para obtener más información, vea [Replicar tablas e índices con particiones](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**False**|ALTER TABLE... Las instrucciones SWITCH no se deben replicar en suscriptores.|  
 |**retención**||**int** que representa el período de retención, en horas, para la actividad de suscripción. Si una suscripción no ha estado activa durante el período de retención, se elimina.|  
 |**snapshot_in_defaultfolder**|**true**|Los archivos de instantánea se almacenan en la carpeta de instantáneas predeterminada. Si *alt_snapshot_folder*también se especifica, los archivos de instantánea se almacenan en el valor predeterminado y las ubicaciones alternativas.|  
 ||**False**|Los archivos de instantánea se almacenan en la ubicación alternativa especificada por *alt_snapshot_folder*.|  
@@ -132,7 +131,7 @@ Vea en la sección de Notas las propiedades que, si se cambian, requieren que se
   - **1** especifica que los cambios en el artículo que la suscripción para reinicializarla, existente y concede permiso para que se produzca la reinicialización de suscripción.  
   
 [ **@publisher** =] **'***publisher***'**  
- Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
   > [!NOTE]  
   >  *publicador* no debe usarse cuando se cambia las propiedades del artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699133"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524468"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Software antivirus para Analytics Platform System
 Si su centro de datos requiere un software antivirus, use estas instrucciones para instalar el software antivirus en Analytics Platform System. Se recomienda no instalar el software antivirus a menos que sea un requisito firme de su centro de datos.  
@@ -46,13 +46,13 @@ Para instalar el software antivirus en los hosts físicos, excluya la siguiente 
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Lista de exclusión para máquinas virtuales (VM)  
 Para instalar el software antivirus en las máquinas virtuales, excluya la siguiente lista de directorios y archivos. No se explorará el software antivirus.  
   
-***PDW_region *-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain *-AD01** y ***appliance_domain *-AD02**  
+**_appliance_domain_-AD01** y  **_appliance_domain_-AD02**  
   
 -   Sin restricciones  
   
@@ -62,15 +62,15 @@ Para instalar el software antivirus en las máquinas virtuales, excluya la sigui
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+**_appliance_domain_- VMM**  
   
 -   Sin restricciones  
   
-***appliance_domain*-WDS**  
+**_appliance_domain_- WDS**  
   
 -   Sin restricciones  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

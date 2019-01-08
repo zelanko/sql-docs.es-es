@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
@@ -15,12 +14,12 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b07bc36ebf3ca16bac2a2134d1054d850c19886
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6fd76284caf53ff6a3d46d1bbfd0f514615c2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203365"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805557"
 ---
 # <a name="transfer-database-task"></a>Tarea Transferir bases de datos
   La tarea Transferir bases de datos transfiere una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre dos instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A diferencia de otras tareas que solo transfieren objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiándolos, la tarea Transferir bases de datos puede copiar o mover una base de datos. Esta tarea también puede utilizarse para copiar una base de datos en el mismo servidor.  
@@ -39,7 +38,7 @@ ms.locfileid: "48203365"
 ## <a name="execution-value"></a>Valor de ejecución  
  El valor de ejecución, definido en la propiedad `ExecutionValue` de la tarea, devuelve el valor 1, ya que a diferencia de otras tareas de transferencia, la tarea Transferir bases de datos solo puede transferir una base de datos.  
   
- Asignando una variable definida por el usuario para el `ExecValueVariable` propiedad de la tarea Transferir bases de datos, información sobre la transferencia del mensaje de error puede estar disponible para otros objetos en el paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) y [Usar variables en paquetes](../use-variables-in-packages.md).  
+ Si se asigna una variable definida por el usuario a la propiedad `ExecValueVariable` de la tarea Transferir bases de datos, se puede hacer que la información de la transferencia del mensaje de error esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) y [Usar variables en paquetes](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entradas del registro  
  La tarea Transferir bases de datos incluye las siguientes entradas del registro personalizadas:  
@@ -50,7 +49,7 @@ ms.locfileid: "48203365"
   
 -   SourceDB    Esta entrada del registro muestra el nombre de la base de datos que se transfiere.  
   
- Además, una entrada de registro para el `OnInformation` se escribe un evento cuando se sobrescribe la base de datos de destino.  
+ Además, se escribe una entrada del registro para el evento `OnInformation` cuando se sobrescribe la base de datos de destino.  
   
 ## <a name="security-and-permissions"></a>Seguridad y permisos  
  Para transferir una base de datos en el modo sin conexión, el usuario que ejecuta el paquete debe ser miembro del rol de servidor sysadmin.  
@@ -72,9 +71,9 @@ ms.locfileid: "48203365"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la base de datos de tarea de transferencia &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Transferir bases de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la base de datos de tarea de transferencia &#40;bases de datos de página&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Editor de la tarea Transferir bases de datos &#40;página Bases de datos&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

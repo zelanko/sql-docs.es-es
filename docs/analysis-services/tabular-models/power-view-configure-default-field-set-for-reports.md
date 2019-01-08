@@ -1,5 +1,5 @@
 ---
-title: Configurar un conjunto de campos predeterminado para informes de Power View | Documentos de Microsoft
+title: Configurar un conjunto de campos predeterminado para informes de Power View en Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32d8d9c4acbc1c5eae47e90709c4ffdedd269f11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b8549a384b8eb0e7625d354ccf4d5c4e8b5e664
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041859"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072062"
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View: configurar el conjunto de campos predeterminado para informes
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "34041859"
 6.  Repita estos pasos para otras tablas del libro.  
   
 ## <a name="next-step"></a>Paso siguiente  
- Después de crear un conjunto de campos predeterminado, puede influir aún más en la experiencia de diseño de informes especificando etiquetas predeterminadas, imágenes predeterminadas, el comportamiento del grupo predeterminado o si las filas que contienen el mismo valor se agrupan en una fila o se enumeran individualmente. Para obtener más información, consulte [configurar propiedades de comportamiento de tabla para informes de Power View](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
+ Después de crear un conjunto de campos predeterminado, puede influir aún más en la experiencia de diseño de informes especificando etiquetas predeterminadas, imágenes predeterminadas, el comportamiento del grupo predeterminado o si las filas que contienen el mismo valor se agrupan en una fila o se enumeran individualmente. Para obtener más información, consulte [configurar las propiedades de comportamiento de tablas para informes de Power View](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
   
   

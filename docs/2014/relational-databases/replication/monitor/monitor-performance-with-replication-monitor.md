@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -20,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086497"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815577"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Supervisar el rendimiento con el Monitor de replicación
   El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le ofrece las siguientes posibilidades para supervisar el rendimiento de la replicación transaccional y de la replicación de mezcla:  
@@ -76,7 +75,7 @@ ms.locfileid: "48086497"
   
     |Excelente|Bueno|Regular|Insuficiente|Crítico|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34 %|35 - 59 %|60 - 84 %|85 - 99 %|100% +|  
   
 -   En la replicación de mezcla, la calidad del rendimiento es independiente del umbral (el umbral de procesamiento de filas sí determina si se muestra un valor de **Rendimiento crítico** en la columna **Estado** ). La calidad del rendimiento se determina comparando el rendimiento de una suscripción individual con el rendimiento medio histórico de las suscripciones a la publicación que tienen el mismo tipo de conexión (de acceso telefónico o LAN). El Monitor de replicación muestra un valor una vez que se han producido cinco sincronizaciones con al menos 50 cambios en cada una a través del mismo tipo de conexión. Si ha habido menos de cinco sincronizaciones con al menos 50 cambios, o la sincronización más reciente tiene menos de 50 cambios, el Monitor de replicación no muestra ningún valor.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48086497"
   
     |Excelente|Bueno|Regular|Insuficiente|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150 %|26 - 75 %|0 - 25 %|  
   
  Para obtener más información sobre la visualización de información de suscripción, vea [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
@@ -99,6 +98,6 @@ ms.locfileid: "48086497"
   
 ## <a name="see-also"></a>Vea también  
  [Monitoring Replication](../monitoring-replication.md)  (Supervisar la replicación)  
- [Establecer umbrales y advertencias en el Monitor de replicación](set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

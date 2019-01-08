@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -18,12 +17,12 @@ ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50ee8a83c87ec6f2b14ac07caa77774b7a7c2d15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78e6a175ce7757a9e9808a5a993bec6a44a3db2a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137912"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816397"
 ---
 # <a name="database-suspect-data-page-event-class"></a>clase de eventos Database Suspect Data Page
   La clase de eventos **Database Suspect Data Page** indica cuándo se agrega una página a la tabla [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) en [msdb](../databases/msdb-database.md). Incluya esta clase de eventos en los seguimientos que supervisan la aparición de páginas sospechosas.  
@@ -38,8 +37,8 @@ ms.locfileid: "48137912"
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Id. de la base de datos para la que se ha producido la alerta de evento de página sospechosa. Esto es lo mismo que la columna **database_id** de la tabla **suspect_pages** .|3|Sí|  
-|**EventClass**|**int**|El tipo de evento es 213.|27|no|  
-|**EventSequence**|**int**|Secuencia de la clase de eventos en el lote.|51|no|  
+|**EventClass**|**int**|El tipo de evento es 213.|27|No|  
+|**EventSequence**|**int**|Secuencia de la clase de eventos en el lote.|51|No|  
 |**SPID**|**int**|Id. de la tarea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que encontró la página sospechosa.|12|Sí|  
 |**StartTime**|**datetime**|Momento en el que se produjo el evento.|14|Sí|  
 |**ObjectID**|**int**|Id. de la fila de la base de datos que contiene la página sospechosa. Esto es el mismo que la columna **file_id** de la tabla **suspect_pages** .|22|Sí|  

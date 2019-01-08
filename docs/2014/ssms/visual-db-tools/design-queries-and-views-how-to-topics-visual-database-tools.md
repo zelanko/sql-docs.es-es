@@ -4,10 +4,10 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- • vs.solutionexplorer.file.query
+- vs.solutionexplorer.file.query
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - View Designer, about View Designer
@@ -20,12 +20,12 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1652e8a15b973e46a6692fcc2f79bc56cc2fdff8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108365"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328385"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)
   El Diseñador de consultas y vistas le ayudará a crear y mantener los componentes de recuperación y manipulación de datos de la aplicación.  
@@ -49,7 +49,7 @@ ms.locfileid: "48108365"
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
  Muestra temas en los que se trata la creación, modificación, ejecución y copia de consultas junto con temas básicos acerca de cómo clasificar, ordenar e imprimir los resultados de la búsqueda.  
   
- [Especificar criterios de búsqueda (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
+ [Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
  Muestra reglas y convenciones para crear consultas y procedimientos acerca de cómo utilizar los criterios para obtener unos resultados concretos.  
   
  [Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
@@ -61,5 +61,3 @@ ms.locfileid: "48108365"
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Diseñar tablas &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)  
  Pasos detallados para diseñar y mantener la estructura de la base de datos mediante tablas, columnas, claves, índices, procedimientos almacenados, etc.  
-  
-  

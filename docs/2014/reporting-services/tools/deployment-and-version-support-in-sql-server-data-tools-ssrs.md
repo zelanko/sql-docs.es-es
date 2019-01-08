@@ -11,12 +11,12 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa6994d4bcf01cc1de7036a45d52a7a090af80b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 251ec4db1d1f1cb4ddebe447e095c3c2338ee0bb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218177"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352145"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] admite los escenarios siguientes:  
@@ -42,7 +42,7 @@ ms.locfileid: "48218177"
   
 -   OutputPath es una propiedad de generación que identifica la ruta de acceso de las carpetas donde almacenar la definición de informe que se usa en la comprobación de la generación, la implementación y la vista previa de informes.  
   
--   ErrorLevel es una propiedad de generación que identifica la severidad de los problemas de la generación que se notifican como errores. Los problemas con un nivel de gravedad menor o igual que el valor de ErrorLevel se notifican como errores; de lo contrario, se notifican como advertencias. Para más información, vea la sección "Validación de informes y niveles de Error" de [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel es una propiedad de generación que identifica la severidad de los problemas de la generación que se notifican como errores. Los problemas con un nivel de gravedad menor o igual que el valor de ErrorLevel se notifican como errores; de lo contrario, se notifican como advertencias. Para obtener más información, vea la sección "Validación de informes y niveles de Error" de [Diseño de informes con el Diseñador de informes &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion es una propiedad de implementación que identifica la versión esperada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que está instalada en el servidor de informes de destino especificado en la propiedad TargetServerURL.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48218177"
 ##  <a name="bkmk_SupportedVersions"></a> Versiones admitidas  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para proyectos de servidor de informes, no está diseñado para ejecutarse en equipos basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] y no se instala en servidores basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. En cambio, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sí es compatible con los equipos basados en x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para proyectos de servidor de informes, no está diseñado para ejecutarse en equipos basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]y no se instala en servidores basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. En cambio, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sí es compatible con los equipos basados en x64.  
   
  En la tabla siguiente se describen las versiones compatibles para crear y publicar los informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -68,12 +68,12 @@ ms.locfileid: "48218177"
 |Proyecto de servidor de informes<br /><br /> o Administrador de configuración de<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Esquema RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Solo el servidor de informes|Actualiza localmente el esquema RDL 2003 y RDL 2005 al esquema RDL 2008.|  
 |Proyecto de servidor de informes<br /><br /> o Administrador de configuración de<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Esquema RDL 2005|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes||  
 |Proyecto de servidor de informes|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|Esquema RDL 2003|No compatible||  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Diseñador de informes RDLC|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Esquema RDL 2005|No compatible|No admite el esquema RDL 2008.|  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Controles del Visor|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|RDL 2008 no se admite en modo local|N/D|Puede ver informes RDL 2008 en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes en modo de servidor.|  
+|Diseñador de informes RDLC de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Esquema RDL 2005|No compatible|No admite el esquema RDL 2008.|  
+|Controles de visor de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|RDL 2008 no se admite en modo local|N/D|Pueden verse informes RDL 2008 en el servidor de informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de servidor.|  
   
- Para obtener más información acerca de cómo abrir informes en una versión anterior del esquema de definición de informe, vea [actualizar informes](../install-windows/upgrade-reports.md). Para obtener más información sobre esquemas de definición de informe concretos, vea la [SQL Server RDL Specification](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Para obtener más información sobre la forma de abrir informes en una versión anterior del esquema de definición de informes, vea [Actualizar informes](../install-windows/upgrade-reports.md). Para obtener más información sobre esquemas de definición de informe concretos, vea la [SQL Server RDL Specification](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## <a name="see-also"></a>Vea también  
- [Publicación de orígenes de datos e informes](../reports/publishing-data-sources-and-reports.md)  
+ [Publicar orígenes de datos e informes](../reports/publishing-data-sources-and-reports.md)  
   
   

@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8897a78bc28aa549eb51f53b56e983e7cdec81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134635"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819357"
 ---
 # <a name="replay-trace-data"></a>Reproducir datos de seguimiento
   Puede iniciar una reproducción distribuida con la característica Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] después de haber preparado los datos de seguimiento de entrada. Para obtener más información, vea [Preparar los datos de seguimiento de entrada](prepare-the-input-trace-data.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "48134635"
   
 ### <a name="to-replay-the-trace"></a>Para reproducir el seguimiento  
   
-1.  **(Opcional) Modifique los valores de configuración de reproducción**: si quiere modificar los valores de configuración de reproducción, como el modo de secuenciación y los diversos valores de escalado, debe modificar el elemento `<ReplayOptions>` del archivo de configuración de reproducción basado en XML `DReplay.exe.replay.config`. También puede modificar el elemento `<OutputOptions>` para especificar los valores de configuración de salida, como el registro del recuento de filas. Si modifica el archivo de configuración de reproducción, se recomienda modificar una copia en lugar del original. Para modificar los valores de configuración, siga estos pasos:  
+1.  **(Opcional) Modificar la configuración de reproducción**: Si desea modificar la configuración de reproducción, como el modo de secuenciación y diversos valores de escalado, debe modificar el `<ReplayOptions>` elemento del archivo de configuración de reproducción basado en XML `DReplay.exe.replay.config`. También puede modificar el elemento `<OutputOptions>` para especificar los valores de configuración de salida, como el registro del recuento de filas. Si modifica el archivo de configuración de reproducción, se recomienda modificar una copia en lugar del original. Para modificar los valores de configuración, siga estos pasos:  
   
     1.  Realice una copia del archivo de configuración de reproducción predeterminado, `DReplay.exe.replay.config`, y cambie el nombre del nuevo archivo. El archivo de configuración de reproducción predeterminado se encuentra en la carpeta de instalación de la herramienta de administración.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48134635"
   
      Para obtener más información sobre el archivo de configuración de reproducción, vea [Configurar Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Iniciar la fase de reproducción de eventos**: para iniciar Distributed Replay, debe ejecutar la herramienta de administración con la opción **replay** . Para obtener más información, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+2.  **Iniciar la fase de reproducción de eventos**: Para iniciar la reproducción distribuida, debe ejecutar la herramienta de administración con el **reproducir** opción. Para obtener más información, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
     1.  Abra la utilidad de símbolo del sistema de Windows (`CMD.exe`) y navegue hasta la ubicación de instalación de la herramienta de administración de Distributed Replay (`DReplay.exe`).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48134635"
   
     5.  (Opcional) Use el parámetro *target_server* , **-s**, para especificar la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde los clientes de Distributed Replay deben reproducir la carga de trabajo de seguimiento. Este parámetro no es necesario si se ha usado el elemento `<Server>` para especificar el servidor de destino en el elemento `<ReplayOptions>` del archivo de configuración de reproducción.  
   
-    6.  Use el parámetro *clients* , **-w**, para especificar los clientes de Distributed Replay que deben participar en la reproducción. Enumere los nombres de los equipos cliente, separados por comas. Nota: no se permiten direcciones IP.  
+    6.  Use el parámetro *clients* , **-w**, para especificar los clientes de Distributed Replay que deben participar en la reproducción. Enumere los nombres de los equipos cliente, separados por comas. Nota: No se permiten direcciones IP.  
   
     7.  (Opcional) Use el parámetro *config_file* , **-c**, para especificar la ubicación del archivo de configuración de reproducción. Use este parámetro para señalar el nuevo archivo de configuración si se ha modificado una copia del archivo de configuración de reproducción predeterminado.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "48134635"
 3.  Una vez finalizada la reproducción distribuida, la herramienta de administración devuelve información de resumen. Si se especificó la opción **-o** , la actividad de reproducción se ha guardado en los archivos de seguimiento de resultados en cada cliente. Para obtener más información sobre los archivos de seguimiento de resultados, vea [Revisar los resultados de la reproducción](review-the-replay-results.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Requisitos de reproducción distribuida](distributed-replay-requirements.md)   
- [Opciones de línea de comandos de la herramienta de administración &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](configure-distributed-replay.md)  
   
   

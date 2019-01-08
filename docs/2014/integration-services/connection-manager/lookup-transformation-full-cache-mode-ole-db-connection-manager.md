@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5025524fb0f414a3a419b53d51868009eafc9820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab881af80386badae624b1d5910ba99ba67a4a43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147021"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767827"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB
   Puede configurar la transformación Búsqueda para que use el modo de caché completa y un administrador de conexiones OLE DB. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
@@ -52,11 +51,11 @@ ms.locfileid: "48147021"
   
     -   Haga clic en **Usar una tabla o una vista**y, a continuación, seleccione una tabla o una vista, o haga clic en **Nueva** para crear una tabla o una vista.  
   
-         O bien  
+         -o bien-  
   
     -   Haga clic en **Usar los resultados de una consulta SQL**y después genere una consulta en la ventana **Comando SQL** , o haga clic en **Generar consulta** para generar una consulta mediante las herramientas gráficas que proporciona el **Generador de consultas** .  
   
-         O bien  
+         -o bien-  
   
     -   Haga clic en **Examinar** para importar una instrucción SQL de un archivo.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48147021"
     >  La transformación Búsqueda asigna automáticamente las columnas que tienen el mismo nombre y el mismo tipo de datos.  
   
     > [!NOTE]  
-    >  Las columnas deben tener tipos coincidentes de datos para asignarse. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+    >  Las columnas deben tener tipos coincidentes de datos para asignarse. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 11. Incluya las columnas de búsqueda en el resultado realizando las tareas siguientes:  
   
@@ -83,8 +82,8 @@ ms.locfileid: "48147021"
 13. Haga clic en **Aceptar** para guardar los cambios en la transformación Búsqueda y, a continuación, ejecute el paquete.  
   
 ## <a name="see-also"></a>Vea también  
- [Implementación de una transformación Búsqueda en el modo de caché completa con el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implementar una búsqueda en modo No hay caché o Caché parcial](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   
   

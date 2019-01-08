@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraDb
@@ -13,12 +12,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 565f88565a797c2f902b2df4f42deea631b34bb4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22b5d71aa2d6d4ac63fe597e9da6b9dfb0a15c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114225"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202194"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar con una base de datos de origen de Oracle
   Use la página Oracle Source para proporcionar la información necesaria para conectarse a la base de datos de origen de Oracle. La instancia CDC leerá los registros Rehacer de la base de datos de Oracle a la que está conectado.  
@@ -35,13 +34,13 @@ ms.locfileid: "48114225"
  **Autenticación de minería de registros de Oracle**  
  Para especificar las credenciales del usuario de la base de datos de Oracle que tiene autorización para realizar minería de registros, seleccione una de las opciones siguientes:  
   
--   **Autenticación de Windows**: seleccione esta opción para usar las credenciales del dominio de Windows actual. Solo puede usar esta opción si la base de datos de Oracle está configurada para usar la autenticación de Windows.  
+-   **Autenticación de Windows**: Seleccione esta opción para usar las credenciales de dominio de Windows actuales. Solo puede usar esta opción si la base de datos de Oracle está configurada para usar la autenticación de Windows.  
   
--   **Autenticación de Oracle**: si selecciona esta opción, debe escribir el **Nombre de usuario** y la **Contraseña** para el usuario en la base de datos de Oracle a la que se está conectando.  
+-   **Autenticación de Oracle**: Si selecciona esta opción, debe escribir el **nombre de usuario** y **contraseña** para el usuario se conecta a la base de datos de Oracle.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Un usuario debe tener concedidos los privilegios siguientes en la base de datos de Oracle para poder ser un usuario de minería de registros.  
->   
+> 
 >  -   SELECT en \<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE en DBMS LOGMNR  
@@ -55,7 +54,7 @@ ms.locfileid: "48114225"
 > -   SELECT en ALL OBJECTS  
 > -   SELECT en DBA OBJECTS  
 > -   SELECT en ALL TABLES  
->   
+> 
 >  Si alguno de estos privilegios no se puede conceder a un V$xxx, concédalo al V_S$xxx.  
   
  **Probar conexión**  
@@ -67,7 +66,7 @@ ms.locfileid: "48114225"
  Cuando termine de especificar información en esta página, haga clic en **Siguiente** para [Select Oracle Tables and Columns](select-oracle-tables-and-columns.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Creación de la instancia de base de datos de cambios SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Cómo crear la instancia de base de datos de cambios de SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Editar propiedades de la instancia](edit-instance-properties.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - bitwise NOT (~)
@@ -14,12 +13,12 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 655f09c1470e37f7d1503e1e3d151a734210e45c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e70e53d4cbcb0eab7c7484cafea303e758a5b000
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810357"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (Not bit a bit) (expresión de SSIS)
   Realiza una negación bit a bit de un entero. Este operador puede aplicarse a tipos de datos enteros con o sin signo.  
@@ -34,7 +33,7 @@ ms.locfileid: "48154327"
   
 ## <a name="arguments"></a>Argumentos  
  *integer_expression*  
- Expresión válida de cualquier tipo de datos entero. *integer*_*expression* es un entero que se transforma en un número binario para la operación bit a bit. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Expresión válida de cualquier tipo de datos entero. *integer*_*expression* es un entero que se transforma en un número binario para la operación bit a bit. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos de *integer_expression*.  
@@ -59,7 +58,7 @@ ms.locfileid: "48154327"
  1111111101010101  
   
 ## <a name="see-also"></a>Vea también  
- [Precedencia y asociatividad](operator-precedence-and-associativity.md)   
+ [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   
   

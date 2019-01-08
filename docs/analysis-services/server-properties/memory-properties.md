@@ -1,5 +1,5 @@
 ---
-title: Propiedades de memoria | Microsoft Docs
+title: Propiedades de memoria de Analysis Services | Microsoft Docs
 ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 763c085e9a4dbc6ecb459ffcd17f5185531b98fb
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264885"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072002"
 ---
 # <a name="memory-properties"></a>Propiedades de memoria
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

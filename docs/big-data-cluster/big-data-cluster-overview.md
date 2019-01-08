@@ -1,18 +1,20 @@
 ---
-title: ¿Qué son los clústeres de macrodatos de 2019 de SQL Server? | Microsoft Docs
+title: ¿Qué son los clústeres de datos de gran tamaño?
+titleSuffix: SQL Server 2019 big data clusters
 description: Obtenga información acerca de los clústeres de macrodatos de 2019 de SQL Server (versión preliminar) que se ejecutan en Kubernetes y proporcionan opciones de escalabilidad horizontal relacionales y datos de HDFS.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 5a44fe9001b7a3bffb67cb3f213bed2ac1065970
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221711"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030049"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>¿Qué son los clústeres de macrodatos de 2019 de SQL Server?
 
@@ -75,13 +77,13 @@ Kubernetes es un orquestador de contenedores de código abierto, que se puede es
 |--|--|
 | **Cluster** | Un clúster de Kubernetes es un conjunto de equipos, conocidos como nodos. Un nodo controla el clúster y se designa el nodo maestro; los nodos restantes son nodos de trabajo. El maestro de Kubernetes es responsable de distribuir el trabajo entre los trabajadores y para supervisar el estado del clúster. |
 | **Node** | Un nodo ejecuta aplicaciones en contenedores. Puede ser una máquina física o una máquina virtual. Un clúster de Kubernetes puede contener una mezcla de los nodos físicos de máquina y la máquina virtual. |
-| **pod** | Un pod es la unidad atómica de implementación de Kubernetes. Un pod es un grupo lógico de uno o varios contenedores y los recursos asociados, es necesario para ejecutar una aplicación. Cada pod se ejecuta en un nodo; un nodo puede ejecutar uno o varios pods. El maestro de Kubernetes asigna automáticamente los pods a los nodos del clúster. |
+| **pod** | Un pod es la unidad atómica de implementación de Kubernetes. Un pod es un grupo lógico de uno o varios contenedores- y asociadas a los recursos necesarios para ejecutar una aplicación. Cada pod se ejecuta en un nodo; un nodo puede ejecutar uno o varios pods. El maestro de Kubernetes asigna automáticamente los pods a los nodos del clúster. |
 
 En los clústeres de SQL Server macrodatos, Kubernetes es responsables del estado de los clústeres grandes de datos de SQL Server; Kubernetes crea y configura los nodos del clúster, asigna los pods a nodos y supervisa el estado del clúster.
 
 ### <a name="big-data-clusters-architecture"></a>arquitectura de clústeres de macrodatos
 
-Nodos del clúster se organizan en tres planos lógicos: el plano de control, el panel de proceso y el plano de datos. Cada plano tiene responsabilidades diferentes en el clúster. Todos los nodos Kubernetes en un clúster de macrodatos de SQL Server hospeda pods para los componentes de menos a un plano.
+Nodos del clúster se organizan en tres planos lógicos: el plano de control, el plano de proceso y el plano de datos. Cada plano tiene responsabilidades diferentes en el clúster. Todos los nodos Kubernetes en un clúster de macrodatos de SQL Server hospeda pods para los componentes de menos a un plano.
 
 ![Información general sobre la arquitectura](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
@@ -91,7 +93,7 @@ El plano de control proporciona administración y seguridad para el clúster. Co
 
 ### <a id="computeplane"></a> Plano de proceso
 
-El plano de compute proporciona recursos informáticos para el clúster. Contiene los nodos que ejecutan SQL Server en Linux pods. Los pods en el plano de compute se dividen en *grupos de proceso* específica para las tareas de procesamiento. Un grupo de proceso puede actuar como un [PolyBase](../relational-databases/polybase/polybase-guide.md) grupo de escalabilidad horizontal para las consultas distribuidas a través de diferentes orígenes de datos, como HDFS, Oracle, MongoDB o Teradata.
+El plano de compute proporciona recursos informáticos para el clúster. Contiene los nodos que ejecutan SQL Server en Linux pods. Los pods en el plano de compute se dividen en *grupos de proceso* específica para las tareas de procesamiento. Un grupo de proceso puede actuar como un [PolyBase](../relational-databases/polybase/polybase-guide.md) grupo de escalabilidad horizontal para las consultas distribuidas a través de datos diferentes orígenes esto como HDFS, Oracle, MongoDB o Teradata.
 
 ### <a id="dataplane"></a> Plano de datos
 

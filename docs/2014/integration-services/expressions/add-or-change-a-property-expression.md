@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
@@ -14,12 +13,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c571f92879a31399c0db4c7bc0acacc1355e169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8144f0a050afd484d77a12c13780de461587513b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178505"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807387"
 ---
 # <a name="add-or-change-a-property-expression"></a>Agregar o cambiar una expresión de propiedad
   Puede crear expresiones de propiedad para paquetes, tareas, contenedores de bucles ForEach, contenedores de bucles For, contenedores de secuencias, controladores de eventos, administradores de conexión de paquetes y proyectos, y proveedores de registro.  
@@ -44,7 +43,7 @@ ms.locfileid: "48178505"
   
     -   Escriba o cambie directamente la expresión de propiedad en la columna **Expresión** y, a continuación, haga clic en **Aceptar**.  
   
-         O bien  
+         -o bien-  
   
     -   Haga clic en los puntos suspensivos (…) en la fila de expresión de la propiedad para abrir el **Generador de expresiones**.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48178505"
 ## <a name="see-also"></a>Vea también  
  [Expresiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Usar expresiones de propiedad en paquetes](use-property-expressions-in-packages.md)   
- [Servicios de integración &#40;SSIS&#41; paquetes](../integration-services-ssis-packages.md)   
+ [Paquetes de Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
  [Contenedores de Integration Services](../control-flow/integration-services-containers.md)   
  [Tareas de Integration Services](../control-flow/integration-services-tasks.md)   
  [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md)   

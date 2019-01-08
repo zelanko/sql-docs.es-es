@@ -16,12 +16,12 @@ ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 641ec96632e2976ea56f1607b2076d4d01734523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542299"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Elegir y asignar datos de prueba para el modelo
   Para crear un gráfico de precisión en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], debe elegir los datos que se utilizarán para probar el modelo y asignar dichos datos al modelo.  
@@ -76,7 +76,7 @@ ms.locfileid: "48166363"
   
 3.  En la pestaña **Selección de entrada** , en **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión**, seleccione la opción **Especificar otro conjunto de datos**.  
   
-4.  Haga clic en el botón Examinar **(…)** para abrir un cuadro de diálogo y generar la definición del conjunto de datos externo.  
+4.  Haga clic en el botón Examinar **(...)**  para abrir un cuadro de diálogo y generar la definición del conjunto de datos externo.  
   
 5.  En el cuadro de diálogo **Seleccionar estructura de minería de datos** , seleccione la estructura que contenga los modelos con los que desea trabajar y, después, haga clic en **Aceptar**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48166363"
   
 4.  En **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión**, seleccione la opción **Especificar otro conjunto de datos**.  
   
-5.  Haga clic en el botón Examinar **(…)** para abrir un cuadro de diálogo y generar la definición del origen de datos externo.  
+5.  Haga clic en el botón Examinar **(...)**  para abrir un cuadro de diálogo y generar la definición del origen de datos externo.  
   
 6.  En el cuadro de diálogo **Especificar asignación de columnas** , haga clic en **Seleccionar tabla de casos**.  
   
@@ -121,6 +121,6 @@ ms.locfileid: "48166363"
      Las nuevas asignaciones de columna se muestran en el cuadro de diálogo **Especificar asignación de columnas** . Puede quitar una asignación seleccionando la línea entre las columnas y presionando la tecla Supr. Para crear una conexión, seleccione una columna de la tabla **Estructura de minería de datos** y arrástrela hasta la columna correspondiente de la tabla **Seleccionar tabla(s) de entrada** .  
   
 ## <a name="see-also"></a>Vea también  
- [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

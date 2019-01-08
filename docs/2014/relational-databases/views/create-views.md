@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 550f4dbc3e733c3dee9fb200d85789931722e4f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215005"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541819"
 ---
 # <a name="create-views"></a>Crear vistas
   Puede crear vistas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se puede usar una vista para lo siguiente:  
@@ -42,7 +42,7 @@ ms.locfileid: "48215005"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Una vista solo se puede crear en la base de datos actual.  
@@ -60,9 +60,9 @@ ms.locfileid: "48215005"
   
 1.  En el **Explorador de objetos**, expanda la base de datos donde desea crear la nueva vista.  
   
-2.  Haga clic con el botón derecho en la carpeta **Vistas** y después haga clic en **Nueva vista…**  
+2.  Haga clic con el botón derecho en la carpeta **Vistas** y después haga clic en **Nueva vista...**.  
   
-3.  En el cuadro de diálogo **Agregar tabla** , seleccione el elemento o elementos que desea incluir en la nueva vista desde una de las siguientes pestañas: Tablas, Vistas, Funciones y Sinónimos.  
+3.  En el **Agregar tabla** cuadro de diálogo, seleccione el elemento o elementos que se van a incluir en la nueva vista desde una de las pestañas siguientes: Las tablas, vistas, funciones y sinónimos.  
   
 4.  Haga clic en **Agregar**y, a continuación, en **Cerrar**.  
   

@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dropsubscription
@@ -17,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8af8a4fc4572389bfaca7d1c678de8ec95641e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687483"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812977"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +43,22 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicación***'**  
+ [  **@publication=** ] **'**_publicación_**'**  
  Es el nombre de la publicación asociada. *publicación* es **sysname**, su valor predeterminado es null. Si **todas**, se cancelan todas las suscripciones de todas las publicaciones del suscriptor especificado. *publicación* es un parámetro necesario.  
   
- [  **@article=** ] **'***artículo***'**  
+ [  **@article=** ] **'**_artículo_**'**  
  Es el nombre del artículo. *artículo* es **sysname**, su valor predeterminado es null. Si **todas**, especifican de suscripciones a todos los artículos de cada publicación y el suscriptor se quitan. Use **todas** para las publicaciones que permiten inmediatas de actualización.  
   
- [  **@subscriber=** ] **' ***suscribirse*r**' **  
+ [  **@subscriber=** ] **'**_subscribe_r **'**  
  Es el nombre del suscriptor cuyas suscripciones se van a quitar. *suscriptor* es **sysname**, no tiene ningún valor predeterminado. Si **todas**, se quitan todas las suscripciones para todos los suscriptores.  
   
- [  **@destination_db=** ] **'***destination_db***'**  
+ [  **@destination_db=** ] **'**_destination_db_**'**  
  Es el nombre de la base de datos de destino. *destination_db* es **sysname**, su valor predeterminado es null. Cuando es NULL, se quitan todas las suscripciones del suscriptor indicado.  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **'***reservada***'**  
+ [  **@reserved=** ] **'**_reservada_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

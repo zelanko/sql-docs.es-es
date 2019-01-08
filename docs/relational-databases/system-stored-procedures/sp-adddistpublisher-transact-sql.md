@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistpublisher
@@ -17,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b8233a5ba3d4610e43dc2c9fb47ba9107ffad268
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716993"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206574"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  Es el nombre de la base de datos de distribución. *distributor_db* es **sysname**, no tiene ningún valor predeterminado. Los agentes de replicación utilizan este parámetro para conectarse al publicador.  
   
  [  **@security_mode=**] *security_mode*  
- Es el modo de seguridad implementado. Este parámetro lo utilizan únicamente los agentes de replicación a fin de conectar al publicador para suscripciones de actualización en cola, o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *security_mode* es **int**, y puede tener uno de estos valores.  
+ Es el modo de seguridad implementado. Este parámetro solo se usa por los agentes de replicación para conectarse al publicador para suscripciones de actualización en cola o con una que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *security_mode* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

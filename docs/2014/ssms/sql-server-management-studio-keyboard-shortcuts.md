@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -21,12 +20,12 @@ ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20fe82c5ca0060d5a373f90fe72b8f4468240af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085845"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794737"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Métodos abreviados de teclado de SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ofrece a los usuarios dos esquemas de teclado. De forma predeterminada, usa el esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , con métodos abreviados de teclado basados en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece un esquema del teclado similar al esquema estándar de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para cambiar el esquema de teclado o agregar otros métodos abreviados de teclado, haga clic en **Opciones** en el menú **Herramientas**. Seleccione el esquema de teclado deseado en la página **Entorno**, **Teclado** .  
@@ -235,7 +234,7 @@ ms.locfileid: "48085845"
 |------------|-----------------------------|---------------------------------|  
 |Insertar una línea nueva|ENTRAR o MAYÚS+ENTRAR|ENTRAR o MAYÚS+ENTRAR|  
 |Intercambiar los caracteres de cualquier lado del cursor (no es aplicable al Editor SQL).|CTRL+T|CTRL+T|  
-|Eliminar un carácter situado a la derecha del cursor|Delete|Delete|  
+|Eliminar un carácter situado a la derecha del cursor|SUPRIMIR|SUPRIMIR|  
 |Eliminar un carácter situado a la izquierda del cursor|RETROCESO<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+<br /><br /> RETROCESO|RETROCESO<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+<br /><br /> RETROCESO|  
 |Eliminar el espacio en blanco de la selección o eliminar el espacio en blanco junto al curso si no hay selección|CTRL+K, C|Sin equivalencia|  
 |Insertar el número de espacios configurado para el editor|TAB|TAB|  

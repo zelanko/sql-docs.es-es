@@ -17,19 +17,19 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aca52e23bf392c411063ab48ddd3e4ce9b6ae41
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809821"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798377"
 ---
 # <a name="validate-a-dac-package"></a>Validar un paquete de DAC
   Es aconsejable revisar el contenido de un paquete DAC antes de implementarlo en producción y validar las acciones de actualización antes de actualizar una DAC existente. Esto es especialmente aconsejable al implementar paquetes que no se desarrollaron en su organización.  
   
 1.  **Antes de empezar:**  [Requisitos previos](#Prerequisites)  
   
-2.  **Para actualizar una DAC, mediante:**  [Ver el contenido de una DAC](#ViewDACContents), [Ver los cambios de la base de datos](#ViewDBChanges), [Ver las acciones de actualización](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **Para actualizar una DAC, mediante:**  [Ver el contenido de una DAC](#ViewDACContents), [ver los cambios de la base de datos](#ViewDBChanges), [ver las acciones de actualización](#ViewUpgradeActions), [comparar las DAC](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Requisitos previos  
  Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estas DAC contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema. Antes de usar una DAC de un origen desconocido o que no sea de confianza, impleméntela en una instancia de prueba aislada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], ejecute [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos y examine también el código en la base de datos, como los procedimientos almacenados u otro código definido por el usuario.  
@@ -39,15 +39,15 @@ ms.locfileid: "43809821"
   
  **Ver una DAC en SQL Server Developer Tools**  
   
-1.  Abra el menú **Archivo** , seleccione **Nuevo**y, a continuación, **Proyecto...**  
+1.  Abra el menú **Archivo**, seleccione **Nuevo** y, después, **Proyecto...**.  
   
 2.  Seleccione la plantilla de proyecto de **SQL Server** y especifique los valores de **Nombre**, **Ubicación**y **Nombre de solución**.  
   
-3.  En el **Explorador de soluciones**, haga clic con el botón secundario en el nodo y seleccione **Propiedades...**  
+3.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo y seleccione **Propiedades...**.  
   
 4.  En la pestaña **Configuración de proyecto** , en la sección **Tipos de salida** , active la casilla **Aplicación de capa de datos (archivo .dacpac)** y, después, cierre el cuadro de diálogo de propiedades.  
   
-5.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo de proyecto y seleccione **Importar aplicación de capa de datos…**.  
+5.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo de proyecto y seleccione **Importar aplicación de capa de datos...**.  
   
 6.  Use el **Explorador de soluciones** para abrir todos los archivos de la DAC, como la directiva de selección de servidor y los scripts previos y posteriores a la implementación.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "43809821"
   
 1.  Cree un objeto SMO Server y establézcalo en la instancia que contiene la DAC que se va a ver.  
   
-2.  Abra un `ServerConnection` de objetos y conectarse a la misma instancia.  
+2.  Abra un objeto `ServerConnection` y conéctese a la misma instancia.  
   
 3.  Especifique el nombre de DAC en una variable.  
   
-4.  Use la `GetDatabaseChanges()` método para recuperar un `ChangeResults` objeto y canalícelo a un archivo de texto para generar un informe simple de nuevos, eliminados y cambiados objetos.  
+4.  Use el método `GetDatabaseChanges()` para recuperar un objeto de `ChangeResults` y canalícelo a un archivo de texto para generar un informe simple de objetos nuevos, eliminados y cambiados.  
   
 ### <a name="view-database-changes-example-powershell"></a>Ver el ejemplo de cambios de base de datos (PowerShell)  
  **Ver el ejemplo de cambios de base de datos (PowerShell)**  
@@ -123,13 +123,13 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 1.  Cree un objeto SMO Server y establézcalo en la instancia que contiene la DAC implementada.  
   
-2.  Abra un `ServerConnection` de objetos y conectarse a la misma instancia.  
+2.  Abra un objeto `ServerConnection` y conéctese a la misma instancia.  
   
 3.  Use `System.IO.File` para cargar el archivo de paquete DAC.  
   
 4.  Especifique el nombre de DAC en una variable.  
   
-5.  Use el `GetIncrementalUpgradeScript()` podría ejecutar método para obtener una lista de las instrucciones Transact-SQL en una actualización y canalice dicha lista a un archivo de texto.  
+5.  Use el método `GetIncrementalUpgradeScript()` para obtener una lista de las instrucciones Transact-SQL que ejecutaría una actualización y canalice la lista a un archivo de texto.  
   
 6.  Cierra la secuencia de archivos usada para leer el archivo de paquete DAC.  
   

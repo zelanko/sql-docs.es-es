@@ -10,12 +10,12 @@ ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bffdc944c10a534cffd58a6b9931165f556432b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145385"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353011"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Mejorar el rendimiento de las consultas de texto completo
   A continuación se ofrece una lista de recomendaciones que servirán para mejorar el rendimiento de las consultas de texto completo.  
@@ -48,7 +48,7 @@ ms.locfileid: "48145385"
 -   Con las aplicaciones que contienen predicados de relación selectiva, las consultas que usan predicados relacionales selectivos y predicados de texto completo no selectivos podrían demostrar un mejor comportamiento cuando se escriben para utilizar el optimizador de consultas. Esto permite al optimizador de consultas decidir si puede explotar el predicado o una pila de intervalo para generar un plan de consulta efectivo. Este enfoque es más sencillo y a menudo más eficaz que indizar los datos relacionales como datos de texto completo.  
   
 ## <a name="related-resources"></a>Recursos relacionados  
- [Búsqueda de texto completo en SQL Server 2008: características internas y mejoras](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 Full-Text Search: Funcionamiento interno y mejoras](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>Vea también  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

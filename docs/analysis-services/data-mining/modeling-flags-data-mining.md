@@ -1,5 +1,5 @@
 ---
-title: Marcas de modelado (minería de datos) | Documentos de Microsoft
+title: Marcas de modelado (minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32a7241fcea41af44e3e336d02c857f51d133208
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f644f882d1a252f678d868d3492b4aed4e11006f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017422"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531900"
 ---
 # <a name="modeling-flags-data-mining"></a>Marcas de modelado (Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "34017422"
  Indica que los valores de la columna de atributos nunca deben incluir un valor NULL. Se producirá un error si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] encuentra un valor NULL para esta columna de atributos durante el proceso de entrenamiento de modelos.  
   
  **MODEL_EXISTENCE_ONLY**  
- Indica que la columna se tratará como si tuviera dos estados posibles: **Missing** y **Existing**. Si el valor es **NULL**, se trata como Ausente. La marca MODEL_EXISTENCE_ONLY se aplica al atributo de predicción y es compatible con la mayoría de los algoritmos.  
+ Indica que la columna se tratará como si tuviera dos estados: **Falta** y **existente**. Si el valor es **NULL**, se trata como Ausente. La marca MODEL_EXISTENCE_ONLY se aplica al atributo de predicción y es compatible con la mayoría de los algoritmos.  
   
- De hecho, al establecer la marca MODEL_EXISTENCE_ONLY en **True** , se cambia la representación de los valores para que solo haya dos estados: **Missing** y **Existing**. Todos los estados no ausentes se combinan en un único valor **Existing** .  
+ De hecho, establecer la marca MODEL_EXISTENCE_ONLY en **True** cambia la representación de los valores de modo que hay sólo dos estados: **Falta** y **existente**. Todos los estados no ausentes se combinan en un único valor **Existing** .  
   
  Un uso típico de esta marca de modelado se daría en los atributos para los que el estado **NULL** tiene un significado implícito; el valor explícito del estado **NOT NULL** podría no ser tan importante como el hecho de que la columna tenga cualquier valor. Por ejemplo, una columna [DateContractSigned] podría ser **NULL** si nunca se ha firmado un contrato y **NOT NULL** si se ha firmado. Por lo tanto, si la finalidad del modelo es predecir si se firmará un contrato, puede usar la marca MODEL_EXISTENCE_ONLY para omitir el valor de fecha exacta en los casos de **NOT NULL** y solo hacer distinciones en los casos donde un contrato es **Missing** o **Existing**.  
   
@@ -57,7 +57,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  Puede agregar o cambiar las marcas de modelado utilizadas en un modelo mediante el Diseñador de minería de datos y modificar las propiedades de las columnas asociadas. Dichos cambios requieren que la estructura o el modelo se vuelvan a procesar.  
   
- Puede especificar las marcas de modelado en una nueva estructura o modelo de minería de datos mediante DMX, o utilizando AMO o XMLA. Sin embargo, no puede cambiar las marcas de modelado utilizadas en un modelo y en una estructura de minería de datos existentes utilizando DMX. Puede crear un nuevo modelo de minería de datos utilizando la sintaxis `ALTER MINING STRUCTURE….ADD MINING MODEL`.  
+ Puede especificar las marcas de modelado en una nueva estructura o modelo de minería de datos mediante DMX, o utilizando AMO o XMLA. Sin embargo, no puede cambiar las marcas de modelado utilizadas en un modelo y en una estructura de minería de datos existentes utilizando DMX. Puede crear un nuevo modelo de minería de datos utilizando la sintaxis `ALTER MINING STRUCTURE....ADD MINING MODEL`.  
   
 ##  <a name="bkmk_UseRegressors"></a> Usos de la marca de modelado REGRESSOR  
  Cuando se establece la marca de modelado REGRESSOR en una columna, se indica al algoritmo que la columna contiene regresores potenciales. Los regresores reales que se utilizan en el modelo los determina el algoritmo. Se puede descartar un regresor potencial si no modela el atributo de predicción.  
@@ -87,18 +87,18 @@ WHERE MODEL_NAME = '<model name>'
   
  Puede utilizar el parámetro FORCE_REGRESSOR para garantizar que el algoritmo utilizará un regresor determinado. Este parámetro se puede utilizar con el algoritmo de árboles de decisión y el algoritmo de regresión lineal.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Utilice los vínculos siguientes para obtener más información acerca de cómo utilizar marcas de modelado.  
   
 |Tarea|Tema|  
 |----------|-----------|  
-|Modificar las marcas de modelado mediante el Diseñador de minería de datos|[Ver o cambiar modelado marcas & #40; minería de datos & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|Especificar una sugerencia al algoritmo para recomendar regresores probables|[Especificar una columna para utilizar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Ver las marcas de modelado admitidas por algoritmos concretos (en la sección Marcas de modelado de cada tema de referencia del algoritmo)|[Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|Modificar las marcas de modelado mediante el Diseñador de minería de datos|[Ver o cambiar marcas de modelado &#40;minería de datos&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Especificar una sugerencia al algoritmo para recomendar regresores probables|[Especificar una columna para usar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Ver las marcas de modelado admitidas por algoritmos concretos (en la sección Marcas de modelado de cada tema de referencia del algoritmo)|[Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Obtener más información acerca de las columnas de la estructura de minería de datos y las propiedades que se pueden establecer en ellas|[Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |Obtener información sobre las marcas de modelado y las columnas del modelo de minería de datos que se pueden aplicar en el modelo|[Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)|  
 |Ver la sintaxis para trabajar con marcas de modelado en instrucciones DMX|[Marcas de modelado &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Descripción de los valores que faltan y cómo trabajar con ellos|[Los valores que faltan & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|Descripción de los valores que faltan y cómo trabajar con ellos|[Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |Obtener información sobre cómo administrar los modelos y las estructuras y establecer las propiedades de uso|[Mover objetos de minería de datos](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

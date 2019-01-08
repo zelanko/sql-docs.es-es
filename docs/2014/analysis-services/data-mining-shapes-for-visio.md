@@ -16,29 +16,29 @@ ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3dab107fb57ab2e6d0abaa97bd76a1ce8082b726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92630f90d7b18ad668dcffc02feeb65990cf3c84
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055235"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512630"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Formas de minería de datos para Visio
   Las Formas de minería de datos para Visio proporcionan plantillas personalizadas para mostrar modelos de minería de datos. Mediante estas plantillas, puede conectarse a un modelo que ha creado y crear presentaciones interactivas para ilustrar los resultados de la minería de datos.  
   
- Las plantillas ofrecen muchas ventajas con respecto a las capturas de pantalla y los gráficos estáticos: interactúan con los modelos de minería de datos subyacentes, que se almacenan en una instancia de Analysis Services, y permiten personalizar la forma en que se muestran los patrones en el modelo de minería de datos. Puede contraer y expandir un modelo de árbol, filtrar en los nodos de datos o por atributos, y mostrar las estadísticas del modelo como las probabilidades y los coeficientes.  
+ Las plantillas ofrecen muchas ventajas respecto a los gráficos estáticos y capturas de pantalla: interactúan con los modelos de minería de datos subyacente, que se almacenan en una instancia de Analysis Services, y le permiten personalizar la forma en que se muestran los patrones en el modelo de minería de datos. Puede contraer y expandir un modelo de árbol, filtrar en los nodos de datos o por atributos, y mostrar las estadísticas del modelo como las probabilidades y los coeficientes.  
   
  ![DM](media/dm-stencil.gif "DM")  
   
  Las plantillas de Visio incluyen estos asistentes:  
   
--   **Diagrama de red de dependencias:** Utilice este asistente para crear gráficos de árboles de decisión y redes neuronales.  
+-   **Diagrama de red de dependencias:** Utilice a este asistente para crear gráficos de árboles de decisión y redes neuronales.  
   
 -   **Diagrama de árbol de decisión:** Use este asistente para crear diagramas que muestran los puntos de decisión y las fórmulas asociadas con los modelos de árboles de decisión. Este diagrama se puede utilizar también con modelos de regresión.  
   
 -   **Diagrama del clúster:** Use este asistente para crear gráficos multicolor para los modelos de segmentación. Se puede alternar entre las vistas como distinción del atributo, perfiles del clúster y dependencias, y personalizar la apariencia de los clústeres.  
   
-## <a name="installation"></a>Installation  
+## <a name="installation"></a>Instalación  
  Al instalar las plantillas de minería de datos para Visio, de forma predeterminada los siguientes archivos se instalan en \<unidad > \Program Files\Microsoft SQL Server 2012 DM Add-Ins (o \<unidad > \ o (x86) de archivos de programa \Microsoft SQL Server 2012 DM Add-Ins):  
   
 -   **Microsoft Data mining.vst:** esta plantilla contiene formato, diseño y asistentes que le ayudarán a trabajar con las formas de minería de datos prediseñados.  

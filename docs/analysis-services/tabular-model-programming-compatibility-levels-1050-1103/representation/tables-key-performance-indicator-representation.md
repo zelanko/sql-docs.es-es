@@ -1,5 +1,5 @@
 ---
-title: Representación de indicadores de rendimiento (Tabular) de clave | Documentos de Microsoft
+title: Representación de indicadores de rendimiento (Tabular) de clave | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a536272f6e41e3aaf1abe6404139b67e0e558f0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 690c82c020f509e7dec816ca64a11dc2828ad4cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039689"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513981"
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Tablas: representación de indicadores clave de rendimiento
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Los KPI se usan para medir el rendimiento de un valor, definido por una medida base, con respecto a un valor de destino.  
   
 ## <a name="key-performance-indicator-representation"></a>Representación de indicadores clave de rendimiento  
- En los modelos de objetos tabulares, un indicador clave de rendimiento (KPI) es una medida con información adicional para que la aplicación cliente la muestre gráficamente. Un KPI normalmente tiene información sobre el objetivo que se pretende obtener, el estado de la medida en comparación con el objetivo e información para que la herramienta cliente sepa cómo va a mostrar gráficamente el estado.  
+ En objetos tabulares modela un indicador clave de rendimiento - kpi: es una medida con información adicional para la aplicación cliente para que se muestre gráficamente. Un KPI normalmente tiene información sobre el objetivo que se pretende obtener, el estado de la medida en comparación con el objetivo e información para que la herramienta cliente sepa cómo va a mostrar gráficamente el estado.  
   
 ### <a name="key-performance-indicator-in-amo"></a>Indicador clave de rendimiento en AMO  
  Cuando se usa AMO para administrar un KPI de modelo tabular, no hay una correspondencia uno a uno entre los objetos de los KPI de AMO; el objeto <xref:Microsoft.AnalysisServices.Kpi> de AMO no se usa con este fin. En AMO, en los modelos tabulares, los KPI se representan mediante una serie de objetos creados en uno de los elementos de la colección de <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> y de <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>.  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Ejemplo AMO2Tabular  
- Para obtener una descripción de cómo usar AMO para crear y manipular el indicador clave de rendimiento representaciones, vea el código fuente del ejemplo AMO a Tabular; concreto, revise el siguiente archivo fuente: AddKPIs.cs. El ejemplo está disponible en Codeplex. Nota importante sobre el código: el código se proporciona solo como apoyo de los conceptos lógicos explicados aquí y no debe utilizarse en un entorno de producción; no debe usarse para otros fines excepto el pedagógico.  
+ Para obtener una descripción acerca de cómo se usa AMO para crear y manipular representaciones de indicadores clave de rendimiento, vea el código fuente del ejemplo AMO a tabular. Revise específicamente el siguiente archivo de código fuente: AddKPIs.cs. El ejemplo está disponible en Codeplex. Nota importante sobre el código: el código se proporciona solo como apoyo de los conceptos lógicos explicados aquí y no debe utilizarse en un entorno de producción; no debe usarse para otros fines excepto el pedagógico.  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -18,12 +17,12 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d233d2ee94a611c63e8466102c66bd01e77b0513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4376967ea1d21e1022a21b9df836e1be3d66858
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063465"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349662"
 ---
 # <a name="precedence-constraints"></a>Restricciones de precedencia
   Las restricciones de precedencia vinculan ejecutables, contenedores y tareas de paquetes en un flujo de control, y especifican condiciones que determinan si se ejecutan los ejecutables. Un ejecutable puede ser un contenedor de bucles For, de bucles Foreach o de secuencia, o bien una tarea o un controlador de eventos. Los controladores de eventos usan las restricciones de precedencia para vincular sus ejecutables en un flujo de control.  
@@ -61,7 +60,7 @@ ms.locfileid: "48063465"
   
 -   Una expresión o una restricción que usa los resultados de la ejecución del ejecutable de precedencia o los resultados de devolución de la evaluación de la expresión.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Usa colores para identificar el tipo de restricción de precedencia. La restricción de operación realizada correctamente es verde, la de error es roja y la de conclusión es azul. Para mostrar etiquetas de texto en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] que muestran el tipo de la restricción, debe configurar las características de accesibilidad del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] usa colores para identificar el tipo de restricción de precedencia. La restricción de operación realizada correctamente es verde, la de error es roja y la de conclusión es azul. Para mostrar etiquetas de texto en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] que muestran el tipo de la restricción, debe configurar las características de accesibilidad del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
   
  La expresión debe ser una expresión de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] válida y puede incluir funciones, operadores y variables del sistema y personalizadas. Para obtener más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) y [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
@@ -75,12 +74,12 @@ ms.locfileid: "48063465"
 -   El resultado de error requiere que el ejecutable de precedencia genere un error para que pueda ejecutarse el ejecutable restringido.  
   
 > [!NOTE]  
->  Solo las restricciones de precedencia que son miembros del mismo `Precedence Constraint` colección se puede agrupar en una condición lógica AND. Por ejemplo, no se pueden combinar restricciones de precedencia de dos contenedores de bucles Foreach.  
+>  Solo las restricciones de precedencia que son miembros de la misma colección `Precedence Constraint` se pueden agrupar en una condición lógica AND. Por ejemplo, no se pueden combinar restricciones de precedencia de dos contenedores de bucles Foreach.  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>Configuración de la restricción de precedencia  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener información sobre las propiedades que se pueden configurar en el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)], vea [Editor de restricciones de precedencia](../precedence-constraint-editor.md).  
+ Para obtener información sobre las propiedades que se pueden configurar en el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , vea [Editor de restricciones de precedencia](../precedence-constraint-editor.md).  
   
  Para obtener información sobre cómo establecer mediante programación estas propiedades, vea <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "48063465"
      En este tema se ofrece información sobre cómo se configura el comportamiento predeterminado para las restricciones de precedencia y cómo se conectan los ejecutables mediante las restricciones de precedencia predeterminadas.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Artículo técnico, sobre [ejemplos de expresiones SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
+ Artículo técnico, sobre [ejemplos de expresiones SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vea también  
  [Agregar expresiones a las restricciones de precedencia](../add-expressions-to-precedence-constraints.md)   

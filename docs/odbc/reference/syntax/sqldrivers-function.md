@@ -20,16 +20,16 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0815a5d0597fabb6b4f5e942d2bbb92b7ae57e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727543"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214736"
 ---
 # <a name="sqldrivers-function"></a>Función SQLDrivers
 **Conformidad**  
- Versión introdujo: ODBC 2.0 normativo: ODBC  
+ Versión de introducción: Cumplimiento de estándares 2.0 de ODBC: ODBC  
   
  **Resumen**  
  **SQLDrivers** muestra descripciones del controlador y palabras clave del atributo de controlador. Esta función se implementa solo por el Administrador de controladores.  

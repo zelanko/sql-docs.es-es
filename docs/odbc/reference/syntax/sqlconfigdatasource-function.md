@@ -20,16 +20,16 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef1336514d876d171cd9d31d8c20171e154f9a2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646903"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215604"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource Function
 **Conformidad**  
- Introdujo la versión: ODBC 1.0  
+ Versión de introducción: ODBC 1.0  
   
  **Resumen**  
  **SQLConfigDataSource** agrega, modifica o elimina los orígenes de datos.  
@@ -60,7 +60,7 @@ BOOL SQLConfigDataSource(
   
  ODBC_REMOVE_DSN: Quitar un origen de datos de usuario existente.  
   
- ODBC_ADD_SYS_DSN: Agregar un nuevo origen de datos del sistema.  
+ ODBC_ADD_SYS_DSN: Agregue un nuevo origen de datos del sistema.  
   
  ODBC_CONFIG_SYS_DSN: Modificar un origen de datos del sistema existente.  
   

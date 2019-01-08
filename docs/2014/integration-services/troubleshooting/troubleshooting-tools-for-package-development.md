@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dc02c97daa09091c2f7ca4063c32325e0a39a3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e1935b7ffa0acc22183f91cf5c7fe3896c9e1a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176695"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792115"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Herramientas para solucionar problemas con el desarrollo de paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que se pueden usar para solucionar problemas de los paquetes mientras estos se desarrollan en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -44,9 +43,9 @@ ms.locfileid: "48176695"
   
 -   **Establezca todo el paquete y todas las conexiones para trabajar sin conexión cuando los orígenes de datos no estén disponibles**. Puede habilitar **Trabajar sin conexión** en el menú **SSIS** . A diferencia de la `DelayValidation` propiedad, el **trabajar sin conexión** opción está disponible incluso antes de abrir un paquete. También se puede habilitar la opción **Trabajar sin conexión** para acelerar las operaciones en el diseñador, y deshabilitarla solo cuando se quiere validar el paquete.  
   
--   **Configure la propiedad DelayValidation para los elementos del paquete que no son válidos hasta el tiempo de ejecución**. Se puede establecer `DelayValidation` en `True` para los elementos del paquete cuya configuración no sea válida en tiempo de diseño a fin de evitar errores de validación. Por ejemplo, puede haber una tarea Flujo de datos que utilice una tabla de destino inexistente antes de que la tarea de ejecución de SQL cree la tabla en tiempo de ejecución. El `DelayValidation` propiedad se puede habilitar en el nivel de paquete, o en el nivel de las tareas y contenedores individuales incluidos en el paquete. Normalmente debe dejar esta propiedad establecida en `True` en los mismos elementos del paquete cuando se implementa el paquete, para evitar que los mismos errores de validación en tiempo de ejecución.  
+-   **Configure la propiedad DelayValidation para los elementos del paquete que no son válidos hasta el tiempo de ejecución**. Se puede establecer `DelayValidation` en `True` para los elementos del paquete cuya configuración no sea válida en tiempo de diseño a fin de evitar errores de validación. Por ejemplo, puede haber una tarea Flujo de datos que utilice una tabla de destino inexistente antes de que la tarea de ejecución de SQL cree la tabla en tiempo de ejecución. La propiedad `DelayValidation` se puede habilitar en el nivel de paquete o en el de tareas y contenedores individuales incluidos en el paquete. Por lo general, se debe mantener el valor de esta propiedad en `True` para los mismos elementos del paquete cuando se implementa el paquete, a fin de evitar los mismos errores de validación en tiempo de ejecución.  
   
-     El `DelayValidation` propiedad puede establecerse en una tarea de flujo de datos, pero no en datos individuales componentes de flujo. Se puede obtener un resultado similar estableciendo la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> para componentes individuales de flujo de datos en `false`. Sin embargo, cuando el valor de esta propiedad es `false`, el componente no es consciente de los cambios realizados en los metadatos de orígenes de datos externos.  
+     Es posible establecer la propiedad `DelayValidation` para una tarea Flujo de datos, pero no para componentes individuales de flujo de datos. Se puede obtener un resultado similar estableciendo la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> para componentes individuales de flujo de datos en `false`. No obstante, cuando el valor de esta propiedad es `false`, el componente no detecta los cambios realizados en los metadatos de los orígenes de datos externos.  
   
  Si los objetos de base de datos usados por el paquete están bloqueados durante la validación, es posible que este proceso deje de responder. En estas circunstancias, el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] también deja de responder. Puede reanudar la validación usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para cerrar la sesión asociada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede evitar este problema si usa la configuración descrita en esta sección.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48176695"
   
 -   **Usar los visores de datos para supervisar los datos a medida que éstos se mueven por el flujo de datos**. Los visores de datos muestran los valores de los datos a medida que estos se mueven entre orígenes, transformaciones y destinos. Un visor de datos puede mostrar los datos en una cuadrícula. Puede copiar los datos de un visor de datos al Portapapeles y, después, pegarlos en un archivo o en una hoja de cálculo de Excel. Para obtener más información, vea [Agregar un visor de datos a un flujo de datos](../add-a-data-viewer-to-a-data-flow.md).  
   
--   **Configurar salidas de error para los componentes de flujo de datos que las admitan**. Muchos orígenes, transformaciones y destinos del flujo de datos también admiten salidas de error. La configuración de la salida de error de un componente de flujo de datos permite dirigir los datos que contienen errores a otro destino. Por ejemplo, puede capturar los datos que generaron errores o se truncaron en un archivo de texto independiente. También se pueden adjuntar visores de datos a las salidas de error y examinar solo los datos erróneos. En tiempo de diseño, las salidas de error capturan valores de datos con problemas para ayudarle a desarrollar paquetes que controlen de forma eficaz los datos del mundo real. Sin embargo, mientras que otras herramientas y características de solución de problemas solamente son útiles en tiempo de diseño, las salidas de error siguen siendo útiles en el entorno de producción. Para obtener más información, vea [Control de errores en los datos](../data-flow/error-handling-in-data.md).  
+-   **Configurar salidas de error para los componentes de flujo de datos que las admitan**. Muchos orígenes, transformaciones y destinos del flujo de datos también admiten salidas de error. La configuración de la salida de error de un componente de flujo de datos permite dirigir los datos que contienen errores a otro destino. Por ejemplo, puede capturar los datos que generaron errores o se truncaron en un archivo de texto independiente. También se pueden adjuntar visores de datos a las salidas de error y examinar solo los datos erróneos. En tiempo de diseño, las salidas de error capturan valores de datos con problemas para ayudarle a desarrollar paquetes que controlen de forma eficaz los datos del mundo real. Sin embargo, mientras que otras herramientas y características de solución de problemas solamente son útiles en tiempo de diseño, las salidas de error siguen siendo útiles en el entorno de producción. Para más información, vea [Control de errores en los datos](../data-flow/error-handling-in-data.md).  
   
 -   **Capturar el recuento de filas procesadas**. Al ejecutar un paquete en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , el número de filas que ha pasado a través de una ruta se muestra en el diseñador de flujo de datos. Este número se actualiza periódicamente mientras los datos pasan por la ruta. También puede agregar una transformación Recuento de filas al flujo de datos para capturar el recuento de filas final en una variable. Para más información, consulte [Row Count Transformation](../data-flow/transformations/row-count-transformation.md).  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48176695"
  Si se encuentra con un número de error de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sin una descripción asociada durante el desarrollo de un paquete, puede ver la descripción en [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md). En este momento, la lista no incluye información sobre cómo solucionar problemas.  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas de solución de problemas de ejecución del paquete](troubleshooting-tools-for-package-execution.md)   
+ [Herramientas para solucionar problemas con la ejecución de paquetes](troubleshooting-tools-for-package-execution.md)   
  [Características de rendimiento del flujo de datos](../data-flow/data-flow-performance-features.md)  
   
   

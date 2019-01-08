@@ -21,12 +21,12 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d731c5fbb7a90e69b7e1b1502411f57e80219892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687233"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409582"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47687233"
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
+managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
 ##  <a name="Arguments"></a> Argumentos  
@@ -69,7 +69,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
  Debe pertenecer a la **db_backupoperator** rol de base de datos con **ALTER ANY CREDENTIAL** permisos. El usuario no debe denegarse **VIEW ANY DEFINITION** permisos.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para ‘TestDB’  
+ El ejemplo siguiente devuelve el [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuración para 'TestDB'  
   
  Para cada fragmento de código, seleccione 'tsql' en el campo de atributo language.  
   

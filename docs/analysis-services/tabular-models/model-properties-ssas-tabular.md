@@ -1,5 +1,5 @@
 ---
-title: Propiedades de los modelos | Documentos de Microsoft
+title: Propiedades de modelo tabular de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56b0e5595887cb8da627ba0864c624f89a6857a6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9251a09039d93d473963ced235669c66f99431b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044499"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072192"
 ---
-# <a name="model-properties"></a>Propiedades del modelo 
+# <a name="model-properties"></a>Propiedades de modelo 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Este artículo describen las propiedades del modelo. Cada proyecto de modelos tabulares tiene propiedades del modelo que afectan al modo en que se compila el modelo que se está creando con las herramientas de desarrollo de SQL Server, cómo se realizan las copias de seguridad y cómo se almacena la base de datos del área de trabajo. Las propiedades del modelo que se describen aquí no se aplican a los modelos que se han implementado previamente.  
+  En este artículo se describe las propiedades del modelo tabular. Cada proyecto de modelos tabulares tiene propiedades del modelo que afectan al modo en que se compila el modelo que se está creando con las herramientas de desarrollo de SQL Server, cómo se realizan las copias de seguridad y cómo se almacena la base de datos del área de trabajo. Las propiedades del modelo que se describen aquí no se aplican a los modelos que se han implementado previamente.  
   
  Secciones de este tema:  
   
@@ -29,10 +29,10 @@ ms.locfileid: "34044499"
 ##  <a name="bkmk_model_properties"></a> Propiedades del modelo  
  **Avanzadas**  
   
-|Propiedad|Valor predeterminado|Description|  
+|Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
-|**Acción de compilación**|Compilar|Esta propiedad especifica el modo en que el archivo está relacionado con el proceso de compilación e implementación. El valor de esta propiedad tiene las opciones siguientes:<br /><br /> **Compilar** : se produce una acción de compilación normal. Las definiciones de los objetos del modelo se escribirán en el archivo .asdatabase.<br /><br /> **Ninguna** : la salida al archivo .asdatabase estará vacía.|  
-|**Copiar en el directorio de salida**|No copiar|Esta propiedad especifica que el archivo de origen se copiará en el directorio de salida. El valor de esta propiedad tiene las opciones siguientes:<br /><br /> **No copiar** : no se crea ninguna copia en el directorio de salida.<br /><br /> **Copiar siempre** : siempre se crea una copia en el directorio de salida.<br /><br /> **Copiar si es posterior** : se crea una copia en el directorio de salida solo si hay cambios en el archivo model.bim.|  
+|**Acción de compilación**|Compilar|Esta propiedad especifica el modo en que el archivo está relacionado con el proceso de compilación e implementación. El valor de esta propiedad tiene las opciones siguientes:<br /><br /> **Compilar** -se produce una acción de compilación normal. Las definiciones de los objetos del modelo se escribirán en el archivo .asdatabase.<br /><br /> **Ninguno** -el resultado al archivo .asdatabase estará vacío.|  
+|**Copiar en el directorio de salida**|No copiar|Esta propiedad especifica que el archivo de origen se copiará en el directorio de salida. El valor de esta propiedad tiene las opciones siguientes:<br /><br /> **No copie** -se crea ninguna copia en el directorio de salida.<br /><br /> **Copiar siempre** -siempre se crea una copia en el directorio de salida.<br /><br /> **Copiar si es posterior** : se crea una copia en el directorio de salida solo si hay cambios en el archivo model.bim.|  
   
  **Varios**  
   
@@ -40,15 +40,15 @@ ms.locfileid: "34044499"
 >  Algunas propiedades se establecen automáticamente cuando se crea el modelo y no se pueden cambiar.  
   
 > [!NOTE]  
->  Las propiedades Servidor del área de trabajo, Retención del área de trabajo y Copia de seguridad de datos tienen valores predeterminados que se aplican al crear un nuevo proyecto de modelo. Puede cambiar la configuración predeterminada para los modelos nuevos en la página Modelado de datos en la configuración de Analysis Server del cuadro de diálogo Herramientas\Opciones. Estas propiedades, al igual que otras, también se pueden establecer para cada modelo en la ventana Propiedades. Para obtener más información, consulte [configurar las propiedades de implementación y de modelado de datos predeterminadas](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  Las propiedades Servidor del área de trabajo, Retención del área de trabajo y Copia de seguridad de datos tienen valores predeterminados que se aplican al crear un nuevo proyecto de modelo. Puede cambiar la configuración predeterminada para los modelos nuevos en la página Modelado de datos en la configuración de Analysis Server del cuadro de diálogo Herramientas\Opciones. Estas propiedades, al igual que otras, también se pueden establecer para cada modelo en la ventana Propiedades. Para obtener más información, consulte [configurar propiedades de implementación y modelado de datos predeterminada](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-|Propiedad|Valor predeterminado|Description|  
+|Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
 |**Intercalación**|Intercalación predeterminada para el equipo en el que está instalado Visual Studio.|El designador de intercalación del modelo.|  
 |**Nivel de compatibilidad**|Valor predeterminado u otro seleccionado al crear el proyecto.|Se aplica a SQL Server 2012 Analysis Services SP1 o posterior. Especifica las características y los valores disponibles para este modelo. Para obtener más información, vea [Nivel de compatibilidad para modelos tabulares de Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |**Copia de seguridad de datos**|No hacer copia de seguridad en disco|Especifica si se mantiene una copia de seguridad de los datos del modelo en un archivo de copia de seguridad. El valor de esta propiedad tiene las opciones siguientes:<br /><br /> **Hacer copia de seguridad en disco** : especifica que se debe mantener una copia de seguridad de los datos del modelo en el disco. Cuando se guarda el modelo, los datos también se guardarán en el archivo de copia de seguridad (ABF). La selección de esta opción puede hacer que se alarguen los tiempos empleados para cargar y guardar modelos.<br /><br /> **No hacer copia de seguridad en disco** : especifica que no se debe mantener una copia de seguridad de los datos del modelo en el disco. Esta opción minimizará el tiempo necesario para guardar y cargar el modelo.<br /><br /> <br /><br /> La configuración predeterminada para esta propiedad se puede cambiar en la página Modelado de datos en la configuración de Analysis Server del cuadro de diálogo Herramientas\Opciones.| 
-|**Dirección del filtro predeterminado**|En una sola dirección|Determina la dirección del filtro predeterminado para nuevas relaciones.| 
-|**Modo DirectQuery**|Desactivado|Especifica si este modelo funciona en modo DirectQuery. Para obtener más información, consulte [Directquerymode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
+|**Dirección de filtrado predeterminada**|Dirección única|Determina la dirección del filtro predeterminado para nuevas relaciones.| 
+|**Modo DirectQuery**|Desactivado|Especifica si este modelo funciona en modo DirectQuery. Para obtener más información, consulte [el modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
 |**Nombre de archivo**|Model.bim|Especifica el nombre del archivo .bim. El nombre del archivo no se debe cambiar.|  
 |**Ruta de acceso completa**|Ruta de acceso que se especificó cuando se creó el proyecto.|La ubicación del archivo model.bim. Esta propiedad no se puede establecer en la ventana Propiedades.|  
 |**Idioma**|Inglés|El idioma predeterminado del modelo. El idioma predeterminado se determina mediante el idioma de Visual Studio. Esta propiedad no se puede establecer en la ventana Propiedades.|  
@@ -63,7 +63,7 @@ ms.locfileid: "34044499"
 2.  En la ventana **Propiedades** , haga clic en una propiedad y, a continuación, escriba un valor o haga clic en la flecha abajo para seleccionar una opción de configuración.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades de implementación y de modelado de datos predeterminadas](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Configurar las propiedades de implementación y modelado de datos predeterminada](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [Propiedades de proyecto](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

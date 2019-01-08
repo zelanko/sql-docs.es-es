@@ -1,22 +1,21 @@
 ---
-title: 'Paso 3: Modificar el valor de configuración de la propiedad Directory | Microsoft Docs'
+title: 'Paso 3: Modificar el valor de configuración de propiedad de directorio | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39a1547e2248c62299026440b5b33da88458138e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 011cd07c0f28f884f460d78d5f2f88631bfe2fd9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085885"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807507"
 ---
 # <a name="step-3-modifying-the-directory-property-configuration-value"></a>Paso 3: Modificar el valor de configuración de la propiedad Directory
   En esta tarea, modificará el parámetro de configuración, almacenado en el archivo SSISTutorial.dtsConfig, para la propiedad Value de la variable de nivel de paquete `User::varFolderName`. Esta variable actualiza la propiedad Directory del contenedor de bucles Foreach. El valor modificado hará referencia a la `New Sample Data` carpeta que ha creado en la tarea anterior. Una vez que haya modificado el parámetro de configuración y que haya ejecutado el paquete, la variable actualizará la propiedad Directory, mediante el valor rellenado desde el archivo de configuración, en lugar del valor del directorio configurado originalmente en el paquete.  
@@ -34,6 +33,6 @@ ms.locfileid: "48085885"
 3.  Guarde el cambio y cierre el editor de texto.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 4: Probar el paquete del tutorial de la lección 5](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+ [Paso 4: Probar el paquete del Tutorial lección 5](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
   

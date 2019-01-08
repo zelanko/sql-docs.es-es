@@ -14,12 +14,12 @@ ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae0e86016d21e33507544747a44e5fc48b273ae2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094125"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419686"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Asistente para clasificación (Complementos de minería de datos para Excel)
   ![Asistente para clasificar en la cinta de opciones minería de datos](media/dmc-classify.gif "Asistente para clasificar en la cinta de opciones minería de datos")  
@@ -34,7 +34,7 @@ ms.locfileid: "48094125"
   
 2.  En el **seleccionar datos de origen** página, elija los datos que se va a analizar.  
   
-     Este asistente admite varios tipos de datos: tablas de Excel, rangos de Excel y orígenes de datos externos. Con datos externos, puede agregarlos a Excel o elegir un conjunto de tablas o vistas de un origen de datos de Analysis Services. También puede agregar tablas y cambiar columnas para crear orígenes de datos ad hoc.  
+     Este asistente admite varios tipos de datos: Las tablas de Excel, rangos de Excel y orígenes de datos externos. Con datos externos, puede agregarlos a Excel o elegir un conjunto de tablas o vistas de un origen de datos de Analysis Services. También puede agregar tablas y cambiar columnas para crear orígenes de datos ad hoc.  
   
 3.  En el **clasificación** página, elija la columna que desea clasificar.  
   

@@ -14,22 +14,22 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220345"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792270"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
-  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultas de texto completo pueden buscar sinónimos de los términos especificados por el usuario mediante el uso de un diccionario de sinónimos. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *sinónimos* define un conjunto de sinónimos para un idioma específico. Los administradores del sistema pueden definir dos formatos de sinónimos: conjuntos de expansión y conjuntos de reemplazo. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos. Coincidencia de diccionario de sinónimos tiene lugar para todas [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) y [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) consultas y para cualquier [CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) consultas que Especifique la cláusula FORMSOF THESAURUS.  
+  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las consultas de texto completo pueden buscar sinónimos de los términos especificados por el usuario usando un diccionario de sinónimos. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *de* define un conjunto de sinónimos para un idioma concreto. Los administradores del sistema pueden definir dos formatos de sinónimos: conjuntos de expansión y conjuntos de reemplazo. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos. La comprobación de coincidencia con el diccionario de sinónimos tiene lugar para todas las consultas [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) y [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) , y para las consultas [CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) que especifican la cláusula FORMSOF THESAURUS.  
   
 ##  <a name="tasks"></a> Tareas básicas para la configuración de un archivo de diccionario de sinónimos  
  Para que las consultas de búsqueda de texto completo en la instancia de servidor puedan buscar sinónimos en un idioma determinado, debe definir las asignaciones del diccionario de sinónimos de ese idioma. Cada diccionario de sinónimos se debe configurar manualmente para definir lo siguiente:  
   
 -   Configuración de signos diacríticos  
   
-     En un diccionario de sinónimos determinado, todos los patrones de búsqueda distinguen o no las marcas diacríticas como la tilde (**~**), la marca de acento agudo (**´**) o la diéresis (**¨**) (es decir, *distinguen acentos* o *no distinguen acentos*). Por ejemplo, imagine que especifica el patrón "café" para que sea reemplazado por otros patrones en una consulta de búsqueda de texto completo. Si el archivo de sinónimos no distingue acentos, la búsqueda de texto completo reemplaza los patrones "café" y "cafe". Si el archivo de sinónimos distingue acentos, la búsqueda de texto completo solo reemplaza el patrón "café". De forma predeterminada, un diccionario de sinónimos no distingue acentos.  
+     Para un diccionario de sinónimos determinado, son todos los patrones de búsqueda distinguen o no los signos diacríticos, por ejemplo, una tilde (**~**), acento agudo (**??** ), o diéresis (**??** ) (es decir, *acentos* o *no distinguir acentos*). Por ejemplo, imagine que especifica el patrón "esté??" Reemplazar por otros patrones en una consulta de texto completo. Si el diccionario de sinónimos no distingue acentos, búsqueda de texto completo reemplaza lo patrones "esté"?? y "cafe". Si el diccionario de sinónimos distingue acentos, búsqueda de texto completo reemplaza solo el patrón "esté??". De forma predeterminada, un diccionario de sinónimos no distingue acentos.  
   
 -   Conjunto de expansión  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48220345"
   
   
 ##  <a name="structure"></a> Descripción de la estructura de un archivo de diccionario de sinónimos  
- Cada archivo de diccionario de sinónimos define un contenedor XML cuyo identificador es `Microsoft Search Thesaurus`y un comentario, `<!--` ... `-->`, que contiene un diccionario de sinónimos de ejemplo. El diccionario de sinónimos se define en un \<sinónimos > elemento que contiene ejemplos de los elementos secundarios que definen la configuración de signos diacríticos, conjuntos de expansión y conjuntos de reemplazo, como sigue:  
+ Cada archivo de sinónimos define un contenedor XML cuyo identificador es `Microsoft Search Thesaurus` y un comentario, `<!--` ... `-->`, que contiene un diccionario de sinónimos de ejemplo. El diccionario de sinónimos se define en un \<sinónimos > elemento que contiene ejemplos de los elementos secundarios que definen la configuración de signos diacríticos, conjuntos de expansión y conjuntos de reemplazo, como sigue:  
   
 -   Estructura XML de la configuración de signos diacríticos  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a94f0a88442051597a845623c26e4cc9fe782d31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168767"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773777"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Roles fijos de base de datos del Agente SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene los siguientes roles fijos de base de datos de la base de datos **msdb** , que proporcionan a los administradores un control más preciso a la hora de obtener acceso al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los roles enumerados de menor a mayor privilegio de acceso son:  
@@ -50,10 +50,10 @@ ms.locfileid: "48168767"
   
 |Acción|Operadores|Trabajos locales<br /><br /> (solo trabajos que les pertenecen)|Programación de trabajos<br /><br /> (solo programaciones que les pertenecen)|Servidores proxy|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
-|Crear, modificar o eliminar|no|Sí <sup>1</sup>|Sí|no|  
+|Crear, modificar o eliminar|No|Sí <sup>1</sup>|Sí|No|  
 |Ver lista (enumerar)|Sí <sup>2</sup>|Sí|Sí|Sí <sup>3</sup>|  
-|Habilitar o deshabilitar|no|Sí|Sí|No aplicable|  
-|Ver propiedades|no|Sí|Sí|no|  
+|Habilitar o deshabilitar|No|Sí|Sí|No aplicable|  
+|Ver propiedades|No|Sí|Sí|No|  
 |Ejecutar, detener o iniciar|No aplicable|Sí|No aplicable|No aplicable|  
 |Ver historial de trabajos|No aplicable|Sí|No aplicable|No aplicable|  
 |Eliminar historial de trabajos|No aplicable|No <sup>4</sup>|No aplicable|No aplicable|  
@@ -77,14 +77,14 @@ ms.locfileid: "48168767"
   
 |Acción|Operadores|Trabajos locales|Trabajos multiservidor|Programación de trabajos|Servidores proxy|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Crear, modificar o eliminar|no|Sí <sup>1</sup> (propiedad de sólo los trabajos)|no|Sí (solo programaciones que les pertenecen)|no|  
+|Crear, modificar o eliminar|No|Sí <sup>1</sup> (propiedad de sólo los trabajos)|No|Sí (solo programaciones que les pertenecen)|No|  
 |Ver lista (enumerar)|Sí <sup>2</sup>|Sí|Sí|Sí|Sí <sup>3</sup>|  
-|Habilitar o deshabilitar|no|Sí (solo trabajos que les pertenecen)|no|Sí (solo programaciones que les pertenecen)|No aplicable|  
-|Ver propiedades|no|Sí|Sí|Sí|no|  
-|Modificar propiedades|no|Sí (solo trabajos que les pertenecen)|no|Sí (solo programaciones que les pertenecen)|no|  
-|Ejecutar, detener o iniciar|No aplicable|Sí (solo trabajos que les pertenecen)|no|No aplicable|No aplicable|  
+|Habilitar o deshabilitar|No|Sí (solo trabajos que les pertenecen)|No|Sí (solo programaciones que les pertenecen)|No aplicable|  
+|Ver propiedades|No|Sí|Sí|Sí|No|  
+|Modificar propiedades|No|Sí (solo trabajos que les pertenecen)|No|Sí (solo programaciones que les pertenecen)|No|  
+|Ejecutar, detener o iniciar|No aplicable|Sí (solo trabajos que les pertenecen)|No|No aplicable|No aplicable|  
 |Ver historial de trabajos|No aplicable|Sí|Sí|No aplicable|No aplicable|  
-|Eliminar historial de trabajos|No aplicable|No <sup>4</sup>|no|No aplicable|No aplicable|  
+|Eliminar historial de trabajos|No aplicable|No <sup>4</sup>|No|No aplicable|No aplicable|  
 |Adjuntar o separar|No aplicable|No aplicable|No aplicable|Sí (solo programaciones que les pertenecen)|No aplicable|  
   
  <sup>1</sup> no se puede cambiar la propiedad de un trabajo.  
@@ -109,14 +109,14 @@ ms.locfileid: "48168767"
   
 |Acción|Trabajos|Operadores|Trabajos locales|Trabajos multiservidor|Programación de trabajos|Servidores proxy|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Crear, modificar o eliminar|no|no|Sí <sup>2</sup> (propiedad de sólo los trabajos)|no|Sí (solo programaciones que les pertenecen)|no|  
+|Crear, modificar o eliminar|No|No|Sí <sup>2</sup> (propiedad de sólo los trabajos)|No|Sí (solo programaciones que les pertenecen)|No|  
 |Ver lista (enumerar)|Sí|Sí <sup>1</sup>|Sí|Sí|Sí|Sí|  
-|Habilitar o deshabilitar|no|no|Sí <sup>3</sup>|no|Sí <sup>4</sup>|No aplicable|  
+|Habilitar o deshabilitar|No|No|Sí <sup>3</sup>|No|Sí <sup>4</sup>|No aplicable|  
 |Ver propiedades|Sí|Sí|Sí|Sí|Sí|Sí|  
-|Modificar propiedades|no|no|Sí (solo trabajos que les pertenecen)|no|Sí (solo programaciones que les pertenecen)|no|  
-|Ejecutar, detener o iniciar|No aplicable|No aplicable|Sí|no|No aplicable|No aplicable|  
+|Modificar propiedades|No|No|Sí (solo trabajos que les pertenecen)|No|Sí (solo programaciones que les pertenecen)|No|  
+|Ejecutar, detener o iniciar|No aplicable|No aplicable|Sí|No|No aplicable|No aplicable|  
 |Ver historial de trabajos|No aplicable|No aplicable|Sí|Sí|No aplicable|No aplicable|  
-|Eliminar historial de trabajos|No aplicable|No aplicable|Sí|no|No aplicable|No aplicable|  
+|Eliminar historial de trabajos|No aplicable|No aplicable|Sí|No|No aplicable|No aplicable|  
 |Adjuntar o separar|No aplicable|No aplicable|No aplicable|No aplicable|Sí (solo programaciones que les pertenecen)|No aplicable|  
   
  <sup>1</sup> puede obtener la lista de operadores disponibles para su uso en **sp_notify_operator** y **propiedades del trabajo** cuadro de diálogo de Management Studio.  

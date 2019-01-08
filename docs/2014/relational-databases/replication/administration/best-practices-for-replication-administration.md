@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, best practices
@@ -14,15 +13,15 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079285"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823317"
 ---
 # <a name="best-practices-for-replication-administration"></a>Prácticas recomendadas para la administración de replicación
-  Después de configurar la replicación, es importante entender cómo administrar una topología de replicación. En este tema se proporciona una guía básica de prácticas recomendadas en varias áreas con vínculos a más información de cada área. Además de seguir la guía de procedimientos recomendados que se presenta en este tema, puede leer el tema de preguntas más frecuentes para familiarizarse con preguntas y problemas comunes: [Preguntas más frecuentes para administradores de replicación](frequently-asked-questions-for-replication-administrators.md).  
+  Después de configurar la replicación, es importante entender cómo administrar una topología de replicación. En este tema se proporciona una guía básica de prácticas recomendadas en varias áreas con vínculos a más información de cada área. Además de seguir las instrucciones de prácticas recomendadas presentadas en este tema, considere la posibilidad de leer el tema de preguntas más frecuentes para familiarizarse con los problemas y preguntas comunes: [Preguntas para administradores de replicación más](frequently-asked-questions-for-replication-administrators.md).  
   
  Es útil dividir la guía de prácticas recomendadas en dos áreas:  
   
@@ -106,7 +105,7 @@ ms.locfileid: "48079285"
  Después de que haya establecido números de línea de base, establezca umbrales en el Monitor de replicación. Para obtener más información, vea [Establecer umbrales y advertencias en el Monitor de replicación](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) y [Usar alertas para eventos del Agente de replicación](../agents/use-alerts-for-replication-agent-events.md). Si se encuentra con un problema de rendimiento, se recomienda leer las sugerencias de los temas para mejorar el rendimiento enumerados anteriormente y aplicar cambios en áreas que afecten a los problemas que ha encontrado.  
   
 ## <a name="create-thresholds-and-alerts"></a>Crear umbrales y alertas  
- El Monitor de replicación le permite establecer un número de umbrales relacionados con el estado y el rendimiento. Se recomienda establecer los umbrales apropiados para su topología; si se alcanza un umbral, se mostrará una advertencia y, opcionalmente, se puede enviar una alerta a una cuenta de correo electrónico, un buscapersonas u otro dispositivo. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
+ El Monitor de replicación le permite establecer un número de umbrales relacionados con el estado y el rendimiento. Se recomienda establecer los umbrales apropiados para su topología; si se alcanza un umbral, se mostrará una advertencia y, opcionalmente, se puede enviar una alerta a una cuenta de correo electrónico, un buscapersonas u otro dispositivo. Para obtener más información, consulte [establecer umbrales y advertencias en el Monitor de replicación](../monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  Además de las alertas que se pueden asociar con los umbrales de supervisión, la replicación ofrece un número de alertas predefinidas que responden a las acciones del agente de replicación. Un administrador puede utilizar estas alertas para mantenerse informado sobre el estado de la topología de replicación. Se recomienda leer el tema en el que se describen las alertas y utilizar aquellas que se adapten a las necesidades de administración (también es posible crear alertas adicionales si es necesario). Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../agents/use-alerts-for-replication-agent-events.md).  
   

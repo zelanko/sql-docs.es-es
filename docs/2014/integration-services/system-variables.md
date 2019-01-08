@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -17,17 +16,17 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c77ca84cd844b5c49f704d44f2eca3ba34c4269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0798b78aebb308d76585df0e5c7e6e9200e20b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163475"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792321"
 ---
 # <a name="system-variables"></a>Variables del sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  
   
- Todas las variables, del sistema y definidas por el usuario, se pueden utilizar en los enlaces de parámetros que utiliza la tarea Ejecutar SQL para asignar variables a parámetros.  
+ Todas las variables (del sistema y definidas por el usuario) se pueden usar en los enlaces de parámetros que usa la tarea Ejecutar SQL para asignar variables a parámetros.  
   
 ## <a name="system-variables-for-packages"></a>Variables del sistema para paquetes  
  La siguiente tabla describe las variables del sistema que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para paquetes.  
@@ -90,7 +89,7 @@ ms.locfileid: "48163475"
 |**ProgressCountHigh**|Int32|Parte alta de un valor de 64 bits que indica la cantidad total de operaciones procesadas por el evento OnProgress.|Controlador de eventos OnProgress|  
 |`ProgressCountLow`|Int32|Parte baja de un valor de 64 bits que indica la cantidad total de operaciones procesadas por el evento OnProgress.|Controlador de eventos OnProgress|  
 |**ProgressDescription**|String|Descripción del progreso.|Controlador de eventos OnProgress|  
-|`Propagate`|Boolean|Indica si el evento se propaga a un controlador de eventos de nivel más alto.<br /><br /> Nota: El valor de la `Propagate` variable se descarta durante la validación del paquete.<br /><br /> Si establece `Propagate` en `False` en un paquete secundario, ello no evita que un evento se propague hasta el paquete primario.|Todos los controladores de eventos|  
+|`Propagate`|Boolean|Indica si el evento se propaga a un controlador de eventos de nivel más alto.<br /><br /> Nota: El valor de la variable `Propagate` se descarta durante la validación del paquete.<br /><br /> Si establece `Propagate` en `False` en un paquete secundario, ello no evita que un evento se propague hasta el paquete primario.|Todos los controladores de eventos|  
 |`SourceDescription`|String|Descripción del ejecutable en el controlador de eventos que provocó el evento.|Todos los controladores de eventos|  
 |`SourceID`|String|Descripción del identificador único del ejecutable en el controlador de eventos que provocó el evento.|Todos los controladores de eventos|  
 |**SourceName**|String|Nombre del ejecutable en el controlador de eventos que provocó el evento.|Todos los controladores de eventos|  
@@ -105,6 +104,6 @@ ms.locfileid: "48163475"
  Esta regla se aplica también a las variables definidas por el usuario. No obstante, si bien los tipos de datos de las variables del sistema no se pueden cambiar y usted debe adaptar el uso de estas variables para que se ajusten a los tipos de datos, las variables definidas por el usuario son más flexibles. Las variables definidas por el usuario que se utilizan en enlaces de parámetros generalmente se definen con tipos de datos que son compatibles con los tipos de datos de parámetros a los que se asignan.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Asignar parámetros de consulta a variables en una tarea Ejecutar SQL](control-flow/execute-sql-task.md)  
+ [asignar parámetros de consulta a variables en una tarea Ejecutar SQL](control-flow/execute-sql-task.md)  
   
   

@@ -20,16 +20,16 @@ ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b531feb33d9d555296f428fb01778a7b7627d851
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ef98000391ec6c39012603795b7f11a34c68183
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778883"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208144"
 ---
 # <a name="sqlremovedriver-function"></a>Función SQLRemoveDriver
 **Conformidad**  
- Versión introdujo: ODBC 3.0  
+ Versión de introducción: ODBC 3.0  
   
  **Resumen**  
  **SQLRemoveDriver** cambia o quita la información sobre el controlador de la entrada de Odbcinst.ini en la información del sistema.  
@@ -51,7 +51,7 @@ BOOL SQLRemoveDriver(
  *fRemoveDSN*  
  [Entrada] Los valores válidos son:  
   
- TRUE: Quitar asociado con el controlador especificado en el DSN *lpszDriver*. FALSE: No quite asociado con el controlador especificado en el DSN *lpszDriver*.  
+ TRUE: Quitar asociado con el controlador especificado en el DSN *lpszDriver*. FALSE: No quite los DSN asociados con el controlador especificado en *lpszDriver*.  
   
  *lpdwUsageCount*  
  [Salida] El contador de uso del controlador después de llamar a esta función.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - Managed Classes [SQLXML], executing template files
@@ -18,12 +16,12 @@ ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 655c12a8b3f055adb6dc61164046e3059216ed19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b52ed239cd8e27e6304c1335b57a6598f441cac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082475"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812198"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ejecutar archivos de plantilla utilizando la propiedad CommandText
   En este ejemplo se muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando el CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como valor. En el ejemplo siguiente, se especifica la propiedad CommandType como SqlXmlCommandType.TemplateFile.  

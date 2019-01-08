@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
@@ -13,12 +12,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b0772ac03110b21912671b7e7651a1b0ede2903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bb735093eb7b2e41e1822facca6c03ace45a911
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055995"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789707"
 ---
 # <a name="contained-database-collations"></a>Intercalaciones de bases de datos independientes
   Varias propiedades afectan a la semántica de igualdad y al criterio de ordenación de los datos de texto, como son la distinción entre mayúsculas y minúsculas y de los acentos, y el idioma básico que se usa. Estas cualidades se expresan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de la opción de intercalación de los datos. Para obtener una explicación más detallada de las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../collations/collation-and-unicode-support.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "48055995"
  Este tema clarifica el contenido del cambio y examina áreas en las que puede ocasionar problemas.  
   
 ## <a name="non-contained-databases"></a>Bases de datos dependientes  
- Todas las bases de datos tienen una intercalación predeterminada (que se puede establecer al crear o modificar una base de datos). Esta intercalación se usa para todos los metadatos de la base de datos, así como el valor predeterminado para todas las columnas de cadena dentro de la base de datos. Los usuarios pueden elegir una intercalación diferente para una columna en particular utilizando la `COLLATE` cláusula.  
+ Todas las bases de datos tienen una intercalación predeterminada (que se puede establecer al crear o modificar una base de datos). Esta intercalación se usa para todos los metadatos de la base de datos, así como el valor predeterminado para todas las columnas de cadena dentro de la base de datos. Los usuarios pueden elegir una intercalación diferente para una columna en particular utilizando la cláusula `COLLATE`.  
   
 ### <a name="example-1"></a>Ejemplo 1  
  Por ejemplo, si estuviéramos trabajando en Beijing, podríamos utilizar una intercalación china:  
@@ -107,12 +106,12 @@ JOIN #T2
 CREATE FUNCTION f(@x INT) RETURNS INT  
 AS BEGIN   
       DECLARE @I INT = 1  
-      DECLARE @İ INT = 2  
+      DECLARE @?? INT = 2  
       RETURN @x * @i  
 END;  
 ```  
   
- Esta es una función bastante peculiar. En una intercalación con distinción entre mayúsculas y minúsculas, el @i de la cláusula de devolución no puede enlazar a @I o @İ. En una intercalación Latin1_General sin distinción entre mayúsculas y minúsculas, @i enlaza a @I y la función devuelve 1. Pero en una intercalación turca sin distinción entre mayúsculas y minúsculas, @i enlaza a@İ, y la función devuelve 2. Esto puede causar confusión en una base de datos que se mueva entre instancias con intercalaciones diferentes.  
+ Esta es una función bastante peculiar. En una intercalación que distingue mayúsculas de minúsculas, el @i en la cláusula return no se puede enlazar a @I o @??. En una intercalación Latin1_General sin distinción entre mayúsculas y minúsculas, @i enlaza a @I y la función devuelve 1. Pero en una intercalación turca entre mayúsculas y minúsculas, @i enlaza a @?, y la función devuelve 2. Esto puede causar confusión en una base de datos que se mueva entre instancias con intercalaciones diferentes.  
   
 ## <a name="contained-databases"></a>Bases de datos independientes  
  Dado que uno de los objetivos de diseño de las bases de datos independientes es hacer que sean autodependientes, la dependencia de las intercalaciones de `tempdb` e instancia debe romperse. Para ello, las bases de datos independientes presentan el concepto de intercalación de catálogo. La intercalación de catálogo se utiliza para los objetos transitorios y los metadatos del sistema. Abajo se proporcionan los detalles.  
@@ -121,7 +120,7 @@ END;
   
  La intercalación de la base de datos se conserva, pero solo se usa como intercalación predeterminada para los datos del usuario. De forma predeterminada, la intercalación de base de datos es igual a la intercalación de base de datos de modelo, pero puede cambiarse por el usuario a través de un `CREATE` o `ALTER DATABASE` comando como con bases de datos dependientes.  
   
- Una palabra clave nueva, `CATALOG_DEFAULT`, está disponible en la cláusula `COLLATE`. Esto se utiliza como acceso directo a la intercalación actual de los metadatos tanto en las bases de datos independientes como en las dependientes. Es decir, en una base de datos dependiente, `CATALOG_DEFAULT` devolverá la intercalación de base de datos actual, dado que los metadatos se intercalan en la intercalación de base de datos. En una base de datos independiente, estos dos valores pueden ser diferentes, porque el usuario puede cambiar la intercalación de la base de datos para que no coincida con la del catálogo.  
+ Una palabra clave nueva, `CATALOG_DEFAULT`, está disponible en la cláusula `COLLATE`. Esto se utiliza como acceso directo a la intercalación actual de los metadatos tanto en las bases de datos independientes como en las dependientes. Es decir, en una base de datos dependiente, `CATALOG_DEFAULT` devolverá la intercalación de la base de datos actual, dado que los metadatos se intercalan en la intercalación de la base de datos. En una base de datos independiente, estos dos valores pueden ser diferentes, porque el usuario puede cambiar la intercalación de la base de datos para que no coincida con la del catálogo.  
   
  El comportamiento de varios objetos tanto en las bases de datos independientes como en las dependientes se resume en esta tabla:  
   
@@ -152,11 +151,11 @@ JOIN #T2
  Esto funciona porque `T1_txt` y `T2_txt` se intercalan en la intercalación de base de datos de la base de datos independiente.  
   
 ## <a name="crossing-between-contained-and-uncontained-contexts"></a>Cruzar los contextos contenidos y no contenidos  
- Siempre que una sesión de una base de datos independiente sigue siendo contenida, debe permanecer dentro de la base de datos a la que se conectó. En este caso el comportamiento es muy sencillo. Pero si una sesión cruza de un contexto contenido a uno no contenido, el comportamiento se vuelve más complejo, porque los dos conjuntos de reglas deben unirse. Esto puede ocurrir en una base de datos parcialmente independiente, ya que un usuario puede `USE` a otra base de datos. El siguiente principio administra la diferencia en las reglas de intercalación en este caso.  
+ Siempre que una sesión de una base de datos independiente sigue siendo contenida, debe permanecer dentro de la base de datos a la que se conectó. En este caso el comportamiento es muy sencillo. Pero si una sesión cruza de un contexto contenido a uno no contenido, el comportamiento se vuelve más complejo, porque los dos conjuntos de reglas deben unirse. Esto puede ocurrir en una base de datos parcialmente independiente, ya que un usuario puede usar `USE` en otra base de datos. El siguiente principio administra la diferencia en las reglas de intercalación en este caso.  
   
 -   La base de datos en la que el lote comienza determina el comportamiento de la intercalación de un lote.  
   
- Tenga en cuenta que esta decisión antes de que se emiten los comandos, incluido un inicial `USE`. Es decir, si un lote comienza en una base de datos independiente, pero el primer comando es un `USE` a una base de datos dependiente, el comportamiento de la intercalación contenida se seguirá usando para el lote. Por tanto, una referencia a una variable, por ejemplo, puede tener varios resultados posibles:  
+ Observe que esta decisión se toma antes de que se ejecute ningún comando, incluso un `USE` inicial. Es decir, si un lote comienza en una base de datos independiente, pero el primer comando es un `USE` de una base de datos dependiente, el comportamiento de la intercalación contenida se seguirá usando para el lote. Por tanto, una referencia a una variable, por ejemplo, puede tener varios resultados posibles:  
   
 -   La referencia puede encontrar una coincidencia exactamente. En este caso, la referencia funcionará sin generar un error.  
   
@@ -164,7 +163,7 @@ JOIN #T2
   
 -   La referencia puede encontrar varias coincidencias que eran distintas originalmente. Esto también producirá un error.  
   
- Mostraremos esto con unos ejemplos. Para ello, suponemos que hay una base de datos independiente parcialmente denominada `MyCDB` con su intercalación de la base de datos establecida en la intercalación predeterminada, **Latin1_General_100_CI_AS_WS_KS_SC**. Se supone que es la intercalación de la instancia `Latin1_General_100_CS_AS_WS_KS_SC`. Las dos intercalaciones solo difieren en la distinción de mayúsculas y minúsculas.  
+ Mostraremos esto con varios ejemplos. Para ello, suponemos que hay una base de datos independiente parcialmente denominada `MyCDB` con su intercalación de la base de datos establecida en la intercalación predeterminada, **Latin1_General_100_CI_AS_WS_KS_SC**. Suponemos que la intercalación de la instancia es `Latin1_General_100_CS_AS_WS_KS_SC`. Las dos intercalaciones solo difieren en la distinción de mayúsculas y minúsculas.  
   
 ### <a name="example-1"></a>Ejemplo 1  
  El siguiente ejemplo ilustra el caso en el que la referencia encuentra exactamente una coincidencia.  

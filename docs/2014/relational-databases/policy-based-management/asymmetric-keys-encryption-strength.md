@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ae63bcc83ffd43f12c275b373343136d8625a61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d83c2aa530fa0c0f6bff515ce4ed669fcef7dae3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142205"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803707"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>Intensidad del cifrado de claves asimétricas
   Esta regla comprueba si las claves asimétricas se crearon utilizando 1024 bits o un cifrado más seguro.  

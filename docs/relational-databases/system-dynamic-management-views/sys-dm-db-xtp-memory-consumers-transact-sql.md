@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f1a3a5403c4549205c226f25d6c925ef81d4b10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 768fb39cdf26b01d55ffaf175ec07e181d265b52
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856523"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522750"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "47856523"
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|Identificador (interno) del consumidor de memoria.|  
 |memory_consumer_type|**int**|Tipo de consumidor de memoria:<br /><br /> 0=Aggregation. (Agrega el uso de memoria de dos o varios consumidores. No se debe mostrar).<br /><br /> 2=VARHEAP (Hace un seguimiento del consumo de memoria para un montón de longitud variable).<br /><br /> 3=HASH (Hace un seguimiento del consumo de memoria para un índice).<br /><br /> 5=DB page pool (Hace un seguimiento del consumo de memoria para un grupo de páginas de base de datos para las operaciones en tiempo de ejecución. Por ejemplo, variables de tabla y algunos recorridos serializables. Solo hay un consumidor de memoria de este tipo en cada base de datos).|  
-|memory_consumer_type_desc|**Nvarchar (64)**|Tipo de consumidor de memoria: VARHEAP, HASH o PGPOOL.<br /><br /> 0 – (No se debe mostrar).<br /><br /> 2: VARHEAP<br /><br /> 3 - HASH<br /><br /> 5: PGPOOL|  
-|memory_consumer_desc|**Nvarchar (64)**|Descripción de la instancia del consumidor de memoria:<br /><br /> VARHEAP: <br />Montón de base de datos. Se usa para asignar datos de usuario para una base de datos (filas).<br />Montón del sistema de base de datos. Se usa para asignar datos de base de datos que se incluirán en volcados de memoria y no incluir datos de usuario.<br />Montón de índice de intervalo. Montón privado que el índice de intervalo usa para asignar páginas BW.<br /><br /> HASH: Ninguna descripción, ya que el object_id indica la tabla y el index_id el propio índice hash.<br /><br /> PGPOOL: La base de datos hay sólo una página grupo paginado de 64K de la base de datos.|  
+|memory_consumer_type_desc|**Nvarchar (64)**|Tipo de consumidor de memoria: VARHEAP, HASH o PGPOOL.<br /><br /> 0 - (no debe mostrarse.)<br /><br /> 2: VARHEAP<br /><br /> 3 - HASH<br /><br /> 5: PGPOOL|  
+|memory_consumer_desc|**Nvarchar (64)**|Descripción de la instancia del consumidor de memoria:<br /><br /> VARHEAP: <br />Montón de base de datos. Se usa para asignar datos de usuario para una base de datos (filas).<br />Montón del sistema de base de datos. Se usa para asignar datos de base de datos que se incluirán en volcados de memoria y no incluir datos de usuario.<br />Montón de índice de intervalo. Montón privado que el índice de intervalo usa para asignar páginas BW.<br /><br /> HASH: Sin descripción, ya que el object_id indica la tabla y el index_id el propio índice hash.<br /><br /> PGPOOL: Para la base de datos solo hay un grupo de páginas de base de datos de 64K.|  
 |object_id|**bigint**|Identificador del objeto al que se atribuye la memoria asignada. Un valor negativo para los objetos del sistema.|  
 |xtp_object_id|**bigint**|El identificador de objeto para la tabla optimizada para memoria.|  
 |index_id|**int**|El identificador de índice del consumidor (si existe). NULL para las tablas base.|  

@@ -20,16 +20,16 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d48d9742f9b3fafe77f441226961218f47c6005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719713"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213444"
 ---
 # <a name="sqlfreestmt-function"></a>Función SQLFreeStmt
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
   
  **Resumen**  
  **SQLFreeStmt** detiene el procesamiento asociado con una instrucción concreta, cierra los cursores abiertos asociados con la instrucción, descarta los resultados pendientes o, de manera opcional, libera todos los recursos asociados con el identificador de instrucción.  
@@ -50,11 +50,11 @@ SQLRETURN SQLFreeStmt(
  *Opción*  
  [Entrada] Una de las siguientes opciones:  
   
- SQL_ cerrar: Cierra el cursor asociado con *StatementHandle* (si se ha definido uno) y descarta todos los resultados pendientes. La aplicación puede volver a abrir este cursor más adelante mediante la ejecución de un **seleccione** instrucción nuevo con los valores de parámetro de la misma u otra. Si ningún cursor está abierto, esta opción no tiene efecto para la aplicación. **SQLCloseCursor** también se puede invocar para cerrar un cursor. Para obtener más información, consulte [cierre el Cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ SQL_ CLOSE: Cierra el cursor asociado con *StatementHandle* (si se ha definido uno) y descarta todos los resultados pendientes. La aplicación puede volver a abrir este cursor más adelante mediante la ejecución de un **seleccione** instrucción nuevo con los valores de parámetro de la misma u otra. Si ningún cursor está abierto, esta opción no tiene efecto para la aplicación. **SQLCloseCursor** también se puede invocar para cerrar un cursor. Para obtener más información, consulte [cierre el Cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
- SQL_DROP: Esta opción es obsoleta. Una llamada a **SQLFreeStmt** con un *opción* de SQL_DROP se asigna en el Administrador de controladores a [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ SQL_DROP: Esta función está en desuso. Una llamada a **SQLFreeStmt** con un *opción* de SQL_DROP se asigna en el Administrador de controladores a [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
- SQL_UNBIND: Establece el campo SQL_DESC_COUNT de la descartar en 0, liberando todos los búferes de columna enlazada por **SQLBindCol** para la dada *StatementHandle*. Esto desenlaza la columna de marcador; Para ello, el campo SQL_DESC_DATA_PTR de la Descartar para la columna de marcador se establece en NULL. Tenga en cuenta que si esta operación se realiza en un descriptor asignado explícitamente que se comparte por más de una instrucción, la operación afectará a los enlaces de todas las instrucciones que comparten el descriptor. Para obtener más información, consulte [información general de recuperar los resultados (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
+ SQL_UNBIND: Establece el campo SQL_DESC_COUNT de la descartar en 0, liberando todos los búferes de columna enlazado por **SQLBindCol** para la dada *StatementHandle*. Esto desenlaza la columna de marcador; Para ello, el campo SQL_DESC_DATA_PTR de la Descartar para la columna de marcador se establece en NULL. Tenga en cuenta que si esta operación se realiza en un descriptor asignado explícitamente que se comparte por más de una instrucción, la operación afectará a los enlaces de todas las instrucciones que comparten el descriptor. Para obtener más información, consulte [información general de recuperar los resultados (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
   
  SQL_RESET_PARAMS: Establece el campo SQL_DESC_COUNT del APD en 0, liberando todos los búferes de parámetros establecidos por **SQLBindParameter** para la dada *StatementHandle*. Si esta operación se realiza en un descriptor asignado explícitamente que se comparte por más de una instrucción, esta operación afectará a los enlaces de todas las instrucciones que comparten el descriptor. Para obtener más información, consulte [enlazar parámetros](../../../odbc/reference/develop-app/binding-parameters-odbc.md).  
   

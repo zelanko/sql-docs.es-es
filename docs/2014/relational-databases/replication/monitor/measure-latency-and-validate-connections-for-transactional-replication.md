@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, performance
@@ -17,12 +16,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e87c43039294526a253f514be250bf89a6428d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180685"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813907"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
   En este tema se describe cómo medir la latencia y validar conexiones para la replicación transaccional en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante el Monitor de replicación, [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). La replicación transaccional proporciona la característica de testigo de seguimiento, que ofrece una forma cómoda de medir la latencia en topologías de replicación transaccional y validar las conexiones entre el publicador, el distribuidor y los suscriptores. Se escribe un token (una pequeña cantidad de datos) en el registro de transacción de la base de datos de publicaciones, marcado como si fuese una transacción replicada, y se envía a través del sistema, de forma que permite calcular:  
@@ -51,7 +50,7 @@ ms.locfileid: "48180685"
   
      [Replication Management Objects](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Los testigos de seguimiento también pueden ser útiles al detener el sistema, lo que implica detener todas las actividades y comprobar que todos los nodos han recibido todos los cambios pendientes. Para más información, vea [Poner en modo inactivo una topología de replicación &#40;programación de la replicación con Transact-SQL&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
@@ -89,7 +88,7 @@ ms.locfileid: "48180685"
   
 3.  Haga clic en **Insertar seguimiento**.  
   
-4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **distribuidor a suscriptor**, **latencia Total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Para ver información en el testigo de seguimiento insertado previamente  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48180685"
   
 3.  Seleccione una hora en la lista desplegable **Hora de inserción** .  
   
-4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **distribuidor a suscriptor**, **latencia Total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
   
     > [!NOTE]  
     >  La información del testigo de seguimiento se guarda durante el mismo período que otros datos del historial, que depende del período de retención de historial de la base de datos de distribución. Para obtener información sobre cómo cambiar las propiedades de la base de datos de distribución, vea [Ver y modificar las propiedades del distribuidor y del publicador](../view-and-modify-distributor-and-publisher-properties.md).  
@@ -133,7 +132,7 @@ ms.locfileid: "48180685"
   
  [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Para exponer un token de seguimiento en una publicación transaccional  
   
@@ -143,9 +142,9 @@ ms.locfileid: "48180685"
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, las propiedades de publicación en el paso 3 se definieron incorrectamente o no existe la publicación.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 3 se definieron incorrectamente, o bien que la publicación no existe.  
   
-5.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> . Este método inserta un token de seguimiento en el registro de transacciones de la publicación.  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A>. Este método inserta un token de seguimiento en el registro de transacciones de la publicación.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Para medir la latencia y validar las conexiones de una replicación transaccional  
   
@@ -157,7 +156,7 @@ ms.locfileid: "48180685"
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades del monitor de la publicación del paso 3 se definieron incorrectamente, o bien que la publicación no existe.  
   
-5.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Convierta el objeto <xref:System.Collections.ArrayList> devuelto a una matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Convierta el objeto <xref:System.Collections.ArrayList> devuelto a una matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
 6.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> . Pase un valor de <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> para un token de seguimiento del paso 5. Esto devuelve información de latencia del token de seguimiento seleccionado como objeto <xref:System.Data.DataSet> . Si se devuelve toda la información del token de seguimiento, la conexión entre el publicador y el distribuidor y la conexión entre el distribuidor y el suscriptor existen, y la topología de replicación está funcionando.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48180685"
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades del monitor de la publicación del paso 3 se definieron incorrectamente, o bien que la publicación no existe.  
   
-5.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Convierta el objeto <xref:System.Collections.ArrayList> devuelto a una matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Convierta el objeto <xref:System.Collections.ArrayList> devuelto a una matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
 6.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> . Pase uno de los siguientes valores:  
   

@@ -12,15 +12,15 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61e58bef0e4face7aac45563350e4f1047de359d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204975"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518101"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Actualizar el trasvase de registros a SQL Server 2014 (Transact-SQL)
-  Es posible conservar las configuraciones de trasvase de registros al actualizar de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. En este tema se describen escenarios alternativos y prácticas recomendadas para actualizar la configuración de trasvase de registros.  
+  Es posible conservar las configuraciones de trasvase de registros al actualizar de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. En este tema se describen escenarios alternativos y prácticas recomendadas para actualizar la configuración de trasvase de registros.  
   
 > [!NOTE]  
 >  La[compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md) se incluyó en [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. Una configuración de trasvase de registros actualizada usa la opción de configuración de nivel de seguridad **Compresión de copia de seguridad predeterminada** para controlar si se emplea la compresión de copia de seguridad para los archivos de copia de seguridad del registro de transacciones. El comportamiento de la compresión de las copias de seguridad de registros se puede especificar para cada configuración de trasvase de registros. Para obtener más información, vea [Configurar el trasvase de registros &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48204975"
  
   
 ###  <a name="UpgradeSecondary"></a> Actualizar la instancia del servidor secundario  
- El proceso de actualización implica actualizar las instancias de servidor secundario de un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior configuración de trasvase de registros a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de actualizar la instancia del servidor principal. Actualice siempre la instancia del servidor secundario en primer lugar. Si el servidor principal se actualizara antes que un servidor secundario, el trasvase de registros se produciría un error porque puede crear una copia de seguridad en una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede restaurar en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ El proceso de actualización implica actualizar las instancias de los servidores secundarios de una configuración de trasvase de registros de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de actualizar la instancia del servidor principal. Actualice siempre la instancia del servidor secundario en primer lugar. Si el servidor principal se actualizara antes que un servidor secundario, se produciría un error en el trasvase de registros porque una copia de seguridad creada en una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede restaurar en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  El trasvase de registros continúa a lo largo del proceso de actualización porque los servidores secundarios actualizados continúan restaurando las copias de seguridad de registros a partir del servidor principal de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versiones posteriores. El proceso para actualizar las instancias de los servidores secundarios depende en parte de si la configuración de trasvase de registros posee varios servidores secundarios. Para obtener más información, vea [Actualizar varias instancias del servidor secundario](#MultipleSecondaries), posteriormente en este tema.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48204975"
  Una vez actualizado el servidor secundario, los trabajos de los agentes de trasvase de registros se reanudan y continúan copiando y restaurando las copias de seguridad de registros a partir de la instancia del servidor principal, el servidor A. La cantidad de tiempo requerida para que el servidor secundario ponga al día la base de datos secundaria varía, dependiendo del tiempo que se tarde en actualizar el servidor secundario y la frecuencia de las copias de seguridad en el servidor principal.  
   
 > [!NOTE]  
->  Durante la actualización del servidor, no se actualiza la base de datos secundaria a un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] base de datos. Solo se actualizará si se pone en conexión.  
+>  Durante la actualización del servidor, la base de datos secundaria no se actualiza a una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Solo se actualizará si se pone en conexión.  
   
 > [!IMPORTANT]  
 >  La opción RESTORE WITH STANDBY no se admite para una base de datos que requiere actualizarse. Si una base de datos secundaria actualizada se ha configurado utilizando RESTORE WITH STANDBY, los registros de transacciones ya no se pueden restaurar después de la actualización. Para reanudar el trasvase de registros en esa base de datos secundaria, tendrá que configurarlo de nuevo en ese servidor de reserva. Para obtener más información acerca de la opción STANDBY, vea [argumentos de RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
@@ -68,21 +68,21 @@ ms.locfileid: "48204975"
 ###  <a name="UpgradePrimary"></a> Actualizar la instancia del servidor principal  
  Al planear una actualización, es importante tener en cuenta la cantidad de tiempo que la base de datos dejará de estar disponible. El escenario de actualización más sencillo implica que la base de datos no esté disponible mientras se actualiza el servidor principal (escenario 1, a continuación).  
   
- A costa de un proceso de actualización más complicado, puede maximizar la disponibilidad de la base de datos por la conmutación por error el [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o el servidor principal superior a un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servidor secundario antes de actualizar el servidor principal original (escenario 2, más adelante). Hay dos variantes del escenario de conmutación por error. Puede volver al servidor principal original y mantener la configuración de trasvase de registros original. O bien, puede quitar la configuración de trasvase de registros original antes de actualizar el servidor principal original y después crear una configuración nueva usando el servidor principal nuevo. En esta sección se describen ambos escenarios.  
+ A costa de un proceso de actualización más complicado, puede obtener la máxima disponibilidad de la base de datos conmutando por error el servidor principal de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior al servidor secundario de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de actualizar el servidor principal original (escenario 2, a continuación). Hay dos variantes del escenario de conmutación por error. Puede volver al servidor principal original y mantener la configuración de trasvase de registros original. O bien, puede quitar la configuración de trasvase de registros original antes de actualizar el servidor principal original y después crear una configuración nueva usando el servidor principal nuevo. En esta sección se describen ambos escenarios.  
   
 > [!IMPORTANT]  
 >  Asegúrese de actualizar la instancia del servidor secundario antes de actualizar la instancia del servidor principal. Para obtener más información, vea [Actualizar la instancia del servidor secundario](#UpgradeSecondary), anteriormente en este tema.  
   
   
-####  <a name="Scenario1"></a> Escenario 1: Instancia de actualizar el servidor principal sin conmutación por error  
+####  <a name="Scenario1"></a> Escenario 1: Actualizar la instancia del servidor principal sin conmutación por error  
  Este es el escenario más sencillo, pero ocasiona más tiempo de inactividad que la conmutación por error. Simplemente se actualiza la instancia del servidor principal y la base de datos no está disponible durante la actualización.  
   
  Una vez actualizado el servidor, la base de datos se vuelve a poner en línea automáticamente, lo que hace que se actualice. Una vez actualizada la base de datos, los trabajos de trasvase de registros se reanudan.  
   
-#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>Escenario 2: actualizar la instancia del servidor principal con conmutación por error  
+#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>Escenario 2: Actualizar la instancia del servidor principal con conmutación por error  
  En este escenario se obtiene la máxima disponibilidad y se reduce al mínimo el tiempo de inactividad. Utiliza una conmutación por error controlada a la instancia del servidor secundario, lo que mantiene la base de datos disponible mientras se actualiza la instancia del servidor principal original. El tiempo de inactividad se limita al tiempo relativamente corto que se requiere para la conmutación por error, en lugar del tiempo exigido para actualizar la instancia del servidor principal.  
   
- Actualizar la instancia del servidor principal con conmutación por error implica tres procedimientos generales: realizar una conmutación por error controlada al servidor secundario, actualizar la instancia del servidor principal original a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y configurar el trasvase de registros en una instancia del servidor principal de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Estos procedimientos se describen en esta sección.  
+ Actualizar la instancia del servidor principal con conmutación por error implica tres procedimientos generales: realizar una conmutación por error controlada al servidor secundario, actualizar la instancia del servidor principal original a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]y configurar el trasvase de registros en una instancia del servidor principal de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Estos procedimientos se describen en esta sección.  
   
 > [!IMPORTANT]  
 >  Si piensa tener la instancia del servidor secundario como instancia del nuevo servidor principal, tiene que quitar la configuración de trasvase de registros. Una vez actualizada la instancia del servidor principal original, será preciso reconfigurar el trasvase de registros desde el nuevo servidor principal hasta el nuevo servidor secundario. Para obtener más información, consulte [Quitar trasvase de registros &#40;SQL Server&#41;](remove-log-shipping-sql-server.md).  
@@ -91,7 +91,7 @@ ms.locfileid: "48204975"
 #####  <a name="Procedure1"></a> Procedimiento 1: Realizar una conmutación por error controlada al servidor secundario  
  Conmutación por error controlada al servidor secundario:  
   
-1.  Realizar manualmente una [copia de seguridad del final del registro](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) del registro de transacciones en la base de datos principal especificando WITH NORECOVERY. Esta copia de seguridad de registros captura cualquier entrada del registro que todavía no se haya incluido en la copia de seguridad y deja la base de datos sin conexión. Tenga en cuenta que mientras la base de datos esté sin conexión, se producirá un error en el trabajo de copia de seguridad del trasvase de registros.  
+1.  Realice manualmente una [copia del final del registro](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) del registro de transacciones en la base de datos principal especificando WITH NORECOVERY. Esta copia de seguridad de registros captura cualquier entrada del registro que todavía no se haya incluido en la copia de seguridad y deja la base de datos sin conexión. Tenga en cuenta que mientras la base de datos esté sin conexión, se producirá un error en el trabajo de copia de seguridad del trasvase de registros.  
   
      En el ejemplo siguiente se crea una copia del final del registro de la base de datos `AdventureWorks` en el servidor principal. El archivo de copia de seguridad se denomina `Failover_AW_20080315.trn`:  
   
@@ -106,9 +106,9 @@ ms.locfileid: "48204975"
   
 2.  En el servidor secundario:  
   
-    1.  Asegúrese de que se han aplicado todas las copias de seguridad realizadas automáticamente por los trabajos de copia de seguridad de trasvase de registros. Para comprobar qué trabajos de copia de seguridad se han aplicado, use el [sp_help_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql) procedimiento almacenado del sistema del servidor de supervisión o en los servidores principales y secundarios. El mismo archivo debe aparecer en las columnas **last_backup_file**, **last_copied_file**y **last_restored_file** . Si alguno de los archivos de copia de seguridad no se ha copiado y restaurado, invoque manualmente los trabajos de restauración y copia del agente para la configuración de trasvase de registros.  
+    1.  Asegúrese de que se han aplicado todas las copias de seguridad realizadas automáticamente por los trabajos de copia de seguridad de trasvase de registros. Para comprobar qué trabajos de copia de seguridad se han aplicado, use el procedimiento almacenado del sistema [sp_help_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql) en el servidor de supervisión o en los servidores principal y secundario. El mismo archivo debe aparecer en las columnas **last_backup_file**, **last_copied_file**y **last_restored_file** . Si alguno de los archivos de copia de seguridad no se ha copiado y restaurado, invoque manualmente los trabajos de restauración y copia del agente para la configuración de trasvase de registros.  
   
-         Para obtener información acerca de cómo iniciar un trabajo, consulte [iniciar un trabajo](../../ssms/agent/start-a-job.md).  
+         Para obtener información sobre cómo iniciar un trabajo, vea [Start a Job](../../ssms/agent/start-a-job.md).  
   
     2.  Copie el archivo de copia de seguridad del final del registro que creó en el paso 1 desde el recurso compartido de archivos en la ubicación local usada por el trasvase de registros del servidor secundario.  
   
@@ -130,13 +130,13 @@ ms.locfileid: "48204975"
   
     5.  Tenga cuidado de que el registro de transacciones de la base de datos secundaria no se llene mientras la base de datos está en línea. Para evitar que el registro de transacciones se llene, puede que sea necesario realizar una copia de seguridad del mismo. En ese caso, se recomienda que ponga la copia de seguridad en una ubicación compartida, un *recurso compartido de copia de seguridad*, de modo que las copias de seguridad estén disponibles para restaurarse en la otra instancia del servidor.  
   
-#####  <a name="Procedure2 "></a> Procedimiento 2: Actualizar la instancia del servidor principal Original a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- Después de actualizar la instancia del servidor principal original a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos todavía estará sin conexión y en el formato.  
+#####  <a name="Procedure2 "></a> Procedimiento 2: Actualice la instancia de servidor principal Original a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ Después de actualizar la instancia del servidor principal original a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos todavía estará sin conexión y en el formato.  
   
-#####  <a name="Procedure3"></a> Procedimiento 3: Configurar el trasvase de registros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure3"></a> Procedimiento 3: Configuración de trasvase de registros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  El resto del proceso de actualización depende de si el trasvase de registros sigue estando configurado, como se explica a continuación:  
   
--   Si ha conservado la configuración de trasvase de registros de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior, vuelva a la instancia del servidor principal original. Para obtener más información, vea [Para volver a la instancia del servidor principal original](#SwitchToOrigPrimary), más adelante en esta sección.  
+-   Si ha conservado la configuración de trasvase de registros de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]o posterior, vuelva a la instancia del servidor principal original. Para obtener más información, vea [Para volver a la instancia del servidor principal original](#SwitchToOrigPrimary), más adelante en esta sección.  
   
 -   Si quitó la configuración de trasvase de registros antes de la conmutación por error, cree una nueva configuración de trasvase de registros en la que la instancia del servidor secundario original sea la instancia del nuevo servidor principal. Para obtener más información, vea [Para mantener la instancia del servidor secundario anterior como instancia del nuevo servidor principal](#KeepOldSecondaryAsNewPrimary), posteriormente en esta sección.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48204975"
     GO  
     ```  
   
-2.  Si se realizó alguna copia de seguridad de registros de transacciones en la base de datos principal provisional exceptuando la copia de seguridad del final del registro que creó en el paso 1, restaure esas copias de seguridad del registro usando WITH NORECOVERY en la base de datos sin conexión del servidor principal original (servidor A). La base de datos se actualiza a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] formato cuando se restaura la primera copia de seguridad.  
+2.  Si se realizó alguna copia de seguridad de registros de transacciones en la base de datos principal provisional exceptuando la copia de seguridad del final del registro que creó en el paso 1, restaure esas copias de seguridad del registro usando WITH NORECOVERY en la base de datos sin conexión del servidor principal original (servidor A). La base de datos se actualiza al formato de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cuando se restaura la primera copia de seguridad de registros.  
   
 3.  Restaure la copia del final del registro, `Switchback_AW_20080315.trn`, en la base de datos principal original (en servidor A) usando WITH RECOVERY para poner en línea la base de datos.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "48204975"
   
 2.  Haga una copia de seguridad de registros desde la nueva base de datos principal (en el servidor B).  
   
-3.  Restaure las copias de seguridad de registros en la instancia del nuevo servidor secundario (servidor A) usando WITH NORECOVERY. La primera operación de restauración actualiza la base de datos [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+3.  Restaure las copias de seguridad de registros en la instancia del nuevo servidor secundario (servidor A) usando WITH NORECOVERY. La primera operación de restauración actualiza la base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 4.  Configure el trasvase de registros con el servidor secundario antiguo (servidor B) como instancia del servidor principal.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48204975"
   
 6.  Actualice el servidor principal original (servidor A).  
   
-7.  En la base de datos a la que realizó la conmutación por error, es decir, la base de datos principal provisional (en el servidor B), realice manualmente una copia de seguridad de registros de transacciones usando WITH NORECOVERY. De esta forma se deja la base de datos sin conexión.  
+7.  Error en la principal base de datos provisional (en el servidor B), manualmente la base de datos realizar copias de seguridad del registro de transacciones usando WITH NORECOVERY. De esta forma se deja la base de datos sin conexión.  
   
 8.  Restaure todas las copias de seguridad de registros de transacciones que creó en la base de datos principal provisional (en el servidor B) en la otra base de datos secundaria (en el servidor C) usando WITH NORECOVERY. Esto permite al trasvase de registros continuar a partir de la base de datos principal original después de su actualización, sin requerir una restauración de la base de datos completa en cada base de datos secundaria.  
   

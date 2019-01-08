@@ -13,15 +13,15 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0cdbb90bfbca6994a875a0653ee9d34c8e8ffb9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775773"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501781"
 ---
 # <a name="binding-parameters-odbc"></a>Enlazar parámetros ODBC
-Cada parámetro en una instrucción SQL debe estar asociado, o *enlazado,* a una variable en la aplicación antes de que se ejecuta la instrucción. Cuando la aplicación enlaza una variable a un parámetro, describe esa variable, dirección, tipo de datos de C y así sucesivamente, al controlador. También se describe el propio parámetro: datos de SQL tipo, precisión y así sucesivamente. El controlador almacena esta información en la estructura se mantiene para esa instrucción y usa la información para recuperar el valor de la variable cuando se ejecuta la instrucción.  
+Cada parámetro en una instrucción SQL debe estar asociado, o *enlazado,* a una variable en la aplicación antes de que se ejecuta la instrucción. Cuando la aplicación enlaza una variable a un parámetro, describe esa variable - dirección, tipo de datos C etc. - al controlador. También se describe el propio parámetro - tipo de datos SQL, precisión y así sucesivamente. El controlador almacena esta información en la estructura se mantiene para esa instrucción y usa la información para recuperar el valor de la variable cuando se ejecuta la instrucción.  
   
  Parámetros se pueden enlazar o Reenlazar en cualquier momento antes de que se ejecuta una instrucción. Si después de ejecutar una instrucción, se vuelve a enlazar un parámetro, el enlace no se aplica hasta que se vuelve a ejecutar la instrucción. Para enlazar un parámetro a otra variable, una aplicación simplemente vuelve a enlazar el parámetro con la nueva variable; el enlace anterior se libera automáticamente.  
   

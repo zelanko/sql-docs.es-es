@@ -20,16 +20,16 @@ ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e376d10f21fa00c6bbe86fc692b0185f3c8d8d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb490b475c5795125d11915729693eb630934eb8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642853"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201464"
 ---
 # <a name="sqlvaliddsn-function"></a>Función SQLValidDSN
 **Conformidad**  
- Versión introdujo: ODBC 2.0  
+ Versión de introducción: ODBC 2.0  
   
  **Resumen**  
  **SQLValidDSN** comprueba la longitud y la validez del nombre del origen de datos antes de que el nombre se agrega a la información del sistema.  
@@ -39,7 +39,7 @@ ms.locfileid: "47642853"
 ```  
   
 BOOL SQLValidDSN(  
-     LPCSTR    lpszDSN);  
+     LPCSTR    lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  

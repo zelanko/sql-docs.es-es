@@ -1,5 +1,5 @@
 ---
-title: NameToSet (MDX) | Documentos de Microsoft
+title: NameToSet (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5bb38614d9c83b0624d76f9f09c377c9fcbf82fb
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: d42a94ce4e878a3f4ac0ef14a48872bf5d32a144
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742364"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542459"
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
 
 
-  Devuelve un conjunto que contiene el miembro especificado por una cadena con formato de Expresiones multidimensionales (MDX).  
+  Devuelve un conjunto que contiene al miembro especificado por una cadena con formato de expresiones multidimensionales MDX.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,7 +32,7 @@ NameToSet(Member_Name)
  *Member_Name*  
  Expresión de cadena válida que representa el nombre de un miembro.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si el nombre del miembro especificado no existe, el **NameToSet** función devuelve un conjunto que contiene ese miembro. En caso contrario, la función devuelve un conjunto vacío.  
   
 > [!NOTE]  

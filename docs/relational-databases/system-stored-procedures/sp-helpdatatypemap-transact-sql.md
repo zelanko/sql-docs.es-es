@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdatatypemap
@@ -17,17 +16,17 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1eab8424e2ff5eb81e8d89a6ed897b7d19b5b72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d4addec6f0b5a7faff69d513c655450202d099
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837943"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210854"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve información sobre las asignaciones de tipos de datos definido entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos (DBMS) de los sistemas de administración. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
+  Devuelve información sobre las asignaciones de tipos de datos definido entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos (DBMS) de los sistemas de administración. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -93,7 +92,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_helpdatatypemap** define asignaciones de tipos de datos tanto de que no son publicadores de SQL Server y desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los publicadores que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ **sp_helpdatatypemap** define asignaciones de tipos de datos tanto de que no son publicadores de SQL Server y desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los publicadores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
  Cuando no se admite la combinación especificada de origen y el DBMS de destino, **sp_helpdatatypemap** devuelve un conjunto de resultados vacío.  
   

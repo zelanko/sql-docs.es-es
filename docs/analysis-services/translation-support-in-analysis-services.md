@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con traducción en Analysis Services | Documentos de Microsoft
+title: Compatibilidad con traducción en Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 882434c2bd0a194a2ecbe21a62d3b22964b30f09
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18b0dd9990c863d6630e63969250bc60b3287255
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041839"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213634"
 ---
 # <a name="translation-support-in-analysis-services"></a>Compatibilidad con traducción en Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "34041839"
   
 ## <a name="see-also"></a>Vea también  
  [Escenarios de globalización para Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Idiomas e intercalaciones & #40; Analysis Services & #41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [Idiomas e intercalaciones &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [Establecer o cambiar la intercalación de columnas](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Sugerencias de globalización y mejores prácticas & #40; Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   

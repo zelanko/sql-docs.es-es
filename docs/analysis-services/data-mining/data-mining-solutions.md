@@ -1,5 +1,5 @@
 ---
-title: Soluciones de minería de datos | Documentos de Microsoft
+title: Soluciones de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e52afe834120b661bd885be4e00491385b8b917
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4668afcd31c7eb97e398772587866636ff155459
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015172"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543008"
 ---
 # <a name="data-mining-solutions"></a>Soluciones de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,8 +30,8 @@ ms.locfileid: "34015172"
   
  [Tutoriales de la solución](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a>Soluciones relacionales y. multidimensionales  
- Una solución de minería de datos se puede basar en datos multidimensionales, es decir, en un cubo existente; o en datos puramente relacionales, como las tablas y las vistas de un almacenamiento de datos; o bien en archivos de texto, libros de Excel u otros orígenes de datos externos.  
+##  <a name="bkmk_RelMD"></a> Soluciones relacionales y. multidimensionales  
+ Puede ser una solución de minería de datos basado en datos multidimensionales: es decir, un cubo existente- o en datos puramente relacionales, como las tablas y vistas en un almacén de datos o en archivos de texto, libros de Excel u otros orígenes de datos externos.  
   
 -   Puede crear objetos de minería de datos en una solución de base de datos multidimensional existente.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34015172"
   
  [Procesar objetos de minería de datos](../../analysis-services/data-mining/processing-data-mining-objects.md)  
   
- [Proyectos relacionados en las soluciones de minería de datos de](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ [Proyectos relacionados en las soluciones de minería de datos](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
  [Implementación de soluciones de minería de datos](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)  
   
@@ -75,13 +75,13 @@ ms.locfileid: "34015172"
   
 |Tareas|Temas|  
 |-----------|------------|  
-|Pruebe los modelos que cree, valide la calidad de los datos de entrenamiento y cree gráficos que representen la precisión de los modelos de minería de datos.|[Prueba y validación & #40; minería de datos & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Pruebe los modelos que cree, valide la calidad de los datos de entrenamiento y cree gráficos que representen la precisión de los modelos de minería de datos.|[Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Entrene el modelo rellenando la estructura y los modelos relacionados con datos. Actualice y amplía los modelos con nuevos datos.|[Procesar objetos de minería de datos](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |Personalice un modelo de minería de datos aplicando filtros a los datos de entrenamiento, eligiendo un algoritmo diferente o estableciendo parámetros avanzados para el algoritmo.|[Personalizar la estructura y los modelos de minería de datos](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|Personalice un modelo de minería de datos aplicando filtros a los datos usados en el entrenamiento del modelo.|[Agregar modelos de minería de datos a una estructura & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Personalice un modelo de minería de datos aplicando filtros a los datos usados en el entrenamiento del modelo.|[Agregar modelos de minería de datos a una estructura &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Actualice y administre las soluciones de minería de datos.|Vínculo TBD|  
   
 ## <a name="see-also"></a>Vea también  
- [Tutoriales de minería de datos & #40; Analysis Services & #41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [Tutoriales de minería de datos &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

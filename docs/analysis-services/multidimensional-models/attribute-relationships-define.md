@@ -1,5 +1,5 @@
 ---
-title: Definir relaciones de atributo | Documentos de Microsoft
+title: Definir relaciones de atributo | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b97a8d3c28b4b7b012efe12f1e3469ca409834b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e49207e99887e13cdd5321821e7325b4a2dac7dc
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023042"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983967"
 ---
-# <a name="attribute-relationships---define"></a>Atributo relaciones - definir
+# <a name="attribute-relationships---define"></a>Relaciones de los atributos: Definir
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los atributos son la unidad de creación fundamental de una dimensión. Una dimensión contiene un conjunto de atributos que se organizan en función de las relaciones de atributo.  
   
@@ -30,13 +30,11 @@ ms.locfileid: "34023042"
   
 -   Hace que los algoritmos de diseños de agregaciones seleccionen agregados más efectivos, siempre y cuando las jerarquías definidas por el usuario se hayan establecido a lo largo de las rutas de acceso de la relación.  
   
-    > [!NOTE]  
-    >  Para obtener más información sobre la importancia y las implicaciones de definir y configurar las relaciones de atributo, vea la sección “Enhancing query performance” (Mejora del rendimiento de las consultas) en [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621)(Guía de rendimiento de SQL Server 2005 Analysis Services).  
   
 ## <a name="attribute-relationship-considerations"></a>Consideraciones sobre las relaciones de atributo  
  Si los datos subyacentes lo permiten, también debería definir relaciones de atributo únicas entre atributos. Para definir relaciones de atributo únicas, utilice la pestaña **Relación de los atributos** del Diseñador de dimensiones.  
   
- Cualquier atributo que tenga una relación de salida debe tener una clave única relativa a su atributo relacionado. En otras palabras, un miembro de un atributo de origen solo debe identificar un único miembro de un atributo relacionado. Por ejemplo, considere la relación, Ciudad -> Estado. En esta relación, el atributo de origen es Ciudad y el atributo relacionado es Estado. El atributo de origen es el lado "varios" y la parte relacionada es el lado "uno" de la relación de varios a uno. La clave para el atributo de origen sería Ciudad + Estado. Para obtener más información, vea [Crear, modificar o eliminar una relación de atributo](../../analysis-services/multidimensional-models/attribute-relationships-create-modify-or-delete-relationship.md).  
+ Cualquier atributo que tenga una relación de salida debe tener una clave única relativa a su atributo relacionado. En otras palabras, un miembro de un atributo de origen solo debe identificar un único miembro de un atributo relacionado. Por ejemplo, considere la relación, Ciudad -> Estado. En esta relación, el atributo de origen es Ciudad y el atributo relacionado es Estado. El atributo de origen es el lado "many" y la parte relacionada es el lado "uno" de la relación de varios a uno. La clave para el atributo de origen sería Ciudad + Estado. Para obtener más información, vea [Crear, modificar o eliminar una relación de atributo](../../analysis-services/multidimensional-models/attribute-relationships-create-modify-or-delete-relationship.md).  
   
  Para obtener más información sobre las propiedades de una relación de atributo, vea [Configurar propiedades de relación de los atributos](../../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md).  
   
@@ -44,6 +42,6 @@ ms.locfileid: "34023042"
 >  Si las relaciones de atributo no se definen correctamente, puede que los resultados de las consultas no sean válidos.  
   
 ## <a name="see-also"></a>Vea también  
- [Relaciones de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [Relación de los atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

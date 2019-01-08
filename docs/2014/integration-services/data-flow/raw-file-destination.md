@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledest.f1
@@ -19,12 +18,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 515f6ffe76b451b621ceded394a22483ce59b2cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ebcc0ff9c9c2baae93ac31258ff994b463fc3b0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188095"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753677"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
   El destino de archivo sin formato escribe datos sin procesar en un archivo. Como el formato de los datos es el nativo del destino, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el destino de archivo sin formato puede escribir datos más rápidamente que otros destinos, como el destino de archivo plano o los destinos de OLE DB.  
@@ -89,7 +88,7 @@ ms.locfileid: "48188095"
   
 -   1300, productE  
   
- Los datos nuevos se anexan al final del archivo sin formato y las claves ordenadas (PK) no se incluyen en el orden. Además, la operación de anexar no cambió los metadatos del archivo (información sobre el orden). Si lee el archivo con el origen de archivo sin formato, el componente indica que el archivo todavía está ordenado según PK aunque los datos del archivo ya no estén en el orden correcto.  
+ Los datos nuevos se anexan al final del archivo sin formato y las claves ordenadas (PK) no se incluyen en el orden. Además, la operación de anexar no ha cambiado los metadatos del archivo (información sobre el orden). Si lee el archivo con el origen de archivo sin formato, el componente indica que el archivo todavía está ordenado según PK aunque los datos del archivo ya no estén en el orden correcto.  
   
  Para mantener las claves ordenadas en el orden correcto mientras se anexan datos, puede diseñar el flujo de datos del paquete como sigue:  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48188095"
   
 5.  Escriba en RawFile2 mediante el destino de archivo sin formato.  
   
-     RawFile1 está bloqueado porque se está leyendo, en el flujo de datos.  
+     RawFile1 está bloqueado porque se está leyendo en el flujo de datos.  
   
 6.  Reemplace RawFile1 con RawFile2.  
   

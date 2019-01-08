@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
@@ -14,12 +13,12 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d3bb5f71617371d4ff360242cf3076e73fdbbea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 727c6e221accc9cc0d1ce46a5907a5e450d6e21b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070684"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813357"
 ---
 # <a name="package-properties-dialog-box"></a>Propiedades del paquete, cuadro de diálogo
   Utilice el cuadro de diálogo **Propiedades del paquete** para ver las propiedades de los paquetes almacenados en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -51,7 +50,7 @@ ms.locfileid: "48070684"
   
  Todas las propiedades que aparecen en la página **General** son de solo lectura.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre del paquete.  
   
  **Identificador**  

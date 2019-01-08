@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transformations [Integration Services], listed
@@ -22,12 +21,12 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 288eb3b2e8e8b86d27c50efdaf6a1f6a2754e91d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76157486751a08d17cf46de312f63e6e41dc3cb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140731"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785237"
 ---
 # <a name="integration-services-transformations"></a>Transformaciones de Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] son los componentes en el flujo de datos de un paquete que agregan, combinan, distribuyen y modifican datos. Las transformaciones también pueden realizar operaciones de búsqueda y generar conjuntos de datos de ejemplo. Esta sección describe las transformaciones que incluye [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y explica cómo funcionan.  
@@ -83,7 +82,7 @@ ms.locfileid: "48140731"
 |[Transformación Combinación de mezcla](merge-join-transformation.md)|Transformación que combina dos conjuntos de datos mediante una combinación FULL, LEFT o INNER.|  
 |[Transformación Búsqueda](lookup-transformation.md)|Transformación que busca valores en una tabla de referencia con una coincidencia exacta.|  
 |[Transformación de caché](cache-transform.md)|La transformación que escribe los datos procedentes de un origen de datos conectado del flujo de datos en un administrador de conexiones de caché que guarda los datos en un archivo caché. La transformación de búsqueda realiza búsquedas en los datos del archivo caché.|  
-|[Transformación Distribuidor de datos equilibrado](balanced-data-distributor-transformation.md)|La transformación distribuye uniformemente los búferes de filas entrantes entre los resultados de subprocesos independientes para mejorar el rendimiento de los paquetes de SSIS que se ejecutan en servidores con varios núcleos y varios procesadores.|  
+|[Transformación Balanced Data Distributor](balanced-data-distributor-transformation.md)|La transformación distribuye uniformemente los búferes de filas entrantes entre los resultados de subprocesos independientes para mejorar el rendimiento de los paquetes de SSIS que se ejecutan en servidores con varios núcleos y varios procesadores.|  
   
 ## <a name="auditing-transformations"></a>Auditar transformaciones  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye las transformaciones siguientes para agregar filas de recuento e información.  

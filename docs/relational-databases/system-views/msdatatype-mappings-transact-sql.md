@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdatatype_mappings
@@ -19,12 +18,12 @@ ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00df6d73813fea7efebb3fa4db3c5e65187f2109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5af1233e81c996e98287a637e01ad1d249671303
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785097"
 ---
 # <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47636703"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**dbms_name**|**nvarchar(128)**|Es el nombre del DBMS. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> **MSSQLSERVER**: el destino es una base de datos de SQL Server.<br />**ORACLE**: el destino es una base de datos de Oracle.<br />**DB2**: el destino es una base de datos IBM DB2.<br />**SYBASE**: el destino es una base de datos de Sybase.|  
+|**dbms_name**|**nvarchar(128)**|Es el nombre del DBMS. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> **MSSQLSERVER**: El destino es una base de datos de SQL Server.<br />**ORACLE**: El destino es una base de datos de Oracle.<br />**DB2**: El destino es una base de datos IBM DB2.<br />**SYBASE**: El destino es una base de datos Sybase.|  
 |**sql_type**|**nvarchar(128)**|Es el tipo de datos de SQL Server.|  
 |**dest_type**|**nvarchar(128)**|Es el nombre del tipo de datos que no son de SQL Server.|  
 |**dest_prec**|**bigint**|Es la precisión del tipo de datos que no son de SQL Server.|  

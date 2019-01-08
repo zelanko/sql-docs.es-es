@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906405"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984106"
 ---
 # <a name="dynamic-management-views-dmvs"></a>Vistas de administración dinámica (DMV) 
 
@@ -93,15 +93,15 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-Si una DMV no está disponible para un conjunto de filas determinado, el servidor devuelve el error: `The <schemarowset> request type was not recognized by the server.` todos los demás errores indican problemas con la sintaxis.  
+Si una DMV no está disponible para un conjunto de filas determinado, el servidor devuelve el error: `The <schemarowset> request type was not recognized by the server.` Todos los demás errores indican problemas con la sintaxis.  
 
 Conjuntos de filas de esquema se describen en los dos protocolos de SQL Server Analysis Services:   
 
-[[MS-SSAS-T]: protocolo Tabular de SQL Server Analysis Services](https://msdn.microsoft.com/library/mt719260) -describe los conjuntos de filas de esquema para los modelos tabulares en los niveles de compatibilidad 1200 y superior.
+[[MS-SSAS-T]: SQL Server Analysis Services Tabular protocolo](https://msdn.microsoft.com/library/mt719260) -describe los conjuntos de filas de esquema para los modelos tabulares en los niveles de compatibilidad 1200 y superior.
 
-[[MS-SSAS]: protocolo de SQL Server Analysis Services](https://msdn.microsoft.com/library/ee320606) -describe los conjuntos de filas de esquema para los modelos multidimensionales y modelos tabulares en los niveles de compatibilidad 1100 y 1103.
+[[MS-SSAS]: Protocolo de SQL Server Analysis Services](https://msdn.microsoft.com/library/ee320606) -describe los conjuntos de filas de esquema para los modelos multidimensionales y modelos tabulares en los niveles de compatibilidad 1100 y 1103.
 
-### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Los conjuntos de filas que se describe en [MS-SSAS-T]: protocolo Tabular de SQL Server Analysis Services
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Conjuntos de filas que se describe en [MS-SSAS-T]: Protocolo Tabular de SQL Server Analysis Services
 
 |Conjunto de filas  |Descripción  |
 |---------|---------|
@@ -134,7 +134,7 @@ Conjuntos de filas de esquema se describen en los dos protocolos de SQL Server A
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   Proporciona información sobre los objetos de tabla en el modelo.      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|Proporciona información sobre los objetos de la variación en cada columna.|
 
-### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Los conjuntos de filas que se describe en [MS-SSAS]: protocolo de SQL Server Analysis Services
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Conjuntos de filas que se describe en [MS-SSAS]: Protocolo SQL Server Analysis Services
 
 |Conjunto de filas|Descripción|  
 |------------|-----------------|  
@@ -172,7 +172,7 @@ Conjuntos de filas de esquema se describen en los dos protocolos de SQL Server A
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|Devuelve información acerca de los segmentos de columna utilizado para almacenar datos de las tablas en memoria.|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|Contiene información acerca de las columnas que se usa para representar las columnas de una tabla en memoria.|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|Devuelve estadísticas acerca de las tablas en memoria disponibles en el servidor.|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|Contiene el conjunto de filas de esquema DISCOVER_TRACE_COLUMNS.|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|Contiene el conjunto de filas de esquema DISCOVER_TRACE_EVENT_CATEGORIES.|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|Contiene el conjunto de filas de esquema DISCOVER_TRACES.|  

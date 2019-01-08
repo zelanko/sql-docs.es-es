@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 043ae99502b8f1f128ca892dbfe4e3f84c4af14d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efe8e9e468bca96605e3c9cfc771e78cb4b78cce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191845"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823709"
 ---
 # <a name="look-up-rfc-destination"></a>Buscar destino RFC
   Use el cuadro de diálogo **Buscar destino RFC** para buscar un destino RFC que se haya definido en el sistema de SAP Netweaver BW. Cuando aparezca la lista de destinos RFC disponibles, seleccione el destino que desee y el componente rellenará las opciones asociadas a los valores necesarios.  
@@ -46,7 +45,7 @@ ms.locfileid: "48191845"
  Permite ver el nombre del servidor o la dirección IP del host de puerta de enlace. Normalmente, el nombre o la dirección IP es el mismo que el del servidor de aplicaciones SAP.  
   
  **Servicio de puerta de enlace**  
- Ver el nombre del servicio de puerta de enlace, en el formato `sapgwNN`, donde `NN` es el número del sistema.  
+ Vea el nombre del servicio de puerta de enlace, con el formato `sapgwNN`, donde `NN` es el número del sistema.  
   
  **Id. de programa**  
  Permite ver el identificador de programa asociado al destino RFC.  

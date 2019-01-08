@@ -11,12 +11,12 @@ ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60bfb038d6712f44d6a0b5cd6cc57863f0f76ade
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 79565c22eab900eb152f8b5fa52748b3e5a09a16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48904985"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394258"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Mostrar encabezados de fila y de columna en varias páginas (Generador de informes y SSRS)
   Puede controlar si se deben repetir los encabezados de fila y de columna en cada página de una región de datos Tablix que abarca varias páginas. Una región de datos Tablix puede ser una tabla, una matriz o una lista.  
@@ -25,7 +25,7 @@ ms.locfileid: "48904985"
   
  ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
- Los encabezados de grupo de filas y columnas se crean automáticamente al agregar los grupos mediante el Asistente para nueva tabla o matriz o el Asistente para nuevo gráfico, agregando los campos al panel de agrupación o utilizando los menús contextuales. Si la región de datos Tablix tiene solamente un área de cuerpo de Tablix y ningún encabezado de grupo, las filas y columnas son miembros de Tablix.  
+ Los encabezados de grupo de filas y de columnas se crean automáticamente al agregar los grupos usando el asistente Nueva tabla o matriz o el asistente Nuevo gráfico, agregando los campos al Panel de agrupación o usando los menús contextuales. Si la región de datos Tablix tiene solamente un área de cuerpo de Tablix y ningún encabezado de grupo, las filas y columnas son miembros de Tablix.  
   
  Para los miembros estáticos, puede mostrar la parte superior de las filas adyacentes o las columnas adyacentes las laterales en varias páginas.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48904985"
   
 3.  Haga clic en el miembro estático que corresponde al miembro estático (fila o columna) que desea que se mantenga visible durante el desplazamiento. El panel de propiedades muestra las propiedades de **Miembro de Tablix** .  
   
-     Si no ve el panel Propiedades, haga clic en la pestaña **Ver** en la parte superior de la ventana del Generador de informes y, a continuación, haga clic en **Propiedades**.  
+     Si no ve el panel Propiedades, haga clic en la pestaña **Ver** en la parte superior de la ventana del Generador de informes y, después, haga clic en **Propiedades**.  
   
 4.  En el panel Propiedades, configure **RepeatOnNewPage** en True.  
   

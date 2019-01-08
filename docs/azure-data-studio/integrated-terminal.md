@@ -1,7 +1,8 @@
 ---
-title: Terminal integrado en Azure Data Studio | Microsoft Docs
+title: Terminal integrado
+titleSuffix: Azure Data Studio
 description: Obtenga información sobre el terminal integrado en Azure Data Studio.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 91adc56e93a7dc1b065b77169ad18fd977231d9f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355986"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030439"
 ---
 # <a name="integrated-terminal"></a>Terminal integrado
 
@@ -89,7 +90,7 @@ Puede personalizar la fuente de terminal integrado y el alto de línea con la si
 
 ## <a id="key-bindings"></a>Enlaces de teclado de Terminal
 
-El **vista: alternar Terminal integrado** comando está enlazado a **Ctrl +'** alternar rápidamente el panel de terminal integrado dentro y fuera de la vista.
+El **vista: Alternar Terminal integrado** comando está enlazado a **Ctrl +'** alternar rápidamente el panel de terminal integrado dentro y fuera de la vista.
 
 A continuación se muestran los métodos abreviados de teclado para desplazarse rápidamente dentro el terminal integrado:
 
@@ -109,16 +110,16 @@ Otros comandos de terminal están disponibles y se pueden enlazar a los métodos
 
 Estas sobrecargas son:
 
-* `workbench.action.terminal.focus`: Céntrese en el terminal. Esto es similar a alternar pero centra el terminal en lugar de ocultarlo, si está visible.
+* `workbench.action.terminal.focus`: Centrar el terminal. Esto es similar a alternar pero centra el terminal en lugar de ocultarlo, si está visible.
 * `workbench.action.terminal.focusNext`: Se centra en la siguiente instancia de terminal.
 * `workbench.action.terminal.focusPrevious`: Se centra en la instancia anterior de terminal.
-* `workbench.action.terminal.kill`: Quita la instancia actual de terminal.
-* `workbench.action.terminal.runSelectedText`: Ejecuta el texto seleccionado en la instancia de terminal.
-* `workbench.action.terminal.runActiveFile`: Ejecuta el archivo activo en la instancia de terminal.
+* `workbench.action.terminal.kill`: Quite la instancia actual de terminal.
+* `workbench.action.terminal.runSelectedText`: Ejecute el texto seleccionado en la instancia de terminal.
+* `workbench.action.terminal.runActiveFile`: Ejecute el archivo activo en la instancia de terminal.
 
 ### <a name="run-selected-text"></a>Ejecutar texto seleccionado
 
-Para usar el `runSelectedText` de comandos, seleccione el texto en un editor y ejecute el comando **Terminal: ejecutar texto seleccionado en Terminal Active** a través de la **paleta de comandos** (**Ctrl + Mayús + P**). El terminal intenta ejecutar el texto seleccionado:
+Para usar el `runSelectedText` de comandos, seleccione el texto en un editor y ejecute el comando **Terminal: Ejecutar texto seleccionado en el Terminal Active** a través de la **paleta de comandos** (**Ctrl + Mayús + P**). El terminal intenta ejecutar el texto seleccionado:
 
 ![Ejecutar texto seleccionado](media/integrated-terminal/terminal_run_selected.png)
 
@@ -128,9 +129,9 @@ Si no hay texto seleccionado en el editor activo, se ejecuta la línea donde se 
 
 Los enlaces de teclado para copiar y pegar siguen los estándares de la plataforma:
 
-* Linux: **Ctrl + Mayús + C** y **Ctrl + Mayús + V**
+* Linux: **CTRL + MAYÚS + C** y **Ctrl + Mayús + V**
 * Mac: **Cmd + C** y **Cmd + V**
-* Windows: **Ctrl + C** y **Ctrl + V**
+* Windows: **CTRL + C** y **Ctrl + V**
 
 ### <a name="find"></a>Buscar
 
@@ -145,7 +146,7 @@ Si desea que **CTRL+f** para ir al shell en lugar de iniciar el widget de búsqu
 
 ### <a name="rename-terminal-sessions"></a>Cambiar el nombre de sesiones de terminal Server
 
-Sesiones de Terminal integradas ahora se pueden cambiar mediante la **Terminal: cambiar el nombre de** (`workbench.action.terminal.rename`) comando. El nuevo nombre se muestra en la lista desplegable de selección terminal.
+Sesiones de Terminal integradas ahora se pueden cambiar mediante la **Terminal: Cambiar el nombre de** (`workbench.action.terminal.rename`) comando. El nuevo nombre se muestra en la lista desplegable de selección terminal.
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Forzar los enlaces de teclado para pasar a través del terminal
 

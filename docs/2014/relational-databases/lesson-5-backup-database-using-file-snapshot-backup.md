@@ -11,12 +11,12 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78674b36b395aa50677e17fa4344690c988f5715
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a75375ae8636cd3c8861030131ce08c63832460
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215135"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404289"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lección 6: Migrar una base de datos de una máquina de origen local a un equipo de destino de Windows Azure
   En esta lección se supone que ya tiene otro servidor SQL Server, que puede residir en otro equipo local o en una máquina virtual de Windows Azure. Para obtener información sobre cómo crear una máquina virtual de SQL Server en Windows Azure, consulte [aprovisionamiento de una máquina Virtual de SQL Server en Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Después de aprovisionar una máquina virtual de SQL Server en Windows Azure, asegúrese de que puede conectarse a una instancia de SQL Server en esta máquina virtual a través de SQL Server Management Studio en otro equipo.  
@@ -51,7 +51,7 @@ ms.locfileid: "48215135"
   
         2.  En la barra de herramientas estándar, haga clic en **nueva consulta**.  
   
-        3.  Copie y pegue el ejemplo siguiente en la ventana de consulta, y modifíquelo como sea necesario. La instrucción siguiente crea una credencial de SQL Server para almacenar el certificado de Acceso compartido del contenedor de almacenamiento.  
+        3.  Copie y pegue el ejemplo siguiente en la ventana de consulta, y modifíquelo como sea necesario. La siguiente instrucción crea una credencial de SQL Server para almacenar el certificado de acceso compartido del contenedor de almacenamiento.  
   
             ```tsql  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48215135"
   
              Al final de este paso, la máquina de destino ha importado el certificado de cifrado cuya copia de seguridad se realizó desde la máquina de origen. A continuación, puede adjuntar los archivos de datos en el equipo de destino.  
   
-    2.  A continuación, cree una base de datos con los archivos de registro y de datos que señalan a los archivos existentes en Almacenamiento de Windows Azure con la opción FOR ATTACH. En la ventana de consulta, ejecute la instrucción siguiente:  
+    2.  A continuación, cree una base de datos con los archivos de registro y de datos que señalan a los archivos existentes en Azure Storage con la opción FOR ATTACH. En la ventana de consulta, ejecute la instrucción siguiente:  
   
         ```tsql  
   
@@ -147,6 +147,6 @@ ms.locfileid: "48215135"
   
  **Lección siguiente:**  
   
- [Lección 7: Mover los archivos de datos a Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lección 7: Mover los archivos de datos a almacenamiento de Windows Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

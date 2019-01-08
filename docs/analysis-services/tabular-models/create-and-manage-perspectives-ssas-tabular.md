@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar perspectivas | Documentos de Microsoft
+title: Crear y administrar perspectivas en los modelos tabulares de Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56c8f35aa15debbc064cacd73205234377224a28
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 962b6b90de6d95107d1a4cdd3484a44205afb630
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040599"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071852"
 ---
 # <a name="create-and-manage-perspectives"></a>Crear y administrar perspectivas 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,19 +31,19 @@ ms.locfileid: "34040599"
   
 ###  <a name="bkmk_edit"></a> Para editar una perspectiva  
   
--   Para modificar una perspectiva, active y desactive los campos en la columna de la perspectiva, lo que agrega y quita objetos de campo de la perspectiva.  
+-   Para modificar una perspectiva, active y desactive los campos de columna de la perspectiva, que agrega y quita los objetos de campo desde la perspectiva.  
   
 ###  <a name="bkmk_rename"></a> Para cambiar el nombre de una perspectiva  
   
--   Al mantener el mouse sobre el encabezado de columna de una perspectiva (el nombre de la perspectiva), aparece el botón **Cambiar nombre** . Para cambiar el nombre de la perspectiva, haga clic en **Cambiar nombre**y, a continuación, escriba un nuevo nombre o edite el nombre existente.  
+-   Cuando mantenga el mouse sobre el encabezado de columna de una perspectiva (el nombre de la perspectiva), el **cambiar el nombre** aparece el botón. Para cambiar el nombre de la perspectiva, haga clic en **Cambiar nombre**y, a continuación, escriba un nuevo nombre o edite el nombre existente.  
   
 ###  <a name="bkmk_delete"></a> Para eliminar una perspectiva  
   
--   Al mantener el mouse sobre el encabezado de columna de una perspectiva (el nombre de la perspectiva), aparece el botón **Eliminar** . Para eliminar la perspectiva, haga clic en el botón **Eliminar** y, a continuación, haga clic en **Sí** en la ventana de confirmación.  
+-   Cuando mantenga el mouse sobre el encabezado de columna de una perspectiva (el nombre de la perspectiva), el **eliminar** aparece el botón. Para eliminar la perspectiva, haga clic en el botón **Eliminar** y, a continuación, haga clic en **Sí** en la ventana de confirmación.  
   
 ###  <a name="bkmk_copy"></a> Para copiar una perspectiva  
   
--   Al mantener el mouse sobre el encabezado de columna de una perspectiva, aparece el botón **Copiar** . Para crear una copia de esa perspectiva, haga clic en el botón **Copiar** . Se agregará una copia de la perspectiva seleccionada como una perspectiva nueva a la derecha de las perspectivas existentes. La nueva perspectiva hereda el nombre de la perspectiva copiada y se anexa una anotación *-Copia* al final del nombre. Por ejemplo, si se crea una copia de la perspectiva *Ventas* , la nueva perspectiva se llama *Ventas – Copiar*.  
+-   Cuando mantenga el mouse sobre un encabezado de columna perspectiva, el **copia** aparece el botón. Para crear una copia de esa perspectiva, haga clic en el botón **Copiar** . Se agregará una copia de la perspectiva seleccionada como una perspectiva nueva a la derecha de las perspectivas existentes. La nueva perspectiva hereda el nombre de la perspectiva copiada y se anexa una anotación *-Copia* al final del nombre. Por ejemplo, si una copia de la *ventas* se crea la perspectiva, se llama a la nueva perspectiva *ventas - copiar*.  
   
 ## <a name="see-also"></a>Vea también  
  [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   

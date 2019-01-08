@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f29dc88bf6298aebea60591034f0c7abc6765185
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167015"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513224"
 ---
 # <a name="modify-views"></a>Modificar vistas
   Después de definir una vista, puede cambiar su definición en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sin tener que quitarla y volverla a crear si usa [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "48167015"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48167015"
   
     1.  Active o desactive las casillas de cualquier elemento que desee agregar o quitar.  
   
-    2.  Haga clic con el botón derecho en el panel de diagrama, seleccione **Agregar tabla**y, luego, las columnas adicionales que quiere agregar a la vista del cuadro de diálogo **Agregar tabla** .  
+    2.  Haga clic con el botón derecho en el panel de diagrama, seleccione **Agregar tabla** y, luego, las columnas adicionales que quiere agregar a la vista del cuadro de diálogo **Agregar tabla**.  
   
     3.  Haga clic con el botón derecho en la barra de título de la tabla que quiere quitar y seleccione **Quitar**.  
   

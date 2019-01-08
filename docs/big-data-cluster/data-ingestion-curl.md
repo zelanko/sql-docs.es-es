@@ -1,22 +1,23 @@
 ---
-title: Use curl para cargar datos en HDFS en SQL Server 2019 CTP 2.1 | Microsoft Docs
+title: Use curl para cargar datos en HDFS en clústeres de SQL Server 2019 macrodatos | Microsoft Docs
 description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a5f580ab39ef7338f424975d9667745131ee748f
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 890c323434c17bb66cd9a67aac872a5580cb2ddf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221631"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201624"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-ctp-21"></a>Use curl para cargar datos en HDFS en SQL Server 2019 CTP 2.1
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>Use curl para cargar datos en HDFS en clústeres de macrodatos de SQL Server 2019
 
-En este artículo se explica cómo usar **curl** para cargar datos en HDFS en SQL Server 2019 CTP 2.1.
+En este artículo se explica cómo usar **curl** para cargar datos en HDFS en clústeres de macrodatos de 2019 de SQL Server (versión preliminar).
 
 ## <a name="obtain-the-service-external-ip"></a>Obtener la dirección IP externa de servicio
 

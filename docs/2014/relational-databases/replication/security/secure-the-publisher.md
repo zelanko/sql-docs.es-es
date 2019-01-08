@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server replication], publication access list
@@ -18,12 +17,12 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe1ff9c4c0b9eec12d2e7ec0ac0d3325e9e0c91d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa2f5528bb223081e7334a7fbd477368d1f7c447
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146465"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810617"
 ---
 # <a name="secure-the-publisher"></a>Proteger el publicador
   Los siguientes agentes de replicación se conectan al publicador:  
@@ -61,13 +60,13 @@ ms.locfileid: "48146465"
  Para administrar la PAL, vea [Manage Logins in the Publication Access List](manage-logins-in-the-publication-access-list.md) (Administrar inicios de sesión en la lista de acceso a la publicación).  
   
 ## <a name="snapshot-agent"></a>Agente de instantáneas  
- Existe un Agente de instantáneas para cada publicación. Para más información, consulte [Create a Publication](../publish/create-a-publication.md).  
+ Existe un Agente de instantáneas para cada publicación. Para obtener más información, consulte [Create a Publication](../publish/create-a-publication.md).  
   
 ## <a name="ftp-snapshot-delivery"></a>Entrega de instantáneas a través de FTP  
  Si especifica que las instantáneas deben estar disponibles a través de un recurso compartido FTP en lugar de un recurso compartido UNC, es preciso indicar un inicio de sesión y una contraseña al configurar el acceso FTP. Para más información, vea [Deliver a Snapshot Through FTP](../publish/deliver-a-snapshot-through-ftp.md) (Entregar una instantánea mediante FTP).  
   
 ## <a name="log-reader-agent"></a>Agente de registro del LOG  
- Existe un Agente de registro del LOG para cada base de datos publicada para la replicación transaccional. Para más información, consulte [Create a Publication](../publish/create-a-publication.md).  
+ Existe un Agente de registro del LOG para cada base de datos publicada para la replicación transaccional. Para obtener más información, consulte [Create a Publication](../publish/create-a-publication.md).  
   
 ## <a name="queue-reader-agent"></a>Agente de lectura de cola  
  Existe un Agente de lectura de cola para todos los publicadores y publicaciones (que permite las suscripciones de actualización en cola) asociados a un distribuidor determinado. Para más información, vea [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md) (Habilitar suscripciones actualizables para publicaciones transaccionales).  

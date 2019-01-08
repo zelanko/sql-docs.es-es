@@ -1,30 +1,34 @@
 ---
-title: Uso de cuadernos en versión preliminar de SQL Server 2019 | Microsoft Docs
-description: ''
+title: Ejecutar blocs de notas en Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Este artículo explica cómo ejecutar Jupyter Notebook en Azure Data Studio conneected a un clúster de macrodatos de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221641"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246614"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Uso de cuadernos en versión preliminar de SQL Server 2019
 
-En este artículo se describe cómo iniciar cuadernos de Jupyter en el clúster y empezar a crear sus propios cuadernos. También muestra cómo enviar trabajos en el clúster.
+En este artículo se describe cómo iniciar Jupyter Notebooks en un clúster de macrodatos y cómo empezar a crear sus propios cuadernos. También muestra cómo enviar trabajos en el clúster.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar los blocs de notas, debe instalar los requisitos previos siguientes:
 
 - [Un clúster de macrodatos de SQL Server 2019](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [La extensión de SQL Server 2019 (versión preliminar)](../azure-data-studio/sql-server-2019-extension.md).
+- [Herramientas de SQL Server 2019 macrodatos](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Extensión de SQL Server 2019**
+   - **kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -80,7 +84,7 @@ Cuando selecciona uno de estos kernels, instalaremos esa kernel en el entorno vi
 |Kernel de Spark|Para escribir código Scala mediante el proceso de Spark del clúster.
 |Kernel de Python|Para escribir código de Python para el desarrollo local.
 
-El `Attach to` proporciona el contexto para el Kernel adjuntar. Cuando se conecta al final de la puerta de enlace de Spark o HDFS (Knox), seleccione el valor predeterminado `Attach to` es ese punto de conexión del clúster.
+El `Attach to` proporciona el contexto para el Kernel adjuntar. Cuando se conecta al final de la puerta de enlace (Knox) Spark o HDFS, seleccione el valor predeterminado `Attach to` es ese punto de conexión del clúster.
 
 ![image8](media/notebooks-guidance/image8.png)
 

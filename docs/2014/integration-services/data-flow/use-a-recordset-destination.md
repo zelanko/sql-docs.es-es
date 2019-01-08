@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
@@ -13,12 +12,12 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4d3afbb967238cfef049b491f6ab871f830708b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c63477a53de07777806aa8efb1fda78ef44264
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102465"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791107"
 ---
 # <a name="use-a-recordset-destination"></a>Usar un destino de conjunto de registros
   El destino de conjunto de registros no guarda los datos en un origen de datos externo. En su lugar, guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo de datos `Object`. Una vez que el destino de conjunto de registros guarda los datos, normalmente se utiliza un contenedor de bucles Foreach con el enumerador de ADO para Foreach para procesar una fila del conjunto de registros cada vez. El enumerador de ADO para Foreach guarda el valor de cada columna de la fila actual en una variable de paquete independiente. A continuación, las tareas que se configuran en el contenedor de bucles Foreach leen esos valores de las variables y realizan alguna acción con ellos.  
@@ -38,7 +37,7 @@ ms.locfileid: "48102465"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cree o abra un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Cree una variable que contendrá el conjunto de registros guardado en la memoria por parte del destino de conjunto de registros y establezca el tipo de variable `Object`.  
+2.  Cree una variable que contendrá el conjunto de registros guardados en la memoria por el destino de conjunto de registros y establezca el tipo de la variable en `Object`.  
   
 3.  Cree variables adicionales de los tipos adecuados para que contengan los valores de cada columna del conjunto de registros que desea utilizar.  
   
@@ -69,21 +68,21 @@ ms.locfileid: "48102465"
   
 3.  En la ventana **Variables** , cree las variables que contendrán el conjunto de registros y los valores de columna de la fila actual:  
   
-    1.  Cree una variable denominada `BonusRecordset`y establezca su tipo en `Object`.  
+    1.  Cree una variable con nombre `BonusRecordset` y establezca su tipo en `Object`.  
   
-         El `BonusRecordset` variable contiene el conjunto de registros.  
+         La variable `BonusRecordset` contiene el conjunto de registros.  
   
-    2.  Cree una variable denominada `EmailAddress`y establezca su tipo en `String`.  
+    2.  Cree una variable con nombre `EmailAddress` y establezca su tipo en `String`.  
   
-         El `EmailAddress` variable contiene la dirección de correo electrónico del vendedor.  
+         La variable `EmailAddress` contiene la dirección de correo electrónico del vendedor.  
   
-    3.  Cree una variable denominada `FirstName`y establezca su tipo en `String`.  
+    3.  Cree una variable con nombre `FirstName` y establezca su tipo en `String`.  
   
-         El `FirstName` variable contiene el nombre del vendedor.  
+         La variable `FirstName` contiene el nombre del vendedor.  
   
-    4.  Cree una variable denominada `Bonus`y establezca su tipo en `Double`.  
+    4.  Cree una variable con nombre `Bonus` y establezca su tipo en `Double`.  
   
-         El `Bonus` variable contiene el importe de la bonificación del vendedor.  
+         La variable `Bonus` contiene el importe de la bonificación del vendedor.  
   
 #### <a name="to-configure-the-connection-managers"></a>Para configurar los administradores de conexión  
   

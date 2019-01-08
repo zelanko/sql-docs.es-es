@@ -11,12 +11,12 @@ ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7ddb7f9ffd0aa44db250df00df78b9f20d307e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61965f9d07ebef7d3f30623df318125e67587890
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082291"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349392"
 ---
 # <a name="troubleshoot-report-builder"></a>Solucionar problemas del Generador de informes
   El Generador de informes es una herramienta de creación de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que le permite generar informes desde muchos tipos diferentes de orígenes de datos y publicarlos en un servidor de informes o en un sitio de SharePoint. Los informes que cree pueden verse en el generador de informes en un explorador Web, o como parte de un [!INCLUDE[msCoName](../includes/msconame-md.md)] aplicación de Windows o el sitio de SharePoint.  
@@ -30,12 +30,12 @@ ms.locfileid: "48082291"
   
  [Solucionar problemas de elementos de informe &#40;generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Solucionar problemas de gráficos &#40;generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Solucionar problemas de gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
 ## <a name="administrators"></a>Administradores de  
  [Instalar, desinstalar y asistencia del Generador de informes](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
- Además, vea los temas siguientes en el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Además, vea los temas siguientes en el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Planear la compatibilidad de informe de mapa](../../2014/reporting-services/plan-for-map-report-support.md)  
   
@@ -46,9 +46,9 @@ ms.locfileid: "48082291"
   
  Por ejemplo, participe en grupos de discusión para conversar con un grupo en línea de usuarios del Generador de informes con experiencia, incluidos los profesionales más valorados (MVP) de Reporting Services, que gustosamente emplean parte de su tiempo en responder a las preguntas y proporcionar soluciones, sugerencias y consejos.  
   
- Lea lo que cuentan los miembros del equipo de Reporting Services en el [blog del equipo de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=118788).
+ Lea lo que cuentan los miembros del equipo de Reporting Services en el [blog del equipo de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=118788).
   
- Si aún no ha encontrado una respuesta, [enviar comentarios](http://go.microsoft.com/fwlink/?LinkId=118791).  
+ Si aún no ha encontrado una respuesta, [enviar comentarios](https://go.microsoft.com/fwlink/?LinkId=118791).  
   
 ## <a name="see-also"></a>Vea también  
  [Instalar, desinstalar y asistencia del Generador de informes](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  

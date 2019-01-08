@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c3fa39cde45e568ad713a3238c98e96d40f8495
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd5bc058acf58a62c07fd5bdc65a33a43a6a7d6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155045"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749797"
 ---
 # <a name="look-up-infoobject"></a>Buscar InfoObject
   Use el cuadro de diálogo **Buscar InfoObject** para buscar un InfoObject que se haya definido en el sistema de SAP Netweaver BW. Cuando aparezca la lista de InfoObjects disponibles, seleccione el InfoObject que desee y el destino de SAP BW rellenará las opciones asociadas a los valores necesarios.  
@@ -59,7 +58,7 @@ ms.locfileid: "48155045"
  **Características de tiempo**  
  Permite buscar InfoObjects que representan características de tiempo.  
   
- **Nombre**  
+ **Name**  
  Permite escribir el nombre del InfoObject que desea buscar o un nombre parcial con el carácter comodín de asterisco (*). O bien, use el carácter comodín de asterisco por sí solo para incluir todos los InfoObjects.  
   
  **Descripción**  

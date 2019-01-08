@@ -10,12 +10,12 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45909dae2443b594b12de98a2403178bdd7ce1ca
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2f1da635e524b746bb96d0d19876285c869679e2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032712"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395518"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   La limpieza de datos es el proceso de analizar la calidad de los datos en un origen de datos; para ello, se aprueban o rechazan manualmente las sugerencias del sistema y, de esta manera, se hacen modificaciones en los datos. La limpieza de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) incluye un proceso asistido por PC que analiza cómo se ajustan los datos al conocimiento de una base de conocimiento y un proceso interactivo que permite al administrador de datos revisar y modificar los resultados obtenidos en los procesos asistidos por PC con el fin de garantizar que la limpieza de datos resulta exactamente como se deseaba efectuar.  
@@ -63,13 +63,13 @@ ms.locfileid: "51032712"
 ##  <a name="Interactive"></a> Limpieza interactiva  
  En función del proceso de limpieza asistido por PC, DQS proporciona al administrador de datos la información que necesita para tomar una decisión sobre si debe cambiar los datos. DQS clasifica los datos en las cinco pestañas siguientes:  
   
--   **Sugerido**: valores para los que DQS detectó sugerencias con un nivel de confianza mayor que el *umbral de sugerencia automática* , pero inferior al *umbral de corrección automática* . Debe revisar estos valores y aprobarlos o rechazarlos según corresponda.  
+-   **Sugiere**: Los valores para los que DQS detectó sugerencias con un nivel de confianza mayor que el *umbral de sugerencia automática* , pero inferior el *umbral de corrección automática* valor. Debe revisar estos valores y aprobarlos o rechazarlos según corresponda.  
   
--   **Nuevo:**: valores válidos para los que DQS no tiene suficiente información (sugerencia), por lo que no se pueden asignar a ninguna otra pestaña. Además, esta pestaña también contiene valores con un nivel de confianza inferior al *umbral de sugerencia automática* , pero lo suficientemente altos para que se identifiquen como válidos.  
+-   **Nuevo**: valores válidos para los que DQS no tiene suficiente información (sugerencia), por lo que no se pueden asignar a ninguna otra pestaña. Además, esta pestaña también contiene valores con un nivel de confianza inferior al *umbral de sugerencia automática* , pero lo suficientemente altos para que se identifiquen como válidos.  
   
 -   **No válido**: valores que se marcaron como no válidos en el dominio de la base de conocimiento o valores que no cumplieron una regla de dominios o datos de referencia. Esta pestaña también contendrá los valores que rechaza el usuario en cualquiera de las otras cuatro pestañas durante el proceso de limpieza interactivo.  
   
--   **Corregido**: valores corregidos por DQS durante el proceso de limpieza automatizada para los que DQS detectó una corrección para el valor con un nivel de confianza por encima del *umbral de corrección automática* . Esta pestaña también contendrá los valores para los que el usuario especificó un valor correcto en la columna de **Corregir a** durante la limpieza interactiva y que fueron posteriormente aprobados haciendo clic en el botón de opción de la columna **Aprobar** en cualquiera de las otras cuatro pestañas.  
+-   **Se ha corregido**: Valores corregidos por DQS durante el proceso de limpieza automatizada que DQS detectó una corrección para el valor con el nivel de confianza por encima del *umbral de corrección automática* valor. Esta pestaña también contendrá los valores para los que el usuario especificó un valor correcto en la columna de **Corregir a** durante la limpieza interactiva y que fueron posteriormente aprobados haciendo clic en el botón de opción de la columna **Aprobar** en cualquiera de las otras cuatro pestañas.  
   
 -   **Correcto**: valores que se estiman correctos. Por ejemplo, si el valor coincide con un valor de dominio. Si procede, puede invalidar la limpieza de DQS; para ello, rechace los valores en esta pestaña o especifique una palabra alternativa en la columna **Corregir a** y haga clic en el botón de opción de la columna **Aceptar** . Esta pestaña también contendrá los valores que aprobó el usuario durante la limpieza interactiva haciendo clic en el botón de opción de la columna **Aprobar** en la pestaña **Nuevo** o **No válido** .  
   
@@ -87,7 +87,7 @@ ms.locfileid: "51032712"
  ![Limpieza de datos en Data Quality Client](../../2014/data-quality-services/media/dqs-cleansingindqsclient.gif "Limpieza de datos en Data Quality Client")  
   
 ##  <a name="Leading"></a> Corregir el valor inicial  
- La corrección del valor inicial se aplica a los valores de dominio que tienen sinónimos y donde el usuario quiere usar uno de los valores de sinónimos como valor inicial en lugar de otros con el fin de proporcionar una representación coherente del valor. Por ejemplo, “Nueva York”, “NYC” y “gran manzana” son sinónimos, y el usuario desea utilizar “Nueva York” como valor inicial en lugar de “NYC” y “gran manzana”. DQS admite la corrección de valores principales durante el proceso de limpieza al objeto de ayudarle a normalizar los datos. La corrección del valor inicial se realiza únicamente si el dominio se habilitó para la misma cuando se creó. De forma predeterminada, todos los dominios se habilitan para la corrección del valor inicial salvo que se haya desactivado la casilla **Usar valores iniciales** mientras se creaba un dominio. Para obtener más información sobre esta casilla, vea [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+ La corrección del valor inicial se aplica a los valores de dominio que tienen sinónimos y donde el usuario quiere usar uno de los valores de sinónimos como valor inicial en lugar de otros con el fin de proporcionar una representación coherente del valor. Por ejemplo, "Nueva York", "NYC" y "Gran manzana" son sinónimos, y el usuario quiere usar "Nueva York" como valor inicial en lugar de "NYC" y "Gran manzana". DQS admite la corrección de valores principales durante el proceso de limpieza al objeto de ayudarle a normalizar los datos. La corrección del valor inicial se realiza únicamente si el dominio se habilitó para la misma cuando se creó. De forma predeterminada, todos los dominios se habilitan para la corrección del valor inicial salvo que se haya desactivado la casilla **Usar valores iniciales** mientras se creaba un dominio. Para obtener más información sobre esta casilla, vea [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
 ##  <a name="Standardize"></a> Estandarizar datos limpios  
  Puede elegir si desea exportar los datos limpios en el formato normalizado según el formato de salida que se haya definido para los dominios. Al crear un dominio, puede seleccionar el formato que se aplicará cuando los valores de datos del dominio se generen. Para obtener más información acerca de cómo especificar formatos de salida para un dominio, vea la lista **Dar formato a la salida para** en [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  

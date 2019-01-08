@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -22,12 +20,12 @@ ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d92e86b5e548d5a828a9d20c00c69dd600f1c632
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 639071b9526c70477fd081bd94d61380a79beb2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127505"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797017"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Controlar problemas de simultaneidad de base de datos en diagramas de actualización (SQLXML 4.0)
   Al igual que otros mecanismos de actualización de base de datos, los diagramas de actualización deben lidiar con actualizaciones simultáneas de datos en un entorno multiusuario. Los diagramas de actualización usan el control de simultaneidad optimista, que usa la comparación de datos de campos de selección como instantáneas para asegurarse de que otra aplicación de usuario no haya modificado los datos que van a actualizarse desde que se leyeron de la base de datos. Actualización incluye estos valores de instantánea en el  **\<antes >** bloque de la actualización. Antes de actualizar la base de datos, updategram comprueba los valores que se especifican en el  **\<antes >** bloque contra los valores actualmente en la base de datos para asegurarse de que la actualización es válida.  

@@ -1,20 +1,22 @@
 ---
-title: ¿Qué es un grupo de proceso de clústeres de macrodatos SQL? | Microsoft Docs
-description: En este artículo se describe el grupo de proceso en un clúster de macrodatos de SQL Server 2019.
+title: ¿Qué son los grupos de proceso?
+titleSuffix: SQL Server 2019 big data clusters
+description: En este artículo se describe el grupo de proceso en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6aa73c5881a4b6a17e190c26c15f97b3d8c79c14
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: f1e725580c98585ee86b401c0e8c12ea143cdab1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221801"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207724"
 ---
-# <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>¿Qué es un grupo de proceso de clústeres de macrodatos SQL?
+# <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>¿Cuáles son los grupos de proceso en un clúster de macrodatos de 2019 de SQL Server?
 
 En este artículo se describe el rol de *grupos de proceso de SQL Server* en un clúster de macrodatos de vista previa de 2019 de SQL Server. Grupos de proceso proporcionan recursos de cálculo de escalabilidad horizontal para un clúster de macrodatos. Las secciones siguientes describen la arquitectura y la funcionalidad de un grupo de proceso.
 
@@ -23,7 +25,7 @@ En este artículo se describe el rol de *grupos de proceso de SQL Server* en un 
 Un grupo de proceso está formado por uno o más pods que se ejecutan en Kubernetes de proceso. La creación automatizada y la administración de estos pods se coordinan mediante el [instancia principal de SQL Server](concept-master-instance.md). Cada pod contiene un conjunto de servicios de bases y una instancia del motor de base de datos de SQL Server.
 
 > [!NOTE]
-> CTP 2.1 solo admite un grupo de proceso único por clúster.
+> CTP 2.2 solo admite un grupo de proceso único por clúster.
 
 ## <a name="scale-out-groups"></a>Grupos de escalado horizontal
 

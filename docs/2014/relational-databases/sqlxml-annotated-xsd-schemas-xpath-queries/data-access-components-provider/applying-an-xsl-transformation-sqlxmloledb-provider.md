@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, applying XSL transformations
@@ -18,12 +16,12 @@ ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11f7ce945dcf4b89c6b76ba14e0383bc38ca3c39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74f8834ef29e4b5a1cf2b3988585f771cb9d1f1f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224045"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800022"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Aplicar una transformación XSL (proveedor SQLXMLOLEDB)
   En esta aplicación ADO de ejemplo, se ejecuta una consulta SQL y se aplica una transformación XSL al resultado. Establecer el clientsidexml, propiedad en True, exige el procesamiento del conjunto de filas en el lado cliente. El lenguaje de comandos se establece en {5d531cb2-e6ed-11d2-b252-00c04f681b71}, porque la consulta SQL se especifica en una plantilla y se debe especificar este lenguaje al ejecutar una plantilla. La propiedad xsl especifica el archivo XSL debe usar para aplicar la transformación. El valor de propiedad de ruta de acceso Base se usa para buscar el archivo XSL. Si especifica una ruta de acceso en el valor de la propiedad xsl, la ruta de acceso es relativa a la ruta de acceso que se especifica en la propiedad de ruta de acceso Base.  
@@ -40,7 +38,7 @@ ms.locfileid: "48224045"
   
  La propiedad xsl se especifica en la aplicación. por lo tanto, se aplica la transformación XSL al documento XML que se genera en el cliente y el resultado es una tabla de dos columnas.  
   
- Para ejecutar el comando de plantilla, se debe especificar el lenguaje de plantilla XML {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
+ Para ejecutar el comando de la plantilla, se debe especificar el lenguaje de plantilla XML: {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   
 > [!NOTE]  
 >  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para el proveedor de datos, que exige la instalación de software cliente de red adicional. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  

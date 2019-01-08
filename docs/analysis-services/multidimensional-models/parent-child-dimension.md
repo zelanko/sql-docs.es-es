@@ -1,5 +1,5 @@
 ---
-title: Dimensiones de elementos primarios y secundarios | Documentos de Microsoft
+title: Las dimensiones de elementos primarios y secundarios | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a9f9cda883822d093db624a4580a94093120ba41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6f9990103da1de5107ceaf3432f4da2a9a4486c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021432"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510212"
 ---
 # <a name="parent-child-dimension"></a>Dimensión de elementos primarios y secundarios
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34021432"
   
  Sin embargo, las dimensiones de elementos primarios y secundarios crean jerarquías de elementos primarios y secundarios al examinar los datos que contiene la tabla principal de dimensiones y, a continuación, evaluar las relaciones de elementos primarios y secundarios entre los registros de la tabla. Para obtener más información sobre las jerarquías de elementos primarios y secundarios, vea [Jerarquías de usuario](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md).  
   
- Las jerarquías de elementos primarios y secundarios no derivan los nombres de los niveles de los atributos utilizados para crear la jerarquía. En cambio, estas dimensiones crean automáticamente nombres de nivel mediante una plantilla de asignación de nombres; es decir, una expresión de cadena que se puede especificar en el nivel del atributo primario que controla cómo genera el atributo la jerarquía de atributos. Para obtener más información sobre cómo establecer la plantilla de asignación de nombres para un atributo primario, vea [Atributos y jerarquías de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+ Las jerarquías de elementos primarios y secundarios no derivan los nombres de los niveles de los atributos utilizados para crear la jerarquía. En su lugar, estas dimensiones crean nombres de nivel automáticamente mediante una expresión de cadena de una plantilla de nomenclatura puede especificar en el nivel del atributo primario que controla cómo genera el atributo de la jerarquía de atributo. Para obtener más información sobre cómo establecer la plantilla de asignación de nombres para un atributo primario, vea [Atributos y jerarquías de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
 ## <a name="data-members"></a>Miembros de datos  
  Normalmente, los miembros hoja de una dimensión contienen datos derivados directamente de los orígenes de datos subyacentes; mientras que los miembros no hoja contienen datos derivados de agregaciones realizadas en miembros secundarios.  
@@ -42,7 +42,7 @@ ms.locfileid: "34021432"
  No obstante, las jerarquías de elementos primarios y secundarios podrían tener algunos miembros no hoja cuyos datos se deriven de orígenes de datos subyacentes, además de los datos agregados de miembros secundarios. Para estos miembros no hoja de una jerarquía de elementos primarios y secundarios, se pueden crear miembros secundarios especiales generados por el sistema que contienen los datos de la tabla de hechos subyacente. Denominados *miembros de datos*, estos miembros secundarios especiales contienen un valor asociado directamente a un miembro no hoja independiente del valor de resumen calculado a partir de los descendientes del miembro no hoja. Para obtener más información sobre los miembros de datos, vea [Atributos en las jerarquías de elementos primarios y secundarios](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Atributos en jerarquías de elementos primarios y secundarios](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
+ [Atributos en las jerarquías de elementos primarios y secundarios](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
  [Propiedades de la dimensión de base de datos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Programación de minería de datos | Documentos de Microsoft
+title: Programación de minería de datos de Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1be416528bc923e757afb9a8f3e556790941bf11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 27a964581782d5868e4089a1063dbbce0c689525
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019962"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072762"
 ---
 # <a name="data-mining-programming"></a>Programación de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,13 +23,13 @@ ms.locfileid: "34019962"
   
 -   **XMLA**  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite XML for Analysis (XMLA) como un protocolo para la comunicación con aplicaciones cliente. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite comandos adicionales que amplían la especificación XML for Analysis.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite XML for Analysis (XMLA) como protocolo de comunicación con aplicaciones cliente. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite comandos adicionales que amplían la especificación XML for Analysis.  
   
      Dado que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza XMLA para la compatibilidad con la definición, la manipulación y el control de los datos, puede crear estructuras y modelos de minería de datos mediante las herramientas visuales proporcionadas por [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y extender, a continuación, los objetos de minería de datos que haya creado mediante scripts DMX (Extensiones de minería de datos) y ASSL (Analysis Services Scripting Language).  
   
      Puede crear y modificar objetos de minería de datos íntegramente en scripts XMLA, además de ejecutar mediante programación consultas de predicción en los modelos desde sus propias aplicaciones.  
   
--   **Analysis Management Objects (AMO)**  
+-   **Objetos de administración de análisis (AMO)**  
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] también proporciona un marco completo que permite a los demás proveedores de minería de datos integrar los objetos de minería de datos en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -54,17 +54,17 @@ ms.locfileid: "34019962"
  Describe las adiciones realizadas en la especificación para admitir la minería de datos y los datos multidimensionales: nuevas columnas y nuevos conjuntos de filas de esquema y el lenguaje DMX (Extensiones de minería de datos) para crear y administrar las estructuras de minería de datos.  
   
 ## <a name="related-reference"></a>Referencia relacionada  
- [Desarrollar con ADOMD.NET](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
- Presenta la programación de objetos de servidor y cliente ADOMD.NET.  
+ [Desarrollo con ADOMD.NET](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ Presenta el cliente ADOMD.NET y objetos de programación de servidor.  
   
- [Desarrollar con objetos de administración de análisis & #40; AMO & #41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  Presenta la biblioteca de programación de AMO.  
   
- [Desarrollar con Analysis Services Scripting Language & #40; ASSL & #41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Desarrollar aplicaciones con Analysis Services Scripting Language &#40;ASSL&#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  Presenta XML for Analysis (XMLA) y sus extensiones.  
   
 ## <a name="see-also"></a>Vea también  
  [Guía del desarrollador (Analysis Services)](../analysis-services/analysis-services-developer-documentation.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

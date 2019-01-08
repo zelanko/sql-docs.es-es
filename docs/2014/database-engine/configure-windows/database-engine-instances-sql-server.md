@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157955"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640746"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instancias del motor de base de datos (SQL Server)
-  Una instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una copia de la `sqlservr.exe` ejecutable que se ejecuta como un servicio de sistema operativo. Cada instancia administra varias bases de datos del sistema y una o varias bases de datos de usuario. Cada equipo puede ejecutar varias instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las aplicaciones se conectan a la instancia para realizar el trabajo en una base de datos administrada por la instancia.  
+  Una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una copia del ejecutable de `sqlservr.exe` que se ejecuta como un servicio de sistema operativo. Cada instancia administra varias bases de datos del sistema y una o varias bases de datos de usuario. Cada equipo puede ejecutar varias instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las aplicaciones se conectan a la instancia para realizar el trabajo en una base de datos administrada por la instancia.  
   
 ## <a name="instances"></a>Instancias  
  Una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] funciona como un servicio que controla todas las solicitudes de aplicación para trabajar con datos de cualquiera de las bases de datos administradas por dicha instancia. Es el destino de las solicitudes de conexión (inicios de sesión) de aplicaciones. La conexión se ejecuta en una conexión de red si la aplicación y la instancia están en equipos independientes. Si la aplicación y la instancia están en el mismo equipo, la conexión de SQL Server se puede ejecutar como una conexión de red o una conexión en memoria. Cuando una conexión se ha completado, una aplicación envía instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] a través de la conexión hasta la instancia. La instancia resuelve las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en operaciones con los datos y objetos de las bases de datos y, si se han concedido los permisos necesarios a las credenciales de inicio de sesión, realiza el trabajo. Los datos recuperados se devuelven a la aplicación, junto con cualesquiera mensajes como errores.  
@@ -46,7 +45,7 @@ ms.locfileid: "48157955"
 |Describe cómo usar el generador de perfiles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para capturar el seguimiento de solicitudes de aplicación que entran en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los seguimientos se pueden reproducir posteriormente para actividades como pruebas de rendimiento o diagnóstico de problemas.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |Describe la captura de datos modificados (CDC) y las características de seguimiento de cambios y cómo se usan estas características para realizar el seguimiento de cambios en los datos de una base de datos.|[Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |Describe cómo usar el visor del archivo de registro para buscar y ver los errores y mensajes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en diversos registros; por ejemplo el historial de trabajos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los registros de SQL Server y los registros de eventos de Windows.|[Visor de archivos de registro](../../relational-databases/logs/log-file-viewer.md)|  
-|Describe cómo usar el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para analizar las bases de datos y hacer recomendaciones para tratar problemas potenciales de rendimiento.|[Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Describe cómo usar el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para analizar las bases de datos y hacer recomendaciones para tratar problemas potenciales de rendimiento.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Describe cómo los administradores de base de datos de producción pueden establecer una conexión de diagnóstico a instancias cuando las conexiones estándar no se están aceptando.|[Conexión de diagnóstico para administradores de bases de datos](diagnostic-connection-for-database-administrators.md)|  
 |Describe cómo usar la característica desusada de servidores remotos para habilitar el acceso desde una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a otra. El mecanismo preferido para esta funcionalidad es un servidor vinculado.|[Servidores remotos](remote-servers.md)|  
 |Describe las capacidades de Service Broker para las aplicaciones de mensajería y de puesta en cola, y proporciona punteros a la documentación de Service Broker.|[Service Broker](sql-server-service-broker.md)|  

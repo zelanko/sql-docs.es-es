@@ -12,12 +12,12 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0ad2e58c7c261d191adf7d48b157e42f13d8d37
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: f91f65dbe060eb11c3eeb049d069c665949dd350
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351034"
 ---
 # <a name="unused-assembly-cleanup"></a>Limpieza del ensamblado sin usar
   El ejemplo `AssemblyCleanup` contiene un procedimiento almacenado de .NET que limpia los ensamblados no usados en la base de datos actual mediante consultas en los catálogos de metadatos. Su único parámetro, `visible_assemblies`, se utiliza para especificar si se deben quitar los ensamblados visibles no usados o no. Un valor de 'false' significa de forma predeterminada que solo se quitarán los ensamblados no visibles no usados; en los demás casos se quitarán todos los ensamblados no usados. El conjunto de ensamblados no usados está formado por aquellos que no tienen ningún punto de entrada definido (rutinas, tipos y agregados) y que no tienen ningún ensamblado utilizado que haga referencia a ellos directa o indirectamente.  
@@ -25,9 +25,9 @@ ms.locfileid: "50743170"
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   .NET Framework SDK 2.0 o posterior, o Microsoft Visual Studio 2005 o posterior. Puede obtener .NET Framework SDK de forma gratuita.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "50743170"
   
     #### <a name="enabling-clr-integration"></a>Habilitar la integración con CLR  
   
-    -   Ejecute los siguientes comandos [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+    -   Ejecute los siguientes comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
      `sp_configure 'clr enabled', 1`  
   

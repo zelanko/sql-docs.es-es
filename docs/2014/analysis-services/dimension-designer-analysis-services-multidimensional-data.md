@@ -13,12 +13,12 @@ ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7686f2db3e033fa6d38e0f7a7f9616d93c11a1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048785"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528941"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Diseñador de dimensiones (Analysis Services - Datos multidimensionales)
   Use el Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para examinar los datos que contiene la dimensión, y para modificar las distintas propiedades de una dimensión existente: atributos, jerarquías, niveles, relaciones de atributo y traducciones.  
@@ -29,7 +29,7 @@ ms.locfileid: "48048785"
   
     -   Haga clic con el botón derecho en una dimensión y, después, haga clic en **Abrir** o en **Diseñador de vistas**.  
   
-         O bien  
+         -o bien-  
   
     -   Haga doble clic en una dimensión.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48048785"
  [Traducciones](translations-dimension-designer-analysis-services-multidimensional-data.md)  
  Use esta página para ver y modificar las traducciones asociadas con la dimensión y sus atributos, jerarquías y niveles.  
   
- [Explorador](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Browser](browser-dimension-designer-analysis-services-multidimensional-data.md)  
  Use esta página para examinar los miembros de una jerarquía contenida en la dimensión.  
   
 ## <a name="see-also"></a>Vea también  

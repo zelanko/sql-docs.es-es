@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 25fb50dbd858007a29d2a10a94053884620ed68b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49f5e3fd6250d3a9bb20ff68927bc66fa1e5d426
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750593"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211544"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Implementar un clúster de Pacemaker para SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tutorial documentan las tareas necesarias para implementar un clúster de Linux Pacemaker para un [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] siempre en el grupo de disponibilidad (AG) o instancia de clúster de conmutación por error (FCI). A diferencia de Windows Server estrechamente acoplado /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pila, la creación del clúster de Pacemaker, así como configuración de grupo (AG) de disponibilidad en Linux puede hacerse antes o después de la instalación de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. La integración y la configuración de recursos para la parte de Pacemaker de una implementación de grupo de disponibilidad o FCI se realiza una vez configurado el clúster.
+Este tutorial documentan las tareas necesarias para implementar un clúster de Linux Pacemaker para un [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] siempre en el grupo de disponibilidad (AG) o instancia de clúster de conmutación por error (FCI). A diferencia de Windows Server estrechamente acoplado / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pila, la creación del clúster de Pacemaker, así como configuración de grupo (AG) de disponibilidad en Linux puede hacerse antes o después de la instalación de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. La integración y la configuración de recursos para la parte de Pacemaker de una implementación de grupo de disponibilidad o FCI se realiza una vez configurado el clúster.
 > [!IMPORTANT]
 > Un grupo de disponibilidad con un tipo de clúster ninguno *no* requiere un clúster de Pacemaker, ni puede administrarse mediante Pacemaker. 
 
@@ -126,7 +126,7 @@ Esta sección describe cómo crear y configurar el clúster para cada distribuci
 1. Autorizar a los nodos
    
    ```bash
-   sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster
+   sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster
    ```
    
    donde *NodeX* es el nombre del nodo.

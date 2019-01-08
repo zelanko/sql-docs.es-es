@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
@@ -12,12 +12,12 @@ ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f9c1845d756662addc3bab1c17c6189c1a1fc2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098435"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806517"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Copiar los resultados de una consulta (Visual Database Tools)
   El conjunto de resultados se puede copiar como texto separado por tabulaciones desde el panel **Resultados** . Puede copiar el conjunto de resultados completo, o las filas o celdas contiguas o no contiguas que desee.  

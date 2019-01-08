@@ -10,12 +10,12 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: b139ff48d818ad586c029103f8d86e6ff2721af0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032124"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414802"
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) en administración del conocimiento, proyectos de calidad de datos y administración de calidad de datos.  
@@ -25,7 +25,7 @@ ms.locfileid: "51032124"
   
  **Detección de conocimiento**  
   
- La detección de conocimiento es un proceso asistido por equipo que analiza las muestras de los datos de su organización para compilar el conocimiento acerca de los datos. Una vez que se tienen los resultados del análisis, se puede validar y mejorar el conocimiento; tras ello, se aplica para llevar a cabo la limpieza, coincidencia y generación de perfiles de los datos. Para obtener más información, consulte [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ La detección de conocimiento es un proceso asistido por ordenador que analiza muestras de los datos de la organización para compilar el conocimiento sobre los datos. Una vez que se tienen los resultados del análisis, se puede validar y mejorar el conocimiento; tras ello, se aplica para llevar a cabo la limpieza, coincidencia y generación de perfiles de los datos. Para obtener más información, consulte [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Administración de dominios**  
   
@@ -48,9 +48,9 @@ ms.locfileid: "51032124"
   
  La limpieza de datos en DQS se realiza en función del conocimiento en una base de conocimiento de DQS. La limpieza de datos de DQS es un proceso de dos pasos:  
   
--   **Limpieza asistida por PC**: DQS utiliza el conocimiento de la base de conocimiento seleccionada para el proyecto de limpieza con el fin de proponer correcciones o sugerencias a los valores de un origen de datos.  
+-   **Limpieza asistida por ordenador**: DQS utiliza el conocimiento de la base de conocimiento seleccionada para el proyecto de limpieza para proponer correcciones o sugerencias a los valores de un origen de datos.  
   
--   **Limpieza interactiva**: el administrador de datos puede realizar el proceso de limpieza interactiva para cambiar o aumentar las correcciones de datos que ha propuesto el proceso de limpieza de datos asistido por PC. El administrador de datos lleva a cabo esta operación mediante niveles de confianza y estadísticas que se han identificado mediante el proceso de limpieza de datos o bien especificando sus propios cambios en el proyecto.  
+-   **Limpieza interactiva**: El Administrador de datos puede realizar el proceso de limpieza interactiva para cambiar o aumentar las correcciones de datos que ha propuesto el proceso de limpieza de datos asistido por ordenador. El administrador de datos lleva a cabo esta operación mediante niveles de confianza y estadísticas que se han identificado mediante el proceso de limpieza de datos o bien especificando sus propios cambios en el proyecto.  
   
  Después de limpiar los datos, el administrador de datos puede exportar los datos procesados a una base de datos SQL Server, a un archivo .csv o un archivo de Excel. Para obtener más información, consulte [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
   

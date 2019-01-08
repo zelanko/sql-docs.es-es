@@ -20,16 +20,16 @@ ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d02e60d22f2e3489c7cd7943f7f0ed2fa26fd89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf81d013ccf449288791b1875752d5b6067770a1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848883"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207604"
 ---
 # <a name="sqlremovetranslator-function"></a>Función SQLRemoveTranslator
 **Conformidad**  
- Versión introdujo: ODBC 3.0  
+ Versión de introducción: ODBC 3.0  
   
  **Resumen**  
  **SQLRemoveTranslator** quita información acerca de un traductor de desde la sección de Odbcinst.ini de la información del sistema y disminuye el contador de uso de componente del traductor por 1.  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergepullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adbb39c32f09898e6d521b0ecff3c06c1a6494f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e037842d6be6ae08bc35ac9827ebd6931503f89e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639983"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802027"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = anónima|  
 |**priority**|**float(8)**|Prioridad de la suscripción. El valor debe ser menor que **100,00**.|  
 |**sync_type**|**tinyint**|Tipo de sincronización de suscripción:<br /><br /> **1** = automática<br /><br /> **2** = no se utiliza la instantánea.|  
-|**Descripción**|**nvarchar(255)**|Breve descripción de la suscripción de extracción.|  
+|**description**|**nvarchar(255)**|Breve descripción de la suscripción de extracción.|  
 |**merge_jobid**|**binary (16)**|Id. de trabajo del Agente de mezcla.|  
 |**enabled_for_syncmgr**|**int**|Indica si la suscripción se puede sincronizar mediante el Administrador de sincronización de [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |**last_updated**|**nvarchar(26)**|Hora a la que el Agente de mezcla sincronizó correctamente la suscripción por última vez.|  

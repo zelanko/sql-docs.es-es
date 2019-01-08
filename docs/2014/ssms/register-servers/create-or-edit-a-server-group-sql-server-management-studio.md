@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editgroup.f1
@@ -17,12 +17,12 @@ ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af727a26191e4691cf401c9a990dd41acc8ec188
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32c91f7b3186543a5a5a053c1aa410648caf0fb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206705"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812337"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Crear o editar un grupo de servidores (SQL Server Management Studio)
   En este tema se describe cómo organizar los servidores de Servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] creando grupos de servidores y poniendo los servidores en los grupos de servidores. Puede crear grupos de servidores en cualquier momento en Servidores registrados o cuando registra los servidores.  

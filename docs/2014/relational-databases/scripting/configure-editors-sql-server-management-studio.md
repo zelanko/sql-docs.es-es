@@ -11,26 +11,26 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd9aaf7f069cd9454a9f735dd08f2956aaf582c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263cdf9ddd1c140a4cb2d3142c8b3db29e558791
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159325"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543892"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurar editores (SQL Server Management Studio)
   El funcionamiento de los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede personalizarse configurando las opciones de cada editor.  
   
 ## <a name="settng-editor-options"></a>Configurar las opciones del editor  
- La mayoría de las opciones del editor se establecen a través del menú **Herramientas** , donde se selecciona **Opciones…** para mostrar un cuadro de diálogo **Opciones** . En el cuadro de diálogo **Opciones** , abra el nodo de **Editor de texto** en el panel izquierdo para configurar las opciones de edición de texto y código. Los nodos situados bajo Editor de texto se corresponden con editores concretos:  
+ La mayoría de las opciones del editor se establecen a través del menú **Herramientas**, donde se selecciona **Opciones…** para mostrar un cuadro de diálogo **Opciones**. En el cuadro de diálogo **Opciones** , abra el nodo de **Editor de texto** en el panel izquierdo para configurar las opciones de edición de texto y código. Los nodos situados bajo Editor de texto se corresponden con editores concretos:  
   
-1.  **Todos los lenguajes** : las opciones que se establecen a través de este nodo se aplican a todos los editores de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Puede invalidar estos valores estableciendo opciones distintas para un editor concreto en los demás nodos.  
+1.  **Todos los lenguajes**: las opciones que se establecen a través de este nodo se aplican a todos los editores de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Puede invalidar estos valores estableciendo opciones distintas para un editor concreto en los demás nodos.  
   
-2.  **Texto sin formato** : las opciones que se establecen a través de este nodo se aplican a editores MDX, DMX y de texto.  
+2.  **Texto sin formato**: las opciones que se establecen a través de este nodo se aplican a editores MDX, DMX y de texto.  
   
-3.  **Transact-SQL:** las opciones que se establecen a través de este nodo se aplican al editor de consultas del motor de base de datos.  
+3.  **Transact-SQL**: las opciones que se establecen a través de este nodo se aplican al editor de consultas del motor de base de datos.  
   
-4.  **XML** : las opciones que se establecen a través de este nodo se aplican al editor de XML for Analysis.  
+4.  **XML**: las opciones que se establecen a través de este nodo se aplican al editor de XML for Analysis.  
   
  Abra los nodos **Ejecución de la consulta** o **Resultados de la consulta** para personalizar la ejecución de consultas y el modo en que se muestran los resultados.  
   

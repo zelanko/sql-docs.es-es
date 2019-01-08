@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Habilitar el widget de insight tabla ejemplo de uso de espacio en Azure Data Studio | Microsoft Docs'
+title: 'Tutorial: Habilitar el widget de insight tabla ejemplo de uso de espacio'
+titleSuffix: Azure Data Studio
 description: Este tutorial muestra cómo habilitar el widget de insight tabla ejemplo de uso de espacio en el panel de la base de datos de Azure Data Studio.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355996"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030359"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Habilitación de la tabla espacio en uso muestra insight widget mediante [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Habilitar la tabla espacio en uso muestra insight widget mediante [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Este tutorial muestra cómo habilitar un widget de información en el panel de la base de datos, que proporciona una vista de un vistazo sobre el uso de espacio para todas las tablas de una base de datos. Durante este tutorial, obtendrá información sobre cómo:
 
@@ -38,7 +39,7 @@ Este tutorial requiere SQL Server o Azure SQL Database *TutorialDB*. Para crear 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] tiene un widget de ejemplo integrados para supervisar el espacio usado por las tablas en una base de datos.
 
 1. Abra *configuración de usuario* presionando **Ctrl + Mayús + P** para abrir el *paleta de comandos*.
-2. Tipo *configuración* en el cuadro de búsqueda y seleccione **preferencias: abrir la configuración de usuario**.
+2. Tipo *configuración* en el cuadro de búsqueda y seleccione **preferencias: Abrir configuración de usuario**.
 2. Tipo *panel* en búsqueda de la configuración del cuadro de entrada y busque **dashboard.database.widgets**.
 
 3. Para personalizar el **dashboard.database.widgets** configuración que deba editar la **dashboard.database.widgets** entrada en el **configuración de usuario** sección (la columna en la lado derecho). Si no hay ningún **dashboard.database.widgets** en el **configuración de usuario** sección, mantenga el mouse sobre el **dashboard.database.widgets** texto en la columna de la configuración predeterminada y haga clic en el icono de lápiz que aparece a la izquierda del texto y haga clic en **copia a la configuración de**. Si indica que el elemento emergente **reemplazar en la configuración de**, no haga clic en él. Vaya a la **configuración de usuario** columna a la derecha y busque el **dashboard.database.widgets** sección y avance al paso siguiente.
@@ -82,7 +83,7 @@ El **dashboard.database.widgets** sección debe ser similar a la imagen siguient
 
 
 ## <a name="next-steps"></a>Pasos siguientes
-En este tutorial, ha aprendido cómo:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 > * Activar rápidamente un widget de información mediante una muestra del widget insight integrados.
 > * Ver los detalles de uso del espacio de tabla.

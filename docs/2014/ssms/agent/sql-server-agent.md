@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
@@ -13,12 +13,12 @@ ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e0f1e8f3e76ffbe84495fc7bae6229a1b590089
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211935"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783887"
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un servicio de Microsoft Wendows que ejecuta tareas admenistrativas programadas, denomenadas *trabajos* en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "48211935"
   
  Para obtener más información, vea [Crear y adjuntar programaciones a trabajos](create-and-attach-schedules-to-jobs.md).  
   
-### <a name="alerts"></a>Trabajos  
+### <a name="alerts"></a>Alertas  
  Una *alerta* es una respuesta automática a un evento específico. Por ejemplo, un evento puede ser el inicio de un trabajo o que los recursos del sistema alcancen un umbral específico. Debe definir las condiciones en las que se genera una alerta.  
   
  Una alerta puede responder a una de las condiciones siguientes:  

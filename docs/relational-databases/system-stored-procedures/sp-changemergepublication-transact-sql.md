@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072299"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788487"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**False**|Quita la información de publicaciones de Active Directory.|  
 |**replicate_ddl**|**1**|Las instrucciones de lenguaje de definición de datos (DDL) que se ejecutan en el publicador se replican.|  
 ||**0**|Las instrucciones de DDL no se replican.|  
-|**retención**||Se trata de un **int** que representa el número de *retention_period_unit* unidades para el que se va a guardar los cambios para la publicación indicada. Si la suscripción no está sincronizada en el período de retención y se han quitado, por medio de una operación de limpieza en el distribuidor, los cambios pendientes que podía haber recibido, la suscripción expira y es necesario reinicializarla. El período de retención máximo admitido es el número de días entre el 31 de diciembre de 9999 y la fecha actual.<br /><br /> Nota: El período de retención para las publicaciones de combinación tiene un período de gracia de 24 horas para dar cabida a los suscriptores en diferentes zonas horarias.|  
+|**retención**||Se trata de un **int** que representa el número de *retention_period_unit* unidades para el que se va a guardar los cambios para la publicación indicada. Si la suscripción no está sincronizada en el período de retención y se han quitado, por medio de una operación de limpieza en el distribuidor, los cambios pendientes que podía haber recibido, la suscripción expira y es necesario reinicializarla. El período de retención máximo admitido es el número de días entre el 31 de diciembre de 9999 y la fecha actual.<br /><br /> Nota: El período de retención para las publicaciones de combinación tiene un plazo de gracia de 24 horas para adaptarse a los suscriptores de las diferentes zonas horarias.|  
 |**retention_period_unit**|**day**|El período de retención se especifica en días.|  
 ||**week**|El período de retención se especifica en semanas.|  
 ||**month**|El período de retención se especifica en meses.|  
@@ -119,7 +118,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**inactivo**|La publicación está en estado inactivo.|  
 |**sync_mode**|**nativo** o<br /><br /> **bcp nativo**|La salida del programa de copia masiva de todas las tablas en modo nativo se utiliza para la instantánea inicial.|  
 ||**carácter**<br /><br /> o **carácter bcp**|La salida del programa de copia masiva de todas las tablas en modo de carácter se utiliza para la instantánea inicial, que se necesita para todos los suscriptores que no lo son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**use_partition_groups**<br /><br /> Nota: después de utilizar partition_groups, si se revierte al uso **setupbelongs**y establezca **use_partition_groups = false** en **changemergearticle**, esto podría no ser refleja correctamente después de tomar una instantánea. Los desencadenadores que genera una instantánea son conformes con los grupos de particiones.<br /><br /> La solución para este escenario consiste en establecer el estado en Inactive, modificar el **use_partition_groups**y, a continuación, establezca el estado en activo.|**true**|La publicación utiliza particiones previamente calculadas.|  
+|**use_partition_groups**<br /><br /> Nota: Después de utilizar partition_groups, si se revierte al uso **setupbelongs**y establezca **use_partition_groups = false** en **changemergearticle**, esto podría no ser correctamente refleja después de tomar una instantánea. Los desencadenadores que genera una instantánea son conformes con los grupos de particiones.<br /><br /> La solución para este escenario consiste en establecer el estado en Inactive, modificar el **use_partition_groups**y, a continuación, establezca el estado en activo.|**true**|La publicación utiliza particiones previamente calculadas.|  
 ||**False**|La publicación no utiliza particiones previamente calculadas.|  
 |**validate_subscriber_info**||Muestra las funciones que se utilizan para recuperar información del suscriptor. Después, valida los criterios de filtro dinámico que se están utilizando para que el suscriptor compruebe que la información se está dividiendo de un modo coherente.|  
 |**web_synchronization_url**||Valor predeterminado de la URL de Internet utilizada para la sincronización web.|  

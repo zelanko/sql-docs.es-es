@@ -15,12 +15,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0e98d0653bf73c96448291d4c25654cdf5ea753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a971b96de66cf766541b741c48f5477cf9db65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177481"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350434"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Firmar un paquete mediante un certificado digital
   En este tema se describe cómo firmar un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con un certificado digital. Puede utilizar una firma digital, junto con otros valores de configuración, para evitar que se cargue y se ejecute un paquete que no es válido.  
@@ -33,11 +33,11 @@ ms.locfileid: "48177481"
   
     -   Obtener un certificado de una entidad de certificación pública comercial que se dedique a emitirlos.  
   
-    -   Obtener un certificado de un servidor de certificados que permita a una organización emitir certificados internamente. Tiene que agregar el certificado raíz utilizado para firmar dicho certificado al almacén **Entidades de certificación raíz de confianza** . Para ello, puede utilizar el complemento Certificados de [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC). Para obtener más información, vea el tema "[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)" en MSDN Library.  
+    -   Obtener un certificado de un servidor de certificados que permita a una organización emitir certificados internamente. Tiene que agregar el certificado raíz utilizado para firmar dicho certificado al almacén **Entidades de certificación raíz de confianza** . Para ello, puede utilizar el complemento Certificados de [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC). Para obtener más información, vea el tema "[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)" en MSDN Library.  
   
-    -   Crear su propio certificado solo con fines de pruebas. La herramienta Creación de certificados (Makecert.exe) genera certificados X.509 solo a efectos de pruebas. Para obtener más información, vea el tema "[Herramienta Creación de certificados (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)" en MSDN Library.  
+    -   Crear su propio certificado solo con fines de pruebas. La herramienta Creación de certificados (Makecert.exe) genera certificados X.509 solo a efectos de pruebas. Para obtener más información, vea el tema "[Herramienta Creación de certificados (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)" en MSDN Library.  
   
-     Para obtener más información sobre los certificados, vea la Ayuda en pantalla para el complemento Certificados. Para obtener más información sobre cómo firmar activos digitales, vea el tema "[Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)" en MSDN Library.  
+     Para obtener más información sobre los certificados, vea la Ayuda en pantalla para el complemento Certificados. Para obtener más información sobre cómo firmar activos digitales, vea el tema "[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)" en MSDN Library.  
   
 -   Asegurarse de que el certificado se ha habilitado para la firma de código. Para determinar si un certificado está habilitado para la firma de código, revise las propiedades del certificado en el complemento Certificados.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48177481"
   
 9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
-     Aunque se haya firmado el paquete, también debe configurar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para comprobar la firma digital antes de cargar el paquete. Para más información, vea [Identificar el origen de paquetes con firmas digitales](security/identify-the-source-of-packages-with-digital-signatures.md).  
+     Aunque se haya firmado el paquete, también debe configurar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para comprobar la firma digital antes de cargar el paquete. Para obtener más información, vea [Identificar el origen de paquetes con firmas digitales](security/identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - SecurityCertificate Class
@@ -20,12 +18,12 @@ ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9eed8b218d42098340863505a57d8c470c033c9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051165"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792397"
 ---
 # <a name="securitycertificate-class"></a>Clase SecurityCertificate
   El [clase SecurityCertificate] securitycertificate-class.md) representa un certificado de seguridad. Un certificado es una instrucción firmada digitalmente que enlaza el valor de una clave pública con la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que contiene la clave privada correspondiente. El certificado lo emite una entidad de certificación.  

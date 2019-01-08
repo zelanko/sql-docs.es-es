@@ -13,15 +13,15 @@ ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6d2ed88feef80027a7c52c89b3fe891d8f589c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ac7154d80a33907cb27bf191dcb41bca866894
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096145"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783927"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>Columnas con el nombre de una prueba de nodo XPath
-  Si el nombre de columna es una de las pruebas de nodo XPath, se asignará el contenido tal y como se muestra en la tabla siguiente. Cuando el nombre de la columna es una prueba de nodo XPath, se asigna el contenido al nodo correspondiente. Si el tipo SQL de la columna es `xml`, se devuelve un error.  
+  Si el nombre de columna es una de las pruebas de nodo XPath, se asignará el contenido tal y como se muestra en la tabla siguiente. Cuando el nombre de la columna es una prueba de nodo XPath, se asigna el contenido al nodo correspondiente. Si el tipo SQL de la columna es `xml`, se devolverá un error.  
   
 |Nombre de la columna|Comportamiento|  
 |-----------------|--------------|  
@@ -57,7 +57,7 @@ WHERE  E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
  `<row EmpID="1">`  
   
@@ -71,7 +71,7 @@ FOR XML PATH;
   
  `<First>Ken</First>`  
   
- `<Last>Sánchez</Last>`  
+ `<Last>S??nchez</Last>`  
   
  `</EmpName>`  
   

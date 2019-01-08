@@ -1,5 +1,5 @@
 ---
-title: Orígenes de datos y enlaces (SSAS Multidimensional) | Documentos de Microsoft
+title: Orígenes de datos y enlaces (SSAS Multidimensional) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2461bbdc3707ed30e130aaa32e117f24f9fe379d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025049"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529108"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Orígenes de datos y enlaces (SSAS multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "34025049"
   
  El medio de expresar el origen de datos varía según el tipo de origen de datos. Por ejemplo, un origen de datos relacional se distingue por una cadena de conexión. Para obtener más información acerca de los orígenes de datos, vea [Data Sources in Multidimensional Models](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md).  
   
- Sin tener en cuenta el origen de datos usado, la vista del origen de datos (DSV) contiene los metadatos para el origen de datos. Así, los enlaces para un cubo u otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se expresan como enlaces a DSV. Estos enlaces pueden incluir enlaces a objetos lógicos, como vistas, columnas calculadas y relaciones que no existen físicamente en el origen de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega una columna calculada que encapsula la expresión en la DSV y, a continuación, enlaza la medida de OLAP correspondiente a dicha columna de la DSV. Para obtener más información acerca de DSVs, vea [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+ Sin tener en cuenta el origen de datos usado, la vista del origen de datos (DSV) contiene los metadatos para el origen de datos. Así, los enlaces para un cubo u otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se expresan como enlaces a DSV. Estos enlaces pueden incluir enlaces a objetos de objetos lógicos, como vistas, columnas calculadas y relaciones que no existen físicamente en el origen de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega una columna calculada que encapsula la expresión en la DSV y, a continuación, enlaza la medida de OLAP correspondiente a dicha columna de la DSV. Para obtener más información acerca de DSVs, vea [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Cada objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enlaza con el origen de datos a su manera. Además, los enlaces de datos para estos objetos y la definición del origen de datos se pueden proporcionar insertados con la definición del objeto enlazado a datos (por ejemplo, la dimensión) o fuera de línea como un conjunto independiente de definiciones.  
   
 ## <a name="analysis-services-data-types"></a>Tipos de datos de Analysis Services  
  Los tipos de datos que se utilizan en los enlaces deben coincidir con los tipos de datos admitidos por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los tipos de datos siguientes están definidos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
-|Tipo de datos de Analysis Services|Description|  
+|Tipo de datos de Analysis Services|Descripción|  
 |---------------------------------|-----------------|  
 |Bigint|Entero de 64 bits con signo. Este tipo de datos se asigna internamente al tipo de datos Int64 en Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I8 en OLE DB.|  
-|Bool|Valor booleano. Este tipo de datos se asigna internamente al tipo de datos Booleano en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_BOOL en OLE DB.|  
+|Bool|Valor Boolean. Este tipo de datos se asigna internamente al tipo de datos Booleano en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_BOOL en OLE DB.|  
 |Moneda|Valor de moneda comprendido entre -263 (o -922.337.203.685.477,5808) y 263-1 (o +922.337.203.685.477,5807) con una precisión de una diezmilésima de unidad de moneda. Este tipo de datos se asigna internamente al tipo de datos Decimal en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_CY en OLE DB.|  
-|Date|Datos de fecha, almacenados como un número de punto flotante de doble precisión. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción del día. Este tipo de datos se asigna internamente al tipo de datos DateTime en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_DATE en OLE DB.|  
+|date|Datos de fecha, almacenados como un número de punto flotante de doble precisión. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción del día. Este tipo de datos se asigna internamente al tipo de datos DateTime en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_DATE en OLE DB.|  
 |Doble|Número de punto flotante de doble precisión comprendido entre -1,79E +308 y 1,79E +308. Este tipo de datos se asigna internamente al tipo de datos Doble en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_R8 en OLE DB.|  
 |Integer|Entero de 32 bits con signo. Este tipo de datos se asigna internamente al tipo de datos Int32 en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I4 en OLE DB.|  
 |Único|Número de punto flotante de precisión simple comprendido entre -3,40E +38 y 3,40E +38. Este tipo de datos se asigna internamente al tipo de datos Single en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_R4 en OLE DB.|  
@@ -52,7 +52,7 @@ ms.locfileid: "34025049"
  Todos los datos que se reciben del origen de datos se convierten al tipo de [!INCLUDE[ssAS](../../includes/ssas-md.md)] especificado en el enlace (normalmente, durante el procesamiento). Se produce un error si no se puede realizar la conversión (por ejemplo, de String a Int). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] normalmente establece el tipo de datos del enlace en el que mejor coincide con el tipo de origen del origen de datos. Por ejemplo, los tipos Date, DateTime, SmallDateTime, DateTime2 y DateTimeOffset de SQL se asignan a Date en [!INCLUDE[ssAS](../../includes/ssas-md.md)] , y el tipo Time de SQL se asigna a String.  
   
 ## <a name="bindings-for-dimensions"></a>Enlaces para dimensiones  
- Cada atributo de una dimensión se enlaza a una columna en una DSV. Todos los atributos de una dimensión deben proceder de un origen de datos único. Sin embargo, los atributos se pueden enlazar a columnas en tablas diferentes. Las relaciones entre las tablas se definen en DSV. En el caso en el que existe más de un conjunto de relaciones para la misma tabla, podría ser necesario introducir una consulta con nombre en la DSV que actúe como 'alias' de tabla. Las expresiones y los filtros se definen en la DSV usando cálculos con nombre y consultas con nombre.  
+ Cada atributo de una dimensión se enlaza a una columna en una DSV. Todos los atributos de una dimensión deben proceder de un origen de datos único. Sin embargo, los atributos se pueden enlazar a columnas en tablas diferentes. Las relaciones entre las tablas se definen en DSV. En el caso donde existe más de un conjunto de relaciones a la misma tabla, podría ser necesario introducir una consulta con nombre en la DSV que actúe como una tabla de 'alias'. Las expresiones y los filtros se definen en la DSV usando cálculos con nombre y consultas con nombre.  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>Enlaces para grupos de medidas, medidas y particiones  
  Cada grupo de medidas tiene los enlaces predeterminados siguientes:  
@@ -145,7 +145,7 @@ ms.locfileid: "34025049"
   
  Para especificar los enlaces temporales, se incluye el objeto de colección opcional **Bindings** con el comando de procesamiento. La colección **Bindings** opcional contiene los elementos siguientes.  
   
-|Propiedad|Cardinalidad|Tipo|Description|  
+|Property|Cardinalidad|Tipo|Descripción|  
 |--------------|-----------------|----------|-----------------|  
 |**Enlace**|0-n|**Enlace**|Proporciona una colección de nuevos enlaces.|  
 |**DataSource**|0-1|**DataSource**|Reemplaza **DataSource** del servidor que se habría usado.|  
@@ -154,9 +154,9 @@ ms.locfileid: "34025049"
  Todos los elementos que se relacionan con los enlaces fuera de línea son opcionales. Para cualquier elemento no especificado, ASSL usa la especificación contenida en el DDL del objeto almacenado. La especificación de **DataSource** o **DataSourceView** en el comando **Process** es opcional. Si se especifican **DataSource** o **DataSourceView** , no se crean instancias de los mismos y no se almacenan después de que el comando **Process** se haya completado.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definición del tipo de enlace fuera de línea  
- Dentro de la colección **Enlaces** temporales, ASSL permite una colección de enlaces para varios objetos, cada uno de ellos como un **Enlace**. Cada **Enlace** tiene una referencia de objeto extendida, similar a la referencia del objeto, pero también puede hacer referencia a objetos secundarios (por ejemplo, atributos de dimensión y atributos de grupo de medida). Este objeto toma la forma plana típica de la **objeto** elemento **proceso** comandos, excepto en que la \< *objeto* > \< */Objeto*> etiquetas no están presentes.  
+ Dentro de la colección **Enlaces** temporales, ASSL permite una colección de enlaces para varios objetos, cada uno de ellos como un **Enlace**. Cada **Enlace** tiene una referencia de objeto extendida, similar a la referencia del objeto, pero también puede hacer referencia a objetos secundarios (por ejemplo, atributos de dimensión y atributos de grupo de medida). Este objeto toma la forma plana típica del **objeto** elemento **proceso** comandos, excepto en que el \< *objeto* > \< */Objeto*> etiquetas no están presentes.  
   
- Cada objeto para el que se especifica el enlace se identifica por un elemento XML del formulario \< *objeto*> ID (por ejemplo, **DimensionID**). Después de haber identificado el objeto de manera tan específica como sea posible con el formulario \< *objeto*> ID, a continuación, identifica el elemento para el que se especifica el enlace, que suele ser **origen**. Un caso común para tener en cuenta es en qué **Source** es una propiedad del **DataItem**, que es el caso para enlaces de columna en un atributo. En este caso, no especifica la etiqueta **DataItem** ; en su lugar, simplemente especifica la propiedad **Source** , como si estuviera directamente en la columna que se va a enlazar.  
+ Cada objeto para el que se especifica el enlace se identifica mediante un elemento XML del formulario \< *objeto*> ID (por ejemplo, **DimensionID**). Después de haber identificado el objeto de manera más específica posible con la forma \< *objeto*> ID, a continuación, identifica el elemento para el que se especifica el enlace, que suele ser **origen**. Un caso común para tener en cuenta es en qué **Source** es una propiedad del **DataItem**, que es el caso para enlaces de columna en un atributo. En este caso, no especifica la etiqueta **DataItem** ; en su lugar, simplemente especifica la propiedad **Source** , como si estuviera directamente en la columna que se va a enlazar.  
   
  **KeyColumns** se identifican por su orden dentro de la colección **KeyColumns** . Allí no es posible especificar, por ejemplo, solo la primera y la tercera columna de clave de un atributo, porque no hay manera de indicar que se va a omitir la segunda columna de clave. Todas las columnas de clave deben encontrarse en el enlace fuera de línea para un atributo de dimensión.  
   

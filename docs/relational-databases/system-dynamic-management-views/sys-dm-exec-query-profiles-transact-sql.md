@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2f1bf4cf990c7888088388a8d9c65a45865a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
+ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727123"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860098"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "47727123"
 |first_row_time|**bigint**|Marca de tiempo en la que se abrió la primera fila (en milisegundos).|  
 |last_row_time|**bigint**|Marca de tiempo en la que se abrió la última fila (en milisegundos).|  
 |close_time|**bigint**|Marca de tiempo al cerrar (en milisegundos).|  
-|dividir|**bigint**|Tiempo total transcurrido (en milisegundos) acumulado hasta ahora por las operaciones del nodo de destino.|  
-|cpu_time_ms|**bigint**|Tiempo total de CPU (en milisegundos) acumulado hasta ahora por las operaciones del nodo de destino.|  
+|dividir|**bigint**|Tiempo total transcurrido (en milisegundos) utilizado por las operaciones del nodo de destino hasta el momento.|  
+|cpu_time_ms|**bigint**|Total de hasta ahora el uso de CPU de tiempo (en milisegundos) por las operaciones del nodo de destino.|  
 |database_id|**smallint**|Identificador de la base de datos que contiene el objeto en el que se efectúan las lecturas y escrituras.|  
 |object_id|**int**|El identificador para el objeto en el que se efectúan las lecturas y escrituras. Hace referencia a sys.objects.object_id.|  
 |index_id|**int**|El índice (si existe) en el que se abre el conjunto de filas.|  
@@ -73,7 +73,7 @@ ms.locfileid: "47727123"
 |segment_read_count|**int**|Número de lecturas anticipadas de segmento hasta ahora.|  
 |segment_skip_count|**int**|Número de segmentos omitidos hasta ahora.| 
 |actual_read_row_count|**bigint**|Número de filas leídas por un operador antes de aplica el predicado residual.| 
-|estimated_read_row_count|**bigint**|**Se aplica a:** partir [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de filas estimado que leerá un operador antes de aplica el predicado residual.|  
+|estimated_read_row_count|**bigint**|**Se aplica a:** A partir [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de filas estimado que leerá un operador antes de aplica el predicado residual.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Si el nodo del plan de consultas no tiene E/S, todos los contadores relativos a E/S se establecen en NULL.  
@@ -84,20 +84,30 @@ ms.locfileid: "47727123"
   
 -   Si se realizaran búsquedas en paralelo, esta DMV informa sobre los contadores para cada uno de los subprocesos paralelos que se ejecutan en la búsqueda.
  
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, las estadísticas de ejecución de consulta estándar infraestructura de generación de perfiles no existe en paralelo con una estadísticas de ejecución ligero infraestructura de generación de perfiles. La nueva infraestructura generación de perfiles de consulta ejecución estadísticas reduce considerablemente la sobrecarga de rendimiento de recopilación de estadísticas de ejecución de consulta por cada operador, como el número real de filas. Esta característica se puede habilitar mediante global inicio [marca de seguimiento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), o se activa automáticamente cuando se usan eventos extendidos query_thread_profile.
+A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, las estadísticas de ejecución de consulta estándar infraestructura de generación de perfiles no existe en paralelo con una estadísticas de ejecución ligero infraestructura de generación de perfiles. La nueva infraestructura generación de perfiles de consulta ejecución estadísticas reduce considerablemente la sobrecarga de rendimiento de recopilación de estadísticas de ejecución de consulta por cada operador, como el número real de filas. Esta característica se puede habilitar mediante global inicio [marca de seguimiento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), o se activa automáticamente cuando se usan eventos extendidos query_thread_profile.
 
 >[!NOTE]
 > No se admiten CPU y el tiempo transcurrido en la infraestructura de generación de perfiles ligera consulta ejecución estadísticas para reducir el impacto de rendimiento.
 
- ESTABLECER STATISTICS XML ON y SET STATISTICS PROFILE ON use siempre las estadísticas de ejecución de consulta heredado infraestructura de generación de perfiles.
-  
+ESTABLECER STATISTICS XML ON y SET STATISTICS PROFILE ON use siempre las estadísticas de ejecución de consulta heredado infraestructura de generación de perfiles.
+
+Para habilitar la salida en sys.dm_exec_query_profiles realice lo siguiente:
+
+En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y posterior, utilice SET STATISTICS PROFILE ON o SET STATISTICS XML ON junto con la consulta está investigando. Esto permite que la infraestructura de generación de perfiles y produce resultados en la DMV para la sesión donde se ejecutó el comando. Si se está investigando una consulta que se ejecuta desde una aplicación y no se puede habilitar las opciones SET con él, puede crear un evento extendido con el evento query_post_execution_showplan que activará la infraestructura de generación de perfiles. 
+
+En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, o bien puede activar [marca de seguimiento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) o usar el evento extendido query_thread_profile.
+
+>[!NOTE]
+> La consulta está investigando tiene que iniciar una vez que se ha habilitado la infraestructura de generación de perfiles. Si ya se está ejecutando la consulta, que comience una sesión de eventos extendidos no producirá los resultados en sys.dm_exec_query_profiles.
+
+
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
    
 ## <a name="examples"></a>Ejemplos  
- Paso 1: Inicio de sesión a una sesión en el que va a ejecutar la consulta que vaya a analizar con sys.dm_exec_query_profiles. Para configurar la consulta para la generación de perfiles use SET STATISTICS PROFILE en. Ejecute la consulta en esta misma sesión.  
+ Paso 1: registrarse en una sesión en la que tenga previsto ejecutar la consulta que vaya a analizar con sys.dm_exec_query_profiles. Para configurar la consulta para la generación de perfiles use SET STATISTICS PROFILE en. Ejecute la consulta en esta misma sesión.  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -111,7 +121,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- Paso 2: Inicio de sesión a una segunda sesión que es diferente de la sesión en el que se está ejecutando la consulta.  
+ Paso 2: registrarse en una segunda sesión que sea distinta a la sesión en la que se ejecuta la consulta.  
   
  La siguiente instrucción resume el progreso que ha realizado la consulta que se ejecutaba de forma simultánea en la sesión 54. Para ello, calcula el número total de filas resultantes de todos los subprocesos para cada nodo y lo compara con el número estimado de filas resultantes para ese nodo.  
   

@@ -11,12 +11,12 @@ ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74e98548349d073cf5f008c6015ce55ac3768acb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067213"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350652"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Borrar las memorias caché de Analysis Services
   Analysis Services almacena los datos en memoria caché para mejorar el rendimiento de las consultas. En este tema se proporcionan recomendaciones para usar el comando ClearCache de XMLA con el fin de borrar las memorias caché creadas en respuesta a una consulta MDX. Los efectos de ejecutar ClearCache varían dependiendo de que se use un modelo tabular o multidimensional.  
@@ -33,7 +33,7 @@ ms.locfileid: "48067213"
   
  Al ejecutar ClearCache también se borrarán las memorias caché en memoria en el motor analítico en memoria xVelocity (VertiPaq). El motor xVelocity mantiene un pequeño conjunto de resultados almacenados en caché. La ejecución de ClearCache invalidará estas memorias caché en el motor xVelocity.  
   
- Por último, la ejecución de ClearCache también quitará los datos residuales que queden en memoria cuando se vuelve a configurar un modelo tabular para `DirectQuery` modo. Esto es especialmente importante si el modelo contiene información confidencial sujeta a controles estrictos. En este caso, la ejecución de ClearCache es una acción preventiva que se puede adoptar para asegurarse de que solo existe información confidencial donde se espera que esté. La acción de borrar la memoria caché manualmente es necesaria si se usa [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para implementar el modelo y cambiar el modo de consulta. En cambio, si se usa [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para especificar `DirectQuery` en el modelo y las particiones, se borrará automáticamente la memoria caché cuando cambie el modelo para utilizar ese modo de consulta.  
+ Finalmente, la ejecución de ClearCache también quitará los datos residuales que queden en memoria cuando un modelo tabular se configure de nuevo para el modo `DirectQuery` . Esto es especialmente importante si el modelo contiene información confidencial sujeta a controles estrictos. En este caso, la ejecución de ClearCache es una acción preventiva que se puede adoptar para asegurarse de que solo existe información confidencial donde se espera que esté. La acción de borrar la memoria caché manualmente es necesaria si se usa [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para implementar el modelo y cambiar el modo de consulta. En cambio, si se usa [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para especificar `DirectQuery` en el modelo y las particiones, se borrará automáticamente la memoria caché cuando cambie el modelo para utilizar ese modo de consulta.  
   
  En comparación con las recomendaciones para borrar las memorias caché de modelos multidimensionales durante las pruebas de rendimiento, no hay ninguna recomendación general para borrar las memorias caché de modelos tabulares. Si no está administrando la implementación de un modelo tabular que contiene información confidencial, no hay ninguna tarea administrativa específica que requiera borrar la memoria caché.  
   
@@ -41,26 +41,26 @@ ms.locfileid: "48067213"
  Para borrar la memoria caché, use XMLA y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puede borrar la memoria caché en el nivel de base de datos, cubo, dimensión o tabla, o grupo de medida. Los pasos siguientes para borrar la memoria caché en el nivel de base de datos son aplicables a los modelos tanto multidimensionales como tabulares.  
   
 > [!NOTE]  
->  Las pruebas de rendimiento rigurosas pueden requerir un enfoque más completo para borrar la memoria caché. Para obtener instrucciones sobre cómo vaciar las memorias caché de Analysis Services y del sistema, vea la sección sobre borrado de memorias caché en la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?linkID=http://go.microsoft.com/fwlink/?LinkID=225539).  
+>  Las pruebas de rendimiento rigurosas pueden requerir un enfoque más completo para borrar la memoria caché. Para obtener instrucciones sobre cómo vaciar las memorias caché de Analysis Services y del sistema, vea la sección sobre borrado de memorias caché en la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?linkID=https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  En los modelos multidimensionales y tabulares, la acción de borrar algunas de estas memorias caché puede ser un proceso de dos pasos que consiste en invalidar la memoria caché cuando se ejecuta ClearCache, seguido de vaciarla cuando se recibe la consulta siguiente. Una reducción del consumo de memoria solo se manifestará después de que la memoria caché quede realmente vacía.  
   
  La acción de borrar la memoria caché requiere proporcionar un identificador de objeto a la instrucción `ClearCache` en una consulta XMLA. En el primer paso de este tema se explica cómo obtener un identificador de objeto.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Paso 1: obtener el identificador de objeto  
+#### <a name="step-1-get-the-object-identifier"></a>Paso 1: Obtener el identificador de objeto  
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en un objeto, seleccione **Propiedades**y copie el valor de la propiedad ID en el panel **Propiedades** . Este enfoque funciona para una base de datos, cubo, dimensión o tabla.  
   
 2.  Para obtener el identificador de grupo de medida, haga clic con el botón derecho en el grupo de medida y seleccione **Incluir grupo de medidas como**. Elija **Crear** o **Modificar**y envíe la consulta a una ventana. El identificador del grupo de medida estará visible en la definición del objeto. Copie el identificador de la definición del objeto.  
   
-#### <a name="step-2-run-the-query"></a>Paso 2: ejecutar la consulta  
+#### <a name="step-2-run-the-query"></a>Paso 2: Ejecutar la consulta  
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en una base de datos, señale **Nueva consulta**y seleccione **XMLA**.  
   
-2.  Copie el ejemplo de código siguiente en la ventana de consulta XMLA. Cambio `DatabaseID` al identificador de la base de datos en la conexión actual.  
+2.  Copie el ejemplo de código siguiente en la ventana de consulta XMLA. Cambie `DatabaseID` al identificador de la base de datos en la conexión actual.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID> Adventure Works DW Multidimensional</DatabaseID>  
       </Object>  
@@ -71,7 +71,7 @@ ms.locfileid: "48067213"
      También puede especificar una ruta de acceso de un objeto secundario, como un grupo de medida, para borrar la memoria caché solo para ese objeto.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional</DatabaseID>  
             <CubeID>Adventure Works</CubeID>  
@@ -89,7 +89,7 @@ ms.locfileid: "48067213"
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Secuencia de comandos de las tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Crear scripts para tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
  [Supervisión de una instancia de Analysis Services](monitor-an-analysis-services-instance.md)  
   
   

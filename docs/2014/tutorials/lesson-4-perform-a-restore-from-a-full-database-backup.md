@@ -11,14 +11,14 @@ ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e239526f0a5e77ad57122e8e9ddbaa163f040827
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3af76a0ec664a10d5457dc3d106de3727740ce19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162925"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523658"
 ---
-# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lección 4: Realizar una restauración desde una copia de seguridad completa de la base de datos
+# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lección 4: Realizar una restauración desde una copia de seguridad de base de datos completa
   En esta lección se muestra el uso de una instrucción tsql para realizar una restauración desde una copia de seguridad completa de la base de datos creada en la lección anterior.  
   
 ## <a name="perform-a-restore-of-a-database-backup"></a>Realizar una restauración de una copia de seguridad de la base de datos  
@@ -36,7 +36,7 @@ ms.locfileid: "48162925"
     RESTORE DATABASE AdventureWorks2012   
     FROM URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2012.bak'   
     WITH CREDENTIAL = 'mycredential';  
-    , STATS = 5 – use this to see monitor the progress  
+    , STATS = 5 - use this to see monitor the progress  
     GO  
   
     ```  
@@ -44,6 +44,6 @@ ms.locfileid: "48162925"
 5.  Compruebe la instrucción T-SQL y haga clic en **Ejecutar**.  
   
 ### <a name="return-to-tutorials-portal"></a>Volver al portal de tutoriales  
- [Tutorial: Copia de seguridad SQL Server y la restauración en Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ [Tutorial: Servicio de almacenamiento de blobs de SQL Server Backup and Restore a Windows Azure](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
   

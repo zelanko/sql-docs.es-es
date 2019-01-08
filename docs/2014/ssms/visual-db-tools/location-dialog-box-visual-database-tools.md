@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.getdirectoryname
@@ -12,12 +12,12 @@ ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fd239a71c551c9fc3d5be3dd5fe0ae5aa772308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144715"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780637"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Ubicación (cuadro de diálogo, Visual Database Tools)
   Utilice este cuadro de diálogo para ubicar y seleccionar la carpeta que contiene los archivos de interés. Este cuadro de diálogo devuelve la ruta de acceso de la carpeta seleccionada al cuadro de diálogo que realiza la llamada. Puede tener acceso a este cuadro de diálogo de esta forma:  

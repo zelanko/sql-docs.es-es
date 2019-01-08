@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XSD schemas [SQLXML], mapping attributes and elements
@@ -28,12 +26,12 @@ ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 674e47df8f43088f51aacebd0a2e4da0c891443f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 673e96509061f3d4fdc808b4165ff56991baa8ad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089305"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793687"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
   De forma predeterminada, un elemento de tipo complejo en un esquema XSD anotado se asigna a una tabla (vista) con el mismo nombre en la base de datos especificada, mientras que un elemento o atributo de tipo simple se asigna a la columna con el mismo nombre en la tabla.  
@@ -92,7 +90,7 @@ ms.locfileid: "48089305"
 </ROOT>  
 ```  
   
-### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Asignar un elemento XML a una columna de base de datos  
+### <a name="b-mapping-an-xml-element-to-a-database-column"></a>b. Asignar un elemento XML a una columna de base de datos  
  En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El  **\<Person.Contact >** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. Los elementos  **\<FirstName >** y  **\<LastName >** y **EmployeeID** atributo son de tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y el ejemplo anterior es que los elementos se usan para asignar los campos de FirstName y LastName.  
   
 ```  

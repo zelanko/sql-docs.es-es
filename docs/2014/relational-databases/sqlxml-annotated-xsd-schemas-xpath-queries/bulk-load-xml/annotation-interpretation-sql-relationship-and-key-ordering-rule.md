@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:relationship
@@ -16,12 +14,12 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ec5dab60311e06f09e1d1d5b4a9d1258a32565
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787187"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship y regla de orden de clave (SQLXML 4.0)
   Dado que la carga masiva XML genera registros cuando sus nodos entran en el ámbito y envía esos registros a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando sus nodos salen del ámbito, los datos del registro deben estar presentes en el ámbito del nodo.  
@@ -117,7 +115,7 @@ ms.locfileid: "48121825"
     set objBL=Nothing  
     ```  
   
-     Como resultado, la carga masiva XML inserta un valor NULL en la columna de clave externa CustomerID de la tabla CustOrder. Si revisa los datos de ejemplo XML para que la  **\<CustomerID >** elemento secundario aparezca delante el  **\<orden >** elemento secundario, obtendrá el resultado esperado: carga masiva XML Inserta el valor de clave externa especificado en la columna.  
+     Como resultado, la carga masiva XML inserta un valor NULL en la columna de clave externa CustomerID de la tabla CustOrder. Si revisa los datos de ejemplo XML para que la  **\<CustomerID >** elemento secundario aparezca delante el  **\<orden >** elemento secundario, obtendrá el resultado esperado: Carga masiva XML inserta el valor de clave externa especificado en la columna.  
   
  Éste es el esquema XDR equivalente:  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bff3b71c0f091bc60d500dfaced02cb62b483753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0f98b373b736b9e7b97e9c5a599812210e4136
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069265"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799657"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Dirigir el flujo CDC según el tipo de cambio
   Para agregar y configurar una transformación Divisor CDC, el paquete debe contener por lo menos una tarea Flujo de datos y un origen de CDC.  
@@ -37,11 +36,11 @@ ms.locfileid: "48069265"
   
 6.  Seleccione una de las siguientes salidas:  
   
-    -   Salida Delete: la salida donde se dirigen las filas de cambios DELETE.  
+    -   Eliminación de salida: La salida donde se dirigen las filas de cambio de eliminación.  
   
-    -   Salida Insert: la salida donde se dirigen las filas de cambios INSERT.  
+    -   Salida INSERT: La salida donde se dirigen las filas de cambios INSERT.  
   
-    -   Salida Update: la salida donde se dirigen las filas de cambios UPDATE antes o después y las filas de cambios Merge.  
+    -   Actualizar salida: La salida donde antes o después del cambio de la actualización filas y mezcla cambian las filas se dirigen.  
   
 7.  Opcionalmente, puede configurar las propiedades avanzadas mediante el cuadro de diálogo **Editor avanzado** .  
   

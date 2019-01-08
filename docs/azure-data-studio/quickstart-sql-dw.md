@@ -1,7 +1,8 @@
 ---
-title: 'Inicio rápido: Conectarse y consultar Azure SQL Data Warehouse mediante Azure Data Studio | Microsoft Docs'
-description: En este tutorial rápido se muestra cómo usar Azure Data Studio para conectarse a una base de datos SQL y ejecutar una consulta
-ms.custom: tools|sos
+title: 'Inicio rápido: Conectarse y consultar Azure SQL Data Warehouse'
+titleSuffix: Azure Data Studio
+description: En este tutorial rápido se muestra cómo usar Azure Data Studio para conectarse a Azure SQL Data Warehouse y ejecutar una consulta
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: bf26924bc7791cf5321c32b3c127abc52780740b
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355736"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030759"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Inicio rápido: Usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse y consultar datos en Azure SQL Data Warehouse
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Inicio rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse y consultar datos en Azure SQL Data Warehouse
 
 En este tutorial rápido se muestra cómo utilizar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a Azure SQL data warehouse y, a continuación, usar instrucciones Transact-SQL para crear, insertar y seleccionar los datos. 
 

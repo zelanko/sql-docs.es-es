@@ -14,12 +14,12 @@ ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17ea214c6e9dacb8517c42e7cb62141b92ef1ccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3586379cbd22dee4e288a032a9dd850355b2b674
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126695"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543552"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Crear o personalizar una biblioteca de fuentes de datos (PowerPivot para SharePoint)
   Una *biblioteca de fuentes de distribución de datos* es una biblioteca de SharePoint especial que le permite registrarse y compartir los documentos (.atomsvc) de servicio de datos de Atom. En estos documentos se proporcionan fuentes de distribución de datos XML para libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otras aplicaciones cliente que admitan el formato de distribución de datos Atom. Una biblioteca de fuentes de distribución de datos es diferente de otras bibliotecas de SharePoint porque permite:  
@@ -28,7 +28,7 @@ ms.locfileid: "48126695"
   
 -   Compartir y administrar los documentos de servicio de datos en una ubicación central.  
   
--   Identificar visualmente los documentos de servicio de datos mediante un icono, para que pueda distinguir fácilmente los documentos de servicio desde otros documentos almacenados en la misma biblioteca: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Identificar visualmente los documentos de servicio de datos mediante un icono, para que pueda distinguir con facilidad los documentos de servicio de otros documentos almacenados en la misma biblioteca: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  Una biblioteca de fuentes de distribución de datos siempre contiene archivos de documentos de servicio de datos (.atomsvc) y nunca las propias fuentes de distribución de datos. A diferencia de una fuente de distribución de datos, que consta de datos XML estáticos, el documento de servicio de datos especifica una dirección URL para un servicio o aplicación que genera una fuente tras la solicitud, proporcionando información de conexión reutilizable para las operaciones de importación repetibles.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48126695"
   
 1.  Haga clic en **Acciones de sitio** en la esquina superior izquierda de la página.  
   
-2.  Haga clic en **Más opciones**...  
+2.  Haga clic en **más opciones**...  
   
 3.  En Bibliotecas, haga clic en **Biblioteca de fuentes de distribución de datos**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48126695"
   
  Los siguientes pasos se deben repetir para cada biblioteca en la que desee crear o modificar los documentos de registro de fuentes de distribución de datos.  
   
-#### <a name="step-1-enable-content-type-management"></a>Paso 1: habilitar la administración de tipos de contenido  
+#### <a name="step-1-enable-content-type-management"></a>Paso 1: Habilitar la administración del tipo de contenido  
   
 1.  Abra la biblioteca de documentos para la que desee habilitar varios tipos de contenido.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48126695"
   
 7.  Haga clic en **Aceptar**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Paso 2: agregar el tipo de contenido de documento de servicio de datos  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Paso 2: Agregar el tipo de contenido del documento de servicio de datos  
   
 1.  En la sección Tipos de contenido, haga clic en **Agregar a partir de tipos de contenido de sitio**. Si no ve esta página, regrese al sitio, haga clic en **Biblioteca** en Herramientas de biblioteca y, a continuación, haga clic en **Configuración de la biblioteca**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48126695"
   
 5.  Haga clic en **Aceptar**.  
   
-#### <a name="step-3-verify-data-service-document-configuration"></a>Paso 3: comprobar la configuración del documento de servicio de datos  
+#### <a name="step-3-verify-data-service-document-configuration"></a>Paso 3: Comprobar la configuración de documento de servicio de datos  
   
 1.  Abra la página principal del sitio.  
   

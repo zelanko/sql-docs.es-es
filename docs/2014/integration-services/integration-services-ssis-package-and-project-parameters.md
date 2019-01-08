@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bc06bbc38809f3ae3921fb59f11aedad0f3ce1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9358d3d7d014f7dc69dad00605ebdaaa2ef70707
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135225"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352245"
 ---
 # <a name="integration-services-ssis-parameters"></a>Parámetros de Integration Services (SSIS)
   Los parámetros de[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) permiten asignar valores a las propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear *parámetros de proyecto* en el nivel de proyecto y *parámetros de paquete* en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo.  
   
- En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] puede crear, modificar o eliminar parámetros del proyecto en la ventana **Project.params** . Para crear, modificar y eliminar los parámetros de paquetes, use la pestaña **Parámetros** en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Puede asociar un parámetro nuevo o existente a una propiedad de tarea con el cuadro de diálogo **Parametrizar** . Para obtener más información sobre el uso de la **Project.params** ventana y la **parámetros** pestaña, vea [Create Parameters](create-parameters.md). Para obtener más información sobre la **parametrizar** cuadro de diálogo, vea [Parameterize Dialog Box](parameterize-dialog-box.md).  
+ En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] puede crear, modificar o eliminar parámetros del proyecto en la ventana **Project.params** . Para crear, modificar y eliminar los parámetros de paquetes, use la pestaña **Parámetros** en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Puede asociar un parámetro nuevo o existente a una propiedad de tarea con el cuadro de diálogo **Parametrizar** . Para obtener más información sobre cómo usar la ventana **Project.params** y las pestaña **Parámetros** , vea [Create Parameters](create-parameters.md). Para obtener más información acerca del cuadro de diálogo **Parametrizar** , vea [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
 ## <a name="parameters-and-package-deployment-model"></a>Parámetros y modelo de implementación de paquetes  
  En general, si implementa un paquete con el modelo de implementación de paquetes, debe utilizar configuraciones en lugar de parámetros.  
@@ -47,7 +46,7 @@ ms.locfileid: "48135225"
 |Nombre del valor|Descripción|Tipo del valor|  
 |----------------|-----------------|-------------------|  
 |Valor de ejecución|El valor asignado a una instancia específica de la ejecución del paquete. Esta asignación invalida todos los demás valores, pero solo se aplica a una única instancia de ejecución del paquete.|Literal|  
-|Valor de servidor|El valor asignado al parámetro dentro del ámbito del proyecto, una vez que el proyecto se implementa en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Este valor invalida el valor predeterminado de diseño.|Literal o referencia de variable de entorno|  
+|Valor de servidor|El valor asignado al parámetro dentro del ámbito del proyecto, una vez que el proyecto se implementa en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Este valor invalida el valor predeterminado de diseño.|Literal o referencia de variable de entorno|  
 |Valor de diseño|El valor asignado al parámetro cuando el proyecto se crea o modifica en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Este valor se mantiene con el proyecto.|Literal|  
   
  Puede utilizar un único parámetro para asignar un valor a varias propiedades del paquete. A una propiedad del paquete se le puede asignar un valor solo de un único parámetro.  
@@ -81,14 +80,14 @@ ms.locfileid: "48135225"
  [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) (catalog.set_execution_parameter_value [base de datos de SSISDB];)  
  Establece el valor de un parámetro para una instancia de ejecución en el catálogo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- También puede utilizar el cuadro de diálogo **Ejecutar paquete** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para modificar el valor de parámetro. Para obtener más información, consulte [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
+ También puede utilizar el cuadro de diálogo **Ejecutar paquete** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para modificar el valor de parámetro. Para obtener más información, vea [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
   
- También puede usar el dtexec `/Parameter` opción para modificar un valor de parámetro. Para más información, consulte [dtexec Utility](packages/dtexec-utility.md).  
+ También puede utilizar la opción de `/Parameter` dtexec para modificar un valor de parámetro. Para más información, consulte [dtexec Utility](packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Validación de parámetros  
  Si los valores de parámetros no se pueden resolver, la ejecución del paquete correspondiente generará un error. Para ayudar a evitar errores, puede validar los proyectos y los paquetes mediante el cuadro de diálogo **Validar** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. La validación permite confirmar que todos los parámetros tienen los valores necesarios o pueden resolver los valores necesarios con referencias de entorno específicas. La validación comprueba también otros problemas comunes del paquete.  
   
- Para obtener más información, consulte [Validate Dialog Box](catalog/validate-dialog-box.md).  
+ Para obtener más información, vea [Validate Dialog Box](catalog/validate-dialog-box.md).  
   
 ### <a name="parameter-example"></a>Ejemplo de parámetro  
  En este ejemplo se describe un parámetro denominado **pkgOptions** que se utiliza para especificar opciones para el paquete en que reside.  
@@ -103,6 +102,6 @@ ms.locfileid: "48135225"
  [Establecimiento de valores de parámetro después de la implementación del proyecto](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog, [Sugerencia rápida de SSIS: parámetros necesarios](http://go.microsoft.com/fwlink/?LinkId=239781), en mattmasson.com.  
+ Entrada de blog, [Sugerencia rápida de SSIS: Los parámetros necesarios](https://go.microsoft.com/fwlink/?LinkId=239781), en mattmasson.com.  
   
   

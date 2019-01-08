@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c93de6cb7c4b084a178633691f0874f704811e2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788467"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Seleccionar una cuenta para el servicio Agente SQL Server
   La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como una cuenta de usuario especificada. Se puede seleccionar una cuenta para el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , donde se pueden elegir las opciones siguientes:  
@@ -91,24 +91,24 @@ ms.locfileid: "48075565"
   
  <sup>4</sup> vea la limitación 4.  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitación 1: utilizar cuentas no administrativas para la administración multiservidor  
- Dar de alta servidores de destino en el servidor maestro puede producir un error acompañado del siguiente mensaje: “Error en la operación de alta”.  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitación 1: Uso de cuentas no administrativas para la administración multiservidor  
+ Dar de alta servidores de destino a un servidor maestro puede producir un error con el mensaje de error siguiente: "Error en la operación de dar de alta".  
   
  Para resolver este error, reinicie los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Limitación 2: utilizar la cuenta de sistema local para la administración multiservidor  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Limitación 2: Uso de la cuenta Sistema Local para la administración multiservidor  
  Solo se admite la administración multiservidor cuando el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta bajo la cuenta de sistema local y tanto el servidor maestro como el servidor de destino residen en el mismo equipo. Si usa esta configuración, cuando lleve a cabo el alta de los servidores de destino en el servidor maestro se devuelve el siguiente mensaje:  
   
  "Comprobar que la cuenta de inicio del agente de *<nombre_equipo_servidor_destino>* posea derechos para iniciar la sesión como servidor de destino".  
   
  Puede omitir este mensaje informativo. La operación de alta debe finalizar correctamente. Para obtener más información, vea [Crear un entorno multiservidor](create-a-multiserver-environment.md).  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Limitación 3: utilizar la cuenta de servicio de red cuando es un usuario de SQL Server  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Limitación 3: Con la cuenta de servicio de red cuando es un usuario de SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Se puede producir un error al iniciar el Agente si ejecuta el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bajo una cuenta de servicio de red y se concedió explícitamente a esta cuenta acceso para iniciar sesión en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para resolver este problema, reinicie el equipo donde se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Solo es necesario hacerlo una vez.  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Limitación 4: utilizar la cuenta de servicio de red cuando SQL Server Reporting Services se ejecuta en el mismo equipo  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Limitación 4: Con la cuenta de servicio de red cuando se ejecuta SQL Server Reporting Services en el mismo equipo  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Se puede producir un error al iniciar el Agente si se ejecuta el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bajo la cuenta de servicio de red y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] también está ejecutándose en el mismo equipo.  
   
  Para resolver este problema, reinicie el equipo donde se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, reinicie los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Solo es necesario hacerlo una vez.  

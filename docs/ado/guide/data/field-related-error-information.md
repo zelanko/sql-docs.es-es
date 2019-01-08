@@ -14,15 +14,15 @@ ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01f456527d7be8a954fecdace730bd1f8e47936b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813053"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524491"
 ---
 # <a name="field-related-error-information"></a>Información de Error relacionado con el campo
-Si un error está relacionado directamente a un campo, por ejemplo, si los datos no se encuentra o si es del tipo incorrecto para el campo, puede recuperar más información sobre la causa del problema examinando la **campo** del objeto **estado**  propiedad. Esta propiedad se ha mejorado para proporcionar información específica acerca del problema. Así, por ejemplo, cuando una llamada a **UpdateBatch** se produce un error, la causa del problema se puede determinar examinando el **estado** propiedad de la **campos** en cada uno de los afectados registros. La propiedad contendrá uno de los valores en el **FieldStatusEnum** constante. En la tabla siguiente incluye los valores que son de especial interés cuando se produce un error.  
+Si un error está directamente relacionado con un campo, por ejemplo, si los datos no se encuentra o si es del tipo incorrecto para el campo - se puede recuperar más información sobre la causa del problema examinando la **campo** del objeto **estado**  propiedad. Esta propiedad se ha mejorado para proporcionar información específica acerca del problema. Así, por ejemplo, cuando una llamada a **UpdateBatch** se produce un error, la causa del problema se puede determinar examinando el **estado** propiedad de la **campos** en cada uno de los afectados registros. La propiedad contendrá uno de los valores en el **FieldStatusEnum** constante. En la tabla siguiente incluye los valores que son de especial interés cuando se produce un error.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  

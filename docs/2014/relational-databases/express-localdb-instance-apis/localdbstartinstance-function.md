@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBStartInstance
@@ -18,12 +16,12 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 99bec66e77a8ac5fd742ffb85b6f87dfefe88510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799647"
 ---
 # <a name="localdbstartinstance-function"></a>Función LocalDBStartInstance
   Inicia la instancia de SQL Server Express LocalDB especificada.  
@@ -111,10 +109,10 @@ HRESULT LocalDBStartInstance(
   
 |Búfer|Tamaño de búfer|Análisis razonado|Acción|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|El usuario desea iniciar la instancia y no necesita un nombre de canalización.|Inicia una instancia (sin devolución de canalización y no se requiere la devolución de tamaño de búfer).|  
+|NULL|NULL|Usuario desea iniciar la instancia y no necesita una canalización de nombre.|Inicia una instancia (sin devolución de canalización y no se requiere la devolución de tamaño de búfer).|  
 |NULL|Mostrar|El usuario solicita el tamaño de búfer de salida. (En la llamada siguiente el usuario probablemente solicitará un inicio real).|Devuelve el tamaño de búfer necesario (sin inicio y sin devolución de canalización). El resultado es S_OK.|  
 |Mostrar|NULL|No está permitido; entrada no correcta.|El resultado devuelto es LOCALDB_ERROR_INVALID_PARAMETER.|  
-|Mostrar|Mostrar|El usuario desea iniciar la instancia y necesita el nombre de la canalización para conectarse una vez se haya iniciado.|Comprueba el tamaño de búfer, inicia la instancia y devuelve el nombre de la canalización en el búfer. <br />El argumento de tamaño de búfer devuelve la longitud de la cadena de “server=”, sin incluir valores NULL finales.|  
+|Mostrar|Mostrar|El usuario desea iniciar la instancia y necesita el nombre de la canalización para conectarse una vez se haya iniciado.|Comprueba el tamaño de búfer, inicia la instancia y devuelve el nombre de la canalización en el búfer. <br />El argumento de tamaño de búfer devuelve la longitud de la "servidor =" cadena, sin incluir valores NULL finales.|  
   
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   

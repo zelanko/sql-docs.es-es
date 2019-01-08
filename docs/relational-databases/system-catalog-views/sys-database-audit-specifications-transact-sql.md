@@ -20,12 +20,12 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b91e302c48917454ba29210a2557caf558940a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604914"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522979"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47604914"
 |database_specification_id|**int**|Identificador de la especificación de base de datos.|  
 |create_date|**datetime**|Fecha en la que se creó la especificación de auditoría.|  
 |modified_date|**datetime**|Fecha en la que se modificó por última vez la especificación de auditoría.|  
-|is_state_enabled|**bit**|Estado de la especificación de auditoría:<br /><br /> 0 – Deshabilitada<br /><br /> 1 – Habilitada|  
+|is_state_enabled|**bit**|Estado de la especificación de auditoría:<br /><br /> 0 - DESHABILITADO<br /><br /> 1 - HABILITADO|  
 |audit_GUID|**uniqueidentifier**|GUID de la auditoría que contiene esta especificación. Se usa durante la enumeración de las especificaciones de auditoría de base de datos miembro al adjuntar o iniciar la base de datos.|  
   
 ## <a name="remarks"></a>Comentarios  

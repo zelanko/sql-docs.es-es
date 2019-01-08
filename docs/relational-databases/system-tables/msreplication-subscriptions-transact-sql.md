@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSreplication_subscriptions
@@ -19,12 +18,12 @@ ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f195247e3daf764903028e8ba10ca0d7dd24a426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fa68012f419939c3f77980020795f23c4ca4672
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800843"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794537"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47800843"
 |**subscription_type**|**int**|El tipo de suscripción:<br /><br /> 0 = Inserción.<br /><br /> 1 = Extracción.<br /><br /> 2 = Anónima.|  
 |**distribution_agent**|**sysname**|Nombre del Agente de distribución.|  
 |**Time**|**smalldatetime**|Hora de la última actualización realizada por el Agente de distribución.|  
-|**Descripción**|**nvarchar(255)**|Descripción de la suscripción.|  
+|**description**|**nvarchar(255)**|Descripción de la suscripción.|  
 |**transaction_timestamp**|**varbinary (16)**|Solo para uso interno.|  
 |**update_mode**|**tinyint**|Tipo de actualización.|  
 |**valor de agent_id**|**binary (16)**|Id. del agente.|  

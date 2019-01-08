@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 4 (opcional): combinar, coincidencia y publicar un nuevo conjunto de datos | Microsoft Docs'
+title: 'Tarea 4 (opcional): Combinar, coincidencia y publicar un nuevo conjunto de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05c8785427b905138e513ab7134d56def7cdcf4d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061755"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353073"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarea 4 (opcional): combinar, buscar coincidencias y publicar un conjunto de datos nuevo
-  Con el tiempo, le interesará agregar más datos al repositorio MDS. Antes de agregar datos, puede ser útil comparar los nuevos datos con los datos que ya se administran en MDS para asegurarse de que no se agregan datos duplicados o imprecisos. En el complemento Master Data Services para Excel, puede combinar datos de dos hojas de cálculo y comparar los datos para identificar y quitar duplicados antes de publicar los datos en MDS. La característica de búsqueda de coincidencias del complemento MDS para Excel emplea la funcionalidad de coincidencia de DQS para identificar coincidencias en los datos. En esta tarea, combinará datos de dos hojas de cálculo en una y después buscará coincidencias para identificar y quitar duplicados antes de publicar los datos en MDS. Consulte [coincidencia de calidad de datos en el complemento MDS para Excel](http://msdn.microsoft.com/library/hh548681.aspx) y [combinar datos](http://msdn.microsoft.com/library/hh548680.aspx) temas para obtener más detalles.  
+  Con el tiempo, le interesará agregar más datos al repositorio MDS. Antes de agregar datos, puede ser útil comparar los nuevos datos a los datos que ya se administran en MDS, para asegurarse de que no se agregan datos duplicados o imprecisos. En el complemento Master Data Services para Excel, puede combinar datos de dos hojas de cálculo y comparar los datos para identificar y quitar duplicados antes de publicar los datos en MDS. La característica de búsqueda de coincidencias del complemento MDS para Excel emplea la funcionalidad de coincidencia de DQS para identificar coincidencias en los datos. En esta tarea, combinará datos de dos hojas de cálculo en una y después buscará coincidencias para identificar y quitar duplicados antes de publicar los datos en MDS. Consulte [coincidencia de calidad de datos en el complemento MDS para Excel](https://msdn.microsoft.com/library/hh548681.aspx) y [combinar datos](https://msdn.microsoft.com/library/hh548680.aspx) temas para obtener más detalles.  
   
 1.  Inicie una nueva instancia de **Excel**. Haga clic en **iniciar**, apunte a **ejecutar**, tipo **Excel**y haga clic en **Aceptar**.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48061755"
   
 4.  Debería ver el **Explorador de datos maestros** panel a la derecha. Si no ve el Explorador de datos maestros, haga clic en **Mostrar explorador** botón en la cinta de opciones.  
   
-5.  En el **Explorador de datos maestros** ventana, seleccione **proveedores** en la lista desplegable para la **modelo**. Debería ver que el modelo tiene una entidad: **proveedor**.  
+5.  En el **Explorador de datos maestros** ventana, seleccione **proveedores** en la lista desplegable para la **modelo**. Observe que el modelo tiene una entidad: **Proveedor**.  
   
      ![Excel - ventana del explorador de datos maestros](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - ventana del explorador de datos maestros")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48061755"
   
 8.  Abra **Suppliers.xls** (el archivo original entrada que se incluye en los archivos del tutorial) y copie todas las filas (tres) de la **CombineAndCleanse** hoja de cálculo para **Hoja2**.  
   
-9. Vuelva a la **proveedor** hoja en el **libro 1 – Microsoft Excel** (no el **Cleansed and Matched Supplier List** Excel) que está conectado a **MDS**.  
+9. Vuelva a la **proveedor** hoja en el **1 libro: Microsoft Excel** (no el **Cleansed and Matched Supplier List** Excel) que está conectado a **MDS**.  
   
 10. Haga clic en **Datos maestros** en la barra de menús.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48061755"
   
 25. Haga clic en **Aceptar**.  
   
-26. El proceso de coincidencia debe identificar un duplicado para el proveedor con **código: S1**.  
+26. El proceso de coincidencia debe identificar un duplicado para el proveedor que tiene **Code: S1**.  
   
      ![Excel - resultados coincidentes](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - resultados coincidentes")  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48061755"
   
 33. **Ordenación** la lista por **código** y busque los registros con **S57** y **S66** como códigos. También puede usar el **filtro** en la barra de herramientas para buscar un registro específico en la lista.  
   
-34. Ahora, cierre **Libro1 – Microsoft Excel** ventana sin guardar el archivo.  
+34. Ahora, cierre **Book1 - Microsoft Excel** ventana sin guardar el archivo.  
   
 ## <a name="next-step"></a>Paso siguiente  
  [Tarea 5: Crear un atributo basado en dominio desde Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  

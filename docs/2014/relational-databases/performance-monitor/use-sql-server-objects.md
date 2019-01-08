@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - server performance [SQL Server], objects for monitoring
@@ -30,12 +30,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0678c741387e6b9e3a252d03fcebad8dcb5e5a52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de0e30a3d0b7daf014753c225ca34bf7a1b0cd17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133037"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753598"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos de SQL Server
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye objetos y contadores que el Monitor de sistema puede utilizar para supervisar la actividad de los equipos en los que se ejecute una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un objeto es cualquier recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como un bloqueo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un proceso de Windows. Cada objeto contiene uno o más contadores que determinan diversos aspectos de los objetos que se van a supervisar. Por ejemplo, el objeto **Bloqueos de SQL Server** contiene los contadores **Número de interbloqueos/seg.** y **Tiempos de espera de bloqueos/seg.**  
@@ -105,12 +105,12 @@ ms.locfileid: "48133037"
 |[SQLServer:Locks](sql-server-locks-object.md)|Proporciona información acerca de las solicitudes de bloqueo individuales que realiza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como los tiempos de espera de bloqueos y los interbloqueos. Pueden existir múltiples instancias de este objeto.|  
 |[SQLServer:Memory Manager](sql-server-memory-manager-object.md)|Proporciona información acerca de la utilización de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como, por ejemplo, el número total de estructuras de bloqueo asignadas actualmente.|  
 |[SQLServer:Caché del plan](sql-server-plan-cache-object.md)|Proporciona información acerca de la caché de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se utiliza para almacenar objetos como procedimientos almacenados, desencadenadores y planes de consultas.|  
-|[SQLServer:Estadísticas de grupo de recursos de servidor](sql-server-resource-pool-stats-object.md)|Proporciona información sobre las estadísticas del grupo de recursos de servidor del regulador de recursos.|  
+|[SQLServer: Estadísticas de grupo de recursos](sql-server-resource-pool-stats-object.md)|Proporciona información sobre las estadísticas del grupo de recursos de servidor del regulador de recursos.|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|Proporciona información acerca de los errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|Proporciona información acerca de aspectos de consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como el número de lotes de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que recibe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|Proporciona información acerca de las transacciones activas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como el número global de transacciones y el número de transacciones de instantáneas.|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|Realiza una supervisión personalizada. Cada contador puede ser un procedimiento almacenado personalizado o cualquier instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que devuelva un valor para supervisar.|  
-|[SQLServer:Wait Statistics](sql-server-wait-statistics-object.md)|Proporciona información acerca de las esperas.|  
+|[SQLServer: Estadísticas de espera](sql-server-wait-statistics-object.md)|Proporciona información acerca de las esperas.|  
 |[SQLServer: Estadísticas de grupo de cargas de trabajo](sql-server-workload-group-stats-object.md)|Proporciona información sobre las estadísticas de grupo de cargas de trabajo del regulador de recursos.|  
   
 ##  <a name="SQLServerReplicationPOs"></a> Objetos de rendimiento de replicación de SQL Server  
@@ -118,7 +118,7 @@ ms.locfileid: "48133037"
   
 |Objeto de rendimiento|Descripción|  
 |------------------------|-----------------|  
-|**SQLServer:Agentes de replicación**<br /><br /> **SQLServer:Instantánea de replicación**<br /><br /> **SQLServer:Lector del registro de replicación**<br /><br /> **SQLServer:Distribuidor de replicación**<br /><br /> **SQLServer:Mezcla de replicación**<br /><br /> Para más información, consulte [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md).|Proporciona información acerca de la actividad del agente de replicación.|  
+|**SQLServer:Agentes de replicación**<br /><br /> **SQLServer:Instantánea de replicación**<br /><br /> **SQLServer:Lector del registro de replicación**<br /><br /> **SQLServer:Distribuidor de replicación**<br /><br /> **SQLServer:Mezcla de replicación**<br /><br /> Para más información, vea [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md).|Proporciona información acerca de la actividad del agente de replicación.|  
   
 ##  <a name="SsisPipelineCounters"></a> Contadores de canalización SSIS  
  Para el contador **Canalización SSIS** , vea [Contadores de rendimiento](../../integration-services/performance/performance-counters.md).  

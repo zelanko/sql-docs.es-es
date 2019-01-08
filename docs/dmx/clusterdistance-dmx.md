@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad3d0d06016fe8684cacaf73286b229a423aa7c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533661"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,18 +34,18 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>Tipo devuelto  
  Un valor escalar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **ClusterDistance** función devuelve la distancia entre el caso de entrada y el clúster que tiene la mayor probabilidad de que el caso de entrada.  
   
- En el caso de la agrupación en clústeres mediana-K, dado que cualquier caso puede pertenecer a un único clúster, con un peso de pertenencia de 1.0, la distancia del clúster siempre es 0. Sin embargo, se supone que con mediana-K, cada clúster tiene un centroide. Puede obtener el valor del centroide consultando o examinando la tabla anidada NODE_DISTRIBUTION en el contenido del modelo de minería de datos. Para obtener más información, vea [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
+ En el caso de la agrupación en clústeres mediana-K, dado que cualquier caso puede pertenecer a un único clúster, con un peso de pertenencia de 1.0, la distancia del clúster siempre es 0. Sin embargo, se supone que con mediana-K, cada clúster tiene un centroide. Puede obtener el valor del centroide consultando o examinando la tabla anidada NODE_DISTRIBUTION en el contenido del modelo de minería de datos. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
  En el caso del método de agrupación en clústeres EM predeterminado, todos los puntos dentro del clúster se consideran igualmente probables; por consiguiente, por diseño no hay centroide para el clúster. El valor de **ClusterDistance** entre un caso determinado y un clúster determinado *N* se calcula como sigue:  
   
- ClusterDistance(N) =1–(membershipWeight(N))  
+ ClusterDistance(N) =1-(membershipWeight(N))  
   
  O bien:  
   
- ClusterDistance(N) = 1 – ClusterProbability (N))  
+ ClusterDistance(N) = 1-ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>Funciones de predicción relacionadas  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona las funciones adicionales siguientes para consultar los modelos de agrupación en clústeres:  
@@ -58,7 +58,7 @@ ClusterDistance([<ClusterID expression>])
   
 -   Use la [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) función para devolver una medida de 0 a 1 que indica la probabilidad de que un caso de entrada es que exista teniendo en cuenta el modelo aprendido por el algoritmo.  
   
-## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Ejemplo 1: obtener la distancia de clúster para el clúster más probable  
+## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Ejemplo 1: Obtener la distancia del clúster al clúster más probable  
  En el ejemplo siguiente se devuelve la distancia del caso especificado para el clúster al que es más probable que el caso pertenezca.  
   
 ```  
@@ -88,7 +88,7 @@ NATURAL PREDICTION JOIN
 |--------------|  
 |Clúster 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Ejemplo 2: obtener la distancia a un clúster especificado  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Ejemplo 2: Obtener la distancia a un clúster especificado  
  La siguiente sintaxis usa el conjunto de filas de esquema del contenido del modelo de minería de datos para devolver la lista de identificadores de nodo y títulos de nodo para los clústeres que existen en el modelo de minería de datos. A continuación, puede usar la leyenda del nodo como el argumento de identificador de clúster en el **ClusterDistance** función.  
   
 ```  
@@ -129,6 +129,6 @@ NATURAL PREDICTION JOIN
  [Clúster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Contenido del modelo de minería de datos para los modelos de clústeres &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

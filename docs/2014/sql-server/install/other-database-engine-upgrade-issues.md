@@ -13,12 +13,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cbaa1d648b3de2cdd0b16d233db93bf52635b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176065"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321641"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Otros problemas de actualización del motor de base de datos
   La versión actual del Asesor de actualizaciones no podrá detectar los siguientes problemas de actualización. Examine los problemas enumerados a continuación para evaluar su posible impacto en los sistemas.  
@@ -64,7 +64,7 @@ ms.locfileid: "48176065"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>La tabla de destino de la cláusula OUTPUT INTO no puede tener ningún desencadenador definido  
- No se admite el uso de OUPUT INTO en una tabla de destino cuando la tabla tiene algún desencadenador habilitado.  
+ No se admite el resultado en una tabla de destino cuando la tabla tiene desencadenadores habilitados.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>Error en tiempo de compilación con los UDF cuando el destino de una cláusula OUTPUT INTO sea una tabla  
  Las funciones definidas por el usuario (UDF) no se pueden utilizar para realizar acciones que modifiquen el estado de la base de datos. Por ejemplo, un UDF no puede realizar ninguna acción DDL (CREATE/ALTER/DROP) o DML (INSERT/UPDATE/DELETE) sobre ningún objeto, excepto para variables de tabla.  

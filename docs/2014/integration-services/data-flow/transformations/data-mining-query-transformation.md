@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1be2f23cbcf39b1b3775ef0a8de592ed71240a45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00b8b6e5004878c3d6c7174ed375f68a2c4d7b4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058605"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796115"
 ---
 # <a name="data-mining-query-transformation"></a>Consulta de minería de datos, transformación
   La transformación Consulta de minería de datos realiza consultas de predicción en modelos de minería de datos. Esta transformación contiene un generador de consultas para crear consultas de Extensiones de minería de datos (DMX). El generador de consultas permite crear instrucciones personalizadas para evaluar los datos de entrada de la transformación en un modelo de minería existente mediante el lenguaje DMX. Para más información, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
@@ -37,9 +36,9 @@ ms.locfileid: "48058605"
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Consulta de minería de datos** , haga clic en uno de los temas siguientes:  
   
--   [Editor de transformación consulta de minería de datos &#40;pestaña modelo de minería de datos&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Editor de transformación Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [Editor de transformación consulta de minería de datos &#40;pestaña modelo de minería de datos&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Editor de transformación Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -47,6 +46,6 @@ ms.locfileid: "48058605"
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
- Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
+ Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
   
   

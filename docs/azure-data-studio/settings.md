@@ -1,7 +1,8 @@
 ---
-title: Configuración de área de trabajo y usuario Studio de datos de Azure | Microsoft Docs
-description: Cómo modificar la configuración de área de trabajo y usuario de Azure Data Studio.
-ms.custom: tools|sos
+title: Usuario y la configuración de área de trabajo
+titleSuffix: Azure Data Studio
+description: Cómo personalizar Azure Data Studio mediante la modificación de usuario y la configuración de área de trabajo.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 34eea8db6295903ccdd99d7d73b143fb6fed02ec
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6bf09159c8b7384a835a06bfafe744ea2f90f0c2
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355956"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030509"
 ---
-# <a name="user-and-workspace-settings"></a>Usuario y la configuración de área de trabajo
+# <a name="modify-user-and-workspace-settings"></a>Modificar la configuración de área de trabajo y usuario
 
 Es fácil de configurar [!INCLUDE[name-sos](../includes/name-sos-short.md)] a su gusto a través de configuración. Casi todas las partes de [!INCLUDE[name-sos](../includes/name-sos-short.md)]del editor, la interfaz de usuario y comportamiento funcional tiene opciones puede modificar.
 
@@ -30,7 +31,7 @@ Es fácil de configurar [!INCLUDE[name-sos](../includes/name-sos-short.md)] a su
 
 El comando de menú **archivo** > **preferencias** > **configuración** (**código**  >  **Preferencias** > **configuración** en Mac) proporciona el punto de entrada para configurar la configuración de usuario y el área de trabajo. Se proporcionan con una lista de la configuración predeterminada. Copiar cualquier configuración que desea cambiar a la correspondiente `settings.json` archivo. Las pestañas de la derecha le permite alternar rápidamente entre los archivos de configuración de usuario y el área de trabajo.
 
-También puede abrir la configuración de usuario y del área de trabajo desde el **paleta de comandos** (**Ctrl + Mayús + P**) con **preferencias: abra Configuración de usuario** y  **Preferencias: Abrir Configuración de área de trabajo** o use el método abreviado de teclado (**Ctrl +,**).
+También puede abrir la configuración de usuario y del área de trabajo desde el **paleta de comandos** (**Ctrl + Mayús + P**) con **preferencias: Abrir configuración de usuario** y **preferencias: Abrir configuración de área de trabajo** o use el método abreviado de teclado (**Ctrl +,**).
 
 El siguiente ejemplo deshabilita los números de línea en el editor y configura las líneas de código que se les aplica sangría automáticamente.
 
@@ -38,7 +39,7 @@ El siguiente ejemplo deshabilita los números de línea en el editor y configura
 
 Se vuelven a cargar los cambios de configuración por [!INCLUDE[name-sos](../includes/name-sos-short.md)] después modificado `settings.json` se guarda el archivo.
 
->**Nota:** configuración de área de trabajo es útiles para compartir la configuración específica del proyecto a través de un equipo.
+>**Nota:** Configuración de área de trabajo es útiles para compartir la configuración específica del proyecto a través de un equipo.
 
 ## <a name="settings-file-locations"></a>Ubicaciones de archivo de configuración
 

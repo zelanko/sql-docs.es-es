@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
@@ -24,12 +23,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112755"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782847"
 ---
 # <a name="configure-web-synchronization"></a>Configurar sincronización web
   La opción de sincronización web para la replicación de mezcla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilita la replicación de datos con el protocolo HTTPS a través de Internet. Para utilizar la sincronización web, primero debe realizar las siguientes acciones de configuración:  
@@ -125,7 +124,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 -   Si se replican grandes volúmenes de datos, podría ser necesario ajustar el tamaño del lote del Agente de mezcla.  
   
- El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica mediante el –`DownloadGenerationsPerBatch` y –`UploadGenerationsPerBatch` parámetros del agente de mezcla. Para más información, consulte [Replication Merge Agent](agents/replication-merge-agent.md).  
+ El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica mediante el -`DownloadGenerationsPerBatch` y -`UploadGenerationsPerBatch` parámetros del agente de mezcla. Para más información, consulte [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Para grandes volúmenes de datos, especifique un número pequeño para cada uno de los parámetros de procesamiento por lotes. Se recomienda comenzar con un valor de 10 y optimizarlo después de acuerdo con las necesidades y el rendimiento de la aplicación. Normalmente, estos parámetros se especifican en un perfil de agente. Para obtener más información acerca de los perfiles, vea [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication], snapshot replication
@@ -21,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43f5005c9b03772e8e8e23c3b3e06ea912683362
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229995"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823525"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional
   Hay tres áreas que hay que considerar al diseñar una estrategia de copias de seguridad y restauración para la replicación de instantáneas o transaccional:  
@@ -72,7 +71,7 @@ ms.locfileid: "48229995"
   
  **Para establecer la opción sync with backup**  
   
--   Programación de [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicación: [Habilitar las copias de seguridad coordinadas para la replicación transaccional &#40;programación de la replicación con Transact-SQL&#41;](enable-coordinated-backups-for-transactional-replication.md)  
+-   Programación de la replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Habilitar copias de seguridad coordinadas para la replicación transaccional &#40;programación de la replicación con Transact-SQL&#41;](enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Restaurar bases de datos que participan en la replicación  
  Puede restaurar todas las bases de datos de una topología de replicación si hay copias de seguridad recientes disponibles y se siguen los pasos correctos. Los pasos de restauración de la base de datos de publicación dependen del tipo de replicación y de las opciones utilizadas. No obstante, los pasos de restauración de todas las demás bases de datos son independientes del tipo y de las opciones.  
@@ -92,7 +91,7 @@ ms.locfileid: "48229995"
   
  La restauración de las bases de datos **msdb** y **maestra** , que también se tratan en esta sección, es igual para los cuatro tipos.  
   
-#### <a name="publication-database-snapshot-replication"></a>Base de datos de publicaciones: replicación de instantáneas  
+#### <a name="publication-database-snapshot-replication"></a>Base de datos de publicación: Replicación de instantáneas  
   
 1.  Restaure la última copia de seguridad de la base de datos de publicaciones. Vaya al paso 2.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48229995"
   
      Para más información sobre cómo quitar la replicación, vea [sp_removedbreplication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Base de datos de publicaciones: replicación transaccional de solo lectura  
+#### <a name="publication-database-read-only-transactional-replication"></a>Base de datos de publicación: Replicación transaccional de solo lectura  
   
 1.  Restaure la última copia de seguridad de la base de datos de publicaciones. Vaya al paso 2.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "48229995"
   
          Para obtener más información acerca de cómo especificar que el suscriptor ya tiene los datos, vea [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de datos de publicaciones: replicación transaccional con suscripciones de actualización  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de datos de publicación: Replicación transaccional con suscripciones actualizables  
   
 1.  Restaure la última copia de seguridad de la base de datos de publicaciones. Vaya al paso 2.  
   
@@ -183,7 +182,7 @@ ms.locfileid: "48229995"
   
          Para obtener más información acerca de cómo especificar que el suscriptor ya tiene los datos, vea [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Base de datos de publicaciones: replicación transaccional punto a punto  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Base de datos de publicación: Peer-to-Peer Transactional Replication  
  En los pasos siguientes, las bases de datos de publicación **A**, **B**y **C** están en una topología de replicación transaccional punto a punto. Las bases de datos **A** y **C** están en línea y funcionan correctamente; la base de datos **B** es la que se desea restaurar. El proceso descrito aquí, sobre todo los pasos 7, 10 y 11, son muy similares al proceso que se requiere para agregar un nodo a una topología punto a punto. La forma más directa de llevar a cabo estos pasos es mediante el Asistente de configuración de la topología punto a punto, pero también puede usar procedimientos almacenados.  
   
 1.  Ejecute los agentes de distribución para sincronizar las suscripciones de las bases de datos **A** y **C**. Vaya al paso 2.  
@@ -322,7 +321,7 @@ ms.locfileid: "48229995"
   
 2.  Restaure la última copia de seguridad de la base de datos de suscripciones. Vaya al paso 3.  
   
-3.  Si la base de datos de suscripciones solo contiene las suscripciones de inserción, vaya al paso 4. Si la base de datos de suscripciones contiene cualquier suscripción de extracción, hágase las preguntas siguientes: ¿está actualizada la información de suscripción? ¿La base de datos incluye todas las tablas y opciones que se establecieron en el momento del error? En caso afirmativo, continúe en el paso 4. En caso contrario, reinicialice la suscripción. La recuperación se ha completado.  
+3.  Si la base de datos de suscripciones solo contiene las suscripciones de inserción, vaya al paso 4. Si la base de datos de suscripciones contiene cualquier suscripción de extracción, pregúntese lo siguiente: ¿Es la información de suscripción actual? ¿La base de datos incluye todas las tablas y opciones que se establecieron en el momento del error? En caso afirmativo, continúe en el paso 4. En caso contrario, reinicialice la suscripción. La recuperación se ha completado.  
   
 4.  Para sincronizar el suscriptor, ejecute el Agente de distribución. La recuperación se ha completado.  
   

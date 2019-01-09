@@ -1,5 +1,5 @@
 ---
-title: Definir una relación de hechos | Documentos de Microsoft
+title: Definir una relación de hechos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e960315b16828dfcfc21f4899c2643883ad18327
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018192"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518843"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lección 5-2: definir una relación de hechos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 A veces, los usuarios desean poder dimensionar las medidas según los elementos de datos que se encuentran en la tabla de hechos o realizar consultas en la tabla de hechos sobre determinada información relacionada adicional, como números de factura o números de pedidos de compra relacionados con hechos de venta específicos. Cuando se define una dimensión basada en un elemento de tabla de hechos de este tipo, la dimensión se conoce como *dimensión de hechos*. Las dimensiones de hechos también se denominan dimensiones degeneradas. Las dimensiones de hechos son útiles para agrupar filas de tablas de hechos relacionadas, como todas las filas que están relacionadas con un número de factura determinado. Aunque esta información puede colocarse en una tabla de dimensiones independiente de la base de datos relacional, crear una tabla de dimensiones independiente para la información no supone ninguna ventaja, ya que la tabla de dimensiones crecerá al mismo ritmo que la tabla de hechos, y simplemente crearía datos duplicados y una complejidad innecesaria.  
   
-En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede determinar si los datos de las dimensiones de hechos deben duplicarse en una estructura de dimensiones MOLAP para incrementar el rendimiento de las consultas o si es necesario definir una dimensión de hechos como dimensión ROLAP para ahorrar espacio a costa del rendimiento de las consultas. Cuando se almacena una dimensión en modo de almacenamiento MOLAP, todos los miembros de la dimensión se almacenan en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en una estructura MOLAP muy comprimida, además de almacenarse en las particiones del grupo de medida. Cuando se almacena una dimensión con el modo de almacenamiento ROLAP, en la estructura MOLAP solo se almacena la definición de la dimensión, y, en el momento de la consulta, los miembros de la dimensión propiamente dichos se consultan desde la tabla de hechos relacionales subyacente. El modo de almacenamiento adecuado se decide en función de la frecuencia con la que se consultan las dimensiones de hechos, el número de filas que devuelve una consulta típica, el rendimiento de la consulta y el costo de procesamiento. Para definir una dimensión como ROLAP, no es necesario almacenar todos los cubos que utilizan la dimensión con el mismo modo de almacenamiento ROLAP. El modo de almacenamiento de cada dimensión se puede configurar independientemente.  
+En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede determinar si los datos de las dimensiones de hechos deben duplicarse en una estructura de dimensiones MOLAP para incrementar el rendimiento de las consultas o si es necesario definir una dimensión de hechos como dimensión ROLAP para ahorrar espacio a costa del rendimiento de las consultas. Cuando se almacena una dimensión en modo de almacenamiento MOLAP, todos los miembros de la dimensión se almacenan en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en una estructura MOLAP muy comprimida, además de almacenarse en las particiones del grupo de medida. Al almacenar una dimensión con el modo de almacenamiento ROLAP, se almacena la definición de la dimensión en el MOLAP miembros de estructura de la dimensión propiamente dichos se consultan de la tabla de hechos relacionales subyacente en tiempo de consulta. El modo de almacenamiento adecuado se decide en función de la frecuencia con la que se consultan las dimensiones de hechos, el número de filas que devuelve una consulta típica, el rendimiento de la consulta y el costo de procesamiento. Para definir una dimensión como ROLAP, no es necesario almacenar todos los cubos que utilizan la dimensión con el mismo modo de almacenamiento ROLAP. El modo de almacenamiento de cada dimensión se puede configurar independientemente.  
   
 Cuando define una dimensión de hechos, puede definir la relación entre la dimensión de hechos y el grupo de medida como relación de hechos. Las relaciones de hechos presentan estas limitaciones:  
   
@@ -66,7 +66,7 @@ En las tareas de este tema, debe agregar una nueva dimensión de cubo basada en 
   
 14. En el panel **Atributos** del Diseñador de dimensiones para la dimensión **Internet Sales Order Details** , seleccione **Sales Order Number**y, después, cambie la propiedad **Nombre** de la ventana Propiedades por **Item Description.**  
   
-15. En la celda de la propiedad **NameColumn** , haga clic en el botón Examinar **(…)**. En el cuadro de diálogo **Columna de nombre** , seleccione **Product** en la lista **Tabla de origen** , seleccione **EnglishProductName** en **Columna de origen**y, después, haga clic en **Aceptar**.  
+15. En el **NameColumn** propiedad de celda, haga clic en el botón Examinar **(...)** . En el cuadro de diálogo Columna de nombre , seleccione Product en la lista **Tabla de origen** , seleccione **EnglishProductName** en **Columna de origen**y, después, haga clic en **Aceptar**.  
   
 16. Agregue el atributo **Sales Order Number** a la dimensión arrastrando la columna **SalesOrderNumber** de la tabla **InternetSales** del panel **Vista del origen de datos** al panel **Atributos** .  
   
@@ -88,7 +88,7 @@ En las tareas de este tema, debe agregar una nueva dimensión de cubo basada en 
   
     Observe que la dimensión de cubo **Internet Sales Order Details** está configurada automáticamente con una relación de hechos, como indica el icono único.  
   
-2.  Haga clic en el botón Examinar (**…**) de la celda **Item Description** , situada en la intersección del grupo de medida **Internet Sales** con la dimensión **Internet Sales Order Details** , para revisar las propiedades de la relación de hechos.  
+2.  Haga clic en el botón Examinar (**...** ) en el **Item Description** celda en la intersección de la **Internet Sales** grupo de medida y la **Internet Sales Order Details** dimensión, Revise las propiedades de relación de hechos.  
   
     Se abre el cuadro de diálogo **Definir relación** . Observe que no puede configurar ninguna de las propiedades.  
   
@@ -116,14 +116,14 @@ En las tareas de este tema, debe agregar una nueva dimensión de cubo basada en 
   
     En la imagen siguiente se muestra el resultado de los pasos anteriores.  
   
-    ![El dimensionamiento de importe de ventas de ventas por Internet](../analysis-services/media/l5-factrelationship-3.gif "dimensionamiento de importe de ventas de ventas por Internet")  
+    ![El dimensionamiento de Internet Sales-Sales Amount](../analysis-services/media/l5-factrelationship-3.gif "acotación de Internet Sales-Sales Amount")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Definir una relación de varios a varios](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## <a name="see-also"></a>Vea también  
 [Relaciones de dimensión](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
-[Definir una relación de hechos y las propiedades de relación de hechos](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
+[Definir relaciones de hechos y propiedades de las relaciones de hechos](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   
   

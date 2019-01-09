@@ -11,20 +11,20 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed6e4ef356d56029f94789dd462e0578161d6668
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ad5132b4fe6750c2e2dd66786b5a4dceb4577e5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693423"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211774"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Conectarse a Azure Blob Storage (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos de **Azure Blob Storage** desde la página **Elegir un origen de datos** o **Elegir un destino** del Asistente para importación y exportación de SQL Server.
 
->   [!NOTE]
+> [!NOTE]
 > Para usar el origen o el destino del blob de Azure, tiene que instalar Azure Feature Pack para SQL Server Integration Services.
 > - Para descargar el Feature Pack, consulte [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492) (Azure Feature Pack para Microsoft SQL Server 2016 Integration Services).
->
+> 
 > - Para obtener más información, vea [Azure Feature Pack para Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
 En la captura de pantalla siguiente se muestran las opciones para configurar una conexión a Azure Blob Storage.

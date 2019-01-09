@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2220349cf0ab3db2a31e2c520fc8ef92acb48eb9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7544e79400c2b85b11330825866909a05acdfd09
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762423"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213764"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ WITH IDENTITY = 'identity_name'
   
  SECRET **='**_secret_**'**  
  Especifica el secreto necesario para la autenticación de salida. `SECRET` es necesario para importar un archivo del almacenamiento de blobs de Azure. Para cargar datos de Azure Blob Storage a SQL DW o Almacenamiento de datos paralelos, el secreto debe ser la clave de Azure Storage.  
->  [!WARNING]
+> [!WARNING]
 >  El valor de clave SAS debe empezar con un signo de interrogación (“?”). Cuando use la clave SAS, debe quitar el símbolo “?” inicial. Si no lo hace, puede que se bloquee su trabajo.  
   
 ## <a name="remarks"></a>Notas  
@@ -100,7 +100,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 GO  
 ```  
 
-### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Creación de una credencial con ámbito de base de datos para una firma de acceso compartido   
+### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>b. Creación de una credencial con ámbito de base de datos para una firma de acceso compartido   
 En el ejemplo siguiente se crea una credencial con ámbito de base de datos que se puede usar para crear un [origen de datos externo](../../t-sql/statements/create-external-data-source-transact-sql.md), que puede realizar operaciones masivas, como [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Las firmas de acceso compartido no se pueden usar con PolyBase en SQL Server, APS ni SQL DW.
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  

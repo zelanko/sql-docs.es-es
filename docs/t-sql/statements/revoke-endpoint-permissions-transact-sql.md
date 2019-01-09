@@ -17,12 +17,12 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cad53aef8b06cca5dc37bca1b5a95d82d6c89d74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae9f994111a6c15c3bdf0a5c8d4f972e62605a9c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839913"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591799"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE (permisos de extremo de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Especifica un permiso que se puede conceder para un extremo. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  Especifica el extremo en el que se va a conceder el permiso. El calificador de ámbito (**::**) es obligatorio.  
   
  { FROM | TO } \<server_principal> Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el que se va a revocar el permiso.  
@@ -113,7 +113,7 @@ REVOKE VIEW DEFINITION ON ENDPOINT::Mirror7 FROM ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Revocar el permiso TAKE OWNERSHIP con la opción CASCADE  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>b. Revocar el permiso TAKE OWNERSHIP con la opción CASCADE  
  En el siguiente ejemplo se revoca el permiso `TAKE OWNERSHIP` en el extremo `Shipping83` al usuario `PKomosinski` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a todas las entidades de seguridad a las que `PKomosinski` concedió `TAKE OWNERSHIP` en `Shipping83`.  
   
 ```  
@@ -123,7 +123,7 @@ REVOKE TAKE OWNERSHIP ON ENDPOINT::Shipping83 FROM PKomosinski
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [DENY Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)  [DENY &#40;permisos de extremo de Transact-SQL&#40;]  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   

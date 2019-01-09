@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fcb107c5ae7a22fa2705fda0580e0284940f694
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523342"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380696"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Hace referencia que se encontraron sys.numbered_procedure_parameters desusados. No debe usarse. Se produce una vez por cada compilación.|  
 |numbered_procedures|Hace referencia a que se encontraron sys.numbered_procedures desusados. No debe usarse. Se produce una vez por cada compilación.|  
-|Oldstyle RAISEERROR|Se encontró la sintaxis de RAISERROR obsoleta (Formato: RAISERROR integer string). Reescriba la instrucción usando la sintaxis de RAISERROR actual. Se produce una vez por cada compilación.|  
+|Oldstyle RAISEERROR|Se encontró la sintaxis RAISERROR obsoleta (formato: cadena de entero RAISERROR). Reescriba la instrucción usando la sintaxis de RAISERROR actual. Se produce una vez por cada compilación.|  
 |OLEDB para conexiones ad hoc|SQLOLEDB no es un proveedor admitido. Utilice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para las conexiones ad hoc.|  
 |PERMISSIONS|Se encontraron referencias a la función intrínseca PERMISSIONS. Consulte en su lugar sys.fn_my_permissions. Se produce una vez por cada consulta.|  
 |ProcNums|Se encontró la sintaxis de ProcNums desusada. Reescriba las instrucciones para quitar las referencias. Se produce una vez por cada compilación.|  
@@ -279,7 +279,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |xp_loginconfig|Se encontró el procedimiento xp_loginconfig. Utilice en su lugar el argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Se produce una vez por cada consulta.|  
 |xp_revokelogin|Se encontró el procedimiento xp_revokelogin. Use ALTER LOGIN DISABLE o DROP LOGIN en su lugar. Se produce una vez por cada compilación.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características desusadas del motor de base de datos de SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Características en desuso de búsqueda de texto completo en SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement (clase de eventos)](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   

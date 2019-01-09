@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
@@ -14,12 +13,12 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: db868a100ce5dfaad41507b29c6256fa3d53aea6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbf39fc0f0988a624d5a472b8938e47e4aa78a48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836035"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819297"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Edición de una entidad (Master Data Services)
 
@@ -73,7 +72,7 @@ ms.locfileid: "47836035"
   
  ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Eliminar una entidad &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  

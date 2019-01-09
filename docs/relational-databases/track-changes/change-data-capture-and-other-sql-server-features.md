@@ -1,6 +1,6 @@
 ---
 title: Captura de datos modificados y otras características de SQL Server | Microsoft Docs
-ms.date: 05/03/2016
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,15 +12,15 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 809c196ffdad3715b0d1c4f8c857c36fd246d02d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a293914cad908b8c4d7fc295bf1e0846446dc2ec
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560482"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991828"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Captura de datos modificados y otras características de SQL Server
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   En este tema se describe cómo interactúan las características siguientes con la captura de datos modificados:  
   
 -   [Seguimiento de cambios](#ChangeTracking)  
@@ -82,7 +82,7 @@ ms.locfileid: "51560482"
 ## <a name="change-data-capture-and-always-on"></a>Captura de datos modificados y AlwaysOn  
  Cuando se usa AlwaysOn, la enumeración de cambios se debe realizar en la réplica secundaria con el fin de reducir la carga del disco en la réplica principal.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar y supervisar la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

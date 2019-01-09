@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 156b4e773a56095a3f205017aabca8514e3bbbcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 927990916440cc33c56a362b17b77adbb726620e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779567"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Conflictos de combinación (Master Data Services)
 
@@ -48,7 +47,7 @@ ms.locfileid: "47836703"
   
 4.  Tras hacer clic en **Aplicar**, puede realizar cambios adicionales y volver a publicarlos. O puede hacer clic en **Cancelar** para cancelar la actualización y volver a cargar la última versión desde el servidor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
   

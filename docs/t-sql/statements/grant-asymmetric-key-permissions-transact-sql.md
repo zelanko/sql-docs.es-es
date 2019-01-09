@@ -18,12 +18,12 @@ ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 86d21ac71916d492e058cfd3f1193b0e6b9d8979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcf2732ddc71ad218f97715266cc70b77df6f2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780003"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589179"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT (permisos de clave asimétrica de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ GRANT { permission  [ ,...n ] }
  *permission*  
  Especifica un permiso que se puede conceder para una clave asimétrica. Se muestra a continuación.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  Especifica la clave asimétrica en la que se va a conceder el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  
@@ -107,7 +107,7 @@ AS *granting_principal*
   
  Los beneficiarios del permiso CONTROL SERVER, como por ejemplo, los miembros del rol fijo de servidor **sysadmin**, pueden conceder cualquier permiso para cualquier elemento protegible en el servidor. Los beneficiarios del permiso CONTROL para una base de datos, como por ejemplo, los miembros del rol fijo de base de datos **db_owner**, pueden conceder cualquier permiso para cualquier elemento protegible en la base de datos. Los receptores del permiso CONTROL en un esquema pueden conceder los permisos en cualquier objeto del esquema.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

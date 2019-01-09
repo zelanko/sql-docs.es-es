@@ -15,12 +15,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8f64fb29a90f38d777d0963b9f985bb65e2e2a8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6c48e1dd5a5fbcdc2141f14288e10f452b64c850
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701350"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201444"
 ---
 # <a name="save-as"></a>Guardar como
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,8 +33,8 @@ Busque la carpeta del proyecto actual en este menú desplegable. Al seleccionar 
 **Nombre de archivo**  
 Utilice esta opción para ver el nombre del archivo actual, cambiar el nombre del archivo o filtrar los archivos y las carpetas que aparecen. Para filtrar los archivos y las carpetas que aparecen, escriba un nombre de archivo parcial o completo que sirva de filtro. Puede usar el asterisco (`*`) como carácter comodín.  
   
-> [!TIP]  
-> Para mostrar archivos en ubicaciones web o de red, escriba una dirección URL o una ruta de red en el cuadro **Nombre de archivo** . Por ejemplo, "https://mywebsite" muestra los archivos disponibles en la ubicación web "miSitioWeb" y "\\\miServidor\miRecursoCompartido" muestra los archivos disponibles en la ubicación "miRecursoCompartido" en "miServidor".  
+> [!TIP]
+> Para mostrar archivos en ubicaciones web o de red, escriba una dirección URL o una ruta de red en el cuadro **Nombre de archivo** . Por ejemplo, "<https://mywebsite>" muestra los archivos disponibles en la ubicación web "miSitioWeb" y "\\\miServidor\miRecursoCompartido" muestra los archivos disponibles en la ubicación "miRecursoCompartido" en "miServidor".  
   
 **Guardar como tipo**  
 Utilice esta opción para seleccionar un nuevo tipo de archivo para el elemento seleccionado. Los tipos de archivo que aparecen incluyen todos los tipos de archivo disponibles a los que puede convertirse el elemento seleccionado.  
@@ -52,7 +52,7 @@ Muestra los archivos y las carpetas en **Mis proyectos** o en la última ubicaci
 **Mi PC**  
 Muestra la ubicación **Mi PC** de su equipo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Opciones avanzadas para guardar](../../ssms/menu-help/advanced-save-options.md)  
 [Administrar archivos con codificación](../../ssms/solution/manage-files-with-encoding.md)  
   

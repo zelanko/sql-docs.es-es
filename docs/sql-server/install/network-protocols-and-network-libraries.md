@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c6683da3464e094db8e85eca71baa45e3c2d031
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696643"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201877"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolos de red y bibliotecas de red
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51696643"
 ## <a name="server-message-block-protocol"></a>Protocolo Bloque de mensajes del servidor  
  Los servidores de la red perimétrica deben tener todos los protocolos innecesarios deshabilitados, incluido el bloque de mensajes del servidor (SMB). Los servidores web y los servidores del Sistema de nombres de dominio (DNS) no necesitan SMB. Este protocolo debería deshabilitarse para contrarrestar la amenaza de enumeración de usuarios.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Si deshabilita el Bloque de mensajes de servidor, se bloqueará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Servicio de clúster de Windows para tener acceso al recurso compartido de archivos remoto. No deshabilite SMB si hace algo de lo siguiente o prevé hacerlo:  
->   
+> 
 >  -   Usar el modo de quórum de la mayoría del recurso compartido de archivos y el Nodo de clúster de Windows  
 > -   Especificar un recurso compartido de archivos SMB como directorio de datos durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 > -   Crear un archivo de base de datos en un recurso compartido de archivos SMB  
@@ -87,7 +87,7 @@ ms.locfileid: "51696643"
   
 -   [Configuración de red del servidor](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configuración de Área expuesta](../../relational-databases/security/surface-area-configuration.md)   
  [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  

@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42db9954a071865124d443be32203fc284dfe699
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 079a54bdbf107ec9f83e1078fedba1be84374c5b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838963"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589139"
 ---
 # <a name="specify-parameters"></a>Especificar parámetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -135,7 +135,7 @@ GO
   
  Para especificar un parámetro de salida, se debe indicar la palabra clave OUTPUT en la definición del parámetro en la instrucción CREATE PROCEDURE. El procedimiento devuelve el valor actual del parámetro de salida al programa de llamada cuando se abandona el procedimiento. El programa de llamada también debe usar la palabra clave OUTPUT al ejecutar el procedimiento, a fin de guardar el valor del parámetro en una variable que se pueda usar en el programa de llamada.  
   
- En el siguiente ejemplo se crea el procedimiento `Production.usp_GetList`, que devuelve una lista de productos con precios que no superan un importe especificado. El ejemplo muestra la utilización de varias instrucciones SELECT y varios parámetros OUTPUT. Los parámetros OUTPUT permiten a un procedimiento externo, un proceso por lotes o más de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] tener acceso a un conjunto de valores durante la ejecución del procedimiento.  
+ En el ejemplo siguiente se crea el procedimiento `Production.usp_GetList` , que devuelve una lista de productos con precios que no superan un importe especificado. El ejemplo muestra la utilización de varias instrucciones SELECT y varios parámetros OUTPUT. Los parámetros OUTPUT permiten a un procedimiento externo, un proceso por lotes o más de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] tener acceso a un conjunto de valores durante la ejecución del procedimiento.  
   
 ```  
 USE AdventureWorks2012;  
@@ -169,7 +169,7 @@ GO
  Ejecute `usp_GetList` para obtener una lista de los productos de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (Bicicletas) que cuestan menos de 700 USD. Los parámetros OUTPUT **\@cost** y **\@compareprices** se usan con el lenguaje de control de flujo para devolver un mensaje en la ventana **Messages** (Mensajes).  
   
 > [!NOTE]  
->  La variable OUTPUT debe definirse durante la creación del procedimiento y también durante el uso de la variable. El nombre del parámetro y de la variable no tienen por qué coincidir. Pero el tipo de datos y la posición de los parámetros deben coincidir (a menos que se use **\@listprice=** *variable*).  
+>  La variable OUTPUT debe definirse durante la creación del procedimiento y también durante el uso de la variable. El nombre del parámetro y de la variable no tienen por qué coincidir. Pero el tipo de datos y la posición de los parámetros deben coincidir (a menos que se use **\@listprice=** _variable_).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -204,7 +204,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

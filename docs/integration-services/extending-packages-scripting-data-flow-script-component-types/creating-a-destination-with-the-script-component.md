@@ -17,12 +17,12 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77bb9538c24be9fac285ab94b77d46ab85a29907
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 390f2734b36cfb956abd33ad2e5175ecd2320c34
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541944"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210834"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Crear un destino con el componente de script
   Los componentes de destino se utilizan en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para guardar datos recibidos de orígenes y transformaciones de nivel superior en un origen de datos. Por lo general, el componente de destino se conecta al origen de datos a través de un administrador de conexiones existente.  
@@ -101,7 +101,7 @@ ms.locfileid: "52541944"
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes muestran código que se requiere en la clase **ScriptMain** para crear un componente de destino.  
   
-> [!NOTE]  
+> [!NOTE]
 >  En estos ejemplos se usa la tabla **Person.Address** de la base de datos de ejemplo **AdventureWorks** y se pasan las columnas primera y cuarta, las columnas **int*AddressID*** y **nvarchar(30)City**, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
   
 ### <a name="adonet-destination-example"></a>Ejemplo de destino ADO.NET  
@@ -350,7 +350,7 @@ public class ScriptMain:
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creating a Source with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  (Crear un origen con el componente de script)  
  [Desarrollar un componente de destino personalizado](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
   

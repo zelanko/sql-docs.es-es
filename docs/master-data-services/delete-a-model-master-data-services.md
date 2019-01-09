@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting models [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bf09705d0ccec2707d19a89af7321ff86d861ee1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7ae7bce17aad06bf17c8d78d976cdd0ef518bad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755433"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796433"
 ---
 # <a name="delete-a-model-master-data-services"></a>Eliminar un modelo (Master Data Services)
 
@@ -54,7 +53,7 @@ ms.locfileid: "47755433"
   
  La columna **Estado** de la cuadrícula muestra el estado de la operación en el modelo. Al hacer clic en el botón **Guardar modelo**, se muestra la imagen ![Actualizar](../master-data-services/media/mds-model-status-updating.png "Actualizar"), que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, se muestra la imagen ![Error](../master-data-services/media/mds-model-status-error.png "Error"). De lo contrario, el estado es correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
   

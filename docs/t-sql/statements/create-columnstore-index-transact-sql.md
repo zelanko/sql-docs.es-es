@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7f9c78dc06da0cbb12e34483d3bdd7b469a8f78
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c6c384df7810cce06f3e10003ec85771b2bcea58
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398058"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215654"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -215,7 +215,7 @@ Crea un índice no clúster de almacén de columnas en memoria en una tabla de a
     Especifica las columnas que se van a almacenar. Un índice no clúster de almacén de columnas está limitado a 1024 columnas.  
    Cada columna debe ser de un tipo de datos compatible con los índices de almacén de columnas. Vea [Limitaciones y restricciones](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obtener una lista de los tipos de datos admitidos.  
 
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
    Especifica el nombre de una, dos o tres partes de la tabla que contiene el índice.  
 
 #### <a name="with-options"></a>Opciones de WITH
@@ -234,7 +234,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
   
    Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
@@ -425,7 +425,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;
 GO  
 ```  
   
-### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. Convertir un índice clúster en un índice clúster de almacén de columnas con el mismo nombre.  
+### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>b. Convertir un índice clúster en un índice clúster de almacén de columnas con el mismo nombre.  
  En este ejemplo se crea la tabla con un índice clúster y después se muestra la sintaxis para convertir el índice clúster en un índice clúster de almacén de columnas. Esto cambia el almacenamiento de la tabla de un almacén de filas a un almacén de columnas.  
   
 ```sql  
@@ -614,7 +614,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Crear un índice no clúster de almacén de columnas simple con todas las opciones  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>b. Crear un índice no clúster de almacén de columnas simple con todas las opciones  
  En el ejemplo siguiente se muestra la sintaxis para crear un índice no clúster de almacén de columnas usando todas las opciones.  
   
 ```sql  
@@ -694,7 +694,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Volver a compilar un índice clúster de almacén de columnas  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>b. Volver a compilar un índice clúster de almacén de columnas  
  A partir del ejemplo anterior, en este ejemplo se usa CREATE CLUSTERED COLUMNSTORE INDEX para volver a compilar el índice clúster de almacén de columnas existente denominado cci_xDimProduct.  
   
 ```sql  

@@ -1,7 +1,7 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b95f966b27db3638aae6455dc5e7819f07d0ebae
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c909ac69819fc66f734b33fd8b2badce6069cdef
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695463"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951637"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -108,19 +108,6 @@ No se requieren permisos para `PREDICT`; pero los usuarios necesitan el permiso 
 ## <a name="examples"></a>Ejemplos
 
 En los ejemplos siguientes se describe la sintaxis para llamar a `PREDICT`.
-
-### <a name="call-a-stored-model-and-use-it-for-prediction"></a>Llamar a un modelo almacenado y usarlo para la predicción
-
-En este ejemplo se llama a un modelo de regresión logística existente almacenado en la tabla [models_table]. Obtiene el último modelo entrenado, mediante una instrucción SELECT y, después, pasa el modelo binario a la función PREDICT. Los valores de entrada representan características; la salida representa la clasificación asignada por el modelo.
-
-```sql
-DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
-DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
-
-SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
-WITH (class string);
-```
 
 ### <a name="using-predict-in-a-from-clause"></a>Uso de PREDICT en una cláusula FROM
 

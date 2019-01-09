@@ -13,16 +13,16 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: markingmyname
 ms.author: maghan
 ms.date: 03/07/2017
-ms.openlocfilehash: 63cee227f67a6e4c07974a296e3c512318d83fe2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 8383383c09861763936bc0fc9c9ee6e6cdbb365d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813208"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201514"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
 
-  En[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], debe especificar el servidor de informes y, si lo desea, las carpetas de los informes y orígenes de datos compartidos para poder publicar los elementos de un proyecto de Servidor de informes en un servidor de informes. Las propiedades y valores que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] necesita para generar los informes, obtener una vista previa de los mismos e implementarlos están almacenados en las configuraciones de proyecto correspondiente al proyecto del servidor de informes. Puede crear varios conjuntos con nombre para estas propiedades de proyecto; de esta forma, podrá cambiar de un conjunto de propiedades a otro según sea necesario. Cada conjunto de propiedades es una configuración. Por ejemplo, puede tener una configuración para publicar los informes en un servidor de pruebas y otra configuración diferente para publicar los informes en un servidor de producción.  
+  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], debe especificar el servidor de informes y, si lo desea, las carpetas de los informes y orígenes de datos compartidos para poder publicar los elementos en un proyecto de servidor de informes en un informe. Las propiedades y valores que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] necesita para generar los informes, obtener una vista previa de los mismos e implementarlos están almacenados en las configuraciones de proyecto correspondiente al proyecto del servidor de informes. Puede crear varios conjuntos con nombre para estas propiedades de proyecto; de esta forma, podrá cambiar de un conjunto de propiedades a otro según sea necesario. Cada conjunto de propiedades es una configuración. Por ejemplo, puede tener una configuración para publicar los informes en un servidor de pruebas y otra configuración diferente para publicar los informes en un servidor de producción.  
   
  Use el Administrador de configuración para crear y administrar conjuntos de propiedades de proyecto en las configuraciones de proyecto. El Administrador de configuración es una característica admitida en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], en el que está basado [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .  
   
@@ -79,5 +79,5 @@ ms.locfileid: "51813208"
     > [!NOTE]  
     >  Si ha seleccionado **Generar** , el Diseñador de informes genera el proyecto del informe y comprueba si existen errores antes de mostrar una vista previa o publicarlo en un servidor de informes. Si ha seleccionado **Implementar** , el Diseñador de informes publica los informes en el servidor de informes de acuerdo con las propiedades de implementación establecidas. Si no ha seleccionado **Implementar** , el Diseñador de informes muestra el informe especificado en la propiedad **StartItem** en una ventana de vista previa local.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Publicar orígenes de datos e informes](../../reporting-services/reports/publishing-data-sources-and-reports.md) [Obtener la vista previa de informes](../../reporting-services/reports/previewing-reports.md) [Diseñador de informes (Ayuda F1)](../../reporting-services/tools/report-designer-f1-help.md) [Ejemplos de direcciones URL para los elementos de un servidor de informes - Modo de SharePoint](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md) [Páginas de propiedades del proyecto (cuadro de diálogo)](../../reporting-services/tools/project-property-pages-dialog-box.md) [Publicar informes en un servidor de informes](../../reporting-services/reports/publishing-reports-to-a-report-server.md)

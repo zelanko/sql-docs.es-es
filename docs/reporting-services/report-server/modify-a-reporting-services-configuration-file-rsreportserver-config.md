@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54ca89e75da4bf5ce5d0666ec479b870deda2848
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758662"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202144"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modificar un archivo de configuración de Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena la configuración de la aplicación en un conjunto de archivos de configuración. La instalación crea los archivos de configuración para cada instancia del servidor de informes que instala. Dentro de cada archivo, los valores se establecen durante la instalación o al usar herramientas y aplicaciones para configurar un servidor para la operación. En algunos casos, debe modificar directamente un archivo para agregar o configurar la configuración avanzada. Los parámetros de configuración se especifican como atributos o elementos XML. Si comprende XML y los archivos de configuración, puede utilizar un editor de texto o de código para modificar las opciones de configuración definibles por el usuario.  
   
  Algunos valores de configuración solo se pueden establecer a través de una herramienta. La configuración que contiene valores cifrados se debe modificar a través de la herramienta de configuración de Reporting Services, el programa de instalación o la utilidad de línea de comandos **rsconfig** . Debe ser miembro del grupo local de administradores para ejecutar estas herramientas.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Tenga cuidado al modificar los archivos de configuración. Si modifica un parámetro reservado para uso interno, es posible que deshabilite la instalación. En general, no se recomienda modificar los parámetros de configuración a no ser que esté intentando resolver un problema específico. Para obtener más información sobre qué valores de configuración se pueden cambiar con seguridad, vea [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) o [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Para más información sobre los archivos de configuración, consulte la documentación del producto de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  En este tema:  
@@ -99,11 +99,11 @@ ms.locfileid: "47758662"
   
 6.  Compruebe los archivos de registro de seguimiento para ver que no se produjeron errores. Si observa condiciones de error es porque una opción de configuración o su valor se especificó incorrectamente. Examine [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) para ver los valores válidos para cualquier configuración que esté produciendo un error. Para obtener más información sobre cómo ver el registro de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Archivo de configuración ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Implementación de una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Implementar una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Implementación de una extensión de entrega](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Implementación de una extensión de representación](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
  [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  

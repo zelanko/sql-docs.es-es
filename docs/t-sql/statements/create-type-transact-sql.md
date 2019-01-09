@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6dae0f33308ca37bb9a5fd4b0f1f94280ecbf146
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512903"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266006"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,8 +56,10 @@ CREATE TYPE [ schema_name. ] type_name
     [ ( precision [ , scale ] ) ]  
     [ NULL | NOT NULL ]   
   | EXTERNAL NAME assembly_name [ .class_name ]   
-  | AS TABLE ( { <column_definition> | <computed_column_definition> }  
-        [ <table_constraint> ] [ ,...n ] )    
+AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+    | [ <table_constraint> ] [ ,... n ]    
+    | [ <table_index> ] [ ,... n ] } )
+ 
 } [ ; ]  
   
 <column_definition> ::=  
@@ -112,14 +114,18 @@ column_name AS computed_column_expression
 {  
     IGNORE_DUP_KEY = { ON | OFF }  
 }  
+
+< table_index > ::=  
+  INDEX constraint_name  
+     [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
 ```  
--- User-defined Table Types Syntax  
+-- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
-AS TABLE ( { <column_definition> }  
-    |  [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ]    } )
+AS TABLE ( { <column_definition> [ ,... n ] }  
+    | [ <table_constraint> ] [ ,... n ]    
+    | [ <table_index> ] [ ,... n ] } )
     [ WITH ( <table_option> [ ,... n ] ) ]  
  [ ; ]  
   
@@ -219,6 +225,12 @@ column_name <data_type>
   
  \<index_option>  
  Especifica la respuesta de error para valores de clave duplicados en una operación de inserción de varias filas en un índice clúster o no clúster único. Para más información sobre las opciones de índice, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+ 
+  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
+     
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Especifica que se creará un índice en la tabla. Puede tratarse de un índice agrupado o un índice que no esté en clúster. El índice incluirá las columnas enumeradas y ordenará los datos en orden ascendente o descendente.
   
  INDEX  
  Debe especificar los índices de columna y de tabla como parte de la instrucción CREATE TABLE. CREATE INDEX y DROP INDEX no se admiten en las tablas optimizadas para memoria.  
@@ -281,7 +293,7 @@ CREATE TYPE SSN
 FROM varchar(11) NOT NULL ;  
 ```  
   
-### <a name="b-creating-a-user-defined-type"></a>B. Crear un tipo definido por el usuario  
+### <a name="b-creating-a-user-defined-type"></a>b. Crear un tipo definido por el usuario  
  En el siguiente ejemplo se crea un tipo `Utf8String` que hace referencia a la clase `utf8string` del ensamblado `utf8string`. Antes de crear el tipo, se registra el ensamblado `utf8string` en la base de datos local. Reemplace la parte binaria de la instrucción CREATE ASSEMBLY con una descripción válida.  
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -306,7 +318,7 @@ CREATE TYPE LocationTableType AS TABLE
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

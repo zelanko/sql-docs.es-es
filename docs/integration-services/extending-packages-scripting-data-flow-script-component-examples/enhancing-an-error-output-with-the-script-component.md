@@ -1,7 +1,7 @@
 ---
 title: Mejorar una salida de errores con el componente de script | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68973d2d0464372b070667a5d59dcc4327b211bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4ffc8c50b44285279b88d73e8fd68e34b0aab3ec
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527951"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069062"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Mejorar una salida de errores con el componente de script
   De forma predeterminada, las dos columnas adicionales en una salida de errores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ErrorCode y ErrorColumn, solo contienen códigos numéricos que representan un número de error y el id. de la columna en la que se produjo el error. Estos valores numéricos pueden tener un uso limitado sin la descripción del error y el nombre de columna correspondientes.  
@@ -63,45 +63,56 @@ ms.locfileid: "52527951"
 10. Adjunte la salida del componente de script a un destino conveniente. Para pruebas ad hoc, la manera más fácil de configurar es mediante un destino de archivo plano.  
   
 11. Ejecute el paquete.  
-  
-```vb  
-Public Class ScriptMain  
-    Inherits UserComponent  
-    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
-  
-      Row.ErrorDescription = _  
-        Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)  
-  
-      Dim componentMetaData130 = TryCast(Me.ComponentMetaData, IDTSComponentMetaData130)  
-      If componentMetaData130 IsNot Nothing Then  
-        Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)  
-         End If  
-  
-    End Sub  
-End Class  
-```  
-  
-```csharp  
-public class ScriptMain:  
-    UserComponent  
-{  
-    public override void Input0_ProcessInputRow(Input0Buffer Row)  
-    {  
-  
-      Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);  
-  
-      var componentMetaData130 = this.ComponentMetaData as IDTSComponentMetaData130;  
-      if (componentMetaData130 != null)  
-        {  
-            Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn);  
-        }  
-  
-    }  
-}  
-  
-```  
-  
-## <a name="see-also"></a>Ver también  
+
+```vb
+Public Class ScriptMain      ' VB
+    Inherits UserComponent
+    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+        Row.ErrorDescription = _
+            Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)
+
+        Dim componentMetaData130 = TryCast(Me.ComponentMetaData, IDTSComponentMetaData130)
+
+        If componentMetaData130 IsNot Nothing Then
+
+            If 0 = Row.ErrorColumn Then
+                ' 0 means no specific column is identified by ErrorColumn, this time.
+                Row.ColumnName = "Check the row for a violation of a foreign key constraint."
+            Else
+                Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)
+            End If
+        End If
+    End Sub
+End Class
+```
+
+```csharp
+public class ScriptMain:      // C#
+    UserComponent
+{
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);
+
+        var componentMetaData130 = this.ComponentMetaData as IDTSComponentMetaData130;
+        if (componentMetaData130 != null)
+        {
+            // 0 means no specific column is identified by ErrorColumn, this time.
+            if (Row.ErrorColumn == 0)
+            {
+                Row.ColumnName = "Check the row for a violation of a foreign key constraint.";
+            }
+            else
+            {
+                Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn);
+            }
+        }
+    }
+}
+```
+
+## <a name="see-also"></a>Consulte también  
  [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md)   
  [Usar las salidas de error en un componente de flujo de datos](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Crear una transformación sincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   

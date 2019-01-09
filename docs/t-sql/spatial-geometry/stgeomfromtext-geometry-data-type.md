@@ -18,12 +18,12 @@ ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8436835ab2003e2700ec48d5a490887d0d0cb25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a3e5ac533e7f207b9f7d1079a37baa3ef351104
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669803"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979234"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se usa `STGeomeFromText()` para crear una instancia de `geometry`.  
+ En el ejemplo siguiente se usa `STGeomFromText()` para crear una instancia de `geometry`.  
   
 ```  
 DECLARE @g geometry;  
@@ -63,7 +63,7 @@ SET @g = geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

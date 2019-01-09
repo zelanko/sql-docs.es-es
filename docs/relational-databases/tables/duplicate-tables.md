@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df05fc03563c88a10a7c56b71536e41068ffb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af0251b5a493eb757b16dfb01b08304751eaa4dc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845483"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589529"
 ---
 # <a name="duplicate-tables"></a>Tablas duplicadas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47845483"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47845483"
   
 6.  En el menú **Edición** , haga clic en **Pegar**.  
   
-7.  En el menú **Archivo**, haga clic en **Guardar***nombre de tabla*.  
+7.  En el menú **Archivo** , haga clic en **Guardar**_nombre de tabla_.  
   
 8.  En el cuadro de diálogo **Elegir nombre** , escriba un nombre para la tabla nueva y haga clic en **Aceptar**.  
   

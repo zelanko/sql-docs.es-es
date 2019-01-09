@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b164b167de39a8a465e19b1f751ab22c9295c6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a51a863a36562d7be1ef242ca9ad680e9149c73b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725953"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213054"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
   En este tema se proporciona una referencia de los permisos de SharePoint que se pueden usar para conceder acceso a las operaciones del servidor de informes para un servidor de informes que se ejecuta en el modo integrado de SharePoint. Si va a crear niveles de permisos personalizados, este tema puede ayudarle a elegir qué permisos usar.  
@@ -37,7 +37,7 @@ ms.locfileid: "47725953"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013.|  
+| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013.|  
   
 ## <a name="list-permissions"></a>Permisos de lista  
  Los permisos que se establecen en la biblioteca que contiene los elementos del servidor de informes determinan la forma en que los usuarios obtienen acceso a dichos elementos.  
@@ -70,7 +70,7 @@ ms.locfileid: "47725953"
 |Utilizar interfaces remotas|Usar las interfaces de SOAP, Web DAV o SharePoint Designer para tener acceso al sitio web.|X|X|X|Se usa para llamar al extremo proxy de dirección URL del servidor de informes.|  
 |Abrir|Abrir un sitio web, una lista o una carpeta para obtener acceso a los elementos incluidos en dicho contenedor.|X|X|X|Leer programaciones y propiedades de elementos.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Concesión de permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

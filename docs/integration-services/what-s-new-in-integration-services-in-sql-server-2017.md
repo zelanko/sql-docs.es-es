@@ -11,17 +11,17 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1fe0017d3797f260aede9e712cbf1cecfe6a45a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3bb34a00c22e1fa3ceafb7d2f203c1dbd43ac80d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420576"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214024"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novedades de Integration Services en SQL Server 2017
 En este tema, se describen las características que se han agregado o actualizado en [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
->   [!NOTE]
+> [!NOTE]
 > SQL Server 2017 también incluye las características de SQL Server 2016 y las características agregadas en las actualizaciones de SQL Server 2016. Para obtener información sobre las nuevas características de SSIS en SQL Server 2016, consulte [Novedades de Integration Services en SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
 
 ## <a name="highlights-of-this-release"></a>Aspectos destacados de esta versión

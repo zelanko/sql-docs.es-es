@@ -24,19 +24,19 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4bbf698ed48d63d4e94a697cd91069efa3b98d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29345e463715bf787b7b7ada9d96c97aa42f38ed
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757443"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204454"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permite la actualización interactiva de registro mínimo de una columna **text**, **ntext** o **image** existente. WRITETEXT sobrescribe completamente los datos existentes en la columna afectada. No se puede usar WRITETEXT en las columnas **text**, **ntext** e **image** de vistas.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use los tipos de datos de valores grandes y la cláusula **.** WRITE de la instrucción [UPDATE](../../t-sql/queries/update-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -112,7 +112,7 @@ ALTER DATABASE pubs SET RECOVERY SIMPLE;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   

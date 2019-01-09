@@ -17,15 +17,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 736ce0ea9cc700d9064a3fa5fc87a27f9b38e71a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 606778f5505e6ba7e22ade1394a0169fce4a918b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765764"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375247"
 ---
 # <a name="plan-guides"></a>Guías de plan
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47765764"
   
  El número total de guías de plan que se pueden crear solo está limitado por los recursos de los que disponga el sistema. No obstante, las guías de plan deberían limitarse a aquellas consultas de gran importancia cuyo rendimiento se desea mejorar o estabilizar. No se deben usar las guías de plan para influenciar la mayor parte de la carga de la consulta de una aplicación implementada.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Las guías de plan no se pueden usar en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Las guías de plan son visibles en todas las ediciones. También se pueden adjuntar bases de datos que incluyen guías de plan a cualquier versión. Las guías de plan permanecen intactas cuando se restaura o adjunta una base de datos a una versión actualizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="types-of-plan-guides"></a>Tipos de guías de plan  
@@ -57,7 +57,7 @@ BEGIN
 END;  
 ```  
   
- Asuma que este procedimiento almacenado se ha compilado y optimizado para `@Country_region = N'AU'` (Australia). Sin embargo, dado hay relativamente pocos pedidos de ventas que se originen en Australia, el rendimiento se reduce cuando la consulta ejecuta usando valores para los parámetros que se corresponden con países con más pedidos de ventas. Dado que el mayor número de pedidos de ventas se origina en Estados Unidos, el rendimiento de un plan de consulta generado para `@Country_region = N'US'` será probablemente mejor para todos los valores posibles del parámetro `@Country_region`.  
+ Asuma que este procedimiento almacenado se ha compilado y optimizado para `@Country_region = N'AU'` (Australia). Sin embargo, dado hay relativamente pocos pedidos de ventas que se originen en Australia, el rendimiento se reduce cuando la consulta ejecuta usando valores para los parámetros que se corresponden con países con más pedidos de ventas. Dado que el mayor número de pedidos de ventas se origina en Estados Unidos, el rendimiento de un plan de consulta generado para `@Country_region = N'US'` será probablemente mejor para todos los valores posibles del parámetro `@Country_region` .  
   
  Puede solucionar este problema modificando el procedimiento almacenado y agregando la sugerencia de consulta `OPTIMIZE FOR` a la consulta. No obstante, puesto que el procedimiento almacenado se encuentra en una aplicación implementada, no puede modificar directamente el código de la aplicación. En su lugar, puede crear la guía de plan siguiente en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -152,7 +152,7 @@ sp_create_plan_guide
 |Describe cómo usar SQL Server Profiler para crear y probar guías de plan.|[Usar SQL Server Profiler para crear y probar guías de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Describe cómo validar las guías de plan.|[Validar guías de planes tras una actualización](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   

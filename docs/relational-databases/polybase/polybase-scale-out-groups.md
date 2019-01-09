@@ -14,18 +14,18 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a145b7ae7194720c8366f0c647a511e086fe4a2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ad890736cf0536c5f4f776d2bd4949e195dd26d6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412642"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205424"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escalado horizontal de PolyBase
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Una instancia de SQL Server independiente con PolyBase puede convertirse en un cuello de botella de rendimiento cuando se trabaja con grandes conjuntos de datos en Hadoop o Almacenamiento de blobs de Azure. La característica de grupos de PolyBase permite crear un clúster de instancias de SQL Server para procesar grandes conjuntos de datos a partir de orígenes de datos externos, como Hadoop o Almacenamiento de blobs de Azure, en un modo de escalado horizontal para mejorar el rendimiento de las consultas. Ahora puede escalar la capacidad de proceso de SQL Server para satisfacer las demandas de rendimiento de la carga de trabajo. Los grupos de escalado horizontal de PolyBase, un grupo de instancias de SQL Server, permiten procesar grandes conjuntos de datos externos en una arquitectura de procesamiento en paralelo. El rendimiento de las consultas y la carga de datos puede aumentar linealmente a medida que agrega más instancias de SQL Server al grupo. 
+Una instancia de SQL Server independiente con PolyBase puede convertirse en un cuello de botella de rendimiento cuando se trabaja con grandes conjuntos de datos en Hadoop o Azure Blog Storage. La característica de grupos de PolyBase permite crear un clúster de instancias de SQL Server para procesar grandes conjuntos de datos a partir de orígenes de datos externos, como Hadoop o Almacenamiento de blobs de Azure, en un modo de escalado horizontal para mejorar el rendimiento de las consultas. Ahora puede escalar la capacidad de proceso de SQL Server para satisfacer las demandas de rendimiento de la carga de trabajo. Los grupos de escalado horizontal de PolyBase, un grupo de instancias de SQL Server, permiten procesar grandes conjuntos de datos externos en una arquitectura de procesamiento en paralelo. El rendimiento de las consultas y la carga de datos puede aumentar linealmente a medida que agrega más instancias de SQL Server al grupo. 
   
 Vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) y [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
@@ -35,7 +35,7 @@ Vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-w
 
 El nodo principal contiene la instancia de SQL Server a la que se envían las consultas PolyBase. Cada grupo de PolyBase solo puede tener un nodo principal. Un nodo principal es un grupo lógico del motor de base de datos de SQL, el motor de PolyBase y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server.
   
-## <a name="compute-node"></a>Nodo de ejecución  
+## <a name="compute-node"></a>Nodo de proceso  
 
 Un nodo de ejecución contiene la instancia de SQL Server que ayuda a escalar horizontalmente el procesamiento de las consultas de los datos externos. Un nodo de ejecución es un grupo lógico de SQL Server y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server. Un grupo de PolyBase puede tener varios nodos de ejecución. El nodo principal y los nodos de ejecución deben ejecutar la misma versión de SQL Server.
 
@@ -46,7 +46,7 @@ Al consultar instancias externas de SQL Server, Oracle o Teradata, las tablas co
 Por ejemplo, supongamos que tiene una tabla externa de SQL Server con 12 particiones mensuales y un grupo de escalado horizontal de PolyBase de 3 nodos. Cada nodo usará 4 lectores de PolyBase para procesar cada una de las 12 particiones. Este ejemplo se ilustra en la siguiente imagen. 
 
 > [!NOTE]
- Y es diferente de las lecturas de escalabilidad horizontal a través de Hadoop. 
+>  Y es diferente de las lecturas de escalabilidad horizontal a través de Hadoop. 
 
 ![Grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Grupos de escalado horizontal de PolyBase")
   

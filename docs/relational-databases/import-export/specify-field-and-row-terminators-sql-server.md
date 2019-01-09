@@ -18,18 +18,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c9a7592e4ba1d3087aafaff1eef22b467eb55dd7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543803"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215481"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo y de fila (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   En los campos de datos de caracteres, los caracteres de terminación opcionales permiten marcar el final de cada campo de un archivo de datos con un *terminador de campo* y el final de cada fila con un *terminador de fila*. Los caracteres de terminación son una forma de indicar a los programas que leen el archivo de datos dónde termina un campo o una fila y dónde comienza otro.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Cuando utilice el formato nativo o nativo Unicode, use prefijos de longitud en lugar de terminadores de campo. Los datos de formato nativo pueden entrar en conflicto con los terminadores, ya que un archivo de datos de formato nativo se almacena en el formato de datos binario interno de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="characters-supported-as-terminators"></a>Caracteres admitidos como terminadores  
@@ -181,7 +181,7 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Usar BULK INSERT para especificar terminadores interactivamente  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>b. Usar BULK INSERT para especificar terminadores interactivamente  
  En el ejemplo siguiente se importa de forma masiva el archivo de datos `Department-c-t.txt` mediante una instrucción `BULK INSERT` que utiliza los calificadores que figuran en la siguiente tabla:  
   
 |Opción|Attribute|  
@@ -204,7 +204,7 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

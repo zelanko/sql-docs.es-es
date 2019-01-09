@@ -13,12 +13,12 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 70ebcc5773d17f6f0f6fe714367f4bf487f3a0db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c718dd14e1c7d2fc508efa403a9abfbcbae100d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686273"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205814"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes en la escalabilidad horizontal de Integration Services (SSIS)
 Tras implementar los paquetes en el servidor de Integration Services, puede ejecutarlos en escalabilidad horizontal con uno de los siguientes métodos:
@@ -117,7 +117,7 @@ Para establecer el modo de ejecución predeterminado para los paquetes en **Esca
 
 Una vez que haya establecido este modo de ejecución predeterminado, ya no tendrá que especificar el parámetro **@runinscaleout** al llamar al procedimiento almacenado `[catalog].[create_execution]`. Los paquetes se ejecutan en escalabilidad horizontal de forma automática. 
 
-![Modo de ejecución](media\exe-mode.PNG)
+![Modo de ejecución](media/exe-mode.PNG)
 
 Para volver a cambiar el modo de ejecución predeterminado de modo que los paquetes no se ejecuten de forma automática en el modo de escalabilidad horizontal, establezca **Modo de ejecución predeterminado de todo el servidor** en **Servidor**.
 

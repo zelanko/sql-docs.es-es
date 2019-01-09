@@ -5,20 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Catalog Metadata
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0474646ae51a8fdabe6ff139c6eff1ec966f8d93
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: c7e3e4632141040f791b6b83640c5261017726c6
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158813"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380806"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, objeto de metadatos de catálogo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,5 +36,5 @@ En la tabla siguiente se describen los objetos de rendimiento de **metadatos de 
 
 Hay una instancia del contador para cada base de datos.
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Supervisar el uso de recursos (Monitor de sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

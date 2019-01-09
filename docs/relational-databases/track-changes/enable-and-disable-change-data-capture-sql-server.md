@@ -1,6 +1,6 @@
 ---
 title: Habilitar y deshabilitar la captura de datos modificados (SQL Server) | Microsoft Docs
-ms.date: 03/06/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01dd23b4c7143280c54137b0e1474eb59fdcd0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 61ca34394e2cab5cf16862f6ddae20573c4e17a0
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558799"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991838"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar y deshabilitar la captura de datos modificados (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Este tema describe cómo habilitar y deshabilitar la captura de datos modificados para una tabla y una base de datos.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Habilitar la captura de datos modificados en una base de datos  
@@ -142,7 +142,7 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  Si la captura de datos modificados está habilitada en una tabla con una clave principal existente y el parámetro *@index_name* no se usa para identificar un índice único alternativo, la característica de captura de datos modificados usará la clave principal. Los cambios subsiguientes en la clave principal no se permitirán sin deshabilitar primero la captura de datos modificados para la tabla. Esto es así independientemente de si se solicitó compatibilidad con las consultas net changes cuando se configuró la captura de datos modificados. Si no hay ninguna clave principal en una tabla en el momento en que se habilita para la captura de datos modificados, la captura de datos modificados omite la incorporación posterior de una clave principal. Dado que la captura de datos modificados no utilizará ninguna clave principal que se cree una vez habilitada la tabla, las columnas de clave y la clave se pueden quitar sin restricciones.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Deshabilitar la captura de datos modificados para una tabla  
@@ -165,7 +165,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Trabajar con datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

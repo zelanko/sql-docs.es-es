@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], changing name
@@ -14,12 +13,12 @@ ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 789cbb1c0b55b7b41b4e0829d3562cac8fbacd50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6348cc9a2b64501f7a639d480a7112bf28923585
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626773"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785285"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Cambiar el nombre y el tipo de datos de un atributo (Master Data Services)
 
@@ -60,7 +59,7 @@ ms.locfileid: "47626773"
   
 9. Haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Eliminar un atributo &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fbd32c13badb86db8dae7156b14ca3f93f97d76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6949ff07fccb7de14a597b754e7f2beeaa9bfe8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710653"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206295"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administración automatizada en una empresa
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ Contiene información sobre cómo crear y administrar servidores maestros y de d
 Contiene información acerca de cómo usar cuentas de Windows no administrativas o la cuenta Sistema local para que el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda afectar a entornos multiservidor.  
   
 [Establecer opciones de cifrado en servidores de destino](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-Contiene información acerca de cómo establecer la subclave del Registro del Agente[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MsxEncryptChannelOptions en los servidores de destino.  
+Contiene información acerca de cómo establecer la subclave del Registro del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MsxEncryptChannelOptions en los servidores de destino.  
   
 [Administrar trabajos en una empresa](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Contiene información sobre cómo comprobar el estado del trabajo, cómo cambiar servidores de destino de trabajos, cómo sincronizar los relojes de los servidores de destino y cómo sondear el estado del trabajo actual de los servidores maestros.  
@@ -85,7 +85,7 @@ Contiene información sobre el reenvío de eventos desde servidores de destino a
 [Optimizar la administración automatizada en una empresa](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
 Contiene información sobre cómo una administración automatizada en un entorno multiservidor se aprovecha de las características de optimización automática de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Temas de compatibilidad con versiones anteriores para instalar el motor de base de datos de SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
 [Registrar servidores](../register-servers/register-servers.md)  
 [sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  

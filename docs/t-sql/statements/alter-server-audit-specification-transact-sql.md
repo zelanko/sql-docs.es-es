@@ -20,12 +20,12 @@ ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f8ec3babd503117e70affa28ccd1a123d0f09894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01490d9fe252d17c6d4b25eebd5e160ebe79a33a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752293"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980241"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,11 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  Después de crearse una especificación de auditoría de servidor, podrá ser vista por entidades de seguridad que cuenten con los permisos CONTROL SERVER o ALTER ANY SERVER AUDIT, así como la cuenta sysadmin, o por entidades de seguridad que tengan acceso explícito a la auditoría.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea una especificación de auditoría de servidor denominada `HIPPA_Audit_Specification`. Quita el grupo de acciones de auditoría para los inicios de sesión erróneos y agrega un grupo de acciones de auditoría para el acceso a los objetos de base de datos para una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `HIPPA_Audit`.  
+ En el ejemplo siguiente se crea una especificación de auditoría de servidor denominada `HIPAA_Audit_Specification`. Quita el grupo de acciones de auditoría para los inicios de sesión erróneos y agrega un grupo de acciones de auditoría para el acceso a los objetos de base de datos para una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `HIPAA_Audit`.  
   
 ```  
-ALTER SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     DROP (FAILED_LOGIN_GROUP)  
     ADD (DATABASE_OBJECT_ACCESS_GROUP);  
 GO  
@@ -82,7 +82,7 @@ GO
  Para ver un ejemplo completo de cómo crear una auditoría, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a7865fd7a7cd887ea8ea9dd763a2fca5d2fcc4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee8a63632d54c727051e405dff2f237b58849c2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759187"
 ---
 # <a name="approval-required-master-data-services"></a>Aprobación necesaria (Master Data Services)
 
@@ -51,7 +50,7 @@ ms.locfileid: "47612243"
   
 4.  Haga clic en **Editar**, seleccione **Aprobación necesaria**y luego haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de cambios &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)  
   
   

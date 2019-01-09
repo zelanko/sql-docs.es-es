@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], reversing
@@ -14,12 +13,12 @@ ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 013c7517f23d98be796bb7745eb11ba95d7096fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a23e955452408c5c1b57adcaf8de6ece84aa2fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634742"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751858"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Invertir una transacción (Master Data Services)
 
@@ -49,9 +48,9 @@ ms.locfileid: "47634742"
   
 7.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. Se agrega otra transacción a la cuadrícula para registrar la transacción invertida.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
  [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
- [Revertir el historial de revisiones de miembro](../master-data-services/rollback-member-revision-history-master-data-services.md)
+ [Reversión del historial de revisiones de miembro](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

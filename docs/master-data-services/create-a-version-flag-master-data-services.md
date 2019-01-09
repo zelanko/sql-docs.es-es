@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating version flags [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 161b7fdda7655c3111bef6b016e52db76106e82f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 894c27e89f2dc9be90c792b4cce8db5690a32863
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769599"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Crear una marca de versión (Master Data Services)
 
@@ -60,7 +59,7 @@ ms.locfileid: "47808333"
   
 -   [Asignar una marca a una versión &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Cambiar el nombre de marca de una versión &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   

@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0afcc9e97bf2518dc0e3fc400842f17c9442543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92f106346e9e1e3d292c1d1a0f40b41da6067fae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744823"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215714"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propiedades de paso de trabajo - Nuevo paso de trabajo (página General)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Comprueba la sintaxis del comando.
   
 ## <a name="options-for-activex-script-job-steps"></a>Opciones de pasos de trabajo de scripts ActiveX  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > El subsistema de scripts ActiveX se quitará del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una versión futura de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.  
   
 **VBScript**  
@@ -373,7 +373,7 @@ Debe especificar las opciones en la ventana de línea de comandos.
 **Línea de comandos**  
 Escriba las opciones de línea de comandos que se van a utilizar en este paquete.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Administrar pasos de trabajo](../../ssms/agent/manage-job-steps.md)  
 [Trabajos del Agente SQL Server para paquetes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
 [Administrar agentes de replicación](../../relational-databases/replication/agents/replication-agent-administration.md)  

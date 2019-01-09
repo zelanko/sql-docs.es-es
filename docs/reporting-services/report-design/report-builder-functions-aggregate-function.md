@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b97d2a45a0312e2d2db0425f89262526ddbe76ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ea1a6e2a0cca043fc7465a3dd7408ec24ab98286
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030534"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202594"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funciones del Generador de informes: función Aggregate
   Devuelve un agregado personalizado de la expresión especificada, según esté definido en el proveedor de datos.  
@@ -47,7 +47,7 @@ Aggregate(expression, scope)
   
  Para cambiar este comportamiento predeterminado, cambie el valor de la opción **Interpretar los subtotales como filas de detalles** en el cuadro de diálogo **Propiedades del conjunto de datos** . Si esta opción se establece en **True**, todos los datos, incluidos los agregados de servidor, aparecen como datos de detalle. Si se establece en **False**, los agregados de servidor aparecen como totales. El valor de esta propiedad afecta a todas las regiones de datos que están vinculadas a este conjunto de datos.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Todos los grupos contenedores del elemento de informe que hacen referencia a **Aggregate** necesitan tener referencias de campo sencillas en sus expresiones de grupo (por ejemplo, `[FieldName]`). No puede usar **Aggregate** en una región de datos que usa expresiones de grupo complejas. Para la extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , es necesario incluir en la consulta los campos MDX del tipo **LevelProperty** (no de **MemberProperty**) para admitir la agregación con la función **Aggregate**.  
   
  *Expression* puede contener las llamadas a las funciones de agregados anidados con las siguientes excepciones y condiciones:  
@@ -74,7 +74,7 @@ Aggregate(expression, scope)
 =Aggregate(Fields!LineTotal.Value, "GroupbyOrder")  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

@@ -5,19 +5,18 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 56b4bb8fe7bad21e19814ab3afc0f91d26a24689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4433de08779a908686efb3082f3ce4651f76a402
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840223"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821899"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Área funcional de Explorador (Master Data Manager)
 
@@ -63,7 +62,7 @@ ms.locfileid: "47840223"
   
  [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)  
   
   

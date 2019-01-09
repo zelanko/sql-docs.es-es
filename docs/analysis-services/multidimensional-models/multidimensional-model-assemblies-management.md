@@ -1,5 +1,5 @@
 ---
-title: Administración de ensamblados de modelos multidimensionales | Documentos de Microsoft
+title: Administración de los ensamblados de modelos multidimensionales | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df015e99df80915c68fa8f45e9f31ec475e22bc2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025672"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215794"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Administración de ensamblados de modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona una gran cantidad de funciones intrínsecas para su uso con los lenguajes de expresiones multidimensionales (MDX) y extensiones de minería de datos (DMX), diseñado para realizar multitud de tareas desde cálculos estadísticos estándar hasta recorridos por los miembros de una jerarquía. No obstante, al igual que con cualquier otro producto complejo, existe siempre la necesidad de ampliar la funcionalidad.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona gran cantidad de funciones intrínsecas que se pueden usar con los lenguajes MDX (Expresiones multidimensionales) y DMX (Extensiones de minería de datos), y que están diseñadas para realizar multitud de tareas, desde cálculos estadísticos estándar hasta recorridos por los miembros de una jerarquía. No obstante, al igual que con cualquier otro producto complejo, existe siempre la necesidad de ampliar la funcionalidad.  
   
  Por lo tanto, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite agregar ensamblados a una instancia o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los ensamblados permiten crear funciones externas definidas por el usuario mediante cualquier lenguaje CLR (Common Language Runtime), como por ejemplo Microsoft Visual Basic .NET o Microsoft Visual C#. También puede utilizar lenguajes de automatización COM (Modelo de objetos componentes), como Microsoft Visual Basic o Microsoft Visual C++.  
   
@@ -71,13 +71,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 ## <a name="security"></a>Seguridad  
  La seguridad de los ensamblados depende del modelo de seguridad de .NET Framework, que es un modelo de seguridad de acceso del código. .NET Framework admite un mecanismo de seguridad de acceso del código que presupone que el tiempo de ejecución puede hospedar código de plena confianza y código parcialmente de confianza. Los recursos protegidos por la seguridad de acceso del código de .NET Framework se suelen empaquetar mediante código administrado que solicita el permiso correspondiente antes de permitir el acceso al recurso. La solicitud de permiso solo se satisface si todos los que llaman (en el nivel de ensamblado) de la pila de llamadas tienen el permiso correspondiente para el recurso.  
   
- En el caso de los ensamblados, el permiso de ejecución se pasa con la propiedad **PermissionSet** del objeto **Assembly** . Los permisos que recibe el código administrado vienen determinados por la directiva de seguridad activa. Existen tres niveles de directiva activos en un entorno que no esté hospedado en[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : organización, equipo y usuario. La lista real de permisos que el código recibe queda determinada por la intersección de los permisos obtenidos por estos tres niveles.  
+ En el caso de los ensamblados, el permiso de ejecución se pasa con la propiedad **PermissionSet** del objeto **Assembly** . Los permisos que recibe el código administrado vienen determinados por la directiva de seguridad activa. Ya hay tres niveles de directiva en vigor en que no es [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] entorno hospedado: enterprise, equipo y usuario. La lista real de permisos que el código recibe queda determinada por la intersección de los permisos obtenidos por estos tres niveles.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un nivel de directiva de seguridad de nivel de host a la biblioteca CLR mientras lo hospeda; esta directiva es un nivel de directiva adicional por debajo de los tres niveles de directiva que siempre están activos. Esta directiva se establece para cada dominio de aplicación creado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  La directiva de nivel de host de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es una combinación de la directiva fija de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ensamblados de sistema y de la directiva especificada por el usuario para ensamblados de usuario. La parte especificada por el usuario de la directiva de host de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende del propietario de ensamblado que especifique uno de los tres depósitos de permisos para cada ensamblado:  
   
-|Configuración de permisos|Description|  
+|Configuración de permisos|Descripción|  
 |------------------------|-----------------|  
 |**Seguro**|Proporciona permiso de cálculo interno. Este depósito de permisos no asigna permisos para el acceso a los recursos protegidos en .NET Framework. Se trata del depósito de permisos predeterminado para un ensamblado si no se especifica ninguno con la propiedad **PermissionSet** .|  
 |**ExternalAccess**|Proporciona el mismo acceso que la configuración **Safe** , con la posibilidad adicional de permitir el acceso a los recursos externos del sistema. Este depósito de permisos no ofrece garantías de seguridad (aunque se puede proteger este escenario), pero ofrece garantías de confiabilidad.|  

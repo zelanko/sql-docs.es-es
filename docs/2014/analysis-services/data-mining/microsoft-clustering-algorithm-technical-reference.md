@@ -24,19 +24,19 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089725"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371527"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de Microsoft
   En esta sección se explica la implementación del algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , incluidos los parámetros que se pueden usar para controlar el comportamiento de los modelos de agrupación en clústeres. Además, incluye instrucciones sobre cómo mejorar el rendimiento durante la creación y el procesamiento de modelos de agrupación en clústeres.  
   
  Para obtener información adicional sobre cómo usar los modelos de agrupación en clústeres, vea los temas siguientes:  
   
--   [Contenido del modelo de minería de datos para los modelos de clústeres &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48089725"
   
  La implementación de Microsoft proporciona dos opciones: EM escalable y no escalable. De forma predeterminada, en EM escalable, los primeros 50.000 registros se usan para inicializar el examen inicial. Si esta operación se realiza correctamente, el modelo solo usa estos datos. Si el modelo no se puede ajustar con 50.000 registros, se leen otros 50.000. En EM no escalable, se lee el conjunto de datos completo independientemente de su tamaño. Este método puede crear clústeres más precisos, pero los requisitos de memoria pueden ser significativos. Dado que EM escalable funciona en un búfer local, recorrer los datos en iteración es mucho más rápido, y el algoritmo hace un mejor uso de la caché de memoria de la CPU que EM no escalable. Es más, EM escalable es tres veces más rápido que EM no escalable, incluso si todos los datos caben en la memoria principal. En la mayoría de casos, la mejora en el rendimiento no significa una reducción de la calidad del modelo completo.  
   
- Para consultar un informe técnico donde se describe la implementación de EM en el algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vea [Scaling EM (Expectation Maximization) Clustering to Large Databases](http://go.microsoft.com/fwlink/?LinkId=45964)(Escalado de agrupación en clústeres de EM [Expectation Maximization] en bases de datos de gran tamaño).  
+ Para consultar un informe técnico donde se describe la implementación de EM en el algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vea [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(Escalado de agrupación en clústeres de EM [Expectation Maximization] en bases de datos de gran tamaño).  
   
 ### <a name="k-means-clustering"></a>Agrupación en clústeres mediana-K  
  La agrupación en clústeres mediana-K es un método muy conocido para asignar la pertenencia al clúster que consiste en minimizar las diferencias entre los elementos de un clúster al tiempo que se maximiza la distancia entre los clústeres. El término “mediana” en mediana-K hace referencia al *centroide* del clúster, que es un punto de datos que se elige arbitrariamente y que se restringe de forma iterativa hasta que representa la media real de todos los puntos de datos del clúster. La "K" hace referencia a un número arbitrario de puntos que se usan para inicializar el proceso de agrupación en clústeres. El algoritmo mediana-K calcula las distancias euclidianas cuadradas entre los registros de datos de un clúster y el vector que representa la media de clústeres, y converge en un conjunto final de K clústeres cuando la suma alcanza su valor mínimo.  
@@ -166,7 +166,7 @@ ms.locfileid: "48089725"
 |NOT NULL|La columna no puede contener valores NULL. Se producirá un error si Analysis Services encuentra un valor NULL durante el entrenamiento del modelo.<br /><br /> Se aplica a la columna de la estructura de minería de datos.|  
   
 ## <a name="requirements"></a>Requisitos  
- Un modelo de agrupación en clústeres debe contener una columna de clave y columnas de entrada. También se pueden definir columnas de entrada como columnas de predicción. Las columnas establecidas en `Predict Only` no se utilizan para generar clústeres. La distribución de estos valores en los clústeres se calcula después de que se hayan generado los clústeres.  
+ Un modelo de agrupación en clústeres debe contener una columna de clave y columnas de entrada. También se pueden definir columnas de entrada como columnas de predicción. Las columnas establecidas en `Predict Only` no se usan para generar clústeres. La distribución de estos valores en los clústeres se calcula después de que se hayan generado los clústeres.  
   
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
@@ -181,7 +181,7 @@ ms.locfileid: "48089725"
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm.md)   
- [Ejemplos de consultas de modelos de clústeres](clustering-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de clústeres &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

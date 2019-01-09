@@ -2,8 +2,6 @@
 title: Asociados de supervisión de SQL Server | Microsoft Docs
 description: Listas de asociados externos que cuentan con soluciones para supervisar Server.
 services: sql-server
-documentationcenter: NA
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 11/02/2017
@@ -11,12 +9,12 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 16e2e8dcc3e136ad99171845da89ff9a6504c460
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1dbe3213ae6b5774cd08efa6f6a24b799f74a6a7
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501973"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732002"
 ---
 # <a name="sql-server-monitoring-partners"></a>Asociados de supervisión de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

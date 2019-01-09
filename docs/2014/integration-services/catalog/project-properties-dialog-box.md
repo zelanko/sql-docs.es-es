@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isprojectprop.general.f1
@@ -14,12 +13,12 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d657e1339f454045a4a1e536610a58cd27e94c8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48e299e72343987d0738c739404284314f23dcf5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054235"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759047"
 ---
 # <a name="project-properties-dialog-box"></a>Propiedades del proyecto (cuadro de diálogo)
   Un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es una unidad de implementación. Cada proyecto puede contener paquetes, parámetros y referencias de entorno. Un proyecto es un objeto protegible y puede definir permisos en las entidades de seguridad de base de datos. Cuando se vuelve a implementar un proyecto, la versión anterior del mismo puede almacenarse en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -51,7 +50,7 @@ ms.locfileid: "48054235"
 ##  <a name="general"></a> Establecer las opciones de la página General  
  Use la página General para ver las propiedades del proyecto.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre del proyecto.  
   
  **Identificador**  
@@ -72,7 +71,7 @@ ms.locfileid: "48054235"
  Examinar  
  Haga clic en **Examinar** para seleccionar los usuarios y los roles para los que quiere establecer permisos con el cuadro de diálogo **Examinar todas las entidades** .  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre del usuario o del rol.  
   
  **Tipo**  

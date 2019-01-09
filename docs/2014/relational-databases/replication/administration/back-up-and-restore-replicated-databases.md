@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication]
@@ -26,12 +25,12 @@ ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea5fc487bdac09fab4003076d42cce59a06e27a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076875"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773367"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Hacer copias de seguridad y restaurar bases de datos replicadas
   Las bases de datos replicadas requieren una atención especial en relación con la copia de seguridad y restauración de los datos. En este tema se proporciona información preliminar y vínculos a información adicional sobre las estrategias para realizar copias de seguridad y restauración de cada tipo de replicación.  

@@ -22,19 +22,19 @@ ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26fdd13e19e2542f5020467323d9e640a4b563b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9778d44f3a11bcea066aea3ef43d36489b5daded
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827523"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211514"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Habilita la captura de datos modificados en la base de datos actual. Este procedimiento se debe ejecutar para una base de datos antes de que se puedan habilitar las tablas para la captura de datos modificados de esa base de datos. La captura de datos modificados registra las operaciones de inserción, actualización y eliminación aplicadas a las tablas habilitadas, proporcionando los detalles de los cambios en un formato relacional de uso sencillo. Para las filas modificadas, se captura la información de columna que duplica la estructura de las columnas de una tabla de origen sometida a seguimiento, junto con los metadatos necesarios para aplicar los cambios a un entorno de destino.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  La captura de datos modificados no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

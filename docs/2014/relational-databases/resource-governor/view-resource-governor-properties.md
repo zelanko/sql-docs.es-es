@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
@@ -15,21 +14,21 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a3e2caa3c2b89ead6ee109ea13fa6783cc61dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116415"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781268"
 ---
 # <a name="view-resource-governor-properties"></a>Ver las propiedades del regulador de recursos
   Puede crear o configurar entidades del regulador de recursos, por ejemplo grupos de recursos de servidor y grupos de cargas de trabajo, utilizando la página Propiedades del regulador de recursos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  **Antes de empezar:**  [Permisos](#Permissions)  
   
-2.  **Visualización de las propiedades del regulador de recursos utilizando lo siguiente:**  [Página Propiedades del regulador de recursos](#ViewRGProp)  
+2.  **Para ver las propiedades del regulador de recursos con:**  [Página de propiedades del regulador de recursos](#ViewRGProp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Además de ver las propiedades de las entidades del regulador de recursos, puede realizar varias tareas de configuración mediante la página **Propiedades del regulador de recursos** . Para obtener más información, vea estos temas:  
   
 -   [Habilitar el regulador de recursos](enable-resource-governor.md)  
@@ -76,7 +75,7 @@ ms.locfileid: "48116415"
  **Grupos de recursos de servidor**  
  Cree o cambie la configuración del grupo de recursos de servidor utilizando la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un grupo de recursos, haga clic en la fila que viene precedida por un asterisco (**\***).  
   
- **Nombre**  
+ **Name**  
  Especifique el nombre del grupo de recursos de servidor.  
   
  **% de tiempo mínimo de CPU**  
@@ -96,7 +95,7 @@ ms.locfileid: "48116415"
  **Grupos de cargas de trabajo de grupo de recursos de servidor**  
  Cree o cambie la configuración del grupo de cargas de trabajo utilizando la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un grupo de cargas de trabajo, haga clic en la fila que viene precedida por un asterisco (**\***).  
   
- **Nombre**  
+ **Name**  
  Especifique el nombre del grupo de cargas de trabajo  
   
  **Importancia**  

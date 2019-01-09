@@ -17,12 +17,12 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5a2ad8bfa15d8f6e487ba4fc3b28fa3c7796fbed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 712ae71efdf9ac4faea36dcacd6842406dff358f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192935"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357114"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticación con el servidor de informes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) proporciona varias opciones configurables para autenticar usuarios y aplicaciones cliente en el servidor de informes. De forma predeterminada, el servidor de informes usa la autenticación de Windows integrada y supone que existen relaciones de confianza donde el cliente y los recursos de red están en el mismo dominio o en un dominio de confianza. En función de la topología de red y las necesidades de su organización, puede personalizar el protocolo de autenticación que se usa para la autenticación integrada de Windows, usar la autenticación básica o usar una extensión personalizada basada en formularios de autenticación que proporcione. Cada uno de los tipos de autenticación puede activarse o desactivarse individualmente. Puede habilitar más de un tipo de autenticación si desea que el servidor de informes acepte solicitudes de varios tipos.  
@@ -39,9 +39,9 @@ ms.locfileid: "48192935"
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Negotiate|Sí|Intenta usar primero la autenticación integrada Kerberos para Windows, pero vuelve a NTLM si Active Directory no puede conceder un vale para la solicitud de cliente al servidor de informes. Negotiate solamente volverá a NTLM si el vale no está disponible. Si el primer intento provoca un error en lugar de indicar que no se encuentra un vale, el servidor de informes no hace un segundo intento.|  
 |RSWindowsNTLM|NTLM|Sí|Usa la autenticación integrada NTLM para Windows.<br /><br /> Las credenciales no se delegarán ni suplantarán en otras solicitudes. Las solicitudes subsiguientes seguirán una nueva secuencia de desafío-respuesta. Según la configuración de seguridad de la red, podría pedirse a un usuario las credenciales o la solicitud de autenticación se administrará de forma transparente.|  
-|RSWindowsKerberos|Kerberos|no|Usa la autenticación integrada Kerberos para Windows. Para configurar Kerberos, debe colocar los nombres principales del servicio del servidor (SPN) para las cuentas de servicio, lo que requiere privilegios de administrador de dominio. Si configura la delegación de identidad con Kerberos, el token del usuario que solicita un informe también se puede usar en una conexión adicional a los orígenes de datos externos que proporcionan datos a los informes.<br /><br /> Antes de especificar RSWindowsKerberos, asegúrese de que el tipo de explorador que usa lo admite realmente. Si utiliza Internet Explorer, la autenticación Kerberos solo se admite a través de Negotiate. Internet Explorer no formulará ninguna solicitud de autenticación que especifique Kerberos directamente.|  
-|RSWindowsBasic|Básico|no|La autenticación básica se define en el protocolo HTTP y solo se puede usar para autenticar las solicitudes HTTP para el servidor de informes.<br /><br /> Las credenciales se pasan en la solicitud HTTP en la codificación Base64. Si usa la autenticación básica, utilice el Nivel de sockets seguros (SSL) para cifrar la información de la cuenta de usuario antes de enviarse a través de la red. SSL proporciona un canal cifrado para enviar una solicitud de conexión del cliente al servidor de informes a través de una conexión HTTP TCP/IP. Para obtener más información, vea el tema relativo al [uso de SSL para cifrar datos confidenciales](http://go.microsoft.com/fwlink/?LinkId=71123) en el sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
-|Personalizado|(Anónima)|no|La autenticación anónima indica al servidor de informes que omita el encabezado de autenticación de una solicitud HTTP. El servidor de informes acepta todas las solicitudes, pero llama a una autenticación de formularios [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Forms personalizada que el usuario proporciona para autenticar al usuario.<br /><br /> Especifique `Custom` únicamente si está implementando un módulo de autenticación personalizada que administra todas las solicitudes de autenticación en el servidor de informes. No puede utilizar el tipo de autenticación Custom con la extensión de la autenticación de Windows predeterminada.|  
+|RSWindowsKerberos|Kerberos|No|Usa la autenticación integrada Kerberos para Windows. Para configurar Kerberos, debe colocar los nombres principales del servicio del servidor (SPN) para las cuentas de servicio, lo que requiere privilegios de administrador de dominio. Si configura la delegación de identidad con Kerberos, el token del usuario que solicita un informe también se puede usar en una conexión adicional a los orígenes de datos externos que proporcionan datos a los informes.<br /><br /> Antes de especificar RSWindowsKerberos, asegúrese de que el tipo de explorador que usa lo admite realmente. Si utiliza Internet Explorer, la autenticación Kerberos solo se admite a través de Negotiate. Internet Explorer no formulará ninguna solicitud de autenticación que especifique Kerberos directamente.|  
+|RSWindowsBasic|Básico|No|La autenticación básica se define en el protocolo HTTP y solo se puede usar para autenticar las solicitudes HTTP para el servidor de informes.<br /><br /> Las credenciales se pasan en la solicitud HTTP en la codificación Base64. Si usa la autenticación básica, utilice el Nivel de sockets seguros (SSL) para cifrar la información de la cuenta de usuario antes de enviarse a través de la red. SSL proporciona un canal cifrado para enviar una solicitud de conexión del cliente al servidor de informes a través de una conexión HTTP TCP/IP. Para obtener más información, vea el tema relativo al [uso de SSL para cifrar datos confidenciales](https://go.microsoft.com/fwlink/?LinkId=71123) en el sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
+|Personalizado|(Anónima)|No|La autenticación anónima indica al servidor de informes que omita el encabezado de autenticación de una solicitud HTTP. El servidor de informes acepta todas las solicitudes, pero llama a una autenticación de formularios [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Forms personalizada que el usuario proporciona para autenticar al usuario.<br /><br /> Especifique `Custom` únicamente si está implementando un módulo de autenticación personalizada que administra todas las solicitudes de autenticación en el servidor de informes. No puede utilizar el tipo de autenticación Custom con la extensión de la autenticación de Windows predeterminada.|  
   
 ## <a name="unsupported-authentication-methods"></a>Métodos de autenticación no admitidos  
  No se admiten los métodos de autenticación y solicitudes siguientes.  
@@ -65,18 +65,18 @@ ms.locfileid: "48192935"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Configuración de la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)  
+-   [Configurar la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)  
   
 -   [Configuración de la autenticación básica en el servidor de informes](configure-basic-authentication-on-the-report-server.md)  
   
--   [Configuración de la autenticación de formularios o personalizada en el servidor de informes](configure-custom-or-forms-authentication-on-the-report-server.md)  
+-   [Configurar la autenticación de formularios o personalizada en el servidor de informes](configure-custom-or-forms-authentication-on-the-report-server.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descripciones de las tareas|Vínculos|  
 |-----------------------|-----------|  
 |Configurar el tipo de autenticación integrada de Windows.|[Configuración de la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)|  
-|Configurar el tipo de autenticación básica.|[Configuración de la autenticación básica en el servidor de informes](configure-basic-authentication-on-the-report-server.md)|  
+|Configurar el tipo de autenticación básica.|[Configurar la autenticación básica en el servidor de informes](configure-basic-authentication-on-the-report-server.md)|  
 |Configurar la autenticación de formularios o, de lo contrario, un tipo de autenticación personalizada.|[Configuración de la autenticación de formularios o personalizada en el servidor de informes](configure-custom-or-forms-authentication-on-the-report-server.md)|  
 |Permitir al administrador de informes controlar el escenario de autenticación personalizada.|[Configurar el Administrador de informes para pasar cookies de autenticación personalizadas](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
   
@@ -86,10 +86,10 @@ ms.locfileid: "48192935"
  (crear-y-administrar-rol-assignments.md)   
  [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [Implementación de una extensión de seguridad](../extensions/security-extension/implementing-a-security-extension.md)   
- [Configurar conexiones SSL en un servidor de informes de modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md)   
- [Configurar el acceso al generador de informes](../report-server/configure-report-builder-access.md)   
- [Introducción a las extensiones de seguridad](../extensions/security-extension/security-extensions-overview.md)   
- [Autenticación en Reporting Services](../extensions/security-extension/authentication-in-reporting-services.md)   
- [Autorización en Reporting Services](../extensions/security-extension/authorization-in-reporting-services.md)  
+ [Configurar conexiones SSL en un servidor de informes en modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md)   
+ [Configurar el acceso al Generador de informes](../report-server/configure-report-builder-access.md)   
+ [Información general de extensiones de seguridad](../extensions/security-extension/security-extensions-overview.md)   
+ [Autenticación de Windows en Reporting Services](../extensions/security-extension/authentication-in-reporting-services.md)   
+ [La autorización en Reporting Services](../extensions/security-extension/authorization-in-reporting-services.md)  
   
   

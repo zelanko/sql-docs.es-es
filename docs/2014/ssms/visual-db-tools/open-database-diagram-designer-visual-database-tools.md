@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - opening Database Diagram Designer
@@ -15,12 +15,12 @@ ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b45e9729eb66334703b15f9a9d801fc072a5ea5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a4fb2a6fc58d008dc0c69824282f5ac35b2bb6a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086525"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780467"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Abrir el Diseñador de diagramas de base de datos (Visual Database Tools)
   El Diseñador de diagramas de base de datos es una herramienta visual que le permite diseñar y visualizar una base de datos a la que está conectado. Cuando diseña una base de datos, puede utilizar el Diseñador de bases de datos para crear, editar o eliminar tablas, columnas, claves, índices, relaciones y restricciones. Para ver una base de datos, puede crear uno o varios diagramas que muestren algunas o todas las tablas, columnas, claves y relaciones de la base de datos.  

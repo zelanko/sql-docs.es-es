@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2bcdfc80c056b9d9a29df4195e136d5b00d31f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 756c6ce9c57b314ddd9f9e821df7c391af5fa84a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206787"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805806"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Paso 6: Agregar y configurar transformaciones de búsqueda
   Tras configurar el origen de archivo plano para extraer datos del archivo de origen, la siguiente tarea consiste en definir las transformaciones de búsqueda necesarias para obtener los valores para las claves **CurrencyKey** y **DateKey**. Una transformación Búsqueda realiza una búsqueda combinando datos de la columna de entrada especificada en una columna de un conjunto de datos de referencia. El conjunto de datos de referencia puede ser una tabla o una vista existente, una tabla nueva o el resultado de una instrucción SQL. En este tutorial, la transformación Búsqueda utiliza un administrador de conexiones OLE DB para conectar con la base de datos que contiene los datos que constituyen el origen del conjunto de datos de referencia.  
@@ -135,6 +134,6 @@ ms.locfileid: "48206787"
  [Paso 7: Agregar y configurar el destino de OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación Búsqueda](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

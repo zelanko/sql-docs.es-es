@@ -16,15 +16,15 @@ ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e47248ac5719b2303c71f2e7b93161112ca7f870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507627"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Elegir datos de un origen o el controlador
-El origen de datos o el controlador utilizado por una aplicación a veces es codificado de forma rígida en la aplicación. Por ejemplo, una aplicación personalizada escrita por un departamento MIS para transferir datos desde un origen de datos a otro contendría los nombres de los orígenes de datos, la aplicación simplemente no funcionaba con otros orígenes de datos. Otro ejemplo es una aplicación vertical, como uno utilizado para la entrada de pedidos. Este tipo de aplicación siempre usa el mismo origen de datos, que tiene un esquema predefinido conocido por la aplicación.  
+El origen de datos o el controlador utilizado por una aplicación a veces es codificado de forma rígida en la aplicación. Por ejemplo, una aplicación personalizada escrita por un departamento MIS para transferir datos desde un origen de datos a otro contendría los nombres de los datos de orígenes de la aplicación simplemente no funcionarían con otros orígenes de datos. Otro ejemplo es una aplicación vertical, como uno utilizado para la entrada de pedidos. Este tipo de aplicación siempre usa el mismo origen de datos, que tiene un esquema predefinido conocido por la aplicación.  
   
  Otras aplicaciones seleccione el origen de datos o el controlador en tiempo de ejecución. Normalmente, estas son aplicaciones genéricas que realizar consultas ad hoc, por ejemplo, una hoja de cálculo que usa ODBC para importar datos. Estas aplicaciones normalmente una lista de los orígenes de datos disponibles o los controladores y permiten a los usuarios elegir las que desean trabajar. Si una aplicación genérica enumera los orígenes de datos, controladores o ambos con frecuencia depende de si la aplicación usa controladores basados en DBMS o basados en archivos.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2238676493cce8a732055dea853e7368fe817865
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b928b54236929238c404597f4ba1eeeddb427ccc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054365"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790647"
 ---
 # <a name="odbc-source"></a>Origen ODBC
   El origen ODBC extrae los datos de una base de datos con ODBC mediante una tabla de base de datos, una vista o una instrucción SQL.  
@@ -38,9 +37,9 @@ ms.locfileid: "48054365"
 ## <a name="error-handling"></a>Tratamiento de errores  
  El origen ODBC tiene una salida de error. La salida de error del componente incluye las columnas de salida siguientes:  
   
--   **Código de error**: número que corresponde al error actual. Vea la documentación de la base de datos con ODBC que usa para obtener una lista de errores. Para obtener una lista de códigos de errores de SSIS, vea la referencia Código de errores y mensajes de SSIS.  
+-   **Código de error**: El número que corresponde al error actual. Vea la documentación de la base de datos con ODBC que usa para obtener una lista de errores. Para obtener una lista de códigos de errores de SSIS, vea la referencia Código de errores y mensajes de SSIS.  
   
--   **Columna de error**: columna de origen que produce el error (para los errores de conversión).  
+-   **Columna de error**: La columna de origen que produce el error (para errores de conversión).  
   
 -   Columnas estándar de datos de salida.  
   
@@ -52,9 +51,9 @@ ms.locfileid: "48054365"
 ## <a name="extract-options"></a>Opciones de extracción  
  El origen ODBC funciona en modo **Lote** o **Fila a fila** . La propiedad **FetchMethod** determina el modo usado. En la lista siguiente, se describen los modos.  
   
--   **Lote**: el componente intenta usar el método más eficaz de búsqueda en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, es SQLFetchScroll con enlace de matriz (donde el tamaño de la matriz se determina mediante la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente al modo **Fila a fila** .  
+-   **Batch**: El componente intenta usar el método más eficaz de búsqueda en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, es SQLFetchScroll con enlace de matriz (donde el tamaño de la matriz se determina mediante la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
   
--   **Fila a fila**: el componente usa SQLFetch para recuperar las filas de una en una.  
+-   **Fila a fila**: El componente usa SQLFetch para recuperar las filas de una a la vez.  
   
  Para obtener más información acerca de la la propiedad **FetchMethod** , vea [ODBC Source Custom Properties](odbc-source-custom-properties.md).  
   
@@ -73,9 +72,9 @@ ms.locfileid: "48054365"
   
 -   [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [Editor de orígenes ODBC &#40;página columnas&#41;](../odbc-source-editor-columns-page.md)  
+-   [Editor de orígenes ODBC &#40;página Columnas&#41;](../odbc-source-editor-columns-page.md)  
   
--   [Editor de orígenes ODBC &#40;página de salida de Error&#41;](../odbc-source-editor-error-output-page.md)  
+-   [Editor de orígenes ODBC &#40;página Salida de error&#41;](../odbc-source-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** contiene las propiedades que se pueden establecer mediante programación.  
   
@@ -87,14 +86,14 @@ ms.locfileid: "48054365"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Editor de orígenes ODBC &#40;página de salida de Error&#41;](../odbc-source-editor-error-output-page.md)  
+-   [Editor de orígenes ODBC &#40;página Salida de error&#41;](../odbc-source-editor-error-output-page.md)  
   
--   [Editor de orígenes ODBC &#40;página columnas&#41;](../odbc-source-editor-columns-page.md)  
+-   [Editor de orígenes ODBC &#40;página Columnas&#41;](../odbc-source-editor-columns-page.md)  
   
 -   [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [Extraer datos mediante el origen ODBC](odbc-source.md)  
+-   [Extraer datos mediante el origen de ODBC](odbc-source.md)  
   
--   [Propiedades personalizadas del origen ODBC](odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
   
   

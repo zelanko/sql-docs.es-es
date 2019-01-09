@@ -16,12 +16,12 @@ ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdf75e8911aaf4856092de273b332b3f4fb27aee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c9c148995dfe83d24798c31900874e4fe3e80df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225795"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405370"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxis y ejemplos del filtro de modelos (Analysis Services: Minería de datos)
   En esta sección se proporciona información detallada sobre la sintaxis para los filtros de modelo, junto con expresiones de ejemplo.  
@@ -31,7 +31,7 @@ ms.locfileid: "48225795"
 ##  <a name="bkmk_Syntax"></a> Filter Syntax  
  Las expresiones de filtro generalmente equivalen al contenido de una cláusula WHERE. Puede conectar varias condiciones usando los operadores lógicos `AND`, `OR` y `NOT`.  
   
- En las tablas anidadas, también se puede usar el `EXISTS` y `NOT EXISTS` operadores. Una condición `EXISTS` se evalúa como `true` si la subconsulta devuelve al menos una fila. Esto es útil en casos en los que desea restringir el modelo a los casos que contienen un valor determinado en la tabla anidada: por ejemplo, los clientes que han comprado un artículo al menos una vez.  
+ En tablas anidadas, también puede usar los operadores `EXISTS` y `NOT EXISTS`. Una condición `EXISTS` se evalúa como `true` si la subconsulta devuelve al menos una fila. Esto es útil en casos en los que desea restringir el modelo a los casos que contienen un valor determinado en la tabla anidada: por ejemplo, los clientes que han comprado un artículo al menos una vez.  
   
  Una condición `NOT EXISTS` se evalúa como `true` si la condición especificada en la subconsulta no existe. Un ejemplo es cuando se desea restringir el modelo a los clientes que nunca han comprado un artículo determinado.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48225795"
 -   **\<=** (menor o igual que)  
   
 > [!NOTE]  
->  Independientemente del tipo de datos, estos operadores no se puede aplicar a una columna que tiene el tipo `Discrete`, `Discretized`, o `Key`.  
+>  Sin tener en cuenta el tipo de datos, estos operadores no se pueden aplicar a una columna que tenga el tipo `Discrete`, `Discretized` o `Key`.  
   
  Una expresión que usa cualquiera de los operadores siguientes se puede aplicar a una columna de clave continua, discreta o de datos discretos:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48225795"
   
  Si el argumento *avPredicate*se aplica a una columna de datos discretos, el valor usado en el filtro puede ser cualquier valor de un depósito concreto.  
   
- Es decir, no define la condición como `AgeDisc = ’25-35’`, pero en su lugar calcula y, a continuación, usa un valor de ese intervalo.  
+ Es decir, no define la condición como `AgeDisc = '25-35'`, pero en su lugar calcula y, a continuación, usa un valor de ese intervalo.  
   
  Ejemplo:  `AgeDisc = 27`  indica cualquier valor del mismo intervalo que 27, que en este caso es 25-35.  
   
@@ -123,12 +123,12 @@ Age,
 Occupation,  
 MaritalStatus PREDICT  
 )  
-WITH FILTER (Age > 30 AND Occupation=’Architect’)  
+WITH FILTER (Age > 30 AND Occupation='Architect')  
 ```  
   
 
   
-###  <a name="bkmk_Ex2"></a> Ejemplo 2: filtrado de nivel de caso usando atributos de tabla anidada  
+###  <a name="bkmk_Ex2"></a> Ejemplo 2: Filtrado de nivel de caso usando atributos de tabla anidada  
  Si su estructura de minería de datos contiene tablas anidadas, puede filtrar por la existencia de un valor en una tabla anidada o filtrar en filas de tabla anidada que contienen un valor concreto. Este ejemplo restringe los casos usados para el modelo a los clientes mayores de 30 años que realizaron al menos una compra que incluía la leche.  
   
  Como se muestra en este ejemplo, no es necesario que el filtro use solamente las columnas incluidas en el modelo. La tabla anidada **Products** forma parte de la estructura de minería de datos pero no está incluida en el modelo de minería de datos. Sin embargo, todavía puede filtrar por los valores y atributos de la tabla anidada. Para ver los detalles de estos casos, la obtención de detalles debe estar habilitada.  
@@ -142,18 +142,18 @@ Occupation,
 MaritalStatus PREDICT  
 )  
 WITH DRILLTHROUGH,   
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’)  
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')  
 )  
 ```  
   
  
   
-###  <a name="bkmk_Ex3"></a> Ejemplo 3: filtrado del nivel de caso en varios atributos de tabla anidada  
+###  <a name="bkmk_Ex3"></a> Ejemplo 3: Filtrado de nivel de caso en varios atributos de tabla anidada  
  En este ejemplo se muestra un filtro de tres partes: se aplica una condición a la tabla de casos, otra condición a un atributo de la tabla anidada y otra, en un valor concreto de una de las columnas de tabla anidada.  
   
  La primera condición del filtro, `Age > 30`, se aplica a una columna de la tabla de casos. Las condiciones restantes se aplican a la tabla anidada.  
   
- La segunda condición, `EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’`, comprueba la presencia de al menos una compra en la tabla anidada que incluía la leche. La tercera condición, `Quantity>=2`, significa que el cliente debe haber comprado al menos dos unidades de leche en una transacción única.  
+ La segunda condición, `EXISTS (SELECT * FROM Products WHERE ProductName='Milk'`, comprueba la presencia de al menos una compra en la tabla anidada que incluía la leche. La tercera condición, `Quantity>=2`, significa que el cliente debe haber comprado al menos dos unidades de leche en una transacción única.  
   
 ```  
 ALTER MINING STRUCTURE MyStructure  ADD MINING MODEL MyModel_3  
@@ -168,13 +168,13 @@ ProductName KEY,
 Quantity        
 )  
 )  
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity >= 2)   
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity >= 2)   
 )  
 ```  
   
 
   
-###  <a name="bkmk_Ex4"></a> Ejemplo 4: filtrado del nivel de caso en ausencia de atributos de tabla anidada  
+###  <a name="bkmk_Ex4"></a> Ejemplo 4: Filtrado de nivel de caso en ausencia de atributos de tabla anidada  
  En este ejemplo se muestra cómo limitar los casos al cliente que no compró un artículo específico, filtrando por la ausencia de un atributo en la tabla anidada. En este ejemplo, el modelo se entrena usando clientes mayores de 30 años que nunca han comprado leche.  
   
 ```  
@@ -189,12 +189,12 @@ Products PREDICT
 ProductName  
 )  
 )  
-FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
+FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk') )  
 ```  
   
 
   
-###  <a name="bkmk_Ex5"></a> Ejemplo 5: filtrado por varios valores de tabla anidada  
+###  <a name="bkmk_Ex5"></a> Ejemplo 5: Filtrado por varios valores de tabla anidada  
  El propósito del ejemplo es mostrar el filtrado de tabla anidada. El filtro de tabla anidada se aplica después del filtro de casos y solamente restringe las filas de tabla anidada.  
   
  Este modelo podría contener varios casos con tablas anidadas vacías porque no se especifica EXISTS.  
@@ -210,14 +210,14 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 WITH DRILLTHROUGH  
 ```  
   
 
   
-###  <a name="bkmk_Ex6"></a> Ejemplo 6: filtrar por los atributos de tabla anidada y EXISTS  
+###  <a name="bkmk_Ex6"></a> Ejemplo 6: Filtrado de atributos de tabla anidada y EXISTS  
  En este ejemplo, el filtro en la tabla anidada restringe las filas a aquéllas que contienen leche o agua embotellada. A continuación, los casos del modelo se restringen usando una instrucción `EXISTS`. Esto asegura que la tabla anidada no está vacía.  
   
 ```  
@@ -231,14 +231,14 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 FILTER (EXISTS (Products))  
 ```  
   
 
   
-###  <a name="bkmk_Ex7"></a> Ejemplo 7: combinaciones de filtros complejas  
+###  <a name="bkmk_Ex7"></a> Ejemplo 7: Combinaciones de filtros complejas  
  El escenario para este modelo se parece al del ejemplo 4 pero es mucho más complejo. La tabla anidada, **ProductsOnSale**, tiene la condición de filtro `(OnSale)` lo que significa que el valor de **OnSale** debe ser `true` para el producto enumerado en **ProductName**. Aquí, **OnSale** es una columna de estructura.  
   
  La segunda parte del filtro, para **ProductsNotOnSale**, repite esta sintaxis pero filtra por los productos para que el valor de **OnSale** es `not true``(!OnSale)`.  
@@ -281,10 +281,10 @@ FILTER (EXISTS (Products))
   
   
   
-###  <a name="bkmk_Ex8"></a> Ejemplo 8: filtrar según las fechas  
+###  <a name="bkmk_Ex8"></a> Ejemplo 8: Filtrar según las fechas  
  Puede filtrar las columnas de entrada según fechas, como con cualquier otro dato. Las fechas contenidas en una columna del tipo de fecha y hora son valores continuos; por consiguiente, puede especificar un intervalo de fechas utilizando a operadores como mayor que (>) o menor que (<). Si el origen de datos no representa las fechas por un tipo de datos continuo, sino como valores discretos o de texto, no puede filtrar en un intervalo de fechas, sino que debe especificar valores discretos e individuales.  
   
- Sin embargo, no puede crear un filtro en la columna de fecha en un modelo del serie temporal si la columna de fecha utilizada para el filtro también es la columna de clave para el modelo. Eso es porque, en modelos de serie temporal y los modelos de clústeres de secuencia, la columna de fecha podría tratarse como tipo `KeyTime` o `KeySequence`.  
+ Sin embargo, no puede crear un filtro en la columna de fecha en un modelo del serie temporal si la columna de fecha utilizada para el filtro también es la columna de clave para el modelo. Eso se debe a que, en los modelos de series temporales y de agrupación en clústeres de secuencia, la columna de fecha podría tratarse como de tipo `KeyTime` o `KeySequence`.  
   
  Si necesita filtrar en fechas continuas en un modelo de serie temporal, puede crear una copia de la columna en la estructura de minería de datos y filtrar el modelo en la nueva columna.  
   
@@ -293,9 +293,9 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  Observe que cualquier columna adicional que agregue al modelo podría afectar a los resultados. Por consiguiente, si no desea utilizar la columna en el cálculo de la serie, solo debería agregar la columna a la estructura de minería de datos y no al modelo. También puede establecer la marca de modelo en la columna a `PredictOnly` o a `Ignore`. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md).  
+>  Observe que cualquier columna adicional que agregue al modelo podría afectar a los resultados. Por consiguiente, si no desea utilizar la columna en el cálculo de la serie, solo debería agregar la columna a la estructura de minería de datos y no al modelo. También puede establecer la marca de modelo de la columna en `PredictOnly` o en `Ignore`. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md).  
   
- En el caso de otros tipos de modelo, puede utilizar fechas como criterios de entrada o como criterios de filtro igual que con cualquier otra columna. Sin embargo, si tiene que utilizar un nivel concreto de granularidad que no es compatible con un `Continuous` tipo de datos, puede crear un valor derivado en el origen de datos utilizando expresiones para extraer la unidad que se utilizará en el filtro y el análisis.  
+ En el caso de otros tipos de modelo, puede utilizar fechas como criterios de entrada o como criterios de filtro igual que con cualquier otra columna. Sin embargo, si tiene que utilizar un nivel concreto de granularidad que un tipo de datos `Continuous` no admita, puede crear un valor derivado en el origen de datos utilizando expresiones para extraer la unidad que se usará en el filtro y el análisis.  
   
 > [!WARNING]  
 >  Cuando especifique fechas como criterios de filtro, debe usar el siguiente formato, independientemente del formato de fecha del sistema operativo actual: `mm/dd/yyyy`. Cualquier otro formato produce un error.  
@@ -305,7 +305,7 @@ FILTER (EXISTS (Products))
  
   
 ## <a name="see-also"></a>Vea también  
- [Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
- [Pruebas y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+ [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
+ [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
   

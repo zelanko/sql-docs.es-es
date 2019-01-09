@@ -13,12 +13,12 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149215"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372897"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Conexión con una Azure SQL Database (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite conectar con [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -26,7 +26,7 @@ ms.locfileid: "48149215"
 > [!NOTE]  
 >  Si va a conectarse a un conjunto de datos de Azure DataMarket, vea [Conectarse a un informe o a una fuente de distribución de datos &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md).  
   
- [!INCLUDE[ssSDS](../includes/sssds-md.md)] es una base de datos relacional hospedada con la que se conecta usando la autenticación de SQL Server. Para obtener más información sobre [!INCLUDE[ssSDS](../includes/sssds-md.md)], vea el sitio web [Base de datos SQL](http://go.microsoft.com/fwlink/?LinkID=157856). Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado.  
+  [!INCLUDE[ssSDS](../includes/sssds-md.md)] es una base de datos relacional hospedada con la que se conecta usando la autenticación de SQL Server. Para obtener más información sobre [!INCLUDE[ssSDS](../includes/sssds-md.md)], vea el sitio web [Base de datos SQL](https://go.microsoft.com/fwlink/?LinkID=157856). Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado.  
   
 > [!NOTE]  
 >  Las credenciales del usuario actual se utilizan al seleccionar una base de datos en esta página. Sin embargo, la importación no se realizará correctamente si el usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer la base de datos seleccionada.  

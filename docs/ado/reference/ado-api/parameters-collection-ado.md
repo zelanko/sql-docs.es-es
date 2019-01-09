@@ -18,12 +18,12 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28832f7e96ddbb149db5561654d55ef0003551cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbfff2a8db4405e19eb448e7bd7db5c8ac236f8
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657854"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321801"
 ---
 # <a name="parameters-collection-ado"></a>Colección de parámetros (ADO)
 Contiene todos los [parámetro](../../../ado/reference/ado-api/parameter-object.md) objetos de un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
@@ -45,7 +45,7 @@ Contiene todos los [parámetro](../../../ado/reference/ado-api/parameter-object.
   
 2.  Cuando se llama a un procedimiento almacenado con parámetros y anexar explícitamente un parámetro a la **parámetros** colección con **Append**, el parámetro de valor devuelto y salida se debe anexar a la **Parámetros** colección. En primer lugar se debe anexar el valor devuelto a la **parámetros** colección. Use **Append** para agregar los demás parámetros en el **parámetros** colección en el orden de definición. Por ejemplo, el procedimiento almacenado SPWithParam tiene dos parámetros. El primer parámetro, *InParam*, es un parámetro de entrada que se definen como parámetros (20) y el segundo parámetro, *OutParam*, es un parámetro output definido como parámetros (20). Puede recuperar el parámetro de valor devuelto y salida con el código siguiente.  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  
@@ -55,7 +55,7 @@ Contiene todos los [parámetro](../../../ado/reference/ado-api/parameter-object.
   
     ccmd.parameters.Append ccmd.CreateParameter(, adInteger, adParamReturnValue, , NULL)   ' return value  
     ccmd.parameters.Append ccmd.CreateParameter("InParam", adVarChar, adParamInput, 20, "hello world")   ' input parameter  
-    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOuput, 20, NULL)   ' output parameter  
+    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOutput, 20, NULL)   ' output parameter  
   
     ccmd.execute()  
   
@@ -66,7 +66,7 @@ Contiene todos los [parámetro](../../../ado/reference/ado-api/parameter-object.
   
 3.  Cuando se llama a un procedimiento almacenado con parámetros y configuración de los parámetros mediante una llamada a la **elemento** método en el **parámetros** colección, el parámetro de valor devuelto y salida del procedimiento almacenado puede recuperarse de la **parámetros** colección. Por ejemplo, el procedimiento almacenado SPWithParam tiene dos parámetros. El primer parámetro, *InParam*, es un parámetro de entrada que se definen como parámetros (20) y el segundo parámetro, *OutParam*, es un parámetro output definido como parámetros (20). Puede recuperar el parámetro de valor devuelto y salida con el código siguiente.  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  

@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661754"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417376"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC
 En este tema se trata los detalles del desarrollo de un controlador ODBC que contiene información sobre cómo el controlador debe proporcionar servicios de agrupación de conexiones.  
@@ -45,7 +45,7 @@ En este tema se trata los detalles del desarrollo de un controlador ODBC que con
 |Función|Funcionalidad agregada|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Compatibilidad con el nuevo tipo de identificador: SQL_HANDLE_DBC_INFO_TOKEN (consulte la siguiente descripción).|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Admite el atributo solo para establecer conexión nuevo: SQL_ATTR_DBC_INFO_TOKEN para restablecer la conexión (consulte la siguiente descripción).|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Compatibilidad con el nuevo atributo solo para establecer conexión: SQL_ATTR_DBC_INFO_TOKEN para restablecer la conexión (consulte la siguiente descripción).|  
   
 > [!NOTE]  
 >  Funciones en desuso, como **SQLError** y **SQLSetConnectOption** no se admiten para la agrupación de conexiones dependientes del controlador.  

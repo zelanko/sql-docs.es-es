@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 5bd5581b2842ec5d11cd27a989aa41ddb2cee1de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532003"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error: SMB: SQL Server en Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "47661943"
 
 En este artículo se explica cómo configurar el almacenamiento SMB para una instancia de clúster de conmutación por error (FCI) en Linux. 
  
-En el mundo que no sean Windows, SMB a menudo se conoce para compartir como un sistema de archivos de Internet común (CIFS) y se implementa a través de Samba. En el mundo de Windows, el acceso a un recurso compartido SMB se realiza de este modo: \\nombreservidor\nombrerecursocompartido. Para las instalaciones de SQL Server basada en Linux, se debe montar el recurso compartido SMB como una carpeta.
+En el mundo que no sean Windows, SMB a menudo se conoce para compartir como un sistema de archivos de Internet común (CIFS) y se implementa a través de Samba. En el mundo de Windows, el acceso a un recurso compartido SMB se realiza de este modo: \\NOMBRESERVIDOR\NOMBRERECURSOCOMPARTIDO. Para las instalaciones de SQL Server basada en Linux, se debe montar el recurso compartido SMB como una carpeta.
 
 ## <a name="important-source-and-server-information"></a>Información importante de origen y el servidor
 
@@ -102,7 +102,7 @@ Estas son algunas sugerencias y notas para utilizar correctamente SMB:
    *    Elimine los archivos del directorio de datos de SQL Server existente. No recibirá ninguna confirmación si se realiza correctamente.
  
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    Compruebe que se han eliminado los archivos. 

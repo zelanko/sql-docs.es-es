@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - ORDER BY clause [Visual Database Tools]
@@ -12,12 +12,12 @@ ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14f9efc4b93aedd4bacb757912e82a954c2fff72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30a2fca3dd0f2fcc6f22f2330c37fb8e333d9994
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078485"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771937"
 ---
 # <a name="sort-with-order-by-visual-database-tools"></a>Ordenar con ORDER BY (Visual Database Tools)
   Puede ordenar los resultados de la consulta por una o más de las columnas de las filas devueltas utilizando una cláusula ORDER BY. Puede definir una cláusula ORDER BY eligiendo opciones en el panel Detalles de los criterios.  
@@ -36,7 +36,7 @@ ms.locfileid: "48078485"
  Observe que cuando se trabaja en el panel Criterios, la cláusula UNION de la consulta cambia para coincidir con las acciones más recientes.  
   
 > [!NOTE]  
->  Al ordenar los resultados por más de una columna, especifique el orden de prioridad que se seguirá al realizar búsquedas en las columnas utilizando la columna **Criterio de ordenación** . Para más información, consulte **Ordenar varias columnas de las consultas**.  
+>  Al ordenar los resultados por más de una columna, especifique el orden de prioridad que se seguirá al realizar búsquedas en las columnas utilizando la columna **Criterio de ordenación** . Para obtener más información, vea **Cómo: Ordenar varias columnas en consultas**.  
   
 ## <a name="see-also"></a>Vea también  
  [Ordenar y agrupar los resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   

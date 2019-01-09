@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
@@ -14,12 +13,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bd30b84643032cf68796b9ebc14bf0407d76427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215635"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358197"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Crear y aplicar la instantánea inicial
   En este tema se describe cómo crear y aplicar la instantánea inicial en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Las publicaciones de mezcla que usan filtros con parámetros necesitan una instantánea de dos partes. Para más información, consulte [Crear una instantánea para una publicación de mezcla con filtros con parámetros](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "48215635"
   
 #### <a name="to-create-a-snapshot-in-management-studio"></a>Para crear una instantánea en Management Studio  
   
-1.  Conéctese al publicador en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]y, a continuación, expanda el nodo del servidor.  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]y luego expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -77,13 +76,13 @@ ms.locfileid: "48215635"
   
 #### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>Para crear y ejecutar un trabajo del Agente de instantáneas que genere la instantánea inicial  
   
-1.  Cree una publicación de instantáneas, transaccional o de combinación. Para más información, consulte [Create a Publication](publish/create-a-publication.md).  
+1.  Cree una publicación de instantáneas, transaccional o de combinación. Para obtener más información, consulte [Create a Publication](publish/create-a-publication.md).  
   
 2.  Ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique **@publication** y los siguientes parámetros:  
   
     -   **@job_login, que especifica** las credenciales de autenticación de Windows con las que se ejecuta el Agente de instantáneas en el distribuidor.  
   
-    -   **@job_password**, que es la contraseña para las credenciales de Windows proporcionadas.  
+    -    **@job_password**, que es la contraseña para las credenciales de Windows proporcionadas.  
   
     -   (Opcional) El valor **0** para **@publisher_security_mode** si el agente va a utilizar autenticación de SQL Server para conectarse al publicador. En este caso, debe especificar también la información de inicio de sesión de autenticación de SQL Server para **@publisher_login** y **@publisher_password**.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48215635"
   
 #### <a name="to-run-the-snapshot-agent-to-generate-the-initial-snapshot"></a>Para ejecutar el Agente de instantáneas y generar una instantánea inicial  
   
-1.  Cree una publicación de instantáneas, transaccional o de combinación. Para más información, consulte [Create a Publication](publish/create-a-publication.md).  
+1.  Cree una publicación de instantáneas, transaccional o de combinación. Para obtener más información, consulte [Create a Publication](publish/create-a-publication.md).  
   
 2.  Agregue artículos a la publicación. Para más información, consulte [Define an Article](publish/define-an-article.md).  
   
@@ -144,11 +143,11 @@ ms.locfileid: "48215635"
   
  [!code-sql[HowTo#startmergesnapshot_10](../../snippets/tsql/SQL15/replication/howto/tsql/createmergesnapshot_10.bat)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  El Agente de instantáneas genera instantáneas una vez creada la publicación. Puede generar estas instantáneas mediante programación utilizando Replication Management Objects (RMO) y el acceso de código administrado directo a las funcionalidades del agente de replicación. Los objetos que se usan dependen del tipo de replicación. El Agente de instantáneas se puede iniciar sincrónicamente con el objeto <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> o de forma asincrónica con el trabajo de agente. Una vez generada la instantánea inicial, se transfiere y se aplica al suscriptor cuando se sincroniza la suscripción por primera vez. Deberá volver a ejecutar el agente cada vez que la instantánea existente no contenga datos válidos y actualizados. Para obtener más información, vea [Mantener publicaciones](publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
->  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](http://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Para generar la instantánea inicial de una publicación transaccional o de instantáneas iniciando el trabajo del Agente de instantáneas (asincrónico)  
   
@@ -156,9 +155,9 @@ ms.locfileid: "48215635"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication> . Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para cargar las propiedades restantes del objeto. Si este método devuelve `false`, las propiedades de publicación en el paso 2 se definieron incorrectamente o no existe la publicación.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para cargar las propiedades restantes del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.  
   
-4.  Si el valor de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> es `false`, llame a <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para crear el trabajo del agente de instantáneas para esta publicación.  
+4.  Si el valor de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> es `false`, llame a <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para crear el trabajo de Agente de instantáneas para esta publicación.  
   
 5.  Llame al método <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> para iniciar el trabajo del agente que genera la instantánea inicial de esta publicación.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "48215635"
   
 2.  Establezca un valor de <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> o <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> para <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A>.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Para generar la instantánea inicial de una publicación de combinación iniciando el trabajo del Agente de instantáneas (asincrónico)  
   
@@ -190,9 +189,9 @@ ms.locfileid: "48215635"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> . Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para cargar las propiedades restantes del objeto. Si este método devuelve `false`, las propiedades de publicación en el paso 2 se definieron incorrectamente o no existe la publicación.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para cargar las propiedades restantes del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.  
   
-4.  Si el valor de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> es `false`, llame a <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para crear el trabajo del agente de instantáneas para esta publicación.  
+4.  Si el valor de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> es `false`, llame a <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para crear el trabajo de Agente de instantáneas para esta publicación.  
   
 5.  Llame al método <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> para iniciar el trabajo del agente que genera la instantánea inicial de esta publicación.  
   

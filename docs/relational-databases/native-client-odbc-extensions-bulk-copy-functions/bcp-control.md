@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c15063ef190c3858007e7d64bc0e4d7ebf0d5b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3df6609af185d09c01641de495ae23687a083e07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761763"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210464"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: los datos del archivo están en la página de códigos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- Número de versión del formato de archivo de datos. Esto puede ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), o 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 es el valor predeterminado. Esto resulta útil para exportar e importar datos en formatos admitidos en versiones anteriores del servidor. Por ejemplo, para importar los datos que se obtienen de una columna de texto en un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server en un **varchar (max)** columna en un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] servidor o posterior, debe especificar 80. De forma similar, si especifica 80 al exportar datos desde un **varchar (max)** columna, éstos se guardarán al igual que las columnas de texto se guardan en el [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] dar formato y se pueden importar a una columna de texto de un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
+ Número de versión del formato de archivo de datos. Esto puede ser 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), o 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 es el valor predeterminado. Esto resulta útil para exportar e importar datos en formatos admitidos en versiones anteriores del servidor. Por ejemplo, para importar los datos que se obtienen de una columna de texto en un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server en un **varchar (max)** columna en un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] servidor o posterior, debe especificar 80. De forma similar, si especifica 80 al exportar datos desde un **varchar (max)** columna, éstos se guardarán al igual que las columnas de texto se guardan en el [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] dar formato y se pueden importar a una columna de texto de un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
   
  BCPFIRST  
  Es la primera fila de datos del archivo o la tabla que va a copiarse. El valor predeterminado es 1; un valor menor que 1 reinicializa esta opción a su valor predeterminado.  

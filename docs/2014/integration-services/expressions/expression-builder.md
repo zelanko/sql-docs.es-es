@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionbuilder.f1
@@ -15,12 +14,12 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0560d4cc4b5aeaa0b96269e5ee1bbfe9c61e83c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c3daace92f033cb96428226b51294f5a372b7c2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118465"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764077"
 ---
 # <a name="expression-builder"></a>Generador de expresiones
   Use el cuadro de diálogo **Generador de expresiones** para crear y editar una expresión de propiedad, o bien para escribir la expresión que establece el valor de una variable con una interfaz gráfica de usuario que incluye variables y proporciona una referencia integrada para las funciones, conversiones de tipo y operadores del lenguaje de expresiones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -48,9 +47,9 @@ ms.locfileid: "48118465"
 |**Evaluar expresión**|Haga clic en **Evaluar expresión** para ver el resultado de evaluación de la expresión.|  
   
 ## <a name="see-also"></a>Vea también  
- [Página expresiones](expressions-page.md)   
+ [Página Expresiones](expressions-page.md)   
  [Editor de expresiones de propiedad](property-expressions-editor.md)   
- [Servicios de integración &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Variables del sistema](../system-variables.md)  
   
   

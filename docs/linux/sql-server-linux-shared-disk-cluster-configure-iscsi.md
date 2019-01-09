@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676344"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524907"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error - iSCSI: SQL Server en Linux
 
@@ -93,7 +93,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
 6.  Comprobación de discos iSCSI conectados
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30 iSCSIattachedDisks][7]
 
@@ -187,7 +187,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
    *    Elimine los archivos del directorio de datos de SQL Server existente. No recibirá ninguna confirmación si se realiza correctamente.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    Compruebe que se han eliminado los archivos. La figura siguiente muestra un ejemplo de la secuencia completa de c a través de h.
@@ -337,7 +337,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
 14. Configure el servidor para que esa única Pacemaker puede activar el grupo de volúmenes.
 
     ```bash
-    sudo lvmconf --enable-halvm --services –startstopservices
+    sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
 15. Generar una lista de los grupos de volúmenes en el servidor. Nada muestran que no sea el disco iSCSI se usa el sistema, como para el disco del sistema operativo.
@@ -367,7 +367,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
 
 18. Reinicie el servidor.
 
-19. En otro servidor que vaya a participar en la FCI, realice los pasos 1-6. Esto presentará el destino iSCSI para el servidor SQL Server. 
+19. En otro servidor que vaya a participar en la FCI, realice los pasos 1 - 6. Esto presentará el destino iSCSI para el servidor SQL Server. 
  
 20. Generar una lista de los grupos de volúmenes en el servidor. Debe mostrar el grupo de volúmenes que creó anteriormente. 
 
@@ -387,7 +387,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-25. Repita los pasos 1 a 6 en cualquier otro servidor que vaya a participar en la FCI.
+25. Repita los pasos del 1 al 6 en cualquier otro servidor que vaya a participar en la FCI.
 
 Ahora está listo para configurar la FCI.
 

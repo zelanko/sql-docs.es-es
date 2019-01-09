@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Integration Services], tasks
@@ -27,12 +26,12 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a87a28e1e39959868b1a39c897b8b67716227466
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d840663c675452b137a57fedc56f623b430af6e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111854"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765647"
 ---
 # <a name="integration-services-tasks"></a>Tareas de Integration Services
   Las tareas son elementos de flujo de control que definen las unidades de trabajo que se realizan en un flujo de control de paquetes. Un paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consta de una o más tareas. Si el paquete contiene más de una tarea, las tareas se conectan y ordenan en el flujo de control mediante restricciones de precedencia.  
@@ -44,7 +43,7 @@ ms.locfileid: "48111854"
 ## <a name="types-of-tasks"></a>Tipos de tareas  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye los siguientes tipos de tareas.  
   
- Tarea Flujo de datos  
+ tarea Flujo de datos  
  Tarea que ejecuta flujos de datos para extraer datos, aplicar transformaciones de nivel de columna y cargar datos.  
   
  Tareas de preparación de datos  
@@ -75,10 +74,10 @@ ms.locfileid: "48111854"
   
  Para obtener más información sobre cómo agregar una tarea a un paquete mediante programación, vea [Agregar tareas mediante programación](../building-packages-programmatically/adding-tasks-programmatically.md).  
   
- Cada tarea puede configurarse individualmente a través de los cuadros de diálogo personalizados para cada tarea proporcionados por el diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a través de la ventana Propiedades incluida en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Un paquete puede incluir varias tareas del mismo tipo (por ejemplo, seis tareas Ejecutar SQL) y cada tarea se puede configurar de una manera diferente. Para obtener más información, vea [Establecer las propiedades de tareas o contenedores](../set-the-properties-of-a-task-or-container.md).  
+ Cada tarea puede configurarse individualmente a través de los cuadros de diálogo personalizados para cada tarea proporcionados por el diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a través de la ventana Propiedades incluida en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En un paquete, se pueden incluir varias tareas del mismo tipo (por ejemplo, seis tareas Ejecutar SQL) y cada tarea se puede configurar de una manera diferente. Para obtener más información, vea [Establecer las propiedades de tareas o contenedores](../set-the-properties-of-a-task-or-container.md).  
   
 ## <a name="tasks-connections-and-groups"></a>Grupos y conexiones de tareas  
- Si una tarea contiene más de una tarea, dichas tareas se conectan y ordenan en el flujo de control mediante restricciones de precedencia. Para más información, consulte [Precedence Constraints](precedence-constraints.md).  
+ Si una tarea contiene más de una tarea, dichas tareas se conectan y ordenan en el flujo de control mediante restricciones de precedencia. Para obtener más información, vea [Restricciones de precedencia](precedence-constraints.md).  
   
  Las tareas pueden agruparse y ejecutarse como una sola unidad de trabajo o repetirse en un bucle. Para obtener más información, consulte [Foreach Loop Container](foreach-loop-container.md), [For Loop Container](for-loop-container.md)y [Sequence Container](sequence-container.md).  
   

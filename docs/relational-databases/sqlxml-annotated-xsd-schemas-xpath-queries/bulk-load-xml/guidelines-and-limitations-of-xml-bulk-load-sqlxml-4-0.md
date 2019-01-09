@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3b9b66ee257cb3d82acb18112ed46d837a3468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1640ff8c4daab2260253d1104f1f8099d306120a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798581"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512752"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Instrucciones y limitaciones de la carga masiva XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47798581"
   
 -   Se comprueba que el formato de un documento XML sea correcto, pero no se valida el documento.  
   
-     La carga masiva XML comprueba el documento XML para determinar si el formato es correcto, es decir, para asegurarse de que el XML cumple los requisitos de sintaxis de la recomendación XML 1.0 de World Wide Web Consortium. Si el documento no tiene el formato correcto, la carga masiva XML cancela el procesamiento y devuelve un error. La única excepción a esta regla es que el documento sea un fragmento (por ejemplo, el documento no tiene ningún elemento raíz único), en cuyo caso la carga masiva XML cargará el documento.  
+     Carga masiva XML comprueba el documento XML para determinar si se trata bien-formed-que es, para asegurarse de que el XML cumple los requisitos de sintaxis de la recomendación de XML 1.0 del World Wide Web Consortium. Si el documento no tiene el formato correcto, la carga masiva XML cancela el procesamiento y devuelve un error. La única excepción a esta regla es que el documento sea un fragmento (por ejemplo, el documento no tiene ningún elemento raíz único), en cuyo caso la carga masiva XML cargará el documento.  
   
      La carga masiva XML no valida el documento con respecto a cualquier esquema de datos XML o esquema DTD que se defina o al que se haga referencia dentro del archivo de datos XML. Además, la carga masiva XML no valida el archivo de datos XML en el esquema de asignación proporcionado.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "47798581"
   
      Se crean las tablas que se identifican en el esquema de asignación (la base de datos debe existir). Si ya existen una o varias de las tablas en la base de datos, el sgdroptables, propiedad determina si estas tablas preexistentes se elimina y vuelve a crear.  
   
--   Si especifica la propiedad SchemaGen (por ejemplo, SchemaGen = true), se crean las tablas que se identifican en el esquema de asignación. Pero SchemaGen crea ninguna restricción (por ejemplo, las restricciones PRIMARY KEY/FOREIGN KEY) en estas tablas con una excepción: si los nodos XML que constituyen la clave principal en una relación se definen como si tuviera un tipo de Id. de XML (es decir, **tipo = "xsd: ID"** para XSD) y el sguseid, propiedad se establece en True para SchemaGen, no solo se crean claves principales en el identificador escrito nodos, pero se crean relaciones de clave principal/clave externa de las relaciones del esquema de asignación.  
+-   Si especifica la propiedad SchemaGen (por ejemplo, SchemaGen = true), se crean las tablas que se identifican en el esquema de asignación. Pero SchemaGen crea ninguna restricción (por ejemplo, las restricciones PRIMARY KEY/FOREIGN KEY) en estas tablas con una excepción: Si los nodos XML que constituyen la clave principal en una relación se definen como si tuviera un tipo de Id. de XML (es decir, **tipo = "xsd: ID"** para XSD) y el sguseid, propiedad se establece en True para SchemaGen, no solo se crean claves principales de el identificador escrito nodos, pero se crean relaciones de clave principal/clave externa de las relaciones del esquema de asignación.  
   
 -   SchemaGen no usa extensiones ni facetas del esquema XSD para generar el relacional [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esquema.  
   

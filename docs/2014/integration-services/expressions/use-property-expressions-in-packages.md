@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -20,12 +19,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e14b518f8b644d9d1b2670e90bbf27b09faf049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6dd870de31e6b3be65cac62cda84c3e9c9635c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085735"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373377"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
   Una expresión de propiedad es una expresión asignada a una propiedad para permitir la actualización dinámica de la propiedad en tiempo de ejecución. Por ejemplo, una expresión de propiedad puede actualizar la línea Para que utiliza una tarea Enviar correo, insertando una dirección de correo electrónico almacenada en una variable.  
@@ -53,10 +52,10 @@ ms.locfileid: "48085735"
   
  Una propiedad solo puede utilizar una expresión de propiedad, y una expresión de propiedad solo se puede aplicar a una propiedad. Sin embargo, puede generar varias expresiones de propiedad idénticas y asignarlas a diferentes propiedades.  
   
- Algunas propiedades se establecen mediante el uso de valores provenientes de enumeradores. Cuando hace referencia al miembro enumerador en una expresión de propiedad, debe utilizar el valor numérico equivalente al nombre descriptivo del miembro enumerador. Por ejemplo, si establece una expresión de propiedad el `LoggingMode` propiedad, que utiliza un valor de la `DTSLoggingMode` enumeración, la expresión de propiedad debe utilizar 0, 1 o 2 en lugar de los nombres descriptivos `Enabled`, `Disabled`, o `UseParentSetting`. Para más información, vea [Constantes enumeradas en expresiones de propiedad](enumerated-constants-in-property-expressions.md).  
+ Algunas propiedades se establecen mediante el uso de valores provenientes de enumeradores. Cuando hace referencia al miembro enumerador en una expresión de propiedad, debe utilizar el valor numérico equivalente al nombre descriptivo del miembro enumerador. Por ejemplo, si una expresión de propiedad establece la propiedad `LoggingMode`, que utiliza un valor de la enumeración `DTSLoggingMode`, la expresión de propiedad debe utilizar 0, 1 o 2 en lugar de los nombres descriptivos `Enabled`, `Disabled` o `UseParentSetting`. Para más información, vea [Constantes enumeradas en expresiones de propiedad](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interfaz de usuario de las expresiones de propiedad  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Proporciona un conjunto de herramientas para crear y administrar expresiones de propiedad.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona un conjunto de herramientas para generar y administrar expresiones de propiedad.  
   
 -   La página **Expresiones** , que se encuentra en los editores personalizados de tareas, el contenedor de bucles For y los contenedores ForEach. La página **Expresiones** permite modificar expresiones y ver una lista de las expresiones de propiedad que utiliza una tarea, un bucle ForEach o un bucle For.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48085735"
   
  ![Interfaz de usuario para las expresiones de propiedad](../media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
   
- En la ventana **Propiedades** y en la página **Expresiones** , haga clic en el botón Examinar **(…)** en el nivel de la colección de **Expresiones** para abrir el cuadro de diálogo **Editor de expresiones de propiedad** . El Editor de expresiones de propiedad le permite asignar una propiedad a una expresión y escribir una expresión de propiedad. Si quiere usar las herramientas gráficas de expresiones para crear y validar la expresión, haga clic en el botón Examinar **(…)** en el nivel de expresión para abrir el cuadro de diálogo **Generador de expresiones** y, después, cree o modifique la expresión (y, de manera opcional, valídela).  
+ En la ventana **Propiedades** y en la página **Expresiones**, haga clic en el botón Examinar **(…)** en el nivel de la colección de **Expresiones** para abrir el cuadro de diálogo **Editor de expresiones de propiedad**. El Editor de expresiones de propiedad le permite asignar una propiedad a una expresión y escribir una expresión de propiedad. Si quiere usar las herramientas gráficas de expresiones para crear y validar la expresión, haga clic en el botón Examinar **(…)** en el nivel de expresión para abrir el cuadro de diálogo **Generador de expresiones** y, después, cree o modifique la expresión (y, de manera opcional, valídela).  
   
  También puede abrir el cuadro de diálogo **Generador de expresiones** desde el cuadro de diálogo **Editor de expresiones de propiedad** .  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48085735"
   
  Por lo tanto, no verá los valores actualizados de las propiedades de los objetos de paquete que utilizan expresiones de propiedad en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] hasta que guarde el paquete, lo ejecute o lo vuelva a abrir después de agregarle las expresiones de propiedad.  
   
- Las expresiones de propiedad asociadas con los diferentes tipos de objetos (administradores de conexión, proveedores de registro y enumeradores) también se cargan cuando se llama a métodos específicos para ese tipo de objeto. Por ejemplo, las propiedades de administradores de conexión se cargan antes de que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] crea una instancia de la conexión.  
+ Las expresiones de propiedad asociadas a los diferentes tipos de objetos (administradores de conexiones, proveedores de registro y enumeradores) también se cargan cuando se llama a métodos específicos para ese tipo de objeto. Por ejemplo, las propiedades de administradores de conexión se cargan antes de que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] crea una instancia de la conexión.  
   
  Las expresiones de propiedad se cargan una vez que se han cargado las configuraciones de paquete. Por ejemplo, las variables se actualizan primero con sus configuraciones, y luego se evalúan y cargan las expresiones de propiedad que utilizan las variables. Esto significa que las expresiones de propiedad siempre utilizan los valores de variables establecidas con configuraciones.  
   
@@ -105,9 +104,9 @@ ms.locfileid: "48085735"
 |Enumeradores Foreach|Tras la carga de configuraciones<br /><br /> Antes de la validación<br /><br /> Antes de la ejecución<br /><br /> Antes de cada enumeración del bucle|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Usar expresiones de propiedad en el bucle Foreach  
- A menudo, es útil implementar una expresión de propiedad para establecer el valor de la propiedad `ConnectionString` de los administradores de conexión que se utilizan dentro del contenedor de bucles Foreach. Después de que el enumerador asigne su valor actual a una variable en cada iteración del bucle, la expresión de propiedad puede usar el valor de esta variable para actualizar el valor de la `ConnectionString` propiedad dinámicamente.  
+ A menudo, es útil implementar una expresión de propiedad para establecer el valor de la propiedad `ConnectionString` de los administradores de conexión que se utilizan dentro del contenedor de bucles Foreach. Después de que el enumerador asigne su valor actual a una variable en cada iteración del bucle, la expresión de propiedad puede usar el valor de esa variable para actualizar el valor de la propiedad `ConnectionString` de forma dinámica.  
   
- Si desea utilizar expresiones de propiedad con la propiedad `ConnectionString` de administradores de conexión de archivos, varios archivos, archivos planos y varios archivos planos que utiliza un bucle Foreach, deberá tener en cuenta varios aspectos. Un paquete se puede configurar para ejecutar varios ejecutables simultáneamente estableciendo la propiedad `MaxConcurrentExecutables` en un valor mayor que 1 o en el valor -1. El valor de -1 permite que el número máximo de ejecutables en ejecución simultánea sea igual al número de procesadores más dos. Para evitar las consecuencias negativas de la ejecución paralela de ejecutables, el valor de `MaxConcurrentExecutables` se debe establecer en 1. Si `MaxConcurrentExecutables` no está establecida en 1, el valor de la `ConnectionString` no se garantiza que la propiedad y los resultados son imprevisibles.  
+ Si desea utilizar expresiones de propiedad con la propiedad `ConnectionString` de administradores de conexión de archivos, varios archivos, archivos planos y varios archivos planos que utiliza un bucle Foreach, deberá tener en cuenta varios aspectos. Un paquete se puede configurar para ejecutar varios ejecutables simultáneamente estableciendo la propiedad `MaxConcurrentExecutables` en un valor mayor que 1 o en el valor -1. El valor de -1 permite que el número máximo de ejecutables en ejecución simultánea sea igual al número de procesadores más dos. Para evitar las consecuencias negativas de la ejecución paralela de ejecutables, el valor de `MaxConcurrentExecutables` se debe establecer en 1. Si `MaxConcurrentExecutables` no se establece en 1, el valor de la propiedad `ConnectionString` no se puede garantizar y se pueden obtener resultados impredecibles.  
   
  Por ejemplo, suponga que un bucle Foreach que enumera los archivos de una carpeta recupera los nombres de archivo y luego utiliza la tarea Ejecutar SQL para insertar cada nombre de archivo en una tabla. Si `MaxConcurrentExecutables` no se establece en 1, es posible que se produzcan conflictos de escritura si dos instancias de la tarea Ejecutar SQL intentan escribir en la tabla al mismo tiempo.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "48085735"
   
  Si el nombre del paquete es EmailRowCountPP, se ejecutó el 4 de marzo de 2005 y la duración de la ejecución fue de 9 segundos, la expresión se evalúa como la cadena siguiente.  
   
- PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
+ PExpression--> paquete: (EmailRowCountPP) Iniciado: 3/4/2005 segundos de duración: 9 de 11:06:18 A.M.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expresión de propiedad para el cuerpo de un mensaje de correo electrónico  
  Se puede usar la siguiente expresión de propiedad para establecer la propiedad MessageSource de una tarea Enviar correo. La expresión utiliza una combinación de literales de cadena, variables definidas por el usuario y el operador de concatenación (+). Las variables definidas por el usuario se denominan `nasdaqrawrows`, `nyserawrows`y `amexrawrows`. La cadena "\n" indica un retorno de carro.  
@@ -168,9 +167,9 @@ ms.locfileid: "48085735"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   [Marcador de resaltado de expresión y configuración (proyecto de CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Marcador de resaltado de expresión y configuración (proyecto de CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   Artículo técnico, sobre [ejemplos de expresiones SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
+-   Artículo técnico, sobre [ejemplos de expresiones SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vea también  
  [Usar variables en paquetes](../use-variables-in-packages.md)  

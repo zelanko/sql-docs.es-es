@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:General Statistics
@@ -13,15 +13,15 @@ ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db96a90e9621949c528ea707be08beb5002177fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067865"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777807"
 ---
 # <a name="sql-server-general-statistics-object"></a>General Statistics (objeto de SQL Server)
-  El objeto **SQLServer:General Statistics** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la actividad general en el servidor, como el número de conexiones actuales y el número de usuarios que se conectan y se desconectan de equipos en los que se ejecuta una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]por segundo. Esto resulta útil cuando se trabaja en sistemas de procesamiento de transacciones en línea (OLTP) grandes, con un gran número de clientes que se conectan y se desconectan de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  El objeto **SQLServer:General Statistics** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la actividad general en el servidor, como el número de conexiones actuales y el número de usuarios que se conectan y se desconectan de equipos en los que se ejecuta una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por segundo. Esto resulta útil cuando se trabaja en sistemas de procesamiento de transacciones en línea (OLTP) grandes, con un gran número de clientes que se conectan y se desconectan de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Esta tabla describe los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** .  
   

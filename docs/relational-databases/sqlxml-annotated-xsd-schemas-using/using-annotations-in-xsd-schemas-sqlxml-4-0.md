@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80aa9ae1fd19f9f7ed0e90436604095f091ca781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a03e78298bc2bea8d0c6bf33484dbda28a2d5319
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511138"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Utilizar anotaciones en esquemas XSD (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47618339"
   
  Si no se especifican las anotaciones, se produce la asignación predeterminada. Un elemento XSD con un tipo complejo se asigna de forma predeterminada a un nombre de tabla (vista) de la base de datos especificada, mientras que un elemento o atributo con un tipo simple se asigna a la columna con el mismo nombre que el elemento o atributo.  
   
- Estas anotaciones también se pueden utilizar para especificar las relaciones jerárquicas en XML y así representar las relaciones en la base de datos, ya que un esquema XSD es simplemente una vista XML de datos relacionales.  
+ Estas anotaciones también pueden utilizarse para especificar las relaciones jerárquicas en XML, lo que representan las relaciones de la base de datos, porque un esquema XSD es simplemente una vista XML de datos relacionales.  
   
  En esta sección se proporcionan descripciones de las anotaciones que puede usar con esquemas XSD y ejemplos de su uso.  
   

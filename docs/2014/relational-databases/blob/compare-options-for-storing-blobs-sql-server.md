@@ -10,17 +10,17 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a46b3f35b8ce19382996bf8c0667b6222dc5c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059735"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364717"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opciones para almacenar objetos Blob (SQL Server)
   Explica y compara las opciones que están disponibles para almacenar archivos y documentos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="Expectations"></a> Almacenar archivos de la base de datos - Ventajas y expectativas  
+##  <a name="Expectations"></a> Almacenamiento de archivos en la base de datos - Ventajas y expectativas  
  Un porcentaje alto de los datos empresariales no se estructuran por naturaleza y se suelen almacenar como archivos y documentos en los sistemas de archivos. Las aplicaciones que tienen acceso a los archivos a través de las API de Windows generan, administran y consumen la mayor parte de los datos. Las empresas suelen mantener estos datos en el sistema de archivos, mientras que almacenan los metadatos relacionados de los archivos en una base de datos relacional.  
   
  Integrar los datos no estructurados en la base de datos relacional proporciona beneficios significativos. Entre estos beneficios, se incluyen los siguientes:  
@@ -47,16 +47,16 @@ ms.locfileid: "48059735"
   
 |Característica|Servidor de archivos y solución de base de datos|Solución de FILESTREAM|Solución de FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Un solo artículo para tareas de administración**|no|Sí|**Sí**|  
-|**Un solo conjunto de servicios**: búsquedas, informes, consultas, etc.|no|Sí|**Sí**|  
-|**Modelo de seguridad integrada**|no|Sí|**Sí**|  
-|**Actualizaciones en contexto de datos FILESTREAM**|Sí|no|**Sí**|  
-|**Jerarquía de archivos y de directorios que se mantiene en la base de datos**|no|no|**Sí**|  
-|**Compatibilidad con aplicaciones Windows**|Sí|no|**Sí**|  
-|**Acceso relacional a los atributos de archivo**|no|no|**Sí**|  
+|**Un solo artículo para tareas de administración**|No|Sí|**Sí**|  
+|**Un solo conjunto de servicios**: búsquedas, informes, consultas, etc.|No|Sí|**Sí**|  
+|**Modelo de seguridad integrada**|No|Sí|**Sí**|  
+|**Actualizaciones en contexto de datos FILESTREAM**|Sí|No|**Sí**|  
+|**Jerarquía de archivos y de directorios que se mantiene en la base de datos**|No|No|**Sí**|  
+|**Compatibilidad con aplicaciones Windows**|Sí|No|**Sí**|  
+|**Acceso relacional a los atributos de archivo**|No|No|**Sí**|  
   
 ##  <a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)  
- Para obtener una comparación de estas dos características, vea este elemento de blogs del equipo RBS: comparación de característica de [del almacén remoto de blobs y FILESTREAM de SQL Server](http://go.microsoft.com/fwlink/?LinkId=210317).  
+ Para obtener una comparación de estas dos características, consulte este blog del equipo RBS: [Comparación de características de SQL Server remoto BLOB Store y FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> Más información  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  

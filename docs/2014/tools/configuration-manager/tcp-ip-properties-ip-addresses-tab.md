@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
@@ -14,12 +13,12 @@ ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fcccefeda97346c43fd70b41653f2f125816adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136215"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747977"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Propiedades de TCP / IP (pestaña de direcciones IP)
   Use el cuadro de diálogo **Propiedades de TCP/IP (pestaña Direcciones IP)** para configurar las opciones del protocolo TCP/IP para una dirección IP específica. Solo las opciones **Puertos dinámicos TCP** y **Puerto TCP** pueden configurarse para todas las direcciones al mismo tiempo seleccionando **IPAll**.  
@@ -52,10 +51,10 @@ ms.locfileid: "48136215"
   
  El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede escuchar en varios puertos con la misma dirección IP. Al enumerar los puertos, sepárelos con una coma siguiendo el formato 1433,1500,1501. Este campo tiene un límite de 2.047 caracteres.  
   
- Para configurar que una dirección IP única escuche en varios puertos, el parámetro **Escuchar todo** también se debe establecer en **No**, en la pestaña **Protocolos** del cuadro de diálogo **Propiedades de TCP/IP** . Para obtener más información, vea: "Cómo: Configurar el motor de base de datos para escuchar en varios puertos TCP" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Para configurar que una misma dirección IP escuche en varios puertos, el parámetro **Escuchar todo** también tiene que establecerse en **No**(en la **pestaña Protocolos** del cuadro de diálogo **Propiedades de TCP/IP** ). Para obtener más información, vea: "Cómo: Configurar el motor de base de datos para escuchar en varios puertos TCP" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Agregar o quitar direcciones IP  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager muestra las direcciones IP que estaban disponibles en el momento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instaló. Las direcciones IP disponibles pueden cambiar cuando se agregan o se quitan tarjetas de red, cuando expira una dirección IP asignada dinámicamente, cuando se vuelve a configurar la estructura de red o cuando cambia la ubicación física del equipo, por ejemplo un equipo portátil que se conecta a la red en un edificio diferente. Para cambiar una dirección IP, edite el cuadro **Dirección IP** y, a continuación, reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ El Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra las direcciones IP disponibles en el momento en que se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las direcciones IP disponibles pueden cambiar cuando se agregan o se quitan tarjetas de red, cuando expira una dirección IP asignada dinámicamente, cuando se vuelve a configurar la estructura de red o cuando cambia la ubicación física del equipo, por ejemplo un equipo portátil que se conecta a la red en un edificio diferente. Para cambiar una dirección IP, edite el cuadro **Dirección IP** y, a continuación, reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Elegir un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

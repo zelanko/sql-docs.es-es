@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145900"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367757"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servicios de minería de datos y orígenes de datos
   La minería de datos requiere una conexión a una instancia de SQL Server Analysis Services. Los datos de un cubo no son necesarios para la minería de datos y se recomienda el uso de orígenes relacionales; sin embargo, la minería de datos usa los componentes proporcionados por el motor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -89,7 +89,7 @@ ms.locfileid: "50145900"
  También puede establecer propiedades que permitan ajustar el servidor y controlar la seguridad para uso del cliente. Para más información, consulte [Feature Properties](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Para obtener más información sobre la compatibilidad con los algoritmos de complemento con las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obtener más información sobre la compatibilidad con los algoritmos de complemento con las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Acceso a objetos de minería de datos mediante programación  
  Puede utilizar los modelos de objetos siguientes para crear una conexión a una base de datos de Analysis Services y trabajar con objetos de minería de datos:  

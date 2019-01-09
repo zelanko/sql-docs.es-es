@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed4e0738b9473295157c88fb7ee54804a5ebd75d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b370d18c6c5c1a90be370aeef2f910713a51695b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598543"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418586"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Conversiones del tipo de datos de fecha y hora de SQL a C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47598543"
 |21|Si el búfer es suficientemente grande como para alojar SQL_SS_TIMESTAMPOFFSET_STRUCT, el valor se devuelve como SQL_SS_TIMESTAMPOFFSET_STRUCT. De lo contrario, se genera un registro de diagnóstico con SQLSTATE 22003 y el mensaje "Valor numérico fuera del intervalo".|  
 |22|El valor se convierte a la zona horaria del cliente antes de que se extraiga la fecha. Esto proporciona coherencia con otras conversiones con tipos timestampoffset. Si se produce un error durante esta conversión, se genera un registro de diagnóstico con SQLSTATE 22008 y el mensaje "Desbordamiento del campo DateTime". Esto puede dar lugar a una fecha que difiera del valor obtenido por truncamiento simple.|  
   
- En la tabla de este tema se describen las conversiones entre el tipo devuelto al cliente y el tipo del enlace. Para los parámetros de salida, si el tipo de servidor especificado en SQLBindParameter no coincide con el tipo real en el servidor, se realizará una conversión implícita por el servidor y el tipo devuelto al cliente coincidirá con el tipo especificado a través de SQLBindParameter. Esto puede conducir a resultados de conversión inesperados cuando las reglas de conversión del servidor son distintas de las que se indican en la tabla anterior. Por ejemplo, cuando es necesario proporcionar una fecha predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1900-1-1 en lugar de la fecha actual.  
+ En la tabla de este tema se describen las conversiones entre el tipo devuelto al cliente y el tipo del enlace. Para los parámetros de salida, si el tipo de servidor especificado en SQLBindParameter no coincide con el tipo real en el servidor, se realizará una conversión implícita por el servidor y el tipo devuelto al cliente coincidirá con el tipo especificado a través de SQLBindParameter. Esto puede conducir a resultados de conversión inesperados cuando las reglas de conversión del servidor son diferentes de los que aparecen en la tabla anterior. Por ejemplo, cuando es necesario proporcionar una fecha predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1900-1-1 en lugar de la fecha actual.  
   
 ## <a name="see-also"></a>Vea también  
  [Mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

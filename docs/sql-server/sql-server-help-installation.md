@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514532"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202454"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Visor de Ayuda y ayuda sin conexión de SQL Server
 
@@ -176,7 +176,7 @@ La ayuda en línea siempre mostrará el contenido más actualizado.
 
 **Para ver ayuda en línea de SQL Server en SSMS 17.x**
 
-- Haga clic en **Ver ayuda** en el menú **Ayuda**. La documentación de SQL Server 2016 y 2017 más reciente de [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) se muestra en un explorador. 
+- Haga clic en **Ver ayuda** en el menú **Ayuda**. La documentación de SQL Server 2016 y 2017 más reciente de [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) se muestra en un explorador. 
 
    ![Ver Ayuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -207,7 +207,7 @@ Al presionar F1 o al hacer clic en **Ayuda** o en el icono **?** de un cuadro de
 1. Seleccione **Establecer preferencias de la Ayuda** en el menú Ayuda y seleccione **Iniciar en el explorador** o **Iniciar en el Visor de Ayuda**. 
 2. Presione F1 o haga clic en **Ayuda** o en **?** en los cuadros de diálogo en los que estén disponibles para ver temas en línea contextuales en el entorno elegido.
 
->  [!NOTE]
+> [!NOTE]
 >  La ayuda de F1 solo funciona cuando está conectado a Internet. No hay ningún origen sin conexión para la ayuda de F1. 
 
 ## <a name="systems-without-internet-access"></a>Sistemas sin acceso a Internet

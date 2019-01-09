@@ -14,12 +14,12 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9a46c83c497c8eaeba3873bafef399f924506916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076265"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532440"
 ---
 # <a name="create-an-application-role"></a>Crear un rol de aplicación
   En este tema se describe cómo crear un rol de aplicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Los roles de aplicación limitan el acceso de los usuarios a una base de datos excepto a través de aplicaciones específicas. Los roles de aplicación no tienen usuarios, de modo que no aparece la lista **Miembros del rol** cuando se selecciona **Rol de aplicación** .  
@@ -39,7 +39,7 @@ ms.locfileid: "48076265"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -56,11 +56,11 @@ ms.locfileid: "48076265"
   
 3.  Expanda la carpeta **Roles** .  
   
-4.  Haga clic con el botón derecho en la carpeta **Roles de aplicación** y seleccione **Nuevo rol de aplicación**.  
+4.  Haga clic con el botón derecho en la carpeta **Roles de aplicación** y seleccione **Nuevo rol de aplicación...**.  
   
-5.  En el cuadro de diálogo **Rol de aplicación - Nuevo** , en la página **General**, escriba el nuevo nombre del nuevo rol de aplicación en el cuadro **Nombre de rol** .  
+5.  En el cuadro de diálogo **Rol de aplicación - Nuevo**, en la página **General**, escriba el nuevo nombre del nuevo rol de aplicación en el cuadro **Nombre de rol**.  
   
-6.  En el cuadro **Esquema predeterminado** , determine el esquema al que pertenecerán los objetos creados por este rol especificando los nombres de objeto. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Buscar esquema** .  
+6.  En el cuadro **Esquema predeterminado** , determine el esquema al que pertenecerán los objetos creados por este rol especificando los nombres de objeto. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Buscar esquema**.  
   
 7.  En el cuadro **Contraseña** , escriba una contraseña para el nuevo rol. Vuelva a escribir la contraseña en el cuadro **Confirmar contraseña** .  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48076265"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opciones adicionales  
- El cuadro de diálogo **Rol de aplicación - Nuevo** también proporciona opciones en dos páginas adicionales: **Elementos protegibles** y **Propiedades extendidas**.  
+ El **rol de aplicación - nuevo** cuadro de diálogo también proporciona opciones en dos páginas adicionales: **Elementos protegibles** y **propiedades extendidas**.  
   
 -   La página **Elementos protegibles** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión.  
   

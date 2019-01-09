@@ -1,7 +1,7 @@
 ---
 title: Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 4293880c6301712876d3a76a88ad9090925296b9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5f9392d0ba5b07a489caffdd2e496051e842b1c8
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600805"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984066"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -138,7 +138,8 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
-> Es necesario para la compatibilidad con Ubuntu 18.04 versión 17.2 o posterior del controlador.
+> - Es necesario para la compatibilidad con Ubuntu 18.04 versión 17.2 o posterior del controlador.
+> - El paquete de desarrollo de unixodbc 2.3.1 no está disponible en Ubuntu 14.04.   
 
 ### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El capitán), macOS 10.12 (Sierra) y macOS 10.13 (High Sierra)
 
@@ -369,7 +370,7 @@ Si prefiere o requiere la [!INCLUDE[msCoName](../../../includes/msconame_md.md)]
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Cada uno de estos paquetes a su vez tiene sus propias dependencias, que pueden o no pueden estar presentes en el sistema. Una solución general para este problema, consulte la documentación de administrador de paquetes de su distribución: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), y [SUSE](https://en.opensuse.org/Portal:Zypper)
+Cada uno de estos paquetes a su vez tiene sus propias dependencias, que pueden o no pueden estar presentes en el sistema. Una solución general para este problema, consulte la documentación del paquete del Administrador de su distribución: [RedHat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), y [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 También es común para descargar manualmente todos los paquetes dependientes y colocarlas juntas en el equipo de instalación y, a continuación, instalar manualmente cada paquete a su vez, finalizando con la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 paquete.
 
@@ -534,7 +535,7 @@ MacOS: `/usr/local/share/msodbcsql17/resources/en_US/`
 
 
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Instalación del Administrador de controladores](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 

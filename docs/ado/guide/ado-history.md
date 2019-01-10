@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709563"
@@ -35,7 +35,7 @@ En dominio entre secuencias de comandos relacionadas con sitios de confianza, se
  **Recordset.Open** *,* **Recordset.Save** *,* **Stream.SaveToFile** *, y* **Stream.LoadFromFile** *operará solo los archivos físicos.*
 Estos métodos ahora para comprobar que los identificadores de archivos punto a solo los archivos físicos.
 
- **Recordset.ActiveCommand***devuelve un error cuando se invoca desde una página ASP/HTML.* 
+ **Recordset.ActiveCommand** *devuelve un error cuando se invoca desde una página ASP/HTML.* 
 Esto evita la **comando** objeto desde el que se utiliza incorrectamente.
 
  *El número de***conjuntos de registros***devuelto por una anidada***forma***comando tiene un límite superior.* 

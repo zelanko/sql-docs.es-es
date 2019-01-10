@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conditional delete tracking [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f166cef67ffd07a02e7414ecfa1863e583e8971
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: ec91a27daf01a77cc9c1916db36d80de4864964f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186335"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752707"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Optimizar el rendimiento de la replicación de mezcla con seguimiento condicional de eliminaciones
     
@@ -47,7 +46,7 @@ ms.locfileid: "48186335"
   
  **Para especificar que no se realice el seguimiento de las eliminaciones**  
   
--   Programación [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la replicación: [especificar que no se debe realizar un seguimiento de las eliminaciones para los artículos de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   Programación de la replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Especificar que no se debe realizar un seguimiento de las eliminaciones para los artículos de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Opciones de artículos para replicación de mezcla](article-options-for-merge-replication.md)   

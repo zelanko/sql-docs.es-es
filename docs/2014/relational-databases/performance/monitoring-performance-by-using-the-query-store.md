@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a857b51bf884a1bec30e28935591946da43ef390
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072947"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756617"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisar el rendimiento mediante el almacén de consultas
   La característica del almacén de consultas ofrece a los DBA conocimientos sobre el rendimiento y la elección del plan de consultas. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente diferencias de rendimiento provocadas por cambios en los planes de consulta. Captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución, y los conserva para su revisión. Separa los datos por ventanas de tiempo, lo que permite ver patrones de uso la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. Se puede configurar el almacén de consultas mediante el [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) opción.  
   
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([obtenerlo](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Se aplica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenerlo](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
 >  Actualmente, se trata de una característica de vista previa. Para usar el Store de la consulta debe reconocer y Aceptar que la implementación de la consulta Store está sujeto a los términos de vista previa en su contrato de licencia (por ejemplo, el contrato Enterprise, contrato de Microsoft Azure o contrato Microsoft Online Subscription), así como cualquier aplicable [términos de uso complementarios de Microsoft Azure Preview](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/).  
@@ -33,7 +32,7 @@ ms.locfileid: "48072947"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>Mediante el uso de la página del Almacén de consultas en Management Studio  
   
-1.  En el Explorador de objetos, haga clic con el botón derecho en una base de datos y, luego, haga clic en **Propiedades**. (Requiere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versión 2016 de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)  
+1.  En el Explorador de objetos, haga clic con el botón derecho en una base de datos y, luego, haga clic en **Propiedades**. (Requiere la versión [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2016 de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)  
   
 2.  En el cuadro de diálogo **Propiedades de la base de datos** , seleccione la página **Almacén de consultas** .  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48072947"
   
 #### <a name="by-using-transact-sql-statements"></a>Mediante instrucciones Transact-SQL  
   
-1.  Use el `ALTER DATABASE` statement para habilitar el almacén de consultas. Por ejemplo:  
+1.  Use la instrucción `ALTER DATABASE` para habilitar el almacén de consultas. Por ejemplo:  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
@@ -71,7 +70,7 @@ ms.locfileid: "48072947"
   
 -   Analizar los patrones de uso (CPU, E/S y memoria) de recursos para una base de datos determinada.  
   
- El almacén de consultas contiene dos almacenes: un **almacén de planes** para conservar la información del plan de ejecución y un **almacén de estadísticas de tiempo de ejecución** para conservar la información de estadísticas de ejecución. El número de planes únicos que pueden almacenarse para una consulta en el almacén de planes se limita por la `max_plans_per_query` opción de configuración. Para mejorar el rendimiento, la información se escribe en los dos almacenes de forma asincrónica. Para minimizar el uso del espacio, se agregan las estadísticas de ejecución en tiempo de ejecución en el almacén de estadísticas de tiempo de ejecución en una ventana de tiempo fijo. La información de estos almacenes se puede ver al consultar las vistas del catálogo del almacén de consultas.  
+ El almacén de consultas contiene dos almacenes: un **almacén de planes** para conservar la información del plan de ejecución y un **almacén de estadísticas de tiempo de ejecución** para conservar la información de estadísticas de ejecución. El número de planes únicos que se pueden almacenar para una consulta en el almacén de planes se limita por la opción de configuración `max_plans_per_query`. Para mejorar el rendimiento, la información se escribe en los dos almacenes de forma asincrónica. Para minimizar el uso del espacio, se agregan las estadísticas de ejecución en tiempo de ejecución en el almacén de estadísticas de tiempo de ejecución en una ventana de tiempo fijo. La información de estos almacenes se puede ver al consultar las vistas del catálogo del almacén de consultas.  
   
  La siguiente consulta devuelve información sobre las consultas y los planes del almacén de consultas.  
   
@@ -115,14 +114,14 @@ JOIN sys.query_store_query_text AS Txt
  INTERVAL_LENGTH_MINUTES  
  Determina el intervalo de tiempo en el que se agregan los datos de estadísticas de ejecución en tiempo de ejecución al almacén de consultas. Para optimizar el uso del espacio, se agregan las estadísticas de ejecución en tiempo de ejecución en el almacén de estadísticas de tiempo de ejecución en una ventana de tiempo fijo. Esta ventana de tiempo fijo se configura mediante INTERVAL_LENGTH_MINUTES.  
   
- Consulta el `sys.database_query_store_options` vista para determinar las opciones actuales del almacén de consultas.  
+ Consulte la vista `sys.database_query_store_options` para determinar las opciones actuales del almacén de consultas.  
   
  Para obtener más información sobre el establecimiento de opciones mediante instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , vea [Administración de opciones](#OptionMgmt).  
   
  
   
 ##  <a name="Related"></a> Vistas, funciones y procedimientos relacionados  
- Store de la consulta se pueden ver y administrar a través de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o mediante el uso de las siguientes vistas y procedimientos.  
+ El Almacén de consultas se puede ver y administrar a través de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o usando las siguientes vistas y procedimientos.  
   
 -   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
@@ -206,9 +205,9 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- Tenga en cuenta que no se permiten valores arbitrarios; debería usar uno de los siguientes valores: 1, 5, 10, 15, 30 y 60.  
+ Tenga en cuenta que no se permiten valores arbitrarios; debe usar uno de los siguientes: 1, 5, 10, 15, 30 y 60.  
   
- Nuevo valor de intervalo se expone a través de `sys.database_query_store_options` vista.  
+ El nuevo valor de intervalo se expone a través de la vista `sys.database_query_store_options`.  
   
  Si el almacenamiento del Almacén de consultas está completamente lleno, use la siguiente instrucción para ampliar el almacenamiento.  
   
@@ -276,9 +275,9 @@ DEALLOCATE adhoc_queries_cursor;
   
  Puede definir su propio procedimiento con una lógica diferente para borrar los datos que ya no son importantes para usted.  
   
- El ejemplo anterior se usa el `sp_query_store_remove_query` extendidos de un procedimiento almacenado para quitar datos innecesarios. También puede usar otros dos procedimientos.  
+ En el ejemplo anterior se usa el procedimiento almacenado extendido `sp_query_store_remove_query` para quitar datos innecesarios. También puede usar otros dos procedimientos.  
   
--   `sp_query_store_reset_exec_stats` : borra las estadísticas de tiempo de ejecución para un plan determinado.  
+-   `sp_query_store_reset_exec_stats` -borrar las estadísticas de tiempo de ejecución de un plan determinado.  
   
 -   `sp_query_store_remove_plan` : quita un plan único.  
   
@@ -500,7 +499,7 @@ OPTION (MERGE JOIN);
 
   
 ###  <a name="Stability"></a> Mantener la estabilidad del rendimiento de consultas  
- Para las consultas ejecutadas varias veces es posible que tenga en cuenta que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usado diferentes planes que dieron lugar a duración y uso de recursos diferente. Con el Almacén de consultas puede detectar con facilidad cuándo se devolvió el rendimiento de las consultas y determinar el plan óptimo en un período de interés. Luego puede forzar ese plan óptimo para futuras ejecuciones de consultas.  
+ Para las consultas ejecutadas varias veces puede observar que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ha usado diferentes planes que han generado diferente duración y uso de los recursos. Con el Almacén de consultas puede detectar con facilidad cuándo se devolvió el rendimiento de las consultas y determinar el plan óptimo en un período de interés. Luego puede forzar ese plan óptimo para futuras ejecuciones de consultas.  
   
  También puede identificar el rendimiento incoherente de las consultas para una consulta con parámetros (ya sea con parámetros automáticos o con parámetros manuales). Entre los distintos planes puede identificar el plan que es rápido y lo suficientemente óptimo para todos o la mayoría de los valores de parámetros y forzar ese plan, manteniendo un rendimiento predecible para el conjunto más amplio de escenarios de usuario.  
   
@@ -510,9 +509,9 @@ OPTION (MERGE JOIN);
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- Cuando se usa `sp_query_store_force_plan` solo puede forzar los planes que se grabaron por consulta Store como un plan para esa consulta. Es decir, los únicos planes disponibles para una consulta son aquellos que ya se usaron para ejecutar la Q1 mientras el Almacén de consultas estaba activo.  
+ Al usar `sp_query_store_force_plan` solo puede forzar los planes que se grabaron por el Almacén de consultas como un plan para esa consulta. Es decir, los únicos planes disponibles para una consulta son aquellos que ya se usaron para ejecutar la Q1 mientras el Almacén de consultas estaba activo.  
   
- **Quitar el forzado de un plan para una consulta.** Para volver a confiar en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultar optimizador para calcular el plan de consulta óptimo, use `sp_query_store_unforce_plan` para no forzar el plan que se seleccionó para la consulta.  
+ **Quitar el forzado de un plan para una consulta.** Para volver a confiar en el optimizador de consultas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para calcular el plan de consulta óptimo, use `sp_query_store_unforce_plan` para eliminar la aplicación del plan que se seleccionó para la consulta.  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

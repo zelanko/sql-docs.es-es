@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.conc.subtopubs.f1
@@ -25,12 +24,12 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 573346dcd34691f9270e61592a25d8625d2af367
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207835"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767901"
 ---
 # <a name="subscribe-to-publications"></a>Suscribirse a publicaciones
   Una suscripción es una solicitud de copia de datos y objetos de base de datos en una publicación. Una suscripción define qué publicación se recibirá, dónde y cuándo. Al planear suscripciones, tenga en cuenta dónde se realizará el proceso del agente. El tipo de suscripción que elige controla dónde se ejecuta el agente. Con una suscripción de inserción, el Agente de mezcla o el Agente de distribución se ejecutan en el distribuidor, mientras que en una suscripción de extracción los agentes se ejecutan en los suscriptores. Después de crear una suscripción, no se puede cambiar de un tipo a otro.  

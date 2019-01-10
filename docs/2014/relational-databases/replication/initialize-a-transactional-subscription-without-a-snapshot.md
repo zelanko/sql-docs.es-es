@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, initializing
@@ -15,12 +14,12 @@ ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7680a62293bd9a15b12e0a979be22c33220af4b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107815"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811987"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar una suscripción transaccional sin una instantánea
   De forma predeterminada, una suscripción a una publicación transaccional se inicializa con una instantánea generada por el Agente de instantáneas y aplicada por el Agente de distribución. En algunos escenarios, como aquellos en los que intervienen grandes conjuntos de datos iniciales, es preferible inicializar una suscripción mediante otro método. Otros métodos para inicializar un suscriptor incluyen:  
@@ -47,7 +46,7 @@ ms.locfileid: "48107815"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Habilitar la inicialización con una copia de seguridad para las publicaciones transaccionales &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Programación de la replicación con Transact-SQL: [Inicializar una suscripción transaccional a partir de un copia de seguridad &#40;programación de la replicación con Transact-SQL&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
+-   Programación de Transact-SQL de la replicación: [Inicializar una suscripción transaccional desde una copia de seguridad &#40;programación de la replicación con Transact-SQL&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  Si una suscripción se inicializa sin una instantánea, la cuenta con la que se ejecuta el servicio SQL Server en el publicador debe contar con permisos de escritura en la carpeta de instantáneas en el distribuidor. Para obtener más información sobre los permisos, vea [Replication Agent Security Model](security/replication-agent-security-model.md).  

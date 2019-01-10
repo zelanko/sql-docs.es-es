@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eaf1d549ecf5e40593c3602cc35b4f4ad5e39790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085505"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813657"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
   Una vez que haya considerado las sugerencias generales sobre el rendimiento que se describen en [Aumentar el rendimiento general de la replicación](enhance-general-replication-performance.md), tenga en cuenta estas áreas adicionales específicas de la replicación transaccional.  
@@ -70,16 +69,16 @@ ms.locfileid: "48085505"
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parámetros del Agente de distribución y del Agente de registro del LOG  
   
--   Para resolver los cuellos de botella accidentales que solo ocurren una vez, use el parámetro **–MaxCmdsInTran** para el Agente de registro del LOG.  
+-   Para resolver los cuellos de botella accidentales que solo ocurren una vez, use el parámetro **-MaxCmdsInTran** para el Agente de registro del LOG.  
   
-     El parámetro **–MaxCmdsInTran** especifica el número máximo de instrucciones agrupadas en una transacción cuando el Agente de registro del LOG escribe comandos en la base de datos de distribución. El uso de este parámetro permite al Agente de registro del LOG y al Agente de distribución dividir las transacciones grandes (compuestas por muchos comandos) del publicador en varias transacciones más pequeñas cuando se aplican comandos en el suscriptor. Especificando este parámetro se puede reducir la contención en el distribuidor y la latencia entre el publicador y el suscriptor. Puesto que la transacción original se aplica en unidades más pequeñas, el suscriptor puede obtener acceso a las filas de una transacción lógica del publicador de gran tamaño antes de que finalice la transacción original, lo que interrumpe la estricta atomicidad transaccional. El valor predeterminado es **0**, que conserva los límites de la transacción del publicador. Este parámetro no se aplica a los publicadores de Oracle.  
+     El parámetro **-MaxCmdsInTran** especifica el número máximo de instrucciones agrupadas en una transacción cuando el Agente de registro del LOG escribe comandos en la base de datos de distribución. El uso de este parámetro permite al Agente de registro del LOG y al Agente de distribución dividir las transacciones grandes (compuestas por muchos comandos) del publicador en varias transacciones más pequeñas cuando se aplican comandos en el suscriptor. Especificando este parámetro se puede reducir la contención en el distribuidor y la latencia entre el publicador y el suscriptor. Puesto que la transacción original se aplica en unidades más pequeñas, el suscriptor puede obtener acceso a las filas de una transacción lógica del publicador de gran tamaño antes de que finalice la transacción original, lo que interrumpe la estricta atomicidad transaccional. El valor predeterminado es **0**, que conserva los límites de la transacción del publicador. Este parámetro no se aplica a los publicadores de Oracle.  
   
     > [!WARNING]  
     >  `MaxCmdsInTran` no se ha diseñado para estar siempre activado. Su función es evitar los casos en los que alguien ha realizado accidentalmente un gran número de operaciones DML en una sola transacción (lo que produce un retraso en la distribución de comandos hasta que toda la transacción está en la base de datos de distribución, se establecen los bloqueos, etc.). Si se encuentra habitualmente esta situación, debe revisar las aplicaciones y buscar formas de reducir el tamaño de las transacciones.  
   
--   Use el parámetro **–SubscriptionStreams** en el Agente de distribución.  
+-   Use la **- SubscriptionStreams** parámetro del agente de distribución.  
   
-     El parámetro **–SubscriptionStreams** puede mejorar considerablemente el rendimiento de la replicación. Permite establecer varias conexiones con un suscriptor para aplicar lotes de cambios en paralelo, al tiempo que mantiene muchas de las características transaccionales presentes cuando se usa un solo subproceso. Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores. Antes de que finalice esta fase de reintento, pueden aparecer incoherencias transaccionales temporales en el suscriptor. Una vez que se han confirmado correctamente los lotes con errores, el suscriptor vuelve al estado de coherencia transaccional.  
+     El parámetro **-SubscriptionStreams** puede mejorar considerablemente el rendimiento de la replicación. Permite establecer varias conexiones con un suscriptor para aplicar lotes de cambios en paralelo, al tiempo que mantiene muchas de las características transaccionales presentes cuando se usa un solo subproceso. Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores. Antes de que finalice esta fase de reintento, pueden aparecer incoherencias transaccionales temporales en el suscriptor. Una vez que se han confirmado correctamente los lotes con errores, el suscriptor vuelve al estado de coherencia transaccional.  
   
      Se puede especificar un valor para este parámetro del agente mediante el **@subscriptionstreams** de [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   

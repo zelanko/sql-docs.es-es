@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9b891d4c8196dbac8fd7e557abc17f15bafbe0f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545222"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133335"
 ---
 # <a name="customization-file-connect-section"></a>Sección de conexión del archivo de personalización
 El comportamiento predeterminado del controlador es Denegar todas las conexiones. El **conectar** sección especifica las excepciones de ese comportamiento. Por ejemplo, si todos los **conectar** secciones están ausentes o vacías y, después, de forma predeterminada se pudo establecer ninguna conexión.  
@@ -57,11 +57,11 @@ connectionString
 |Parte|Descripción|  
 |----------|-----------------|  
 |**Conectar**|Una cadena literal que indica que esta es una entrada de cadena de conexión.|  
-|***ConnectionString***|Cadena que reemplaza la cadena de conexión de cliente completa.|  
+|**_ConnectionString_**|Cadena que reemplaza la cadena de conexión de cliente completa.|  
 |**Acceso**|Una cadena literal que indica que esta es una entrada de acceso.|  
-|***accessRight***|Uno de los derechos de acceso siguiente:<br /><br /> -   **NoAccess** -usuario no puede obtener acceso al origen de datos.<br />-   **ReadOnly** -usuario puede leer el origen de datos.<br />-   **Lectura y escritura** -usuario puede leer o escribir en el origen de datos.|  
+|**_accessRight_**|Uno de los derechos de acceso siguiente:<br /><br /> -   **NoAccess** -usuario no puede obtener acceso al origen de datos.<br />-   **ReadOnly** -usuario puede leer el origen de datos.<br />-   **Lectura y escritura** -usuario puede leer o escribir en el origen de datos.|  
   
- Si desea permitir cualquier conexión (en vigor, deshabilitar el comportamiento predeterminado del controlador), establezca la entrada de acceso el **conectarse de forma predeterminada** sección a `Access=ReadWrite`y elimine o comente cualquier otro **conectar** *identificador* sección.  
+ Si desea permitir cualquier conexión (en vigor, deshabilitar el comportamiento predeterminado del controlador), establezca la entrada de acceso el **conectarse de forma predeterminada** sección a `Access=ReadWrite`y elimine o comente cualquier otro **conectar** _identificador_ sección.  
   
 ## <a name="see-also"></a>Vea también  
  [Sección de registros del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

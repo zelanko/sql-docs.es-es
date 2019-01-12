@@ -13,12 +13,12 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823317"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134748"
 ---
 # <a name="best-practices-for-replication-administration"></a>Prácticas recomendadas para la administración de replicación
   Después de configurar la replicación, es importante entender cómo administrar una topología de replicación. En este tema se proporciona una guía básica de prácticas recomendadas en varias áreas con vínculos a más información de cada área. Además de seguir las instrucciones de prácticas recomendadas presentadas en este tema, considere la posibilidad de leer el tema de preguntas más frecuentes para familiarizarse con los problemas y preguntas comunes: [Preguntas para administradores de replicación más](frequently-asked-questions-for-replication-administrators.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "52823317"
 ## <a name="validate-data-periodically"></a>Validar los datos periódicamente  
  La replicación no requiere validación, pero se recomienda ejecutar la validación periódicamente en la replicación transaccional y la replicación de mezcla. La validación le permite comprobar que los datos del suscriptor coinciden con los datos del publicador. Una validación satisfactoria indica que en ese momento se han replicado todos los cambios del publicador en el suscriptor (y del suscriptor en el publicador si el suscriptor admite actualizaciones) y que las dos bases de datos están sincronizadas.  
   
- Se recomienda realizar la validación de acuerdo con la programación de copia de seguridad de la base de datos de publicaciones. Por ejemplo, si se realiza una copia de seguridad completa de la base de datos de publicaciones una vez a la semana, se podría ejecutar la validación una vez a la semana tras finalizar la copia de seguridad. Para obtener más información, vea [Validar datos replicados](../validate-replicated-data.md).  
+ Se recomienda realizar la validación de acuerdo con la programación de copia de seguridad de la base de datos de publicaciones. Por ejemplo, si se realiza una copia de seguridad completa de la base de datos de publicaciones una vez a la semana, se podría ejecutar la validación una vez a la semana tras finalizar la copia de seguridad. Para obtener más información, vea [Validar datos replicados](../validate-data-at-the-subscriber.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Utilizar perfiles para cambiar los parámetros de agentes si es necesario  
  Los perfiles de agente proporcionan un método cómodo para establecer los parámetros de los agentes de replicación. También se pueden especificar los parámetros en la línea de comandos del agente, pero normalmente es más apropiado utilizar un perfil de agente predefinido o crear un perfil nuevo si necesita cambiar el valor de un parámetro. Por ejemplo, si está utilizando la replicación de mezcla y un suscriptor pasa de una conexión de banda ancha a una conexión telefónica, considere la posibilidad de utilizar el perfil **slow link** para el Agente de mezcla; este perfil utiliza un conjunto de parámetros que se ajustan mejor al vínculo de comunicaciones más lento. Para obtener más información, consulte [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
@@ -148,6 +148,6 @@ ms.locfileid: "52823317"
  Para obtener más información, vea [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
   
 ## <a name="see-also"></a>Vea también  
- [Administración &#40;replicación&#41;](administration-replication.md)  
+ [Preguntas más frecuentes sobre la administración de replicación](frequently-asked-questions-for-replication-administrators.md)  
   
   

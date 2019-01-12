@@ -13,12 +13,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b03c94ccfd50dc1c031c7e25f548e61ab1de1ac5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815728"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134585"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Información general de la interfaz del Monitor de replicación
   El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenta una vista centrada en el publicador o una vista centrada en el distribuidor de toda la actividad de replicación en un formato de dos paneles. Se agrega un publicador al monitor en el panel izquierdo y, en el panel derecho, el monitor muestra información sobre el publicador, sus publicaciones, las suscripciones a esas publicaciones y los diversos agentes de replicación. Además de presentar información de la topología de replicación, el Monitor de replicación permite realizar varias tareas, como iniciar y detener agentes y validar datos.  
@@ -104,7 +104,7 @@ ms.locfileid: "52815728"
   
      Esta pestaña muestra información detallada sobre los agentes y trabajos utilizados por todos los tipos de replicación. La pestaña también le permite iniciar y detener cada agente y trabajo.  
   
- Para obtener más información, consulte [Ver información y realizar tareas para un publicador &#40;Monitor de replicación&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+ Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
   
  El Monitor de replicación también proporciona un menú contextual para el nodo de publicador. En el panel izquierdo, haga clic con el botón secundario en un publicador para:  
   
@@ -177,7 +177,7 @@ ms.locfileid: "52815728"
   
          Los mensajes de error disponibles proporcionan información detallada sobre por qué no funciona un agente y un punto inicial para solucionar problemas con los agentes asociados con una publicación.  
   
- Para obtener más información, consulte [Ver información y realizar tareas para una publicación &#40;Monitor de replicación&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) y [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
+ Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
   
  El Monitor de replicación también proporciona un menú contextual para el nodo de publicaciones. En el panel izquierdo, haga clic con el botón secundario en una publicación para:  
   
@@ -216,7 +216,7 @@ ms.locfileid: "52815728"
   
          En esta pestaña se proporcionan estadísticas detalladas de cada artículo procesado durante la sincronización, incluido el tiempo invertido en cada fase del proceso (carga de cambios, descarga de cambios, etc.). Puede ayudar a identificar con precisión tablas específicas que provocan lentitud y el mejor lugar para solucionar problemas de rendimiento con suscripciones de mezcla.  
   
- Para obtener más información, consulte [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) y [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+ Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Ver información y realizar tareas relacionadas con perfiles de agente  
  El Monitor de replicación incluye varios cuadros de diálogo para administrar perfiles de agente. Los perfiles de agente son conjuntos de parámetros de un agente que determinan su comportamiento. Para más información, consulte [Replication Agent Profiles](../agents/replication-agent-profiles.md). Los cuadros de diálogo son:  

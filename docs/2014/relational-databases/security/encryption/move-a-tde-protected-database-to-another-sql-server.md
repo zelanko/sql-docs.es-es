@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544635"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135005"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
   En este tema se describe cómo proteger una base de datos mediante el uso del cifrado de datos transparente (TDE) y, a continuación, mover la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra (`master`) del servidor o una clave asimétrica protegida por un módulo EKM.  
@@ -191,7 +191,7 @@ ms.locfileid: "52544635"
   
     -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
   
-    -   Cuando una base de datos tiene una o más conexiones activas, el **estado** es **no está listo** y **mensaje** columna muestra *< número_de_conexiones_activas > *** conexiones activas**, por ejemplo: **1 conexiones activas**. Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
+    -   Cuando una base de datos tiene una o más conexiones activas, el **estado** es **no está listo** y **mensaje** columna muestra _< número_de_conexiones_activas >_**Conexiones activas** , por ejemplo: **1 conexiones activas**. Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
   
      Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "52544635"
   
 8.  En el cuadro de diálogo **Adjuntar bases de datos** , en **Bases de datos que se van a adjuntar**, haga clic en **Agregar**.  
   
-9. En el **buscar archivos de base de datos-*** nombre_servidor* cuadro de diálogo, seleccione la base de datos de archivo para adjuntar al nuevo servidor y haga clic en **Aceptar**.  
+9. En el **buscar archivos de base de datos -**_nombre_servidor_ cuadro de diálogo, seleccione la base de datos de archivo para adjuntar al nuevo servidor y haga clic en **Aceptar**.  
   
      En el cuadro de diálogo **Adjuntar bases de datos** están disponibles las siguientes opciones.  
   
@@ -252,7 +252,7 @@ ms.locfileid: "52544635"
      **Quitar**  
      Quita el archivo seleccionado de la cuadrícula **Bases de datos que se van a adjuntar** .  
   
-     **"** *<database_name>* **" detalles de la base de datos**  
+     **"** _<database_name>_ **" detalles de la base de datos**  
      Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** (**...**).  
   
     > [!NOTE]  

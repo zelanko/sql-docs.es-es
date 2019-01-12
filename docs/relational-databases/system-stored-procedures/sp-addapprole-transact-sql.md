@@ -18,12 +18,12 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 04163593c48a22bebdd933881b165af3418e0dfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40e397bd63d8018d2043a1aced4824f48e4ddc9a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690693"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135875"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'***rol***'**  
+ [  **@rolename =** ] **'**_rol_**'**  
  Es el nombre del nuevo rol de aplicación. *rol* es **sysname**, no tiene ningún valor predeterminado. *función* debe ser un identificador válido y no puede existir en la base de datos actual.  
   
  Los nombres de roles de aplicación pueden contener entre 1 y 128 caracteres, y pueden incluir letras, símbolos y números. Los nombres de rol no pueden contener una barra diagonal inversa (\\) ni ser NULL ni una cadena vacía (").  
   
- [  **@password =** ] **'***contraseña***'**  
+ [  **@password =** ] **'**_contraseña_**'**  
  Es la contraseña necesaria para activar el rol de aplicación. *contraseña* es **sysname**, no tiene ningún valor predeterminado. *contraseña* no puede ser NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

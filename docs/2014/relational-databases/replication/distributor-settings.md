@@ -1,5 +1,5 @@
 ---
-title: Configuración del distribuidor | Microsoft Docs
+title: Cuadro de diálogo de configuración del distribuidor | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ccd710e20ba1cb280b60dea72bad368e80505846
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753217"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132325"
 ---
-# <a name="distributor-settings"></a>Configuración del distribuidor
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Cuadro de diálogo de configuración del distribuidor de replicación de SQL Server
   El cuadro de diálogo **Configuración del distribuidor** le permite cambiar la configuración de los distribuidores que se han agregado al panel izquierdo del Monitor de replicación.  
   
 ## <a name="options"></a>Opciones  

@@ -16,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6c3341c37998f61cba743c8da8a4cd772c2c73d9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822579"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133765"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,22 +62,22 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicación***'**  
+ [  **@publication=**] **'**_publicación_**'**  
  Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado. La publicación debe existir.  
   
- [  **@subscriber =**] **'***suscriptor***'**  
+ [  **@subscriber =**] **'**_suscriptor_**'**  
  Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  Es el nombre de la base de datos de suscripción. *subscriber_db*es **sysname**, su valor predeterminado es null.  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
+ [  **@subscription_type=**] **'**_subscription_type_**'**  
  Es el tipo de suscripción. *subscription_type*es **nvarchar (15)**, con el valor predeterminado es PUSH. Si **inserción**, se agrega una suscripción de inserción y el agente de mezcla se agrega en el distribuidor. Si **extracción**, se agrega una suscripción de extracción sin agregar un agente de mezcla en el distribuidor.  
   
 > [!NOTE]  
 >  Las suscripciones anónimas no necesitan utilizar este procedimiento almacenado.  
   
- [  **@subscriber_type=**] **'***subscriber_type***'**  
+ [  **@subscriber_type=**] **'**_subscriber_type_**'**  
  Es el tipo de suscriptor. *propiedad subscriber_type*es **nvarchar (15)**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
@@ -90,7 +90,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscription_priority=**] *subscription_priority*  
  Es un número que indica la prioridad de la suscripción. *subscription_priority*es **real**, su valor predeterminado es null. En las suscripciones locales y anónimas, la prioridad es 0.0. En el caso de las suscripciones globales, la prioridad debe ser inferior a 100.0.  
   
- [  **@sync_type=**] **'***sync_type***'**  
+ [  **@sync_type=**] **'**_sync_type_**'**  
  Es el tipo de sincronización de suscripción. *sync_type*es **nvarchar (15)**, su valor predeterminado es **automática**. Puede ser **automática** o **ninguno**. Si **automática**, el esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor. Si **ninguno**, se supone que el suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas. Las tablas y los datos del sistema se transfieren siempre.  
   
 > [!NOTE]  
@@ -167,13 +167,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@active_end_date=**] *active_end_date*  
  Es la fecha en la que el agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es null.  
   
- [  **@optional_command_line=**] **'***optional_command_line***'**  
+ [  **@optional_command_line=**] **'**_optional_command_line_**'**  
  Es el símbolo del sistema opcional que se va a ejecutar. *optional_command_line*es **nvarchar (4000)**, su valor predeterminado es null. Este parámetro se utiliza para agregar un comando que captura el resultado y lo guarda en un archivo o para especificar un atributo o archivo de configuración.  
   
- [  **@description=**] **'***descripción***'**  
+ [  **@description=**] **'**_descripción_**'**  
  Es una breve descripción de esta suscripción de mezcla. *descripción*es **nvarchar (255)**, su valor predeterminado es null. Este valor se muestra el Monitor de replicación en el **Nombre_descriptivo** columna, que puede usarse para ordenar las suscripciones en una publicación supervisada.  
   
- [  **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr***'**  
+ [  **@enabled_for_syncmgr=**] **'**_enabled_for_syncmgr_**'**  
  Especifica si la suscripción se puede sincronizar mediante el Administrador de sincronización de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *enabled_for_syncmgr* es **nvarchar (5)**, su valor predeterminado es False. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [  **@offloadagent=** ] *remote_agent_activation*  
@@ -182,16 +182,16 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solamente se mantiene por compatibilidad con versiones anteriores de scripts.  
   
- [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
+ [  **@offloadserver=** ] **'**_remote_agent_server_name_**'**  
  Especifica el nombre de red del servidor a utilizar en la activación remota del agente. *remote_agent_server_name*es **sysname**, su valor predeterminado es null.  
   
- [  **@use_interactive_resolver=** ] **'***use_interactive_resolver***'**  
+ [  **@use_interactive_resolver=** ] **'**_use_interactive_resolver_**'**  
  Permite que los conflictos se resuelvan de forma interactiva para todos los artículos que lo permitan. *use_interactive_resolver* es **nvarchar (5)**, su valor predeterminado es False.  
   
- [  **@merge_job_name=** ] **'***merge_job_name***'**  
+ [  **@merge_job_name=** ] **'**_merge_job_name_**'**  
  El *@merge_job_name* parámetro está en desuso y no se puede establecer. *merge_job_name* es **sysname**, su valor predeterminado es null.  
   
- [ **@hostname**=] **'***hostname***'**  
+ [ **@hostname**=] **'**_hostname_**'**  
  Invalida el valor devuelto por [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) cuando esta función se utiliza en la cláusula WHERE de un filtro con parámetros. *nombre de host* es **sysname**, su valor predeterminado es null.  
   
 > [!IMPORTANT]  

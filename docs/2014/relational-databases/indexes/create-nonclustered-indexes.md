@@ -16,12 +16,12 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 932bd340e84e352eb6de2bd714508135328024d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533064"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132019"
 ---
 # <a name="create-nonclustered-indexes"></a>Crear índices no clúster
   Puede crear índices no clúster en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice no clúster es una estructura de índice independiente de los datos almacenados en una tabla que reordena una o más columnas seleccionadas. Con frecuencia, los índices no clúster pueden ayudarle a encontrar datos más rápidamente que cuando se busca en la tabla subyacente; las consultas a veces pueden responderse completamente con los datos del índice no clúster o el índice no clúster puede apuntar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] hacia las filas de la tabla subyacente. Normalmente, los índices no clúster se crean para mejorar el rendimiento de las consultas usadas con frecuencia no cubiertas por el índice clúster o para buscar filas en una tabla sin un índice clúster (denominado montón). Se pueden crear varios índices no clúster en una tabla o una vista indizada.  
@@ -82,7 +82,7 @@ ms.locfileid: "52533064"
   
 8.  Haga clic en **Cerrar**.  
   
-9. En el menú **Archivo**, haga clic en **Guardar***nombre_de_tabla*.  
+9. En el menú **Archivo** , haga clic en **Guardar**_table_name_.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Para crear un índice no clúster mediante el Explorador de objetos  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52533064"
   
 6.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
   
-7.  En el cuadro de diálogo **Seleccionar columnas de***nombre_de_tabla*, active las casillas de las columnas de tabla que se van a agregar al índice no agrupado.  
+7.  En el cuadro de diálogo **Seleccionar columnas de**_nombre_tabla_ , active las casillas de las columnas de tabla que se van a agregar al índice no agrupado.  
   
 8.  Haga clic en **Aceptar**.  
   

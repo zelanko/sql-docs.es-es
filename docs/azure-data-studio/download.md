@@ -3,7 +3,7 @@ title: Descargue e instale
 titleSuffix: Azure Data Studio
 description: Descarga e instalar Azure datos Studio para Windows, macOS o Linux
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,50 +11,57 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ab531acaf5b8246da6603807760d716ab7ffb74
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: a4f8861d8d7104b536abbf14a7629218c46e577e
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030659"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143065"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Descargue e instale Data Studio de Azure
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] se ejecuta en Windows, macOS y Linux.
 
-Descargue e instale la versión más reciente, la *versión de noviembre*:
+Descargue e instale la versión más reciente, la *versión de enero*:
 
 > [!NOTE]
 > Si va a actualizar desde SQL Operations Studio y desea conservar la configuración, métodos abreviados de teclado o fragmentos de código, consulte [mover la configuración de usuario](#move-user-settings).
 
 |Plataforma|Descargar|Fecha de la versión| Versión |
 |:---|:---|:---|:---|
-|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|6 de noviembre de 2018 |1.2.4|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|6 de noviembre de 2018 |1.2.4|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|6 de noviembre de 2018 |1.2.4|
+|Windows|[Instalador de usuario (recomendado)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[Instalador de sistema](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|09 de enero de 2019 |1.3.8|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|09 de enero de 2019 |1.3.8|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|09 de enero de 2019 |1.3.8|
 
 Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](release-notes.md).
 
 ## <a name="get-azure-data-studio-for-windows"></a>Obtener Azure Data Studio para Windows
 
-Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una experiencia de instalador de Windows estándar y un archivo .zip: 
+Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una experiencia de instalador de Windows estándar y un archivo .zip:
 
-**Instalador**
+**Instalador de usuario** (recomendado)
 
-1. Descargue y ejecute el [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] installer para Windows](https://go.microsoft.com/fwlink/?linkid=2038320).
-1. Iniciar el [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
+El instalador de usuario se recomienda porque no requiere privilegios de administrador, lo que simplifica las instalaciones y actualizaciones.
+
+1. Descargue y ejecute el [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *usuario* installer para Windows](https://go.microsoft.com/fwlink/?linkid=2049972).
+2. Iniciar el [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
+
+**Instalador de sistema**
+
+1. Descargue y ejecute el [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *sistema* installer para Windows](https://go.microsoft.com/fwlink/?linkid=2049975).
+2. Iniciar el [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **archivo zip**
 
-1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip para Windows](https://go.microsoft.com/fwlink/?linkid=2038323).
+1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip para Windows](https://go.microsoft.com/fwlink/?linkid=2050146).
 2. Busque el archivo descargado y extráigalo.
 3. Ejecute `\azuredatastudio-windows\azuredatastudio.exe`:
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>Obtener Azure Data Studio para Mac OS
 
-1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=2038327).
+1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=2049981).
 2. Para expandir el contenido del archivo zip, haga doble clic en él.
 3. Para realizar [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibles en el *Launchpad*, arrastre *Studio.app de datos de Azure* a la *aplicaciones* carpeta.
 
@@ -62,9 +69,9 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
 ## <a name="get-azure-data-studio-for-linux"></a>Obtener Azure Data Studio para Linux
 
 1. Descargar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux mediante uno de los instaladores o el archivo tar.gz:
-    - [.DEB](https://go.microsoft.com/fwlink/?linkid=2038405)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)
-    - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)
+    - [.DEB](https://go.microsoft.com/fwlink/?linkid=2050157)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)
+    - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)
 1. Para extraer el archivo e inicie [!INCLUDE[name-sos](../includes/name-sos-short.md)], abra una nueva ventana de Terminal y escriba los siguientes comandos:
 
    **Instalación de Debian:**
@@ -131,7 +138,7 @@ Si instaló [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] con un arc
 - Windows 10 (64 bits)
 - Windows 8.1 (64 bits)
 - Windows 8 (64 bits)
-- Requiere Windows 7 (SP1) (64 bits) - [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
+- Requiere Windows 7 (SP1) (64 bits) - [KB2533623](https://www.microsoft.com/download/details.aspx?id=26767)
 - Windows Server 2016
 - Windows Server 2012 R2 (64 bits)
 - Windows Server 2012 (64 bits)
@@ -162,6 +169,13 @@ Para comprobar las actualizaciones más recientes, haga clic en el icono de engr
 ## <a name="supported-sql-offerings"></a>Ofertas de SQL admitidas
 
 * Esta versión de Azure Data Studio funciona con todas las [las versiones compatibles de SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ](https://support.microsoft.com/lifecycle?C2=1044) y proporciona compatibilidad para trabajar con las últimas características de nube de Azure SQL Database y Azure SQL Data Warehouse. Azure Data Studio también proporciona compatibilidad de versión preliminar para instancia administrada de SQL Azure.
+
+## <a name="upgrade-from-sql-operations-studio"></a>Actualización desde SQL Operations Studio
+
+Si aún usa SQL Operations Studio, deberá actualizar a Azure Data Studio. SQL Operations Studio era el nombre de vista previa y la versión preliminar de Azure Data Studio. En septiembre de 2018, hemos [cambió el nombre a Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) y lanzó la versión de disponibilidad General (GA). Dado que SQL Operations Studio ya no se actualiza o admite, pedimos a todos los usuarios de SQL Operations Studio para descargar la versión más reciente de Azure Data Studio para obtener las últimas características, actualizaciones de seguridad y correcciones.
+ 
+Al actualizar desde la versión preliminar anterior de Azure Data Studio más reciente, perderá la configuración actual y las extensiones. Para mover la configuración, siga las instrucciones que aparecen en la siguiente *mover la configuración de usuario* sección:
+
 
 ## <a name="move-user-settings"></a>Mover la configuración de usuario
 

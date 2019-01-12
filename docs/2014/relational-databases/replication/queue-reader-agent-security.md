@@ -14,12 +14,12 @@ ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52291313f25453db47b10ecc5da0daa7ad9e1c89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 657116e00b6905964f8cc65c28dff383c3cc9ad0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781957"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133645"
 ---
 # <a name="queue-reader-agent-security"></a>Seguridad del Agente de lectura de cola
   El cuadro de diálogo **Seguridad del Agente de lectura de cola** le permitirá especificar la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con la que se ejecutará el Agente de lectura de cola y establecerá las conexiones locales al distribuidor. El agente se conecta al publicador a través de la cuenta especificada en el cuadro de diálogo **Propiedades del publicador** (disponible en el cuadro de diálogo **Propiedades del distribuidor** ); el agente se conectará al suscriptor a través del mismo contexto que el Agente de distribución para la suscripción. Para más información, consulte [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "52781957"
  Escriba la contraseña de la cuenta de Windows.  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar inicios de sesión y contraseñas en la replicación](security/manage-logins-and-passwords-in-replication.md)   
+ [Administrar inicios de sesión y contraseñas en la replicación](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modelo de seguridad del Agente de replicación](security/replication-agent-security-model.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
  [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  

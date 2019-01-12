@@ -10,14 +10,14 @@ ms.assetid: a605417c-4ba7-4f3f-baa9-14166f97c478
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f81433cdf995e421e50f4f0bd0e0c66e40272f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 00deba3bb21a36f478fc2994f621cbe8fe9396c2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755577"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131385"
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>Propiedades de NS$&lt;nombre del servicio&gt; (pestaña Avanzadas)
-  [!INCLUDE[ssNS](../../includes/ssns-md.md)] se implementa como un servicio con un nombre que tiene el formato **NS$***<nombre_configurado por el usuario>*. Si se han definido propiedades personalizadas, aparecen en esta pestaña junto con los valores correspondientes. Es posible que no aparezcan propiedades en esta pestaña.  
+  [!INCLUDE[ssNS](../../includes/ssns-md.md)] se implementa como un servicio con el formato **NS$**_< nombre_configurado por el usuario nombre >_. Si se han definido propiedades personalizadas, aparecen en esta pestaña junto con los valores correspondientes. Es posible que no aparezcan propiedades en esta pestaña.  
   
   

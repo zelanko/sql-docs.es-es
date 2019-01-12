@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6666f717881d30c7232a7b83b3f6a6c59925df71
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f6a14751ea8a0b268c846935e5058c10d79b4d60
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658105"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131785"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve una fila por cada columna a la que puede tener acceso el usuario actual en la base de datos actual.  
   
- Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA ***.** view_name *.  
+ Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA**_.view_name_.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Calificador de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nombre de la tabla.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Nombre de columna.|  
 |**ORDINAL_POSITION**|**int**|Número de identificación de la columna.|  
@@ -57,7 +57,7 @@ ms.locfileid: "51658105"
 |**COLLATION_SCHEMA**|**nvarchar (** 128 **)**|Siempre devuelve NULL.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|Devuelve el nombre único para la intercalación si la columna de datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos de alias, esta columna es el nombre de la base de datos en que se creó el tipo de datos definido por el usuario. En caso contrario se devuelve NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, devuelve el nombre del esquema del tipo de datos definido por el usuario. En caso contrario se devuelve NULL.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un tipo de datos. La única manera confiable de localizar el esquema de un tipo consiste en utilizar la función TYPEPROPERTY.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, devuelve el nombre del esquema del tipo de datos definido por el usuario. En caso contrario se devuelve NULL.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un tipo de datos. La única manera confiable de localizar el esquema de un tipo consiste en utilizar la función TYPEPROPERTY.|  
 |**NOMBRE_DOMINIO**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna es el nombre del tipo de datos definido por el usuario. En caso contrario se devuelve NULL.|  
   
 ## <a name="remarks"></a>Comentarios  

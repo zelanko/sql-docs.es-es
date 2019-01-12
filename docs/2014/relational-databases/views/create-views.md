@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541819"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134405"
 ---
 # <a name="create-views"></a>Crear vistas
   Puede crear vistas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se puede usar una vista para lo siguiente:  
@@ -70,7 +70,7 @@ ms.locfileid: "52541819"
   
 6.  En el **Panel de criterios**, seleccione criterios de ordenación o filtro adicionales para las columnas.  
   
-7.  En el menú **Archivo**, haga clic en **Guardar***nombre de vista*.  
+7.  En el menú **Archivo** , haga clic en **Guardar**_view name_.  
   
 8.  En el cuadro de diálogo **Elegir nombre** , especifique un nombre para la nueva vista y haga clic en **Aceptar**.  
   

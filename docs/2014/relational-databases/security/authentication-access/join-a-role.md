@@ -15,12 +15,12 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 815615f31e033eaee63f2c296ff5daf73349714c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514305"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134125"
 ---
 # <a name="join-a-role"></a>combinar un rol
   En este tema se describe cómo asignar roles a inicios de sesión y a usuarios de base de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Use los roles de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para administrar eficazmente los permisos. Asigne permisos a roles y, a continuación, agregue o quite usuarios e inicios de sesión a los roles. Mediante el uso de roles, los permisos no se tienen que mantener individualmente para cada usuario.  
@@ -76,9 +76,9 @@ ms.locfileid: "52514305"
   
 4.  Haga clic con el botón derecho en el rol que quiere editar y seleccione **Propiedades**.  
   
-5.  En el **propiedades del rol de servidor-*** nombre_del_rol_de_servidor* cuadro de diálogo el **miembros** página, haga clic en **agregar**.  
+5.  En el **propiedades del rol de servidor -**_nombre_del_rol_de_servidor_ cuadro de diálogo el **miembros** página, haga clic en **agregar**.  
   
-6.  En el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de servidor que quiere agregar a este rol de servidor. O bien, haga clic en **Examinar...** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver a la **propiedades del rol de servidor-*** nombre_del_rol_de_servidor* cuadro de diálogo.  
+6.  En el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de servidor que quiere agregar a este rol de servidor. O bien, haga clic en **Examinar...** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver a la **propiedades del rol de servidor -**_nombre_del_rol_de_servidor_ cuadro de diálogo.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "52514305"
   
 7.  Haga clic con el botón derecho en el rol que quiere editar y seleccione **Propiedades**.  
   
-8.  En el **propiedades de rol de base de datos-*** nombre_del_rol_de_la_base_de_datos* cuadro de diálogo el **General** página, haga clic en **agregar**.  
+8.  En el **propiedades de rol de base de datos -**_nombre_del_rol_de_la_base_de_datos_ cuadro de diálogo el **General** página, haga clic en **agregar**.  
   
-9. En el cuadro de diálogo **Seleccionar usuario o rol de base de datos** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de la base de datos que quiere agregar a este rol de base de datos. O bien, haga clic en **Examinar...** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver a la **propiedades de rol de base de datos-*** nombre_del_rol_de_la_base_de_datos* cuadro de diálogo.  
+9. En el cuadro de diálogo **Seleccionar usuario o rol de base de datos** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de la base de datos que quiere agregar a este rol de base de datos. O bien, haga clic en **Examinar...** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver a la **propiedades de rol de base de datos -**_nombre_del_rol_de_la_base_de_datos_ cuadro de diálogo.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

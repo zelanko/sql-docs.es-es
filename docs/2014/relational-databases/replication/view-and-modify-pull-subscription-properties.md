@@ -18,12 +18,12 @@ ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bdd411323c78f3289a2855002adcedef3a975b40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814227"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133785"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Ver y modificar las propiedades de una suscripción de extracción
   En este tema se describe cómo ver y modificar las propiedades de una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -159,8 +159,8 @@ ms.locfileid: "52814227"
 8.  Cierre todas las conexiones.  
   
 ## <a name="see-also"></a>Vea también  
- [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  (Prácticas recomendadas de seguridad de replicación)  
+ [Ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Suscribirse a publicaciones](subscribe-to-publications.md)  
   
   

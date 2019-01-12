@@ -10,12 +10,12 @@ ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d64724108630e64ecfd654367180a6603aabe3e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125955"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134835"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Guardar scripts como proyectos o soluciones
   Los desarrolladores que estén familiarizados con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio acogerán con entusiasmo el Explorador de soluciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los scripts empleados en su empresa pueden agruparse en proyectos de script; estos proyectos pueden administrarse conjuntamente en forma de solución. Cuando los scripts se colocan en soluciones y proyectos de script, pueden abrirse como un grupo o guardarse juntos en un producto de control de código fuente como Visual SourceSafe. Los proyectos de script incluyen información de conexión para que los scripts se ejecuten correctamente y pueden incluir archivos que no sean de script, por ejemplo, un archivo auxiliar de texto.  
@@ -58,11 +58,11 @@ ms.locfileid: "48125955"
     > [!NOTE]  
     >  Si necesita más espacio para escribir la consulta, presione MAYÚS+ALT+ENTRAR para cambiar al modo de pantalla completa.  
   
-11. En el Explorador de soluciones, haga clic con el botón derecho en **SQLQuery1**y, después, haga clic en **Cambiar nombre**. Escriba **Check Workorders****.sql** como el nombre nuevo para la consulta y pulse ENTRAR.  
+11. En el Explorador de soluciones, haga clic con el botón derecho en **SQLQuery1**y, después, haga clic en **Cambiar nombre**. Tipo **Check Workorders.sql** como el nuevo nombre para la consulta y presione ENTRAR.  
   
 12. Para guardar la solución y el proyecto de script, en el menú **Archivo** , haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Resumen: Soluciones y proyectos de scripts](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [Resumen: Soluciones y proyectos de Script](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   

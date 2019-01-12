@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507272"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132545"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
   Para conectarse a una sesión de creación de reflejo de la base de datos, un cliente puede usar SQL Native Client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos proveedores de acceso a datos son totalmente compatibles con la creación de reflejo de la base de datos cuando se configuran para una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener información acerca de las consideraciones de programación para el uso de una base de datos reflejada, vea [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Además, la instancia del servidor principal actual debe estar disponible y el inicio de sesión del cliente se debe haber creado en la instancia del servidor. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Las conexiones de cliente a una sesión de creación de reflejo de la base de datos no tienen relación con la instancia del servidor testigo, si existe alguno.  
@@ -85,7 +85,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Atributo Server  
  La cadena de conexión debe contener un atributo `Server` que proporciona el nombre del asociado inicial, que debería identificar la instancia del servidor principal actual.  
   
- La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<nombre_de_servidor>*[**\\***<nombre_de_instancia_de_SQL_Server>*]. Por ejemplo:  
+ La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<nombre_de_servidor>*[**\\**_<nombre_de_instancia_de_SQL_Server>_]. Por ejemplo:  
   
  `Server=Partner_A;`  
   
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |Controlador ODBC|`Failover_Partner`|  
 |Objetos de datos ActiveX (ADO)|`Failover Partner`|  
   
- La manera más sencilla de identificar la instancia de servidor es especificando su nombre de sistema, *<nombre_de_servidor>*[**\\**<nombre_de_instancia_de_SQL_Server>*].  
+ La manera más sencilla de identificar la instancia de servidor es especificando su nombre de sistema, *<nombre_de_servidor>*[**\\**_<nombre_de_instancia_de_SQL_Server>_].  
   
  O bien, la dirección IP y el número de puerto pueden proporcionarse en el atributo `Failover Partner`. Si el intento de conexión inicial no tiene éxito durante la primera conexión a la base de datos, el intento de conectarse al asociado de conmutación por error no tendrá que retransmitirse en DNS y SQL Server Browser. Una vez que se establezca la conexión, el nombre del asociado de conmutación por error se sobrescribirá con el nombre del asociado de conmutación por error, de modo que, si se produce una conmutación por error, las conexiones redirigidas requerirán DNS y SQL Server Browser.  
   
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  El tiempo de reintento se calcula mediante la siguiente fórmula:  
   
- *TiempoDeReintento* **=** *TiempoDeReintentoAnterior* **+(** 0,08 **\****TiempoDeEsperaDeInicioDeSesión***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0,08 **&#42;**  _LoginTimeout_**)**  
   
  Donde *PreviousRetryTime* es inicialmente 0.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |Redondear|Cálculo de*RetryTime* |Tiempo de reintento por intento|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1,2 segundos|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2,4 segundos|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3,6 segundos|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4,8 segundos|  
+|1|0 **+ (** 0,08 **&#42;** 15 **)**|1,2 segundos|  
+|2|1.2 **+ (** 0,08 **&#42;** 15 **)**|2,4 segundos|  
+|3|2.4 **+ (** 0,08 **&#42;** 15 **)**|3,6 segundos|  
+|4|3.6 **+ (** 0,08 **&#42;** 15 **)**|4,8 segundos|   
   
  En la siguiente ilustración se muestran los tiempos de reintento para intentos de conexión sucesivos, cada uno de los cuales se agota.  
   

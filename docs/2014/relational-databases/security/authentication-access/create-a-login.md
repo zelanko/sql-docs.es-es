@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374767"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131595"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
   En este tema se describe cómo crear un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un inicio de sesión es la identidad de la persona o proceso que se está conectando a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -146,7 +146,7 @@ ms.locfileid: "53374767"
  La página **Asignación de usuarios** enumera todas las bases de datos posibles y las pertenencias al rol de base de datos en esas bases de datos que se pueden aplicar al inicio de sesión. Las bases de datos seleccionadas determinan las pertenencias a roles disponibles para el inicio de sesión. En esta página están disponibles las opciones siguientes:  
   
  **Usuarios asignados a este inicio de sesión**  
- Selecciona las bases de datos a las que se puede obtener acceso con este inicio de sesión. Cuando se seleccione una base de datos, sus roles de bases de datos válidos se mostrarán en el panel **Miembros del rol de base de datos para:** *nombre_baseDeDatos* .  
+ Selecciona las bases de datos a las que se puede obtener acceso con este inicio de sesión. Cuando se seleccione una base de datos, sus roles de bases de datos válidos se mostrarán en el panel **Miembros del rol de base de datos para:** _nombre_baseDeDatos_ .  
   
  **Mapa**  
  Permite que el inicio de sesión obtenga acceso a las bases de datos que se muestran a continuación.  
@@ -160,10 +160,10 @@ ms.locfileid: "53374767"
  **Esquema predeterminado**  
  Especifica el esquema predeterminado del usuario. Cuando se crea un usuario por primera vez, el esquema predeterminado es **dbo**. Es posible especificar un esquema predeterminado que aún no existe. No puede especificar un esquema predeterminado para un usuario asignado a un grupo, un certificado o una clave asimétrica de Windows.  
   
- **Cuenta de invitado habilitada para:**  *nombre_baseDeDatos*  
+ **Guest account enabled for:**  _database_name_  
  Atributo de solo lectura que indica si la cuenta de invitado está habilitada en la base de datos seleccionada. Utilice la página **Estado** del cuadro de diálogo **Propiedades de inicio de sesión** de la cuenta de invitado para habilitarla o deshabilitarla.  
   
- **Miembros del rol de base de datos para:**  *nombre_baseDeDatos*  
+ **Database role membership for:**  _database_name_  
  Selecciona los roles para el usuario en la base de datos especificada. Todos los usuarios son miembros del rol **public** de todas las bases de datos, y no pueden eliminarse. Para obtener más información sobre los roles de base de datos, vea [Roles de nivel de base de datos](database-level-roles.md).  
   
 ### <a name="securables"></a>Elementos protegibles  
@@ -176,10 +176,10 @@ ms.locfileid: "53374767"
   
 1.  Haga clic en **Buscar**.  
   
-2.  En el **agregar objetos** cuadro de diálogo, seleccione una de las siguientes opciones: **Objetos específicos...** , **Todos los objetos de los tipos...** , o **el servidor *** nombre_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  En el **agregar objetos** cuadro de diálogo, seleccione una de las siguientes opciones: **Objetos específicos...** , **Todos los objetos de los tipos...** , o **el servidor**_nombre_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Selección de **el servidor *** nombre_servidor* rellena automáticamente la cuadrícula superior con todos los objetos protegibles de ese servidor.  
+    >  Cuando se selecciona **El servidor**_nombre_servidor_, se rellena automáticamente la cuadrícula superior con todos los objetos protegibles de ese servidor.  
   
 3.  Si selecciona **Objetos específicos...**:  
   

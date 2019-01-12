@@ -16,12 +16,12 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee501c8e576363fd4a4bc15883ca322490d60908
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150775"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132395"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Ejecutar el Asesor de actualizaciones (símbolo del sistema)
   Use la **UpgradeAdvisorWizardCmd** utilidad para ejecutar el Asesor de actualizaciones desde el símbolo del sistema. Puede elegir recibir los resultados en formato XML o en un archivo con valores separados por comas.  
@@ -43,7 +43,7 @@ where <server_info> is any combination of the following:
  **-?**  
  Muestra la sintaxis del comando.  
   
- **-ConfigFile** *nombre de archivo*  
+ **-ConfigFile** _nombre de archivo_  
  Es el nombre de ruta de acceso y nombre de archivo de un archivo XML que contiene valores que se va a usar al ejecutar el **UpgradeAdvisorWizardCmd** utilidad.  
   
  *< informacióndeservidor >*  
@@ -51,22 +51,22 @@ where <server_info> is any combination of the following:
   
  *< informacióndeservidor >* puede ser cualquier combinación de los cuatro argumentos siguientes:  
   
- **-Servidor** *nombreDeServidor*  
+ **-Servidor** _nombreDeServidor_  
  Especifica el nombre del equipo que se va a analizar. Éste puede ser el equipo local, que es el valor predeterminado, o un equipo remoto.  
   
- **-Instancia** *instance_name*  
+ **-Instancia** _instance_name_  
  Especifica el nombre de la instancia que se va a analizar. No existe ningún valor predeterminado. Si no especifica este parámetro, [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se examina. El valor para una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es MSSQLSERVER. Para una instancia con nombre, utilice el nombre de la instancia.  
   
- **-ASInstance***nombredeinstanciaas*   
+ **-ASInstance**_nombredeinstanciaas_   
  Especifica el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se va a analizar. No existe ningún valor predeterminado. Si no especifica este valor, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no se examina. El valor para la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es MSSQLServerOLAPService. Para una instancia con nombre, utilice el nombre de la instancia.  
   
- **-RSInstance***nombredeinstanciars*   
+ **-RSInstance**_nombredeinstanciars_   
  Especifica el nombre de la instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se va a analizar. No existe ningún valor predeterminado. Si no especifica este valor, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se examina. El valor para una instancia predeterminada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es ReportServer. Para una instancia con nombre, utilice el nombre de la instancia.  
   
- **-SqlUser** *login_id*  
+ **-SqlUser** _login_id_  
  Si está utilizando la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este valor representa el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilizará el Asesor de actualizaciones para conectarse con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no especifica un inicio de sesión, se utilizará el sistema de autenticación de Windows para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **-SqlPassword** *contraseña*  
+ **-SqlPassword** _contraseña_  
  Si usas el **- SqlUser** argumento, use este argumento para especificar la contraseña para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión.  
   
  **-CSV**  
@@ -137,11 +137,11 @@ where <server_info> is any combination of the following:
 |`BatchFile`|Especifica un archivo por lotes que se va a analizar. Pueden ser varios.|Se requiere una vez o más en caso de que esté presente el elemento `BatchFiles`. No existe ningún valor predeterminado.|  
 |`BatchSeparator`|Especifica el separador de lotes utilizado en sus archivos por lotes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Una opcional por `SQLServer` elemento. El valor predeterminado es GO.|  
 |`AnalysisServices`|Contiene la configuración de análisis para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Se puede utilizar una vez por cada archivo de configuración. Si no se especifica, no se analizarán las bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|`ASInstance`|Especifica el nombre de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Una obligatoria por `AnalysisServices` elemento. No existe ningún valor predeterminado.|  
+|`ASInstance`|Especifica el nombre de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Se requiere una vez por elemento `AnalysisServices`. No existe ningún valor predeterminado.|  
 |`Databases` para el elemento `Analysis Services`|Contiene una lista de bases de datos que se van a analizar.|Una opcional por `AnalysisServices` elemento. Si este elemento no está presente, se analizarán todas las bases de datos en la instancia.|  
 |`Database` para el elemento `AnalysisServices`|Especifica el nombre de la base de datos que se va a analizar.|Se requiere una vez o más en caso de que esté presente el elemento `Databases`. Si un elemento `Database` contiene el valor "*", se analizarán todas las bases de datos de la instancia. No existe ningún valor predeterminado.|  
 |`ReportingServices`|Especifica que se ejecute análisis contra [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Se puede utilizar una vez por cada archivo de configuración. Si no se especifica, no se analizará [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|`RSInstance`|Especifica el nombre de una instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Una obligatoria por `ReportingServices` elemento. No existe ningún valor predeterminado.|  
+|`RSInstance`|Especifica el nombre de una instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Se requiere una vez por elemento `ReportingServices`. No existe ningún valor predeterminado.|  
 |`IntegrationServices`|Contiene la configuración de análisis de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Se puede utilizar una vez por cada archivo de configuración. Si no se especifica, no se analizará [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
 |`PackagePath`|Especifica la ruta de acceso de un conjunto de paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Una opcional por `IntegrationServices` elemento. Si este elemento no está presente, el análisis se produce en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia y ningún externamente se analizan los paquetes almacenados. No existe ningún valor predeterminado.|  
   
@@ -154,7 +154,7 @@ where <server_info> is any combination of the following:
 UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"  
 ```  
   
-### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>B. Ejecutar el Asesor de actualizaciones utilizando la configuración predeterminada  
+### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>b. Ejecutar el Asesor de actualizaciones utilizando la configuración predeterminada  
  En el ejemplo siguiente se muestra cómo ejecutar el Asesor de actualizaciones desde el símbolo del sistema mediante la configuración predeterminada y el sistema de autenticación de Windows.  
   
 ```  

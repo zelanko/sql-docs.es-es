@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ae1ad6aabc87d1cf0d7d92da5b97092c23bc02d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0574683e2f77efe0654a8c3193bee2f499a9400b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511931"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135745"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -177,7 +177,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Comentarios  
  Use **bcp_bind** para una forma rápida y eficaz copiar datos de una variable de programa en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Llame a [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) antes de llamar a esta o cualquier otra función de copia masiva. Una llamada a **bcp_init** establece el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla de destino para la copia masiva. Al llamar a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), **bcp_init** *szDataFile*parámetro, que indica el archivo de datos, se establece en NULL; el **bcp_init**_eDirection_ parámetro se establece en DB_IN.  
+ Llame a [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) antes de llamar a esta o cualquier otra función de copia masiva. Una llamada a **bcp_init** establece el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla de destino para la copia masiva. Al llamar a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), **bcp_init** _szDataFile_parámetro, que indica el archivo de datos, se establece en NULL; el **bcp_init**_eDirection_ parámetro se establece en DB_IN.  
   
  Realice otra **bcp_bind** llamar para cada columna de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla en la que van a copiar. Después de la necesaria **bcp_bind** llamadas se realizaron y, después, llamar a **bcp_sendrow** para enviar una fila de datos desde las variables de programa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No se permite volver a enlazar una columna.  
   

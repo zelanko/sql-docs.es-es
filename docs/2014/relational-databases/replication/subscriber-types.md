@@ -12,12 +12,12 @@ ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e34d70b84e20f8c4f65e09baad9d8388aa96fca3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b9445c7b366a43253da4accabaf98d9c5b7f8d92
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806217"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134945"
 ---
 # <a name="subscriber-types"></a>Tipos de suscriptor
   La replicación de mezcla le permite especificar los tipos de suscriptor compatibles con una publicación. Si selecciona Tipos de suscriptor, podrá establecer el *nivel de compatibilidad de la publicación*, que determina las características que puede usar una publicación.  
@@ -39,6 +39,5 @@ ms.locfileid: "52806217"
  [Publicar datos y objetos de base de datos](publish/publish-data-and-database-objects.md)   
  [Create a Publication](publish/create-a-publication.md)   
  [Ver y modificar las propiedades del distribuidor y del publicador](view-and-modify-distributor-and-publisher-properties.md)   
- [Referencia de propiedades &#40;replicación&#41;](properties-reference-replication.md)  
-  
+
   

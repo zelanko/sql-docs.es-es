@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532130"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133295"
 ---
 # <a name="create-a-server-role"></a>Crear un rol de servidor
   En este tema se describe cómo crear un nuevo rol de servidor en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "52532130"
   
 3.  Haga clic con el botón derecho en la carpeta **Roles del servidor** y seleccione **Nuevo rol de servidor...**.  
   
-4.  En el **nuevo rol de servidor-*** nombre_del_rol_de_servidor* cuadro de diálogo el **General** , escriba un nombre para el nuevo rol de servidor en el **el nombre del rol de servidor** cuadro.  
+4.  En el **nuevo rol de servidor -**_nombre_del_rol_de_servidor_ cuadro de diálogo el **General** , escriba un nombre para el nuevo rol de servidor en el **el nombre del rol de servidor**cuadro.  
   
 5.  En el cuadro **Propietario** , escriba el nombre de la entidad de seguridad del servidor que poseerá el nuevo rol. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor**.  
   

@@ -3,7 +3,7 @@ title: Notas de la versión y el registro de cambios
 titleSuffix: Azure Data Studio
 description: Notas de la versión de Data Studio Azure
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030349"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143665"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Notas de versión más recientes de Studio de datos y registro de cambios de Azure
 
-**[Descargue la versión de noviembre.](download.md)**
+**[Descargue la versión de enero.](download.md)**
+
+
+## <a name="january-2019-january-release"></a>Enero de 2019 (versión de enero)
+
+fecha de lanzamiento: 09 de enero de 2019  
+Versión: 1.3.8
+
+- Agrega a un nuevo instalador de usuario de Windows. A diferencia del instalador de sistema existente, el nuevo instalador de usuario no requiere privilegios de administrador. Esto también permite una experiencia de actualización más fácil para que no sean administradores.
+- Compatibilidad de autenticación de Active Directory de Azure.
+- Presentación de información de rendimiento de DM Idera SQL (versión preliminar).
+- Compatibilidad del Asistente para aplicaciones de capa de datos en la extensión de importación de SQL Server.
+- Actualizar a la [extensión de versión preliminar de SQL Server de 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Mejoras de SQL Server Profiler.
+- Resultados de la transmisión por secuencias para las consultas grandes (versión preliminar).
+- Extensiones de la Comunidad: sp_executesql to sql y la nueva base de datos.
+- Puede resolver [errores y problemas](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1).
+
+Para obtener información detallada, consulte el [registro de cambios](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), y [versiones](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="november-2018-november-release"></a>Noviembre de 2018 (versión de noviembre)
 
@@ -35,6 +53,7 @@ Versión: 1.2.4
 - Servicio de las herramientas de actualización de SQL a.Net Core 2,2 Preview 3 (para la compatibilidad con AAD eventual)
 
 ### <a name="bug-fixes"></a>Correcciones de errores
+
 - Corregir [emitir #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Conexión perdida a Azure SQL DB
 - Corregir [emitir 2914 #](https://github.com/Microsoft/azuredatastudio/issues/2914): Nodo de base de datos de "Argumento no válido" excepción expansión OE
 - Corregir [emitir #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Los mensajes de varias líneas se muestran correctamente en los resultados de consulta
@@ -44,8 +63,6 @@ Versión: 1.2.4
 - Corregir [emitir #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Agregar una interfaz de línea de comandos para conectarse a un servidor SQL Server
 - Corregir [emitir #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Agregar compatibilidad de tema del plan de consulta
 - …
-
-Para obtener información detallada, consulte el [registro de cambios](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), y [versiones](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="october-2018-october-release"></a>Octubre de 2018 (versión de octubre)
 
@@ -146,7 +163,7 @@ El *versión preliminar pública de agosto* se centra en correcciones de errores
 - Corregir [emitir #2129](https://github.com/Microsoft/azuredatastudio/pull/2129): Guardar la posición de desplazamiento de datos de edición al cambiar de fichas.
 - Corregir [emitir 2152 #](https://github.com/Microsoft/azuredatastudio/issues/2152): Indicador de fila de la cuadrícula de resultados basado en cero.
 
-## <a name="known-issues"></a>Problemas conocidos
+### <a name="known-issues"></a>Problemas conocidos
 
 - [Problema #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Guardar como sólo guarda primera fila de datos de Excel
 - [Problema #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): No se puede conectar en Ubuntu 16.04 para SQL en un contenedor

@@ -12,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810897"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136065"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Consideraciones y limitaciones de diseño de los publicadores de Oracle
   La publicación de una base de datos de Oracle se diseña para que funcione casi idénticamente a la publicación de una base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No obstante, debe tener en cuenta las siguientes limitaciones y problemas:  
@@ -135,7 +135,7 @@ ms.locfileid: "52810897"
   
 -   Los suscriptores de publicaciones de Oracle no se pueden inicializar automáticamente desde una copia de seguridad.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite dos tipos de validación: binaria y de recuento de filas. Los publicadores de Oracle admiten la validación de recuento de filas. Para obtener más información, vea [Validar datos replicados](../validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite dos tipos de validación: binaria y de recuento de filas. Los publicadores de Oracle admiten la validación de recuento de filas. Para obtener más información, vea [Validar datos replicados](../validate-data-at-the-subscriber.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona dos formatos de instantánea: modo bcp nativo y modo de carácter. Los publicadores de Oracle admiten las instantáneas en modo de carácter.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52810897"
   
     -   No se puede cambiar el parámetro **@job_login** a través de [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) o [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), pero se puede cambiar la contraseña.  
   
- Para más información sobre la seguridad de replicación, vea [Seguridad y protección &#40;replicación&#41;](../security/security-and-protection-replication.md).  
+ Para obtener más información acerca de la seguridad de replicación, vea [seguridad de replicación de SQL Server](../security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Consideraciones administrativas para los publicadores de Oracle](administrative-considerations-for-oracle-publishers.md)   

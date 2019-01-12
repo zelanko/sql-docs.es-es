@@ -2,7 +2,7 @@
 title: Identificar la SKU de base de datos SQL de Azure adecuada para la base de datos local (Data Migration Assistant) | Microsoft Docs
 description: Aprenda a usar Data Migration Assistant para identificar a la derecha de la SKU de base de datos SQL de Azure para la base de datos local
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544109"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226502"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificar la SKU de base de datos SQL de Azure adecuada para la base de datos local
 
@@ -30,9 +30,6 @@ En este artículo se centra principalmente en la característica de recomendacio
 
 > [!NOTE] 
 > Esta funcionalidad está disponible actualmente solo a través de la interfaz de línea de comandos (CLI). Compatibilidad con esta característica a través de la interfaz de usuario DMA se agregará en una próxima versión.
-
-> [!IMPORTANT]
-> Recomendaciones de SKU de Azure SQL Database están disponibles actualmente para las migraciones de SQL Server 2016 o posterior.
 
 Las instrucciones siguientes ayudan a determinar las recomendaciones de SKU de base de datos de SQL Azure y aprovisionar las bases de datos asociadas en Azure mediante Data Migration Assistant.
 
@@ -66,7 +63,7 @@ No es necesario realizar esta tarea para cada base de datos individualmente. Los
     .\SkuRecommendationDataCollectionScript.ps1
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
-     -CollectionTimeInSeconds 10
+     -CollectionTimeInSeconds 2400
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
     

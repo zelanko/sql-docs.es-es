@@ -13,12 +13,12 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03a7640f95242538d01c8f135a005729b15042b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813977"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135455"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Detección de conflictos en la replicación punto a punto
   La replicación transaccional punto a punto permite insertar, actualizar o eliminar datos en cualquier nodo de una topología y propagar los cambios de los datos a los demás nodos. Dado que se pueden cambiar los datos de cualquier nodo, podrían producirse conflictos entre los datos modificados en los distintos nodos. Si una fila se modifica en más de un nodo, puede producirse un conflicto o incluso la pérdida de una actualización cuando la fila se propaga a otros nodos.  
@@ -26,7 +26,7 @@ ms.locfileid: "52813977"
  La replicación punto a punto de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y versiones posteriores ofrece la posibilidad de habilitar la detección de conflictos en una topología punto a punto. Esta opción contribuye a evitar los problemas causados por los conflictos no detectados, como son el comportamiento incoherente de las aplicaciones y las actualizaciones perdidas. Cuando se habilita esta opción, de forma predeterminada, un cambio conflictivo se trata como un error crítico que produce el error del Agente de distribución. En caso de conflicto, la topología permanece en un estado incoherente hasta que se resuelve el conflicto y se restablece la coherencia de los datos en toda la topología.  
   
 > [!NOTE]  
->  Para evitar la posible incoherencia de datos, asegúrese de evitar los conflictos en una topología punto a punto, incluso con la detección de conflictos habilitada. Para asegurarse de que las operaciones de escritura para una fila determinada se realizan en un solo nodo, las aplicaciones que tienen acceso y cambian datos deben particionar las operaciones de inserción, actualización y eliminación. Este particionamiento asegura que las modificaciones introducidas en una fila determinada que se originan en un nodo se sincronizan con todos los demás nodos de la topología antes de que se modifique la fila en otro nodo. Si una aplicación requiere funcionalidades sofisticadas de detección y resolución de conflictos, use la replicación de mezcla. Para obtener más información, consulte [Replicación de mezcla](../merge/merge-replication.md) y [Detectar y solucionar conflictos de replicación de mezcla](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  Para evitar la posible incoherencia de datos, asegúrese de evitar los conflictos en una topología punto a punto, incluso con la detección de conflictos habilitada. Para asegurarse de que las operaciones de escritura para una fila determinada se realizan en un solo nodo, las aplicaciones que tienen acceso y cambian datos deben particionar las operaciones de inserción, actualización y eliminación. Este particionamiento asegura que las modificaciones introducidas en una fila determinada que se originan en un nodo se sincronizan con todos los demás nodos de la topología antes de que se modifique la fila en otro nodo. Si una aplicación requiere funcionalidades sofisticadas de detección y resolución de conflictos, use la replicación de mezcla. Para obtener más información, consulte [Replicación de mezcla](../merge/merge-replication.md) y [Detectar y solucionar conflictos de replicación de mezcla](../merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="understanding-conflicts-and-conflict-detection"></a>Descripción de los conflictos y de la detección de conflictos  
  En una única base de datos, los cambios realizados en la misma fila por parte de aplicaciones diferentes no provocan conflictos. Esto se debe a que las transacciones se serializan y se utilizan bloqueos para controlar los cambios simultáneos. En un sistema distribuido asincrónico, como en uno de replicación punto a punto, las transacciones se producen de forma independiente en cada nodo, y no hay ningún mecanismo para serializarlas por los distintos nodos. Se podría usar una confirmación en dos fases de tipo protocolo, pero esto afecta de forma significativa al rendimiento.  
@@ -92,7 +92,7 @@ ms.locfileid: "52813977"
   
     3.  Use el visor de conflictos para comprobar los conflictos detectados y determine las filas afectadas, el tipo de conflicto y la fila ganadora. El conflicto se resuelve en función del valor del identificador de originador que se especificó durante la configuración: la fila procedente del nodo con el identificador más alto gana el conflicto. Para obtener más información, vea [Ver conflictos de datos para publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
-    4.  Ejecute la validación para asegurarse de que las filas en conflicto convergieron correctamente. Para obtener más información, vea [Validar datos replicados](../validate-replicated-data.md).  
+    4.  Ejecute la validación para asegurarse de que las filas en conflicto convergieron correctamente. Para obtener más información, vea [Validar datos replicados](../validate-data-at-the-subscriber.md).  
   
         > [!NOTE]  
         >  Si los datos son incoherentes después de este paso, debe actualizar manualmente las filas en el nodo que tenga la prioridad más alta y, a continuación, dejar que se propaguen los cambios desde ese nodo. Si no hay ningún otro conflicto relacionado con los cambios en la topología, todos los nodos se encontrarán en un estado coherente.  

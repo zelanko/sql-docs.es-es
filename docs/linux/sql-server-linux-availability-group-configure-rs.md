@@ -5,18 +5,17 @@ description: Obtenga información sobre cómo configurar un SQL Server siempre e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 02/14/2018
+ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.assetid: ''
-ms.openlocfilehash: 014ff123618c04f91c0e2c2a39d5ef8e5690a386
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 60cdef13ec46ab1f859d17f724863f67939e6b6f
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203874"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206501"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurar un grupo de disponibilidad de SQL Server para el escalado de lectura en Linux
 
@@ -24,8 +23,8 @@ ms.locfileid: "53203874"
 
 Puede configurar un SQL Server siempre en grupo de disponibilidad (AG) para cargas de trabajo de escalado de lectura en Linux. Hay dos tipos de arquitecturas para los grupos de disponibilidad. Una arquitectura de alta disponibilidad usa un administrador de clústeres para proporcionar continuidad empresarial mejorada. Esta arquitectura también puede incluir las réplicas de escalado de lectura. Para crear la arquitectura de alta disponibilidad, consulte [configurar SQL Server grupo de disponibilidad AlwaysOn para alta disponibilidad en Linux](sql-server-linux-availability-group-configure-ha.md). La otra arquitectura solo admite cargas de trabajo de escalado de lectura. En este artículo se explica cómo crear un AG sin un administrador de clústeres para las cargas de trabajo de escalado de lectura. Esta arquitectura solo proporciona escalado de lectura. No proporciona alta disponibilidad.
 
->[!NOTE]
->Un grupo de disponibilidad con `CLUSTER_TYPE = NONE` puede incluir réplicas hospedadas en otras plataformas de sistema operativo. No puede admitir la alta disponibilidad. 
+> [!NOTE]
+> Un grupo de disponibilidad con `CLUSTER_TYPE = NONE` puede incluir réplicas hospedadas en otras plataformas de sistema operativo. No puede admitir la alta disponibilidad. 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
@@ -84,7 +83,6 @@ Hay dos maneras de conectarse a réplicas secundarias de solo lectura. Las aplic
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Grupos de disponibilidad distribuidos](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
-* [Información general de los grupos de disponibilidad AlwaysOn (SQL Server)](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
+* [Grupos de disponibilidad distribuidos](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [Información general de los grupos de disponibilidad AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [Realizar una conmutación manual por error forzada](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
-

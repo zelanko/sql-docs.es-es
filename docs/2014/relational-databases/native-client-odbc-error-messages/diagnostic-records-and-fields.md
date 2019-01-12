@@ -20,12 +20,12 @@ ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d600a29020a3ecc729e3e405e14b0920504ab56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 173d0287ba1b63e8811e2d340448d03c3bbf961d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115945"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133145"
 ---
 # <a name="diagnostic-records-and-fields"></a>Registros y campos de diagnóstico
   Los registros de diagnóstico se asocian a controladores de entorno, conexión, instrucción o descriptor de ODBC. Cuando una función de ODBC genera un código de retorno distinto de SQL_SUCCESS o SQL_INVALID_HANDLE, el identificador que llama la función incluye registros de diagnóstico asociados que contienen mensajes informativos o de error. Estos registros se conservan hasta que se llama a otra función con el mismo identificador, momento en el cual se descartan. No hay ningún límite al número de registros de diagnóstico que pueden estar asociados a un identificador en un momento determinado.  
@@ -36,7 +36,7 @@ ms.locfileid: "48115945"
   
  Los campos de los registros de estado contienen información sobre errores o advertencias concretos devueltos por el Administrador de controladores ODBC, el controlador o el origen de datos, incluidos SQLSTATE, el número de error nativo, el mensaje de diagnóstico, el número de columna y el número de fila. Los registros de estado solamente se crean si la función devuelve SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA o SQL_STILL_EXECUTING. Para obtener una lista completa de los campos de los registros de estado, vea **SQLGetDiagField**.  
   
- **SQLGetDiagRec** recupera un único registro de diagnóstico, junto con su ODBC SQLSTATE, el número de error nativo y los campos de mensaje de diagnóstico. Esta funcionalidad es similar a la API ODBC 2. *x *** SQLError** función. La función de control de errores más simple en ODBC 3. *x* consiste en llamar repetidamente a **SQLGetDiagRec** a partir de la *RecNumber* parámetro establecido en 1 e incrementando *RecNumber* en 1 hasta que **SQLGetDiagRec** devuelve SQL_NO_DATA. Esto es equivalente a ODBC 2. *x* aplicación que llama a **SQLError** hasta que devuelve SQL_NO_DATA_FOUND.  
+ **SQLGetDiagRec** recupera un único registro de diagnóstico, junto con su ODBC SQLSTATE, el número de error nativo y los campos de mensaje de diagnóstico. Esta funcionalidad es similar a la API ODBC 2. _x_**SQLError** función. La función de control de errores más simple en ODBC 3. *x* consiste en llamar repetidamente a **SQLGetDiagRec** a partir de la *RecNumber* parámetro establecido en 1 e incrementando *RecNumber* en 1 hasta que **SQLGetDiagRec** devuelve SQL_NO_DATA. Esto es equivalente a ODBC 2. *x* aplicación que llama a **SQLError** hasta que devuelve SQL_NO_DATA_FOUND.  
   
  ODBC 3. *x* es compatible con mucha más información de diagnóstico que ODBC 2. *x*. Esta información se almacena en campos adicionales de los registros de diagnóstico recuperados mediante **SQLGetDiagField**.  
   

@@ -1,6 +1,6 @@
 ---
-title: 'Agregar SQLRUserGroup como un usuario de base de datos: SQL Server Machine Learning Services'
-description: Para las conexiones de bucle invertido mediante autenticación implícita, agregar SQLRUserGroup como un usuario de base de datos para que una cuenta de trabajo puede iniciar sesión en el servidor para la conversión de identidad al usuario que realiza la llamada.
+title: 'Agregar SQLRUserGroup como un inicio de sesión de servidor SQL: SQL Server Machine Learning Services'
+description: Para las conexiones de bucle invertido mediante autenticación implícita, agregar SQLRUserGroup como un inicio de sesión de SQL Server para que una cuenta de trabajo puede iniciar sesión en el servidor para la conversión de identidad al usuario que realiza la llamada.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 0bc84a7a4cfae14ea19491c42e828d0a93cdfba7
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432358"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143425"
 ---
-# <a name="add-sqlrusergroup-as-a-database-user"></a>Agregar SQLRUserGroup como usuario de base de datos
+# <a name="add-sqlrusergroup-as-a-sql-server-login"></a>Agregar SQLRUserGroup como un inicio de sesión de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Crear un inicio de sesión de base de datos para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) cuando un [bucle de espera de conexión](../../advanced-analytics/concepts/security.md#implied-authentication) en el script especifica un *conexión de confianza*y la identidad utilizada para ejecutar un objeto contiene el código es una cuenta de usuario de Windows.
+Crear un inicio de sesión de SQL Server para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) cuando un [bucle de espera de conexión](../../advanced-analytics/concepts/security.md#implied-authentication) en el script especifica un *conexión de confianza*y la identidad utilizada para ejecutar un objeto contiene el código es una cuenta de usuario de Windows.
 
 Las conexiones son aquellos que tengan de confianza `Trusted_Connection=True` en la cadena de conexión. Cuando SQL Server recibe una solicitud que especifica una conexión de confianza, comprueba si la identidad del usuario actual de Windows tiene un inicio de sesión. Para ejecutar como una cuenta de trabajo de procesos externos (como MSSQLSERVER01 desde **SQLRUserGroup**), se produce un error en la solicitud porque esas cuentas no tienen un inicio de sesión de forma predeterminada.
 

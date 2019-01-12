@@ -16,12 +16,12 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f769e45d80dd54c6e006297e46ee9cf8ad2da92e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 12ba78e62b0441a76cea2b10ebaf13caec767443
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819137"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133905"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@property=**] **'***propiedad***'**  
+ [  **@property=**] **'**_propiedad_**'**  
  Es la propiedad de un distribuidor determinado. *propiedad* es **sysname**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
@@ -47,7 +47,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|Número máximo de minutos que un agente puede ejecutarse sin registrar un mensaje de progreso.|  
 |NULL (predeterminado)|Todos los disponibles *propiedad* valores se imprimen.|  
   
- [  **@value=**] **'***valor***'**  
+ [  **@value=**] **'**_valor_**'**  
  Es el valor de la propiedad del distribuidor especificado. *valor* es **varchar (255)**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

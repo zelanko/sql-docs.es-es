@@ -20,15 +20,15 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f34b5accc278a55946546c149c00bffd3a02a693
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812003"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133575"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de seguridad del Agente de replicación
-  El modelo de seguridad del agente de replicación permite un mayor control sobre las cuentas en la que los agentes de replicación ejecutan y realizan conexiones: Se puede especificar una cuenta diferente para cada agente. Para obtener más información sobre cómo especificar cuentas, vea [Administrar inicios de sesión y contraseñas en la replicación](manage-logins-and-passwords-in-replication.md).  
+  El modelo de seguridad del agente de replicación permite un mayor control sobre las cuentas en la que los agentes de replicación ejecutan y realizan conexiones: Se puede especificar una cuenta diferente para cada agente. Para obtener más información sobre cómo especificar cuentas, vea [Administrar inicios de sesión y contraseñas en la replicación](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 > [!IMPORTANT]  
 >  Cuando un miembro de rol fijo de servidor **sysadmin** configura la replicación, los agentes de replicación se pueden configurar para suplantar la cuenta del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esto se consigue no especificando ningún inicio de sesión ni contraseña para el agente de replicación; no obstante, no se recomienda este enfoque. En su lugar, por seguridad, se recomienda especificar una cuenta para cada agente con los permisos mínimos descritos en la sección "Permisos requeridos por los agentes", más adelante en este tema.  
@@ -92,7 +92,7 @@ ms.locfileid: "52812003"
   
 ## <a name="see-also"></a>Vea también  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Seguridad y protección &#40;replicación&#41;](security-and-protection-replication.md)   
+ [Seguridad de replicación de SQL Server](view-and-modify-replication-security-settings.md)   
  [Proteger la carpeta de instantáneas](secure-the-snapshot-folder.md)  
   
   

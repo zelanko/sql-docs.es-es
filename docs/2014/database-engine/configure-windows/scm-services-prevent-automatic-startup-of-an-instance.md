@@ -17,12 +17,12 @@ ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d296f9a73138dd2a93cec5f3ae6ca62d257fd2fb
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640066"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131725"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>Evitar el inicio automático de una instancia de SQL Server (Administrador de configuración de SQL Server)
   En este tema se describe cómo evitar que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicie automáticamente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se suele configurar para iniciarse automáticamente. Puede cambiar esta configuración estableciendo en manual el modo de inicio de la instancia.  
@@ -37,9 +37,9 @@ ms.locfileid: "52640066"
   
 3.  En el panel de detalles, haga clic con el botón derecho en **MSSQLServer**y, después, haga clic en **Propiedades**.  
   
-4.  En el **SQL Server \<***nombreDeInstancia***> propiedades** cuadro de diálogo el **propiedades** cuadro, establezca el valor de **iniciar modo de**a **Manual**.  
+4.  En el cuadro de diálogo **Propiedades de \<**_nombreDeInstancia_**> de SQL Server**, en el cuadro **Propiedades**, establezca el valor de **Modo de inicio** en **Manual**.  
   
-5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de \<***nombredeinstancia***> de SQL Server** y, luego, cierre el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de \<**_nombreDeInstancia_**> de SQL Server** y, luego, cierre el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](start-stop-pause-resume-restart-sql-server-services.md)  

@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 439a2009e6cb5e470ef09d3c766c4349d54ecdb8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792305"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135835"
 ---
 # <a name="view-and-modify-publication-properties"></a>Ver y modificar propiedades de publicación
   En este tema se describe cómo ver y modificar las propiedades de publicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -192,8 +192,8 @@ ms.locfileid: "52792305"
  [Change Publication and Article Properties](change-publication-and-article-properties.md)  (Cambiar las propiedades de la publicación y de los artículos)  
  [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)  (Realizar cambios de esquema en bases de datos de publicaciones)  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  (Agregar y quitar artículos de una publicación [SQL Server Management Studio])  
- [Ver información y realizar tareas para una publicación &#40;Monitor de replicación&#41;](../monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [Agregar y quitar artículos de una publicación](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [Ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [er y modificar las propiedades de un artículo](view-and-modify-article-properties.md)  
   
   

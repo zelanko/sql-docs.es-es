@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527721"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133475"
 ---
 # <a name="create-statistics"></a>Crear estadísticas
   Puede crear estadísticas de optimización de consultas en una o más columnas de una tabla o vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para la mayoría de las consultas, el optimizador de consultas ya genera las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para obtener los mejores resultados es necesario crear estadísticas adicionales.  
@@ -69,7 +69,7 @@ ms.locfileid: "52527721"
   
 4.  Haga clic con el botón derecho en la carpeta **Estadísticas** y, después, seleccione **Nueva estadística...**.  
   
-     Las siguientes propiedades se muestran en la página **General** del cuadro de diálogo **Nuevas estadísticas de tabla***nombre_tabla*.  
+     Las siguientes propiedades se muestran en la página **General** del cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre_tabla_ .  
   
      **Nombre de tabla**  
      Muestra el nombre de la tabla descrita por las estadísticas.  
@@ -113,12 +113,12 @@ ms.locfileid: "52527721"
      **Actualizar estadísticas de estas columnas**  
      Comprueba la actualización de las estadísticas cuando se cierra el cuadro de diálogo.  
   
-     La siguiente propiedad se muestra en la página **Filtro** del cuadro de diálogo **Nuevas estadísticas de tabla***nombre_tabla*.  
+     La siguiente propiedad se muestra en la página **Filtro** del cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre_tabla_ .  
   
      **Expresión de filtro**  
      Define qué filas de datos se incluyen en las estadísticas filtradas. Por ejemplo, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  En el cuadro de diálogo **Nuevas estadísticas de tabla***nombre_tabla*, en la página **General**, haga clic en **Agregar**.  
+5.  En el cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre_tabla_ , en la página **General** , haga clic en **Agregar**.  
   
      Las propiedades siguientes se muestran en el cuadro de diálogo **Seleccionar columnas** . Esta información es de solo lectura.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527721"
   
 6.  En el cuadro de diálogo **Seleccionar columnas** , active la casilla o casillas de cada columna para la que desee crear una estadística y haga clic en **Aceptar**.  
   
-7.  En el cuadro de diálogo *Nuevas estadísticas de tabla***nombre_tabla*, haga clic en **Aceptar**.  
+7.  En el cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre_tabla_ , haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

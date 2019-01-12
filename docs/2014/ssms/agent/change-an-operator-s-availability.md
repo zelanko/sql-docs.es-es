@@ -22,12 +22,12 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbe4b5e5605964d027e496a56b4dbf0836baaae4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801777"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135685"
 ---
 # <a name="change-an-operator39s-availability"></a>Cambiar la disponibilidad de un operador
   En este tema se describe cómo cambiar la programación de un operador para recibir notificaciones de alerta en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "52801777"
   
 4.  Haga clic con el botón derecho en el operador que desea habilitar o deshabilitar y seleccione **Propiedades**; luego, haga clic en la pestaña **General** .  
   
-5.  En el cuadro de diálogo *Propiedades de***nombre_de_operador**, active o desactive la casilla **Habilitado**.  
+5.  En el cuadro de diálogo _nombre_operador_**Propiedades** , active o desactive la casilla **Habilitado** .  
   
 6.  Haga clic en **Aceptar**.  
   

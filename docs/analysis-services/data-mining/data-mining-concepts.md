@@ -1,6 +1,6 @@
 ---
 title: Conceptos de minería de datos | Microsoft Docs
-ms.date: 05/01/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -9,28 +9,32 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6dc15187198b5355d9e6f5a2171e57d52406e839
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982007"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185141"
 ---
 # <a name="data-mining-concepts"></a>Conceptos de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> Minería de datos está en desuso en SQL Server Analysis Services 2017. No se actualiza la documentación de características en desuso. Para obtener más información, consulte [compatibilidad con versiones anteriores de Analysis Services (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md).
+
   La minería de datos es el proceso de detectar la información procesable de los conjuntos grandes de datos. Utiliza el análisis matemático para deducir los patrones y tendencias que existen en los datos. Normalmente, estos patrones no se pueden detectar mediante la exploración tradicional de los datos porque las relaciones son demasiado complejas o porque hay demasiado datos.  
   
  Estos patrones y tendencias se pueden recopilar y definir como un *modelo de minería de datos*. Los modelos de minería de datos se pueden aplicar en escenarios como los siguientes:  
   
--   **Pronóstico**: cálculo de las ventas y predicción de las cargas del servidor o del tiempo de inactividad del servidor.  
+-   **Previsión**: calcular las ventas y predecir las cargas de servidor o el tiempo de inactividad del servidor.  
   
--   **Riesgo y probabilidad**: elección de los mejores clientes para la distribución de correo directo, determinación del punto de equilibrio probable para los escenarios de riesgo, y asignación de probabilidades a diagnósticos y otros resultados.  
+-   **Riesgo y probabilidad**: elegir los mejores clientes para la distribución de correo directo, determinar el punto de equilibrio probable para los escenarios de riesgo, y asignat probabilidades a diagnósticos u otros resultados.  
   
--   **Recomendaciones**: determinación de los productos que se pueden vender juntos y generación de recomendaciones.  
+-   **Recomendaciones**: determinar los productos que se pueden vender juntos y generar recomendaciones.  
   
--   **Búsqueda de secuencias**: análisis de los artículos que los clientes han introducido en el carrito de la compra y predicción de posibles eventos.  
+-   **Buscar secuencias**: analizar los artículos que los clientes han introducido en el carrito de compra y predecir los posibles eventos.  
   
--   **Agrupación**: distribución de clientes o eventos en grupos de elementos relacionados, y análisis y predicción de afinidades.  
+-   **Agrupación**: separar los clientes o los eventos en clústeres de elementos relacionados, y analizar y predecir afinidades.  
   
  La generación de un modelo de minería de datos forma parte de un proceso mayor que incluye desde la formulación de preguntas acerca de los datos y la creación de un modelo para responderlas, hasta la implementación del modelo en un entorno de trabajo. Este proceso se puede definir mediante los seis pasos básicos siguientes:  
   

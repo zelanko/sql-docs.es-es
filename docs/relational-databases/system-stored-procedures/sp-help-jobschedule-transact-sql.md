@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a327b07384ce2c12e64612b19c611c57dbbf18b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850373"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100360"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id=** ] *job_id*  
  El número de identificación del trabajo. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  Nombre del trabajo. *job_name*es **sysname**, su valor predeterminado es null.  
   
-> **Nota:** cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
+> **NOTA:** Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [  **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'**_schedule_name_**'**  
  Nombre del elemento de programación del trabajo. *schedule_name*es **sysname**, su valor predeterminado es null.  
   
  [  **@schedule_id=** ] *schedule_id*  
@@ -88,7 +88,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
 |**job_count**|**int**|Recuento de trabajos devueltos.|  
   
-> **Nota:** **sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb** .   **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
+> **Nota: sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb**. **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
   
 ## <a name="remarks"></a>Comentarios  
  Los parámetros de **sp_help_jobschedule** puede usarse solo en determinadas combinaciones. Si *schedule_id* se especifica, ni *job_id* ni *job_name* se pueden especificar. En caso contrario, el *job_id* o *job_name* parámetros se pueden usar con *schedule_name*.  
@@ -120,7 +120,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>B. Devolver la programación de un trabajo para una programación específica  
+### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>b. Devolver la programación de un trabajo para una programación específica  
  En el ejemplo siguiente se devuelve información de la programación denominada `NightlyJobs` y el trabajo denominado `RunReports`.  
   
 ```  

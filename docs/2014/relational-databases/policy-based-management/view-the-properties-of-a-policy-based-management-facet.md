@@ -12,12 +12,12 @@ ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbd3260e8d32811c405623dbdcc94dd34b0b8711
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753267"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100303"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Ver las propiedades de una faceta de administración basada en directivas
   En este tema se describe cómo ver las propiedades de una faceta de administración basada en directivas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "52753267"
   
 4.  Haga clic en el signo más para expandir la carpeta **Facetas** .  
   
-5.  Haga clic con el botón derecho en la faceta cuyas propiedades quiere ver y seleccione **Propiedades**. Para obtener más información sobre las opciones disponibles en el cuadro de diálogo **Propiedades de faceta -***nombre_de_faceta*, vea [Cuadro de diálogo Propiedades de faceta, página General](../../integration-services/general-page-of-integration-services-designers-options.md), [Cuadro de diálogo Propiedades de faceta, página Directivas dependientes](facet-properties-dialog-box-dependent-policies-page.md) y [Cuadro de diálogo Propiedades de faceta, página Condiciones dependientes](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Haga clic con el botón derecho en la faceta cuyas propiedades quiere ver y seleccione **Propiedades**. Para obtener más información sobre las opciones disponibles en el **propiedades de faceta -**_nombre_de_faceta_ cuadro de diálogo, vea [cuadro de diálogo Propiedades de faceta, página General](../../integration-services/general-page-of-integration-services-designers-options.md), [ Cuadro de diálogo Propiedades de faceta, página directivas dependientes](facet-properties-dialog-box-dependent-policies-page.md), y [cuadro de diálogo de propiedades de faceta, página condiciones dependientes](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Cuando termine, haga clic en **Cerrar**.  
   

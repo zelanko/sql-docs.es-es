@@ -13,12 +13,12 @@ ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 872b0ffa2cc08c90430ec703cea984ad7d274339
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527981"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100820"
 ---
 # <a name="update-statistics"></a>Actualizar estadísticas
   Puede actualizar las estadísticas de optimización de consultas en una tabla o en una vista indizada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. De forma predeterminada, el optimizador de consultas ya actualiza las estadísticas como requisito para mejorar el plan de consulta; en algunos casos puede mejorar el rendimiento de las consultas utilizando UPDATE STATISTICS o el procedimiento almacenado `sp_updatestats` para actualizar las estadísticas con más frecuencia que la de las actualizaciones predeterminadas.  
@@ -58,7 +58,7 @@ ms.locfileid: "52527981"
   
 5.  Haga clic con el botón derecho en el objeto de estadísticas que quiere actualizar y seleccione **Propiedades**.  
   
-6.  En el **propiedades de estadísticas-*** statistics_name* cuadro de diálogo, seleccione el **actualizar las estadísticas de estas columnas** casilla de verificación y, a continuación, haga clic en **Aceptar**.  
+6.  En el **propiedades de estadísticas -**_statistics_name_ cuadro de diálogo, seleccione el **actualizar las estadísticas de estas columnas** casilla de verificación y, a continuación, haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

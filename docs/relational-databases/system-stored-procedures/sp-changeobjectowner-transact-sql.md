@@ -18,12 +18,12 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 16ba2e0130c766763c554d6ec256a8858db3373b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8914ce54d85e99213d923d7bebc186f61f928cf9
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204934"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100490"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@objname =** ] **'***objeto***'**  
- Es el nombre de una tabla, una vista, una función definida por el usuario o un procedimiento almacenado existentes en la base de datos actual. *objeto* es un **nvarchar(776)**, no tiene ningún valor predeterminado. *objeto* se puede calificar con el propietario del objeto existente, en el formulario *existing_owner.Object ***.*** objeto* si el esquema y su propietario tienen el mismo nombre.  
+ [  **@objname =** ] **'**_objeto_**'**  
+ Es el nombre de una tabla, una vista, una función definida por el usuario o un procedimiento almacenado existentes en la base de datos actual. *objeto* es un **nvarchar(776)**, no tiene ningún valor predeterminado. *objeto* se puede calificar con el propietario del objeto existente, en el formulario _existing_owner.Object_**.** _objeto_ si el esquema y su propietario tienen el mismo nombre.  
   
- [  **@newowner=**] **' *** propietario* **'**  
+ [  **@newowner=**] **'**_propietario_ **'**  
  Es el nombre de la cuenta de seguridad que corresponde al nuevo propietario del objeto. *propietario* es **sysname**, no tiene ningún valor predeterminado. *propietario* debe ser un usuario de base de datos válido, el rol de servidor [!INCLUDE[msCoName](../../includes/msconame-md.md)] inicio de sesión de Windows o grupo de Windows con acceso a la base de datos actual. Si el nuevo propietario es un usuario o grupo de Windows que no tiene una entidad de seguridad de base de datos correspondiente, se creará un usuario de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

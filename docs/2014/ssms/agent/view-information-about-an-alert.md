@@ -16,12 +16,12 @@ ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 693c36cf0c23004f0538595ac75e1aa5d5039a33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768477"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100240"
 ---
 # <a name="view-information-about-an-alert"></a>Ver información acerca de una alerta
   En este tema se describe el modo de ver infomación acerca de las alertas del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "52768477"
   
 4.  Haga clic con el botón derecho en la alerta que tiene la información que desea ver y seleccione **Propiedades**.  
   
-     Para obtener más información sobre las opciones disponibles presentes en el cuadro de diálogo *Propiedades de la alerta***nombre_de_alerta*, consulte:  
+     Para más información sobre las opciones disponibles presentes en el cuadro de diálogo _nombre_alerta_**Propiedades de la alerta** , consulte:  
   
     -   [Propiedades de nueva alerta de alerta &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

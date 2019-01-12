@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d61c0d2a7c7b15db9e96a354d5b7f062d10ca8f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 71b5b57625a8feb5d268898ff4865c2039bd358c
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514078"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100510"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,21 +46,21 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@table_name=**] *object*  
+ [  **\@table_name =**] *objeto*  
  Es el nombre del objeto para devolver la información de catálogo. *objeto* puede ser una tabla, vista u otro objeto que tiene columnas como funciones con valores de tabla. *objeto* es **nvarchar (384)**, no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
   
- [ **@table_owner****=**] *owner*  
+ [  **\@table_owner =**] *propietario*  
  Es el propietario del objeto utilizado para devolver la información de catálogo. *propietario* es **nvarchar (384)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de objeto del DBMS subyacente.  
   
  Si el usuario actual posee un objeto con el nombre especificado, se devuelven las columnas de ese objeto. Si *propietario* no se especifica y el usuario actual no posee un objeto con los valores especificados *objeto*, **sp_columns** busca un objeto con los valores especificados  *objeto* que pertenezca al propietario de la base de datos. Si existe uno, se devuelven las columnas de ese objeto.  
   
- [ **@table_qualifier****=**] *qualifier*  
+ [  **\@table_qualifier =**] *calificador*  
  Es el nombre del calificador de objeto. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para objetos (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre de servidor del entorno de base de datos del objeto.  
   
- [ **@column_name=**] *column*  
+ [  **\@column_name =**] *columna*  
  Es una sola columna y se utiliza cuando solo se desea una columna de información del catálogo. *columna* es **nvarchar (384)**, su valor predeterminado es null. Si *columna* no es se especifica, se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *columna* representa el nombre de columna como se muestra en el **syscolumns** tabla. Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL-92 (caracteres comodín % y _).  
   
- [ **@ODBCVer=**] *ODBCVer*  
+ [  **\@ODBCVer =**] *ODBCVer*  
  Es la versión de ODBC que se está usando. *ODBCVer* es **int**, con el valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para las diferencias de comportamiento entre las versiones 2 y 3, vea el ODBC **SQLColumns** especificación.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

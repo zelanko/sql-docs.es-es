@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415642"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54099970"
 ---
 # <a name="view-statistics-properties"></a>Ver propiedades de estadísticas
   Puede mostrar las estadísticas de optimización de consultas actuales para una tabla o vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los objetos de estadísticas incluyen un encabezado con metadatos sobre las estadísticas, un histograma con la distribución de valores de la primera columna de clave del objeto de estadísticas y un vector de la densidad para medir la correlación entre las columnas. Para obtener más información sobre histogramas y vectores de densidad, vea [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
@@ -58,9 +58,9 @@ ms.locfileid: "52415642"
   
 5.  Haga clic con el botón derecho en el objeto Estadísticas cuyas propiedades quiere ver y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Propiedades de estadísticas -** *nombre_de_estadísticas* , en el panel **Seleccionar una página** , seleccione **Detalles**.  
+6.  En el cuadro de diálogo **Propiedades de estadísticas -** _nombre_de_estadísticas_ , en el panel **Seleccionar una página** , seleccione **Detalles**.  
   
-     Las propiedades siguientes se muestran en la página **Detalles** en el cuadro de diálogo **Propiedades de estadísticas -** *nombre_de_estadísticas* .  
+     Las propiedades siguientes se muestran en la página **Detalles** en el cuadro de diálogo **Propiedades de estadísticas -** _nombre_de_estadísticas_ .  
   
      **Nombre de tabla**  
      Muestra el nombre de la tabla descrita por las estadísticas.  

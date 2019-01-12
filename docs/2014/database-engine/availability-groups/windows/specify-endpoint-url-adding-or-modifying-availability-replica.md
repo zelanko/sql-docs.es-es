@@ -15,12 +15,12 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8356014a1b5406f2cd33d5166b5feea7339d782e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370057"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100270"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Especificar la dirección URL del extremo al agregar o modificar una réplica de disponibilidad (SQL Server)
   Para hospedar una réplica de disponibilidad de un grupo de disponibilidad, una instancia de servidor debe poseer un extremo de creación de reflejo de la base de datos. La instancia de servidor utiliza este extremo para escuchar los mensajes de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] procedentes de las réplicas de disponibilidad hospedadas por otras instancias del servidor. Para definir una réplica de disponibilidad para un grupo de disponibilidad, debe especificar la dirección URL del extremo de la instancia del servidor que hospedará la réplica. La *dirección URL del punto de conexión* identifica el protocolo de transporte del TCP del punto de conexión de creación de reflejo de la base de datos, la dirección del sistema de la instancia del servidor y el número de puerto asociado con el punto de conexión.  
@@ -39,7 +39,7 @@ ms.locfileid: "53370057"
 ##  <a name="SyntaxOfURL"></a> Sintaxis de una dirección URL del extremo  
  La sintaxis de una dirección URL del extremo tiene el siguiente formato:  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP<strong>://</strong>*\<dirección del sistema>*<strong>:<strong>*\<puerto>*  
   
  donde  
   
@@ -47,15 +47,15 @@ ms.locfileid: "53370057"
   
     -   Dado que todos los nodos del clúster de conmutación por error de Windows Server (WSFC) están en el mismo dominio, puede usar el nombre del equipo; por ejemplo, `SYSTEM46`.  
   
-    -   Para utilizar una dirección IP, ésta debe ser única en el entorno. Recomendamos que utilice una dirección IP solo si es estática. La dirección IP puede ser IP Versión 4 (IPv4) o IP Versión 6 (IPv6). Las direcciones IPv6 se deben incluir entre corchetes, por ejemplo: **[***<dirección_IPv6>***]**.  
+    -   Para utilizar una dirección IP, ésta debe ser única en el entorno. Recomendamos que utilice una dirección IP solo si es estática. La dirección IP puede ser IP Versión 4 (IPv4) o IP Versión 6 (IPv6). Las direcciones IPv6 se deben incluir entre corchetes, por ejemplo: **[**_<dirección_IPv6>_**]**.  
   
          Para conocer la dirección IP de un sistema, en el símbolo del sistema de Windows, escriba el comando **ipconfig** .  
   
     -   El nombre de dominio completo siempre funciona. Esta es una cadena de dirección definida localmente que adopta diferentes formatos en distintos lugares. Con frecuencia, aunque no siempre, el nombre de dominio completo es un nombre compuesto que incluye el nombre del equipo y una serie de segmentos de dominio separados por puntos con el siguiente formato:  
   
-         *nombre_equipo* **.** *segmento_de_dominio*[...**.***segmento_de_dominio*]  
+         _nombre_equipo_ **.** _segmento_dominio_[...**.**_segmento_dominio_]  
   
-         donde *nombre_de_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_de_dominio*[...**.***segmento_de_dominio*] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
+         donde *nombre_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_dominio*[...**.**_segmento_dominio_] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
   
          El contenido y el número de segmentos de dominio se determinan en la empresa u organización. Para obtener más información, vea [Buscar el nombre de dominio completo](#Finding_FQDN), más adelante en este tema.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "53370057"
   
  Para formar el nombre de dominio completo, concatene los valores de *<host_name>* y *<Primary_Dns_Suffix>* de la siguiente manera:  
   
- *&lt;nombre_host&gt;* **.** *<sufijo_DNS_primario>*  
+ _&lt;nombre_host&gt;_ **.** _<sufijo_DNS_primario>_  
   
  Por ejemplo, la configuración IP  
   

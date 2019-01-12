@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781268"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100800"
 ---
 # <a name="view-resource-governor-properties"></a>Ver las propiedades del regulador de recursos
   Puede crear o configurar entidades del regulador de recursos, por ejemplo grupos de recursos de servidor y grupos de cargas de trabajo, utilizando la página Propiedades del regulador de recursos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "52781268"
  Habilite o deshabilite el regulador de recursos seleccionando o desactivando la casilla.  
   
  **Grupos de recursos de servidor**  
- Cree o cambie la configuración del grupo de recursos de servidor utilizando la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un grupo de recursos, haga clic en la fila que viene precedida por un asterisco (**\***).  
+ Cree o cambie la configuración del grupo de recursos de servidor utilizando la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un nuevo grupo de recursos, haga clic en la fila que viene precedida por un asterisco (**&#42;**).  
   
  **Name**  
  Especifique el nombre del grupo de recursos de servidor.  
@@ -93,7 +93,7 @@ ms.locfileid: "52781268"
  Para obtener más información, consulte [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  **Grupos de cargas de trabajo de grupo de recursos de servidor**  
- Cree o cambie la configuración del grupo de cargas de trabajo utilizando la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un grupo de cargas de trabajo, haga clic en la fila que viene precedida por un asterisco (**\***).  
+ Cree o cambie la configuración del grupo de cargas de trabajo utilizando la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un nuevo grupo de cargas de trabajo, haga clic en la fila que viene precedida por un asterisco (**&#42;**).  
   
  **Name**  
  Especifique el nombre del grupo de cargas de trabajo  

@@ -17,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813987"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126435"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52813987"
   
  Para habilitar las suscripciones actualizables para publicaciones transaccionales, [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
- Para crear suscripciones actualizables para publicaciones transaccionales, vea [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ Para crear suscripciones actualizables para publicaciones transaccionales, vea [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 ## <a name="switching-between-update-modes"></a>Cambio entre modos de actualización  
  Al utilizar las suscripciones actualizables, puede especificar que una suscripción utilice un modo de actualización y, después, cambie al otro si la aplicación lo requiere. Por ejemplo, puede especificar que una suscripción utilice la actualización inmediata, pero cambie a la actualización en cola si se pierde la conectividad de red por un error del sistema.  
@@ -123,8 +123,8 @@ ms.locfileid: "52813987"
     -   Si se esperan conflictos, no debe utilizar restricciones de clave externa en el publicador o suscriptor si utiliza la resolución de conflictos "El suscriptor gana"; no debe utilizar restricciones de clave externa en el suscriptor si utiliza la resolución de conflictos "El publicador gana".  
   
 ## <a name="see-also"></a>Vea también  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  (Replicación transaccional punto a punto)  
- [Tipos de publicaciones para la replicación transaccional](publication-types-for-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
+ [Replicación transaccional](transactional-replication.md)   
  [Publicar datos y objetos de base de datos](../publish/publish-data-and-database-objects.md)   
  [Suscribirse a publicaciones](../subscribe-to-publications.md)  
   

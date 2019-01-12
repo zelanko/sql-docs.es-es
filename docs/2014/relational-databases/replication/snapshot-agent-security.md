@@ -14,12 +14,12 @@ ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a3125ef66a88b8d7c47324e67b1a263581a925d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788727"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124175"
 ---
 # <a name="snapshot-agent-security"></a>Seguridad del Agente de instantáneas
   El cuadro de diálogo **Seguridad del Agente de instantáneas** le permite especificar lo siguiente:  
@@ -55,7 +55,7 @@ ms.locfileid: "52788727"
  La cuenta de Windows o la cuenta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizada para conectarse debe ser miembro, como mínimo, del rol fijo de base de datos **db_owner** de la base de datos de publicación.  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar inicios de sesión y contraseñas en la replicación](security/manage-logins-and-passwords-in-replication.md)   
+ [Administrar inicios de sesión y contraseñas en la replicación](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modelo de seguridad del Agente de replicación](security/replication-agent-security-model.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
  [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  

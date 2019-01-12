@@ -16,12 +16,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e400c24476df7d9e663f17c71425f11b5155058
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641016"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123955"
 ---
 # <a name="remote-servers"></a>Servidores remotos
   Los servidores remotos solo se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por compatibilidad con versiones anteriores. No obstante, las aplicaciones nuevas deben utilizar servidores vinculados. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "52641016"
 >  Siempre que sea posible, utilice la autenticación de Windows.  
   
 ### <a name="remote-server-security-example"></a>Ejemplo de seguridad para servidores remotos  
- Considere las instalaciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siguientes: **serverSend** and **serverReceive**. **serverReceive** está configurado para asignar un inicio de sesión entrante de **serverSend**, denominado **Sales_Mary**, a un inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticado de **serverReceive**, llamado **Alice**. Otro inicio de sesión entrante de **serverSend**, llamado **Joe**, está asignado a un inicio de sesión autenticado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en **serverReceive***,* llamado **Joe**.  
+ Considere las instalaciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siguientes: **serverSend** and **serverReceive**. **serverReceive** está configurado para asignar un inicio de sesión entrante de **serverSend**, denominado **Sales_Mary**, a un inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticado de **serverReceive**, llamado **Alice**. Otro inicio de sesión entrante de **serverSend**, llamado **Joe**, está asignado a un inicio de sesión autenticado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en **serverReceive**_,_ llamado **Joe**.  
   
  En el siguiente ejemplo de código de Transact-SQL se configura `serverSend` para realizar llamadas RPC en `serverReceive`.  
   

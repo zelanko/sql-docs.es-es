@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9513e58afc764fe8df5719ad03ac575a2632da6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770087"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127200"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   La replicación punto a punto proporciona una solución escalada y de alta disponibilidad manteniendo copias de datos en varias instancias de servidor, también denominadas *nodos*. Generada en la base de replicación transaccional, la replicación punto a punto propaga transaccionalmente los cambios coherentes en tiempo casi real. Esto permite a las aplicaciones que requieran una escalada de las operaciones de lectura distribuir las lecturas de los clientes en varios nodos. Dado que los datos se mantienen en los nodos en tiempo casi real, la replicación punto a punto proporciona redundancia de datos, lo que aumenta la disponibilidad de los mismos.  
@@ -43,7 +43,7 @@ ms.locfileid: "52770087"
  La replicación punto a punto incluye la opción de habilitar la detección de conflictos en una topología punto a punto. Esta opción ayuda a evitar problemas que se producen por conflictos no detectados, como comportamientos incoherentes de las aplicaciones y actualizaciones perdidas. Habilitando esta opción, de forma predeterminada, un cambio conflictivo se trata como un error crítico que produce el error del Agente de distribución. En caso de un conflicto, la topología permanece en un estado incoherente hasta que se resuelve el conflicto manualmente y los datos se hacen coherentes en toda la topología. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
->  Para evitar la posible incoherencia de datos, asegúrese de evitar los conflictos en una topología punto a punto, incluso con la detección de conflictos habilitada. Para asegurarse de que las operaciones de escritura para una fila determinada se realizan en un solo nodo, las aplicaciones que tienen acceso y cambian datos deben particionar las operaciones de inserción, actualización y eliminación. Este particionamiento asegura que las modificaciones a una fila determinada que se originan en un nodo están sincronizadas con todos los demás nodos en la topología antes de que se modifique la fila por un nodo diferente. Si una aplicación requiere funcionalidades sofisticadas de detección y resolución de conflictos, use la replicación de mezcla. Para obtener más información, consulte [Replicación de mezcla](../merge/merge-replication.md) y [Detectar y solucionar conflictos de replicación de mezcla](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  Para evitar la posible incoherencia de datos, asegúrese de evitar los conflictos en una topología punto a punto, incluso con la detección de conflictos habilitada. Para asegurarse de que las operaciones de escritura para una fila determinada se realizan en un solo nodo, las aplicaciones que tienen acceso y cambian datos deben particionar las operaciones de inserción, actualización y eliminación. Este particionamiento asegura que las modificaciones a una fila determinada que se originan en un nodo están sincronizadas con todos los demás nodos en la topología antes de que se modifique la fila por un nodo diferente. Si una aplicación requiere funcionalidades sofisticadas de detección y resolución de conflictos, use la replicación de mezcla. Para obtener más información, consulte [Replicación de mezcla](../merge/merge-replication.md) y [Detectar y solucionar conflictos de replicación de mezcla](../merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="peer-to-peer-topologies"></a>Topologías punto a punto  
  En los siguientes escenarios se ilustran los usos típicos de la replicación punto a punto.  
@@ -171,6 +171,6 @@ ms.locfileid: "52770087"
 ## <a name="see-also"></a>Vea también  
  [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Tipos de publicaciones para la replicación transaccional](publication-types-for-transactional-replication.md)  
+ [Tipos de publicaciones para la replicación transaccional](transactional-replication.md)  
   
   

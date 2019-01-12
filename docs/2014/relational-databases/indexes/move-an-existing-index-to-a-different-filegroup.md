@@ -16,12 +16,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6fa11684cc9f35eb662ca41c731f11887e1bce32
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534041"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127925"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover un índice existente a un grupo de archivos diferente
   En este tema se describe cómo mover un índice existente de su grupo de archivos actual a otro distinto en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "52534041"
   
 8.  Haga clic en **Cerrar**.  
   
-9. En el menú **Archivo** , seleccione **Guardar***nombre_de_tabla*.  
+9. En el menú **Archivo** , seleccione **Guardar**_nombre_tabla_.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Para mover un índice existente a un grupo de archivos distinto en el Explorador de objetos  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52534041"
   
 8.  Haga clic en **Aceptar**.  
   
- La información siguiente está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice -** *nombre_índice*:  
+ La información siguiente está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice -** _nombre_índice_:  
   
  **Grupo de archivos**  
  Almacena el índice en el grupo de archivos especificado. En la lista solo se muestran los grupos de archivos (fila) estándar. La selección de lista predeterminada es el grupo de archivos PRIMARY de la base de datos.  

@@ -21,12 +21,12 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e367cc0a02e446bf915c01e5a3d846ba02dcc8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781947"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128565"
 ---
 # <a name="synchronize-data"></a>Sincronizar datos
   La sincronización de los datos se refiere al proceso de propagación de los cambios en los datos y el esquema entre el publicador y los suscriptores después de haber aplicado la instantánea inicial en el suscriptor. La sincronización puede producirse:  
@@ -69,6 +69,6 @@ ms.locfileid: "52781947"
 -   La replicación de mezcla admite controladores de lógica de negocios. El uso de un marco de trabajo de controladores de lógica de negocios le permite escribir un ensamblado de código administrado al que se llama durante el proceso de sincronización de mezcla. El ensamblado incluye lógica de negocios que puede responder a varias condiciones durante la sincronización: cambios de datos, conflictos y errores. Para más información, vea [Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md) (Ejecutar lógica de negocios durante la sincronización de mezcla).  
   
 ## <a name="see-also"></a>Vea también  
- [Detectar y solucionar conflictos de replicación de mezcla](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
+ [Detectar y solucionar conflictos de replicación de mezcla](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

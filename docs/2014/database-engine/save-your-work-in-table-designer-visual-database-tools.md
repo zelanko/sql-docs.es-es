@@ -14,12 +14,12 @@ ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56da0e1bff6811885a2008a0881d52583c24c1ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090305"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130805"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Guardar el trabajo en el Diseñador de tablas (Visual Database Tools)
   Puede guardar los cambios en las tablas que están abiertas en el Diseñador de tablas.  
@@ -28,7 +28,7 @@ ms.locfileid: "48090305"
   
 1.  Haga clic en cualquier parte en el Diseñador de tablas.  
   
-2.  Desde el **archivo** menú, elija **guardar *** tablename*.  
+2.  En el menú **Archivo** , elija **Guardar**_nombreTabla_.  
   
 3.  En el cuadro de diálogo **Guardar** , haga clic en **Sí** para actualizar la base de datos.  
   

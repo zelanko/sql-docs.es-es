@@ -16,12 +16,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 214d58fd64649b23f632b393d6b9b0a2b71a2359
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362837"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125505"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar las cuentas de servicio (Analysis Services)
   El aprovisionamiento de cuentas para todo un producto se documenta en [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un tema que contiene gran cantidad de información sobre las cuentas de servicio de todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluido [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte ese tema para obtener información sobre los tipos de cuenta válidos, los privilegios de Windows que se asignan durante la instalación, los permisos del sistema de archivos, los permisos del Registro, etc.  
@@ -39,7 +39,7 @@ ms.locfileid: "53362837"
 ## <a name="logon-account-recommendations"></a>Recomendaciones de la cuenta de inicio de sesión  
  En un clúster de conmutación por error, todas las instancias de Analysis Services deben configurarse para utilizar una cuenta de usuario con dominio de Windows. Asigne la misma cuenta a todas las instancias. Para obtener más detalles, consulte [Cómo agrupar en clúster Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Las instancias independientes deben usar la cuenta virtual predeterminada, **NT Service\MSSQLServerOLAPService** para la instancia predeterminada, o **NT Service\MSOLAP$ *** nombre de instancia* para una instancia con nombre. Esta recomendación se aplica a las instancias de Analysis Services en todos los modos de servidor, suponiendo que se dispone de un sistema operativo Windows Server 2008 R2 o posterior, y SQL Server 2012 o posterior para Analysis Services.  
+ Las instancias independientes deben usar la cuenta virtual predeterminada: **NT Service\MSSQLServerOLAPService** para la instancia predeterminada o **NT Service\MSOLAP$**_nombre-de-la-instancia_ para una instancia con nombre. Esta recomendación se aplica a las instancias de Analysis Services en todos los modos de servidor, suponiendo que se dispone de un sistema operativo Windows Server 2008 R2 o posterior, y SQL Server 2012 o posterior para Analysis Services.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Otorgar permisos a Analysis Services  
  En esta sección se describen los permisos que Analysis Services requiere para las operaciones internas y locales, como iniciar el archivo ejecutable, leer el archivo de configuración y cargar bases de datos desde el directorio de datos. Si, en su lugar, busca orientación sobre cómo establecer permisos de acceso a datos externos e interoperabilidad con otros servicios y aplicaciones, consulte [Otorgar permisos adicionales para operaciones específicas del servidor](#bkmk_tasks) (más adelante en este tema).  

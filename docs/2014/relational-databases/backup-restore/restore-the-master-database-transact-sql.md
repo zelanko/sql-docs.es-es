@@ -12,12 +12,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9363dfe3bee63bb6b32ecb5d7c29468f6a3def1a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 823a6455616b412a41179d831b565e10b3286fb7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215804"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127395"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurar la base de datos maestra (Transact-SQL)
   En este tema se explica cómo restaurar la base de datos **maestra** desde una copia de seguridad de base de datos completa.  
@@ -43,7 +43,7 @@ ms.locfileid: "53215804"
  El ejemplo siguiente restaura la base de datos `master` en la instancia de servidor predeterminada. En el ejemplo se asume que la instancia de servidor ya se ejecuta en modo de usuario único. El ejemplo inicia `sqlcmd` y ejecuta una instrucción `RESTORE DATABASE` que restaura una copia de seguridad de base de datos completa de `master` desde un dispositivo de disco: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]
->  Para una instancia con nombre, el comando **sqlcmd** debe especificar la opción **-S***\<<NombreDeEquipo*\\*\<NombreDeInstancia>*.  
+>  Para una instancia con nombre, el comando **sqlcmd** debe especificar la opción **-S**_\<nombreDeEquipo>_\\*\<nombreDeInstancia>*.  
   
 ```  
   
@@ -52,7 +52,7 @@ ms.locfileid: "53215804"
 2> GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](complete-database-restores-simple-recovery-model.md)   
  [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](complete-database-restores-full-recovery-model.md)   
  [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   

@@ -18,12 +18,12 @@ ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4834ebec21b69d000a84c6d4fdd5c615f2ca833e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 53bf75f0c153012eb60188f354ac9ac775ce1b26
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757017"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128245"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52757017"
 |**fast_multicol_updateproc**|**bit**|Especifica si se ha habilitado el Agente de mezcla para aplicar cambios a varias columnas de la misma fila en una instrucción UPDATE.<br /><br /> **0** = problemas cambiada una actualización independiente para cada columna.<br /><br /> **1** = emite una instrucción UPDATE que lleva a cabo en varias columnas en una instrucción actualizaciones.|  
 |**check_permissions**|**int**|Mapa de bits de los permisos de nivel de tabla que se comprueba cuando el agente de mezcla aplica cambios en el publicador. *check_permissions* puede tener uno de estos valores:<br /><br /> **0 x 00 =** no se comprueban los permisos.<br /><br /> **0 x 10 =** comprueba los permisos del publicador antes de poder cargar los INSERT creado en un suscriptor.<br /><br /> **0 x 20 =** comprueba los permisos del publicador antes de poder cargar los UPDATE creados en un suscriptor.<br /><br /> **0 x 40 =** comprueba los permisos del publicador antes de poder cargar los DELETE creados en un suscriptor.|  
 |**maxversion_at_cleanup**|**int**|El valor más alto de generación para el cual se limpian los metadatos.|  
-|**processing_order**|**int**|Indica el orden de procesamiento de artículos en una publicación de combinación; el valor **0** indica que el artículo está desordenado y artículos se procesan en orden de menor a mayor valor. Si existen dos artículos que tienen el mismo valor, se procesan al mismo tiempo. Para más información, vea [Especificar el orden de procesamiento de los artículos de mezcla](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).|  
+|**processing_order**|**int**|Indica el orden de procesamiento de artículos en una publicación de combinación; el valor **0** indica que el artículo está desordenado y artículos se procesan en orden de menor a mayor valor. Si existen dos artículos que tienen el mismo valor, se procesan al mismo tiempo. Para obtener más información, consulte [las propiedades de replicación de mezcla especificar](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
 |**upload_options**|**tinyint**|Define las restricciones impuestas a las actualizaciones realizadas en un suscriptor con suscripción de cliente. Pueden tener uno de estos valores:<br /><br /> **0** = no existen restricciones en las actualizaciones realizadas en el suscriptor con suscripción de cliente; todos los cambios se cargan en el publicador.<br /><br /> **1** = se permiten realizar cambios en el suscriptor con suscripción de cliente, pero no se cargan en el publicador.<br /><br /> **2** = no se permiten cambios en el suscriptor con suscripción de cliente.<br /><br /> Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).|  
 |**published_in_tran_pub**|**bit**|Indica que un artículo de una publicación de combinación también se publica en una publicación transaccional.<br /><br /> **0** = el artículo no está publicado en un artículo transaccional.<br /><br /> **1** = el artículo también se publica en un artículo transaccional.|  
 |**ligero**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

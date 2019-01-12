@@ -12,12 +12,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb3aa18f17219f46bc5ce6f3d25af7d4bd29c4d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753957"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127806"
 ---
 # <a name="secure-the-snapshot-folder"></a>Proteger la carpeta de instantáneas
   La carpeta de instantáneas es un directorio que almacena archivos de instantáneas. Se recomienda que sea un directorio dedicado para el almacenamiento de instantáneas. Conceda al Agente de instantáneas permiso de escritura en la carpeta y asegúrese de que el permiso de lectura se concede solamente a la cuenta de Windows que utiliza el Agente de mezcla o el Agente de distribución cuando tiene acceso a la carpeta. Para tener acceso a una carpeta de instantáneas que se encuentra en un equipo remoto, la cuenta de Windows asociada con el agente debe ser una cuenta de dominio.  
@@ -54,7 +54,7 @@ ms.locfileid: "52753957"
  [Ubicaciones alternativas para las carpetas de instantáneas](../alternate-snapshot-folder-locations.md)   
  [Inicializar una suscripción con una instantánea](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Seguridad y protección &#40;replicación&#41;](security-and-protection-replication.md)   
+ [Seguridad de replicación de SQL Server](view-and-modify-replication-security-settings.md)   
  [Transferir instantáneas mediante FTP](../transfer-snapshots-through-ftp.md)  
   
   

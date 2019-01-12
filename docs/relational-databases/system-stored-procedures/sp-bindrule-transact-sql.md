@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f06c0b7395ce61a52cae17e9cbc6429cdd6b9eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08f754022ae28cfce074978bfdd8c3f79ba71a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728393"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128415"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rulename=**] **'***regla***'**  
+ [  **@rulename=**] **'**_regla_**'**  
  Es el nombre de una regla creada con la instrucción CREATE RULE. *regla* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
   
- [  **@objname=**] **'***object_name***'**  
+ [  **@objname=**] **'**_object_name_**'**  
  Es la tabla y columna, o el tipo de datos de alias a la que se va a enlazar la regla. Una regla no se puede enlazar a una columna **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, de tipo definido por el usuario CLR o **timestamp**. Una regla no se puede enlazar a una columna calculada.  
   
  *object_name* es **nvarchar(776)** no tiene ningún valor predeterminado. Si *object_name* es un nombre de una parte, se resuelve como un tipo de datos de alias. Si es un nombre de dos o tres partes, se resuelve primero como una tabla y una columna, y si esta resolución genera un error, se resuelve como un tipo de datos de alias. De forma predeterminada, las columnas existentes del tipo de datos de alias heredan *regla* a menos que se ha enlazado una regla directamente a la columna.  
@@ -60,7 +60,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  Las reglas creadas a partir de expresiones que utilizan tipos de datos de alias pueden enlazarse a columnas o tipos de datos de alias, pero no se compilan cuando se hace referencia a ellos. Evite el uso de reglas creadas a partir de tipos de datos de alias.  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+ [  **@futureonly=** ] **'**_futureonly_flag_**'**  
  Solo se usa cuando se enlaza una regla a un tipo de datos de alias. *future_only_flag* es **varchar (15)** con el valor predeterminado es NULL. Este parámetro cuando se establece en **futureonly** impide que las columnas existentes de un tipo de datos de alias hereden la nueva regla. Si *futureonly_flag* es NULL, la nueva regla se enlaza con las columnas del tipo de datos de alias que actualmente no tengan regla o utilicen la regla existente del tipo de datos de alias.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -89,7 +89,7 @@ GO
 EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Enlazar una regla a un tipo de datos de alias  
+### <a name="b-binding-a-rule-to-an-alias-data-type"></a>b. Enlazar una regla a un tipo de datos de alias  
  Suponiendo que existe una regla denominada `rule_ssn` y un tipo de datos de alias denominado `ssn`, este ejemplo enlaza `rule_ssn` a `ssn`. En una instrucción CREATE TABLE, las columnas del tipo `ssn` heredan la regla `rule_ssn`. Las columnas existentes del tipo `ssn` también heredan la `rule_ssn` de regla, a menos que **futureonly** se especifica para *futureonly_flag*, o `ssn` tenga una regla enlazada directamente a él. Las reglas enlazadas a columnas siempre tienen prioridad sobre las enlazadas a tipos de datos.  
   
 ```  

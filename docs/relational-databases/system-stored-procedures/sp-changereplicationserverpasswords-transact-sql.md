@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 073577731fba32e092307ebd7c86eb5904c38a05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760238"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125715"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación  
   
- [ **@login** =] **'***inicio de sesión***'**  
+ [ **@login** =] **'**_inicio de sesión_**'**  
  Es el nombre de la cuenta de Windows o del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a cambiar. *inicio de sesión* es **nvarchar (257)**, no tiene ningún valor predeterminado  
   
- [ **@password** =] **'***contraseña***'**  
+ [ **@password** =] **'**_contraseña_**'**  
  Es la nueva contraseña que se almacenará para el elemento especificado *inicio de sesión*. *contraseña* es **sysname**, no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Después de cambiar una contraseña de replicación, es necesario detener y reiniciar cada agente que utilice la contraseña para que el cambio surta efecto en dicho agente.  
   
- [ **@server** =] **'***server***'**  
+ [ **@server** =] **'**_server_**'**  
  Es la conexión con el servidor cuya contraseña almacenada se está cambiando. *servidor* es **sysname**, y puede tener uno de estos valores:  
   
 |Valor|Descripción|  

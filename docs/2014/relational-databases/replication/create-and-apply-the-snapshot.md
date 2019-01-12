@@ -13,12 +13,12 @@ ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd78bf7da1a68e7e053af52c4fa8f9cf0cd71094
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4c69b22af2a4e5a087c21b34fc719f971c3844b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755647"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128585"
 ---
 # <a name="create-and-apply-the-snapshot"></a>Crear y aplicar una instantánea
   El Agente de instantáneas genera instantáneas una vez creada la publicación. Se pueden generar de la siguiente manera:  
@@ -43,8 +43,7 @@ ms.locfileid: "52755647"
   
  Para ver o modificar la ubicación de la carpeta de instantáneas predeterminada, vea  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Especifique la ubicación predeterminada de instantáneas &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)  
-  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Especifique la ubicación predeterminada de instantáneas](snapshot-options.md#snapshot-folder-locations)
 -   Programación de la replicación y programación con RMO: [Configurar la publicación y la distribución](configure-publishing-and-distribution.md)  
   
 ## <a name="see-also"></a>Vea también  

@@ -12,12 +12,12 @@ ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26e0f33ef996f47fe4be2b3be034111187033f94
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 63becb9b07114b6e0ae0589664ae80d82f8babb2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753767"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126185"
 ---
 # <a name="mssqleng021331"></a>MSSQL_ENG021331
     
@@ -39,7 +39,7 @@ ms.locfileid: "52753767"
  Compruebe que se ha especificado la ruta de acceso correcta para la carpeta de instantáneas y que la cuenta con la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el publicador dispone de permisos suficientes.  
   
 ## <a name="see-also"></a>Vea también  
- [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)  (Especificar la ubicación predeterminada de instantáneas [SQL Server Management Studio])  
+ [Especifique la ubicación predeterminada de instantáneas](snapshot-options.md#snapshot-folder-locations)   
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)   
  [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md) (Inicializar una suscripción transaccional sin una instantánea)  
   

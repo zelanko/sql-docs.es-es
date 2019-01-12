@@ -21,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 71bd15f01cc69371765c4af17fb184ce28481f65
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806257"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129285"
 ---
 # <a name="enhance-general-replication-performance"></a>Aumentar el rendimiento de la replicación general
   Puede aumentar el rendimiento general de todos los tipos de replicación en su aplicación y en la red siguiendo las directrices descritas en este tema.  
@@ -76,7 +76,7 @@ ms.locfileid: "52806257"
   
     -   En la replicación de mezcla, puede ser más eficaz utilizar controladores de lógica de negocios. Para obtener más información, consulte [Ejecutar lógica de negocios durante la sincronización de mezcla](../merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Si utiliza desencadenadores para mantener la integridad referencial en las tablas publicadas para la replicación de mezcla, especifique el orden de procesamiento de las tablas para reducir el número de reintentos requeridos por el Agente de mezcla. Para obtener más información, consulte [Especificar el orden de procesamiento de los artículos de mezcla](../merge/specify-the-processing-order-of-merge-articles.md).  
+     Si utiliza desencadenadores para mantener la integridad referencial en las tablas publicadas para la replicación de mezcla, especifique el orden de procesamiento de las tablas para reducir el número de reintentos requeridos por el Agente de mezcla. Para obtener más información, consulte [las propiedades de replicación de mezcla especificar](../publish/specify-merge-replication-properties.md).  
   
 -   Limite el uso de tipos de datos de objetos grandes (LOB).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52806257"
   
      Cuando sea necesario enviar grandes cantidades de cambios a los suscriptores, reinicializarlos con una nueva instantánea puede ser más rápido que utilizar la replicación para mover los cambios individuales. Para obtener más información, vea [Reinicializar suscripciones](../reinitialize-subscriptions.md).  
   
-     En la replicación transaccional, el Monitor de replicación muestra, en la pestaña **Comandos sin distribuir** , información acerca del número de transacciones de la base de datos de distribución que aún no se han distribuido a un suscriptor, así como el tiempo estimado para la distribución de dichas transacciones. Para obtener más información, consulte [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     En la replicación transaccional, el Monitor de replicación muestra, en la pestaña **Comandos sin distribuir** , información acerca del número de transacciones de la base de datos de distribución que aún no se han distribuido a un suscriptor, así como el tiempo estimado para la distribución de dichas transacciones. Para obtener más información, consulte [ ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Consideraciones acerca de las instantáneas  
   

@@ -19,12 +19,12 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57bc3a40cfaa600c27c0bded34d62a1f68060390
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d947f319c56c29c0d3dbe4ce88c38055c59dfc5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607333"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124115"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@server =** ] **'***server***'**  
+ [  **@server =** ] **'**_server_**'**  
  Es el nombre del servidor para el que se establece la opción. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.  
   
- [  **@optname =** ] **'***option_name***'**  
+ [  **@optname =** ] **'**_option_name_**'**  
  Es la opción que se va a establecer en el servidor especificado. *option_name* es **varchar (** 35 **)**, no tiene ningún valor predeterminado. *option_name* puede ser cualquiera de los siguientes valores.  
   
 |Valor|Descripción|  
@@ -66,7 +66,7 @@ sp_serveroption [@server = ] 'server'
 |**Usar intercalación remota**|Determina si se utilizará la intercalación de una columna remota o de un servidor local.<br /><br /> Si **true**, se utiliza la intercalación de columnas remotas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] orígenes de datos y la intercalación especificada en **nombre de intercalación** sirve para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] orígenes de datos.<br /><br /> Si **false**, las consultas distribuidas siempre utilizarán la intercalación predeterminada del servidor local, mientras que **nombre de intercalación** y la intercalación de columnas remotas se omiten. El valor predeterminado es **false**. (El **false** valor es compatible con la semántica de intercalación utilizada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.)|  
 |**promoción de transacciones de procedimientos remotos**|Use esta opción para proteger las acciones de un procedimiento entre servidores a través de una transacción del Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC). Cuando esta opción es TRUE (u ON) una llamada a un procedimiento almacenado remoto inicia una transacción distribuida y se da de alta la transacción MS DTC. La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que efectúa la llamada al procedimiento almacenado remoto es el originador de la transacción y controla su realización. Posteriormente, cuando se ejecuta para la conexión una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION, la instancia que controla la transacción solicita a MS DTC que administre la realización de la transacción distribuida entre los servidores participantes.<br /><br /> Una vez iniciada una transacción distribuida de [!INCLUDE[tsql](../../includes/tsql-md.md)], se pueden realizar llamadas a procedimientos almacenados remotos en otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se hayan definido como servidores vinculados. Todos los servidores vinculados se dan de alta en la transacción distribuida de [!INCLUDE[tsql](../../includes/tsql-md.md)] y MS DTC se asegura de que la transacción se complete en cada uno de ellos.<br /><br /> Si esta opción está establecida en FALSE (u OFF), una transacción local no se promoverá a una transacción distribuida mientras se llame a una llamada a procedimiento remoto en un servidor vinculado.<br /><br /> Si antes de realizar una llamada a procedimiento entre servidores, la transacción ya es una transacción distribuida, esta opción no tiene efecto alguno. La llamada a procedimiento en un servidor vinculado se ejecutará en la misma transacción distribuida.<br /><br /> Si antes de realizar una llamada a procedimiento entre servidores, no existe ninguna transacción activa en la conexión, esta opción no tiene efecto alguno. A continuación, el procedimiento se ejecuta en el servidor vinculado sin transacciones activas.<br /><br /> El valor predeterminado para esta opción es TRUE (u ON).|  
   
- [  **@optvalue =**] **'***option_value***'**  
+ [  **@optvalue =**] **'**_option_value_**'**  
  Especifica si el *option_name* debe habilitarse (**TRUE** o **en**) o deshabilitado (**FALSE** o **desactivar**). *option_value* es **varchar (** 10 **)**, no tiene ningún valor predeterminado.  
   
  *option_value* puede ser un entero no negativo para el **connect timeout** y **tiempo de espera de consulta** opciones. Para el **nombre de intercalación** opción, *option_value* puede ser un nombre de intercalación o NULL.  

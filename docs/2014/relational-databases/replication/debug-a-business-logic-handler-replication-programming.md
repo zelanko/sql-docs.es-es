@@ -1,5 +1,5 @@
 ---
-title: Depuración de un controlador de lógica de negocios (programación de la replicación) | Microsoft Docs
+title: Depurar un controlador de lógica de negocios | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 019ff508b10859cae2388636e9189292b498e251
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761517"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128765"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar un controlador de lógica de negocios (programación de la replicación)
   Use un controlador de lógica de negocios para invocar la lógica de negocios personalizada cuando se sincroniza una suscripción de mezcla. Para obtener más información, vea [Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md) (Ejecutar lógica de negocios durante la sincronización de mezcla).  
@@ -31,7 +31,7 @@ ms.locfileid: "52761517"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Para depurar un controlador de lógica de negocios en un equipo local  
   
-1.  Configure la publicación y la distribución, cree una publicación y cree una suscripción a la publicación. Para obtener más información, consulte [Configurar la publicación y la distribución](configure-publishing-and-distribution.md) y [Crear, modificar y eliminar publicaciones y artículos &#40;replicación&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Configure la publicación y la distribución, cree una publicación y cree una suscripción a la publicación. Para obtener más información, consulte [configurar la publicación y distribución](configure-publishing-and-distribution.md) y [crear una publicación](publish/create-a-publication.md).  
   
 2.  Cree y registre un controlador de lógica de negocios Para más información, consulte [Implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md).  
   

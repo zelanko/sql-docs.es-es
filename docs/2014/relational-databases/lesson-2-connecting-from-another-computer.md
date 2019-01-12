@@ -10,12 +10,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367199"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127215"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conectarse desde otro equipo
   Para mejorar la seguridad, no se puede obtener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express y Evaluation desde otro equipo cuando se instala inicialmente. En esta lección se muestra cómo habilitar los protocolos, configurar los puertos y configurar el Firewall de Windows para conectarse desde otros equipos.  
@@ -44,7 +44,7 @@ ms.locfileid: "53367199"
     > [!NOTE]  
     >  Es posible que estén disponibles las opciones de 32 y 64 bits.  
   
-2.  En **Administrador de configuración de SQL Server**, expanda **configuración de red de SQL Server**y, a continuación, haga clic en **protocolos de**  *\<nombreDeInstancia >*.  
+2.  En **Administrador de configuración de SQL Server**, expanda **configuración de red de SQL Server**y, a continuación, haga clic en **protocolos de**  _\<nombreDeInstancia >_.  
   
      La instancia predeterminada (una instancia sin nombre) aparece como **MSSQLSERVER**. Si ha instalado una instancia con nombre, el nombre proporcionado aparece en la lista. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] se instala como **SQLEXPRESS**, a menos que se haya cambiado el nombre durante la instalación.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53367199"
   
 2.  En el cuadro de diálogo **Conectar al servidor** , confirme **Motor de base de datos** en el cuadro **Tipo de servidor** .  
   
-3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:***<nombre_equipo>*. En nuestro ejemplo de una instancia con nombre, escriba **tcp:***<nombre_equipo>***,49172**.  
+3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:**_<nombre_equipo>_. En nuestro ejemplo de una instancia con nombre, escriba **tcp:**_<nombre_equipo>_**,49172**.  
   
     > [!NOTE]  
     >  Si omite **tcp:** en el cuadro **Nombre del servidor** , el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  

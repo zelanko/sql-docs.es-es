@@ -16,12 +16,12 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36188e2faa578c0c4ef2a89b32e00d474366d32d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 00c5b4b94bc0a4347991944ccaa7898e75f244f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212444"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130695"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,20 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicación***'**  
+ [  **@publication=** ] **'**_publicación_**'**  
  Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@scriptfile=** ] **'***scriptfile***'**  
+ [  **@scriptfile=** ] **'**_scriptfile_**'**  
  Es la ruta de acceso completa al archivo de script SQL. *ScriptFile* es **nvarchar (4000)**, no tiene ningún valor predeterminado.  
   
- [  **@skiperror=** ] **'***skiperror***'**  
+ [  **@skiperror=** ] **'**_skiperror_**'**  
  Indica si el Agente de distribución o el Agente de mezcla se debe detener cuando se encuentra un error durante el procesamiento de script. *SkipError* es **bit**, su valor predeterminado es 0.  
   
  **0** = el agente se detendrá.  
   
  **1** = el agente continúa con el script y omite el error.  
   
- [  **@publisher=** ] **'***publisher***'**  
+ [  **@publisher=** ] **'**_publisher_**'**  
  Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  

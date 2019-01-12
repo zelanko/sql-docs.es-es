@@ -18,12 +18,12 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 833fc69629e76aaf4e6b7b86f0ac2afcef812878
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e7305e73d1f2f35d5cb4666e68114c9ee8f58e7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719803"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126215"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'***rol***'**  
+ [  **@rolename =** ] **'**_rol_**'**  
  Es el nombre de un rol fijo de base de datos válida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *rol* es **sysname**, su valor predeterminado es null. Si *rol* no se especifica, se muestran los permisos para todos los roles fijos de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

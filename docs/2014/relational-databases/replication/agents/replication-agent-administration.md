@@ -22,12 +22,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49729948f284af9ec2a638f7da3da4b248521653
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762497"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130455"
 ---
 # <a name="replication-agent-administration"></a>Administración del Agente de replicación
   Los agentes de replicación realizan muchas tareas asociadas con la replicación, lo que incluye la creación de copias de esquema y datos, detección de actualizaciones en el publicador o el suscriptor, y propagación de cambios entre servidores. De manera predeterminada, los agentes de replicación se ejecutan en los pasos de trabajo del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los agentes son simples ejecutables, por lo que se les puede llamar directamente desde la línea de comandos o desde scripts de proceso por lotes. Cada agente de replicación admite un conjunto de parámetros en tiempo de ejecución que se utilizan para controlar cómo se ejecuta; estos parámetros se especifican en un perfil de agente o en la línea de comandos.  
@@ -69,7 +69,7 @@ ms.locfileid: "52762497"
   
     -   Agente de lectura de cola  
   
-     Obtenga acceso a la información y a las tareas asociadas con estos agentes a través de la pestaña **Agentes** . Para obtener más información, vea [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+     Obtenga acceso a la información y a las tareas asociadas con estos agentes a través de la pestaña **Agentes** . Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Los siguientes agentes están asociados con suscripciones en el Monitor de replicación:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52762497"
   
     -   Agente de mezcla  
   
-     Información de acceso y las tareas asociadas con estos agentes a través de las siguientes pestañas: **Lista de supervisión** (disponible para todos los publicadores) o el **todas las suscripciones** (disponible para todas las publicaciones). Para obtener más información, vea [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Información de acceso y las tareas asociadas con estos agentes a través de las siguientes pestañas: **Lista de supervisión** (disponible para todos los publicadores) o el **todas las suscripciones** (disponible para todas las publicaciones). Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="independent-and-shared-agents"></a>Agentes independientes y compartidos  
  Un agente independiente es un agente que da servicio a una suscripción. Un agente compartido da servicio a varias suscripciones. Cuando varias suscripciones que utilizan el mismo agente tienen que sincronizarse, de manera predeterminada esperan en una cola y el agente compartido da servicio a cada una de ellas al mismo tiempo. La latencia se reduce cuando se utilizan agentes independientes porque el agente está preparado siempre que es necesario sincronizar la suscripción. La replicación de mezcla siempre utiliza agentes independientes, y la replicación transaccional utiliza de manera predeterminada agentes independientes para las publicaciones creadas en el Asistente para nueva publicación (en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la replicación transaccional utilizaba agentes compartidos de manera predeterminada).  

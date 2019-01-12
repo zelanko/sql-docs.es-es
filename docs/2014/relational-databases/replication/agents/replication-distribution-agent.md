@@ -15,12 +15,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7568e9deb0462dec9e9527d9876aeefd9ed9c543
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f036e5cf48ce7909b63d34f98861e398b0274b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767667"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128305"
 ---
 # <a name="replication-distribution-agent"></a>Agente de distribución de replicación
   El Agente de distribución de replicación es un ejecutable que mueve la instantánea (para la replicación de instantáneas y la replicación transaccional) y las transacciones de las tablas de base de datos de la distribución (para la replicación transaccional) a las tablas de destino en los suscriptores.  
@@ -89,43 +89,43 @@ ms.locfileid: "52767667"
  **-?**  
  Imprime todos los parámetros disponibles.  
   
- **-Publisher** *nombre_de_servidor*[**\\***** nombre_de_instancia*]  
- Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_**\\**_instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  Es el nombre de la base de datos del publicador.  
   
- **-Subscriber** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
- Es el nombre del suscriptor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ Es el nombre del suscriptor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_**\\**_instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  Es el nombre de la base de datos del suscriptor.  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  Es la ruta de acceso a la carpeta que contiene la instantánea inicial para una suscripción.  
   
- **-BcpBatchSize** *bcp_batch_size*  
+ **-BcpBatchSize** _bcp_batch_size_  
  Es el número de filas para enviar en una operación de copia masiva. Al realizar una operación **bcp in** , el tamaño del lote es el número de filas para enviar al servidor como una transacción y también el número de filas que se deben enviar antes de que el Agente de distribución registre un mensaje de progreso de **bcp** . Al realizar una operación **bcp out** , se usa un tamaño de lote fijo de **1000** .  
   
- **-CommitBatchSize** *commit_batch_size*  
+ **-CommitBatchSize** _commit_batch_size_  
  Es el número de transacciones que se va a emitir al Suscriptor antes de que se emita una instrucción COMMIT. El valor predeterminado es 100.  
   
- **-CommitBatchThreshold**  *commit_batch_threshold*  
+ **-CommitBatchThreshold**  _commit_batch_threshold_  
  Es el número de comandos de replicación que se va a emitir al Suscriptor antes de que se emita una instrucción COMMIT. El valor predeterminado es 1000.  
   
  **-Continuous**  
  Especifica si el agente intenta sondear las transacciones replicadas continuamente. Si se especifica, el agente sondea las transacciones replicadas del origen en intervalos de sondeo, aunque no haya ninguna transacción pendiente.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de símbolo del sistema para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
- **-Distributor** *distributor*  
+ **-Distributor** _distributor_  
  Es el nombre del distribuidor. Para la distribución (inserción) del Distribuidor, el nombre tiene como valor predeterminado el nombre del Distribuidor local.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  Es el nombre de inicio de sesión del distribuidor.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  Es la contraseña del distribuidor.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
@@ -143,27 +143,27 @@ ms.locfileid: "52767667"
  > [!NOTE]  
  >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para que el agente se conecte correctamente al establecer -EncryptionLevel en 2, cree un alias en la instancia local de SQL Server. El parámetro "Alias Name" debe ser el nombre del servidor, mientras que el parámetro "Server" se debe establecer en el nombre completo de la instancia de SQL Server.
 
- Para obtener más información, vea [Información general sobre seguridad &#40;replicación&#41;](../security/security-overview-replication.md).  
+ Para obtener más información, consulte [seguridad de replicación de SQL Server](../security/view-and-modify-replication-security-settings.md).  
   
- **-ErrorFile** *error_path_and_file_name*  
+ **-ErrorFile** _error_path_and_file_name_  
  Es la ruta y nombre del archivo de error generado por el Agente de distribución. Este archivo se genera en cualquier punto en el que se haya producido el error durante la aplicación de transacciones de replicación en el suscriptor; los errores que se producen en el publicador o el distribuidor no se registran en este archivo. Contiene las transacciones de replicación en las que se ha producido un error y los mensajes de error relacionados. Si no se especifica, el archivo de error se genera en el directorio actual del Agente de distribución. El nombre del archivo de error es el nombre del agente de distribución con la extensión .err. Si el nombre de archivo especificado existe, los mensajes de error se anexan al archivo. Este parámetro puede tener un máximo de 256 caracteres Unicode.  
   
- **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
+ **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  Especifica el nombre y la ruta del archivo para el archivo de configuración XML de eventos extendidos. El archivo de configuración de eventos extendidos le permite configurar sesiones y habilitar eventos para su seguimiento.  
   
  **-FileTransferType** [ **0**| **1**]  
  Especifica el tipo de transferencia de archivo. Un valor de **0** indica UNC (convención de nomenclatura universal) y un valor de **1** indica FTP (protocolo de transferencia de archivos).  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  Es la dirección de red del servicio FTP para el distribuidor. Cuando no se especifica, se utiliza **DistributorAddress** . Si no se especifica **DistributorAddress** , se utiliza **Distribuidor** .  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  Es la contraseña del usuario que se utiliza para conectarse al servicio FTP.  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  Es el número de puerto del servicio FTP para el distribuidor. Cuando no se especifica, se utiliza el número de puerto predeterminado para el servicio FTP (21).  
   
- **-FtpUserName**  *nombre_de_usuario_de_ftp*  
+ **-FtpUserName**  _nombre_de_usuario_de_ftp_  
  Es el nombre de usuario que se utiliza para conectar con el servicio FTP. Cuando no se especifica, se utiliza **anónimo** .  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
@@ -176,25 +176,25 @@ ms.locfileid: "52767667"
 |**2**|Inserta nuevos registros de historial a menos que el registro sea para mensajes de inactividad o mensajes de trabajos de ejecución prolongada, en cuyo caso actualiza los registros anteriores.|  
 |**3**|Siempre inserta nuevos registros, a menos que sea para mensajes inactivos.|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  Es el nombre del host utilizado al conectarse al publicador. Este parámetro puede tener un máximo de 128 caracteres Unicode.  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Es el número de segundos antes de que el subproceso del historial compruebe si cualquiera de las conexiones existentes está esperando una respuesta del servidor. Este valor se puede reducir para evitar que la comprobación del agente marque al agente de distribución como sospechoso al ejecutar un lote de ejecución prolongada. El valor predeterminado es **300** segundos.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  Es el número de segundos antes de que el inicio de sesión exceda el tiempo de espera. El valor predeterminado es de **15** segundos.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  Especifica el número de operaciones de copia masiva que se pueden realizar en paralelo. El número máximo de subprocesos y conexiones ODBC que existen simultáneamente es el menor entre **MaxBcpThreads** y el número de solicitudes de copia masiva que aparecen en la transacción de sincronización en la base de datos de distribución. **MaxBcpThreads** debe tener un valor mayor que **0** y no tiene ningún límite superior codificado de forma rígida. El valor predeterminado es **2** veces el número de procesadores, hasta un valor máximo de **8**. Al aplicar una instantánea que se generó en el publicador utilizando la opción de instantánea simultánea, se utiliza un subproceso, sin tener en cuenta el número especificado para **MaxBcpThreads**.  
   
- **-MaxDeliveredTransactions** *number_of_transactions*  
+ **-MaxDeliveredTransactions** _number_of_transactions_  
  Es el número máximo de transacciones de inserción o extracción aplicado a suscriptores en una sincronización. Un valor de **0** indica que el máximo es un número infinito de transacciones. Los suscriptores pueden utilizar otros valores para acortar la duración de una sincronización que se extrae de un publicador.  
   
 > [!NOTE]  
 >  Si se especifican tanto -MaxDeliveredTransactions como -Continuous, el Agente de distribución entrega el número especificado de transacciones y, a continuación, se detiene (aunque se especifique -Continuous). Debe reiniciar el Agente de distribución cuando el trabajo se complete.  
   
- **-MessageInterval**  *message_interval*  
+ **-MessageInterval**  _message_interval_  
  Es el intervalo de tiempo utilizado para el registro del historial. Un evento de historial se registra cuando se alcanza uno de estos parámetros:  
   
 -   Se alcanza el valor **TransactionsPerHistory** una vez registrado el último evento de historial.  
@@ -203,43 +203,43 @@ ms.locfileid: "52767667"
   
  Si no hay ninguna transacción replicada disponible en el origen, el agente envía un mensaje de no transacción al distribuidor. Esta opción especifica cuánto tiempo espera el agente para enviar otro mensaje que indica que no hay ninguna transacción. Los agentes siempre envían un mensaje que indica que no hay ninguna transacción cuando detectan que no hay ninguna transacción disponible en el origen después de procesar previamente las transacciones replicadas. El valor predeterminado es 60 segundos.  
   
- **-OledbStreamThreshold** *oledb_stream_threshold*  
+ **-OledbStreamThreshold** _oledb_stream_threshold_  
  Especifica el tamaño mínimo, en bytes, para los datos del objeto binario grande por encima del cual los datos se vincularán como un flujo. Debe especificar **-UseOledbStreaming** para usar este parámetro. Los valores pueden ir de 400 a 1048576 bytes, con un valor predeterminado de 16384 bytes.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  Es la ruta de acceso del archivo de salida del agente. Si no se proporciona un nombre de archivo, el resultado se envía a la consola. Si el nombre de archivo especificado existe, el resultado se anexa al archivo.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Especifica si el resultado debería ser detallado. Si el nivel detallado es **0**, solo se imprimen los mensajes de error. Si el nivel detallado es **1**, se imprimen todos los mensajes del informe de progreso. Si el nivel detallado es **2** (valor predeterminado), se imprimen todos los mensajes de error y mensajes del informe de progreso, lo que es útil para la depuración.  
   
- **-PacketSize** *packet_size*  
+ **-PacketSize** _packet_size_  
  Es el tamaño del paquete, en bytes. El valor predeterminado es 4096 (bytes).  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  Es la frecuencia, en segundos, con la que la base de datos de distribución recibe consultas de transacciones replicadas. El valor predeterminado es 5 segundos.  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](replication-agent-profiles.md).  
   
- **-Publication**  *publicación*  
+ **-Publication**  _publicación_  
  Es el nombre de la publicación. Este parámetro solamente es válido si la publicación se define para tener siempre una instantánea disponible para las suscripciones nuevas o reinicializadas.  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  Es el número de segundos antes de que la consulta exceda el tiempo de espera. El valor predeterminado es 1800 segundos.  
   
- **-QuotedIdentifier** *quoted_identifier*  
+ **-QuotedIdentifier** _quoted_identifier_  
  Especifica el carácter del identificador entrecomillado que se utilizará. El primer carácter del valor indica el valor que utiliza el agente de distribución. Si **QuotedIdentifier** se utiliza sin ningún valor, el agente de distribución utiliza un espacio. Si no se utiliza **QuotedIdentifier** , el agente de distribución utiliza cualquier identificador entrecomillado que admita el suscriptor.  
   
- **-SkipErrors** *identificador_de_error_nativo* [**:***...n*]  
+ **-SkipErrors** _native_error_id_ [**:**_...n_]  
  Es una lista separada por dos puntos que especifica los números de error que este agente omitirá.  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  Es la ruta de acceso a la base de datos Jet (archivo .mdb) si **SubscriberType** es **2** (permite una conexión a una base de datos Jet sin un nombre del origen de datos ODBC (DSN)).  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  Es el nombre de inicio de sesión del suscriptor. Si **SubscriberSecurityMode** es **0** (para autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), se debe especificar este parámetro.  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  Es la contraseña del suscriptor. Si **SubscriberSecurityMode** es **0** (para autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), se debe especificar este parámetro.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -266,7 +266,7 @@ ms.locfileid: "52767667"
 > [!NOTE]  
 >  Los flujos de suscripción no funcionan en los artículos configurados para entregar [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para usar flujos de suscripción, configure en su lugar los artículos para que entreguen llamadas de procedimiento almacenado.  
   
- **-SubscriptionTableName** *subscription_table*  
+ **-SubscriptionTableName** _subscription_table_  
  Es el nombre de la tabla de suscripción generada o usada en el Suscriptor determinado. Si no se especifica, se usa la tabla [MSreplication_subscriptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-subscriptions-transact-sql). Utilice esta opción para los sistemas de administración de bases de datos (DBMS) que no admiten los nombres largos del archivo.  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  

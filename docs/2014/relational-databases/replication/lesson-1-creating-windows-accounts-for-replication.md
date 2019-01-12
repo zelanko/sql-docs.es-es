@@ -1,11 +1,10 @@
 ---
-title: 'Lección 1: Creación de cuentas de Windows para replicación | Microsoft Docs'
+title: 'Lección 1: Creación de Windows de cuentas para la replicación | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -14,14 +13,14 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0269a82d4ef11e53c41d7b288797064e0f3abd16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095575"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127465"
 ---
-# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lección 1: Crear cuentas de Windows para replicación
+# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lección 1: Creación de Windows de cuentas para la replicación
   En esta lección creará cuentas de Windows para ejecutar agentes de replicación. Creará distintas cuentas de Windows en el servidor local para los siguientes agentes:  
   
 |Agente|Ubicación|Nombre de cuenta|  
@@ -63,7 +62,7 @@ ms.locfileid: "48095575"
 6.  Haga clic en **Cerrar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha creado correctamente cuentas de Windows para agentes de replicación. A continuación, configurará la carpeta de instantáneas. Consulte [Lección 2: Preparar la carpeta de instantáneas](lesson-2-preparing-the-snapshot-folder.md).  
+ Ha creado correctamente cuentas de Windows para agentes de replicación. A continuación, configurará la carpeta de instantáneas. Consulte [lección 2: Preparación de la carpeta de instantáneas](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre los agentes de replicación](agents/replication-agents-overview.md)  

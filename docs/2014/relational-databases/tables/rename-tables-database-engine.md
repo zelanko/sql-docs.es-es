@@ -15,12 +15,12 @@ ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b930defb70b64bd006026870389fc509b755c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789017"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124595"
 ---
 # <a name="rename-tables-database-engine"></a>Cambiar el nombre a las tablas (motor de base de datos)
   Puede cambiar el nombre de una tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "52789017"
   
 4.  Para cancelar esta acción, presione la tecla ESC antes de salir del campo.  
   
-5.  En el menú **Archivo**, elija **Guardar***nombre de tabla*.  
+5.  En el menú **Archivo** , elija **Guardar**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

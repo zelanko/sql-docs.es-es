@@ -18,12 +18,12 @@ ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 027800860166b511b0a548313de30b3d237d9930
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513803"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127460"
 ---
 # <a name="bcpbind"></a>bcp_bind
   Enlaza los datos de una variable de programa a una columna de tabla para la copia masiva en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Comentarios  
  Use **bcp_bind** para una forma rápida y eficaz copiar datos de una variable de programa en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Llame a [bcp_init](bcp-init.md) antes de llamar a esta o cualquier otra función de copia masiva. Una llamada a **bcp_init** establece el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla de destino para la copia masiva. Al llamar a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](bcp-sendrow.md), **bcp_init** *szDataFile*parámetro, que indica el archivo de datos, se establece en NULL; el **bcp_init**_eDirection_ parámetro se establece en DB_IN.  
+ Llame a [bcp_init](bcp-init.md) antes de llamar a esta o cualquier otra función de copia masiva. Una llamada a **bcp_init** establece el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla de destino para la copia masiva. Al llamar a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](bcp-sendrow.md), **bcp_init** _szDataFile_parámetro, que indica el archivo de datos, se establece en NULL; el **bcp_init**_eDirection_ parámetro se establece en DB_IN.  
   
  Realice otra **bcp_bind** llamar para cada columna de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla en la que van a copiar. Después de la necesaria **bcp_bind** llamadas se realizaron y, después, llamar a **bcp_sendrow** para enviar una fila de datos desde las variables de programa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No se permite volver a enlazar una columna.  
   

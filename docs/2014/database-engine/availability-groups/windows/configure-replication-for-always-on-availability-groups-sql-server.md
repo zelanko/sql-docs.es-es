@@ -13,12 +13,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cce805ea589a3795a5d617a1d2e01274f8a2fc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 547ebeb6043345821d2b2a19b407599abfd14008
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174625"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125415"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Configurar la replicación para grupos de disponibilidad AlwaysOn (SQL Server)
   La configuración de la replicación y los grupos de disponibilidad AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere siete pasos. Cada paso se describe con más detalle en las secciones siguientes.  
@@ -133,7 +133,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- En cada host de réplica secundaria, configure la distribución. Identifique el distribuidor del publicador original como distribuidor remoto. Usar la misma contraseña que utilizó cuando `sp_adddistributor` se ejecutó originalmente en el distribuidor. Si se utilizan procedimientos almacenados para configurar la distribución, el *@password* parámetro de `sp_adddistributor` se usa para especificar la contraseña.  
+ En cada host de réplica secundaria, configure la distribución. Identifique el distribuidor del publicador original como distribuidor remoto. Use la misma contraseña que se utiliza al ejecutar `sp_adddistributor` originalmente en el distribuidor. Si se utilizan procedimientos almacenados para configurar la distribución, el *@password* parámetro de `sp_adddistributor` se usa para especificar la contraseña.  
   
 ```  
 EXEC sp_adddistributor   
@@ -141,7 +141,7 @@ EXEC sp_adddistributor
     @password = '**Strong password for distributor**';  
 ```  
   
- En cada host de réplica secundaria, asegúrese de que los suscriptores de inserción de publicaciones de la base de datos aparezcan como servidores vinculados. Si se emplean procedimientos almacenados para configurar los publicadores remotos, use `sp_addlinkedserver` para agregar a los suscriptores (si no están presentes) como servidores vinculados a los publicadores.  
+ En cada host de réplica secundaria, asegúrese de que los suscriptores de inserción de publicaciones de la base de datos aparezcan como servidores vinculados. Si se emplean procedimientos almacenados para configurar los publicadores remotos, use `sp_addlinkedserver` para agregar los suscriptores (si todavía no están presentes) como servidores vinculados para los publicadores.  
   
 ```  
 EXEC sys.sp_addlinkedserver   
@@ -176,15 +176,15 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
  El procedimiento almacenado `sp_validate_replica_hosts_as_publishers` se debe ejecutar desde un inicio de sesión con autorización suficiente en cada host de réplica del grupo de disponibilidad para consultar información acerca del grupo de disponibilidad. A diferencia de `sp_validate_redirected_publisher`, usa las credenciales del llamador y no utiliza el inicio de sesión que se conservan en msdb.dbo.MSdistpublishers para conectarse a las réplicas del grupo de disponibilidad.  
   
 > [!NOTE]  
->  `sp_validate_replica_hosts_as_publishers` se producirá un error con el siguiente error al validar los hosts de réplica secundaria que no permiten el acceso de lectura o requieren especificar la intención de lectura.  
+>  `sp_validate_replica_hosts_as_publishers` producirá el error siguiente al validar los hosts de réplica secundaria que no permiten el acceso de lectura o requieren especificar la intención de lectura.  
 >   
 >  Mensaje 21899, nivel 11, estado 1, procedimiento `sp_hadr_verify_subscribers_at_publisher`, línea 109  
 >   
->  Error '976' en la consulta en el publicador redirigido 'MyReplicaHostName' para determinar si hubiera entradas de sysserver para suscriptores del publicador original 'MyOriginalPublisher', mensaje de error 'Error 976, nivel 14, estado 1, mensaje: La base de datos de destino 'MyPublishedDB', participa en un grupo de disponibilidad y no se encuentra accesible en este momento para consultas. El movimiento de datos se ha suspendido o la réplica de disponibilidad no está habilitada para el acceso de lectura. Para permitir el acceso de solo lectura a esta y a otras bases de datos del grupo de disponibilidad, habilite el acceso de lectura en una o varias réplicas de disponibilidad secundarias del grupo.  Para obtener más información, consulte el `ALTER AVAILABILITY GROUP` instrucción [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] libros en pantalla.'.  
+>  Error en la consulta en el publicador redirigido 'MyReplicaHostName' para determinar si hay entradas de sysserver para los suscriptores del publicador original 'MyOriginalPublisher' Error '976', mensaje de error ' Error 976, nivel 14, estado 1, mensaje: La base de datos de destino 'MyPublishedDB', participa en un grupo de disponibilidad y actualmente no es accesible para las consultas. El movimiento de datos se ha suspendido o la réplica de disponibilidad no está habilitada para el acceso de lectura. Para permitir el acceso de solo lectura a esta y a otras bases de datos del grupo de disponibilidad, habilite el acceso de lectura en una o varias réplicas de disponibilidad secundarias del grupo.  Para obtener más información, vea la instrucción `ALTER AVAILABILITY GROUP` en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]'.  
 >   
 >  Se encontraron uno o varios errores de validación del publicador para el host de réplica 'MyReplicaHostName'.  
   
- Este comportamiento es el esperado. Debe comprobar la presencia de las entradas del servidor del suscriptor en estos host de réplica secundaria consultando las entradas de sysserver directamente en el host.  
+ Este es el comportamiento normal. Debe comprobar la presencia de las entradas del servidor del suscriptor en estos host de réplica secundaria consultando las entradas de sysserver directamente en el host.  
   
 ##  <a name="step7"></a> 7. Agregar el publicador original al Monitor de replicación  
  En cada réplica del grupo de disponibilidad, agregue el publicador original al Monitor de replicación.  
@@ -196,7 +196,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Administración &#40;replicación&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Preguntas más frecuentes sobre la administración de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Para crear y configurar un grupo de disponibilidad**  
   

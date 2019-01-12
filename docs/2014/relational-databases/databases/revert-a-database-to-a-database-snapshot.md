@@ -13,12 +13,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef9bda4b8eeff394e44ba696e228b121015960b9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774357"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125655"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Revertir una base de datos a una instantánea de base de datos
   Si se dañan los datos de una base de datos en línea, revertir la base de datos a una instantánea de base de datos anterior puede ser, en algunos casos, ser una alternativa adecuada a restaurar la base de datos a partir de una copia de seguridad. Por ejemplo, revertir una base de datos puede resultar útil para revertir un error grave del usuario que sea reciente, por ejemplo la eliminación de una tabla. Tenga en cuenta que se pierden todos los cambios realizados después de que se creara la instantánea.  
@@ -99,7 +99,7 @@ ms.locfileid: "52774357"
   
      Para realizar una operación de reversión es necesario disponer de permisos RESTORE DATABASE en la base de datos de origen. Para revertir la base de datos, use la siguiente instrucción Transact-SQL:  
   
-     RESTORE DATABASE *nombre_base_de_datos* FROM DATABASE_SNAPSHOT **=***nombre_de_base_de_datos_de_instantánea*  
+     RESTORE DATABASE *nombre_base_de_datos* FROM DATABASE_SNAPSHOT **=**_nombre_base_de_datos_de_instantánea_  
   
      Donde *nombre_base_de_datos* es la base de datos de origen y *nombre_base_de_datos_de_instantánea* equivale al nombre de la instantánea a la que quiere revertir la base de datos. Tenga en cuenta que en esta instrucción debe especificar un nombre de instantánea y no un dispositivo de copia de seguridad.  
   

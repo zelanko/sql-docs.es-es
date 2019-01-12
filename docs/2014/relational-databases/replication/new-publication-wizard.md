@@ -43,12 +43,12 @@ ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c2b215895f6e28d51b91ed5617b3de1230cb7bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755737"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123265"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
   En esta sección se ofrece información acerca de las siguientes páginas del Asistente para nueva publicación:  
@@ -82,6 +82,6 @@ ms.locfileid: "52755737"
 ## <a name="see-also"></a>Vea también  
  [Create a Publication](publish/create-a-publication.md)   
  [Publicar datos y objetos de base de datos](publish/publish-data-and-database-objects.md)   
- [Referencia de propiedades &#40;replicación&#41;](properties-reference-replication.md)  
+
   
   

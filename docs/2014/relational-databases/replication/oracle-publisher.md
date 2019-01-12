@@ -12,12 +12,12 @@ ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad7a226b3c4e3fa9aa593e82e976ff94dd4fe557
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753877"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130255"
 ---
 # <a name="oracle-publisher"></a>Publicador de Oracle
   A partir de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite publicar datos de una base de datos de Oracle mediante la replicación transaccional y de instantáneas. Para obtener más información, consulte [Información general de la publicación de Oracle](non-sql/oracle-publishing-overview.md).  
@@ -39,6 +39,6 @@ ms.locfileid: "52753877"
   
 ## <a name="see-also"></a>Vea también  
  [Crear una publicación a partir de una base de datos de Oracle](publish/create-a-publication-from-an-oracle-database.md)   
- [Referencia de propiedades &#40;replicación&#41;](properties-reference-replication.md)  
+
   
   

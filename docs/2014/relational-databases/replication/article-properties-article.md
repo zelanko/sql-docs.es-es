@@ -14,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785227"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124995"
 ---
 # <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
   El cuadro de diálogo **Propiedades del artículo** está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación** . Le permite ver y establecer propiedades para todos los tipos de artículo. Algunas propiedades solo se pueden establecer cuando se crea la publicación, mientras que otras se pueden establecer únicamente si la publicación no tiene suscripciones activas. Las propiedades que no se pueden establecer se muestran como de solo lectura.  
@@ -121,7 +121,7 @@ ms.locfileid: "52785227"
   
 ### <a name="resolver-tab"></a>Pestaña Solucionador  
  **Utilizar el solucionador predeterminado**  
- Si selecciona el solucionador predeterminado, los conflictos se resuelven sobre la base de la prioridad asignada a cada suscriptor o del primer cambio escrito en el publicador, en función del tipo de suscripciones utilizadas. Para más información, vea [Detectar y solucionar conflictos de replicación de mezcla](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+ Si selecciona el solucionador predeterminado, los conflictos se resuelven sobre la base de la prioridad asignada a cada suscriptor o del primer cambio escrito en el publicador, en función del tipo de suscripciones utilizadas. Para más información, vea [Detectar y solucionar conflictos de replicación de mezcla](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Usar un solucionador personalizado (registrada en el distribuidor)**  
  Si opta por utilizar un solucionador de artículos (puede ser una proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un escrito por el usuario), debe seleccionar un solucionador del cuadro de lista. Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

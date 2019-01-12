@@ -12,29 +12,25 @@ ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5d1c1012c9e482b09281fd11406017b4330dd6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c77f6ce464540cd74f67af73d63a20f5d94fdfc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813697"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130036"
 ---
 # <a name="configure-distribution-wizard"></a>Configure Distribution Wizard
   En esta sección se ofrece información acerca de las siguientes páginas del Asistente para configurar la distribución:  
   
--   [Distribuidor](distributor.md)  
-  
+-   [Distribuidor](distributor.md)
 -   [Carpeta de instantáneas](snapshot-folder.md)  
-  
 -   [Base de datos de distribución](distribution-database.md)  
-  
 -   [Publicadores](publishers.md)  
-  
 -   [Contraseña del distribuidor](distributor-password.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar distribución](configure-distribution.md)   
  [Configurar la publicación y la distribución](configure-publishing-and-distribution.md)   
- [Referencia de propiedades &#40;replicación&#41;](properties-reference-replication.md)  
+
   
   

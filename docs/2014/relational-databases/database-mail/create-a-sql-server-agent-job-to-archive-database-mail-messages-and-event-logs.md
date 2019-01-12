@@ -15,12 +15,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 357678ea7a6f76554cbafade965ee6c847480d67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813567"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124235"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos
   Las tablas **msdb** mantienen copias de los mensajes del Correo electrónico de base de datos y sus datos adjuntos, además del registro de eventos del Correo electrónico de base de datos. Puede reducir el tamaño de las tablas y eliminar los mensajes y eventos que ya no sean necesarios periódicamente. Los procedimientos siguientes permiten crear un trabajo del Agente SQL Server para automatizar el proceso.  
@@ -47,11 +47,11 @@ ms.locfileid: "52813567"
   
 -   En el primer procedimiento se crea con cuatro pasos un trabajo denominado Archivar mensajes del Correo electrónico de base de datos.  
   
-    1.  Copiar todos los mensajes de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_***<año_mes>*.  
+    1.  Copiar todos los mensajes de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_**_<año_mes>_.  
   
-    2.  Copiar todos los datos adjuntos relacionados con los mensajes copiados en el primer paso, de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_Attachments_***<año_mes>*.  
+    2.  Copiar todos los datos adjuntos relacionados con los mensajes copiados en el primer paso, de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_Attachments_**_<año_mes>_.  
   
-    3.  Copiar todos los eventos del registro de eventos del Correo electrónico de base de datos relacionados con los mensajes copiados en el primer paso, de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato *DBMailArchive_Log_***<año_mes>*.  
+    3.  Copiar todos los eventos del registro de eventos del Correo electrónico de base de datos relacionados con los mensajes copiados en el primer paso, de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_Log_**_<año_mes>_.  
   
     4.  Eliminar los registros de los elementos de correo transferidos de las tablas del Correo electrónico de base de datos.  
   

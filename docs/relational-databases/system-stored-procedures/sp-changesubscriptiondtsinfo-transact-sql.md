@@ -16,12 +16,12 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04587ac4015719bb8a525754d7c0d9e36790b2b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5e691c78e0ef0ddf775b5a23baa7dde1d96f72a9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783377"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129250"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
  [  **@job_id=**] *job_id*  
  Es el identificador del trabajo del agente de distribución para la suscripción de inserción. *job_id* es **varbinary (16)**, no tiene ningún valor predeterminado. Para buscar el identificador de trabajo de distribución, ejecute **sp_helpsubscription** o **sp_helppullsubscription**.  
   
- [ **@dts_package_name**=] **'***dts_package_name***'**  
+ [ **@dts_package_name**=] **'**_dts_package_name_**'**  
  Especifica el nombre del paquete DTS. *dts_package_name* es un **sysname**, su valor predeterminado es null. Por ejemplo, para especificar un paquete denominado **DTSPub_Package**, especificaría `@dts_package_name = N'DTSPub_Package'`.  
   
- [ **@dts_package_password**=] **'***dts_package_password***'**  
+ [ **@dts_package_password**=] **'**_dts_package_password_**'**  
  Especifica la contraseña del paquete. *dts_package_password* es **sysname** con el valor predeterminado es NULL, que especifica que la propiedad de contraseña se dejará sin cambios.  
   
 > [!NOTE]  
 >  Un paquete DTS debe tener una contraseña.  
   
- [ **@dts_package_location**=] **'***dts_package_location***'**  
+ [ **@dts_package_location**=] **'**_dts_package_location_**'**  
  Especifica la ubicación del paquete. *dts_package_location* es un **tipo (12)**, su valor predeterminado es null, que especifica que la ubicación del paquete se debe dejar sin cambios. Puede cambiar la ubicación del paquete a **distribuidor** o **suscriptor**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

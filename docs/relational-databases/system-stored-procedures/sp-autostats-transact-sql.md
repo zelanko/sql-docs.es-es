@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a7a6c0ddee6e425ff80155be3002d8deffe187
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d628f2b5dffc976e32b15bea08407c5d0740c297
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721275"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123996"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tblname=** ] **'***table_or_indexed_view_name***'**  
+ [  **@tblname=** ] **'**_table_or_indexed_view_name_**'**  
  Es el nombre de la tabla o vista indizada para la que se muestra la opción AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
   
- [  **@flagc=** ] **'***stats_value***'**  
+ [  **@flagc=** ] **'**_stats_value_**'**  
  Actualiza la opción AUTO_UPDATE_STATISTICS a uno de estos valores:  
   
  **ON** = ON  
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Cuando *stats_flag* no es se especifica, muestra la configuración actual de AUTO_UPDATE_STATISTICS. *stats_value* es **varchar (10)**, su valor predeterminado es null.  
   
- [  **@indname=** ] **'***statistics_name***'**  
+ [  **@indname=** ] **'**_statistics_name_**'**  
  Es el nombre de las estadísticas para las que se muestra o actualiza la opción AUTO_UPDATE_STATISTICS. Para que se muestren las estadísticas de un índice, se puede usar el nombre del mismo; un índice y su objeto de estadísticas correspondiente tienen el mismo nombre.  
   
  *statistics_name* es **sysname**, su valor predeterminado es null.  
@@ -98,7 +98,7 @@ EXEC sp_autostats 'Production.Product';
 GO  
 ```  
   
-### <a name="b-enable-autoupdatestatistics-for-all-statistics-on-a-table"></a>B. Habilitar AUTO_UPDATE_STATISTICS para todas las estadísticas de una tabla  
+### <a name="b-enable-autoupdatestatistics-for-all-statistics-on-a-table"></a>b. Habilitar AUTO_UPDATE_STATISTICS para todas las estadísticas de una tabla  
  En el ejemplo siguiente, se habilita la opción AUTO_UPDATE_STATISTICS para todas las estadísticas de la tabla `Product`.  
   
 ```  

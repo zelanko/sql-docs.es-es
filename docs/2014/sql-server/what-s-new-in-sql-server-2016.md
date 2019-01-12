@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 4e4a9e1cc36590555ab33632c97c73cbeb3d8e0f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 57acb73332f90f4084243184f480edf0a1395a7b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365618"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124825"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>¿Qué&#39;s de SQL Server 2014
   En este tema se resume detallados vínculos a las nuevas características de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y resume los paquetes de servicios para [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -38,8 +38,6 @@ ms.locfileid: "53365618"
  **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] no se ha presentado nuevas características importantes a lo siguiente:**  
   
 -   [¿Qué novedades &#40;Integration Services&#41;](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
-  
--   [¿Qué novedades &#40;replicación&#41;](../relational-databases/replication/what-s-new-replication.md)  
   
 -   [¿Qué novedades &#40;Reporting Services&#41;](../reporting-services/what-s-new-reporting-services.md)  
   

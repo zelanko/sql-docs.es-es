@@ -13,17 +13,17 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa7fb107e67d529c656a49b271744757a1a73746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651323"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128065"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Fecha, hora y marca de tiempo literales
 Es la secuencia de escape para literales de fecha, hora y marca de tiempo  
   
- **{***-tipo* **'** *valor* **'}**   
+ **{**_-tipo_ **'** _valor_ **'}**  
   
  donde *literal de tipo* es uno de los valores enumerados en la tabla siguiente.  
   
@@ -35,7 +35,7 @@ Es la secuencia de escape para literales de fecha, hora y marca de tiempo
   
  [1] el número de dígitos a la derecha del separador decimal en un intervalo de hora o marca de tiempo que contiene un componente de segundos de literal es dependiente de la precisión en segundos, la medida indicada en el campo de descriptor SQL_DESC_PRECISION. (Para obtener más información, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
- Para obtener más información acerca de la fecha, hora y las secuencias de escape de marca de tiempo, consulte [fecha, hora y las secuencias de Escape de marca de tiempo](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) en Apéndice C: SQL gramática.  
+ Para obtener más información acerca de la fecha, hora y las secuencias de escape de marca de tiempo, consulte [fecha, hora y las secuencias de Escape de marca de tiempo](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) en el apéndice C: Gramática de SQL.  
   
  Por ejemplo, las dos siguientes instrucciones SQL actualizan la fecha de pedido de ventas 1023 en la tabla Orders abierta. La primera instrucción usa la sintaxis de la secuencia de escape. La segunda instrucción usa la sintaxis nativa de Rdb de Oracle para la columna de fecha y no es interoperable.  
   

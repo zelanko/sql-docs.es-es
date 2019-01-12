@@ -18,12 +18,12 @@ ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3c0d60d5c20651e525d573f8367f1aff4824f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80de1581116ddc477ee1d5b8197532a853ee3da7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601383"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130525"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @loginame **=** ] **'***inicio de sesión***'**  
+ [ @loginame **=** ] **'**_inicio de sesión_**'**  
  Es el nombre del inicio de sesión que se va a agregar al rol fijo de servidor. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado. *inicio de sesión* puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión o un inicio de sesión de Windows. Si el inicio de sesión de Windows no tiene acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todavía, se le concede el acceso automáticamente.  
   
- [ @rolename **=** ] **'***rol***'**  
+ [ @rolename **=** ] **'**_rol_**'**  
  Es el nombre del rol fijo de servidor al que se va a agregar el inicio de sesión. *rol* es **sysname**, su valor predeterminado es null, y debe ser uno de los siguientes valores:  
   
 -   sysadmin  

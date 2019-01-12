@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba242dfc6c457bd94c082f151f162b8f6eb06e29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819187"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128240"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'***publisher***'**  
+ [  **@publisher=** ] **'**_publisher_**'**  
  Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@property=** ] **'***propiedad***'**  
+ [  **@property=** ] **'**_propiedad_**'**  
  Es la propiedad que se va a cambiar para el publicador indicado. *propiedad* es **sysname** y puede tener uno de estos valores.  
   
- [ **@value=** ] **'***valor***'**  
+ [ **@value=** ] **'**_valor_**'**  
  Es el valor de la propiedad especificada. *valor* es **nvarchar (255)**, su valor predeterminado es null.  
   
- [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  Es necesario para la instancia administrada de SQL Database, debe coincidir con la clave de acceso para el volumen de almacenamiento de Azure SQL Database. 
 
 

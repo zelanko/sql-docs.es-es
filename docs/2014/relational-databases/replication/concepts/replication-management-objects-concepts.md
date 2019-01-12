@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +20,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75d4e1e4ac97683d25e00fd2cf249a8890f5edd3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772088"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129575"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   Replication Management Objects (RMO) es un ensamblado de código administrado que encapsula las funcionalidades de replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. RMO se implementa mediante el espacio de nombres <xref:Microsoft.SqlServer.Replication>.  
@@ -35,16 +35,16 @@ ms.locfileid: "52772088"
  [Configurar distribución](../configure-distribution.md)  
  Los temas de esta sección muestran cómo utilizar RMO para configurar la publicación y la distribución.  
   
- [Crear, modificar y eliminar publicaciones y artículos &#40;replicación&#41;](../publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../publish/create-a-publication.md)  
  Los temas de esta sección muestran cómo utilizar RMO para crear, eliminar y modificar las publicaciones y los artículos.  
   
  [Suscribirse a publicaciones](../subscribe-to-publications.md)  
  Los temas de esta sección muestran cómo utilizar RMO para crear, eliminar y modificar las suscripciones.  
   
- [Proteger una topología de replicación](../security/secure-a-replication-topology.md)  
+ [Proteger una topología de replicación](../security/view-and-modify-replication-security-settings.md)  
  Los temas de esta sección muestran cómo utilizar RMO para ver y modificar la configuración de seguridad.  
   
- [Sincronizar suscripciones &#40;replicación&#41;](../synchronize-subscriptions-replication.md)  
+ [Sincronizar suscripciones &#40;replicación&#41;](../synchronize-data.md)  
  Los temas de esta sección muestran cómo sincronizar las suscripciones.  
   
  [Supervisar la replicación](../monitoring-replication.md)  

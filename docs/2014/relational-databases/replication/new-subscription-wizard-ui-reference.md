@@ -12,12 +12,12 @@ ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 945dfd47f82f0c11dcb104d283cf61346f27903d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ace6059545a4c46e3af279ad7c6104456478801c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814697"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125205"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Asistente para nueva suscripción (referencia de IU)
   En esta sección se ofrece información sobre las siguientes páginas del Asistente para nueva suscripción:  
@@ -45,7 +45,7 @@ ms.locfileid: "52814697"
 ## <a name="see-also"></a>Vea también  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
- [Referencia de propiedades &#40;replicación&#41;](properties-reference-replication.md)  
+ [Suscribirse a publicaciones](subscribe-to-publications.md)   
+
   
   

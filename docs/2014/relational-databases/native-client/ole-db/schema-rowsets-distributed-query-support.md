@@ -17,17 +17,17 @@ ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93b285b2e06fbe9227f9012f22ded8e932c35457
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164317"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125185"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Compatibilidad con consultas distribuidas en conjuntos de filas de esquema
   Para admitir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas distribuidas, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB **IDBSchemaRowset** interfaz devuelve los metadatos para los servidores vinculados.  
   
- Si la propiedad SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION es VARIANT_TRUE, puede especificarse un identificador entrecomillado para el nombre del catálogo (por ejemplo, "my.catalog"). Al restringir la salida del conjunto de filas de esquema por catálogo, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client reconoce un nombre de dos partes que contiene el nombre de catálogo y el servidor vinculado. Para los conjuntos de filas de esquema que figuran en la siguiente tabla, especificar un nombre de catálogo de dos partes, como *linked_server ***.*** catalog* restringe los resultados al catálogo aplicable del servidor con nombre vinculado.  
+ Si la propiedad SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION es VARIANT_TRUE, puede especificarse un identificador entrecomillado para el nombre del catálogo (por ejemplo, "my.catalog"). Al restringir la salida del conjunto de filas de esquema por catálogo, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client reconoce un nombre de dos partes que contiene el nombre de catálogo y el servidor vinculado. Para los conjuntos de filas de esquema en la tabla siguiente, especificando un nombre de catálogo de dos partes como _linked_server_**.** _catálogo_ restringe la salida al catálogo aplicable del servidor vinculado con nombre.  
   
 |Conjunto de filas de esquema|Restricción de catálogo|  
 |-------------------|-------------------------|  

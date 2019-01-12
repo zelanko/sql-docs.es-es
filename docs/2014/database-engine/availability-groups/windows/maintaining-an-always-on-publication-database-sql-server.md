@@ -13,12 +13,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b275f7b25d87753911548eda5225d5de29f0897c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143765"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126990"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Mantener una base de datos de publicación AlwaysOn (SQL Server)
   En este tema se describen las consideraciones especiales para mantener una base de datos de publicación cuando se usan grupos de disponibilidad AlwaysOn.  
@@ -68,7 +68,7 @@ ms.locfileid: "48143765"
     > [!NOTE]  
     >  Cuando se quita un grupo de disponibilidad que ha publicado bases de datos de miembros o una base de datos publicada de un grupo de disponibilidad, todas las copias de las bases de datos publicadas se dejarán en estado de recuperación. Si se restaura, cada una aparecerá como base de datos publicada. Solo se debe conservar una copia con los metadatos de la publicación. Para deshabilitar la replicación para una copia de la base de datos publicada, primero debe quitar todas las suscripciones y publicaciones de la base de datos.  
   
-     Ejecute `sp_dropsubscription` para quitar las suscripciones de publicaciones. Asegúrese de establecer el parámetro *@ignore_distributributor* en 1 para mantener los metadatos de la base de datos de publicación activa en el distribuidor.  
+     Ejecute `sp_dropsubscription` para quitar suscripciones de la publicación. Asegúrese de establecer el parámetro *@ignore_distributributor* en 1 para mantener los metadatos de la base de datos de publicación activa en el distribuidor.  
   
     ```  
     USE MyDBName;  
@@ -106,7 +106,7 @@ ms.locfileid: "48143765"
   
 -   [Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Administración &#40;replicación&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Preguntas más frecuentes sobre la administración de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [Los suscriptores de replicación y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b15344c41bcfe8f43606683dc2e94f848bdb5923
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780087"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125455"
 ---
 # <a name="secure-the-subscriber"></a>Proteger el suscriptor
   Los agentes de mezcla y de distribución se conectan al suscriptor. Estas conexiones pueden realizarse en el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Windows. Es importante proporcionar un inicio de sesión apropiado para estos agentes, al mismo tiempo que se sigue el principio de conceder los derechos mínimos necesarios y proteger el almacenamiento de todas las contraseñas. Para obtener información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -50,10 +50,10 @@ ms.locfileid: "52780087"
 > [!IMPORTANT]  
 >  Para especificar la información de conexión, use el procedimiento almacenado [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). También puede usar la página **Inicio de sesión para suscripciones actualizables** del Asistente para nueva suscripción, que llama a **sp_link_publication**. En ciertas condiciones, este procedimiento almacenado puede producir un error si el suscriptor ejecuta el Service Pack 1 (SP1) de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior y el publicador ejecuta una versión anterior. Si el procedimiento almacenado produce un error en estas circunstancias, actualice el publicador a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 o posterior.  
   
- Para más información, vea [Crear una suscripción actualizable en una publicación transaccional](../create-updatable-subscription-transactional-publication-transact-sql.md) y [Ver y modificar la configuración de seguridad de la replicación](view-and-modify-replication-security-settings.md) .  
+ Para más información, vea [Crear una suscripción actualizable en una publicación transaccional](../publish/create-an-updatable-subscription-to-a-transactional-publication.md) y [Ver y modificar la configuración de seguridad de la replicación](view-and-modify-replication-security-settings.md) .  
   
 > [!IMPORTANT]  
->  La cuenta especificada para la conexión solo debe tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicaciones; no debe tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_***\<NúmeroHexadecimal>* a la cuenta de configuró en cada suscriptor.  
+>  La cuenta especificada para la conexión solo debe tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicaciones; no debe tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_**_\<númeroHexadecimal>_ a la cuenta de configuró en cada suscriptor.  
   
 ## <a name="queued-updating-subscriptions"></a>Suscriptores de actualización en cola  
  Al configurar suscripciones de actualización en cola, hay dos áreas relacionadas con la seguridad que debe tener en cuenta:  
@@ -76,6 +76,6 @@ ms.locfileid: "52780087"
 ## <a name="see-also"></a>Vea también  
  [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Seguridad y protección &#40;Replicación&#41;](security-and-protection-replication.md)  
+ [Seguridad de replicación de SQL Server](view-and-modify-replication-security-settings.md)  
   
   

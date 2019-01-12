@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: df8e06b5de6824ee33fb8e923411ecf3e24e2ca9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409702"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125145"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] es un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] entorno con mejoras específicas para soluciones de inteligencia empresarial. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] se incluye con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "52409702"
 ##  <a name="bkmk_ReportServerProjects"></a> Proyectos de servidor de informes  
  Cuando se instala [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], pasan a estar disponibles las siguientes plantillas de proyecto en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Proyecto de servidor de informes.** Cuando se selecciona un proyecto de servidor de informes, se abre el Diseñador de informes. Un proyecto de servidor de informes es una plantilla de proyectos de Business Intelligence instalada por [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que se encuentra disponible en el cuadro de diálogo **Nuevo proyecto** . Para más información, vea [Agregar un informe nuevo o existente a un proyecto de informe &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Las propiedades de proyecto del servidor de informes se aplican a todos los informes y todos los orígenes de datos compartidos de un proyecto de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Estas propiedades incluyen la dirección URL del servidor de informes y los nombres de carpeta de los informes y orígenes de datos compartidos. Use el cuadro de diálogo **Páginas de propiedades del proyecto** para ver los valores de propiedad actuales. Para abrir este cuadro de diálogo, en el **proyecto** menú, haga clic en  *\<nombre del proyecto >* **propiedades**.  
+-   **Proyecto de servidor de informes.** Cuando se selecciona un proyecto de servidor de informes, se abre el Diseñador de informes. Un proyecto de servidor de informes es una plantilla de proyectos de Business Intelligence instalada por [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que se encuentra disponible en el cuadro de diálogo **Nuevo proyecto** . Para más información, vea [Agregar un informe nuevo o existente a un proyecto de informe &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Las propiedades de proyecto del servidor de informes se aplican a todos los informes y todos los orígenes de datos compartidos de un proyecto de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Estas propiedades incluyen la dirección URL del servidor de informes y los nombres de carpeta de los informes y orígenes de datos compartidos. Use el cuadro de diálogo **Páginas de propiedades del proyecto** para ver los valores de propiedad actuales. Para abrir este cuadro de diálogo, en el **proyecto** menú, haga clic en  _\<nombre del proyecto >_ **propiedades**.  
   
 -   **Asistente de proyectos de servidor de informes.** Cuando se selecciona un proyecto de asistente de proyectos de servidor de informes, se crea automáticamente un proyecto de servidor de informes y se abre el Asistente para informes. En el asistente, puede crear un informe siguiendo las instrucciones de cada página para crear una cadena de conexión a un origen de datos, establecer las credenciales del origen de datos, diseñar una consulta, agregar una región de datos de tabla o matriz, especificar datos y grupos de informe, elegir un estilo de fuente y color, publicar el informe en un servidor de informes y obtener una vista previa del informe localmente. Después de crear un informe con el asistente, puede modificar los datos del informe y el diseñador de informes mediante el Diseñador de informes en el proyecto de servidor de informes.  
   

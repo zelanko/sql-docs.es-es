@@ -17,12 +17,12 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 786ede341e899acf2831c5c3e0a6204d3a80b1b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 791c5955cae2b1e7fec4575f43400ced245dcef5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791956"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124125"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include features y tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -50,7 +50,7 @@ ms.locfileid: "52791956"
 |Cuando la tarea o contenedor recibe el evento `OnTaskFailed`.|Es llamado por el host de la tarea cuando se produce un error.|  
 |Cuando la tarea o contenedor recibe el evento `OnProgress`.|Se llama para actualizar el progreso de la ejecución de la tarea.|  
 |Cuando la tarea o contenedor recibe el evento `OnQueryCancel`.|Se llama en cualquier momento durante el procesamiento de la tarea cuando puede cancelar la ejecución.|  
-|Cuando la tarea o contenedor recibe el evento `OnVariableValueChanged`.|Llamado por la biblioteca de tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] cuando cambia el valor de una variable. El parámetro RaiseChangeEvent de la variable debe establecerse en `true` para generar este evento.<br /><br /> **\*\* Advertencia \*\*** La variable asociada a este punto de interrupción se tiene que definir en el ámbito del **contenedor** . Si la variable se define en el ámbito del paquete, el punto de interrupción no se llega a tocar.|  
+|Cuando la tarea o contenedor recibe el evento `OnVariableValueChanged`.|Llamado por la biblioteca de tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] cuando cambia el valor de una variable. El parámetro RaiseChangeEvent de la variable debe establecerse en `true` para generar este evento.<br /><br /> **&#42;&#42;Advertencia &#42; &#42;**  debe definirse la variable asociada a este punto de interrupción en el **contenedor** ámbito. Si la variable se define en el ámbito del paquete, el punto de interrupción no se llega a tocar.|  
 |Cuando la tarea o contenedor recibe el evento `OnCustomEvent`.|Llamado por tareas para provocar eventos personalizados definidos por la tarea.|  
   
  Además de las condiciones de interrupción disponibles para todas las tareas y contenedores, algunas tareas y contenedores incluyen condiciones de interrupción especiales para establecer puntos de interrupción. Por ejemplo, puede habilitar una condición de interrupción en el contenedor de bucles For que establezca un punto de interrupción que suspenda la ejecución al principio de cada iteración del bucle.  

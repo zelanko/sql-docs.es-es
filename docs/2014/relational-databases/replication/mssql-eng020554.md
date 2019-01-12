@@ -12,12 +12,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdb16831ec27c647645ae0d63f2aa899ec49d590
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806827"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124405"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
     
@@ -52,15 +52,15 @@ ms.locfileid: "52806827"
   
      Compruebe los detalles del error en el Monitor de replicación y, a continuación, reinicie el agente si se ha detenido. Los detalles del error pueden ofrecer información adicional sobre el motivo por el que el agente no se estaba ejecutando correctamente. Si el agente se está ejecutando, no lo detenga y lo reinicie porque esto puede agravar el problema. Para obtener información sobre el modo de ver el estado del agente y los detalles del error en el Monitor de replicación, vea los siguientes temas:  
   
-    -   Para el Agente de instantáneas, el Agente de registro del LOG y el Agente de lectura de cola, vea [Cómo ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+    -   Para el agente de instantáneas, Agente lector del registro y el agente de lector de cola, vea [ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-    -   Para el Agente de distribución y el Agente de mezcla, vea [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+    -   Para el agente de distribución y agente de mezcla, vea [ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Si este error se genera con frecuencia porque el agente está ocupado:  
   
      Es posible que tenga que volver a diseñar la aplicación para que el agente pase menos tiempo procesando.  
   
-     Puede incrementar el intervalo en el que el estado del agente se comprueba usando el cuadro de diálogo **Propiedades del trabajo** . Para obtener información sobre el acceso a este cuadro de diálogo para trabajos de replicación, vea [Ver información y realizar tareas para un publicador &#40;Monitor de replicación&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+     Puede incrementar el intervalo en el que el estado del agente se comprueba usando el cuadro de diálogo **Propiedades del trabajo** . Para obtener información sobre el acceso a este cuadro de diálogo para trabajos de replicación, vea [ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Si un agente no puede iniciar sesión en uno de los equipos de la topología:  
   

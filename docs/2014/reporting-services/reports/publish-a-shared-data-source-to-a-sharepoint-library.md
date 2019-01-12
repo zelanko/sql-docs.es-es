@@ -15,12 +15,12 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b9d254bc40b8a4f36bd73913a33729d3235dd8dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6df7b90915fd7ba91a2b577abc710e708b792ec1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061815"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124295"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Publicar un origen de datos compartido en una biblioteca de SharePoint
   Para publicar un origen de datos compartido en un servidor de informes que se ejecuta en el modo integrado de SharePoint, debe establecer las propiedades de proyecto de informe en el Diseñador de informes. En las propiedades de proyecto, todas las referencias a servidores, informes y orígenes de datos compartidos deben ser direcciones URL completas.  
@@ -31,7 +31,7 @@ ms.locfileid: "48061815"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra un proyecto de servidor de informes nuevo o uno existente.  
   
-2.  En el menú **Proyecto** , haga clic en **Propiedades**. Se abre el cuadro de diálogo ***Páginas de propiedades de *\<proyecto>**.  
+2.  En el menú **Proyecto** , haga clic en **Propiedades**. Se abre el cuadro de diálogo **Páginas de propiedades** de _\<proyecto>_.  
   
 3.  Elija la **Configuración** que utilice para publicar en un sitio de SharePoint.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48061815"
  [Ejemplos de dirección URL para los elementos de informe publicados en un servidor de informes en modo de SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Páginas de propiedades del proyecto (cuadro de diálogo)](../tools/project-property-pages-dialog-box.md)   
  [Establecer propiedades de implementación &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
- [Publicación de informes en un servidor de informes](publishing-reports-to-a-report-server.md)   
- [Usar una conexión de datos de Office &#40;.odc&#41; con informes &#40;modo integrado de Reporting Services en SharePoint&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [Publicar informes en un servidor de informes](publishing-reports-to-a-report-server.md)   
+ [Usar una conexión de datos de Office &#40;.odc&#41; con informes &#40;Reporting Services en el modo integrado de SharePoint&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

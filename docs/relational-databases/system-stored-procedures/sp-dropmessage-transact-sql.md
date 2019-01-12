@@ -18,12 +18,12 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa4b07c3a7c27546990f1b5a1a25fd4f7d0da83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725043"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124155"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_dropmessage [ @msgnum = ] message_number
  [  **@msgnum =** ] *message_number*  
  Es el número de mensaje que se va a quitar. *message_number* debe ser un mensaje definido por el usuario que tiene un número de mensaje superior a 50000. *message_number* es **int**, su valor predeterminado es null.  
   
- [  **@lang =** ] **'***lenguaje***'**  
+ [  **@lang =** ] **'**_lenguaje_**'**  
  Es el idioma del mensaje que se va a quitar. Si **todas** se especifica, todas las versiones de idioma de *message_number* se quitan. *lenguaje* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -70,7 +70,7 @@ GO
 EXEC sp_dropmessage 50001;  
 ```  
   
-### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>B. Quitar un mensaje definido por el usuario que incluya una versión traducida  
+### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>b. Quitar un mensaje definido por el usuario que incluya una versión traducida  
  En el ejemplo siguiente se quita un mensaje definido por el usuario (número `60000`) que incluye una versión traducida del mensaje.  
   
 ```  

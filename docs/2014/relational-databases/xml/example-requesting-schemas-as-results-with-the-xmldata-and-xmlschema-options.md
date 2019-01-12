@@ -13,12 +13,12 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2f6a8395db11179d78a6f513890fd307acbd82c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d0337ea25181ab45426353e69a4f37124aa33bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352054"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126545"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Ejemplo: Solicitar esquemas como resultados con las opciones XMLDATA y XMLSCHEMA
   Esta consulta devuelve el esquema XML-DATA que describe la estructura del documento.  
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  <`Schema`> se declara como un espacio de nombres. Para evitar conflictos de espacio de nombres al solicitar varios esquemas de datos XML en distintas consultas FOR XML, el identificador del espacio de nombres ( `Schema1` en este ejemplo) cambia en cada ejecución de la consulta. El identificador del espacio de nombres es **Schema*n***, donde ***n*** es un número entero.  
+>  <`Schema`> se declara como un espacio de nombres. Para evitar conflictos de espacio de nombres al solicitar varios esquemas de datos XML en distintas consultas FOR XML, el identificador del espacio de nombres ( `Schema1` en este ejemplo) cambia en cada ejecución de la consulta. El identificador de espacio de nombres se compone de **Schema_n_** donde **_n_** es un entero.  
   
  Al especificar la opción `XMLSCHEMA` , se puede solicitar el esquema XSD del resultado.  
   

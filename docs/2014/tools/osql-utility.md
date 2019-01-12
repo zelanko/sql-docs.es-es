@@ -23,12 +23,12 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33b7d8f60bfef89aef49733cf193f8aad2678ee7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808877"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126755"
 ---
 # <a name="osql-utility"></a>osql (utilidad)
   La utilidad **osql** permite especificar archivos de script, procedimientos del sistema e instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] . Esta herramienta utiliza ODBC para comunicarse con el servidor.  
@@ -67,10 +67,10 @@ ms.locfileid: "52808877"
 > [!NOTE]  
 >  Debido a la naturaleza de la difusión en las redes, es posible que **osql** no reciba una respuesta a tiempo de todos los servidores. Por lo tanto, la lista de servidores devuelta puede variar para cada invocación de esta opción.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  Es el identificador de inicio de sesión del usuario. Los identificadores de inicio de sesión distinguen entre mayúsculas y minúsculas.  
   
- **-P** *password*  
+ **-P** _password_  
  Es una contraseña especificada por el usuario. Si no se usa la opción **-P** , **osql** solicitará una contraseña. Si se usa la opción **-P** al final del símbolo del sistema sin una contraseña, **osql** usará la contraseña predeterminada (NULL).  
   
 > [!IMPORTANT]  
@@ -93,31 +93,31 @@ C:\>osql
  **-E**  
  Utiliza una conexión de confianza en lugar de solicitar una contraseña.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Si no se especifica ningún servidor, **osql** se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se ejecuta **osql** desde un equipo remoto conectado a la red.  
+ **-S** _server_name_[ **\\**_instance_name_]  
+ Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_**\\**_instance_name_ para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Si no se especifica ningún servidor, **osql** se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se ejecuta **osql** desde un equipo remoto conectado a la red.  
   
- **-H** *wksta_name*  
+ **-H** _wksta_name_  
  Es el nombre de una estación de trabajo. El nombre de la estación de trabajo se almacena en **sysprocesses.hostname** y se muestra mediante **sp_who**. Si no se especifica esta opción, se supone el nombre actual del equipo.  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  Ejecuta una instrucción USE *db_name* al iniciar **osql**.  
   
- **-l** *time_out*  
+ **-l** _time_out_  
  Especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de **osql** agote el tiempo de espera. El tiempo de espera predeterminado para el inicio de sesión de **osql** es de ocho segundos.  
   
- **-t** *time_out*  
+ **-t** _time_out_  
  Especifica el número de segundos que tienen que transcurrir antes de que un comando exceda el tiempo de espera. Si no se especifica ningún valor para *time_out* , los comandos no tienen tiempo de espera.  
   
- **-h** *headers*  
+ **-h** _headers_  
  Especifica el número de filas que se van a imprimir entre los encabezados de las columnas. La opción predeterminada es imprimir los encabezados una vez para cada conjunto de resultados de la consulta. Utilice -1 para especificar que no desea imprimir los encabezados. Si se utiliza -1, no debe haber ningún espacio entre el parámetro y el valor (**-h-1**, no **-h -1**).  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  Especifica el carácter separador de columnas que, de forma predeterminada, es un espacio en blanco. Use caracteres que tienen un significado especial para el sistema operativo (por ejemplo, |; & \< >), incluya el carácter de comillas dobles (").  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  Permite al usuario ajustar el ancho de la pantalla para la salida. El valor predeterminado es 80 caracteres. Cuando una línea de salida ha alcanzado el ancho máximo de pantalla, se divide en varias líneas.  
   
- **-a** *packet_size*  
+ **-a** _packet_size_  
  Permite solicitar un paquete de diferente tamaño. Los valores válidos de *packet_size* son de 512 a 65 535. El valor predeterminado de **osql** es el servidor predeterminado. Si se aumenta el tamaño del paquete, se puede mejorar el rendimiento durante la ejecución de scripts grandes en las que hay muchas instrucciones SQL entre comandos GO. [!INCLUDE[msCoName](../includes/msconame-md.md)] indican que 8192 suele ser la configuración más rápida para operaciones de copia masiva. Se puede solicitar un tamaño mayor para los paquetes, pero **osql** adopta el valor predeterminado para el servidor si no puede cumplirse la solicitud.  
   
  **-e**  
@@ -126,16 +126,16 @@ C:\>osql
  **-I**  
  Activa la opción de conexión QUOTED_IDENTIFIER.  
   
- **-D** *data_source_name*  
+ **-D** _data_source_name_  
  Conecta a un origen de datos ODBC definido mediante el controlador ODBC de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La conexión **osql** utiliza las opciones especificadas en el origen de datos.  
   
 > [!NOTE]  
 >  Esta opción no funciona con los orígenes de datos definidos para otros controladores.  
   
- **-c** *cmd_end*  
+ **-c** _cmd_end_  
  Especifica el terminador del comando. De forma predeterminada, los comandos se terminan y se envían a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si se escribe GO en una línea aparte. Cuando restablezca el terminador del comando, no utilice palabras reservadas de [!INCLUDE[tsql](../includes/tsql-md.md)] ni caracteres que tengan un significado especial para el sistema operativo, vayan o no precedidos por una barra diagonal inversa.  
   
- **-q "** *query* **"**  
+ **-q "** _query_ **"**  
  Ejecuta una consulta cuando se inicia **osql** , pero no sale de **osql** cuando se completa la consulta. (La instrucción de consulta no debe incluir GO.) Si emite una consulta desde un archivo por lotes, utilice %variables o %variables% de entorno. Por ejemplo:  
   
 ```  
@@ -145,22 +145,22 @@ osql -E -q "select name, object_id from %table%"
   
  Utilice comillas dobles para la consulta y comillas simples en los elementos que incruste en la consulta.  
   
- **-Q"** *query* **"**  
+ **-Q"** _query_ **"**  
  Ejecuta una consulta y sale inmediatamente de **osql**. Utilice comillas dobles para la consulta y comillas simples en los elementos que incruste en la consulta.  
   
  **-n**  
  Quita la numeración y el símbolo del sistema (>) de las líneas de entrada.  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  Personaliza la presentación de los mensajes de error. Se muestra el nivel de error, estado y número de mensaje en errores con el nivel de gravedad especificado o superior. No se mostrarán errores que tengan un nivel de gravedad inferior al nivel especificado. Use **-1** para especificar que se devuelvan todos los encabezados con los mensajes, incluso con los mensajes informativos. Si usa **-1**, no debe dejar espacio entre el parámetro y los valores (**-m-1**, no **-m -1**).  
   
  **-r** { **0**| **1**}  
  Redirige la salida del mensaje a la pantalla (**stderr**). Si no especifica ningún parámetro, o si especifica **0**, solo se redirigirán los mensajes con nivel de gravedad 11 o superior. Si especifica **1**, toda salida de mensaje (incluida "print") se redirigirá.  
   
- **-i** *input_file*  
+ **-i** _input_file_  
  Identifica el archivo que contiene un lote de instrucciones SQL o procedimientos almacenados. Se puede usar el operador de comparación menor que (**\<**) en lugar de **-i**.  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  Identifica el archivo que recibe la salida de **osql**. Se puede usar el operador de comparación mayor que (**>**) en lugar de **-o**.  
   
  Si *input_file* no está en formato Unicode y no se especifica **-u** , *output_file* se almacena en formato OEM. Si *input_file* está en formato Unicode o se especifica **-u** , *output_file* se almacena en formato Unicode.  
@@ -253,7 +253,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  Siempre que sea posible, use la opción **-E**(conexión de confianza).  
   
- Cuando use **osql** de forma interactiva, podrá leer un archivo del sistema operativo en el búfer de comandos con **:r***file_name*. De esta manera, se enviará el script SQL de *file_name* directamente al servidor como un lote único.  
+ Cuando use **osql** de forma interactiva, podrá leer un archivo del sistema operativo en el búfer de comandos con **:r**_file_name_. De esta manera, se enviará el script SQL de *file_name* directamente al servidor como un lote único.  
   
 > [!NOTE]  
 >  Cuando se usa **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trata el separador de lotes GO, si aparece en el archivo de script de SQL, como un error de sintaxis.  

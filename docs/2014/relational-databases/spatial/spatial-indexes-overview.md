@@ -11,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373227"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100890"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite datos espaciales e índices espaciales. Un *índice espacial* es un tipo de índice extendido que permite indizar una columna espacial. Una columna espacial es una columna de tabla que contiene datos de un tipo espacial, como `geometry` o `geography`.  
@@ -127,7 +127,7 @@ ms.locfileid: "53373227"
 >  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de la instrucción [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>El cuadro de límite  
- Los datos geométricos ocupan un plano que puede ser infinito. Sin embargo, en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un índice espacial requiere un espacio finito. Para establecer un espacio finito para descomposición, el esquema de teselación de cuadrícula de geometría exige un *cuadro de límite*rectangular. El cuadro de límite está definido por cuatro coordenadas, `(` *x-min ***,*** y-min* `)` y `(` *x-max ***,*** y máxima*  `)`, que se almacenan como propiedades del índice espacial. Estas coordenadas representan lo siguiente:  
+ Los datos geométricos ocupan un plano que puede ser infinito. Sin embargo, en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un índice espacial requiere un espacio finito. Para establecer un espacio finito para descomposición, el esquema de teselación de cuadrícula de geometría exige un *cuadro de límite*rectangular. El cuadro de límite está definido por cuatro coordenadas, `(` _x-min_**,**_y-min_ `)` y `(` _xmáxima_ **,**_y-max_`)`, que se almacenan como propiedades del índice espacial. Estas coordenadas representan lo siguiente:  
   
 -   *x-min* es la coordenada x de la esquina inferior izquierda del cuadro de límite.  
   
@@ -140,11 +140,11 @@ ms.locfileid: "53373227"
 > [!NOTE]  
 >  Estas coordenadas están especificadas por la cláusula BOUNDING_BOX de la instrucción [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
- El `(` *x-min ***,*** y-min* `)` y `(` *x-max ***,*** y-max* `)` coordenadas determinan la posición y las dimensiones del rectángulo. El espacio exterior del cuadro de límite se trata como una celda única con el número 0.  
+ El `(` _x-min_**,**_y-min_ `)` y `(` _x-max_**,** _y-max_ `)` coordenadas determinan la posición y las dimensiones del rectángulo. El espacio exterior del cuadro de límite se trata como una celda única con el número 0.  
   
  El índice espacial descompone el espacio que se encuentra dentro del cuadro de límite. La cuadrícula de nivel 1 de la jerarquía de cuadrículas rellena el cuadro de límite. Para colocar un objeto geométrico en la jerarquía de cuadrículas, el índice espacial compara las coordenadas del objeto con las coordenadas del cuadro de límite.  
   
- La siguiente ilustración muestra los puntos definidos por el `(` *x-min ***,*** y-min* `)` y `(` *x-max ***,*** y-max* `)` las coordenadas del rectángulo. El nivel superior de la jerarquía de cuadrículas se muestra como una cuadrícula 4x4. Para la ilustración, se omiten los niveles inferiores. Un cero (0) indica el espacio exterior del cuadro de límite. Tenga en cuenta que el objeto 'A' se extiende, en parte, más allá del cuadro y el objeto 'B' permanece por completo fuera del cuadro de la celda 0.  
+ La siguiente ilustración muestra los puntos definidos por el `(` _x-min_**,**_y-min_ `)` y `(` _x máxima_  **,**_y-max_ `)` las coordenadas del rectángulo. El nivel superior de la jerarquía de cuadrículas se muestra como una cuadrícula 4x4. Para la ilustración, se omiten los niveles inferiores. Un cero (0) indica el espacio exterior del cuadro de límite. Tenga en cuenta que el objeto 'A' se extiende, en parte, más allá del cuadro y el objeto 'B' permanece por completo fuera del cuadro de la celda 0.  
   
  ![Cuadro de límite que muestra las coordenadas y la celda 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Cuadro de límite que muestra las coordenadas y la celda 0.")  
   

@@ -14,12 +14,12 @@ ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e94112325267cf65329d825f46a30f3ed9c50450
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215585"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127255"
 ---
 # <a name="create-custom-templates"></a>Crear plantillas personalizadas
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incorpora plantillas para muchas tareas comunes, pero el auténtico valor reside en la posibilidad de crear una plantilla personalizada para un script complejo que tenga que crear con frecuencia. En esta práctica, creará un script sencillo con unos pocos parámetros; pero las plantillas también son útiles para scripts largos y repetitivos.  
@@ -67,7 +67,7 @@ ms.locfileid: "48215585"
   
 10. En el Editor de consultas, escriba **EXECUTE dbo.WorkOrdersForBlade**y, después, pulse F5 para ejecutar la consulta. Confirme que el panel **Resultados** devuelve una lista de los pedidos de trabajo relativos a cuchillas.  
   
-11. Editar la plantilla de secuencia de comandos (la secuencia de comandos en el paso 7), reemplace el nombre del producto hoja con el parámetro ***< * product_name**, `nvarchar(50)`, **nombre*> ***, en cuatro lugares.  
+11. Editar la plantilla de secuencia de comandos (la secuencia de comandos en el paso 7), reemplace el nombre del producto hoja con el parámetro  <strong>*<* product_name</strong>, `nvarchar(50)`, <strong>nombre*>*</strong> , en cuatro lugares.  
   
     > [!NOTE]  
     >  Los parámetros requieren tres elementos: el nombre del parámetro que desea reemplazar, el tipo de datos del parámetro y un valor predeterminado para el parámetro.  

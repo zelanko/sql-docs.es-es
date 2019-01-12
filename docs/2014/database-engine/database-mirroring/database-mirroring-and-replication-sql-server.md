@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543581"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130485"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
   La creación de reflejo de la base de datos se puede usar conjuntamente con la replicación para mejorar la disponibilidad para la base de datos de publicación. La creación de reflejo de la base de datos incluye la creación de dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos de la entidad de seguridad se aplican a la otra copia de la base de datos, conocida como la base de datos reflejada. La creación de reflejo incluye la aplicación a la base de datos reflejada del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos de la entidad de seguridad.  
@@ -161,7 +161,7 @@ ms.locfileid: "52543581"
 |Modo de alta seguridad sin conmutación automática por error|Se garantiza que todas las transacciones confirmadas se refuerzan en disco en la entidad reflejada. El Agente de registro del LOG solo replica las transacciones reforzadas en la entidad reflejada. Si la entidad reflejada no está disponible, la entidad de seguridad no permite que continúe la actividad en la base de datos; por lo tanto, el Agente de registro del LOG no contará con transacciones para replicar.|  
   
 ## <a name="see-also"></a>Vea también  
- [Características y tareas de replicación](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [Replicación de SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Trasvase de registros y replicación &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

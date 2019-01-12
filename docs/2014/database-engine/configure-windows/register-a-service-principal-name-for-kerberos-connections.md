@@ -16,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dcbe4835a333e6b1b1c0881ccd1833c4e5606639
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5def842b7b65523d207433680ebd017536b7f2aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370417"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130955"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos
   El uso de la autenticación Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que se cumplan las siguientes condiciones:  
@@ -71,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Instancia con nombre**  
   
--   *MSSQLSvc/FQDN*: [*puerto***|*** nombreDeInstancia*], donde:  
+-   *MSSQLSvc/FQDN*:[_puerto_**|**_nombreDeInstancia_], donde:  
   
     -   *MSSQLSvc* es el servicio que se va a registrar.  
   
@@ -83,7 +83,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Instancia predeterminada**  
   
--   *MSSQLSvc/FQDN*:*puerto***|*** MSSQLSvc/FQDN*, donde:  
+-   *MSSQLSvc/FQDN*:_puerto_**|**_MSSQLSvc/FQDN_, donde:  
   
     -   *MSSQLSvc* es el servicio que se va a registrar.  
   

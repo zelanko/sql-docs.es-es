@@ -19,12 +19,12 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47fd5d47ea064a6aa783132ff052f8b95a6f2941
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150435"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126905"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restauraciones de archivos (modelo de recuperación simple)
   Este tema solo es relevante para las bases de datos de modelo simple que incluyen como mínimo un grupo de archivos secundario de solo lectura.  
@@ -46,7 +46,7 @@ ms.locfileid: "48150435"
      Para más información sobre la restauración con conexión de archivos y páginas, vea [Características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Para obtener más información sobre la restauración con conexión, vea [Restauración con conexión &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Si quiere que la base de datos esté sin conexión durante una restauración de archivos, deje sin conexión la base de datos de que empiece a restaurar la secuencia realizando la acción siguiente [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) : ALTER DATABASE *nombre_base_de_datos* SET OFFLINE.  
+    >  Si desea que la base de datos esté sin conexión durante una restauración de archivos, desconecte la base de datos antes de iniciar la secuencia de restauración ejecutando la siguiente [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) instrucción: ALTER DATABASE *database_name* SET OFFLINE.  
   
 
   
@@ -62,13 +62,13 @@ ms.locfileid: "48150435"
   
  La secuencia de restauración solo contiene dos instrucciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)] . La primera instrucción restaura un archivo secundario, el archivo `A`, que se restaura usando WITH NORECOVERY. La segunda operación restaura otros dos archivos, `B` y `C` , que se restauran usando WITH RECOVERY desde un dispositivo de copia de seguridad diferente:  
   
-1.  RESTORE DATABASE *base_de_datos* FILE **=***nombre_de_archivo_A*  
+1.  RESTORE DATABASE *base_de_datos* FILE **=**_nombre_de_archivo_A_  
   
      FROM *copia_de_seguridad_de_archivo_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *base_de_datos* FILE **=***nombre_de_archivo_B***,***nombre_de_archivo_C*  
+2.  RESTORE DATABASE *base_de_datos* FILE **=**_nombre_de_archivo_B_**,**_nombre_de_archivo_C_  
   
      FROM *copia_de_seguridad_de_archivos_B_y_C*  
   
@@ -76,9 +76,9 @@ ms.locfileid: "48150435"
   
 ### <a name="examples"></a>Ejemplos  
   
--   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación simple&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Ejemplo: Restauración en línea de un archivo de solo lectura &#40;modelo de recuperación Simple&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Ejemplo: restauración sin conexión del grupo de archivo principal y de otro grupo de archivos &#40;modelo de recuperación completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Ejemplo: Restauración sin conexión principal y otro grupo de archivos de &#40;modelo de recuperación completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48150435"
   
   
 ## <a name="see-also"></a>Vea también  
- [Copias de seguridad y restauración: interoperabilidad y coexistencia &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Copia de seguridad y restauración: Interoperabilidad y coexistencia &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Copias de seguridad diferenciales &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Copias de seguridad de archivos completas &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md)   

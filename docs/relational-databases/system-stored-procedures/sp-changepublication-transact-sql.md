@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209134"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131245"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicación***'**  
+ [  **@publication =** ] **'**_publicación_**'**  
  Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null.  
   
- [  **@property =** ] **'***propiedad***'**  
+ [  **@property =** ] **'**_propiedad_**'**  
  Es la propiedad de publicación que se va a cambiar. *propiedad* es **nvarchar (255)**.  
   
- [  **@value =** ] **'***valor***'**  
+ [  **@value =** ] **'**_valor_**'**  
  Es el nuevo valor de la propiedad. *valor* es **nvarchar (255)**, su valor predeterminado es null.  
   
  Esta tabla describe las propiedades de la publicación que se pueden cambiar y las restricciones de los valores de esas propiedades.  
@@ -130,7 +130,7 @@ Vea en la sección de Notas las propiedades que, si se cambian, requieren que se
   - **0** especifica que los cambios en el artículo no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
   - **1** especifica que los cambios en el artículo que la suscripción para reinicializarla, existente y concede permiso para que se produzca la reinicialización de suscripción.  
   
-[ **@publisher** =] **'***publisher***'**  
+[ **@publisher** =] **'**_publisher_**'**  
  Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
   > [!NOTE]  

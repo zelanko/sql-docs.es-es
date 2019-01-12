@@ -1,5 +1,5 @@
 ---
-title: Información del publicador, Publicaciones | Microsoft Docs
+title: Cuadro de diálogo de información del publicador de replicación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8614db7bd44f6ba5de8826215aed8cf123e86488
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812177"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128915"
 ---
-# <a name="publisher-information-publications"></a>Información del publicador, Publicaciones
+# <a name="sql-server-replication-publisher-information-dialog-box"></a>Cuadro de diálogo de información del publicador de replicación de SQL Server
   La pestaña **Publicaciones** proporciona información de resumen para todas las publicaciones del publicador seleccionado en el panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
@@ -84,7 +84,7 @@ ms.locfileid: "52812177"
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Ver información y realizar tareas para un publicador &#40;Monitor de replicación&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091265"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134095"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ayuda a proporcionar alta disponibilidad y capacidades adicionales de recuperación de base de datos.  
@@ -205,10 +205,10 @@ ms.locfileid: "48091265"
 |||||  
 |-|-|-|-|  
 ||**publicador**|**Distribuidor** <sup>3</sup>|**Suscriptor**|  
-|**Transaccional**|Sí<sup>1</sup>|no|Sí<sup>2</sup>|  
-|**P2P**|no|no|no|  
-|**Mezcla**|Sí|no|Sí<sup>2</sup>|  
-|**Snapshot**|Sí|no|Sí<sup>2</sup>|  
+|**Transaccional**|Sí<sup>1</sup>|No|Sí<sup>2</sup>|  
+|**P2P**|No|No|No|  
+|**Mezcla**|Sí|No|Sí<sup>2</sup>|  
+|**Snapshot**|Sí|No|Sí<sup>2</sup>|  
   
  <sup>1</sup> no incluye compatibilidad para la replicación transaccional bidireccional y recíproca.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "48091265"
   
 -   [Mantener una base de datos de publicación AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Administración &#40;replicación&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Preguntas más frecuentes sobre la administración de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   

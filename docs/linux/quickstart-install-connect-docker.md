@@ -5,7 +5,7 @@ description: En este tutorial rápido se muestra cómo usar Docker para ejecutar
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -13,12 +13,12 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: a8ed1a9be24ab071bc3e202902b2a56f3ab3c046
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: f4e6298cb1165f75dcd9a6aa6c77a1628650c0f6
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266016"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206321"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Inicio rápido: Ejecutar imágenes de contenedor de SQL Server con Docker
 
@@ -328,7 +328,7 @@ Ahora ejecute una consulta para devolver datos desde la tabla `Inventory`.
 
 También puede conectarse a la instancia de SQL Server en la máquina de Docker desde cualquier herramienta externa de Linux, Windows o Mac OS que admita conexiones de SQL.
 
-En los pasos siguientes, se usa **sqlcmd** fuera de su contenedor para conectarse a la instancia de SQL Server que se ejecuta en el contenedor. En estos pasos, se presupone que ya dispone de las herramientas de línea de comandos de SQL Server instaladas fuera de su contenedor. Se aplican las mismas entidades de seguridad que al usar otras herramientas, pero el proceso de conexión es único para cada herramienta.
+En los pasos siguientes, se usa **sqlcmd** fuera de su contenedor para conectarse a la instancia de SQL Server que se ejecuta en el contenedor. En estos pasos, se presupone que ya dispone de las herramientas de línea de comandos de SQL Server instaladas fuera de su contenedor. Los mismos principios se aplican al usar otras herramientas, pero el proceso de conexión es único para cada herramienta.
 
 1. Busque la dirección IP de la máquina host de su contenedor. En Linux, use **ifconfig** o **ip addr**. En Windows, use **ipconfig**.
 

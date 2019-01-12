@@ -14,12 +14,12 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85eb91717bba1642270d0851a4a11917d8c40051
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bd29769b0ba4fd5d9a48fcef07181b7ac70f7c8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770747"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123546"
 ---
 # <a name="validate-subscription"></a>Validar suscripción
   Use el cuadro de diálogo **Validar suscripción** para especificar que es necesario validar una suscripción a una publicación de combinación la próxima vez que se ejecute el Agente de mezcla para la suscripción. El resultado de la validación se muestra en el Monitor de replicación. Para más información, consulte [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
@@ -40,6 +40,6 @@ ms.locfileid: "52770747"
  Haga clic para tener acceso al cuadro de diálogo **Opciones de validación de subscripciones** , que permite especificar si desea usar la validación del recuento de filas o la validación de las sumas de comprobación binarias.  
   
 ## <a name="see-also"></a>Vea también  
- [Validar datos replicados](validate-replicated-data.md)  
+ [Validar datos replicados](validate-data-at-the-subscriber.md)  
   
   

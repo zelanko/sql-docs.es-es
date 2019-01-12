@@ -12,12 +12,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: deee5ba0d402dce6c2c0c5779c676ac7b42a926a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 014c0891fa3a887e781def415e68c38549bafe08
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520325"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129045"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitor de creación de reflejo de la base de datos (página Advertencias)
   Muestra una lista de solo lectura de las advertencias que se admiten en los eventos de creación de reflejo de la base de datos, así como los valores de umbral de advertencia especificados (si los hay).  
@@ -37,7 +37,7 @@ ms.locfileid: "52520325"
 |**Advertir si la transacción sin enviar más antigua sobrepasa el umbral**|Especifica el número de minutos de transacciones que se pueden acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a calcular el potencial de pérdida de datos en concepto de tiempo y resulta especialmente relevante para el modo de rendimiento alto. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
 |**Advertir si la sobrecarga de confirmación del servidor reflejado sobrepasa el umbral**|Especifica el número de milisengundos de retraso medio por transacción tolerado antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|  
   
- **Umbral en '** *< instancia_del_servidor* **'**  
+ **Umbral en '** _< instancia_del_servidor_ **'**  
  En cada una de las advertencias, muestra el umbral actual especificado por el usuario (si existe) para una de las instancias del servidor. El nombre completo de la instancia del servidor se indica en el encabezado de la columna correspondiente.  
   
  Para obtener más información, vea la sección "Comentarios" más adelante en este tema.  
@@ -48,7 +48,7 @@ ms.locfileid: "52520325"
  Para obtener más información, vea la sección "Comentarios" más adelante en este tema.  
   
 ## <a name="remarks"></a>Comentarios  
- Si la información no está disponible actualmente para una instancia del servidor, la columna **Umbral en** muestra un fondo gris y un texto de marca de agua. Si el monitor no está conectado a la instancia del servidor, la cuadrícula de cada celda muestra **No conectado a** *<NOMBRE_DE_SISTEMA>*, o bien **No conectado a** *<NOMBRE_DE_SISTEMA>***\\***<nombre_de_instancia>*, en función de si la instancia es la predeterminada o es una instancia con nombre. Si el monitor espera que se devuelva una consulta, la cuadrícula muestra **Esperando datos...** en cada celda.  
+ Si la información no está disponible actualmente para una instancia del servidor, la columna **Umbral en** muestra un fondo gris y un texto de marca de agua. Si el monitor no está conectado a la instancia del servidor, la cuadrícula de cada celda muestra **No conectado a** _<NOMBRE_DE_SISTEMA>_, o bien **No conectado a** _<NOMBRE_DE_SISTEMA>_**\\**_<nombre_de_instancia>_, en función de si la instancia es la predeterminada o es una instancia con nombre. Si el monitor espera que se devuelva una consulta, la cuadrícula muestra **Esperando datos...** en cada celda.  
   
  Si hay información disponible, la celda de cada advertencia muestra un valor de umbral especificado (y una unidad de medida), o bien **No habilitado**.  
   

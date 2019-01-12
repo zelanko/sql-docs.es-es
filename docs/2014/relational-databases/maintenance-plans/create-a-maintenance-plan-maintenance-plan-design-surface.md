@@ -12,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775797"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132790"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
   En este tema se describe cómo crear un plan de mantenimiento de varios servidores o de uno mediante la superficie de diseño del plan de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aunque el **Asistente para plan de mantenimiento** es mejor para crear planes de mantenimiento básicos, crear un plan con la superficie de diseño le permite usar un flujo de trabajo mejorado.  
@@ -55,7 +55,7 @@ ms.locfileid: "52775797"
   
 3.  Haga clic con el botón derecho en la carpeta **Planes de mantenimiento** y seleccione **Nuevo plan de mantenimiento**.  
   
-4.  En el cuadro de diálogo **Nuevo plan de mantenimiento** , en el cuadro **Nombre** , escriba un nombre para el plan y, a continuación, haga clic en **Aceptar**. De este modo se abre el cuadro de herramientas y la superficie *maintenance_plan_name* **[Diseño]** con el subplán **Subplan_1** creado en la cuadrícula principal.  
+4.  En el cuadro de diálogo **Nuevo plan de mantenimiento** , en el cuadro **Nombre** , escriba un nombre para el plan y, a continuación, haga clic en **Aceptar**. De este modo se abre el cuadro de herramientas y la superficie _maintenance_plan_name_ **[Diseño]** con el subplán **Subplan_1** creado en la cuadrícula principal.  
   
      Las siguientes opciones están disponibles en el encabezado del espacio de diseño.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "52775797"
   
         1.  Si selecciona **Generar un informe de archivo de texto**, seleccione **Crear un nuevo archivo** o **Anexar a archivo**.  
   
-        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(...)**  y seleccione la ruta de acceso a la carpeta o el nombre de la **Buscar carpeta-*** nombre_servidor* o **buscar archivos de base de datos-*** nombre_servidor* cuadros de diálogo.  
+        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(...)**  y seleccione la ruta de acceso para el nombre de archivo o carpeta desde la **Buscar carpeta -**_nombre_servidor_ o **buscar archivos de base de datos -**_nombreDeServidor_  cuadros de diálogo.  
   
         3.  Si selecciona **Enviar informe a un destinatario de correo electrónico**, en la lista de **Operador del agente** , seleccione el destinatario del informe enviado por correo electrónico.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "52775797"
   
 12. Para ver los resultados en el visor del archivo de registro, en el **Explorador de objetos**, haga clic con el botón derecho en la carpeta **Planes de mantenimiento** o en el plan de mantenimiento específico y, luego, selecciones **Ver historial**.  
   
-     Las siguientes opciones están disponibles en el **Log File Viewer-*** nombre_servidor* cuadro de diálogo.  
+     Las siguientes opciones están disponibles en el **Log File Viewer -**_nombre_servidor_ cuadro de diálogo.  
   
      **Cargar registro**  
      Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  

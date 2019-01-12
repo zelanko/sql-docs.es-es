@@ -12,12 +12,12 @@ ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc44785fa96b5bc9af8e871605f8304d13bc481d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4788e7696b9bb986ab5a16fb2fea618d0b996cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753287"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133595"
 ---
 # <a name="mssqleng020574"></a>MSSQL_ENG020574
     
@@ -33,7 +33,7 @@ ms.locfileid: "52753287"
 |Texto del mensaje|La suscripción del suscriptor '%s' al artículo '%s' en la publicación '%s' no pasó la validación de datos.|  
   
 ## <a name="explanation"></a>Explicación  
- Los datos del suscriptor se validaron con los datos del publicador y no coinciden, por lo que se ha generado un error en la validación. Para obtener más información acerca de la validación, consulte [Validate Replicated Data](validate-replicated-data.md).  
+ Los datos del suscriptor se validaron con los datos del publicador y no coinciden, por lo que se ha generado un error en la validación. Para obtener más información acerca de la validación, consulte [Validate Replicated Data](validate-data-at-the-subscriber.md).  
   
 ## <a name="user-action"></a>Acción del usuario  
  Se recomienda que realice lo siguiente:  

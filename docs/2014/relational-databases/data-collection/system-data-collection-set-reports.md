@@ -20,12 +20,12 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36aa1bbfd37642e66b232a1b532ff114397841d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788445"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100500"
 ---
 # <a name="system-data-collection-set-reports"></a>Informes de conjuntos de recopilación de datos del sistema
   El recopilador de datos proporciona un informe histórico para cada uno de los conjuntos de recopilación de datos del sistema. Cada uno de los informes siguientes utiliza datos que están almacenados en el almacén de administración de datos:  
@@ -56,7 +56,7 @@ ms.locfileid: "52788445"
  La tabla debajo del gráfico muestra las horas de la recopilación de datos y los datos de uso correspondientes.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Subinforme Uso de disco para la base de datos : <nombre_de_base_de_datos>  
- El subinforme **Uso de disco para la base de datos:***<nombre_de_base_de_datos>* se muestra al hacer clic en un nombre de base de datos de la tabla de resumen del informe Conjunto de recopilación de uso de disco. Este informe proporciona un desglose numérico y gráfico del uso de espacio de los archivos del registro de transacciones y de datos. El uso de espacio de los archivos de datos se categoriza como un porcentaje asignado a las páginas de índice, el espacio sin asignar, a los datos y al espacio sin usar. Estas categorías se definen como se indica a continuación:  
+ El subinforme **Uso de disco para la base de datos:**_<nombre_de_base_de_datos>_ se muestra al hacer clic en un nombre de base de datos de la tabla de resumen del informe Conjunto de recopilación de uso de disco. Este informe proporciona un desglose numérico y gráfico del uso de espacio de los archivos del registro de transacciones y de datos. El uso de espacio de los archivos de datos se categoriza como un porcentaje asignado a las páginas de índice, el espacio sin asignar, a los datos y al espacio sin usar. Estas categorías se definen como se indica a continuación:  
   
 |Categoría|Definición|  
 |--------------|----------------|  

@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9c1f2fbb750dcdf8e5d78ddcfd5004a32c0cc209
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246754"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242146"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes
 
@@ -77,7 +78,7 @@ Ejecute el **kubectl** comando para ver la configuración del clúster. Asegúre
 kubectl config view
 ```
 
-## <a name="define-environment-variables"></a>Definir variables de entorno
+## <a id="env"></a> Definir variables de entorno
 
 La configuración del clúster puede personalizarse mediante un conjunto de variables de entorno que se pasan a la `mssqlctl create cluster` comando. La mayoría de las variables de entorno es opcional con los valores predeterminados como se indica a continuación. Tenga en cuenta que hay variables de entorno como las credenciales que requieren intervención del usuario.
 

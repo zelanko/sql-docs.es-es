@@ -13,17 +13,17 @@ ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 379357c8598fbdfddedfaa6b3cc5952e2a9119c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786077"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135625"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detectar y solucionar conflictos en registros lógicos
   En este tema se tratan las diferentes combinaciones de opciones de detección y resolución de conflictos posibles al utilizar registros lógicos. Los conflictos en la replicación de mezcla se producen cuando más de un nodo cambia los mismos datos o, al replicar cambios, la replicación de mezcla encuentra determinados tipos de errores, por ejemplo una infracción de restricción. Para obtener más información acerca de la detección y resolución de conflictos, vea [Detección y resolución de conflictos de replicación de mezcla avanzada](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [Especificar el seguimiento de conflictos y el nivel de resolución para artículos de mezcla](../publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [Especificar el seguimiento de conflictos y el nivel de resolución para artículos de mezcla](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-detection"></a>Detección de conflictos  
  Dos propiedades de artículo determinan la manera en que se detectan conflictos para los registros lógicos: **column_tracking** y **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y las versiones posteriores también admiten la detección de nivel de registro lógico.  

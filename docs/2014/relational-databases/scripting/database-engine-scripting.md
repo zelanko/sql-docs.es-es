@@ -16,12 +16,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bf36beb01ee7d31b78e6bdf06921bc460bcbbad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d2529bc92acf32730b0462edeb7315b60fd046a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199215"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127442"
 ---
 # <a name="database-engine-scripting"></a>Scripting del motor de base de datos
   El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] admite el entorno de scripting de [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell para administrar las instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y los objetos en las instancias. También puede generar y ejecutar consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contengan [!INCLUDE[tsql](../../includes/tsql-md.md)] y XQuery en entornos muy similares a los de scripts.  
@@ -60,7 +60,7 @@ ms.locfileid: "48199215"
   
 -   Use el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo**/**Abrir** para abrir el archivo en una nueva ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
--   Use el **-i *** archivo_entrada* parámetro para ejecutar el archivo con el `sqlcmd` utilidad.  
+-   Use la **-i**_archivo_entrada_ parámetro para ejecutar el archivo con el `sqlcmd` utilidad.  
   
 -   Use el parámetro **-QueryFromFile** para ejecutar el archivo con el cmdlet **Invoke-Sqlcmd** en los scripts de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48199215"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo usar el código y los editores de texto en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para desarrollar, para depurar, y ejecutar interactivamente los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|Describe cómo utilizar el `sqlcmd` utilidad para ejecutar [!INCLUDE[tsql](../../includes/tsql-md.md)] secuencias de comandos desde el símbolo del sistema, incluida la capacidad para desarrollar scripts de forma interactiva.|[Temas de procedimientos sobre sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
+|Describe cómo usar la utilidad de `sqlcmd` para ejecutar scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] del símbolo del sistema, incluida la capacidad de desarrollar de forma interactiva los scripts.|[Temas de procedimientos sobre sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
 |Describe cómo integrar los componentes de SQL Server en un entorno de Windows PowerShell 2.0 y, a continuación, compilar scripts de PowerShell y administrar instancias y objetos de SQL Server.|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |Describe cómo usar el asistente de **Generar y publicar scripts** para crear scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] que vuelven a crear los objetos de una base de datos.|[Generar scripts &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   

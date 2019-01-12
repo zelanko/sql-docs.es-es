@@ -14,12 +14,12 @@ ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4538774295e7456d46922a71db91527604d71fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761657"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135845"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Opciones de validación de suscripciones (suscripciones transaccionales)
   Utilice el cuadro de diálogo **Opciones de validación de suscripciones** para especificar si la validación debe utilizar solo un número de fila o un número de fila y una suma de comprobación binaria.  
@@ -36,6 +36,6 @@ ms.locfileid: "52761657"
   
 ## <a name="see-also"></a>Vea también  
  [Validar datos en el suscriptor](validate-data-at-the-subscriber.md)   
- [Validar datos replicados](validate-replicated-data.md)  
+ [Validar datos replicados](validate-data-at-the-subscriber.md)  
   
   

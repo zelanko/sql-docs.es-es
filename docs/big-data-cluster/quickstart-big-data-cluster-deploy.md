@@ -5,162 +5,239 @@ description: Tutorial de una implementación de clústeres de macrodatos de 2019
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 12/17/2018
 ms.topic: quickstart
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 39c79c39c04d64656b83004425d476896cbc75db
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531160"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241706"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
-En este tutorial, implementará un clúster de macrodatos de 2019 de SQL Server (versión preliminar) en AKS en una configuración predeterminada adecuada para entornos de desarrollo y pruebas.
+En este tutorial, usará un script de implementación de ejemplo para implementar el clúster de macrodatos de 2019 de SQL Server (versión preliminar) para Azure Kubernetes Service (AKS). 
 
-> [!NOTE]
-> AKS es una sola ubicación para el host de Kubernetes. Clústeres de datos de gran tamaño se pueden implementar en Kubernetes, independientemente de la infraestructura subyacente. Para obtener más información, consulte [de clústeres de cómo implementar grandes de datos de SQL Server en Kubernetes](deployment-guidance.md).
+> [!TIP]
+> AKS es sólo una opción para hospedar Kubernetes para el clúster de macrodatos. Para obtener información sobre otras opciones de implementación, así como la forma para personalizar la implementación de opciones, consulte [de clústeres de cómo implementar grandes de datos de SQL Server en Kubernetes](deployment-guidance.md).
 
-Además de una instancia de SQL Master, el clúster incluye dos instancias del grupo de almacenamiento, una instancia del grupo de datos y proceso de una instancia del grupo. Datos se guardan con volúmenes persistentes de Kubernetes que usan clases de almacenamiento predeterminada AKS. Para personalizar aún más la configuración, ver las variables de entorno en el [instrucciones de implementación](deployment-guidance.md).
-
-Si prefiere ejecutar un script para crear el clúster de AKS e instalar un clúster de macrodatos al mismo tiempo, consulte [implementar un clúster de macrodatos en Azure Kubernetes Service (AKS) de SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+La implementación del clúster de macrodatos predeterminado usada aquí consta de una instancia de SQL Master, proceso de una instancia del grupo, dos instancias de grupo de datos y dos instancias del grupo de almacenamiento. Datos se guardan con volúmenes persistentes de Kubernetes que usan las clases de almacenamiento predeterminada AKS. La configuración predeterminada utilizada en este inicio rápido es adecuada para entornos de desarrollo y pruebas.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Este inicio rápido requiere que ya ha configurado un clúster de AKS con una versión mínima de v1.10. Para obtener más información, consulte el [implementar en AKS](deploy-on-aks.md) guía.
-
-- [Herramientas de SQL Server 2019 macrodatos](deploy-big-data-tools.md):
+- Una suscripción de Azure.
+- [Herramientas de macrodatos](deploy-big-data-tools.md):
+   - **mssqlctl**
+   - **kubectl**
    - **Azure Data Studio**
    - **Extensión de SQL Server 2019**
-   - **kubectl**
-   - **mssqlctl**
+   - **CLI de Azure**
 
-## <a name="verify-aks-configuration"></a>Comprobar la configuración de AKS
+## <a name="log-in-to-your-azure-account"></a>Inicie sesión en su cuenta de Azure
 
-Una vez implementado el clúster de AKS, puede ejecutar el siguiente comando kubectl para ver la configuración del clúster. Asegúrese de que kubectl apunta al contexto de clúster correcto.
+El script usa la CLI de Azure para automatizar la creación de un clúster de AKS. Antes de ejecutar el script, debe iniciar sesión con su cuenta de Azure CLI de Azure al menos una vez. Ejecute el siguiente comando desde un símbolo del sistema.
 
-```bash
-kubectl config view
+```
+az login
 ```
 
-## <a name="define-environment-variables"></a>Definir variables de entorno
+## <a name="download-the-deployment-script"></a>Descargar el script de implementación
 
-Establecer las variables de entorno necesarias para implementar el clúster de macrodatos ligeramente es diferente dependiendo de si se utiliza el cliente de Windows o Linux y macOS.  Elija los pasos siguientes, dependiendo del sistema operativo que esté utilizando.
+En este tutorial rápido se automatiza la creación del clúster de macrodatos en AKS mediante un script de python **implementar-sql-big-data-aks.py**. Si ya ha instalado python para **mssqlctl**, debería poder ejecutar correctamente el script en este inicio rápido. 
 
-Antes de continuar, tenga en cuenta las siguientes directrices importantes:
+En una solicitud de bash Windows PowerShell o Linux, ejecute el siguiente comando para descargar el script de implementación desde GitHub.
 
-- En el [ventana de comandos](https://docs.microsoft.com/visualstudio/ide/reference/command-window), se incluyen entre comillas en las variables de entorno. Si utiliza comillas para encapsular una contraseña, se incluyen las comillas en la contraseña.
-- En bash, no se incluyen entre comillas en la variable. Nuestros ejemplos utilizan comillas dobles `"`.
-- Puede establecer la contraseña de las variables de entorno que prefiera, pero asegúrese de que son lo suficientemente complejos y no utilizar la `!`, `&`, o `'` caracteres.
-- El `sa` cuenta es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la instalación. Después de crear el contenedor de SQL Server, la variable de entorno `MSSQL_SA_PASSWORD` especificada se reconoce mediante la ejecución de `echo $MSSQL_SA_PASSWORD` en el contenedor. Por motivos de seguridad, cambiar su `sa` contraseña según los procedimientos recomendados que se documentan [aquí](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
-
-Inicialice las variables de entorno siguientes.  Son necesarios para implementar un clúster de macrodatos:
-
-### <a name="windows"></a>Windows
-
-Mediante una ventana de comandos (no PowerShell), configure las siguientes variables de entorno:
-
-```cmd
-SET ACCEPT_EULA=Y
-SET CLUSTER_PLATFORM=aks
-
-SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
-
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
-SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+```
+curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/aks/deploy-sql-big-data-aks.py"
 ```
 
-### <a name="linuxmacos"></a>Linux y macOS
+## <a name="run-the-deployment-script"></a>Ejecute el script de implementación
 
-Inicialice las variables de entorno siguientes:
+Utilice los pasos siguientes para ejecutar el script de implementación. Este script creará un servicio AKS en Azure y, a continuación, implementar un clúster de macrodatos de 2019 de SQL Server en AKS. También puede modificar el script con otros [variables de entorno](deployment-guidance.md#env) para crear una implementación personalizada.
 
-```bash
-export ACCEPT_EULA="Y"
-export CLUSTER_PLATFORM="aks"
+1. Ejecute el script con el siguiente comando:
 
-export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
+   ```
+   python deploy-sql-big-data-aks.py
+   ```
 
-export DOCKER_REGISTRY="private-repo.microsoft.com"
-export DOCKER_REPOSITORY="mssql-private-preview"
-export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
-export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
-export DOCKER_PRIVATE_REGISTRY="1"
+   > [!NOTE]
+   > Si tiene python3 y python2 en el equipo cliente y en la ruta de acceso, tendrá que ejecutar el comando mediante python3: `python3 deploy-sql-big-data-aks.py`.
+
+1. Cuando se le solicite, escriba la siguiente información:
+
+   | Valor | Descripción |
+   |---|---|
+   | **Id. de suscripción de Azure** | El identificador de suscripción de Azure que se usará para AKS. Puede enumerar todas las suscripciones y sus identificadores ejecutando `az account list` desde otra línea de comandos. |
+   | **Grupo de recursos de Azure** | El nombre del grupo de recursos de Azure para crear el clúster de AKS. |
+   | **Nombre de usuario de docker** | El nombre de usuario de Docker proporcionada como parte de la versión preliminar pública limitada. |
+   | **Contraseña de docker** | La contraseña de Docker proporcionada como parte de la versión preliminar pública limitada. |
+   | **Región de Azure** | La región de Azure para el nuevo clúster AKS (valor predeterminado **westus**). |
+   | **Tamaño de la máquina** | El [tamaño de la máquina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) que se usará para los nodos del clúster AKS (valor predeterminado **Standard_L4s**). |
+   | **Nodos de trabajo** | El número de nodos de trabajo en el clúster de AKS (valor predeterminado **3**). |
+   | **Nombre del clúster** | El nombre de clúster AKS y el clúster de macrodatos. El nombre del clúster debe ser solo caracteres alfanuméricos en minúsculas y sin espacios en blanco. (valor predeterminado **sqlbigdata**). |
+   | **Contraseña** | Contraseña para el controlador, la puerta de enlace de Spark o HDFS y la instancia maestra (valor predeterminado **MySQLBigData2019**). |
+   | **Controlador para el usuario** | Nombre de usuario para el usuario del controlador (predeterminado: **admin**). |
+
+   > [!IMPORTANT]
+   > Cada notificación de volumen persistente en el clúster requiere un disco conectado. Actualmente, el clúster de macrodatos requiere 21 notificaciones de volumen persistente. Al elegir un tamaño de máquina virtual de Azure y el número de nodos, asegúrese de que el número total de discos que se pueden conectar a través de los nodos es mayor o igual a 21. Por ejemplo, el [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamaño de máquina admite 16 discos conectados, por lo que significa de tres nodos que se pueden conectar 48 discos.
+
+   > [!NOTE]
+   > El `sa` cuenta es un administrador del sistema en la instancia principal de SQL Server que se crea durante la instalación. Después de crear la implementación, el `MSSQL_SA_PASSWORD` variable de entorno es reconocible ejecutando `echo $MSSQL_SA_PASSWORD` en el contenedor de la instancia maestra. Por motivos de seguridad, cambiar su `sa` contraseña en la instancia principal después de la implementación. Para obtener más información, consulte [cambiar la contraseña de SA](../linux/quickstart-install-connect-docker.md#sapassword).
+
+1. Se iniciará la secuencia de comandos mediante la creación de un clúster de AKS mediante los parámetros especificados. Este paso tarda varios minutos.
+
+   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
+
+## <a name="monitor-the-status"></a>Supervisar el estado
+
+Después de la secuencia de comandos crea el clúster de AKS, continúa para establecer variables de entorno necesarias con la configuración que especificó anteriormente. A continuación, llama **mssqlctl** para implementar el clúster de macrodatos en AKS.
+
+La ventana de comandos de cliente dará como resultado el estado de implementación. Durante el proceso de implementación, debería ver una serie de mensajes donde está esperando el pod del controlador:
+
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-> [!NOTE]
-> Durante la versión preliminar pública limitada, se proporcionan las credenciales de Docker para descargar las imágenes de clúster de SQL Server datos de gran tamaño a cada cliente por Microsoft. Para solicitar acceso, registrar [aquí](https://aka.ms/eapsignup)y especifique su interés para probar los clústeres grandes de datos de SQL Server.
+Después de 10 a 20 minutos, se debería notificar que se está ejecutando el pod del controlador:
 
-## <a name="deploy-a-big-data-cluster"></a>Implementar un clúster de macrodatos
-
-Para implementar un clúster de macrodatos de 2019 CTP 2.2 de SQL Server en el clúster de Kubernetes, ejecute el siguiente comando:
-
-```bash
-mssqlctl create cluster <your-cluster-name>
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
 ```
 
-> [!NOTE]
-> El nombre del clúster debe ser solo alfanuméricos caracteres en minúsculas, sin espacios en blanco. Todos los artefactos de Kubernetes para el clúster de macrodatos se creará en un espacio de nombres con el mismo nombre que el clúster de nombre especificado.
+> [!IMPORTANT]
+> Toda la implementación puede tardar mucho tiempo debido al tiempo necesario para descargar las imágenes de contenedor para los componentes del clúster de macrodatos. Sin embargo, no debería tardar varias horas. Si experimenta problemas con la implementación, consulte el [solución de problemas de implementación](deployment-guidance.md#troubleshoot) sección del artículo de guía de implementación.
 
-La ventana de comandos o el shell devuelve el estado de implementación. También puede comprobar el estado de implementación mediante la ejecución de estos comandos en una ventana cmd diferentes:
+## <a name="inspect-the-cluster"></a>Inspeccionar el clúster
 
-```bash
-kubectl get all -n <your-cluster-name>
-kubectl get pods -n <your-cluster-name>
-kubectl get svc -n <your-cluster-name>
-```
+En cualquier momento durante la implementación, puede usar kubectl o el Portal de administración de clúster para inspeccionar el estado y los detalles sobre el clúster de ejecución de macrodatos.
 
-Puede ver un estado y la configuración para cada pod más granulares mediante la ejecución:
-```bash
-kubectl describe pod <pod name> -n <your-cluster-name>
-```
+### <a name="use-kubectl"></a>Usar kubectl
+
+Abra una ventana de comandos para usar **kubectl** durante el proceso de implementación.
+
+1. Ejecute el siguiente comando para obtener un resumen del estado de todo el clúster:
+
+   ```
+   kubectl get all -n <your-cluster-name>
+   ```
+
+1. Inspeccionar los servicios de kubernetes y sus puntos de conexión internos y externos con el siguiente **kubectl** comando:
+
+   ```
+   kubectl get svc -n <your-cluster-name>
+   ```
+
+1. También puede inspeccionar el estado de los pods de kubernetes con el siguiente comando:
+
+   ```
+   kubectl get pods -n <your-cluster-name>
+   ```
+
+1. Obtener más información acerca de un pod específico con el siguiente comando:
+
+   ```
+   kubectl describe pod <pod name> -n <your-cluster-name>
+   ```
 
 > [!TIP]
-> Para obtener más detalles sobre cómo supervisar y solucionar problemas de una implementación, consulte el [solución de problemas de implementación](deployment-guidance.md#troubleshoot) sección del artículo de guía de implementación.
+> Para obtener más información acerca de cómo supervisar y solucionar problemas de una implementación, consulte el [solución de problemas de implementación](deployment-guidance.md#troubleshoot) sección del artículo de guía de implementación.
 
-## <a name="open-the-cluster-administration-portal"></a>Abra el Portal de administración de clúster
+### <a name="use-the-cluster-administration-portal"></a>Usar el Portal de administración de clúster
 
-Una vez que se está ejecutando el pod del controlador, puede usar el Portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `service-proxy-lb` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente.
+Una vez que se está ejecutando el pod del controlador, también puede usar el Portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `service-proxy-lb` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales usadas para iniciar sesión en el portal coinciden con los valores para **controlador para el usuario** y **contraseña** que especificó en el script de implementación.
 
-Puede obtener la dirección IP del servicio de proxy de servicio de equilibrador de carga, ejecute este comando en una ventana cmd o bash:
+Puede obtener la dirección IP de la **proxy-service-lb** servicio, ejecute este comando en una ventana cmd o bash:
 
 ```bash
 kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> Verá una advertencia de seguridad al obtener acceso a la página web, puesto que estamos usando certificados SSL generados automáticamente. En futuras versiones, se proporcionará la capacidad para proporcionar sus propios certificados autofirmados.
+> En CTP 2.2, verá una advertencia de seguridad al obtener acceso a la página web, porque los clústeres de macrodatos actualmente está usando certificados SSL generados automáticamente. Además, en CTP 2.2, no muestra el estado de la instancia principal de SQL Server.
 
-## <a name="connect-to-the-big-data-cluster"></a>Conéctese al clúster de macrodatos
+## <a name="connect-to-the-cluster"></a>Conéctese al clúster
 
-Después de que el script de implementación se ha completado correctamente, puede obtener la dirección IP de la instancia principal de SQL Server y los puntos de conexión de Spark o HDFS siguiendo los pasos descritos a continuación. Todos los puntos de conexión de clúster se muestran en la sección de puntos de conexión de servicio en el Portal de administración de clúster, así como para facilitar su consulta.
+Cuando finalice el script de implementación, la salida le informa de éxito:
 
-Azure proporciona el servicio del equilibrador de carga de Azure en AKS. Ejecute el siguiente comando en una ventana de símbolo o ventana de bash:
-
-```bash
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-Busque el **External-IP** valor que se asigna a los servicios. Conectarse a la instancia principal de SQL Server con la dirección IP para el `endpoint-master-pool` en el puerto 31433 (p. ej.:  **\<ip-address\>, 31433**) y para el punto del clúster de macrodatos de SQL Server con la IP externa para el `service-security-lb` servicio.   Que el punto final de clúster de macrodatos es donde puede interactuar con HDFS y enviar trabajos de Spark a través de Knox.
+Ahora se implementa el clúster de macrodatos de SQL Server en AKS. Ahora puede usar Azure Data Studio para conectarse a la instancia principal de SQL Server y los puntos de conexión de Spark o HDFS mediante Azure Data Studio.
+
+### <a id="master"></a> Instancia principal
+
+La instancia principal de SQL Server es una instancia de SQL Server tradicional que contienen bases de datos relacionales de SQL Server. Los pasos siguientes describen cómo conectarse a la instancia maestra mediante Azure Data Studio.
+
+1. Desde la línea de comandos, busque la dirección IP de la instancia maestra con el siguiente comando:
+
+   ```
+   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   ```
+
+1. En Azure Data Studio, presione **F1** > **nueva conexión**.
+
+1. En **tipo de conexión**, seleccione **Microsoft SQL Server**.
+
+1. Escriba la dirección IP de la instancia principal de SQL Server en **nombre del servidor** (por ejemplo: **\<Dirección IP\>, 31433**).
+
+1. Escriba un inicio de sesión SQL **nombre de usuario** (`SA`) y **contraseña** (la contraseña que escribió en el script de implementación).
+
+1. Cambiar el destino **nombre de base de datos** a una de las bases de datos relacionales.
+
+   ![Conéctese a la instancia maestra](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
+
+1. Presione **Connect**y el **panel Server** debería aparecer.
+
+### <a id="hdfs"></a> Puerta de enlace de Spark o HDFS
+
+El **puerta de enlace de Spark o HDFS** le permite conectar con el fin de trabajar con el bloque de almacenamiento HDFS y para ejecutar trabajos de Spark. Los pasos siguientes describen cómo conectar con Azure Data Studio.
+
+1. Desde la línea de comandos, busque la dirección IP de la puerta de enlace de Spark o HDFS con el siguiente comando:
+
+   ```
+   kubectl get svc service-security-lb -n <your-cluster-name>
+   ```
+ 
+1. En Azure Data Studio, presione **F1** > **nueva conexión**.
+
+1. En **tipo de conexión**, seleccione **clúster grande de datos de SQL Server**.
+   
+   > [!TIP]
+   > Si no ve el **clúster grande de datos de SQL Server** conexión escriba, asegúrese de que ha instalado el [extensión de SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) y que reinicie Azure Data Studio después de la extensión de completado instalación de.
+
+1. Escriba la dirección IP del clúster de macrodatos en **nombre del servidor** (no especifique un puerto).
+
+1. Escriba `root` para el **usuario** y especifique el **contraseña** a su clúster de macrodatos que escribió en el script de implementación.
+
+   ![Conectarse a la puerta de enlace de Spark o HDFS](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
+
+1. Presione **Connect**y el **panel Server** debería aparecer.
+
+## <a name="clean-up"></a>Limpiar
+
+Si va a probar los clústeres grandes de datos de SQL Server en Azure, debe eliminar el clúster de AKS cuando termine para evitar cargos inesperados. No quite el clúster si piensa seguir usándola.
+
+> [!WARNING]
+> Los pasos siguientes destruye el clúster de AKS, lo que elimina el clúster de macrodatos de SQL Server. Si tiene datos de HDFS que desea mantener ni las bases de datos, copia esos datos de seguridad antes de eliminar el clúster.
+
+Ejecute el siguiente comando de CLI de Azure para quitar el clúster de macrodatos y el servicio AKS en Azure (reemplace `<resource group name>` con el **grupo de recursos de Azure** que especificó en el script de implementación):
+
+```azurecli
+az group delete -n <resource group name>
+```
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ahora que está implementado el clúster de macrodatos de SQL Server, pruebe algunas de las nuevas capacidades:
+Ahora que está implementado el clúster de macrodatos de SQL Server, puede cargar datos de ejemplo y explore los tutoriales:
 
 > [!div class="nextstepaction"]
-> [Uso de cuadernos en versión preliminar de SQL Server 2019](notebooks-guidance.md)
+> [Tutorial: Cargar datos de ejemplo en un clúster de macrodatos de SQL Server 2019](tutorial-load-sample-data.md)

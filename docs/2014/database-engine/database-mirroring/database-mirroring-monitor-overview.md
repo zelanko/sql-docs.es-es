@@ -14,12 +14,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 876397aeab28f0d328e3fb80555bdae18699bb01
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536970"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133885"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Información general del Monitor de creación de reflejo de la base de datos
   Si dispone de los permisos correctos, puede utilizar el Monitor de creación de reflejo de la base de datos para supervisar cualquier subconjunto de las bases de datos reflejadas de una instancia del servidor. La supervisión le permite comprobar si los datos fluyen en la sesión de creación de reflejo de la base de datos. Si hay flujo de datos, supervisa la calidad del mismo. Asimismo, el Monitor de creación de reflejo de la base de datos resulta útil para solucionar la causa de un flujo de datos reducido.  
@@ -45,7 +45,7 @@ ms.locfileid: "52536970"
   
  En cada base de datos registrada, se muestra la siguiente información:  
   
- *<Database_name>* **(** *\<Status>* **,** *<PRINCIPAL_SERVER>* **->** *<MIRROR_SERVER>* **)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<Database_name>*  
  Nombre de una base de datos reflejada que se registra con el Monitor de creación de reflejo de la base de datos.  
@@ -64,9 +64,9 @@ ms.locfileid: "52536970"
  *<PRINCIPAL_SERVER>*  
  Nombre del asociado que es actualmente la instancia del servidor principal. El nombre adopta el siguiente formato:  
   
- *<NOMBRE_DE_SISTEMA>*[**\\***<nombre_de_instancia>*]  
+ *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
   
- donde *<SYSTEM_NAME>* es el nombre del sistema en el que se encuentra la instancia del servidor. En una instancia del servidor no predeterminada, también se muestra el nombre de la instancia: *<NOMBRE_DE_SISTEMA>***\\***<nombre_de_instancia>*.  
+ donde *<SYSTEM_NAME>* es el nombre del sistema en el que se encuentra la instancia del servidor. En una instancia del servidor no predeterminada, también se muestra el nombre de la instancia: _<SYSTEM_NAME>_**\\**_<nombre_instancia>_.  
   
  *<MIRROR_SERVER>*  
  Nombre del asociado que es actualmente la instancia del servidor reflejado. El formato es el mismo que el del servidor principal.  
@@ -81,7 +81,7 @@ ms.locfileid: "52536970"
   
  Un administrador del sistema puede ver la configuración actual de las advertencias para la base de datos; para ello, debe seleccionar la página con pestañas **Advertencias** . Desde dicha página, el administrador puede iniciar el cuadro de diálogo **Establecer umbrales de advertencia** para habilitar y configurar uno o varios umbrales de advertencia.  
   
- En el titular situado encima de las pestañas, el panel de detalles muestra la última hora a la que el monitor actualizó la información de estado, como **Última actualización:***\<fecha>**\<hora>*. Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
+ En el titular situado encima de las pestañas, el panel de detalles muestra la última hora a la que el monitor actualizó la información de estado, como **Última actualización:**_\<fecha>_*\<hora>*. Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
   
 ## <a name="action-menu"></a>Menú Acción  
  El menú **Acción** siempre contiene los siguientes comandos:  

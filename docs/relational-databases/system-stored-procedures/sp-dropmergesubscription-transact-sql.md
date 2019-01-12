@@ -16,12 +16,12 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acb16727506952146ace1383c8d36808d7c22a73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791507"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130745"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicación***'**  
+ [  **@publication=** ] **'**_publicación_**'**  
  Es el nombre de publicación. *publicación* es **sysname**, su valor predeterminado es null. La publicación debe existir y debe cumplir las normas de los identificadores.  
   
- [  **@subscriber=**] **'***suscriptor***'**  
+ [  **@subscriber=**] **'**_suscriptor_**'**  
  Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
+ [  **@subscriber_db=** ] **'**_subscriber_db_**'**  
  Es el nombre de la base de datos de suscripción. *subscription_database*es **sysname**, su valor predeterminado es null.  
   
- [  **@subscription_type=** ] **'***subscription_type***'**  
+ [  **@subscription_type=** ] **'**_subscription_type_**'**  
  Es el tipo de suscripción. *subscription_type*es **nvarchar (15)**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  

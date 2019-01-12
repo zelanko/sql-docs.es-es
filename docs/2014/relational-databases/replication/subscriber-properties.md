@@ -14,12 +14,12 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e35b5020eef6b7a884a0490d882c82e2775c8952
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3142a78fcf3a2413e43b1a7598b5d3b282aba1c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805787"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127675"
 ---
 # <a name="subscriber-properties"></a>Propiedades del suscriptor
   El cuadro de diálogo **Propiedades del suscriptor** contiene información importante de los suscriptores que ejecutan versiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "52805787"
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](view-and-modify-distributor-and-publisher-properties.md)   
- [Referencia de propiedades &#40;replicación&#41;](properties-reference-replication.md)   
+
  [Suscribirse a publicaciones](subscribe-to-publications.md)  
   
   

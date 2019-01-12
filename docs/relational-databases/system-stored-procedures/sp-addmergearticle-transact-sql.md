@@ -16,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7894d5f7f3d3c686c8984c0386f1025f00c2890
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4bcf5b0163156fe078c3bd3382efb193ec417399
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770147"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129413"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0 x 100000000**|Use esta opción para replicar el atributo FILESTREAM si se especifica en **varbinary (max)** columnas. No especifique esta opción si replica tablas en suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Replicación de tablas que incluyen columnas FILESTREAM en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] no es compatible con suscriptores, independientemente de cómo se establece esta opción de esquema. Vea la opción relacionada **0 x 800000000**.|  
 |**0x200000000**|Convierte los tipos de datos de fecha y hora (**fecha**, **tiempo**, **datetimeoffset**, y **datetime2**) introducido en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a los datos tipos que se admiten en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**0x400000000**|Replica la opción de compresión para los datos y los índices. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
-|**0 x 800000000**|Establezca esta opción para almacenar los datos de FILESTREAM en su propio grupo de archivos en el suscriptor. Si no se establece esta opción, los datos de FILESTREAM se almacenan en el grupo de archivos predeterminado. La replicación no crea grupos de archivos; por tanto, si establece esta opción, debe crear el grupo de archivos antes de aplicar la instantánea en el suscriptor. Para obtener más información sobre cómo crear objetos antes de aplicar la instantánea, vea [ejecutar Scripts antes y después de aplicar la instantánea](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> Vea la opción relacionada **0 x 100000000**.|  
+|**0 x 800000000**|Establezca esta opción para almacenar los datos de FILESTREAM en su propio grupo de archivos en el suscriptor. Si no se establece esta opción, los datos de FILESTREAM se almacenan en el grupo de archivos predeterminado. La replicación no crea grupos de archivos; por tanto, si establece esta opción, debe crear el grupo de archivos antes de aplicar la instantánea en el suscriptor. Para obtener más información sobre cómo crear objetos antes de aplicar la instantánea, vea [ejecutar Scripts antes y después de aplicar la instantánea](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Vea la opción relacionada **0 x 100000000**.|  
 |**0x1000000000**|Convierte los tipos common language runtime (CLR) definido por el usuario (UDT) en **varbinary (max)** para que las columnas de tipo UDT se pueden replicar en suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x2000000000**|Convierte el **hierarchyid** tipo de datos que **varbinary (max)** para que las columnas de tipo **hierarchyid** se pueden replicar en suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre cómo usar **hierarchyid** columnas en las tablas replicadas, vea [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Replica los índices filtrados de la tabla. Para obtener más información sobre los índices filtrados, vea [crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md).|  
@@ -296,7 +296,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  Si la tabla de origen para un artículo ya está publicada en otra publicación y, a continuación, el valor de *partition_options* debe ser el mismo para ambos artículos.  
   
  [  **@processing_order=** ] *processing_order*  
- Indica el orden de procesamiento de los artículos en una publicación de mezcla. *processing_order* es **int**, su valor predeterminado es 0. **0** especifica que el artículo está desordenado y cualquier otro valor representa el valor ordinal del orden de procesamiento para este artículo. Los artículos se procesan en orden desde el valor menor al mayor. Si dos artículos tienen el mismo valor, lo determina el orden de procesamiento de orden el alias del artículo en el [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) tabla del sistema. Para más información, vea [Especificar el orden de procesamiento de los artículos de mezcla](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+ Indica el orden de procesamiento de los artículos en una publicación de mezcla. *processing_order* es **int**, su valor predeterminado es 0. **0** especifica que el artículo está desordenado y cualquier otro valor representa el valor ordinal del orden de procesamiento para este artículo. Los artículos se procesan en orden desde el valor menor al mayor. Si dos artículos tienen el mismo valor, lo determina el orden de procesamiento de orden el alias del artículo en el [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) tabla del sistema. Para obtener más información, consulte [las propiedades de replicación de mezcla especificar](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
  Define las restricciones en actualizaciones realizadas en el suscriptor con una suscripción de cliente. Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* es **tinyint**, y puede tener uno de los siguientes valores.  
@@ -358,11 +358,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  Si especifica un valor de **3** para *partition_options*, puede haber solo una suscripción para cada partición de datos de ese artículo. Si se crea una segunda partición en la que el criterio de filtrado de la nueva suscripción se resuelve en la misma partición que la suscripción existente, se quitará la suscripción existente.  
   
- Al especificar un valor de 3 para *partition_options*, los metadatos se limpian siempre que se ejecuta el agente de mezcla y la instantánea con particiones expira más rápidamente. Al utilizar esta opción, debe considerar la habilitación de la instantánea con particiones solicitada por el suscriptor. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Al especificar un valor de 3 para *partition_options*, los metadatos se limpian siempre que se ejecuta el agente de mezcla y la instantánea con particiones expira más rápidamente. Al utilizar esta opción, debe considerar la habilitación de la instantánea con particiones solicitada por el suscriptor. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  Agregar un artículo con un filtro horizontal estático, mediante *subset_filterclause*, a una publicación existente con artículos que tienen filtros con parámetros requiere que se reinicialicen las suscripciones.  
   
- Al especificar *processing_order*, se recomienda dejar espacios entre los valores de orden del artículo, lo que facilita establecer nuevos valores en el futuro. Por ejemplo, si tiene tres artículos: artículo1, artículo2 y artículo3, establezca *processing_order* a 10, 20 y 30, en lugar de 1, 2 y 3. Para más información, vea [Especificar el orden de procesamiento de los artículos de mezcla](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+ Al especificar *processing_order*, se recomienda dejar espacios entre los valores de orden del artículo, lo que facilita establecer nuevos valores en el futuro. Por ejemplo, si tiene tres artículos: artículo1, artículo2 y artículo3, establezca *processing_order* a 10, 20 y 30, en lugar de 1, 2 y 3. Para obtener más información, consulte [las propiedades de replicación de mezcla especificar](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="default-schema-option-table"></a>Tabla Opciones de esquema predeterminadas  
  Esta tabla describen el valor predeterminado establecido por el procedimiento almacenado si se especifica un valor NULL para *schema_option*, que depende del tipo de artículo.  

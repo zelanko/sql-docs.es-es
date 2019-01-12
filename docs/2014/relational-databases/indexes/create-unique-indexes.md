@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540911"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127235"
 ---
 # <a name="create-unique-indexes"></a>Crear índices únicos
   En este tema se describe cómo crear un índice único en una tabla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice único garantiza que la clave de índice no contiene valores duplicados y, por tanto, cada fila de la tabla es en cierta forma única. No existen diferencias significativas entre crear una restricción UNIQUE y crear un índice único que es independiente de una restricción. La validación de datos se produce de igual modo y el optimizador de consultas no distingue entre un índice único creado mediante una restricción o creado manualmente. Sin embargo, la creación de una restricción UNIQUE en la columna aclara el objetivo del índice. Para obtener más información acerca de las restricciones UNIQUE, vea [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
@@ -124,7 +124,7 @@ ms.locfileid: "52540911"
   
 13. Haga clic en **Cerrar**.  
   
-14. En el menú **Archivo**, haga clic en **Guardar***nombre_de_tabla*.  
+14. En el menú **Archivo** , haga clic en **Guardar**_table_name_.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Crear un índice único mediante el Explorador de objetos  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52540911"
   
 7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
   
-8.  En el cuadro de diálogo **Seleccionar columnas de***nombre_de_tabla*, active las casillas de las columnas de tabla que se van a agregar al índice único.  
+8.  En el cuadro de diálogo **Seleccionar columnas de**_nombre_de_tabla_ , active las casillas de las columnas de tabla que se van a agregar al índice único.  
   
 9. Haga clic en **Aceptar**.  
   

@@ -13,12 +13,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 433c50834a7dc989d706cc2f67883cd43f5788d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508409"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135535"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
     
@@ -63,13 +63,13 @@ ms.locfileid: "52508409"
   
 4.  Para establecer el servidor principal como asociado en la base de datos reflejada, conéctese al servidor reflejado y emita la instrucción siguiente:  
   
-     ALTER DATABASE *<nombre_de_base_de_datos>* SET PARTNER **=***<dirección_de_red_de_servidor>*  
+     ALTER DATABASE *<nombre_de_base_de_datos>* SET PARTNER **=**_<dirección_de_red_de_servidor>_  
   
      donde *<nombre_de_base_de_datos>* es el nombre de la base de datos de la que se va a crear el reflejo (este nombre es el mismo para ambos asociados) y *<dirección_del_servidor_de_red>* es la dirección de red del servidor principal.  
   
      La sintaxis para una dirección de red de servidor es la siguiente:  
   
-     TCP **://**\<*dirección-del-sistema>***:**\<* puerto>*  
+     TCP<strong>://</strong>\<*dirección del sistema>*<strong>:</strong>\<*puerto>*  
   
      donde \<*dirección del sistema>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino y \<*puerto>*, el número de puerto que usa el punto de conexión de la creación de reflejo de la instancia de servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](specify-a-server-network-address-database-mirroring.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52508409"
   
 5.  Para establecer el servidor reflejado como asociado en la base de datos principal, conéctese al servidor principal y emita la instrucción siguiente:  
   
-     ALTER DATABASE *<nombre_de_base_de_datos>* SET PARTNER **=***<dirección_de_red_de_servidor>*  
+     ALTER DATABASE *<nombre_de_base_de_datos>* SET PARTNER **=**_<dirección_de_red_de_servidor>_  
   
      Para obtener más información, vea el paso 4.  
   

@@ -18,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 542cf5a0960e967d2bebb3889af0f03656004472
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661854"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124565"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expresiones SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  ¿Si el **?** no se especifica el indicador de repetición, `sequence of` solo devolverá True cuando la `Expression` escriba coincide con el `Type` especificado y `Expression` devuelve un singleton.  
   
- **Tenga en cuenta** el signo más (**+**) y el asterisco (**\***) indicadores de repetición no se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Tenga en cuenta** el signo más (**+**) y el asterisco (**&#42;**) indicadores de repetición no se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Los ejemplos siguientes ilustran el uso de la**instanci** operador XQuery.  
   
@@ -139,7 +139,7 @@ where ProductModelID=19
  La consulta devuelve True.  
   
 ### <a name="example-c"></a>Ejemplo C  
- Cuando se utilizan tipos de unión, la expresión `instance of` de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una limitación: en concreto, cuando el tipo de un elemento o atributo es un tipo de unión, puede que `instance of` no determine el tipo exacto. Por tanto, una consulta devolverá False, a menos que los tipos atómicos utilizados en SequenceType sean los elementos principales máximos del tipo real de la expresión de la jerarquía simpleType. Es decir, los tipos atómicos especificados en SequenceType deben ser secundarios directos de anySimpleType. Para obtener información acerca de la jerarquía de tipos, vea [reglas de conversión de tipos en XQuery](../xquery/type-casting-rules-in-xquery.md).  
+ Al usar tipos de unión, el `instance of` expresión en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una limitación: En concreto, cuando el tipo de un elemento o atributo es un tipo de unión, `instance of` no se puede determinar el tipo exacto. Por tanto, una consulta devolverá False, a menos que los tipos atómicos utilizados en SequenceType sean los elementos principales máximos del tipo real de la expresión de la jerarquía simpleType. Es decir, los tipos atómicos especificados en SequenceType deben ser secundarios directos de anySimpleType. Para obtener información acerca de la jerarquía de tipos, vea [reglas de conversión de tipos en XQuery](../xquery/type-casting-rules-in-xquery.md).  
   
  En la siguiente consulta de ejemplo se realiza lo siguiente:  
   
@@ -401,7 +401,7 @@ select @x.query('xs:date("2000-01-01Z")')
     go  
     ```  
   
-     El resultado es el siguiente:  
+     Éste es el resultado:  
   
     ```  
     <a>2002-05-25Z</a>  

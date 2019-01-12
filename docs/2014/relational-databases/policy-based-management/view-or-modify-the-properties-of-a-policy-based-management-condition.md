@@ -13,12 +13,12 @@ ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb6f8f381b0cc284e0db2816fd56dd130f60de07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758217"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100590"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Ver o modificar las propiedades de una condición de administración basada en directivas
   En este tema se describe cómo ver o modificar las propiedades de una condición de administración basada en directivas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -54,7 +54,7 @@ ms.locfileid: "52758217"
   
 4.  Haga clic en el signo más para expandir la carpeta **Condiciones** .  
   
-5.  Haga clic con el botón derecho en la condición que quiere ver o editar y seleccione **Propiedades**. Para obtener más información sobre las opciones disponibles en el cuadro de diálogo **Abrir condición: ***nombre_de_condición*, vea [Cuadro de diálogo Crear nueva condición o Abrir condición, página General](../../integration-services/general-page-of-integration-services-designers-options.md), [Cuadro de diálogo Abrir condición, página Directivas dependientes](open-condition-dialog-box-dependent-policies-page.md), [Cuadro de diálogo Crear nueva condición o Abrir condición, página Descripción](create-new-condition-or-open-condition-dialog-box-description-page.md) y [Cuadro de diálogo Edición avanzada &#40;condición&#41;](advanced-edit-condition-dialog-box.md).  
+5.  Haga clic con el botón derecho en la condición que quiere ver o editar y seleccione **Propiedades**. Para obtener más información sobre las opciones disponibles en el **abrir condición -**_condition_name_ cuadro de diálogo, vea [crear nueva condición o cuadro de diálogo de abrir condición, página General](../../integration-services/general-page-of-integration-services-designers-options.md), [Abrir el cuadro de diálogo condición, página directivas dependientes](open-condition-dialog-box-dependent-policies-page.md), [crear nueva condición o cuadro de diálogo Abrir condición, página Descripción](create-new-condition-or-open-condition-dialog-box-description-page.md), y [Advanced Edit &#40; Condición&#41; cuadro de diálogo](advanced-edit-condition-dialog-box.md).  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   

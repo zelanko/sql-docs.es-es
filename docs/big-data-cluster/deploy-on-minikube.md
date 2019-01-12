@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 66a0e955c77d98e7c3a311047fa3b93dd299ce76
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246574"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241167"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Configurar minikube para las implementaciones de clústeres de macrodatos de SQL Server 2019
 
@@ -25,7 +26,7 @@ En este artículo se describe cómo configurar **minikube** en una única máqui
 - Para ejecutar un clúster de Minikube para SQL Server 2019 (versión preliminar) para los clústeres de datos de gran tamaño, se recomienda que la máquina tenga al menos 32 GB de RAM.
 
    > [!TIP] 
-   > Si el equipo tiene solo el mínimo de memoria recomendado, a continuación, configurar la implementación de clúster tenga la instancia del grupo de 1 almacenamiento, 1 instancia del grupo de datos y solo 1 instancia de grupo de proceso. Esta configuración solo debe usar para entornos de evaluación donde la durabilidad y disponibilidad de los datos no son importantes. Consulte la [documentación de implementación](deployment-guidance.md#define-environment-variables) para obtener más información sobre las variables de entorno para establecer el número de réplicas para grupos de datos de configuración, calcular los grupos y grupos de almacenamiento.
+   > Si el equipo tiene solo el mínimo de memoria recomendado, a continuación, configurar la implementación de clúster tenga la instancia del grupo de 1 almacenamiento, 1 instancia del grupo de datos y solo 1 instancia de grupo de proceso. Esta configuración solo debe usar para entornos de evaluación donde la durabilidad y disponibilidad de los datos no son importantes. Consulte la [documentación de implementación](deployment-guidance.md#env) para obtener más información sobre las variables de entorno para establecer el número de réplicas para grupos de datos de configuración, calcular los grupos y grupos de almacenamiento.
 
 - Virtualización AMD-v o VT-x debe habilitarse en el BIOS del equipo.
 

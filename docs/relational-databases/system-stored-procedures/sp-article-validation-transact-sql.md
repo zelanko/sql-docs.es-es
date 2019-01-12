@@ -16,12 +16,12 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f0d205f22e00916c53f5557458694d939bf1766
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 849564fcda37c022413d9e0758abe50279497a0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210914"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125115"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ sp_article_validation [ @publication = ] 'publication'
  Solo los usuarios con permisos selección ALL en la tabla de origen para el artículo que se está validando se puede ejecutar **sp_article_validation**.  
   
 ## <a name="see-also"></a>Vea también  
- [Validar datos replicados](../../relational-databases/replication/validate-replicated-data.md)   
+ [Validar datos replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   

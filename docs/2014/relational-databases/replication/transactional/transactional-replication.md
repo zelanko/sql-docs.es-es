@@ -13,41 +13,25 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cd024310b00338749147b56e3b63a09fbd515de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814017"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127685"
 ---
 # <a name="transactional-replication"></a>replicación transaccional
   Normalmente, la replicación transaccional se inicia con una instantánea de los datos y los objetos de la base de datos de publicaciones. En cuanto se obtiene la instantánea inicial, los posteriores cambios de datos y modificaciones del esquema realizados en el publicador habitualmente se entregan en el suscriptor cuando se producen (casi en tiempo real). Los cambios de datos se aplican al suscriptor en el mismo orden y dentro de los mismos límites de la transacción que cuando se produjeron en el publicador. Por tanto, en una publicación, se garantiza la coherencia transaccional.  
   
  La replicación transaccional se utiliza normalmente en entornos entre servidores y es la adecuada en los siguientes casos:  
   
--   Se desea que se propaguen cambios incrementales a los suscriptores en el momento en que ocurren.  
-  
--   La aplicación requiere una latencia baja entre el momento en que se realizan los cambios en el publicador y el momento en que llegan los cambios al suscriptor.  
-  
--   La aplicación necesita acceso a los estados intermedios de los datos. Por ejemplo, si una fila cambia cinco veces, la replicación transaccional permite que una aplicación responda a cada cambio (por ejemplo, la activación de un desencadenador) y no solo al cambio de datos neto en la fila.  
-  
--   El publicador tiene un volumen elevado de actividad de inserción, actualización y eliminación.  
-  
+-   Se desea que se propaguen cambios incrementales a los suscriptores en el momento en que ocurren.    
+-   La aplicación requiere una latencia baja entre el momento en que se realizan los cambios en el publicador y el momento en que llegan los cambios al suscriptor.    
+-   La aplicación necesita acceso a los estados intermedios de los datos. Por ejemplo, si una fila cambia cinco veces, la replicación transaccional permite que una aplicación responda a cada cambio (por ejemplo, la activación de un desencadenador) y no solo al cambio de datos neto en la fila.    
+-   El publicador tiene un volumen elevado de actividad de inserción, actualización y eliminación.    
 -   El publicador o el suscriptor es una base de datos que no es de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , como Oracle.  
   
  De forma predeterminada, los suscriptores de publicaciones transaccionales deben tratarse como de solo lectura, porque los cambios no se propagan de vuelta al publicador. Sin embargo, la replicación transaccional ofrece opciones que permiten realizar actualizaciones en el suscriptor  
-  
- **En este tema**  
-  
- [Cómo funciona la replicación transaccional](#HowWorks)  
-  
- [Conjunto de datos inicial](#Dataset)  
-  
- [Agente de instantáneas](#SnapshotAgent)  
-  
- [Agente de registro del LOG](#LogReaderAgent)  
-  
- [Agente de distribución](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> Cómo funciona la replicación transaccional  
  La replicación transaccional se implementa con el Agente de instantáneas, el Agente de registro del LOG y el Agente de distribución de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El Agente de instantáneas prepara archivos de instantáneas que contienen esquemas y datos de las tablas y objetos de base de datos publicados, almacena los archivos en la carpeta de instantáneas y registra los trabajos de sincronización en la base de datos de distribución del distribuidor.  
@@ -82,5 +66,17 @@ ms.locfileid: "52814017"
   
 ##  <a name="DistributionAgent"></a> Agente de distribución  
  El Agente de distribución se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. El Agente mueve las transacciones desde la base de datos de distribución al suscriptor. Si se ha marcado una suscripción para validarla, el Agente de distribución comprueba también si los datos en el publicador y en el suscriptor coinciden.  
+
+## <a name="publication-types"></a>Tipos de publicaciones
+
+  
+La replicación transaccional ofrece cuatro tipos de publicaciones:  
+  
+|Tipo de publicación|Descripción|  
+|----------------------|-----------------|  
+|Publicación transaccional estándar|Apropiada para topologías en las que todos los datos del suscriptor son de solo lectura (la replicación transaccional no exige que esto se cumpla en el suscriptor).<br /><br /> Las publicaciones transaccionales estándar se crean de manera predeterminada cuando se usa Transact-SQL o Replication Management Objects (RMO). Cuando se utiliza el Asistente para nueva publicación, se crean seleccionando **Publicación transaccional** en la página **Tipo de publicación** .<br /><br /> Para obtener más información sobre la creación de publicaciones, vea [Publish Data and Database Objects (Publicar datos y objetos de base de datos)](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Publicación transaccional con suscripciones actualizables|Las características de este tipo de publicación son:<br /><br /> -Cada ubicación tiene datos idénticos, con un publicador y un suscriptor. <br /> -Es posible actualizar las filas en el suscriptor<br /> -Esta topología es más adecuada para entornos de servidor que necesitan una alta disponibilidad y escalabilidad de lectura.<br /><br />Para obtener más información, consulte [suscripciones actualizables](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Topología punto a punto|Las características de este tipo de publicación son:<br /> -Cada ubicación tiene datos idénticos y actúa como publicador y suscriptor.<br /> -La misma fila puede cambiarse solo en una ubicación a la vez.<br /> -Admite [la detección de conflictos](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-Esta topología es más adecuada para entornos de servidor que necesitan una alta disponibilidad y escalabilidad de lectura.<br /><br />Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Replicación transaccional bidireccional|Las características de este tipo de publicación son:<br />Replicación bidireccional es similar a la replicación punto a punto, sin embargo, no proporciona la resolución de conflictos. Además, la replicación bidireccional se limita a 2 servidores. <br /><br /> Para obtener más información, consulte [la replicación transaccional bidireccional](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

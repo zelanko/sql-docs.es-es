@@ -17,19 +17,19 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164605"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131815"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
   En este tema se describe cómo crear una vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. El primer índice creado en una vista debe ser un índice clúster único. Después de haber creado el índice clúster único, puede crear más índices no clúster. La creación de un índice clúster único en una vista mejora el rendimiento de la consulta porque la vista se almacena en la base de datos de la misma manera que se almacena una tabla con un índice clúster. El optimizador de consultas puede utilizar vistas indizadas para acelerar la ejecución de las consultas. No es necesario hacer referencia a la vista en la consulta para que el optimizador tenga en cuenta esa vista al hacer una sustitución.  
   
   
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Para crear una vista indizada, es necesario seguir los pasos descritos a continuación, que son fundamentales para la correcta implementación de la vista indizada:  
   
 1.  Compruebe que las opciones SET sean correctas para todas las tablas existentes a las que se hará referencia en la vista.  
@@ -86,11 +86,11 @@ ms.locfileid: "48164605"
   
 -   Cuando crea el índice, la opción IGNORE_DUP_KEY debe establecerse en OFF (configuración predeterminada).  
   
--   En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, *esquema ***.*** nombredetabla*.  
+-   En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, _esquema_**.**_nombretabla_ .  
   
 -   Las funciones definidas por el usuario a las que se hace referencia en la vista se deben crear con la opción WITH SCHEMABINDING.  
   
--   Para hacer referencia a las funciones definidas por el usuario a las que se hace referencia en la vista, se deben usar nombres de dos partes, *esquema ***.*** función*.  
+-   Para hacer referencia a las funciones definidas por el usuario a las que se hace referencia en la vista, se deben usar nombres de dos partes, _esquema_**.**_función_.  
   
 -   La propiedad de acceso a datos de una función definida por el usuario debe ser NO SQL y la propiedad de acceso externo debe ser NO.  
   

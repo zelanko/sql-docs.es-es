@@ -15,12 +15,12 @@ ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cce9b961c2830b670bb862dee88284a18ed7eb6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c33c5adeb748f3a714112faf7410684413cf0cd5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363307"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134685"
 ---
 # <a name="performing-bulk-copy-operations"></a>Realizar operaciones de copia masiva
   La característica de copia masiva de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la transferencia de grandes cantidades de datos a una tabla o vista de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o desde ella. Los datos también pueden transferirse especificando una instrucción SELECT. Los datos pueden moverse entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y un archivo de datos del sistema operativo, como un archivo ASCII. El archivo de datos puede tener diferentes formatos; el formato para una copia masiva se define en un archivo de formato. Opcionalmente, los datos pueden cargarse en variables de programa y transferirse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante funciones y métodos de copia masiva.  
@@ -95,7 +95,7 @@ ms.locfileid: "53363307"
   
 -   **ISupportErrorInfo**  
   
- Las propiedades específicas del proveedor SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS y SSPROP_FASTLOADKEEPIDENTITY controlan el comportamiento de los conjuntos de filas de copia masiva de proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Las propiedades se especifican en el *rgProperties* miembro de un * rgPropertySets ***IOpenRowset**miembro de parámetro.  
+ Las propiedades específicas del proveedor SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS y SSPROP_FASTLOADKEEPIDENTITY controlan el comportamiento de los conjuntos de filas de copia masiva de proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Las propiedades se especifican en el *rgProperties* miembro de un _rgPropertySets_**IOpenRowset**miembro de parámetro.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  

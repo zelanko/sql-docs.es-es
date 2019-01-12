@@ -14,12 +14,12 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513994"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135715"
 ---
 # <a name="outer-joins"></a>Combinaciones externas
 ODBC admite el SQL-92 dejado, sintaxis de combinación externa completa y correcta. Es la secuencia de escape para las combinaciones externas  
@@ -28,7 +28,7 @@ ODBC admite el SQL-92 dejado, sintaxis de combinación externa completa y correc
   
  donde *combinación externa* es  
   
- *referencia de tabla* {**izquierda &#124; derecha &#124; completa} OUTER JOIN** {*referencia de tabla* &#124; *combinación externa*} **ON**  *condición de búsqueda*  
+ *referencia de tabla* {**izquierda &#124; derecha &#124; completa} OUTER JOIN** {*referencia de tabla* &#124; *combinación externa*} **ON**  _condición de búsqueda_  
   
  *referencia de tabla* especifica un nombre de tabla y *condición de búsqueda* especifica la condición de combinación entre la *referencias de tabla*.  
   

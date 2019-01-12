@@ -14,12 +14,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b45418c96716cc90ac1b3f42974cd35e60c1919d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 23567accc051e72ede3b8ed079b22411de6bc7c6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797587"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126095"
 ---
 # <a name="modify-columns-database-engine"></a>Modificar columnas (motor de base de datos)
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , el tipo de datos de una columna se puede modificar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "52797587"
   
 3.  En la pestaña **Propiedades de columna** , haga clic en la celda de la cuadrícula de la propiedad **Tipo de datos** y elija un tipo de datos en la lista desplegable.  
   
-4.  En el menú **Archivo**, haga clic en **Guardar***nombre de tabla*.  
+4.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
   
 > [!NOTE]  
 >  Cuando se modifica el tipo de datos de una columna, el Diseñador de tablas aplica la longitud del tipo de datos predeterminada que se ha seleccionado, aunque ya se haya especificado otra. Defina siempre la longitud del tipo de datos del valor deseado después de especificar el tipo de datos.  

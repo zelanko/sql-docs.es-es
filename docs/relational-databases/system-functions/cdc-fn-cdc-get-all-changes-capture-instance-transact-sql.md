@@ -17,19 +17,19 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4614ab97c2f5726c1c5382fbe87b9198f9cf2f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800733"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136035"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada cambio aplicado a la tabla de origen dentro del intervalo del número de secuencia de registro (LSN) especificado. Si una fila de origen ha tenido muchos cambios durante el intervalo, cada cambio se representa en el conjunto de resultados devuelto. Además de devolver los datos del cambio, cuatro columnas de metadatos proporcionan la información que necesita aplicar los cambios a otro origen de datos. Las opciones de filtrado de filas rigen el contenido de las columnas de metadatos y de las filas devueltas en el conjunto de resultados. Cuando se especifica la opción de filtro de filas 'all', cada cambio tiene exactamente una fila para identificar el cambio. Cuando se especifica la opción 'all update old', las operaciones de actualización se representan como dos filas: una que contiene los valores de las columnas capturadas antes de la actualización y otra que contiene los valores de las columnas capturadas después de la actualización.  
   
- Esta función de enumeración se crea cuando se habilita una tabla de origen para la captura de datos modificados. Usa el formato y se obtiene el nombre de función **cdc.fn_cdc_get_all_changes_***capture_instance* donde *capture_instance* es el valor especificado para la instancia de captura cuando la tabla de origen es habilitado para la captura de datos modificados.  
+ Esta función de enumeración se crea cuando se habilita una tabla de origen para la captura de datos modificados. Usa el formato y se obtiene el nombre de función **cdc.fn_cdc_get_all_changes_**_capture_instance_ donde *capture_instance* es el valor especificado para la captura instancia de la tabla de origen está habilitada para la captura de datos modificados.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

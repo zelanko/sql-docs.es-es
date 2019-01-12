@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d96dd15857847e739600f087fa63b2c34453d27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816047"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125375"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicación***'**  
+ [  **@publication=**] **'**_publicación_**'**  
  Es el nombre de la publicación de la que se va a quitar un artículo. *publicación*es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article=**] **'***artículo***'**  
+ [  **@article=**] **'**_artículo_**'**  
  Es el nombre del artículo que se va a quitar de la publicación especificada. *artículo*es **sysname**, no tiene ningún valor predeterminado. Si **todas**, se quitan todos los artículos existentes en la publicación de combinación especificada. Incluso si *artículo* es **todas**, la publicación debe quitarse por separado desde el artículo.  
   
  [  **@ignore_distributor=**] *ignore_distributor*  

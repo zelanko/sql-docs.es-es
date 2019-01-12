@@ -8,12 +8,13 @@ manager: craigg
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 8bccadd8fbce9fe2a8cc6f16db75dbd09f3d1ed0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.technology: big-data-cluster
+ms.openlocfilehash: 9129b436f33092054a19b858fa5bcdb8aebadec2
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53264367"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241826"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectarse a un clúster de macrodatos de SQL Server con Azure Data Studio
 
@@ -29,7 +30,7 @@ En este artículo se describe cómo conectarse a un clúster de macrodatos de 20
 
 ## <a name="connect-to-the-cluster"></a>Conéctese al clúster
 
-Cuando se conecta a un clúster de macrodatos, tiene la opción para conectarse a SQL Server [instancia maestra](concept-master-instance.md) o a la puerta de enlace de Spark o HDFS. Las secciones siguientes muestran cómo conectarse a cada uno.
+Cuando se conecta a un clúster de macrodatos, tiene la opción de conectarse a la instancia principal de SQL Server o a la puerta de enlace de Spark o HDFS. Las secciones siguientes muestran cómo conectarse a cada uno.
 
 ## <a id="master"></a> Instancia principal
 
@@ -79,6 +80,9 @@ El **puerta de enlace de Spark o HDFS** le permite conectar con el fin de trabaj
 1. En Azure Data Studio, presione **F1** > **nueva conexión**.
 
 1. En **tipo de conexión**, seleccione **clúster grande de datos de SQL Server**.
+
+   > [!TIP]
+   > Si no ve el **clúster grande de datos de SQL Server** conexión escriba, asegúrese de que ha instalado el [extensión de SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) y que reinicie Azure Data Studio después de la extensión de completado instalación de.
 
 1. Escriba la dirección IP del clúster de macrodatos en **nombre del servidor** (no especifique un puerto).
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2160f4e2a204f1e1e6b90da9949bd356bc9b7cf5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589269"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131071"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lección 1: Publicar datos con la replicación de mezcla
   En esta lección, creará una publicación de combinación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto de las tablas **Employee**, **SalesOrderHeader**y **SalesOrderDetail** en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Estas tablas están filtradas con filtros de fila con parámetros para que cada suscripción contenga una partición única de los datos. También agregará el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el Agente de mezcla a la lista de acceso a la publicación (PAL). Para realizar este tutorial, es preciso que haya finalizado el anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  

@@ -15,12 +15,12 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c037aedf4fa3199be658999f676731875e0b785
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764207"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127595"
 ---
 # <a name="edit-an-operator"></a>Editar un operador
   En este tema se describe cómo editar la disponibilidad de un operador para que reciba notificaciones y cómo modificar las direcciones de correo electrónico, buscapersonas y NET SEND en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "52764207"
   
 4.  Haga clic con el botón derecho en el operador que desea editar y seleccione **Propiedades**.  
   
-     Para obtener más información sobre las opciones disponibles que se incluyen en el cuadro de diálogo *Propiedades de***nombre_de_operador*, consulte:  
+     Para más información sobre las opciones disponibles que se incluyen en el cuadro de diálogo _nombre_operador_**Propiedades** , consulte:  
   
     -   [Propiedades del operador y operador New &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a28ee9f405e589e7956be4391f22d9ea2a46388
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815527"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135531"
 ---
 # <a name="distribution-agent-security"></a>Seguridad del Agente de distribución
   El cuadro de diálogo **Seguridad del Agente de distribución** permite especificar la cuenta de Windows con la que se ejecuta el Agente de distribución. El Agente de distribución se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. La cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows se denomina también *cuenta de proceso*porque el proceso del agente se ejecuta con dicha cuenta. Las opciones adicionales disponibles en el cuadro de diálogo dependen de cómo se tenga acceso al mismo:  
@@ -94,7 +94,7 @@ Persist Security Info=False;Connection Pooling=True;
  La mayoría de las opciones de la cadena son específicas para el servidor DB2 que está configurando, pero la opción **Process Binary as Character** siempre debe establecerse en **False**. Se requiere un valor para que la opción **Catálogo original** identifique la base de datos de suscripciones. Para más información, consulte [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar inicios de sesión y contraseñas en la replicación](security/manage-logins-and-passwords-in-replication.md)   
+ [Administrar inicios de sesión y contraseñas en la replicación](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modelo de seguridad del Agente de replicación](security/replication-agent-security-model.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
  [Replication Security Best Practices](security/replication-security-best-practices.md)   

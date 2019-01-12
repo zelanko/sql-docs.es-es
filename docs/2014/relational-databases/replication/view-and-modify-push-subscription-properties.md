@@ -17,12 +17,12 @@ ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ff13200783ab81e8402fe4bc97774898c97f85e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810937"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127265"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Ver y modificar las propiedades de una suscripción de inserción
   En este tema se describe cómo ver y modificar las propiedades de una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -140,8 +140,8 @@ ms.locfileid: "52810937"
 7.  (Opcional) Para ver los nuevos valores, llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> para recargar las propiedades de la suscripción.  
   
 ## <a name="see-also"></a>Vea también  
- [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  (Prácticas recomendadas de seguridad de replicación)  
+ [Ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Suscribirse a publicaciones](subscribe-to-publications.md)  
   
   

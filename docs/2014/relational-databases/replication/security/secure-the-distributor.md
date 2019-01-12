@@ -13,17 +13,17 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51618b0103a168ab72cab676fdf76ec1da8c3a7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788607"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135505"
 ---
 # <a name="secure-the-distributor"></a>Proteger el distribuidor
   Al distribuidor se conectan los siguientes agentes de replicación: el Agente de registro del LOG, el Agente de instantáneas, el Agente de lectura de cola, el Agente de distribución y el Agente de mezcla. Es importante proporcionar un inicio de sesión adecuado para cada uno de estos agentes respetando el principio de conceder los derechos mínimos necesarios y proteger el almacenamiento de todas las contraseñas:  
   
--   Para información sobre la administración de inicios de sesión y contraseñas, vea [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md) (Administrar inicios de sesión y contraseñas en la replicación).  
+-   Para información sobre la administración de inicios de sesión y contraseñas, vea [Manage Logins and Passwords in Replication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication) (Administrar inicios de sesión y contraseñas en la replicación).  
   
 -   Para obtener información detallada acerca de los permisos exigidos para cada agente, vea [Replication Agent Security Model](replication-agent-security-model.md).  
   
@@ -48,6 +48,6 @@ ms.locfileid: "52788607"
  [Ver y modificar la configuración de seguridad de la replicación](view-and-modify-replication-security-settings.md)   
  [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Seguridad y protección &#40;Replicación&#41;](security-and-protection-replication.md)  
+ [Seguridad de replicación de SQL Server](view-and-modify-replication-security-settings.md)  
   
   

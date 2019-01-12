@@ -12,12 +12,12 @@ ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53a19b1de1c8aa0be89d0a743007b141bdb169b2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 55a3be7188905ccebb9f9d09567879b6bca13de5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766917"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126535"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional-publication-sql-server-2005-and-later"></a>Información del publicador, Lista de supervisión de suscripciones (Publicación transaccional, SQL Server 2005 y posteriores)
   La pestaña **Lista de supervisión de suscripciones** está disponible para distribuidores que ejecutan SQL Server 2005 y versiones posteriores; está pensada para mostrar información sobre las suscripciones de todas las publicaciones disponibles en el publicador seleccionado. Puede filtrar la lista de suscripciones para ver errores, advertencias y las suscripciones que tienen un rendimiento bajo. Esta ficha proporciona una ubicación única para un administrador supervise toda la actividad de replicación en un publicador: Monitor de replicación muestra todas las suscripciones que requieran atención, basándose en el tipo de replicación seleccionado y en la opción elegida en el **mostrar** cuadro de lista desplegable. Puesto que los elementos mostrados en esta pestaña se basan en el rendimiento y el estado actual, las suscripciones se muestran en esta página solo si coinciden con la opción del cuadro de lista **Mostrar** en el momento actual.  
@@ -95,7 +95,7 @@ ms.locfileid: "52766917"
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Ver información y realizar tareas para un publicador &#40;Monitor de replicación&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  
   
   

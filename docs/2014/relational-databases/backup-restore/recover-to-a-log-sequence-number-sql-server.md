@@ -21,12 +21,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e88773137297430763f5ddd47cf7b95030f53d87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050387"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124255"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar a un número de secuencia de registro (SQL Server)
   Este tema solamente es aplicable a las bases de datos que utilizan el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación completa.  
@@ -41,7 +41,7 @@ ms.locfileid: "48050387"
  El LSN de una entrada de registro en la que se haya producido un evento importante puede resultar útil para generar secuencias de restauración válidas. Dado que los LSN se ordenan, pueden compararse para comprobar su igualdad y desigualdad (es decir, **\<**, **>**, **=**, **\<=**, **>=**). Estas comparaciones son útiles para generar secuencias de restauración.  
   
 > [!NOTE]  
->  Los números LSN son valores de tipo de datos `numeric`(25,0). Las operaciones aritméticas (por ejemplo, la suma o la resta) carecen de importancia y no deben utilizarse con los LSN.  
+>  Los números LSN son valores con tipos de datos `numeric`(25,0). Las operaciones aritméticas (por ejemplo, la suma o la resta) carecen de importancia y no deben utilizarse con los LSN.  
   
 
   
@@ -64,11 +64,11 @@ ms.locfileid: "48050387"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxis de Transact-SQL para restaurar hasta un LSN  
  Con la instrucción [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) , puede detenerse en el LSN o inmediatamente antes, como se indica a continuación:  
   
--   Use la cláusula WITH STOPATMARK **='** lsn:*<número_de_Isn>***'**, donde lsn:*\<número_de_Isn>* es una cadena que especifica que la entrada de registro que contiene el LSN especificado es el punto de recuperación.  
+-   Use la cláusula WITH STOPATMARK **='** lsn:_<númeroDeIsn>_**'**, donde lsn:*\<númeroDeIsn>* es una cadena que especifica que la entrada de registro que contiene el LSN especificado es el punto de recuperación.  
   
      STOPATMARK realiza una puesta al día hasta el LSN e incluye esa entrada de registro en la puesta al día.  
   
--   Use la cláusula WITH STOPBEFOREMARK **='** lsn:*<número_de_Isn>***'**, donde lsn:*\<número_de_Isn>* es una cadena que especifica que la entrada de registro inmediatamente anterior a la entrada que contiene el número LSN especificado es el punto de recuperación.  
+-   Use la cláusula WITH STOPBEFOREMARK **='** lsn:_<númeroDeIsn>_**'**, donde lsn:*\<númeroDeIsn>* es una cadena que especifica que la entrada de registro inmediatamente anterior a la entrada que contiene el número LSN especificado es el punto de recuperación.  
   
      STOPBEFOREMARK realiza una puesta al día al LSN y excluye esa entrada de registro de la puesta al día.  
   

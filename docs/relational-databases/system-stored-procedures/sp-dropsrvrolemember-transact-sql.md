@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2f08fa101e2a53696e58f15413ec08c301a9e890
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eca631440e92f946513429ddb43d3212a109984
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596955"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131945"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @loginame **=** ] **'***inicio de sesión***'**  
+ [ @loginame **=** ] **'**_inicio de sesión_**'**  
  Es el nombre del inicio de sesión que se va a quitar del rol fijo de servidor. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado. *inicio de sesión* debe existir.  
   
- [ @rolename **=** ] **'***rol***'**  
+ [ @rolename **=** ] **'**_rol_**'**  
  Es el nombre de un rol de servidor. *rol* es **sysname**, su valor predeterminado es null. *función* debe ser uno de los siguientes valores:  
   
 -   sysadmin  

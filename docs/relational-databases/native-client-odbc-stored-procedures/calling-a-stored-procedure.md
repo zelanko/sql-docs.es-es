@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d93734ea9ef55361eb065f1f200757632dca1fd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e7cd89d826177074bca18a047545a32acee115a9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662404"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128370"
 ---
 # <a name="calling-a-stored-procedure"></a>Llamar a un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51662404"
   
  La secuencia de escape ODBC CALL para llamar a un procedimiento es:  
   
- {[**? =**]**llamada ***procedure_name*[([*parámetro*] [**, **[* parámetro *]]...)]}  
+ {[**? =**]**llamar**_procedure_name_[([*parámetro*] [**,**[*parámetro*]] ...)]}  
   
  donde *nombre_procedimiento* especifica el nombre de un procedimiento y *parámetro* especifica un parámetro de procedimiento. Los parámetros con nombre solo se admiten en instrucciones que utilizan la secuencia de escape ODBC CALL.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "51662404"
   
  Los parámetros de entrada y de entrada/salida pueden omitirse de las llamadas a procedimiento. Si se llama a un procedimiento con paréntesis pero sin ningún parámetro, el controlador indica al origen de datos que use el valor predeterminado para el primer parámetro. Por ejemplo:  
   
- {**llamar** * procedure_name ***()**}  
+ {**llamar** _nombre_procedimiento_**()**}  
   
  Si el procedimiento no tiene ningún parámetro, puede producirse un error en el procedimiento. Si se llama a un procedimiento sin paréntesis, el controlador no envía ningún valor de parámetro. Por ejemplo:  
   
- {**llamar** *procedure_name*}  
+ {**llamar** _procedure_name_}  
   
  Pueden especificarse literales para los parámetros de entrada y de entrada/salida en llamadas a procedimiento. Por ejemplo, el procedimiento InsertOrder tiene cinco parámetros de entrada. La siguiente llamada a InsertOrder omite el primer parámetro, proporciona un literal para el segundo parámetro y usa un marcador de parámetro para el tercero, cuarto y quinto parámetro. (Los parámetros se numeran secuencialmente, comenzando por el valor 1.)  
   

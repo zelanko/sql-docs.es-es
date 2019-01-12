@@ -12,12 +12,12 @@ ms.assetid: 4b983e76-bb77-43c5-b44b-19919d3da619
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5624b58f95ca6a5f47af6269a2bd4cbc6a30033b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f2a0aa29f032dfed7202430aeb44b20e05c78c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758197"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134975"
 ---
 # <a name="mssqleng014161"></a>MSSQL_ENG014161
     
@@ -35,7 +35,7 @@ ms.locfileid: "52758197"
 ## <a name="explanation"></a>Explicación  
  La replicación le permite habilitar advertencias para varias condiciones. Incluye la superación de una latencia específica en suscripciones transaccionales. Latencia es el tiempo que transcurre entre la confirmación de un cambio de datos en el publicador y la confirmación del cambio correspondiente en el suscriptor.  
   
- Al habilitar una advertencia mediante el Monitor de replicación o [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql), especifica un umbral que determina cuándo se desencadena una advertencia. Cuando se alcanza o se supera un umbral, aparece una advertencia en el Monitor de replicación y se escribe un evento en el registro de eventos de Windows. Alcanzar un umbral también puede desencadenar una alerta del Agente SQL Server. Para obtener más información, vea [Establecer umbrales y advertencias en el Monitor de replicación](monitor/set-thresholds-and-warnings-in-replication-monitor.md) y [Cómo supervisar la replicación mediante programación (programación con RMO)](monitor/monitoring-replication-overview.md).  
+ Al habilitar una advertencia mediante el Monitor de replicación o [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql), especifica un umbral que determina cuándo se desencadena una advertencia. Cuando se alcanza o se supera un umbral, aparece una advertencia en el Monitor de replicación y se escribe un evento en el registro de eventos de Windows. Alcanzar un umbral también puede desencadenar una alerta del Agente SQL Server. Para obtener más información, vea [Establecer umbrales y advertencias en el Monitor de replicación](monitor/set-thresholds-and-warnings-in-replication-monitor.md) y [Cómo supervisar la replicación mediante programación (programación con RMO)](monitoring-replication.md).  
   
 ## <a name="user-action"></a>Acción del usuario  
  Si una suscripción supera un umbral de latencia, debe determinar si hay algún problema de rendimiento en el sistema o si debe ajustarse el umbral. Una vez configurada la replicación, desarrolle una línea base de rendimiento que le permitirá determinar el comportamiento de la replicación con la carga de trabajo habitual de las aplicaciones y la topología. Incluya la latencia en esta línea base para poder establecer un valor adecuado para el umbral.  

@@ -14,12 +14,12 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b499f06254a482deea2c90f2fc570b8bb7c9d43e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5feb29337ccd0ee79cd1b6f98187cc6fdb52a942
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516751"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130675"
 ---
 # <a name="customization-file-userlist-section"></a>Sección UserList del archivo de personalización
 El **userlist** sección pertenece a la **conectar** sección con la misma sección *identificador* parámetro.  
@@ -32,13 +32,13 @@ El **userlist** sección pertenece a la **conectar** sección con la misma secci
 ## <a name="syntax"></a>Sintaxis  
  Es una entrada de acceso de usuario del formulario:  
   
- *Nombre de usuario* **=**   
- ***accessRights***  
+ _Nombre de usuario_ **=**   
+ **_accessRights_**  
   
 |Parte|Descripción|  
 |----------|-----------------|  
 |*userName*|El *nombre de usuario* de la persona que utiliza esta conexión. Nombres de usuario válidos se establecen con IIS **Service Manager** cuadro de diálogo.|  
-|***accessRights***|Uno de los derechos de acceso siguiente:<br /><br /> -   **NoAccess** -usuario no puede obtener acceso al origen de datos.<br />-   **ReadOnly** -usuario puede leer el origen de datos.<br />-   **Lectura y escritura** -usuario puede leer o escribir en el origen de datos.|  
+|**_accessRights_**|Uno de los derechos de acceso siguiente:<br /><br /> -   **NoAccess** -usuario no puede obtener acceso al origen de datos.<br />-   **ReadOnly** -usuario puede leer el origen de datos.<br />-   **Lectura y escritura** -usuario puede leer o escribir en el origen de datos.|  
   
 ## <a name="see-also"></a>Vea también  
  [Sección de conexión del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

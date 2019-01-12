@@ -20,12 +20,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ffe88de8533db5cf9bbec7936d30e95d64b1726
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640776"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133915"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server)
   En este tema se describe cómo habilitar conexiones cifradas para una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mediante la especificación de un certificado para el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizando el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El equipo servidor debe tener un certificado y el equipo cliente debe estar configurado para confiar en la entidad de certificación raíz del certificado. La puesta en servicio es el proceso de instalar un certificado mediante su importación en Windows.  
@@ -83,9 +83,9 @@ ms.locfileid: "52640776"
   
 ###  <a name="ConfigureServerConnections"></a> Para configurar el servidor de modo que acepte conexiones cifradas  
   
-1.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<instancia de servidor>* y, después, seleccione **Propiedades**.  
+1.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<instancia de servidor>_ y, después, seleccione **Propiedades**.  
   
-2.  En el **protocolos de ***\<nombre de instancia >* **propiedades** cuadro de diálogo el **certificado** pestaña, seleccione el certificado que desee en la lista desplegable para el **certificado** cuadro y, a continuación, haga clic en **Aceptar**.  
+2.  En el **protocolos de**_\<nombre de instancia >_ **propiedades** cuadro de diálogo el **certificado** ficha, seleccione el desea certificado en el menú desplegable para la **certificado** cuadro y, a continuación, haga clic en **Aceptar**.  
   
 3.  En la pestaña **Marcas** , en el cuadro **ForceEncryption** , seleccione **Sí**y, a continuación, haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   

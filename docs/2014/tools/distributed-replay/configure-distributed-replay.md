@@ -10,12 +10,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39f81a2e2d1762ac60ba34490844b123d3ae8fbe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376697"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124575"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   Los detalles de configuración de Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se especifican en archivos XML en Distributed Replay Controller, en los clientes y donde se encuentra instalada la herramienta de administración. Entre los archivos figuran los siguientes:  
@@ -121,7 +121,7 @@ ms.locfileid: "53376697"
   
 |Parámetro|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (el servidor de prueba)|`<Server>`|Especifica el nombre del servidor y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión.|*server_name*[\\*instance_name*]<br /><br /> No puede usar "`localhost`" o "`.`" para representar el host local.|No, si el nombre del servidor ya se especifica con el parámetro **-s***target server* con la opción **replay** de la herramienta de administración.|  
+|Instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (el servidor de prueba)|`<Server>`|Especifica el nombre del servidor y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión.|*server_name*[\\*instance_name*]<br /><br /> No puede usar "`localhost`" o "`.`" para representar el host local.|No, si el nombre del servidor ya se especifica con el parámetro **-s**_target server_ con la opción **replay** de la herramienta de administración.|  
 |Modo de secuenciación|`<SequencingMode>`|Especifica el modo que se usa para la programación de eventos.|`synchronization` &#124; `stress`|No. El valor es `stress`de forma predeterminada.|  
 |Granularidad de escala de esfuerzo|`<StressScaleGranularity>`|Especifica si todas las conexiones en el Identificador de perfil de servicio (SPID) deben escalarse juntas (SPID) o independientemente (Conexión) en el modo de esfuerzo.|SPID &#124; Conexión|Sí. El valor es `SPID`de forma predeterminada.|  
 |Escala del tiempo de conexión|`<ConnectTimeScale>`|Se usa para escalar el tiempo de conexión en el modo de esfuerzo.|Un entero entre `1` y `100`.|No. El valor es `100`de forma predeterminada.|  

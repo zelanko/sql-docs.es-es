@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516223"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126165"
 ---
 # <a name="create-clustered-indexes"></a>Crear índices clúster
   Puede crear índices clúster en las tablas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con pocas excepciones, todas las tablas deben tener un índice clúster. Además de mejorar el rendimiento de las consultas, un índice clúster se puede recompilar o reorganizar a petición para controlar la fragmentación de las tablas. También se puede crear un índice clúster en una vista. (Los índices agrupados se definen en el tema [Índices agrupados y no agrupados descritos](clustered-and-nonclustered-indexes-described.md)).  
@@ -86,7 +86,7 @@ ms.locfileid: "52516223"
   
 4.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
   
-5.  En el cuadro de diálogo **Seleccionar columnas de***nombre_de_tabla*, active la casilla de la columna de tabla que se va a agregar al índice agrupado.  
+5.  En el cuadro de diálogo **Seleccionar columnas de**_table_name_ , active la casilla de la columna de tabla que se va a agregar al índice agrupado.  
   
 6.  Haga clic en **Aceptar**.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "52516223"
   
 9. Haga clic en **Cerrar**.  
   
-10. En el menú **Archivo**, haga clic en **Guardar***nombre_de_tabla*.  
+10. En el menú **Archivo** , haga clic en **Guardar**_table_name_.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

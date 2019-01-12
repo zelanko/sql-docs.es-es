@@ -20,12 +20,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f1a426f91af1f284cc0e60505dc2fcbfae9c4ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377567"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124525"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexión de diagnóstico para administradores de bases de datos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una conexión de diagnóstico especial para los administradores cuando no son posibles las conexiones estándar con el servidor. La conexión de diagnóstico permite a un administrador tener acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar consultas de diagnóstico y solucionar problemas, incluso cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no responde a las solicitudes de conexión estándar.  
@@ -43,7 +43,7 @@ ms.locfileid: "53377567"
   
  Solo los miembros del rol sysadmin de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden conectarse utilizando la DAC.  
   
- La DAC está disponible y se admite a través de la utilidad del símbolo del sistema **sqlcmd** a través de un modificador de administrador especial (**-A**). Para obtener más información sobre cómo usar **sqlcmd**, vea [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). También puede conectar agregando el prefijo `admin:`al nombre de la instancia en el formato **sqlcmd - Sadmin: *** < nombre_instancia >.* También puede iniciar una DAC desde un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas mediante la conexión a `admin:` \<* instance_name * >.  
+ La DAC está disponible y se admite a través de la utilidad del símbolo del sistema **sqlcmd** a través de un modificador de administrador especial (**-A**). Para obtener más información sobre cómo usar **sqlcmd**, vea [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). También puede conectar agregando el prefijo `admin:`al nombre de la instancia en el formato **sqlcmd - Sadmin:**_< nombre_instancia >._ También puede iniciar una DAC desde un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas mediante la conexión a `admin:` \< *instance_name*>.  
   
 ## <a name="restrictions"></a>Restrictions  
  Dado que la DAC existe únicamente para el diagnóstico de problemas de servidor en raras circunstancias, hay algunas restricciones en la conexión:  
@@ -93,7 +93,7 @@ ms.locfileid: "53377567"
   
  Durante el inicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna dinámicamente el puerto de la DAC. Mientras se establece la conexión a la instancia predeterminada, la DAC evita el uso de una solicitud del protocolo de resolución de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP) al servicio SQL Server Browser. Primero se conecta a través del puerto TCP 1434. Si se produce un error, realiza una llamada SSRP para obtener el puerto. Si el Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no escucha las solicitudes SSRP, la solicitud de conexión devolverá un error. Consulte el registro de errores para ver en qué número de puerto escucha la DAC. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para aceptar conexiones de administración remotas, la DAC debe iniciarse con un número de puerto explícito:  
   
- **Sqlcmd-Stcp:**  *\<server >,\<puerto >*  
+ **Sqlcmd-Stcp:**  _\<server >,\<puerto >_  
   
  El registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el número de puerto de la DAC, que es 1434 de forma predeterminada. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para aceptar solo conexiones DAC locales, conéctese mediante el adaptador de bucles invertidos con el comando siguiente:  
   

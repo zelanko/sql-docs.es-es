@@ -12,12 +12,12 @@ ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4a53fb37c9775ef863724db418c574b31ef8a3e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9e0520c28d78b8036072b70de2d8f83a1a8c72da
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784747"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128755"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Suscripción, Historial de Distribuidor a suscriptor (suscripción de instantánea)
   La pestaña **Historial de Distribuidor a suscriptor** muestra información detallada sobre el Agente de distribución, incluidos el estado, el historial, los mensajes informativos y cualquier mensaje de error.  
@@ -62,7 +62,7 @@ ms.locfileid: "52784747"
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [Ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)  (Supervisar la replicación)  
  [Información general sobre los agentes de replicación](agents/replication-agents-overview.md)  
   

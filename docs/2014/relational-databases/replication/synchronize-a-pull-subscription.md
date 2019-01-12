@@ -14,12 +14,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d64d1d589d00222c7c48b4a5516dba8bd1185406
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752647"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125026"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronización de una suscripción de extracción
   En este tema se describe cómo sincronizar una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicación](agents/replication-agents-overview.md) o Replication Management Objects (RMO).  
@@ -43,7 +43,7 @@ ms.locfileid: "52752647"
 5.  Haga clic en **Cerrar**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- Se pueden sincronizar las suscripciones de extracción mediante programación y a petición invocando el archivo ejecutable del agente de replicación adecuado del símbolo del sistema. El archivo ejecutable de agente de replicación que se invoca dependerá del tipo de publicación a la que pertenece la suscripción de extracción. Para más información, consulte [Replication Agents](agents/replication-agents.md).  
+ Se pueden sincronizar las suscripciones de extracción mediante programación y a petición invocando el archivo ejecutable del agente de replicación adecuado del símbolo del sistema. El archivo ejecutable de agente de replicación que se invoca dependerá del tipo de publicación a la que pertenece la suscripción de extracción. Para más información, consulte [Replication Agents](agents/replication-agents-overview.md).  
   
 > [!NOTE]  
 >  Los agentes de replicación se conectan al servidor local con las credenciales de autenticación de Windows del usuario que inició el agente desde el símbolo del sistema. También se usan estas credenciales de Windows al conectarse a los servidores remotos con la autenticación integrada de Windows.  

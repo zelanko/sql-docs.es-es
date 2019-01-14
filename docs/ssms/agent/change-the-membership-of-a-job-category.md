@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1e56b8180caf8beec9a0371e79e847fd4ff2e30d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cbb3f5d659a859e58deb7410e6890b5b39ac2895
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701113"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131135"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Las categorías de trabajo le ayudan a organizar los trabajos para poder filtrar
 ## <a name="BeforeYouBegin"></a>Antes de empezar  
   
 ### <a name="Security"></a>Seguridad  
-Para obtener información detallada, vea [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Usar SQL Server Management Studio  
   
@@ -63,13 +63,13 @@ Para obtener información detallada, vea [Implement SQL Server Agent Security](.
   
 3.  Haga clic con el botón derecho en la carpeta **Trabajos** y seleccione **Administrar categorías de trabajos**.  
   
-4.  En el cuadro de diálogo **Administrar categorías de trabajos***nombre_de_servidor*, seleccione la categoría de trabajo que desea editar y, luego, haga clic en **Ver trabajos**.  
+4.  En el cuadro de diálogo **Administrar categorías de trabajos**_nombre_servidor_ , seleccione la categoría de trabajo que desea editar y, luego, haga clic en **Ver trabajos**.  
   
 5.  Active la casilla **Mostrar todos los trabajos** .  
   
 6.  Para agregar un trabajo a la categoría, en la cuadrícula principal, active la casilla de la columna **Seleccionar** correspondiente al trabajo. Para quitar un trabajo de la categoría, desactive la casilla. Cuando termine, haga clic en **Aceptar**.  
   
-7.  Cierre el cuadro de diálogo **Administrar categorías de trabajos***nombre_de_servidor*.  
+7.  En el cuadro de diálogo **Administrar categorías de trabajos**_nombre_servidor_ .  
   
 ## <a name="TSQL"></a>Usar Transact-SQL  
   

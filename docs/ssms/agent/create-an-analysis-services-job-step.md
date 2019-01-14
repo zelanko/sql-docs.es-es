@@ -14,14 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b42d5ae09ef078e98f1343a4e4e7bfda7ac6566b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c72154e0cb963e5a3c819c064155bd8ea869aa85
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698193"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257220"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -59,7 +60,7 @@ En este tema se describe cómo crear y definir los pasos de trabajo del Agente [
   
 -   Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden escribir la salida de un paso de trabajo en un archivo. Si ejecutan el paso de trabajo usuarios miembros del rol de base de datos **SQLAgentUserRole** en la base de datos **msdb** , solo se podrá escribir la salida en una tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escribe la salida del paso de trabajo en la tabla **sysjobstepslog** de la base de datos **msdb** .  
   
--   Para obtener información detallada, vea [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+-   Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Usar SQL Server Management Studio  
   
@@ -129,8 +130,8 @@ En este tema se describe cómo crear y definir los pasos de trabajo del Agente [
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
         <ObjectDefinition>  
-            <DataSource xmlns:xsd="https://www.w3.org/2001/XMLSchema"
-                xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+            <DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:type="RelationalDataSource">  
                 <ID>AdventureWorks2012</ID>  
                 <Name>Adventure Works 2012</Name>  

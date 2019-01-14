@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 58abfa4ff4add4415b71a536b0c9aeb1f6a9f472
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ce920c169e2a3e64be1c6aa02841305b64378ee
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702563"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256400"
 ---
 # <a name="view-information-about-an-operator"></a>Ver información acerca de un operador
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base d
   
 4.  Haga clic con el botón derecho en el operador que desea ver y seleccione **Propiedades**.  
   
-    Para obtener más información sobre las opciones disponibles que se incluyen en el cuadro de diálogo *Propiedades de***nombre_de_operador*, consulte:  
+    Para más información sobre las opciones disponibles que se incluyen en el cuadro de diálogo _nombre_operador_**Propiedades** , consulte:  
   
     -   [Propiedades del operador - Nuevo operador &#40;Página General&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

@@ -13,12 +13,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb3e20913a2a7232aeeb93132fb6a8d0bb69e532
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8907d3a3644c0795608495c259a93fb64d648332
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782797"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125915"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Sincronizar una suscripción mediante el Administrador de sincronización de Windows (Administrador de sincronización de Windows)
   El Administrador de sincronización de[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows solo se puede usar para sincronizar suscripciones con publicaciones de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo que el Administrador de sincronización (también se puede usar para sincronizar archivos y páginas web sin conexión). Para utilizar el Administrador de sincronización:  
@@ -97,7 +97,7 @@ ms.locfileid: "52782797"
   
 ### <a name="to-use-the-interactive-resolver"></a>Para utilizar el Solucionador interactivo  
   
-1.  Habilite el artículo y la suscripción para utilizar la resolución interactiva. Para más información, vea [Especificar la resolución interactiva de conflictos para artículos de mezcla](publish/specify-interactive-conflict-resolution-for-merge-articles.md).  
+1.  Habilite el artículo y la suscripción para utilizar la resolución interactiva. Para más información, vea [Especificar la resolución interactiva de conflictos para artículos de mezcla](/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 2.  Después de que la suscripción comienza la sincronización en el Administrador de sincronización, el Solucionador interactivo se inicia automáticamente si la resolución interactiva de conflictos está habilitada y hay conflictos en uno o varios artículos. El Solucionador interactivo muestra un conflicto cada vez, con una sugerencia de resolución para cada conflicto (basada en el solucionador especificado al crear la publicación y la suscripción).  
   

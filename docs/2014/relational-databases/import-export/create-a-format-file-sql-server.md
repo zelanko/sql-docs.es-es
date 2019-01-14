@@ -12,12 +12,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9df741090bf896019c6d1c4ede5215982497cb3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366997"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126705"
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
   Cuando se realiza una importación masiva de datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una exportación masiva de datos desde una tabla, se puede utilizar un archivo de formato para un sistema flexible de escribir archivos de datos que requiera poca o ninguna modificación para adaptarlos a otros formatos de datos o para leer archivos de datos de otros programas de software.  
@@ -34,7 +34,7 @@ ms.locfileid: "53366997"
 ## <a name="creating-a-non-xml-format-file"></a>Crear un archivo de formato no XML  
  Si quiere usar un comando **bcp** para crear un archivo de formato, especifique el argumento **format** y use **nul** en lugar de una ruta de acceso de archivo de datos. La opción **format** también requiere la opción **-f** , como:  
   
- **bcp** *table_or_view* **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** nul **-f***format_file_name*  
   
 > [!NOTE]  
 >  Para distinguir un archivo de formato no XML, se recomienda utilizar .fmt como extensión del nombre de archivo, por ejemplo, miTabla.fmt.  
@@ -61,7 +61,7 @@ ms.locfileid: "53366997"
   
 |Calificadores|Descripción|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|Especifica el archivo de formato no XML.|  
+|**formatnul-f** _format_file_|Especifica el archivo de formato no XML.|  
 |**-n**|Especifica tipos de datos nativos.|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
   
@@ -91,7 +91,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |Calificadores|Descripción|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|Especifica un archivo de formato no XML.|  
+|**formatnul-f** _format_file_|Especifica un archivo de formato no XML.|  
 |**-c**|Especifica los datos de caracteres.|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
   
@@ -135,7 +135,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ## <a name="creating-an-xml-format-file"></a>Crear un archivo de formato XML  
  Si quiere usar un comando **bcp** para crear un archivo de formato, especifique el argumento **format** y use **nul** en lugar de una ruta de acceso de archivo de datos. La opción **format** siempre requiere la opción **-f** y, para crear un archivo de formato XML, también debe especificar la opción **-x** , como:  
   
- **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
+ **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
 >  Para distinguir un archivo de formato XML, se recomienda utilizar .xml como extensión de archivo, por ejemplo, miTabla.xml.  
@@ -161,7 +161,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 |Calificadores|Descripción|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|Especifica el archivo de formato XML.|  
+|**formatnul-f** _format_file_ **-x**|Especifica el archivo de formato XML.|  
 |**-c**|Especifica los datos de caracteres.|  
 |**-t** `,`|Especifica una coma (**,**) como terminador de campo.<br /><br /> Nota: Si el archivo de datos usa el terminador de campo predeterminado (`\t`), el **-t** modificador no es necesario.|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
@@ -201,7 +201,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |Calificadores|Descripción|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|Especifica el archivo de formato XML.|  
+|**formatnul-f** _format_file_ **-x**|Especifica el archivo de formato XML.|  
 |**-n**|Especifica tipos de datos nativos.|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
   

@@ -14,12 +14,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2998ac4c51ea4ea7b289e4ef769acf0f3991f53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784897"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135955"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Habilitar suscripciones actualizables para publicaciones transaccionales
   En este tema se describe cómo habilitar suscripciones de actualización para publicaciones transaccionales en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "52784897"
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  Habilite suscripciones de actualización para publicaciones transaccionales en la página **Tipo de publicación** del Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Crear una publicación](create-a-publication.md). No se pueden habilitar suscripciones de actualización después de crear la publicación.  
   
- Para utilizar suscripciones de actualización, debe configurar también opciones en el Asistente para nuevas suscripciones. Para obtener más información, consulte [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+ Para utilizar suscripciones de actualización, debe configurar también opciones en el Asistente para nuevas suscripciones. Para obtener más información, consulte [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-enable-updating-subscriptions"></a>Para habilitar las suscripciones de actualización  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52784897"
   
 4.  Agregue artículos a la publicación. Para más información, consulte [Define an Article](define-an-article.md).  
   
-5.  En el Suscriptor, cree una suscripción de actualización a esta publicación. Para más información, consulte [Crear una suscripción actualizable en una publicación transaccional](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+5.  En el Suscriptor, cree una suscripción de actualización a esta publicación. Para más información, consulte [Crear una suscripción actualizable en una publicación transaccional](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-create-a-publication-that-supports-queued-updating-subscriptions"></a>Para crear una publicación que admita suscripciones de actualización en cola  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52784897"
   
 5.  Agregue artículos a la publicación. Para más información, consulte [Define an Article](define-an-article.md).  
   
-6.  En el Suscriptor, cree una suscripción de actualización a esta publicación. Para más información, consulte [Crear una suscripción actualizable en una publicación transaccional](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+6.  En el Suscriptor, cree una suscripción de actualización a esta publicación. Para más información, consulte [Crear una suscripción actualizable en una publicación transaccional](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>Para cambiar la directiva de conflicto para una publicación que permita las suscripciones de actualización en cola  
   
@@ -105,11 +105,11 @@ ms.locfileid: "52784897"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer opciones de resolución de conflictos de actualización en cola &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [Tipos de publicaciones para la replicación transaccional](../transactional/publication-types-for-transactional-replication.md)   
+ [Establecer opciones de resolución de conflictos de actualización en cola &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Tipos de publicaciones para la replicación transaccional](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Usar sqlcmd con variables de script](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

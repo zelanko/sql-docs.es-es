@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519336"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135585"
 ---
 # <a name="configure-web-synchronization"></a>Configurar sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "52519336"
   
 -   Si se replican grandes volúmenes de datos, podría ser necesario ajustar el tamaño del lote del Agente de mezcla.  
   
- El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica con los parámetros **DownloadGenerationsPerBatch** y -**UploadGenerationsPerBatch** del Agente de mezcla. Para más información, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica utilizando los parámetros **DownloadGenerationsPerBatch** y–**UploadGenerationsPerBatch** del Agente de mezcla. Para más información, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Para grandes volúmenes de datos, especifique un número pequeño para cada uno de los parámetros de procesamiento por lotes. Se recomienda comenzar con un valor de 10 y optimizarlo después de acuerdo con las necesidades y el rendimiento de la aplicación. Normalmente, estos parámetros se especifican en un perfil de agente. Para obtener más información acerca de los perfiles, vea [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52519336"
   
 -   La cuenta bajo la que se ejecuta la Escucha de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) es también la cuenta que se conectará al publicador y al distribuidor durante la sincronización. Esta cuenta debe estar asignada a una cuenta de inicio de sesión de SQL en el publicador y el distribuidor. Para obtener más información, vea la sección "Establecer los permisos para la Escucha de replicación de SQL Server" en [Configurar IIS para la sincronización web](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
   
--   Puede usar FTP para entregar la instantánea desde el publicador al equipo en el que se ejecuta IIS. La instantánea se entrega siempre desde el equipo en el que se ejecuta IIS al suscriptor mediante HTTPS. Para obtener más información, vea [Transferir instantáneas mediante FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   Puede usar FTP para entregar la instantánea desde el publicador al equipo en el que se ejecuta IIS. La instantánea se entrega siempre desde el equipo en el que se ejecuta IIS al suscriptor mediante HTTPS. Para obtener más información, vea [Transferir instantáneas mediante FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 -   Si los servidores de la topología de replicación están situados detrás de un firewall, quizá sea necesario abrir puertos del firewall para habilitar la sincronización web.  
   
@@ -170,12 +170,12 @@ ms.locfileid: "52519336"
   
     -   El equipo en el que se ejecuta IIS suele conectarse con el publicador o con el distribuidor usando el puerto 1433 (instancia predeterminada). Cuando el publicador o el distribuidor es una instancia con nombre en un servidor con otra instancia predeterminada, suele usarse el puerto 1500 para la conexión con la instancia con nombre.  
   
-    -   Si el equipo en el que se ejecuta IIS se encuentra separado del distribuidor mediante un firewall y se usa un recurso compartido de FTP para la entrega de instantáneas, deben abrirse los puertos que se usan para FTP. Para obtener más información, vea [Transferir instantáneas mediante FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   Si el equipo en el que se ejecuta IIS se encuentra separado del distribuidor mediante un firewall y se usa un recurso compartido de FTP para la entrega de instantáneas, deben abrirse los puertos que se usan para FTP. Para obtener más información, vea [Transferir instantáneas mediante FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 > [!IMPORTANT]  
 >  El hecho de abrir puertos en el firewall puede dejar el servidor expuesto a ataques malintencionados. Asegúrese de que conoce los sistemas de firewall antes de abrir puertos. Para obtener más información, vea [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Sincronización web para la replicación de mezcla](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

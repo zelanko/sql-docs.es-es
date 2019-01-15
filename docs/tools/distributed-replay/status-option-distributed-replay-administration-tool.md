@@ -9,12 +9,12 @@ ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64db1b89c66f21a571bfd05fa4017f799405c8bc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 09e8ad6b60dfc9afbb3fbed7ef450dc4fb1cc28a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501861"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589209"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opción Status (herramienta de administración de Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +32,12 @@ dreplay status [-m controller] [-f status_interval]
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- **-m** *controller*  
+ **-m** _controller_  
  Especifica el nombre del equipo que se va a controlar. Puede utilizar "`localhost`" o "`.`" para hacer referencia al equipo local.  
   
  Si no se especifica el parámetro **-m** , se usará el equipo local.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  Especifica la frecuencia (en segundos) con la que se muestra el estado.  
   
  Si no se especifica el parámetro **-f** , el intervalo predeterminado es de 30 segundos.  
@@ -54,7 +54,7 @@ dreplay status -m localhost -f 60
   
  Para más información, consulte [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
   

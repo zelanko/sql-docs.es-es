@@ -19,12 +19,12 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 333d51131fedac6bb87dc9dd5ba49c17ff26073e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 8f73f17d3224ced3fca052e9b19a7d61cf64548b
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293093"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100440"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint, utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,31 +81,31 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Especifica que debe devolverse el diagrama de sintaxis para **sqlmaint** . Este parámetro debe utilizarse solo.  
   
- **-S** *server_name*[ **\\**_instance\_name_]  
+ **-S** _server_name_[ **\\**_instance\_name_]  
  Especifica la instancia de destino de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique _server\_name_ para conectar con la instancia predeterminada de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] en ese servidor. Especifique _nombre\_servidor_**\\**_nombre\_instancia_ para conectar una instancia con nombre de [!INCLUDE[ssDE](../includes/ssde-md.md)] en ese servidor. Si no se especifica ningún servidor, **sqlmaint** se conecta a la instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)] en el equipo local.  
   
- **-U** *login_ID*  
+ **-U** _login_ID_  
  Especifica el Id. de inicio de sesión que va a utilizarse para conectar al servidor. Si no se especifica, **sqlmaint** intenta utilizar la autenticación de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Si *login_ID* contiene caracteres especiales, debe incluirse entre comillas dobles ("); de lo contrario, las comillas dobles son opcionales.  
   
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows.  
   
- **-P** *password*  
+ **-P** _password_  
  Especifica la contraseña para el identificador de inicio de sesión. Solo tiene validez si también se especifica el parámetro **-U** . Si *password* contiene caracteres especiales, debe incluirse entre comillas dobles; de lo contrario, las comillas dobles son opcionales.  
   
 > [!IMPORTANT]  
 >  La contraseña no se enmascara. Siempre que sea posible, utilice la autenticación de Windows.  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  Especifica el nombre de la base de datos en que se va a realizar la operación de mantenimiento. Si *database_name* contiene caracteres especiales, debe incluirse entre comillas dobles; de lo contrario, las comillas dobles son opcionales.  
   
- **-PlanName** *name*  
+ **-PlanName** _name_  
  Especifica el nombre de un plan de mantenimiento de base de datos definido mediante el Asistente para planes de mantenimiento de bases de datos. La única información del plan que **sqlmaint** usa es la lista de las bases de datos incluidas en él. Todas las actividades de mantenimiento que se especifiquen en los demás parámetros de **sqlmaint** se aplicarán a esta lista de bases de datos.  
   
- **-PlanID** *guid*  
+ **-PlanID** _guid_  
  Especifica el identificador exclusivo global (GUID) de un plan de mantenimiento de base de datos definido mediante el Asistente para planes de mantenimiento de bases de datos. La única información del plan que **sqlmaint** usa es la lista de las bases de datos incluidas en él. Todas las actividades de mantenimiento que se especifiquen en los demás parámetros de **sqlmaint** se aplicarán a esta lista de bases de datos. Debe coincidir con un valor de plan_id en msdb.dbo.sysdbmaintplans.  
   
- **-Rpt** *text_file*  
+ **-Rpt** _text_file_  
  Especifica la ruta de acceso completa y el nombre del archivo en que se va a generar el informe. También se genera el informe en la pantalla. El informe mantiene información de las versiones al agregar una fecha al nombre de archivo. La fecha se genera de la siguiente manera: al final del nombre de archivo pero antes del punto, con el formato _*yyyyMMddhhmm*. *yyyy* = año, *MM* = mes, *dd* = día, *hh* = hora, *mm* = minuto.  
   
  Si ejecuta la utilidad a las 10:23 a.m. el 1 de diciembre de 1996 y este es el valor de *text_file* :  
@@ -122,10 +122,10 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  Se requiere el nombre de archivo UNC (Convención de nomenclatura universal) para *text_file* cuando **sqlmaint** tiene acceso a un servidor remoto.  
   
- **-To**  *operator_name*  
+ **-To**  _operator_name_  
  Especifica el operador al que se envía el informe generado a través de SQL Mail.  
   
- **-HtmlRpt** *html_file*  
+ **-HtmlRpt** _html_file_  
  Especifica la ruta de acceso completa y el nombre del archivo en que se va a generar un informe HTML. **sqlmaint** genera el nombre de archivo anexando una cadena con el formato _*yyyyMMddhhmm* al nombre de archivo, al igual que en el caso del parámetro **-Rpt** .  
   
  Se requiere el nombre UNC completo del archivo para *html_file* cuando **sqlmaint** tiene acceso a un servidor remoto.  
@@ -133,7 +133,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-DelHtmlRpt** \<*time_period*>  
  Especifica que debe eliminarse cualquier informe HTML del directorio de informes si el intervalo de tiempo posterior a la creación del archivo de informe supera el valor de \<*time_period*>. **-DelHtmlRpt** busca archivos cuyo nombre se ajuste al patrón generado a partir del parámetro *html_file*. Si *html_file* es C:\Archivos de programa\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** hará que **sqlmaint** elimine todos los archivos cuyos nombres coincidan con el patrón C:\Archivos de programa\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm y que sean más antiguos que el valor de \<*time_period*> especificado.  
   
- **-RmUnusedSpace** *threshold_percent free_percent*  
+ **-RmUnusedSpace** _threshold_percent free_percent_  
  Especifica que se quite el espacio no usado de la base de datos especificada en **-D**. Esta opción solo resulta útil para aquellas bases de datos definidas para crecer automáticamente. *Threshold_percent* especifica en megabytes el tamaño que debe alcanzar la base de datos antes de que **sqlmaint** intente quitar el espacio de datos no usado. Si la base de datos es menor que el valor de *threshold_percent*, no se realiza ninguna acción. *Free_percent* especifica la cantidad de espacio no usado que debe conservarse en la base de datos, especificado como porcentaje del tamaño final de la base de datos. Por ejemplo, si una base de datos de 200 MB contiene 100 MB de datos y se especifica el valor 10 para *free_percent* , el tamaño final de la base de datos será de 110 MB. Tenga en cuenta que una base de datos no se ampliará si ocupa menos espacio que la suma de *free_percent* más el espacio ocupado por los datos de la base de datos. Por ejemplo, si una base de datos de 108 MB tiene 100 MB de datos y se especifica 10 para *free_percent* , la base de datos no se ampliará a 110 MB; se mantendrá con un espacio de 108 MB.  
   
  **-CkDB** | **-CkDBNoIdx**  
@@ -147,7 +147,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-CkCat**  
  Especifica que se ejecute una instrucción DBCC CHECKCATALOG (Transact-SQL) en la base de datos especificada en **-D**. Para obtener más información, vea [DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md).  
   
- **-UpdOptiStats** *sample_percent*  
+ **-UpdOptiStats** _sample_percent_  
  Especifica que se ejecute la instrucción siguiente en cada una de las tablas de la base de datos:  
   
 ```  
@@ -158,7 +158,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  Para obtener más información, vea [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md).  
   
- **-RebldIdx** *free_space*  
+ **-RebldIdx** _free_space_  
  Especifica que se deben volver a generar los índices de las tablas de la base de datos de destino mediante el valor porcentual de *free_space* en proporción inversa al factor de relleno. Por ejemplo, si el porcentaje de *free_space* es 30, el factor de relleno empleado será 70. Si se especifica un valor de 100 como porcentaje de *free_space* , se volverán a generar los índices con el valor de factor de relleno original.  
   
  Si los índices están en columnas calculadas, también debe especificar el argumento **-SupportComputedColumn** al usar **-RebldIdx**.  
@@ -253,7 +253,7 @@ dbname_log_yyyymmddhhmm.BAK
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>B. Actualizar estadísticas mediante una muestra del 15% en todas las bases de datos de un plan. Además, reducir todas las bases de datos que hayan alcanzado los 110 MB para que tengan solo el 10 % de espacio disponible  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>b. Actualizar estadísticas mediante una muestra del 15% en todas las bases de datos de un plan. Además, reducir todas las bases de datos que hayan alcanzado los 110 MB para que tengan solo el 10 % de espacio disponible  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  
@@ -271,7 +271,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)  
   

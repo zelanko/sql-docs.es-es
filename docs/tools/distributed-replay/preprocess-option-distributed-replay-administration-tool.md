@@ -11,12 +11,12 @@ ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb0411323de64747c4b142fc4eda1882aceae010
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ad198e96c24431ab51f0ab89517530598bfb1ced
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502708"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129446"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opción de preprocesamiento (herramienta de administración Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- **-m** *controller*  
+ **-m** _controller_  
  Especifica el nombre del equipo que se va a controlar. Puede utilizar "`localhost`" o "`.`" para hacer referencia al equipo local.  
   
  Si no se especifica el parámetro **-m** , se usará el equipo local.  
   
- **-i** *input_trace_file*  
+ **-i** _input_trace_file_  
  Especifica la ruta de acceso completa del archivo de seguimiento de entrada en el controlador, por ejemplo, `D:\Mytrace.trc`. El parámetro **-i** es obligatorio.  
   
  Si hay archivos de sustitución incremental en el mismo directorio, se cargarán y usarán automáticamente. Los archivos deben seguir la convención de nomenclatura de sustitución incremental de archivos, por ejemplo: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`... `Mytrace_n.trc`.  
@@ -48,7 +48,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 > [!NOTE]  
 >  Si está usando la herramienta de administración en un equipo que no es el controlador, tendrá que copiar los archivos de seguimiento de entrada en el controlador de forma que se pueda usar una ruta de acceso local para este parámetro.  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  Especifica el directorio del controlador donde se almacenará el archivo intermedio. El parámetro **-d** es obligatorio.  
   
  Se aplican los siguientes requisitos:  
@@ -61,14 +61,14 @@ dreplay preprocess [-m controller] -i input_trace_file
   
 -   No se admiten las rutas de acceso UNC.  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  Es la ruta de acceso completa del archivo de configuración de preprocesamiento; se usa para especificar la ubicación del archivo de configuración del preprocesamiento cuando está almacenado en una ubicación diferente. Este parámetro puede ser una ruta UNC o puede residir localmente en el equipo donde se ejecuta la herramienta de administración.  
   
  El parámetro **-c** no es obligatorio si no se necesita ningún filtrado o si no se quiere modificar el tiempo de inactividad máximo.  
   
  Sin el parámetro **-c** , se usa el archivo de configuración de preprocesamiento predeterminado, `DReplay.exe.preprocess.config`.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  Especifica la frecuencia (en segundos) con la que se muestran los mensajes de estado.  
   
  Si no se especifica **-f** , el intervalo predeterminado es de 30 segundos.  
@@ -105,7 +105,7 @@ dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay
   
  Para más información, consulte [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Preparar los datos de seguimiento de entrada](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  

@@ -13,12 +13,12 @@ ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce595fc0032ef8c1f498993f0953aa90117d73ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be115f4a0dad8cd7cfacca89a5ff117734087b28
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737383"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134915"
 ---
 # <a name="sort-columns"></a>Ordenar columnas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47737383"
  **Borrar todo**  
  Quite todas las filas de la cuadrícula de ordenación. Para quitar una fila única, seleccione la fila y presione la tecla Suprimir.  
   
-## <a name="see-also"></a>Ver también  
- [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+## <a name="see-also"></a>Consulte también  
+ [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

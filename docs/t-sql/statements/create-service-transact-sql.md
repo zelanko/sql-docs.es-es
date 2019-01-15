@@ -22,12 +22,12 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1a4d4cbb310251bfe6abed7a44dfb5c8514c369c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcd52d1f45b1f1b29777cae26e65660887302e92
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739043"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131925"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Establece el propietario del servicio en el usuario o el rol de base de datos especificado. Cuando el usuario actual es **dbo** o **sa**, *owner_name* puede ser el nombre de cualquier usuario o rol válidos. En caso contrario, *owner_name* debe ser el nombre del usuario actual, el nombre de un usuario para el que el usuario actual tiene permisos IMPERSONATE o el nombre de un rol al que pertenece el usuario actual.  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Especifica la cola que recibe mensajes para el servicio. La cola debe existir en la misma base de datos que el servicio. Si no se proporciona *schema_name*, el valor es el esquema predeterminado del usuario que ejecuta la instrucción.  
   
  *contract_name*  
@@ -91,7 +91,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses]
     ([//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-### <a name="b-creating-a-service-with-multiple-contracts"></a>B. Crear un servicio con varios contratos  
+### <a name="b-creating-a-service-with-multiple-contracts"></a>b. Crear un servicio con varios contratos  
  En el ejemplo siguiente se crea el servicio `//Adventure-Works.com/Expenses` en la cola `ExpenseQueue`. Los diálogos destinados a este servicio deben seguir el contrato `//Adventure-Works.com/Expenses/ExpenseSubmission` o el contrato `//Adventure-Works.com/Expenses/ExpenseProcessing`.  
   
 ```  
@@ -107,7 +107,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
  [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

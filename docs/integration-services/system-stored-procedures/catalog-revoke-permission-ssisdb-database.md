@@ -14,12 +14,12 @@ ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1f44aa5afbb808ee0b111187177acb1ccd5dd5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4853ade7b4888ae8471f05230672e097e87f3131
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651453"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132085"
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>Argumentos  
  [ @object_type = ] *object_type*  
- Tipo del objeto protegible. Entre los tipos de objetos protegibles se incluyen la carpeta (`1`), el proyecto (`2`), el entorno (`3`) y la operación (`4`). El parámetro *object_type* es **smallint***.*  
+ Tipo del objeto protegible. Entre los tipos de objetos protegibles se incluyen la carpeta (`1`), el proyecto (`2`), el entorno (`3`) y la operación (`4`). El parámetro *object_type* es **smallint**_._  
   
  [ @object_id = ] *object_id*  
  Es el identificador único (id.) del objeto protegible. El parámetro *object_id* es **bigint**.  

@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6c384df7810cce06f3e10003ec85771b2bcea58
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8c25ae621c281e0bafd3c2c7e683a05cfc55746b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215654"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128375"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -192,7 +192,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 #### <a name="on-options"></a>Opciones de ON 
    Con las opciones ON puede especificar opciones para el almacenamiento de datos, como un esquema de partición, un grupo de archivos específico o el grupo de archivos predeterminado. Si no se especifica la opción ON, el índice usa la configuración de partición o de grupo de archivos de la tabla existente.  
   
-   *partition_scheme_name* **(** *column_name* **)**  
+   *partition_scheme_name* **(** _column_name_ **)**  
    Especifica el esquema de partición de la tabla. El esquema de partición ya debe existir en la base de datos. Para crear el esquema de partición, vea [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
    *column_name* especifica la columna en la que se van a crear las particiones de un índice con particiones. Esta columna debe coincidir con el tipo de datos, la longitud y la precisión del argumento de la función de partición que *partition_scheme_name* emplea.  
@@ -211,7 +211,7 @@ Crea un índice no clúster de almacén de columnas en memoria en una tabla de a
 *index_name*  
    Especifica el nombre del índice. *index_name* debe ser único en la tabla, pero no es necesario que sea único en la base de datos. Los nombres de índice deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- **(** *column*  [ **,**...*n* ] **)**  
+ **(** _column_  [ **,**...*n* ] **)**  
     Especifica las columnas que se van a almacenar. Un índice no clúster de almacén de columnas está limitado a 1024 columnas.  
    Cada columna debe ser de un tipo de datos compatible con los índices de almacén de columnas. Vea [Limitaciones y restricciones](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obtener una lista de los tipos de datos admitidos.  
 
@@ -272,7 +272,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 #### <a name="on-options"></a>Opciones de ON  
    Estas opciones especifican los grupos de archivos en los que se crea el índice.  
   
-*partition_scheme_name* **(** *column_name* **)**  
+*partition_scheme_name* **(** _column_name_ **)**  
    Especifica el esquema de partición que define los grupos de archivos a los que se asignan las particiones de un índice con particiones. El esquema de partición debe existir dentro de la base de datos mediante la ejecución de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
    *column_name* especifica la columna en la que se van a crear las particiones de un índice con particiones. Esta columna debe coincidir con el tipo de datos, la longitud y la precisión del argumento de la función de partición que *partition_scheme_name* emplea. *column_name* no está limitado a las columnas de la definición de índice. Al crear particiones en un índice de almacén de columnas, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] agrega la columna de partición como una columna del índice, si no se especificó todavía.  
    Si no se especificó *partition_scheme_name* o *filegroup* y se crearon particiones en la tabla, el índice se coloca en el mismo esquema de partición y usa la misma columna de partición que en la tabla subyacente.  

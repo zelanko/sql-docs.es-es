@@ -21,12 +21,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac4d217245516edf109c137897d5e7cee24b172b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 864edbeff7ce15e4cae3d2994ffa9ba2fd05f8ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404390"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133355"
 ---
 # <a name="filter-published-data"></a>Filtrar datos publicados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "52404390"
   
  Los filtros de fila no están diseñados para funcionar entre bases de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita intencionadamente la ejecución de **sp_replcmds** (que filtra la ejecución debajo) al propietario de la base de datos (**dbo**). El **dbo** no tiene privilegios entre bases de datos. Con la incorporación de CDC (Captura de datos modificados) a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the **sp_replcmds** rellena las tablas de seguimiento de cambios con información a la que el usuario puede volver y que puede consultar. Por razones de seguridad, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita la ejecución de esta lógica de modo que un **dbo** malintencionado no pueda asaltar esta ruta de acceso de ejecución. Por ejemplo, un **dbo** malintencionado podría agregar desencadenadores a las tablas de CDC que se ejecutarían en el contexto del usuario que llama a **sp_replcmds**, en este caso el agente del lector de registros.  Si la cuenta bajo la que se está ejecutando el agente tiene privilegios mayores, el **dbo** malintencionado podría escalar sus privilegios.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

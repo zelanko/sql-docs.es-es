@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 202293da5a056e65bb10715d6dac985555e898d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab8431339c53d782b8823000b12fa368a523040e
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626673"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100810"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar el tipo de almacenamiento de archivos mediante bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,15 +44,15 @@ ms.locfileid: "47626673"
   
     |tipo de almacenamiento en archivo|Escriba en el símbolo del sistema|  
     |-----------------------|-----------------------------|  
-    |**char***|**c**[**har**]|  
+    |**char**|**c**[**har**]|  
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**text***\*|**T**[**ext**]|  
+    |**texto**|**T**[**ext**]|  
     |**ntext2**|**W**|  
     |**binario**|**x**|  
     |**varbinary**|**x**|  
-    |**image***\*|**I**[**mage**]|  
+    |**imagen**|**I**[**mage**]|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
@@ -85,15 +85,15 @@ ms.locfileid: "47626673"
   
 |tipo de almacenamiento en archivo|Tipo de datos del archivo host|  
 |-----------------------|-------------------------|  
-|**char***|SQLCHAR|  
+|**char**|SQLCHAR|  
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**text***\*|SQLCHAR|  
-|**ntext***\*|SQLNCHAR|  
+|**texto**|SQLCHAR|  
+|**ntext**|SQLNCHAR|  
 |**binario**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
-|**image***\*|SQLBINARY|  
+|**imagen**|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
 |**smalldatetime**|SQLDATETIM4|  
 |**decimal**|SQLDECIMAL|  
@@ -128,7 +128,7 @@ ms.locfileid: "47626673"
     > [!NOTE]  
     >  Después de que se especifiquen de forma interactiva todos los campos de un comando **bcp**, el comando solicita que guarde sus respuestas para cada campo en un archivo que no tenga el formato XML. Para obtener más información sobre los archivos con formato distinto de XML, vea [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Especificar la longitud de campo mediante bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca0ff4ec4c0e4e390f152feac3f3e1359061003d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4252f3511baadc5536823323c026811ee53dd201
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799253"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257180"
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>Notas  
  TYPE_NAME devolverá un NULL cuando *type_id* no sea válido o cuando el autor de la llamada no cuente con los permisos necesarios para hacer referencia al tipo.  
   
- TYPE_NAME funciona con tipos de datos de sistema así como con tipos de datos definidos por el usuario. El tipo puede estar contenido en cualquier esquema, pero siempre se devuelve un nombre de tipo no calificado. Esto significa que el nombre no tiene el prefijo *schema***.**.  
+ TYPE_NAME funciona con tipos de datos de sistema así como con tipos de datos definidos por el usuario. El tipo puede estar contenido en cualquier esquema, pero siempre se devuelve un nombre de tipo no calificado. Esto significa que el nombre no tiene el prefijo _schema_**.** Prefix.  
   
  Las funciones del sistema se pueden usar en la lista de selección, en la cláusula WHERE y en cualquier lugar donde se permita una expresión. Para más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) y [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   
@@ -107,7 +107,7 @@ SELECT * FROM sys.types;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

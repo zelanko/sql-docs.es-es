@@ -14,12 +14,12 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d8dc7bbdedb0b4e06f5e27e019473fcdb1c3b718
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d42e51bfb9e1c661fc35f457ff090f07879c679b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522615"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128165"
 ---
 # <a name="replicate-schema-changes"></a>Replicar cambios de esquema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "52522615"
   
 3.  (Opcional) vuelva a habilitar la replicación de cambios de esquema ejecutando [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) y especificando un valor de **replicate_ddl** para **@property** y un valor de **1** para **@value**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)   
  [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
   

@@ -19,15 +19,15 @@ ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 6b66adec9b814a08b6174cc454a5f68220ba9656
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 02469a92e530521a32fab9cf126acd51c859312a
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349684"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143195"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Especificar el comportamiento de parametrización de consultas por medio de guías de plan
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cuando la opción de base de datos PARAMETERIZATION se establece en SIMPLE, el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede optar por parametrizar las consultas. Esto quiere decir que todos los valores literales incluidos en una consulta se sustituirán por parámetros. Este proceso se conoce como parametrización simple. Cuando la parametrización SIMPLE está habilitada, no se pueden controlar las consultas que se parametrizarán y las que no. No obstante, puede especificar que todas las consultas de una base de datos se parametricen estableciendo la opción PARAMETERIZATION de base de datos en FORCED. Este proceso se conoce como parametrización forzada.  
   
  Puede cambiar el comportamiento de parametrización de una base de datos por medio de guías de plan tal y como se indica a continuación:  

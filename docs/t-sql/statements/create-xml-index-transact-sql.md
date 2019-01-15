@@ -28,12 +28,12 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6eaf2a4e5deb782533b945e85209c6ed7f2200db
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cf513a21429d26e9f0cc346b26177f1ea90dbbaf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202614"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130215"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  La opción PAD_INDEX solamente resulta útil si también se especifica FILLFACTOR, porque PAD_INDEX utiliza el mismo porcentaje especificado por FILLFACTOR. Si el porcentaje especificado para FILLFACTOR no es lo suficientemente grande como para admitir una fila, [!INCLUDE[ssDE](../../includes/ssde-md.md)] invalida internamente el porcentaje para permitir el valor mínimo. El número de filas de una página de nivel intermedio del índice no es nunca inferior a dos, independientemente de lo bajo que sea el valor de *fillfactor*.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o nueva generación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. El valor predeterminado es 0. Si *fillfactor* es 100 o 0, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea índices con las páginas hoja llenas al máximo de su capacidad.  
   
 > [!NOTE]  
@@ -215,7 +215,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  No se utilizan bloqueos de página.  
   
- MAXDOP **=***max_degree_of_parallelism*  
+ MAXDOP **=**_max_degree_of_parallelism_  
  Reemplaza la opción [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) durante la operación de índice. Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
 > [!IMPORTANT]  

@@ -16,16 +16,16 @@ ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f95a5131c2e034208472271b295631e5fa8b5776
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1058103ba479917512ff5cc2e6893b9197bc371
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606886"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129565"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>Comparar tablas replicadas para buscar diferencias (programación de la replicación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Para determinar si los datos publicados en los artículos de tabla del publicador y el suscriptor no son idénticos, lo que puede indicar una falta de convergencia, se usa la validación de artículos. Para más información, vea [Validar datos replicados](../../../relational-databases/replication/validate-replicated-data.md). La validación, sin embargo, solo devuelve información sobre la existencia o no de diferencias, pero no indica las diferencias concretas entre las tablas de origen y destino. La utilidad de símbolo del sistema **tablediff** devuelve información detallada sobre las diferencias entre dos tablas y puede generar un script [!INCLUDE[tsql](../../../includes/tsql-md.md)] para establecer la convergencia de la suscripción con los datos del publicador.  
+  Para determinar si los datos publicados en los artículos de tabla del publicador y el suscriptor no son idénticos, lo que puede indicar una falta de convergencia, se usa la validación de artículos. Para más información, vea [Validar datos replicados](../../../relational-databases/replication/validate-data-at-the-subscriber.md). La validación, sin embargo, solo devuelve información sobre la existencia o no de diferencias, pero no indica las diferencias concretas entre las tablas de origen y destino. La utilidad de símbolo del sistema **tablediff** devuelve información detallada sobre las diferencias entre dos tablas y puede generar un script [!INCLUDE[tsql](../../../includes/tsql-md.md)] para establecer la convergencia de la suscripción con los datos del publicador.  
   
 > [!NOTE]  
 >  La utilidad **tablediff** solo se admite en servidores [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -74,7 +74,7 @@ ms.locfileid: "47606886"
   
     -   (Opcional) Use **-strict** para exigir la comparación estricta del esquema entre las tablas de origen y destino.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Validar datos en el suscriptor](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

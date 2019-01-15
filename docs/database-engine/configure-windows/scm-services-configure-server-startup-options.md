@@ -20,12 +20,12 @@ ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 567c4e0ec2f94db25a8b49c77ac7ce0eb615f177
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 688339a6f598ed43e6128f7b40be9d1ec91dc8c8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071664"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131226"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>Servicios SCM - Configurar opciones de inicio del servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "49071664"
   
 2.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Servicios de SQL Server**.  
   
-3.  En el panel derecho, haga clic con el botón derecho en **SQL Server (***<nombre_de_instancia>***)** y, luego, haga clic en **Propiedades**.  
+3.  En el panel derecho, haga clic con el botón derecho en **SQL Server (**_<nombre_instancia>_**)** y, luego, haga clic en **Propiedades**.  
   
 4.  En la pestaña **Parámetros de inicio** , en el cuadro **Especifique un parámetro de inicio** , escriba el parámetro y, a continuación, haga clic en **Agregar**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "49071664"
     > [!WARNING]  
     >  Cuando haya terminado de usar el modo de usuario único, en el cuadro Parámetros de inicio, seleccione el parámetro **-m** en el cuadro **Parámetros existentes** y, después, haga clic en **Quitar**. Reinicie el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para restaurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al modo típico multiusuario.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar SQL Server en modo de usuario único](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [Conectarse a SQL Server cuando los administradores del sistema no tienen acceso](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)   
  [Iniciar, detener o pausar el servicio del Agente SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

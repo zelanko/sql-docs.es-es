@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391548"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254970"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Características de SQL Server no admitidas para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Con algunas excepciones, las transacciones entre bases de datos no se admiten. E
 
 |Bases de datos|Permitido|Descripción|  
 |---------------|-------------|-----------------|  
-| Bases de datos de usuario, **modelo** y **msdb**. | no | En la mayoría de los casos, las consultas y transacciones entre bases de datos *no* se admiten.<br /><br />Una consulta no puede acceder a otras bases de datos si usa una tabla optimizada para memoria o un procedimiento almacenado compilado de forma nativa. Esta restricción se aplica tanto a transacciones como a consultas.<br /><br />Las excepciones son las bases de datos del sistema **tempdb** y **master**. Aquí, la base de datos **master** está disponible para acceso de solo lectura. |
+| Bases de datos de usuario, **modelo** y **msdb**. | No | En la mayoría de los casos, las consultas y transacciones entre bases de datos *no* se admiten.<br /><br />Una consulta no puede acceder a otras bases de datos si usa una tabla optimizada para memoria o un procedimiento almacenado compilado de forma nativa. Esta restricción se aplica tanto a transacciones como a consultas.<br /><br />Las excepciones son las bases de datos del sistema **tempdb** y **master**. Aquí, la base de datos **master** está disponible para acceso de solo lectura. |
 | Base de datos de **recursos**, **tempdb** | Sí | En una transacción que toca los objetos OLTP en memoria, las bases de datos de **recursos** y **tempdb** del sistema se pueden usar sin una restricción agregada.
 
 
@@ -64,8 +64,8 @@ Con algunas excepciones, las transacciones entre bases de datos no se admiten. E
   
 - Cursores de conjunto de claves y dinámicos en consultas que tienen acceso a tablas optimizadas para memoria. Estos cursores se degradan a estáticos y de solo lectura.  
   
-- No se admite el uso de **MERGE INTO** *destino*, donde *destino* es una tabla optimizada para memoria.
-    - **MERGE USING** *origen* se admite para las tablas optimizadas para memoria.  
+- No se admite el uso de **MERGE INTO** _destino_, donde *destino* es una tabla optimizada para memoria.
+    - **MERGE USING** _origen_ se admite para las tablas optimizadas para memoria.  
   
 - El tipo de datos ROWVERSION (TIMESTAMP) no se admite. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   
@@ -84,6 +84,6 @@ Con algunas excepciones, las transacciones entre bases de datos no se admiten. E
     - Se admite la autenticación de la base de datos independiente. En cambio, todos los objetos OLTP en memoria se marcan como "breaking containment" en la vista de administración dinámica (DMV) **dm_db_uncontained_entities**.
 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 
 - [Compatibilidad de SQL Server con OLTP en memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

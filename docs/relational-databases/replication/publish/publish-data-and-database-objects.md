@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523071"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129015"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar datos y objetos de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,36 +71,22 @@ ms.locfileid: "52523071"
 ## <a name="creating-publications"></a>Crear publicaciones  
  Para crear una publicación, debe proporcionar la siguiente información:  
   
--   El distribuidor.  
-  
--   La ubicación de los archivos de instantáneas.  
-  
--   La base de datos de publicaciones.  
-  
--   El tipo de publicación que se va a crear (de instantánea, transaccional, transaccional con suscripciones actualizables o de mezcla).  
-  
--   Los datos y los objetos de la base de datos (artículos) que se incluirán en la publicación.  
-  
--   Filtros de fila estáticos y filtros de columna para todos los tipos de publicaciones, y filtros de fila con parámetros y filtros de combinación para publicaciones de combinación.  
-  
--   La programación del Agente de instantáneas.  
-  
--   Las cuentas con las que se ejecutarán los siguientes agentes: el Agente de instantáneas para todas las publicaciones, el Agente de registro del LOG para todas las publicaciones transaccionales, el Agente de lectura de cola para publicaciones transaccionales que permiten suscripciones de actualización.  
-  
+-   El distribuidor.    
+-   La ubicación de los archivos de instantáneas.    
+-   La base de datos de publicaciones.    
+-   El tipo de publicación que se va a crear (de instantánea, transaccional, transaccional con suscripciones actualizables o de mezcla).    
+-   Los datos y los objetos de la base de datos (artículos) que se incluirán en la publicación.   
+-   Filtros de fila estáticos y filtros de columna para todos los tipos de publicaciones, y filtros de fila con parámetros y filtros de combinación para publicaciones de combinación.   
+-   La programación del Agente de instantáneas.    
+-   Las cuentas con las que se ejecutarán los siguientes agentes: el Agente de instantáneas para todas las publicaciones, el Agente de registro del LOG para todas las publicaciones transaccionales, el Agente de lectura de cola para publicaciones transaccionales que permiten suscripciones de actualización.    
 -   Un nombre y una descripción para la publicación.  
   
- Para obtener información acerca de cómo trabajar con publicaciones, vea los siguientes temas:  
-  
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [er y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [Eliminar una publicación](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ Para obtener información acerca de cómo trabajar con publicaciones, vea los siguientes temas:    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [er y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [Eliminar una publicación](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [Eliminar un artículo](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
@@ -109,12 +95,9 @@ ms.locfileid: "52523071"
 ## <a name="publishing-tables"></a>Publicar tablas  
  El objeto que se publica con más frecuencia es la tabla. Los siguientes vínculos proporcionan información adicional acerca de las áreas relacionadas con la publicación de tablas:  
   
--   [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  Cuando se publica una tabla para replicación, puede especificar qué objetos de esquema se deben copiar al suscriptor, como la integridad referencial declarada (restricciones de clave principal, de referencia y UNIQUE), los índices, los desencadenadores DML de usuario (los desencadenadores DDL no se pueden replicar), las propiedades extendidas y la intercalación. Las propiedades extendidas solo se replican en la sincronización inicial entre el publicador y el suscriptor. Si agrega o modifica una propiedad extendida después de la sincronización inicial, el cambio no se replica.  
@@ -199,7 +182,7 @@ ms.locfileid: "52523071"
   
 -   Para artículos de publicaciones que utilizan instantáneas en modo de carácter (que se utilizan para los que no son suscriptores de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y para los suscriptores de [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): de manera predeterminada, el propietario se deja en blanco. Como valor predeterminado del propietario se utiliza el propietario asociado con la cuenta utilizada por el Agente de distribución o el Agente de mezcla para conectarse con el suscriptor.  
   
- El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo - \<***Artículo***>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo: \<**_artículo_**>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para obtener más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) (Definir un artículo) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publicar datos en suscriptores que se ejecutan en versiones anteriores de SQL Server  
   
@@ -251,7 +234,7 @@ ms.locfileid: "52523071"
   
 -   La replicación transaccional y la replicación de mezcla sin filtrar admiten la publicación de una tabla en varias publicaciones y la posterior suscripción en una única tabla en la base de datos de suscripciones (es lo que normalmente se denomina un escenario de acumulación). Este tipo de escenario se suele utilizar para agregar subconjuntos de datos de varias ubicaciones en una tabla en un suscriptor central. Las publicaciones de combinación filtradas no admiten el escenario de suscriptor central. En la replicación de mezcla, la acumulación se suele implementar a través de una única publicación con filtros de fila con parámetros. Para obtener más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Configurar la distribución](../../../relational-databases/replication/configure-distribution.md)   
  [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)  (Inicializar una suscripción)  

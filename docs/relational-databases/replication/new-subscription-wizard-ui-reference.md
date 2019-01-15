@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc885112b28ff2a98e0c78ebcd200b2ec0cc6456
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 425b1bd523a3dd0c6ff1c67e130aa2fc44212473
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758373"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131627"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Asistente para nueva suscripción (referencia de IU)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ En esta sección se ofrece información sobre las siguientes páginas del Asiste
   
 -   [Valores de HOST_NAME](../../relational-databases/replication/host-name-values.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [Referencia de propiedades &#40;replicación&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
+
   
   

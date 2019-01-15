@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc793dd6584e8aef38fe3616473aeae0b67f4c9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10d1920a4205bb1ec258c0b81303b2b61a50cb1f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740723"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123635"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Opciones de validación de suscripciones (suscripciones transaccionales)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "47740723"
  **Detener el Agente de distribución después de finalizar la validación**  
  De forma predeterminada, el Agente de distribución se ejecuta sin interrupción. Seleccione esta opción para detener el agente una vez realizada la validación. Esto permite comprobar si la validación ha sido correcta antes de continuar replicando datos en el suscriptor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Validar datos en el suscriptor](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Validar datos replicados](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validar datos replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

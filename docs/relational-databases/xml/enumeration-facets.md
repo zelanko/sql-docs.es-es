@@ -13,12 +13,12 @@ ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0352161844580ade3a6305b2ed48f063e3fc154a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1b70ec0552135c3fae1910e1a2417ed8619ceecd
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660025"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255730"
 ---
 # <a name="enumeration-facets"></a>facetas de enumeración
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51660025"
   
 ```  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns">  
     <simpleType name="MyST">  
        <restriction base="string">  
           <pattern value="[a-z]*"/>  
@@ -45,7 +45,7 @@ CREATE XML SCHEMA COLLECTION MySampleCollection AS '
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Requisitos y limitaciones de las colecciones de esquemas XML en el servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

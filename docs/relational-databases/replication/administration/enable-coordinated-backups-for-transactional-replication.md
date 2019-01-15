@@ -19,12 +19,12 @@ ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e5eeeaa390b4a8607df47ddfd058bc9e1752395
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a42406af2eb1a3133ffb3e6e65699f75f08bf46
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524811"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124475"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>Habilitar copias de seguridad coordinadas para la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52524811"
 2.  Si la función del paso 1 devuelve **0**, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) en la base de datos de publicación del publicador. Especifique un valor de **sync with backup** para **@optname**y **true** para **@value**.  
   
     > [!NOTE]  
-    >  Si cambia la opción **sync with backup** a **false**, el punto de la truncación de la base de datos de publicación estará actualizado después de que el Agente de registro del LOG se ejecute o después de un intervalo si el Agente de registro del LOG está ejecutando permanentemente. El parámetro del agente **-MessageInterval**, que tiene un valor predeterminado de 30 segundos, controla el intervalo máximo.  
+    >  Si cambia la opción **sync with backup** a **false**, el punto de la truncación de la base de datos de publicación estará actualizado después de que el Agente de registro del LOG se ejecute o después de un intervalo si el Agente de registro del LOG está ejecutando permanentemente. El parámetro del agente **–MessageInterval** , que tiene un valor predeterminado de 30 segundos, controla el intervalo máximo.  
   
 ### <a name="to-enable-coordinated-backups-for-a-distribution-database"></a>Para habilitar las copias de seguridad coordinadas para una base de datos de distribución  
   

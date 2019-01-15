@@ -15,15 +15,15 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: fdad0764a1ada0bd4e9ae4c3c605bb1afd6515ed
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 0bcd57b8f3a2c9d136968fd2903a7e591cc777e2
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328705"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143525"
 ---
 # <a name="create-a-new-plan-guide"></a>Crear una nueva guía de plan
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Las guías de plan influyen en la optimización de las consultas adjuntando sugerencias de consulta o un plan de consulta fijo. En la guía de plan, se especifica la instrucción que se desea optimizar y una cláusula OPTION que contiene sugerencias de consulta que desea utilizar. o un plan de consulta específico que desea usar para optimizar la consulta. Cuando la consulta se ejecuta, el optimizador de consultas hace coincidir la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la guía de plan y además asocia en tiempo de ejecución la cláusula OPTION a la consulta o utiliza el plan de consulta especificado.  
 
 Una guía de plan aplica un plan de consulta fijo, y/o sugerencias de consulta, a una consulta.

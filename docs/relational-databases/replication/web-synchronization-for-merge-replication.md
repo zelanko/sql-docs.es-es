@@ -18,12 +18,12 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f018f3415d0ee99eedb3c086e308a84c61cdc058
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c7be0bb2b8864fc7720753e2af8a372c57a4ec3e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542897"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124965"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronización web para la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "52542897"
   
  ![Flujo de datos y componentes de la sincronización web](../../relational-databases/replication/media/web-sync01.gif "Flujo de datos y componentes de la sincronización web")  
   
- La sincronización web es una opción exclusiva de las suscripciones de extracción, por lo que un Agente de mezcla se ejecutará siempre en el suscriptor. Este Agente de mezcla puede ser el Agente de mezcla estándar, el control ActiveX del Agente de mezcla o de una aplicación que proporcione sincronización a través de Replication Management Objects (RMO). Para especificar la ubicación del equipo en el que se ejecuta IIS, use el parámetro **-InternetUrl** del Agente de mezcla.  
+ La sincronización web es una opción exclusiva de las suscripciones de extracción, por lo que un Agente de mezcla se ejecutará siempre en el suscriptor. Este Agente de mezcla puede ser el Agente de mezcla estándar, el control ActiveX del Agente de mezcla o de una aplicación que proporcione sincronización a través de Replication Management Objects (RMO). Para especificar la ubicación del equipo en el que se ejecuta IIS, utilice el parámetro **–InternetUrl** del Agente de mezcla.  
   
  La Escucha de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) se configura en el equipo en el que se ejecuta IIS y es responsable de controlar los mensajes que se envían al servidor desde el publicador y los suscriptores. Cada nodo de la topología controla el flujo de datos XML con el Reconciliador de replicación de mezcla (Replrec.dll).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52542897"
   
 3.  A continuación, el Agente de mezcla en el suscriptor acepta la respuesta HTTPS y aplica los cambios de descarga a la base de datos de suscripciones.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   

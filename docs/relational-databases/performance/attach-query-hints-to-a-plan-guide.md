@@ -10,15 +10,15 @@ ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: b59552181d7137cfbcccb00b8b9fd0473402acc1
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: eea7817f088215be0a370873824cfaa5467f3cc4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53327945"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143625"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>Asociar sugerencias de consulta a una guía de plan
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   En una guía de plan se puede usar cualquier combinación de sugerencias de consulta válidas. Cuando una guía de plan coincide con una consulta, la cláusula OPTION especificada en la cláusula de sugerencia de una guía de plan se agrega a la consulta antes de la compilación y optimización. Si una consulta que coincide con una guía de plan ya tiene una cláusula OPTION, las sugerencias de consulta especificadas en la guía de plan sustituirán a las de la consulta. Sin embargo, para que una guía de plan coincida con una consulta que ya tiene una cláusula OPTION, debe incluir esta cláusula de la consulta al especificar el texto con el que debe coincidir la instrucción sp_create_plan_guide. Si desea que las sugerencias especificadas en la guía de plan se agreguen a las que ya existen en la consulta, en lugar de sustituirlas, debe especificar tanto las originales como las adicionales en la cláusula OPTION de la guía de plan.  
   
 > [!CAUTION]  

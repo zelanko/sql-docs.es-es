@@ -14,12 +14,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05bbc6f6eaad17fc49f210d20ab78126a68eeb60
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63b21aec220de42f9bf9fb8cd5fae1f109e501fa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541985"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129613"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Habilitar un publicador remoto en un distribuidor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52541985"
   
 4.  En la página **Contraseña del distribuidor** , en los cuadros de texto **Contraseña** y **Confirmar contraseña** , especifique una contraseña segura para la cuenta **distributor_admin** , que la replicación utiliza para conectar del publicador al distribuidor y realizar las tareas administrativas.  
   
-5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades (**...**).  
+5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades (**…**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -49,11 +49,11 @@ ms.locfileid: "52541985"
   
 4.  En la página **Publicadores** , en los cuadros de texto **Contraseña** y **Confirmar contraseña** , especifique una contraseña segura para la cuenta **distributor_admin** , que la replicación utiliza para conectar del publicador al distribuidor y realizar las tareas administrativas.  
   
-5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades (**...**).  
+5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades (**…**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Configurar distribución](../../relational-databases/replication/configure-distribution.md)   
  [Proteger el distribuidor](../../relational-databases/replication/security/secure-the-distributor.md)  

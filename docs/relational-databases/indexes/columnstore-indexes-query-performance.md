@@ -1,7 +1,7 @@
 ---
 title: Rendimiento de las consultas de índices de almacén de columnas | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe14cc4f52fe0606fd68613736d91fd48bf87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637149"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255296"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Rendimiento de las consultas de índices de almacén de columnas
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Recomendaciones para lograr el rendimiento de las consultas muy rápido que se espera que proporcionen los índices de almacén de columnas.    
@@ -141,11 +142,11 @@ FROM FactResellerSalesXL_CCI
 ```    
     
 ### <a name="string-predicate-pushdown"></a>Aplicación del predicado de la cadena    
-Cuando se diseña un esquema de almacenamiento de datos, el modelado del esquema recomendado es usar un esquema de estrella o copo de nieve que conste de una o varias tablas de hechos y muchas tablas de dimensión. La [tabla de hechos](https://en.wikipedia.org/wiki/Fact_table) almacena las transacciones o medidas empresariales y la [tabla de dimensiones](https://en.wikipedia.org/wiki/Dimension_table) almacena las dimensiones en las que tienen que analizarse los hechos.    
+Cuando se diseña un esquema de almacenamiento de datos, el modelado del esquema recomendado es usar un esquema de estrella o copo de nieve que conste de una o varias tablas de hechos y muchas tablas de dimensión. La [tabla de hechos](https://wikipedia.org/wiki/Fact_table) almacena las transacciones o medidas empresariales y la [tabla de dimensiones](https://wikipedia.org/wiki/Dimension_table) almacena las dimensiones en las que tienen que analizarse los hechos.    
     
 Por ejemplo, un hecho puede ser un registro que representa una venta de un producto determinado en una región específica, mientras que la dimensión representa un conjunto de regiones, productos y así sucesivamente. Las tablas de hechos y dimensiones están conectadas a través de la relación de clave principal o externa. Las consultas de análisis de uso más frecuente unen una o varias tablas de dimensiones con la tabla de hechos.    
     
-Consideremos un elemento `Products` de tabla de dimensiones. Una clave principal típica será `ProductCode`, que normalmente se representa como tipo de datos de cadena. Para el rendimiento de las consultas, es aconsejable crear una clave suplente, normalmente una columna de enteros, para hacer referencia a la fila en la tabla de dimensiones de la tabla de hechos.    
+Consideremos un elemento `Products` de tabla de dimensiones. Una clave principal típica será `ProductCode`, que normalmente se representa como tipo de datos de cadena. Para el rendimiento de las consultas, es aconsejable crear una clave suplente, normalmente una columna de enteros, para hacer referencia a la fila en la tabla de dimensiones de la tabla de hechos.    
     
 El índice de almacén de columnas ejecuta las consultas de análisis con combinaciones y predicados que implican claves basadas en enteros o números de forma muy eficiente. Pero en muchas cargas de trabajo de cliente, encontramos que el uso de las columnas basadas en cadenas que se vinculan con tablas de dimensiones/hechos, lo que, como resultado, genera un rendimiento de la consulta del índice del almacén de columna diferente del esperado. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] mejora el rendimiento de las consultas de análisis con las columnas basadas en cadenas notablemente mediante la aplicación de los predicados con las columnas de cadena en el nodo SCAN.    
     
@@ -158,7 +159,7 @@ Con la aplicación del predicado de la cadena, la ejecución de la consulta comp
     -   No aplicación del predicado de la cadena si el diccionario supera las 64 KB de entradas.    
     -   No se admiten valores NULL de la evaluación de expresión.    
     
-## <a name="see-also"></a>Ver también    
+## <a name="see-also"></a>Consulte también    
  [Guía de diseño de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
  [Guía de carga de datos de los índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     

@@ -15,12 +15,12 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b15e2f27c58a49643563c5e25f577d6d738b719a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ec0db9af18be44617103b15c8c66c40ef695f3d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638406"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124515"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Administrar particiones para una publicación de mezcla mediante filtros con parámetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47638406"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47638406"
   
 -   La última vez que se ejecutó un trabajo de instantánea con particiones.  
   
- Mientras la segunda parte de la instantánea de dos partes se puede generar a petición cuando se inicializa una nueva suscripción, los procedimientos siguientes le permiten controlar cómo se genera esta instantánea y pre-generar dicha instantánea cuando sea más conveniente. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Mientras la segunda parte de la instantánea de dos partes se puede generar a petición cuando se inicializa una nueva suscripción, los procedimientos siguientes le permiten controlar cómo se genera esta instantánea y pre-generar dicha instantánea cuando sea más conveniente. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-view-information-on-existing-partitions"></a>Para ver información sobre particiones existentes  
   
@@ -124,7 +124,7 @@ ms.locfileid: "47638406"
   
      Este procedimiento quita también el trabajo de instantáneas y los archivos de instantáneas de la partición.  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Para administrar mejor una publicación con filtros parametrizados, puede crear mediante programación nuevas particiones del suscriptor, enumerar las particiones del suscriptor existentes y eliminar las particiones del suscriptor utilizando Replication Management Objects (RMO). Para obtener más información acerca de cómo particiones del suscriptor, vea [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Se puede obtener la información siguiente sobre las particiones existentes:  
   
 -   El valor y la función de filtrado en los que se basa la partición.  
@@ -161,8 +161,8 @@ ms.locfileid: "47638406"
   
 7.  Repita el paso 6 para cada partición que se elimina.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Instantáneas para publicaciones de combinación con filtros con parámetros](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

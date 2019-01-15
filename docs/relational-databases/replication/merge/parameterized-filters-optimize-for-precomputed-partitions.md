@@ -15,12 +15,12 @@ ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9deab114f4e9185d2c652fd43021c00a6e93a61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7a882660203ee2c23e1cdb6cb9dbf6aa7df407d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807303"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124305"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros con parámetros: optimizar para las particiones precalculadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47807303"
   
  No obstante, si el publicador y el suscriptor se están ejecutando en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior y utiliza particiones precalculadas, la pertenencia a particiones de todos los cambios efectuados en el publicador se calcula previamente y se mantiene en el momento en que se realizan los cambios. Como resultado, cuando un suscriptor se sincroniza con el publicador, puede empezar a descargar inmediatamente los cambios relativos a su partición sin tener que pasar por el proceso de evaluación de particiones. Esto puede producir importantes mejoras de rendimiento cuando una publicación tiene un número elevado de cambios, suscriptores o artículos.  
   
- Además de utilizar particiones precalculadas, genere instantáneas previamente o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan. Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Además de utilizar particiones precalculadas, genere instantáneas previamente o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan. Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  **Para utilizar particiones precalculadas**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47807303"
 ## <a name="performance-of-precomputed-partitions"></a>Rendimiento de las particiones precalculadas  
  Existe un pequeño costo de rendimiento con las particiones precalculadas cuando se cargan cambios desde el suscriptor al publicador, pero la mayor parte del tiempo de procesamiento de mezcla se dedica a evaluar las particiones y descargar los cambios del publicador al suscriptor, por lo que la ganancia neta puede ser importante. La ventaja en cuanto al rendimiento variará dependiendo del número de suscriptores que se sincronicen de forma simultánea y del número de actualizaciones por sincronización que desplacen filas de una partición a otra.  
   
-## <a name="see-also"></a>Ver también  
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+## <a name="see-also"></a>Consulte también  
+ [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

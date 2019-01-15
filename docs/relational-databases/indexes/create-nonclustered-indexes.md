@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73ff25f7de2ce3dcaffa962025ef8d93e535e75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e0431b913366b4e4ccb34bea7a00f0cf003a82e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527065"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134435"
 ---
 # <a name="create-nonclustered-indexes"></a>Crear índices no clúster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "52527065"
   
 8.  Haga clic en **Cerrar**.  
   
-9. En el menú **Archivo**, haga clic en **Guardar***nombre_de_tabla*.  
+9. En el menú **Archivo** , haga clic en **Guardar**_table_name_.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Para crear un índice no clúster mediante el Explorador de objetos  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52527065"
   
 6.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
   
-7.  En el cuadro de diálogo **Seleccionar columnas de***nombre_de_tabla*, active las casillas de las columnas de tabla que se van a agregar al índice no agrupado.  
+7.  En el cuadro de diálogo **Seleccionar columnas de**_nombre_tabla_ , active las casillas de las columnas de tabla que se van a agregar al índice no agrupado.  
   
 8.  Haga clic en **Aceptar**.  
   

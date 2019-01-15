@@ -15,12 +15,12 @@ ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 58db5b7c1317f2bddffc1375bdfac6c5246e4ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 767c8f3eb96182fad541cac224759e065ae4ac3a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767363"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131275"
 ---
 # <a name="sql-server-monitor-overview"></a>Información general del Monitor de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47767363"
  Para utilizar uno de estos módulos, selecciónelo en el menú **Ir** . El módulo seleccionado actualmente posee el contenido de los paneles de navegación y de detalles, la interacción con el usuario en los paneles de detalles y las consultas de contenido y estado.  
   
 > [!NOTE]  
->  Para obtener más información sobre estos monitores, vea [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md) y [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md).  
+>  Para obtener más información sobre estos monitores, vea [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication.md) y [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md).  
   
 ## <a name="permissions"></a>Permisos  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47767363"
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 820a11940cfd3ee904979420acb0c766a6b32fb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664053"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130395"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ column_name <data_type>
  *column_name*  
  Es el nombre de la columna que se va a modificar, agregar o quitar. *column_name* puede tener entre 1 y 128 caracteres. Si se trata de columnas nuevas creadas con un tipo de datos de marca de tiempo, *column_name* se puede omitir. Si no se especifica el argumento *column_name* en una columna con un tipo de datos **timestamp**, se usa el nombre **timestamp**.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type_schema_name_**.** ] *type_name*  
  Es el tipo de datos de la columna agregada y el esquema al que pertenece.  
   
  *type_name* puede ser:  
@@ -245,6 +245,6 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 ## <a name="examples"></a>Ejemplos  
  Para consultar otros ejemplos, vea [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   

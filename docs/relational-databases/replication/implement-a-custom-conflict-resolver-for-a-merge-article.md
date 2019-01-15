@@ -17,12 +17,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11f468e8583cb8110bc0922424e879cd44d46833
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 057320ea2d739b89675a253f4dad80b0f78357f3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539167"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128255"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementar un solucionador de conflictos personalizado para un artículo de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "52539167"
 2.  Ejecute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **@publication**, **@article**, el valor **resolver_info** para **@property**y el nombre del procedimiento almacenado que implementa la lógica de solucionador de conflictos para **@value**.  
   
 ##  <a name="COM"></a> Usar un solucionador personalizado basado en COM  
- El espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa una interfaz que le permite escribir una lógica de negocios compleja para administrar eventos y solucionar conflictos que se producen durante el proceso de sincronización de replicación de mezcla. Para más información, consulte [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). También puede escribir su propia lógica de negocios personalizada basada en código nativo para solucionar conflictos. Esta lógica está generada como componente COM y se compila en las bibliotecas de vínculo dinámico (DLL), usando productos como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Este solucionador de conflictos personalizado basado en COM debe implementar la interfaz **ICustomResolver**, que está diseñada específicamente para la resolución de conflictos.  
+ El espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa una interfaz que le permite escribir una lógica de negocios compleja para administrar eventos y solucionar conflictos que se producen durante el proceso de sincronización de replicación de mezcla. Para más información, consulte [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). También puede escribir su propia lógica de negocios personalizada basada en código nativo para solucionar conflictos. Esta lógica está generada como componente COM y se compila en las bibliotecas de vínculo dinámico (DLL), usando productos como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Este solucionador de conflictos personalizado basado en COM debe implementar la interfaz **ICustomResolver** , que está diseñada específicamente para la resolución de conflictos.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Para crear y registrar un solucionador de conflictos personalizado basado en COM  
   
@@ -119,9 +119,9 @@ ms.locfileid: "52539167"
 2.  Ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) especificando **@publication**, **@article** un valor de **article_resolver** para **@property** y el nombre descriptivo del solucionador de artículos del paso 1 para **@value**.  
   
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-Based Custom Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
- [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Procedimientos recomendados de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

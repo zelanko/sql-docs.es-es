@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86dd39734b2f2d4fd82f6845f60be588cac2c95b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c125c4e1c413fd974ee80fd7f06c8c9f69f33b8d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812838"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257040"
 ---
 # <a name="accessing-the-soap-api"></a>Acceso a la API SOAP
   El servicio web del servidor de informes utiliza el Protocolo simple de acceso a objetos (SOAP) sobre HTTP y actúa como interfaz de comunicaciones entre los programas clientes y el servidor de informes. El servicio web proporciona dos extremos, uno para la ejecución y otro para la administración de informes, y está compuesto de métodos y de un conjunto de objetos de tipo complejo que puede utilizar para tener acceso a la funcionalidad completa de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para llamar al servicio, debe hacer referencia al Lenguaje de descripción de servicios web (WSDL) de Reporting Services.  
@@ -55,9 +55,9 @@ https://server/reportserver/ReportService2010.asmx?wsdl
 |*servidorDeInformes*|Nombre de la carpeta que contiene el servicio web XML. Se configura durante la instalación.|  
 |*\<nombreDelPuntoDeConexión>.asmx*|Nombre del extremo de servicios web.|  
   
- Para más información acerca del formato de WSDL, consulte la especificación de WSDL del World Wide Web Consortium (W3C) en https://www.w3.org/TR/wsdl.  
+ Para más información acerca del formato de WSDL, consulte la especificación de WSDL del World Wide Web Consortium (W3C) en http://www.w3.org/TR/wsdl.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   

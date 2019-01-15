@@ -22,12 +22,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7c7c3b925b018ea7f212693b5de02fb43b425bc4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677894"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256970"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Agregar espacios de nombres a consultas con WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ FOR XML RAW, ELEMENTS XSINIL
  El resultado es el siguiente:  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- Solo se puede utilizar el prefijo de espacio de nombres xml sin definirlo explícitamente en WITH XMLNAMESPACES, como se muestra en la siguiente consulta en modo PATH. Por otra parte, si se declara el prefijo, debe estar enlazado con el espacio de nombres https://www.w3.org/XML/1998/namespace. Los nombres especificados en la cláusula SELECT hacen referencia al prefijo de espacio de nombres xml que no se define explícitamente mediante WITH XMLNAMESPACES.  
+ Solo se puede utilizar el prefijo de espacio de nombres xml sin definirlo explícitamente en WITH XMLNAMESPACES, como se muestra en la siguiente consulta en modo PATH. Por otra parte, si se declara el prefijo, debe estar enlazado con el espacio de nombres http://www.w3.org/XML/1998/namespace. Los nombres especificados en la cláusula SELECT hacen referencia al prefijo de espacio de nombres xml que no se define explícitamente mediante WITH XMLNAMESPACES.  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  
@@ -244,7 +244,7 @@ Go
   
  Debe tenerse en cuenta que una declaración explícita en el prólogo de una consulta XQuery reemplazará el prefijo de espacio de nombres y el espacio de nombres predeterminado del elemento definidos en la cláusula WITH.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
  [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   

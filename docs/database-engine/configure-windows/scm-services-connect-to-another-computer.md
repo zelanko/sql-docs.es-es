@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb0117203d290c32c22691f665a7717a68bb5465
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072149"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135775"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Servicios SCM - Conectarse a otro equipo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "49072149"
   
 8.  En la ventana **Agregar o quitar complemento** , haga clic en **Aceptar**.  
   
-9. Expanda **Administración de equipos(***\<nombre de equipo>***)** y, luego, **Servicios y Aplicaciones**.  
+9. Expanda **Administración de equipos(**_\<nombre de equipo>_**)** y, luego, **Servicios y Aplicaciones**.  
   
 10. Haga clic con el botón derecho en **Administrador de configuración de SQL Server**y, después, haga clic en **Nueva ventana desde aquí**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "49072149"
 > [!CAUTION]  
 >  Cuando utiliza el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo remoto, el nombre del equipo no es obvio y es posible que se detenga por error o que se configure el equipo equivocado. En la pestaña **Servicio** , marque la casilla **Nombre de host** para confirmar el nombre del equipo antes de modificar un servicio.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

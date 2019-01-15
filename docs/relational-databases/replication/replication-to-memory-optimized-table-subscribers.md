@@ -11,12 +11,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1658039af7e81a8019a7b72f0338802bd30162b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d0b215dbc61be9d7a710300301ec63f8796a915
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603303"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129515"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicación en suscriptores de tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47603303"
   
 3.  En la ventana de propiedades del artículo, establezca **Habilitar optimización para memoria** en **true**.  
   
-4.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para más información, consulte [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+4.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 5.  Ahora cree una nueva suscripción. En el **Asistente para nueva suscripción** , establezca **Memory Optimized Subscription** (Suscripción optimizada para memoria) en **true**.  
   
@@ -90,7 +90,5 @@ ms.locfileid: "47603303"
   
 -   ANSI_PADDING debe ser ON.  
   
-## <a name="see-also"></a>Ver también  
- [Características y tareas de replicación](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   

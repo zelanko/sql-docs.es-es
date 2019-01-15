@@ -15,16 +15,16 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9764117e9c69a0581c0399b54c9b78ae694dec88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0df33614cbb10708c6438db69807a1ec3c78d4c3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540265"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129876"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Ver conflictos de datos para publicaciones transaccionales (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Puede ver los conflictos surgidos en la replicación transaccional punto a punto y la replicación transaccional con suscripciones de actualización en cola en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visor de conflictos de replicación. Para obtener información sobre cómo se detectan y resuelven los conflictos, vea [Detección de conflictos en la replicación punto a punto](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) y [Establecer opciones de resolución de conflictos de actualización en cola &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md).  
+  Puede ver los conflictos surgidos en la replicación transaccional punto a punto y la replicación transaccional con suscripciones de actualización en cola en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visor de conflictos de replicación. Para obtener información sobre cómo se detectan y resuelven los conflictos, vea [Detección de conflictos en la replicación punto a punto](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) y [Establecer opciones de resolución de conflictos de actualización en cola &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
  Que haya datos disponibles sobre los conflictos depende del tipo de replicación y del período de retención del conflicto.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "52540265"
   
     -   Seleccionar una o más filas en la cuadrícula superior y hacer clic en **Quitar**para quitar las filas de la tabla de metadatos de conflictos.  
   
-    -   Hacer clic en el botón de propiedades (**...**) para ver más información sobre la columna involucrada en el conflicto.  
+    -   Hacer clic en el botón de propiedades (**…**) para ver más información acerca de la columna involucrada en el conflicto.  
   
     -   Seleccionar **Registrar los detalles de este conflicto** para registrar los datos del conflicto en un archivo. Para especificar la ubicación del archivo, elija el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón Examinar (**...**) y navegue al archivo apropiado. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Opciones** .  
   
 6.  Cierre el Visor de conflictos de replicación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Replicación transaccional punto a punto](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   

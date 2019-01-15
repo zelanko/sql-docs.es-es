@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 627aea0126031dc747472861ac186e600dcfaaf6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202394"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126455"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar la base de datos de distribución de replicación en un grupo de disponibilidad AlwaysOn
 
@@ -48,7 +48,7 @@ Después de configurar una base de datos de distribución en el AG según los pa
 - Agregación o eliminación de nodos de un AG de base de datos de distribución existente.
 - Un distribuidor puede tener varias bases de datos de distribución. Cada base de datos de distribución puede estar en su propio AG y puede no estar en ninguno. Varias bases de datos de distribución pueden compartir un AG.
 - El publicador y el distribuidor deben estar en instancias separadas de SQL Server.
-- Si el agente de escucha del grupo de disponibilidad que hospeda la base de datos de distribución está configurado para usar un puerto no predeterminado, es necesario configurar un alias para el agente de escucha y el puerto no predeterminado. Este alias tendría que crearse en todas las réplicas del publicador, el distribuidor y el suscriptor (para los suscriptores que se ejecuten en modo de extracción). 
+- Si el agente de escucha del grupo de disponibilidad que hospeda la base de datos de distribución está configurado para usar un puerto no predeterminado, es necesario configurar un alias para el agente de escucha y el puerto no predeterminado.
 
 ## <a name="limitations-or-exclusions"></a>Limitaciones o exclusiones
 

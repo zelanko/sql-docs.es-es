@@ -15,12 +15,12 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a84f6880cb0ef1ea41adc616718f167b165b767b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec29a632d1125282d74c59ac511ed0c883a66c52
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691243"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123875"
 ---
 # <a name="subscriber-properties"></a>Propiedades del suscriptor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,8 @@ ms.locfileid: "47691243"
  **Varios**  
  Incluye información sobre el suscriptor y el tipo de suscriptor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Referencia de propiedades &#40;replicación&#41;](../../relational-databases/replication/properties-reference-replication.md)   
  [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09c5b51db06cc41153441d155c2d5292f505705d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6555af4448af4e9e1e4e14f2e4e23f1407f0681
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673623"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135995"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>Conflictos de replicación de mezcla avanzada: solucionadores personalizados basados en COM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47673623"
   
 -   Los tipos de cambios de fila que desea solucionar, como actualizaciones, inserciones y eliminaciones, y si el solucionador se invocará durante la carga de cambios de mezcla, la descarga, o ambas. Puede especificar un tipo de cambio, todos los cambios o cualquier combinación. El solucionador de conflictos de mezcla predeterminado controla los conflictos que no cubre un solucionador personalizado.  
   
--   Si se utiliza el seguimiento por columnas al solucionar el conflicto. Cuando está activo el seguimiento por columnas, solo se marcan como conflicto las columnas en las que se producen conflictos; los demás datos se mezclan normalmente. Sin embargo, los conflictos se resuelven del mismo modo que con el seguimiento por filas: el ganador por prioridad sobrescribe toda la fila de datos (pero los datos pueden ser una mezcla de valores del publicador, de los suscriptores o algunos valores alterados que no proceden del publicador ni de los suscriptores). Para más información, consulte [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+-   Si se utiliza el seguimiento por columnas al solucionar el conflicto. Cuando está activo el seguimiento por columnas, solo se marcan como conflicto las columnas en las que se producen conflictos; los demás datos se mezclan normalmente. Sin embargo, los conflictos se resuelven del mismo modo que con el seguimiento por filas: el ganador por prioridad sobrescribe toda la fila de datos (pero los datos pueden ser una mezcla de valores del publicador, de los suscriptores o algunos valores alterados que no proceden del publicador ni de los suscriptores). Para más información, consulte [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Para implementar un solucionador de conflictos personalizado para COM, vea [Implement a Custom Conflict Resolver for a Merge Article](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47673623"
   
  Para especificar un solucionador personalizado, vea [Specify a Merge Article Resolver](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)  
   

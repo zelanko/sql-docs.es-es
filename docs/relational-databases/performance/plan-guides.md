@@ -20,15 +20,15 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 606778f5505e6ba7e22ade1394a0169fce4a918b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2e7ce811b66da3bb0ee271ea18c2aead1b53495c
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375247"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143485"
 ---
 # <a name="plan-guides"></a>Guías de plan
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Las guías de plan permiten optimizar el rendimiento de las consultas cuando no pueda o no desee cambiar directamente el texto de la consulta real en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Las guías de plan influyen en la optimización de las consultas adjuntando sugerencias de consulta o un plan de consulta fijo para ellas. Las guías de plan pueden ser de gran utilidad cuando el rendimiento de un pequeño subconjunto de consultas de una aplicación de base de datos proporcionado por otro proveedor no es el esperado. En la guía de plan, se especifica la instrucción Transact-SQL que se desea optimizar y además una cláusula OPTION que incluye las sugerencias de consulta que se desean usar o un plan de consulta específico con el que desea optimizar la consulta. Cuando la consulta se ejecuta, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace coincidir la instrucción Transact-SQL con la guía de plan y además adjunta en tiempo de ejecución la cláusula OPTION a la consulta o usa el plan de consulta especificado.  
   
  El número total de guías de plan que se pueden crear solo está limitado por los recursos de los que disponga el sistema. No obstante, las guías de plan deberían limitarse a aquellas consultas de gran importancia cuyo rendimiento se desea mejorar o estabilizar. No se deben usar las guías de plan para influenciar la mayor parte de la carga de la consulta de una aplicación implementada.  

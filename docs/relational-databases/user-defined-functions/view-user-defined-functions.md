@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bce0be6e849dc2e374ca8af1025a5da386b27a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533583"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256030"
 ---
 # <a name="view-user-defined-functions"></a>Ver funciones definidas por el usuario
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "52533583"
   
 4.  Haga clic con el botón derecho en la función cuyas propiedades quiere ver y seleccione **Propiedades**.  
   
-     Las propiedades siguientes aparecen en el cuadro de diálogo **Propiedades de la función:** *nombre_función*.  
+     Las propiedades siguientes aparecen en el cuadro de diálogo **Propiedades de la función:** _nombre_función_.  
   
      **Base de datos**  
      Nombre de la base de datos que contiene esta función.  

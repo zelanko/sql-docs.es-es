@@ -13,12 +13,12 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca169dc94a2f3fcbe6165bbbe1c69de158f9835f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719013"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124665"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitectura de seguridad para la sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47719013"
 |Cuenta de servicio de Windows para el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Administrador de configuración de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
 |Aplicación independiente|El Agente de mezcla se ejecuta en el contexto del usuario de Windows que ejecuta la aplicación.|  
   
-## <a name="b-connection-to-the-subscriber"></a>B. Conexión al suscriptor  
+## <a name="b-connection-to-the-subscriber"></a>b. Conexión al suscriptor  
  El Agente de mezcla se conecta al suscriptor mediante la autenticación de Windows o la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El usuario de Windows o el inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que especifique debe asociarse a un usuario de base de datos que sea miembro del rol fijo de base de datos **dbowner** en la base de datos de suscripciones.  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ ms.locfileid: "47719013"
 |La autenticación de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se utiliza si se especifica uno de los siguientes:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: el valor **0** para el parámetro **@distributor_security_mode** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   RMO: un valor de <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> para <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />- Línea de comandos del Agente de mezcla: el valor **0** para **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: los parámetros **@distributor_login** y **@distributor_password** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> y <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Línea de comandos del Agente de mezcla: **-DistributorLogin** y **-DistributorPassword**.|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. Conexión a un servidor FTP  
- Especifique un usuario de Windows para esta conexión solo si va a descargar archivos de instantáneas desde un servidor FTP, en lugar de desde una ubicación UNC, al equipo en el que se ejecuta IIS antes de aplicar la instantánea al suscriptor. Para obtener más información, vea [Transferir instantáneas mediante FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+ Especifique un usuario de Windows para esta conexión solo si va a descargar archivos de instantáneas desde un servidor FTP, en lugar de desde una ubicación UNC, al equipo en el que se ejecuta IIS antes de aplicar la instantánea al suscriptor. Para obtener más información, vea [Transferir instantáneas mediante FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 |Tipo de autenticación|Dónde se especifica la autenticación|  
 |----------------------------|-------------------------------------------|  
@@ -137,7 +137,7 @@ ms.locfileid: "47719013"
 |---------------------|------------------------------------|  
 |Cualquier usuario de Windows que tenga los permisos necesarios.|Administrador de Internet Information Services (IIS) |  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar sincronización web](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   

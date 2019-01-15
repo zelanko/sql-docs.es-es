@@ -13,12 +13,12 @@ ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47aa6e40882e73d329bb0338d2742bea0da5a95d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b224c85a3d4bd32c8c8e16b77595f7b267cc227c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747933"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132695"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "47747933"
   
  Como miembro de este grupo de seguridad, se conceden a la nueva cuenta los permisos necesarios para ejecutar el trabajo del agente de replicación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [Administrar inicios de sesión y contraseñas en la replicación](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [Administrar inicios de sesión y contraseñas en la replicación](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md)  
   
   

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server replication]
@@ -15,12 +15,12 @@ ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0bcb10caa86474eafab14cb8347e9e28885a137
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ce6f794df17fc67d83e8a6453b7b1a0f231db26
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815943"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299722"
 ---
 # <a name="replication-developer-documentation"></a>Documentación para desarrolladores de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,5 @@ ms.locfileid: "47815943"
  [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
  Describe el uso de los archivos ejecutables del Agente de replicación.  
   
- [Guía del programador: temas de procedimientos &#40;replicación&#41;](../../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)  
- Proporciona una lista de temas de procedimientos que están relacionados con la replicación.  
   
   

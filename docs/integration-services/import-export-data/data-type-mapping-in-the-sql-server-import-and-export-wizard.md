@@ -11,12 +11,12 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee64f342f8ef865d8b264f37c332098b0c2d62cf
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 05dcf3c0c5850b95aa9d657ee228138b0ca0e57d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637629"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256850"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server
  En el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede establecer el nombre, el tipo de datos y las propiedades de tipo de datos de las columnas de las tablas y archivos de destino nuevos, pero no puede especificar conversiones personalizadas para los valores de columna. Como resultado, la asignación integrada de tipos de datos del origen al destino es muy importante.  
@@ -41,7 +41,7 @@ A continuación se muestra una parte del archivo de asignación XML que asigna d
   
 <dtm:DataTypeMappings  
     xmlns:dtm="https://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
     MinSourceVersion="*"   
     MaxSourceVersion="*"   

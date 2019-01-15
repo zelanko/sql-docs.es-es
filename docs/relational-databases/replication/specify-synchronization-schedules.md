@@ -16,12 +16,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b28271ae8ba64b9c07987f50891099ce46dda35
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5c662d888d627b6dcce3d43161d16aee50a994ec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523314"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124855"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar programaciones de sincronización
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "52523314"
   
     -   **\<Definir programación...>**  
   
-2.  Si selecciona **\<Definir programación...>**, especifique una programación en el cuadro de diálogo **Propiedades de programación del trabajo** y, después, haga clic en **Aceptar**.  
+2.  Si selecciona **\<Define Schedule…>**, especifique una programación en el cuadro de diálogo **Propiedades de programación del trabajo** y, después, haga clic en **Aceptar**.  
   
 3.  Finalice el asistente.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "52523314"
   
 2.  En el suscriptor, ejecute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Especifique **@subscriber**, **@subscriber_db**, **@publication**y las credenciales de Windows con las que se ejecuta el Agente de mezcla en el suscriptor para **@job_name** y **@password**. Especifique los parámetros de sincronización, detallados anteriormente, que definen la programación para el trabajo del Agente de distribución que sincroniza la suscripción.  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  La replicación usa el Agente SQL Server para programar los trabajos de las actividades que se producen periódicamente, como la generación de instantáneas y la sincronización de suscripción. Puede usar Replication Management Objects (RMO) mediante programación para especificar las programaciones de los trabajos de agente de replicación.  
   
 > [!NOTE]  
@@ -326,7 +326,7 @@ ms.locfileid: "52523314"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Sincronizar una suscripción de inserción](../../relational-databases/replication/synchronize-a-push-subscription.md)   

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -19,12 +19,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60140f0ac3106be506ad77ddad6114b09834b178
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d88faa3a4e7477fdb63ce3a6933197fd160e4e96
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613463"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298492"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -225,7 +225,7 @@ REM -- The following must be supplied on one line.
   
 -   Sincronizar una suscripción de extracción  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de la programación de replicación](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Crear script para la replicación](../../../relational-databases/replication/scripting-replication.md)  

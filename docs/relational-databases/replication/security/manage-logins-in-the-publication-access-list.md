@@ -17,12 +17,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef0a5be55fe1e3e50fb5b4b69a8ba6bfb620dc36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d0c686bcc52732f1fa25a4e4b4b83b776bb8633
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756383"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124335"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Administrar inicios de sesión en la lista de acceso a la publicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47756383"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -72,10 +72,10 @@ ms.locfileid: "47756383"
   
 1.  En el publicador de la base de datos de publicación, ejecute [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). Para **@publication**, especifique el nombre de la publicación; y para **@login**, especifique el nombre del inicio de sesión o del grupo que se quita.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar inicios de sesión en la lista de acceso a la publicación](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
  [Modelo de seguridad del Agente de replicación](../../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Proteger una topología de replicación](../../../relational-databases/replication/security/secure-a-replication-topology.md)   
+ [Proteger una topología de replicación](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Proteger al publicador](../../../relational-databases/replication/security/secure-the-publisher.md)  
   
   

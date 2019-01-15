@@ -19,12 +19,12 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe616847c9a9883fb46508286828b679a37ed065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2efa695bd6b6c36db1a813d7b33a866a30bd95f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655963"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125965"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurar el motor de base de datos para escuchar en varios puertos TCP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,9 +76,9 @@ ms.locfileid: "47655963"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Para configurar el motor de la base de datos de SQL Server para escuchar en otro puerto TCP  
   
-1.  En Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y, después, haga clic en **Protocolos de***<nombre_de_instancia>*.  
+1.  En Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y, después, haga clic en **Protocolos de** _&lt;nombre_instancia&gt;_.  
   
-2.  Expanda **Protocolos de***<nombre_de_instancia>* y, después, haga clic en **TCP/IP**.  
+2.  Expanda **Protocolos de** _&lt;nombre_instancia&gt;_ y, después, haga clic en **TCP/IP**.  
   
 3.  En el panel derecho, haga clic con el botón derecho en cada dirección IP deshabilitada que quiera habilitar y, después, haga clic en **Habilitar**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "47655963"
   
 6.  En el panel izquierdo, haga clic en **Servicios de SQL Server**.  
   
-7.  En el panel derecho, haga clic con el botón derecho en **SQL Server***<nombre_de_instancia>* y, después, haga clic en **Reiniciar**.  
+7.  En el panel derecho, haga clic con el botón derecho en **SQL Server** _&lt;nombre_instancia&gt;_ y, después, haga clic en **Reiniciar**.  
   
      Cuando se reinicie el [!INCLUDE[ssDE](../../includes/ssde-md.md)], el registro de errores mostrará los puertos en los que escucha [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -103,7 +103,7 @@ ms.locfileid: "47655963"
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   

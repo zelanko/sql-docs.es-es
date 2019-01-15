@@ -16,12 +16,12 @@ ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5fbe0702ee25e39103c43cd689b49b563db49bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714481541ee0060759aff3533add80d04ceebc8b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736573"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257190"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Solucionar problemas de configuración de creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47736573"
 |[Acceso de red](#NetworkAccess)|Explica el requisito por el que cada instancia de servidor debe poder tener acceso a los puertos de las otras instancias de servidor a través de TCP.|  
 |[Preparación de la base de datos reflejada](#MirrorDbPrep)|Resume los requisitos de preparación de la base de datos reflejada para habilitar el inicio de la creación de reflejo.|  
 |[Error en una operación de creación de archivo](#FailedCreateFileOp)|Describe cómo responder a un error en una operación de creación de archivo.|  
-|[Iniciar la creación de reflejo mediante Transact-SQL](#StartDbm)|Describe el orden necesario de las instrucciones ALTER DATABASE *nombre_base_de_datos* SET PARTNER **='***servidor_asociado***'**.|  
+|[Iniciar la creación de reflejo mediante Transact-SQL](#StartDbm)|Describe el orden necesario de las instrucciones ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** .|  
 |[Transacciones entre bases de datos](#CrossDbTxns)|Una conmutación automática por error podría provocar la resolución automática y posiblemente incorrecta de transacciones dudosas. Por esta razón, la creación de reflejo de la base de datos no admite transacciones entre bases de datos.|  
   
 ##  <a name="Accounts"></a> Cuentas  
@@ -144,7 +144,7 @@ ms.locfileid: "47736573"
  Para obtener más información, vea [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Usar certificados para un punto de conexión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) o [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Iniciar la creación de reflejo mediante Transact-SQL  
- El orden en que se emiten las instrucciones ALTER DATABASE *nombre_base_de_datos* SET PARTNER **='***servidor_asociado***'** es muy importante.  
+ El orden en que se emiten las instrucciones ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** es muy importante.  
   
 1.  La primera instrucción se debe ejecutar en el servidor reflejado. Cuando se emite la instrucción, el servidor reflejado no intenta ponerse en contacto con ninguna otra instancia de servidor. En lugar de ello, el servidor reflejado indica a su base de datos que espere a que el servidor principal se haya puesto en contacto con el servidor reflejado.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "47736573"
   
  Para obtener más información, vea [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   

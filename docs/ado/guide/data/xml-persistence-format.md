@@ -13,12 +13,12 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f794267904ec1c84595b4b627722a1ca935c15a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211014"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255690"
 ---
 # <a name="xml-persistence-format"></a>Formato de persistencia de XML
 ADO utiliza la codificación UTF-8 para la secuencia XML que almacena.  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  El esquema muestra las declaraciones de espacios de nombres, la sección de esquema y la sección de datos. La sección de esquema contiene definiciones de fila, ShipperID, CompanyName y teléfono.  
   
- Definiciones de esquema se ajustan a la [especificación W3C XML-Data](https://www.w3.org/TR/1998/NOTE-XML-data/) y se pueden validar totalmente (aunque no se producirá la validación en Internet Explorer 5). Datos XML está actualmente en el formato de esquema admitidas solo para la persistencia de conjunto de registros.  
+ Definiciones de esquema se ajustan a la [especificación W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) y se pueden validar totalmente (aunque no se producirá la validación en Internet Explorer 5). Datos XML está actualmente en el formato de esquema admitidas solo para la persistencia de conjunto de registros.  
   
  La sección de datos tiene tres filas que contienen información acerca de distribuidores. Para un conjunto de filas vacío, la sección de datos puede estar vacía, pero la \<rs: data > etiquetas deben estar presentes. Sin datos, podría escribir la etiqueta de forma abreviada como simplemente \<rs: data / >. Cualquier etiqueta el prefijo "rs" indica que está en el espacio de nombres definido por el urn: schemas-microsoft-Rowset.  
   

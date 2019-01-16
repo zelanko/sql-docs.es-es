@@ -1,7 +1,7 @@
 ---
 title: Introducción a los esquemas XSD anotados (SQLXML 4.0) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e97004dd3b8d28da571f66ba91782f408ee18ede
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 04e34b343ba92fcd8602f2b296e90de2a147fbba
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674284"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255950"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Introducción a los esquemas XSD anotados (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "51674284"
  Un esquema XSD válido debe contener el  **\<xsd: schema >** elemento que se define como sigue:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <!-- additional schema definitions here -->  
 </xsd:schema>  
 ```  
   
- El  **\<xsd: schema >** elemento se deriva de la especificación de espacio de nombres del esquema XML en https://www.w3.org/2001/XMLSchema.  
+ El  **\<xsd: schema >** elemento se deriva de la especificación de espacio de nombres del esquema XML en http://www.w3.org/2001/XMLSchema.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Anotaciones en el esquema XSD  
  Puede usar un esquema XSD con anotaciones que describan la asignación a una base de datos, consultar la base de datos y devolver los resultados en forma de documento XML. Las anotaciones se proporcionan para asignar un esquema XSD a las tablas y columnas de base de datos. Pueden especificarse consultas XPath en la vista XML creada por el esquema XSD para consultar la base de datos y obtener los resultados en un documento XML.  
@@ -61,7 +61,7 @@ ms.locfileid: "51674284"
  En un esquema XSD, las anotaciones se especifican mediante el espacio de nombres **urn: schemas-microsoft-mapping-schema**. Como se muestra en el ejemplo siguiente, la manera más fácil para especificar el espacio de nombres es especificarlo en el  **\<xsd: schema >** etiqueta.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 ...  
 </xsd:schema>  
@@ -73,7 +73,7 @@ ms.locfileid: "51674284"
  En el ejemplo siguiente, el esquema XSD consta de un  **\<Person.Contact >** elemento. El  **\<empleado >** elemento tiene un **ContactID** atributo y  **\<FirstName >** y  **\< LastName >** elementos secundarios:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
   <xsd:element name="Contact" >  
    <xsd:complexType>  
      <xsd:sequence>  
@@ -91,7 +91,7 @@ ms.locfileid: "51674284"
  Se han agregado anotaciones a este esquema XSD para asignar sus elementos y atributos a las tablas y columnas de base de datos:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Contact" sql:relation="Person.Contact" >  
    <xsd:complexType>  
@@ -121,15 +121,15 @@ ms.locfileid: "51674284"
 ## <a name="other-resources"></a>Otros recursos  
  Puede buscar más información sobre el lenguaje de definición de esquemas XML (XSD), el lenguaje de rutas XML (XPath) y el lenguaje de transformación basado en hojas de estilo (XSLT) en los siguientes sitios web:  
   
--   XML Schema Part 0: Primer, W3C recomendación ()https://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Manual, W3C recomendación ()http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Estructuras, el W3C recomendación ()https://www.w3.org/TR/xmlschema-1/)  
+-   Esquema XML parte 1: Estructuras, W3C recomendación ()http://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML parte 2:Datatypes, W3C recomendación ()https://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2:Datatypes, W3C recomendación ()http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) ()https://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
   
--   (XSL Transformations (XSLT)https://www.w3.org/TR/xslt)  
+-   (XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Vea también  
  [Anotar las consideraciones de seguridad de esquema &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   

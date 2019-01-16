@@ -18,14 +18,18 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6fb2354720b334d69f7d5e05977c82c3807fd109
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524987"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300082"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>asignar parámetros de consulta a variables en una tarea Ejecutar SQL
+
+  > [!div class="nextstepaction"]
+  > [Comparta sus comentarios acerca de la tabla de contenido de Docs SQL!](https://aka.ms/sqldocsurvey)
+
   En este tema se describe cómo utilizar una instrucción SQL con parámetros en la tarea Ejecutar SQL, y crear asignaciones entre las variables y los parámetros de la instrucción SQL.  
   
  Para más información sobre la tarea Ejecutar SQL, los marcadores de parámetros y los nombres de parámetros que se usan con diferentes tipos de conexión, vea [Tarea Ejecutar SQL](control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  

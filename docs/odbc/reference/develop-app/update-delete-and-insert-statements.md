@@ -17,31 +17,31 @@ ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92fb7b0e9722c52c7f1e9fc071d434f531b2fc46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721913"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256230"
 ---
 # <a name="update-delete-and-insert-statements"></a>Las instrucciones INSERT, DELETE y UPDATE
 Las aplicaciones basadas en SQL realizar cambios en las tablas mediante la ejecución de la **actualización**, **eliminar**, y **insertar** instrucciones. Estas instrucciones forman parte del nivel de conformidad de gramática mínima de SQL y deben ser compatibles con todos los controladores y orígenes de datos.  
   
  Es la sintaxis de estas instrucciones:  
   
- **ACTUALIZACIÓN***nombre de tabla*   
+ **ACTUALIZACIÓN** _nombre de tabla_  
   
- **ESTABLECER** *identificador de columna* **=** {*expresión* &#124; **NULL**}  
+ **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
   
- [**,** *identificador de columna* **=** {*expresión* &#124; **NULL**}]...  
+ [**,** _column-identifier_ **=** {*expression* &#124; **NULL**}]...  
   
- [**Donde** *condición de búsqueda*]  
+ [**Donde** _condición de búsqueda_]  
   
- **DELETE FROM** *nombre-tabla*[**donde** *condición de búsqueda*]  
+ **DELETE FROM** _nombre-tabla_[**donde** _condición de búsqueda_]  
   
- **INSERT INTO** *nombre-tabla*[**(*** identificador de columna* [**,** *identificador de columna*]... **)**]  
+ **INSERT INTO** _nombre-tabla_[**(** _identificador de columna_ [**,** _deidentificadordecolumna_]... **)**]  
   
- {*especificación de consulta* &#124;  **valores (*** Insertar valor* [**,** *Insertar valor*]... **)**}  
+ {*especificación de consulta* &#124; **valores (** _Insertar valor_ [**,** _Insertar valor_]... **)**}  
   
  Tenga en cuenta que el *especificación de consulta* elemento es válido solo en las gramáticas de Core y SQL extendido y que la *expresión* y *condición de búsqueda* elementos se convierten en más complejas en las gramáticas de Core y SQL extendido.  
   

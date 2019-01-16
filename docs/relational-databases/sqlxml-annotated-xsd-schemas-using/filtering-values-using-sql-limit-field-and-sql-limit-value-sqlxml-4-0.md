@@ -20,12 +20,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dc4a91288beea33ad868c11d1b393188f29d5eb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d1fb6122852f099db87a557869d642a631c5b4df
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677851"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255890"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtras valores mediante sql:limit-field y sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51677851"
  Éste es el esquema:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -151,7 +151,7 @@ ms.locfileid: "51677851"
   
      Para obtener más información, consulte [utilizar ADO para ejecutar consultas SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -166,7 +166,7 @@ ms.locfileid: "51677851"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Limitar los resultados basándose en un valor de descuento de datos de tipo real  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. Limitar los resultados basándose en un valor de descuento de datos de tipo real  
  En este ejemplo, una base de datos contiene dos tablas:  
   
 -   Orders (OrderID)  
@@ -178,7 +178,7 @@ ms.locfileid: "51677851"
  Éste es el esquema:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
    <xsd:appinfo>  
@@ -290,7 +290,7 @@ ms.locfileid: "51677851"
   
 5.  En el Explorador de Windows, haga clic en el archivo TestQuery.vbs para ejecutarlo.  
   
-     El resultado es el siguiente:  
+     Éste es el resultado:  
   
     ```  
     <root>  

@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670414"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256930"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de datos de XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51670414"
  XPath tiene tres tipos de datos: **cadena**, **número**, y **booleano**. El **número** tipo de datos siempre es un IEEE 754 doble punto flotante de precisión. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float (53)** tipo de datos es la más cercana a XPath **número**. Sin embargo, **float (53)** no es exactamente IEEE 754. Por ejemplo, no se utiliza NaN (no es un número) ni infinito. Intenta convertir una cadena no numérica en **número** y dividir por cero da como resultado un error.  
   
 ## <a name="xpath-conversions"></a>Conversiones de XPath  
- Al utilizar una consulta de XPath como `OrderDetail[@UnitPrice > "10.0"]`, las conversiones de tipos de datos implícitas y explícitas pueden cambiar el significado de la consulta de manera sutil. Por consiguiente, es importante entender cómo se implementan los tipos de datos de XPath. La especificación del lenguaje XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 de October de 1999, puede encontrarse en el sitio Web de W3C en https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Al utilizar una consulta de XPath como `OrderDetail[@UnitPrice > "10.0"]`, las conversiones de tipos de datos implícitas y explícitas pueden cambiar el significado de la consulta de manera sutil. Por consiguiente, es importante entender cómo se implementan los tipos de datos de XPath. La especificación del lenguaje XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 de October de 1999, puede encontrarse en el sitio Web de W3C en http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Los operadores de XPath se dividen en cuatro categorías:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "51670414"
 |Ninguno es un conjunto de nodos.|Convierta los dos operandos a **número** y, a continuación, comparar.|Convierta los dos operandos en un tipo común y, a continuación, compare. Convertir en **booleano** si alguno está **booleano**, **número** si alguno está **número**; en caso contrario, convertir en **cadena**.|  
   
 > [!NOTE]  
->  Dado que los operadores relacionales de XPath convierten siempre los operandos en **número**, **cadena** comparaciones no son posibles. Para incluir las comparaciones de fecha, SQL Server 2000 ofrece esta variación a la especificación de XPath: cuando un operador relacional compara un **cadena** a un **cadena**, un conjunto de nodos a un **cadena**, o un conjunto de nodos con valores de cadena en un valor de cadena conjunto de nodos, un **cadena** comparación (no un **número** comparación) se lleva a cabo.  
+>  Dado que los operadores relacionales de XPath convierten siempre los operandos en **número**, **cadena** comparaciones no son posibles. Para incluir las comparaciones de fecha, SQL Server 2000 ofrece esta variación a la especificación de XPath: Cuando un operador relacional compara un **cadena** a un **cadena**, un conjunto de nodos a un **cadena**, o un conjunto de nodos con valores de cadena en un valor de cadena conjunto de nodos, un  **cadena** comparación (no un **número** comparación) se lleva a cabo.  
   
 ## <a name="node-set-conversions"></a>Conversiones de conjunto de nodos  
  Las conversiones de conjunto de nodos no son siempre intuitivas. Un conjunto de nodos se convierte en un **cadena** tomando el valor de cadena de solo el primer nodo en el conjunto. Un conjunto de nodos se convierte en **número** convirtiéndolo en **cadena**y, a continuación, convertir **cadena** a **número**. Un conjunto de nodos se convierte en **booleano** probando su existencia.  
@@ -150,7 +150,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  El prefijo "E -" se agrega a la cadena y el resultado se compara entonces con `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Realizar varias conversiones de tipos de datos en una consulta de XPath  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>b. Realizar varias conversiones de tipos de datos en una consulta de XPath  
  Considere esta consulta especificada de XPath en un esquema XSD anotado: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Esta consulta XPath devuelve todos los  **\<OrderDetail >** elementos que satisfacen el predicado `@UnitPrice * @OrderQty > 98`. Si el **UnitPrice** se anota con un **fixed14.4** tipo de datos en el esquema anotado, este predicado es equivalente a la expresión SQL:  

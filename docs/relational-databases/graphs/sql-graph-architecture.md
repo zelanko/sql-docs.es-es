@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512810"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300192"
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura SQL Graph  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Los usuarios pueden crear un gráfico por cada base de datos. Un gráfico es una
  
 ![arquitectura de SQL graph](../../relational-databases/graphs/media/sql-graph-architecture.png "arquitectura de base de datos de Sql graph")   
 
-Figura 1: Arquitectura de base de datos SQL Graph
+Figura 1: Arquitectura de la base de datos de SQL Graph
  
 ## <a name="node-table"></a>Tabla de nodo
 Una tabla de nodo representa una entidad en un esquema de gráfico. Cada vez que una tabla de nodo se crea, junto con las columnas definidas por el usuario, implícita `$node_id` creada, que identifica de forma única un nodo determinado en la base de datos. Los valores de `$node_id` se generan automáticamente y son una combinación de `object_id` de esa tabla de nodo y un valor bigint generado internamente. Sin embargo, cuando la `$node_id` columna está seleccionada, se muestra un valor calculado en forma de una cadena JSON. Además, `$node_id` es una pseudocolumna, que se asigna a un nombre interno con una cadena hexadecimal en ella. Al seleccionar `$node_id` de la tabla, el nombre de columna aparecerá como `$node_id_<hex_string>`. Usar nombres de columna pseudo en consultas es la manera recomendada de consultas interno `$node_id` columna y el uso de nombres interna con la cadena hexadecimal deben evitarse.
@@ -58,7 +58,7 @@ Figura 2 se muestra cómo se almacenan las tablas perimetrales y de nodo en la b
 
 ![tablas de amigos de persona](../../relational-databases/graphs/media/person-friends-tables.png "nodo Person y amigos perimetral tablas")   
 
-La figura 2: Representación de tabla de nodo y borde
+Figura 2: Representación de tabla de nodo y borde
 
 
 
@@ -97,20 +97,22 @@ La tabla siguiente enumeran los valores válidos para `graph_type` columna
 
 `sys.columns` también almacena información acerca de las columnas implícitas creadas en las tablas de nodo o perimetral. Siguiendo la información se puede recuperar desde sys.columns, sin embargo, los usuarios no pueden seleccionar estas columnas de una tabla de nodo o perimetral. 
 
-Columnas implícitas de una tabla de nodo  
-|Nombre de la columna    |Tipo de datos  |is_hidden  |Comentario  |
-|---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |interno `graph_id` columna  |
-|$node_id_\<cadena_hex > |NVARCHAR   |0  |Nodo externo `node_id` columna  |
+Columnas implícitas de una tabla de nodo
 
-Columnas implícitas de una tabla irregular  
 |Nombre de la columna    |Tipo de datos  |is_hidden  |Comentario  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |interno `graph_id` columna  |
-|$edge_id_\<cadena_hex > |NVARCHAR   |0  |externo `edge_id` columna  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |Nodo externo `node_id` columna  |
+
+Columnas implícitas de una tabla irregular
+
+|Nombre de la columna    |Tipo de datos  |is_hidden  |Comentario  |
+|---  |---|---|---  |
+|graph_id_\<hex_string> |bigint |1  |interno `graph_id` columna  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |externo `edge_id` columna  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno del nodo `object_id`  |
-|from_id_\<cadena_hex >  |bigint |1  |interno del nodo `graph_id`  |
-|$from_id_\<cadena_hex > |NVARCHAR   |0  |externo del nodo `node_id`  |
+|from_id_\<hex_string>  |bigint |1  |interno del nodo `graph_id`  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |externo del nodo `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interno de nodo `object_id`  |
 |to_id_\<hex_string>    |bigint |1  |interno de nodo `graph_id`  |
 |$to_id_\<hex_string>   |NVARCHAR   |0  |externo al nodo `node_id`  |
@@ -138,7 +140,7 @@ Obtenga información sobre la [!INCLUDE[tsql-md](../../includes/tsql-md.md)] ext
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` Ahora se amplía para admitir la creación de una tabla como nodo o PERIMETRAL AS. Tenga en cuenta que una tabla perimetral puede o no tener ningún atributo definido por el usuario.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Se pueden modificar las tablas perimetrales y de nodo del mismo modo que una tabla relacional, usa el `ALTER TABLE`. Los usuarios pueden agregar o modificar las columnas definidas por el usuario, los índices o restricciones. Sin embargo, como la modificación de las columnas de gráfico interno, `$node_id` o `$edge_id`, se producirá un error.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Los usuarios pueden crear índices en columnas pseudo y definido por el usuario en las tablas perimetrales y de nodo. Se admiten todos los tipos de índices, incluidos los índices de almacén de columnas en clúster y no clúster.  |
-|CREAR LAS RESTRICCIONES PERIMETRALES    |[Las restricciones PERIMETRALES &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Los usuarios pueden ahora crear las restricciones perimetrales en las tablas perimetrales para exigir la semántica específica y también mantener la integridad de datos  |
+|CREAR LAS RESTRICCIONES PERIMETRALES    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Los usuarios pueden ahora crear las restricciones perimetrales en las tablas perimetrales para exigir la semántica específica y también mantener la integridad de datos  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Se pueden quitar las tablas perimetrales y de nodo del mismo modo que una tabla relacional, usa el `DROP TABLE`. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún bordes apuntar a un nodo eliminado y no se admite la eliminación en cascada de bordes, tras la eliminación de un nodo o una tabla de nodo. Se recomienda que si se quita una tabla de nodo, los usuarios quitar los bordes que se conecta a los nodos de esa tabla de nodo manualmente para mantener la integridad del gráfico.  |
 
 
@@ -146,7 +148,7 @@ Obtenga información sobre la [!INCLUDE[tsql-md](../../includes/tsql-md.md)] ext
 |Tarea   |Artículo relacionado  |Notas
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Insertar en una tabla de nodo no es diferente a insertar en una tabla relacional. Los valores de `$node_id` columna se genera automáticamente. Intentar insertar un valor en `$node_id` o `$edge_id` columna se producirá un error. Los usuarios deben proporcionar valores para `$from_id` y `$to_id` columnas al insertar en una tabla perimetral. `$from_id` y `$to_id` son el `$node_id` valores de los nodos que se conecta un borde determinado.  |
-|Delete | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Datos de tablas de nodo o perimetral pueden eliminarse en la misma manera como se elimina de tablas relacionales. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún bordes apuntar a un nodo eliminado y no se admite la eliminación en cascada de bordes, tras la eliminación de un nodo. Se recomienda que cada vez que se elimina un nodo, todos los bordes de conexión a dicho nodo también se eliminan, para mantener la integridad del gráfico.  |
+|SUPRIMIR | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Datos de tablas de nodo o perimetral pueden eliminarse en la misma manera como se elimina de tablas relacionales. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún bordes apuntar a un nodo eliminado y no se admite la eliminación en cascada de bordes, tras la eliminación de un nodo. Se recomienda que cada vez que se elimina un nodo, todos los bordes de conexión a dicho nodo también se eliminan, para mantener la integridad del gráfico.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Los valores de columnas definido por el usuario pueden actualizarse mediante la instrucción UPDATE. Actualizando las columnas de gráfico interno `$node_id`, `$edge_id`, `$from_id` y `$to_id` no está permitido.  |
 |MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` se admite la instrucción en una tabla de nodo o perimetral.  |
 
@@ -155,7 +157,7 @@ Obtenga información sobre la [!INCLUDE[tsql-md](../../includes/tsql-md.md)] ext
 |Tarea   |Artículo relacionado  |Notas
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Los nodos y bordes se almacenan internamente como tablas, por lo tanto, admite la mayoría de las operaciones admitidas en una tabla en SQL Server o Azure SQL Database en las tablas perimetrales y de nodo  |
-|MATCH  | [COINCIDENCIA &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|COINCIDENCIA integrados se introdujeron para admitir la coincidencia de patrones y recorrido a través del gráfico.  |
+|MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|COINCIDENCIA integrados se introdujeron para admitir la coincidencia de patrones y recorrido a través del gráfico.  |
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: Propiedades de memoria de Analysis Services | Microsoft Docs
-ms.date: 10/03/2018
+ms.date: 01/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 763c085e9a4dbc6ecb459ffcd17f5185531b98fb
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 055b46ab1464f360cfb89f9bf4d42c0b8997f841
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072002"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327871"
 ---
 # <a name="memory-properties"></a>Propiedades de memoria
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -58,7 +58,14 @@ Las propiedades siguientes son válidas para los modos tabular y multidimensiona
  Especifica un umbral de memoria a partir del cual la instancia finaliza enérgicamente las sesiones de usuario activas para reducir el uso de memoria. Todas las sesiones finalizadas recibirán un error acerca de la presión de memoria que la cancele. El valor predeterminado, cero (0), significa que **HardMemoryLimit** se establecerá en un valor intermedio comprendido entre **TotalMemoryLimit** y la memoria física total del sistema. Si la memoria física del sistema es mayor que el espacio de direcciones virtuales del proceso, se usará en su lugar el espacio de direcciones virtuales para calcular **HardMemoryLimit**.  
 
 **QueryMemoryLimit**   
-Solo Azure Analysis Services. Una propiedad avanzada para controlar cuánta memoria puede usarse por los resultados temporales durante una consulta. Solo se aplica a las medidas DAX y consultas. Consultas MDX en los servidores en modo Multidimensional no usan este límite. No tiene en cuenta para las asignaciones de memoria general usadas por la consulta. Especificada en porcentaje. El valor predeterminado de 0 significa que límite no se especifica.
+Solo Azure Analysis Services. Una propiedad avanzada para controlar cuánta memoria puede usarse por los resultados temporales durante una consulta. Solo se aplica a las medidas DAX y consultas. No tiene en cuenta para las asignaciones de memoria general usadas por la consulta. Si se especifica como un porcentaje, el valor predeterminado viene determinada por el plan. 
+
+|Plan  |Default  |
+|---------|---------|
+|D1     |   80      |
+|Todos los otros planes     |    20     |
+
+Esta propiedad se puede cambiar. Se ha especificado al establecer un valor de 0 significa sin límite.
 
  **VirtualMemoryLimit**  
   Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  

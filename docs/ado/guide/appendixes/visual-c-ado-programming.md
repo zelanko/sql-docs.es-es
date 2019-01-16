@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1b34c2b88c8e1906438f706143fcf6ec966026d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997597"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257050"
 ---
 # <a name="visual-c-ado-programming"></a>Programación ADO en Visual C++
 La referencia de API de ADO describe la funcionalidad de la interfaz de programación de aplicaciones (API) de ADO mediante una sintaxis similar a Microsoft Visual Basic. Aunque el público objetivo son todos los usuarios, los programadores de ADO emplean diversos lenguajes como Visual Basic, Visual C++ (con y sin la **#import** directiva) y Visual J ++ (con el paquete de clase ADO y WFC).  
@@ -74,6 +74,7 @@ variable = objectPtr->GetProperty;  // get property value
  Por ejemplo, el **comando** objeto **ActiveConnection** propiedad se declara con una sintaxis alternativa para **obtener**_ActiveConnection_y **PutRef**_ActiveConnection_. El **PutRef**-sintaxis es una buena elección porque en la práctica, normalmente desea colocar una apertura **conexión** objeto (es decir, un **conexión** puntero de objeto) en este propiedad. Por otro lado, el **Recordset** objeto tiene **obtener**-, **colocar**-, y **PutRef**_ActiveConnection_las operaciones, pero sin sintaxis alternativa.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Colecciones, GetItem (método) y la propiedad del elemento  
+
  ADO define varias colecciones, incluidas **campos**, **parámetros**, **propiedades**, y **errores**. En Visual C++, el **GetItem (_índice_)** método devuelve un miembro de la colección. *Índice* es un **Variant**, cuyo valor es un índice numérico del miembro de la colección, o una cadena que contiene el nombre del miembro.  
   
  El **__declspec(property...)**  directiva de compilador declara el **elemento** fundamental de la propiedad como una sintaxis alternativa para cada colección **GetItem()** método. La sintaxis alternativa utiliza corchetes y es similar a una referencia de la matriz. En general, los dos formularios de aspecto similar al siguiente:  

@@ -16,18 +16,18 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f619c519bd5ec6a3ebb3567fc39e73d63e8b68f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 445fe3a0b87e6ad8e35dbc585981d874f8e357bf
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619693"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256960"
 ---
 # <a name="types-of-drivers"></a>Tipos de controladores
 Controladores ODBC se pueden clasificar como sigue:  
   
 -   **2 de ODBC de 32 bits.**  
-     ***x* controlador** controladores de 32 bits que:  
+     **_x_ controlador** controladores de 32 bits que:  
   
     -   Exporta solo ODBC 2 *.x* funciones.  
   

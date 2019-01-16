@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86a7c1418e59b494362a3d64da81f07caf6cab95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f0d627b294281e5022cbc2dec34de884ab658318
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674164"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256600"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Actualizar datos con diagramas de actualización XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ ms.locfileid: "51674164"
 </ROOT>  
 ```  
   
- **\<updg: antes de >**  
+ **\<updg:before>**  
  Los elementos de la  **\<antes >** bloque identifican los registros existentes en las tablas de base de datos.  
   
- **\<updg: una vez >**  
+ **\<updg:after>**  
  Los elementos de la  **\<después >** se describe cómo especifican los registros en bloque el  **\<antes de >** bloque tendrá un aspecto después de aplican las actualizaciones.  
   
  El **esquema de asignación** atributo identifica el esquema de asignación que va a usar el diagrama de actualización. Si el diagrama de actualización especifica un esquema de asignación, los nombres de elementos y atributos especificados en el  **\<antes >** y  **\<después >** bloques deben coincidir con los nombres del esquema. El esquema de asignación asigna estos nombres de elementos o atributos a los nombres de columnas y tablas de base de datos.  
@@ -122,7 +122,7 @@ ms.locfileid: "51674164"
   
      Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Actualizar varios registros utilizando el atributo updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Actualizar varios registros utilizando el atributo updg:id  
  En este ejemplo, el diagrama de actualización realiza dos actualizaciones en la tabla HumanResources.Shift de la base de datos AdventureWorks:  
   
 -   Cambia el nombre del turno de día original, que empieza a las 7:00 a. m., de "Day" a "Early Morning".  
@@ -269,7 +269,7 @@ ms.locfileid: "51674164"
  El esquema de asignación XSD siguiente tiene  **\<cliente >**,  **\<orden >**, y  **\<OD >** elementos que se asignan a las Tablas Sales.Customer, Sales.SalesOrderHeader y Sales.SalesOrderDetail de la base de datos.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -363,7 +363,7 @@ ms.locfileid: "51674164"
  El siguiente esquema de asignación XSD proporciona una vista XML de las tablas mediante el  **\<Student >**,  **\<curso >**, y  **\<inscripción >** elementos. El **IDREFS** atributos en el esquema de asignación especifican la relación entre estos elementos. El **StudentIDList** atributo el  **\<curso >** elemento es un **IDREFS** atributo de tipo que hace referencia a la columna StudentID de la tabla Enrollment. Del mismo modo, el **EnrolledIn** atributo el  **\<Student >** elemento es un **IDREFS** atributo de tipo que hace referencia a la columna CourseID de la inscripción tabla.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

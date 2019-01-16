@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c8edb6cb54d2ef600080093729a9ff0c06f4082
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3758a437a35ad3add877d04eaafca0997f7b2096
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671644"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256460"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introducción al uso de consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51671644"
   
  XPath es un lenguaje de navegación de grafos que se usa para seleccionar un conjunto de nodos de un documento XML. Cada operador XPath selecciona un conjunto de nodos basándose en un conjunto de nodos seleccionado por un operador XPath anterior. Por ejemplo, dado un conjunto de  **\<cliente >** nodos, XPath pueden seleccionar todo  **\<orden >** nodos con el **fecha** valor de atributo de **"7/14/1999"**. El conjunto de nodos resultante contiene todos los pedidos con la fecha de pedido 7/14/1999.  
   
- World Wide Web Consortium (W3C) define el lenguaje XPath como un lenguaje de navegación estándar. SQLXML 4.0 implementa un subconjunto de la especificación XPath de W3C, que se encuentra en https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ World Wide Web Consortium (W3C) define el lenguaje XPath como un lenguaje de navegación estándar. SQLXML 4.0 implementa un subconjunto de la especificación XPath de W3C, que se encuentra en http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  A continuación se muestran las diferencias que existen entre la implementación XPath de W3C y la implementación SQLXML 4.0.  
   
@@ -98,9 +98,9 @@ ms.locfileid: "51671644"
 |Predicados con valores booleanos que incluyen predicados sucesivos y anidados||[Especificar operadores aritméticos en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Todos los operadores relacionales|=, !=, <, \<=, >, >=|[Especificar operadores relacionales en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Operadores aritméticos|+, -, *, div|[Especificar operadores aritméticos en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Funciones de conversión explícita|**Number()**, **string()**, **Boolean()**|[Especificar funciones de conversión explícita en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|Funciones de conversión explícita|**number()**, **string()**, **Boolean()**|[Especificar funciones de conversión explícita en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |operadores booleanos|AND, OR|[Especificar operadores booleanos en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|funciones booleanas|**True()**, **false()**, **not()**|[Especificar funciones booleanas en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|funciones booleanas|**true()**, **false()**, **not()**|[Especificar funciones booleanas en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |variables de XPath||[Especificar Variables XPath en consultas XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>Funcionalidad incompatible  
@@ -108,13 +108,13 @@ ms.locfileid: "51671644"
   
 |Característica|Elemento|  
 |-------------|----------|  
-|Ejes|**antecesor**, **antecesor o propio**, **descendiente**, **descendant-or-self (/ /)**, **siguiente**,  **siguientes-relacionados**, **espacio de nombres**, **anterior**, **precedentes-relacionados**|  
+|Ejes|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)**, **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
 |Predicados con valores numéricos||  
 |Operadores aritméticos|mod|  
-|Funciones de nodo|**antecesor**, **antecesor o propio**, **descendiente**, **descendant-or-self (/ /)**, **siguiente**,  **siguientes-relacionados**, **espacio de nombres**, **anterior**, **precedentes-relacionados**|  
+|Funciones de nodo|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)**, **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
 |Funciones de cadena|**String()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**,  **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
 |funciones booleanas|**lang()**|  
-|Funciones numéricas|**SUM()**, **floor()**, **ceiling()**, **round()**|  
+|Funciones numéricas|**sum()**, **floor()**, **ceiling()**, **round()**|  
 |Operador de unión|&#124;|  
   
  Cuando especifique consultas XPath en una plantilla, tenga en cuenta el siguiente comportamiento:  

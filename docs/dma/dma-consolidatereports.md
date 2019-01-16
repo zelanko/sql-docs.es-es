@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d26de5c86485e6e7a2c6a11b8528c55c8ce92229
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503277"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300092"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluar una empresa y consolidar los informes de evaluación con DMA
 
@@ -35,6 +35,7 @@ Las siguientes instrucciones paso a paso para ayudarán a usar Data Migration As
     - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 o posterior.
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 o posterior.
     - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+    - [Módulos de PowerShell de Azure](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Descargar y extraer:
     - El [plantilla DMA informes Power BI](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
     - El [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
@@ -120,7 +121,7 @@ Los parámetros asociados con la función dmaProcessor se describen en la tabla 
 
 |Parámetro  |Descripción
 |---------|---------|
-|**encarguen**  | La ubicación a la que se procesará el archivo JSON. Los valores posibles son **SQLServer** y **AzureSQLDatabase**. |
+|**processTo**  | La ubicación a la que se procesará el archivo JSON. Los valores posibles son **SQLServer** y **AzureSQLDatabase**. |
 |**serverName** | La instancia de SQL Server a la que se procesarán los datos.  Si especifica **AzureSQLDatabase** para el **encarguen** parámetro, a continuación, incluir solo el nombre de SQL Server (no incluya. database.windows.net). Se le pedirá para dos inicios de sesión cuando el destino es Azure SQL Database; la primera es sus credenciales de inquilino de Azure, mientras que el segundo es el inicio de sesión de administrador para el servidor de SQL Azure. |
 |**CreateDMAReporting** | La base de datos de almacenamiento provisional para crear para procesar el archivo JSON.  Si la base de datos especificada ya existe y se establece este parámetro en uno, no se crean los objetos.  Este parámetro es útil para volver a crear un único objeto que se ha quitado. |
 |**CreateDataWarehouse** | Crea el almacenamiento de datos que se usará en el informe de Power BI. |

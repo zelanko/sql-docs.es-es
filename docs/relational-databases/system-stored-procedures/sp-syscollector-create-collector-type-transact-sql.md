@@ -19,12 +19,12 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24e9f4aa4cf1ab8694947411f5565250c6544d92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659114"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256240"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,22 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  Es el GUID para el tipo de recopilador. *collector_type_uid* es **uniqueidentifier** y si es NULL, se crea y devuelve como OUTPUT automáticamente.  
   
  [ @name =] '*nombre*'  
  Es el nombre del tipo de recopilador. *nombre* es **sysname** y deben especificarse.  
   
- [ @parameter_schema =] '*parameter_schema*'  
+ [ @parameter_schema = ] '*parameter_schema*'  
  Es el esquema XML para este tipo de recopilador. *parameter_schema* es **xml** con el valor predeterminado es NULL.  
   
  [ @parameter_formatter =] '*parameter_formatter*'  
  Es la plantilla que debe usarse para transformar el XML a fin de usarlo en la página de propiedades del conjunto de recopilación. *parameter_formatter* es **xml** con el valor predeterminado es NULL.  
   
- [@collection_package_id =] *collection_package_id*  
+ [@collection_package_id = ] *collection_package_id*  
  Es un identificador local único que apunta al paquete de recopilaciones de [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado por el conjunto de recopilaciones. *collection_package_id* es **uniqueidentifier** y es necesario.  
   
- [@upload_package_id =] *upload_package_id*  
+ [@upload_package_id = ] *upload_package_id*  
  Es un identificador local único que apunta al paquete de carga de [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado por el conjunto de recopilaciones. *upload_package_id* es **uniqueidentifier** y es necesario.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -79,7 +79,7 @@ EXEC sp_syscollector_create_collector_type
 @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-  <xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
     <xs:element name="TSQLQueryCollector">  
       <xs:complexType>  
         <xs:sequence>  

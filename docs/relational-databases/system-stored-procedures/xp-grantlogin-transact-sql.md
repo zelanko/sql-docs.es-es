@@ -18,12 +18,12 @@ ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a6b08e90fafccca3c64b13132b9cf9e248fdee7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17fe4fd7edad9df6bccace9d301516ae7683edf3
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663783"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255670"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@loginame =** ] **'***login***'**  
+ [ **@loginame =** ] **'**_login_**'**  
  Nombre del usuario o grupo de Windows que se va a agregar. El usuario de Windows o grupo debe calificarse con un nombre de dominio de Windows en el formulario *dominio*\\*usuario*. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@logintype =** ] **'***logintype***'**  
+ [ **@logintype =** ] **'**_logintype_**'**  
  Es el nivel de seguridad del inicio de sesión al que se concede acceso. *LoginType* es **varchar (5)**, su valor predeterminado es null. Solo **admin** se pueden especificar. Si **admin** se especifica, *inicio de sesión* se concede acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y se agrega como miembro de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

@@ -13,12 +13,12 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5eb8012190914c2b5312a89428947f670db11df4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201734"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256200"
 ---
 # <a name="schema-section"></a>Sección de esquema
 La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO escribe metadatos detallados sobre cada columna para conservar la semántica de los valores de datos tanto como sea posible para la actualización. Sin embargo, para cargar el XML, ADO requiere sólo los nombres de las columnas y el conjunto de filas al que pertenecen. Este es un ejemplo de un esquema mínimo:  
@@ -99,7 +99,7 @@ La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO
  De forma similar, porque no hay no definido ningún alias para `CompanyName` en el ejemplo anterior, `CompanyName` debe usarse de forma coherente en todo el documento.  
   
 ## <a name="data-types"></a>Tipos de datos  
- Puede aplicar un tipo de datos a una columna con el atributo dt: Type. Para obtener la guía definitiva para los tipos permitidos de XML, vea la sección tipos de datos de la [especificación W3C XML-Data](https://www.w3.org/TR/1998/NOTE-XML-data/). Puede especificar un tipo de datos de dos maneras: especificar el atributo dt: Type directamente en la propia definición de columna o utilizar la construcción s: DataType como un elemento anidado de la definición de columna. Por ejemplo,  
+ Puede aplicar un tipo de datos a una columna con el atributo dt: Type. Para obtener la guía definitiva para los tipos permitidos de XML, vea la sección tipos de datos de la [especificación W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Puede especificar un tipo de datos de dos maneras: especificar el atributo dt: Type directamente en la propia definición de columna o utilizar la construcción s: DataType como un elemento anidado de la definición de columna. Por ejemplo,  
   
 ```  
 <s:AttributeType name="Phone" >  

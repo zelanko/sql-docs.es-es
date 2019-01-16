@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506829"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226692"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ En este ejemplo se inserta una fila en la tabla Patients. Observe lo siguiente:
 
 - Los valores que se insertan en las columnas de bases de datos, incluidas las columnas cifradas, se pasan como parámetros enlazados (consulte [Función SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Aunque el uso de parámetros es opcional al enviar valores a las columnas no cifradas (aunque es altamente recomendable porque ayuda a evitar la inyección de código SQL), es necesario para los valores que tienen como destino las columnas cifradas. Si los valores insertados en las columnas SSN o BirthDate se pasan como literales incrustados en la instrucción de consulta, la consulta produciría un error porque el controlador no intenta cifrar o procesar de otro modo, los literales en consultas. Como resultado, el servidor los rechazará considerándolos incompatibles con las columnas cifradas.
 
-- El tipo SQL del parámetro insertado en la columna SSN se establece en SQL_CHAR, que se asigna a la **char** tipo de datos de SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Si el tipo del parámetro se estableció en SQL_WCHAR, que se asigna a **nchar**, la consulta producirá, ya que Always Encrypted no admite conversiones de servidor de los valores cifrados de nchar a valores cifrados char. Consulte [referencia del programador de ODBC: Apéndice D: tipos de datos](https://msdn.microsoft.com/library/ms713607.aspx) para obtener información acerca de las asignaciones de tipos de datos.
+- El tipo SQL del parámetro insertado en la columna SSN se establece en SQL_CHAR, que se asigna a la **char** tipo de datos de SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Si el tipo del parámetro se estableció en SQL_WCHAR, que se asigna a **nchar**, la consulta producirá, ya que Always Encrypted no admite conversiones de servidor de los valores cifrados de nchar a valores cifrados char. Consulte [referencia del programador de ODBC: Apéndice D: Tipos de datos](https://msdn.microsoft.com/library/ms713607.aspx) para obtener información acerca de las asignaciones de tipos de datos.
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ En esta sección se describen las optimizaciones integradas de rendimiento en OD
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controlar los ciclos de ida y vuelta para recuperar metadatos para los parámetros de consulta
 
-De forma predeterminada, si Always Encrypted está habilitado para una conexión, el controlador llamará a [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta con parámetros, al pasar la instrucción de consulta (sin ningún valor de parámetro) a SQL Server. Este procedimiento almacenado analiza la instrucción de consulta para averiguar si algún parámetro necesita cifrarse y, si es así, se devuelve la información relacionada con el cifrado para cada parámetro permitir que el controlador cifrarlos. El comportamiento anterior garantiza un alto nivel de transparencia a la aplicación cliente: la aplicación (y el desarrollador de aplicaciones) que no deberá tener en cuenta qué consultas acceden a las columnas cifradas, siempre y cuando se pasan los valores que se dirigen a columnas cifradas a el controlador de parámetros.
+De forma predeterminada, si Always Encrypted está habilitado para una conexión, el controlador llamará a [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta con parámetros, al pasar la instrucción de consulta (sin ningún valor de parámetro) a SQL Server. Este procedimiento almacenado analiza la instrucción de consulta para averiguar si algún parámetro necesita cifrarse y, si es así, se devuelve la información relacionada con el cifrado para cada parámetro permitir que el controlador cifrarlos. El comportamiento anterior garantiza un alto nivel de transparencia para la aplicación cliente: la aplicación (y el desarrollador de la aplicación) no necesita conocer qué consultas tienen acceso a las columnas cifradas, siempre y cuando los valores que tienen como destino estas columnas se pasen al controlador en parámetros.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Por cada instrucción Always Encrypted comportamiento
 
@@ -538,7 +538,7 @@ Cifrado **dinero** o **smallmoney** parámetros no pueden tener como destino las
 
 ## <a name="bulk-copy-of-encrypted-columns"></a>Copia masiva de las columnas cifradas
 
-El uso de la [funciones de copia masiva de SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) y **bcp** utilidad es compatible con Always Encrypted desde ODBC Driver 17 for SQL Server. Texto simple (cifrada en inserción y recuperación descifrada en) y texto cifrado (transferida literalmente) se pueden insertar y recuperar mediante la copia masiva (bcp_ *) las API y el **bcp** utilidad.
+El uso de la [funciones de copia masiva de SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) y **bcp** utilidad es compatible con Always Encrypted desde ODBC Driver 17 for SQL Server. Texto simple (cifrada en inserción y recuperación descifrada en) y texto cifrado (transferida literalmente) se pueden insertar y recuperar mediante la copia masiva (bcp_&#42;) API y la **bcp** utilidad.
 
 - Para recuperar el texto cifrado en formato varbinary (max) (por ejemplo, para la carga masiva en una base de datos diferente), conectarse sin el `ColumnEncryption` opción (o establézcalo en `Disabled`) y realizar una operación BCP OUT.
 
@@ -546,7 +546,7 @@ El uso de la [funciones de copia masiva de SQL](../../relational-databases/nativ
 
 - Para insertar texto cifrado en formato varbinary (max) (p. ej., como recuperados anteriormente), establezca el `BCPMODIFYENCRYPTED` opción en TRUE y realizar una operación BCP IN. En el orden de los datos resultantes se decryptable, asegúrese de que el destino CEK de la columna es igual que desde el que se ha obtenido originalmente el texto cifrado.
 
-Cuando se usa el **bcp** utilidad: controlar la `ColumnEncryption` establecer, use la opción -D y especifique un DSN que contiene el valor deseado. Para insertar texto cifrado, asegúrese del `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` está habilitada la configuración del usuario.
+Cuando se usa el **bcp** utilidad: Para controlar la `ColumnEncryption` establecer, use la opción -D y especifique un DSN que contiene el valor deseado. Para insertar texto cifrado, asegúrese del `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` está habilitada la configuración del usuario.
 
 En la tabla siguiente proporciona un resumen de las acciones cuando se trabaja en una columna cifrada:
 
@@ -602,7 +602,7 @@ Vea [Migración de datos confidenciales protegidos mediante Always Encrypted](..
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|Cuando es TRUE, permite valores varbinary (max) va a insertar en una columna cifrada. Cuando sea FALSE, impide la inserción a menos que se proporcionen los metadatos de cifrado y el tipo correcto.|
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 - [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog de Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)

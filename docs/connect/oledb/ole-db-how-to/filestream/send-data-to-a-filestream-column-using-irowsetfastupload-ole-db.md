@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ffe4c48fe4a7b60ffab669168f0af7af7fe6c705
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaedd5bf7370a4a95f163bca26dbbadd8d49b34b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774913"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212104"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Enviar datos a una columna FILESTREAM mediante IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47774913"
   
  Cuando ejecute este ejemplo, debe pasar el nombre de un servidor o un servidor\nombreDeInstancia, así como un valor comprendido entre 4 MB (0x400001) y 4 GB (0xFFFFFFFF) que indique la cantidad de datos que se van a escribir.  
   
- La cuarta lista de código ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) elimina la base de datos creada por este ejemplo.  
+ La cuarta lista de código ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) elimina la base de datos creada en este ejemplo.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

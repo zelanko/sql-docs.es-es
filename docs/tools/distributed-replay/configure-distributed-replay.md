@@ -11,12 +11,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5253fc1b7ace718fc2d83cadd9fca944b4898c7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 166e5e929863a9c7213f3cda6f43e6c1007865b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506217"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125565"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "52506217"
   
 |Configuración|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (el servidor de prueba)|`<Server>`|Especifica el nombre del servidor y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión.|*server_name*[\\*instance_name*]<br /><br /> No puede usar "`localhost`" o "`.`" para representar el host local.|No, si el nombre del servidor ya se especifica con el parámetro **-s***target server* con la opción **replay** de la herramienta de administración.|  
+|Instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (el servidor de prueba)|`<Server>`|Especifica el nombre del servidor y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión.|*server_name*[\\*instance_name*]<br /><br /> No puede usar "`localhost`" o "`.`" para representar el host local.|No, si el nombre del servidor ya se especifica con el parámetro **-s**_target server_ con la opción **replay** de la herramienta de administración.|  
 |Modo de secuenciación|`<SequencingMode>`|Especifica el modo que se usa para la programación de eventos.|`synchronization` &#124; `stress`|No. El valor es `stress`de forma predeterminada.|  
 |Granularidad de escala de esfuerzo|`<StressScaleGranularity>`|Especifica si todas las conexiones en el Identificador de perfil de servicio (SPID) deben escalarse juntas (SPID) o independientemente (Conexión) en el modo de esfuerzo.|SPID &#124; Conexión|Sí. El valor es `SPID`de forma predeterminada.|  
 |Escala del tiempo de conexión|`<ConnectTimeScale>`|Se usa para escalar el tiempo de conexión en el modo de esfuerzo.|Un entero entre `1` y `100`.|No. El valor es `100`de forma predeterminada.|  
@@ -167,8 +167,8 @@ ms.locfileid: "52506217"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Posible problema cuando se ejecuta con la sincronización de modo de secuenciación
  Puede encontrar un síntoma en la que la funcionalidad de reproducción aparece "pausa" o las reproducciones eventos muy lentamente. Este fenómeno puede producirse si el seguimiento está reproduciendo se basa en datos o eventos que no existen en la base de datos restaurada. 
- 
-Un ejemplo es una carga de trabajo capturada que usa WAITFOR, como en la instrucción WAITFOR de recepción de Service Broker. Cuando se usa el modo de secuenciación de sincronización, los lotes se reproducen en serie. Si se produce una INSERCIÓN en la base de datos de origen después de la copia de seguridad de base de datos, pero antes de la captura de reproducción se inició el seguimiento, la recepción de WAITFOR emitido durante la reproducción que tenga que esperar la duración completa de WAITFOR. Los eventos se establecen en reproducirse después de la recepción de WAITFOR estará detenida. Esto puede producir en el contador del monitor de rendimiento de las solicitudes de Batch/seg. la eliminación de destino de base de datos de reproducción en cero hasta que se complete la WAITFOR. 
+ 
+ Un ejemplo es una carga de trabajo capturada que usa WAITFOR, como en la instrucción WAITFOR de recepción de Service Broker. Cuando se usa el modo de secuenciación de sincronización, los lotes se reproducen en serie. Si se produce una INSERCIÓN en la base de datos de origen después de la copia de seguridad de base de datos, pero antes de la captura de reproducción se inició el seguimiento, la recepción de WAITFOR emitido durante la reproducción que tenga que esperar la duración completa de WAITFOR. Los eventos se establecen en reproducirse después de la recepción de WAITFOR estará detenida. Esto puede producir en el contador del monitor de rendimiento de las solicitudes de Batch/seg. la eliminación de destino de base de datos de reproducción en cero hasta que se complete la WAITFOR. 
  
  Si necesita usar el modo de sincronización y deseos para evitar este comportamiento, debe hacer lo siguiente:
  
@@ -181,7 +181,7 @@ Un ejemplo es una carga de trabajo capturada que usa WAITFOR, como en la instruc
 4.  Iniciar la captura de seguimiento de reproducción distribuida y reanudar la carga de trabajo normal. 
  
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Foro de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   

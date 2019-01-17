@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7d0e18e67720b301f97cc212f7b3b5de0d08e29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402820"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980541"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -255,8 +255,8 @@ Los archivos reason y los archivos de datos tienen el identificador de consulta 
  Tenga en cuenta que el inicio de sesión que crea el origen de datos externo debe tener permiso para leer y escribir en el origen de datos externo, ubicado en Hadoop o Azure Blob Storage.  
 
 
- > [!IMPORTANT]  
-
+> [!IMPORTANT]
+> 
 >  El permiso ALTER ANY EXTERNAL DATA SOURCE concede a cualquier entidad de seguridad la capacidad de crear y modificar cualquier objeto de origen de datos externo y, por lo tanto, también permite acceder a todas las credenciales con ámbito de base de datos de la base de datos. Debe considerarse como un permiso con muchos privilegios, por lo que solo debe concederse a las entidades de seguridad de confianza del sistema.
 
 ## <a name="error-handling"></a>Tratamiento de errores  
@@ -283,7 +283,7 @@ Los archivos reason y los archivos de datos tienen el identificador de consulta 
 -   CREATE TABLE y DROP TABLE  
   
 -   CREATE STATISTICS y DROP STATISTICS  
-Nota: En Azure SQL Database no se admiten CREATE y DROP STATISTICS en tablas externas. 
+Nota: En Azure SQL Database no se admiten CREATE y DROP STATISTICS en las tablas externas. 
   
 -   CREATE VIEW y DROP VIEW  
   
@@ -341,7 +341,7 @@ WITH (
   
 ```  
   
-### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. Crear una tabla externa con datos en formato RCFile.  
+### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>b. Crear una tabla externa con datos en formato RCFile.  
  En este ejemplo se muestran todos los pasos necesarios para crear una tabla externa que tenga datos con formato de RCFiles. Se define un origen de datos externo *mydatasource_rc* y un formato de archivo externo *myfileformat_rc*. Luego se hace referencia a estos objetos de nivel de base de datos en la instrucción CREATE EXTERNAL TABLE. Para obtener más información, vea [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) y [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
 ```  
@@ -552,7 +552,7 @@ FROM ClickStream
 ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplos de consultas de metadatos comunes (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   

@@ -1,6 +1,7 @@
 ---
-title: Supervisar el rendimiento de los grupos de disponibilidad Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Supervisión del rendimiento para grupos de disponibilidad
+description: En este artículo se explica el proceso de sincronización, se muestra cómo calcular algunas de las métricas clave y se proporcionan vínculos a algunos de los escenarios de solución de problemas de rendimiento comunes.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601155"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203362"
 ---
-# <a name="monitor-performance-for-always-on-availability-groups"></a>Supervisar el rendimiento de los grupos de disponibilidad Always On
+# <a name="monitor-performance-for-always-on-availability-groups"></a>Supervisión del rendimiento para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   El rendimiento de los grupos de disponibilidad Always On es vital para mantener el contrato de nivel de servicio (SLA) de las bases de datos de críticas. La comprensión de cómo envían los registros los grupos de disponibilidad a las réplicas secundarias puede ayudar a estimar el objetivo de tiempo de recuperación (RTO) y el objetivo de punto de recuperación (RPO) de la implementación de disponibilidad y a identificar cuellos de botella en grupos de disponibilidad o réplicas con un mal rendimiento. En este artículo se explica el proceso de sincronización, se muestra cómo calcular algunas de las métricas clave y se proporcionan vínculos a algunos de los escenarios de solución de problemas de rendimiento comunes.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "51601155"
   
  Además de las puertas de control de flujo, hay otro factor que puede evitar que los mensajes de registro se envíen. La sincronización de réplicas garantiza que los mensajes se envíen y se apliquen en el orden de los números de secuencia de registro (LSN). Antes de enviar un mensaje de registro, también se compara su LSN con el LSN confirmado más bajo para asegurarse de que es menor que uno de los umbrales (según el tipo de mensaje). Si la diferencia entre los dos LSN es mayor que el umbral, los mensajes no se envían. Una vez que la diferencia vuelve a estar por debajo del umbral, se envían los mensajes.  
   
- Dos útiles contadores de rendimiento, [SQL Server: Réplica de disponibilidad > Control de flujo/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md) y [SQL Server: Réplica de disponibilidad > Tiempo de control de flujo (ms/s)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), muestran, durante el último segundo, cuántas veces se ha activado el control de flujo y cuánto tiempo se ha esperado en el control de flujo. Un mayor tiempo de espera en el control de flujo se traduce en un RPO superior. Para obtener más información sobre los tipos de problemas que pueden dar lugar a un tiempo de espera elevado en el control de flujo, vea [Solución de problemas: el grupo de disponibilidad superó el RPO](troubleshoot-availability-group-exceeded-rpo.md).  
+ Dos útiles contadores de rendimiento, [SQL Server: Réplica de disponibilidad > Control de flujo/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md) y [SQL Server: Réplica de disponibilidad > Tiempo de control de flujo (ms/s)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), muestran, durante el último segundo, cuántas veces se ha activado el control de flujo y cuánto tiempo se ha esperado en el control de flujo. Un mayor tiempo de espera en el control de flujo se traduce en un RPO superior. Para más información sobre los tipos de problemas que pueden dar lugar a un tiempo de espera elevado en el control de flujo, vea [Solución de problemas: el grupo de disponibilidad superó el RPO](troubleshoot-availability-group-exceeded-rpo.md).  
   
 ##  <a name="estimating-failover-time-rto"></a>Estimación del tiempo de conmutación por error (RTO)  
  El RTO del SLA depende del tiempo de conmutación por error de la implementación de Always On en un momento dado, que se puede expresar en la siguiente fórmula:  
@@ -134,9 +135,9 @@ Para la base de datos principal, el valor **last_commit_time** es la hora de con
 
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>Contadores de rendimiento que se usan en las fórmulas de RTO/RPO
 
-- **redo_queue_size** (KB) [*se usa en RTO*]: el tamaño de cola de fase de puesta al día es el tamaño de los registros de transacciones entre sus valores **last_received_lsn** y **last_redone_lsn**. **last_received_lsn** es el identificador de bloque de registro que identifica el punto en el que todos los bloques de registro han sido recibidos por la réplica secundaria en la que se hospeda esta base de datos secundaria. **Last_redone_lsn** es el número de secuencia de registro real de la última entrada de registro que se rehízo en la base de datos secundaria. En función de estos dos valores, se pueden encontrar los identificadores del bloque de registro inicial (**last_received_lsn**) y el bloque de registro final (**last_redone_lsn**). El espacio entre estos dos bloques de registro puede representar la cantidad de bloques de registro de transacciones que todavía no se han puesto al día. Esto se mide en kilobytes (KB).
--  **redo_rate** (KB/s) [*se usa en RTO*]: un valor acumulativo que representa, en un período de tiempo transcurrido, qué cantidad del registro de transacciones (KB) se ha puesto al día en la base de datos secundaria, expresado en kilobytes (KB)/segundo. 
-- **last_commit_time** (Datetime) [*se usa en RPO*]: para la base de datos principal, el valor **last_commit_time** es la hora de confirmación de la transacción más reciente. Para la base de datos secundaria, el valor **last_commit_time** es la hora de confirmación más reciente de la transacción en la base de datos principal que también se ha protegido correctamente en la base de datos secundaria. Como en la base de datos secundaria este valor se debe sincronizar con el mismo valor de la principal, cualquier diferencia entre estos dos valores es la estimación de la pérdida de datos (RPO).  
+- **redo_queue_size** (KB) [*se usa en el RTO*]: el tamaño de cola de fase de puesta al día es el tamaño de los registros de transacciones entre sus valores **last_received_lsn** y **last_redone_lsn**. **last_received_lsn** es el identificador de bloque de registro que identifica el punto en el que todos los bloques de registro han sido recibidos por la réplica secundaria en la que se hospeda esta base de datos secundaria. **Last_redone_lsn** es el número de secuencia de registro real de la última entrada de registro que se rehízo en la base de datos secundaria. En función de estos dos valores, se pueden encontrar los identificadores del bloque de registro inicial (**last_received_lsn**) y el bloque de registro final (**last_redone_lsn**). El espacio entre estos dos bloques de registro puede representar la cantidad de bloques de registro de transacciones que todavía no se han puesto al día. Esto se mide en kilobytes (KB).
+-  **redo_rate** (KB/s) [*se usa en el RTO*]: un valor acumulativo que representa, en un período de tiempo transcurrido, qué cantidad del registro de transacciones (KB) se ha puesto al día en la base de datos secundaria, expresada en kilobytes (KB)/segundo. 
+- **last_commit_time** (Datetime) [*se usa en el RPO*]: para la base de datos principal, **last_commit_time** es la hora de confirmación de la transacción más reciente. Para la base de datos secundaria, el valor **last_commit_time** es la hora de confirmación más reciente de la transacción en la base de datos principal que también se ha protegido correctamente en la base de datos secundaria. Como en la base de datos secundaria este valor se debe sincronizar con el mismo valor de la principal, cualquier diferencia entre estos dos valores es la estimación de la pérdida de datos (RPO).  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>Estimación de RTO y RPO mediante DMV
 
@@ -328,7 +329,7 @@ Se pueden consultar las DMV [sys.dm_hadr_database_replica_states](../../../relat
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Supervisión de RTO y RPO  
- En esta sección se muestra cómo supervisar las métricas RTO y RPO de los grupos de disponibilidad. Esta demostración es similar al tutorial de GUI de [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Parte 2 del modelo de estado de Always On: extensión del modelo de estado).  
+ En esta sección se muestra cómo supervisar las métricas RTO y RPO de los grupos de disponibilidad. Esta demostración es similar al tutorial de GUI proporcionado en [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (El modelo de estado de Always On, parte 2: extensión del modelo de estado).  
   
  Se proporcionan elementos de los cálculos de tiempo de conmutación por error y de posible pérdida de datos de [Estimación del tiempo de conmutación por error (RTO)](#BKMK_RTO) y [Estimación de la posible pérdida de datos (RPO)](#BKMK_RPO) como métricas de rendimiento de la faceta de administración de directivas **Estado de réplica de base de datos** (vea [Ver las facetas de administración basada en directivas en un objeto de SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Puede supervisar estas dos métricas según una programación y recibir alertas cuando superen el RTO y el RPO, respectivamente.  
   
@@ -358,7 +359,7 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
   
     -   **Nombre**: `RTO`  
   
-    -   **Faceta**: **Estado de la réplica de base de datos**  
+    -   **Faceta:** **Estado de la réplica de base de datos**  
   
     -   **Campo**: `Add(@EstimatedRecoveryTime, 60)`  
   
@@ -372,7 +373,7 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
   
     -   **Nombre**: `RPO`  
   
-    -   **Faceta**: **Estado de la réplica de base de datos**  
+    -   **Faceta:** **Estado de la réplica de base de datos**  
   
     -   **Campo**: `@EstimatedDataLoss`  
   
@@ -386,7 +387,7 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
   
     -   **Nombre**: `IsPrimaryReplica`  
   
-    -   **Faceta**: **Grupo de disponibilidad**  
+    -   **Faceta:** **Grupo de disponibilidad**  
   
     -   **Campo**: `@LocalReplicaRole`  
   
@@ -404,11 +405,11 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
   
         -   **Condición de comprobación**: `RTO`  
   
-        -   **Para destinos**: **Cada DatabaseReplicaState** en **IsPrimaryReplica AvailabilityGroup**  
+        -   **Para destinos:** **Cada DatabaseReplicaState** en **IsPrimaryReplica AvailabilityGroup**  
   
              Esta configuración garantiza que la directiva se evalúe solo en los grupos de disponibilidad cuya réplica de disponibilidad local es la réplica principal.  
   
-        -   **Modo de evaluación**: **Según programación**  
+        -   **Modo de evaluación:** **Al programar**  
   
         -   **Programación**: **CollectorSchedule_Every_5min**  
   
@@ -422,7 +423,7 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
   
         -   **Descripción**: **La réplica actual tiene un RTO que supera los 10 minutos, asumiendo una sobrecarga de 1 minuto para la detección y la conmutación por error. Debe investigar los problemas de rendimiento en la instancia de servidor respectiva inmediatamente.**  
   
-        -   **Texto para mostrar**: **RTO superado.**  
+        -   **Texto para mostrar**: **RTO superado**  
   
 8.  Cree una segunda [directiva de administración basada en directivas](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md) con las especificaciones siguientes:  
   
@@ -432,9 +433,9 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
   
         -   **Condición de comprobación**: `RPO`  
   
-        -   **Para destinos**: **Cada DatabaseReplicaState** en **IsPrimaryReplica AvailabilityGroup**  
+        -   **Para destinos:** **Cada DatabaseReplicaState** en **IsPrimaryReplica AvailabilityGroup**  
   
-        -   **Modo de evaluación**: **Según programación**  
+        -   **Modo de evaluación:** **Al programar**  
   
         -   **Programación**: **CollectorSchedule_Every_30min**  
   
@@ -446,7 +447,7 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
   
         -   **Descripción**: **La base de datos de disponibilidad ha superado el RPO de 1 hora. Debe investigar los problemas de rendimiento en las réplicas de disponibilidad inmediatamente.**  
   
-        -   **Texto para mostrar**: **RPO superado.**  
+        -   **Texto para mostrar**: **RPO superado**  
   
  Al terminar se crean dos nuevos trabajos del Agente SQL Server, uno por programación de evaluación de directivas. Estos trabajos deben tener nombres que comiencen por **syspolicy_check_schedule**.  
   

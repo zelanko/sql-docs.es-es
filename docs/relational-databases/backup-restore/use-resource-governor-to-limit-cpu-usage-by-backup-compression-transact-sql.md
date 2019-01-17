@@ -17,12 +17,12 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ea2daec0d2926588e80ade4a5e41cc602da58b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3094df3f5fff3a0dbeb70573236432202420224
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649363"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210544"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47649363"
 ##  <a name="setup_login_and_user"></a> Configurar un inicio de sesión y un usuario para operaciones de prioridad baja  
  El escenario de este tema requiere un usuario y un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de prioridad baja. El nombre de usuario se utilizará para clasificar las sesiones que se ejecutan en el inicio de sesión y enrutarlas a un grupo de cargas de trabajo del regulador de recursos que limita el uso de CPU.  
   
- En el procedimiento siguiente se describen los pasos para configurar un inicio de sesión y un usuario con este propósito, además de un ejemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)] , "Ejemplo A: configurar un inicio de sesión y un usuario (Transact-SQL)".  
+ En el procedimiento siguiente se describen los pasos para configurar un inicio de sesión y un usuario con este propósito, además de un ejemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)], "Ejemplo A: Configurar un inicio de sesión y un usuario (Transact-SQL)".  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>Para configurar un inicio de sesión y un usuario de la base de datos para clasificar las sesiones  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47649363"
   
      Para obtener más información, vea [Permisos de entidad de seguridad de base de datos GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Ejemplo A: configurar un inicio de sesión y un usuario (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Ejemplo A: Configurar un inicio de sesión y un usuario (Transact-SQL)  
  El ejemplo siguiente solo es pertinente si decide crear un usuario y un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuevos para las copias de seguridad de prioridad baja. Por otro lado, puede usar un inicio de sesión y un usuario existentes, si hay alguno adecuado.  
   
 > [!IMPORTANT]  
@@ -186,7 +186,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Ejemplo B: configurar el regulador de recursos (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Ejemplo B: Configurar Resource Governor (Transact-SQL)  
  En el ejemplo siguiente se realizan los pasos dentro de una única transacción:  
   
 1.  Crea el grupo de recursos de servidor `pMAX_CPU_PERCENT_20` .  
@@ -200,7 +200,7 @@ GO
  Después de confirmar la transacción, el ejemplo aplica los cambios de configuración solicitados en las instrucciones ALTER WORKLOAD GROUP o ALTER RESOURCE POOL.  
   
 > [!IMPORTANT]  
->  En el ejemplo siguiente se usa el nombre de usuario del usuario de ejemplo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creado en "Ejemplo A: configurar un inicio de sesión y un usuario (Transact-SQL)", *nombre_de_dominio*`\MAX_CPU`. Reemplace esto por el nombre del usuario del inicio de sesión que piensa usar para crear copias de seguridad comprimidas de prioridad baja.  
+>  En el ejemplo siguiente se usa el nombre de usuario del usuario de ejemplo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creado en "Ejemplo A: Configurar un inicio de sesión y un usuario (Transact-SQL)", *nombre_de_dominio*`\MAX_CPU`. Reemplace esto por el nombre del usuario del inicio de sesión que piensa usar para crear copias de seguridad comprimidas de prioridad baja.  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -264,7 +264,7 @@ GO
 ##  <a name="creating_compressed_backup"></a> Comprimir las copias de seguridad utilizando una sesión con CPU limitada  
  Para crear una copia de seguridad comprimida en una sesión con el uso máximo de CPU limitado, inicie sesión como el usuario especificado en la función clasificadora. En el comando de copia de seguridad, especifique WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) o seleccione **Comprimir copia de seguridad** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Para crear una copia de seguridad comprimida de la base de datos, vea [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Ejemplo C: crear una copia de seguridad comprimida (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Ejemplo C: Crear una copia de seguridad comprimida (Transact-SQL)  
  En el ejemplo [BACKUP](../../t-sql/statements/backup-transact-sql.md) siguiente se crea una copia de seguridad completa comprimida de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en un archivo de copia de seguridad al que se ha dado formato recientemente, `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```sql  
@@ -280,7 +280,7 @@ GO
   
  [&#91;Principio&#93;](#Top)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear y probar una función clasificadora definida por el usuario](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)  
   

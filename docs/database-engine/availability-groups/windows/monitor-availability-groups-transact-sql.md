@@ -1,6 +1,7 @@
 ---
-title: Supervisar grupos de disponibilidad (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Supervisión de grupos de disponibilidad con Transact-SQL (T-SQL)
+description: Descripción de cómo supervisar grupos de disponibilidad Always On mediante Transact-SQL (T-SQL).
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51b67b193847ea554052d26ac55c8e9b7919478f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832363"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209434"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Supervisar grupos de disponibilidad (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,7 +189,7 @@ ms.locfileid: "47832363"
 >  La ubicación de la réplica principal es el origen autorizado para un grupo de disponibilidad.  
   
 > [!NOTE]  
->  Para obtener más información sobre los contadores de rendimiento de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para bases de datos de disponibilidad (el objeto de rendimiento **SQLServer:Database Replica** ), vea [SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Además, para supervisar la actividad del registro de transacciones en bases de datos de disponibilidad, use los siguientes contadores del objeto de rendimiento **SQLServer:Databases** : **Tiempo de escritura de vaciados de registro (ms)**, **Vaciados del registro/s**, **Errores de caché de grupo de registros/s**, **Lecturas de disco de grupo de registros/s**y **Solicitudes de grupo de registros/s**. Para más información, vea [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Para obtener más información sobre los contadores de rendimiento de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para bases de datos de disponibilidad (el objeto de rendimiento **SQLServer:Database Replica** ), vea [SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Además, para supervisar la actividad del registro de transacciones en las bases de datos de disponibilidad, use los contadores siguientes del objeto de rendimiento **SQLServer:Databases**: **Tiempo de escritura de vaciados de registros (ms)**, **Vaciados de registro/s.**, **Errores de caché del grupo de registros/s.**, **Lecturas de disco del grupo de registros/s** y **Solicitudes del grupo de registros/s**. Para más información, vea [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Supervisar agentes de escucha del grupo de disponibilidad  
  Para supervisar los agentes de escucha del grupo de disponibilidad en las subredes del clúster de WSFC, utilice las vistas siguientes:  
@@ -291,7 +292,7 @@ ms.locfileid: "47832363"
   
 -   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  

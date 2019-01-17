@@ -11,12 +11,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22365cc7a483b285f583268856a979a694eeabab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7b77ef114e1af3ec0d8c7a7268ae5f9b892196fe
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537266"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886930"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importar documentos JSON en SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,8 +121,6 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-Para obtener más información y un ejemplo que usa OPENROWSET, vea [Loading files from Azure Blob Storage into Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/) (Cargar archivos desde Azure Blob Storage en Azure SQL Database).
-
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Analizar documentos JSON en filas y columnas
 En lugar de leer un archivo completo de JSON como un valor único, puede interesarle analizarlo y devolver los libros del archivo y sus propiedades en filas y columnas. En este ejemplo se usa un archivo JSON de [este sitio](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) que contiene una lista de libros.
 
@@ -162,7 +160,7 @@ En este ejemplo, OPENROWSET(BULK) lee el contenido del archivo y pasa ese conten
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12,5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6,49|304|Rick Riordan| 
-978-1857995879|Sophie's World : The Greek Philosophers|3,07|64|Jostein Gaarder| 
+978-1857995879|Sophie's World: The Greek Philosophers|3,07|64|Jostein Gaarder| 
 978-1933988177|Lucene in Action, Second Edition|30,5|475|Michael McCandless|
 ||||||
 
@@ -170,10 +168,6 @@ Ahora puede devolver esta tabla al usuario o cargar los datos en otra tabla.
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Más información sobre JSON en SQL Server y Azure SQL Database  
   
-### <a name="microsoft-blog-posts"></a>Entrada de blog de Microsoft  
-  
-Para obtener soluciones específicas, casos de uso y recomendaciones, consulte estas [entradas de blog](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sobre la compatibilidad integrada de JSON en SQL Server y Azure SQL Database.  
-
 ### <a name="microsoft-videos"></a>Vídeos de Microsoft
 
 Para obtener una introducción visual a la compatibilidad integrada de JSON en SQL Server y Azure SQL Database, vea los siguientes vídeos:
@@ -184,6 +178,6 @@ Para obtener una introducción visual a la compatibilidad integrada de JSON en S
 
 -   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds) (JSON como puente entre los universos NoSQL y relacional)
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [Convertir datos JSON en filas y columnas con OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
 

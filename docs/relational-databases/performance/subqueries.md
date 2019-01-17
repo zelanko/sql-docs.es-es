@@ -13,16 +13,16 @@ helpviewer_keywords:
 - subqueries [SQL Server], correlated
 - subqueries [SQL Server], types
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 487397681b993bc4995a422730d84aef5423f8c0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033702"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356025"
 ---
 # <a name="subqueries-sql-server"></a>Subconsultas (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -487,7 +487,7 @@ WHERE ProductSubcategoryID NOT IN
 GO
 ```
 
-Esta instrucción no se puede convertir en una combinación. La combinación análoga "no igual" tiene un significado distinto: busca los nombres de todos los productos presentes en una subcategoría que no es la de bicicletas acabadas.      
+Esta instrucción no se puede convertir en una combinación. La combinación no igual análoga tiene otro significado: busca los nombres de todos los productos presentes en una subcategoría que no es la de bicicletas acabadas.      
 
 ### <a name="upsert"></a> Subconsultas en las instrucciones UPDATE, DELETE e INSERT
 Las subconsultas se pueden anidar en instrucciones de manipulación de datos (DML) `UPDATE`, `DELETE`, `INSERT` y `SELECT `.    
@@ -772,7 +772,7 @@ WHERE ProductSubcategoryID = 1;
 GO
 ```   
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)       
 [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)     
 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)     

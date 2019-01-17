@@ -171,7 +171,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Noruego (Bokmål, Noruega)|Norwegian_100_|No disponible|  
 |Noruego (nynorsk, Noruega)|Norwegian_100_|No disponible|  
 |Occitano (Francia)|French_100_|No disponible|  
-|Oriya (India)|Indic_General_100_<sup>1</sup>|No disponible|  
+|Odia (India)|Indic_General_100_<sup>1</sup>|No disponible|  
 |Pashto (Afganistán)|Pashto_100_<sup>1</sup>|No disponible|  
 |Persa (Irán)|Persian_100_|No disponible|  
 |Punjabí (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  

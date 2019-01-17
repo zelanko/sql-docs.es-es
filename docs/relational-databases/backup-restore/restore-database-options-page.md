@@ -13,12 +13,12 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3b590fa12fb2168a80c320068facb979702cd4fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbeeb28aced36cf1d80b2a6c4efeba3c614385c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853923"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209994"
 ---
 # <a name="restore-database-options-page"></a>Restaurar base de datos (página Opciones)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47853923"
  Para modificar aspectos del comportamiento de la operación de restauración, utilice las opciones del panel **Opciones de restauración** .  
   
  **Sobrescribir la base de datos existente [WITH REPLACE]**  
- La operación de restauración sobrescribirá los archivos de cualquier base de datos que use en ese momento el nombre de base de datos especificado en el campo **Restaurar en**en la página [General](../../relational-databases/backup-restore/restore-database-general-page.md) del cuadro de diálogo **Restaurar base de datos** . Los archivos de la base de datos existente se sobrescribirán aunque restaure copias de seguridad de una base de datos diferente al nombre de base de datos existente. La elección de esta opción equivale a usar la opción REPLACE en una instrucción [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ La operación de restauración sobrescribirá los archivos de cualquier base de datos que use en ese momento el nombre de base de datos especificado en el campo **Restaurar en**en la página [General](../../relational-databases/backup-restore/restore-database-general-page.md) del cuadro de diálogo **Restaurar base de datos** . Los archivos de la base de datos existente se sobrescribirán aunque restaure copias de seguridad de una base de datos diferente al nombre de base de datos existente. La selección de esta opción equivale a usar la opción REPLACE en una instrucción [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Utilice esta opción después de haberlo pensado detenidamente. Para obtener más información, vea [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -114,7 +114,7 @@ ms.locfileid: "47853923"
   
 -   Si la siguiente copia de seguridad es una copia de seguridad de registros, utilice la tarea **Restaurar registro de transacciones** . Para obtener más información sobre cómo reanudar una secuencia de restauración por medio de la restauración de un registro de transacciones, vea [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   

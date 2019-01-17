@@ -1,6 +1,7 @@
 ---
-title: Tiempo de espera de comprobación de estado de concesión del grupo de disponibilidad de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Mecanismos del tiempo de espera de comprobación de estado de concesión del grupo de disponibilidad
+description: Instrucciones y mecanismos para los tiempos de comprobación de estado, clúster y concesión para grupos de disponibilidad Always On.
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393988"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209084"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Mecanismos y directrices de los tiempos de espera de concesión, clúster y comprobación de estado 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Instrucciones y mecanismos de los tiempos de espera de comprobación de estado, clúster y concesión para grupos de disponibilidad Always On 
 
 Las diferencias de hardware, software y configuración del clúster, así como los distintos requisitos de aplicación para el tiempo de actividad y el rendimiento necesitan una configuración específica para los valores de tiempo de espera de concesión, clúster y comprobación de estado. Para determinadas aplicaciones y cargas de trabajo se necesita una supervisión más exigente que limite el tiempo de inactividad producido por errores graves. Para otras se necesita mayor tolerancia a problemas de red transitorios y esperas debido a un uso intensivo de los recursos, pero aceptan conmutaciones por error más lentas. 
 
@@ -80,7 +81,7 @@ El nivel de condición de error del grupo de disponibilidad cambia las condicion
 | 2: OnServerUnresponsive | Si no se reciben datos de `sp_server_diagnostics` para HealthCheckTimeout
 | 3: OnCriticalServerError | (Valor predeterminado) Si el componente del sistema informa de un error
 | 4: OnModerateServerError | Si el componente de recurso informa de un error 
-| 5: OnAnyQualifiedFailureConitions |  Si el componente de procesamiento de consultas informa de un error
+| 5:  OnAnyQualifiedFailureConitions |  Si el componente de procesamiento de consultas informa de un error
 
 ## <a name="updating-cluster-and-always-on-timeout-values"></a>Actualización de valores de tiempo de espera del clúster y de Always On 
 
@@ -128,7 +129,7 @@ El mecanismo de concesión se controla mediante un único valor específico para
    
 ### <a name="health-check-values"></a>Valores de comprobación de estado 
 
-Hay dos valores que controlan la comprobación de estado de AlwaysOn: FailureConditionLevel y HealthCheckTimeout. FailureConditionLevel indica el nivel de tolerancia a determinadas condiciones de error indicado por `sp_server_diagnostics` y HealthCheckTimeout configura el tiempo que la DLL de recursos puede estar sin recibir una actualización de `sp_server_diagnostics`. El intervalo de actualización de `sp_server_diagnostics` siempre es HealthCheckTimeout/3. 
+Dos valores controlan la comprobación de estado de Always On: FailureConditionLevel y HealthCheckTimeout. FailureConditionLevel indica el nivel de tolerancia a determinadas condiciones de error indicado por `sp_server_diagnostics` y HealthCheckTimeout configura el tiempo que la DLL de recursos puede estar sin recibir una actualización de `sp_server_diagnostics`. El intervalo de actualización de `sp_server_diagnostics` siempre es HealthCheckTimeout/3. 
 
 Para configurar el nivel de condición de conmutación por error, use la opción `FAILURE_CONDITION_LEVEL = <n>` de la instrucción `CREATE` o `ALTER` `AVAILABILITY GROUP`, donde `<n>` es un entero entre 1 y 5. El siguiente comando establece el nivel de condición de error en 1 para el grupo de disponibilidad “AG1”: 
 
@@ -153,9 +154,9 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
 
-## <a name="see-also"></a>Ver también    
+## <a name="see-also"></a>Consulte también    
 
-[Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+[Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 
 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)         
 

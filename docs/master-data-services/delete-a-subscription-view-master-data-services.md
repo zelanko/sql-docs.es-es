@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting subscription views [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 933302168f73f9e192087a24f958a7d15a2f4414
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2003a4eb896c4800bcd5c544fcb66e251058c68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618783"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749347"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Eliminar una vista de suscripciones (Master Data Services)
 
@@ -47,8 +46,8 @@ ms.locfileid: "47618783"
   
 5.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear una vista de suscripciones para exportar datos &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)   
- [Información general: exportar datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
+ [Información general: exportación de datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
   

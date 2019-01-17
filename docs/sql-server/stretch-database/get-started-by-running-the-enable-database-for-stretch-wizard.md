@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be0f60c692334b577a7eb59fa25f385ef0af33c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a2a977be46826859cf286fff1750345d5346e2b9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020468"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596826"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Introducción mediante la ejecución del Asistente para Habilitar base de datos para Stretch
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,7 +178,7 @@ Si quiere usar un tipo de función de filtro diferente para seleccionar las fila
   
 ##  <a name="KnownIssues"></a> Solución de problemas del asistente  
  **Error en el Asistente para Stretch Database.**  
- Si aún no se ha habilitado Stretch Database en el nivel de servidor y ejecuta el asistente sin los permisos de administrador del sistema necesarios para habilitarlo, se mostrará un error. Pida al administrador del sistema que habilite Stretch Database en la instancia del servidor local y, después, vuelva a ejecutar el asistente. Para obtener más información, vea [Requisito previo: permiso para habilitar Stretch Database en el servidor](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ Si aún no se ha habilitado Stretch Database en el nivel de servidor y ejecuta el asistente sin los permisos de administrador del sistema necesarios para habilitarlo, se mostrará un error. Pida al administrador del sistema que habilite Stretch Database en la instancia del servidor local y, después, vuelva a ejecutar el asistente. Para más información, vea [Requisito previo: permiso para habilitar Stretch Database en el servidor](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Puede habilitar más tablas para Stretch Database, además de supervisar la migración de datos y administrar las tablas y las bases de datos habilitadas para Stretch.  
@@ -195,7 +195,7 @@ Si quiere usar un tipo de función de filtro diferente para seleccionar las fila
   
 -   [Restore Stretch-enabled databases (Restauración de bases de datos habilitadas para Stretch)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Habilitación de Stretch Database para una base de datos](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Enable Stretch Database for a table (Habilitar Stretch Database para una tabla)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   

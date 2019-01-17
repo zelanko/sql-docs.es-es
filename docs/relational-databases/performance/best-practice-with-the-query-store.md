@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712126"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328975"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **Intervalo de recopilación de estadísticas:** define el nivel de granularidad de la estadística recopilada en tiempo de ejecución (el valor predeterminado es 60 minutos). Considere el uso de un valor inferior si necesita una granularidad más fina o menos tiempo para detectar y mitigar los problemas, pero tenga en cuenta que afectará directamente al tamaño de los datos del Almacén de consultas. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer otro valor para el intervalo de recopilación de estadísticas:  
+ **Intervalo de la recopilación de estadísticas:** define el nivel de granularidad de la estadística recopilada en tiempo de ejecución (el valor predeterminado es 60 minutos). Considere el uso de un valor inferior si necesita una granularidad más fina o menos tiempo para detectar y mitigar los problemas, pero tenga en cuenta que afectará directamente al tamaño de los datos del Almacén de consultas. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer otro valor para el intervalo de recopilación de estadísticas:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **Umbral de consulta obsoleta (días):** directiva de limpieza basada en el tiempo que controla el período de retención de las estadísticas en tiempo de ejecución persistentes y las consultas inactivas.  
+ **Umbral de consultas obsoletas (días):** directiva de limpieza basada en el tiempo que controla el período de retención de las estadísticas en tiempo de ejecución persistentes y las consultas inactivas.  
 De forma predeterminada, el Almacén de consultas se configura para conservar los datos durante 30 días, que puede ser un período innecesariamente largo para su escenario.  
   
  Evite mantener datos históricos que no piense utilizar. Esto reducirá cambios al estado de solo lectura. El tamaño de los datos del Almacén de consultas así como el tiempo para detectar y mitigar el problema serán más predecibles. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el siguiente script para configurar la directiva de limpieza basada en el tiempo:  
@@ -99,7 +99,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
- **Modo de limpieza basado en el tamaño:** Especifica si la limpieza automática de los datos se llevará a cabo cuando el tamaño de datos del Almacén de consultas se aproxime al límite.  
+ **Modo de limpieza basado en el tamaño:** especifica si la limpieza automática de los datos se llevará a cabo cuando el tamaño de datos del Almacén de consultas se aproxime al límite.  
   
  Se recomienda activar la limpieza basada en el tamaño para asegurar que el Almacén de consultas siempre se ejecuta en modo de lectura y escritura y recopila los datos más recientes.  
   
@@ -108,7 +108,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
   
- **Modo de captura del Almacén de consultas:** Especifica la directiva de captura de consultas para el Almacén de consultas.  
+ **Modo de captura del almacén de consultas:** especifica la directiva de captura de consultas para el Almacén de consultas.  
   
 -   **All**: captura todas las consultas. Ésta es la opción predeterminada.  
   
@@ -156,10 +156,10 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
 |Top Resource Consuming Queries (Consultas que consumen más recursos)|Elija una métrica de ejecución de interés e identifique las consultas que tenían los valores más extremos para un intervalo de tiempo proporcionado. <br />Use esta vista para centrar la atención en las consultas más importantes que tienen el mayor impacto en el consumo de recursos de base de datos.|  
 |Consultas con planes forzados|Enumera los planes forzados anteriormente mediante el Almacén de consultas. <br />Use esta vista para obtener acceso rápidamente a todos los planes forzados actualmente.|  
 |Consultas con gran variación|Analice consultas con una gran variación de ejecución en lo referente a cualquiera de las dimensiones disponibles, como la duración, el tiempo de CPU, la E/S y el uso de memoria en el intervalo de tiempo deseado.<br />Use esta vista para identificar consultas con un rendimiento muy variable que pueda afectar a la experiencia del usuario a través de las aplicaciones.|  
-|Estadísticas de espera de consulta|Analice las categorías de espera más activas en una base de datos y qué consultas contribuyen más a la categoría de espera seleccionada.<br />Use esta vista para analizar las estadísticas de espera e identificar las consultas que pueden estar afectando a la experiencia del usuario entre las aplicaciones.<br /><br />**Se aplica a:** a partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|Estadísticas de espera de consulta|Analice las categorías de espera más activas en una base de datos y qué consultas contribuyen más a la categoría de espera seleccionada.<br />Use esta vista para analizar las estadísticas de espera e identificar las consultas que pueden estar afectando a la experiencia del usuario entre las aplicaciones.<br /><br />**Se aplica a:** A partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |Tracked Queries (Consultas seguidas)|Realice un seguimiento de la ejecución de las consultas más importantes en tiempo real. Normalmente, esta vista se utiliza cuando tiene consultas con planes forzados y desea asegurarse de que el rendimiento de las mismas es estable.|
   
-> [!TIP]  
+> [!TIP]
 > Para obtener una descripción detallada sobre cómo usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para identificar las consultas que consumen más recursos y corregir aquellas devueltas debido al cambio de una opción de plan, vea los [blogs de @Azure sobre el Almacén de consultas](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  Cuando identifique una consulta con un rendimiento deficiente, la acción dependerá de la naturaleza del problema.  
@@ -168,7 +168,7 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > El gráfico anterior puede presentar distintas formas para planes de consulta específicos, con los significados siguientes para cada estado posible:<br />  
 > |Forma|Significado|  
 > |-------------------|-------------|
@@ -344,7 +344,7 @@ La marca de seguimiento 7752 habilita la carga asincrónica del Almacén de cons
 > [!IMPORTANT]
 > Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible. 
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Uso del almacén de consultas con OLTP en memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

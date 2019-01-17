@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62f34e574559c1d8685bb254200bed93c6c0a7e5
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559252"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591769"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar el tamaño de un montón
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "51559252"
   
 1.  Especifique el número de filas que habrá en la tabla:  
   
-     ***Num_Rows***  = número de filas de la tabla  
+     **_Num_Rows_**  = número de filas de la tabla  
   
 2.  Especifique el número de columnas de longitud fija y de longitud variable, y calcule el espacio necesario para su almacenamiento:  
   
      Calcule el espacio que ocupa cada uno de estos grupos de columnas en la fila de datos. El tamaño de una columna depende del tipo y de la longitud especificados para los datos.  
   
-     ***Num_Cols***  = número total de columnas (de longitud fija y variable)  
+     **_Num_Cols_**  = número total de columnas (de longitud fija y variable)  
   
-     ***Fixed_Data_Size***  = tamaño total en bytes de todas las columnas de longitud fija  
+     **_Fixed_Data_Size_**  = tamaño total en bytes de todas las columnas de longitud fija  
   
-     ***Num_Variable_Cols***  = número de columnas de longitud variable  
+     **_Num_Variable_Cols_**  = número de columnas de longitud variable  
   
-     ***Max_Var_Size***  = tamaño máximo total en bytes de todas las columnas de longitud variable  
+     **_Max_Var_Size_**  = tamaño máximo total en bytes de todas las columnas de longitud variable  
   
 3.  Una parte de la fila, conocida como el mapa de bits NULL, se reserva para administrar la nulabilidad en las columnas. Calcule el tamaño:  
   
-     ***Null_Bitmap***  = 2 + ((***Num_Cols*** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      Solo debe utilizarse la parte entera de la expresión anterior. Descarte el resto.  
   
@@ -55,36 +55,36 @@ ms.locfileid: "51559252"
   
      Si hay columnas de longitud variable en la tabla, determine cuánto espacio se utiliza para almacenar las columnas en la fila:  
   
-     ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
+     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
-     Los bytes agregados a ***Max_Var_Size*** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100%. Si prevé que se va a usar un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de ***Max_Var_Size*** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
+     Los bytes agregados a **_Max_Var_Size_** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100%. Si prevé que se va a usar un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de **_Max_Var_Size_** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
   
     > [!NOTE]  
-    >  Puede combinar las columnas **varchar**, **nvarchar**, **varbinary**o **sql_variant** que hacen que el ancho total definido para la tabla sea superior a 8060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8000 bytes en una columna **varchar**, **nvarchar,****varbinary**o **sql_variant** . Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla.  
+    >  Puede combinar las columnas **varchar**, **nvarchar**, **varbinary**o **sql_variant** que hacen que el ancho total definido para la tabla sea superior a 8060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8.000 bytes en una columna **varchar**, **nvarchar, varbinary** o **sql_variant**. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla.  
   
-     Si no hay columnas de longitud variable, establezca ***Variable_Data_Size*** en 0.  
+     Si no hay columnas de longitud variable, establezca **_Variable_Data_Size_** en 0.  
   
 5.  Calcule el tamaño total de la fila:  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      El valor 4 de la fórmula representa la sobrecarga del encabezado de la fila de datos.  
   
 6.  Calcule el número de filas por página (8096 bytes libres por página):  
   
-     ***Rows_Per_Page***  = 8096 / (***Row_Size*** + 2)  
+     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
   
      Dado que las filas no abarcan varias páginas, el número de filas por página debe redondearse hacia abajo a la fila completa más cercana. El valor 2 de la fórmula representa la entrada de la fila en la matriz de zonas de la página.  
   
 7.  Calcule el número de páginas necesarias para almacenar todas las filas:  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      El número de páginas estimado debe redondearse hacia arriba a la página completa más cercana.  
   
 8.  Calcule el espacio necesario para almacenar los datos en el montón (8192 bytes en total por página):  
   
-     Tamaño del montón (bytes) = 8192 x ***Num_Pages***  
+     Tamaño del montón (bytes) = 8192 x **_Num_Pages_**  
   
  En este cálculo no se tiene en cuenta lo siguiente:  
   
@@ -108,7 +108,7 @@ ms.locfileid: "51559252"
   
      Para obtener información sobre los requisitos de espacio de las columnas dispersas, vea [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Montones &#40;tablas sin índices agrupados&#41;](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md)   
  [Índices agrupados y no agrupados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)   

@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4cc82fcdd1324ae8596d83d6a8911973a98ae569
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533020"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980341"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,9 +51,9 @@ Define una fecha en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 |Precisión|Un día|  
 |Valor predeterminado|1900-01-01<br /><br /> Este valor se usa para la parte de fecha anexada para la conversión implícita de **time** a **datetime2** o **datetimeoffset**.|  
 |Calendario|Gregoriano|  
-|Precisión de fracciones de segundo definida por el usuario|no|  
-|Conservación y reconocimiento del ajuste de zona horaria|no|  
-|Reconocimiento del horario de verano|no|  
+|Precisión de fracciones de segundo definida por el usuario|No|  
+|Conservación y reconocimiento del ajuste de zona horaria|No|  
+|Reconocimiento del horario de verano|No|  
   
 ## <a name="supported-string-literal-formats-for-date"></a>Formatos de literales de cadena compatibles para date
 En las tablas siguientes se muestran los formatos de literales de cadena válidos para el tipo de datos **date**.
@@ -83,7 +83,7 @@ En las tablas siguientes se muestran los formatos de literales de cadena válido
 |aaaa-mm-ddTZD|Específicamente admitido para uso de XML/SOAP.<br /><br /> DZH es el designador de zona horaria (Z o + hh: mm o -hh:mm).<br /><br /> -   hh:mm representa el desplazamiento de zona horaria. hh es una cifra de dos dígitos, de 0 a 14, que representa el número de horas del ajuste de zona horaria.<br />-   MM es una cifra de dos dígitos, de 0 a 59, que representa el número de minutos adicionales en el desplazamiento de zona horaria.<br />-   + (más) o - (menos) es el signo que se usa obligatoriamente para indicar el desplazamiento de zona horaria. Indica si el ajuste de zona horaria se suma o resta de la hora universal coordinada (UTC) para obtener la hora local. El intervalo válido de ajuste de zona horaria es de -14: 00 a +14: 00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Compatibilidad con ANSI e ISO 8601  
-**date** cumple la definición del estándar ANSI SQL para el calendario gregoriano: “NOTA 85: Los tipos de datos datetime permitirán que las fechas con formato gregoriano se almacenen en el intervalo de fechas comprendido entre 0001-01-01 E. C. y 9999-12-31 E. C.”.
+**date** cumple la definición del estándar ANSI SQL para el calendario Gregoriano: "NOTA 85: Los tipos de datos datetime permitirán que las fechas en el formato Gregoriano se almacenen en el intervalo de fechas de 01-01-0001 CE a 12-31-9999 CE".
   
 El formato predeterminado del literal de cadena (que se usa para clientes de nivel inferior) cumple con el formato del estándar SQL, que se define como AAAA-MM-DD. Este formato es igual que la definición de ISO 8601 para DATE.
   
@@ -124,7 +124,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-Cuando la conversión es a **smalldatetime** y el valor **date** se encuentra en el intervalo de [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), se copia el componente de fecha y el componente de hora se establece en 00:00:00.000. Cuando el valor de **date** está fuera del intervalo de un valor **smalldatetime**, se recibe el mensaje de error 242: "The conversion of a date data type to a smalldatetime data type resulted in an out-of-range value." (La conversión de un tipo de datos date a un tipo de datos date produce un valor fuera de intervalo); el valor de **smalldatetime** se establece en NULL. En el código siguiente se muestran los resultados de convertir un valor `date` en un valor `smalldatetime`.
+Cuando la conversión es a **smalldatetime** y el valor **date** se encuentra en el intervalo de [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), se copia el componente de fecha y el componente de hora se establece en 00:00:00.000. Cuando el valor **date** está fuera del rango de un valor **smalldatetime**, se produce el mensaje de error 242: "La conversión de un tipo de datos date en un tipo de datos smalldatetime da como resultado un valor que no se inscribe en el intervalo"; y el valor **smalldatetime** se establece en NULL. En el código siguiente se muestran los resultados de convertir un valor `date` en un valor `smalldatetime`.
   
 ```sql
 DECLARE @date date= '1912-10-25';  

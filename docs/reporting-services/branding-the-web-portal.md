@@ -1,18 +1,19 @@
 ---
 title: Personalización de marca del portal web | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+description: En este artículo obtendrá información sobre cómo modificar la apariencia del portal web mediante la aplicación de la personalización de marca de la empresa a través de un paquete de marca. El paquete de marca se ha diseñado de forma que no deba estar muy familiarizado con las hojas de estilo CSS para crearlo.
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397713"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201045"
 ---
 # <a name="branding-the-web-portal"></a>Personalización de marca del portal web
 
@@ -239,5 +240,7 @@ También puede **descargarse** o **quitar** el paquete. Si quita el paquete, se 
             "altTableAccent":"#fdc336"  
         }  
     }  
+
+## <a name="next-steps"></a>Pasos siguientes
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

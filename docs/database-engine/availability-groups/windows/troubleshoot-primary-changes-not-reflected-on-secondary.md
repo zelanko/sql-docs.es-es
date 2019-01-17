@@ -1,6 +1,7 @@
 ---
-title: 'Solución de problemas: cambios en la réplica principal que no se reflejan en la réplica secundaria (grupos de disponibilidad Always On - SQL Server) | Microsoft Docs'
-ms.custom: ag-guide
+title: 'Determinación de por qué los cambios no son visibles en la réplica secundaria para un grupo de disponibilidad: SQL Server'
+ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+ms.custom: ag-guide,seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3604871a67e4d5f642015eab07ca11e301ae286c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feed1ad23a72ef00d264994373e0ef23f4d1c8bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803093"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203484"
 ---
-# <a name="troubleshoot-changes-on-the-primary-replica-are-not-reflected-on-the-secondary-replica"></a>Solución de problemas: cambios en la réplica principal que no se reflejan en la réplica secundaria
+# <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determinación de por qué los cambios de la réplica principal no se reflejan en una réplica secundaria de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La aplicación cliente finaliza una actualización en la réplica principal correctamente, pero una consulta a la réplica secundaria muestra que el cambio no se ha reflejado. En este caso, se presupone que el estado de sincronización de su disponibilidad es correcto. En la mayoría de casos, este comportamiento se resuelve pasados unos minutos.  
   

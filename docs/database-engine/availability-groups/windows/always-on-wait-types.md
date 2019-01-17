@@ -1,6 +1,7 @@
 ---
-title: Tipos de espera de los grupos de disponibilidad Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Identificación de las esperas asociadas a grupos de disponibilidad
+description: Identifique las esperas asociadas a los grupos de disponibilidad Always On mediante Transact-SQL (T-SQL) y eventos extendidos.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ee819aefcac1dc21fdf56d6b8ec93d4d1297f83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 841da77e4aa71247e8b65b1a8534bca75ff25272
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675723"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201854"
 ---
-# <a name="always-on-availability-groups-wait-types"></a>Tipos de espera de grupos de disponibilidad Always On
+# <a name="identify-waits-associated-with-availability-groups"></a>Identificación de las esperas asociadas a grupos de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cuando solucione problemas de latencia de grupos de disponibilidad Always On, puede supervisar las estadísticas de espera de acumulación utilizando los tipos de espera específicos de grupos de disponibilidad en la vista de administración dinámica (DMV) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   

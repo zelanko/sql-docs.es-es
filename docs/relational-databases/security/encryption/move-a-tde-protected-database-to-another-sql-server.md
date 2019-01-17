@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ab4adbe1e4233c5e2189c784f71e8897547ebaf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521112"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590269"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,14 +165,14 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
      De forma predeterminada, la operación de separación conserva los catálogos de texto completo asociados a la base de datos. Para quitarlos, desactive la casilla **Mantener catálogos de texto completo** . Esta opción solo aparece cuando se está actualizando una base de datos desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Estado**  
-     Se muestra uno de los siguientes estados: **Listo** o **No está listo**.  
+     Muestra uno de los siguientes estados: **Listo** o **No está listo**.  
   
      **de mensaje**  
      En la columna **Mensaje** puede aparecer información sobre la base de datos, tal y como se indica a continuación:  
   
     -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
   
-    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra _\<número\_de\_conexiones\_activas\>_**Conexiones activas** (por ejemplo, **1 conexión activa**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
+    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra _\<número\_de\_conexiones\_activas\>_**Conexiones activas** (por ejemplo: **1 conexión activa**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
   
      Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
   
@@ -233,7 +233,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
      **Quitar**  
      Quita el archivo seleccionado de la cuadrícula **Bases de datos que se van a adjuntar** .  
   
-     **"** *<database_name>* **" detalles de la base de datos**  
+     **"** _<database_name>_ **" detalles de la base de datos**  
      Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** (**...**).  
   
     > [!NOTE]  
@@ -302,7 +302,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
   
 -   [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Cifrado de datos transparente con Base de datos SQL de Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   

@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ecd7626e28faae1626809e6f45141c93dd4021e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404520"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203884"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -247,11 +247,11 @@ TO \<backup_device> [ **,**...*n* ] Indica que el conjunto de [dispositivos de c
 
 Especifica el dispositivo de copia de seguridad físico o lógico que se va a utilizar para la operación de copia de seguridad.  
   
-{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Applies to:** SQL Server   
+{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Se aplica a:** SQL Server   
 Es el nombre lógico del dispositivo de copia de seguridad en que se hace la copia de seguridad de la base de datos. El nombre lógico debe seguir las reglas definidas para los identificadores. Si se proporciona como una variable (@*logical_device_name_var*), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (@_logical\_device\_name\_var_**=** logical backup device name) o como una variable de cualquier tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
-{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **Se aplica a:** DISK, TAPE y URL se aplican a SQL Server. 
-Especifica un archivo de disco o un dispositivo de cinta, o bien un servicio Microsoft Azure Blob Storage. El formato de las direcciones URL solo se usa para crear copias de seguridad en el servicio de almacenamiento Microsoft Azure. Para obtener información y ejemplos, vea [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obtener un tutorial, vea [Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+{ DISK | TAPE | URL} **=** { **"**_physical\_device\_name_**"** | **@**_physical\_device\_name\_var_ | "NUL" } **Se aplica a:** DISK, TAPE y URL se aplican a SQL Server. 
+Especifica un archivo de disco o un dispositivo de cinta, o bien un servicio Microsoft Azure Blob Storage. El formato de las direcciones URL solo se usa para crear copias de seguridad en el servicio de almacenamiento Microsoft Azure. Para obtener información y ejemplos, vea [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obtener un tutorial, vea [Tutorial: Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
 > [!NOTE] 
 > El dispositivo de disco NUL descartará toda la información que se le envíe y solo se debe usar para realizar pruebas. No se debe usar en entornos de producción.
@@ -259,7 +259,7 @@ Especifica un archivo de disco o un dispositivo de cinta, o bien un servicio Mic
 > [!IMPORTANT]  
 > A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], cuando se hagan copias de seguridad en URL, solo se podrán hacer en un único dispositivo. Para hacer una copia de seguridad en varios dispositivos cuando se hagan copias de seguridad en URL, hay que usar las versiones [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y, asimismo, usar tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
   
-**URL se aplica a**: de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**URL se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 No es necesario que exista un dispositivo de disco antes de que se especifique en una instrucción BACKUP. Si el dispositivo físico existe y no se especifica la opción INIT en la instrucción BACKUP, la copia de seguridad se anexa al dispositivo.  
  
@@ -295,10 +295,10 @@ Es un marcador de posición que indica que una sola instrucción BACKUP puede co
 Especifica las opciones que se van a utilizar con una operación de copia de seguridad.  
   
 CREDENTIAL  
-**Se aplica a**: de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
 Solo se usa al crear una copia de seguridad en el servicio Microsoft Azure Blob Storage.  
   
-FILE_SNAPSHOT **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] mediante [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+FILE_SNAPSHOT **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Se usa para crear una instantánea de Azure de los archivos de base de datos cuando todos los archivos de base de datos de SQL Server se han almacenado usando el servicio Azure Blob Storage. Para más información, vea [Archivos de datos de SQL Server en Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). La copia de seguridad de instantánea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toma instantáneas de Azure de los archivos de base de datos (archivos de datos y de registro) en un estado coherente. Un conjunto coherente de instantáneas de Azure conforma una copia de seguridad y se registra en el archivo de copia de seguridad. La única diferencia entre `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` y `BACKUP LOG TO URL WITH FILE_SNAPSHOT` es que este último también trunca el registro de transacciones, cosa que no hace el primero. Con la copia de seguridad de instantánea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], después de la copia de seguridad completa inicial que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere para establecer la cadena de copia de seguridad, solo se necesita una copia de seguridad del registro de transacciones para restaurar una base de datos al momento en el tiempo de la copia de seguridad del registro de transacciones. Además, solo se necesitan dos copias de seguridad del registro de transacciones para restaurar una base de datos a un momento en el tiempo dentro del intervalo entre ambas copias de seguridad del registro de transacciones.  
     
@@ -771,7 +771,7 @@ Los problemas de propiedad y permisos del archivo físico del dispositivo de cop
 Esta sección contiene los siguientes ejemplos:  
   
 - A. [Realizar una copia de seguridad completa de la base de datos](#backing_up_db)  
-- B. [Realizar una copia de seguridad de la base de datos y el registro](#backing_up_db_and_log)  
+- b. [Realizar una copia de seguridad de la base de datos y el registro](#backing_up_db_and_log)  
 - C. [Crear una copia de seguridad de archivos completa de los grupos de archivos secundarios](#full_file_backup)  
 - D. [Crear una copia de seguridad de archivos diferencial de los grupos de archivos secundarios](#differential_file_backup)  
 - E. [Crear y realizar una copia de seguridad en un conjunto de medios reflejado de una sola familia](#create_single_family_mirrored_media_set)  
@@ -916,7 +916,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
 [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
 [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   
@@ -1138,7 +1138,7 @@ WITH STATS = 5;
 ```
 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
   
 [Restaurar base de datos](restore-statements-transact-sql.md)
 
@@ -1308,7 +1308,7 @@ Para crear una copia de seguridad, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 EXEC sp_pdw_add_network_credentials 'xxx.xxx.xxx.xxx', 'domain1\backupuser', '*****';  
 ```  
   
-### <a name="b-remove-network-credentials-for-the-backup-location"></a>B. Quitar credenciales de red para la ubicación de copia de seguridad  
+### <a name="b-remove-network-credentials-for-the-backup-location"></a>b. Quitar credenciales de red para la ubicación de copia de seguridad  
 En el ejemplo siguiente se muestra cómo quitar las credenciales de un usuario de dominio de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ```sql  
@@ -1354,7 +1354,7 @@ WITH (
 ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [RESTORE DATABASE &#40;Almacenamiento de datos paralelos&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
 
 ::: moniker-end

@@ -12,12 +12,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 532a19a4fca82e200b9499672cf48f736cfd3f4b
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d69a9393c990c16357287ac31433780c3b7e27a4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226327"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979841"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );
 ```  
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>B. Sintaxis básica de DBCC PDW_SHOWEXECUTIONPLAN  
+### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>b. Sintaxis básica de DBCC PDW_SHOWEXECUTIONPLAN  
  Cuando una consulta se ejecuta durante mucho tiempo, significa que está ejecutando una operación de plan de consulta DMS o una operación de plan de consulta SQL.  
   
 Si la consulta está ejecutando una operación de plan de consulta DMS, puede usar la consulta siguiente para recuperar una lista de los identificadores de nodo y de sesión para conocer los pasos que no se han completado.
@@ -89,7 +89,7 @@ AND pdw_node_id = 201001
 order by request_id, [dms_step_index], [distribution_id];  
 ```  
   
-En función de los resultados de la consulta anterior, use los parámetros sql_spid y pdw_node_id para DBCC PDW_SHOWEXEUCTIONPLAN. Por ejemplo, en el comando siguiente se muestra el plan de ejecución para pdw_node_id 201001 y sql_spid 375.
+En función de los resultados de la consulta anterior, use los parámetros sql_spid y pdw_node_id para DBCC PDW_SHOWEXECUTIONPLAN. Por ejemplo, en el comando siguiente se muestra el plan de ejecución para pdw_node_id 201001 y sql_spid 375.
   
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  

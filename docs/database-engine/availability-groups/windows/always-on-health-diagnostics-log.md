@@ -1,6 +1,7 @@
 ---
-title: Registro de diagnósticos de estado de grupos de disponibilidad Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Registros de diagnóstico de mantenimiento de la DLL del recurso de SQL Server para grupos de disponibilidad
+description: Se describe cómo la DLL del recurso de SQL Server supervisa el estado del grupo de disponibilidad Always On.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9a41540e9617f9eb9543677c9982b8bbb5985c3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a1703e24458e21bf267c4b33ce458e7fedbead1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405019"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207764"
 ---
-# <a name="always-on-availability-groups-health-diagnostics-log"></a>Registro de diagnósticos de estado de grupos de disponibilidad Always On
+# <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>Registros de diagnóstico de mantenimiento de la DLL del recurso de SQL Server para grupos de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Para supervisar el estado de la réplica de disponibilidad principal, la DLL del recurso de SQL Server ejecutada por el clúster de clústeres de conmutación por error de Windows Server (WSFC) usa un procedimiento almacenado de la instancia de SQL Server denominado [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md).  
   
@@ -25,7 +26,7 @@ ms.locfileid: "52405019"
   
  **Usar los registros de diagnóstico del clúster de conmutación por error de SQL Server**
  
- Todos los diagnósticos de estado que recibe la DLL del recurso de SQL Server desde sp_server_diagnostics se guardan automáticamente en el directorio Log predeterminado de la instancia de SQL Server (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11. MSSQLSERVER\MSSQL\Log). Estos registros se conocen como registros SQLDIAG y se guardan en el formato de archivo XEL (eventos extendidos). Estos archivos del directorio Log de SQL Server tienen el siguiente formato: \<HOSTNAME>_\<INSTANCENAME>_SQLDIAG_X_XXXXXXXXX.xel. Al examinar los registros SQLDIAG, es posible determinar la causa raíz de un error o un evento de conmutación por error del recurso de grupo de disponibilidad.  
+ Todos los diagnósticos de estado que recibe la DLL del recurso de SQL Server desde sp_server_diagnostics se guardan automáticamente en el directorio Log predeterminado de la instancia de SQL Server (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11. MSSQLSERVER\MSSQL\Log). Estos registros se conocen como registros SQLDIAG y se guardan en el formato de archivo XEL (eventos extendidos). Estos archivos del directorio Log de SQL Server tienen el formato siguiente: \<NOMBRE_DE_HOST>_\<NOMBRE_DE_INSTANCIA>_SQLDIAG_X_XXXXXXXXX.xel. Al examinar los registros SQLDIAG, es posible determinar la causa raíz de un error o un evento de conmutación por error del recurso de grupo de disponibilidad.  
   
  Para ver un registro SQLDIAG, arrastre el archivo .xel a SQL Server Management Studio.  
   

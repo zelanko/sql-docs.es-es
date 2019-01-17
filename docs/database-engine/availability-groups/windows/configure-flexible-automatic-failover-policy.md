@@ -1,6 +1,7 @@
 ---
-title: Configurar la directiva de conmutación por error automática flexible | Microsoft Docs
-ms.custom: ''
+title: Configuración de una directiva de conmutación automática por error flexible para un grupo de disponibilidad
+description: Se describe cómo configurar una directiva de conmutación automática por error flexible para un grupo de disponibilidad Always On mediante Transact-SQL (T-SQL), PowerShell o SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 621811a2cf4c3f7e08143f8608dd0fdced65a816
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505827"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208564"
 ---
-# <a name="configure-flexible-automatic-failover-policy"></a>Configurar la directiva de conmutación por error automática flexible
+# <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configuración de una directiva de conmutación automática por error flexible para un grupo de disponibilidad Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -151,7 +152,7 @@ ms.locfileid: "52505827"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

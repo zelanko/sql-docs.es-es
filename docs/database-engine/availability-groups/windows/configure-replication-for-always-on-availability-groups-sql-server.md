@@ -1,6 +1,7 @@
 ---
-title: Configurar la replicación para grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Configuración de la replicación con grupos de disponibilidad
+description: Configure la replicación con los grupos de disponibilidad Always On.
+ms.custom: seodec18
 ms.date: 07/09/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1242b8b3e9f29cabdb840b405df8dba9f96fd959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b790bcd89f4ad22a78b6a0da43b4d86642e518c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687203"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208495"
 ---
-# <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Configurar la replicación para grupos de disponibilidad AlwaysOn (SQL Server)
+# <a name="configure-replication-with-always-on-availability-groups"></a>Configuración de la replicación con grupos de disponibilidad Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -201,7 +202,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Mensaje 21899, Nivel 11, Estado 1, Procedimiento **sp_hadr_verify_subscribers_at_publisher**, Línea 109  
 >   
->  Error '976' en la consulta en el publicador redirigido 'MyReplicaHostName' para determinar si hubiera entradas de sysserver para suscriptores del publicador original 'MyOriginalPublisher', mensaje de error 'Error 976, nivel 14, estado 1, mensaje: La base de datos de destino 'MyPublishedDB', participa en un grupo de disponibilidad y no se encuentra accesible en este momento para consultas. El movimiento de datos se ha suspendido o la réplica de disponibilidad no está habilitada para el acceso de lectura. Para permitir el acceso de solo lectura a esta y a otras bases de datos del grupo de disponibilidad, habilite el acceso de lectura en una o varias réplicas de disponibilidad secundarias del grupo.  Para obtener más información, consulte la instrucción **ALTER AVAILABILITY GROUP** en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+>  La consulta en el publicador redireccionado "MyReplicaHostName" para determinar si hay entradas de sysserver para los suscriptores del publicador original "MyOriginalPublisher" no se ha podido realizar por el error "976", mensaje de error "Error 976, Level 14, State 1, Message: La base de datos de destino "MyPublishedDB" participa en un grupo de disponibilidad y actualmente no es accesible para las consultas. El movimiento de datos se ha suspendido o la réplica de disponibilidad no está habilitada para el acceso de lectura. Para permitir el acceso de solo lectura a esta y a otras bases de datos del grupo de disponibilidad, habilite el acceso de lectura en una o varias réplicas de disponibilidad secundarias del grupo.  Para obtener más información, consulte la instrucción **ALTER AVAILABILITY GROUP** en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 >   
 >  Se encontraron uno o varios errores de validación del publicador para el host de réplica 'MyReplicaHostName'.  
   
@@ -241,10 +242,10 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidad AlwaysOn: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Grupos de disponibilidad Always On: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Replicación de SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

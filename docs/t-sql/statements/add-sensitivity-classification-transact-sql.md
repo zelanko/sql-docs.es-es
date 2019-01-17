@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cbede7141154147bbb714d00d794d4b8af7cf8e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0fc010c3b02bfbe5e2c5fabb1f8e6313144d7efa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696414"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979382"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ Es un identificador asociado con el tipo de información. A menudo se usa con pl
 ## <a name="remarks"></a>Notas  
 
 - Solo se puede agregar una clasificación a un único objeto. La adición de una clasificación a un objeto que ya está clasificado sobrescribirá la clasificación existente.
-- Se pueden clasificar varios objetos con una sola instrucción `ADD SENSITIVITY CLASSIFICTION`.
+- Se pueden clasificar varios objetos con una sola instrucción `ADD SENSITIVITY CLASSIFICATION`.
 - La vista del sistema [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) puede usarse para recuperar la información de clasificación de confidencialidad para una base de datos.
 
 
@@ -108,7 +108,7 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
 ```  
 
-### <a name="b-classifying-only-a-label"></a>B. Clasificación de solo una etiqueta
+### <a name="b-classifying-only-a-label"></a>b. Clasificación de solo una etiqueta
 En el ejemplo siguiente se clasifica la columna **dbo.customer.comments** con la etiqueta **Confidential** y el identificador de etiqueta **643f7acd-776a-438d-890c-79c3f2a520d6**. El tipo de información no está clasificado en esta columna.
 
 ```sql
@@ -117,9 +117,9 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Confidential', LABEL_ID='643f7acd-776a-438d-890c-79c3f2a520d6' )
 ```  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 
-[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 

@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394538"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980391"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -390,10 +390,10 @@ column_name <data_type>
   
  ON {*partition_scheme* | *filegroup* | **"** default **"**} se puede especificar también en una restricción PRIMARY KEY o UNIQUE. Estas restricciones crean índices. Si se especifica *filegroup*, el índice se almacena en el grupo de archivos con nombre. Si se especifica **"** default **"** o si ON no se especifica en ninguna parte, el índice se almacena en el mismo grupo de archivos que la tabla. Si la restricción PRIMARY KEY o UNIQUE crea un índice clúster, las páginas de datos de la tabla se almacenan en el mismo grupo de archivos que el índice. Si se especifica CLUSTERED o la restricción crea un índice clúster, y se especifica un elemento *partition_scheme* distinto del *partition_scheme* o *filegroup* de la definición de tabla, o viceversa, únicamente se respeta la definición de restricción y se omite el resto.  
   
-> [!NOTE]  
+> [!NOTE]
 >  En este contexto, el valor predeterminado no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"** default **"** u ON **[** default **]**. Si se especifica **"** default **"**, la opción QUOTED_IDENTIFIER debe ser ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Después de crear una tabla con particiones, considere la posibilidad de establecer la opción LOCK_ESCALATION para la tabla en AUTO. Esto puede mejorar la simultaneidad al permitir que los bloqueos se extiendan al nivel de partición (HoBT) en lugar de la tabla. Para obtener más información, vea [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
@@ -401,12 +401,12 @@ column_name <data_type>
   
  No se permite TEXTIMAGE_ON si no hay columnas de valores grandes en la tabla. No se puede especificar TEXTIMAGE_ON si se especifica *partition_scheme*. Si se especifica **"** default **"** o si TEXTIMAGE_ON no se especifica en ninguna parte, las columnas de valores grandes se almacenan en el grupo de archivos predeterminado. El almacenamiento de los datos de columna de valores grandes especificados en CREATE TABLE no se puede modificar posteriormente.  
 
-> [!NOTE]  
+> [!NOTE]
 > Los valores Varchar(max), nvarchar(max), varbinary(max), xml y los de gran tamaño de tipo definido por el usuario se almacenan directamente en la fila de datos, hasta un límite de 8000 bytes y siempre que el valor pueda caber en el registro. Si el valor no cabe en el registro, se almacena un puntero en la fila de manera consecutiva y el resto se almacena de forma no consecutiva en el espacio de almacenamiento de LOB. El valor predeterminado es 0.
-TEXTIMAGE_ON solo cambia la ubicación del "espacio de almacenamiento de LOB", pero no afecta a cuando los datos se almacenan de forma consecutiva. Use la opción de sp_tableoption de almacenar tipos de valores grandes de manera no consecutiva para almacenar todos valores de LOB de manera no consecutiva. 
-
-
-> [!NOTE]  
+> TEXTIMAGE_ON solo cambia la ubicación del "espacio de almacenamiento de LOB", pero no afecta a cuando los datos se almacenan de forma consecutiva. Use la opción de sp_tableoption de almacenar tipos de valores grandes de manera no consecutiva para almacenar todos valores de LOB de manera no consecutiva. 
+> 
+> 
+> [!NOTE]
 >  En este contexto, el valor predeterminado no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y se debe delimitar, como en TEXTIMAGE_ON **"** default **"** o TEXTIMAGE_ON **[** default **]**. Si se especifica **"** default **"**, la opción QUOTED_IDENTIFIER debe ser ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | grupo de archivos | **"** default **"** } 
@@ -706,7 +706,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  No se puede definir ON UPDATE CASCADE, SET NULL o SET DEFAULT si ya existe un desencadenador INSTEAD OF en ON UPDATE en la tabla que se va a modificar.  
   
- Por ejemplo, en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la tabla **ProductVendor** tiene una relación referencial con la tabla **Vendor**: la clave externa **ProductVendor.BusinessEntity** hace referencia a la clave principal **Vendor.BusinessEntityID**.  
+ Por ejemplo, en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la tabla **ProductVendor** tiene una relación referencial con la tabla **Vendor**: La clave externa **ProductVendor.BusinessEntity** hace referencia a la clave principal **Vendor.BusinessEntityID**.  
   
  Si se ejecuta una instrucción UPDATE en una fila de la tabla **Vendor** y se especifica una acción ON UPDATE CASCADE para **ProductVendor.BusinessEntityID**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprueba si hay una o más filas dependientes de la tabla **ProductVendor**. Si las hay, las filas dependientes de la tabla **ProductVendor** se actualizan, así como la fila a la que se hace referencia en la tabla **Vendor**.  
   
@@ -793,13 +793,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  *partition_number_expression* se puede especificar de estas maneras:  
   
--   Proporcione el número de una partición, por ejemplo: ON PARTITIONS (2).  
+-   Proporcione el número de partición de una partición, por ejemplo: EN PARTICIONES (2).  
   
--   Proporcionar los números de partición de varias particiones separados por comas, por ejemplo: ON PARTITIONS (1, 5).  
+-   Proporcionar los números de partición para varias particiones individuales separadas por comas, por ejemplo: EN PARTICIONES (1,5).  
   
--   Proporcione intervalos y particiones individuales, por ejemplo: ON PARTITIONS (2, 4, 6 TO 8).  
+-   Proporcione ambos rangos y las particiones individuales, por ejemplo: ON PARTITIONS (2, 4, 6 TO 8)  
   
- `<range>` se puede especificar como números de partición separados por la palabra TO, por ejemplo: ON PARTITIONS (6 TO 8).  
+ `<range>` se puede especificar como números de partición separados por la palabra TO, como por ejemplo: EN PARTICIONES (6 A 8).  
   
  Para establecer diferentes tipos de compresión de datos para distintas particiones, especifique la opción DATA_COMPRESSION más de una vez, por ejemplo:  
   
@@ -928,9 +928,9 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Instancia administrada de Azure SQL Database no admite tablas optimizadas para memoria. 
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La Instancia administrada de Azure SQL Database no admite tablas optimizadas para memoria. 
   
- El valor ON indica si la tabla está optimizada para memoria. Las tablas optimizadas para memoria forman parte de la característica OLTP en memoria, que se usa para mejorar el rendimiento del procesamiento de transacciones. Para empezar con OLTP en memoria, vea [Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Para más información sobre las tablas optimizadas para memoria, vea [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ El valor ON indica si la tabla está optimizada para memoria. Las tablas optimizadas para memoria forman parte de la característica OLTP en memoria, que se usa para mejorar el rendimiento del procesamiento de transacciones. Para empezar a trabajar con OLTP en memoria vea [Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Para más información sobre las tablas optimizadas para memoria, vea [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  El valor predeterminado OFF indica que la tabla está basada en disco.  
   
@@ -957,7 +957,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
-Los índices de columna y de tabla se pueden especificar como parte de la instrucción CREATE TABLE. Para más información sobre cómo agregar y quitar índices en tablas optimizadas para memoria, vea [Modificar tablas con optimización para memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).
+Los índices de columna y de tabla se pueden especificar como parte de la instrucción CREATE TABLE. Para más información sobre cómo agregar y quitar índices en tablas optimizadas para memoria, vea: [Modificar tablas con optimización para memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
@@ -1217,7 +1217,7 @@ SELECT * FROM tempdb.sys.database_files
  Para ver un informe sobre una tabla y sus columnas, use **sp_help** o **sp_helpconstraint**. Para cambiar el nombre de una tabla, use **sp_rename**. Para obtener un informe de las vistas y los procedimientos almacenados que dependen de una tabla, use [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) y [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
 ## <a name="nullability-rules-within-a-table-definition"></a>Reglas de nulabilidad en una definición de tabla  
- La nulabilidad de una columna determina si esa columna puede permitir un valor nulo (NULL) para sus datos. NULL no es lo mismo que cero o en blanco: NULL significa que no se ha especificado ninguna entrada o que se ha proporcionado un valor NULL explícito, y suele implicar que se desconoce el valor o que no es aplicable.  
+ La nulabilidad de una columna determina si esa columna puede permitir un valor nulo (NULL) para sus datos. NULL no es lo mismo que cero o en blanco: NULL significa que no se ha especificado ninguna entrada o que se ha proporcionado un valor NULL explícito y suele implicar que se desconoce el valor o que no es aplicable.  
   
  Cuando cree o modifique una tabla con las instrucciones CREATE TABLE o ALTER TABLE, la configuración de la sesión y de la base de datos influirá en la nulabilidad para el tipo de datos utilizado en la definición de columna y, posiblemente, la invalidará. Se recomienda que defina siempre explícitamente una columna como NULL o NOT NULL en el caso de columnas no calculadas o, si utiliza un tipo de datos definido por el usuario, que permita que la columna utilice la nulabilidad predeterminada del tipo de datos. Las columnas dispersas siempre deben permitir valores NULL.  
   
@@ -1262,7 +1262,7 @@ CREATE TABLE dbo.Employee (EmployeeID int
 PRIMARY KEY CLUSTERED);  
 ```  
   
-### <a name="b-using-foreign-key-constraints"></a>B. Usar restricciones FOREIGN KEY  
+### <a name="b-using-foreign-key-constraints"></a>b. Usar restricciones FOREIGN KEY  
  Una restricción FOREIGN KEY se utiliza para hacer referencia a otra tabla. Las claves externas pueden ser claves de una sola columna o de varias columnas. En el siguiente ejemplo se muestra una restricción FOREIGN KEY de una única columna en la tabla `SalesOrderHeader` que hace referencia a la tabla `SalesPerson`. Solo se requiere la cláusula REFERENCES para una restricción FOREIGN KEY de una única columna.  
   
 ```sql  
@@ -1438,7 +1438,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  
@@ -1646,7 +1646,7 @@ Could not create constraint or index. See previous errors.
 
 En problema surge del hecho de que, si bien el nombre de la tabla temporal se unifica, los nombres de las restricciones no.
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

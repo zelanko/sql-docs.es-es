@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 99dbf8f5a9ba634899360b86d7f778d73a30de80
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cf58aa27b8b426dca887d24fbfe15158263c8ae2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020609"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212705"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Crear un componente de tiempo de diseño de elemento de informe personalizado
   Un componente de tiempo de diseño de elemento de informe personalizado es un control que se puede utilizar en el entorno de Visual Studio Report Designer. El componente de tiempo de diseño de elemento de informe personalizado proporciona una superficie de diseño activada que puede aceptar las operaciones de arrastrar y colocar, la integración con el explorador de propiedades de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], y la capacidad de proporcionar los editores de propiedades personalizados.  
@@ -24,7 +24,7 @@ ms.locfileid: "50020609"
   
  Las propiedades que se establecen utilizando el componente de tiempo de diseño en el entorno de desarrollo se serializan y deserializan por el entorno de diseño del host y, a continuación, se guardan como elementos en el archivo de lenguaje RDL (Report Definition Language). Cuando el procesador de informes ejecuta el informe, pasa las propiedades que están establecidas utilizando el componente de tiempo de diseño a un componente de tiempo de ejecución del elemento de informe personalizado, que representa el elemento de informe personalizado y lo devuelve al procesador de informes.  
   
-> [!NOTE]  
+> [!NOTE]
 >  El componente de tiempo de diseño de elemento de informe personalizado se implementa como un componente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. En este documento se describirán los detalles de la implementación específicos al componente de tiempo de diseño del elemento de informe personalizado. Para más información sobre cómo desarrollar componentes mediante [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vea [Componentes en Visual Studio](https://go.microsoft.com/fwlink/?LinkId=116576) en MSDN Library.  
   
  Para obtener un ejemplo de un elemento de informe personalizado totalmente implementado, vea [Ejemplos del producto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
@@ -190,12 +190,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Componentes de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Tutorial: Crear un control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio  
+-   Tutorial: Creación de un control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Arquitectura de elementos de informe personalizados](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
  [Creación de un componente de tiempo de ejecución de elemento de informe personalizado](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Bibliotecas de clases de elemento de informe personalizado](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [Implementación de un elemento de informe personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Cómo: Implementar un elemento de informe personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95bf478ba6bb44194f5713a16d0c87b067487551
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4c4ae12021930ba447c3cb01a9830907fb3153
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854632"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822919"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Crear y ejecutar una relación de sincronización de entidades (Master Data Services)
 
@@ -112,15 +111,15 @@ ms.locfileid: "47854632"
   
  Cuando se hace clic en un índice, se muestra la siguiente información.  
   
--   **Last Attempt Error**(Error de último intento): muestra información de error relativa al último intento de sincronización.  
+-   **Last Attempt Error** (Error de último intento): muestra la información de error relativa al último intento de sincronización.  
   
--   **Creado por:** nombre del usuario que creó la sincronización.  
+-   **Creado por**: nombre del usuario que ha creado la sincronización.  
   
--   **El:** fecha y hora en que se creó la sincronización.  
+-   **El**: fecha y hora en que se ha creado la sincronización.  
   
--   **Actualizado por:** nombre del usuario que actualizó la sincronización por última vez.  
+-   **Actualizada por**: nombre del usuario que ha actualizado la sincronización por última vez.  
   
--   **El:** fecha y hora en que se actualizó la sincronización por última vez.  
+-   **El**: fecha y hora en que se ha actualizado la sincronización por última vez.  
   
 ## <a name="next-steps"></a>Next Steps  
  [Modificación y eliminación de una relación de sincronización de entidades &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

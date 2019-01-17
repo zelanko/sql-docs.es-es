@@ -5,7 +5,7 @@ ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - server performance [SQL Server], objects for monitoring
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - counters [SQL Server]
 - performance counters [SQL Server], listed
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ac7940fbb28bbee9f137aa4348fa227d01e9cfa7
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: b6fd6c8f987fb0349f6282755ebb4c4ff33a9147
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159053"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380656"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,13 +119,13 @@ ms.locfileid: "52159053"
 |[SQLServer:Memory Broker Clerks](../../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md)|Estadísticas relacionadas con los distribuidores de agente de memoria.|
 |[SQLServer:Memory Manager](../../relational-databases/performance-monitor/sql-server-memory-manager-object.md)|Proporciona información acerca de la utilización de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como, por ejemplo, el número total de estructuras de bloqueo asignadas actualmente.|  
 |[SQLServer:Caché del plan](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)|Proporciona información acerca de la caché de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se utiliza para almacenar objetos como procedimientos almacenados, desencadenadores y planes de consultas.|  
-|[SQLServer:Query Store](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|Proporciona información sobre el Almacén de consultas.|  
-|[SQLServer:Estadísticas de grupo de recursos de servidor](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|Proporciona información sobre las estadísticas del grupo de recursos de servidor del regulador de recursos.|  
+|[SQLServer: Almacén de consultas](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|Proporciona información sobre el Almacén de consultas.|  
+|[SQLServer: Estadísticas de grupo de recursos](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|Proporciona información sobre las estadísticas del grupo de recursos de servidor del regulador de recursos.|  
 |[SQLServer:SQL Errors](../../relational-databases/performance-monitor/sql-server-sql-errors-object.md)|Proporciona información acerca de los errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLServer:SQL Statistics](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)|Proporciona información acerca de aspectos de consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como el número de lotes de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que recibe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](../../relational-databases/performance-monitor/sql-server-transactions-object.md)|Proporciona información acerca de las transacciones activas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como el número global de transacciones y el número de transacciones de instantáneas.|  
 |[SQLServer:User Settable](../../relational-databases/performance-monitor/sql-server-user-settable-object.md)|Realiza una supervisión personalizada. Cada contador puede ser un procedimiento almacenado personalizado o cualquier instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que devuelva un valor para supervisar.|  
-|[SQLServer:Wait Statistics](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Proporciona información acerca de las esperas.|  
+|[SQLServer: Estadísticas de espera](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Proporciona información acerca de las esperas.|  
 |[SQLServer: Estadísticas de grupo de cargas de trabajo](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|Proporciona información sobre las estadísticas de grupo de cargas de trabajo del regulador de recursos.|  
   
 ##  <a name="SQLServerReplicationPOs"></a> Objetos de rendimiento de replicación de SQL Server  
@@ -141,7 +141,7 @@ ms.locfileid: "52159053"
 ##  <a name="RequiredPermissions"></a> Permisos necesarios  
  La posibilidad de utilizar los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de los permisos de Windows, salvo **SQLAgent:Alertas**. Los usuarios deben ser miembros del rol fijo de servidor **sysadmin** para poder utilizar **SQLAgent:Alerts**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar objetos de rendimiento](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   

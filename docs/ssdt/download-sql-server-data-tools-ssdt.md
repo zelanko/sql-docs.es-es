@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3067b05783d7a83118e87dc8db4cdc6a83d40a1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2769749327f01af9548ad608a42e6d030fd3842
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516003"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300698"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido dela documentación de SQL!](https://aka.ms/sqldocsurvey)
 
 **SQL Server Data Tools** es una herramienta de desarrollo moderna para crear bases de datos relacionales de SQL Server, bases de datos SQL de Azure, modelos de datos de Analysis Services (AS), paquetes de Integration Services (IS) e informes de Reporting Services (RS). Gracias a SSDT, puede diseñar e implementar cualquier tipo de contenido de SQL Server con la misma facilidad con la que desarrollaría una aplicación en Visual Studio.
 
@@ -109,16 +109,19 @@ Después de completar los pasos anteriores, se puede realizar lo siguiente mient
 
 Para ver las opciones disponibles, ejecute `SSDT-Setup-ENU.exe /help`.
 
+> [!NOTE]
+> Si usa una versión completa de Visual Studio 2017, cree una carpeta sin conexión exclusiva para SSDT y ejecute `SSDT-Setup-ENU.exe` desde la carpeta recién creada (no agregue SSDT a otro diseño sin conexión de Visual Studio 2017). Si agrega el diseño SSDT a un diseño sin conexión de Visual Studio existente, no se crearán los componentes de tiempo de ejecución (.exe) necesarios.
+
 ## <a name="supported-sql-versions"></a>Versiones de SQL admitidas
   
 |Plantillas de proyecto|Plataformas SQL compatibles|  
 |-------------------|--------------------|  
 Bases de datos relacionales|  SQL Server 2005* - SQL Server 2017<br> (use SSDT 17.x o SSDT para Visual Studio 2017 para conectarse a [SQL Server en Linux](../linux/sql-server-linux-overview.md))<br /><br />Base de datos SQL de Azure<br /><br />Azure SQL Data Warehouse (solo admite consultas, todavía no se admiten proyectos de base de datos)<br /><br />  * La compatibilidad con SQL Server 2005 está en desuso,<br /><br /> Cambie a una versión de SQL oficialmente compatible.|
   |Modelos de Analysis Services<br /><br />Informes de Reporting Services | SQL Server 2008 - SQL Server 2017|
-  |paquetes de Integration Services| SQL Server 2012 - SQL Server 2017    |
+  |paquetes de Integration Services| SQL Server 2014 - SQL Server 2017    |
   
 ## <a name="dacfx"></a>DacFx
-Tanto en SSDT para Visual Studio 2015 como en SSDT para Visual Studio 2017 se usa DacFx 17.4.1: [Descargar Marco de trabajo de la aplicación de capa de datos de Microsoft® SQL Server® (17.4.1 GA DacFx)](https://www.microsoft.com/download/details.aspx?id=56508).
+En SSDT para Visual Studio 2015 y SSDT para Visual Studio 2017 se usa DacFx 17.4.1: [Descargar Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
 
 ## <a name="previous-versions"></a>Versiones anteriores
 
@@ -130,14 +133,14 @@ Para descargar e instalar SSDT para Visual Studio 2015 o una versión anterior d
 Después de instalar SSDT, siga estos tutoriales para aprender a crear bases de datos, paquetes, modelos de datos e informes mediante SSDT:  
 
 - [Desarrollo de bases de datos sin conexión orientado a proyectos](project-oriented-offline-database-development.md)  
-- [Tutorial de SSIS: Crear un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md)  
+- [Tutorial de SSIS: Creación de un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md)  
 - [Tutoriales de Analysis Services (SSAS)](../analysis-services/analysis-services-tutorials-ssas.md)  
 - [Crear un informe de tabla básico (Tutorial de SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Foro MSDN de SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [Blog del equipo de SSDT](https://blogs.msdn.com/b/ssdt/)  
 [Referencia de la API de DACFx](https://msdn.microsoft.com/library/dn645454.aspx)  

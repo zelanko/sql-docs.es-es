@@ -1,6 +1,7 @@
 ---
 title: Opciones (SQL Server AlwaysOn, página del panel) | Microsoft Docs
-ms.custom: ''
+description: Descripción de la página "Opciones" del panel Always On de SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d79165eae0ccbc1e5c442849c5df0ef83d4f1e90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19f811faffda3584287ec29a4e4c03349586949
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773253"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214816"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>Opciones (SQL Server AlwaysOn, página del panel)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "47773253"
  **Habilite la directiva de AlwaysOn definida por el usuario.**  
  Si ha definido su propia directiva de AlwaysOn, haga clic en esta opción para habilitar la directiva.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

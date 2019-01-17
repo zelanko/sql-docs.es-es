@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504513"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266086"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -319,11 +319,11 @@ Varias mejoras permiten admitir las características descritas en las demás sec
 - Las funciones [COMPRESS &#40;Transact-SQL&#41;](../t-sql/functions/compress-transact-sql.md) y [DECOMPRESS &#40;Transact-SQL&#41;](../t-sql/functions/decompress-transact-sql.md) convierten valores en y desde el algoritmo GZIP.
 - Las funciones [DATEDIFF_BIG &#40;Transact-SQL&#41;](../t-sql/functions/datediff-big-transact-sql.md) y [AT TIME ZONE &#40;Transact-SQL&#41;](../t-sql/queries/at-time-zone-transact-sql.md) y la vista [sys.time_zone_info &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) se agregan para admitir las interacciones de fecha y hora.
 - Ahora se puede crear una credencial en el nivel de base de datos (además de la credencial de nivel de servidor que estaba disponible anteriormente). Para obtener más información, vea [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-database-scoped-credential-transact-sql.md).
-- Se agregan ocho propiedades nuevas a [SERVERPROPERTY &#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md): InstanceDefaultDataPath, InstanceDefaultLogPath, ProductBuild, ProductBuildType, ProductMajorVersion, ProductMinorVersion, ProductUpdateLevel y ProductUpdateReference.
+- Se han agregado ocho propiedades nuevas a [SERVERPROPERTY &#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md): InstanceDefaultDataPath, InstanceDefaultLogPath, ProductBuild, ProductBuildType, ProductMajorVersion, ProductMinorVersion, ProductUpdateLevel y ProductUpdateReference.
 - Se quita el límite de longitud de entrada de 8000 bytes para la función [HASHBYTES &#40;Transact-SQL&#41;](../t-sql/functions/hashbytes-transact-sql.md).
 - Se agregan nuevas funciones de cadena ([STRING_SPLIT &#40;Transact-SQL&#41;](../t-sql/functions/string-split-transact-sql.md) y [STRING_ESCAPE &#40;Transact-SQL&#41;](../t-sql/functions/string-escape-transact-sql.md)).
 - Opciones de crecimiento automático: la marca de seguimiento 1117 se ha reemplazado por las opciones AUTOGROW_SINGLE_FILE y AUTOGROW_ALL_FILES de ALTER DATABASE y la marca de seguimiento 1117 no tiene ningún efecto. Para obtener más información, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) y la nueva columna is_autogrow_all_files de [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md).
-- Asignación de extensiones combinadas: para las bases de datos de usuario, la asignación predeterminada para las 8 primeras páginas de un objeto pasarán de usar extensiones de página combinadas a usar extensiones uniformes. La marca de seguimiento 1118 se reemplaza por la opción SET MIXED_PAGE_ALLOCATION de ALTER DATABASE y la marca de seguimiento 1118 no tiene efecto. Para obtener más información, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md), y la nueva columna `is_mixed_page_allocation_on` de [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+- Asignación de extensiones combinadas: para las bases de datos de usuario, la asignación predeterminada para las ocho primeras páginas de un objeto pasará de usar extensiones de página combinadas a usar extensiones uniformes. La marca de seguimiento 1118 se reemplaza por la opción SET MIXED_PAGE_ALLOCATION de ALTER DATABASE y la marca de seguimiento 1118 no tiene efecto. Para obtener más información, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md), y la nueva columna `is_mixed_page_allocation_on` de [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 ### <a name="transact-sql-improvements-for-natively-compiled-modules"></a>Mejoras de Transact-SQL para los módulos compilados de manera nativa
 
@@ -438,17 +438,15 @@ La propagación directa permite propagar automáticamente una réplica secundari
 Descargar la versión más reciente de [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] admite la Biblioteca de autenticación de Active Directory (ADAL) que se encuentra en desarrollo para conectarse a Microsoft Azure. Esto reemplaza la autenticación basada en certificados que se usa en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
-- Un requisito previo de la instalación de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es tener instalado .NET 4.6. .NET 4.6 se instalará automáticamente a través de la configuración cuando se instale [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .
 - Una nueva opción de cuadrícula de resultados de consulta admite conservar el retorno de carro o avance de línea (caracteres de línea nueva) cuando se copia o se guarda texto de la cuadrícula de resultados. Puede definir esto en el menú Herramientas/Opciones.
 - Las Herramientas de administración de SQL Server ya no se instalan desde el árbol de características principales; para obtener más detalles, vea [Instalar las Herramientas de administración de SQL Server con SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
-- Un requisito previo de la instalación de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es tener instalado .NET 4.6.1. .NET 4.6.1 se instalará automáticamente a través de la configuración cuando se instale [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
 ### <a name="upgrade-advisor"></a>Asesor de actualizaciones
 La vista previa del Asesor de actualizaciones de SQL Server 2016 es una herramienta independiente que permite que los usuarios de versiones anteriores ejecuten un conjunto de reglas de actualización en su base de datos SQL Server para identificar los cambios principales y de comportamiento y las características en desuso, además de prestar ayuda para la adopción de características nuevas, como Stretch Database.
 
  Puede descargar la vista previa del Asesor de actualizaciones [aquí](https://www.microsoft.com/download/details.aspx?id=48119) o puede instalarla con el Instalador de plataforma web.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 

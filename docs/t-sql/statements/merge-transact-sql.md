@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 939ba409a75d332d0aba97aa972db2ba9eecaf7a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970526"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980021"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "50970526"
 
 Realiza operaciones de inserción, actualización o eliminación en una tabla de destino según los resultados de una combinación con una tabla de origen. Por ejemplo, puede sincronizar dos tablas insertando, actualizando o eliminando las filas de una tabla según las diferencias que se encuentren en la otra.  
   
- **Consejo para el rendimiento:** el comportamiento condicional descrito para la instrucción MERGE funciona mejor cuando las dos tablas tienen una mezcla compleja de características coincidentes. Por ejemplo, insertar una fila si no la hay, o actualizar la fila si esta coincide. Cuando simplemente se actualiza una tabla basada en las filas de otra tabla, se puede lograr un mejor rendimiento y escalabilidad con las instrucciones básicas INSERT, UPDATE y DELETE. Por ejemplo:  
+ **Sugerencia de rendimiento:** el comportamiento condicional descrito para la instrucción MERGE funciona mejor cuando las dos tablas tienen una mezcla compleja de características coincidentes. Por ejemplo, insertar una fila si no la hay, o actualizar la fila si esta coincide. Cuando simplemente se actualiza una tabla basada en las filas de otra tabla, se puede lograr un mejor rendimiento y escalabilidad con las instrucciones básicas INSERT, UPDATE y DELETE. Por ejemplo:  
   
 ```  
 INSERT tbl_A (col, col2)  
@@ -251,7 +251,7 @@ SET
  Especifica el nombre o identificador de uno o más índices de la tabla de destino para realizar una combinación implícita con la tabla de origen. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<output_clause>  
- Devuelve una fila para cada fila de *target_table* que se actualiza, inserta o elimina, sin seguir ningún orden concreto. **$action** se puede especificar en la cláusula de salida. **$action** es una columna de tipo **nvarchar(10)** que devuelve uno de estos tres valores por cada fila: 'INSERT', 'UPDATE' o 'DELETE', según la acción realizada en dicha fila. Para más información sobre la sintaxis y los argumentos de esta cláusula, vea [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Devuelve una fila para cada fila de *target_table* que se actualiza, inserta o elimina, sin seguir ningún orden concreto. **$action** se puede especificar en la cláusula de salida. **$action** es una columna de tipo **nvarchar(10)** que devuelve uno de estos tres valores para cada fila: 'INSERT', 'UPDATE' o 'DELETE', según la acción realizada en esa fila. Para más información sobre la sintaxis y los argumentos de esta cláusula, vea [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  OPTION ( \<query_hint> [ ,...n ] )  
  Especifica que se utilizan las sugerencias del optimizador para personalizar el modo en que el motor de base de datos procesa la instrucción. Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -317,7 +317,7 @@ SET
 ### <a name="a-using-merge-to-perform-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Usar MERGE para realizar operaciones INSERT y UPDATE en una tabla en una sola instrucción  
  Un escenario común es la actualización de una o varias columnas de una tabla si una fila coincidente existe, o la inserción de datos como una fila nueva si no existe ninguna fila coincidente. Normalmente, para hacer esto se pasan los parámetros a un procedimiento almacenado que contiene las instrucciones INSERT y UPDATE adecuadas. Con la instrucción MERGE puede realizar ambas tareas en una sola instrucción. En el ejemplo siguiente se muestra un procedimiento almacenado de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que contiene una instrucción INSERT y una instrucción UPDATE. A continuación, el procedimiento se modifica para realizar las operaciones equivalentes utilizando una sola instrucción MERGE.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
@@ -386,10 +386,10 @@ DROP TABLE #MyTempTable;
 GO  
 ```  
   
-### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. Usar MERGE para realizar operaciones UPDATE y DELETE en una tabla en una sola instrucción  
+### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>b. Usar MERGE para realizar operaciones UPDATE y DELETE en una tabla en una sola instrucción  
  En el siguiente ejemplo se usa MERGE para actualizar diariamente la tabla `ProductInventory` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], en función de los pedidos procesados en la tabla `SalesOrderDetail`. La columna `Quantity` de la tabla `ProductInventory` se actualiza restando el número de pedidos realizados cada día para cada producto de la tabla `SalesOrderDetail`. Si el número de pedidos de un producto baja el nivel de inventario del mismo hasta 0 o un valor menor, la fila correspondiente a ese producto se elimina de la tabla `ProductInventory`.  
   
-```  
+```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
@@ -414,9 +414,9 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ```  
   
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. Usar MERGE para realizar operaciones INSERT y UPDATE en una tabla de destino mediante una tabla de origen derivada  
- En el ejemplo siguiente se usa MERGE para modificar la tabla `SalesReason` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], actualizando o insertando las filas. Cuando el valor de `NewName` de la tabla de origen coincide con un valor de la columna `Name` de la tabla de destino, (`SalesReason`), la columna `ReasonType` se actualiza en la tabla de destino. Cuando el valor de `NewName` no coincide, la fila del origen se inserta en la tabla de destino. La tabla de origen es una tabla derivada que usa la característica de constructor con valores de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar varias filas en la tabla de origen. Para saber más sobre cómo usar el constructor con valores de tabla en una tabla derivada, vea [Constructor con valores de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). El ejemplo también muestra cómo almacenar los resultados de la cláusula OUTPUT en una variable de tabla y, a continuación, resumir los resultados de la instrucción MERGE realizando una sencilla operación SELECT que devuelve el recuento de las filas insertadas y actualizadas.  
+ En el ejemplo siguiente se usa MERGE para modificar la tabla `SalesReason` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], actualizando o insertando las filas. Cuando el valor de `NewName` de la tabla de origen coincide con un valor de la columna `Name` de la tabla de destino, (`SalesReason`), la columna `ReasonType` se actualiza en la tabla de destino. Cuando el valor de `NewName` no coincide, la fila del origen se inserta en la tabla de destino. La tabla de origen es una tabla derivada que usa la característica de constructor con valores de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar varias filas en la tabla de origen. Para saber más sobre cómo usar el constructor con valores de tabla en una tabla derivada, vea [Constructor con valores de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). En el ejemplo también se muestra cómo almacenar los resultados de la cláusula OUTPUT en una variable de tabla y, después, resumir los resultados de la instrucción MERGE realizando una sencilla operación SELECT que devuelve el recuento de las filas insertadas y actualizadas.  
   
-```  
+```sql  
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
@@ -440,7 +440,7 @@ GROUP BY Change;
 ### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. Insertar los resultados de la instrucción MERGE en otra tabla  
  En el ejemplo siguiente se capturan los datos devueltos por la cláusula OUTPUT de una instrucción MERGE y se insertan en otra tabla. La instrucción MERGE actualiza diariamente la columna `Quantity` de la tabla `ProductInventory` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], en función de los pedidos procesados en la tabla `SalesOrderDetail`. En el ejemplo se capturan las filas actualizadas y se insertan en otra tabla que se usa para realizar el seguimiento de los cambios del inventario.  
   
-```  
+```sql  
 CREATE TABLE Production.UpdatedInventory  
     (ProductID INT NOT NULL, LocationID int, NewQty int, PreviousQty int,  
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  
@@ -543,7 +543,7 @@ WHERE MATCH(Person-(livesIn)->city)
 GO
 ```
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

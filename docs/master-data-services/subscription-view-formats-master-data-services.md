@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8211d8e996d30d880cfc39f1e47e1141432c0e95
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1031a8f30ff65a00dafeff90e5ce0b5efa1155f7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395487"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766649"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formatos de vista de suscripciones (Master Data Services)
 
@@ -44,8 +43,8 @@ ms.locfileid: "52395487"
 |**Elemento secundario/primario derivado (Vista de jerarquía derivada)**|Contiene una estructura de jerarquía derivada en formato elemento secundario y primario.|  
 |**Niveles derivados (Vista de jerarquía derivada)**|Contiene una estructura de jerarquía derivada en formato de nivel.|  
   
-## <a name="see-also"></a>Ver también  
- [Información general: exportar datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general: exportación de datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Crear una vista de suscripciones para exportar datos &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

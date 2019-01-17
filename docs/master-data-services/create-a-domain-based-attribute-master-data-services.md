@@ -5,8 +5,7 @@ ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
@@ -16,12 +15,12 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1752fd6736ef8900c22054dfa8f7ec6799d981fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23fe106f296860d121d7315daf669855c792b64d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685923"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759217"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Crear un atributo basado en dominio (Master Data Services)
 
@@ -55,13 +54,13 @@ ms.locfileid: "47685923"
   
  Cuando se hace clic en un atributo, se muestra la siguiente información.  
   
--   **Creado por:** nombre del usuario que creó el atributo.  
+-   **Creado por**: nombre del usuario que ha creado el atributo.  
   
--   **El**: fecha y hora en que se creó el atributo.  
+-   **El**: fecha y hora en que se ha creado el atributo.  
   
 -   **Actualizado por**: nombre del último usuario que actualizó el atributo.  
   
--   **El**: fecha y hora en que se actualizó el atributo por última vez.  
+-   **El**: fecha y hora en que se ha actualizado el atributo por última vez.  
   
 ### <a name="to-create-a-domain-based-attribute"></a>Crear un atributo basado en dominio  
   
@@ -101,7 +100,7 @@ ms.locfileid: "47685923"
   
 13. Haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Atributos basados en dominios &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
  [Crear una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Cambiar el nombre y el tipo de datos de un atributo &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   

@@ -3,27 +3,27 @@ title: Archivos de inclusión de la documentación de SQL Server | Microsoft Doc
 ms.custom: ''
 ms.date: 08/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
+ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06d710e269ff4575bf7edb1c074de9421dad5c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cee54e6f49ffaf7e996cf593388ad22e8a7b44
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614763"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731962"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>Archivos de inclusión de SQL Server para el control de versiones y "applies-to"
 
-Las referencias de la documentación se pueden modificar fácilmente sin cambiar el texto real de los artículos individuales mediante archivos de inclusión en Markdown. Hay tres tipos de archivos de inclusión en el mundo del contenido de SQL: de versión de SQL, applies-to y texto referencial. **Los archivos de inclusión de versión de SQL** se usan para indicar la versión de SQL que se está analizando, como SQL Server 2016 o 2017. El **archivo de inclusión applies-to** indica a qué servicios y productos de SQL se aplica el documento, como SQL Server en Linux o Azure SQL Database. **Los archivos de inclusión de texto referencial** no se corresponden a las otras dos categorías, como el archivo de inclusión "Obtener ayuda", una lista de vínculos que los clientes pueden usar para obtener ayuda con SQL.
+Las referencias de la documentación se pueden modificar fácilmente sin cambiar el texto real de los artículos individuales mediante archivos de inclusión en Markdown. Hay tres tipos de archivos de inclusión en el mundo del contenido de SQL: versión de SQL, applies-to y texto referencial. Los archivos de inclusión de **versión de SQL Server** se usan para indicar la versión de SQL que se está analizando, como SQL Server 2016 o 2017. Los archivos de inclusión **applies-to** indican a qué servicios y productos de SQL se aplica el documento, como SQL Server en Linux o Azure SQL Database. Los archivos de inclusión de **texto referencial** no se corresponden a las otras dos categorías, como el archivo de inclusión "Obtener ayuda", una lista de vínculos que los clientes pueden usar para obtener ayuda con SQL.
 
-Este artículo está pensado para usarse como punto de referencia para solo los dos primeros tipos de archivos de inclusión. Puede examinar la lista completa de los archivos de inclusión en el [repositorio sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
+Este artículo está pensado para usarse como punto de referencia solo para los dos primeros tipos de archivos de inclusión. Puede examinar la lista completa de los archivos de inclusión en el [repositorio sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
 
-## <a name="sql-server-version-includes"></a>Archivos de inclusión de versión de SQL Server
+## <a name="sql-server-version-include-files"></a>Archivos de inclusión de versión de SQL Server
 
 Los escritores de contenido de SQL suelen tener que incluir el nombre del producto y la versión de SQL Server. De esta forma, si cambia algo en el nombre, el archivo de inclusión se actualiza en lugar de actualizar de forma manual el valor en todos los artículos. Estos archivos de inclusión se usan como marcadores de posición para los nombres de productos, pero no se han usado de forma coherente en toda la documentación de SQL. SQL Server vNext hace referencia a una futura versión de SQL que aún no tiene número de versión y es la excepción a esto.  
 
@@ -41,7 +41,7 @@ Los escritores de contenido de SQL suelen tener que incluir el nombre del produc
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="sql-server-non-version-specific"></a>SQL Server (no específico de la versión)
+## <a name="sql-server-applies-to-non-version-specific"></a>Archivo applies-to de SQL Server (no específico de la versión)
 
 Estos archivos de inclusión applies-to omiten la versión de SQL Server.
 
@@ -63,7 +63,7 @@ Estos archivos de inclusión applies-to omiten la versión de SQL Server.
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## <a name="sql-server-version-specific"></a>SQL Server (específico de la versión)
+## <a name="sql-server-applies-to-version-specific"></a>Archivo applies-to de SQL Server (específico de la versión)
 
 Estos archivos de inclusión applies-to especifican las versiones de SQL a las que se aplica la documentación.
 
@@ -107,7 +107,7 @@ Estos archivos de inclusión applies-to especifican las versiones de SQL a las q
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="analysis-services"></a>Analysis Services
+## <a name="analysis-services-applies-to"></a>Archivo applies-to de Analysis Services
 
 Estos archivos de inclusión applies-to se usan con la documentación de Analysis Services.
 
@@ -124,7 +124,7 @@ Estos archivos de inclusión applies-to se usan con la documentación de Analysi
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="reporting-services"></a>Reporting Services
+## <a name="reporting-services-applies-to"></a>Archivo applies-to de Reporting Services
 
 Estos archivos de inclusión applies-to se usan con la documentación de Reporting Services.
 

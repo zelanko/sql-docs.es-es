@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2348a0ba8aa1fa0c3c01a1d59867a14abb4579f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808013"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210974"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,8 +123,8 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  Este comportamiento es necesario para permitir a los usuarios basados en grupos de Windows crear y poseer objetos. Sin embargo, puede dar lugar a la creación accidental de esquemas y usuarios. Para evitar crear implícitamente usuarios y esquemas, siempre que sea posible cree explícitamente entidades de seguridad de base de datos y asigne un esquema predeterminado. O establezca explícitamente un esquema existente cuando cree objetos en una base de datos, utilizando nombres de objetos de dos o tres elementos.  
 
->  [!NOTE]
->  La creación implícita de un usuario de Azure Active Directory no es posible en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Crear un usuario de Azure AD de proveedor externo conlleva comprobar el estado de los usuarios en AAD, con lo cual al crearlo se producirá el error 2760, que informa de que **el nombre de esquema especificado "\<user_name@domain>" no existe o no tiene permiso para usarlo**. Y, luego, el error 2759, que indica que se ha producido un **error en CREATE SCHEMA debido a errores anteriores**. Para solucionarlos, cree el usuario de Azure AD de proveedor externo en primer lugar y, después, vuelva a ejecutar la instrucción al crear el objeto.
+> [!NOTE]
+>  La creación implícita de un usuario de Azure Active Directory no es posible en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Como la creación de un usuario de Azure AD a partir de un proveedor externo conlleva comprobar el estado de los usuarios en AAD, se producirá el error 2760: **El nombre de esquema "\<user_name@domain>" especificado no existe o no tiene permisos para utilizarlo.** Y después el error 2759: **Error en CREATE SCHEMA provocado por los errores anteriores**. Para solucionarlos, cree el usuario de Azure AD de proveedor externo en primer lugar y, después, vuelva a ejecutar la instrucción al crear el objeto.
  
   
 ## <a name="deprecation-notice"></a>Aviso sobre elementos desusados  
@@ -157,7 +157,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Crear un esquema y una tabla en el esquema  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>b. Crear un esquema y una tabla en el esquema  
  En el siguiente ejemplo se crea un esquema `Sales` y, luego, una tabla `Sales.Region` en ese esquema.  
   
 ```  
@@ -179,7 +179,7 @@ CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

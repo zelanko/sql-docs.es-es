@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d12db3ef11d3dc4d658b7126319ea53ddf12a91f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a6cc6dcb53bb7c535db570bbaa68db0673a83879
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535361"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531120"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ SSMS no admite la separación de roles entre los administradores de la base de d
 
 El [Asistente para Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md) es una herramienta eficaz que permite establecer la configuración de cifrado elegida para las columnas de la base de datos seleccionadas. Según la configuración actual de Always Encrypted y la configuración de destino elegida, el asistente puede cifrar una columna, descifrarla (quitar el cifrado) o volver a cifrarla (por ejemplo, con una nueva clave de cifrado de columnas o con un tipo de cifrado diferente del actual configurado para la columna). Es posible configurar varias columnas en una misma ejecución del asistente.
 
-Si no ha aprovisionado claves para Always Encrypted, el asistente las generará automáticamente. Basta con que seleccione un almacén de claves para la clave maestra de columna: el Almacén de certificados de Windows o el Almacén de claves de Azure. El asistente generará automáticamente los nombres de las claves y sus objetos de metadatos en la base de datos. Si necesita más control sobre la manera en que se aprovisionan las claves (y más opciones para un almacén de claves que contenga una clave maestra de columna), puede usar los cuadros de diálogo **Nueva clave maestra de columna** y **Nueva clave de cifrado de columnas** (descritos a continuación) para aprovisionar claves antes de iniciar el asistente. Después puede elegir la clave de cifrado de columnas existente en el Asistente para Always Encrypted.
+Si no ha aprovisionado claves para Always Encrypted, el asistente las generará automáticamente. Solo hay que seleccionar un almacén de claves para la clave maestra de columna: Almacén de certificados de Windows o Azure Key Vault. El asistente generará automáticamente los nombres de las claves y sus objetos de metadatos en la base de datos. Si necesita más control sobre la manera en que se aprovisionan las claves (y más opciones para un almacén de claves que contenga una clave maestra de columna), puede usar los cuadros de diálogo **Nueva clave maestra de columna** y **Nueva clave de cifrado de columnas** (descritos a continuación) para aprovisionar claves antes de iniciar el asistente. Después puede elegir la clave de cifrado de columnas existente en el Asistente para Always Encrypted.
 
 Para obtener más información sobre cómo usar el asistente, vea  [Asistente para Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md).
 
@@ -77,8 +77,8 @@ Para ejecutar una consulta que envía un valor con una columna cifrada como dest
 1.  Asegúrese de que Always Encrypted esté habilitado para la conexión de base de datos de la ventana del Editor de consultas, desde donde ejecuta la consulta `SELECT` . Esto indicará al proveedor de datos .NET Framework para SQL Server (que SSMS usa) que cifre las variables Transact-SQL parametrizadas (ver a continuación) con columnas cifradas como destino. Consulte [Habilitación y deshabilitación de Always Encrypted para una conexión de base de datos](#en-dis) que aparece más adelante.   
 2.  Asegúrese de que puede tener acceso a todas las claves maestras de columna configuradas para las columnas cifradas. Por ejemplo, si la clave maestra de columna es un certificado, debe asegurarse de que este esté implementado en la máquina en la que se ejecuta SSMS. O bien, si la clave maestra de columna es una clave almacenada en Azure Key Vault, debe asegurarse de tener los permisos para obtener acceso a la clave (además, es posible que se le pida iniciar sesión en Azure).   
 3.  Asegúrese de que la parametrización de Always Encrypted esté habilitada para la ventana del Editor de consultas. (Requiere al menos la versión 17.0 de SSMS) Declare una variable Transact-SQL e inicialícela con un valor que desea enviar (insertar, actualizar o según el cual filtrar) a la base de datos. Consulte [Parametrización de Always Encrypted](#param) que aparece más adelante para detalles.   
-    >   [!NOTE]
-    >   Como Always Encrypted admite un subconjunto limitado de conversiones de tipo, en muchos casos se requiere que ese tipo de datos de una variable Transact-SQL sea el mismo tipo de la columna de base de datos de destino.   
+    > [!NOTE]
+    > Como Always Encrypted admite un subconjunto limitado de conversiones de tipo, en muchos casos se requiere que ese tipo de datos de una variable Transact-SQL sea el mismo tipo de la columna de base de datos de destino.   
 4.  Ejecute la consulta; para ello, envíe el valor de la variable Transact-SQL a la base de datos. SSMS convertirá la variable en un parámetro de consulta y cifrará su valor antes de enviarlo a la base de datos.   
 
 *Ejemplo*   
@@ -94,13 +94,13 @@ Habilitar Always Encrypted para una conexión de base de datos indica al proveed
 Para habilitar Always Encrypted para una conexión de base de datos, especifique `Column Encryption Setting=Enabled` en la pestaña **Propiedades adicionales** del cuadro de diálogo **Conectar con el servidor** .    
 Para deshabilitar Always Encrypted para una conexión de base de datos, especifique `Column Encryption Setting=Disabled` o simplemente quite el valor en **Valor de cifrado de columnas** en la pestaña **Propiedades adicionales** del cuadro de diálogo **Conectar con el servidor** (su valor predeterminado es **Deshabilitado**).   
 
->  [!TIP] 
->  Para alternar entre Always Encrypted habilitado y deshabilitado para una ventana existente del Editor de consultas, haga lo siguiente:   
->  1.   Haga clic con el botón derecho en cualquier parte de la ventana del Editor de consultas.
->  2.   Seleccione **Conexión** > **Cambiar conexión ...**, 
->  3.   Haga clic en **Opciones** >>
->  4.   Seleccione la pestaña **Propiedades adicionales** y escriba `Column Encryption Setting=Enabled` (para habilitar el comportamiento de Always Encrypted) o quite el valor (para deshabilitar el comportamiento de Always Encrypted).   
->  5.   Haga clic en **Conectar**.   
+> [!TIP]
+> Para alternar entre Always Encrypted habilitado y deshabilitado para una ventana existente del Editor de consultas, haga lo siguiente:   
+> 1.    Haga clic con el botón derecho en cualquier parte de la ventana del Editor de consultas.
+> 2.    Seleccione **Conexión** > **Cambiar conexión ...**, 
+> 3.    Haga clic en **Opciones** >>
+> 4.    Seleccione la pestaña **Propiedades adicionales** y escriba `Column Encryption Setting=Enabled` (para habilitar el comportamiento de Always Encrypted) o quite el valor (para deshabilitar el comportamiento de Always Encrypted).   
+> 5.    Haga clic en **Conectar**.   
    
 ### <a name="param"></a>Parametrización de Always Encrypted   
  
@@ -121,7 +121,7 @@ Parametrización de Always Encrypted está deshabilitada de manera predeterminad
 
 Para habilitar/deshabilitar parametrización de Always Encrypted para la ventana actual del Editor de consultas, haga lo siguiente:   
 1.  Seleccione **Consulta** en el menú principal.   
-2.  Seleccione **Opciones de consulta...**.   
+2.  Seleccione **Opciones de consulta…**.   
 3.  Vaya a **Ejecución** > **Avanzadas**.   
 4.  Seleccione o anule la selección de **Habilitar parametrización de Always Encrypted**.   
 5.  Haga clic en **Aceptar**.   
@@ -134,8 +134,8 @@ Para habilitar/deshabilitar parametrización de Always Encrypted para ventanas f
 5.  Haga clic en **Aceptar**.   
 
 Si ejecuta una consulta en una ventana del Editor de consultas que usa una conexión de base de datos con Always Encrypted habilitado, pero la parametrización no está habilitada para la ventana del Editor de consultas, se le pedirá que la habilite.   
->   [!NOTE]   
->   Parametrización de Always Encrypted funcione solo en ventanas del Editor de consultas que usan conexiones de base de datos con Always Encrypted habilitadas (consulte [Habilitación y deshabilitación de Always Encrypted para una conexión de base de datos](#en-dis)). Ninguna variable Transact-SQL será parametrizada si la ventana del Editor de consultas usa una conexión de base de datos sin tener habilitado Always Encrypted.   
+> [!NOTE]
+> Parametrización de Always Encrypted funcione solo en ventanas del Editor de consultas que usan conexiones de base de datos con Always Encrypted habilitadas (consulte [Habilitación y deshabilitación de Always Encrypted para una conexión de base de datos](#en-dis)). Ninguna variable Transact-SQL será parametrizada si la ventana del Editor de consultas usa una conexión de base de datos sin tener habilitado Always Encrypted.   
 
 #### <a name="how-parameterization-for-always-encrypted-works"></a>Funcionamiento de parametrización de Always Encrypted   
 
@@ -173,7 +173,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio usa IntelliSense para informarle las variables que se pueden parametrizar correctamente y cuáles son los intentos de parametrización que presentan error (y por qué).   
 
-Una declaración de una variable que se puede parametrizar correctamente está marcada con un carácter de subrayado de advertencia en el Editor de consultas. Si mantiene el puntero sobre una instrucción de declaración que se marcó con un carácter de subrayado de advertencia, verá los resultados del proceso de parametrización, incluidos los valores de las propiedades clave del objeto [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) resultante (al que se asigna la variable): [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx), [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). También puede ver la lista completa de todas las variables que se parametrizaron correctamente en la pestaña **Advertencia** de la vista **Lista de errores** . Para abrir la vista **Lista de errores** , seleccione **Vista** en el menú principal y, luego, seleccione **Lista de errores**.    
+Una declaración de una variable que se puede parametrizar correctamente está marcada con un carácter de subrayado de advertencia en el Editor de consultas. Si mantiene el puntero sobre una instrucción de declaración que se ha marcado con un carácter de subrayado de advertencia, verá los resultados del proceso de parametrización, incluidos los valores de las propiedades clave del objeto [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) resultante (al que se asigna la variable): [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx), [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). También puede ver la lista completa de todas las variables que se parametrizaron correctamente en la pestaña **Advertencia** de la vista **Lista de errores** . Para abrir la vista **Lista de errores** , seleccione **Vista** en el menú principal y, luego, seleccione **Lista de errores**.    
 
 Si SQL Server Management Studio intentó parametrizar una variable, pero la parametrización presentó un error, la declaración de la variable se marcará con un carácter de subrayado de error. Si mantiene el puntero sobre una instrucción de declaración que se marcó con un carácter de subrayado de error, recibirá los resultados del error. También podrá ver la lista completa de errores de parametrización de todas las variables en la pestaña **Error** de la vista **Lista de errores** . Para abrir la vista **Lista de errores** , seleccione **Vista** en el menú principal y, luego, seleccione **Lista de errores**.   
 
@@ -185,8 +185,8 @@ Otro ejemplo que aparece a continuación muestra 2 variables que cumplen con las
  
 ![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
->   [!NOTE]
->   Como Always Encrypted admite un subconjunto limitado de conversiones de tipo, en muchos casos se requiere que ese tipo de datos de una variable Transact-SQL sea el mismo tipo de la columna de base de datos de destino. Por ejemplo, suponiendo que el tipo de la columna `SSN` de la tabla `Patients` sea `char(11)`, la consulta siguiente presentará un error, debido a que el tipo de la variable `@SSN` , que es `nchar(11)`, no coincide con el tipo de la columna.   
+> [!NOTE]
+> Como Always Encrypted admite un subconjunto limitado de conversiones de tipo, en muchos casos se requiere que ese tipo de datos de una variable Transact-SQL sea el mismo tipo de la columna de base de datos de destino. Por ejemplo, suponiendo que el tipo de la columna `SSN` de la tabla `Patients` sea `char(11)`, la consulta siguiente presentará un error, debido a que el tipo de la variable `@SSN` , que es `nchar(11)`, no coincide con el tipo de la columna.   
 
 ```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
@@ -202,8 +202,8 @@ WHERE [SSN] = @SSN;
     encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
     column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator.
 
->   [!NOTE]
->   Sin parametrización, la columna completa, incluidas las conversiones de tipo, se procesan dentro de SQL Server/Azure SQL Database. Con la parametrización habilitada, .NET Framework ejecuta algunas conversiones de tipo dentro de SQL Server Management Studio. Debido a las diferencias entre el sistema de tipo de .NET Framework y el sistema de tipo de SQL Server (por ejemplo, una precisión distinta de algunos tipos, como float), una consulta que se ejecuta con parametrización habilitada puede generar resultados distintos a los de la consulta ejecutada sin la parametrización habilitada. 
+> [!NOTE]
+> Sin parametrización, la columna completa, incluidas las conversiones de tipo, se procesan dentro de SQL Server/Azure SQL Database. Con la parametrización habilitada, .NET Framework ejecuta algunas conversiones de tipo dentro de SQL Server Management Studio. Debido a las diferencias entre el sistema de tipo de .NET Framework y el sistema de tipo de SQL Server (por ejemplo, una precisión distinta de algunos tipos, como float), una consulta que se ejecuta con parametrización habilitada puede generar resultados distintos a los de la consulta ejecutada sin la parametrización habilitada. 
 
 #### <a name="permissions"></a>Permisos      
 
@@ -232,8 +232,8 @@ El cuadro de diálogo **Nueva clave maestra de columna** permite generar una cla
     - **Proveedor de almacén de claves (CNG)**: indica un almacén de claves accesible a través de un proveedor de almacén de claves (KSP) que implementa la API Cryptography Next Generation (CNG). Normalmente, este tipo de almacén es un módulo de seguridad de hardware (HSM). Después de seleccionar esta opción, debe elegir un KSP. De forma predeterminada está seleccionado el**proveedor de almacén de claves de software de Microsoft** . Si quiere usar una clave maestra de columna almacenada en un HSM, seleccione un KSP para el dispositivo (debe estar instalado y configurado en el equipo antes de que abra el cuadro de diálogo).
     -   **Proveedor de servicios criptográficos (CAPI)** : almacén de claves accesible a través de un proveedor de servicios criptográficos (CSP) que implementa Cryptography API (CAPI). Normalmente, este almacén es un módulo de seguridad de hardware (HSM). Después de seleccionar esta opción, debe elegir un CSP.  Si quiere usar una clave maestra de columna almacenada en un HSM, seleccione un CSP para el dispositivo (debe estar instalado y configurado en el equipo antes de que abra el cuadro de diálogo).
     
-    >   [!NOTE]
-    >   Dado que CAPI es una API en desuso, la opción Proveedor de servicios criptográficos (CAPI) está deshabilitada de forma predeterminada. Puede habilitarla creando el valor DWORD CAPI Provider Enabled en la clave **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** del Registro de Windows y estableciéndolo en 1. Debe usar CNG en lugar de CAPI, a menos que el almacén de claves no admita CNG.
+    > [!NOTE]
+    > Dado que CAPI es una API en desuso, la opción Proveedor de servicios criptográficos (CAPI) está deshabilitada de forma predeterminada. Puede habilitarla creando el valor DWORD CAPI Provider Enabled en la clave **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** del Registro de Windows y estableciéndolo en 1. Debe usar CNG en lugar de CAPI, a menos que el almacén de claves no admita CNG.
    
     Para obtener más información sobre los anteriores almacenes de claves, vea [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Crear y almacenar claves maestras de columna (Always Encrypted)).
 
@@ -273,11 +273,11 @@ Para obtener más información, vea [Create and Store Column Master Keys (Always
 
 La rotación de una clave maestra de columna es el proceso por el cual se reemplaza una clave maestra de columna existente por otra nueva. Puede que necesite rotar una clave si está en peligro, o bien para cumplir las directivas o los reglamentos de la organización que exigen que se roten las claves criptográficas de forma regular. La rotación de claves maestras de columna implica descifrar las claves de cifrado de columnas que están protegidas con la clave maestra de columna actual, volver a cifrarlas con la nueva clave maestra de columna y actualizar los metadatos de clave. Para obtener más información, vea [Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
-**Paso 1: aprovisionamiento de una nueva clave maestra de columna**
+**Paso 1: Aprovisionamiento de una nueva clave maestra de columna**
 
 Aprovisione una nueva clave maestra de columna siguiendo los pasos descritos en la anterior sección Aprovisionamiento de claves maestras de columna.
 
-**Paso 2: cifrado de las claves de cifrado de columna con la nueva clave maestra de columna**
+**Paso 2: Cifrado de las claves de cifrado de columna con la nueva clave maestra de columna**
 
 Por lo general, una clave maestra de columna protege una o más claves de cifrado de columnas. Cada clave de cifrado de columnas tiene un valor cifrado, almacenado en la base de datos, que es el resultado de haber cifrado la clave de cifrado de columnas con la clave maestra de columna.
 En este paso, cifrará cada una de las claves de cifrado de columnas (protegidas con la clave maestra de columna) que va a rotar con la nueva clave maestra de columna y almacenará el nuevo valor cifrado en la base de datos. Como resultado, cada clave de cifrado de columnas afectada por la rotación tendrá dos valores cifrados: uno cifrado con la clave maestra de columna antigua y otro reciente, cifrado con la nueva.
@@ -293,7 +293,7 @@ SQL Server Management Studio obtendrá los metadatos de las claves de cifrado de
 > [!NOTE]
 > Asegúrese de que ninguna de las claves de cifrado de columnas, cifradas con la clave maestra de columna antigua, esté cifrada con otra clave maestra de columna. Dicho de otro modo, cada clave cifrada de columna afectada por la rotación debe tener exactamente un valor cifrado en la base de datos. Si alguna de las claves de cifrado de columnas afectadas tiene más de un valor cifrado, tendrá que quitarlo para poder continuar con la rotación (consulte el *paso 4* , en el que se explica cómo quitar un valor cifrado de una clave de cifrado de columna).
 
-**Paso 3: configuración de sus aplicaciones con la nueva clave maestra de columna**
+**Paso 3: Configuración de las aplicaciones con la nueva clave maestra de columna**
 
 En este paso, debe garantizar que todas sus aplicaciones cliente que realicen consultas a las columnas de la base de datos protegidas con la clave maestra de columna y que vaya a rotar puedan acceder a la nueva clave maestra de columna (es decir, las columnas de la base de datos cifradas con una clave de cifrado de columnas que, a su vez, está cifrada con la clave maestra de columna, la cual se va a rotar). Este paso depende del tipo de almacén de claves en el que se encuentre la nueva clave maestra de columna. Por ejemplo:
 - Si la nueva clave maestra de columna es un certificado guardado en el Almacén de certificados de Windows, tendrá que implementarlo en la misma ubicación del almacén de certificados (*Usuario actual* o *Equipo local*) que la especificada en la ruta de acceso de la clave de su clave maestra de columna en la base de datos. La aplicación debe poder acceder al certificado:
@@ -306,7 +306,7 @@ Para obtener más información, vea [Create and Store Column Master Keys (Always
 > [!NOTE]
 > En este momento de la rotación, tanto la clave maestra de columna antigua como la nueva son válidas y se pueden usar para obtener acceso a los datos.
 
-**Paso 4: limpieza de los valores de clave de cifrado de columna cifrados con la clave maestra de columna antigua**
+**Paso 4: Limpieza de los valores de clave de cifrado de columna cifrados con la clave maestra de columna antigua**
 
 Una vez que haya configurado todas las aplicaciones para que usen la nueva clave maestra de columna, quite de la base de datos los valores de las claves de cifrado de columnas que estén cifradas con la clave maestra de columna *antigua* . Al quitar los valores antiguos, garantizará que está preparado para la siguiente rotación (recuerde que cada clave de cifrado de columnas protegida con una clave maestra de columna que se vaya a rotar debe tener exactamente un único valor cifrado).
 
@@ -322,7 +322,7 @@ Existe otro motivo para limpiar el valor antiguo antes de archivar o quitar la c
 
 SQL Server Management Studio emitirá instrucciones [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) para quitar los valores cifrados de las claves de cifrado de columnas que están cifradas con la clave maestra de columna antigua.
 
-**Paso 5: eliminación de metadatos de la clave maestra de columna antigua**
+**Paso 5: Eliminación de los metadatos de la clave maestra de columna antigua**
 
 Si decide quitar la definición de la clave maestra de columna antigua de la base de datos, siga los pasos que se indican a continuación. 
 1.  En el **Explorador de objetos**, vaya a la carpeta **Seguridad > Siempre claves cifradas > Claves maestras de columna** y encuentre la clave maestra de columna antigua que quiere quitar de la base de datos.
@@ -369,7 +369,7 @@ Para realizar la rotación de una clave de cifrado de columnas, use el Asistente
 
 ### <a name="permissions"></a>Permisos
 
-La rotación de una clave de cifrado de columnas requiere los siguientes permisos de base de datos: **ALTER ANY COLUMN MASTER KEY**: es obligatorio si se usa una nueva clave de cifrado de columnas generada de forma automática (también se generará una nueva clave maestra de columna y sus metadatos nuevos).
+La rotación de una clave de cifrado de columnas requiere los permisos de base de datos siguientes: **ALTER ANY COLUMN MASTER KEY**: es obligatorio si se usa una nueva clave de cifrado de columnas generada de forma automática (también se generará una nueva clave maestra de columna y sus metadatos nuevos).
 **ALTER ANY COLUMN ENCRYPTION KEY**: es necesario para agregar metadatos a la nueva clave de cifrado de columnas.
 **VIEW ANY COLUMN MASTER KEY DEFINITION** : es necesario para tener acceso a los metadatos de las claves maestras de columna y poder leerlos.
 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** : es necesario para tener acceso a los metadatos de las claves de cifrado de columnas y poder leerlos.
@@ -457,7 +457,7 @@ También necesita tener acceso a las claves maestras de columna configuradas par
 - **Proveedor de servicios criptográficos (CAPI)**: el permiso y las credenciales necesarios que se le podrían solicitar al usar una clave o un almacén de claves dependen del almacén y de la configuración del proveedor de servicios criptográficos (CSP).
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 - [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Asistente para Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)
 - [Información general de administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

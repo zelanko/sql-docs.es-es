@@ -1,6 +1,7 @@
 ---
-title: Requisitos previos, restricciones y recomendaciones - Grupos de disponibilidad AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad
+description: Una descripción de los requisitos previos, las restricciones y las recomendaciones para implementar un grupo de disponibilidad Always On.
+ms.custom: seodec18
 ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -19,14 +20,14 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516458"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202994"
 ---
-# <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones - Grupos de disponibilidad AlwaysOn
+# <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   En este artículo se describen las consideraciones necesarias para implementar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], incluidos requisitos previos, restricciones y recomendaciones relativos a los equipos host, los clústeres de conmutación por error de Windows Server (WSFC), las instancias del servidor y los grupos de disponibilidad. Para cada uno de estos componentes, se indican los criterios de seguridad y permisos necesarios, si existen.  
@@ -39,10 +40,10 @@ ms.locfileid: "52516458"
   
 ||Característica dependiente|Revisión|Vínculo|  
 |------|-----------------------|------------|----------|  
-|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|La revisión para .Net 3.5 SP1 incorpora compatibilidad con las características cliente SQL para AlwaysOn de intención de lectura, de solo lectura y de conmutación por error de múltiples subredes. La revisión tiene que instalarse en cada servidor de informes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Revisión para .Net 3.5 SP1 para agregar compatibilidad con las características AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|La revisión para .Net 3.5 SP1 incorpora compatibilidad con las características cliente SQL para AlwaysOn de intención de lectura, de solo lectura y de conmutación por error de múltiples subredes. La revisión tiene que instalarse en cada servidor de informes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Revisión para .Net 3.5 SP1 para agregar compatibilidad con las características de Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
-###  <a name="SystemRequirements"></a> Lista de comprobación: requisitos (sistema de Windows)  
+###  <a name="SystemRequirements"></a> Lista de comprobación: Requisitos (sistema de Windows)  
  Para admitir la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , asegúrese de que cada equipo que vaya a participar en uno o varios grupos de disponibilidad cumpla los requisitos básicos siguientes:  
   
 ||Requisito|Vínculo|  
@@ -58,16 +59,16 @@ ms.locfileid: "52516458"
   
 ###  <a name="ComputerRecommendations"></a> Recomendaciones para equipos que hospedan réplicas de disponibilidad (sistema de Windows)  
   
--   **Sistemas comparables:**  en un grupo de disponibilidad determinado, todas las réplicas de disponibilidad deben ejecutarse en sistemas comparables que puedan controlar cargas de trabajo idénticas.  
+-   **Sistemas comparables:**  En el caso de un grupo de disponibilidad determinado, todas las réplicas de disponibilidad se deben ejecutar en sistemas comparables que puedan controlar cargas de trabajo idénticas.  
   
--   **Adaptadores de red dedicados:**  para obtener el mejor rendimiento, use un adaptador de red (tarjeta de interfaz de red) dedicado para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+-   **Adaptadores de red dedicados:**  Para obtener el mejor rendimiento, utilice un adaptador de red (tarjeta de interfaz de red) dedicado para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
--   **Espacio en disco suficiente:**  todos los equipos en los que una instancia del servidor hospeda una réplica de disponibilidad deben poseer suficiente espacio en disco para todas las bases de datos del grupo de disponibilidad. Tenga en cuenta que según crecen las bases de datos principales, las correspondientes bases de datos secundarias aumentan la misma cantidad.  
+-   **Espacio suficiente en disco:**  todos los equipos en los que una instancia del servidor hospede una réplica de disponibilidad deben tener suficiente espacio en disco para todas las bases de datos del grupo de disponibilidad. Tenga en cuenta que según crecen las bases de datos principales, las correspondientes bases de datos secundarias aumentan la misma cantidad.  
   
 ###  <a name="PermissionsWindows"></a> Permisos (sistema de Windows)  
  Para administrar un WSFC, el usuario debe ser administrador del sistema en cada nodo de clúster.  
   
- Para obtener más información sobre la cuenta para la administración del clúster, vea [Apéndice A: requisitos para un clúster de conmutación por error](https://technet.microsoft.com/library/dd197454.aspx).  
+ Para más información sobre la cuenta para administrar el clúster, vea [Apéndice A: Requisitos de clúster de conmutación por error](https://technet.microsoft.com/library/dd197454.aspx).  
   
 ###  <a name="RelatedTasksWindows"></a> Tareas relacionadas (sistema de Windows)  
   
@@ -117,7 +118,7 @@ ms.locfileid: "52516458"
   
  **En esta sección:**  
   
--   [Lista de comprobación: requisitos previos](#PrerequisitesSI)  
+-   [Checklist: Requisitos previos](#PrerequisitesSI)  
   
 -   [Uso de subprocesos por parte de los grupos de disponibilidad](#ThreadUsage)  
   
@@ -127,7 +128,7 @@ ms.locfileid: "52516458"
   
 -   [Contenido relacionado](#RelatedContentSI)  
   
-###  <a name="PrerequisitesSI"></a> Lista de comprobación: requisitos previos (instancia del servidor)  
+###  <a name="PrerequisitesSI"></a> Lista de comprobación: Requisitos previos (instancia de servidor)  
   
 ||Requisito previo|Vínculos|  
 |-|------------------|-----------|  
@@ -167,7 +168,7 @@ ms.locfileid: "52516458"
   
     -   Una copia de seguridad en una réplica secundaria contiene un subproceso en la réplica principal mientras dura la operación de copia de seguridad.  
   
- Para obtener más información, vea el blog de los ingenieros de [de CSS](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Series de aprendizaje de AlwaysON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Para más información, vea [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Series de aprendizaje de Always ON - HADRON: Uso del grupo de trabajo para las bases de datos compatibles con HADRON) (Blog de ingenieros de CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 ###  <a name="PermissionsSI"></a> Permisos (instancia del servidor)  
   
@@ -186,7 +187,7 @@ ms.locfileid: "52516458"
   
 ###  <a name="RelatedContentSI"></a> Contenido relacionado (instancia del servidor)  
   
--   [de CSS](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
   
 ##  <a name="NetworkConnect"></a> Recomendaciones de conectividad de red  
  Se recomienda usar los mismos vínculos de red para las comunicaciones entre los nodos de WSFC y las comunicaciones entre las réplicas de disponibilidad.  El uso de vínculos de red independientes puede provocar comportamientos inesperados si alguno de los vínculos da error (incluso de forma intermitente).  
@@ -201,7 +202,7 @@ ms.locfileid: "52516458"
   
 -   [Restricciones](#RestrictionsFCI)  
   
--   [Lista de comprobación: requisitos previos](#PrerequisitesFCI)  
+-   [Checklist: Requisitos previos](#PrerequisitesFCI)  
   
 -   [Tareas relacionadas](#RelatedTasksFCIs)  
   
@@ -212,7 +213,7 @@ ms.locfileid: "52516458"
 > [!NOTE]  
 > Las instancias del clúster de conmutación por error admiten volúmenes compartidos en clúster (CSV). Para obtener más información sobre CSV, vea [Descripción de Volúmenes compartidos de clúster en un clúster de conmutación por error](https://technet.microsoft.com/library/dd759255.aspx).  
   
--   **Los nodos de clúster de una FCI solo pueden hospedar una réplica de un grupo de disponibilidad determinado:** si agrega una réplica de disponibilidad en una FCI, los nodos de WSFC que sean posibles propietarios de FCI no pueden hospedar otra réplica del mismo grupo de disponibilidad.  Para evitar posibles conflictos, se recomienda configurar los posibles propietarios de la instancia de clúster de conmutación por error. Con esto se evitará que un único WSFC intente hospedar dos réplicas de disponibilidad para el mismo grupo de disponibilidad.
+-   **Los nodos de clúster de una FCI pueden hospedar una única réplica para un grupo de disponibilidad determinado:**  si agrega una réplica de disponibilidad en una FCI, los nodos del clúster de WSFC que sean posibles propietarios de FCI no pueden hospedar otra réplica para el mismo grupo de disponibilidad.  Para evitar posibles conflictos, se recomienda configurar los posibles propietarios de la instancia de clúster de conmutación por error. Con esto se evitará que un único WSFC intente hospedar dos réplicas de disponibilidad para el mismo grupo de disponibilidad.
   
      Además, el resto de réplicas debe hospedarse en una instancia de SQL Server 2016 que resida en otro nodo de clúster del mismo clúster de conmutación por error de Windows Server. La única excepción es que mientras se migra a otro clúster, un grupo de disponibilidad puede ocupar temporalmente dos clústeres. 
 
@@ -220,11 +221,11 @@ ms.locfileid: "52516458"
   > Si usa el Administrador de clústeres de conmutación por error para mover una *instancia de clúster de conmutación por error* que hospeda un grupo de disponibilidad a un nodo que *ya* hospeda una réplica del mismo grupo de disponibilidad, podría provocar la pérdida de la réplica del grupo de disponibilidad, impidiendo que se ponga en línea en el nodo de destino. Un único nodo de un clúster de conmutación por error no puede hospedar más de una réplica para el mismo grupo de disponibilidad. Para más información sobre cómo se produce esto y cómo recuperar, eche un vistazo a la entrada de blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Réplica dejada inesperadamente en grupo de disponibilidad). 
 
   
--   **Las FCI no admiten la conmutación automática por error por grupos de disponibilidad**  : Las FCI no admiten la conmutación automática por error por grupos de disponibilidad; por tanto, todas las réplicas de disponibilidad hospedadas por una FCI solo se pueden configurar para la conmutación por error manual.  
+-   **Las FCI no admiten la conmutación automática por error por grupos de disponibilidad:**  las FCI no admiten la conmutación automática por error de grupos de disponibilidad; por tanto, todas las réplicas de disponibilidad hospedadas por una FCI solo se pueden configurar para la conmutación por error manual.  
   
--   **Cambiar el nombre de red de FCI:**  si necesita cambiar el nombre de red de una FCI que hospede una réplica de disponibilidad, tendrá que quitar la réplica del grupo de disponibilidad y, después, agregar la réplica de nuevo al grupo de disponibilidad. No puede quitar la réplica principal, de modo que si cambia el nombre de una FCI que hospeda la réplica principal, debe conmutar por error a una réplica secundaria, después quitar la réplica principal anterior y volver a agregarla. Observe que cambiar el nombre de una FCI puede modificar la dirección URL del extremo de creación de reflejo de la base de datos. Al agregar la réplica asegúrese de especificar la dirección URL del extremo actual.  
+-   **Cambiar el nombre de red de FCI:**  si necesita cambiar el nombre de red de una FCI que hospede una réplica de disponibilidad, tendrá que quitar la réplica del grupo de disponibilidad y, después, volver a agregar la réplica al grupo de disponibilidad. No puede quitar la réplica principal, de modo que si cambia el nombre de una FCI que hospeda la réplica principal, debe conmutar por error a una réplica secundaria, después quitar la réplica principal anterior y volver a agregarla. Observe que cambiar el nombre de una FCI puede modificar la dirección URL del extremo de creación de reflejo de la base de datos. Al agregar la réplica asegúrese de especificar la dirección URL del extremo actual.  
   
-###  <a name="PrerequisitesFCI"></a> Lista de comprobación: requisitos previos (FCI)  
+###  <a name="PrerequisitesFCI"></a> Lista de comprobación: Requisitos previos (FCI)  
   
 ||Requisito previo|Vínculo|  
 |-|------------------|----------|  
@@ -242,7 +243,7 @@ ms.locfileid: "52516458"
   
 -   [Clústeres de conmutación por error y grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Guía de la arquitectura de AlwaysOn: generar una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Guía de arquitectura de Always On: generación de una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Requisitos previos y restricciones de los grupos de disponibilidad  
  **En esta sección:**  
@@ -257,16 +258,16 @@ ms.locfileid: "52516458"
   
 ###  <a name="RestrictionsAG"></a> Restricciones (grupos de disponibilidad)  
   
--   **Las réplicas de disponibilidad deben estar hospedadas en nodos diferentes de un WSFC:** en un grupo de disponibilidad concreto, las réplicas de disponibilidad deben hospedarse en instancias de servidor que se ejecuten en nodos diferentes dentro del mismo WSFC. La única excepción es que mientras se migra a otro clúster, un grupo de disponibilidad puede ocupar temporalmente dos clústeres.  
+-   **Las réplicas de disponibilidad se deben hospedar en distintos nodos de un WSFC:**  para un grupo de disponibilidad determinado, las réplicas de disponibilidad se deben hospedar en las instancias del servidor que se ejecutan en nodos diferentes del mismo WSFC. La única excepción es que mientras se migra a otro clúster, un grupo de disponibilidad puede ocupar temporalmente dos clústeres.  
   
     > [!NOTE]  
     >  Cada una de las diferentes máquinas virtuales de un mismo equipo físico puede hospedar una réplica de disponibilidad para el mismo grupo de disponibilidad, porque cada máquina virtual actúa como un equipo independiente.  
   
--   **Nombre único de grupo de disponibilidad:** cada nombre de grupo de disponibilidad debe ser único en el WSFC. La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
+-   **Nombre único del grupo de disponibilidad:**  cada nombre de grupo de disponibilidad debe ser único en el WSFC. La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
   
--   **Réplicas de disponibilidad**  : Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Todas las réplicas pueden ejecutarse en el modo de confirmación asincrónica o hasta tres de ellas pueden ejecutarse en el modo de confirmación sincrónica (una réplica principal con dos réplicas secundarias sincrónicas).  
+-   **Réplicas de disponibilidad:**  Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Todas las réplicas pueden ejecutarse en el modo de confirmación asincrónica o hasta tres de ellas pueden ejecutarse en el modo de confirmación sincrónica (una réplica principal con dos réplicas secundarias sincrónicas).  
   
--   **Número máximo de grupos de disponibilidad y bases de datos de disponibilidad por equipo:** el número real de bases de datos y grupos de disponibilidad que puede colocar en un equipo (virtual o físico) depende del hardware y de la carga de trabajo, pero no existe ningún límite forzoso. Microsoft ha probado exhaustivamente con 10 grupos de disponibilidad y 100 bases de datos por equipo físico. Los signos de sistemas sobrecargados pueden incluir, pero no limitarse a los siguientes: agotamiento de subprocesos de trabajo, tiempos de respuesta lentos para vistas del sistema del grupo de disponibilidad y DMV de AlwaysOn o volcados del sistema del distribuidor detenidos. Asegúrese de comprobar minuciosamente el entorno con una carga de trabajo similar a la que usará en producción para asegurarse de que puede controlar la capacidad de carga de trabajo máxima con sus contratos de nivel de servicio de aplicación. Cuando evalúe los contratos de nivel de servicio, no olvide tener en cuenta la carga en condiciones de error además de los tiempos de respuesta esperados.  
+-   **Número máximo de grupos de disponibilidad y bases de datos de disponibilidad por equipo:** El número real de bases de datos y grupos de disponibilidad que puede colocar en un equipo (equipo físico o máquina virtual) depende del hardware y de la carga de trabajo, pero no hay ningún límite impuesto. Microsoft ha probado exhaustivamente con 10 grupos de disponibilidad y 100 bases de datos por equipo físico. Los signos de sistemas sobrecargados pueden incluir, pero no limitarse a los siguientes: agotamiento de subprocesos de trabajo, tiempos de respuesta lentos para vistas del sistema del grupo de disponibilidad y DMV de AlwaysOn o volcados del sistema del distribuidor detenidos. Asegúrese de comprobar minuciosamente el entorno con una carga de trabajo similar a la que usará en producción para asegurarse de que puede controlar la capacidad de carga de trabajo máxima con sus contratos de nivel de servicio de aplicación. Cuando evalúe los contratos de nivel de servicio, no olvide tener en cuenta la carga en condiciones de error además de los tiempos de respuesta esperados.  
   
 -   **No use el Administrador de clústeres de conmutación por error para manipular grupos de disponibilidad:**  
   
@@ -331,7 +332,7 @@ ms.locfileid: "52516458"
   
 -   [Tareas relacionadas](#RelatedTasksADb)  
   
-###  <a name="RequirementsDb"></a> Lista de comprobación: requisitos (bases de datos de disponibilidad)  
+###  <a name="RequirementsDb"></a> Lista de comprobación: Requisitos (bases de datos de disponibilidad)  
  Para poder agregarse a un grupo de disponibilidad, una base de datos debe:  
   
 ||Requisitos|Vínculo|  
@@ -355,11 +356,11 @@ ms.locfileid: "52516458"
   
 -   Si la ruta de acceso de archivo (incluida la letra de unidad) de una base de datos secundaria es diferente de la ruta de acceso de la base de datos principal correspondiente, se aplican las restricciones siguientes:  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:**  La opción **Completa** no es compatible (en el tema[Página Seleccionar sincronización de datos iniciales](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) ).  
+    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:**  La opción **Completa** no es compatible (en la [página Seleccionar sincronización de datos iniciales](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md)),  
   
-    -   **RESTORE WITH MOVE:**  para crear las bases de datos secundarias, se debe aplicar RESTORE WITH MOVE a los archivos de base de datos en cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda una réplica secundaria.  
+    -   **RESTORE WITH MOVE:**  para crear las bases de datos secundarias, se debe aplicar RESTORE WITH MOVE a todas las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeden una réplica secundaria.  
   
-    -   **Impacto en las operaciones de agregar archivos:**  una operación posterior de agregar archivos a la réplica principal podría producir un error en las bases de datos secundarias. Este error puede causar la suspensión de las bases de datos secundarias. Esto, a su vez, hace que las réplicas secundarias entren en el estado NOT SYNCHRONIZING.  
+    -   **Impacto en las operaciones de agregar archivos:**  una operación de agregar archivos posterior en la réplica principal podría producir un error en las bases de datos secundarias. Este error puede causar la suspensión de las bases de datos secundarias. Esto, a su vez, hace que las réplicas secundarias entren en el estado NOT SYNCHRONIZING.  
   
         > [!NOTE]  
         >  Para obtener más información sobre cómo responder a una operación de adición de archivos errónea, vea [Solucionar problemas relativos a una operación de agregar archivos con error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md).  
@@ -384,11 +385,11 @@ ms.locfileid: "52516458"
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [de CSS](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  

@@ -1,6 +1,7 @@
 ---
-title: Base de datos de disponibilidad suspendida | Microsoft Docs
-ms.custom: ''
+title: Suspensión de la base de datos de disponibilidad para un grupo de disponibilidad
+description: Identifique las posibles causas de la suspensión de una base de datos en un grupo de disponibilidad Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d87f43a7ec36af19cb141a2cb4c3724158f655f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a6746eb6dc024db06a63de972befd7305f64a85c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601755"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212034"
 ---
-# <a name="availability-database-is-suspended"></a>Base de datos de disponibilidad suspendida
+# <a name="availability-database-is-suspended-for-an-availability-group"></a>Suspensión de la base de datos de disponibilidad para un grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Introducción  
@@ -49,7 +50,7 @@ ms.locfileid: "51601755"
 ## <a name="possible-solution"></a>Solución posible  
  Reanude la sincronización de datos. Si el problema persiste, compruebe el grupo de disponibilidad en el registro de eventos y, a continuación, diagnostique por qué el sistema suspendió el movimiento de datos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

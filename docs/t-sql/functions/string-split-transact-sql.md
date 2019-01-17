@@ -18,15 +18,15 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 93386da795d7e993c0d23c70625290cc8901d8bc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586258"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589979"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 > [!div class="nextstepaction"]
 > [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
@@ -98,7 +98,7 @@ WHERE RTRIM(value) <> '';
   
 STRING_SPLIT devolverá una cadena vacía si no hay nada entre el separador. La condición "RTRIM(value) <>" quitará los tokens vacíos.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Dividir una cadena de valores separados por coma en una columna  
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>b. Dividir una cadena de valores separados por coma en una columna  
 La tabla Product tiene una columna con una lista de etiquetas separadas por comas que se muestran en el siguiente ejemplo:  
   
 |ProductId|Nombre|Etiquetas|  
@@ -126,6 +126,9 @@ FROM Product
 |2|Auriculares LL|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
+
+  >[!NOTE]
+  > El orden de la salida puede variar, ya que _no_ se garantiza que el orden coincida con el de las subcadenas de la cadena de entrada.
   
 ### <a name="c-aggregation-by-values"></a>C. Agregación por valores  
 Los usuarios deben crear un informe en el que se muestre el número de productos por etiqueta, ordenadas por número de productos, y filtrar solo las etiquetas con más de dos productos.  
@@ -153,12 +156,11 @@ WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));
 Para encontrar productos con dos etiquetas especificadas (clothing y road):  
   
 ```sql  
-  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
-    WHERE value IN ('clothing', 'road');  
+    WHERE value IN ('clothing', 'road'));  
 ```  
   
 ### <a name="e-find-rows-by-list-of-values"></a>E. Encontrar filas por la lista de valores  
@@ -179,7 +181,7 @@ FROM Product
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)     
 [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)     
 [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)    

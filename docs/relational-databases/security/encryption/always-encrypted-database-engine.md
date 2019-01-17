@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675134"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203044"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,10 +104,10 @@ Para obtener detalles sobre los algoritmos criptográficos de Always Encrypted, 
 
 |Tarea|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|Aprovisionamiento de claves maestras de columna, claves de cifrado de columna y claves de cifrado de columna cifrada con sus claves maestras de columna correspondientes.|Sí|Sí|no|
+|Aprovisionamiento de claves maestras de columna, claves de cifrado de columna y claves de cifrado de columna cifrada con sus claves maestras de columna correspondientes.|Sí|Sí|No|
 |Creación de metadatos de clave en la base de datos.|Sí|Sí|Sí|
 |Creación de nuevas tablas con columnas cifradas|Sí|Sí|Sí|
-|Cifrado de los datos existentes en las columnas seleccionadas de la base de datos|Sí|Sí|no|
+|Cifrado de los datos existentes en las columnas seleccionadas de la base de datos|Sí|Sí|No|
 
 > [!NOTE]
 > Asegúrese de ejecutar las herramientas de aprovisionamiento de claves o de cifrado de datos en un entorno seguro, en un equipo que no sea el que hospeda la base de datos. De lo contrario, podría filtrarse información confidencial o las claves al entorno de servidor, lo que reduciría las ventajas del empleo de Always Encrypted.  
@@ -255,7 +255,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
 [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   

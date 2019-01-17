@@ -15,15 +15,15 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba71da1f77d0fed61908b6d7aab953505a33e511
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525721"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591479"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Una aplicación de capa de datos (DAC) es una entidad de administración de bases de datos lógicas que define todos los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociados a una base de datos de usuario, como tablas, vistas y objetos de instancia, incluidos los inicios de sesión. Una DAC es una unidad independiente de implementación de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite a los desarrolladores y los administradores de bases de datos en el nivel de capa de datos empaquetar objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un artefacto portátil denominado paquete DAC y también conocido como DACPAC.  
   
  Un BACPAC es un artefacto relacionado que encapsula el esquema de la base de datos junto con los datos almacenados en la base de datos.  
@@ -109,7 +109,7 @@ ms.locfileid: "52525721"
   
 -   **IMPORT**: el usuario puede importar el esquema y los datos a una base de datos nueva en el servidor de host.  
   
- Ambas funciones son compatibles con las herramientas de administración de bases de datos: SQL Server Management Studio, el Portal de Azure y la API de DACFx.  
+ Las dos funciones son compatibles con las herramientas de administración de base de datos: SQL Server Management Studio, Azure Portal y la API DACFx.  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario ser miembro del rol **dbmanager** o tener asignados permisos **CREATE DATABASE** para crear una base de datos, incluida la creación de una base de datos para implementar un paquete DAC. Es necesario ser miembro del rol **dbmanager** o tener asignados permisos **DROP DATABASE** para quitar una base de datos.  

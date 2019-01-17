@@ -25,12 +25,12 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: bbf1a69df5326f12511976d079289195c97c4f57
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 4656a02f268987db7375e8211aec5a275379ea00
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641086"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209734"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ DBCC FREESYSTEMCACHE
  Suprime todos los mensajes de información.  
   
 ## <a name="remarks"></a>Notas  
-Al ejecutar DBCC FREESYSTEMCACHE se borra la memoria caché del plan para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché del plan, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché '%s' (parte de la caché del plan) debidas a operaciones 'DBCC FREEPROCCACHE' o 'DBCC FREESYSTEMCACHE'". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
+Al ejecutar DBCC FREESYSTEMCACHE se borra la memoria caché del plan para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché del plan, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la caché del plan) debidas a operaciones "DBCC FREEPROCCACHE" o "DBCC FREESYSTEMCACHE"". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 
 ## <a name="result-sets"></a>Conjuntos de resultados  
-DBCC FREESYSTEMCACHE devuelve: "Ejecución de DBCC completada. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."
+DBCC FREESYSTEMCACHE devuelve: "La ejecución de DBCC se ha completado. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."
   
 ## <a name="permissions"></a>Permisos  
 Requiere el permiso ALTER SERVER STATE en el servidor.
@@ -78,14 +78,14 @@ En el ejemplo siguiente se muestra cómo limpiar memorias caché que están dedi
 DBCC FREESYSTEMCACHE ('ALL', default);  
 ```  
   
-### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>B. Liberar las entradas de sus memorias caché respectivas una vez que dejan de ser utilizadas  
+### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>b. Liberar las entradas de sus memorias caché respectivas una vez que dejan de ser utilizadas  
 En el ejemplo siguiente se utiliza la cláusula MARK_IN_USE_FOR_REMOVAL para liberar las entradas de todas las memorias caché actuales una vez que las entradas dejan de ser utilizadas.
   
 ```sql
 DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
 [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  

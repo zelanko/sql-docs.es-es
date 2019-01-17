@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -15,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
+ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507283"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738121"
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
 
@@ -78,7 +77,7 @@ ms.locfileid: "52507283"
 |**Registrar todas las transacciones de almacenamiento provisional**|**StagingTransactionLogging**|Solo se aplica a SQL Server 2008 R2. Determina si se van a registrar o no todas las transacciones cuando se cargan los registros de almacenamiento provisional en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . El valor predeterminado es **Off** o **2**. Cambie a **On** o **1** para activar el registro.|  
 |**Intervalo del lote de almacenamiento provisional**|**StagingBatchInterval**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número de segundos después de seleccionar **Iniciar lotes** en que se procesa un lote. El valor predeterminado es **60** segundos (1 minuto).|  
   
- Para obtener más información, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Para más información, vea [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ##  <a name="Explorer"></a> Configuración del Explorador  
   
@@ -113,7 +112,7 @@ ms.locfileid: "52507283"
 |**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que se usa en el vínculo en las notificaciones por correo electrónico; por ejemplo, `https://constoso/mds`.|  
 |**Intervalo de las notificaciones de correo electrónico**|**NotificationInterval**|La frecuencia, en segundos, con la que se envían las notificaciones de correo electrónico. El valor predeterminado es **120** segundos (2 minutos).|  
 |**Número de notificaciones en un solo correo electrónico**|**NotificationsPerEmail**|El número máximo de problemas de validación que se enumerarán en un solo correo electrónico de notificación. Los problemas adicionales, si los hay, no se incluyen en el correo electrónico, pero están disponibles en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cambiando y guardando el **Formato de correo electrónico** en la pestaña **General** del usuario.|  
+|**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Nota: Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], si cambia y guarda el **Formato de correo electrónico** en la pestaña **General** del usuario.|  
 |**Expresión regular para la dirección de correo electrónico**|**EmailRegExPattern**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expresión regular que se utiliza para validar la dirección de correo electrónico escrita en la pestaña **General** del usuario. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
 |**Cuenta de Correo electrónico de base de datos**|**EmailProfilePrincipalAccount**|Muestra la cuenta de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. El perfil predeterminado es **mds_email_user**.|  
 |**Perfil de Correo electrónico de base de datos**|**DatabaseMailProfile**|El perfil de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. Está en blanco de forma predeterminada.|  
@@ -129,6 +128,11 @@ ms.locfileid: "52507283"
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , frecuencia, en segundos, con que se aplican los permisos de usuario y de grupo establecidos en la pestaña **Miembros de la jerarquía** . El valor predeterminado es **3600** segundos (60 minutos).|  
+
+##  <a name="Performance"></a> Configuración de rendimiento  
+|Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
+|-----------------------------------|--------------------|-----------------|  
+|**Habilitar configuración de mejora del rendimiento**|**PerformanceImprovementEnable**|Esta opción se habilita de forma predeterminada (**se establece en 1**) para que la carga de la página relacionada con los permisos tenga un buen rendimiento. Pero en esta situación, la creación o modificación de entidades, atributos, usuarios o grupos tendrá un bajo rendimiento. Para evitarlo, puede deshabilitar esta configuración (**Establecido en 0**). Después de cambiar esta configuración. Tendrá que ejecutar el comando "**EXEC [mdm].[udpPerformanceToggleSwitch];**" para asegurarse de que la vista y los datos son los correctos.|  
   
  Para obtener más información, consulte [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
@@ -151,7 +155,7 @@ ms.locfileid: "52507283"
   
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

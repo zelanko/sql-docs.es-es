@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: f91d98f48031f34f4c1c1ef91c86c1cbb60520fd
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586298"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531070"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-UPDATE STATISTICS schema_name . ] table_name   
+UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
     [ WITH   
        {  
@@ -164,7 +164,7 @@ Cuando es **ON**, las estadísticas conservan el porcentaje de muestreo definido
 **Se aplica a**: de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 MAXDOP = *max_degree_of_parallelism*  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Reemplaza la opción de configuración **max degree of parallelism** durante la operación estadística. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
@@ -242,7 +242,7 @@ UPDATE STATISTICS Sales.SalesOrderDetail;
 GO  
 ```  
   
-### <a name="b-update-the-statistics-for-an-index"></a>B. Actualizar las estadísticas para un índice  
+### <a name="b-update-the-statistics-for-an-index"></a>b. Actualizar las estadísticas para un índice  
  En este ejemplo se actualizan las estadísticas del índice `AK_SalesOrderDetail_rowguid` de la tabla `SalesOrderDetail`.  
   
 ```sql  
@@ -300,7 +300,7 @@ UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;
 UPDATE STATISTICS Customer;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Utilizar las estadísticas para mejorar el rendimiento de las consultas](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   

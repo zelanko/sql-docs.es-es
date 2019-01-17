@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05fc6068b221bfd21ffdfd0e6f8fff850bab179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755573"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797137"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Visualización de relaciones varios a varios en jerarquías derivadas (Master Data Services)
 
@@ -104,7 +103,7 @@ Para obtener instrucciones sobre cómo implementar el modelo de ejemplo Customer
 ## <a name="collections"></a>Colecciones  
  Las colecciones y las jerarquías explícitas se encuentran en desuso. El procedimiento almacenado de conversión (udpConvertCollectionAndConsolidatedMembersToLeaf) convierte los miembros de la colección en miembros hoja y crea jerarquías derivadas de varios a varios para capturar información de pertenencia a la colección.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

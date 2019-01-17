@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92aa4b83697bd424d4e6940f3c46b96033d5ecf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847014"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213134"
 ---
 # <a name="publication-properties-subscription-options"></a>Propiedades de la publicación, Opciones de suscripción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47847014"
  Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si se permite utilizar archivos de copia de seguridad para inicializar suscripciones. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Permitir suscriptores que no sean de SQL**  
- Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si la publicación admite suscriptores que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si se establece esta opción en **True** , se configuran otras propiedades de la publicación para admitir suscriptores que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta opción es de solo lectura si existen suscripciones; no se puede establecer en **True** si las opciones **Permitir suscripciones de actualización inmediata**, **Permitir suscripciones de actualización en cola**o **Permitir suscripciones punto a punto** están establecidas en **True**. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si la publicación admite suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si esta opción se establece en **True**, se configuran otras propiedades de la publicación para admitir suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta opción es de solo lectura si existen suscripciones; no se puede establecer en **True** si las opciones **Permitir suscripciones de actualización inmediata**, **Permitir suscripciones de actualización en cola**o **Permitir suscripciones punto a punto** están establecidas en **True**. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformación de datos  
  **Permitir transformaciones de datos**  
@@ -79,7 +79,7 @@ ms.locfileid: "47847014"
  Se aplica solamente a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si la publicación admite la replicación punto a punto. Si se establece esta opción en **True** , se configuran otras propiedades de la publicación para admitir la replicación punto a punto. Esta opción es de solo lectura si existen suscripciones. Esta opción no se puede establecer en **True** si las opciones **Permitir suscripciones de actualización inmediata** , **Permitir suscripciones de actualización en cola**o **Permitir suscriptores que no sean de SQL** están establecidas en **True**. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  **Permitir detección de conflictos de replicación punto a punto**  
- Se aplica solamente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Especifica si la detección de conflictos está habilitada para esta publicación. Para utilizar la detección de conflictos, todos los nodos deben estar ejecutando [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versión posterior, y debe haberse habilitado la detección para todos los ellos. Para utilizar la detección de conflictos también debe especificar un valor para **Identificador del autor del mismo nivel**. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+ Se aplica solamente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Especifica si la detección de conflictos está habilitada para esta publicación. Para utilizar la detección de conflictos, todos los nodos deben estar ejecutando [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versión posterior, y debe haberse habilitado la detección para todos los ellos. Para utilizar la detección de conflictos también debe especificar un valor para **Identificador del autor del mismo nivel**. Para obtener más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
  **Identificador del autor del mismo nivel**  
  Se aplica solamente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Especifica un Id. para un nodo en una topología punto a punto. Este Id. se utiliza para la detección de conflictos si **Permitir detección de conflictos de replicación punto a punto** se establece en **True**. Especifique un id. positivo distinto de cero que no se haya utilizado jamás en la topología. Para obtener una lista de identificadores que ya se hayan utilizado, consulte la tabla del sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
@@ -117,7 +117,7 @@ ms.locfileid: "47847014"
  Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si se debe optimizar la sincronización calculando previamente las filas de datos que pertenecen a cada partición. Tiene como valor predeterminado **True** si la publicación cumple los criterios de las particiones calculadas previamente. Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Optimizar sincronización**  
- Determina si se optimiza el proceso de mezcla almacenando metadatos adicionales en cada suscriptor. Esta optimización se ha sustituido con las particiones calculadas previamente; la opción **Optimizar sincronización** solo es relevante si la opción **Calcular particiones previamente** está establecida en **False**. Para más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Determina si se optimiza el proceso de mezcla almacenando metadatos adicionales en cada suscriptor. Esta optimización se ha sustituido con las particiones calculadas previamente; la opción **Optimizar sincronización** solo es relevante si la opción **Calcular particiones previamente** está establecida en **False**. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ### <a name="merge-processes"></a>Procesos de mezcla  
  **Limitar procesos simultáneos**  
@@ -126,7 +126,7 @@ ms.locfileid: "47847014"
  **Máximo de procesos simultáneos**  
  Indica el número máximo de Agentes de mezcla que se pueden ejecutar simultáneamente (requiere **Limitar procesos simultáneos**). Si el número de agentes que se están sincronizando supera el máximo, los agentes se ponen en cola hasta que el número es inferior al máximo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

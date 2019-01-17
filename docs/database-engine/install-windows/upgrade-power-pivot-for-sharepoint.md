@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 99e6a0b600dfe7adfe173176b69cd2b45ffdd223
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518301"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209214"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Actualización de PowerPivot para SharePoint
 
@@ -121,7 +121,7 @@ ms.locfileid: "52518301"
         > [!IMPORTANT]  
         >  La primera acción, **Actualizar solución de granja**, siempre se debe procesar primero. Registra los cmdlets de PowerShell que se utilizan para configurar el servidor. Si obtiene un error en esta acción, no debe continuar. En su lugar, utilice la información proporcionada por el error para diagnosticar y resolver el problema antes de procesar acciones adicionales en la lista de tareas.  
   
-    7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Cuando se hace clic en **Ejecutar**, aparece la advertencia siguiente recordándole que las acciones se procesan en modo por lotes: "**Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?**".  
+    7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "**Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?**".  
   
     8.  Haga clic en **Sí** para continuar.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "52518301"
   
     3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones**y, a continuación, haga clic en **Aceptar** para continuar.  
   
-    4.  Aparecerá la advertencia siguiente: "Los libros del Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se van a actualizar a la última versión. Se perderán las personalizaciones realizadas en los libros existentes. ¿Quiere continuar?".  
+    4.  Aparece la advertencia siguiente: "Los libros del Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] van a actualizarse a la última versión. Se perderán las personalizaciones realizadas en los libros existentes. ¿Quiere continuar?".  
   
          Esta advertencia se refiere a los libros del Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que informan sobre la actividad de actualización de datos. Si ha personalizado estos libros, los cambios realizados en ellos se perderán cuando los archivos existentes se reemplacen con versiones más recientes.  
   
@@ -197,13 +197,13 @@ ms.locfileid: "52518301"
         > [!IMPORTANT]  
         >  La primera acción, **Actualizar solución de granja**, siempre se debe procesar primero. Registra los cmdlets de PowerShell que se utilizan para configurar el servidor. Si obtiene un error en esta acción, no debe continuar. En su lugar, utilice la información proporcionada por el error para diagnosticar y resolver el problema antes de procesar acciones adicionales en la lista de tareas.  
   
-    8.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Cuando se hace clic en **Ejecutar**, aparece la advertencia siguiente recordando que las acciones se procesan en modo por lotes: "Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?".  
+    8.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?".  
   
     9. Haga clic en **Sí** para continuar.  
   
     10. La actualización de soluciones y características de la granja puede tardar varios minutos en completarse. Durante este periodo, las solicitudes de conexión para los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] generarán errores similares a "No se pueden actualizar datos" o "Se ha producido un error al intentar realizar la acción solicitada. Inténtelo de nuevo". Una vez finalizada la actualización, el servidor estará disponible y estos errores ya no se producirán.  
   
-8.  **Repita el proceso** para cada servicio SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) de la granja: 1) Ejecute el programa de instalación de SQL Server. 2) Ejecute la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+8.  **Repita el proceso** para cada servicio SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) de la granja: 1) Ejecute el programa de instalación de SQL Server. 2) Ejecute la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
 9. Para comprobar que la actualización se ha efectuado correctamente, ejecute los pasos posteriores a la actualización y compruebe la versión de los servidores de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja de servidores. Para más información, vea [Tareas de comprobación posteriores a la actualización](#verify) en este artículo y la sección siguiente.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "52518301"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Revise las implementaciones existentes para la siguiente información: el **Tipo** es Retracción o Implementación, el **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
+    2.  Revise las implementaciones existentes para la siguiente información: **Tipo**es Retracción o Implementación, **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
     3.  En las implementaciones o las retracciones relacionadas con soluciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copie el valor GUID para **JobId** y péguelo en el comando siguiente (use los comandos Marcar, Copiar y Pegar del menú Edición del shell para copiar el GUID):  
   
@@ -358,7 +358,7 @@ Get-PowerPivotSystemService
   
  Para obtener instrucciones paso a paso que le guiarán por todas las tareas de configuración posteriores a la instalación, vea [Configuración inicial (PowerPivot para SharePoint)](https://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Instalación de PowerPivot para SharePoint 2010](https://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   

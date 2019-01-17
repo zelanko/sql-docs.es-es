@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523476"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208804"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
 
@@ -36,18 +36,18 @@ Para instalar una versión de evaluación de SQL Server, vaya a [SQL Server Eval
    
 - Espacio mínimo disponible en disco duro: 2 GB.
   
-- Recomendado: memoria RAM mínima de 16 GB.
+- Recomendaciones: Un mínimo de 16 GB de RAM.
    
 - TCP/IP debe estar habilitado para que PolyBase funcione correctamente. TCP/IP está habilitado de manera predeterminada en todas las ediciones de SQL Server, excepto en las ediciones Developer y Express de SQL Server. Para que PolyBase funcione correctamente en las ediciones Developer y Express, debe habilitar la conectividad TCP/IP. Vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 - MSVC++ 2012. 
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 > PolyBase solo se puede instalar en una instancia de SQL Server por máquina.
-
+> 
 > [!IMPORTANT]
->
+> 
 > Para usar la funcionalidad de aplicación de cálculos en Hadoop, el clúster de Hadoop de destino debe tener los componentes principales de HDFS, YARN y MapReduce con el servidor de historial de trabajos habilitado. PolyBase envía la consulta de aplicación a través de MapReduce y extrae el estado del servidor de historial de trabajos. Si falta algún componente, se produce un error en la consulta.
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>Nodo único o grupo de escalado horizontal de PolyBase
@@ -108,10 +108,10 @@ Use los valores de esta tabla para crear scripts de instalación. Los servicios 
 |Control del programa de instalación de SQL Server|**Necesario**<br /><br /> /FEATURES=PolyBase|Selecciona la característica PolyBase.|  
 |motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica la contraseña de la cuenta del servicio de motor.|  
-|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio del Motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
+|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio para el motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
 |Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica la cuenta del servicio Movimiento de datos. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica la contraseña de la cuenta de movimiento de datos.|  
-|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio del servicio Movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
+|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio para el servicio de movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
 |PolyBase|**Opcional**<br /><br /> /PBSCALEOUT|Especifica si la instancia de SQL Server se usa como parte de un grupo de cálculo de escalabilidad horizontal de PolyBase. <br />Valores admitidos: True, False.|  
 |PolyBase|**Opcional**<br /><br /> /PBPORTRANGE|Especifica un intervalo de puertos con un mínimo de seis puertos para los servicios de PolyBase. Ejemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
@@ -124,10 +124,10 @@ Use los valores de esta tabla para crear scripts de instalación. Los servicios 
 |Control del programa de instalación de SQL Server|**Obligatorio**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore habilita la compatibilidad con todas las características de PolyBase, excepto la conectividad de Hadoop. PolyBaseJava habilita la conectividad de Hadoop. PolyBase habilita ambas. |  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica la contraseña de la cuenta del servicio de motor.|  
-|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio del Motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
+|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio para el motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
 |Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica la cuenta del servicio de movimiento de datos. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica la contraseña de la cuenta de movimiento de datos.|  
-|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio del servicio Movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
+|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio para el servicio de movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
 |PolyBase|**Opcional**<br /><br /> /PBSCALEOUT|Especifica si la instancia de SQL Server se usa como parte de un grupo de cálculo de escalabilidad horizontal de PolyBase. <br />Valores admitidos: True, False.|  
 |PolyBase|**Opcional**<br /><br /> /PBPORTRANGE|Especifica un intervalo de puertos con un mínimo de seis puertos para los servicios de PolyBase. Ejemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 

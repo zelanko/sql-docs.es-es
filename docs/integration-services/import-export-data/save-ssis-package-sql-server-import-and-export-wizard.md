@@ -13,12 +13,12 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 001ca15788a47a4089739b10f884ef9a81dfa2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d89e15ed8b14c9866e9ad217a973272480eb26c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681693"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204824"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Guardar el paquete SSIS (Asistente para importación y exportación de SQL Server)
   Si en la página **Guardar y ejecutar el paquete** especificó que quiere guardar la configuración como un paquete de SQL Server Integration Services (SSIS), el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Guardar el paquete SSIS**. En esta página, especifique opciones adicionales para guardar el paquete que creó el asistente.  
@@ -40,7 +40,7 @@ En la captura de pantalla siguiente se muestra la primera parte de la página **
  Escriba una descripción para el paquete. Como procedimiento recomendado, describa el fin del paquete para que los paquetes se documenten por sí mismos y su mantenimiento resulte más sencillo.  
   
  **Destino**  
- El destino ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o sistema de archivos) que ha especificado previamente para el paquete. Si quiere guardar el paquete en otro destino, vuelva a la página **Guardar y ejecutar paquete** .
+ El destino ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o sistema de archivos) que se ha especificado previamente para el paquete. Si quiere guardar el paquete en otro destino, vuelva a la página **Guardar y ejecutar paquete** .
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>Captura de pantalla: guardar el paquete en SQL Server
 
@@ -111,7 +111,7 @@ La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** 
 ## <a name="whats-next"></a>¿Qué sigue?  
  Después de especificar opciones adicionales para guardar el paquete, la página siguiente es **Complete el asistente**. En esta página, revise las opciones seleccionadas en el asistente y luego inicie la operación. Para obtener más información, vea [Finalización del asistente](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Guardar paquetes](../../integration-services/save-packages.md)  
 [Ejecutar paquetes de Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)

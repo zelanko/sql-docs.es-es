@@ -1,6 +1,7 @@
 ---
-title: DTC de clúster para grupos de disponibilidad de SQL Server 2016 | Microsoft Docs
-ms.custom: ''
+title: Cómo agrupar en clústeres el servicio DTC para un grupo de disponibilidad
+description: 'Se describen los requisitos y los pasos para agrupar en clústeres el servicio Coordinador de transacciones distribuidas (DTC) de Microsoft para un grupo de disponibilidad Always On. '
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,26 +12,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0bcbbd26ed97fd0df20abfb997495105fe2f726a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601385"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203314"
 ---
-# <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>DTC de clúster para grupos de disponibilidad de SQL Server 2016
+# <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Cómo agrupar en clústeres el servicio DTC para un grupo de disponibilidad Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este tema se describen los requisitos y los pasos para agrupar en clústeres el servicio Microsoft DTC (Coordinador de transacciones distribuidas) para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obtener más información sobre las transacciones distribuidas y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
- ## <a name="checklist-preliminary-requirements"></a>Lista de comprobación: requisitos preliminares
+ ## <a name="checklist-preliminary-requirements"></a>Lista de comprobación: Requisitos preliminares
 ||Tarea|Referencia|  
 |------|-----------------|----------|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Asegúrese de que todos los nodos, servicios y el grupo de disponibilidad se han configurado correctamente.|[Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Asegúrese de que se han cumplido los requisitos de DTC del grupo de disponibilidad.|[Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
-## <a name="checklist-clustered-dtc-resource-dependencies"></a>Lista de comprobación: dependencias de recursos de DTC en clúster
+## <a name="checklist-clustered-dtc-resource-dependencies"></a>Lista de comprobación: Dependencias de recursos de DTC en clúster
 ||Tarea|Referencia|  
 |------|-----------------|----------|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Una unidad de almacenamiento compartido.|[Configuración de la unidad de almacenamiento compartido](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Considere la posibilidad de usar la letra de unidad **M**.|
@@ -66,4 +67,4 @@ Una vez que haya creado el recurso de grupo de disponibilidad, cree un recurso D
 
 [SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (Compatibilidad con SQL Server 2016 DTC en grupos de disponibilidad) 
 
-[Vínculo externo a un artículo sobre cómo configurar DTC para una instancia agrupada de SQL Server con Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[Vínculo externo: a un artículo sobre cómo configurar DTC para una instancia en clúster de SQL Server con Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

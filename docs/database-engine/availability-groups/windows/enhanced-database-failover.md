@@ -1,6 +1,7 @@
 ---
-title: Agregar conmutación por error de base de datos mejorada a un grupo de disponibilidad (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Habilitación de la conmutación por error de base de datos mejorada para un grupo de disponibilidad
+description: Pasos para habilitar la conmutación por error de base de datos mejorada, lo que desencadena una conmutación por error si una base de datos en un grupo de disponibilidad Always On ya no puede escribir transacciones.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
@@ -13,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dee39cb437011c5e894eb54df91c7282db5fe08
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706143"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211664"
 ---
-# <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Agregar conmutación por error de base de datos mejorada a un grupo de disponibilidad (SQL Server)
+# <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Habilitación de la conmutación por error de base de datos mejorada en un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En SQL Server 2012 y 2014, si una base de datos que participa en un grupo de disponibilidad en la réplica principal pierde la capacidad para escribir transacciones, no desencadenará una conmutación por error, aun cuando las réplicas estén sincronizadas y configuradas para la conmutación automática por error.

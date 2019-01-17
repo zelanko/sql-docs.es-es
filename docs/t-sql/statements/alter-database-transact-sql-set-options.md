@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545452"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215391"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL) 
 
@@ -306,7 +306,7 @@ El estado de esta opción se puede determinar mediante el examen de la columna i
 > [!NOTE]  
 >  La creación de reflejo de la base de datos requiere AUTO_CLOSE OFF.  
   
-Cuando la base de datos se establece en AUTOCLOSE = ON, una operación que inicia el cierre automático de la base de datos borra la memoria caché de planes para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y posterior, para cada almacén de caché borrado de la memoria caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché '%s' (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.  
+Cuando la base de datos se establece en AUTOCLOSE = ON, una operación que inicia el cierre automático de la base de datos borra la memoria caché de planes para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y posterior, para cada almacén de caché borrado de la memoria caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.  
  
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }  
 ON  
@@ -510,7 +510,7 @@ EMERGENCY
 La base de datos está marcada como READ_ONLY, el registro está deshabilitado y el acceso está limitado a miembros del rol fijo de servidor sysadmin. EMERGENCY se utiliza principalmente para la solución de problemas. Por ejemplo, una base de datos marcada como sospechosa debido a un archivo de registro dañado se puede establecer en el estado EMERGENCY. Esto puede habilitar el acceso de solo lectura del administrador del sistema a la base de datos. Solamente los miembros del rol fijo de servidor sysadmin pueden establecer una base de datos en el estado EMERGENCY.  
   
 > [!NOTE]  
-> **Permisos:** se necesita el permiso ALTER DATABASE para la base de datos de asunto con el fin de cambiar una base de datos al estado Sin conexión o Emergencia. Se requiere el permiso ALTER ANY DATABASE de nivel de servidor para mover una base de datos de Sin conexión a En línea.  
+> **Permisos:** se requiere el permiso ALTER DATABASE para la base de datos de asunto con el fin de cambiar una base de datos al estado Sin conexión o Emergencia. Se requiere el permiso ALTER ANY DATABASE de nivel de servidor para mover una base de datos de Sin conexión a En línea.  
   
 El estado de esta opción se puede determinar mediante el examen de las columnas state y state_desc en la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o mediante la propiedad Status de la función [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md). Para más información, consulte [Database States](../../relational-databases/databases/database-states.md).  
   
@@ -668,7 +668,7 @@ Consulte [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transac
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } controla si la base de datos puede crear páginas iniciales con una extensión mixta para las primeras ocho páginas de una tabla o un índice.  
  
@@ -695,7 +695,7 @@ La configuración actual de esta opción se puede determinar mediante el examen 
   
 **\<query_store_options> ::=**  
   
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Se aplica a **: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
 Controla si el almacén de consultas está habilitado en esta base de datos y también controla la eliminación del contenido del almacén de consultas. Para obtener más información, vea [Escenarios de uso del Almacén de consultas](../../relational-databases/performance/query-store-usage-scenarios.md). 
@@ -866,7 +866,7 @@ NEW_BROKER
 Especifica que la base de datos debe recibir un identificador de agente nuevo. Dado que la base de datos se considera como un Service Broker nuevo, todas las conversaciones existentes en la base de datos se quitan inmediatamente sin generar mensajes de finalización de diálogo. Cualquier ruta que haga referencia al identificador de [!INCLUDE[ssSB](../../includes/sssb-md.md)] anterior se debe volver a crear con el nuevo identificador.  
   
 ERROR_BROKER_CONVERSATIONS  
-Especifica que la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitada. Esto conserva el identificador [!INCLUDE[ssSB](../../includes/sssb-md.md)] existente de la base de datos. [!INCLUDE[ssSB](../../includes/sssb-md.md)] finaliza todas las conversaciones de la base de datos con un error. Esto permite que las aplicaciones realicen una limpieza regular de las conversaciones existentes.  
+Especifica que la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitada. Esto conserva el identificador de [!INCLUDE[ssSB](../../includes/sssb-md.md)] existente para la base de datos. [!INCLUDE[ssSB](../../includes/sssb-md.md)] finaliza todas las conversaciones de la base de datos con un error. Esto permite que las aplicaciones realicen una limpieza regular de las conversaciones existentes.  
   
 HONOR_BROKER_PRIORITY {ON | OFF}  
 ON  
@@ -1037,7 +1037,7 @@ QUOTED_IDENTIFIER { ON | OFF }
 ON  
 Las comillas dobles se pueden usar para identificadores delimitados.  
   
-Todas las cadenas delimitadas por comillas dobles se interpretan como identificadores de objetos. Los identificadores entre comillas no tienen que adaptarse a las reglas de [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Pueden ser palabras clave e incluir caracteres que no suelen permitirse en los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si una comilla simple (') forma parte de la cadena literal, puede representarse mediante comillas dobles (").  
+Todas las cadenas delimitadas por comillas dobles se interpretan como identificadores de objetos. Los identificadores entre comillas no tienen que adaptarse a las reglas de [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Pueden ser palabras clave e incluir caracteres que no suelen permitirse en los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si una comilla simple (') forma parte de la cadena literal, puede representarse mediante comillas dobles (").  
   
 OFF  
 Los identificadores no se pueden incluir entre comillas y deben seguir todas las reglas de [!INCLUDE[tsql](../../includes/tsql-md.md)] para los identificadores. Los literales se pueden delimitar con comillas simples o dobles.  
@@ -1119,21 +1119,21 @@ No todas las opciones de base de datos usan la cláusula WITH \<termination> ni 
 |\<db_user_access_option>|Sí|Sí|  
 |\<db_update_option>|Sí|Sí|  
 |\<delayed_durability_option>|Sí|Sí|  
-|\<external_access_option>|Sí|no|  
-|\<cursor_option>|Sí|no|  
-|\<auto_option>|Sí|no|  
-|\<sql_option>|Sí|no|  
-|\<recovery_option>|Sí|no|  
-|\<target_recovery_time_option>|no|Sí|  
-|\<database_mirroring_option>|no|no|  
-|ALLOW_SNAPSHOT_ISOLATION|no|no|  
-|READ_COMMITTED_SNAPSHOT|no|Sí|  
+|\<external_access_option>|Sí|No|  
+|\<cursor_option>|Sí|No|  
+|\<auto_option>|Sí|No|  
+|\<sql_option>|Sí|No|  
+|\<recovery_option>|Sí|No|  
+|\<target_recovery_time_option>|No|Sí|  
+|\<database_mirroring_option>|No|No|  
+|ALLOW_SNAPSHOT_ISOLATION|No|No|  
+|READ_COMMITTED_SNAPSHOT|No|Sí|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Sí|Sí|  
-|\<service_broker_option>|Sí|no|  
+|\<service_broker_option>|Sí|No|  
 |DATE_CORRELATION_OPTIMIZATION|Sí|Sí|  
 |\<parameterization_option>|Sí|Sí|  
 |\<change_tracking_option>|Sí|Sí|  
-|\<db_encryption_option>|Sí|no|  
+|\<db_encryption_option>|Sí|No|  
   
 La memoria caché de planes para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se borra si se establece alguna de las opciones siguientes:  
   
@@ -1154,7 +1154,7 @@ La memoria caché de procedimientos también se vacía en los escenarios siguien
 - Restaura una copia de seguridad de una base de datos  
 -   Separa una base de datos.  
   
-Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la memoria caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché '%s' (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.  
+Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -1170,7 +1170,7 @@ GO
   
 ```  
   
-### <a name="b-setting-the-database-to-readonly"></a>B. Establecer la base de datos en READ_ONLY  
+### <a name="b-setting-the-database-to-readonly"></a>b. Establecer la base de datos en READ_ONLY  
 El cambio del estado de una base de datos o un grupo de archivos a READ_ONLY o READ_WRITE requiere el acceso exclusivo a la base de datos. En el siguiente ejemplo la base de datos se establece en el modo `SINGLE_USER` para obtener acceso exclusivo. A continuación, el ejemplo establece el estado de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en `READ_ONLY` y devuelve el acceso a la base de datos a todos los usuarios.  
   
 > [!NOTE]  
@@ -1234,7 +1234,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);  
 ```  
   
-En el ejemplo siguiente se muestra cómo deshabilitar el seguimiento de cambios para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+En el ejemplo siguiente se muestra cómo deshabilitar el seguimiento de cambios para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -1242,7 +1242,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. Habilitar el almacén de consultas  
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Se aplica a **: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 En el ejemplo siguiente se habilita el almacén de consultas y configura los parámetros de almacén de consultas.  
   
@@ -1258,7 +1258,7 @@ SET QUERY_STORE = ON
     );  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
 [Creación de reflejo de la base de datos de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
@@ -1870,7 +1870,7 @@ QUOTED_IDENTIFIER { ON | OFF }
 ON  
 Las comillas dobles se pueden usar para identificadores delimitados.  
   
-Todas las cadenas delimitadas por comillas dobles se interpretan como identificadores de objetos. Los identificadores entre comillas no tienen que adaptarse a las reglas de [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Pueden ser palabras clave e incluir caracteres que no suelen permitirse en los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si una comilla simple (') forma parte de la cadena literal, puede representarse mediante comillas dobles (").  
+Todas las cadenas delimitadas por comillas dobles se interpretan como identificadores de objetos. Los identificadores entre comillas no tienen que adaptarse a las reglas de [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Pueden ser palabras clave e incluir caracteres que no suelen permitirse en los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si una comilla simple (') forma parte de la cadena literal, puede representarse mediante comillas dobles (").  
   
 OFF  
 Los identificadores no se pueden incluir entre comillas y deben seguir todas las reglas de [!INCLUDE[tsql](../../includes/tsql-md.md)] para los identificadores. Los literales se pueden delimitar con comillas simples o dobles.  
@@ -1946,20 +1946,20 @@ No todas las opciones de base de datos usan la cláusula WITH \<termination> ni 
   
 |Categoría de opciones|Se puede especificar con otras opciones|Puede usar la cláusula WITH \<termination>|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|Sí|no|  
+|\<auto_option>|Sí|No|  
 |\<change_tracking_option>|Sí|Sí|  
-|\<cursor_option>|Sí|no|  
-|\<db_encryption_option>|Sí|no|  
+|\<cursor_option>|Sí|No|  
+|\<db_encryption_option>|Sí|No|  
 |\<db_update_option>|Sí|Sí|  
 |\<db_user_access_option>|Sí|Sí|  
 |\<delayed_durability_option>|Sí|Sí|  
 |\<parameterization_option>|Sí|Sí|  
-|ALLOW_SNAPSHOT_ISOLATION|no|no|  
-|READ_COMMITTED_SNAPSHOT|no|Sí|  
+|ALLOW_SNAPSHOT_ISOLATION|No|No|  
+|READ_COMMITTED_SNAPSHOT|No|Sí|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Sí|Sí|  
 |DATE_CORRELATION_OPTIMIZATION|Sí|Sí|  
-|\<sql_option>|Sí|no|  
-|\<target_recovery_time_option>|no|Sí|  
+|\<sql_option>|Sí|No|  
+|\<target_recovery_time_option>|No|Sí|  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -1981,7 +1981,7 @@ GO
   
 ```  
   
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitar el aislamiento de instantánea en una base de datos  
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>b. Habilitar el aislamiento de instantánea en una base de datos  
 En el siguiente ejemplo se habilita la opción del marco de aislamiento de instantánea para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
@@ -2046,7 +2046,7 @@ SET QUERY_STORE = ON
     );  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
 [Creación de reflejo de la base de datos de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
 [Utilizar las estadísticas para mejorar el rendimiento de las consultas](../../relational-databases/statistics/statistics.md)   
@@ -2598,7 +2598,7 @@ QUOTED_IDENTIFIER { ON | OFF }
 ON  
 Las comillas dobles se pueden usar para identificadores delimitados.  
   
-Todas las cadenas delimitadas por comillas dobles se interpretan como identificadores de objetos. Los identificadores entre comillas no tienen que adaptarse a las reglas de [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Pueden ser palabras clave e incluir caracteres que no suelen permitirse en los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si una comilla simple (') forma parte de la cadena literal, puede representarse mediante comillas dobles (").  
+Todas las cadenas delimitadas por comillas dobles se interpretan como identificadores de objetos. Los identificadores entre comillas no tienen que adaptarse a las reglas de [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Pueden ser palabras clave e incluir caracteres que no suelen permitirse en los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si una comilla simple (') forma parte de la cadena literal, puede representarse mediante comillas dobles (").  
   
 OFF  
 Los identificadores no se pueden incluir entre comillas y deben seguir todas las reglas de [!INCLUDE[tsql](../../includes/tsql-md.md)] para los identificadores. Los literales se pueden delimitar con comillas simples o dobles.  
@@ -2683,7 +2683,7 @@ GO
   
 ```  
   
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitar el aislamiento de instantánea en una base de datos  
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>b. Habilitar el aislamiento de instantánea en una base de datos  
 En el siguiente ejemplo se habilita la opción del marco de aislamiento de instantánea para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
@@ -2748,7 +2748,7 @@ SET QUERY_STORE = ON
     );  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
 [Creación de reflejo de la base de datos de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
 [Utilizar las estadísticas para mejorar el rendimiento de las consultas](../../relational-databases/statistics/statistics.md)   

@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ec86bf23a2fdf951da6d64f934ce8f62f6b3cb5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f1f0e5180c03a033cd854aba9f3261e5a89960f5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409902"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210435"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52409902"
   
  Implemente RLS mediante la instrucción [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] y los predicados creados como [funciones con valores de tabla insertadas](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenerlo](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenerla](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 > [!NOTE]
 > Azure SQL Data Warehouse solo admite los predicados de filtro. En la actualidad, los predicados de bloqueo no se admiten en Azure SQL Data Warehouse.
@@ -52,7 +52,7 @@ ms.locfileid: "52409902"
   
  El acceso a los datos de nivel de fila de una tabla está restringido por un predicado de seguridad que se define como una función con valores de tabla insertada. Luego, la función se invoca y una directiva de seguridad la aplica. En el caso de los predicados de filtro, la aplicación desconoce las filas que se han filtrado del conjunto de resultados; si se filtran todas, se devolverá un conjunto nulo. En el caso de los predicados de bloqueo, las operaciones que infrinjan el predicado generarán un error.  
   
- Los predicados de filtro se aplican al leer los datos de la tabla base y afectan a todas las operaciones get: **SELECT**, **DELETE** (el usuario no puede eliminar las filas filtradas) y **UPDATE** (el usuario no puede actualizar las filas filtradas, aunque es posible actualizar las filas de modo que se filtren después). Los predicados de bloqueo afectan a todas las operaciones de escritura.  
+ Los predicados de filtro se aplican al leer los datos desde la tabla base y afectan a todas las operaciones get: **SELECT**, **DELETE** (el usuario no puede eliminar las filas filtradas) y **UPDATE** (el usuario no puede actualizar las filas filtradas, aunque se pueden actualizar de modo que se filtren después). Los predicados de bloqueo afectan a todas las operaciones de escritura.  
   
 -   Los predicados AFTER INSERT y AFTER UPDATE pueden impedir que los usuarios actualicen las filas con valores que infrinjan el predicado.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "52409902"
   
 -   Evite el uso de combinaciones de tablas de forma excesiva en funciones de predicado para maximizar el rendimiento.  
   
- Evite la lógica del predicado que dependa de [opciones SET](../../t-sql/statements/set-statements-transact-sql.md)específicas de la sesión: aunque es improbable que se usen en aplicaciones prácticas, las funciones de predicado cuya lógica depende de determinadas opciones **SET** específicas de la sesión pueden perder información si los usuarios pueden ejecutar consultas arbitrarias. Por ejemplo, una función de predicado que convierte implícitamente una cadena en **datetime** podría filtrar filas diferentes según la opción **SET DATEFORMAT** de la sesión actual. En general, las funciones de predicado deben cumplir las reglas siguientes:  
+ Evite la lógica del predicado que dependa de [opciones SET](../../t-sql/statements/set-statements-transact-sql.md) específicas de la sesión: aunque es improbable que se usen en aplicaciones prácticas, las funciones de predicado cuya lógica depende de determinadas opciones **SET** específicas de la sesión pueden perder información si los usuarios pueden ejecutar consultas arbitrarias. Por ejemplo, una función de predicado que convierte implícitamente una cadena en **datetime** podría filtrar filas diferentes según la opción **SET DATEFORMAT** de la sesión actual. En general, las funciones de predicado deben cumplir las reglas siguientes:  
   
 -   Las funciones de predicado no deben convertir implícitamente cadenas de caracteres en **date**, **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset** o viceversa, ya que estas conversiones se ven afectadas por las opciones [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) y [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). En su lugar, use la función **CONVERT** y especifique explícitamente el parámetro de estilo.  
   
@@ -142,10 +142,10 @@ ms.locfileid: "52409902"
 -   Las funciones de predicado no deben comparar cadenas concatenadas con **NULL**, ya que este comportamiento se ve afectado por la opción [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
    
   
-##  <a name="SecNote"></a> Nota de seguridad: ataques del lado de canal  
- **Administrador de directivas de seguridad malintencionado:** es importante observar que un administrador de directivas de seguridad malintencionado, con permisos suficientes para crear una directiva de seguridad en una columna confidencial, y con permisos para crear o modificar funciones con valores de tabla insertadas, puede conspirar con otro usuario que tenga permisos SELECT en una tabla para exfiltrar datos creando malintencionadamente funciones con valores de tabla insertadas diseñadas para usar ataques del lado de canal para inferir los datos. Estos ataques necesitarían una confabulación (o excesivos permisos concedidos a un usuario malintencionado) y es probable que necesiten varios cambios de la directiva (con permisos para quitar el predicado con el fin de romper el enlace de esquema), modificación de las funciones con valores de tabla insertadas y ejecución repetida de instrucciones SELECT en la tabla de destino. Se recomienda limitar los permisos según sea necesario y supervisar cualquier actividad sospechosa, como el cambio constante de las directivas y las funciones con valores de tabla insertadas relacionadas con la seguridad de nivel de fila.  
+##  <a name="SecNote"></a> Nota de seguridad: Ataques del lado de canal  
+ **Administrador de directivas de seguridad malintencionado:** Es importante observar que un administrador de directivas de seguridad malintencionado, con permisos suficientes para crear una directiva de seguridad en una columna confidencial, y con permisos para crear o modificar funciones insertadas con valores de tabla, puede conspirar con otro usuario que tenga permisos SELECT en una tabla para exfiltrar datos creando de forma malintencionada funciones insertadas con valores de tabla diseñadas para usar ataques del lado de canal para inferir los datos. Estos ataques necesitarían una confabulación (o excesivos permisos concedidos a un usuario malintencionado) y es probable que necesiten varios cambios de la directiva (con permisos para quitar el predicado con el fin de romper el enlace de esquema), modificación de las funciones con valores de tabla insertadas y ejecución repetida de instrucciones SELECT en la tabla de destino. Se recomienda limitar los permisos según sea necesario y supervisar cualquier actividad sospechosa, como el cambio constante de las directivas y las funciones con valores de tabla insertadas relacionadas con la seguridad de nivel de fila.  
   
- **Consultas cuidadosamente diseñadas:** es posible perder información mediante el uso de consultas cuidadosamente diseñadas. Por ejemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiría que un usuario malintencionado sepa que el salario de Juan García es 100.000 $. Aunque hay un predicado de seguridad para impedir que un usuario malintencionado consulte directamente el salario de otras personas, el usuario puede determinar el momento en que la consulta devuelve una excepción de división por cero.  
+ **Consultas cuidadosamente diseñadas:** Es posible perder información mediante el uso de consultas cuidadosamente diseñadas. Por ejemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiría que un usuario malintencionado sepa que el salario de Juan García es 100.000 $. Aunque hay un predicado de seguridad para impedir que un usuario malintencionado consulte directamente el salario de otras personas, el usuario puede determinar el momento en que la consulta devuelve una excepción de división por cero.  
    
   
 ##  <a name="Limitations"></a> Compatibilidad entre características  
@@ -165,7 +165,7 @@ ms.locfileid: "52409902"
   
 -   **Seguimiento de cambios:** el seguimiento de cambios puede perder la clave principal de las filas que se deben filtrar a los usuarios con permisos **SELECT** y **VIEW CHANGE TRACKING** . No se pierden los valores de datos reales; solo el hecho de que la columna A se actualizó, se insertó o se eliminó de la fila con la clave principal B. Esto es problemático si la clave principal contiene un elemento confidencial, como un número del seguro social. Sin embargo, en la práctica, **CHANGETABLE** casi siempre se combina con la tabla original para obtener los datos más recientes.  
   
--   **Búsqueda de texto completo** se espera una disminución del rendimiento en las consultas que usan las siguientes funciones de búsqueda de texto completo y búsqueda semántica, debido a una combinación adicional que se ha introducido para aplicar seguridad de nivel de fila y evitar la pérdida de las claves principales de las filas que se deben filtrar: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
+-   **Búsqueda de texto completo** Se espera una disminución del rendimiento en las consultas que usan las siguientes funciones de búsqueda de texto completo y búsqueda semántica, debido a una combinación adicional introducida para aplicar seguridad de nivel de fila y evitar la pérdida de las claves principales de las filas que se deben filtrar: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
 -   **Índices de almacén de columnas** RLS no es compatible con los índices de almacén de columnas en clúster y no clúster. Pero como la seguridad de nivel de fila aplica una función, es posible que el optimizador pueda modificar el plan de consulta para que no use el modo por lotes.  
   
@@ -370,7 +370,7 @@ REVERT;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   

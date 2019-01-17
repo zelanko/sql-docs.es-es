@@ -25,12 +25,12 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db6f438bc4a4b241b939806fd4dacef6bb146be8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 541bdcde5841394c3a28428a9e21ae4797e75fd4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703453"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202964"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ON ALL SERVER
   
 ## <a name="arguments"></a>Argumentos  
  *IF EXISTS*  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
  Quita el desencadenador condicionalmente solo si ya existe.  
   
@@ -112,7 +112,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
    DROP TRIGGER employee_insupd;  
 ```  
   
-### <a name="b-dropping-a-ddl-trigger"></a>B. Quitar un desencadenador DDL  
+### <a name="b-dropping-a-ddl-trigger"></a>b. Quitar un desencadenador DDL  
  En el siguiente ejemplo se quita el desencadenador DDL `safety`.  
   
 > [!IMPORTANT]  
@@ -123,7 +123,7 @@ DROP TRIGGER safety
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

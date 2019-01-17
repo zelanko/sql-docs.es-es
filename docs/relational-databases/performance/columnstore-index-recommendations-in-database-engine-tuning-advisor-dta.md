@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor, columnstore index
 - Database Engine Tuning Advisor, columnstore and rowstore indexes
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: f0e6c5641983c3528114120feb17c4f93948e926
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ed6d36c68fad62155261181d4134e097f59dd163
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403020"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328775"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Para habilitar las recomendaciones del almacén de columnas cuando se usa la uti
 
 Para obtener información sobre la utilidad de línea de comandos dta.exe, vea [dta (utilidad)](../../tools/dta/dta-utility.md).
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [Guía de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)       
 [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)      
 [Tutorial: Asistente para la optimización de motor de base de datos](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)

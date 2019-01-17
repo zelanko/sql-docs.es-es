@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10532564d2310ad3b8eaf28c2693bafb423d81a2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b621fa1c1b21e6b1131c65524675c3da9890e6ac
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658860"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980161"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Un **CurvePolygon** es una superficie cerrada topológicamente definida por un anillo de límite exterior y cero o más anillos interiores  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las características espaciales de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluido el subtipo **CurvePolygon** , descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+> Para obtener una descripción detallada y ejemplos de las características espaciales de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluido el subtipo **CurvePolygon** , descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Los siguientes criterios definen atributos de una instancia de **CurvePolygon** :  
   
@@ -46,11 +46,11 @@ ms.locfileid: "51658860"
 3.  Los puntos inicial y final tienen las mismas coordenadas X e Y.  
   
     > [!NOTE]  
-    >  Se omiten los valores Z y M.  
+    > Se omiten los valores Z y M.  
   
- El siguiente ejemplo muestra instancias aceptadas de **CurvePolygon** .  
+El siguiente ejemplo muestra instancias aceptadas de **CurvePolygon** .  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0, 0 0))';  
 DECLARE @g3 geometry = 'CURVEPOLYGON((0 0 1, 0 0 2, 0 0 3, 0 0 3))'  
@@ -58,67 +58,57 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` aunque los puntos inicial y final tengan distintos valores Z porque se omiten los valores Z. `@g5` se acepta aunque la instancia del tipo **geography** no sea válida.  
+`@g3` aunque los puntos inicial y final tengan distintos valores Z porque se omiten los valores Z. `@g5` se acepta aunque la instancia del tipo **geography** no sea válida.  
   
- Los ejemplos siguientes inician `System.FormatException`.  
+Los ejemplos siguientes inician `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON((0 5, 0 0, 0 0, 0 0))';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';  
 ```  
   
- `@g1` no se acepta porque los puntos inicial y final no tienen el mismo valor Y. `@g2` no se acepta porque el anillo no tiene suficientes puntos.  
+`@g1` no se acepta porque los puntos inicial y final no tienen el mismo valor Y. `@g2` no se acepta porque el anillo no tiene suficientes puntos.  
   
 ### <a name="valid-instances"></a>Instancias válidas  
- Para que una instancia de **CurvePolygon** sea válida los anillos exterior e interior deben cumplir los siguientes criterios:  
+Para que una instancia de **CurvePolygon** sea válida los anillos exterior e interior deben cumplir los siguientes criterios:  
   
 1.  Solo pueden tocar en puntos de tangencia únicos.  
-  
 2.  No pueden cruzarse entre sí.  
-  
 3.  Cada anillo debe contener cuatro puntos como mínimo.  
-  
 4.  Cada anillo debe ser un tipo de curva aceptable.  
   
- Las instancias de**CurvePolygon** tienen también que cumplir criterios concretos en función de que sean tipos de datos **geometry** o **geography** .  
+Las instancias de**CurvePolygon** tienen también que cumplir criterios concretos en función de que sean tipos de datos **geometry** o **geography** .  
   
 #### <a name="geometry-data-type"></a>Tipo de datos geometry  
- Una instancia de **geometryCurvePolygon** válida debe tener los siguientes atributos:  
+Una instancia de **geometryCurvePolygon** válida debe tener los siguientes atributos:  
   
 1.  Todos los anillos interiores deben estar contenidos en el anillo exterior.  
-  
 2.  Puede tener varios anillos interiores, pero un anillo interior no puede contener otro anillo interior.  
-  
 3.  Ningún anillo puede cruzarse consigo mismo ni con otros.  
-  
 4.  Los anillos solo pueden tocar en puntos de tangencia únicos (el número de puntos donde el contacto de los anillos debe ser finito).  
-  
 5.  El interior del polígono debe estar conectado.  
   
- En el siguiente ejemplo se muestran instancias válidas de **geometryCurvePolygon** .  
+En el siguiente ejemplo se muestran instancias válidas de **geometryCurvePolygon** .  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
- Las instancias de CurvePolygon tienen las mismas reglas de validez que las de Poligon con la excepción de que las instancias de CurvePolygon pueden aceptar los nuevos tipos de segmento de arco circular. Para obtener más ejemplos de instancias que son válidas o que no lo son, vea [Polygon](../../relational-databases/spatial/polygon.md).  
+Las instancias de CurvePolygon tienen las mismas reglas de validez que las de Poligon con la excepción de que las instancias de CurvePolygon pueden aceptar los nuevos tipos de segmento de arco circular. Para obtener más ejemplos de instancias que son válidas o que no lo son, vea [Polygon](../../relational-databases/spatial/polygon.md).  
   
 #### <a name="geography-data-type"></a>Tipo de datos geography  
- Una instancia de **geographyCurvePolygon** válida debe tener los siguientes atributos:  
+Una instancia de **geographyCurvePolygon** válida debe tener los siguientes atributos:  
   
 1.  El interior del polígono está conectado siguiendo la regla de la izquierda.  
-  
 2.  Ningún anillo puede cruzarse consigo mismo ni con otros.  
-  
 3.  Los anillos solo pueden tocar en puntos de tangencia únicos (el número de puntos donde el contacto de los anillos debe ser finito).  
-  
 4.  El interior del polígono debe estar conectado.  
   
- En el siguiente ejemplo se muestra una instancia de CurvePolygon geography válida.  
+En el siguiente ejemplo se muestra una instancia de CurvePolygon geography válida.  
   
-```  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -122.3 47))';  
 SELECT @g.STIsValid();  
 ```  
@@ -133,7 +123,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Declarar y crear instancias de una instancia geometry con un CurvePolygon en la misma instrucción  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>b. Declarar y crear instancias de una instancia geometry con un CurvePolygon en la misma instrucción  
  Este fragmento de código muestra cómo declarar e inicializar una instancia de geometry con un **CurvePolygon** en la misma instrucción:  
   
 ```sql  
@@ -182,9 +172,9 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- @g1 y @g2 usan el mismo anillo de límite exterior: un círculo con un radio de 5 y los dos usan un cuadrado para un anillo interior.  Sin embargo, la instancia de @g1 es válida, pero la instancia de @g2 no lo es.  La razón de que @g2 no sea válida es que el anillo interior divide el espacio interior limitado por el anillo exterior en cuatro regiones independientes.  El siguiente dibujo muestra lo que ha sucedido:  
+ `@g1` y `@g2` usan el mismo anillo de límite exterior: un círculo con un radio de 5 y los dos usan un cuadrado para un anillo interior.  Sin embargo, la instancia de `@g1` es válida, pero la instancia de `@g2` no lo es. La razón de que @g2 no sea válida es que el anillo interior divide el espacio interior limitado por el anillo exterior en cuatro regiones independientes. El siguiente dibujo muestra lo que ha sucedido:  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   

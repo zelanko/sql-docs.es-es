@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
@@ -16,14 +15,14 @@ ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 806868f2ee57fc4c89ac9f90a13981d97e125fbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d4703d6a5e8438404ba282b09b6af6edf40ea71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788643"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215427"
 ---
-# <a name="overview-importing-data-from-tables-master-data-services"></a>Información general: importación de datos de tablas (Master Data Services)
+# <a name="overview-importing-data-from-tables-master-data-services"></a>Información general: Importación de datos de tablas (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -31,8 +30,8 @@ ms.locfileid: "47788643"
   
  Para obtener instrucciones sobre cómo agregar y modificar datos, consulte [Importar datos de tablas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
-> [!NOTE]  
->  También puede usar el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]para agregar datos al repositorio de MDS (base de datos de[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ) desde Excel. Para obtener más información, consulte [Información general: Importación de datos desde Excel &#40;complemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+> [!NOTE]
+>  También puede usar el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para agregar datos al repositorio de MDS (base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) desde Excel. Para más información, vea [Información general: Importación de datos desde Excel &#40;complemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  Cuando agregue o modifique datos, puede hacer lo siguiente:  
   

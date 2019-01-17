@@ -1,6 +1,7 @@
 ---
-title: Acerca del acceso de conexión de cliente a réplicas de disponibilidad (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Tipos de conexiones de cliente a réplicas dentro de un grupo de disponibilidad
+description: Obtenga información sobre los diferentes tipos de conexiones que los clientes pueden realizar a la réplica principal o secundaria de un grupo de disponibilidad Always On en SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32bde72d793ac8c703c6a57fc4fe36ff5fd30d67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6c8dbd61179ab89833c96657eb6107ced45c4528
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602675"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206494"
 ---
-# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Acerca del acceso de conexión de cliente a réplicas de disponibilidad (SQL Server)
+# <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Tipos de conexiones de cliente a réplicas dentro de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En un grupo de disponibilidad AlwaysOn, puede configurar una o varias réplicas de disponibilidad para permitir conexiones de solo lectura cuando se ejecutan en el rol secundario (es decir, cuando se ejecutan como réplica secundaria). También puede configurar cada réplica de disponibilidad para permitir o excluir conexiones de solo lectura cuando se ejecutan bajo el rol principal (es decir, cuando se ejecutan como réplica principal).  
   
@@ -34,18 +35,6 @@ ms.locfileid: "51602675"
   
 > [!NOTE]  
 >  Para obtener información sobre el agente de escucha de grupo de disponibilidad, que administra las solicitudes de conexión de cliente, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
-  
- **En este tema:**  
-  
--   [Tipos de acceso de conexión admitidos por el rol secundario](#ConnectAccessForSecondary)  
-  
--   [Tipos de acceso de conexión admitidos por el rol principal](#ConnectAccessForPrimary)  
-  
--   [Cómo la configuración de acceso de conexión afecta a la conectividad de cliente](#HowConnectionAccessAffectsConnectivity)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
--   [Contenido relacionado](#RelatedContent)  
   
 ##  <a name="ConnectAccessForSecondary"></a> Tipos de acceso de conexión admitidos por el rol secundario  
  El rol secundario admite tres alternativas para las conexiones de cliente, del siguiente modo:  
@@ -121,9 +110,9 @@ ms.locfileid: "51602675"
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Estadísticas](../../../relational-databases/statistics/statistics.md)  

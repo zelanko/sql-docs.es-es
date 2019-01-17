@@ -8,15 +8,15 @@ ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: egranet
-ms.author: esgranet
+ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539115"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980461"
 ---
 # <a name="static-data-masking"></a>Enmascaramiento estático de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ A continuación se muestra una guía paso a paso para ejecutar el enmascaramient
  
  ![Lista desplegable de funciones de enmascaramiento](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- Nota: La mayoría de estas funciones de enmascaramiento tienen parámetros de configuración adicionales. Para el enmascaramiento de orden aleatorio, Enmascaramiento estático de datos proporciona un parámetro predeterminado. Para el enmascaramiento de tipo Orden aleatorio de grupo, Valor único y Composición de cadena, el usuario debe proporcionar parámetros de configuración. Para cambiar o proporcionar parámetros de configuración, haga clic en la opción **Configurar...**  y especifique un valor (alternativo) para el parámetro en el cuadro de diálogo que aparece. En [Funciones de enmascaramiento](#masking-functions) se proporcionan descripciones detalladas de cada función de enmascaramiento.
+ NOTA: La mayoría de estas funciones de enmascaramiento tienen parámetros de configuración adicionales. Para el enmascaramiento de orden aleatorio, Enmascaramiento estático de datos proporciona un parámetro predeterminado. Para el enmascaramiento de tipo Orden aleatorio de grupo, Valor único y Composición de cadena, el usuario debe proporcionar parámetros de configuración. Para cambiar o proporcionar parámetros de configuración, haga clic en la opción **Configurar...**  y especifique un valor (alternativo) para el parámetro en el cuadro de diálogo que aparece. En [Funciones de enmascaramiento](#masking-functions) se proporcionan descripciones detalladas de cada función de enmascaramiento.
  
  ![Botón de configuración de las funciones de enmascaramiento](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -206,6 +206,6 @@ Además, el enmascaramiento estático de datos presenta tres limitaciones en sus
 
 - (Solo SQL Server) El [archivos de datos](../../relational-databases/databases/database-files-and-filegroups.md) y el [archivo de registro](../../relational-databases/logs/the-transaction-log-sql-server.md) todavía pueden contener fragmentos de datos confidenciales en la memoria sin asignar después de que se haya completado el enmascaramiento estático de datos. Estos datos confidenciales se pueden recuperar con un editor hexadecimal si le concede acceso a los archivos de datos y el archivo de registro.
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Enmascaramiento dinámico de datos](../../relational-databases/security/dynamic-data-masking.md)   
  [Introducción al Enmascaramiento dinámico de datos de SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-static-data-masking-get-started/)  

@@ -1,7 +1,7 @@
 ---
-title: Eventos extendidos | Microsoft Docs
+title: 'Eventos extendidos: SQL Server | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/23/2016
+ms.date: 12/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,24 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 972e420f75db790321bc8c8eee595f1932e4f451
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 441d0535e75663150d12e5ff6c05a7b1067f3e6d
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662432"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531051"
 ---
 # <a name="extended-events"></a>Eventos extendidos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Los eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una arquitectura muy escalable y configurable que permite a los usuarios recopilar la información justa y necesaria para solucionar o identificar un problema de rendimiento.  
 
-Encontrará más información sobre los eventos extendidos en:
+Encontrará más información sobre los eventos extendidos en [Inicio rápido: eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-- [Quick Start: Extended Events in SQL Server (Inicio rápido: Eventos extendidos en SQL Server)](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
-- Blogs: [Eventos extendidos de SQL Server](https://blogs.msdn.com/b/extended_events/)
 
-  
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Ventajas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
  Extended Events es un sistema ligero de supervisión de rendimiento que usa muy pocos recursos de rendimiento. Los eventos extendidos proporcionan dos interfaces de usuario gráficas (**Asistente para nueva sesión** y **Nueva sesión**) para crear, modificar, mostrar y analizar los datos de la sesión.  
   
@@ -106,7 +103,7 @@ Si mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUD
 | Usar las vistas de catálogo y las vistas de administración dinámica (DMV) para eventos extendidos | [Instrucciones SELECT y JOIN en vistas del sistema para eventos extendidos en SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Compatibilidad de DAC con las versiones y objetos de SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Implementar una aplicación de capa de datos](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   

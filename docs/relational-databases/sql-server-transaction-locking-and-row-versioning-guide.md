@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511768"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980561"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "52511768"
  El modo de confirmación automática es el modo de administración de transacciones predeterminado de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Cada instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] se confirma o se revierte cuando finaliza. Si una instrucción termina correctamente, se confirma; si encuentra un error, se revierte. Una conexión a una instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] funciona en modo de confirmación automática siempre que no se suplante el modo predeterminado mediante transacciones explícitas o implícitas. El modo de confirmación automática es también el modo predeterminado para ADO, OLE DB, ODBC y DB-Library.  
   
  **Transacciones implícitas**  
- Cuando una conexión funciona en modo de transacciones implícitas, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inicia automáticamente una nueva transacción después de confirmar o revertir la transacción actual. No tiene que realizar ninguna acción para delinear el inicio de una transacción, solo tiene que confirmar o revertir cada transacción. El modo de transacciones implícitas genera una cadena continua de transacciones. Establezca el modo de transacción implícita a través de una función de la API o la instrucción SET IMPLICIT_TRANSACTIONS ON de [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ Cuando una conexión funciona en modo de transacciones implícitas, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inicia automáticamente una nueva transacción después de confirmar o revertir la transacción actual. No tiene que realizar ninguna acción para delinear el inicio de una transacción, solo tiene que confirmar o revertir cada transacción. El modo de transacciones implícitas genera una cadena continua de transacciones. Establezca el modo de transacción implícita a través de una función de la API o la instrucción SET IMPLICIT_TRANSACTIONS ON de [!INCLUDE[tsql](../includes/tsql-md.md)].  Este modo también se denomina Autocommit OFF. Vea [Método setAutoCommit en JDBC](../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md). 
   
  Tras establecer el modo de transacciones implícitas en una conexión, la instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inicia automáticamente una transacción la primera vez que ejecuta una de estas instrucciones:  
   
@@ -291,17 +291,17 @@ GO
 |Nivel de aislamiento de versiones de fila|Definición|  
 |------------------------------------|----------------|  
 |Instantánea de lectura confirmada|Cuando el valor de la opción de base de datos READ_COMMITTED_SNAPSHOT es ON, el aislamiento de lectura confirmada utiliza las versiones de fila para proporcionar una coherencia de lectura en las instrucciones. Las operaciones de lectura solo requieren bloqueos de tablas SCH-S, pero no bloqueos de páginas ni filas. Es decir, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos. Una función definida por el usuario puede devolver datos confirmados después del inicio de la instrucción que contiene que la UDF.<br /><br /> Cuando la opción de base de datos `READ_COMMITTED_SNAPSHOT` está establecida en OFF, que es el valor de configuración predeterminado, el aislamiento confirmado de lectura utiliza bloqueos compartidos para evitar que otras transacciones modifiquen filas mientras la transacción actual está ejecutando una operación de lectura. Los bloqueos compartidos impiden también que la instrucción lea las filas modificadas por otras transacciones hasta que la otra transacción haya finalizado. Ambas implementaciones cumplen la definición ISO del aislamiento de lectura confirmada.|  
-|Snapshot|El nivel de aislamiento de instantánea utiliza las versiones de fila para proporcionar una coherencia de lectura en las transacciones. No se adquiere ningún bloqueo de páginas ni filas en las operaciones de lectura, solo los bloqueos de tabla SCH-S. Cuando se leen filas modificadas por otras transacciones, se recupera la versión de la fila que existía cuando empezó la transacción. El aislamiento de instantánea solo se puede utilizar en una base de datos cuando la opción de base de datos `ALLOW_SNAPSHOT_ISOLATION` está establecida en ON. De forma predeterminada, el valor de esta opción es OFF para las bases de datos de usuarios.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no permite controlar las versiones de los metadatos. Por ello, hay restricciones en qué operaciones de DDL se puede realizar en una transacción explícita que se está ejecutando bajo el aislamiento de instantánea. Las instrucciones de DDL siguientes no se admiten bajo el aislamiento de instantánea después de una instrucción BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, ni ninguna instrucción de DDL de Common Language Runtime (CLR). Estas instrucciones se admiten si se está utilizando el aislamiento de instantánea dentro de transacciones implícitas. Una transacción implícita, por definición, es una instrucción única que permite aplicar la semántica del aislamiento de instantánea, incluso con instrucciones de DDL. Las infracciones de este principio pueden producir el error 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|Snapshot|El nivel de aislamiento de instantánea utiliza las versiones de fila para proporcionar una coherencia de lectura en las transacciones. No se adquiere ningún bloqueo de páginas ni filas en las operaciones de lectura, solo los bloqueos de tabla SCH-S. Cuando se leen filas modificadas por otras transacciones, se recupera la versión de la fila que existía cuando empezó la transacción. El aislamiento de instantánea solo se puede utilizar en una base de datos cuando la opción de base de datos `ALLOW_SNAPSHOT_ISOLATION` está establecida en ON. De forma predeterminada, el valor de esta opción es OFF para las bases de datos de usuarios.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no permite controlar las versiones de los metadatos. Por ello, hay restricciones en qué operaciones de DDL se puede realizar en una transacción explícita que se está ejecutando bajo el aislamiento de instantánea. No se permiten las siguientes instrucciones DDL en el aislamiento de instantánea después de una instrucción BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME o cualquier instrucción de DDL de Common Language Runtime (CLR). Estas instrucciones se admiten si se está utilizando el aislamiento de instantánea dentro de transacciones implícitas. Una transacción implícita, por definición, es una instrucción única que permite aplicar la semántica del aislamiento de instantánea, incluso con instrucciones de DDL. Las infracciones de este principio pueden producir el error 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  En la tabla siguiente se muestran los efectos secundarios de la simultaneidad habilitados por los distintos niveles de aislamiento.  
   
 |Nivel de aislamiento|Lectura desfasada|Lectura no repetible|Fantasma|  
 |---------------------|----------------|------------------------|-------------|  
 |**Lectura pendiente de confirmación**|Sí|Sí|Sí|  
-|**Lectura confirmada**|no|Sí|Sí|  
-|**Lectura repetible**|no|no|Sí|  
-|**Snapshot**|no|no|no|  
-|**Serializable**|no|no|no|  
+|**Lectura confirmada**|No|Sí|Sí|  
+|**Lectura repetible**|No|No|Sí|  
+|**Snapshot**|No|No|No|  
+|**Serializable**|No|No|No|  
   
  Para obtener más información sobre los tipos de bloqueo específicos o las versiones de fila que controlan cada nivel de aislamiento de transacción, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -369,7 +369,7 @@ GO
 |Actualizar (U)|Se utiliza en recursos que se pueden actualizar. Evita una forma común de interbloqueo que se produce cuando varias sesiones leen, bloquean y actualizan recursos.|  
 |Exclusivo (X)|Se utiliza para operaciones de modificación de datos, como `INSERT`, `UPDATE` o `DELETE`. Garantiza que no puedan realizarse varias actualizaciones simultáneamente en el mismo recurso.|  
 |Intención|Se utiliza para establecer una jerarquía de bloqueos. Los tipos de bloqueo de intención son: intención compartido (IS), intención exclusivo (IX) y compartido con intención exclusivo (SIX).|  
-|Esquema|Se utiliza cuando se ejecuta una operación que depende del esquema de una tabla. Hay dos tipos de bloqueo de esquema: modificación del esquema (Sch-M) y modificación de estabilidad (Sch-S).|  
+|esquema|Se utiliza cuando se ejecuta una operación que depende del esquema de una tabla. Hay dos tipos de bloqueo de esquema: modificación del esquema (Sch-M) y modificación de estabilidad (Sch-S).|  
 |Actualización masiva (BU)|Se utiliza cuando se copian datos de forma masiva en una tabla y se especifica la sugerencia `TABLOCK`.|  
 |Intervalo de claves|Protege el intervalo de filas que lee una consulta cuando se utiliza el nivel de aislamiento de transacciones serializables. Garantiza que otras transacciones no puedan insertar filas que podrían incluirse como respuesta de las consultas de la transacción serializable si las consultas se volvieran a ejecutar.|  
   
@@ -434,12 +434,12 @@ GO
 ||Modo concedido existente||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**Modo solicitado**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**Intención compartida (IS)**|Sí|Sí|Sí|Sí|Sí|no|  
-|**Compartido (S)**|Sí|Sí|Sí|no|no|no|  
-|**Actualizado (U)**|Sí|Sí|no|no|no|no|  
-|**Intención exclusiva (IX)**|Sí|no|no|Sí|no|no|  
-|**Compartido con intención exclusiva (SIX)**|Sí|no|no|no|no|no|  
-|**Exclusivo (X)**|no|no|no|no|no|no|  
+|**Intención compartida (IS)**|Sí|Sí|Sí|Sí|Sí|No|  
+|**Compartido (S)**|Sí|Sí|Sí|No|No|No|  
+|**Actualizado (U)**|Sí|Sí|No|No|No|No|  
+|**Intención exclusiva (IX)**|Sí|No|No|Sí|No|No|  
+|**Compartido con intención exclusiva (SIX)**|Sí|No|No|No|No|No|  
+|**Exclusivo (X)**|No|No|No|No|No|No|  
   
 > [!NOTE]  
 > Un bloqueo con intención exclusivo (IX) es compatible con un modo de bloqueo IX, porque IX indica la intención de actualizar solamente algunas de las filas, no todas. También se permite que otras transacciones intenten leer o actualizar algunas filas, siempre y cuando no se trate de las mismas filas que están actualizando las demás transacciones. Además, si dos transacciones intentan actualizar la misma fila, se permitirá a ambas transacciones un bloqueo IX en el nivel de tabla y de página. Sin embargo, un bloqueo X en el nivel de fila solo se permitirá a una transacción. La otra transacción deberá esperar a que se quite el bloqueo en el nivel de fila.  
@@ -477,13 +477,13 @@ GO
 ||Modo concedido existente|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**Modo solicitado**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**Compartido (S)**|Sí|Sí|no|Sí|Sí|Sí|no|  
-|**Actualizado (U)**|Sí|no|no|Sí|no|Sí|no|  
-|**Exclusivo (X)**|no|no|no|no|no|Sí|no|  
-|**RangeS-S**|Sí|Sí|no|Sí|Sí|no|no|  
-|**RangeS-U**|Sí|no|no|Sí|no|no|no|  
-|**RangeI-N**|Sí|Sí|Sí|no|no|Sí|no|  
-|**RangeX-X**|no|no|no|no|no|no|no|  
+|**Compartido (S)**|Sí|Sí|No|Sí|Sí|Sí|No|  
+|**Actualizado (U)**|Sí|No|No|Sí|No|Sí|No|  
+|**Exclusivo (X)**|No|No|No|No|No|Sí|No|  
+|**RangeS-S**|Sí|Sí|No|Sí|Sí|No|No|  
+|**RangeS-U**|Sí|No|No|Sí|No|No|No|  
+|**RangeI-N**|Sí|Sí|Sí|No|No|Sí|No|  
+|**RangeX-X**|No|No|No|No|No|No|No|  
   
 #### <a name="lock_conversion"></a> Bloqueos de conversión  
  Los bloqueos de conversión se crean cuando un bloqueo de intervalos con clave se superpone a otro bloqueo.  
@@ -509,7 +509,7 @@ GO
  Para que el bloqueo de intervalos con clave se produzca, es necesario que se cumplan las condiciones siguientes:  
   
 -   El nivel de aislamiento de las transacciones se debe establecer en SERIALIZABLE.  
--   El procesador de consultas debe utilizar un índice para implementar el predicado del filtro de intervalo. Por ejemplo, la cláusula WHERE de una instrucción SELECT puede establecer una condición de intervalo con este predicado: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. El bloqueo de intervalos con clave solo se puede adquirir si una clave de índice abarca **ColumnX**.  
+-   El procesador de consultas debe utilizar un índice para implementar el predicado del filtro de intervalo. Por ejemplo, la cláusula WHERE de una instrucción SELECT puede establecer una condición de intervalo con este predicado: ColumnX BETWEEN N **"** AAA **"** AND N **"** CZZ **"**. El bloqueo de intervalos con clave solo se puede adquirir si una clave de índice abarca **ColumnX**.  
   
 #### <a name="examples"></a>Ejemplos  
  La tabla y el índice siguientes se utilizan como base para los ejemplos de bloqueo de intervalos con clave que se muestran a continuación.  
@@ -585,7 +585,7 @@ INSERT mytable VALUES ('Dan');
 -   La transacción A ahora solicita un bloqueo exclusivo de la fila 2 y se bloquea hasta que la transacción B finalice y libere el bloqueo compartido que tiene de la fila 2.  
 -   La transacción B ahora solicita un bloqueo exclusivo de la fila 1 y se bloquea hasta que la transacción A finalice y libere el bloqueo compartido que tiene de la fila 1.  
   
- La transacción A no puede completarse hasta que se complete la transacción B, pero la transacción B está bloqueada por la transacción A. Esta condición también se llama dependencia cíclica: la transacción A tiene una dependencia de la transacción B y la transacción B cierra el círculo teniendo una dependencia de la transacción A.  
+ La transacción A no se puede completar hasta que complete la transacción B, pero la transacción B está bloqueada por transacción A. Esta condición también se denomina una dependencia cíclica: La transacción A tiene una dependencia de la transacción B y la transacción B cierra el círculo con una dependencia en la transacción A.  
   
  Ambas transacciones con un interbloqueo esperarán para siempre, a no ser que un proceso externo rompa el interbloqueo. La supervisión de interbloqueos del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] comprueba periódicamente si hay tareas con un interbloqueo. Si el monitor detecta una dependencia cíclica, elige una de las tareas como el sujeto y finaliza su transacción con un error. Esto permite a la otra tarea completar su transacción. La aplicación con la transacción que terminó con un error puede reintentar la transacción, que suele completarse después de que la otra transacción interbloqueada haya finalizado.  
   
@@ -1373,7 +1373,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. Trabajar con transacciones de lectura confirmada utilizando las versiones de fila  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>b. Trabajar con transacciones de lectura confirmada utilizando las versiones de fila  
  En este ejemplo, una transacción de lectura confirmada que utiliza las versiones de fila se ejecuta simultáneamente con otra transacción. La transacción de lectura confirmada se comporta de diferente manera que una transacción de instantáneas. Al igual que una transacción de instantáneas, la transacción de lectura confirmada lee filas con versiones incluso después de que la otra transacción haya modificado los datos. Sin embargo, a diferencia de una transacción de instantáneas, la transacción de lectura confirmada:  
   
 -   Leerá los datos modificados después de que la otra transacción confirme los cambios en los datos.  

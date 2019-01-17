@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418682"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212134"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52418682"
   
  Para usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 y anteriores, deberá descargar e instalar una revisión para .NET 3.5 SP1. La revisión agrega compatibilidad con las características de SQL Client para AG y con las propiedades de cadenas de conexión **ApplicationIntent** y **MultiSubnetFailover**. Si la revisión no se instala en cada equipo que hospeda un servidor de informes, los usuarios que intenten obtener la vista previa de los informes verán un mensaje de error similar al siguiente y el mensaje de error se escribirá en el registro de seguimiento del servidor de informes:  
   
-> **Mensaje de error:** "La palabra clave no se admite "applicationintent""  
+> **Mensaje de error:** "La palabra clave no admite "applicationintent""  
   
  El mensaje tiene lugar cuando incluye una de las propiedades [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en la cadena de conexión [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , pero el servidor no reconoce la propiedad. El mensaje de error indicado se verá cuando haga clic en el botón "Probar conexión" en las interfaces de usuario de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y cuando obtenga la vista previa del informe si los errores remotos se habilitan en los servidores de informes.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52418682"
   
  El modo en que se creen los informes y se publiquen determinará dónde modificará la cadena de conexión:  
   
--   **Modo nativo:** use el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] para los informes y los orígenes de datos ya publicados en un servidor de informes en modo nativo.  
+-   **Modo nativo:** use el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] para los informes y los orígenes de datos compartidos ya publicados en un servidor de informes en modo nativo.  
   
 -   **Modo de SharePoint:** use las páginas de configuración de SharePoint dentro de las bibliotecas de documentos para los informes que ya se han publicado en un servidor SharePoint.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "52418682"
   
 -   **Vista previa en modo servidor o remoto:** si tras publicar informes en el servidor de informes o usar la vista previa en [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], ve un error similar al siguiente, es una indicación de que está obteniendo la vista previa de los informes con el servidor de informes y la revisión .Net Framework 3.5 SP1 para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no se ha instalado en el servidor de informes.  
   
-> **Mensaje de error:** "La palabra clave no se admite "applicationintent""  
+> **Mensaje de error:** "La palabra clave no admite "applicationintent""  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Bases de datos del servidor de informes y grupos de disponibilidad  
  Reporting Services y Power BI Report Server ofrece compatibilidad limitada para usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con bases de datos del servidor de informes. Las bases de datos del servidor de informes se pueden configurar en AG para ser parte de una réplica; sin embargo, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no usará automáticamente una réplica diferente para las bases de datos del servidor de informes cuando se produce una conmutación por error. No se admite el uso de MultiSubnetFailover con las bases de datos del servidor de informes.  
@@ -144,9 +144,9 @@ ms.locfileid: "52418682"
   
  El modo nativo no admite ni usa las bases de datos de alerta ni las características relacionadas. Los servidores de informes en modo nativo se configuran en el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . En el modo SharePoint, configure el nombre de base de datos de la aplicación de servicio para que sea el nombre del "punto de acceso de cliente" que creó como parte de la configuración de SharePoint. Para obtener más información sobre cómo configurar SharePoint con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165)) (Configurar y administrar grupos de disponibilidad de SharePoint Server.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Los servidores de informes de modo de SharePoint usan un proceso de sincronización entre las bases de datos de aplicación de servicio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y las bases de datos de contenido de SharePoint. Es importante mantener juntas las bases de datos del servidor de informes y las bases de datos de contenido. Debe considerar configurarlas en los mismos grupos de disponibilidad para que conmuten por error y se recuperen como un conjunto. Considere el caso siguiente:  
->   
+> 
 >  -   Restaura o conmuta por error a una copia de la base de datos de contenido que no ha recibido las mismas actualizaciones que la base de datos del servidor de informes.  
 > -   El proceso de sincronización de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] detectará las diferencias entre la lista de elementos de la base de datos de contenido y las bases de datos del servidor de informes.  
 > -   El proceso de sincronización eliminará o actualizará los elementos de la base de datos de contenido.  
@@ -190,7 +190,7 @@ ms.locfileid: "52418682"
   
 -   Una vez completada la conmutación por error de la base de datos y tras reiniciarse el servicio del servidor de informes, los trabajos del Agente SQL Server se volverán a crear de forma automática. Hasta que los trabajos del agente SQL se vuelvan a crear, cualquier ejecución en segundo plano asociada a los trabajos del Agente SQL Server no se procesarán. Esta versión también incluye suscripciones de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , programaciones e instantáneas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Introducción a los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   

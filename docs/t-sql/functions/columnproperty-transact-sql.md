@@ -20,12 +20,12 @@ ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5acd726764c2b672287af418f088963a4a5acef7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 451b92b502a22d8cefc32e8ea82570cd1e0187e1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711893"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980551"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Para el argumento *id*, el argumento *propiedad* especifica el tipo de informaci
 |**IsCursorType**|El parámetro de procedimiento es del tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsDeterministic**|La columna es determinista. Esta propiedad solo se aplica a columnas calculadas y columnas de vistas.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida No es una columna calculada o una columna de vista.|  
 |**IsFulltextIndexed**|La columna se registra para la indización de texto completo.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
-|**IsHidden**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.is_hidden**|**Se aplica a**: desde [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: no está oculto<br /><br /> 1: oculto|  
+|**IsHidden**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.is_hidden**|**Se aplica a**: desde [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: no está oculto<br /><br /> 1: Hidden|  
 |**IsIdentity**|La columna utiliza la propiedad IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsIdNotForRepl**|La columna comprueba el valor IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsIndexable**|La columna se puede indizar.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  

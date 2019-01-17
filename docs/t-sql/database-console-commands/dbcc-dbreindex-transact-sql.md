@@ -23,12 +23,12 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 0090be5f985354d4cec29add4d008deea6cac068
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f71e53eb00f994bd68c9be92e1783f79e65470f4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698773"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215874"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Vuelve a generar uno o varios índices de una tabla de la base de datos especifi
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) en su lugar.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -103,7 +103,7 @@ DBCC DBREINDEX ('HumanResources.Employee', PK_Employee_BusinessEntityID,80);
 GO  
 ```  
   
-### <a name="b-rebuilding-all-indexes"></a>B. Volver a generar todos los índices  
+### <a name="b-rebuilding-all-indexes"></a>b. Volver a generar todos los índices  
 En este ejemplo se vuelven a generar todos los índices de la tabla `Employee` de `AdventureWorks` con un valor de factor de relleno de `70`.
   
 ```sql
@@ -113,7 +113,7 @@ DBCC DBREINDEX ('HumanResources.Employee', ' ', 70);
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

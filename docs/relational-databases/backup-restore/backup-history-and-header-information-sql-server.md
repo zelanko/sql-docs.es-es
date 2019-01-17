@@ -34,12 +34,12 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840b6e513e5a1c1cd9408134ced29ac3c22464c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684743"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202624"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historial de copias de seguridad e información de encabezados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "47684743"
  Para obtener más información, vea [Comparación de la información del encabezado de medios y del encabezado de copias de seguridad](#CompareMediaHeaderBackupHeader), más adelante en este tema.  
   
 ##  <a name="BackupHeader"></a> Información de encabezado de copia de seguridad  
- La información del encabezado de copia de seguridad muestra información acerca de todos los conjuntos de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el medio. La información mostrada incluye los tipos de dispositivos de copia de seguridad utilizados, los tipos de copia de seguridad (por ejemplo, base de datos, transacción, archivo o diferencial de la base de datos) así como información acerca de la fecha y hora inicial y final de la copia de seguridad. Esta información es útil cuando se necesita determinar el conjunto de copia de seguridad que se va a restaurar en la cinta o las copias de seguridad que contiene el medio.  
+ En el encabezado de copia de seguridad se muestra información sobre todos los conjuntos de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el medio. La información mostrada incluye los tipos de dispositivos de copia de seguridad utilizados, los tipos de copia de seguridad (por ejemplo, base de datos, transacción, archivo o diferencial de la base de datos) así como información acerca de la fecha y hora inicial y final de la copia de seguridad. Esta información es útil cuando se necesita determinar el conjunto de copia de seguridad que se va a restaurar en la cinta o las copias de seguridad que contiene el medio.  
   
 > [!NOTE]  
 >  Se puede tardar mucho en ver la información de encabezado de la copia de seguridad de las cintas de alta capacidad debido a que se debe examinar el medio completo para mostrar información acerca de cada copia de seguridad del mismo.  
@@ -219,7 +219,7 @@ ms.locfileid: "47684743"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

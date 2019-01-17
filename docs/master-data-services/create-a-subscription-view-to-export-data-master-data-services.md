@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23e50b94464d252431d153c9d68247cbff410b7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9619bca36ec488fdd5e25b5b9eb9a82370d7049
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597054"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754677"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Crear una vista de suscripciones para exportar datos (Master Data Services)
 
@@ -82,16 +81,16 @@ ms.locfileid: "47597054"
   
  Cuando se hace clic en una vista, se muestra la siguiente información.  
   
--   **Creado por:** nombre del usuario que creó la vista.  
+-   **Creado por**: nombre del usuario que ha creado la vista.  
   
--   **El:** fecha y hora en que se creó la vista.  
+-   **El**: fecha y hora en que se ha creado la vista.  
   
--   **Actualizado por:** nombre del usuario que actualizó la vista por última vez.  
+-   **Actualizada por**: nombre del usuario que ha actualizado la vista por última vez.  
   
--   **El:** fecha y hora en que se actualizó la vista por última vez.  
+-   **El**: fecha y hora en que se ha actualizado la vista por última vez.  
   
-## <a name="see-also"></a>Ver también  
- [Información general: exportar datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general: exportación de datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Eliminar una vista de suscripciones &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Crear una marca de versión &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   

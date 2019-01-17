@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: e03786f02e93b40b0b8c4e0132addbbe68395590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d4d5cadf23e70d636fc74cb0cb67a820875192
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627443"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380986"
 ---
 # <a name="disable-resource-governor"></a>Deshabilitar el regulador de recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "47627443"
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
   
--   **Para deshabilitar el regulador de recursos, mediante:**  [Explorador de objetos](#RGOffObjEx), [Propiedades del regulador de recursos](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
+-   **Para deshabilitar Resource Governor con:**  [Explorador de objetos](#RGOffObjEx), [Propiedades de Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Deshabilitar el regulador de recursos tiene como consecuencia lo siguiente:  
   
 -   No se ejecuta la función clasificadora.  
@@ -79,7 +79,7 @@ ALTER RESOURCE GOVERNOR DISABLE;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

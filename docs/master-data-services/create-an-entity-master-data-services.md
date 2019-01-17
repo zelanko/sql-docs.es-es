@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 933c5a7f4eeae256ce9fafed6d5be53a1236e559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3597ac503684c84b10b9ce8025b8fddbb26f3947
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702963"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755087"
 ---
 # <a name="create-an-entity-master-data-services"></a>Crear una entidad (Master Data Services)
 
@@ -54,9 +53,9 @@ ms.locfileid: "47702963"
      Si no completa este campo, se usa el nombre de la entidad.  
   
     > [!TIP]  
-    >  El nombre del modelo debe formar parte del nombre de la tabla de almacenamiento provisional, por ejemplo *Nombremodelo_Nombreentidad*. Esto hace que resulte más sencillo buscar tablas en la base de datos. Para obtener más información sobre las tablas de almacenamiento provisional, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
-    > [!TIP]  
-    >  Si se utiliza la nomenclatura predeterminada para las tablas de almacenamiento provisional, MDS agregará automáticamente identificadores (por ejemplo, _1, _2) a los nombres de las tablas de almacenamiento provisional si existe una entidad con el mismo nombre en otro modelo.
+    >  El nombre del modelo debe formar parte del nombre de la tabla de almacenamiento provisional, por ejemplo *Nombremodelo_Nombreentidad*. Esto hace que resulte más sencillo buscar tablas en la base de datos. Para más información sobre las tablas de almacenamiento provisional, vea [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
+    > [!TIP]
+    > Si se utiliza la nomenclatura predeterminada para las tablas de almacenamiento provisional, MDS agregará automáticamente identificadores (por ejemplo, _1, _2) a los nombres de las tablas de almacenamiento provisional si existe una entidad con el mismo nombre en otro modelo.
   
 7.  En el campo **Tipo de registro de transacciones** , elija el tipo de registro de transacciones de la lista desplegable.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "47702963"
   
 -   [Crear un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Edición de una entidad &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   

@@ -17,7 +17,7 @@ dev_langs:
 helpviewer_keywords:
 - server instance event data [SQL Server]
 - event notifications [SQL Server], event status
-- events [SQL Server], status infromation
+- events [SQL Server], status information
 - EVENTDATA function
 - status information [SQL Server], events
 - DDL triggers, returning event data
@@ -25,12 +25,12 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 953a4d79d128d2295b5365653f0f7b62647f6069
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ec1c2d952c334b1ccb394f5abb36ea91d5f1a87
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701333"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979851"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ Los datos que `EVENTDATA` devuelve no son válidos después de una transacción 
 Las contraseñas no se muestran cuando se ejecutan las instrucciones `CREATE LOGIN` o `ALTER LOGIN`. Esto protege la seguridad del inicio de sesión.  
   
 ## <a name="schemas-returned"></a>Esquemas devueltos  
-EVENTDATA devuelve un valor de tipo de datos **xml**. De manera predeterminada, la definición de esquema para todos los eventos se instala en este directorio: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+EVENTDATA devuelve un valor de tipo de datos **xml**. De forma predeterminada, la definición del esquema para todos los eventos se instala en este directorio: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
 La página web [Esquemas XML de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=31850) también tiene el esquema de eventos.  
   
@@ -114,7 +114,7 @@ GO
 > [!NOTE]  
 >  Para devolver datos de evento, use el método XQuery **value()** en lugar del método **query()**. El método **query()** devuelve XML e instancias de retorno de carro y avance de línea (CR/LF) con el carácter de escape “y” comercial en el resultado, mientras que el método **value()** representa instancias de CR/LF invisibles en el resultado.  
   
-### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Crear una tabla de registro con datos de evento en un desencadenador DDL  
+### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>b. Crear una tabla de registro con datos de evento en un desencadenador DDL  
 En este ejemplo se crea una tabla para almacenar información sobre todos los eventos de nivel de base de datos y rellena esa tabla con un desencadenador DDL. El uso de XQuery con los datos XML generados por `EVENTDATA` captura el tipo de evento y la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  
@@ -151,7 +151,7 @@ DROP TABLE ddl_log;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)   
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Notificaciones de eventos](../../relational-databases/service-broker/event-notifications.md)   

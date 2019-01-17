@@ -22,12 +22,12 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ca73ac4f7283ac8bbcfb7490a9554ea49c9bcfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fe1b71d95dd326eedbdf481c68a74d30c052c6f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749243"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980191"
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Es el usuario, el rol o el rol de aplicación al que se pueden conceder permisos
 Es un nombre de recurso de bloqueo especificado por la aplicación cliente. La aplicación debe asegurar que el nombre del recurso sea exclusivo. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  *resource_name* es **nvarchar(255)** y no tiene ningún valor predeterminado. *resource_name* se compara con un binario y distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.
   
 **'** *lock_mode* **'**  
-El modo de bloqueo que se debe obtener para un recurso concreto. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. *lock_mode* puede tener cualquiera de estos valores: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
+El modo de bloqueo que se debe obtener para un recurso concreto. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. *lock_mode* puede tener uno de estos valores: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
 **'** *lock_owner* **'**  
 El propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)** y el valor puede ser **Transaction** (predeterminado) o **Session**. Si se especifica el valor predeterminado o **Transaction** explícitamente, debe ejecutarse APPLOCK_TEST desde una transacción.

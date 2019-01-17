@@ -11,14 +11,14 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: baa4f703e4c76722dcecb729299e6ff416784f75
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970387"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328595"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conectarse a una instancia de SQL Server y efectuar consultas con SQL Server Management Studio
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conexión a una instancia de SQL Server y realización de consultas con SQL Server Management Studio
 
 > [!div class="nextstepaction"]
 > [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)

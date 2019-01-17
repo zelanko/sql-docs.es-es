@@ -13,12 +13,12 @@ ms.author: mikeray
 ms.reviewer: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7412b6ee9ad3b551fb91200c7d3f45f3287f6780
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 4ca2837780145af3c7f4428c446215ed3510bc50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52255661"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783367"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversión no determinista de las cadenas de fecha literales en valores DATE
 
@@ -75,7 +75,7 @@ Si en su lugar se ha especificado **mdy**, la misma cadena “01-03-2018” sign
 
 Y si se ha especificado **ymd**, no hay ninguna garantía de cuáles serían los resultados. El valor numérico de “2018” es demasiado grande para ser un día.
 <!--
-The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team??
+The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
 #### <a name="specific-countries"></a>Países específicos
@@ -137,7 +137,7 @@ A partir de SQL Server 2005 y su nivel de compatibilidad 90, las conversiones de
 
 #### <a name="unicode"></a>Unicode
 
-<!-- The next live sentence needs an explanatory example!  N'??'.
+<!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->
 La conversión de los datos de caracteres no Unicode entre intercalaciones también se considera no determinista.
 

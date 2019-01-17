@@ -1,25 +1,26 @@
 ---
-title: Portal web (modo nativo de SSRS) | Microsoft Docs
-ms.date: 07/02/2017
+title: El portal web de un servidor de informes (modo nativo de SSRS) | Microsoft Docs
+ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ec3fac28637e21da9fecc7ad291b8ff347ba7d6d
+ms.sourcegitcommit: 9d2fef55b0abfc049fbb55c315097dda2aeb6853
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711226"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53010296"
 ---
-# <a name="web-portal-ssrs-native-mode"></a>Portal web (modo nativo de SSRS)
+# <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>El portal web de un servidor de informes (modo nativo de SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-El portal web de Reporting Services es una experiencia basada en la Web que permite ver informes, informes móviles y KPI, así como navegar por los elementos que se encuentran en la instancia del servidor de informes. También puede usar el portal web para administrar una única instancia del servidor de informes.
+El portal web de un servidor de informes de Reporting Services es una experiencia basada en web. En el portal, puede ver informes, informes móviles, KPI y navegar por los elementos de la instancia del servidor de informes. También puede usar el portal web para administrar una única instancia del servidor de informes.
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
@@ -27,24 +28,15 @@ El portal web de Reporting Services es una experiencia basada en la Web que perm
 
 Puede usar el portal web para realizar las siguientes tareas:
 
-- Ver, buscar e imprimir informes, así como suscribirse a ellos.
-
+- Ver, buscar, imprimir y suscribirse a informes.
 - Crear, proteger y mantener la jerarquía de carpetas para organizar elementos en el servidor.
-
 - Configurar una seguridad basada en roles que determine el acceso a elementos y operaciones.
-
-- Configurar las propiedades de ejecución, el historial y los parámetros del informe.
-
+- Configurar propiedades de ejecución del informe, historial del informe y parámetros del informe.
 - Crear programaciones compartidas y orígenes de datos compartidos para que las programaciones y las conexiones de orígenes de datos sean más fáciles de administrar.
-
 - Crear suscripciones controladas por datos que distribuyan informes a una lista de destinatarios extensa.
-
-- Crear informes vinculados para reutilizarlos y cambiar la finalidad de un informe existente de varias formas.
-
+- Crear informes vinculados para volverlos a utilizar y cambiar la finalidad de un informe existente de distintas maneras.
 - Descargar herramientas comunes como Generador de informes y Publicador de informes móviles.
-
 - [Crear KPI](../reporting-services/working-with-kpis-in-reporting-services.md).
-
 - Enviar comentarios o solicitar nuevas características.
 
 Puede usar el portal web para examinar las carpetas del servidor de informes o buscar informes concretos. Puede ver un informe, sus propiedades generales y copias anteriores de este que se almacenan en el historial de informes. Dependiendo de los permisos que tenga, también podría suscribirse a informes para su entrega en una bandeja de entrada de correo electrónico o en una carpeta compartida del sistema de archivos.
@@ -108,7 +100,7 @@ Los archivos se almacenan en Reporting Services, como sucede con otros archivos 
 
 ## <a name="search-for-items"></a>Búsqueda de elementos
 
-Puede escribir un término de búsqueda y podrá ver todos los elementos a los que tenga acceso. Los resultados se categorizan en KPI, informes, conjuntos de datos y otros elementos. Después, puede interactuar con los resultados y agregarlos a sus favoritos.
+Escriba un término de búsqueda y vea todos los elementos a los que puede acceder. Los resultados se categorizan en KPI, informes, conjuntos de datos y otros elementos. Después, puede interactuar con los resultados y agregarlos a sus favoritos.
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 

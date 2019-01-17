@@ -20,12 +20,12 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47986d4615a6cc9425c8547fecd9527731072d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19f3748634b86bcb4419f96a8abae36a72f20f88
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695693"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589219"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Seguridad de transporte - Creación de reflejo de la base de datos - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47695693"
 ##  <a name="Authentication"></a> Autenticación  
  Autenticación es el proceso de comprobar que un usuario es quien dice ser. Las conexiones entre extremos de creación de reflejo de la base de datos requieren autenticación. Las solicitudes de conexión desde un asociado o testigo, según corresponda, deben autenticarse.  
   
- El tipo de autenticación que utiliza una instancia de servidor para la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] es una propiedad del extremo de reflejo de la base de datos. Hay dos tipos de seguridad de transporte disponibles para los extremos de creación de reflejo de la base de datos: autenticación de Windows (Interfaz de proveedor de compatibilidad para seguridad (SSPI)) y autenticación basada en certificados.  
+ El tipo de autenticación que utiliza una instancia de servidor para la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] es una propiedad del extremo de reflejo de la base de datos. Existen dos tipos de seguridad de transporte para los puntos de conexión de creación de reflejo de la base de datos: autenticación de Windows (la interfaz del proveedor de compatibilidad para seguridad (SSPI)) y la autenticación basada en certificados.  
   
 ### <a name="windows-authentication"></a>Autenticación de Windows  
  En la autenticación de Windows, cada instancia de servidor inicia sesión en el otro lado mediante las credenciales de Windows de la cuenta de usuario de Windows en la que se ejecuta el proceso. La autenticación de Windows puede requerir alguna configuración manual de las cuentas de inicio de sesión, como se indica a continuación:  
@@ -52,15 +52,15 @@ ms.locfileid: "47695693"
   
 -   Si las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como servicios con diferentes cuentas de dominio (en el mismo dominio o en dominios de confianza), el inicio de sesión de cada cuenta debe crearse en **master** en cada una de las otras instancias de servidor, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión.  
   
--   Si las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como cuenta de servicio de red, el inicio de sesión de cada cuenta de equipo host (*NombreDeDominio***\\***NombreDeEquipo$*) se debe crear en **master** en cada uno de los demás servidores, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión. Esto se debe a que una instancia de servidor que se ejecuta en la cuenta Servicio de red se autentica mediante la cuenta de dominio del equipo host.  
+-   Si las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como cuenta de servicio de red, el inicio de sesión de cada cuenta de equipo host (_DomainName_**\\**_ComputerName$_) se debe crear en **master** en cada uno de los demás servidores, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión. Esto se debe a que una instancia de servidor que se ejecuta en la cuenta Servicio de red se autentica mediante la cuenta de dominio del equipo host.  
   
 > [!NOTE]  
->  Para ver un ejemplo de configuración de una sesión de creación de reflejo de base de datos por medio de la autenticación de Windows, vea [Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Para obtener un ejemplo de configuración de una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows, vea [Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
   
 ### <a name="certificates"></a>Certificados  
  En ciertas situaciones, como cuando las instancias de servidor no están en dominios de confianza o cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como servicio local, la autenticación de Windows no está disponible. En estos casos, en lugar de credenciales de usuario, se requieren certificados para autenticar solicitudes de conexión. El extremo de creación de reflejo de cada instancia de servidor debe configurarse con su propio certificado creado localmente.  
   
- El método de cifrado se establece al crear el certificado. Para obtener más información, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Administre con cuidado los certificados que utilice.  
+ El método de cifrado se establece al crear el certificado. Para obtener más información, vea [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Administre con cuidado los certificados que utilice.  
   
  Una instancia de servidor utiliza la clave privada de su propio certificado para establecer su identidad al establecer una conexión. La instancia de servidor que recibe la solicitud de conexión utiliza la clave pública del certificado del remitente para autenticar la identidad de éste. Por ejemplo, considere dos instancias del servidor, Server_A y Server_B. Server_A utiliza su clave privada para cifrar el encabezado de conexión antes de enviar una solicitud de conexión a Server_B. Server_B utiliza la clave pública del certificado de Server_A para descifrar el encabezado de conexión. Si el encabezado descifrado es correcto, Servidor_B sabe que el encabezado fue cifrado por Servidor_A y la conexión se autentica. Si el encabezado descifrado es incorrecto, Servidor_B sabe que la solicitud de conexión no es auténtica y rechaza la conexión.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47695693"
   
 |Valor ALGORITHM|Descripción|  
 |---------------------|-----------------|  
-|RC4|Especifica que el extremo debe usar el algoritmo RC4. Ésta es la opción predeterminada.<br /><br /> **\*\* Advertencia \*\*** El algoritmo RC4 está en desuso. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.|  
+|RC4|Especifica que el extremo debe usar el algoritmo RC4. Ésta es la opción predeterminada.<br /><br /> <strong>\*\* Advertencia \*\*</strong> El algoritmo RC4 está en desuso. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.|  
 |AES|Especifica que el extremo debe usar el algoritmo AES.|  
 |AES RC4|Especifica que los dos extremos negociarán un algoritmo de cifrado con este extremo, dando preferencia al algoritmo AES.|  
 |RC4 AES|Especifica que los dos extremos negociarán un algoritmo de cifrado con este extremo, dando preferencia al algoritmo RC4.|  
@@ -99,7 +99,7 @@ ms.locfileid: "47695693"
   
 -   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   

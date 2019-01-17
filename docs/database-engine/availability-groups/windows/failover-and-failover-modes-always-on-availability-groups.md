@@ -1,6 +1,7 @@
 ---
-title: Conmutación por error y modos de conmutación por error (Grupos de disponibilidad AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Modos de conmutación por error para grupos de disponibilidad
+description: Una descripción de los diferentes modos de conmutación por error disponibles para las bases de datos que participan en un grupo de disponibilidad Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d66d1ccdbfbcd7f59f395b9ecf8367b7a7e16058
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523399"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207444"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "52523399"
  Un administrador de bases de datos puede iniciar una conmutación por error cuando no hay ninguna réplica secundaria en estado SYNCHRONIZED con la réplica principal o cuando la réplica principal no se está ejecutando y no hay ninguna réplica secundaria lista para la conmutación por error. La conmutación por error forzada puede sufrir pérdida de datos y está recomendada únicamente para la recuperación ante desastres. La conmutación por error forzada también se conoce como conmutación por error manual forzada porque solo se puede iniciar manualmente. Esta es la única forma de conmutación por error admitida en el modo de disponibilidad de confirmación asincrónica.  
   
  [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)]  
- Dentro de un grupo de disponibilidad dado, par de réplicas de disponibilidad (incluida la réplica principal actual) que están configuradas para el modo de confirmación sincrónica con conmutación por error automática, si existe. [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]solo tiene efecto si la réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
+ Dentro de un grupo de disponibilidad dado, par de réplicas de disponibilidad (incluida la réplica principal actual) que están configuradas para el modo de confirmación sincrónica con conmutación por error automática, si existe. Un [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] solo tiene efecto si la réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
   
  [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)]  
  Dentro de un grupo de disponibilidad dado, conjunto de dos o tres réplicas de disponibilidad (incluida la réplica principal actual) que están configuradas para el modo de confirmación sincrónica, si lo hubiera. Un [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]solo tiene efecto si las replicas secundarias están configuradas para el modo de conmutación por error manual y al menos una réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
@@ -81,8 +82,8 @@ ms.locfileid: "52523399"
   
 ||Modo de confirmación asincrónica|Modo de confirmación sincrónica con modo de conmutación por error manual|Modo de confirmación sincrónica con modo de conmutación por error automática|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|conmutación automática por error|no|no|Sí|  
-|Conmutación por error manual planeada|no|Sí|Sí|  
+|conmutación automática por error|No|No|Sí|  
+|Conmutación por error manual planeada|No|Sí|Sí|  
 |conmutación por error forzada|Sí|Sí|Sí**\***|  
   
  **\*** Si emite un comando de conmutación por error forzada en una réplica secundaria sincronizada, la réplica secundaria se comportará igual que en el caso de una conmutación por error manual.  
@@ -95,11 +96,11 @@ ms.locfileid: "52523399"
 ### <a name="failover-sets"></a>Conjuntos de conmutación por error  
  Las formas de conmutación por error posibles para un grupo de disponibilidad determinado se pueden considerar como conjuntos de conmutación por error. Un conjunto de conmutación por error consta de una réplica principal y varias réplicas secundarias que admiten una determinada forma de conmutación, de la manera siguiente:  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (opcional):**  dentro de un grupo de disponibilidad concreto, un par de réplicas de disponibilidad (incluida la réplica principal actual) configuradas para el modo de confirmación sincrónica con conmutación por error automática, si lo hubiera. Un conjunto de conmutación automática por error solo tiene efecto si la réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (opcional):**  Dentro de un grupo de disponibilidad dado, par de réplicas de disponibilidad (incluida la réplica principal actual) que están configuradas para el modo de confirmación sincrónica con conmutación por error automática, si existe. Un conjunto de conmutación automática por error solo tiene efecto si la réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):**  dentro de un grupo de disponibilidad concreto, un conjunto de dos o tres réplicas de disponibilidad (incluida la réplica principal actual) configuradas para el modo de confirmación sincrónica, si lo hubiera. Un conjunto de confirmación sincrónica de conmutación automática por error solo tiene efecto si las réplicas secundarias están configuradas para el modo de conmutación por error manual y al menos una réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):**  Dentro de un grupo de disponibilidad dado, conjunto de dos o tres réplicas de disponibilidad (incluida la réplica principal actual) que están configuradas para el modo de confirmación sincrónica, si lo hubiera. Un conjunto de confirmación sincrónica de conmutación automática por error solo tiene efecto si las réplicas secundarias están configuradas para el modo de conmutación por error manual y al menos una réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  en un grupo de disponibilidad determinado, el conjunto de todas las réplicas de disponibilidad cuyo estado operativo es actualmente ONLINE, independientemente del modo de disponibilidad y el modo de conmutación por error. El conjunto completo de conmutación por error es importante cuando no hay actualmente ninguna réplica secundaria en estado SYNCHRONIZED con la réplica principal.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]: **  En un grupo de disponibilidad determinado, conjunto de todas las réplicas de disponibilidad cuyo estado operativo es actualmente ONLINE, independientemente del modo de disponibilidad y el modo de conmutación por error. El conjunto completo de conmutación por error es importante cuando no hay actualmente ninguna réplica secundaria en estado SYNCHRONIZED con la réplica principal.  
   
  Al configurar una réplica de disponibilidad como confirmación sincrónica con conmutación por error automática, la réplica de disponibilidad forma parte de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Sin embargo, que el conjunto tenga efecto dependerá de la réplica principal actual. Las formas de conmutación por error que son actualmente posibles en un momento determinado dependen de qué conjuntos de conmutación estén actualmente activos.  
   
@@ -258,16 +259,16 @@ ms.locfileid: "52523399"
   
 |Modo de disponibilidad de una réplica secundaria|¿Está sincronizada la base de datos?|¿Es posible que se pierdan datos?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Confirmación sincrónica|Sí|no|  
-|Confirmación sincrónica|no|Sí|  
-|Confirmación asincrónica|no|Sí|  
+|Confirmación sincrónica|Sí|No|  
+|Confirmación sincrónica|No|Sí|  
+|Confirmación asincrónica|No|Sí|  
   
  Las bases de datos secundarias realizan el seguimiento solo en dos bifurcaciones de recuperación, por lo que, si se realizan varias conmutaciones por error forzadas, no podrá reanudarse ninguna de las bases de datos secundarias que comenzaron la sincronización de datos con la conmutación por error forzada anterior. Si esto se produce, las bases de datos secundarias que no puedan reanudarse tendrán que quitarse del grupo de disponibilidad, restaurarse en el punto de tiempo preciso y unirse de nuevo al grupo de disponibilidad. En este escenario, se puede observar el error 1408 con el estado 103 (error: 1408, gravedad: 16, estado: 103). Una restauración no funcionará entre varias bifurcaciones de recuperación; por tanto, asegúrese de realizar una copia de seguridad de registros después de realizar varias conmutaciones por error forzadas.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Por qué se requiere la conmutación por error después de forzar el quórum  
  Después de forzar el cuórum en el clúster WSFC (*cuórum forzado*), debe realizarse una conmutación por error forzada (con posible pérdida de datos) en todos los grupos de disponibilidad. La conmutación por error forzada es necesaria porque el estado real de los valores del clúster WSFC puede haberse perdido. Es necesario evitar las conmutaciones por error normales después de un quórum forzado debido a la posibilidad de que una réplica secundaria no sincronizada parezca sincronizada en el clúster WSFC reconfigurado.  
   
- Por ejemplo, considere un clúster WSFC que hospeda un grupo de disponibilidad en tres nodos: El nodo A hospeda la réplica principal y los nodos B y C hospedan una réplica secundaria. El nodo C se desconecta del clúster WSFC mientras la réplica secundaria local se sincroniza.  Pero los nodos A y B conservan un quórum correcto y el grupo de disponibilidad sigue en línea. En el nodo A, la réplica principal continúa aceptando actualizaciones y, en el nodo B, la réplica secundaria continúa sincronizándose con la réplica principal. La réplica secundaria del nodo C se desincroniza y se encuentra cada vez más retrasada respecto de la réplica principal. Sin embargo, debido a que el nodo C está desconectado, la réplica permanece incorrectamente en el estado SYNCHRONIZED.  
+ Por ejemplo, considere la posibilidad de un clúster WSFC que hospeda un grupo de disponibilidad en tres nodos:  el nodo A hospeda la réplica principal y los nodos B y C hospedan una réplica secundaria cada uno. El nodo C se desconecta del clúster WSFC mientras la réplica secundaria local se sincroniza.  Pero los nodos A y B conservan un quórum correcto y el grupo de disponibilidad sigue en línea. En el nodo A, la réplica principal continúa aceptando actualizaciones y, en el nodo B, la réplica secundaria continúa sincronizándose con la réplica principal. La réplica secundaria del nodo C se desincroniza y se encuentra cada vez más retrasada respecto de la réplica principal. Sin embargo, debido a que el nodo C está desconectado, la réplica permanece incorrectamente en el estado SYNCHRONIZED.  
   
  Si se pierde el quórum y después se fuerza en el nodo A, el estado de sincronización del grupo de disponibilidad del clúster WSFC debería ser correcto y la réplica secundaria del nodo C debería mostrarse como UNSYNCHRONIZED. Sin embargo, si se fuerza el quórum en el nodo C, la sincronización del grupo de disponibilidad será incorrecta. El estado de sincronización del clúster se habrá revertido al estado que tenía cuando el nodo C estaba desconectado y la réplica secundaria del nodo C se mostraría *incorrectamente* como SYNCHRONIZED. Dado que las conmutaciones por error manuales planeadas garantizan la seguridad de los datos, no están permitidas para poner un grupo de disponibilidad de nuevo en línea después de forzar el quórum.  
   
@@ -350,9 +351,9 @@ ms.locfileid: "52523399"
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

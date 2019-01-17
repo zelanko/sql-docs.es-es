@@ -21,12 +21,12 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f146b9aed0e8d5cf94e2028c83d7eb751202c309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75dbab8f45c8a617ed0a98829082170dcf85e310
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746343"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53265966"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  El uso de las funciones de cifrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] junto con el valor ANSI_PADDING OFF podría provocar la pérdida de datos debido a las conversiones implícitas. Para más información sobre ANSI_PADDING, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
- Las funciones que se muestran en estos ejemplos se basan en claves y certificados creados en [Cómo cifrar una columna de datos](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ La funcionalidad ilustrada en los siguientes ejemplos se basa en claves y certificados que se crean en [Cómo: Cifrar una columna de datos](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Cifrar una cadena con una clave simétrica  
  En el ejemplo siguiente se agrega una columna a la tabla `Employee` y, a continuación, se cifra el valor del número de seguridad social almacenado en la columna `NationalIDNumber`.  
@@ -122,13 +122,13 @@ SET EncryptedNationalIDNumber
 GO  
 ```  
   
-### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>B. Cifrar un registro junto con un valor de autenticación  
+### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>b. Cifrar un registro junto con un valor de autenticación  
   
 ```  
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
-ALTER TABLE Sales.CreditCard.   
+ALTER TABLE Sales.CreditCard   
     ADD CardNumber_Encrypted varbinary(128);   
 GO  
   
@@ -145,7 +145,7 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

@@ -1,6 +1,7 @@
 ---
-title: Creación de reflejo de la base de datos - Grupos de disponibilidad AlwaysOn - PowerShell | Microsoft Docs
-ms.custom: ''
+title: Creación de un punto de conexión de creación de reflejo de la base de datos para un grupo de disponibilidad con PowerShell
+description: Se describe cómo crear un punto de conexión de creación de reflejo de la base de datos para un grupo de disponibilidad Always On con PowerShell.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 857fe97c4ef19456c4ce755857702bfd19ff8bd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c3c9306b27804603e00bf9c5d542e5bc800f14e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634103"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206384"
 ---
-# <a name="database-mirroring---always-on-availability-groups--powershell"></a>Creación de reflejo de la base de datos - Grupos de disponibilidad AlwaysOn - PowerShell
+# <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>Creación de un punto de conexión de creación de reflejo de la base de datos para un grupo de disponibilidad con PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo crear un extremo de creación de reflejo de la base de datos para uso de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante PowerShell.  
@@ -30,9 +31,9 @@ ms.locfileid: "47634103"
   
 -   **Antes de empezar:**  [Seguridad](#Security)  
   
--   **Para crear un extremo de creación de reflejo de la base de datos utilizando:**  [PowerShell](#PowerShellProcedure)  
+-   **Para crear un punto de conexión de creación de reflejo de la base de datos con:**  [PowerShell](#PowerShellProcedure)  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -83,7 +84,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear un grupo de disponibilidad &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   

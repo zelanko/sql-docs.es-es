@@ -19,12 +19,12 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bba3aa9dd92086fa887e92c5c5efc3379f419fd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51d4b6c9e19f334946657205de6cdc8c6ce593ec
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702960"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980031"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Referencia de los métodos del tipo de datos hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,8 +75,8 @@ Si durante la actualización se encuentra un tipo de usuario con un nombre probl
 Las columnas de tipo **hierarchyid** pueden usarse en cualquier tipo de tabla replicada. Los requisitos para su aplicación dependen de si la replicación es unidireccional o bidireccional, y de las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usadas.
   
 ### <a name="one-directional-replication"></a>Replicación unidireccional
-La replicación unidireccional incluye la replicación de instantáneas, replicación transaccional y replicación de mezcla en las que las modificaciones no se realizan en el suscriptor. El funcionamiento de las columnas **hierarchyid** con la replicación unidireccional depende de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el suscriptor está ejecutando.
--   Un publicador de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] puede replicar las columnas **hierarchyid** a un suscriptor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sin ninguna consideración especial.  
+La replicación unidireccional incluye la replicación de instantáneas, replicación transaccional y replicación de mezcla en las que las modificaciones no se realizan en el suscriptor. El funcionamiento de las columnas **hierarchyid** con la replicación unidireccional depende de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el suscriptor ejecute.
+-   Un publicador de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] puede replicar las columnas **hierarchyid** en un suscriptor de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sin ninguna consideración especial.  
 -   Un publicador de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] debe convertir las columnas **hierarchyid** para replicarlas a un suscriptor que esté ejecutando [!INCLUDE[ssEW](../../includes/ssew-md.md)] o una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] y las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admiten columnas **hierarchyid**. Si está usando una de estas versiones, todavía puede replicar los datos a un suscriptor. Para ello, debe establecer una opción de esquema o el nivel de compatibilidad de la publicación (para la replicación de mezcla) de modo que la columna se pueda convertir en un tipo de datos compatible.  
   
 Se admite el filtrado de columnas en ambos escenarios. Esto incluye el filtrado de las columnas **hierarchyid**. Se admite el filtrado de filas con tal de que el filtro no incluya una columna **hierarchyid**.

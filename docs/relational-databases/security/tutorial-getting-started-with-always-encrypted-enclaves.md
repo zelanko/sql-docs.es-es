@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523548"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046585"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -122,7 +122,8 @@ En este paso, deberá configurar el equipo con SQL Server como un host protegido
 7. En el equipo con SQL Server, ejecute el siguiente comando en una consola de Windows PowerShell con privilegios para indicar al equipo con SQL Server dónde debe hacer la atestación. Asegúrese de que indica la dirección IP o el nombre de DNS del equipo HGS. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
+   # use http, and not https
+   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
    ```
 
 El resultado del comando anterior debe mostrar que el estado de la atestación es correcto.
@@ -229,7 +230,7 @@ En este paso, creará una clave de columna maestra y una clave de cifrado de col
 2. En el **Explorador de objetos**, expanda su base de datos y vaya a **Seguridad** > **Claves de Always Encrypted**.
 3. Aprovisione una nueva clave maestra de columna habilitada para el enclave:
     1. Haga clic con el botón derecho en **Claves de Always Encrypted** y seleccione **Nueva clave maestra de columna…**.
-    2. Seleccione su nombre de clave maestra de columna: CMK1.
+    2. Seleccione el nombre de clave maestra de columna: CMK1.
     3. Seleccione **Almacén de certificados de Windows (usuario actual o equipo local)** o **Azure Key Vault**.
     4. Seleccione **Permitir cálculos de enclave**.
     5. Si ha seleccionado Azure Key Vault, inicie sesión en Azure y seleccione su almacén de claves. Para obtener más información sobre cómo crear un almacén de claves para Always Encrypted, consulte [Administrar sus almacenes de claves desde Azure Portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
@@ -245,7 +246,7 @@ En este paso, creará una clave de columna maestra y una clave de cifrado de col
     3. En la lista desplegable **Clave maestra de columna**, seleccione la clave maestra de columna que creó en los pasos anteriores.
     4. Seleccione **Aceptar**.
 
-## <a name="step-6-encrypt-some-columns-in-place"></a>Paso 6: Cifrar algunas columnas en su lugar
+## <a name="step-6-encrypt-some-columns-in-place"></a>Paso 6: Cifrar algunas columnas en contexto
 
 En este paso, va a cifrar los datos almacenados en las columnas SSN y Salario dentro del enclave del lado del servidor y después podrá probar una consulta SELECT de los datos.
 

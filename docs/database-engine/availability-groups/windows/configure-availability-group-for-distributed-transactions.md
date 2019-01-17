@@ -1,6 +1,7 @@
 ---
-title: Configurar un grupo de disponibilidad para las transacciones distribuidas | Microsoft Docs
-ms.custom: ''
+title: Configuración de transacciones distribuidas para un grupo de disponibilidad
+description: 'Se describe cómo configurar transacciones distribuidas para bases de datos dentro de un grupo de disponibilidad Always On. '
+ms.custom: seodec18
 ms.date: 05/22/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -16,14 +17,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3953e1d6a4b9382d1607765683c990c42432f7b4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513682"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215674"
 ---
-# <a name="configure-availability-group-for-distributed-transactions"></a>Configurar un grupo de disponibilidad para las transacciones distribuidas
+# <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configuración de transacciones distribuidas para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] admite todas las transacciones distribuidas, incluidas las bases de datos de un grupo de disponibilidad. En este artículo se explica cómo configurar un grupo de disponibilidad para las transacciones distribuidas.  
@@ -186,7 +187,7 @@ Para más información sobre cómo resolver transacciones dudosas, vea [Resolve 
 
 [Transacciones distribuidas](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
-[Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+[Grupos de disponibilidad Always On: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [Transactions - Always On Availability Groups and Database Mirroring](transactions-always-on-availability-and-database-mirroring.md) (Transacciones: grupos de disponibilidad AlwaysOn y creación de reflejo de la base de datos)  
 

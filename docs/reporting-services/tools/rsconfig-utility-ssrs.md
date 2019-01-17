@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 967f4188168d1f322ba64c5ef9dfca5c958f3b45
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8904d9cd03f8d9e7b7010f34f8bfde7e23f0475
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525354"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213664"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig (utilidad) (SSRS)
   La utilidad **rsconfig.exe** cifra y almacena valores de cuenta y conexión en el archivo RSReportServer.config. Los valores cifrados incluyen la información de conexión de la base de datos del servidor de informes y los valores de cuenta utilizados para el procesamiento de informes desatendido.  
@@ -92,7 +92,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### <a name="specifying-a-built-in-account"></a>Especificar una cuenta integrada  
- Este ejemplo muestra cómo configurar un servidor de informes para usar una cuenta integrada cuando se conecta a una base de datos de servidor de informes local. Tenga en cuenta que no se usa **-u** . Algunos ejemplos de valores de una cuenta integrada compatibles son NT AUTHORITY\SYSTEM para el Sistema local y NT AUTHORITY\NETWORKSERVICE para el Servicio de red (solo[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ).  
+ Este ejemplo muestra cómo configurar un servidor de informes para usar una cuenta integrada cuando se conecta a una base de datos de servidor de informes local. Tenga en cuenta que no se usa **-u** . Algunos ejemplos de valores de una cuenta integrada compatibles son NT AUTHORITY\SYSTEM para el Sistema local y NT AUTHORITY\NETWORKSERVICE para el Servicio de red (solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]).  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  
@@ -119,7 +119,7 @@ rsconfig -e -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t
 rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

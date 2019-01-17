@@ -26,12 +26,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad662f209361dbffd8096bd7605cb5ad0e01a9d5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 8c8a970d96475d2682bc58246aa2383bf19e8365
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072049"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979741"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -92,7 +92,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>Notas  
 Use DBCC FREEPROCCACHE con precaución para borrar la caché del plan. Borrar la memoria caché (de plan) de procedimientos hace que todos los planes se expulsen y las ejecuciones de consultas entrantes compilarán un nuevo plan, en lugar de volver a usar alguno de los planes previamente almacenados en caché. 
 
-Como consecuencia, el rendimiento de las consultas puede disminuir de manera repentina y temporal a medida que el número de compilaciones nuevas vaya aumentando. Para cada almacén de caché borrado de la caché del plan, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché '%s' (parte de la caché del plan) debidas a operaciones 'DBCC FREEPROCCACHE' o 'DBCC FREESYSTEMCACHE'". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
+Como consecuencia, el rendimiento de las consultas puede disminuir de manera repentina y temporal a medida que el número de compilaciones nuevas vaya aumentando. Para cada almacén de caché borrado de la caché del plan, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la caché del plan) debidas a operaciones "DBCC FREEPROCCACHE" o "DBCC FREESYSTEMCACHE"". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 
 Las siguientes operaciones de reconfiguración también borran la caché de procedimientos:
 -   access check cache bucket count  
@@ -113,7 +113,7 @@ Las siguientes operaciones de reconfiguración también borran la caché de proc
 -   user options  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
-Si no se especifica la cláusula WITH NO_INFOMSGS, DBCC FREEPROCCACHE devuelve: "Ejecución de DBCC completada. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."
+Si no se especifica la cláusula WITH NO_INFOMSGS, se devuelve DBCC FREEPROCCACHE: "La ejecución de DBCC se ha completado. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."
   
 ## <a name="permissions"></a>Permisos  
 Se aplica a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -131,7 +131,7 @@ DBCC FREEPROCCACHE se puede cancelar durante su ejecución.
   
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitaciones y restricciones de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC FREEPROCCACHE no se puede ejecutar dentro de una transacción.
-DBCC FREEPROCCACHE no se puede usar en una instrucción EXPLAIN.
+DBCC FREEPROCCACHE no se admite en una instrucción EXPLAIN.
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Metadatos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Cuando DBCC FREEPROCCACHE se ejecuta, se agrega una fila nueva a la vista del sistema sys.pdw_exec_requests.
@@ -171,7 +171,7 @@ DBCC FREEPROCCACHE (0x060006001ECA270EC0215D05000000000000000000000000);
 GO  
 ```  
   
-### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. Borrar todos los planes de la memoria caché del plan  
+### <a name="b-clearing-all-plans-from-the-plan-cache"></a>b. Borrar todos los planes de la memoria caché del plan  
 En el ejemplo siguiente se borran todos los elementos de la memoria caché del plan. La cláusula WITH `NO_INFOMSGS` se especifica para que no se muestre el mensaje informativo.
   
 ```sql  
@@ -215,7 +215,7 @@ GRANT ALTER SERVER STATE TO David;
 GO
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)  
 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

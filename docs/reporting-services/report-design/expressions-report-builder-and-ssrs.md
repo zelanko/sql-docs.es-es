@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5764d853f70213c0f92b68af28f0647ba6d1a1e5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9790f320fe6f6ebe61eff665de625f9c9cfe77d2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021149"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205024"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expresiones (Generador de informes y SSRS)
   Las expresiones se utilizan ampliamente a lo largo de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para recuperar, calcular, mostrar, agrupar, ordenar, filtrar y parametrizar datos y darles formato. 
@@ -74,7 +74,7 @@ ms.locfileid: "50021149"
 ##  <a name="References"></a> Escribir expresiones complejas  
  Las expresiones pueden incluir referencias a funciones, operadores, constantes, campos, parámetros, elementos de colecciones integradas y referencias a código personalizado incrustado o a ensamblados personalizados.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Para desarrollar expresiones complejas o expresiones que utilizan código personalizado o ensamblados personalizados, recomendamos utilizar el Diseñador de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obtener más información, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)subyacente.  
   
  En la tabla siguiente se enumeran los tipos de referencias que se pueden incluir en una expresión:  
@@ -107,7 +107,7 @@ ms.locfileid: "50021149"
   
  [Referencia de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)  
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
  Para obtener más información y ejemplos, vea los siguientes temas:  
   
 -   [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  

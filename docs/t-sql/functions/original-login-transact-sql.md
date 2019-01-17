@@ -22,15 +22,15 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a4b22ca8bec9f12778cae94d31de77c9cbe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91c5694868c7e57182b8295e5bac793ee8698a50
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789143"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951597"
 ---
 # <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve el nombre del inicio de sesión que se conectó a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede utilizar esta función para devolver la identidad del inicio de sesión original en sesiones en las que hay varios cambios de contexto explícitos o implícitos.  
   
@@ -48,11 +48,13 @@ ORIGINAL_LOGIN( )
   
 ## <a name="remarks"></a>Notas  
  Esta función puede resultar útil para la auditoría de la identidad del contexto de conexión original. Mientras que funciones como [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) y [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) devuelven el contexto de ejecución actual, ORIGINAL_LOGIN devuelve la identidad del inicio de sesión que se conectó en primer lugar a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en esa sesión.  
-  
- Devuelve NULL en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ 
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente cambia el contexto de ejecución de la sesión actual desde el solicitante de las instrucciones para `login1`. Las funciones `SUSER_SNAME` y `ORIGINAL_LOGIN` se utilizan para devolver el usuario de la sesión actual (el usuario al que se cambió el contexto), y la cuenta de inicio de sesión original.  
+ El ejemplo siguiente cambia el contexto de ejecución de la sesión actual desde el solicitante de las instrucciones para `login1`. Las funciones `SUSER_SNAME` y `ORIGINAL_LOGIN` se utilizan para devolver el usuario de la sesión actual (el usuario al que se cambió el contexto), y la cuenta de inicio de sesión original. 
+ 
+  >[!NOTE]
+  > Aunque en Azure SQL Database se admite la función ORIGINAL_LOGIN, el script siguiente producirá un error porque *Execute as LOGIN* no se admite en Azure SQL Database. 
   
 ```  
 USE AdventureWorks2012;  
@@ -79,7 +81,7 @@ DROP USER user1;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
   

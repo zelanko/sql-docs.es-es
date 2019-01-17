@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537783"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980421"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -300,7 +300,7 @@ Para los índices de almacén de columnas de [!INCLUDE[ssNoVersion](../../includ
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
 
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+ **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS ofrece una manera de forzar a los grupos de filas delta con el estado OPEN o CLOSED hacia el almacén de columnas. Con esta opción, no es necesario regenerar el índice de almacén de columnas para vaciar los grupos de filas delta.  Al combinar esta opción con las otras características de eliminación y combinación de desfragmentación, ya no es necesario regenerar el índice en la mayoría de los casos.    
 
@@ -536,13 +536,13 @@ El valor predeterminado es 0 minutos.
   
  \<partition_number_expression> se puede especificar de las maneras siguientes:  
   
--   Proporcionar el número de una partición, por ejemplo: ON PARTITIONS (2).  
+-   Proporcionar el número de una partición, por ejemplo: EN PARTICIONES (2).  
   
--   Proporcionar los números de partición de varias particiones separados por comas, por ejemplo: ON PARTITIONS (1, 5).  
+-   Proporcionar los números de partición para varias particiones individuales separadas por comas, por ejemplo: EN PARTICIONES (1,5).  
   
--   Proporcionar intervalos y particiones individuales: ON PARTITIONS (2, 4, 6 TO 8).  
+-   Proporcionar particiones individuales y de intervalos: EN PARTICIONES (2, 4, 6 A 8).  
   
- \<range> se puede especificar como números de partición separados por la palabra TO, como por ejemplo: ON PARTITIONS (6 TO 8).  
+ \<range> se puede especificar como números de partición separados por la palabra TO, por ejemplo: EN PARTICIONES (6 A 8).  
   
  Para establecer diferentes tipos de compresión de datos para distintas particiones, especifique la opción DATA_COMPRESSION más de una vez, por ejemplo:  
   
@@ -594,7 +594,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
+**Se aplica a**: A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
 
 Reanudar una operación de índice que se haya pausado manualmente o debido a un error.
 
@@ -840,7 +840,6 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
@@ -871,7 +870,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
-### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. Comprimir grupos de filas delta con estado CLOSED en el almacén de columnas  
+### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>b. Comprimir grupos de filas delta con estado CLOSED en el almacén de columnas  
  En este ejemplo se usa la opción REORGANIZE para comprimir cada grupo de filas delta con el estado CLOSED en el almacén de columnas como un grupo de filas comprimido.   Esta operación no es necesaria, pero es útil cuando el motor de tupla no comprime los grupos de filas CLOSED lo suficientemente rápido.  
   
 ```sql  
@@ -884,7 +883,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Comprimir todos los grupos de filas delta con estado OPEN y CLOSED en el almacén de columnas  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+ **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
  El comando REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) comprime cada grupo de filas delta con los estados OPEN y CLOSED en el almacén de columnas como un grupo de filas comprimido. Esto vacía el almacén delta y obliga a todas las filas a comprimirse en el almacén de columnas. Esto es útil sobre todo después de realizar muchas operaciones de inserción, ya que estas operaciones almacenan las filas en uno o varios grupos de filas delta.  
   
@@ -1006,7 +1005,7 @@ GO
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
-### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Volver a generar todos los índices de una tabla y especificar opciones  
+### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>b. Volver a generar todos los índices de una tabla y especificar opciones  
  En el siguiente ejemplo se especifica la palabra clave ALL. Esto vuelve a generar todos los índices asociados a la tabla Production.Product en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Se especifican tres opciones.  
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -1033,10 +1032,10 @@ REBUILD WITH
 ```  
   
 ### <a name="c-reorganizing-an-index-with-lob-compaction"></a>C. Reorganizar un índice con compactación LOB  
- En el siguiente ejemplo se reorganiza un único índice clúster en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Dado que el índice contiene un tipo de datos LOB en el nivel hoja, la instrucción también compacta todas las páginas que contienen datos de objetos grandes. Observe que no es necesario especificar la opción WITH (LOB_COMPACTION) dado que el valor predeterminado es ON.  
+ En el siguiente ejemplo se reorganiza un único índice clúster en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Dado que el índice contiene un tipo de datos LOB en el nivel hoja, la instrucción también compacta todas las páginas que contienen datos de objetos grandes. Observe que no es necesario especificar la opción WITH (LOB_COMPACTION = ON) porque el valor predeterminado es ON.  
   
 ```sql  
-ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
+ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION = ON);  
 ```  
   
 ### <a name="d-setting-options-on-an-index"></a>D. Establecer opciones en un índice  
@@ -1167,7 +1166,7 @@ Para obtener más ejemplos de compresión de datos, vea [Compresión de datos](.
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   

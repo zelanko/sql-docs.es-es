@@ -1,21 +1,23 @@
 ---
-title: 'Informes móviles de SQL Server: tutorial completo | Microsoft Docs'
-ms.date: 11/07/2017
+title: 'Informes móviles de SQL Server: tutorial integral'
+description: Recorra la creación de informes móviles para cualquier tamaño de pantalla con Publicador de informes móviles de Microsoft SQL Server en el portal web de Reporting Services y véalos en las aplicaciones móviles de Power BI.
+ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813768"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209714"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial completo
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial integral
 Recorra la creación de informes móviles para cualquier tamaño de pantalla con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y véalos en las aplicaciones móviles de Power BI.
 
 Cree informes móviles en una superficie de diseño con cuadrícula ajustable de filas y columnas y elementos flexibles de informes móviles. Conéctese a una variedad de orígenes de datos locales o cargue libros de Excel para crear informes móviles. A continuación, guarde los informes en un portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] y véalos en un explorador o en las aplicaciones móviles de Power BI.  
@@ -30,14 +32,14 @@ Este artículo le guiará para que pueda:
 ## <a name="before-we-start"></a>Antes de empezar  
 Para poder continuar, necesita estos productos:  
   
-* Para crear orígenes de datos y KPI, además de publicar informes móviles y conjuntos de datos, necesita tener acceso a un [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
-* Para [crear conjuntos de datos compartidos](../install-windows/install-report-builder.md).  
+* Para crear orígenes de datos y KPI, además de publicar informes móviles y conjuntos de datos, tendrá que acceder a un [servidor de informes de Reporting Services en modo nativo](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* Para crear conjuntos de datos compartidos, [instale el Generador de informes](../install-windows/install-report-builder.md).  
 * Para crear informes móviles, [instale Publicador de informes móviles de SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
-*  O BIEN: Base de datos de ejemplo de World Wide Importers, disponible en la página [Ejemplos de Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
+*  O: Base de datos de ejemplo de World Wide Importers, disponible en la página [Ejemplos de Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Para ver el resultado: 
   *   [Suscríbase al servicio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) y
-  *  [Descargue la aplicación móvil de Power BI](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) a su dispositivo móvil: dispositivo iOS, teléfono Android o dispositivo Windows 10.  
+  *  [Descargue la aplicación móvil de Power BI](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) a su dispositivo móvil: dispositivo iOS, teléfono Android o dispositivo Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Crear un origen de datos compartido  
@@ -77,7 +79,7 @@ Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnov
 4. En el campo de nombre, escriba el nombre del servidor donde guardó el origen de datos, con el formato siguiente:   
    
    Nombre: https://*localhost*/ReportServer  
-   Elementos de tipo: orígenes de datos (*.rsds)  
+   Elementos de tipo: Orígenes de datos (*.rsds)  
    
 5. Haga clic en **Abrir**y desplácese hasta el origen de datos que creó en ese servidor.  
    
@@ -281,7 +283,9 @@ Para ver el informe de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-
   
     ![PBI_iPad_SSMRP_LeftNavBiggr](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-leftnavbiggr.png)  
       
->**Sugerencia**:Pulse el icono de opciones ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) en cualquier momento para pasar de los informes móviles de Reporting Services del portal web de Reporting Services a los paneles del servicio Power BI.   
+> [!TIP]
+> Pulse el icono de opciones ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) en cualquier momento para pasar de los informes móviles de Reporting Services del portal web de Reporting Services a los paneles del servicio Power BI.  
+
   
 ## <a name="view-kpis-and-mobile-reports-in-the-power-bi-app"></a>Ver KPI e informes móviles en la aplicación de Power BI  
   
@@ -297,12 +301,10 @@ Pulse la pestaña **KPI** o **Informes móviles** .
   
 Los KPI y los informes móviles se muestran en las mismas carpetas en las que están en el portal web de Reporting Services.   
   
-### <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también  
  
--  [Visualización de informes móviles y KPI de Reporting Services en la aplicación de iPad](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  
--  [Visualización de informes móviles y KPI de Reporting Services en la aplicación de iPhone](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI para iOS)  
--  [Visualización de informes móviles y KPI de Reporting Services en la aplicación de Android para Power BI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
--  [Visualización de informes móviles y KPI de Reporting Services en la aplicación móvil de Power BI para Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
+-  Visualización [de informes y KPI locales del servidor de informes en la aplicaciones móviles de Power BI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) para dispositivos iOS y Android
+-  Visualización [de informes móviles y KPI de Reporting Services (SSRS) en la aplicación móvil de Power BI para Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
 

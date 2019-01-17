@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaae67a3d08fd899a9a73e4e853b1dbc97dba9ee
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535539"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553217"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El catálogo de **SSISDB** es el eje central cuando se trabaja con proyectos de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que ha implementado en el servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -28,7 +28,7 @@ ms.locfileid: "52535539"
 > [!NOTE]
 > En este artículo se describe el catálogo de SSIS en general y el catálogo de SSIS ejecutado de forma local. El catálogo de SSIS también se puede crear en Azure SQL Database, y los paquetes SSIS se pueden implementar y ejecutar en Azure. Para obtener más información, consulte [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) (Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift).
 >
-> Aunque los paquetes SSIS también se pueden ejecutar en Linux, no se admite el catálogo de SSIS. Para obtener más información, consulte [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md) (Extracción, transformación y carga de datos en Linux con SSIS).
+> Aunque los paquetes SSIS también se pueden ejecutar en Linux, no se admite el catálogo de SSIS. Para obtener más información, consulte [Extracción, transformación y carga de datos en Linux con SSIS](../../linux/sql-server-linux-migrate-ssis.md) .
  
  Entre los objetos que se almacenan en el catálogo **SSISDB** se incluyen proyectos, paquetes, parámetros, entornos y el historial de operaciones.  
   
@@ -412,7 +412,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
     ```  
   
-3.  Use el cuadro de diálogo **Copia de seguridad de la base de datos** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para realizar una copia de seguridad de la base de datos de SSISDB. Para más información, vea [Cómo realizar una copia de seguridad de una base de datos (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Use el cuadro de diálogo **Copia de seguridad de la base de datos** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para realizar una copia de seguridad de la base de datos de SSISDB. Para más información, vea [Cómo: Realizar una copia de seguridad de una base de datos (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Realice los procedimientos siguientes para generar el script CREATE LOGIN para ##MS_SSISServerCleanupJobLogin##. Para obtener más información, vea [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -436,7 +436,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
 ### <a name="to-restore-the-ssis-database"></a>Para restaurar la base de datos de SSIS  
   
-1.  Si va a restaurar la base de datos de SSISDB en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que el catálogo de SSISDB nunca se creó, habilite Common Language Runtime (CLR) ejecutando el procedimiento almacenado sp_configure. Para más información, vea [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y [clr enabled (opción)](https://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Si va a restaurar la base de datos de SSISDB en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que nunca se ha creado el catálogo de SSISDB, habilite Common Language Runtime (CLR) mediante la ejecución del procedimiento almacenado `sp_configure`. Para más información, vea [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y [clr enabled (opción)](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -541,10 +541,10 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
 2.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el servidor local y luego expanda **Catálogos de Integration Services**.  
   
-3.  Haga clic con el botón derecho en **SSISDB**y, después, seleccione **Actualización de base de datos** para iniciar el Asistente para actualización de SSISDB.  
+3.  Haga clic con el botón derecho en **SSISDB**y, después, seleccione **Actualización de base de datos** para iniciar el Asistente para actualización de SSISDB. O bien, inicie el Asistente para actualización de SSISDB mediante la ejecución de `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe` con permisos elevados en el servidor local.
   
-     ![Iniciar el Asistente para actualización de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "Iniciar el Asistente para actualización de SSISDB")  
-  
+     ![Inicio del Asistente para actualización de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
+
 4.  En la página **Seleccionar instancia** , seleccione una instancia de SQL Server en el servidor local.  
   
     > [!IMPORTANT]  
@@ -587,20 +587,20 @@ Lleve a cabo los siguientes pasos, que constituyen unos requisitos previos, ante
   
 ###  <a name="Firsttime"></a> Configuración de la compatibilidad con SSIS para AlwaysOn  
   
--   [Paso 1: creación del catálogo de Integration Services](#Step1)  
+-   [Paso 1: Creación del catálogo de Integration Services](#Step1)  
   
--   [Paso 2: adición de SSISDB a un grupo de disponibilidad AlwaysOn](#Step2)  
+-   [Paso 2: Adición de SSISDB a un grupo de disponibilidad Always On](#Step2)  
   
--   [Paso 3: habilitación de la compatibilidad con SSIS para AlwaysOn](#Step3)  
+-   [Paso 3: Habilitación de la compatibilidad con SSIS para Always On](#Step3)  
   
 > [!IMPORTANT]  
 > -   Debe realizar estos pasos en el **nodo principal** del grupo de disponibilidad.
 > -   Debe habilitar la **compatibilidad con SSIS para AlwaysOn** *después* de agregar SSISDB a un grupo de disponibilidad AlwaysOn.  
 
 > [!NOTE]
-> Para obtener más información sobre este procedimiento, vea el siguiente tutorial con capturas de pantalla adicionales de Marcos Freccia, MVP de Data Platform: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) (Adición de SSISDB a AG para SQL Server 2016).
+> Para más información sobre este procedimiento, vea el tutorial siguiente con capturas de pantalla adicionales de Marcos Freccia, MVP de Data Platform: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) (Adición de SSISDB a grupos de disponibilidad para SQL Server 2016).
 
-####  <a name="Step1"></a> Paso 1: creación del catálogo de Integration Services  
+####  <a name="Step1"></a> Paso 1: Creación del catálogo de Integration Services  
   
 1.  Inicie **SQL Server Management Studio** y conéctese a una instancia de SQL Server en el clúster que quiere establecer como el **nodo principal** del grupo de alta disponibilidad AlwaysOn para SSISDB.  
   
@@ -612,14 +612,14 @@ Lleve a cabo los siguientes pasos, que constituyen unos requisitos previos, ante
   
 5.  Escriba una **contraseña**y haga clic en **Aceptar**. La contraseña protege la clave maestra de la base de datos que se usar para cifrar los datos del catálogo. Guarde la contraseña en un lugar seguro. Se recomienda que haga también una copia de seguridad de la clave maestra de la base de datos. Para más información, consulte [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
-####  <a name="Step2"></a> Paso 2: adición de SSISDB a un grupo de disponibilidad AlwaysOn  
+####  <a name="Step2"></a> Paso 2: Adición de SSISDB a un grupo de disponibilidad Always On  
 Puede agregar la base de datos SSISDB a un grupo de disponibilidad AlwaysOn prácticamente con el mismo procedimiento que emplearía para agregar cualquier otra base de datos de usuario a un grupo de disponibilidad. Consulte [Usar el Asistente para grupo de disponibilidad (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
 Escriba la contraseña que especificó al crear el catálogo de SSIS en la página **Seleccionar bases de datos** del asistente **Nuevo grupo de disponibilidad**.
 
 ![Asistente para nuevo grupo de disponibilidad](../../integration-services/service/media/ssis-newavailabilitygroup.png "Asistente para nuevo grupo de disponibilidad")  
   
-####  <a name="Step3"></a> Paso 3: habilitación de la compatibilidad con SSIS para AlwaysOn  
+####  <a name="Step3"></a> Paso 3: Habilitación de la compatibilidad con SSIS para Always On  
  Después de crear el catálogo de Integration Services, haga clic con el botón derecho en el nodo **Integration Service Catalogs** (Catálogos de Integration Services) y haga clic en **Enable AlwaysOn Support** (Habilitar compatibilidad con AlwaysOn). Verá el siguiente cuadro de diálogo: **Habilitar compatibilidad con AlwaysOn** . Si este elemento de menú está deshabilitado, confirme que tiene todos los requisitos previos instalados y haga clic en **Actualizar**.  
   
  ![Habilitar compatibilidad con AlwaysOn](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -655,9 +655,9 @@ Si la opción **Habilitar compatibilidad con AlwaysOn** del menú contextual par
   
 3.  Actualice la base de datos SSISDB en el **nodo principal**. En el**Explorador de objetos** de SQL Server Management Studio, expanda **Catálogos de Integration Services**, haga clic con el botón derecho en **SSISDB**y, después, seleccione **Actualización de base de datos**. Siga las instrucciones del **Asistente para actualización de SSISDB** a fin de actualizar la base de datos. Inicie el **Asistente para actualización de SSIDB** localmente en el **nodo primario**.  
   
-4.  Siga las instrucciones de [Paso 2: adición de SSISDB a un grupo de disponibilidad AlwaysOn](#Step2) para volver a agregar SSISDB a un grupo de disponibilidad.  
+4.  Siga las instrucciones de [Paso 2: Adición de SSISDB a un grupo de disponibilidad Always On](#Step2) para volver a agregar SSISDB a un grupo de disponibilidad.  
   
-5.  Siga las instrucciones de [Paso 3: habilitación de la compatibilidad con SSIS para AlwaysOn](#Step3).  
+5.  Siga las instrucciones de [Paso 3: Habilitación de la compatibilidad con SSIS para Always On](#Step3).  
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   

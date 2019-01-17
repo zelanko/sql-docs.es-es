@@ -1,6 +1,7 @@
 ---
-title: La réplica de disponibilidad no está unida | Microsoft Docs
-ms.custom: ''
+title: La réplica de disponibilidad no se ha unido a un grupo de disponibilidad
+description: Identifique las posibles causas de por qué una réplica no se ha unido a un grupo de disponibilidad Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d05c100e13e59db4f65cc8dfc48f64b261e0e66c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1be357ee98027d66f327e518a43947e3611fe119
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599775"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203654"
 ---
-# <a name="availability-replica-is-not-joined"></a>La réplica de disponibilidad no está unida
+# <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>La réplica de disponibilidad no se ha unido a un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Introducción  
@@ -45,7 +46,7 @@ ms.locfileid: "51599775"
 ## <a name="possible-solution"></a>Solución posible  
  Use Transact-SQL, PowerShell o SQL Server Management Studio para combinar la réplica secundaria con el grupo de disponibilidad. Para obtener más información sobre cómo combinar las réplicas secundarias con los grupos de disponibilidad, vea [Combinar una réplica secundaria con un grupo de disponibilidad (SQL Server)](https://msdn.microsoft.com/library/ff878473\(SQL.110\).aspx).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

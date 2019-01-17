@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed7f25c6151a135ffba2add1c0f9873dabb84198
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 277df440e315035be6cb019a30fd11cd3e94c674
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698503"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215315"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +77,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  Es el nombre de la tabla que se va a truncar o de la que se van a quitar todas las filas. *table_name* debe ser un valor literal. *table_name* no puede ser la variable o la función de **OBJECT_ID()**.  
   
  WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  Especifica las particiones para truncar o desde las que se quitan todas las filas. Si la tabla no tiene particiones, el argumento **WITH PARTITIONS** generará un error. Si no se proporciona la cláusula **WITH PARTITIONS**, se truncará toda la tabla.  
   
@@ -155,9 +155,9 @@ FROM HumanResources.JobCandidate;
 GO  
 ```  
   
-### <a name="b-truncate-table-partitions"></a>B. Truncar la tabla de particiones  
+### <a name="b-truncate-table-partitions"></a>b. Truncar la tabla de particiones  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  En el ejemplo siguiente se trunca las particiones especificadas de una tabla con particiones. La sintaxis de `WITH (PARTITIONS (2, 4, 6 TO 8))` provoca que los números de partición 2, 4, 6, 7 y 8 se trunquen.  
   
@@ -167,7 +167,7 @@ WITH (PARTITIONS (2, 4, 6 TO 8));
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [IDENTITY &#40;propiedad de Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  

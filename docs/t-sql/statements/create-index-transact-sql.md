@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518331"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980511"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -301,9 +301,12 @@ ON *partition_scheme_name* **( *column_name* )**
  ON **"** default **"**  
  **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].  
   
- Crea el índice especificado en el grupo de archivos predeterminado.  
+ Crea el índice especificado en el mismo grupo de archivos o esquema de partición que la tabla o la vista.  
   
- El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"** default **"** u ON **[** default **]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"** default **"** u ON **[** default **]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+ 
+> [!NOTE]  
+> "default" no indica el grupo de archivos de base de datos predeterminado en el contexto de CREATE INDEX. Esto difiere de CREATE TABLE, donde "default" busca la tabla en el grupo de archivos predeterminado de la base de datos.
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -452,7 +455,7 @@ En la sintaxis compatible con versiones anteriores, WITH DROP_EXISTING es equiva
 ONLINE = { ON | **OFF** }  
 Especifica si las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de índice. El valor predeterminado es OFF.  
   
-> [!NOTE]  
+> [!NOTE]
 > Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ON  
@@ -533,7 +536,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 > Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) y [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  DATA_COMPRESSION  
@@ -557,11 +560,11 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* 
   
  \<partition_number_expression> se puede especificar de las maneras siguientes:  
   
--   Proporcionar el número de una partición, por ejemplo: ON PARTITIONS (2).  
--   Proporcionar los números de partición de varias particiones separados por comas, por ejemplo: ON PARTITIONS (1, 5).  
--   Proporcionar intervalos y particiones individuales: ON PARTITIONS (2, 4, 6 TO 8).  
+-   Proporcionar el número de una partición, por ejemplo: EN PARTICIONES (2).  
+-   Proporcionar los números de partición para varias particiones individuales separadas por comas, por ejemplo: EN PARTICIONES (1,5).  
+-   Proporcione ambos rangos y las particiones individuales, por ejemplo: EN PARTICIONES (2, 4, 6 A 8).  
   
- \<range> se puede especificar como números de partición separados por la palabra TO, como por ejemplo: ON PARTITIONS (6 TO 8).  
+ \<range> se puede especificar como números de partición separados por la palabra TO, por ejemplo: EN PARTICIONES (6 A 8).  
   
  Para establecer diferentes tipos de compresión de datos para distintas particiones, especifique la opción DATA_COMPRESSION más de una vez, por ejemplo:  
  
@@ -792,7 +795,7 @@ Abajo se detallan las funciones que se deshabilitan para las operaciones de crea
 ## <a name="version-notes"></a>Notas de la versión  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no admite opciones de grupo de archivos ni secuencia de archivos.  
   
-## <a name="examples-all-versions-uses-the-adventureworks-database"></a>Ejemplos: todas las versiones. Utiliza la base de datos AdventureWorks.  
+## <a name="examples-all-versions-uses-the-adventureworks-database"></a>Ejemplos: Todas las versiones. Utiliza la base de datos AdventureWorks.  
   
 ### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>A. Crear un índice no clúster de almacén de filas simple  
  El ejemplo siguiente crea un índice no agrupado en la columna `VendorID` de la tabla `Purchasing.ProductVendor`.  
@@ -803,7 +806,7 @@ CREATE INDEX IX_VendorID ON dbo.ProductVendor (VendorID DESC, Name ASC, Address 
 CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>B. Crear un índice compuesto de almacén de filas no agrupado  
+### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>b. Crear un índice compuesto de almacén de filas no agrupado  
  En el ejemplo siguiente se crea un índice compuesto no agrupado en las columnas `SalesQuota` y `SalesYTD` de la tabla `Sales.SalesPerson`.  
   
 ```sql  
@@ -1049,7 +1052,7 @@ CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABL
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 
@@ -1078,7 +1081,7 @@ CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 
@@ -1115,7 +1118,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
     ON Purchasing..ProductVendor (VendorID);   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Guía de diseño de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
  [Índices y ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   

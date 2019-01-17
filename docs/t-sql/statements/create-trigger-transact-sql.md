@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 29bb936325bde06220d982948a1e6c599e9ce784
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2ee63ff261df82926fd67f5014c09f894160d14e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970516"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213744"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>Argumentos
 OR ALTER  
- **Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
+ **Se aplica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
   
  Altera el desencadenador condicionalmente solo si ya existe. 
   
@@ -262,7 +262,7 @@ SELECT * FROM deleted;
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite actualizar las columnas **text**, **ntext** o **image** mediante el uso del desencadenador INSTEAD OF en tablas o vistas.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)y [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) en su lugar. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos **varchar(MAX)**, **nvarchar(MAX)** y **varbinary(MAX)** en las tablas insertadas y eliminadas.  
   
  Para los desencadenadores en tablas optimizadas para memoria, el único *sql_statement* permitido en el nivel superior es un bloque ATOMIC. El código T-SQL permitido dentro del bloque ATOMIC está limitado por el código T-SQL permitido dentro de los procedimientos nativos.  
@@ -427,7 +427,7 @@ AS RAISERROR ('Notify Customer Relations', 16, 10);
 GO  
 ```  
   
-### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. Usar un desencadenador DML con un mensaje de correo electrónico de aviso  
+### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>b. Usar un desencadenador DML con un mensaje de correo electrónico de aviso  
  Este ejemplo envía un mensaje de correo electrónico a una persona especificada (`MaryM`) cuando cambia la tabla `Customer`.  
   
 ```sql  
@@ -570,7 +570,7 @@ GO
 
     
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   

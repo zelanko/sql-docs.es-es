@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 845031e6002ef992b6f04b053bde9955896591fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512118"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202904"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -455,7 +455,7 @@ GO
   
 |Nombre del objeto del Monitor de rendimiento|Nombre del contador del Monitor de rendimiento|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer: Plan Cache|Frecuencia de aciertos de caché|  
+|SQLServer: objeto Plan Cache|Frecuencia de aciertos de caché|  
 ||Páginas de caché|  
 ||Recuentos de objetos de caché*|  
   
@@ -532,7 +532,7 @@ GO
 HumanResources.uspGetAllEmployees;  
 ```  
   
-#### <a name="b-returning-more-than-one-result-set"></a>B. Devolver más de un conjunto de resultados  
+#### <a name="b-returning-more-than-one-result-set"></a>b. Devolver más de un conjunto de resultados  
  El procedimiento siguiente devuelve dos conjuntos de resultados.  
   
 ```sql  
@@ -797,7 +797,7 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> Tratamiento de errores  
  En los ejemplos de esta sección se muestran métodos de controlar errores que pueden producirse cuando se ejecuta el procedimiento almacenado.  
   
-#### <a name="j-using-trycatch"></a>J. Usar TRY... CATCH  
+#### <a name="j-using-trycatch"></a>J. Uso de TRY…CATCH  
  En el ejemplo siguiente se usa la construcción TRY…CATCH para devolver información de error capturada durante la ejecución de un procedimiento almacenado.  
   
 ```sql  
@@ -993,7 +993,7 @@ GO
 EXEC Get10TopResellers;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [Cursores](../../relational-databases/cursors.md)   

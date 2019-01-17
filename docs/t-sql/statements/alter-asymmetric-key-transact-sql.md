@@ -20,12 +20,12 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 02920786c8ee3b4fec011dd084a8fb7fc064b69d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 55867a7740bd0a37d789a870ef043350b22e5376
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807371"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979392"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  Cambia la protección de la clave privada.  
   
- ENCRYPTION BY PASSWORD **='***stongPassword***'**  
+ ENCRYPTION BY PASSWORD **="***contraseñaSegura***"**  
  Especifica una nueva contraseña para proteger la clave privada. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se omite esta opción, la clave privada se cifrará con la clave maestra de la base de datos.  
   
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
@@ -98,7 +98,7 @@ ALTER ASYMMETRIC KEY PacificSales09
 GO  
 ```  
   
-### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>B. Quitar la clave privada de una clave asimétrica  
+### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>b. Quitar la clave privada de una clave asimétrica  
  En el siguiente ejemplo se quita la clave privada de `PacificSales19` y se mantiene solamente la clave pública.  
   
 ```  
@@ -116,7 +116,7 @@ ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
  [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   

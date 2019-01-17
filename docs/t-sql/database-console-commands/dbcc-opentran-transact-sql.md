@@ -26,19 +26,19 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: eafe617f4586863dba9bed75a14cee2623cb54e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cebd9e5b52e2aa80308e266858da014b13f267c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821545"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206734"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 DBCC OPENTRAN ayuda a identificar las transacciones activas que pueden evitar el truncamiento del registro. DBCC OPENTRAN muestra información acerca de la transacción activa más antigua y las transacciones distribuidas y no distribuidas replicadas más antiguas, si las hubiera, dentro del registro de transacciones de la base de datos especificada. Solo se presentan resultados si hay una transacción activa que existe en el registro o si la base de datos contiene información de replicación. Si no hay transacciones activas en el registro, se muestra un mensaje informativo.
   
-> [!NOTE]  
+> [!NOTE]
 >  DBCC OPENTRAN no se admite para publicadores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -113,7 +113,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]  
 >  El resultado "UID (user ID)" no tiene ningún sentido y se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="b-specifying-the-with-tableresults-option"></a>B. Especificar la opción WITH TABLERESULTS  
+### <a name="b-specifying-the-with-tableresults-option"></a>b. Especificar la opción WITH TABLERESULTS  
 El siguiente ejemplo carga los resultados del comando DBCC OPENTRAN en una tabla temporal.
   
 ```sql  
@@ -131,7 +131,7 @@ SELECT * FROM #OpenTranStatus;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
 [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

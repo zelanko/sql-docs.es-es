@@ -18,12 +18,12 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 42d3976cabcfc231079f5b3b0c8cf9cbd1dcde94
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: daaaa615a778314556f9684800bdc2a56cd7a5ef
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524317"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980151"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Especifica un permiso que se puede revocar en un grupo de disponibilidad. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::**_availability_group_name_  
  Especifica el grupo de disponibilidad en el que se va a revocar el permiso. El calificador de ámbito (**::**) es obligatorio.  
   
  { FROM | TO } \<server_principal> Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que se va a revocar el permiso.  
@@ -101,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso CONTROL en el grupo de disponibilidad o el permiso ALTER ANY AVAILABILTIY GROUP en el servidor.  
+ Requiere el permiso CONTROL en el grupo de disponibilidad o el permiso ALTER ANY AVAILABILITY GROUP en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -114,7 +114,7 @@ REVOKE VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. Revocar el permiso TAKE OWNERSHIP con CASCADE  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>b. Revocar el permiso TAKE OWNERSHIP con CASCADE  
  En el siguiente ejemplo se revoca el permiso `TAKE OWNERSHIP` en el grupo de disponibilidad `MyAg` para el usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` y desde todas las entidades de seguridad a las que `PKomosinski` concedio TAKE OWNERSHIP en MyAg.  
   
 ```  
@@ -137,7 +137,7 @@ CASCADE
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [GRANT Availability Group Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)  [GRANT &#40;permisos de grupos de disponibilidad de Transact-SQL&#41;]  
  [Disponibilidad de los permisos de grupo DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   

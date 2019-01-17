@@ -13,12 +13,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e03624a7db0cc28a15a92e9cc1ffff98e9cf4514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227f488e3393352ae083576676b7934b722b0ce9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648211"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203724"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar con una base de datos de origen de Oracle
   Use la página Oracle Source para proporcionar la información necesaria para conectarse a la base de datos de origen de Oracle. La instancia CDC leerá los registros Rehacer de la base de datos de Oracle a la que está conectado.  
@@ -39,9 +39,9 @@ ms.locfileid: "47648211"
   
 -   **Autenticación de Oracle**: si selecciona esta opción, debe escribir el **Nombre de usuario** y la **Contraseña** para el usuario en la base de datos de Oracle a la que se está conectando.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Un usuario debe tener concedidos los privilegios siguientes en la base de datos de Oracle para poder ser un usuario de minería de registros.  
->   
+> 
 >  -   SELECT en \<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE en DBMS LOGMNR  
@@ -55,7 +55,7 @@ ms.locfileid: "47648211"
 > -   SELECT en ALL OBJECTS  
 > -   SELECT en DBA OBJECTS  
 > -   SELECT en ALL TABLES  
->   
+> 
 >  Si alguno de estos privilegios no se puede conceder a un V$xxx, concédalo al V_S$xxx.  
   
  **Probar conexión**  
@@ -66,7 +66,7 @@ ms.locfileid: "47648211"
   
  Cuando termine de especificar información en esta página, haga clic en **Siguiente** para [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cómo crear la instancia de base de datos de cambios de SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Editar propiedades de la instancia](../../integration-services/change-data-capture/edit-instance-properties.md)  
   

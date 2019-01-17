@@ -5,27 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: cb3c412361acf4e3c059f902c2fc0ae498601d36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a065225cdabe601d0e56323e06bf12fa3abc8847
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522989"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380476"
 ---
 # <a name="sql-server-user-settable-object"></a>User Settable (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   El objeto **User Settable** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite crear instancias de contadores personalizadas. Utilice las instancias de contadores personalizadas para supervisar aspectos del servidor que los contadores existentes no supervisan, como los componentes únicos de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, para determinar el número de pedidos de clientes registrados o el inventario de productos).  
   
- El objeto **User Settable** contiene diez instancias del contador de consultas: **User counter 1** a **User counter 10**. Estos contadores tienen asignados los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que van del **sp_user_counter1** al **sp_user_counter10**. A medida que las aplicaciones del usuario ejecutan estos procedimientos almacenados, los valores que establecen estos procedimientos almacenados se muestran en el Monitor de sistema. Un contador puede supervisar cualquier valor entero, por ejemplo, un procedimiento almacenado que cuente el número de pedidos de un producto específico que se han realizado en un día.  
+ El objeto **User Settable** contiene 10 instancias del contador de consultas: **Contador de usuario 1** hasta **Contador de usuario 10**. Estos contadores tienen asignados los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que van del **sp_user_counter1** al **sp_user_counter10**. A medida que las aplicaciones del usuario ejecutan estos procedimientos almacenados, los valores que establecen estos procedimientos almacenados se muestran en el Monitor de sistema. Un contador puede supervisar cualquier valor entero, por ejemplo, un procedimiento almacenado que cuente el número de pedidos de un producto específico que se han realizado en un día.  
   
 > [!NOTE]  
 >  El Monitor del sistema no realiza automáticamente el sondeo de los procedimientos almacenados de contadores del usuario. Es necesario ejecutarlos explícitamente en una aplicación de usuario para actualizar los valores de estos contadores. Utilice un desencadenador para actualizar automáticamente el valor del contador. Por ejemplo, para crear un contador que supervise el número de filas de una tabla, cree un desencadenador INSERT y DELETE en la tabla que ejecuta la siguiente instrucción: `SELECT COUNT(*) FROM table`. Siempre que se active el desencadenador debido a que se esté realizando una operación INSERT o DELETE en la tabla, el contador del Monitor de sistema se actualizará automáticamente.  
@@ -71,7 +71,7 @@ GO
 ## <a name="permissions"></a>Permisos  
  **sp_user_counter** está disponible para todos los usuarios, pero puede estar restringido para cualquier contador de consultas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

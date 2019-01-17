@@ -1,5 +1,5 @@
 ---
-title: 'Paso 1: Crear un nuevo proyecto de Integration Services | Microsoft Docs'
+title: 'Paso 1: Creación de un proyecto de Integration Services | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18dbf43f2305e9991d6fe37615f572e1dc464fda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: edf6642557510b61b19766766250ee2869bf512f
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529517"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553017"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>Lección 1-1: Crear un nuevo proyecto de Integration Services
 El primer paso al crear un paquete en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es crear un proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . En este proyecto, se incluyen las plantillas de los objetos (orígenes de datos, vistas de orígenes de datos y paquetes) que se usan en una solución de transformación de datos.  
@@ -26,7 +26,7 @@ Los paquetes que creará en este tutorial de [!INCLUDE[ssISnoversion](../include
 > [!NOTE]  
 > Este tutorial necesita Microsoft SQL Server Data Tools.  
 >   
-> Para obtener más información acerca de cómo instalar SQL Server Data Tools, vea [Descarga de SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
+> Para obtener más información acerca de cómo instalar SQL Server Data Tools, vea [Descarga de SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
   
 ### <a name="to-create-a-new-integration-services-project"></a>Para crear un proyecto de Integration Services  
   
@@ -47,5 +47,5 @@ Los paquetes que creará en este tutorial de [!INCLUDE[ssISnoversion](../include
 7.  En la barra de herramientas del **Explorador de soluciones** , haga clic con el botón derecho en **Package.dtsx**, haga clic en **Cambiar nombre**y cambie el nombre del paquete predeterminado por **Lesson 1.dtsx**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 2: agregar y configurar un administrador de conexiones de archivos planos](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+[Paso 2: Adición y configuración de un administrador de conexiones de archivos planos](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   

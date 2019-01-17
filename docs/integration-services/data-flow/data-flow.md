@@ -18,12 +18,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba9dc3ac94a3db07bb37eac96ffdbb72911ad562
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2811871ff8d7a190eedd2ebf93fc74639f1c44b9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503573"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215884"
 ---
 # <a name="data-flow"></a>Flujo de datos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres tipos de componentes de flujo de datos: orígenes, transformaciones y destinos. Los orígenes extraen datos de almacenes de datos tales como tablas y vistas en bases de datos relacionales, archivos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Las transformaciones modifican, resumen y limpian datos. Los destinos cargan datos en almacenes de datos o crean conjuntos de datos almacenados en la memoria.  
@@ -109,7 +109,7 @@ ms.locfileid: "52503573"
 ## <a name="transformations"></a>Transformaciones  
  Las capacidades de las transformaciones presentan amplias variaciones. Las transformaciones pueden realizar tareas tales como actualizar, resumir, limpiar, combinar y distribuir datos. Puede modificar valores en columnas, buscar valores en tablas, limpiar datos y agregar valores de columna.  
   
- Las entradas y salidas de una transformación definen las columnas de datos de entrada y salida. Según la operación realizada con los datos, algunas transformaciones tienen una sola entrada y varias salidas, mientras que otras transformaciones tienen varias entradas y una sola salida. Las transformaciones también pueden incluir salidas de error que proporcionan información sobre el error que se ha producido, junto con los datos en los que se ha producido un error; por ejemplo, los datos de cadena que no se han podido convertir a un tipo de datos enteros. El modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no restringe la cantidad de entradas, salidas normales y salidas de error que pueden contener las transformaciones. Puede crear transformaciones personalizadas que implementan cualquier combinación de varias entradas, salidas normales y salidas de error.  
+ Las entradas y salidas de una transformación definen las columnas de datos de entrada y salida. Según la operación realizada con los datos, algunas transformaciones tienen una sola entrada y varias salidas, mientras que otras transformaciones tienen varias entradas y una sola salida. Las transformaciones también pueden incluir salidas de error, que proporcionan información sobre el error ocurrido, junto con los datos que han generado errores: por ejemplo, datos de cadena que no se pueden convertir en un tipo de datos entero. El modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no restringe la cantidad de entradas, salidas normales y salidas de error que pueden contener las transformaciones. Puede crear transformaciones personalizadas que implementan cualquier combinación de varias entradas, salidas normales y salidas de error.  
   
  La entrada de una transformación se define como una o más columnas de entrada. Algunas transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también pueden hacer referencia a columnas externas como entrada. Por ejemplo, la entrada de la transformación Comando de OLE DB incluye columnas externas. Una columna de salida es una columna que la transformación agrega al flujo de datos. Tanto las salidas normales como las salidas de error contienen columnas de salida. Estas columnas de salida a su vez funcionan como columnas de entrada para el siguiente componente en el flujo de datos, ya sea otra transformación o un destino.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "52503573"
  Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).  
   
 ### <a name="columns"></a>Columnas  
- Las entradas, salidas y salidas de error son colecciones de columnas. Cada columna es configurable y, según el tipo de columna (de entrada, de salida o externa), [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona propiedades distintas para la columna. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres formas diferentes de establecer las propiedades de las columnas: mediante programación, mediante cuadros de diálogo específicos del componente o mediante el cuadro de diálogo **Editor avanzado**.  
+ Las entradas, salidas y salidas de error son colecciones de columnas. Cada columna es configurable y, según el tipo de columna (de entrada, de salida o externa), [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona otras propiedades para la columna. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres formas diferentes de establecer las propiedades de las columnas: mediante programación, mediante cuadros de diálogo específicos del componente o mediante el cuadro de diálogo **Editor avanzado**.  
   
 ## <a name="paths"></a>Rutas  
  Las rutas conectan componentes de flujo de datos. En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede ver y modificar las propiedades de ruta, ver los metadatos de salida para el punto de inicio de la ruta y adjuntar visores de datos a una ruta.  

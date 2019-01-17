@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b099941ce9b51583647cd29d0114cd795bf051ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: dfbab3b4af007cfd7694e45176131cb6c931b3fb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397199"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210164"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Roles y tareas de Reporting Services frente a grupos y permisos de SharePoint
   En este tema se comparan las características de autorización basadas en roles y tareas en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con las características de seguridad de los productos de SharePoint. En este tema se comparan la terminología y las características de los roles, las tareas, los grupos de SharePoint, los niveles de permiso y los permisos.  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo|  
+| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo|  
   
  **En este tema:**  
   
@@ -39,17 +39,17 @@ ms.locfileid: "52397199"
 -   [Comparación de las tareas de modo nativo y los permisos de SharePoint](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> Comparación de las herramientas y la terminología de permisos  
- **Modo nativo:** los objetos de permiso en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (roles y tareas) se crean en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y se configuran para los usuarios individuales en el Administrador de informes.  
+ **Modo nativo:** Los objetos de permiso en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (roles y tareas) se crean en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y se configuran para los usuarios individuales en el Administrador de informes.  
   
- **Modo de SharePoint:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa las características de permisos de SharePoint. Los grupos y los permisos de SharePoint se administran desde la página **Configuración del sitio** .  
+ **Modo SharePoint:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo SharePoint usa las características de permisos de SharePoint. Los grupos y los permisos de SharePoint se administran desde la página **Configuración del sitio** .  
   
  En la tabla siguiente se comparan los objetos y conceptos relacionados con los permisos entre el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y SharePoint.  
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Rol:** por ejemplo, "Administrador de contenido".|**Grupo:** por ejemplo, el grupo predeterminado "Visores".|  
-|---|**Grupo de nivel de permisos:** por ejemplo, "Solo ver" para el grupo "Visores".|  
-|**Tareas:** por ejemplo, "Administrar informes".|**Permisos:** por ejemplo, dentro del grupo "Solo ver" hay permisos relacionados con listas para ver elementos, ver versiones y ver páginas de aplicación.|  
+|**Rol:** Por ejemplo, "Administrador de contenido".|**Grupo:** Por ejemplo, el grupo "Visores" predeterminado.|  
+|---|**Grupo de nivel de permiso:** Por ejemplo, "Solo ver" para el grupo "Visores".|  
+|**Tareas:** por ejemplo, "Administrar informes".|**Permisos:** Por ejemplo, dentro del grupo "Solo ver" hay permisos relacionados con listas para ver elementos, ver versiones y ver páginas de aplicación.|  
   
  Para obtener más información sobre los permisos de SharePoint, vea [Niveles de permisos y permisos](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) y [Determinar grupos y niveles de permisos en SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52397199"
 |Ver propiedades del servidor de informes|Sistema|Ninguno (no aplicable). El servidor de informes no controla si el usuario tiene permiso para ver la configuración de la integración en la Administración central.|  
 |Ver programaciones compartidas|Sistema|Abrir elementos.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Establecimiento de permisos para las operaciones del servidor de informes en una aplicación web de SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

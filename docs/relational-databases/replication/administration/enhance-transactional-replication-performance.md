@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5c17d05b00c711c311e41ac98add0e6fd549f58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535762"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207094"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ Es posible que se haya percatado de las siguientes tendencias en los contadores 
 - El valor del contador de rendimiento **Dist: Transacciones entregadas/s** es siempre 0.
 - El contador de rendimiento **Dist: Latencia de entrega** informa de un aumento del valor hasta que se resuelve el interbloqueo.
 
-El tema "Agente de distribución de replicación" de los Libros en pantalla de SQL Server contiene la siguiente descripción del parámetro *SubscriptionStreams*: "Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores".
+En el tema "Agente de distribución de replicación" de Libros en pantalla de SQL Server se incluye la descripción siguiente para el parámetro *SubscriptionStreams*: "Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores".
 
 El Agente de distribución utiliza una sesión para reintentar el lote que no se pudo aplicar. Después de que el Agente de distribución haya aplicado correctamente el lote, retomará el uso de varias sesiones sin reiniciar.
 
@@ -156,7 +156,7 @@ El Agente de distribución utiliza una sesión para reintentar el lote que no se
 Confirmar un conjunto de transacciones tiene una sobrecarga fija; al confirmar un número mayor de transacciones con menos frecuencia, la sobrecarga se reparte entre un mayor volumen de datos.  Aumentar el valor CommitBatchSize (hasta 200) puede mejorar el rendimiento a medida que más transacciones se confirman en el suscriptor. No obstante, las ventajas de aumentar este parámetro disminuyen ya que el costo de aplicar los cambios está determinado por otros factores, como la E/S máxima del disco que contiene el registro. Además, existe un desequilibrio que hay que tener en cuenta: cualquier error que provoque que el Agente de distribución vuelva a comenzar debe revertir y volver a aplicar un mayor número de transacciones. En las redes no confiables, un valor más reducido puede provocar menos errores y que sea necesario revertir y volver a aplicar un menor número de transacciones en caso de producirse un error.  
   
 
-##<a name="see-more"></a>Ver más
+## <a name="see-more"></a>Ver más
   
 [Trabajar con perfiles del Agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating file attributes [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: de33b9191f38c862d8f5092f9801795fc791ddb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aec5467169b75e22e599c30dbacddaf31acbd58c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747879"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Crear un atributo de archivo (Master Data Services)
 
@@ -52,13 +51,13 @@ ms.locfileid: "47720753"
   
  Cuando se hace clic en un atributo, se muestra la siguiente información.  
   
--   **Creado por:** nombre del usuario que creó el atributo.  
+-   **Creado por**: nombre del usuario que ha creado el atributo.  
   
--   **El**: fecha y hora en que se creó el atributo.  
+-   **El**: fecha y hora en que se ha creado el atributo.  
   
 -   **Actualizado por**: nombre del último usuario que actualizó el atributo.  
   
--   **El**: fecha y hora en que se actualizó el atributo por última vez.  
+-   **El**: fecha y hora en que se ha actualizado el atributo por última vez.  
   
 ### <a name="to-create-a-file-attribute"></a>Crear un atributo de archivo  
   
@@ -92,7 +91,7 @@ ms.locfileid: "47720753"
   
 12. Haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Cambiar el nombre y el tipo de datos de un atributo &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

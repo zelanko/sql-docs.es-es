@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6f73b9d5160989537de72192774bbd7c0157fa29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696783"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979681"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permisos: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Almacenamiento de datos paralelos)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -276,7 +276,7 @@ GRANT CONTROL SERVER TO [Ted];
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
-### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. Conceder un permiso de nivel de servidor a un inicio de sesión  
+### <a name="b-granting-a-server-level-permission-to-a-login"></a>b. Conceder un permiso de nivel de servidor a un inicio de sesión  
  En el ejemplo siguiente se concede un permiso de nivel de servidor en un inicio de sesión a una entidad de seguridad de servidor (otro inicio de sesión).  
   
 ```  

@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 972cd8bf1acc8a7abcf428c3bfd553e878248fde
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641506"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069791"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -168,7 +168,7 @@ Habilita o deshabilita la recopilación de estadísticas de ejecución a nivel d
 
 Las estadísticas de ejecución a nivel de instrucción de los módulos de T-SQL compilados de forma nativa se recopilan si esta opción está activada o si se habilita la recopilación de estadísticas mediante [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
 
-Para obtener información más detallada sobre la supervisión del rendimiento de los módulos de T-SQL compilados de forma nativa, consulte [Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
+Para más información sobre la supervisión del rendimiento de los módulos de [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados de forma nativa, vea [Supervisión del rendimiento de los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
@@ -210,20 +210,20 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 Permite la configuración de la funcionalidad para quitar automáticamente las [tablas temporales globales](create-table-transact-sql.md). El valor predeterminado es ON, lo que significa que las tablas temporales globales se quitan automáticamente cuando no están en uso en ninguna sesión. Cuando se establece en OFF, las tablas temporales globales deben quitarse explícitamente mediante una instrucción DROP TABLE o se quitarán automáticamente al reiniciar el servidor.
 
-- En el servidor lógico de Azure SQL Database, esta opción se puede establecer en las bases de datos de usuario individuales del servidor lógico.
-- En SQL Server e Instancia administrada de Azure SQL Database, esta opción está establecida en `TEMPDB` y el valor de las bases de datos de usuario individuales no surte ningún efecto.
+- En el servidor lógico de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta opción se puede establecer en las bases de datos de usuario individuales del servidor lógico.
+- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Instancia administrada de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta opción se establece en `TempDB` y la configuración de las bases de datos de usuario individuales no surte ningún efecto.
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Permite habilitar o deshabilitar la ejecución intercalada de funciones con valores de tabla de múltiples instrucciones en el ámbito de base de datos o de instrucción a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. La ejecución intercalada es una característica que forma parte del procesamiento de consultas adaptable en bases de datos SQL. Para obtener más información, vea [Procesamiento de consultas adaptable](../../relational-databases/performance/adaptive-query-processing.md)
+Permite habilitar o deshabilitar la ejecución intercalada de funciones con valores de tabla de múltiples instrucciones en el ámbito de base de datos o de instrucción a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. La ejecución intercalada es una característica que forma parte del procesamiento de consultas adaptable en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Para obtener más información, vea [Procesamiento de consultas adaptable](../../relational-databases/performance/adaptive-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Permite habilitar o deshabilitar las combinaciones adaptables en el ámbito de base de datos o de instrucción a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. Las combinaciones adaptables son una característica que forma parte del [Procesamiento de consultas adaptable](../../relational-databases/performance/adaptive-query-processing.md) incorporado en SQL Server 2017.
+Permite habilitar o deshabilitar las combinaciones adaptables en el ámbito de base de datos o de instrucción a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. Las combinaciones adaptables son una característica que forma parte del [Procesamiento de consultas adaptable](../../relational-databases/performance/adaptive-query-processing.md) incorporado en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
@@ -233,74 +233,69 @@ Permite habilitar o deshabilitar los comentarios de concesión de memoria en mod
 
 ## <a name="Permissions"></a> Permissions
 
-Requiere ALTER ANY DATABASE SCOPE CONFIGURATION en la base de datos. Este permiso se puede conceder por un usuario con permiso CONTROL en una base de datos.
+Requiere `ALTER ANY DATABASE SCOPE CONFIGURATION` en la base de datos. Este permiso se puede conceder por un usuario con permiso CONTROL en una base de datos.
 
 ## <a name="general-remarks"></a>Notas generales
-
 Aunque se pueden configurar bases de datos secundarias con valores de configuración de ámbito diferentes a los de su principal, en todas las bases de datos secundarias se usa la misma configuración. No se pueden configurar otros valores para bases de datos secundarias individuales.
 
 La ejecución de esta instrucción borra la caché de procedimientos en la base de datos actual, lo que significa que se tendrán que volver a compilar todas las consultas.
 
 Para las consultas con nombres de tres elementos, la configuración de la conexión de base de datos actual para la consulta se cumplirá, menos para los módulos SQL (como procedimientos, funciones y desencadenadores) que se compilan en el contexto de base de datos actual y, por tanto, se usan las opciones de la base de datos en la que residen.
 
-El evento ALTER_DATABASE_SCOPED_CONFIGURATION se agrega como un evento de DDL que se puede usar para activar un desencadenador DDL, y es un elemento secundario del grupo de desencadenadores de ALTER_DATABASE_EVENTS.
+El evento `ALTER_DATABASE_SCOPED_CONFIGURATION` se agrega como un evento de DDL que se puede usar para activar un desencadenador DDL, y es un elemento secundario del grupo de desencadenadores de `ALTER_DATABASE_EVENTS`.
 
 Las opciones de configuración con ámbito de la base de datos se transfieren con la base de datos, lo que significa que, cuando una base de datos se restaura o se adjunta, permanecen las opciones de configuración existentes.
 
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
 
 ### <a name="maxdop"></a>MAXDOP
-
 La configuración granular puede invalidar las globales y Resource Governor puede limitar todas las demás opciones de MAXDOP. La lógica para el valor MAXDOP es la siguiente:
 
-- La sugerencia de consulta invalida tanto sp_configure como la configuración con ámbito de base de datos. Si el valor MAXDOP del grupo de recursos se establece para el grupo de cargas de trabajo:
+- La sugerencia de consulta invalida tanto `sp_configure` como la configuración con ámbito de base de datos. Si el valor MAXDOP del grupo de recursos se establece para el grupo de cargas de trabajo:
 
   - Si la sugerencia de consulta se establece en 0, se reemplaza por la configuración de Resource Governor.
 
   - Si la sugerencia de consulta no es 0, se limita por la configuración de Resource Governor.
 
-- La configuración con ámbito de base de datos (a menos que sea 0) reemplaza el valor de sp_configure, a menos que haya una sugerencia de consulta y esté limitada por la configuración de Resource Governor.
+- La configuración con ámbito de base de datos (a menos que sea 0) reemplaza el valor de `sp_configure`, a menos que haya una sugerencia de consulta y esté limitada por la configuración de Resource Governor.
 
-- La configuración de Resource Governor reemplaza el valor de sp_configure.
+- La configuración de Resource Governor reemplaza el valor de `sp_configure`.
 
 ### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
-Cuando se usa la sugerencia QUERYTRACEON para habilitar el optimizador de consultas heredado o las revisiones del optimizador de consultas, sería una condición OR entre la sugerencia de consulta y el valor de configuración con ámbito de base de datos, lo que significa que si una de las dos está habilitada, las opciones se aplican.
+Cuando se usa la sugerencia `QUERYTRACEON` para habilitar el optimizador de consultas predeterminado de SQL Server 7.0 hasta las versiones [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o las revisiones del optimizador de consultas, sería una condición OR entre la sugerencia de consulta y el valor de configuración con ámbito de base de datos, lo que significa que si una de las dos está habilitada, se aplican las configuraciones con ámbito de base de datos.
 
-### <a name="geodr"></a>GeoDR
+### <a name="geo-dr"></a>Geo DR
 
-Las bases de datos secundarias legibles (por ejemplo, los Grupos de disponibilidad AlwaysOn y las bases de datos con replicación geográfica de Azure SQL Database) usan el valor secundario comprobando el estado de la base de datos. Aunque la nueva compilación no se produce en la conmutación por error y técnicamente la nuevo base de datos principal tiene consultas que usan la configuración de la secundaria, la idea es que la configuración entre principal y secundaria solo varía cuando la carga de trabajo es diferente y, por tanto, las consultas en caché usan la configuración óptima, mientras que las consultas nuevas eligen la configuración nueva que es adecuada para ellas.
+Las bases de datos secundarias legibles (por ejemplo, los Grupos de disponibilidad Always On y las bases de datos con replicación geográfica de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) usan el valor secundario comprobando el estado de la base de datos. Aunque la nueva compilación no se produce en la conmutación por error y técnicamente la nuevo base de datos principal tiene consultas que usan la configuración de la secundaria, la idea es que la configuración entre principal y secundaria solo varía cuando la carga de trabajo es diferente y, por tanto, las consultas en caché usan la configuración óptima, mientras que las consultas nuevas eligen la configuración nueva que es adecuada para ellas.
 
 ### <a name="dacfx"></a>DacFx
 
-Como ALTER DATABASE SCOPED CONFIGURATION es una característica nueva de Azure SQL Database y SQL Server a partir de SQL Server 2016 que afecta al esquema de base de datos, las exportaciones del esquema (con o sin datos) no se pueden importar a una versión anterior de SQL Server como [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Por ejemplo, una exportación a un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o un [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) desde una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] que usara esta nueva característica no podría importarse a un servidor de nivel inferior.
+Como `ALTER DATABASE SCOPED CONFIGURATION` es una característica nueva de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) que afecta el esquema de base de datos, las exportaciones del esquema (con o sin datos) no se pueden importar a una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Por ejemplo, una exportación a un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o un [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) desde una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] que usara esta nueva característica no podría importarse a un servidor de nivel inferior.
 
 ### <a name="elevateonline"></a>ELEVATE_ONLINE
 
-Esta opción solo se aplica a las instrucciones de DDL que admiten la sintaxis WITH(ONLINE =. Los índices XML no se ven afectados.
+Esta opción solo se aplica a las instrucciones de DDL que admiten `WITH (ONLINE = <syntax>)`. Los índices XML no se ven afectados.
 
 ### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
 
-Esta opción solo se aplica a las instrucciones de DDL que admiten la sintaxis WITH(RESUMABLE=. Los índices XML no se ven afectados.
+Esta opción solo se aplica a las instrucciones de DDL que admiten `WITH (RESUMABLE = <syntax>)`. Los índices XML no se ven afectados.
 
 ## <a name="metadata"></a>Metadatos
 
 En la vista del sistema [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) se proporciona información sobre las configuraciones con ámbito en una base de datos. Las opciones de configuración con ámbito de base de datos solo se muestran en sys.database_scoped_configurations por ser invalidaciones de la configuración predeterminada de todo el servidor. En la vista del sistema [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) solo se muestra la configuración de todo el servidor.
 
 ## <a name="examples"></a>Ejemplos
-
 En estos ejemplos se muestra el uso de ALTER DATABASE SCOPED CONFIGURATION
 
 ### <a name="a-grant-permission"></a>A. Conceder permiso
-
 En este ejemplo se concede el permiso necesario para ejecutar ALTER DATABASE SCOPED CONFIGURATION al usuario [Joe].
 
 ```sql
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
-### <a name="b-set-maxdop"></a>B. Configuración de MAXDOP
-
+### <a name="b-set-maxdop"></a>b. Configuración de MAXDOP
 En este ejemplo se establece MAXDOP = 1 para una base de datos principal y MAXDOP = 4 para una base de datos secundaria en un escenario de replicación geográfica.
 
 ```sql
@@ -315,7 +310,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```
 
 ### <a name="c-set-legacycardinalityestimation"></a>C. Configuración de LEGACY_CARDINALITY_ESTIMATION
-
 En este ejemplo se establece LEGACY_CARDINALITY_ESTIMATION en ON para una base de datos secundaria en un escenario de replicación geográfica.
 
 ```sql
@@ -329,7 +323,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parametersniffing"></a>D. Configuración de PARAMETER_SNIFFING
-
 En este ejemplo se establece PARAMETER_SNIFFING en OFF para una base de datos principal en un escenario de replicación geográfica.
 
 ```sql
@@ -349,7 +342,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 ```
 
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. Configuración de QUERY_OPTIMIZER_HOTFIXES
-
 Se establece QUERY_OPTIMIZER_HOTFIXES en ON para una base de datos principal en un escenario de replicación geográfica.
 
 ```sql
@@ -357,7 +349,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. Borrado de la caché de procedimientos
-
 En este ejemplo se borra la caché de procedimientos (solo es posible para una base de datos principal).
 
 ```sql
@@ -365,8 +356,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 ```
 
 ### <a name="g-set-identitycache"></a>G. Configuración de IDENTITY_CACHE
-
-**Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (la característica está en versión preliminar pública)
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (la característica está en versión preliminar pública)
 
 En este ejemplo se deshabilita la caché de identidad.
 
@@ -375,8 +365,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. Configuración de OPTIMIZE_FOR_AD_HOC_WORKLOADS
-
-**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 En este ejemplo se habilita o deshabilita un código auxiliar de plan compilado que se almacenará en caché cuando se compile un lote por primera vez.
 
@@ -385,7 +374,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevateonline"></a>I. Establecer ELEVATE_ONLINE
-
 **Se aplica a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] y como característica en vista previa pública
 
 Este ejemplo establece ELEVATE_ONLINE en FAIL_UNSUPPORTED.
@@ -395,8 +383,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevateresumable"></a>J. Establecer ELEVATE_RESUMABLE
-
-**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
+**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
 
 Este ejemplo establece ELEVATE_RESUMABLE en WHEN_SUPPORTED.
 

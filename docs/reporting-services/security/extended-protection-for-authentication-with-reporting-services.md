@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d86215287683e9ff8ab3c7c01f410ff8b2fd0896
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8f096065d690044fdda42f71ebb0c423801b41bb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031964"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212695"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
 
@@ -35,12 +35,12 @@ SSRS admite y aplica la protección ampliada que se ha habilitado en el sistema 
   
  Los problemas comunes que se producen a causa de los cambios de la configuración de la protección ampliada o de una configuración incorrecta no se muestran mediante mensajes ni ventanas de cuadro de diálogo de error obvios. Los problemas relacionados con la configuración y la compatibilidad de la protección ampliada tienen como resultado errores de autenticación y errores en los registros de seguimiento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Algunas tecnologías de acceso a datos pueden no admitir la protección ampliada. Para conectar los orígenes de datos de SQL Server y la base de datos del catálogo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se usa una tecnología de acceso a datos. El hecho de que una tecnología de acceso a datos no admite la protección ampliada afecta a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de las maneras siguientes:  
->   
+> 
 >  -   El servidor SQL Server que ejecuta la base de datos del catálogo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no puede tener habilitada la protección ampliada; de lo contrario se producirá un error de conexión entre el servidor de informes y la base de datos del catálogo, y se devolverán errores de autenticación.  
 > -   Los servidores SQL Server que se usan como orígenes de datos de los informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no pueden tener habilitada la protección ampliada; de lo contrario, los intentos de conexión del servidor de informes con el origen de datos del informe provocarán errores y devolverán errores de autenticación.  
->   
+> 
 >  La documentación de una tecnología de acceso a datos debe tener información sobre la compatibilidad con la protección ampliada.  
   
 ### <a name="upgrade"></a>UPGRADE  
@@ -112,8 +112,8 @@ SSRS admite y aplica la protección ampliada que se ha habilitado en el sistema 
   
 |Configuración|Descripción|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|Especifica el grado de aplicación de la protección ampliada. Los valores válidos son:<br /><br /> **Off**: valor predeterminado. Especifica que no existe comprobación de enlace de canal ni de enlace de servicio<br /><br /> El valor**Allow** admite la protección ampliada, pero no la necesita.  Especifica lo siguiente:<br /><br /> -La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan. La forma de aplicar la protección la determina la opción **RsWindowsExtendedProtectionScenario**.<br /><br /> -Se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.<br /><br /> **Require** especifica lo siguiente:<br /><br /> -La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan.<br /><br /> **No** se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.|  
-|**RsWindowsExtendedProtectionScenario**|Especifica las formas de la protección ampliada que se validan: enlace de canal, enlace de servicio o ambos. Los valores válidos son:<br /><br /> **Proxy**: valor predeterminado. Especifica lo siguiente:<br /><br /> -Si está presente, la autenticación de Windows NTLM, Kerberos y Negotiate cuando está presente un token de enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> **Any** Especifica lo siguiente:<br /><br /> -No se necesitan la autenticación de Windows NTLM, Kerberos ni Negotiate, ni ningún enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> **Direct** Especifica lo siguiente:<br /><br /> -La autenticación de Windows NTLM, Kerberos y Negotiate cuando están presentes un CBT y una conexión SSL al servicio actual, y el CBT para que la conexión SSL coincida con el CBT del token de NTLM, Kerberos o Negotiate.<br /><br /> -No se aplica el enlace de servicio.<br /><br /> <br /><br /> Nota: Se ignora la configuración **RsWindowsExtendedProtectionScenario** si **RsWindowsExtendedProtectionLevel** está establecido en **OFF**.|  
+|**RSWindowsExtendedProtectionLevel**|Especifica el grado de aplicación de la protección ampliada. Los valores válidos son:<br /><br /> **Off**: Predeterminado: Especifica que no existe comprobación de enlace de canal ni de enlace de servicio<br /><br /> El valor**Allow** admite la protección ampliada, pero no la necesita.  Especifica lo siguiente:<br /><br /> -La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan. La forma de aplicar la protección la determina la opción **RsWindowsExtendedProtectionScenario**.<br /><br /> -Se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.<br /><br /> **Require** especifica lo siguiente:<br /><br /> -La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan.<br /><br /> **No** se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.|  
+|**RsWindowsExtendedProtectionScenario**|Especifica qué formas de protección ampliada se validan: Enlace de canales, enlace de servicios o ambos. Los valores válidos son:<br /><br /> **Proxy**: Predeterminado: Especifica lo siguiente:<br /><br /> -Si está presente, la autenticación de Windows NTLM, Kerberos y Negotiate cuando está presente un token de enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> **Any** Especifica lo siguiente:<br /><br /> -No se necesitan la autenticación de Windows NTLM, Kerberos ni Negotiate, ni ningún enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> **Direct** Especifica lo siguiente:<br /><br /> -La autenticación de Windows NTLM, Kerberos y Negotiate cuando están presentes un CBT y una conexión SSL al servicio actual, y el CBT para que la conexión SSL coincida con el CBT del token de NTLM, Kerberos o Negotiate.<br /><br /> -No se aplica el enlace de servicio.<br /><br /> <br /><br /> Nota: Se ignora la configuración **RsWindowsExtendedProtectionScenario** si **RsWindowsExtendedProtectionLevel** está establecido en **OFF**.|  
   
  Entradas del ejemplo en el archivo de configuración **rsreportserver.config** :  
   
@@ -166,7 +166,7 @@ SSRS admite y aplica la protección ampliada que se ha habilitado en el sistema 
 [Conectar al motor de base de datos con protección ampliada](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [Introducción a la protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [Autenticación de Windows integrada con protección ampliada](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Asesor de seguridad de Microsoft: protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Microsoft Security Advisory: Protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Método SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

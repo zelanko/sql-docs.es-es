@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c491a67b55db4a730db2bb7fcd8977162657e516
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410912"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531080"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas de conexión al motor de base de datos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ Estas instrucciones resultan de especial utilidad con el error "**Conectar con e
 
 *   "Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. El servidor no se encontró o no estaba accesible. Compruebe que el nombre de instancia es correcto y que SQL Server está configurado para permitir conexiones remotas. " 
 
-*   "(proveedor: proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir la conexión con SQL Server) (Microsoft SQL Server, Error: 53)" o "(proveedor: proveedor de TCP, error: 0 - Este host es desconocido) (Microsoft SQL Server, Error: 11001)" 
+*   "(proveedor: Proveedor de canalizaciones con nombre, error: 40: no se pudo abrir una conexión con SQL Server (Microsoft SQL Server, Error: 53)" o "(proveedor: Proveedor TCP, error: 0: Este host es desconocido). (Microsoft SQL Server, Error: 11001)" 
 
 Este error normalmente significa que no se encuentra el equipo de SQL Server o que el número de puerto TCP es desconocido, no es el número de puerto correcto o está bloqueado por un firewall.
 
->  [!TIP]
+> [!TIP]
 >  En [Solving Connectivity errors to SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server) (Resolver errores de conectividad de SQL Server) encontrará una página interactiva de solución de problemas de los servicios de soporte al cliente de [!INCLUDE[msCoName_md](../../includes/msconame-md.md)].
 
 ### <a name="not-included"></a>No incluido
@@ -64,8 +64,8 @@ En primer lugar, debe recopilar información básica sobre el motor de base de d
     2.  En el Visor de registros, haga clic en el botón **Filtrar** de la barra de herramientas. En el cuadro **El mensaje contiene texto** , escriba **El servidor está escuchando en**, haga clic en **Aplicar filtro**y luego en **Aceptar**.
     3.  Debería aparecer un mensaje similar a **El servidor está escuchando en [ 'any' \<ipv4> 1433]**. Este mensaje indica que esta instancia de SQL Server está escuchando en todas las direcciones IP de este equipo (para IP versión 4) y está escuchando al puerto TCP 1433. (El puerto TCP 1433 suele ser el que usa el motor de base de datos. Solo una instancia de SQL Server puede usar un puerto, por lo que si hay más de una instancia de SQL Server instalada, algunas instancias deben usar otros números de puerto). Anote el número de puerto usado por la instancia de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] a la que está intentando conectarse. 
 
-    >    [!NOTE] 
-    >    Probablemente aparezca la dirección IP 127.0.0.1. Se llama dirección de adaptador de bucle invertido y solo se puede conectar a ella desde procesos del mismo equipo. Puede ser útil para solucionar problemas, pero no se puede usar para conectarse desde otro equipo.
+    > [!NOTE] 
+    > Probablemente aparezca la dirección IP 127.0.0.1. Se llama dirección de adaptador de bucle invertido y solo se puede conectar a ella desde procesos del mismo equipo. Puede ser útil para solucionar problemas, pero no se puede usar para conectarse desde otro equipo.
 
 ## <a name="enable-protocols"></a>Habilitar protocolos
 
@@ -98,20 +98,20 @@ Antes de solucionar un problema de conexión desde otro equipo, pruebe la capaci
 |Instancia predeterminada|Nombre del equipo|ACCNT27|
 |Instancia con nombre|Nombre del equipo\nombre de la instancia|ACCNT27\PAYROLL|
 
->  [!NOTE] 
+> [!NOTE]
 >  Al conectarse a SQL Server desde una aplicación cliente del mismo equipo, se usa el protocolo de memoria compartida. La memoria compartida es un tipo de canalización local con nombre, así que a veces se producen errores relacionados con las canalizaciones.
 
 Si aparece un error en este punto, tendrá que resolverlo antes de continuar. Hay muchos aspectos que podrían plantear problemas. El inicio de sesión podría no estar autorizado a conectarse. Podría faltar la base de datos predeterminada.
 
->    [!NOTE] 
+> [!NOTE]
 >    Algunos mensajes de error que se pasan al cliente no proporcionan suficiente información para solucionar el problema a propósito. Se trata de una característica de seguridad para evitar proporcionar información sobre SQL Server a cualquier atacante. Para ver la información completa sobre el error, busque en el registro de errores de SQL Server. Allí se proporcionan los detalles. Si recibe el error **18456 Error de inicio de sesión para el usuario**, el tema de los Libros en pantalla [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contiene información adicional sobre los códigos de error. Además, el blog de Aaron Bertrand ofrece una lista muy amplia de códigos de error en [Troubleshooting Error 18456 (Solucionar el error 18456)](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Puede ver el registro de errores con SSMS (si se puede conectar), en la sección Administración del Explorador de objetos. De lo contrario, puede ver el registro de errores con el programa Bloc de notas de Windows. La ubicación predeterminada varía en función de la versión y se puede cambiar durante la instalación. La ubicación predeterminada de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] es `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Si puede conectar con la memoria compartida, pruebe la conexión mediante TCP. Puede forzar una conexión TCP si especifica **tcp:** antes del nombre. Por ejemplo:
 
 |Conectar con:|Tipo:|Ejemplo:|
 |-----------------|---------------|-----------------|
-|Instancia predeterminada|tcp: nombre del equipo|tcp:ACCNT27|
-|Instancia con nombre|tcp: nombre del equipo\nombre de la instancia|tcp:ACCNT27\PAYROLL|
+|Instancia predeterminada|tcp: Nombre del equipo|tcp:ACCNT27|
+|Instancia con nombre|tcp: nombre del equipo o nombre de la instancia|tcp:ACCNT27\PAYROLL|
   
 Si puede conectar con la memoria compartida pero no con TCP, debe solucionar el problema de TCP. Lo más probable es que TCP no esté habilitado. Para habilitar TCP, consulte los pasos anteriores de **Habilitar protocolos** .
 
@@ -144,7 +144,7 @@ Ambos problemas están relacionados con el servicio SQL Server Browser, que prop
   * Inicie el servicio SQL Server Browser. Vuelva a la sección 1.d de **Recopilación de información sobre la instancia de SQL Server**.
   * El firewall está bloqueando el servicio SQL Server Browser. Abra el puerto UDP 1434 del firewall. Vuelva a la sección **Apertura de un puerto del firewall**. (Asegúrese de estar abriendo un puerto UDP, no un puerto TCP. Son cosas diferentes).
   * Un enrutador está bloqueando la información del puerto UDP 1434. La comunicación UDP (protocolo de datagramas de usuario) no está diseñada para pasar a través de enrutadores. Esto evita que la red se llene de tráfico de baja prioridad. Es posible que pueda configurar el enrutador para reenviar el tráfico UDP. También puede optar por proporcionar siempre el número de puerto al conectarse.
-  * Si el equipo cliente usa Windows 7 o Windows Server 2008 (o un sistema operativo más reciente), el sistema operativo cliente podría eliminar el tráfico UDP porque la respuesta del servidor se devuelve desde una dirección IP diferente a la que se consultó. Esta es una característica de seguridad que bloquea la "asignación de origen no estricta". Para obtener más información, consulte la sección **Varias direcciones IP de servidor** del tema de los Libros en pantalla [Solucionar problemas de tiempo de espera expirado](https://msdn.microsoft.com/library/ms190181.aspx). Se trata de un artículo de SQL Server 2008 R2, pero las entidades de seguridad aún son válidas. Es posible que pueda configurar el cliente para usar la dirección IP correcta. También puede optar por proporcionar siempre el número de puerto al conectarse.
+  * Si el equipo cliente usa Windows 7 o Windows Server 2008 (o un sistema operativo más reciente), el sistema operativo cliente podría eliminar el tráfico UDP porque la respuesta del servidor se devuelve desde una dirección IP diferente a la que se consultó. Esta es una característica de seguridad que bloquea la "asignación de origen no estricta". Para más información, vea la sección **Varias direcciones IP de servidor** del tema de los Libros en pantalla [Solucionar problemas de: tiempo de espera expirado](https://msdn.microsoft.com/library/ms190181.aspx). Se trata de un artículo de SQL Server 2008 R2, pero las entidades de seguridad aún son válidas. Es posible que pueda configurar el cliente para usar la dirección IP correcta. También puede optar por proporcionar siempre el número de puerto al conectarse.
      
 3. Una vez que se pueda conectar con la dirección IP (o la dirección IP y el nombre de instancia de una instancia con nombre), intente conectarse con el nombre de equipo (o el nombre de equipo y el nombre de instancia de una instancia con nombre). Coloque `tcp:` delante del nombre del equipo para forzar una conexión TCP/IP. Por ejemplo, en el caso de la instancia predeterminada en un equipo denominado `ACCNT27`, use `tcp:ACCNT27` ; en el caso de una instancia con nombre denominada `PAYROLL`en ese equipo, use `tcp:ACCNT27\PAYROLL` . Si puede conectarse con la dirección IP pero no con el nombre de equipo, entonces tiene un problema de resolución de nombres. Vuelva a la sección 4 de **Prueba de la conectividad TCP/IP**.
 

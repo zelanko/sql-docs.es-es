@@ -11,12 +11,12 @@ ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8fe62a659dce3f672f298c55b7d4308e682c3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac71cce5f8a4fad04ea006c8ea96f0decae9c93a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814023"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215784"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Actualizar datos (complemento MDS para Excel)
 
@@ -39,7 +39,7 @@ ms.locfileid: "47814023"
   
 -   Si un valor de atributo ha cambiado en el repositorio MDS, el valor de la hoja de cálculo se actualiza con el valor del repositorio MDS. El color de la celda no cambia.  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   En la hoja de cálculo activa, si existen datos no administrados en las filas situadas bajo los datos administrados por MDS, los datos no administrados pueden sobrescribirse. Esto ocurre cuando se actualiza la hoja y se agregan nuevas filas de datos administrados por MDS, que se superponen a los datos no administrados.  
 > -   Al actualizar, se eliminan los comentarios de las celdas administradas por MDS.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47814023"
   
 -   [Conexiones &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [Información general: Exportar datos a Excel &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [Información general: exportación de datos a Excel &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Complemento Master Data Services para Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   

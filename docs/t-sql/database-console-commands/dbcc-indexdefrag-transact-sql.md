@@ -24,12 +24,12 @@ ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 3f4236452b1bda93c7e69b2577e4b2bfa5ded592
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 10bf0b318c4a9f6b549dc53d2f89a0a0640d813b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698754"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207324"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Desfragmenta los índices de la tabla o la vista especificada.
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) en su lugar.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -121,7 +121,7 @@ DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID
 GO  
 ```  
   
-### <a name="b-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>B. Usar DBCC SHOWCONTIG y DBCC INDEXDEFRAG para desfragmentar los índices de una base de datos  
+### <a name="b-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>b. Usar DBCC SHOWCONTIG y DBCC INDEXDEFRAG para desfragmentar los índices de una base de datos  
  En el siguiente ejemplo se muestra una forma sencilla de desfragmentar todos los índices de una base de datos que están fragmentados por encima de un umbral declarado.  
   
 ```sql  
@@ -228,7 +228,7 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

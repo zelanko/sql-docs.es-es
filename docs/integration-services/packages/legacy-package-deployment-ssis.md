@@ -32,12 +32,12 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cad877fe1c1431f044f41b6dc7087c8b990cc4c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8830f5984bed8b18c82d18e724c608d6730eb643
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639072"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204734"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implementación de paquetes heredada (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye herramientas y asistentes para facilitar la implementación de paquetes del equipo de desarrollo en el servidor de producción o en otros equipos.  
@@ -176,15 +176,15 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
   
  **COMENTARIOS:**
->También puede acceder al **Organizador de configuraciones de paquetes** haciendo clic en el botón de puntos suspensivos junto a la propiedad **Configuración** . La propiedad Configuración aparece en la ventana de propiedades del paquete.  
-  
->Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación de proyectos le permite implementar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).    
-  
->En el cuadro de diálogo **Organizador de configuraciones de paquetes** , puede habilitar paquetes para usar configuraciones, agregar y eliminar configuraciones, y establecer el orden preferido en que se deben cargar las configuraciones. 
- 
->Cuando las configuraciones de paquetes se cargan en el orden preferido, se cargan de arriba a abajo, según la lista que se muestra en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Sin embargo, en tiempo de ejecución, las configuraciones de paquetes podrían no cargarse en el orden preferido. Concretamente, las configuraciones de paquetes principales se cargan después de las configuraciones de otros tipos.  
-  
->Si varias configuraciones establecen la misma propiedad de objeto, el último valor cargado se utiliza en tiempo de ejecución.  
+> También puede acceder al **Organizador de configuraciones de paquetes** haciendo clic en el botón de puntos suspensivos junto a la propiedad **Configuración** . La propiedad Configuración aparece en la ventana de propiedades del paquete.  
+> 
+> Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación de proyectos le permite implementar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).    
+> 
+> En el cuadro de diálogo **Organizador de configuraciones de paquetes** , puede habilitar paquetes para usar configuraciones, agregar y eliminar configuraciones, y establecer el orden preferido en que se deben cargar las configuraciones. 
+> 
+> Cuando las configuraciones de paquetes se cargan en el orden preferido, se cargan de arriba a abajo, según la lista que se muestra en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Sin embargo, en tiempo de ejecución, las configuraciones de paquetes podrían no cargarse en el orden preferido. Concretamente, las configuraciones de paquetes principales se cargan después de las configuraciones de otros tipos.  
+> 
+> Si varias configuraciones establecen la misma propiedad de objeto, el último valor cargado se utiliza en tiempo de ejecución.  
   
  En el cuadro de diálogo **Organizador de configuraciones de paquetes** , puede ejecutar el Asistente para la configuración de paquetes, que guía al usuario para crear una configuración. Para ejecutar el Asistente para la configuración de paquetes, agregue una nueva configuración en el cuadro de diálogo **Organizador de configuraciones de paquetes** o modifique una existente. En las páginas del asistente, puede elegir el tipo de configuración, seleccionar si desea tener acceso directo a la configuración o utilizar variables de entorno, así como seleccionar las propiedades que desee guardar en la configuración.  
   
@@ -212,7 +212,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Cuando finaliza el asistente, la nueva configuración se agrega a la lista de configuraciones del cuadro de diálogo **Organizador de configuraciones de paquetes** .  
   
-> **NOTA:** La última página del Asistente para la configuración de paquetes, la página Finalización del asistente, enumera las propiedades de destino de la configuración. Si quiere actualizar propiedades cuando ejecuta paquetes mediante la utilidad del símbolo del sistema **dtexec** , puede generar las cadenas que representan las rutas de acceso a las propiedades con el Asistente para configuración de paquetes, y, después, copiarlas y pegarlas en la ventana del símbolo del sistema para usarlas con la opción establecida de **dtexec**.  
+> **NOTA:** La última página del Asistente para la configuración de paquetes, la página Finalización del asistente, enumera las propiedades de destino de la configuración. Si quiere actualizar propiedades cuando ejecuta paquetes mediante la utilidad del símbolo del sistema **dtexec**, puede generar las cadenas que representan las rutas de acceso a las propiedades con el Asistente para configuración de paquetes, y, después, copiarlas y pegarlas en la ventana del símbolo del sistema para usarlas con la opción establecida de **dtexec**.  
   
  En la tabla siguiente se describen las columnas de la lista de configuraciones del cuadro de diálogo **Organizador de configuraciones de paquetes** .  
   
@@ -293,7 +293,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Seleccione una configuración y utilice las flechas arriba y abajo para subirla o bajarla de la lista. Las configuraciones se cargan en la secuencia en la que aparecen en la lista.  
 
 ## <a name="package-configuration-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la configuración de paquetes
-  Use el **Asistente para la configuración de paquetes** para crear configuraciones que actualizan las propiedades de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y sus objetos en tiempo de ejecución. Este asistente se ejecuta al agregar una nueva configuración o modificar una existente en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Para abrir el cuadro de diálogo **Organizador de configuraciones de paquetes** , seleccione **Configuraciones de paquetes** en el menú **SSIS** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para más información, vea [Crear configuraciones de paquetes](../../integration-services/packages/create-package-configurations.md).  
+  Use el **Asistente para la configuración de paquetes** para crear configuraciones que actualizan las propiedades de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y sus objetos en tiempo de ejecución. Este asistente se ejecuta al agregar una nueva configuración o modificar una existente en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Para abrir el cuadro de diálogo **Organizador de configuraciones de paquetes** , seleccione **Configuraciones de paquetes** en el menú **SSIS** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obtener más información, vea [Crear configuraciones de paquetes](../../integration-services/packages/create-package-configurations.md).  
   
 > **NOTA:** Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación de proyectos le permite implementar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
@@ -587,7 +587,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Archivo de configuración**  
  Para modificar el contenido de un archivo de configuración, seleccione el archivo en la lista.  
   
- **Related Topics:** [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)  
+ **Temas relacionados:** [Crear configuraciones de paquetes](../../integration-services/packages/create-package-configurations.md)  
   
  **Ruta de acceso**  
  Muestra la ruta de acceso de la propiedad que debe configurarse.  
@@ -682,7 +682,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Para seleccionar la carpeta en el cuadro de diálogo **Paquete SSIS** , haga clic en el botón para examinar (…). Sin embargo, el cuadro de diálogo no proporciona medios para seleccionar la carpeta predeterminada. Si desea utilizar la carpeta predeterminada, tiene que escribir "/" en el cuadro de texto.  
   
 > [!NOTE]  
->  Si no escribe una ruta de acceso del paquete válida, aparece el mensaje de error siguiente: "Uno o más argumentos no son válidos."  
+>  Si no escribe una ruta de acceso del paquete válida, aparece el mensaje de error siguiente: "Uno o más argumentos no son válidos".  
   
  **Basar el cifrado en el almacenamiento del servidor**  
  Seleccione estas características de seguridad del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para contribuir a proteger los paquetes.  

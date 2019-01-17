@@ -1,7 +1,7 @@
 ---
 title: Opciones File y Filegroup de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403563"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53329024"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opciones File y Filegroup de ALTER DATABASE (Transact-SQL) 
 
@@ -144,8 +144,8 @@ Quita la descripción del archivo lógico de una instancia de [!INCLUDE[ssNoVers
 *logical_file_name*  
 Es el nombre lógico utilizado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se hace referencia al archivo.  
   
-> [!WARNING]  
-> La eliminación de un archivo de base de datos que tenga asociadas copias de seguridad de `FILE_SNAPSHOT` se realizará correctamente, pero no se eliminarán las instantáneas asociadas para, así, evitar que se invaliden las copias de seguridad que hagan referencia al archivo de base de datos. El archivo se truncará, pero no se eliminará físicamente con el fin de mantener intactas las copias de seguridad de FILE_SNAPSHOT. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> [!WARNING]
+> La eliminación de un archivo de base de datos que tenga asociadas copias de seguridad de `FILE_SNAPSHOT` se realizará correctamente, pero no se eliminarán las instantáneas asociadas para, así, evitar que se invaliden las copias de seguridad que hagan referencia al archivo de base de datos. El archivo se truncará, pero no se eliminará físicamente con el fin de mantener intactas las copias de seguridad de FILE_SNAPSHOT. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 MODIFY FILE  
 Especifica el archivo que se debe modificar. Solo se puede cambiar una propiedad \<filespec> cada vez. NAME se debe especificar siempre en \<filespec> para identificar el archivo que se va a modificar. Si se especifica SIZE, el nuevo tamaño debe ser mayor que el tamaño actual del archivo.  
@@ -294,7 +294,7 @@ Especifica que el grupo de archivos almacena objetos binarios grandes (BLOB) de 
   
 CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 Especifica que el grupo de archivos almacena los datos optimizados para memoria en el sistema de archivos. Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Solo se permite un grupo de archivos `MEMORY_OPTIMIZED_DATA` por base de datos. Para crear tablas optimizadas para memoria, el grupo de archivos no puede estar vacío. Debe haber al menos un archivo. *filegroup_name* hace referencia a una ruta de acceso. La ruta de acceso hasta la última carpeta debe existir y la última carpeta no debe existir.  
  
@@ -316,13 +316,13 @@ NAME = *new_filegroup_name*
 Cambia el nombre del grupo de archivos a *new_filegroup_name*.  
   
 AUTOGROW_SINGLE_FILE  
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 Cuando un archivo del grupo de archivos alcanza el umbral de crecimiento automático, solo ese archivo crece. Ésta es la opción predeterminada.  
   
 AUTOGROW_ALL_FILES  
 
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 Cuando un archivo del grupo de archivos alcanza el umbral de crecimiento automático, crecen todos los archivos del grupo de archivos. 
 
@@ -341,15 +341,15 @@ Una base de datos de solo lectura no permite realizar modificaciones en los dato
 - No es posible reducir la base de datos.  
 - No se produce ningún bloqueo en las bases de datos de solo lectura. Esto puede acelerar el rendimiento de las consultas.  
   
-> [!NOTE]  
+> [!NOTE]
 > La palabra clave `READONLY` se quitará en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite el uso de `READONLY` en los nuevos trabajos de desarrollo y piense en modificar las aplicaciones que utilizan actualmente `READONLY`. Utilice `READ_ONLY` en su lugar.  
   
 READ_WRITE | READWRITE  
 Especifica que el grupo es READ_WRITE. Pueden realizarse actualizaciones en los objetos del grupo de archivos. Para cambiar este estado, debe tener acceso exclusivo a la base de datos. Para obtener más información, vea la cláusula SINGLE_USER.  
   
-> [!NOTE]  
+> [!NOTE]
 > La palabra clave `READWRITE` se quitará en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READWRITE` en los nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que usan `READWRITE` para que empleen `READ_WRITE`.  
-  
+> 
 > [!TIP]
 > Puede averiguar el estado de estas opciones si examina la columna **is_read_only** de la vista de catálogo **sys.databases** o la propiedad **Updateability** de la función `DATABASEPROPERTYEX`.  
   
@@ -428,7 +428,7 @@ ADD FILE
 GO  
 ```  
   
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Agregar a una base de datos un grupo de archivos con dos archivos  
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Agregar a una base de datos un grupo de archivos con dos archivos  
 En el siguiente ejemplo se crea el grupo de archivos `Test1FG1` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] y se agregan dos archivos de 5 MB al grupo de archivos.  
   
 ```sql  
@@ -688,7 +688,7 @@ END;
 GO  
 ```      
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -887,13 +887,13 @@ Una base de datos de solo lectura no permite realizar modificaciones en los dato
 - No es posible reducir la base de datos.  
 - No se produce ningún bloqueo en las bases de datos de solo lectura. Esto puede acelerar el rendimiento de las consultas.  
   
-> [!NOTE]  
+> [!NOTE]
 >  La palabra clave READONLY se quitará en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite el uso de READONLY en los nuevos trabajos de desarrollo y piense en modificar las aplicaciones que utilizan READONLY actualmente. Utilice READ_ONLY en su lugar.  
   
 READ_WRITE | READWRITE  
 Especifica que el grupo es READ_WRITE. Pueden realizarse actualizaciones en los objetos del grupo de archivos. Para cambiar este estado, debe tener acceso exclusivo a la base de datos. Para obtener más información, vea la cláusula SINGLE_USER.  
   
-> [!NOTE]  
+> [!NOTE]
 >  La palabra clave `READWRITE` se quitará en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READWRITE` en los nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que usan `READWRITE` para que empleen `READ_WRITE`.  
   
 Puede averiguar el estado de estas opciones si examina la columna **is_read_only** de la vista de catálogo **sys.databases** o la propiedad **Updateability** de la función `DATABASEPROPERTYEX`.  
@@ -925,7 +925,7 @@ GO
   
 ```  
   
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Agregar a una base de datos un grupo de archivos con dos archivos  
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Agregar a una base de datos un grupo de archivos con dos archivos  
 En el siguiente ejemplo se crea el grupo de archivos `Test1FG1` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] y se agregan dos archivos de 5 MB al grupo de archivos.  
   
 ```sql  
@@ -1081,7 +1081,7 @@ END;
 GO  
 ```      
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -1092,5 +1092,6 @@ GO
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
-[El grupo de archivos con optimización para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+[El grupo de archivos con optimización para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)
 
+::: moniker-end

@@ -19,12 +19,12 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4222a9175e9c5ae1b813d87d67fcc8a34170249a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13cb528700007174c20c5c6881b64a9c4282f036
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714443"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589420"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT (permisos de texto completo de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Es el nombre de un permiso. Las asignaciones válidas de permisos a elementos protegibles se describen en la sección "Comentarios", más adelante en este tema.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_nombre_catálogo_de_texto_completo_  
  Especifica el catálogo de texto completo para el que se concede el permiso. El calificador de ámbito **::** es obligatorio.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_nombre_de_la_lista_de_palabras_irrelevantes_de_texto_completo_  
  Especifica la lista de palabras irrelevantes de texto completo en la que se concede el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  
@@ -142,7 +142,7 @@ GRANT CONTROL
     TO Ted ;  
 ```  
   
-### <a name="b-granting-permissions-to-a-stoplist"></a>B. Conceder permisos en una lista de palabras irrelevantes  
+### <a name="b-granting-permissions-to-a-stoplist"></a>b. Conceder permisos en una lista de palabras irrelevantes  
  En el ejemplo siguiente, se concede a `Mary` el permiso `VIEW DEFINITION` en la lista de palabras irrelevantes de texto completo `ProductStoplist`.  
   
 ```  
@@ -151,7 +151,7 @@ GRANT VIEW DEFINITION
     TO Mary ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   

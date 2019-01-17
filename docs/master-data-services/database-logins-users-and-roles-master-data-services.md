@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -19,12 +18,12 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed15741a0565cda9735b4e2d851e1b025deea224
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8780bd1545793f08e51e2e0804d03d8a3e98178e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607353"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760177"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Inicios de sesión, usuarios y roles en bases de datos (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "47607353"
 |Usuario|Descripción|  
 |----------|-----------------|  
 |**mds_clr_user**|No se usa. Asigna mds_dlp_login.|  
-|**mds_email_user**|Se usa para notificaciones.<br /><br /> -Asigna mds_email_login.<br /><br /> -Es un miembro del rol: DatabaseMailUserRole.|  
+|**mds_email_user**|Se usa para notificaciones.<br /><br /> -Asigna mds_email_login.<br /><br /> -Es miembro del rol: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Usuarios de la base de datos de Master Data Services  
   
@@ -66,9 +65,9 @@ ms.locfileid: "47607353"
 |----------|-----------------|  
 |**mdm**|Contiene todos los objetos de Service Broker y bases de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que no sean las funciones contenidas en el esquema mdq.|  
 |**mdq**|Contiene funciones de base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas con el filtrado de los resultados de miembros basados en expresiones regulares o de similitud, y el formato de los correos electrónicos de notificación.|  
-|**stg**|Contiene las tablas de bases de datos, los procedimientos almacenados y las vistas de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas con el proceso de almacenamiento provisional. No elimine ninguno de estos objetos. Para obtener más información sobre el proceso de almacenamiento provisional, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
+|**stg**|Contiene las tablas de bases de datos, los procedimientos almacenados y las vistas de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas con el proceso de almacenamiento provisional. No elimine ninguno de estos objetos. Para más información sobre el proceso de almacenamiento provisional, vea [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

@@ -11,19 +11,19 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395692"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215824"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-**Resumen:** en este artículo se describe una solución para la configuración de Master Data Service (MDS) hospedado en un grupo de disponibilidad AlwaysOn. En el artículo se describe cómo instalar y configurar SQL 2016 Master Data Services en un grupo de disponibilidad (AG) AlwaysOn de SQL 2016. El propósito principal de esta solución es mejorar la alta disponibilidad y la recuperación ante desastres de datos de back-end MDS hospedados en una base de datos de SQL Server.
+**Resumen:** En este artículo se describe una solución para la configuración de Master Data Service (MDS) hospedado en un grupo de disponibilidad Always On. En el artículo se describe cómo instalar y configurar SQL 2016 Master Data Services en un grupo de disponibilidad (AG) AlwaysOn de SQL 2016. El propósito principal de esta solución es mejorar la alta disponibilidad y la recuperación ante desastres de datos de back-end MDS hospedados en una base de datos de SQL Server.
 
 ## <a name="introduction"></a>Introducción
 
@@ -156,8 +156,8 @@ Cuando haya instalado la característica WSFC en todas las instancias, podrá co
 7.  En la página **Resumen**, busque posibles mensajes de advertencia o de error.
 
     Los errores se deben corregir, pero las advertencias puede que no supongan ningún problema. Un mensaje de advertencia indica que "el elemento probado podría cumplir el requisito, pero hay algo que se debe revisar". Por ejemplo, en la figura 7 se muestra el mensaje de advertencia "Validar latencia de acceso a disco", que puede deberse a que el disco está ocupado temporalmente con otras tareas, y puede ignorarlo. Debe consultar la documentación en línea de cada mensaje de advertencia y de error para obtener más detalles. Vea la figura 7.
- 
-![Asistente para validar una configuración, página Validando](media/Fig6_ValidationTests.png)
+ 
+    ![Asistente para validar una configuración, página Validando](media/Fig6_ValidationTests.png)
 
     Figura 6
 
@@ -187,7 +187,7 @@ Comentarios:
 
 -   Es posible que la característica WSFC no esté disponible en todas las ediciones de Windows Server. Asegúrese de que su edición cuenta con esta característica.
 
--   Asegúrese de que cuenta con los permisos adecuados para configurar WSFC en Active Directory. Si hay algún problema, vea [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guía paso a paso de clústeres de conmutación por error: Configurar cuentas en Active Directory).
+-   Asegúrese de que cuenta con los permisos adecuados para configurar WSFC en Active Directory. Si hay algún problema, vea [Guía paso a paso de clústeres de conmutación por error: Configurar cuentas en Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx).
 
 Para obtener más información detallada sobre WSFC, vea [Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx) (Clústeres de conmutación por error).
 
@@ -305,15 +305,15 @@ El grupo de disponibilidad solo se puede crear en bases de datos existentes. As�
     Para cada réplica, configure las opciones **Confirmación sincrónica**, **Conmutación automática por error** y **Secundaria legible**. Vea la figura 17.
 17.
 
-    **Confirmación sincrónica**: Garantiza que, si se confirma una transacción en la réplica principal de una base de datos, también se confirme en las demás réplicas sincrónicas. La confirmación asincrónica no lo garantiza y podría ir a la zaga de la réplica principal.
+    **Confirmación sincrónica**: garantiza que, si se confirma una transacción en la réplica principal de una base de datos, también se confirme en las demás réplicas sincrónicas. La confirmación asincrónica no lo garantiza y podría ir a la zaga de la réplica principal.
 
     Normalmente debe habilitar la confirmación sincrónica solo si ambos nodos están en el mismo centro de datos. Si se encuentran en centros de datos diferentes, la confirmación sincrónica podría ralentizar el rendimiento de la base de datos.
 
     Si no se marca esta casilla, se usará la confirmación asincrónica.
 
-    **Conmutación automática por error:** Si la réplica principal está inactiva, el grupo de disponibilidad efectuará automáticamente una conmutación por error a su réplica secundaria cuando se seleccione la conmutación automática por error. Solo se puede habilitar en las réplicas que tienen confirmaciones sincrónicas.
+    **Conmutación automática por error:** si la réplica principal está inactiva, el grupo de disponibilidad realizará automáticamente una conmutación por error a su réplica secundaria cuando se seleccione la conmutación automática por error. Solo se puede habilitar en las réplicas que tienen confirmaciones sincrónicas.
 
-    **Secundaria legible:** De forma predeterminada, los usuarios no se pueden conectar a ninguna réplica secundaria. Con esta opción, los usuarios podrán conectarse a la réplica secundaria con acceso de solo lectura.
+    **Secundaria legible:** de forma predeterminada, los usuarios no se pueden conectar a ninguna réplica secundaria. Con esta opción, los usuarios podrán conectarse a la réplica secundaria con acceso de solo lectura.
 
 8.  En la página **Especificar réplicas**, haga clic en la pestaña **Agente de escucha** y haga lo siguiente. Vea la figura 18.
 
@@ -358,7 +358,7 @@ El grupo de disponibilidad solo se puede crear en bases de datos existentes. As�
 
 3.  Haga clic en **Conmutación por error** para efectuar una conmutación por error a una réplica sincrónica y a una réplica asincrónica. Esto sirve para comprobar que la conmutación por error se efectúa correctamente sin ningún problema.
 
- La configuración de AlwaysOn ha finalizado.
+ La configuración de AlwaysOn ha finalizado.
 
 Para más información sobre los grupos de disponibilidad AlwaysOn, vea [Grupos de disponibilidad AlwaysOn (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fd046f665745ca9456acb6a2c30e28ff9a6fc082
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711506"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626404"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   La característica del Almacén de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece datos detallados sobre el rendimiento y la elección del plan de consultas. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente las diferencias de rendimiento provocadas por cambios en los planes de consulta. El Almacén de consultas captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución y las conserva para su revisión. Además, separa los datos por ventanas de tiempo, lo que permite ver patrones de uso de la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. El almacén de consultas se puede configurar con la opción [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
@@ -105,7 +105,7 @@ Después de habilitar el Almacén de consultas, actualice la parte de la base de
   
 ![Árbol del Almacén de consultas de SQL Server 2016 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 Query Store tree in SSMS Object Explorer")   ![Árbol del Almacén de consultas de SQL Server 2017 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 Query Store tree in SSMS Object Explorer") 
   
-Seleccione **Regressed Queries** (Consultas devueltas) para abrir el panel del mismo nombre **Regressed Queries** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el panel Regressed Queries (Consultas devueltas) se muestran las consultas y los planes del Almacén de consultas. Use los cuadros desplegables de la parte superior para filtrar las consultas según diversos criterios: **Duración (ms)** (valor predeterminado), Tiempo de CPU (ms), Lecturas lógicas (KB), Escrituras lógicas (KB), Lecturas físicas (KB), Tiempo de CLR (ms), DOP, Consumo de memoria (KB), Recuento de filas, Memoria usada (KB), Memoria de base de datos temporal utilizada (KB) y Tiempo de espera (ms).  
+Seleccione **Regressed Queries** (Consultas devueltas) para abrir el panel del mismo nombre **Regressed Queries** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el panel Regressed Queries (Consultas devueltas) se muestran las consultas y los planes del Almacén de consultas. Use los cuadros desplegables de la parte superior para filtrar las consultas en función de varios criterios: **Duración (ms)** (valor predeterminado), Tiempo de CPU (ms), Lecturas lógicas (KB), Escrituras lógicas (KB), Lecturas físicas (KB), Tiempo de CLR (ms), DOP, Consumo de memoria (KB), Recuento de filas, Memoria usada (KB), Memoria de base de datos temporal utilizada (KB) y Tiempo de espera (ms).  
 Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, forzar y no forzar un plan de consulta, alternar entre los formatos de cuadrícula y gráfico, comparar los planes seleccionados (si se ha seleccionado más de uno) y actualizar la pantalla.  
   
 ![Consultas devueltas de SQL Server 2016 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 Regressed Queries in SSMS Object Explorer")  
@@ -239,7 +239,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 ```  
   
  > [!NOTE]
- > No se admiten valores arbitrarios para `INTERVAL_LENGTH_MINUTES`. Use una de las siguientes opciones: 1, 5, 10, 15, 30, 60 o 1440 minutos.  
+ > No se admiten valores arbitrarios para `INTERVAL_LENGTH_MINUTES`. Use uno de los siguientes: 1, 5, 10, 15, 30, 60 o 1440 minutos.  
   
  El nuevo valor de intervalo se expone a través de la vista **sys.database_query_store_options** .  
   
@@ -588,7 +588,7 @@ Para volver a confiar en el optimizador de consultas [!INCLUDE[ssNoVersion](../.
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Uso del almacén de consultas con OLTP en memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Escenarios de uso del Almacén de consultas](../../relational-databases/performance/query-store-usage-scenarios.md)   

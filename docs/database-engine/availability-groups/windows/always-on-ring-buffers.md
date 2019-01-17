@@ -1,6 +1,7 @@
 ---
-title: Búferes de anillo de grupos de disponibilidad Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Uso de búferes en anillo para obtener información de estado sobre los grupos de disponibilidad
+description: Obtenga cierta información de diagnóstico sobre los grupos de disponibilidad Always On mediante los búferes en anillo de SQL Server.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bc5ccc83285ead5a5d5de55742380d0af5766b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26f6cd91a0b2af905d863d398245c672657092dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642400"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208304"
 ---
-# <a name="always-on-availability-groups-ring-buffers"></a>Búferes de anillo de los grupos de disponibilidad Always On
+# <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>Uso de búferes en anillo para obtener información de estado sobre los grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En los búferes de anillo de SQL Server o en la vista de administración dinámica (DMV) sys.dm_os_ring_buffers puede obtener información de diagnóstico para los grupos de disponibilidad Always On. Los búferes de anillo se crean durante el inicio de SQL Server y registran las alertas del sistema de SQL Server para el diagnóstico interno. No se admiten, pero pueden servirle para extraer información valiosa cuando tenga que solucionar problemas. Estos búferes de anillo proporcionan otra fuente de diagnóstico cuando SQL Server se bloquea o ha dejado de funcionar.  
   

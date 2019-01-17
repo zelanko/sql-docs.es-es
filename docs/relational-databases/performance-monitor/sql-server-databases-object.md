@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 554e582d23afa6ef62b8bc1fd5ab7c8f0c704f4c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158924"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997577"
 ---
 # <a name="sql-server-databases-object"></a>Databases (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52158924"
 |**Rendimiento de copia de seguridad y restauración/seg.**|Rendimiento de lectura/escritura por segundo en copias de seguridad y restauración de bases de datos. Por ejemplo, puede medir la variación en el rendimiento de la operación de copia de seguridad de una base de datos cuando se utilizan en paralelo más dispositivos de copia de seguridad o cuando se utilizan dispositivos más rápidos. El rendimiento de la operación de copia de seguridad o restauración de una base de datos permite determinar el progreso y el rendimiento de estas operaciones.|  
 |**Copia masiva de filas/seg.**|Número de filas copiadas de forma masiva por segundo.|  
 |**Rendimiento de la copia masiva/seg.**|Cantidad de datos copiados de forma masiva (en kilobytes) por segundo.|  
-|**Entradas de la tabla de confirmación**|Tamaño de la parte de memoria de la tabla de confirmación para la base de datos. Para obtener más información, vea [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
+|**Entradas de la tabla de confirmación**|Tamaño (recuento de filas) de la parte de memoria de la tabla de confirmación para la base de datos. Para obtener más información, vea [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Tamaño de los archivos de datos (KB)**|Tamaño acumulado (en kilobytes) de todos los archivos de datos de la base de datos, incluido el crecimiento automático. La supervisión de este contador resulta útil, por ejemplo, para determinar el tamaño correcto de **tempdb**.|  
 |**Bytes de recorrido lógico DBCC/seg.**|Número de bytes del examen de lectura lógica por segundo para los comandos de la consola de base de datos (DBCC).|  
 |**Tiempo de confirmación de grupo/seg.**|Tiempo de obstrucción de grupo (microsegundos) por segundo.|
@@ -84,7 +84,7 @@ ms.locfileid: "52158924"
 |**Procesados/seg por el registro del controlador de XTP**|La cantidad de bytes del registro procesada por el subproceso controlador del XTP, por segundo.|
 |**Memoria XTP usada (KB)**|Cantidad de memoria usada por XTP en la base de datos.| 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, réplica de base de datos](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

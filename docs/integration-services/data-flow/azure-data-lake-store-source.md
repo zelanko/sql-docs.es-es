@@ -14,19 +14,19 @@ ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b36adb786bc346f426cc28aeb9960158003cafd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5ec780327f12a4d81063c155aa5d3666b004ea6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856463"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210154"
 ---
 # <a name="azure-data-lake-store-source"></a>Origen de Azure Data Lake Store
-  El componente **Origen de Azure Data Lake Store** permite que un paquete SSIS lea datos de un Azure Data Lake Store. Los formatos de archivo admitidos son: Text y Avro.
+  El componente **Origen de Azure Data Lake Store** permite que un paquete SSIS lea datos de un Azure Data Lake Store. Los formatos de archivo compatibles son los siguientes: texto y Avro.
   
  El **Origen de Azure Data Lake Store** es un componente de [Feature Pack de SQL Server Integration Services (SSIS) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
->   [!NOTE]
+> [!NOTE]
 > Para garantizar que el Administrador de conexiones de Azure Data Lake Store y los componentes que lo utilizan (es decir, Origen de Data Lake Store y Destino de Azure Data Lake Store) se puedan conectar a los servicios, descargue la versión más reciente de Azure Feature Pack [aquí](https://www.microsoft.com/download/details.aspx?id=49492). 
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>Configurar Origen de Azure Data Lake Store

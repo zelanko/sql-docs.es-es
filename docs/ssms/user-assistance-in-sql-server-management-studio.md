@@ -14,12 +14,12 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e85c73beea1db9b3db7032492321556bb17253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9db497d157ac6b48591fccb42c0eb6fd9dc34779
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818785"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208934"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Asistencia al usuario en SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ El **Contenido** y el **Índice** ofrecen una funcionalidad y una interfaz con l
   
     Almacena marcadores de temas del usuario para facilitar el acceso en otras ocasiones.  
   
-Ayuda sobre la Ayuda (Ayuda de[!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer) vincula a los usuarios con la documentación sobre el Visor de ayuda; sin embargo, los temas se encuentran en una colección independiente de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para más información acerca del Visor de ayuda, seleccione **Ayuda sobre la Ayuda** en el menú Ayuda de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+Ayuda sobre la Ayuda (Ayuda de [!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer) vincula a los usuarios con la documentación sobre el Visor de ayuda, pero los temas se encuentran en una colección independiente de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para más información acerca del Visor de ayuda, seleccione **Ayuda sobre la Ayuda** en el menú Ayuda de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online y comunidades de SQL Server  
 La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece a los usuarios formas de ponerse en contacto con MSDN Online y con comunidades centradas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en la Web para obtener información. Puede hacer lo siguiente:  

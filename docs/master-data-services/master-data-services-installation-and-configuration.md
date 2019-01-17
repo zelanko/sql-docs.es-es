@@ -5,19 +5,18 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b79bb79750d7f4696581dab86c95cf71abf02375
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce92fb9c6bead52848ad5de1b70092b8168f292
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526947"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205614"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
 
@@ -36,12 +35,12 @@ Para obtener información general sobre cómo organizar los datos en [!INCLUDE[s
 Para obtener vínculos a los vídeos y a otros recursos de aprendizaje de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Información sobre SQL Server Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Descargar**  
->-   Para descargar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
->-   ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** para poner en marcha una máquina virtual con SQL Server ya instalado.  
- 
+> -   Para descargar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** para poner en marcha una máquina virtual con SQL Server ya instalado.  
+> 
 > **¿No puede crear un sitio web de MDS?**
->>Consulte este artículo de soporte técnico de Microsoft para obtener instrucciones sobre cómo resolver este problema.
-[No se puede crear un sitio web de MDS mediante una cuenta con pocos privilegios en SQL Server 2016](https://aka.ms/mdssupport) 
+> >Consulte este artículo de soporte técnico de Microsoft para obtener instrucciones sobre cómo resolver este problema.
+> [No se puede crear un sitio web de MDS mediante una cuenta con pocos privilegios en SQL Server 2016](https://aka.ms/mdssupport) 
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer y Silverlight
 - Al instalar [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en un equipo con Windows Server 2012, podría tener que configurar la seguridad mejorada de Internet Explorer para permitir el scripting para el sitio de la aplicación web. De lo contrario, la exploración al sitio en el equipo servidor producirá errores.
@@ -119,11 +118,11 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
  **Configurar la base de datos y el sitio web mediante el**  de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]  
 
  
-> [!WARNING]  
-    >  Debe [instalar IIS](#InstallIIS) antes de iniciar el Administrador de configuración de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Si no lo hace, el Administrador de configuración mostrará un error de Internet Information Services y no podrá crear la aplicación web de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
-    
+> [!WARNING]
+>  Debe [instalar IIS](#InstallIIS) antes de iniciar el Administrador de configuración de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Si no lo hace, el Administrador de configuración mostrará un error de Internet Information Services y no podrá crear la aplicación web de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
+> 
 > **Requisitos del explorador**
->>La aplicación web de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] solo funciona en Internet Explorer (IE) 9 o posterior. No se admite ni IE 8 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.    
+> >La aplicación web de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] solo funciona en Internet Explorer (IE) 9 o posterior. No se admite ni IE 8 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.    
   
 1.  Inicie el [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]y haga clic en **Configuración de base de datos** en el panel izquierdo.  
   
@@ -216,13 +215,13 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
  Para obtener información sobre los requisitos previos para ejecutar esta herramienta, consulte [Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
- Para información sobre las actualizaciones efectuadas en los datos para admitir nuevas características en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vea [Ejemplos de SQL Server: paquetes de implementación de modelos (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Para obtener información sobre las actualizaciones efectuadas en los datos para admitir nuevas características en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vea [Ejemplos de SQL Server: Paquetes de implementación de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
  **Para implementar los modelos de ejemplo**  
   
 1.  Copie los paquetes de modelo de ejemplo en *unidad*\Archivos de programa\Microsoft SQL Server\140\Master Data Services\Configuration.  
   
-2.  Abra un símbolo del sistema de administrador y ejecute el siguiente comando para ir a MDSModelDeploy.exe.  
+2.  Abra un símbolo del sistema de administrador y ejecute el comando siguiente para ir a MDSModelDeploy.exe.  
   
     ```  
     cd c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration  
@@ -283,7 +282,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
  Para obtener información general sobre cómo usar un modelo y entidades para crear una estructura para los datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], consulte [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
     
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Base de datos de Master Data Services](../master-data-services/master-data-services-database.md)   
  [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)   
  [Página Configuración de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 374b59460313afaaeb670c8926f215580f7d11de
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0be6a45826744aa15707691d545abaf1a4c2411
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534381"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212064"
 ---
 # <a name="change-data-capture-ssis"></a>Captura de datos modificados (SSIS)
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la captura de datos modificados ofrece una solución efectiva al desafío de realizar eficazmente las cargas incrementales de las tablas de origen a los data mart y a los almacenamientos de datos.  
@@ -29,7 +29,7 @@ ms.locfileid: "52534381"
   
  El mecanismo de captura de datos modificados de [!INCLUDE[ssDE](../../includes/ssde-md.md)] captura las operaciones de inserción, actualización y eliminación aplicadas a las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona los detalles de los cambios en un formato relacional fácil de utilizar. Las tablas de cambios utilizadas por la captura de datos modificados contienen las columnas que reflejan la estructura de columnas de las tablas de origen a las que se realiza el seguimiento junto con los metadatos necesarios para entender los cambios que se han producido en cada fila.  
   
-> [!NOTE]  
+> [!NOTE]
 >  La captura de datos modificados no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="how-change-data-capture-works-in-integration-services"></a>Cómo funciona la captura de datos modificados en Integration Services  
@@ -41,7 +41,7 @@ ms.locfileid: "52534381"
   
  Tal como se muestra en el diagrama anterior, la creación de un paquete que realiza una carga incremental de datos modificados conlleva los pasos siguientes:  
   
- **Paso 1: diseñar el flujo de control**  
+ **Paso 1: Diseñar el flujo de control**  
  Debe definir las tareas siguientes en el flujo de control del paquete:  
   
 -   Calcule los valores **datetime** inicial y final para el intervalo de cambios en los datos de origen que desea recuperar.  
@@ -62,14 +62,14 @@ ms.locfileid: "52534381"
   
      **Para obtener más información:** [Preparar para consultar datos modificados](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
- **Paso 2: configurar la consulta para los datos modificados**  
+ **Paso 2: Configurar la consulta para los datos modificados**  
  Cree la función con valores de tabla que consultará los datos.  
   
  Utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para desarrollar y guardar la consulta.  
   
  **Para obtener más información:** [Recuperar y describir datos modificados](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
- **Paso 3: diseñar el flujo de datos**  
+ **Paso 3: Diseñar el flujo de datos**  
  Debe definir las tareas siguientes en el flujo de datos del paquete:  
   
 -   Recupere los datos modificados de las tablas de cambios.  

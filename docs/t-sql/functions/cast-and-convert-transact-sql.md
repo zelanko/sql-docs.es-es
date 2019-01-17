@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 513ccaf7c50b7ca08d6651d516a4b5265d86d7fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191075"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210790"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST y CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52191075"
 
 Estas funciones convierten una expresión de un tipo de datos a otro.  
 
-**Ejemplo:** cambio del tipo de datos de entrada
+**Ejemplo:** Cambio del tipo de datos de entrada
 
 **Cast**
 ```sql  
@@ -103,7 +103,7 @@ Devuelve *expression*, traducido a *data_type*.
 ## <a name="date-and-time-styles"></a>Estilos de fecha y hora  
 Para una *expression* que tenga el tipo de datos de fecha u hora, *style* puede tener uno de los valores que se muestran en la siguiente tabla. Otros valores se procesan como 0. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], los únicos estilos que se admiten al convertir de tipos de fecha y hora a **datetimeoffset** son 0 o 1. Todos los demás estilos de conversión devuelven el error 9809.
   
->  [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el formato de fecha, en estilo árabe, con el algoritmo kuwaití.
   
 |Sin el siglo (aa) (<sup>1</sup>)|Con el siglo (aaaa)|Estándar|Entrada/salida (<sup>3</sup>)|  
@@ -125,8 +125,8 @@ Para una *expression* que tenga el tipo de datos de fecha u hora, *style* puede 
 |**14**|**114**|-|hh:mi:ss:mmm(24h)|  
 |-|**20** o **120** (<sup>2</sup>)|ODBC canónico|aaaa-mm-dd hh:mi:ss(24h)|  
 |-|**21** o **121** (<sup>2</sup>)|ODBC canónico (con milisegundos), valor predeterminado para time, date, datetime2 y datetimeoffset|aaaa-mm-dd hh:mi:ss.mmm(24h)|  
-|-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-ddThh:mi:ss.mmm (sin espacios)<br /><br /> Nota: en el caso de un valor 0 en milisegundos (mmm), el valor de fracción decimal en milisegundos no se mostrará. Por ejemplo, el valor "2012-11-07T18:26:20.000" se muestra como "2012-11-07T18:26:20".|  
-|-|**127**(<sup>6, 7</sup>)|ISO8601 con zona horaria Z.|aaaa-mm-ddThh:mi:ss.mmmZ (sin espacios)<br /><br /> Nota: en el caso de un valor 0 en milisegundos (mmm), el valor decimal en milisegundos no se mostrará. Por ejemplo, el valor "2012-11-07T18:26:20.000" se mostrará como "2012-11-07T18:26:20".|  
+|-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-ddThh:mi:ss.mmm (sin espacios)<br /><br /> Nota: En el caso de un valor 0 en milisegundos (mmm), el valor de fracción decimal en milisegundos no se mostrará. Por ejemplo, el valor "2012-11-07T18:26:20.000" se muestra como "2012-11-07T18:26:20".|  
+|-|**127**(<sup>6, 7</sup>)|ISO8601 con zona horaria Z.|aaaa-mm-ddThh:mi:ss.mmmZ (sin espacios)<br /><br /> Nota: En el caso de un valor 0 en milisegundos (mmm), el valor decimal en milisegundos no se mostrará. Por ejemplo, el valor "2012-11-07T18:26:20.000" se mostrará como "2012-11-07T18:26:20".|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|dd mes aaaa hh:mi:ss:mmma.m.<br /><br /> En este estilo, **mon** es una representación Unicode Hijri multitoken del nombre completo del mes. Este valor no se representa correctamente en una instalación estadounidense predeterminada de SSMS.|  
 |-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|dd/mm/aaaa hh:mi:ss:mmma.m.|  
   
@@ -169,7 +169,7 @@ En el caso de una *expression* **money** o **smallmoney**, *style* puede tener u
 |---|---|
 |**0** (valor predeterminado)|Sin separadores de millar cada tres dígitos a la izquierda del separador decimal y dos dígitos a la derecha del separador decimal<br /><br />Ejemplo: 4235,98.|  
 |**1**|Separadores de millar cada tres dígitos a la izquierda del separador decimal y dos dígitos a la derecha del separador decimal<br /><br />Ejemplo: 3.510,92.|  
-|**2**|Sin separadores de millar cada tres dígitos a la izquierda del separador decimal y cuatro dígitos a la derecha del separador decimal<br /><br />Ejemplo: 4235.9819.|  
+|**2**|Sin separadores de millar cada tres dígitos a la izquierda del separador decimal y cuatro dígitos a la derecha del separador decimal<br /><br />Ejemplo: 4235,9819.|  
 |**126**|Equivalente al estilo 2 al convertir a char(n) o varchar(n)|  
   
 ## <a name="xml-styles"></a>Estilos xml
@@ -368,7 +368,7 @@ WHERE CONVERT(int, ListPrice) LIKE '3%';
 GO  
 ```  
   
-### <a name="b-using-cast-with-arithmetic-operators"></a>B. Utilizar CAST con operadores aritméticos  
+### <a name="b-using-cast-with-arithmetic-operators"></a>b. Utilizar CAST con operadores aritméticos  
 En este ejemplo se calcula una única columna (`Computed`) mediante la división de las ventas anuales hasta la fecha (`SalesYTD`) entre el porcentaje de la comisión (`CommissionPCT`). Este valor se redondea al número entero más cercano y luego se convierte (CAST) en un tipo de datos `int`.
   
 ```sql

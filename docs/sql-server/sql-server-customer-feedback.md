@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525202"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979651"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configuración de SQL Server para enviar comentarios a Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Los clientes empresariales pueden establecer la configuración de directiva de g
     
     Nombre EntradaRegistro = CustomerFeedback
     
-    Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
+    Tipo de entrada DWORD: 0 es no participar; 1 es participar
     
     {InstanceID} hace referencia al tipo de instancia y a la instancia, como en los ejemplos siguientes:
 
@@ -91,18 +91,18 @@ Los clientes empresariales pueden establecer la configuración de directiva de g
     
     Nombre EntradaRegistro = CustomerFeedback
     
-    Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
+    Tipo de entrada DWORD: 0 es no participar; 1 es participar
 
 > [!NOTE]
 > {Versión principal} hace referencia a la versión de SQL Server, por ejemplo 140 para SQL Server 2017.
 
-- Para SQL Server Management Studio:
+- Para SQL Server Management Studio 17:
   
-    Subclave = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140
+    Subclave = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    Nombre EntradaRegistro = CustomerFeedback
+    Nombre EntradaRegistro = UserFeedbackOptIn
 
-    Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
+    Tipo de entrada DWORD: 0 es no participar; 1 es participar
 
     Además, SSMS 17.x se basa en el shell de Visual Studio 2015 y la instalación de Visual Studio admite los comentarios de los clientes de forma predeterminada.  
 
@@ -114,6 +114,13 @@ Los clientes empresariales pueden establecer la configuración de directiva de g
 
     La recopilación de datos de uso de SQL Server 2017 respeta la directiva de grupo basada en el Registro sobre estas subclaves del Registro.
 
+- Para SQL Server Management Studio 18:
+    
+    Subclave = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    Nombre EntradaRegistro = UserFeedbackOptIn
+
+    Tipo de entrada DWORD: 0 es no participar; 1 es participar
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Establecer subclaves del Registro para la recopilación de volcados de memoria
 
 De forma similar al comportamiento en una versión anterior de SQL Server, los clientes de SQL Server 2017 Enterprise pueden establecer la configuración de directivas de grupo en el servidor para participar o no en la recopilación de volcados de memoria. Esto se hace configurando una directiva basada en el Registro. Las claves del Registro y la configuración necesarias son: 
@@ -124,7 +131,7 @@ De forma similar al comportamiento en una versión anterior de SQL Server, los c
 
     Nombre EntradaRegistro = EnableErrorReporting
 
-    Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
+    Tipo de entrada DWORD: 0 es no participar; 1 es participar
  
     {InstanceID} hace referencia al tipo de instancia y a la instancia, como en los ejemplos siguientes: 
 
@@ -139,7 +146,7 @@ De forma similar al comportamiento en una versión anterior de SQL Server, los c
 
     Nombre EntradaRegistro = EnableErrorReporting
 
-    Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
+    Tipo de entrada DWORD: 0 es no participar; 1 es participar
 
 > [!NOTE]
 > {Major Version} hace referencia a la versión de SQL Server. Por ejemplo, "140" hace referencia a SQL Server 2017.

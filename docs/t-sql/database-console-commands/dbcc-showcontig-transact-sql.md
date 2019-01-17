@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9ae3cd167b7f8b2dc633eb50063b4bcaee143acf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510717"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213854"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Muestra información sobre la fragmentación de los datos y los índices de la t
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) en su lugar.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -96,7 +96,7 @@ En la tabla siguiente se describe la información del conjunto de resultados.
 |**Extensiones examinadas**|Número de extensiones de la tabla o el índice.|  
 |**Cambios de extensión**|Número de veces que la instrucción DBCC se ha movido de una extensión a otra al examinar las páginas de la tabla o el índice.|  
 |**Avg. páginas por extensión**|Número de páginas por extensión en la cadena de páginas.|  
-|**Densidad de examen [Mejor recuento:Recuento real]**|Es un porcentaje. Es la relación entre **Mejor recuento** y **Recuento real**. Este valor es 100 si todo es contiguo; si dicho valor es inferior a 100, existe fragmentación.<br /><br /> **Mejor recuento** es el número ideal de cambios de extensión si todo está vinculado de forma contigua. **Recuento real** es el número real de cambios de extensión.|  
+|**Densidad de examen [Mejor recuento: Recuento real]**|Es un porcentaje. Es la relación entre **Mejor recuento** y **Recuento real**. Este valor es 100 si todo es contiguo; si dicho valor es inferior a 100, existe fragmentación.<br /><br /> **Mejor recuento** es el número ideal de cambios de extensión si todo está vinculado de forma contigua. **Recuento real** es el número real de cambios de extensión.|  
 |**Fragmentación de examen lógico**|Porcentaje de páginas que no funcionan resultante del examen de las páginas hoja del índice. Este número no es relevante para los montones. Una página no ordenada es aquella en la que la siguiente página física asignada al índice no es la que señala el puntero de *página siguiente* en la página hoja actual.|  
 |**Fragmentación de examen de extensión**|Porcentaje de extensiones que no funcionan resultante del examen de las páginas hoja del índice. Este número no es relevante para los montones. Una extensión que no funciona es aquella en que la extensión que contiene la página actual de un índice no es físicamente la extensión siguiente a la que contiene la página anterior de un índice.<br /><br /> Nota: Este número carece de significado si el índice abarca varios archivos.|  
 |**Avg. bytes libres por página**|Valor promedio de los bytes libres de las páginas exploradas. Cuanto más alto es el número, menos llenas estarán las páginas. Los números más bajos funcionan mejor si el índice no contiene muchas inserciones aleatorias. Este número también está influido por el tamaño de la fila; un tamaño de fila grande puede provocar un número más alto.|  
@@ -199,7 +199,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Usar OBJECT_ID para obtener el Id. de la tabla y sys.indexes para obtener el Id. del índice  
+### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>b. Usar OBJECT_ID para obtener el Id. de la tabla y sys.indexes para obtener el Id. del índice  
 En el siguiente ejemplo se usa `OBJECT_ID` y la vista de catálogo `sys.indexes` para obtener el id. de tabla y el id. de índice para el índice `AK_Product_Name` de la tabla `Production.Product` de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql  
@@ -342,7 +342,7 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

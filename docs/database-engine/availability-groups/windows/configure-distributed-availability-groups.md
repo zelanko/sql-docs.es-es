@@ -1,6 +1,7 @@
 ---
-title: Configurar un grupo de disponibilidad distribuido (grupo de disponibilidad AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Configuración de un grupo de disponibilidad distribuido
+description: 'Se describe cómo crear y configurar un grupo de disponibilidad Always On distribuido. '
+ms.custom: seodec18
 ms.date: 08/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604001"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215371"
 ---
-# <a name="configure-distributed-availability-group"></a>Configurar un grupo de disponibilidad distribuido  
+# <a name="configure-a-distributed-always-on-availability-group"></a>Configuración de un grupo de disponibilidad Always On distribuido  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Para crear un grupo de disponibilidad distribuido, debe crear un grupo de disponibilidad y el agente de escucha en cada clúster de conmutación por error de Windows Server (WSFC). Después, combine estos grupos de disponibilidad en un grupo de disponibilidad distribuido. En los pasos siguientes se proporciona un ejemplo básico de Transact-SQL. Este ejemplo no cubre todos los detalles relativos a cómo crear grupos de disponibilidad y agentes de escucha, sino que se centra en resaltar los requisitos clave. 

@@ -1,6 +1,7 @@
 ---
-title: Guía de solución de problemas y supervisión de grupos de disponibilidad Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Referencia para la supervisión y solución de problemas de grupos de disponibilidad Always On
+description: Esta guía sirve como página de referencia para empezar a trabajar en la supervisión y en la solución de algunos de los problemas comunes de los grupos de disponibilidad Always On.
+ms.custom: ag-guide, seodec18
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,19 +11,18 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6af848993830329f9f5bbc6b2dc42be416a36fcc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 59ca941e6588f00140b4b57fa3a73904b6ad8f35
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398868"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215624"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guía de solución de problemas y supervisión de grupos de disponibilidad Always On
  Esta guía le ayudará a empezar a trabajar en la supervisión de grupos de disponibilidad Always On y en la solución de problemas de algunos de los problemas comunes en los grupos de disponibilidad. Proporciona contenido original, así como una página de aterrizaje con información útil que está publicada en otra parte. Aunque esta guía no puede analizar completamente todos los problemas que pueden producirse en todo el área de grupos de disponibilidad, puede orientarle en la dirección correcta en el análisis de la causa principal de los problemas y en su resolución. 
  
  Dado que los grupos de disponibilidad son una tecnología integrada, muchos problemas pueden ser síntomas de otros problemas del sistema de base de datos. Algunos problemas se deben a valores de configuración de un grupo de disponibilidad, como la suspensión de una base de datos de disponibilidad. Otros problemas pueden estar relacionados con otros aspectos de SQL Server, como la configuración, las implementaciones de los archivos de base de datos y los problemas de rendimiento sistémico no relacionados con la disponibilidad de SQL Server. Todavía pueden existir otros problemas fuera de SQL Server, como problemas de la E/S de red, TCP/IP, Active Directory y clústeres de conmutación por error de Windows Server (WSFC). A menudo, los problemas que surgen en un grupo de disponibilidad, una réplica o una base de datos requieren que ejecute la solución de problemas en varias tecnologías para identificar la causa principal.  
   
-
   
 ##  <a name="BKMK_SCENARIOS"></a> Escenarios de solución de problemas  
  En la tabla siguiente puede acceder a vínculos a los escenarios de solución de problemas comunes para los grupos de disponibilidad. Se clasifican por sus tipos de escenario, por ejemplo, configuración, conectividad de cliente, conmutación por error y rendimiento.  
@@ -65,12 +65,12 @@ ms.locfileid: "52398868"
 |-----------|-----------------|  
 |[Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Supervisar el rendimiento de los grupos de disponibilidad Always On)|Describe el proceso de sincronización de datos para los grupos de disponibilidad, puertas de control de flujo y métricas útiles al supervisar un grupo de disponibilidad; y también muestra cómo recopilar métricas de RTO y RPO.|  
 |[Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Proporciona información sobre herramientas para supervisar un grupo de disponibilidad.|  
-|[The Always On health model, part 1: Health model architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx) (Modelo de mantenimiento de Always On, parte 1: arquitectura del modelo de mantenimiento)|Proporciona información general sobre el modelo de estado de Always On.|  
-|[The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Modelo de mantenimiento de Always On, parte 2: extender el modelo de mantenimiento)|Muestra cómo personalizar el modelo de mantenimiento de Always On y personalizar el panel de Always On para mostrar información adicional.|  
-|[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx) (Supervisar el mantenimiento de Always On con PowerShell, parte 1: información general básica de los cmdlets)|Proporciona una introducción básica a los cmdlets de PowerShell en Always On que puede usarse para supervisar el mantenimiento de un grupo de disponibilidad.|  
-|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx) (Supervisar el mantenimiento de Always On con PowerShell, parte 2: uso avanzado de cmdlets)|Proporciona información sobre el uso avanzado de los cmdlets de PowerShell en Always On para supervisar el mantenimiento de un grupo de disponibilidad.|  
-|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx) (Supervisar el mantenimiento de Always On con PowerShell, parte 3: una aplicación de supervisión sencilla)|Muestra cómo supervisar automáticamente un grupo de disponibilidad con una aplicación.|  
-|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx) (Supervisar el mantenimiento de Always On con PowerShell, parte 4: integración con el agente SQL Server)|Proporciona información sobre cómo integrar la supervisión del grupo de disponibilidad con el agente SQL Server y cómo configurar notificaciones a las personas adecuadas cuando surjan problemas.|  
+|[The Always On health model, part 1: Health model architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx) (El modelo de estado de Always On, parte 1: arquitectura del modelo de estado)|Proporciona información general sobre el modelo de estado de Always On.|  
+|[The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (El modelo de estado de Always On, parte 2: extensión del modelo de estado)|Muestra cómo personalizar el modelo de mantenimiento de Always On y personalizar el panel de Always On para mostrar información adicional.|  
+|[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx) (Supervisión del mantenimiento de Always On con PowerShell, parte 1: información general sobre cmdlets básicos)|Proporciona una introducción básica a los cmdlets de PowerShell en Always On que puede usarse para supervisar el mantenimiento de un grupo de disponibilidad.|  
+|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx) (Supervisión del mantenimiento de Always On con PowerShell, parte 2: uso avanzado de cmdlets)|Proporciona información sobre el uso avanzado de los cmdlets de PowerShell en Always On para supervisar el mantenimiento de un grupo de disponibilidad.|  
+|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx) (Supervisión del mantenimiento de Always On con PowerShell, parte 3: una aplicación de supervisión sencilla)|Muestra cómo supervisar automáticamente un grupo de disponibilidad con una aplicación.|  
+|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx) (Supervisión del mantenimiento de Always On con PowerShell, parte 4: integración con el Agente SQL Server)|Proporciona información sobre cómo integrar la supervisión del grupo de disponibilidad con el agente SQL Server y cómo configurar notificaciones a las personas adecuadas cuando surjan problemas.|  
 
 ## <a name="next-steps"></a>Pasos siguientes  
  [SQL Server Always On Team Blog](https://blogs.msdn.com/b/sqlalwayson/)  (Blog del equipo Always On de SQL Server)  

@@ -21,17 +21,17 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f8d06d55c31698629fed1521f54eaca8521d9d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc0ce16aabdf9ea1bfdafce6f6c06cce7aa181b3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710383"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203155"
 ---
 # <a name="non-sql-server-subscribers"></a>suscriptores que no son de SQL Server  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Los siguientes suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden suscribirse a publicaciones de instantáneas y transaccionales mediante suscripciones de inserción. Las suscripciones se admiten en las dos versiones más recientes de cada base de datos enumerada utilizando la versión más reciente del proveedor OLE DB indicado.  
+Los suscriptores siguientes que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se pueden suscribir a publicaciones de instantáneas y transaccionales mediante suscripciones de inserción. Las suscripciones se admiten en las dos versiones más recientes de cada base de datos enumerada utilizando la versión más reciente del proveedor OLE DB indicado.  
   
  La replicación heterogénea en suscriptores que no son SQL Server está desusada. La publicación de Oracle está desusada. Para mover datos, cree soluciones mediante captura de datos modificados y [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
@@ -60,7 +60,7 @@ Información de las versiones de Oracle:
 Para obtener información acerca de cómo crear suscripciones a Oracle e IBM DB2, vea [suscriptores de Oracle](../../../relational-databases/replication/non-sql/oracle-subscribers.md) y [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Consideraciones para suscriptores que no son de SQL Server  
- Tenga en cuenta las siguientes consideraciones al replicar datos en suscriptores que no sean de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+ Tenga en cuenta las consideraciones siguientes al replicar datos en suscriptores que no sean de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 ### <a name="general-considerations"></a>Consideraciones generales  
   
@@ -86,7 +86,7 @@ Para obtener información acerca de cómo crear suscripciones a Oracle e IBM DB2
   
 -   Si se agrega o elimina un artículo de una publicación, se deben reinicializar las suscripciones a suscriptores que no sean de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   Las únicas restricciones que admiten los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] son: NULL y NOT NULL. Las restricciones de clave principal se replican como índices únicos.  
+-   Las únicas restricciones que admiten los suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] son: NULL y NOT NULL. Las restricciones de clave principal se replican como índices únicos.  
   
 -   El valor NULL se trata de manera distinta en diferentes bases de datos y esto afecta al modo de representar un valor en blanco, una cadena vacía y un valor NULL. A su vez, afecta al comportamiento de los valores insertados en columnas con restricciones únicas definidas. Por ejemplo, Oracle permite varios valores NULL en una columna considerada única, mientras que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo permite un valor NULL en una columna única.  
   
@@ -112,7 +112,7 @@ Para obtener información acerca de cómo crear suscripciones a Oracle e IBM DB2
   
 -   Los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se pueden inicializar automáticamente desde una copia de seguridad.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Replicación de bases de datos heterogéneas](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md)  
   

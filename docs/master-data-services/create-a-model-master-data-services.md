@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
@@ -15,12 +14,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398798"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748837"
 ---
 # <a name="create-a-model-master-data-services"></a>Crear un modelo (Master Data Services)
 
@@ -49,7 +48,7 @@ ms.locfileid: "52398798"
   
 6.  En el campo **Log Retention Days** (Días de retención del registro), seleccione una de las opciones de retención de datos de registro. El valor predeterminado es **Configuración del sistema**, lo que indica que el valor se hereda de la configuración del sistema del [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-     Para reemplazar la configuración del sistema sin quitar los datos del registro de transacciones, seleccione **NO**. Para conservar solo los datos de registro de hoy y truncar los datos de registro de todos los días anteriores, seleccione **SÍ** y establezca el campo **Días** en 0. Para conservar los datos de registro durante un número especificado de días, seleccione **Sí** y establezca el campo **Días** en el número de días.  
+     Para reemplazar la configuración del sistema sin quitar los datos del registro de transacciones, seleccione **NO**. Para conservar solo los datos de registro de hoy y truncar los de todos los días anteriores, seleccione **SÍ** y establezca el campo **Días** en 0. Para conservar los datos de registro durante un número especificado de días, seleccione **Sí** y establezca el campo **Días** en el número de días.  
   
 7.  Si lo desea, active **Crear entidad con el mismo nombre que el modelo** para crear una entidad con el mismo nombre que el modelo.  
   
@@ -59,25 +58,25 @@ ms.locfileid: "52398798"
   
 -   **Estado**: el estado del modelo. Al hacer clic en el botón **Guardar modelo**, se muestra la imagen ![Actualizar](../master-data-services/media/mds-model-status-updating.png "Actualizar"), que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, se muestra la imagen ![Error](../master-data-services/media/mds-model-status-error.png "Error"). De lo contrario, el estado es correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
   
--   **Nombre**: el nombre del modelo.  
+-   **Nombre**: Nombre del modelo.  
   
--   **Descripción**: la descripción del modelo.  
+-   **Descripción**: La descripción del modelo.  
   
 -   **Días de retención del registro**: el número de días que se conserva el registro para el modelo.  
   
--   **Creado por**: el nombre del usuario que creó el modelo.  
+-   **Creado por**: el nombre del usuario que ha creado el modelo.  
   
--   **Fecha y hora de creación**: la fecha y hora de creación del modelo.  
+-   **Fecha y hora de creación**: fecha y hora en que se ha creado el modelo.  
   
--   **Actualizado por**: el nombre del último usuario que actualizó el modelo.  
+-   **Actualizada por**: nombre del usuario que ha actualizado el modelo por última vez.  
   
--   **Fecha y hora de actualización**: la fecha y hora de la última actualización del modelo.  
+-   **Fecha y hora de actualización**: fecha y hora en que se actualizó el modelo por última vez.  
   
 ## <a name="next-steps"></a>Next Steps  
   
 -   [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Eliminar un modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   

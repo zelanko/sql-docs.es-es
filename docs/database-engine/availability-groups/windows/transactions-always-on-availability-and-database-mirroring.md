@@ -1,7 +1,7 @@
 ---
 title: Transacciones - Grupos de disponibilidad AlwaysOn y creación de reflejo de la base de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,12 +16,12 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad9700e9b1c86b454191e51c6a7e4ee52c393c6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: af982fa485cb9fbcc394a063e0390b795e87e0b0
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606845"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328955"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transacciones - Grupos de disponibilidad y creación de reflejo de la base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +32,10 @@ En este artículo se describe la compatibilidad de las transacciones entre bases
 
 SQL Server 2017 admite las transacciones distribuidas de bases de datos en los grupos de disponibilidad. Esto engloba tanto las bases de datos que hay en la misma instancia de SQL Server como las bases de datos en distintas instancias de SQL Server. Las transacciones distribuidas no son posibles con bases de datos configuradas para la creación de reflejo de base de datos.
 
->[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] El Service Pack 2 y versiones posteriores proporcionan compatibilidad total con las transacciones distribuidas en los grupos de disponibilidad. 
->
->En las versiones de [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] anteriores al Service Pack 2, las transacciones distribuidas entre bases de datos (es decir, las transacciones que usan bases de datos en la misma instancia de SQL Server) que implican una base de datos en un grupo de disponibilidad no son compatibles.
+> [!NOTE]
+> [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] Service Pack 2 y versiones posteriores proporcionan compatibilidad total con las transacciones distribuidas en los grupos de disponibilidad. 
+> 
+> En las versiones de [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] anteriores al Service Pack 2, las transacciones distribuidas entre bases de datos (es decir, las transacciones que usan bases de datos en la misma instancia de SQL Server) que implican una base de datos en un grupo de disponibilidad no son compatibles.
 
 Para configurar un grupo de disponibilidad para transacciones distribuidas, vea [Configurar un grupo de disponibilidad para las transacciones distribuidas](configure-availability-group-for-distributed-transactions.md).
 
@@ -45,13 +45,13 @@ Obtenga más información en:
 - [DTC Developers Guide](https://msdn.microsoft.com/library/ms679938.aspx) (Guía de desarrolladores de DTC)
 - [DTC Programmers Reference](https://msdn.microsoft.com/library/ms686108.aspx) (Referencia de programadores de DTC)
 
-## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 y versiones anteriores: compatibilidad con transacciones entre bases de datos en la misma instancia de SQL Server  
+## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 y versiones anteriores: Compatibilidad con transacciones entre bases de datos en la misma instancia de SQL Server  
 
 En SQL Server 2016 SP1 y versiones anteriores, las transacciones entre bases de datos en la misma instancia de SQL Server no son compatibles con los grupos de disponibilidad. La misma instancia de SQL Server no puede hospedar dos bases de datos en una transacción entre bases de datos si una o ambas bases de datos están en un grupo de disponibilidad. Esta limitación también se aplica si esas bases de datos forman parte del mismo grupo de disponibilidad.  
   
 Las transacciones entre bases de datos tampoco se admiten para la creación de reflejo de la base de datos.  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 y versiones anteriores: compatibilidad con transacciones distribuidas  
+##  <a name="dtcsupport"></a> SQL Server 2016 SP1 y versiones anteriores: Compatibilidad con transacciones distribuidas  
 Las transacciones distribuidas son compatibles con los grupos de disponibilidad si las bases de datos se hospedan en instancias diferentes de SQL Server. También se aplica a las transacciones distribuidas entre las instancias de SQL Server y otro servidor compatible con DTC.  
  
 Coordinador de transacciones distribuidas de Microsoft (MSDTC o DTC) es un servicio de Windows que proporciona infraestructura de transacciones para sistemas distribuidos. MSDTC permite que las aplicaciones cliente incluyan varios orígenes de datos en una transacción, que luego se confirma en todos los servidores incluidos en la transacción. Por ejemplo, puede usar MSDTC para coordinar transacciones que abarcan varias bases de datos en servidores diferentes.
@@ -91,6 +91,6 @@ SQL Server 2016 ofrece la posibilidad de usar transacciones distribuidas en las 
 >  No se puede usar la creación de reflejo de la base de datos con DTC ni usar los grupos de disponibilidad con DTC de formas no aprobadas en este artículo.  Esto no implica que los aspectos del producto no relacionados con DTC sean incompatibles; no obstante, no se admiten los problemas derivados del uso incorrecto de las transacciones distribuidas.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Grupos de disponibilidad Always On: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

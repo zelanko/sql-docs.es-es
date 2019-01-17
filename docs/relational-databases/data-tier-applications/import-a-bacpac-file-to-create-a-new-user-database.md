@@ -26,18 +26,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521241"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590689"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Importe un archivo de aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una instancia nueva de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  El proceso de importación compila una nueva DAC en dos fases.  
   
 1.  La importación crea una nueva DAC y la base de datos asociada mediante la definición de DAC almacenada en el archivo de exportación de la misma manera que una implementación de DAC crea una nueva DAC a partir de la definición de un archivo de paquete DAC.  
@@ -45,7 +45,7 @@ ms.locfileid: "52521241"
 2.  La importación masiva copia los datos del archivo de exportación.  
   
 ## <a name="sql-server-utility"></a>Utilidad de SQL Server  
- Si importa una DAC en una instancia administrada del motor de base de datos, la DAC importada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicaciones de capa de datos implementadas** details page.  
+ Si importa una DAC en una instancia del motor de base de datos, la DAC importada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicaciones de capa de datos implementadas** details page.  
   
 ## <a name="database-options-and-settings"></a>Opciones y configuración de bases de datos  
  De forma predeterminada, la base de datos creada durante la importación incorporará toda la configuración predeterminada de la instrucción CREATE DATABASE, con la excepción de que la intercalación de base de datos y el nivel de compatibilidad se establecen en los valores definidos en el archivo de exportación de DAC. Un archivo de exportación de DAC usa los valores de la base de datos original.  
@@ -59,7 +59,7 @@ ms.locfileid: "52521241"
  Se recomienda no importar un archivo de exportación de DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos archivos contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un archivo de exportación de un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como procedimientos almacenados y otro código definido por el usuario. Para más información sobre cómo realizar estas comprobaciones, consulte [Validar un paquete de DAC](validate-a-dac-package.md).  
   
 ## <a name="security"></a>Seguridad  
- Para mejorar la seguridad, los inicios de sesión de autenticación de SQL Server están almacenados en un archivo de exportación de DAC sin contraseña. Cuando el archivo se importa, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
+ Para mejorar la seguridad, los inicios de sesión de autenticación de SQL Server están almacenados en un archivo de exportación de DAC sin contraseña. Cuando el archivo se importa, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y utilice ALTER LOGIN para habilitar el inicio de sesión y asignar una contraseña nueva que se pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
   
 ## <a name="permissions"></a>Permisos  
  Una DAC solo la pueden importar miembros de los roles fijos de servidor **sysadmin** o **serveradmin** , o inicios de sesión que pertenezcan al rol fijo de servidor **dbcreator** y dispongan de permisos ALTER ANY LOGIN. La cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada denominada **sa** también puede importar una DAC. La importación de una DAC con inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles loginmanager o serveradmin. La importación de una DAC sin inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles dbmanager o serveradmin.  
@@ -101,9 +101,9 @@ ms.locfileid: "52521241"
   
 -   **Importar desde el disco local**: haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
   
--   **Importar desde Azure**: importa un archivo BACPAC desde un contenedor de Microsoft Azure. Debe conectarse a un contenedor de Microsoft Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. El archivo temporal se creará en la ubicación especificada y permanecerá allí una vez finalizada la operación.  
+-   **Importar desde Azure**: importa un archivo BACPAC desde un contenedor de Microsoft Azure. Debe conectarse a un contenedor de Microsoft Azure para validar esta opción. Tenga en cuenta que la opción Importar desde Azure también requiere que se especifique un directorio local para el archivo temporal. El archivo temporal se creará en la ubicación especificada y permanecerá allí una vez finalizada la operación.  
   
-     Al examinar Azure, podrá intercambiar entre los contenedores de una cuenta única. Debe especificar un único archivo .bacpac para continuar con la operación de importación. Tenga en cuenta que puede ordenar columnas por **Nombre**, **Tamaño**o **Fecha de modificación**.  
+     Al examinar Azure, podrá intercambiar entre los contenedores de una cuenta única. Debe especificar un único archivo .bacpac para continuar con la operación de importación. Puede ordenar las columnas por **Nombre**, **Tamaño** o **Fecha de modificación**.  
   
      Para continuar, especifique el archivo .bacpac para importar y, a continuación, haga clic en **Abrir**.  
   
@@ -122,8 +122,8 @@ ms.locfileid: "52521241"
   
  **Desde Azure SQL Database:**  
   
- - **[Importación de un archivo BACPAC para crear una Azure SQL Database nueva](https://azure.microsoft.com/documentation/articles/sql-database-import/)** proporciona instrucciones paso a paso con el Portal de Azure, PowerShell, SSMS o SqlPackage.  
- - Consulte **[Opciones y rendimiento de SQL Database: descripción de lo que está disponible en cada nivel de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** para obtener una vista detallada de los distintos niveles de servicio.  
+ - En **[Importación de un archivo BACPAC para crear una instancia de Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** se proporcionan instrucciones paso a paso con Azure Portal, PowerShell, SSMS o SqlPackage.  
+ - Consulte **[Opciones de SQL Database y rendimiento: descripción de lo que está disponible en cada nivel de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** para obtener una vista detallada de los distintos niveles de servicio.  
 
 ### <a name="validation-page"></a>Página Validación  
  Use esta página para revisar los problemas que bloquean la operación. Para continuar, resuelva los problemas de bloqueo y, después, haga clic en **Volver a ejecutar la validación** para asegurarse de que la validación es correcta.  
@@ -143,7 +143,7 @@ ms.locfileid: "52521241"
   
  Haga clic en **Cerrar** para cerrar el asistente.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Importación de un archivo BACPAC para crear una Azure SQL Database nueva](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportar una aplicación de capa de datos](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  

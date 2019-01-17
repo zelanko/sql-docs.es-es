@@ -1,7 +1,7 @@
 ---
 title: Cláusula ORDER BY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 12/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7279def5a168f46a86db05be1c41b28bbfa9db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8babb966273c05524a373a14c6a084e5c74cfc7b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530234"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980281"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT: Cláusula ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,14 @@ ORDER BY order_by_expression
   
  Es posible especificar varias columnas de ordenación. Los nombres de columna tienen que ser únicos. La secuencia de las columnas de ordenación de la cláusula ORDER BY define la organización del conjunto de resultados ordenado. Es decir, el conjunto de resultados se ordena conforme a la primera columna y, a continuación, esa lista ordenada se ordena según la segunda columna, y así sucesivamente.  
   
- Los nombres de columna a los que se hace referencia en la cláusula ORDER BY deben corresponderse con una columna de la lista de selección o con una columna definida en la tabla especificada en la cláusula FROM sin ambigüedades.  
+ Los nombres de columna a los que se hace referencia en la cláusula ORDER BY deben corresponderse con una columna o un alias de columna de la lista de selección, o bien con una columna definida en la tabla especificada en la cláusula FROM sin ambigüedades. Si la cláusula ORDER BY hace referencia a un alias de columna de la lista de selección, el alias de columna se debe usar de forma independiente y no como parte de una expresión en la cláusula ORDER BY, por ejemplo:
+ 
+```sql
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName; -- correct 
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName + ''; -- wrong
+```
   
  COLLATE *collation_name*  
  Especifica que la operación ORDER BY debe realizarse conforme a la intercalación especificada en *collation_name*, y no conforme a la intercalación de la columna definida en la tabla o vista. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE se aplica a las columnas de tipo **char**, **varchar**, **nchar** y **nvarchar**.  
@@ -216,7 +223,7 @@ WHERE Name LIKE 'Lock Washer%'
 ORDER BY ProductID;  
 ```  
   
-#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. Especificar una columna que no está definida en la lista de selección  
+#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>b. Especificar una columna que no está definida en la lista de selección  
  En el siguiente ejemplo se ordena el conjunto de resultados por una columna que no está incluida en la lista de selección, pero sí definida en la tabla especificada en la cláusula FROM.  
   
 ```sql
@@ -267,7 +274,7 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-an-ascending-order"></a>B. Especificar un orden ascendente  
+#### <a name="b-specifying-an-ascending-order"></a>b. Especificar un orden ascendente  
  En el siguiente ejemplo se ordena el conjunto de resultados en orden ascendente según la columna `Name`. Los caracteres están ordenados alfabéticamente, no numéricamente. Es decir, 10 se ordena antes que 2.  
   
 ```sql
@@ -384,7 +391,7 @@ ORDER BY DepartmentID
   
 ```  
   
-#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Especificar variables para los valores de OFFSET y FETCH  
+#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>b. Especificar variables para los valores de OFFSET y FETCH  
  En el siguiente ejemplo se declaran las variables `@StartingRowNumber` y `@FetchRows`, y se especifican estas variables en las cláusulas OFFSET y FETCH.  
   
 ```sql
@@ -543,7 +550,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   

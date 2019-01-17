@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
@@ -16,12 +15,12 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9c8e5c76ceffe53f2b2ee4dd759db748ae58f7b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b337b716905523d78d3e49d60477c7b6f29f72f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606593"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765327"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Superponer permisos de usuario y de grupo (Master Data Services)
 
@@ -55,7 +54,7 @@ ms.locfileid: "47606593"
   
  El Grupo 2 tiene el permiso **Leer** para la entidad Product.  
   
- Resultado: el permiso vigente del usuario para la entidad Product es **Actualizar** .  
+ Resultado: el permiso vigente del usuario para la entidad Product es **Actualizar**.  
   
 ## <a name="example-2"></a>Ejemplo 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -68,7 +67,7 @@ ms.locfileid: "47606593"
   
  El Grupo 2 tiene el permiso **Denegar** para la entidad Product.  
   
- Resultado: el permiso vigente del usuario para la entidad Product es **Denegar** .  
+ Resultado: el permiso vigente del usuario para la entidad Product es **Denegar**.  
   
 ## <a name="example-3"></a>Ejemplo 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -81,9 +80,9 @@ ms.locfileid: "47606593"
   
  El Grupo 2 tiene el permiso **Leer** para un grupo de miembros en un nodo de la jerarquía.  
   
- Resultado: el permiso vigente del usuario para los miembros es **Actualizar** .  
+ Resultado: el permiso vigente del usuario para los miembros es **Actualizar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cómo se determinan los permisos &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Superponer permisos de modelo y de miembro &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

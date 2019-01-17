@@ -19,30 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c4bf49266f87dcc569ca6bca52c5a8d82119bb7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1cdaa903f8d81c2c4878965bc085f594f0313704
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510862"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626272"
 ---
 # <a name="create-a-database-schema"></a>Crear un esquema de la base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   En este tema se describe cómo crear un esquema en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
-  
- **En este tema**  
-  
--   **Antes de empezar:**  
-  
-     [Limitaciones y restricciones](#Restrictions)  
-  
-     [Seguridad](#Security)  
-  
--   **Para crear un esquema, utilizando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -75,9 +61,12 @@ ms.locfileid: "52510862"
 5.  En el cuadro **Propietario del esquema** , escriba el nombre del usuario o rol de base de datos que va a poseer el esquema. Como alternativa, haga clic en **Buscar** para abrir el cuadro de diálogo **Buscar roles y usuarios** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+
+> [!NOTE]
+> No se mostrará un cuadro de diálogo si va a crear un esquema mediante SSMS para una instancia de **Azure SQL Database** o de **Azure SQL Data Warehouse**. Tendrá que ejecutar la instrucción T-SQL de creación de esquema de plantilla que se genera.
   
 ### <a name="additional-options"></a>Opciones adicionales  
- El cuadro de diálogo **Esquema - Nuevo** también proporciona opciones de dos páginas adicionales: **Permisos** y **Propiedades extendidas**.  
+ En el cuadro de diálogo **Esquema - Nuevo** también se ofrecen opciones en dos páginas adicionales: **Permisos** y **Propiedades extendidas**.  
   
 -   La página **Permisos** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión.  
   

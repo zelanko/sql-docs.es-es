@@ -1,9 +1,11 @@
 ---
 title: Parámetros de informe (Generador de informes y Diseñador de informes) | Microsoft Docs
-ms.date: 10/17/2016
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: En este tema se describen los usos habituales de los parámetros de informe de Reporting Services, las propiedades que se pueden establecer y mucho más.
+ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -15,26 +17,25 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 55104192e2a6ac738ca5b99365fd90b74d40430b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032084"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215026"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parámetros de informe (Generador de informes y Diseñador de informes)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint y en modo nativo
+
   En este tema se describen los usos habituales de los parámetros de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , las propiedades que puede establecer y otros muchos aspectos. Los parámetros de informe le permiten controlar datos de informe, conectar informes relacionados y cambiar la presentación de los informes. Puede utilizar parámetros de informe en informes paginados creados en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y en el Diseñador de informes y también en informes móviles creados en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Obtenga más información sobre [Conceptos de parámetros de informe](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint y en modo nativo|  
-  
- Para intentar agregar un parámetro a un informe por su cuenta, vea [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+ 
+Para intentar agregar un parámetro a un informe, vea [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
     
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Usos comunes de los parámetros  
  Estos son algunos de los usos más comunes de los parámetros.  
   
- **Control de datos de informes móviles y paginados**  
+**Control de datos de informes móviles y paginados**  
   
 -   Filtre los datos del informe paginado en el origen de datos; para ello escriba las consultas del conjunto de datos que incluyen variables.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "50032084"
   
 -   Permita a los usuarios especificar valores para personalizar los datos de un informe paginado. Por ejemplo, para proporcionar dos parámetros para la fecha de inicio y de finalización de los datos de ventas.  
   
- **Conectar informes relacionados**  
+**Conectar informes relacionados**  
   
 -   Use parámetros para relacionar informes principales con informes detallados, así como a subinformes e informes vinculados. Cuando se diseña un conjunto de informes, cada informe se puede diseñar de tal modo que responda a determinadas preguntas. Cada informe puede aportar un punto de vista o un nivel de detalle distinto sobre la información relacionada. Para ofrecer un conjunto de informes interrelacionados, cree parámetros para los datos relacionados en los informes de destino.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "50032084"
   
 -   Personalizar conjuntos de parámetros para varios usuarios. Crear dos informes vinculados basados en un informe de ventas en el servidor de informes. Uno utilizará valores de parámetro predefinidos para los vendedores y el otro, para los directores de ventas. Ambos informes utilizan la misma definición de informe.  
   
- **Cambiar la presentación de los informes**  
+**Cambiar la presentación de los informes**  
   
 -   Envíe comandos a un servidor de informes a través de una solicitud URL, para personalizar la representación de un informe. Para más información, vea [Acceso URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) y [Pasar un parámetro de informe en una dirección URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
@@ -105,9 +106,9 @@ ms.locfileid: "50032084"
   
  Para obtener más información, vea [Consultas de conjunto de datos](#bkmk_Dataset_Parameters) en este tema.  
   
- **Crear un parámetro de forma manual**  
+**Crear un parámetro de forma manual**  
   
- Cree un parámetro manualmente desde el panel Datos de informe. Puede configurar parámetros de informe para que un usuario pueda especificar de forma interactiva valores que le permitan a personalizar el contenido o la apariencia de un informe. También puede configurar parámetros de informe para que un usuario no pueda cambiar los valores preconfigurados.  
+Cree un parámetro manualmente desde el panel Datos de informe. Puede configurar parámetros de informe para que un usuario pueda especificar de forma interactiva valores que le permitan a personalizar el contenido o la apariencia de un informe. También puede configurar parámetros de informe para que un usuario no pueda cambiar los valores preconfigurados.  
   
 > [!NOTE]  
 >  Puesto que los parámetros se administran de forma independiente en el servidor, al volver a publicar un informe principal con una nueva configuración de parámetros, no se sobrescribe la configuración de parámetros existente del informe.  
@@ -210,31 +211,10 @@ ms.locfileid: "50032084"
 >   
 >  Si un parámetro de informe no está asociado a un parámetro de conjunto de datos y los valores de parámetro están incluidos en el informe, un usuario del informe podría escribir sintaxis de expresiones o una dirección URL en el valor de parámetro y representar el informe en Excel o HTML. Si, posteriormente, otro usuario visualiza el informe y hace clic en el contenido del parámetro representado, el usuario podría ejecutar accidentalmente el script o el vínculo malintencionados.  
 >   
->  Para reducir el riesgo de ejecución accidental de scripts malintencionados, abra los informes representados exclusivamente desde orígenes de confianza. Para más información sobre cómo proteger informes, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  
-  
-##  <a name="bkmk_How_To_Topics"></a> Temas de procedimientos  
- En esta sección se enumeran procedimientos que muestran, paso a paso, cómo trabajar con los parámetros y los filtros.  
-  
--   [Agregar, cambiar o eliminar parámetros de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)  
-  
--   [Agregar, cambiar o eliminar valores predeterminados para un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)  
-  
--   [Cambiar el orden de un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Agregar parámetros en cascada a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
-  
--   [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
--   [Agregar un subinforme y parámetros &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
-  
--   [Customize the Parameters Pane in a Report &#40;Report Builder&#41; (Personalizar el panel de parámetros en un informe [Generador de informes])](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)  
-  
+>  Para reducir el riesgo de ejecución accidental de scripts malintencionados, abra los informes representados exclusivamente desde orígenes de confianza. Para obtener más información sobre cómo proteger informes, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  
 
 ##  <a name="bkmk_Related_Topics"></a> Secciones relacionadas  
- [Configurar parámetros de informe de SSRS (cuestionario)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
-  
+
  [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Conceptos de parámetros de informe](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  

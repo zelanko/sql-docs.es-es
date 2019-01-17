@@ -1,6 +1,7 @@
 ---
-title: Grupo de disponibilidad no preparado para conmutación automática por error | Microsoft Docs
-ms.custom: ''
+title: Grupo de disponibilidad no preparado para conmutación automática por error
+description: Identifique las posibles causas de por qué un grupo de disponibilidad Always On no está preparado para la conmutación por error.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dec114e42921c7d7619ad3da6252d54e534826a9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2951f586d252d058d7de542160f8b103b6a79bef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601605"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210114"
 ---
-# <a name="availability-group-is-not-ready-for-automatic-failover"></a>Grupo de disponibilidad no preparado para conmutación automática por error
+# <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>El grupo de disponibilidad Always On no está preparado para la conmutación automática por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Introducción  
@@ -51,7 +52,7 @@ ms.locfileid: "51601605"
   
 -   Use la directiva para comprobar que los datos están en un estado de sincronización y el destino de la conmutación automática por error es SYNCHRONIZED y, a continuación, resuelva el problema en la réplica de disponibilidad.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

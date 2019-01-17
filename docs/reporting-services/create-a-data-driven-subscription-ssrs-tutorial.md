@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e4d15a3762c94d8a4daa6bb1837a2fd89be8fb88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712526"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791757"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Crear una suscripción controlada por datos (Tutorial de SSRS)
 En este tutorial de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se explican los conceptos relacionados con las suscripciones controladas por datos mediante un ejemplo sencillo en el que se crea una suscripción controlada por datos para generar y guardar la salida de informe filtrado en un recurso compartido de archivos. 
@@ -33,8 +33,8 @@ En este tutorial de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] s
  Lección | Comentarios
  ------- | --------------
  [Lección 1: Crear una base de datos de suscriptor de ejemplo](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | En esta lección creará una base de datos local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de tablas que contiene la información del suscriptor, los números de pedido de información que se usan para el filtrado y los formatos de los archivos de salida.
-[Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |En esta lección, configurará un origen de datos de informe para que el informe pueda ejecutarse en modo desatendido según una programación. El procesamiento desatendido requiere las credenciales almacenadas. Además, modificará el conjunto de datos de informe para que incluya un parámetro proporcionado por los datos del suscriptor. Este parámetro se usa para filtrar los datos del informe en función del número de pedido.
- [Lección 3: Definir una suscripción controlada por datos](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | En esta lección, creará una suscripción controlada por datos. Esta lección le guía a través de cada página del Asistente para suscripciones controladas por datos.
+[Lección 2: Configurar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |En esta lección, configurará un origen de datos de informe para que el informe pueda ejecutarse en modo desatendido según una programación. El procesamiento desatendido requiere las credenciales almacenadas. Además, modificará el conjunto de datos de informe para que incluya un parámetro proporcionado por los datos del suscriptor. Este parámetro se usa para filtrar los datos del informe en función del número de pedido.
+ [Lección 3: Crear una suscripción controlada por datos](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | En esta lección, creará una suscripción controlada por datos. Esta lección le guía a través de cada página del Asistente para suscripciones controladas por datos.
 
  En el siguiente diagrama se muestra el flujo de trabajo básico del tutorial.
 
@@ -72,7 +72,7 @@ Para utilizar este tutorial, debe tener el software siguiente instalado en el eq
   
 **Tiempo estimado para completar este tutorial:** 30 minutos. Otros 30 minutos si no ha completado el tutorial de informe básico.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Suscripciones controladas por datos](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  

@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7098114ba6a69b65ba689f00a726bb93c93b6a2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1bfefddd741f385fdcd465e93099f05c11ca5473
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528781"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980271"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,6 +69,7 @@ ALTER AVAILABILITY GROUP group_name
   | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
   | HEALTH_CHECK_TIMEOUT = milliseconds  
   | DB_FAILOVER  = { ON | OFF }   
+  | DTC_SUPPORT  = { PER_DB | NONE }  
   | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
   
 <server_instance> ::=   
@@ -93,7 +94,7 @@ ALTER AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -189,7 +190,7 @@ ALTER AVAILABILITY GROUP group_name
 >  Para ver la preferencia de copia de seguridad automatizada de un grupo de disponibilidad existente, seleccione la columna **automated_backup_preference** o **automated_backup_preference_desc** de la vista de catálogo [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). Además, se puede usar [sys.fn_hadr_backup_is_preferred_replica &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) para determinar la réplica de copia de seguridad preferida.  Esta función siempre devolverá 1 al menos para una de las réplicas, incluso aunque `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
   
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
- Especifica qué condiciones de error desencadenarán una conmutación por error automática para este grupo de disponibilidad. FAILURE_CONDITION_LEVEL se establece en el nivel de grupo, pero solo se aplica a las réplicas de disponibilidad que tienen configurado el modo de disponibilidad de confirmación sincrónica (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT). Además, las condiciones de error pueden desencadenar una conmutación automática por error solamente si las réplicas principal y secundaria están configuradas para el modo de conmutación automática por error (FAILOVER_MODE **=** AUTOMATIC) y la réplica secundaria está sincronizada actualmente con la réplica principal.  
+ Especifica qué condiciones de error desencadenarán una conmutación por error automática para este grupo de disponibilidad. FAILURE_CONDITION_LEVEL se establece en el nivel de grupo, pero solo se aplica a las réplicas de disponibilidad que tienen configurado el modo de disponibilidad de confirmación sincrónica (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT). Además, las condiciones de error pueden desencadenar una conmutación automática por error solamente si las réplicas principal y secundaria están configuradas para el modo de conmutación automática por error (FAILOVER_MODE **=** AUTOMATIC) y la réplica secundaria está sincronizada actualmente con la réplica principal.  
   
  Solo se admite en la réplica principal.  
   
@@ -197,7 +198,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |Nivel|Condición de error|  
 |-----------|-----------------------|  
-|1|Especifica que se debe iniciar una conmutación por error automática en los casos siguientes:<br /><br /> El servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está inactivo.<br /><br /> La concesión del grupo de disponibilidad para conectarse al clúster de WSFC expira porque no se ha recibido ninguna confirmación de la instancia del servidor. Para obtener más información, vea [Cómo funciona: tiempo de espera de concesión de AlwaysOn de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Especifica que se debe iniciar una conmutación por error automática en los casos siguientes:<br /><br /> El servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está inactivo.<br /><br /> La concesión del grupo de disponibilidad para conectarse al clúster de WSFC expira porque no se ha recibido ninguna confirmación de la instancia del servidor. Para más información, vea [Cómo funciona: tiempo de espera de concesión de Always On de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Especifica que se debe iniciar una conmutación por error automática en los casos siguientes:<br /><br /> La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se conecta al clúster y se ha superado el umbral de HEALTH_CHECK_TIMEOUT del grupo de disponibilidad especificado por el usuario.<br /><br /> La réplica de disponibilidad tiene un estado de error.|  
 |3|Especifica que se debe iniciar una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graves, como bloqueos por subproceso huérfanos, infracciones graves de acceso de escritura o un volcado excesivo.<br /><br /> Éste es el comportamiento predeterminado.|  
 |4|Especifica que se debe iniciar una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moderados, tales como una condición persistente de memoria insuficiente en el grupo de recursos de servidor interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -209,7 +210,7 @@ ALTER AVAILABILITY GROUP group_name
  Los valores FAILURE_CONDITION_LEVEL y HEALTH_CHECK_TIMEOUT definen una *directiva flexible de conmutación por error* para un grupo dado. Esta directiva flexible de conmutación por error proporciona mayor control sobre las condiciones que deben causar una conmutación por error automática. Para obtener más información, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- Especifica el tiempo de espera (en milisegundos) para que el procedimiento almacenado del sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) devuelva información de mantenimiento del servidor antes de que el clúster de WSFC suponga que la instancia del servidor está inactiva o bloqueada. HEALTH_CHECK_TIMEOUT se establece en el nivel de grupo, pero solo se aplica a réplicas de disponibilidad que tienen configurado el modo de disponibilidad de confirmación sincrónica con conmutación de error automática (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT).  Además, un tiempo de espera de comprobación de estado puede desencadenar una conmutación automática por error solamente si las réplicas principal y secundaria están configuradas para el modo de conmutación automática por error (FAILOVER_MODE **=** AUTOMATIC) y la réplica secundaria está sincronizada actualmente con la réplica principal.  
+ Especifica el tiempo de espera (en milisegundos) para que el procedimiento almacenado del sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) devuelva información de mantenimiento del servidor antes de que el clúster de WSFC suponga que la instancia del servidor está inactiva o bloqueada. HEALTH_CHECK_TIMEOUT se establece en el nivel de grupo, pero solo se aplica a las réplicas de disponibilidad que tienen configurado el modo de confirmación sincrónica con conmutación automática por error (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Además, un tiempo de espera de comprobación de estado puede desencadenar una conmutación automática por error solamente si las réplicas principal y secundaria están configuradas para el modo de conmutación automática por error (FAILOVER_MODE **=** AUTOMATIC) y la réplica secundaria está sincronizada actualmente con la réplica principal.  
   
  El valor predeterminado de HEALTH_CHECK_TIMEOUT es 30000 milisegundos (30 segundos). El valor mínimo es 15000 milisegundos (15 segundos) y el valor máximo es 4294967295 milisegundos.  
   
@@ -223,6 +224,11 @@ ALTER AVAILABILITY GROUP group_name
  
  Para obtener más información sobre este valor, vea [Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). 
 
+DTC_SUPPORT  **=** { PER_DB | NONE }  
+Especifica si las transacciones distribuidas están habilitadas para este grupo de disponibilidad. Las transacciones distribuidas para bases de datos de grupo de disponibilidad solo se admiten a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], y las transacciones entre bases de datos solo a partir de [!INCLUDE[ssSQL16](../../includes/sssql15-md.md)] SP2. `PER_DB` crea el grupo de disponibilidad con compatibilidad con estas transacciones y promoverá de forma automática a transacciones distribuidas las transacciones entre las bases de datos relacionadas con las bases de datos del grupo de disponibilidad. `NONE` impide la promoción automática de transacciones entre bases de datos a transacciones distribuidas y no registra la base de datos con un RMID estable en DTC. Las transacciones distribuidas no se evitan cuando se usa el valor `NONE`, pero es posible que la conmutación por error de base de datos y la recuperación automática no se puedan realizar correctamente en algunas circunstancias. Para obtener más información, vea [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
+ 
+> [!NOTE]
+> La compatibilidad para cambiar la configuración de DTC_SUPPORT de un grupo de disponibilidad se introdujo en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 2. Esta opción no se puede usar con versiones anteriores. Para cambiar esta configuración en versiones anteriores de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], debe usar DROP y CREATE en el grupo de disponibilidad.
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introducido en SQL Server 2017. Se usa para establecer un número mínimo de réplicas secundarias sincrónicas que se deben confirmar antes de que la réplica principal confirme una transacción. Garantiza que las transacciones de SQL Server esperen hasta que se actualicen los registros de transacciones en el número mínimo de réplicas secundarias. El valor predeterminado es 0, que proporciona el mismo comportamiento que SQL Server 2016. El valor mínimo es 0. El valor máximo es el número de réplicas menos 1. Esta opción se relaciona con las réplicas en el modo de confirmación sincrónica. Cuando las réplicas están en modo de confirmación sincrónica, las escrituras en la réplica principal esperan hasta que las escrituras en las réplicas secundarias sincrónicas se confirmen en el registro de transacciones de la base de datos de réplica. Si un servidor SQL Server que hospeda una réplica secundaria sincrónica deja de responder, el servidor SQL Server que hospeda la réplica principal marcará esa réplica secundaria como NO SINCRONIZADA y continuará. Cuando la base de datos que no responde vuelve a estar en línea, se encontrará en un estado "no sincronizado" y la réplica se marcará como incorrecta hasta que la réplica principal la convierta en sincrónica nuevo. Esta configuración garantiza que la réplica principal no continúe hasta que el número mínimo de réplicas haya confirmado cada transacción. Si el número mínimo de réplicas no está disponible, se producirá un error en las confirmaciones de la réplica principal. Para el tipo de clúster `EXTERNAL`, se ha cambiado esta configuración cuando se agrega el grupo de disponibilidad a un recurso de clúster. Vea [Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](../../linux/sql-server-linux-availability-group-ha.md).
@@ -306,7 +312,10 @@ ALTER AVAILABILITY GROUP group_name
  Especifica el modo de conmutación por error de la réplica de disponibilidad que está definiendo.  
   
  AUTOMATIC  
- Habilita la conmutación por error automática. AUTOMATIC solo se admite si se especifica también AVAILABILITY_MODE = SYNCHRONOUS_COMMIT. Puede especificar AUTOMATIC para dos réplicas de disponibilidad, incluida la réplica principal.  
+ Habilita la conmutación por error automática. AUTOMATIC solo se admite si se especifica también AVAILABILITY_MODE = SYNCHRONOUS_COMMIT. Puede especificar AUTOMATIC para tres réplicas de disponibilidad, incluida la principal.  
+  
+> [!NOTE]  
+>  Antes de SQL Server 2016, estaba limitado a dos réplicas de conmutación automática por error, incluida la principal
   
 > [!NOTE]  
 >  Las instancias de clúster de conmutación por error (FCI) de SQL Server no admiten la conmutación automática por error de grupos de disponibilidad, por lo tanto, todas las réplicas de disponibilidad hospedadas por un FCI solo se pueden configurar para la conmutación por error manual.  
@@ -335,7 +344,7 @@ ALTER AVAILABILITY GROUP group_name
   
 -   0 indica que esta réplica de disponibilidad nunca se elegirá para realizar copias de seguridad. Esto es útil, por ejemplo, para una réplica de disponibilidad remota en la que no desee nunca realizar la conmutación por error para las copias de seguridad.  
   
- Para obtener más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Para más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Especifica la configuración específica del rol que se aplicará si esta réplica de disponibilidad posee actualmente el rol secundario (es decir, siempre que sea una réplica secundaria). Dentro de los paréntesis, especifique una o ambas de las opciones de rol secundario. Si se especifican ambas, utilice una lista separada por comas.  
@@ -345,7 +354,7 @@ ALTER AVAILABILITY GROUP group_name
  ALLOW_CONNECTIONS **=** { NO | READ_ONLY | ALL }  
  Especifica si las bases de datos de una réplica de disponibilidad determinada que está realizando el rol secundario (es decir, actuando como réplica secundaria) pueden aceptar conexiones de los clientes; uno de los tipos de conexión siguientes:  
   
- NO  
+ No  
  No se permiten conexiones de usuario a las bases de datos secundarias de esta réplica. No están disponibles para acceso de lectura. Éste es el comportamiento predeterminado.  
   
  READ_ONLY  
@@ -354,7 +363,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  Se permiten todas las conexiones con las bases de datos de la réplica secundaria para acceso de solo lectura.  
   
- Para obtener más información, vea [Secundarias activas: réplicas secundarias legibles &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para más información, vea [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  Especifica la dirección URL que se va a usar para enrutar las solicitudes de conexión de intención de lectura de enrutamiento para esta réplica de disponibilidad. Es la dirección URL en la que escucha el motor de base de datos de SQL Server. Normalmente, la instancia predeterminada del motor de base de datos de SQL Server escucha en el puerto TCP 1433.  
@@ -453,11 +462,11 @@ Inicia una conmutación por error manual del grupo de disponibilidad sin pérdid
  ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
  Define un nuevo agente de escucha para este grupo de disponibilidad. Solo se admite en la réplica principal.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Antes de crear el primer agente de escucha, se recomienda encarecidamente leer [Crear o configurar un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
->   
+> 
 >  Después de crear un agente de escucha para un grupo de disponibilidad determinado, es absolutamente recomendable que haga lo siguiente:  
->   
+> 
 >  -   Pida al administrador de red que reserve la dirección IP del agente de escucha para su uso exclusivo.  
 > -   Proporcione el nombre del host DNS del agente de escucha a los desarrolladores de aplicaciones para que lo usen en las cadenas de conexión cuando soliciten conexiones cliente a este grupo de disponibilidad.  
   
@@ -620,7 +629,7 @@ ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: c2e84a286cb4fa59c25426e9b1e8e8506fb51d91
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370547"
 ---
 # <a name="how-query-store-collects-data"></a>Introducción a la recopilación de datos del almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52711077"
 |**sys.query_store_query**|Entradas de consulta a las que se realiza un seguimiento y que se aplican por separado en el almacén de consultas. Un texto de consulta solo puede generar varias entradas de consulta si se ejecuta con opciones de contexto distintas, o bien si se ejecuta fuera, en lugar de dentro de distintos módulos de [!INCLUDE[tsql](../../includes/tsql-md.md)] (procedimientos almacenados, desencadenadores, etc.).|  
 |**sys.query_store_plan**|Presenta el plan estimado para la consulta con las estadísticas de tiempo de compilación. El plan almacenado equivale a uno que se obtendría utilizando `SET SHOWPLAN_XML ON`.|  
 |**sys.query_store_runtime_stats_interval**|El almacén de consultas divide el tiempo en periodos (intervalos) generados de forma automática y almacena estadísticas agregadas en ese intervalo para cada plan ejecutado. El tamaño del intervalo se controla mediante la opción de configuración Intervalo de recopilación de estadísticas (en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o `INTERVAL_LENGTH_MINUTES` con [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
-|**sys.query_store_runtime_stats**|Estadísticas agregadas del runtime para los planes ejecutados. Todas las métricas capturadas se expresan como cuatro funciones estadísticas: Promedio, Mínimo, Máximo y Desviación estándar.|  
+|**sys.query_store_runtime_stats**|Estadísticas agregadas del runtime para los planes ejecutados. Todas las métricas capturadas se expresan en forma de cuatro funciones estadísticas: Average, Minimum, Maximum y Standard Deviation.|  
   
  Para obtener más información sobre las vistas del almacén de consultas, vea la sección **Vistas, funciones y procedimientos relacionados** de [Supervisión del rendimiento mediante el almacén de consultas](monitoring-performance-by-using-the-query-store.md).  
   
@@ -70,7 +70,7 @@ Si se termina una sesión o la aplicación cliente se reinicia o bloquea, las es
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Query Store Catalog Views (Vistas de catálogo del almacén de consultas) &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  

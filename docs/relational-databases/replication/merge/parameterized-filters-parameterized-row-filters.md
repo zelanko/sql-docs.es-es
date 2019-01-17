@@ -21,12 +21,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03226910c9af65708504dc3d99865e88c9ab193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00ef0f5df65f6b472e6c439e097c745d03d86040
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605163"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215156"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros con parámetros: filtros de fila con parámetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  Por ejemplo, a la empleada Pamela Ansman-Wolfe se le ha asignado el identificador 280. Especifique el valor de identificador de empleado (280 en este ejemplo) como valor de HOST_NAME() al crear una suscripción para esta empleada. Cuando el Agente de mezcla se conecte al publicador, comparará el valor devuelto por HOST_NAME() con los valores de la tabla y descargará únicamente la fila que contiene el valor 280 en la columna **EmployeeID** .  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  La función HOST_NAME() devuelve un valor **nchar** , por lo que debe usar CONVERT si la columna de la cláusula del filtro es de tipo de datos numérico, como en el ejemplo anterior. Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de los filtros de fila con parámetros, como `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En su lugar, se recomienda usar el método que se muestra en el ejemplo: `EmployeeID = CONVERT(int,HOST_NAME())`. Esta cláusula puede usare para el parámetro **@subset_filterclause** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), pero generalmente no se puede usar en el Asistente para nueva publicación (el asistente ejecuta la cláusula del filtro para validarlo, pero no lo logra porque el nombre del equipo no se puede convertir a **int**). Si usa el Asistente para nueva publicación, se recomienda especificar `CONVERT(nchar,EmployeeID) = HOST_NAME()` en el asistente y, a continuación, usar [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) para cambiar la cláusula a `EmployeeID = CONVERT(int,HOST_NAME())` antes de crear una instantánea de la publicación.  
   
  **Para reemplazar el valor de HOST_NAME()**  
@@ -186,7 +186,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Si dos tablas del publicador tienen una relación de filtro de combinación y la tabla secundaria tiene filas que no tienen una fila correspondiente en la tabla primaria, la inserción de la fila que falta en la tabla primaria no hará que las filas relacionadas se descarguen al suscriptor (las filas se descargarían con particiones superpuestas). Por ejemplo, si la tabla **SalesOrderDetail** tiene filas sin una fila correspondiente en la tabla **SalesOrderHeader** , e inserta la fila que falta en **SalesOrderHeader**, la fila se descargará en el suscriptor, pero las filas correspondientes en **SalesOrderDetail** no lo harán.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Prácticas recomendadas para filtros de fila basados en el tiempo](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
  [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtrar datos publicados para la replicación de mezcla](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

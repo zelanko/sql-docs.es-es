@@ -15,19 +15,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d4a037898aaa022b7db5d6bf55f4a6dfb08988c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734613"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216064"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinar los permisos efectivos del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 En este artículo se describe cómo determinar quién tiene permisos para varios objetos en el motor de base de datos de SQL Server. SQL Server implementa dos sistemas de permisos para el motor de base de datos. Un sistema anterior de roles fijos tiene permisos preconfigurados. A partir de SQL Server 2005 está disponible un sistema más flexible y preciso. (La información de este artículo también es aplicable a SQL Server, a partir de la versión 2005. Ciertos tipos de permisos no están disponibles en algunas versiones de SQL Server).
 
->  [!IMPORTANT] 
+> [!IMPORTANT]
 >  * Los permisos efectivos son la suma de ambos sistemas de permiso. 
 >  * Una denegación de permisos invalida una concesión de permisos. 
 >  * Si un usuario es miembro del rol fijo de servidor sysadmin, los permisos no se comprueban más, por lo que no se aplicarán las denegaciones. 
@@ -51,24 +51,24 @@ En este artículo se describe cómo determinar quién tiene permisos para varios
 ## <a name="older-fixed-role-permission-system"></a>Sistema anterior de permisos de rol fijo
 
 Los roles fijos de servidor y los roles fijos de base de datos tienen permisos preconfigurados que no se pueden cambiar. Para determinar quién es miembro del rol fijo de servidor, ejecute la siguiente consulta:    
->  [!NOTE] 
+> [!NOTE]
 >  No se aplica a SQL Database ni a SQL Data Warehouse, donde el permiso de nivel de servidor no está disponible. La columna `is_fixed_role` de `sys.server_principals` se agregó en SQL Server 2012. No es necesaria para las versiones anteriores de SQL Server.  
-```sql
-SELECT SP1.name AS ServerRoleName, 
- isnull (SP2.name, 'No members') AS LoginName   
- FROM sys.server_role_members AS SRM
- RIGHT OUTER JOIN sys.server_principals AS SP1
-   ON SRM.role_principal_id = SP1.principal_id
- LEFT OUTER JOIN sys.server_principals AS SP2
-   ON SRM.member_principal_id = SP2.principal_id
- WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
- ORDER BY SP1.name;
+> ```sql
+> SELECT SP1.name AS ServerRoleName, 
+>  isnull (SP2.name, 'No members') AS LoginName   
+>  FROM sys.server_role_members AS SRM
+>  RIGHT OUTER JOIN sys.server_principals AS SP1
+>    ON SRM.role_principal_id = SP1.principal_id
+>  LEFT OUTER JOIN sys.server_principals AS SP2
+>    ON SRM.member_principal_id = SP2.principal_id
+>  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
+>  ORDER BY SP1.name;
 ```
->  [!NOTE] 
->  * Todos los inicios de sesión son miembros del rol público y no se pueden quitar. 
->  * Esta consulta comprueba las tablas en la base de datos maestra, pero se puede ejecutar en cualquier base de datos para el producto local. 
+> [!NOTE]
+>  * All logins are members of the public role and cannot be removed. 
+>  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
 
-Para determinar quién es miembro de un rol fijo de base de datos, ejecute la consulta siguiente en todas las bases de datos.
+To determine who is a member of a fixed database role, execute the following query in each database.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -106,22 +106,22 @@ Recuerde que es posible que un usuario de Windows sea miembro de más de un grup
 ### <a name="server-permissions"></a>Permisos de servidor
 
 La consulta siguiente devuelve una lista de los permisos que se han concedido o denegado en el nivel de servidor. Esta consulta debe ejecutarse en la base de datos maestra.   
->  [!NOTE] 
+> [!NOTE]
 >  Los permisos de nivel de servidor se no se pueden conceder ni consultar en la base de datos SQL o SQL Data Warehouse.   
-```sql
-SELECT pr.type_desc, pr.name, 
- isnull (pe.state_desc, 'No permission statements') AS state_desc, 
- isnull (pe.permission_name, 'No permission statements') AS permission_name 
- FROM sys.server_principals AS pr
- LEFT OUTER JOIN sys.server_permissions AS pe
-   ON pr.principal_id = pe.grantee_principal_id
- WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
- ORDER BY pr.name, type_desc;
+> ```sql
+> SELECT pr.type_desc, pr.name, 
+>  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
+>  isnull (pe.permission_name, 'No permission statements') AS permission_name 
+>  FROM sys.server_principals AS pr
+>  LEFT OUTER JOIN sys.server_permissions AS pe
+>    ON pr.principal_id = pe.grantee_principal_id
+>  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
+>  ORDER BY pr.name, type_desc;
 ```
 
-### <a name="database-permissions"></a>Permisos para la base de datos
+### Database Permissions
 
-La consulta siguiente devuelve una lista de los permisos que se han concedido o denegado en el nivel de base de datos. Esta consulta debe ejecutarse en todas las bases de datos.   
+The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

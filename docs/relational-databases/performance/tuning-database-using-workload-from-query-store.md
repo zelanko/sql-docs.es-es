@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor, Query Store
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 5ebd403911b6247964c5f512e45ce64e72290578
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 439967d45e74b0069d3064af64393151f9efc735
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302438"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376607"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Optimización de la base de datos mediante carga de trabajo del Almacén de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ En la interfaz gráfica de usuario del DTA, seleccione el botón de radio **Alma
 Desde la línea de comandos (dta.exe), elija la opción **-iq** para seleccionar la carga de trabajo del Almacén de consultas. 
 
 Hay dos opciones adicionales disponibles a través de la línea de comandos que ayudan a optimizar el comportamiento del DTA al seleccionar la carga de trabajo en el Almacén de consultas. Estas opciones no están disponibles a través de la interfaz gráfica de usuario:
-  1. **Número de eventos de carga de trabajo para optimizar**: esta opción, especificada mediante el argumento de línea de comandos **-n**, permite al usuario controlar el número de eventos del Almacén de consultas que se optimizan. De forma predeterminada, DTA usa un valor de 1000 para esta opción. Tenga en cuenta que DTA siempre elige los eventos más costosos por duración total. 
+  1. **Número de eventos de carga de trabajo para optimizar**: esta opción, que se especifica mediante el argumento de línea de comandos **-n**, permite al usuario controlar el número de eventos del Almacén de consultas que se optimizan. De forma predeterminada, DTA usa un valor de 1000 para esta opción. Tenga en cuenta que DTA siempre elige los eventos más costosos por duración total. 
   
   2. **Ventanas de tiempo de los eventos que se van a optimizar**: como el almacén de consultas puede contener consultas que se han ejecutado hace mucho tiempo, esta opción permite al usuario especificar una ventana de tiempo pasada (en horas) en la que es necesario que se ejecute una consulta para que DTA la considere para la optimización. Esta opción se especifica con el argumento de línea de comandos **-I**. 
 
@@ -45,7 +45,7 @@ Para obtener más información, vea [dta (utilidad)](../../tools/dta/dta-utility
 ## <a name="difference-between-using-workload-from-query-store-and-plan-cache"></a>Diferencia entre el uso de la carga de trabajo del Almacén de consultas y la caché de planes 
 La diferencia entre las opciones Almacén de consultas y caché de planes es que la primera contiene un historial más extenso de consultas que se han ejecutado en la base de datos, guardadas entre reinicios del servidor. Por otro lado, la caché de planes solo contiene un subconjunto de consultas ejecutadas recientemente cuyos planes se almacenan en caché en memoria. Cuando se reinicia el servidor, se descartan las entradas en la caché de planes.
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)     
 [Tutorial: Asistente para la optimización de motor de base de datos](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [Introducción a la recopilación de datos del almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md)     

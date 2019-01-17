@@ -14,12 +14,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9270b71457bdbb6e932015ddcad8118ef2f42cdd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 97f3e713cc130456c40765ad84678739e7c6e6f3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529923"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204224"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Creación de reflejo de la base de datos - Establecer la sesión - Autenticación de Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "52529923"
   
  Una vez preparada la base de datos reflejada (vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), puede establecer una sesión de creación de reflejo de la base de datos. Las instancias de servidor principal, reflejado y testigo deben ser instancias de servidor independientes y se deben encontrar en sistemas host distintos.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Es recomendable que configure la creación de reflejo de la base de datos durante las horas de menor actividad, ya que puede afectar al rendimiento.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Una determinada instancia de servidor puede participar en varias sesiones simultáneas de creación de reflejo de la base de datos con el mismo asociado o con asociados distintos. Una instancia de servidor puede ser asociado en algunas sesiones y testigo en otras. La instancia del servidor reflejado debe ejecutar la misma edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que la instancia del servidor principal. La creación de reflejo de la base de datos no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Asimismo, se recomienda encarecidamente que se ejecuten en sistemas comparables que puedan administrar cargas de trabajo idénticas.  
   
 ### <a name="to-establish-a-database-mirroring-session"></a>Para establecer una sesión de creación de reflejo de la base de datos  
@@ -44,7 +44,7 @@ ms.locfileid: "52529923"
      Cada instancia de servidor de una sesión de creación de reflejo de la base de datos requiere un extremo de creación de reflejo de la base de datos. Si el extremo no existe, deberá crearlo.  
   
     > [!NOTE]  
-    >  El tipo de autenticación que utilice la instancia de servidor para la creación de reflejo de la base de datos es una propiedad del extremo de reflejo de la base de datos. Existen dos tipos de seguridad de transporte disponibles para la creación de reflejo de la base de datos: autenticación de Windows o autenticación basada en certificados. Para obtener más información, vea [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
+    >  El tipo de autenticación que utilice la instancia de servidor para la creación de reflejo de la base de datos es una propiedad del extremo de reflejo de la base de datos. Existen dos tipos de seguridad de transporte para la creación de reflejo de la base de datos: autenticación de Windows o autenticación basada en certificados. Para obtener más información, vea [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
      Asegúrese de que exista un extremo para el reflejo de bases de datos en cada servidor asociado. La instancia de servidor solo puede tener un extremo de reflejo de la base de datos, independientemente del número de sesiones de creación de reflejo que se admitirán. Si tiene pensado usar esta instancia de servidor exclusivamente para los asociados en las sesiones de creación de reflejo de la base de datos, puede asignar el rol de asociado al punto de conexión (ROLE**=** PARTNER). Si también tiene pensado usar este servidor para el testigo en otras sesiones de creación de reflejo de la base de datos, asigne el rol del extremo como ALL.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "52529923"
     ```  
   
     > [!IMPORTANT]  
-    >  No reconfigure un extremo de creación de reflejo de la base de datos en uso. Si existe un extremo para la creación de reflejo de la base de datos y ya se está utilizando, se recomienda utilizar ese extremo para cada sesión en la instancia de servidor. Quitar un extremo en uso puede dar lugar a que el extremo se reinicie y conllevar la interrupción de las conexiones de las sesiones existentes, que pueden aparecer como un error en las otras instancias de servidor. Esto es especialmente importante en el modo de alta seguridad con conmutación automática por error, en el que reconfigurar el extremo en un asociado podría dar lugar a una conmutación automática por error. Asimismo, si se ha establecido un testigo para una sesión, la eliminación del extremo de creación de reflejo de la base de datos puede hacer que el servidor principal de esa sesión pierda quórum; si sucede esto, la base de datos se queda sin conexión y se desconecta a sus usuarios. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  No reconfigure un extremo de creación de reflejo de la base de datos en uso. Si existe un extremo para la creación de reflejo de la base de datos y ya se está utilizando, se recomienda utilizar ese extremo para cada sesión en la instancia de servidor. Quitar un extremo en uso puede dar lugar a que el extremo se reinicie y conllevar la interrupción de las conexiones de las sesiones existentes, que pueden aparecer como un error en las otras instancias de servidor. Esto es especialmente importante en el modo de alta seguridad con conmutación automática por error, en el que reconfigurar el extremo en un asociado podría dar lugar a una conmutación automática por error. Asimismo, si se ha establecido un testigo para una sesión, la eliminación del extremo de creación de reflejo de la base de datos puede hacer que el servidor principal de esa sesión pierda quórum; si sucede esto, la base de datos se queda sin conexión y se desconecta a sus usuarios. Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
      Si alguno de los asociados no tiene un punto de conexión, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52529923"
          Otra opción, si no desea la conmutación automática por error y prefiere poner más énfasis en el rendimiento en lugar de la disponibilidad, es desactivar la seguridad de las transacciones. Para obtener más información, vea [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
-        >  En el modo de alto rendimiento, WITNESS debe establecerse en OFF. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+        >  En el modo de alto rendimiento, WITNESS debe establecerse en OFF. Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -211,7 +211,7 @@ ms.locfileid: "52529923"
 > [!NOTE]  
 >  Para ver un ejemplo completo en el que se muestra la configuración de seguridad, se prepara la base de datos reflejada, se configuran los asociados y se agrega un testigo, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   

@@ -18,12 +18,12 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d18d64f08eacc5b2784c9101d77e90f4c5d33a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb4a177f1d391877e6f1b9d0f7b37c9c001b955
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702803"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979481"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
   
  Un búfer negativo quita todos los puntos incluidos en la distancia dada del límite de la geometría.  
   
- El error entre el búfer teórico y el calculado es max(tolerance, extents * 1.E-7), donde tolerance = distance \* .001. Para más información sobre las extensiones, vea la [referencia del método del tipo de datos geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ El error entre el búfer teórico y el calculado es max(tolerance, extents * 1.E-7), donde tolerance = distance \* ,001. Para más información sobre las extensiones, vea la [referencia del método del tipo de datos geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -79,7 +79,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Llamar a STBuffer() con parameter_value < 0 en una instancia de Polygon  
+### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>b. Llamar a STBuffer() con parameter_value < 0 en una instancia de Polygon  
  En el siguiente ejemplo se devuelve una instancia de `Polygon` con un búfer negativo:  
   
 ```
@@ -163,7 +163,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
   
  Las primeras dos instrucciones **SELECT** devuelven una instancia de `MultiPolygon` porque el parámetro *distance* es menor o igual a la mitad de la distancia entre los dos puntos (1 1) y (1 4). La tercera instrucción **SELECT** devuelve una instancia de `Polygon` porque las instancias almacenadas en búfer de los dos puntos (1 1) y (1 4) se superponen.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BufferWithTolerance &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

@@ -5,17 +5,24 @@ ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual - "query plans [SQL Server]" - "execution plans [SQL Server]" - "query profiling" - "lightweight query profiling" - "lightweight profiling" - "lwp"
+ms.topic: conceptual
+helpviewer_keywords:
+- query plans [SQL Server]
+- execution plans [SQL Server]
+- query profiling
+- lightweight query profiling
+- lightweight profiling
+- lwp
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0ee0bc2c99d997d6a44d5ca0e9944e0ae4bfeb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617255"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732032"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +59,7 @@ A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ss
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera v1
 
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
   
 A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se ha reducido la sobrecarga de rendimiento para recopilar información sobre los planes de ejecución gracias a la incorporación de la generación de perfiles ligera. A diferencia de la generación de perfiles estándar, la ligera no recopila información en tiempo de ejecución de CPU, aunque sigue recopilando la información de uso de E/S y de recuento de filas.
 
@@ -76,13 +83,13 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> Para obtener más información sobre la sobrecarga de rendimiento de generación de perfiles de consulta, vea la entrada de blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar). 
+> Para más información sobre la sobrecarga de rendimiento del generación de perfiles de consulta, vea la entrada de blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar). 
 
 Cuando se ejecuta una sesión de eventos extendidos que usa el evento *query_thread_profile*, la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) también se rellena con la generación de perfiles ligera, lo que habilita las estadísticas de consulta dinámicas para todas las sesiones mediante [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) o la consulta directa a la DMV.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera v2
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 incluye una versión revisada de la generación de perfiles ligera con sobrecarga mínima. La generación de perfiles ligera también puede habilitarse de forma global mediante la [marca de seguimiento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para las versiones indicadas anteriormente en *Se aplica a*. Se ha incorporado una nueva DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) para devolver el plan de ejecución de consultas de las solicitudes en curso.
 
@@ -118,9 +125,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 A partir de la generación de perfiles ligera v2 y su baja sobrecarga, cualquier servidor que aún no esté enlazado a CPU puede ejecutar la generación de perfiles ligera **continuamente** y permitir que los profesionales de bases de datos pulsen en cualquier ejecución activa en cualquier momento, por ejemplo mediante Monitor de actividad o directamente al consultar a `sys.dm_exec_query_profiles`, y obtengan el plan de consulta con estadísticas en tiempo de ejecución.
 
-Para obtener más información sobre la sobrecarga de rendimiento de generación de perfiles de consulta, vea la entrada de blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar). 
+Para más información sobre la sobrecarga de rendimiento del generación de perfiles de consulta, vea la entrada de blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar). 
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y optimizar el rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Abrir el Monitor de actividad &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
@@ -133,4 +140,4 @@ Para obtener más información sobre la sobrecarga de rendimiento de generación
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Mostrar un plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md)      
- [Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar)

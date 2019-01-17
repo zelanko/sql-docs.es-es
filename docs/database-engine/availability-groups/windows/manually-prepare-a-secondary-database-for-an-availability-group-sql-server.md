@@ -1,6 +1,7 @@
 ---
-title: Preparar manualmente una base de datos secundaria para un grupo de disponibilidad (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Preparación de una base de datos secundaria para un grupo de disponibilidad
+description: Una descripción de cómo preparar manualmente una base de datos secundaria para unirse a un grupo de disponibilidad Always On.
+ms.custom: seodec18
 ms.date: 07/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,14 +19,14 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8422db4a4888cf217c674954588c04acad675d9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529930"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209304"
 ---
-# <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>Preparar manualmente una base de datos secundaria para un grupo de disponibilidad (SQL Server)
+# <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparación de una base de datos secundaria para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 En este tema se describe cómo preparar una base de datos de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell. Para preparar una base de datos hay que realizar dos pasos: 
 

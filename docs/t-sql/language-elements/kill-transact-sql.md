@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eec14db312bb6fb2a8fb65bb51e396a4c1be3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be0bccac59c011fc36e8481029d9951cd36cad99
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837008"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205404"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 *UOW*  
-**Se aplica a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Identifica el identificador de unidad de trabajo (UOW) de las transacciones distribuidas. *UOW* es un GUID que puede obtenerse desde la columna request_owner_guid de la vista de administración dinámica sys.dm_tran_locks. *UOW* también puede obtenerse desde el registro de errores o a través del monitor MS DTC. Para obtener más información sobre cómo supervisar transacciones distribuidas, consulte la documentación de MS DTC.  
   
@@ -136,7 +136,7 @@ KILL 53;
 GO  
 ```  
   
-### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>B. Usar KILL Id. de sesión WITH STATUSONLY para obtener un informe de progreso  
+### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>b. Usar KILL Id. de sesión WITH STATUSONLY para obtener un informe de progreso  
  En el siguiente ejemplo se genera un estado del proceso de revertir para el Id. de sesión específico.  
   
 ```sql  
@@ -156,7 +156,7 @@ KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';
 ```  
 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

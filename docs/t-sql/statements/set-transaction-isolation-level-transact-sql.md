@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8d2029680262934370479ef2c4ec81792a821f1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359667"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,9 +82,9 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  El comportamiento de READ COMMITTED depende del valor de la opción de base de datos READ_COMMITTED_SNAPSHOT:  
   
--   Si READ_COMMITTED_SNAPSHOT se establece en OFF (valor predeterminado), el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza bloqueos compartidos para impedir que otras transacciones modifiquen las filas mientras la transacción actual esté ejecutando una operación de lectura. Los bloqueos compartidos impiden también que la instrucción lea las filas modificadas por otras transacciones hasta que la otra transacción haya finalizado. El tipo de bloqueo compartido determina cuándo se liberará. Los bloqueos de fila se liberan antes de que se procese la fila siguiente. Los bloqueos de página se liberan cuando se lee la página siguiente, y los bloqueos de tabla se liberan cuando la instrucción finaliza.  
+-   Si READ_COMMITTED_SNAPSHOT se establece en OFF (el valor predeterminado de SQL Server), el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa bloqueos compartidos para impedir que otras transacciones modifiquen las filas mientras la transacción actual esté ejecutando una operación de lectura. Los bloqueos compartidos impiden también que la instrucción lea las filas modificadas por otras transacciones hasta que la otra transacción haya finalizado. El tipo de bloqueo compartido determina cuándo se liberará. Los bloqueos de fila se liberan antes de que se procese la fila siguiente. Los bloqueos de página se liberan cuando se lee la página siguiente, y los bloqueos de tabla se liberan cuando la instrucción finaliza.  
   
--   Si READ_COMMITTED_SNAPSHOT se establece en ON, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos.
+-   Si READ_COMMITTED_SNAPSHOT se establece en ON (el valor predeterminado de Base de datos SQL Azure), el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos.
 
 > [!IMPORTANT]  
 > La elección de un nivel de aislamiento de transacción no afecta a los bloqueos adquiridos para proteger la modificación de datos. Siempre se obtiene un bloqueo exclusivo en los datos modificados de una transacción, bloqueo que se mantiene hasta que se completa la transacción, independientemente del nivel de aislamiento seleccionado para la misma. Además, una actualización realizada en el nivel de aislamiento READ_COMMITTED usa bloqueos de actualización en las filas de datos seleccionadas, mientras que una actualización realizada en el nivel de aislamiento SNAPSHOT emplea versiones de fila para seleccionar filas para actualizar. En el caso de las operaciones de lectura, los niveles de aislamiento de transacción definen básicamente el nivel de protección contra los efectos de las modificaciones que realizan otras transacciones. Vea [Guía de versiones de fila y bloqueo de transacciones](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide) para obtener más información.
@@ -188,7 +188,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

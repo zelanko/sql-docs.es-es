@@ -1,6 +1,7 @@
 ---
-title: Grupos de disponibilidad independientes del dominio (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Creación de un grupo de disponibilidad independiente del dominio
+description: Pasos para crear un grupo de disponibilidad en el que se usa un clúster de grupo de trabajo. Esto permite que en SQL Server 2016 (y versiones posteriores) se implemente un grupo de disponibilidad Always On sobre un WSFC que no requiera Active Directory Domain Services y, por tanto, no requiera que cada servidor forme parte del mismo dominio.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c70aba3f6dc1648b70c9bc9a524052a7ba591793
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415082"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211914"
 ---
-# <a name="domain-independent-availability-groups"></a>Grupos de disponibilidad independientes del dominio
+# <a name="create-a-domain-independent-availability-group"></a>Creación de un grupo de disponibilidad independiente del dominio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Los grupos de disponibilidad AlwaysOn (AG) requieren un clúster de conmutación por error de Windows Server (WSFC) subyacente. Implementar un WSFC a través de Windows Server 2012 R2 siempre ha requerido que los servidores que participan en ese WSFC (también conocidos como nodos) estén unidos al mismo dominio. Para más información sobre Active Directory Domain Services (AD DS), vaya [aquí](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).

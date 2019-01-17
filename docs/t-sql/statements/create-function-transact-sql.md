@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 008707aee498d5c63f1ef8a2d67e7166bf7eb4f4
-ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
+ms.openlocfilehash: f2b1ef643fe1d19b0df1ed4efd3b4802789006eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51818521"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206194"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>Argumentos
 *OR ALTER*  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Modifica condicionalmente la función solo si ya existe. 
  
@@ -345,7 +345,7 @@ Es un valor predeterminado para el parámetro. Si se define un valor *default*, 
  ORDER (\<order_clause>) Especifica el orden en que los resultados se devuelven de la función con valores de tabla. Para obtener más información, vea la sección "[Usar el criterio de ordenación en funciones CLR con valores de tabla](#using-sort-order-in-clr-table-valued-functions)" más adelante en este tema.  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Especifica el ensamblado y el método al que deberá hacer referencia el nombre de la función creada.  
   
@@ -373,7 +373,7 @@ En un ejemplo típico de MyFood.DLL, en el que todos los tipos están en el espa
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Define el tipo de datos de tabla de una función [!INCLUDE[tsql](../../includes/tsql-md.md)]. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla. La tabla se coloca siempre en el grupo de archivos principal.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Define los tipos de datos de tabla para una función CLR. La declaración de tabla solamente incluye nombres de columna y tipos de datos. La tabla se coloca siempre en el grupo de archivos principal.  
   
@@ -397,7 +397,7 @@ En un ejemplo típico de MyFood.DLL, en el que todos los tipos están en el espa
  Especifica que la función tendrá una o más de las siguientes opciones.  
   
  ENCRYPTION  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
  Indica que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertirá el texto original de la instrucción CREATE FUNCTION a un formato confuso. La salida de los datos confusos no es directamente visible en ninguna de las vistas de catálogo. Los usuarios que no disponen de acceso a las tablas del sistema o a los archivos de base de datos no pueden recuperar el texto protegido. En cambio, estará disponible para los usuarios con privilegios que puedan obtener acceso a las tablas del sistema a través del [puerto DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o directamente a los archivos de base de datos. Además, los usuarios que pueden adjuntar un depurador al proceso del servidor pueden recuperar el procedimiento original de la memoria en tiempo de ejecución. Para más información sobre cómo tener acceso al sistema, vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -675,7 +675,7 @@ La cláusula `ORDER` no garantiza que los resultados estén ordenados al ejecuta
 > Para obtener más ejemplos y consideraciones de rendimiento sobre las funciones definidas por el usuario, vea [Crear funciones definidas por el usuario (motor de base de datos)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
 
 ### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>A. Usar una función con valores escalares definida por el usuario que calcula la semana ISO  
- En el ejemplo siguiente se crea la función definida por el usuario `ISOweek`. Esta función usa un argumento de fecha para calcular el número de semana ISO. Para que esta función calcule correctamente, se debe invocar `SET DATEFIRST 1` antes de llamar a la función.  
+ En el ejemplo siguiente se crea la función definida por el usuario `ISOweek`. Esta función toma un argumento de fecha para calcular el número de semana ISO. Para que esta función calcule correctamente, se debe invocar `SET DATEFIRST 1` antes de llamar a la función.  
   
  En el ejemplo también se muestra el uso de la cláusula [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) para especificar el contexto de seguridad en el que se puede ejecutar un procedimiento almacenado. En el ejemplo, la opción `CALLER` especifica que el procedimiento se ejecutará en el contexto del usuario que lo llama. Las otras opciones que puede especificar son `SELF`, `OWNER`, y *user_name*.  
   
@@ -713,7 +713,7 @@ ISO Week
 52  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>B. Crear una función alineada con valores de tabla  
+### <a name="b-creating-an-inline-table-valued-function"></a>b. Crear una función alineada con valores de tabla  
  El ejemplo siguiente devuelve una función insertada con valores de tabla en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Devuelve tres columnas `ProductID`, `Name` y el agregado de ventas totales anuales hasta la fecha por tienda como `YTD Total` para cada producto vendido a la tienda.  
   
 ```sql  
@@ -790,7 +790,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. Crear una función CLR  
  En el ejemplo se crea la función CLR `len_s`. Antes de crear la función, el ensamblado `SurrogateStringFunction.dll` se registra en la base de datos local.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  
@@ -826,7 +826,7 @@ GO
   
  La definición de funciones creadas con la opción `ENCRYPTION` no se puede ver con sys.sql_modules; con todo, se muestra otra información sobre las funciones cifradas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   

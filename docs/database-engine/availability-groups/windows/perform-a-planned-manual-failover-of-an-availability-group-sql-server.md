@@ -1,6 +1,7 @@
 ---
-title: Realización de una conmutación por error manual planeada de un grupo de disponibilidad | Microsoft Docs
-ms.custom: ''
+title: Realización de una conmutación por error manual planeada de un grupo de disponibilidad
+description: Este tema se describe cómo realizar una conmutación por error manual planeada de un grupo de disponibilidad Always On.
+ms.custom: seodec18
 ms.date: 10/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,16 +16,16 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b19d83a07e083598689595120b30857eea127ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854063"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212164"
 ---
-# <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Realización de una conmutación por error manual planeada de un grupo de disponibilidad (SQL Server)
+# <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Realización de una conmutación por error manual planeada de un grupo de disponibilidad Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En este tema se describe cómo realizar una conmutación por error manual sin pérdida de datos (una *conmutación por error manual planeada*) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Una conmutación por error planeada, al igual que cualquier conmutación por error de un grupo de disponibilidad AlwaysOn, realiza la transición de una réplica secundaria a un rol principal. Al mismo tiempo, la conmutación por error realiza la transición de la réplica principal antigua al rol secundario.  
+En este tema se describe cómo realizar una conmutación por error manual sin pérdida de datos (una *conmutación por error manual planeada*) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Una conmutación por error planeada, al igual que cualquier conmutación por error de un grupo de disponibilidad AlwaysOn, realiza la transición de una réplica secundaria a un rol principal. Al mismo tiempo, la conmutación por error realiza la transición de la réplica principal antigua al rol secundario.  
   
 Una conmutación por error manual planeada solo se admite cuando la réplica principal y la réplica secundaria de destino se ejecutan en modo de confirmación sincrónica y están sincronizadas. Una conmutación por error manual planeada conserva todos los datos de las bases de datos secundarias que se unen al grupo de disponibilidad en la réplica secundaria de destino. Después de que la réplica principal antigua realiza la transición al rol secundario, sus bases de datos se convierten en bases de datos secundarias. A continuación, pueden empezar a sincronizarse con las bases de datos principales. Después de que todas realicen la transición al estado SYNCHRONIZED, la nueva réplica secundaria es apta para actuar como destino de una conmutación por error manual planeada futura.  
   
@@ -107,7 +108,7 @@ Una conmutación por error manual planeada solo se admite cuando la réplica pri
     -   [Proveedor de PowerShell de SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [Obtener ayuda de SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> Seguimiento: después de conmutar por error manualmente un grupo de disponibilidad 
+##  <a name="FollowUp"></a> Seguimiento: después de realizar la conmutación por error manual de un grupo de disponibilidad 
  Si la conmutación por error se produjo fuera del grupo de disponibilidad de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)], ajuste los votos de cuórum de los nodos de clúster de Windows Server para reflejar la nueva configuración del grupo de disponibilidad. Para más información, consulte [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
 
 <a name = "ReadScaleOutOnly"><a/>

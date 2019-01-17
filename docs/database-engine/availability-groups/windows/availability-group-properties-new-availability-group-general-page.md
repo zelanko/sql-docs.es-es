@@ -1,6 +1,8 @@
 ---
-title: 'Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (página General) | Microsoft Docs'
-ms.custom: ''
+title: 'Propiedades del grupo de disponibilidad: Nuevo grupo de disponibilidad (página General)'
+titleSuffix: SQL Server
+description: Una descripción de las distintas propiedades de la página "General" del "Asistente para nuevo grupo de disponibilidad" en SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +14,14 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 098bc8bf6746acdec41aecc9533b21bc0b49e095
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1acbcb925b2b98cdc81bf3f745ebaa9b79edbf55
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690003"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208524"
 ---
-# <a name="availability-group-properties-new-availability-group-general-page"></a>Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (página General)
+# <a name="availability-group-properties-new-availability-group-general-page"></a>Propiedades del grupo de disponibilidad: Nuevo grupo de disponibilidad (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tema se aplica a la pestaña **General** del cuadro de diálogo de **Nuevo grupo de disponibilidad** y el cuadro de diálogo de **Propiedades de grupo de disponibilidad** .  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  
   
@@ -110,7 +112,7 @@ ms.locfileid: "47690003"
  **Quitar**  
  Haga clic para quitar una réplica secundaria del grupo de disponibilidad.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

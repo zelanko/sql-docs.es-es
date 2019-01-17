@@ -2,22 +2,19 @@
 title: Asociados de alta disponibilidad y recuperación ante desastres de SQL Server | Microsoft Docs
 description: Listas de asociados externos que cuentan con soluciones para supervisar Server.
 services: sql-server
-documentationcenter: NA
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 09/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 5dc3ba843314297131de569bafa5412577a24adf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1849328d008a6b995d2242a1e00aa9c0040e8d05
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510426"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732052"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Asociados de alta disponibilidad y recuperación ante desastres de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,39 +13,43 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cf571df37585a4a3e575d03b8cc1cd905fdffd1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: f417e004ead7e089930a9c970a2eebf00e015ab2
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018580"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978855"
 ---
 # <a name="multipoint"></a>MultiPoint
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Un **MultiPoint** es una colección de cero o más puntos. El límite de una instancia de **MultiPoint** está vacío.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente crea una instancia de `geometry MultiPoint` con SRID 23 y dos puntos: un punto con las coordenadas (2, 3), un punto con las coordenadas (7, 8) y un valor de Z de 9,5.  
+
+### <a name="example-a"></a>Ejemplo A.
+El ejemplo siguiente crea una instancia de `geometry MultiPoint` con SRID 23 y dos puntos: un punto con las coordenadas (2, 3), un punto con las coordenadas (7, 8) y un valor de Z de 9,5.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('MULTIPOINT((2 3), (7 8 9.5))', 23);  
 ```  
   
- Esta instancia de `MultiPoint` también se puede expresar usando `STMPointFromText()` como se muestra a continuación.  
+### <a name="example-b"></a>Ejemplo B. 
+En el ejemplo siguiente se expresa la instancia de `MultiPoint` mediante `STMPointFromText()`.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STMPointFromText('MULTIPOINT((2 3), (7 8 9.5))', 23);  
 ```  
   
- El ejemplo siguiente usa el método `STGeometryN()` para recuperar una descripción del primer punto de la colección.  
+### <a name="example-c"></a>Ejemplo C.
+El ejemplo siguiente usa el método `STGeometryN()` para recuperar una descripción del primer punto de la colección.  
   
-```  
+```sql  
 SELECT @g.STGeometryN(1).STAsText();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Punto](../../relational-databases/spatial/point.md)   
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   

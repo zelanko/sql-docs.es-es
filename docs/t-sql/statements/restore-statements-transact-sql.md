@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f6ee77ac0a4fc91f9a182c1d893d39d599228da4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d4370a2f60a17ee126be5940ec69dbdfc5a03d4f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524591"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980321"
 ---
 # <a name="restore-statements-transact-sql"></a>Instrucciones RESTORE (Transact-SQL)
 Restaura copias de seguridad de bases de datos de SQL realizadas con el comando BACKUP. 
@@ -167,7 +167,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
    } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
-Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
+Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.  
 <files_or_filegroups>::=   
 {   
    FILE = { logical_file_name_in_backup | @logical_file_name_in_backup_var }   
@@ -342,7 +342,7 @@ RESTORE no se permite en una transacción explícita o implícita.
   
 Para restaurar una base de datos **maestra** dañada se usa un procedimiento especial. Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
-Al restaurar una base de datos se borra la memoria caché del plan para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la memoria caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché '%s' (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.  
+Al restaurar una base de datos se borra la memoria caché del plan para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.  
   
 Para restaurar una base de datos de disponibilidad, restaure primero la base de datos a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, agréguela al grupo de disponibilidad  
 
@@ -428,7 +428,7 @@ En todos los ejemplos se supone que se ha realizado una copia de seguridad compl
 Entre los ejemplos de RESTORE se incluyen los siguientes:  
   
 - A. [Restaurar una base de datos completa](#restoring_full_db)  
-- B. [Restaurar copias de seguridad de bases de datos completas y diferenciales](#restoring_full_n_differential_db_backups)  
+- b. [Restaurar copias de seguridad de bases de datos completas y diferenciales](#restoring_full_n_differential_db_backups)  
 - C. [Restaurar una base de datos con la sintaxis de RESTART](#restoring_db_using_RESTART)  
 - D. [Restaurar una base de datos y mover archivos](#restoring_db_n_move_files)  
 - E. [Copiar una base de datos con BACKUP y RESTORE](#copying_db_using_bnr)  
@@ -960,7 +960,7 @@ RESTORE DATABASE SalesInvoices2013
 FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';  
 ```  
   
-### <a name="b-restore-a-full-and-differential-backup"></a>B. Restaurar una copia de seguridad completa y diferencial  
+### <a name="b-restore-a-full-and-differential-backup"></a>b. Restaurar una copia de seguridad completa y diferencial  
 En el siguiente ejemplo se restaura una copia de seguridad completa y, luego, una diferencial en la base de datos SalesInvoices2013.  
   
 La copia de seguridad completa de la base de datos se restaura a partir de la copia de seguridad que se almacena en el directorio "\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full". Si la restauración se completa correctamente, la copia de seguridad diferencial se restaura en la base de datos SalesInvoices2013.  La copia de seguridad diferencial se almacena en el directorio "\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff".  
@@ -984,7 +984,7 @@ RESTORE HEADERONLY
   
 Esta información de encabezado puede servir para comprobar el contenido de una copia de seguridad o para asegurarse de que el dispositivo de restauración de destino es compatible con el dispositivo de copia de seguridad de origen antes de intentar restaurar la copia de seguridad.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [BACKUP DATABASE &#40;Almacenamiento de datos paralelos&#41;](../../t-sql/statements/backup-transact-sql.md)  
 
 ::: moniker-end

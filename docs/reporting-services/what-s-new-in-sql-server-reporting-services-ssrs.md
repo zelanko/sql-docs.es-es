@@ -1,18 +1,18 @@
 ---
 title: Novedades de Reporting Services (SSRS) | Microsoft Docs
-ms.date: 09/06/2018
+ms.date: 12/11/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b72f5bfef28c5f434cff07b2a931519c3fefd295
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 1b6844ad30aa426d1df71727becc6e6cfa3071d5
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712412"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432478"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
@@ -31,7 +31,7 @@ Para descargar SQL Server 2017 Reporting Services, vaya al **[Centro de descarga
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a name="sql-server-2019-preview-reporting-services"></a>Versión preliminar de SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services no está disponible para CTP 2.1. Instale la versión actual: [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services no está disponible para CTP 2.2. Instale la versión actual: [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -124,23 +124,23 @@ Para obtener más información, vea:
 
 ### <a name="report-improvements"></a>Mejoras del informe
 
-**Motor de representación HTML 5:** un nuevo motor de representación HTML5 destinado al modo de estándares modernos web "completos" y a los exploradores modernos.  El nuevo motor de representación ya no cuenta con el modo de interpretación usado por algunos exploradores antiguos.
+**Motor de representación HTML 5:** un nuevo motor de representación HTML5 destinado al modo moderno de estándares web "completos" y a los exploradores modernos.  El nuevo motor de representación ya no cuenta con el modo de interpretación usado por algunos exploradores antiguos.
   
  Para más información sobre la compatibilidad de exploradores, vea [Compatibilidad del explorador de Reporting Services y Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
-**Informes paginados modernos** : diseñe informes paginados modernos y muy atractivos con nuevos estilos modernos para gráficos, medidores, mapas y otras visualizaciones de datos.
+**Informes paginados modernos:** diseñe informes paginados modernos y muy atractivos con nuevos estilos modernos para gráficos, medidores, mapas y otras visualizaciones de datos.
   
-**Gráficos de rectángulos y proyección solar:** mejore sus informes con gráficos de rectángulos ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") y proyección solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), formas estupendas para mostrar datos jerárquicos. Para obtener más información, consulte [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Gráficos de rectángulos y de proyección solar:** mejore los informes con gráficos de rectángulos ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") y de proyección solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), formas estupendas para mostrar datos jerárquicos. Para obtener más información, consulte [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Inserción de informes:** ahora puede insertar informes paginados o móviles en otras páginas web y aplicaciones; para ello, puede usar un iframe junto con los parámetros de dirección URL.  
+**Inserción de informes:** ahora puede insertar informes paginados o móviles en otras páginas web y aplicaciones; para ello, puede usar un iframe junto con parámetros de dirección URL.  
 
-**Anclar elementos de informe a un panel de Power BI:** mientras se visualiza un informe en el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], puede seleccionar elementos de informe y anclarlos a un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Puede anclar elementos como gráficos, paneles de medidores, mapas e imágenes. Puede **(1)** seleccionar el grupo que contiene el panel que quiere anclar, **(2)** seleccionar el panel donde también quiere anclar el elemento y **(3)** seleccionar la frecuencia con la que quiere que se actualice el icono en el panel.   ![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Las suscripciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administran la actualización y, después de anclar el elemento, se pueden modificar para configurar una programación de actualización distinta.  
+**Anclar elementos de informe a un panel de Power BI:** mientras ve un informe en el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], puede seleccionar elementos del informe y anclarlos a un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].   Puede anclar elementos como gráficos, paneles de medidores, mapas e imágenes. Puede **(1)** seleccionar el grupo que contiene el panel que quiere anclar, **(2)** seleccionar el panel donde también quiere anclar el elemento y **(3)** seleccionar la frecuencia con la que quiere que se actualice el icono en el panel.   ![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Las suscripciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administran la actualización y, después de anclar el elemento, se pueden modificar para configurar una programación de actualización distinta.  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
  Para más información, vea [Integración de Power BI Report Server &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) y [Anclado de elementos de Reporting Services en paneles de Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
  
- **Representación y exportación de PowerPoint:** el formato PPTX (Microsoft PowerPoint) es una nueva extensión de representación de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . Puede exportar informes en formato PPTX desde las aplicaciones habituales, como el Generador de informes, el Diseñador de informes (en SSDT) y el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. A modo de ejemplo, en la imagen siguiente se muestra el menú Exportar en [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+ **Representación y exportación de PowerPoint:** el formato de Microsoft PowerPoint (PPTX) es una extensión de representación de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] nueva. Puede exportar informes en formato PPTX desde las aplicaciones habituales, como el Generador de informes, el Diseñador de informes (en SSDT) y el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. A modo de ejemplo, en la imagen siguiente se muestra el menú Exportar en [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -152,7 +152,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
   
  Para obtener más información, consulte [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  
  
- **PDF reemplaza a ActiveX para la impresión remota:** la experiencia de impresión ActiveX de la barra de herramientas del visor de informes se ha reemplazado por una experiencia moderna basada en PDF que funciona en la matriz de exploradores admitidos, como Microsoft Edge. No necesita descargar más controles de ActiveX. Según el explorador que use y las aplicaciones y servicios de visualización de PDF que haya instalado, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abrirá un diálogo de impresión para imprimir el informe o le pedirá que descargue un archivo .PDF del informe.  Como administrador, puede deshabilitar la impresión del lado del cliente desde [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para más información, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
+ **PDF reemplaza a ActiveX para la impresión remota:** la experiencia de impresión ActiveX de la barra de herramientas del visor de informes se ha reemplazado por una experiencia moderna basada en PDF que funciona en la matriz de exploradores admitidos, incluido Microsoft Edge. No necesita descargar más controles de ActiveX. Según el explorador que use y las aplicaciones y servicios de visualización de PDF que haya instalado, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abrirá un diálogo de impresión para imprimir el informe o le pedirá que descargue un archivo .PDF del informe.  Como administrador, puede deshabilitar la impresión del lado del cliente desde [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para más información, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
@@ -166,11 +166,11 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |**Credenciales compartidas para las suscripciones de recurso compartido de archivos**. Ahora existen dos flujos de trabajo con las suscripciones de recurso compartido de archivos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Como novedad de esta versión, el administrador de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede configurar una única cuenta de recurso compartido de archivos, que se usa para una o para varias suscripciones. Para configurar la cuenta de recurso compartido de archivos, el administrador de configuración del modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] debe definir la opción **Specify a file share account**(Especificar una cuenta de recurso compartido de archivos) y, después, en la página de configuración de la suscripción, los usuarios deben seleccionar **Use file share account**(Usar la cuenta de recurso compartido de archivos).<br /><br /> Configure suscripciones individuales con credenciales específicas para el recurso compartido de archivos de destino.<br /><br /> También puede combinar los dos enfoques y definir que algunas suscripciones de recurso compartido de archivos usen la cuenta central de recurso compartido de archivos mientras otras suscripciones usan credenciales específicas.|en modo nativo|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
- En la nueva versión de SSDT se incluyen plantillas de proyecto para [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Asistente de proyectos de servidor de informes y Proyecto de servidor de informes. Para obtener más información acerca de la descarga de SSDT, consulte [SQL Server Data Tools para Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
+ La nueva versión de SSDT incluye plantillas de proyecto para [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Asistente de proyectos de servidor de informes y Proyecto de servidor de informes. Para obtener más información acerca de la descarga de SSDT, consulte [SQL Server Data Tools para Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### <a name="report-builder-improvements"></a>Mejoras del generador de informes
 
-**Nueva interfaz de usuario del Generador de informes:** la interfaz de usuario principal de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] ahora tiene una apariencia moderna, con elementos de interfaz de usuario simplificados.  
+**Nueva interfaz de usuario del Generador de informes:** la interfaz de usuario principal de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] ahora tiene un aspecto moderno, con elementos de interfaz de usuario mejorados.  
   
 |||  
 |-|-|  

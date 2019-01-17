@@ -7,8 +7,6 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,25 +17,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a824164a694239faeb5dbfc9ce18ba260f518f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac5b1039e6424a66842fcd156fe3475d14826694
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538795"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53329035"
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
+
+Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
   
-#### <a name="to-find-using-regular-expressions"></a>Para buscar mediante expresiones regulares  
+## <a name="find-using-regular-expressions"></a>Búsqueda mediante expresiones regulares  
   
-1.  Para permitir el uso de expresiones regulares en el campo **Buscar** en operaciones de **Búsqueda rápida**, **Buscar en archivos**, **Reemplazo rápido**o **Reemplazar en archivos** , active la opción **Usar** de **Opciones de búsqueda**y, luego, elija **Expresiones regulares**.  
+1.  Para permitir el uso de expresiones regulares en el campo **Buscar** en operaciones de **Búsqueda rápida**, **Buscar en archivos**, **Reemplazo rápido**o **Reemplazar en archivos**, seleccione la opción **Usar** de **Opciones de búsqueda** y, luego, elija **Expresiones regulares**.  
   
 2.  El botón triangular de la **Lista de referencia** situado junto al campo **Buscar** se activa. Haga clic en este botón para obtener una lista de las expresiones regulares más utilizadas. Al elegir alguno de los elementos del Generador de expresiones, éste se inserta en la cadena **Buscar** .  
   
 > [!NOTE]  
->  Existen diferencias de sintaxis entre las expresiones regulares que se pueden utilizar en las cadenas de **Buscar** y las que son válidas en la programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Por ejemplo, en **Buscar y reemplazar**, las llaves {} se utilizan para expresiones etiquetadas. Así, la expresión "zo{1}" devuelve todas las repeticiones de "zo" seguido de la etiqueta 1, como "Alonzo1" y "Gonzo1". Sin embargo, en .NET Framework, la notación {} se utiliza para cuantificadores. Así, la expresión "zo{1}" devuelve todas las repeticiones de "z" seguido exactamente de una "o", como "zone", pero no "zoo".  
+> Existen diferencias de sintaxis entre las expresiones regulares que se pueden utilizar en las cadenas de **Buscar** y las que son válidas en la programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Por ejemplo, en **Buscar y reemplazar**, las llaves {} se utilizan para expresiones etiquetadas. Así, la expresión "zo{1}" devuelve todas las repeticiones de "zo" seguido de la etiqueta 1, como "Alonzo1" y "Gonzo1". Sin embargo, en .NET Framework, la notación {} se utiliza para cuantificadores. Así, la expresión "zo{1}" devuelve todas las repeticiones de "z" seguido exactamente de una "o", como "zone", pero no "zoo".  
   
  En la tabla siguiente se describen las expresiones regulares disponibles en la **Lista de referencias**.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "52538795"
 |----------------|------------|-----------------|  
 |Cero o más como mínimo|@|Devuelve cero o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
 |Uno o más como mínimo|#|Devuelve una o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
-|Repetir n veces|^n|Devuelve n repeticiones de la expresión anterior. Por ejemplo, [0-9]^4 devuelve cualquier secuencia de 4 dígitos.|  
+|Repetir n veces|^n|Devuelve n repeticiones de la expresión anterior. Por ejemplo, [0-9]^4 devuelve cualquier secuencia de cuatro dígitos.|  
 |Agrupar|()|Agrupa una subexpresión.|  
 |N-ésimo texto etiquetado|\n|En una expresión **Buscar y reemplazar** , indica el texto devuelto por la expresión con etiqueta enésima, donde n es un número de 1 a 9.<br /><br /> En una expresión de **Reemplazar** , \0 inserta todo el texto coincidente.|  
 |Campo justificado a la derecha|\\(w,n)|En una expresión de **Reemplazar** , justifica a la derecha la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
@@ -134,8 +133,6 @@ ms.locfileid: "52538795"
 |Katakana|:Ka|Devuelve caracteres Katakana.|  
 |Ideográfico/Han/Kanji|:Id|Devuelve caracteres ideográficos, como Han y Kanji.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Buscar y reemplazar](../../relational-databases/scripting/search-and-replace.md)   
  [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md)  
-  
-  

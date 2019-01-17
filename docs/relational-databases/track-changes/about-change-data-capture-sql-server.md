@@ -1,6 +1,6 @@
 ---
 title: Acerca de la captura de datos modificados (SQL Server) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5fc24683d4272a4e93ac7d1e30581fa202588e1e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402750"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991878"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Acerca de la captura de datos modificados (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   La captura de datos modificados registra la actividad de inserción, actualización y eliminación que se aplica a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto hace que los detalles de estos cambios estén disponibles en un formato relacional de fácil uso. La información de las columnas y los metadatos que se necesitan para aplicar los cambios a un entorno de destino se capturan para las filas modificadas y se almacenan en tablas de cambios que reflejan la estructura de columnas de las tablas de origen sometidas a seguimiento. Se proporcionan funciones con valores de tabla para permitir el acceso sistemático a los datos modificados por los consumidores.  
   
  Un buen ejemplo de consumidor de datos a quien va dirigida esta tecnología es una aplicación de extracción, transformación y carga (ETL). Una aplicación ETL carga incrementalmente los datos modificados de las tablas de origen de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un almacenamiento de datos o data mart. Aunque la representación de las tablas de origen dentro del almacén de datos debe reflejar los cambios en las tablas de origen, una tecnología de extremo a extremo que actualice una réplica del origen no resulta adecuada en este caso. En su lugar, necesita un flujo de datos modificados confiable y estructurado de forma que los consumidores puedan aplicarlo a representaciones de destino dispares de los datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona esta tecnología.  
@@ -44,7 +44,7 @@ ms.locfileid: "52402750"
   
  Cada operación de inserción o eliminación aplicada a una tabla de origen aparece como una fila única dentro de la tabla de cambios. Las columnas de datos de la fila resultante de una operación de inserción contienen los valores de columna después de la inserción. Las columnas de datos de la fila resultante de una operación de eliminación contienen los valores de columna antes de la eliminación. Una operación de actualización requiere una entrada de fila para identificar los valores de columna antes de la actualización, y una segunda entrada de fila para identificar los valores de columna después de la actualización.  
   
- Cada fila de una tabla de cambios también contiene metadatos adicionales que permiten interpretar los cambios realizados. La columna __$start_lsn identifica el número de secuencia de registro (LSN) de confirmación que fue asignado al cambio. El LSN de confirmación identifica tanto los cambios que se confirmaron dentro de la misma transacción como el orden de esas transacciones. La columna \_\_$seqval se puede usar para ordenar los cambios adicionales que se produzcan en la misma transacción. La columna \_\_$operation registra la operación que está asociada al cambio: 1 = eliminación, 2 = inserción, 3 = actualización (antes de la imagen) y 4 = actualización (después de la imagen). La columna \_\_$update_mask es una máscara de bits variable con un bit definido para cada columna capturada. Para las entradas correspondientes a operaciones de inserción y eliminación, la máscara de actualización siempre tendrá todos los bits activados. Las filas correspondientes a operaciones de actualización, sin embargo, tendrán solo activados los bits que correspondan a las columnas cambiadas.  
+ Cada fila de una tabla de cambios también contiene metadatos adicionales que permiten interpretar los cambios realizados. La columna __$start_lsn identifica el número de secuencia de registro (LSN) de confirmación que fue asignado al cambio. El LSN de confirmación identifica tanto los cambios que se confirmaron dentro de la misma transacción como el orden de esas transacciones. La columna \_\_$seqval se puede usar para ordenar los cambios adicionales que se produzcan en la misma transacción. En la columna \_\_$operation se registra la operación que está asociada al cambio: 1 = eliminación, 2 = inserción, 3 = actualización (antes de la imagen) y 4 = actualización (después de la imagen). La columna \_\_$update_mask es una máscara de bits variable con un bit definido para cada columna capturada. Para las entradas correspondientes a operaciones de inserción y eliminación, la máscara de actualización siempre tendrá todos los bits activados. Las filas correspondientes a operaciones de actualización, sin embargo, tendrán solo activados los bits que correspondan a las columnas cambiadas.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Intervalo de validez de la captura de datos modificados para una base de datos  
  El intervalo de validez de la captura de datos modificados para una base de datos es el tiempo durante el cual los datos modificados están disponibles para las instancias de captura. El intervalo de validez comienza cuando se crea la primera instancia de captura para una tabla de base de datos y continúa hasta el momento actual.  
@@ -133,7 +133,7 @@ CREATE TABLE T1(
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Habilitar y deshabilitar la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Trabajar con datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

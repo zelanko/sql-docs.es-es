@@ -11,12 +11,12 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c49ec9733634d0b8eb5f6523eb6fd7f416b5f408
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb847f12e7b9a508d880033da7e66a426b757791
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829473"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202644"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de Access (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos de **Microsoft Access** desde la página **Elegir un origen de datos** o **Elegir un destino** del Asistente para importación y exportación de SQL Server.
@@ -46,8 +46,8 @@ La lista de proveedores de datos puede contener varias entradas para Microsoft A
  **Nombre de archivo**  
 Especifique la ruta de acceso y el nombre del archivo de Access. Por ejemplo, **C:\\MisDatos.mdb** para un archivo en el equipo local, o bien **\\\\Ventas\\BaseDeDatos\\Northwind.mdb** para un archivo en un recurso compartido de red. O bien, haga clic en **Examinar**. 
 
- >   [!NOTE] 
- > Si hace clic en **Examinar** para buscar el archivo de Access, el cuadro de diálogo **Abrir** filtra los archivos con el formato y la extensión de archivo .mdb anteriores de forma predeterminada. Sin embargo, el proveedor de datos también puede abrir archivos con el formato y la extensión de archivo .accdb más recientes.
+> [!NOTE]
+> Si hace clic en **Examinar** para buscar el archivo de Access, el cuadro de diálogo **Abrir** filtra los archivos con el formato y la extensión de archivo .mdb anteriores de forma predeterminada. Sin embargo, el proveedor de datos también puede abrir archivos con el formato y la extensión de archivo .accdb más recientes.
   
  **Examinar**  
  Busque el archivo de base de datos desde el cuadro de diálogo **Abrir**.  

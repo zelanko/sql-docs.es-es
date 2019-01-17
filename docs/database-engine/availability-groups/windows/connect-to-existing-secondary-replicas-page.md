@@ -1,6 +1,7 @@
 ---
-title: Conectar a una página de réplicas secundarias existentes | Microsoft Docs
-ms.custom: ''
+title: Página "Conectar con réplicas secundarias existentes" para grupos de disponibilidad
+description: Una descripción de las distintas opciones que se encuentran en la página "Conectar con réplicas secundarias existentes" del "Asistente para grupo de disponibilidad" en SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2feb2d658f6d333fbe1b1762ea8483562b79db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753983"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211234"
 ---
-# <a name="connect-to-existing-secondary-replicas-page"></a>Conectar a una página de réplicas secundarias existentes
+# <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>Conectar con réplicas secundarias existentes: grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema de Ayuda se describen las opciones de la página **Conectar con réplicas secundarias existentes** . Este tema se usa en [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
@@ -46,7 +47,7 @@ ms.locfileid: "47753983"
   
 -   [Usar el Asistente para agregar una base de datos al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

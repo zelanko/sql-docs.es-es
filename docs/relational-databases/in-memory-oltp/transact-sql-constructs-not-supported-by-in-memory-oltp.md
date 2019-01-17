@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503623"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590769"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ ms.locfileid: "52503623"
 |Operación|Actualización de columnas de clave principal|Las columnas de clave principal de las tablas optimizadas para memoria y los tipos de tablas no se pueden actualizar. Si es necesario actualizar la clave principal, elimine la fila antigua e inserte la nueva fila con la clave principal actualizada.|  
 |Operación|CREATE INDEX|Los índices de las tablas optimizadas para memoria deben especificarse insertados con la instrucción **CREATE TABLE** o con la instrucción **ALTER TABLE** .|  
 |Operación|CREATE FULLTEXT INDEX|Las tablas optimizadas para memoria no admiten índices de texto completo.|  
-|Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten determinados cambios en los esquemas:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: se admiten las operaciones ALTER TABLE, ALTER PROCEDURE, y sp_rename. No se admiten otros cambios en el esquema, por ejemplo, al agregar propiedades extendidas.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: se admiten las operaciones ALTER TABLE y ALTER PROCEDURE. No se admiten otros cambios en el esquema, incluido sp_rename.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: no se admiten cambios en el esquema. Para cambiar la definición de una tabla con optimización para memoria o un procedimiento almacenado compilado de forma nativa, primero quite el objeto y, a continuación, vuelva a crearlo con la definición deseada.| 
-|Operación|TRUNCATE TABLE|Las tablas optimizadas para memoria no admiten la operación TRUNCATE. Para quitar todas las filas de una tabla, elimínelas con **DELETE FROM***table* o quite y vuelva a crear la tabla.|  
+|Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten determinados cambios en los esquemas:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: se admiten las operaciones ALTER TABLE, ALTER PROCEDURE y sp_rename. No se admiten otros cambios en el esquema, por ejemplo, al agregar propiedades extendidas.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: se admiten las operaciones ALTER TABLE y ALTER PROCEDURE. No se admiten otros cambios en el esquema, incluido sp_rename.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: no se admiten cambios en el esquema. Para cambiar la definición de una tabla con optimización para memoria o un procedimiento almacenado compilado de forma nativa, primero quite el objeto y, a continuación, vuelva a crearlo con la definición deseada.| 
+|Operación|TRUNCATE TABLE|Las tablas optimizadas para memoria no admiten la operación TRUNCATE. Para quitar todas las filas de una tabla, elimínelas con **DELETE FROM**_table_ , o bien quite y vuelva a crear la tabla.|  
 |Operación|ALTER AUTHORIZATION|No es posible cambiar el propietario de una tabla optimizada para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el procedimiento.|  
 |Operación|ALTER SCHEMA|No se admite la transferencia de una tabla o de un procedimiento almacenado compilado de forma nativa existente. Quite y vuelva a crear el objeto que va a transferir entre esquemas.|  
 |Operación|DBCC CHECKTABLE|DBCC CHECKTABLE no es compatible con las tablas optimizadas para memoria. Para comprobar la integridad de los archivos de punto de control en el disco, realice una copia de seguridad del grupo de archivos MEMORY_OPTIMIZED_DATA.|  
@@ -104,11 +104,11 @@ ms.locfileid: "52503623"
 |Característica|Cursores|Los procedimientos almacenados compilados de forma nativa no admiten cursores.<br /><br /> Cuando ejecute el procedimiento desde el cliente, utilice RPC en lugar de la API de cursores. Con ODBC, evite la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] . **EXECUTE**; en su lugar, especifique el nombre del procedimiento directamente.<br /><br /> Cuando ejecute el procedimiento desde un lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] o desde otro procedimiento almacenado, evite usar un cursor con el procedimiento almacenado compilado de forma nativa.<br /><br /> Cuando cree un procedimiento almacenado compilado de forma nativa, en lugar de un cursor, use la lógica basada en conjunto o un bucle **WHILE** .|  
 |Característica|Valores predeterminados de parámetros no constantes|Cuando se usan los valores predeterminados de los parámetros en procedimientos almacenados compilados de forma nativa, dichos valores deben ser constantes. Quite los caracteres comodín de las declaraciones de parámetro.|  
 |Característica|EXTERNAL|Los procedimientos almacenados CLR no se pueden compilar de forma nativa. Quite la cláusula AS EXTERNAL o la opción de NATIVE_COMPILATION de la instrucción CREATE PROCEDURE.|  
-|Característica|Procedimientos almacenados numerados|Los procedimientos almacenados compilados de forma nativa no se pueden numerar. Quite **;***number* de la instrucción **CREATE PROCEDURE**.|  
+|Característica|Procedimientos almacenados numerados|Los procedimientos almacenados compilados de forma nativa no se pueden numerar. Quite **;**_number_ de la instrucción **CREATE PROCEDURE** .|  
 |Característica|Instrucciones INSERT ... VALUES de varias filas|En un procedimiento almacenado compilado de forma nativa no se pueden insertar varias filas usando la misma instrucción **INSERT** . Cree instrucciones **INSERT** para cada fila.|  
 |Característica|Expresiones de tabla común (CTE)|Los procedimientos almacenados compilados de forma nativa no admiten expresiones de tabla común (CTE). Vuelva a escribir la consulta.|  
 |Característica|COMPUTE|No se admite la cláusula **COMPUTE** . Quítela de la consulta.|  
-|Característica|SELECT INTO|La cláusula **INTO** no se puede usar con la instrucción **SELECT** . Vuelva a escribir la consulta como **INSERT INTO** *Table* **SELECT**.|  
+|Característica|SELECT INTO|La cláusula **INTO** no se puede usar con la instrucción **SELECT** . Vuelva a escribir la consulta como **INSERT INTO** _Table_ **SELECT**.|  
 |Característica|Lista de columnas insertadas incompleta|En general, en las instrucciones INSERT, deben especificarse valores para todas las columnas de la tabla.<br /><br /> Sin embargo, se admiten las restricciones DEFAULT y las columnas IDENTITY(1,1) en tablas optimizadas para memoria. Estas columnas pueden omitirse de la lista de columnas INSERT. En el caso de columnas IDENTITY, la omisión es obligatoria.|  
 |Característica|*Función*|Los procedimientos almacenados compilados de forma nativa no admiten algunas funciones integradas. Quite la función rechazada del procedimiento almacenado. Para obtener más información sobre las funciones integradas admitidas, vea<br />[Características admitidas en los módulos T-SQL compilados de forma nativa](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)o<br />[Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Característica|CASE|**Se aplica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] y SQL Server a partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Las expresiones **CASE** no se admiten en las consultas en procedimientos almacenados compilados de forma nativa. Cree consultas diferentes para mayúsculas y minúsculas. Para obtener más información, vea [Implementación de una expresión CASE de un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] admiten las expresiones CASE.|  
@@ -186,7 +186,7 @@ ms.locfileid: "52503623"
 |Característica|Transacción enlazada|Las sesiones enlazadas no pueden participar en transacciones que tienen acceso a tablas optimizadas para memoria. No enlace la sesión antes de ejecutar el procedimiento.|  
 |Característica|DTC|Las transacciones que tienen acceso a tablas optimizadas para memoria no pueden ser transacciones distribuidas.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

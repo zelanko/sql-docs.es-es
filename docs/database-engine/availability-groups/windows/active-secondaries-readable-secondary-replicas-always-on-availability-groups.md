@@ -1,6 +1,7 @@
 ---
-title: 'Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn) | Microsoft Docs'
-ms.custom: ''
+title: Descarga de cargas de trabajo de solo lectura a la réplica secundaria de un grupo de disponibilidad
+description: Obtenga información sobre la descarga de consultas e informes de solo lectura a una réplica secundaria de un grupo de disponibilidad Always On en SQL Server.
+ms.custom: seodec18
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604724"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206274"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)
+# <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarga de cargas de trabajo de solo lectura a la réplica secundaria de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Las funcionalidades secundarias activas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluyen compatibilidad con el acceso de solo lectura a una o varias réplicas secundarias (*réplicas secundarias legibles*). Una réplica secundaria legible puede estar en modo de disponibilidad de confirmación sincrónica o en el modo de disponibilidad de confirmación asincrónica. Una réplica secundaria legible permite el acceso de solo lectura a todas las bases de datos secundarias. Sin embargo, las bases de datos secundarias legibles no se establecen como de solo lectura. Son dinámicas. Una base de datos secundaria dada cambia a medida que se aplican los cambios en la base de datos principal correspondiente. En lo que respecta a las réplicas secundarias típicas, los datos, lo cual incluye las tablas con optimización para memoria durables, las bases de datos secundarias están en tiempo prácticamente real. Además, los índices de texto completo se sincronizan con las bases de datos secundarias. En muchas circunstancias, la latencia de datos entre una base de datos principal y la base de datos secundaria correspondiente suele ser de solo unos pocos segundos.  
@@ -35,22 +36,6 @@ ms.locfileid: "51604724"
 >  Aunque no puede escribir datos en las bases de datos secundarias, puede escribir en bases de datos de lectura y escritura de la instancia del servidor que hospeda la réplica secundaria, incluidas las bases de datos de usuario y las bases de datos del sistema, como **tempdb**.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] también admite el reenrutamiento de las solicitudes de conexión con intención de lectura a una réplica secundaria legible (*enrutamiento de solo lectura*). Para obtener información sobre el enrutamiento de solo lectura, vea [Usar un agente de escucha para conectarse a una réplica secundaria de solo lectura (enrutamiento de solo lectura)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
-  
- **En este tema:**  
-  
--   [Ventajas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Benefits)  
-  
--   [Requisitos previos del grupo de disponibilidad](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Prerequisites)  
-  
--   [Limitaciones y restricciones](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_LimitationsRestrictions)  
-  
--   [Consideraciones de rendimiento](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Performance)  
-  
--   [Consideraciones de planeamiento de capacidad](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_CapacityPlanning)  
-  
--   [Tareas relacionadas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_RelatedTasks)  
-  
--   [Contenido relacionado](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#RelatedContent)  
   
 ##  <a name="bkmk_Benefits"></a> Ventajas  
  La dirección de conexiones de solo lectura a las réplicas secundarias legibles proporciona las siguientes ventajas:  
@@ -145,8 +130,8 @@ ms.locfileid: "51604724"
   
  Esto significa que hay latencia, normalmente solo se trata de unos segundos, entre las réplicas principales y secundarias. No obstante, en casos excepcionales, por ejemplo, si los problemas de red reducen el rendimiento, la latencia puede ser importante. La latencia aumenta cuando se producen cuellos de botella de E/S y cuando se suspende el movimiento de los datos. Para supervisar el movimiento de datos suspendido, puede usar el [panel AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) o la vista de administración dinámica [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
-####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latencia de datos en bases de datos con tablas con optimización para memoria  
- En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existen consideraciones especiales en torno a la latencia de datos en las secundarias activas (vea [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)). A partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , no existe ninguna consideración especial en torno a la latencia de datos para tablas con optimización para memoria. La latencia de datos esperada para tablas con optimización para memoria es comparable a la latencia para tablas basadas en disco.  
+####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latencia de datos en bases de datos con tablas optimizadas para memoria  
+ En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existían consideraciones especiales en torno a la latencia de datos en las secundarias activas: vea [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundarias activas: réplicas secundarias legibles](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , no existe ninguna consideración especial en torno a la latencia de datos para tablas optimizadas para memoria. La latencia de datos esperada para tablas con optimización para memoria es comparable a la latencia para tablas basadas en disco.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Repercusión de la carga de trabajo de solo lectura  
  Al configurar una réplica secundaria para el acceso de solo lectura, las cargas de trabajo de solo lectura en las bases de datos secundarias utilizan los recursos del sistema, como la CPU y E/S (para tablas basadas en disco) de los subprocesos REDO, especialmente si las cargas de trabajo de solo lectura en tablas basadas en disco realizan un uso intensivo de E/S. No hay ningún impacto en la E/S cuando se tiene acceso a tablas con optimización para memoria porque todas las filas residen en memoria.  
@@ -231,9 +216,9 @@ GO
   
     |¿Réplica secundaria legible?|¿Nivel de aislamiento de instantánea o de RCSI habilitado?|Base de datos principal|Base de datos secundaria|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |no|no|Sin versiones de fila ni sobrecarga de 14 bytes|Sin versiones de fila ni sobrecarga de 14 bytes|  
-    |no|Sí|Con versiones de fila y sobrecarga de 14 bytes|Sin versiones de fila pero con sobrecarga de 14 bytes|  
-    |Sí|no|Sin versiones de fila pero con sobrecarga de 14 bytes|Con versiones de fila y sobrecarga de 14 bytes|  
+    |No|No|Sin versiones de fila ni sobrecarga de 14 bytes|Sin versiones de fila ni sobrecarga de 14 bytes|  
+    |No|Sí|Con versiones de fila y sobrecarga de 14 bytes|Sin versiones de fila pero con sobrecarga de 14 bytes|  
+    |Sí|No|Sin versiones de fila pero con sobrecarga de 14 bytes|Con versiones de fila y sobrecarga de 14 bytes|  
     |Sí|Sí|Con versiones de fila y sobrecarga de 14 bytes|Con versiones de fila y sobrecarga de 14 bytes|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Tareas relacionadas  
@@ -252,9 +237,9 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   

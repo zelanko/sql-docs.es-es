@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fea754e936831833fd81ff9a50079c31b5938f6
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535823"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979611"
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ La figura siguiente describe la jerarquía de **geometry** en la que se basan lo
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
 
-Como la figura indica, los diez tipos a partir de los que pueden crearse instancias de los tipos de datos **geometry** y **geography** son **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**y **GeometryCollection**. Existe un tipo adicional a partir del que pueden crearse instancias para el tipo de datos Geography: **FullGlobe**. Los tipos **geometry** y **geography** pueden reconocer una instancia concreta siempre y cuando se trate de una instancia bien formada, aunque no se haya definido explícitamente. Por ejemplo, si define una instancia **Point** usando explícitamente el método STPointFromText(), **geometry** y **geography** reconocen la instancia como **Point**, con tal de que la entrada de método esté bien formada. Si define la misma instancia mediante el método `STGeomFromText()` , los tipos de datos **geometry** y **geography** reconocen la instancia como **Point**.  
+Como la figura indica, los diez tipos a partir de los que pueden crearse instancias de los tipos de datos **geometry** y **geography** son **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**y **GeometryCollection**. Existe un tipo adicional a partir del que se pueden crear instancias para el tipo de datos Geography: **FullGlobe**. Los tipos **geometry** y **geography** pueden reconocer una instancia concreta siempre y cuando se trate de una instancia bien formada, aunque no se haya definido explícitamente. Por ejemplo, si define una instancia **Point** usando explícitamente el método STPointFromText(), **geometry** y **geography** reconocen la instancia como **Point**, con tal de que la entrada de método esté bien formada. Si define la misma instancia mediante el método `STGeomFromText()` , los tipos de datos **geometry** y **geography** reconocen la instancia como **Point**.  
 
 Los subtipos de los tipos Geometry y Geography se dividen en tipos simples y de colección.  Algunos métodos como `STNumCurves()` funcionan solo con los tipos simples.  
 
@@ -85,10 +85,10 @@ Las características simples de OGC para la especificación de SQL analizan los 
 
 Para obtener más información acerca de las especificaciones de OGC, vea lo siguiente:  
 -   [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](https://go.microsoft.com/fwlink/?LinkId=93627)  
--   [Especificaciones de OGC, Acceso a características simples, Parte 2 - Opciones de SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [Especificaciones de OGC, acceso a características simples, parte 2: opciones de SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Segmentos de arco circular  
-Tres tipos instanciables pueden tomar segmentos de arco circular: **CircularString**, **CompoundCurve**y **CurvePolygon**.  Un segmento de arco circular se define mediante tres puntos en un plano bidimensional y el tercer punto no puede ser igual que el primero.  
+Tres tipos de los que se pueden crear instancias pueden tomar segmentos de arco circular: **CircularString**, **CompoundCurve** y **CurvePolygon**.  Un segmento de arco circular se define mediante tres puntos en un plano bidimensional y el tercer punto no puede ser igual que el primero.  
 
 Las figuras A y B muestran segmentos de arco circular. Observe que cada uno de los tres puntos pertenece al perímetro de un círculo.  
 
@@ -96,10 +96,11 @@ Las figuras C y D muestran cómo se puede definir el segmento de una línea como
 Los métodos que funcionan en tipos de segmentos de arco circular usan segmentos de línea recta para aproximarse al arco circular. El número de segmentos de línea utilizado para aproximarse al arco dependerá de su longitud y curvatura. Los valores Z se pueden almacenar para cada uno de los tipos de segmentos de arco circular; sin embargo, los métodos no usarán los valores Z en sus cálculos.  
 
 > [!NOTE]  
->  Si se dan valores Z para los segmentos de arco circular, deben ser iguales para todos los puntos del segmento de arco circular para que se acepte como entrada. Por ejemplo: se acepta `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` , pero no se acepta `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` .  
+> Si se dan valores Z para los segmentos de arco circular, deben ser iguales para todos los puntos del segmento de arco circular para que se acepte como entrada. Por ejemplo: se acepta `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` , pero no se acepta `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` .  
 
 ### <a name="linestring-and-circularstring-comparison"></a>Comparación de LineString y CircularString  
 En este ejemplo se muestra cómo almacenar triángulos isósceles idénticos tanto con una instancia de **LineString** como con una instancia de **CircularString** :  
+
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -114,14 +115,16 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 Tenga en cuenta que una instancia de **CircularString** requiere siete puntos para definir el triángulo, pero una instancia de **LineString** requiere solo cuatro puntos para definir el triángulo. Esto se debe a que una instancia de **CircularString** almacena los segmentos de arco circular y no los de línea. Por tanto, los lados del triángulo almacenado en la instancia de **CircularString** son ABC, CDE y EFA mientras que los del triángulo almacenado en la instancia de **LineString** son AC, CE y EA.  
 
-Considere el fragmento de código siguiente:  
+Considere el ejemplo siguiente:  
+
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-Este fragmento de código genera los siguientes resultados:  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```
 LS LengthCS Length
 5.65685...6.28318...
@@ -131,15 +134,15 @@ Las instancias de **CircularString** usan menos puntos para almacenar límites c
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Comparación de LineString y CompoundCurve  
 En los siguientes ejemplos de código se muestra cómo almacenar la misma figura con instancias de **LineString** y **CompoundCurve** :
+
 ```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
-o Administrador de configuración de  
-
 En los ejemplos anteriores, una instancia de **LineString** o un instancia de **CompoundCurve** pudieron almacenar la figura.  En el siguiente ejemplo se usa **CompoundCurve** para almacenar un segmento de gráfico circular:  
+
 ```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
@@ -148,6 +151,7 @@ Una instancia de **CompoundCurve** puede almacenar directamente el segmento de a
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>Comparación de CircularString y CompoundCurve  
 En el siguiente ejemplo de código se muestra cómo se puede almacenar el segmento de gráfico circular en una instancia de **CircularString** :  
+
 ```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
@@ -168,9 +172,9 @@ SELECT @g.ToString(), @g.STLength();
 ```
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Comparación de Polygon y CurvePolygon  
-Las instancias de**CurvePolygon** pueden usar las instancias de **CircularString** y **CompoundCurve** instances when defining their exterior y interior rings.  Las instancias de**Polygon** no pueden usar los tipos de segmento de arco circular: **CircularString** y **CompoundCurve**.  
+Las instancias de**CurvePolygon** pueden usar las instancias de **CircularString** y **CompoundCurve** instances when defining their exterior y interior rings.  Las instancias de **Polygon** no pueden usar los tipos de segmento de arco circular: **CircularString** y **CompoundCurve**.  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 - [Datos espaciales (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [Referencia de los métodos del tipo de datos geometry](https://msdn.microsoft.com/library/bb933973.aspx) 
 - [Referencia de los métodos del tipo de datos geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   

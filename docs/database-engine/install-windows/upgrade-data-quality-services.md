@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 09651f097f0ae07b41c1c38866b862f73c529486
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2049dc558264b2b231a7d6a12109b833cccaddfe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601936"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208837"
 ---
 # <a name="upgrade-data-quality-services"></a>Actualizar Data Quality Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "51601936"
 
 En este artículo encontrará información sobre cómo actualizar la instalación existente de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). Como parte de la actualización de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, debe actualizar también el esquema de bases de datos de DQS.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   Debe hacer una copia de seguridad de las bases de datos de DQS antes de actualizar DQS para impedir la pérdida accidental de datos durante la actualización del esquema. Para obtener información sobre la copia de seguridad de bases de datos de DQS, vea [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Puede conectarse a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server a través de la versión actual o una versión anterior de Data Quality Client o la [transformación Limpieza de DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) de Integration Services para realizar tareas de calidad de datos.  
 > -   Después de actualizar Data Quality Services y Master Data Services, ya no funcionará ninguna versión anterior del complemento Master Data Services para Excel. Puede descargar la versión [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] del complemento Master Data Services para Excel [aquí](https://go.microsoft.com/fwlink/?LinkID=506665).  
@@ -61,8 +61,8 @@ En este artículo encontrará información sobre cómo actualizar la instalació
 
       >[!NOTE]
       >En la ruta de acceso de carpeta, reemplace [nn] por el número de versión de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
-      >- Si es SQL Server 2016: 13
-      >- Si es SQL Server 2017: 14
+      >- Para SQL Server 2016: 13
+      >- Para SQL Server 2017: 14
 
         ```  
         cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
@@ -97,7 +97,7 @@ En este artículo encontrará información sobre cómo actualizar la instalació
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMINIO\nombreDeUsuario>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMINIO\nombreDeUsuario>|2||  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Quitar objetos del servidor de calidad de datos](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  

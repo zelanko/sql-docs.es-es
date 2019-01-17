@@ -14,12 +14,12 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4271eb5bc3956fd58b942eb7c7076716f8f03f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2617ab51ffdde7bd8986c0a7d508067ac2686e1e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414272"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203264"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Valide documentos XML y obtenga una salida de error enriquecida habilitando la propiedad **ValidationDetails** de la tarea XML.  
@@ -32,8 +32,8 @@ ms.locfileid: "52414272"
   
  La funcionalidad de validación de XML se escala fácilmente en el caso de documentos XML grandes y un gran número de errores. Puesto que el propio archivo de salida está en formato XML, puede consultar y analizar la salida. Por ejemplo, si la salida contiene un gran número de errores, puede agruparlos mediante una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] , como se describe en este tema.  
   
-> [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) ha introducido la propiedad **ValidationDetails** en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. La propiedad también está disponible en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+> [!NOTE]
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introdujo la propiedad **ValidationDetails** en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. La propiedad también está disponible en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Ejemplo de salida de un archivo XML que no es válido  
  Este es un ejemplo de archivo de salida con los resultados de validación de un archivo XML válido.  
@@ -119,7 +119,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  ![Consulta para agrupar errores de XML en Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Query to group XML errors in Management Studio")  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tarea XML](../../integration-services/control-flow/xml-task.md)   
  [Editor de la tarea XML &#40;página General&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   

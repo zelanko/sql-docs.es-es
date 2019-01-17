@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c7768b97ba5fc337ab06b42e61fb1e80330bc76
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 066b202a91f646dadd4a72182193e9fb0fcee6f1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970977"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980001"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ Es un identificador válido de la expresión de tabla común. *expression_name* 
  *CTE_query_definition*  
  Especifica una instrucción SELECT cuyo conjunto de resultados llena la expresión de tabla común. La instrucción SELECT de *CTE_query_definition* debe cumplir los mismos requisitos que en la creación de una vista, excepto que una expresión CTE no puede definir otra expresión CTE. Para más información, vea la sección Comentarios y [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Si se definen varios parámetros *CTE_query_definition*, las definiciones de consulta deben combinarse mediante uno de estos operadores de conjunto: UNION ALL, UNION, EXCEPT o INTERSECT.  
+ Si se define más de una *definición_de_consulta_de_CTE*, es preciso unir las definiciones de consulta mediante uno de estos operadores de conjuntos: UNION ALL, UNION, EXCEPT o INTERSECT.  
   
 ## <a name="remarks"></a>Notas  
   
@@ -202,7 +202,7 @@ GO
   
 ```  
   
-### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>B. Usar una expresión de tabla común para limitar recuentos y promedios de informes  
+### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>b. Usar una expresión de tabla común para limitar recuentos y promedios de informes  
  En el siguiente ejemplo se muestra el número medio de pedidos de venta correspondiente a todos los años para los representantes de ventas.  
   
 ```  
@@ -678,7 +678,7 @@ UNION ALL
 SELECT TableName, TotalAvg FROM CountCustomer;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXCEPT e INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   

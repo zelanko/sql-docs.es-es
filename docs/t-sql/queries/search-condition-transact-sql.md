@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ef9f5377ffef172436d7e84164a20f1d92a9a325
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699803"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979521"
 ---
 # <a name="search-condition-transact-sql"></a>Condiciones de búsqueda (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "51699803"
  Es un nombre de columna, una constante, una función, una variable, una subconsulta escalar o cualquier combinación de nombres de columna, constantes y funciones conectados mediante uno o varios operadores o una subconsulta. La expresión también puede contener la expresión CASE.  
   
 > [!NOTE]  
->  Las constantes y las variables de cadena no Unicode usan la página de códigos que corresponde a la intercalación predeterminada de la base de datos. Pueden producirse conversiones de páginas de códigos al trabajar únicamente con datos de caracteres no Unicode y hacer referencia a los tipos de datos de caracteres no Unicode **char**, **varchar** y **text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte las variables y constantes de cadena no Unicode a la página de códigos que corresponde a la intercalación de la columna a la que se hace referencia o que se ha especificado mediante COLLATE, si esa página de códigos es diferente a la que corresponde a la intercalación predeterminada de la base de datos. Los caracteres que no se encuentran en la nueva página de códigos se traducen en un carácter similar, si se encuentra una [coincidencia](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/), o bien se convierten en el carácter de sustitución predeterminado "?".  
+>  Las constantes y las variables de cadena no Unicode usan la página de códigos que corresponde a la intercalación predeterminada de la base de datos. Pueden producirse conversiones de página de códigos cuando se trabaja únicamente con datos de caracteres no Unicode y se hace referencia a los tipos de datos de caracteres no Unicode **char**, **varchar** y **text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte las variables y constantes de cadena no Unicode a la página de códigos que corresponde a la intercalación de la columna a la que se hace referencia o que se ha especificado mediante COLLATE, si esa página de códigos es diferente a la que corresponde a la intercalación predeterminada de la base de datos. Los caracteres que no se encuentran en la nueva página de códigos se traducen en un carácter similar, si se encuentra una [coincidencia](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/), o bien se convierten en el carácter de sustitución predeterminado "?".  
 >  
 > Cuando se trabaja con varias páginas de códigos, las constantes de caracteres pueden llevar un prefijo con la letra mayúscula 'N' y se pueden usar variables Unicode para evitar las conversiones de páginas de códigos.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "51699803"
  Especifica la búsqueda de una expresión, basada en si la expresión está incluida en una lista o excluida de ella. La expresión de búsqueda puede ser una constante o un nombre de columna, y la lista puede ser un conjunto de constantes o, más normalmente, una subconsulta. Encierre la lista de valores entre paréntesis. Para más información, vea [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Se puede considerar como una instrucción SELECT restringida y es similar a \<query_expresssion> en la instrucción SELECT. No se permiten la cláusula ORDER BY ni la palabra clave INTO. Para obtener más información, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Se puede considerar como una instrucción SELECT restringida y es similar a \<expresión_de_consulta> en la instrucción SELECT. No se permiten la cláusula ORDER BY ni la palabra clave INTO. Para obtener más información, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
  Se utiliza con un operador de comparación y una subconsulta. Devuelve TRUE para \<predicate> si todos los valores obtenidos de la subconsulta satisfacen la operación de comparación, o FALSE si no todos los valores satisfacen la comparación o si la subconsulta no devuelve filas a la instrucción externa. Para obtener más información, vea [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  
@@ -217,7 +217,7 @@ FROM Production.ProductPhoto
 WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;  
 ```  
   
-### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>B. Usar la sintaxis de WHERE y LIKE con datos Unicode  
+### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>b. Usar la sintaxis de WHERE y LIKE con datos Unicode  
  En el siguiente ejemplo se utiliza la cláusula `WHERE` para recuperar la dirección de correo de una empresa que está fuera de los Estados Unidos (`US`) y en una ciudad cuyo nombre empieza con `Pa`.  
   
 ```  
@@ -254,7 +254,7 @@ FROM DimEmployee
 WHERE LastName LIKE N'%and%';  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   

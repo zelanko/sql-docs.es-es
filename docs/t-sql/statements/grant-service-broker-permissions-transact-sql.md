@@ -21,12 +21,12 @@ ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a5af2e9a7ad54c76d2c6fb6e5854803a652dc2ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3146d04acc0a74096af2cc2f04341eaa1b2a68fe
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799023"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589829"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (permisos de Service Broker de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +56,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Especifica un permiso que se puede conceder para un elemento protegible de Service Broker.  Se muestra a continuación.  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  Especifica el contrato para el que se concede el permiso. Es preciso usar el calificador de ámbito "::".  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  Especifica el tipo de mensaje para el que se concede el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Especifica el enlace de servicio remoto para el que se concede el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  Especifica la ruta para la que se concede el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
- SERVICE **::***service_name*  
+ SERVICE **::**_nombre_del_servicio_  
  Especifica el servicio para el que se concede el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  
@@ -187,7 +187,7 @@ GRANT permission  [ ,...n ] ON
   
  Los beneficiarios del permiso CONTROL SERVER, como por ejemplo, los miembros del rol fijo de servidor **sysadmin**, pueden conceder cualquier permiso para cualquier elemento protegible en el servidor. Los beneficiarios del permiso CONTROL para una base de datos, como por ejemplo, los miembros del rol fijo de base de datos **db_owner**, pueden conceder cualquier permiso para cualquier elemento protegible en la base de datos. Los receptores del permiso CONTROL en un esquema pueden conceder los permisos en cualquier objeto del esquema.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   

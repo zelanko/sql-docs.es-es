@@ -21,12 +21,12 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c56e70fc866c3666107677338feb3285cabb38b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fbdc84168ea3c0878924033347ca0c0fff3e514
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812183"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206164"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ FULLTEXTSERVICEPROPERTY ('property')
  *property*  
  Es una expresión que contiene el nombre de la propiedad del servicio de búsqueda en texto completo. La tabla presenta las propiedades y proporciona descripciones de la información que se devuelve.  
   
-> [!NOTE]  
->  Las propiedades siguientes se quitarán en una futura versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** y **ResourceUsage**. Evite el uso de estas propiedades en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  
+> [!NOTE]
+>  Las propiedades siguientes se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** y **ResourceUsage**. Evite el uso de estas propiedades en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  
   
 |Propiedad|Valor|  
 |--------------|-----------|  
@@ -82,7 +82,7 @@ EXEC sp_fulltext_service @action='verify_signature', @value=1;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  

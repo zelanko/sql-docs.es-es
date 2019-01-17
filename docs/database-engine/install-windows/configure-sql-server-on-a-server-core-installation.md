@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 26a4fcb38edaa490fd295b7f781a2062a7671199
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409052"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209074"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar SQL Server en una instalación Server Core
 
@@ -120,7 +120,7 @@ Estos pasos están pensados para realizarse en un equipo donde se ejecute la edi
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guarda el cambio. A continuación, debe reiniciarse manualmente el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto le permite elegir una hora de reinicio que sea la mejor para sus requisitos empresariales. Al reiniciar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , AlwaysOn se habilitará y la propiedad del servidor IsHadrEnabled se establecerá en 1.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Deberá tener los derechos de usuario adecuados o se le deberá haber delegado la autoridad adecuada en el equipo de destino para conectarse a ese equipo.  
 > -   El nombre del equipo que está administrando se mostrará entre paréntesis junto a Administración de equipos en el árbol de consola.  
   
@@ -226,9 +226,9 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Usar herramientas para la solución de problemas  
  Puede usar la [utilidad SQLdiag](../../tools/sqldiag-utility.md) para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. SQLdiag tiene como fin acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de Microsoft.  
   
- Puede iniciar la utilidad en el símbolo del sistema del administrador en Server Core, mediante la sintaxis especificada en el artículo: [SQLdiag Utility](../../tools/sqldiag-utility.md).  
+ Puede iniciar la utilidad en el símbolo del sistema del administrador en Server Core, mediante la sintaxis especificada en el artículo: [SQLdiag (utilidad)](../../tools/sqldiag-utility.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instalar SQL Server en Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
  [Artículos de procedimientos de instalación](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   

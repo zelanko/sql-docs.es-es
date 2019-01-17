@@ -1,19 +1,21 @@
 ---
 title: Importar HTML en un informe (Generador de informes y SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: Obtenga información sobre cómo usar un cuadro de texto para insertar en un informe texto con formato HTML recuperado de un campo del conjunto de datos.
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ee3c9ffa00fcb76f4b167b5f535099b9f8c57ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8279a0ea362cd6b85045f3ffe3d7ce0caf1ab013
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029734"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214856"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importar HTML en un informe (Generador de informes y SSRS)
   Se puede usar un cuadro de texto para insertar en un informe texto con formato HTML recuperado de un campo de conjunto de datos. El texto puede proceder de cualquier expresión simple o compleja que se evalúe como HTML con un formato correcto. El texto con formato se puede representar en todos los formatos de salida compatibles, incluso PDF.  
@@ -25,10 +27,7 @@ ms.locfileid: "50029734"
 > [!NOTE]  
 >  Cuando se importa texto que contiene marcado HTML, el cuadro de texto siempre debe analizar los datos en primer lugar. Dado que solo se admite un subconjunto de etiquetas HTML, el HTML que se muestra en el informe representado puede diferir del HTML original.  
   
- Para más información, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
-  
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+ Para empezar rápidamente, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 ## <a name="supported-html-tags"></a>Etiquetas HTML compatibles  
  La lista siguiente es una lista completa de las etiquetas que se representarán como HTML cuando se definan como texto de marcador de posición:  
@@ -39,9 +38,9 @@ ms.locfileid: "50029734"
   
 -   Encabezado, estilo y elementos de bloque: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
   
--   Formato del texto: \<B>, \<I>, \<U>, \<S>  
+-   Formato de texto: \<B>, \<I>, \<U>, \<S>  
   
--   Control de listas: \<OL>, \<UL>, \<LI>  
+-   Administración de listas: \<OL>, \<UL>, \<LI>  
   
  Cualquier otra etiqueta de marcado HTML se omitirá durante el procesamiento del informe. Si el HTML representado por la expresión en el texto del marcador de posición no está bien formado, el marcador de posición se representa como texto simple. Todas las etiquetas HTML distinguen entre mayúsculas y minúsculas.  
   
@@ -64,8 +63,6 @@ ms.locfileid: "50029734"
   
     -   Las unidades de longitud de CSS relativas se pasan por algo y no se admiten. Las unidades no admitidas son em, ex, px,%,rem.  
   
-     Para más información sobre unidades de CSS, consulte: [CSS Values and Units Reference](https://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (https://msdn.microsoft.com/library/ms531211(VS.85).aspx) (Valores de CSS y unidades de referencia).  
-  
 -   color  
   
 -   padding, padding-bottom, padding-top, padding-right, padding-left  
@@ -80,7 +77,7 @@ ms.locfileid: "50029734"
   
 -   Para los atributos y los estilos CSS, si una propiedad se especifica más de una vez, solo se aplica la última instancia de la propiedad. Por ejemplo, si el texto es **\<p align="left" align="right">**, el texto estará alineado a la derecha.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Representar en HTML &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

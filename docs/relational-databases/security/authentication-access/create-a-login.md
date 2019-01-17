@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3702cdd2e09b101b3a779926fa170a976b39c958
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516641"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209104"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "52516641"
 ##  <a name="Background"></a> Información previa  
  Un inicio de sesión es una entidad de seguridad o una entidad que puede ser autenticada por un sistema seguro. Los usuarios necesitan iniciar sesión para conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede crear un inicio de sesión basado en una entidad de seguridad de Windows (como un usuario de dominio o un grupo de dominio de Windows) o puede crear un inicio de sesión que no lo esté (como un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
-> **NOTA:** Para usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] debe utilizar la autenticación de modo mixto. Para obtener más información, vea [Elegir un modo de autenticación](../../../relational-databases/security/choose-an-authentication-mode.md).  
+> **NOTA:** Para usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] debe utilizar la autenticación de modo mixto. Para obtener más información, vea [Elegir un modo de autenticación](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
  Como entidad de seguridad, se pueden conceder permisos a los inicios de sesión. El ámbito de un inicio de sesión es todo el [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión. Los permisos que tienen como ámbito la instancia completa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por ejemplo, el permiso **CREATE ENDPOINT** ) se pueden conceder a un inicio de sesión.  
   
-> **NOTA:** Cuando un inicio de sesión se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la identidad se valida en la base de datos maestra. Use los usuarios de base de datos independiente para autenticar conexiones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] en el nivel de base de datos. No se necesita un inicio de sesión si se usan usuarios de base de datos independiente. Una base de datos independiente es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (y de la base de datos maestra) que hospeda la base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite usuarios de base de datos independientes para la autenticación de Windows y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Al usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], se combinan las reglas de usuarios de la base de datos independiente con las de firewall de nivel de base de datos. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **NOTA:** Cuando un inicio de sesión se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la identidad se valida en la base de datos maestra. Use los usuarios de base de datos independiente para autenticar conexiones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] en el nivel de base de datos. No se necesita un inicio de sesión si se usan usuarios de base de datos independiente. Una base de datos independiente es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (y de la base de datos maestra) que hospeda la base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite usuarios de base de datos independientes para la autenticación de Windows y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Al usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], se combinan las reglas de usuarios de la base de datos independiente con las de firewall de nivel de base de datos. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Seguridad  
 
@@ -62,7 +62,7 @@ ms.locfileid: "52516641"
   
      Si hace clic en **Buscar...**:  
   
-    1.  En **Seleccionar este tipo de objeto**, haga clic en **Tipos de objeto...** para abrir el cuadro de diálogo **Tipos de objeto** y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **Grupos** y **Usuarios**. Las opciones**Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
+    1.  En **Seleccionar este tipo de objeto**, haga clic en **Tipos de objeto...** para abrir el cuadro de diálogo **Tipos de objetos** y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **Grupos** y **Usuarios**. Las opciones**Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
   
     2.  En **Desde esta ubicación**, haga clic en **Ubicaciones...** para abrir el cuadro de diálogo **Ubicaciones** y seleccione una de las ubicaciones de servidor disponibles. Cuando termine, haga clic en **Aceptar**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52516641"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opciones adicionales  
- En el cuadro de diálogo **Inicio de sesión - Nuevo** también se proporcionan opciones para cuatro páginas adicionales: **Roles del servidor**, **Asignación de usuarios**, **Elementos protegibles** y **Estado**.  
+ En el cuadro de diálogo **Inicio de sesión - Nuevo** también se ofrecen opciones en cuatro páginas adicionales: **Roles de servidor**, **Asignación de usuarios**, **Elementos protegibles** y **Estado**.  
   
 ### <a name="server-roles"></a>Roles del servidor  
  La página **Roles de servidor** enumera todos los roles posibles que se pueden asignar al nuevo inicio de sesión. Las siguientes opciones están disponibles:  
@@ -165,15 +165,15 @@ ms.locfileid: "52516641"
   
 1.  Haga clic en **Buscar**.  
   
-2.  En el cuadro de diálogo **Agregar objetos**, seleccione una de las opciones siguientes: **Objetos específicos...**, **Todos los objetos de los tipos...** o **El servidor**_nombre\_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  En el cuadro de diálogo **Agregar objetos**, seleccione una de las opciones siguientes: **Objetos específicos...**, **Todos los objetos de los tipos...** o **Servidor**_nombre\_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **NOTA:** Cuando se selecciona **El servidor**_nombre\_servidor_, se rellena automáticamente la cuadrícula superior con todos los objetos que se pueden proteger de ese servidor.  
+    > **NOTA:** Cuando se selecciona **Servidor**_nombre\_servidor_, se rellena de forma automática la cuadrícula superior con todos los objetos que se pueden proteger de ese servidor.  
   
 3.  Si selecciona **Objetos específicos...**:  
   
     1.  En el cuadro de diálogo **Seleccionar objetos**, en **Seleccionar estos tipos de objeto**, haga clic en **Tipos de objeto...**.  
   
-    2.  En el cuadro de diálogo **Seleccionar tipos de objeto** , seleccione alguno o todos los tipos de objeto siguientes: **Extremos**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad**y **Roles del servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  En el cuadro de diálogo **Seleccionar tipos de objeto**, seleccione alguno o todos los tipos de objeto siguientes: **Puntos de conexión**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad** y **Roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)**, haga clic en **Examinar...**.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "52516641"
   
     5.  En el cuadro de diálogo **Seleccionar objetos** , haga clic en **Aceptar**.  
   
-4.  Si selecciona **Todos los objetos de los tipos...** en el cuadro de diálogo **Seleccionar tipos de objeto**, seleccione alguno o todos los tipos de objeto siguientes: **Puntos de conexión**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad** y **Roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Si selecciona **Todos los objetos de los tipos...**, en el cuadro de diálogo **Seleccionar tipos de objeto**, seleccione alguno o todos los tipos de objeto siguientes: **Puntos de conexión**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad** y **Roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nombre**  
  El nombre de cada entidad de seguridad o elemento protegible que se agrega a la cuadrícula.  
@@ -264,7 +264,7 @@ ms.locfileid: "52516641"
   
  Para obtener más información, vea [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: pasos que se deben realizar después de crear un inicio de sesión  
+##  <a name="FollowUp"></a> Seguimiento: Pasos que se deben realizar después de crear un inicio de sesión  
  Después de crear un inicio de sesión, este puede conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero no necesariamente tiene permisos suficientes para realizar ningún trabajo útil. En la lista siguiente se proporcionan vínculos a las acciones de inicio de sesión comunes.  
   
 -   Para combinar el inicio de sesión con un rol, vea [Combinar un rol](../../../relational-databases/security/authentication-access/join-a-role.md).  
@@ -273,7 +273,7 @@ ms.locfileid: "52516641"
   
 -   Para conceder un permiso a un inicio de sesión, vea [Conceder un permiso a una entidad de seguridad](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

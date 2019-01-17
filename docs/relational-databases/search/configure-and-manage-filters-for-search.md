@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b18963f7b512d2fa395d53406528a2d813b364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba65abd869322574cd2047be5066aad4b1c30767
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739703"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53552957"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurar y administrar filtros para búsquedas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,15 +40,19 @@ Los documentos binarios se pueden almacenar en una sola columna de tipo **varbin
 
 ## <a name="installed-filters"></a>Filtros instalados 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala sus propios filtros HTML y XML. Además, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también carga los filtros para formatos de propietario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (.doc, .xdoc, .ppt, etcétera) que ya están instalados en el sistema operativo. Para identificar los filtros que están cargados actualmente en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use el procedimiento almacenado [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) , como se explica a continuación:  
-  
+
 ```sql
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
+
+> [!NOTE]
+> Incluso con la versión más reciente del módulo Filter Pack de Office que proporciona compatibilidad con .xlsx, SQL Server no admite hojas de cálculo Strict Open XML.  No se devolverá ningún error, simplemente se producirá un error en SQL Server al indexar el contenido de cualquier hoja de cálculo Strict Open XML.
+
 ## <a name="non-microsoft-filters"></a>Filtros que no son de Microsoft
 Para poder usar filtros para formatos que no son de [!INCLUDE[msCoName](../../includes/msconame-md.md)], debe cargarlos manualmente en la instancia del servidor. Para obtener información sobre cómo instalar filtros adicionales, vea [Ver o cambiar los filtros y separadores de palabras registrados](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
  [Compatibilidad de FILESTREAM con otras características de SQL Server](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)  
   

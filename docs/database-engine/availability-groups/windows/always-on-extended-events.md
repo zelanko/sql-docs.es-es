@@ -1,6 +1,7 @@
 ---
-title: Eventos extendidos de grupos de disponibilidad Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Configuración de eventos extendidos para grupos de disponibilidad
+description: SQL Server define eventos extendidos que son específicos de los grupos de disponibilidad Always On. Puede supervisar estos eventos extendidos en una sesión para ayudar con el diagnóstico de causas raíz cuando solucione problemas de un grupo de disponibilidad.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413202"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207574"
 ---
-# <a name="always-on-availability-groups-extended-events"></a>Eventos extendidos de grupos de disponibilidad Always On
+# <a name="configure-extended-events-for-always-on-availability-groups"></a>Configuración de eventos extendidos para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server define eventos extendidos que son específicos de los grupos de disponibilidad Always On. Puede supervisar estos eventos extendidos en una sesión para ayudar con el diagnóstico de causas raíz cuando solucione problemas de un grupo de disponibilidad. Puede ver los eventos extendidos de un grupo de disponibilidad con la siguiente consulta:  
   
@@ -302,7 +303,7 @@ GO
 |availability_group_id|Guid|Identificador del grupo de disponibilidad.|  
 |availability_group_name|unicode_string|El nombre del grupo de disponibilidad.|  
 |ddl_action|alwayson_ddl_action|Indica el tipo de acción de DDL: CREATE, ALTER o DROP.|  
-|ddl_phase|ddl_opcode|Indica la fase de la operación de DDL: BEGIN, COMMIT o ROLLBACK.|  
+|ddl_phase|ddl_opcode|Indica la fase de una operación de DDL: BEGIN, COMMIT o ROLLBACK.|  
 |.|unicode_string|Texto de la instrucción que se ha ejecutado.|  
   
 #### <a name="alwaysonhealth-session-definition"></a>Definición de sesión alwayson_health  
@@ -355,7 +356,7 @@ GO
   
 |columna|Description|  
 |------------|-----------------|  
-|Nombre|error_reported<br /><br /> Número de error 1480: La base de datos REPLICATION_TYPE_MSG "DATABASE_NAME" cambia roles de "OLD_ROLE" a "NEW_ROLE" debido a REASON_MSG|  
+|Nombre|error_reported<br /><br /> Número de error 1480: La base de datos REPLICATION_TYPE_MSG "NOMBRE_DE_BASE_DE_DATOS" cambia roles de "ROL_ANTERIOR" a "ROL_NUEVO" debido a REASON_MSG|  
 |Categoría|errors|  
 |Canal|Administración|  
   

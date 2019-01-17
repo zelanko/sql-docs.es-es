@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f19e41bb14179dcf0a01de36c86a9f4ff5fdfc88
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2b5c3e694518f5500736ee1d991d6253e1ac5357
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970486"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978991"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ISNULL ( check_expression , replacement_value )
  Es la [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que se va a comprobar si es NULL. *check_expression* puede ser de cualquier tipo.  
   
  *replacement_value*  
- Es la expresión que se devuelve si *check_expression* es NULL. *replacement_value* debe ser de un tipo que se puede convertir implícitamente en el tipo de *check_expression*.  
+ Es la expresión que se devuelve si *check_expression* es NULL. *valor_de_reemplazo* debe ser de un tipo que se pueda convertir implícitamente en el tipo de *expresión_de_comprobación*.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Devuelve el mismo tipo que *check_expression*. Si se proporciona un literal NULL como *check_expression*, devuelve el tipo de datos de *replacement_value*. Si se proporciona un literal NULL como *check_expression* y no se proporciona *replacement_value*, se devuelve un **int**.  
@@ -84,7 +84,7 @@ GO
  (1 row(s) affected)
  ```  
   
-### <a name="b-using-isnull"></a>B. Usar ISNULL  
+### <a name="b-using-isnull"></a>b. Usar ISNULL  
  En el siguiente ejemplo se selecciona la descripción, el porcentaje de descuento, la cantidad mínima y la cantidad máxima de todas las ofertas especiales de `AdventureWorks2012`. Si la cantidad máxima de una oferta especial determinada es NULL, el valor de `MaxQty` mostrado en el conjunto de resultados es `0.00`.  
   
 ```  
@@ -184,7 +184,7 @@ FROM dbo.DimProduct
 WHERE Weight IS NULL;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)   
  [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   

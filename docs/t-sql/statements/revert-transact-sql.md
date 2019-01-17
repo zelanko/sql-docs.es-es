@@ -23,12 +23,12 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 92876c7411082757cdd3ac3d06885b9a88520c89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03b1a748eaece8345a9d1c496633dd318a948692
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796253"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980411"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ EXECUTE dbo.usp_myproc;
  Cuando se especifica como una instrucción independiente, REVERT se aplica a las instrucciones EXECUTE AS definidas en un lote o sesión. REVERT no tiene efecto si la instrucción EXECUTE AS correspondiente contiene la cláusula WITH NO REVERT. En este caso, el contexto de ejecución permanece efectivo hasta que se quita la sesión.  
   
 ## <a name="using-revert-with-cookie"></a>Usar REVERT WITH COOKIE  
- La instrucción EXECUTE AS que se usa para establecer el contexto de ejecución de una sesión puede incluir la cláusula opcional WITH NO REVERT COOKIE = @*varbinary_variable*. Cuando esta instrucción se ejecuta, [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa la cookie a @*varbinary_variable*. El contexto de ejecución que establece esa instrucción se puede volver al contexto anterior solo si la llamada a la instrucción REVERT WITH COOKIE = @*varbinary_variable* contiene el valor *@varbinary_variable* correcto.  
+ La instrucción EXECUTE AS que se usa para establecer el contexto de ejecución de una sesión puede incluir la cláusula opcional WITH NO REVERT COOKIE = @*variable_varbinary*. Cuando se ejecuta esta instrucción, [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa la cookie a @*variable_varbinary*. El contexto de ejecución que establece esa instrucción se puede volver al contexto anterior solo si la llamada a la instrucción REVERT WITH COOKIE = @*varbinary_variable* contiene el valor *@varbinary_variable* correcto.  
   
  Este mecanismo es útil en un entorno donde se utiliza la agrupación de conexiones. La agrupación de conexiones es el mantenimiento de un grupo de base de datos que reutilizan las aplicaciones entre varios usuarios finales. Puesto que el valor pasado a *@varbinary_variable* solo lo conoce el llamador de la instrucción EXECUTE AS (en este caso, la aplicación), el llamador puede garantizar que el usuario final que llama a la aplicación no puede cambiar el contexto de ejecución que establece. Después de volver el contexto de ejecución, la aplicación puede cambiar el contexto a otra entidad de seguridad.  
   
@@ -131,8 +131,8 @@ DROP USER user2;
 GO  
 ```  
   
-### <a name="b-using-the-with-cookie-clause"></a>B. Usar la cláusula WITH COOKIE  
- En este ejemplo se establece el contexto de ejecución de una sesión en un usuario determinado y se especifica la cláusula WITH NO REVERT COOKIE = @*varbinary_variable*. La instrucción `REVERT` debe especificar el valor pasado a la variable `@cookie` en la instrucción `EXECUTE AS` para volver correctamente el contexto al llamador. Para ejecutar este ejemplo, deben existir el inicio de sesión `login1` y el usuario `user1` creados en el ejemplo A.  
+### <a name="b-using-the-with-cookie-clause"></a>b. Usar la cláusula WITH COOKIE  
+ En el ejemplo siguiente se establece el contexto de ejecución de una sesión en un usuario determinado y se especifica la cláusula WITH NO REVERT COOKIE = @*variable_varbinary*. La instrucción `REVERT` debe especificar el valor pasado a la variable `@cookie` en la instrucción `EXECUTE AS` para volver correctamente el contexto al llamador. Para ejecutar este ejemplo, deben existir el inicio de sesión `login1` y el usuario `user1` creados en el ejemplo A.  
   
 ```  
 DECLARE @cookie varbinary(100);  
@@ -153,7 +153,7 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EXECUTE AS &#40;cláusula de Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

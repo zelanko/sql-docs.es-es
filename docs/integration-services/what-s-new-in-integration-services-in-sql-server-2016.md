@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640202"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205844"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novedades de Integration Services en SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -180,7 +180,7 @@ La característica Implementación incremental de paquetes le permite implementa
   
 -   API del modelo de objetos de administración (MOM)  
   
- Para obtener más información, consulte [Deploy Integration Services (SSIS) Projects and Packages(Implementación de proyectos y paquetes de Integration Services [SSIS])](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ Para más información, vea [Implementación de proyectos y paquetes de Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
 
 ####  <a name="encrypted"></a> Compatibilidad con Always Encrypted en el catálogo de SSIS  
  SSIS ya es compatible con la característica Always Encrypted en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea las entradas de blog siguientes.  
@@ -200,7 +200,7 @@ La característica Implementación incremental de paquetes le permite implementa
  El nuevo nivel de registro **RuntimeLineage** del catálogo de SSIS recopila los datos necesarios para realizar un seguimiento de la información de linaje en el flujo de datos. Puede analizar esta información de linaje para asignar la relación de linaje entre las tareas. Los ISV y los desarrolladores pueden generar herramientas de asignación de linaje personalizadas con esta información. 
 
 ####  <a name="CustomLogging"></a> Nuevo nivel de registro personalizado en el catálogo de SSIS  
- Las versiones anteriores del catálogo de SSIS le permiten elegir entre cuatro niveles de registro integrados al ejecutar un paquete: **ninguno, básico, rendimiento o detallado**. SQL Server 2016 agrega el nivel de registro **RuntimeLineage**. Además, ahora puede crear varios niveles de registro personalizado y guardarlos en el catálogo de SSIS, y elegir el nivel de registro que va a usar cada vez que ejecute un paquete. Para cada nivel de registro personalizado, seleccione solo las estadísticas y los eventos que quiera capturar. También puede incluir el contexto del evento para ver los valores de las variables, las cadenas de conexión y las propiedades de la tarea. Para obtener más información, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ En las versiones anteriores del catálogo de SSIS se permitía elegir entre cuatro niveles de registro integrados al ejecutar un paquete: **Ninguno, Básico, Rendimiento o Detallado**. SQL Server 2016 agrega el nivel de registro **RuntimeLineage**. Además, ahora puede crear varios niveles de registro personalizado y guardarlos en el catálogo de SSIS, y elegir el nivel de registro que va a usar cada vez que ejecute un paquete. Para cada nivel de registro personalizado, seleccione solo las estadísticas y los eventos que quiera capturar. También puede incluir el contexto del evento para ver los valores de las variables, las cadenas de conexión y las propiedades de la tarea. Para obtener más información, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Nombres de columna para errores del flujo de datos  
  Al redirigir las filas en el flujo de datos que contienen errores a una salida de error, el resultado contiene un identificador numérico para la columna en la que se produjo el error, pero no muestra el nombre de la columna. Ahora existen varias formas de buscar o mostrar el nombre de la columna en la que se produjo el error.  
@@ -213,7 +213,7 @@ La característica Implementación incremental de paquetes le permite implementa
   
 -   En el Componente de script o en un componente de flujo de datos personalizado, llame al nuevo método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> de la interfaz IDTSComponentMetadata100.  
   
- Para más info sobre esta mejora, vea el siguiente blog publicado por el desarrollador de SSIS Bo Fan: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(Mejoras de la columna de error para el flujo de datos de SSIS).  
+ Para más información sobre esta mejora, vea la entrada de blog siguiente del desarrollador de SSIS Bo Fan: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx) (Mejoras de la columna de error para el flujo de datos de SSIS).  
   
 > [!NOTE]  
 >  (Esta compatibilidad se amplió en versiones posteriores. Para obtener más información, vea [Compatibilidad ampliada con nombres de columna de error](#getidstring) y [Nueva interfaz IDTSComponentMetaData130 de la API](#CMD130)).  
@@ -326,7 +326,7 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
    
  ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > Si desarrolla extensiones personalizadas para SSIS, vea [Admitir varias versiones en los componentes personalizados](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) y [Conseguir que la compatibilidad con varias versiones de SSDT 2015 para SQL Server 2016 admita extensiones personalizadas de SSIS](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>Mejor experiencia de administración en SQL Server Management Studio

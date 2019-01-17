@@ -1,6 +1,7 @@
 ---
-title: Mantener una base de datos de publicación AlwaysOn (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Administración de una base de datos del publicador replicada como parte de un grupo de disponibilidad
+description: 'Una descripción sobre cómo administrar y mantener una base de datos que actúa como publicador en una replicación de SQL y también participa en un grupo de disponibilidad Always On. '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5d6b88887e20f29c4d8e123143544f8c76d60fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1c8c674eb0e86d0b78348f07fb95259327582cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600334"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208734"
 ---
-# <a name="maintaining-an-always-on-publication-database-sql-server"></a>Mantener una base de datos de publicación AlwaysOn (SQL Server)
+# <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Administración de una base de datos del publicador replicada como parte de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   En este tema se tratan consideraciones especiales para mantener una base de datos de publicación cuando se usan grupos de disponibilidad AlwaysOn.  
@@ -118,10 +119,10 @@ ms.locfileid: "47600334"
   
 -   [Suscriptores de replicación y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidad AlwaysOn: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Grupos de disponibilidad Always On: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Replicación de SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

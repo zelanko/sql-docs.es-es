@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509959"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531100"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ OPENROWSET
  Para obtener información acerca del uso de la opción BULK, vea la sección "Comentarios" más adelante en este tema. Para obtener información acerca de los permisos que necesita la opción BULK, vea la sección "Permisos", más adelante en este tema.  
   
 > [!NOTE]  
->  Cuando se utiliza para importar datos con el modelo de recuperación completa, OPENROWSET (BULK ...) no optimiza el registro.  
+> Cuando se utiliza para importar datos con el modelo de recuperación completa, OPENROWSET (BULK ...) no optimiza el registro.  
   
  Para más información sobre cómo preparar datos para importaciones masivas, vea [Preparar los datos para exportar o importar de forma masiva &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
@@ -136,7 +136,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data
 > CODEPAGE no es una opción admitida en Linux.
 
 > [!NOTE]  
->  Se recomienda especificar un nombre de intercalación para cada columna en un archivo de formato, excepto cuando quiera que la opción 65001 tenga prioridad sobre la especificación de la página de códigos o la intercalación.  
+> Se recomienda especificar un nombre de intercalación para cada columna en un archivo de formato, excepto cuando quiera que la opción 65001 tenga prioridad sobre la especificación de la página de códigos o la intercalación.  
   
 |Valor de CODEPAGE|Descripción|  
 |--------------------|-----------------|  
@@ -168,7 +168,7 @@ Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blo
  El valor predeterminado de *maximum_errors* es 10.  
   
 > [!NOTE]  
->  MAX_ERRORS no se aplica en las restricciones CHECK o para convertir tipos de datos **money** y **bigint**.  
+> MAX_ERRORS no se aplica en las restricciones CHECK o para convertir tipos de datos **money** y **bigint**.  
   
  ROWS_PER_BATCH =*rows_per_batch*  
  Especifica el número aproximado de filas de datos del archivo de datos. Este valor debe ser del mismo tipo que el número de filas real.  
@@ -198,7 +198,7 @@ Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blo
  Devuelve el contenido de *data_file* como un conjunto de filas de una sola columna y una sola fila de tipo **varbinary(max)**.  
   
 > [!IMPORTANT]  
->  Recomendamos que importe los datos XML solo mediante la opción SINGLE_BLOB, en vez de SINGLE_CLOB y SINGLE_NCLOB, ya que solo SINGLE_BLOB admite todas las conversiones de codificación de Windows.  
+> Recomendamos que importe los datos XML solo mediante la opción SINGLE_BLOB, en vez de SINGLE_CLOB y SINGLE_NCLOB, ya que solo SINGLE_BLOB admite todas las conversiones de codificación de Windows.  
   
  SINGLE_CLOB  
  Al leer *data_file* como ASCII, el contenido se devuelve como un conjunto de filas de tipo **varchar(max)** de una sola fila y una sola columna, por medio de la intercalación de la base de datos actual.  
@@ -248,10 +248,10 @@ Especifica un carácter que se usará como carácter de comillas en el archivo C
      `FROM OPENROWSET(BULK...) AS table_alias`  
   
      `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`  
->    [!IMPORTANT]  
->    Si `AS <table_alias>` no se puede agregar, se producirá el error:    
->    Mensaje 491, Nivel 16, Estado 1, Línea 20    
->    Debe especificarse un nombre de correlación para el conjunto de filas masivo en la cláusula FROM.    
+> [!IMPORTANT]  
+> Si `AS <table_alias>` no se puede agregar, se producirá el error:    
+> Mensaje 491, Nivel 16, Estado 1, Línea 20    
+> Debe especificarse un nombre de correlación para el conjunto de filas masivo en la cláusula FROM.    
   
 -   Una instrucción `SELECT...FROM OPENROWSET(BULK...)` consulta los datos directamente en el archivo, sin importar los datos a una tabla. Las instrucciones `SELECT...FROM OPENROWSET(BULK...)` también pueden mostrar los alias de las columnas masivas usando un archivo de formato para especificar los nombres de las columnas y también los tipos de datos.  
   
@@ -262,13 +262,13 @@ Especifica un carácter que se usará como carácter de comillas en el archivo C
  Para más información sobre cómo usar las instrucciones `INSERT...SELECT * FROM OPENROWSET(BULK...)`, vea [Importar y exportar datos de forma masiva &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md). Para obtener más información sobre cuándo se incluyen en el registro de transacciones las operaciones de inserción de filas que se efectúan durante una importación en bloque, vea [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 > [!NOTE]  
->  Cuando use `OPENROWSET`, es importante que entienda el modo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controla la suplantación. Para más información sobre las consideraciones de seguridad, vea [Importación en bloque de datos mediante las instrucciones BULK INSERT u OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+> Cuando use `OPENROWSET`, es importante que entienda el modo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controla la suplantación. Para más información sobre las consideraciones de seguridad, vea [Importación en bloque de datos mediante las instrucciones BULK INSERT u OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>Importar de forma masiva datos SQLCHAR, SQLNCHAR o SQLBINARY  
  OPENROWSET(BULK...) presupone que, si no se especifica, la longitud máxima de los datos SQLCHAR, SQLNCHAR o SQLBINARY no supera los 8000 bytes. Si los datos importados están en un campo de datos LOB que incluye cualquier objeto **varchar(max)**, **nvarchar(max)** o **varbinary(max)** que supera los 8000 bytes, debe usar un archivo de formato XML que defina la longitud máxima para el campo de datos. Para especificar la longitud máxima, edite el archivo de formato y declare el atributo MAX_LENGTH.  
   
 > [!NOTE]  
->  Un archivo de formato generado automáticamente no especifica la longitud o la longitud máxima de un campo LOB. Sin embargo, es posible editar un archivo de formato y especificar la longitud o la longitud máxima manualmente.  
+> Un archivo de formato generado automáticamente no especifica la longitud o la longitud máxima de un campo LOB. Sin embargo, es posible editar un archivo de formato y especificar la longitud o la longitud máxima manualmente.  
   
 ### <a name="bulk-exporting-or-importing-sqlxml-documents"></a>Exportación o importación masiva de documentos SQLXML  
  Para importar o exportar de forma masiva datos SQLXML, utilice uno de los tipos de datos siguientes en el archivo de formato.  
@@ -295,11 +295,11 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
       ORDER BY GroupName, Name') AS a;  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>B. Usar el proveedor Microsoft OLE DB para Jet  
+### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>b. Usar el proveedor Microsoft OLE DB para Jet  
  En el siguiente ejemplo se obtiene acceso a la tabla `Customers` de la base de datos `Northwind` de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access a través del proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Jet.  
   
 > [!NOTE]  
->  En este ejemplo se supone que está instalado Access. Para ejecutar este ejemplo, debe instalar la base de datos Northwind.  
+> En este ejemplo se supone que está instalado Access. Para ejecutar este ejemplo, debe instalar la base de datos Northwind.  
   
 ```sql  
 SELECT CustomerID, CompanyName  
@@ -315,7 +315,7 @@ GO
  En el siguiente ejemplo se seleccionan todos los datos de la tabla `Customers` de la instancia local de la base de datos `Northwind` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de la tabla `Orders` de la base de datos `Northwind` de Access que se encuentra en el mismo equipo.  
   
 > [!NOTE]  
->  En este ejemplo se supone que está instalado Access. Para ejecutar este ejemplo, debe instalar la base de datos Northwind.  
+> En este ejemplo se supone que está instalado Access. Para ejecutar este ejemplo, debe instalar la base de datos Northwind.  
   
 ```sql  
 USE Northwind  ;  
@@ -448,7 +448,7 @@ Para ver ejemplos completos de `OPENROWSET`, incluido cómo configurar la creden
   
 -   [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Importar y exportar datos en bloque &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   

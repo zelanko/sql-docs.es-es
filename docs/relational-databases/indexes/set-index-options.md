@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0dbf0368c86b906a2f482010779407353f771db8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5f852bcf9a1cf195df6ebf05738cc63536ee4941
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392889"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588109"
 ---
 # <a name="set-index-options"></a>Establecer opciones de índice
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52392889"
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Las siguientes opciones se aplican inmediatamente al índice mediante la cláusula SET de la instrucción ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY y STATISTICS_NORECOMPUTE.  
+-   Las opciones siguientes se aplican inmediatamente al índice mediante la cláusula SET de la instrucción ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY y STATISTICS_NORECOMPUTE.  
   
 -   Las opciones siguientes se pueden establecer cuando se vuelve a generar un índice mediante ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP y DROP_EXISTING (solo CREATE INDEX).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52392889"
   
 7.  Haga clic en **Cerrar**.  
   
-8.  En el menú **Archivo** , seleccione **Guardar***nombre_de_tabla*.  
+8.  En el menú **Archivo** , seleccione **Guardar**_nombre_tabla_.  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Para modificar las propiedades de un índice en el Explorador de objetos  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52392889"
   
 7.  Cambie los valores de una o todas las propiedades para personalizar el índice.  
   
-8.  Para agregar, quitar o cambiar la posición de una columna de índice, seleccione la página **General** del cuadro de diálogo **Propiedades del índice:** *nombre_índice* . Para obtener más información, consulte [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).  
+8.  Para agregar, quitar o cambiar la posición de una columna de índice, seleccione la página **General** del cuadro de diálogo **Propiedades del índice:** _nombre_índice_ . Para obtener más información, consulte [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

@@ -5,19 +5,18 @@ ms.date: 07/08/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392345"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764607"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novedades de Master Data Services (MDS)
 
@@ -82,7 +81,7 @@ ms.locfileid: "52392345"
   
  Ahora es posible asignar explícitamente a un usuario el permiso de administrador en el nivel de modelo. Esto significa que si más adelante se le asignan permisos al usuario en el subárbol del modelo, como el nivel de entidad, no perderá el permiso de administrador.  
   
- En esta versión de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se proporcionan más niveles de permisos mediante la introducción de los siguientes permisos nuevos: lectura, creación, actualización y eliminación. Por ejemplo, un usuario que solo tenga el permiso de actualización, ahora puede actualizar los datos maestros sin crear ni eliminar los datos. Cuando se le concede a un usuario el permiso de creación, actualización y eliminación, se le asigna automáticamente el permiso de lectura. También puede combinar los permisos de lectura, creación, actualización y eliminación.  
+ En esta versión de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se proporcionan más niveles de permisos mediante la introducción de los siguientes permisos nuevos: Leer, Crear, Actualizar y Eliminar. Por ejemplo, un usuario que solo tenga el permiso de actualización, ahora puede actualizar los datos maestros sin crear ni eliminar los datos. Cuando se le concede a un usuario el permiso de creación, actualización y eliminación, se le asigna automáticamente el permiso de lectura. También puede combinar los permisos de lectura, creación, actualización y eliminación.  
   
  Cuando se actualiza a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los permisos anteriores se convierten en permisos nuevos, tal como se muestra en la tabla siguiente.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "52392345"
 |El usuario que instala originalmente [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tiene el permiso de administrador del servidor.|El usuario tiene el permiso de función de superusuario.|  
 |El usuario tiene permisos de actualización en el nivel de modelo y ningún permiso en el subárbol de modelo, por lo que implícitamente es administrador del modelo.|El usuario tiene permisos explícitos de administrador en el nivel de modelo.|  
 |El usuario tiene permisos de solo lectura.|El usuario tiene permisos de acceso de lectura.|  
-|El usuario tiene permisos de actualización.|El usuario tiene los cuatro permisos de acceso: creación, actualización, eliminación y lectura.|  
+|El usuario tiene permisos de actualización.|El usuario tiene los cuatro permisos de acceso: Crear, Actualizar, Eliminar y Leer.|  
 |El usuario tiene permisos de denegación.|El usuario tiene permisos de denegación.|  
   
  Para más información sobre los permisos, consulte [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
@@ -229,9 +228,9 @@ ms.locfileid: "52392345"
    
  **Actualización de los paquetes de implementación de modelos de ejemplo**  
   
- Los paquetes de ejemplo se han actualizado para admitir nuevos escenarios. Para más información, consulte [Ejemplos de SQL Server: paquetes de implementación de modelos (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Los paquetes de ejemplo se han actualizado para admitir nuevos escenarios. Para más información, vea [Ejemplos de SQL Server: Paquetes de implementación de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características de Master Data Services y Data Quality Services compatibles con las ediciones de SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Características en desuso de Master Data Services](../master-data-services/deprecated-master-data-services-features.md)   
  [Características descontinuadas de Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  

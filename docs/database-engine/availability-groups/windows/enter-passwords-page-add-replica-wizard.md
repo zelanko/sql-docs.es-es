@@ -1,6 +1,7 @@
 ---
-title: Página Escribir contraseñas (Asistente para agregar réplica) | Microsoft Docs
-ms.custom: ''
+title: Página Escribir contraseñas (Asistente para agregar réplica) para grupos de disponibilidad
+description: Descripción de las propiedades que se encuentran en la página "Escribir contraseñas" del "Asistente para agregar réplica" en SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11b171ef067bd5abdc29d306421b956792f1a55b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7472049d96abf98f55dcc90486012b33ba13ba66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790583"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215046"
 ---
-# <a name="enter-passwords-page-add-replica-wizard"></a>Página Escribir contraseñas (Asistente para agregar réplica)
+# <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Página Escribir contraseñas (Asistente para agregar réplica) para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema de Ayuda se describen las opciones de la página **Escribir contraseñas** . Este tema se aplica al [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
@@ -49,7 +50,7 @@ ms.locfileid: "47790583"
   
 -   [Usar el Asistente para agregar una réplica al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

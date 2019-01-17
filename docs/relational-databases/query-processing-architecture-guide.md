@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542518"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591889"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ En los ejemplos siguientes se muestra qué planes de ejecución se quitan de la 
 * Se suele hacer referencia a un plan de ejecución como si su costo nunca llegara a ser cero. El plan permanece en la caché de planes y no se quita a menos que haya presión de memoria y el costo actual sea cero.
 * Se insertó un plan de ejecución ad hoc y no se le vuelve a hacer referencia antes de que exista presión de memoria. Dado que los planes ad hoc se inician con un costo actual de cero, cuando [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examina el plan de ejecución, verá el costo actual de cero y quitará el plan de la caché de planes. El plan de ejecución ad hoc permanece en la caché de planes con el costo actual de cero cuando ya no hay presión de memoria.
 
-Para quitar manualmente un único plan o todos los planes de la memoria caché, utilice [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
+Para quitar manualmente un único plan o todos los planes de la memoria caché, utilice [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). Desde [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` borra la memoria caché (de plan) de procedimientos de la base de datos en ámbito.
 
 ### <a name="recompiling-execution-plans"></a>Volver a compilar planes de ejecución
 
@@ -572,7 +572,7 @@ Las siguientes cláusulas de consulta no incluyen parámetros. Tenga en cuenta q
 La parametrización se produce a nivel de instrucciones Transact-SQL individuales. En otras palabras, las instrucciones individuales de un lote incluyen parámetros. Tras la compilación, una consulta con parámetros se ejecuta en el contexto del lote en el que se envió originalmente. Si un plan de ejecución de una consulta se almacena en caché, puede determinar si la consulta incluía parámetros haciendo referencia a la columna sql de la vista de administración dinámica sys.syscacheobjects. Si una consulta incluye parámetros, los nombres y tipos de datos de parámetros se anteponen al texto del lote enviado en esta columna, como (\@1 tinyint).
 
 > [!NOTE]
-> Los nombres de parámetros son arbitrarios. Los usuarios o las aplicaciones no deben basarse en un determinado orden de nombres. Además, los elementos siguientes pueden cambiar de una versión a otra de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y de una actualización de Service Pack a otra: los nombres de parámetros, la selección de literales que incluyen parámetros y el espaciado en el texto con parámetros.
+> Los nombres de parámetros son arbitrarios. Los usuarios o las aplicaciones no deben basarse en un determinado orden de nombres. Además, puede cambiar lo siguiente entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y las actualizaciones de Service Pack: los nombres de parámetro, la elección de literales con parámetros y el espaciado en el texto con parámetros.
 
 #### <a name="data-types-of-parameters"></a>Tipos de datos de parámetros
 
@@ -1026,8 +1026,8 @@ He aquí otro ejemplo: supongamos que la tabla tiene cuatro particiones en la co
 |Particiones de tabla basadas en la columna A |Busca la columna B en cada partición de tabla |
 |----|----|
 |Partición de tabla 1: A < 10   |B=50, B=100, B=150 |
-|Partición de tabla 2: A >= 10 y A < 20   |B=50, B=100, B=150 |
-|Partición de tabla 3: A >= 20 y A < 30   |B=50, B=100, B=150 |
+|Partición de tabla 2: A >= 10 Y A < 20   |B=50, B=100, B=150 |
+|Partición de tabla 3: A >= 20 Y A < 30   |B=50, B=100, B=150 |
 |Partición de tabla 4: A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Procedimientos recomendados

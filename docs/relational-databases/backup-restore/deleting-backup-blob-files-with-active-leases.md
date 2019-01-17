@@ -11,12 +11,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9e2237473024a75227ff7ec7838849618cdf54d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14a4ff6a2af3182e8e62a019993d39a6470caf37
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663464"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205123"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,22 +31,22 @@ ms.locfileid: "51663464"
 ## <a name="manage-orphaned-blobs"></a>Administrar blobs huérfanos  
  En los pasos siguientes se describe cómo realizar la limpieza después de una actividad de copia de seguridad o restauración con errores. Puede realizar todos los pasos mediante scripts de PowerShell. En la sección siguiente, se incluye un ejemplo de script de PowerShell:  
   
-1.  **Identificar blobs con concesiones**: si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso y usarlo para limpiar los blobs.  También puede usar las propiedades LeaseStats y LeastState para identificar blobs con concesiones. Una vez identificados los blobs, revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
+1.  **Identificar blobs con concesiones:** si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso, y usarlo para limpiar los blobs.  También puede usar las propiedades LeaseStats y LeastState para identificar blobs con concesiones. Una vez identificados los blobs, revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
   
-2.  **Interrumpir la concesión**: una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](https://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
+2.  **Interrumpir la concesión:** una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](https://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
   
     > [!TIP]  
     >  SQL Server emite un identificador de concesión para establecer acceso exclusivo durante la operación de restauración. El identificador de concesión de restauración es BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Eliminar el blob**: para eliminar un blob con una concesión activa, debe interrumpir primero la concesión.  
+3.  **Eliminar el blob:** para eliminar un blob con una concesión activa, primero debe interrumpir la concesión.  
   
 ###  <a name="Code_Example"></a> Ejemplo de script de PowerShell  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Si está ejecutando PowerShell 2.0, quizás tenga problemas al cargar el ensamblado de Microsoft WindowsAzure.Storage.dll. Recomendamos que actualice [PowerShell](https://docs.microsoft.com/powershell/) para resolver el problema. También puede usar la siguiente solución alternativa para PowerShell 2.0:  
->   
+> 
 >  -   Cree o modifique el archivo powershell.exe.config para cargar los ensamblados de .NET 2.0 y .NET 4.0 en tiempo de ejecución con lo siguiente:  
->   
+> 
 >     ```  
 >     \<?xml version="1.0"?>   
 >     <configuration>   
@@ -55,7 +55,7 @@ ms.locfileid: "51663464"
 >             <supportedRuntime version="v2.0.50727"/>   
 >         </startup>   
 >     </configuration>  
->   
+> 
 >     ```  
   
  El siguiente script de ejemplo identifica blobs con concesiones activas y, después, las interrumpe. En el ejemplo también se muestra cómo filtrar los identificadores de concesión de versión.  
@@ -84,7 +84,7 @@ ms.locfileid: "51663464"
   
      **Interrumpir concesiones**  
   
-     **La concesión de \<dirección URL del blob es una concesión de restauración: solo verá este mensaje si tiene un blob con una concesión de restauración que todavía esté activa.**  
+     **La concesión de \<dirección URL del blob> es una concesión de restauración: solo verá este mensaje si tiene un blob con una concesión de restauración que todavía esté activa.**  
   
      **La concesión en \<dirección URL del blob no es una concesión de restauración. Interrumpiendo la concesión en \<dirección URL del blob.**  
   

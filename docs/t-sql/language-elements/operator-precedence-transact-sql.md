@@ -18,19 +18,19 @@ ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4eb0d7865b71ba29ec00895e64574c0a188b3bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 933212da81784d7d186fc6ef7c0cdfaa4edab24b
+ms.sourcegitcommit: 7ead3a042d369315fc83a9ccc3d74f62e7b05bc0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795603"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012321"
 ---
 # <a name="operator-precedence-transact-sql"></a>Prioridad de operador (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cuando una expresión compleja tiene múltiples operadores, la prioridad de operador determina la secuencia en que se realiza la operación. El orden de ejecución puede afectar de manera significativa al valor resultante.  
   
- Los operadores tienen los niveles de prioridad que se muestran en la siguiente tabla. Un operador de los niveles más altos se evalúa antes que un operador de un nivel más bajo.  
+ Los operadores tienen los niveles de prioridad que se muestran en la siguiente tabla. Un operador en niveles más altos se evalúa antes que un operador en un nivel inferior (en la tabla siguiente, 1 es el nivel más alto y 8 el más bajo).
   
 |Nivel|Operadores|  
 |-----------|---------------|  
@@ -82,7 +82,7 @@ SET @MyNumber = 2 * (4 + (5 - 3) );
 SELECT @MyNumber;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Operadores lógicos &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  

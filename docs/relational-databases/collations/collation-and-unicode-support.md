@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661724"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206444"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ Las opciones asociadas con una intercalación son la distinción de mayúsculas 
 |------------|-----------------|    
 |Distinguir mayúsculas de minúsculas (_CS)|Distingue entre letras mayúsculas y minúsculas. Si se selecciona, las letras minúsculas se ordenan por delante de sus versiones en mayúsculas. Si esta opción no está seleccionada, la intercalación no distinguirá mayúsculas de minúsculas. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera las versiones mayúscula y minúscula de las letras como letras idénticas a efectos de ordenación. Puede seleccionar explícitamente no distinguir entre mayúsculas y minúsculas especificando _CI.|    
 |Distinguir acentos (_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, 'a' no es igual a 'ấ'. Si esta opción no está seleccionada, la intercalación no distinguirá acentos. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera las versiones acentuadas y no acentuadas de las letras como letras idénticas a efectos de ordenación. Puede seleccionar explícitamente no distinguir acentos especificando _AI.|    
-|Distinguir kana (_KS)|Distingue entre los dos tipos de caracteres Kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera los caracteres Hiragana y Katakana como caracteres iguales a efectos de ordenación. La omisión de esta opción es el único método para especificar Kana-insensibilidad.|    
+|Distinguir kana (_KS)|Distingue entre dos tipos de caracteres kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera los caracteres Hiragana y Katakana como caracteres iguales a efectos de ordenación. La omisión de esta opción es el único método para especificar Kana-insensibilidad.|    
 |Distinguir ancho (_WS)|Distingue entre caracteres de ancho total y ancho medio. Si no se activa esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que la representación de ancho completo y de ancho medio del mismo carácter son idénticas para la ordenación. La omisión de esta opción es el único método para especificar no distinción de ancho.|    
 |Distinguir selector de variación (_VSS) | Distingue distintos selectores de variación ideográfica en las intercalaciones del japonés Japanese_Bushu_Kakusu_140 y Japanese_XJIS_140, introducidas por primera vez en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Una secuencia de variación consta de un carácter base y de un selector de variación adicional. Si no se selecciona la opción _VSS, la intercalación no distinguirá el selector de variación y este no se tendrá en cuenta en la comparación. Es decir, SQL Server considera que los caracteres que se basan en el mismo carácter base con diferentes selectores de variación son idénticos con fines de ordenación. Consulte también  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)(Base de datos de variaciones ideográficas de Unicode). <br/><br/> Las intercalaciones que distinguen selectores de variación (_VSS) no se admiten en los índices de búsqueda de texto completo. Los índices de búsqueda de texto completo solo admiten opciones que distinguen acentos (_AS), que distinguen kana (_KS) y que distinguen ancho (_WS). Los motores XML y CLR de SQL Server no admiten selectores de variación (_VSS).
 |UTF-8 (_UTF8)|Permite que los datos con codificación UTF-8 se almacenen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se selecciona esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el formato de codificación distinto de Unicode de forma predeterminada para los tipos de datos aplicables.| 

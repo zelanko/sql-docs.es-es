@@ -30,12 +30,12 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 29cdf6bcf1d79042b0469719341f823ba778dcdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761423"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979261"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ AS condition_expression
   
  Para obtener un informe sobre una regla, use **sp_help**. Para que se muestre el texto de una regla, ejecute **sp_helptext** con el nombre de la regla como parámetro. Para cambiar el nombre de una regla, use **sp_rename**.  
   
- Una regla se debe quitar usando DROP RULE para poder crear otra con el mismo nombre y, antes de quitarla, el enlace se debe cancelar usando **sp_unbindrule**. Para cancelar el enlace de una regla a una columna, use **sp_unbindrule**.  
+ Una regla se debe quitar mediante DROP RULE para poder crear otra con el mismo nombre y, antes de quitarla, el enlace se debe cancelar mediante **sp_unbindrule**. Para cancelar el enlace de una regla a una columna, use **sp_unbindrule**.  
   
  Una nueva regla se puede enlazar a una columna o tipo de datos sin cancelar el enlace de la anterior; la nueva regla anula la anterior. Las reglas enlazadas a columnas siempre tienen prioridad sobre las enlazadas a tipos de datos de alias. Enlazar una regla a una columna sustituye una regla ya enlazada al tipo de datos de alias de esa columna. Sin embargo, el enlace de una regla a un tipo de datos no sustituye una regla enlazada a una columna de ese tipo de datos de alias. La tabla siguiente muestra la prioridad cuando se enlazan reglas a columnas y a tipos de datos de alias en los que ya existen reglas.  
   
@@ -109,7 +109,7 @@ AS
 @range>= $1000 AND @range <$20000;  
 ```  
   
-### <a name="b-creating-a-rule-with-a-list"></a>B. Crear una regla con una lista  
+### <a name="b-creating-a-rule-with-a-list"></a>b. Crear una regla con una lista  
  En el siguiente ejemplo se crea una regla que restringe los valores reales especificados en las columnas (a las que la regla está enlazada) a solo aquellos enumerados en la regla.  
   
 ```  
@@ -127,7 +127,7 @@ AS
 @value LIKE '__-%[0-9]'  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

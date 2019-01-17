@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d971857a0d46ff2ed0bd54588558ac74ab5eb549
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119633"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980351"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE: funciones de desencadenador (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ UPDATE ( column )
  IF UPDATE devuelve el valor TRUE en las acciones INSERT porque en las columnas se insertaron valores explícitos o implícitos (NULL).  
   
 > [!NOTE]  
->  La cláusula IF UPDATE(*column*) funciona de forma idéntica a una instrucción IF, IF…ELSE o WHILE, y puede usar el bloque BEGIN…END. Para más información, vea [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
+>  La cláusula IF UPDATE(*columna*) funciona de forma idéntica a una instrucción IF, IF…ELSE o WHILE, y puede usar el bloque BEGIN…END. Para más información, vea [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) se puede usar en cualquier lugar del cuerpo de un desencadenador [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -92,7 +92,7 @@ WHERE PostalCode = '12345';
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   

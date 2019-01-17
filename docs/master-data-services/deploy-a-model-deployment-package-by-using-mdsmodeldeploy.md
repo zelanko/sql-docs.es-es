@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 99e11038cbc7315ff485177f9270e6f0fba74142
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398219"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823699"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implementar un paquete de implementación de modelo mediante MDSModelDeploy
 
@@ -98,7 +97,7 @@ ms.locfileid: "52398219"
   
  **Notas:**  
   
--   Si una vista de suscripciones del paquete tiene el mismo nombre que una vista de suscripciones de un modelo existente, esta advertencia se muestra como que **se ha cambiado el nombre de la vista de suscripción del implementador** y la vista se crea como *modelname.subscriptionviewname*. Si este nombre ya se está usando, no se crea la vista de suscripciones.  
+-   Si una vista de suscripción del paquete tiene el mismo nombre que una vista de suscripción de un modelo existente, se muestra esta advertencia: **Se ha cambiado el nombre de la vista de suscripción del implementador** y la vista se crea como *nombre_del_modelo.nombre_de_vista_de_suscripción*. Si este nombre ya se está usando, no se crea la vista de suscripciones.  
   
 -   El proceso de implementación tiene cuatro pasos:  
   
@@ -119,7 +118,7 @@ ms.locfileid: "52398219"
   
 -   [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Implementar modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

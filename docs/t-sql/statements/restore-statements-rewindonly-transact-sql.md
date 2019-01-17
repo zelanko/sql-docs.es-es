@@ -23,12 +23,12 @@ ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0ba43b04bc5c77d060fd2f8edda25d8a925a2856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1e6db73f4acea3654e8cffe8699df08f3f8d2c7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602293"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980091"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Instrucciones RESTORE: REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ FROM <backup_device> [ ,...n ]
  Es el nombre lógico, que debe seguir las reglas de los identificadores, del dispositivo de copia de seguridad creado por **sp_addumpdevice** desde el que se restaura la base de datos. Si se proporciona como una variable (**@**_logical\_backup\_device\_name\_var_), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- Permite restaurar las copias de seguridad guardadas en el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta deben especificarse con el nombre real (por ejemplo, nombre de archivo y ruta de acceso completa) del dispositivo: DISK = 'C:\Archivos de programa\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' o TAPE = '\\\\.\TAPE0'. Si se especifica como una variable (**@**_physical\_backup\_device\_name\_var_), el nombre del dispositivo se puede especificar como una constante de cadena (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
+ Permite restaurar las copias de seguridad guardadas en el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta se deben especificar con el nombre real (por ejemplo, nombre de archivo y ruta de acceso completa) del dispositivo: DISK = "C:\Archivos de programa\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak" o TAPE = "\\\\.\TAPE0". Si se especifica como una variable (**@**_physical\_backup\_device\_name\_var_), el nombre del dispositivo se puede especificar como una constante de cadena (**@**_physical\_backup\_device\_name\_var_ = "*physical_backup_device_name*") o como una variable de tipo de datos de cadena de caracteres, excepto para los tipos de datos **ntext** o **text**.  
   
  Si utiliza un servidor de red con un nombre UNC (que debe contener el nombre del equipo), especifique un tipo de dispositivo de disco. Para más información sobre cómo usar los nombres UNC, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -97,7 +97,7 @@ FROM <backup_device> [ ,...n ]
 ### <a name="permissions"></a>Permisos  
  Cualquier usuario puede utilizar RESTORE REWINDONLY.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

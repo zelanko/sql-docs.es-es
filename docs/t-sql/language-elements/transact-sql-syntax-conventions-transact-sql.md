@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd93fef0add8f773a1acac0635c13f59d8bd5cab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b85685dd15e6eb7dd2350bdeda5befb28959c281
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700973"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202804"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenciones de sintaxis de Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51700973"
   
 |Convención|Se usa para|  
 |----------------|--------------|  
-|MAYÚSCULAS|Palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|UPPERCASE|Palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |*cursiva*|Parámetros proporcionados por el usuario para la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |**Negrita**|Nombres de bases de datos, tablas, columnas e índices, procedimientos almacenados, utilidades, nombres de tipos de datos y texto que debe escribirse exactamente como se muestra.|  
 |_underline_|Indica el valor predeterminado que se aplica cuando la cláusula que contiene el valor subrayado se omite en la instrucción.|  
@@ -111,13 +111,13 @@ La mayoría de los ejemplos de código de la referencia de [!INCLUDE[tsql](../..
 Muchos ejemplos de código agregan como prefijo a las constantes de cadenas de caracteres Unicode la letra **N**. Sin el prefijo **N**, la cadena se convierte a la página de códigos predeterminada de la base de datos. Esta página de códigos predeterminada puede no reconocer determinados caracteres.  
   
 ## <a name="applies-to-references"></a>Referencias de "Se aplica a"  
-La referencia de [!INCLUDE[tsql](../../includes/tsql-md.md)] incluye temas relacionados con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+En la referencia de [!INCLUDE[tsql](../../includes/tsql-md.md)] se incluyen artículos relacionados con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
 En la parte superior de cada artículo hay una sección que indica qué productos son compatibles con el artículo. Si se omite un producto, la función descrita en el artículo no estará disponible en ese producto. Por ejemplo, los grupos de disponibilidad se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En el artículo **CREATE AVAILABILITY GROUP** se indica que se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) porque no se aplica a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ni [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 En algunos casos, se puede usar el tema general de un artículo, pero no se admiten todos los argumentos. Por ejemplo, los usuarios de bases de datos independientes se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La instrucción **CREATE USER** se puede usar en cualquier producto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; en cambio, la sintaxis **WITH PASSWORD** no se puede usar con versiones anteriores. En este caso, las secciones **Se aplica a** adicionales se insertan en las descripciones del argumento correspondiente en el cuerpo del artículo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de Transact-SQL &#40;motor de base de datos&#41;](../../t-sql/transact-sql-reference-database-engine.md)    
 [Palabras clave reservadas &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
 [Problemas de diseño de Transact-SQL](https://msdn.microsoft.com/library/dd193411.aspx)    

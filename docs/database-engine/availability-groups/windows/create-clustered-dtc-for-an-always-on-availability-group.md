@@ -1,6 +1,7 @@
 ---
-title: Crear un DTC agrupado para un grupo de disponibilidad AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Creación de un recurso DTC agrupado para un grupo de disponibilidad
+description: Este tema le guiará a través de una configuración completa de un recurso DTC agrupado para un grupo de disponibilidad AlwaysOn de SQL Server.
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2182b11c9416c487d3d583308d07ae1ad5f3f72f
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396929"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069781"
 ---
-# <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Crear un DTC agrupado para un grupo de disponibilidad AlwaysOn
+# <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Creación de un recurso DTC agrupado para un grupo de disponibilidad Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -320,21 +321,21 @@ GO
 ```
 
 > [!IMPORTANT]
-No puede habilitar DTC en un [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] existente.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aceptará la siguiente sintaxis para un grupo de disponibilidad existente:  
->
+> No puede habilitar DTC en un [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] existente.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aceptará la siguiente sintaxis para un grupo de disponibilidad existente:  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<grupo_de_disponibilidad\>  
-SET (DTC_Support = Per_DB)  
->
->Sin embargo, en realidad no se realizará ningún cambio de configuración.  Puede confirmar la configuración **dtc_support** con la siguiente consulta T-SQL:  
->
->SELECT name, dtc_support FROM sys.availability_groups  
->
->La única manera de habilitar la compatibilidad con DTC en un grupo de disponibilidad es creando un grupo de disponibilidad mediante Transact-SQL.
+> SET (DTC_Support = Per_DB)  
+> 
+> Sin embargo, en realidad no se realizará ningún cambio de configuración.  Puede confirmar la configuración **dtc_support** con la siguiente consulta T-SQL:  
+> 
+> SELECT name, dtc_support FROM sys.availability_groups  
+> 
+> La única manera de habilitar la compatibilidad con DTC en un grupo de disponibilidad es creando un grupo de disponibilidad mediante Transact-SQL.
  
 ## <a name="ClusterDTC"></a>8.  Preparar recursos de clúster
 
-Este script preparará los recursos dependientes de DTC: disco y dirección IP.  El almacenamiento compartido se agregará a Windows Cluster.  Se crearán los recursos de red y, luego, DTC se creará y convertirá en un recurso en el grupo de disponibilidad.  Ejecute el siguiente script de PowerShell en `SQLNODE1`.
+Este script preparará los recursos dependientes de DTC: disco y dirección IP.  El almacenamiento compartido se agregará a Windows Cluster.  Se crearán los recursos de red y, luego, DTC se creará y convertirá en un recurso en el grupo de disponibilidad.  Ejecute el siguiente script de PowerShell en `SQLNODE1`. Gracias a [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) por el script.
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server
@@ -587,4 +588,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> El instrucción `USE AG1` se debe ejecutar para garantizar que el contexto de base de datos se establece en `AG1`.  De lo contrario, recibirá el mensaje de error siguiente: "Contexto de transacción en uso por otra sesión".
+> El instrucción `USE AG1` se debe ejecutar para garantizar que el contexto de base de datos se establece en `AG1`.  De lo contrario, es probable que reciba el mensaje de error siguiente: "Contexto de transacción en uso por otra sesión".

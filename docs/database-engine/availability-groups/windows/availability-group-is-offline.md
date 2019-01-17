@@ -1,6 +1,7 @@
 ---
-title: Grupo de disponibilidad sin conexión | Microsoft Docs
-ms.custom: ''
+title: Grupo de disponibilidad sin conexión
+description: Identifique las posibles causas de la desconexión de un grupo de disponibilidad Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 343ae5ff2b5b65b26569f99ff22d51ed1860e69d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 78517d525165c7186c1ecccb2c1fc3561a7f3f45
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600175"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203744"
 ---
-# <a name="availability-group-is-offline"></a>Grupo de disponibilidad sin conexión
+# <a name="always-on-availability-group-is-offline"></a>Grupo de disponibilidad Always On sin conexión
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Introducción  
@@ -73,7 +74,7 @@ ms.locfileid: "51600175"
   
 -   Si hay una conmutación por error en curso, espere a que se complete.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

@@ -19,12 +19,12 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b413d8948d671b0b3717df94db8cf18ecada004
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 770568bcf8d6a89b350b9cd04ef3ff6cb10a015f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701463"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980371"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ with Expression2
   
 ## <a name="arguments"></a>Argumentos  
  *Expression1*  
- Identifica un nodo cuyo valor se va a actualizar. Debe identificar un solo nodo. Es decir, *Expression1* debe ser un singleton estático. Si el XML tiene un tipo, el tipo del nodo debe ser simple. Si se seleccionan varios nodos, se producirá un error. Si *Expression1* devuelve una secuencia vacía, no se reemplazará ningún valor ni se devolverá ningún error. *Expression1* debe devolver un solo elemento que incluya contenido de tipo simple (tipos de lista o atómicos), un nodo de texto o un nodo de atributo. *Expression1* no puede ser un tipo de unión, un tipo complejo, una instrucción de procesamiento, un nodo de documento ni un nodo de comentario. De lo contrario, se devolverá un error.  
+ Identifica un nodo cuyo valor se va a actualizar. Debe identificar un solo nodo. Es decir, *Expresión1* debe ser un singleton estático. Si el XML tiene un tipo, el tipo del nodo debe ser simple. Si se seleccionan varios nodos, se producirá un error. Si *Expression1* devuelve una secuencia vacía, no se reemplazará ningún valor ni se devolverá ningún error. *Expression1* debe devolver un solo elemento que incluya contenido de tipo simple (tipos de lista o atómicos), un nodo de texto o un nodo de atributo. *Expression1* no puede ser un tipo de unión, un tipo complejo, una instrucción de procesamiento, un nodo de documento ni un nodo de comentario. De lo contrario, se devolverá un error.  
   
  *Expression2*  
  Identifica el nuevo valor del nodo. Puede ser una expresión que devuelve un nodo de tipo simple, puesto que se usará **data()** implícitamente. Si el valor es una lista de valores, la instrucción **update** reemplazará el valor antiguo por la lista. Si se modifica una instancia XML con tipo, *Expression2* debe ser del mismo tipo o un subtipo de *Expression1*. En caso contrario, se devolverá un error. Si se modifica una instancia XML sin tipo, *Expression2* debe ser una expresión que se pueda atomizar. En caso contrario, se devolverá un error.  
@@ -80,7 +80,7 @@ SELECT @myDoc;
   
  Tenga en cuenta que el destino que se actualiza debe ser, como máximo, un nodo que se especifica de forma explícita en la expresión de ruta de acceso agregando un "[1]" al final de la expresión.  
   
-### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. Utilizar la expresión if para determinar el valor de reemplazo  
+### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>b. Utilizar la expresión if para determinar el valor de reemplazo  
  Puede especificar la expresión **if** en Expression2 de la instrucción **XML DML replace value of**, tal como se muestra en el ejemplo siguiente. Expression1 identifica que se debe actualizar el atributo LaborHours del primer centro de trabajo. Expression2 usa una expresión **if** para determinar el nuevo valor del atributo LaborHours.  
   
 ```  
@@ -193,7 +193,7 @@ from T
   
  Tenga en cuenta el uso de **cast** al reemplazar el valor LotSize. Esto es necesario cuando el valor debe ser de un tipo específico. En este ejemplo, si el valor fuera 500, la conversión explícita no sería necesaria.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   

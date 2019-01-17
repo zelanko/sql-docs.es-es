@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c35eed3e73a80a2fcaf060e094c31938d0692414
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 511be25daa32daa1a8d80707043280171f76edbc
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697234"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980221"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -228,7 +228,7 @@ DROP TABLE FactInternetSales_old;
 
 <a name="ctas-change-column-attributes-bk"></a>
 
-### <a name="b-use-ctas-to-change-column-attributes"></a>B. Usar CTAS para cambiar los atributos de columna 
+### <a name="b-use-ctas-to-change-column-attributes"></a>b. Usar CTAS para cambiar los atributos de columna 
 Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos
 
 En este ejemplo se usa CTAS para cambiar los tipos de datos, la nulabilidad y la intercalación de varias columnas en la tabla DimCustomer2.  
@@ -663,7 +663,7 @@ WHERE NOT EXISTS
 ;
 
 RENAME OBJECT dbo.[DimProduct]          TO [DimProduct_old];
-RENAME OBJECT dbo.[DimpProduct_upsert]  TO [DimProduct];
+RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 ```
 
@@ -823,7 +823,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 
 Por lo tanto, puede ver que la coherencia de los tipos y el mantenimiento de las propiedades de nulabilidad en una instrucción CTAS es un procedimiento recomendado de ingeniería. Ayuda a mantener la integridad de los cálculos y también garantiza que la modificación de particiones sea posible.
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   

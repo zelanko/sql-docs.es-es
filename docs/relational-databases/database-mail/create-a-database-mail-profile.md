@@ -15,22 +15,22 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0280e8039b5288186e910289eeb7c7566fdb0ae0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558732"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980451"
 ---
 # <a name="create-a-database-mail-profile"></a>Crear un perfil de correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Para crear perfiles públicos y privados de Correo electrónico de base de datos, use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para más información sobre los perfiles de correo electrónico, consulte [Perfil de Correo electrónico de base de datos](database-mail-configuration-objects.md).
   
--   **Antes de empezar:** [Requisitos previos](#Prerequisites), , [Seguridad](#Security)  
+-   **Antes de comenzar:** [Requisitos previos](#Prerequisites), [Seguridad](#Security)  
   
 -   **Para crear un perfil privado de Correo electrónico de base de datos mediante:**  [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Para crear un perfil público de Correo electrónico de base de datos mediante:** [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **Para crear un perfil público de Correo electrónico de base de datos mediante:**  [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51558732"
   
 -   En la página **Administrar perfiles y cuentas** , seleccione la opción **Crear nuevo perfil** y haga clic en **Siguiente**.  
   
--   En la página **Nuevo perfil** , especifique el nombre de perfil y la descripción. Agregue las cuentas que se incluirán en el perfil y haga clic **Siguiente**.  
+-   En la página **Nuevo perfil**, especifique el nombre de perfil, la descripción y agregue las cuentas que se van a incluir en el perfil, y haga clic **Siguiente**.  
   
 -   En la página **Finalización del asistente** , revise las acciones que realizará y haga clic en **Finalizar** para completar crear el nuevo perfil.  
   

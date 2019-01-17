@@ -1,6 +1,7 @@
 ---
-title: Propiedades de las réplicas de disponibilidad (página General) | Microsoft Docs
-ms.custom: ''
+title: Propiedades de las réplicas de disponibilidad (página General) para grupos de disponibilidad
+description: Una descripción de las distintas propiedades de la página "General" de la página "Propiedades de réplica de disponibilidad" en SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54105086ff43e11f703df1da6da6c8dba75f0dad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a114666df21424bda445ac852f14752c6372e6d3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611130"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205324"
 ---
-# <a name="availability-replica-properties-general-page"></a>Propiedades de las réplicas de disponibilidad (página General)
+# <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Propiedades de las réplicas de disponibilidad (página General) para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use este cuadro de diálogo para ver las propiedades de una réplica de disponibilidad.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "47611130"
  **Sí**  
  Se permiten todas las conexiones a las bases de datos secundarias de esta réplica, pero solo para acceso de lectura. Todas las bases de datos secundarias están disponibles para acceso de lectura.  
   
- Para obtener más información, vea [Secundarias activas: réplicas secundarias legibles &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para más información, vea [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Tiempo de espera de sesión (segundos)**  
  Período de tiempo de espera, en segundos. El período de tiempo de espera es el tiempo máximo que la réplica espera hasta recibir un mensaje de otra réplica antes de considerar que se ha producido un error en la conexión entre la réplica principal y la secundaria. El tiempo de espera de la sesión detecta si las réplicas secundarias están conectadas a la réplica principal. Al detectar un error en la conexión con una réplica secundaria, la réplica principal considera que la réplica secundaria no se ha sincronizado (NOT_SYNCHRONIZED). Al detectar un error en la conexión con la réplica principal, la réplica secundaria intenta volver a conectarse.  
@@ -99,7 +100,7 @@ ms.locfileid: "47611130"
  **Dirección URL del extremo**  
  Representación en forma de cadena de la base de datos definida por el usuario que crea un reflejo del extremo usado por las conexiones entre las réplicas principal y secundaria para la sincronización de datos. Para obtener más información sobre la sintaxis de las direcciones URL del punto de conexión, vea [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

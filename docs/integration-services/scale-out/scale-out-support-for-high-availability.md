@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638152"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246744"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
@@ -97,7 +97,7 @@ En máquinas virtuales de Azure, este paso de configuración requiere pasos adic
 
 1.  Tendrá que configurar un dominio de Azure. Los clústeres de conmutación por error de Windows Server requieren que todos los equipos del clúster sean miembros del mismo dominio. Para obtener más información, vea [Habilitación de Azure Active Directory Domain Services mediante Azure Portal](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
 
-2. Tendrá que configurar un equilibrador de carga de Azure. Es un requisito para la escucha de grupo de disponibilidad. Para obtener más información, vea [Tutorial: equilibrar la carga de tráfico interno de las máquinas virtuales con Load Balancer Básico mediante Azure Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
+2. Tendrá que configurar un equilibrador de carga de Azure. Es un requisito para la escucha de grupo de disponibilidad. Para más información, vea [Tutorial: equilibrar la carga de tráfico interno de las máquinas virtuales con Load Balancer Básico mediante Azure Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Actualización de la dirección del Servicio principal de escalabilidad horizontal en SSISDB
 
@@ -107,7 +107,7 @@ En el servidor SQL Server principal, ejecute el procedimiento almacenado `[catal
 
 Ahora puede agregar trabajos de escalabilidad horizontal con la ayuda del [Administrador de escalabilidad horizontal de Integration Services](integration-services-ssis-scale-out-manager.md). Escriba `[SQL Server Availability Group Listener DNS name],[Port]` en la página de conexión.
 
-# <a name="upgrade-scale-out-in-high-availability-environment"></a>Actualización de la escalabilidad horizontal en entornos de alta disponibilidad
+## <a name="upgrade-scale-out-in-high-availability-environment"></a>Actualización de la escalabilidad horizontal en entornos de alta disponibilidad
 Para actualizar la escalabilidad horizontal en entornos de alta disponibilidad, siga los [pasos de actualización de Always On para el catálogo de SSIS](../catalog/ssis-catalog.md#Upgrade), actualice el Servicio principal de escalabilidad horizontal y el Trabajo de escalabilidad horizontal en todas las máquinas y vuelva a crear el rol de clúster de conmutación por error de Windows Server en el paso 7 anterior con la nueva versión del Servicio principal de escalabilidad horizontal.
 
 ## <a name="next-steps"></a>Pasos siguientes

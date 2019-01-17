@@ -22,12 +22,12 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98a5cdb6b02cda84424cb305a4ecc63e38056bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 602c8f5d1cded1c5d19c520087ceac1b9c9124d5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797274"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591899"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   Con el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Ejecutando **net stop mssqlserver** desde un símbolo del sistema para una instancia predeterminada, o bien ejecutando **net stop mssql$***instancename* desde un símbolo del sistema para una instancia con nombre.  
+-   Mediante la ejecución de **net stop mssqlserver** desde un símbolo del sistema para una instancia predeterminada, o la ejecución de **net stop mssql$**_nombre_de_instancia_ desde un símbolo del sistema para una instancia con nombre.  
   
 -   Con Servicios del Panel de control.  
   
@@ -77,7 +77,7 @@ SHUTDOWN [ WITH NOWAIT ]
 ## <a name="permissions"></a>Permisos  
  Los permisos de SHUTDOWN se asignan a los miembros de los roles fijos de servidor **sysadmin** y **serveradmin** y no son transferibles.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   

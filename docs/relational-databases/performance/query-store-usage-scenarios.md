@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711206"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372487"
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "52711206"
   
  ![consultaDeAlmacénDeUso1](../../relational-databases/performance/media/query-store-usage-1.png "consultaDeAlmacénDeUso1")  
   
- Para ver una descripción detallada del escenario, consulte el blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Almacén de consultas: una caja negra de su base de datos).  
+ Para obtener una descripción detallada del escenario, consulte el blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Almacén de consultas: Una caja negra de datos para la base de datos)  
   
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identificar y ajustar las consultas que consumen más recursos  
  Aunque la carga de trabajo puede generar miles de consultas, normalmente solo unas pocas usan realmente la mayor parte de los recursos del sistema y, por tanto, requieren su atención. Entre las consultas que más recursos consumen suelen estar las consultas devueltas o aquellas que se pueden ajustar para mejorarlas.  
   
- La forma más sencilla de empezar a explorar es abrir **Principales consultas que consumen recursos** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La interfaz de usuario se divide en tres paneles: un histograma con las consultas que consumen más recurso (izquierda), un resumen del plan para la consulta seleccionada (derecha) y un plan de consulta visual para el plan seleccionado (abajo). Haga clic en el botón **Configurar** para controlar la cantidad de consultas que quiere analizar y el intervalo de tiempo que le interesa. También puede elegir entre diferentes dimensiones de consumo de recursos (duración, CPU, memoria, E/S, número de ejecuciones) y la base (promedio, mínima, máxima, total, desviación estándar).  
+ La forma más sencilla de empezar a explorar es abrir **Principales consultas que consumen recursos** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La interfaz de usuario se divide en tres paneles: un histograma con las consultas que consumen más recursos (a la izquierda), un resumen del plan para la consulta seleccionada (a la derecha) y un plan de consulta visual para el plan seleccionado (abajo). Haga clic en el botón **Configurar** para controlar la cantidad de consultas que quiere analizar y el intervalo de tiempo que le interesa. También puede elegir entre diferentes dimensiones de consumo de recursos (duración, CPU, memoria, E/S, número de ejecuciones) y la base (promedio, mínima, máxima, total, desviación estándar).  
   
  ![consultaDeAlmacénDeUso2](../../relational-databases/performance/media/query-store-usage-2.png "consultaDeAlmacénDeUso2")  
   
@@ -215,7 +215,7 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

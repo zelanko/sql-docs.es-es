@@ -1,23 +1,25 @@
 ---
 title: Exportar a Microsoft Word (Generador de informes y SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
+description: La extensión de representación de Word representa informes paginados en el formato de  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). El formato es Office Open XML.
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e8bae0c0ef770acf460840abcc0989f8cdf4324e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393344"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202424"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
 
-  La extensión de representación de Word representa informes paginados en el formato de  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). El formato es Office Open XML.  
+  La extensión de representación de Word representa informes paginados en el formato de Microsoft Word (.docx). El formato es Office Open XML.  
   
  El tipo de contenido de los archivos generados por este representador es **application/vnd.openxmlformats-officedocument.wordprocessingml.document** y la extensión de archivo es .docx.  
   
@@ -72,7 +74,7 @@ ms.locfileid: "52393344"
   
 -   **Expresión compleja:**  la expresión es `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expresión con ejecuciones de texto:** Texto, **Average Sales**, y expresión,  `=Avg(Fields!YTDPurchase.Value, "Sales)`, y texto, **Page Number**, y expresión `=Globals!PageNumber`  
+-   **Expresión con ejecuciones de texto:** Texto, **Promedio de ventas** y expresión, `=Avg(Fields!YTDPurchase.Value, "Sales)` y texto, **Número de página** y expresión `=Globals!PageNumber`  
   
  Para evitar este problema, use varias ejecuciones de texto en vez de una expresión compleja cuando use expresiones en encabezados y pies de página. Las dos siguientes expresiones son equivalentes. La primera es una expresión compleja y la segunda usa ejecuciones de texto. El representador de Word solo analiza correctamente la segunda expresión.  
   

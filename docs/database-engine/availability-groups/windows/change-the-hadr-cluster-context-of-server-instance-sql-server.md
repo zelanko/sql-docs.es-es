@@ -1,6 +1,7 @@
 ---
-title: Cambiar el contexto de clúster de HADR de la instancia de servidor (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Cambio del clúster que administra los metadatos para las réplicas de un grupo de disponibilidad
+description: Cuando se realiza una migración entre clústeres, para cambiar el clúster que administra los metadatos para las réplicas de disponibilidad dentro de un grupo de disponibilidad Always On, cambie el contexto de clúster HADR de una instancia de SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 940fc70407c6a4131719818bbbc87049c93fab6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605707"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202134"
 ---
-# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Cambiar el contexto de clúster de HADR de la instancia de servidor (SQL Server)
+# <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Cambio del clúster que administra los metadatos para las réplicas de un grupo de disponibilidad Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -39,9 +40,9 @@ ms.locfileid: "51605707"
   
      [Seguridad](#Security)  
   
--   **Para cambiar el contexto de clúster de una réplica de disponibilidad con:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para cambiar el contexto de clúster de una réplica de disponibilidad, mediante:**  [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Después de cambiar el contexto de clúster de una réplica de disponibilidad](#FollowUp)  
+-   **Seguimiento:**  [después de cambiar el contexto de clúster de una réplica de disponibilidad](#FollowUp)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
@@ -168,9 +169,9 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Artículos técnicos de SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  

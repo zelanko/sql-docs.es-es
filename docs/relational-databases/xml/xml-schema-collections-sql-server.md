@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6810231163d1674893e55624f333cd023bd95c47
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b0c36e72558423b91a6adb8c8ae11e942c301446
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666194"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205674"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Colecciones de esquemas XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -193,7 +193,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
  Es posible obtener esquemas XML individuales incluidos en la colección como instancias de tipo de datos **xml** ; para ello, especifique el espacio de nombres de destino como tercer argumento de **XML_SCHEMA_NAMESPACE()**. Esto se muestra en el ejemplo siguiente.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Ejemplo: Obtener un esquema especificado a partir de una colección de esquemas XML  
- La instrucción siguiente genera como resultado el esquema XML con el espacio de nombres de destino "https://www.microsoft.com/books" a partir de la colección de esquemas XML "myCollection" dentro del esquema relacional dbo.  
+ La instrucción siguiente genera como resultado el esquema XML con el espacio de nombres de destino "<https://www.microsoft.com/books>" a partir de la colección de esquemas XML "myCollection" dentro del esquema relacional dbo.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
@@ -207,7 +207,7 @@ N'https://www.microsoft.com/books')
   
 -   Cree una tabla que contenga una columna de tipo de datos **xml** para almacenar los esquemas XML y también cargarlos en el sistema de tipo XML. Puede consultar la columna XML mediante los métodos de tipo de datos **xml** . Además, puede crear un índice XML en esta columna. Sin embargo, con este enfoque, la aplicación debe mantener la coherencia entre los esquemas XML almacenados en la columna XML y el sistema de tipo XML. Por ejemplo, si se quita el espacio de nombres de esquemas XML del sistema de tipo XML, también se tiene que quitar de la tabla para preservar la coherencia.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ver una colección de esquemas XML almacenada](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Preprocesar un esquema para combinar esquemas incluidos](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
  [Requisitos y limitaciones de las colecciones de esquemas XML en el servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

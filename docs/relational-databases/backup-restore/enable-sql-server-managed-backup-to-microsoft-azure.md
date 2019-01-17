@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7ef52db1ccafaeaf9539974032da3622b23838c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672804"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787097"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51672804"
   
 1.  **Suscríbase a Azure:** si ya tiene una suscripción de Azure, vaya al paso siguiente. En caso contrario, puede comenzar a trabajar con una [evaluación gratuita](https://azure.microsoft.com/pricing/free-trial/) o explorar las [opciones de compra](https://azure.microsoft.com/pricing/purchase-options/).  
   
-2.  **Cree una cuenta de Almacenamiento de Azure:** si ya tiene una cuenta de almacenamiento, vaya al paso siguiente. En caso contrario, puede usar el [Portal de administración de Azure](https://manage.windowsazure.com/) o Azure PowerShell para crear la cuenta de almacenamiento. El siguiente comando `New-AzureStorageAccount` crea una cuenta de almacenamiento denominada `managedbackupstorage` en la región este de EE. UU.  
+2.  **Cree una cuenta de almacenamiento de Azure:** si ya tiene una cuenta de almacenamiento, vaya al paso siguiente. En caso contrario, puede usar el [Portal de administración de Azure](https://manage.windowsazure.com/) o Azure PowerShell para crear la cuenta de almacenamiento. El siguiente comando `New-AzureStorageAccount` crea una cuenta de almacenamiento denominada `managedbackupstorage` en la región este de EE. UU.  
   
     ```powershell  
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
@@ -48,12 +48,20 @@ ms.locfileid: "51672804"
     New-AzureStorageContainer -Name backupcontainer -Context $context  
     ```  
   
-4.  **Genere una firma de acceso compartido (SAS):** para acceder al contenedor, debe crear una SAS. Puede hacerlo en algunas herramientas, código y Azure PowerShell. El siguiente comando `New-AzureStorageContainerSASToken` crea un token de SAS para el contenedor de blobs `backupcontainer` que expira en un año.  
+4.  **Generar una firma de acceso compartido (SAS):** para acceder al contenedor, debe crear una SAS. Puede hacerlo en algunas herramientas, código y Azure PowerShell. El siguiente comando `New-AzureStorageContainerSASToken` crea un token de SAS para el contenedor de blobs `backupcontainer` que expira en un año.  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
     ```  
+    En el caso de AzureRM, use el comando siguiente:
+       ```powershell
+    Connect-AzureRmAccount
+    Set-AzureRmContext -SubscriptionId "YOURSUBSCRIPTIONID"
+    $StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+   ```  
   
      La salida de este comando contendrá la dirección URL del contenedor y el token de SAS. A continuación se muestra un ejemplo:  
   
@@ -68,11 +76,11 @@ ms.locfileid: "51672804"
     |**Dirección URL del contenedor:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**Token de SAS:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     Anote la dirección URL del contenedor y la SAS para usarlos al crear una credencial de SQL. Para obtener más información sobre SAS, consulte [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+     Anote la dirección URL del contenedor y la SAS para usarlos al crear una credencial de SQL. Para más información sobre SAS, vea [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>Habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
-1.  **Cree una credencial de SQL para la URL de SAS:** use el token de SAS para crear una credencial de SQL para la dirección URL del contenedor de blobs. En SQL Server Management Studio, use la siguiente consulta de Transact-SQL para crear la credencial para la dirección URL del contenedor de blobs según el ejemplo siguiente:  
+1.  **Cree una credencial de SQL para la dirección URL de SAS:** use el token de SAS para crear una credencial de SQL para la dirección URL del contenedor de blobs. En SQL Server Management Studio, use la siguiente consulta de Transact-SQL para crear la credencial para la dirección URL del contenedor de blobs según el ejemplo siguiente:  
   
     ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
@@ -80,11 +88,11 @@ ms.locfileid: "51672804"
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
     ```  
   
-2.  **Asegúrese de que el servicio del Agente SQL Server se haya iniciado y esté ejecutándose:** inicie el Agente SQL Server, si no se está ejecutando.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
+2.  **Asegúrese de que el servicio del Agente SQL Server está iniciado y en ejecutándose:** inicie el Agente SQL Server si no se está ejecutando actualmente.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
   
-3.  **Determinar el período de retención:** determine el período de retención para los archivos de copia de seguridad. El período de retención se especifica en días y puede abarcar de 1 a 30.  
+3.  **Determine el período de retención:** Determine el período de retención para los archivos de copia de seguridad. El período de retención se especifica en días y puede abarcar de 1 a 30.  
   
-4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** inicie SQL Server Management Studio y conéctese a la instancia de SQL Server de destino. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la dirección URL del contenedor y el período de retención según sus requisitos:  
+4.  **Habilitar y configurar[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  inicie SQL Server Management Studio y conéctese a la instancia de SQL Server de destino. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la dirección URL del contenedor y el período de retención según sus requisitos:  
   
     > [!IMPORTANT]  
     >  Para habilitar la copia de seguridad administrada en el nivel de instancia, especifique `NULL` para el parámetro `database_name` .  
@@ -102,7 +110,7 @@ ms.locfileid: "51672804"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada ahora en la base de datos especificada. Puede tardarse hasta 15 minutos en que las operaciones de copia de seguridad de la base de datos empiecen a ejecutarse.  
   
-5.  **Revise la configuración predeterminada de los eventos extendidos:** revise la configuración de eventos extendidos ejecutando la siguiente instrucción de Transact-SQL.  
+5.  **Revise la configuración predeterminada del evento extendido:** Revise la configuración de eventos extendidos ejecutando la siguiente instrucción transact-SQL.  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
@@ -114,9 +122,9 @@ ms.locfileid: "51672804"
   
     1.  Configure Correo electrónico de base de datos si aún no está habilitado en la instancia. Para obtener más información, vea [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
-    2.  Configure la notificación del Agente SQL Server para que use Correo electrónico de base de datos. Para obtener más información, consulte [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+    2.  Configure la notificación del Agente SQL Server para que use Correo electrónico de base de datos. Para más información, consulte [Configurar el Agente SQL Server para que use el Correo electrónico de base de datos](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Habilite las notificaciones por correo electrónico para recibir los errores y advertencias de copia de seguridad:** en la ventana de consulta, ejecute las siguientes instrucciones Transact-SQL:  
+    3.  **Habilite las notificaciones por correo electrónico para recibir advertencias y errores de copia de seguridad:** En la ventana de consulta, ejecute las siguientes instrucciones Transact-SQL:  
   
         ```  
         EXEC msdb.managed_backup.sp_set_parameter  
@@ -125,9 +133,9 @@ ms.locfileid: "51672804"
   
         ```  
   
-7.  **Consulte los archivos de copia de seguridad en la cuenta de Almacenamiento de Microsoft Azure:** conéctese a la cuenta de almacenamiento desde SQL Server Management Studio o desde el Portal de administración de Azure. Verá los archivos de copia de seguridad del contenedor especificado. Tenga en cuenta que podría ver una base de datos y una copia de seguridad de registros antes de que transcurran 5 minutos desde la habilitación de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la base de datos.  
+7.  **Vea archivos de copia de seguridad en la cuenta de Microsoft Azure Storage:** Conéctese a la cuenta de almacenamiento desde SQL Server Management Studio o el Portal de administración de Azure. Verá los archivos de copia de seguridad del contenedor especificado. Tenga en cuenta que podría ver una base de datos y una copia de seguridad de registros antes de que transcurran 5 minutos desde la habilitación de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la base de datos.  
   
-8.  **Supervise el estado de mantenimiento:**  puede supervisar a través de notificaciones por correo electrónico que configuró previamente o supervisar los eventos registrados de forma activa. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
+8.  **Supervise el estado de mantenimiento:**  puede supervisar a través de notificaciones por correo electrónico que ha configurado previamente, o bien supervisar los eventos registrados de forma activa. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
   
     ```  
     --  view all admin events  
@@ -176,7 +184,7 @@ ms.locfileid: "51672804"
   
  Los pasos descritos en esta sección son específicos para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez en la base de datos. Puede modificar las configuraciones existentes usando los mismos procedimientos almacenados del sistema y proporcionar los nuevos valores.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

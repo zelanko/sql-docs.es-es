@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5e69a2ebd97a554620914ffba5ea20c6a08aa21
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520852"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980331"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -327,7 +327,7 @@ GO
   
  Si la instrucción UPDATE ha podido cambiar más de una fila durante la actualización de la clave de agrupación en clústeres y una o varias columnas **text**, **ntext** o **image**, la actualización parcial de estas columnas se ejecuta como una sustitución completa de los valores.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)y [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) en su lugar.  
   
 ### <a name="updating-large-value-data-types"></a>Actualizar tipos de datos de valores grandes  
@@ -497,7 +497,7 @@ UPDATE Person.Address
 SET ModifiedDate = GETDATE();  
 ```  
   
-#### <a name="b-updating-multiple-columns"></a>B. Actualizar varias columnas  
+#### <a name="b-updating-multiple-columns"></a>b. Actualizar varias columnas  
  En el siguiente ejemplo se actualizan los valores de las columnas `Bonus`, `CommissionPct` y `SalesQuota` para todas las filas de la tabla `SalesPerson`.  
   
 ```sql  
@@ -546,7 +546,7 @@ GO
 ```  
   
 #### <a name="e-using-the-with-commontableexpression-clause"></a>E. Usar la cláusula WITH common_table_expression  
- En el siguiente ejemplo se actualiza el valor `PerAssemnblyQty` para todas las partes y componentes que se utilizan directamente o indirectamente para crear el `ProductAssemblyID 800`. La expresión de tabla común devuelve una lista jerárquica de partes que se usan directamente para compilar `ProductAssemblyID 800` y las partes que se usan para compilar esos componentes, etc. Solo se modifican las filas devueltas por la expresión de tabla común.  
+ En el siguiente ejemplo se actualiza el valor `PerAssemblyQty` para todas las partes y componentes que se utilizan directamente o indirectamente para crear el `ProductAssemblyID 800`. La expresión de tabla común devuelve una lista jerárquica de partes que se usan directamente para compilar `ProductAssemblyID 800` y las partes que se usan para compilar esos componentes, etc. Solo se modifican las filas devueltas por la expresión de tabla común.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -762,7 +762,7 @@ GO
  En los ejemplos de esta sección se muestra cómo actualizar las filas de una tabla de destino remota mediante un [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [función de conjunto de filas](../../t-sql/functions/rowset-functions-transact-sql.md) para hacer referencia a la tabla remota.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. Actualizar datos en una tabla remota con un servidor vinculado  
- En el ejemplo siguiente se actualiza una tabla en un servidor remoto. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato servidor.catálogo.esquema.objeto. Observe que debe especificar un nombre de servidor válido para `@datasrc`.  
+ En el ejemplo siguiente se actualiza una tabla en un servidor remoto. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkedServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato servidor.catálogo.esquema.objeto. Observe que debe especificar un nombre de servidor válido para `@datasrc`.  
   
 ```sql  
 USE master;  
@@ -770,7 +770,7 @@ GO
 -- Create a link to the remote data source.   
 -- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
   
-EXEC sp_addlinkedserver @server = N'MyLinkServer',  
+EXEC sp_addlinkedserver @server = N'MyLinkedServer',  
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
@@ -781,7 +781,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -790,18 +790,18 @@ WHERE DepartmentID = 4;
  En el ejemplo siguiente se actualiza una fila de una tabla remota mediante la especificación de la función de conjunto de filas [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). En este ejemplo se usa el nombre del servidor vinculado creado en el ejemplo anterior.  
   
 ```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
+UPDATE OPENQUERY (MyLinkedServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
 SET GroupName = 'Sales and Marketing';  
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. Actualizar datos en una tabla remota con la función OPENDATASOURCE  
- En el ejemplo siguiente se inserta una fila en una tabla remota mediante la especificación de la función de conjunto de filas [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Especifique un nombre de servidor válido para el origen de datos con el formato *server_name* o *server_name\instance_name*. Quizá deba configurar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las consultas distribuidas ad hoc. Para más información, vea [Opción de configuración del servidor ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
-  
-```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
-SET GroupName = 'Sales and Marketing';  
-```  
-  
+ En el ejemplo siguiente se actualiza una fila de una tabla remota mediante la especificación de la función de conjunto de filas [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Especifique un nombre de servidor válido para el origen de datos con el formato *server_name* o *server_name\instance_name*. Quizá deba configurar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las consultas distribuidas ad hoc. Para más información, vea [Opción de configuración del servidor ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
+
+```sql
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
+```
+
 ###  <a name="LOBValues"></a> Actualizar tipos de datos de objetos grandes  
  En los ejemplos de esta sección se muestran los métodos de actualización de los valores de columnas definidos con tipos de datos de objetos grandes (LOB).  
   
@@ -1213,7 +1213,7 @@ DROP TABLE CTAS_acs
 ;
 ```
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Cursores &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   

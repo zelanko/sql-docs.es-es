@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503413"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207319"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Procesamiento de consultas adaptable en bases de datos SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ Para habilitar la versión preliminar pública de los comentarios de concesión 
 
 La actividad de comentarios de concesión de memoria del modo de fila será visible a través del evento extendido **memory_grant_updated_by_feedback**. 
 
-A partir de los comentarios de concesión de memoria del modo de fila, se mostrarán dos atributos de plan de consulta nuevos para planes reales posteriores a la ejecución: ***IsMemoryGrantFeedbackAdjusted*** y ***LastRequestedMemory***, que se agregan al elemento XML del plan de consulta *MemoryGrantInfo*. 
+A partir de los comentarios de concesión de memoria del modo de fila, se mostrarán dos atributos nuevos de plan de consulta para los planes reales posteriores a la ejecución: ***IsMemoryGrantFeedbackAdjusted*** y ***LastRequestedMemory***, que se agregan al elemento XML de plan de consulta *MemoryGrantInfo*. 
 
 *LastRequestedMemory* muestra la memoria concedida en Kilobytes (KB) desde la ejecución de consulta anterior. El atributo *IsMemoryGrantFeedbackAdjusted* permite comprobar el estado de los comentarios de concesión de memoria para la instrucción dentro de un plan de ejecución de consulta real. Los valores que se exponen en este atributo son los siguientes:
 
@@ -171,7 +171,7 @@ La siguiente consulta se usa para mostrar un ejemplo de combinación adaptable:
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
@@ -190,7 +190,7 @@ En el plan se ve lo siguiente:
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
 La consulta devuelve una fila. Al habilitar las estadísticas de consultas activas se ve el siguiente plan:
@@ -367,7 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 
 Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de ámbito de base de datos o una opción de marca de seguimiento.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)    (Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database)  
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)   (Guía de arquitectura de procesamiento de consultas)  
 [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef241919f29225ee7c6384a7466fc69bc9391ed
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571444"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748487"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guía de arquitectura de páginas y extensiones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ Las páginas IAM se asignan según se necesitan para cada unidad de asignación 
  
 Páginas IAM vinculadas en una cadena por unidad de asignación Una página IAM tiene un encabezado que indica la extensión inicial del intervalo de extensiones asignado por la página IAM. La página IAM también tiene un mapa de bits grande en el que cada bit representa una extensión. El primer bit del mapa representa la primera extensión del intervalo, el segundo bit representa la segunda extensión, etc. Si un bit es 0, la extensión que representa no está asignada a la unidad de asignación propietaria de IAM. Si el bit es 1, la extensión que representa está asignada a la unidad de asignación propietaria de la página IAM.
 
-Si [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] necesita insertar una fila nueva y no hay espacio disponible en la página actual, utiliza las páginas IAM y PFS para buscar una página para la asignación o, en el caso de un montón o una página de texto o imagen, una página con espacio suficiente para contener la fila. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza las páginas IAM para buscar las extensiones asignadas a la unidad de asignación. Para cada extensión, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] busca las páginas PFS para ver si existe una página que se pueda utilizar. Cada página IAM y PFS cubre muchas páginas de datos, por lo que en una base de datos hay pocas páginas IAM y PFS. Esto significa que las páginas IAM y PFS están generalmente en el grupo de búferes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y se pueden buscar con rapidez. Para los índices, el punto de inserción de una nueva fila lo establece la clave de índice. En este caso, el proceso de búsqueda descrito anteriormente no se produce.
+Si [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] necesita insertar una fila nueva y no hay espacio disponible en la página actual, utiliza las páginas IAM y PFS para buscar una página para la asignación o, en el caso de un montón o una página de texto o imagen, una página con espacio suficiente para contener la fila. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza las páginas IAM para buscar las extensiones asignadas a la unidad de asignación. Para cada extensión, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] busca las páginas PFS para ver si existe una página que se pueda utilizar. Cada página IAM y PFS cubre muchas páginas de datos, por lo que en una base de datos hay pocas páginas IAM y PFS. Esto significa que las páginas IAM y PFS están generalmente en el grupo de búferes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y se pueden buscar con rapidez. Para los índices, el punto de inserción de una fila nueva se establece mediante la clave de índice, pero cuando se necesita una página nueva, se produce el proceso descrito anteriormente.
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] solo asigna una nueva extensión a una unidad de asignación cuando no puede encontrar rápidamente una página en una extensión existente con espacio suficiente para almacenar la fila que se va a insertar. 
 
@@ -175,6 +175,6 @@ El intervalo entre las páginas DCM y BCM es el mismo que el intervalo entre las
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [Montones &#40;tablas sin índices agrupados&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    

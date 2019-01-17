@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4bf9ffc5d71e046c32322d20bc9b59c7fb5a25f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63b1c9e8bda9bbabcc94aa7b384b3e7ffef053de
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856173"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590209"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantener valores NULL o usar valores predeterminados durante la importación masiva (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,10 +46,10 @@ Los siguientes calificadores especifican que un campo vacío del archivo de dato
 |Comando|Qualifier|Tipo de calificador|  
 |-------------|---------------|--------------------|  
 |BCP|-k|Switch|  
-|BULK INSERT|KEEPNULLS**\***|Argumento|  
+|BULK INSERT|KEEPNULLS\*|Argumento|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|N/D|N/D|  
   
-**\*** Para [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), si no hay valores predeterminados disponibles, se debe definir la columna de la tabla para permitir valores NULL. 
+\* Para [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), si no hay valores predeterminados disponibles, se debe definir la columna de la tabla para permitir valores NULL. 
   
 > [!NOTE]
 > Estos calificadores deshabilitan la comprobación de definiciones DEFAULT en una tabla mediante los comandos de importación masiva.  Sin embargo, para cualquier instrucción INSERT simultánea, se esperan definiciones DEFAULT.
@@ -349,7 +349,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
   
 -   [Especificar el tipo de almacenamiento en archivo mediante bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   

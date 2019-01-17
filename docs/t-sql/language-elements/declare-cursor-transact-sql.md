@@ -25,15 +25,18 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: af3a010f835223a875da7df5028ac1406798c479
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597126"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300111"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Comparta sus comentarios sobre la tabla de contenido dela documentación de SQL!](https://aka.ms/sqldocsurvey)
 
   Define los atributos de un cursor de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)], como su comportamiento de desplazamiento y la consulta utilizada para generar el conjunto de resultados sobre el que opera el cursor. `DECLARE CURSOR` acepta tanto una sintaxis basada en el estándar ISO como una sintaxis que usa un conjunto de extensiones [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

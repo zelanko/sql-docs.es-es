@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a204ee5d34e37736ddd433636cf0e86564718b77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213134"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128019"
 ---
 # <a name="publication-properties-subscription-options"></a>Propiedades de la publicación, Opciones de suscripción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "53213134"
  Determina si se utiliza un agente que es independiente de otras publicaciones desde esta base de datos. Esta opción es de solo lectura; de forma predeterminada se establece en **True** para publicaciones creadas con el Asistente para nueva publicación y no se puede cambiar después de crear la publicación. Para obtener más información, vea [Administración del Agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
  **Instantánea siempre visible**  
- Determina si los archivos de instantánea se crean cada vez que se ejecuta el Agente de instantáneas (requiere **Agente de distribución independiente**). Esta opción es de solo lectura; se establece en **True** si se selecciona **Crear una instantánea inmediatamente y mantenerla disponible para inicializar suscripciones** en la página **Agente de instantáneas** del Asistente para nueva publicación (es el valor predeterminado). Para obtener más información, vea [Crear y aplicar una instantánea](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
+ Determina si los archivos de instantánea se crean cada vez que se ejecuta el Agente de instantáneas (requiere **Agente de distribución independiente**). Esta opción es de solo lectura; se establece en **True** si se selecciona **Crear una instantánea inmediatamente y mantenerla disponible para inicializar suscripciones** en la página **Agente de instantáneas** del Asistente para nueva publicación (es el valor predeterminado). Para obtener más información, vea [Crear y aplicar una instantánea](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
  **Permitir inicialización desde archivos de copia de seguridad**  
  Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si se permite utilizar archivos de copia de seguridad para inicializar suscripciones. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  

@@ -10,12 +10,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328565"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254700"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desarrollo con las API de REST para Reporting Services
 
@@ -40,14 +40,14 @@ Un par de solicitud/respuesta de una API de REST puede dividirse en cinco compon
 
 * Campos de encabezado de mensaje de solicitud HTTP:
 
-    * [Método HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) obligatorio (también denominado " operación" o "verbo"), que indica al servicio qué tipo de operación se está solicitando. Las API de REST de Reporting Services admiten los métodos DELETE, GET, HEAD, PUT, POST y PATCH.
+    * [Método HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) obligatorio (también denominado " operación" o "verbo"), que indica al servicio qué tipo de operación se está solicitando. Las API de REST de Reporting Services admiten los métodos DELETE, GET, HEAD, PUT, POST y PATCH.
     * Campos de encabezado adicionales y opcionales, según necesite el método HTTP y el URI especificados.
 
 * Campos de **cuerpo de mensaje de solicitudes** HTTP opcionales para admitir la operación HTTP y el URI. Por ejemplo, las operaciones POST contienen objetos codificados con MIME que se pasan como parámetros complejos. Para las operaciones POST o PUT, el tipo de codificación MIME para el cuerpo también debe especificarse en el encabezado de solicitud `Content-type`. Algunos servicios requieren que se use un tipo MIME concreto, como `application/json`.
 
 * Campos de **encabezado de mensaje de respuesta HTTP**:
 
-    * Un [código de estado HTTP](https://www.w3.org/Protocols/HTTP/HTRESP.html), que puede ser 2xx para los códigos correctos y 4xx o 5xx para los códigos de error. Como alternativa se puede devolver un código de estado definido por el servicio, como se indica en la documentación de la API.
+    * Un [código de estado HTTP](http://www.w3.org/Protocols/HTTP/HTRESP.html), que puede ser 2xx para los códigos correctos y 4xx o 5xx para los códigos de error. Como alternativa se puede devolver un código de estado definido por el servicio, como se indica en la documentación de la API.
     * Campos de encabezado adicionales y opcionales, según sea necesario para admitir la respuesta a la solicitud, como un encabezado de respuesta `Content-type`.
 
 * Campos de **cuerpo del mensaje de respuesta** HTTP opcionales:

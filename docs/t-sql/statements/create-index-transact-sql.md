@@ -55,18 +55,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8a77956d457e70566cbebef0e92d952b0b1158d9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980511"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300512"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido dela documentación de SQL!](https://aka.ms/sqldocsurvey)
 
 Crea un índice relacional en una tabla o una vista. También se denomina índice de almacén de filas porque es un índice de árbol B agrupado o no agrupado. Puede crear un índice de almacén de filas antes de que haya datos en la tabla. Utilice un índice de almacén de filas para mejorar el rendimiento de las consultas, especialmente cuando las consultas hacen la selección en columnas específicas o requieren que los valores se ordenen en un orden concreto.  
   
@@ -278,7 +278,7 @@ Crea un índice que especifica la ordenación lógica de una tabla. Con un índi
   
  Los índices filtrados no se aplican a los índices XML ni a los índices de texto completo. Para los índices UNIQUE, solo las filas seleccionadas deben tener valores de índice únicos. Los índices filtrados no admiten la opción IGNORE_DUP_KEY.  
   
-ON *partition_scheme_name* **( *column_name* )**  
+ON _partition_scheme_name_ **( *column_name* )**  
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica el esquema de partición que define los grupos de archivos a los que se asignarán las particiones de un índice con particiones. El esquema de partición debe existir dentro de la base de datos mediante la ejecución de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica la columna en la que se van a crear las particiones de un índice con particiones. Esta columna debe coincidir con el tipo de datos, la longitud y la precisión del argumento de la función de partición que *partition_scheme_name* emplea. *column_name* no está limitado a las columnas de la definición de índice. Se puede especificar cualquier columna de la tabla base, excepto en el caso de partición de un índice UNIQUE, en el que se debe elegir *column_name* entre las columnas usadas como clave única. Esta restricción permite que [!INCLUDE[ssDE](../../includes/ssde-md.md)] compruebe la unicidad de los valores de clave en una única partición solamente.  
@@ -476,7 +476,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  OFF: la operación de índice no se puede reanudar.
 
-MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
+MAX_DURATION **=** _time_ [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
  
 **Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
 
@@ -696,7 +696,7 @@ INSERT INTO t1 VALUES (1, 0);
   
 -   Las nuevas opciones de índice solo se pueden especificar mediante WITH (**_option\_name_ = ON | OFF**).  
 -   Las opciones no se pueden especificar utilizando la sintaxis compatible con versiones anteriores y la nueva sintaxis en la misma instrucción. Por ejemplo, al especificar WITH (**DROP_EXISTING, ONLINE = ON**), se genera un error en la instrucción.  
--   Cuando se crea un índice XML, las opciones se deben especificar mediante WITH (***option_name*= ON | OFF**).  
+-   Cuando se crea un índice XML, las opciones se deben especificar mediante WITH (**_option_name_= ON | OFF**).  
   
 ## <a name="dropexisting-clause"></a>Cláusula DROP_EXISTING  
  Puede utilizar la cláusula DROP_EXISTING para volver a generar el índice, agregar o quitar columnas, modificar opciones, modificar el criterio de ordenación de las columnas o cambiar el grupo de archivos o el esquema de partición.  

@@ -28,18 +28,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 066b202a91f646dadd4a72182193e9fb0fcee6f1
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 396797a115821543a1330cedfbe10ebf63769aeb
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980001"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299372"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido dela documentación de SQL!](https://aka.ms/sqldocsurvey)
 
 Especifica un conjunto de resultados temporal con nombre, conocido como expresión de tabla común (CTE). Se deriva de una consulta simple y se define en el ámbito de ejecución de una sola instrucción SELECT, INSERT, UPDATE o DELETE. Esta cláusula también se puede utilizar en una instrucción CREATE VIEW como parte de la instrucción SELECT que la define. Una expresión de tabla común puede incluir referencias a ella misma. Esto se conoce como expresión de tabla común recursiva.  
   

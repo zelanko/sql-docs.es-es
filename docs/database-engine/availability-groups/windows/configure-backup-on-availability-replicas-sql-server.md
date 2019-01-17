@@ -19,12 +19,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a70a9808f51ff102d62159d524007101aa2d3dd8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c6016d1feff6d66fa7ef93fc99b04f20eda88970
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212334"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133227"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configuración de copias de seguridad en las réplicas secundarias de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "53212334"
   
 2.  Opcionalmente, configure la prioridad de copia de seguridad de cada réplica de disponibilidad que está agregando o modificando. La instancia del servidor que hospeda la réplica principal usa esta prioridad para decidir qué réplica debe atender una solicitud de copia de seguridad automatizada en una base de datos del grupo de disponibilidad (se elige la réplica con mayor prioridad). Esta prioridad puede ser cualquier número comprendido entre 0 y 100, ambos incluidos. Si la prioridad es 0, indica que la réplica no debe considerarse candidata para atender solicitudes de copia de seguridad.  El valor predeterminado es 50.  
   
-     Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet **New-SqlAvailabilityReplica** . Para modificar una réplica de disponibilidad existente, use el cmdlet **Set-SqlAvailabilityReplica** . En cualquier caso, especifique el parámetro *BackupPriority***n*, donde *n* es un valor entre 0 y 100.  
+     Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet **New-SqlAvailabilityReplica** . Para modificar una réplica de disponibilidad existente, use el cmdlet **Set-SqlAvailabilityReplica** . En cualquier caso, especifique el parámetro **BackupPriority**_n_ , donde *n* es un valor entre 0 y 100.  
   
      Por ejemplo, el comando siguiente establece la prioridad de copia de seguridad de la réplica de disponibilidad `MyReplica` en **60**.  
   

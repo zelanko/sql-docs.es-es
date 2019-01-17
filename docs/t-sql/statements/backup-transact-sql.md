@@ -43,16 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203884"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242288"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -367,7 +367,7 @@ Especifica el texto de forma libre que describe el conjunto de copia de segurida
 NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Especifica el nombre del conjunto de copia de seguridad. Los nombres pueden tener un máximo de 128 caracteres. Si no se especifica NAME, está en blanco.  
   
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }  
 Especifica cuándo se puede sobrescribir el conjunto de copia de seguridad para esta copia de seguridad. Si se usan las dos opciones, RETAINDAYS tiene precedencia sobre EXPIREDATE.  
   
 Si no se especifica ninguna opción, la fecha de expiración se determina con el valor de configuración **mediaretention**. Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
@@ -518,7 +518,7 @@ A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], no tiene ningú
   
 **Opciones de supervisión**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Muestra un mensaje cada vez que se completa otro *percentage*; se usa para indicar el progreso. Si *percentage* se omite, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un mensaje después de completar cada 10 por ciento.  
   
 La opción STATS informa del porcentaje completado desde el umbral para informar del próximo intervalo. Éste es aproximadamente el porcentaje especificado; por ejemplo, con STATS=10, si la cantidad completada equivale al 40 por ciento, la opción puede mostrar el 43 por ciento. En el caso de los conjuntos de copia de seguridad de gran tamaño, esto no representa ningún problema porque el porcentaje completado se mueve muy lentamente entre las llamadas de E/S.  
@@ -564,14 +564,14 @@ Estas opciones solo se usan con `BACKUP LOG`.
 > [!NOTE]  
 > Si no desea hacer copias de seguridad del registro, use el modelo de recuperación simple. Para obtener más información, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{ NORECOVERY | STANDBY **=** *undo_file_name* }  
+{ NORECOVERY | STANDBY **=** _undo_file_name_ }  
   NORECOVERY 
 
 Realiza una copia de seguridad del registro después del error y deja la base de datos en el estado RESTORING. NORECOVERY resulta útil cuando, en caso de error, se conmuta a una base de datos secundaria y al guardar los registros después del error antes de una operación RESTORE.  
   
 Para hacer una copia de seguridad del registro óptima que omita el truncamiento de los registros y, después, establecer la base de datos en el estado RESTORING de forma atómica, use las opciones `NO_TRUNCATE` y `NORECOVERY` conjuntamente.  
   
-STANDBY **=** *standby_file_name* 
+STANDBY **=** _standby_file_name_ 
 
 Realiza una copia de seguridad del final del registro y deja la base de datos en modo de solo lectura y en el estado STANDBY. La cláusula STANDBY escribe datos en espera (realiza la reversión, pero con la posibilidad de recuperaciones posteriores). El uso de la opción STANDBY es equivalente a BACKUP LOG WITH NORECOVERY seguido de RESTORE WITH STANDBY.  
   
@@ -1113,7 +1113,7 @@ No surte ningún efecto. La versión acepta esta opción por compatibilidad con 
   
 **Opciones de supervisión**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Muestra un mensaje cada vez que se completa otro *percentage*; se usa para indicar el progreso. Si *percentage* se omite, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un mensaje después de completar cada 10 por ciento.  
   
 La opción STATS informa del porcentaje completado desde el umbral para informar del próximo intervalo. Éste es aproximadamente el porcentaje especificado; por ejemplo, con STATS=10, si la cantidad completada equivale al 40 por ciento, la opción puede mostrar el 43 por ciento. En el caso de los conjuntos de copia de seguridad de gran tamaño, esto no representa ningún problema porque el porcentaje completado se mueve muy lentamente entre las llamadas de E/S.  

@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208564"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126585"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configuración de una directiva de conmutación automática por error flexible para un grupo de disponibilidad Always On
 
@@ -113,7 +113,7 @@ ms.locfileid: "53208564"
   
 2.  Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet **New-SqlAvailabilityGroup** . Para modificar una réplica de disponibilidad existente, use el cmdlet **Set-SqlAvailabilityGroup** .  
   
-    -   Para establecer el nivel de condición de conmutación por error, use el parámetro **FailureConditionLevel***nivel*, donde *nivel* es uno de los siguientes valores:  
+    -   Para establecer el nivel de condición de conmutación por error, utilice el parámetro **FailureConditionLevel**_level_ , donde *level* es uno de los siguientes valores:  
   
         |Valor|Nivel|La conmutación por error iniciada es automática cuando se produce...|  
         |-----------|-----------|-------------------------------------------|  
@@ -125,7 +125,7 @@ ms.locfileid: "53208564"
   
          Para obtener más información sobre los niveles de condición de conmutación por error, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
-         Por ejemplo, el siguiente comando cambia el nivel de condición de error de un grupo de disponibilidad existente, `AG1`al nivel uno.  
+         Por ejemplo, el siguiente comando cambia el nivel de condición de error de un grupo de disponibilidad existente, `AG1` al nivel uno.  
   
         ```  
         Set-SqlAvailabilityGroup `   
@@ -133,7 +133,7 @@ ms.locfileid: "53208564"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Para establecer el umbral de tiempo de espera de comprobación de estado, use el parámetro **HealthCheckTimeout***n*, donde *n* es un entero de 15000 milisegundos (15 segundos) a 4294967295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
+    -   Para establecer el umbral de tiempo de espera de comprobación de estado, use el parámetro **HealthCheckTimeout**_n_ , donde *n* es un entero de 15 000 milisegundos (15 segundos) a 4 294 967 295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
   
          Por ejemplo, el siguiente comando cambia el umbral de tiempo de espera de comprobación de estado de un grupo de disponibilidad disponible, `AG1`, a 120.000 milisegundos (dos minutos).  
   

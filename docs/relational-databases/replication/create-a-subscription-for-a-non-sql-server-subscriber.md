@@ -15,12 +15,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 854e407cce5f229883e9b4f53e6a818d4532640b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4ae569fa5f7a15435fc69f84fd4254c692e1eb1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205244"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126515"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Crear una suscripción para un suscriptor que no sea de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "53205244"
   
     -   Para IBM DB2, la base de datos se especifica en la propiedad **Catálogo inicial** de la cadena de conexión DB2, la cual puede indicarse en el campo **Opciones de conexión adicionales** que se describe más adelante en este proceso.  
   
-8.  En la página **Seguridad del Agente de distribución**, haga clic en el botón de propiedades (**...**) situado junto al suscriptor para acceder al cuadro de diálogo **Seguridad del Agente de distribución**.  
+8.  En la página **Seguridad del Agente de distribución** , haga clic en el botón de propiedades (**…**) situado junto al suscriptor para obtener acceso al cuadro de diálogo **Seguridad del Agente de distribución** .  
   
 9. En el cuadro de diálogo **Seguridad del Agente de distribución** :  
   

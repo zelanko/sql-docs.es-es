@@ -1,7 +1,7 @@
 ---
 title: Guía de arquitectura de administración de memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 31ebb5ef9994c3c853b8163f4f2ba58e8cbe7d3b
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328985"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206451"
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## <a name="windows-virtual-memory-manager"></a>Administrador de memoria virtual de Windows  
@@ -70,7 +71,10 @@ Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar la
 > [!NOTE]
 > Las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden ejecutarse en un sistema operativo de 32 bits. Para acceder a más de 4 gigabytes (GB) de memoria en un sistema operativo de 32 bits, se requieren las extensiones de ventana de dirección (AWE) para administrar la memoria. Esto no es necesario cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ejecuta en sistemas operativos de 64 bits. Para más información acerca de AWE, consulte [Espacio de dirección del proceso](https://msdn.microsoft.com/library/ms189334.aspx) y [Administrar la memoria para bases de datos de gran tamaño](https://msdn.microsoft.com/library/ms191481.aspx) en la documentación de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
+<a name="changes-to-memory-management-starting-2012-11x-gm"></a>
+
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Cambios en la administración de memoria a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+
 En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), la asignación de memoria se realizaba mediante cinco mecanismos diferentes:
 -  **Asignador de página única (SPA)**, que incluye solo las asignaciones de memoria menores o iguales a 8 KB en el proceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las opciones de configuración *memoria de servidor máxima (MB)* y *memoria de servidor mínima (MB)* determinaban los límites de la memoria física que podía consumir el SPA. El grupo de búferes era el mecanismo para SPA y el mayor consumidor de asignaciones de página única.
 -  **Asignador de varias páginas (MPA)**, para las asignaciones de memoria que solicitan más de 8 KB.

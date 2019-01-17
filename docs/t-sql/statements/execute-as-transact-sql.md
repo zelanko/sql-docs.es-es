@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2183c64e1d525e0d0add54317e2af10d0ada311b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6a66ee0be27bcc584bd3d01a7b17a1fffbc74a33
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979711"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134345"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53979711"
 > [!IMPORTANT]  
 >  Mientras el cambio de contexto al usuario de la base de datos esté activo, cualquier intento de acceso a recursos fuera de la base de datos provocará que la instrucción genere errores. Esto incluye instrucciones USE *database*, consultas distribuidas y consultas que hacen referencia a otra base de datos que usa identificadores de tres o cuatro partes.  
   
- **'** *name* **'**  
+ **'** _name_ **'**  
  Es un nombre válido de inicio de sesión o de usuario. *name* debe ser miembro del rol fijo de servidor **sysadmin** o existir como entidad de seguridad en [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) o [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) respectivamente.  
   
  *name* se puede especificar como una variable local.  
@@ -85,7 +85,7 @@ ms.locfileid: "53979711"
  COOKIE INTO **@**_varbinary_variable_  
  Especifica que el contexto de ejecución solo se puede revertir al contexto anterior si la llamada a la instrucción REVERT WITH COOKIE contiene el valor de **@**_varbinary_variable_ correcto. [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa la cookie a **@**_varbinary_variable_. La opción **COOKIE INTO** solo se puede usar en el nivel ad hoc.  
   
- **@** *varbinary_variable* es **varbinary(8000)**.  
+ **@** _varbinary_variable_ es **varbinary(8000)**.  
   
 > [!NOTE]  
 >  El parámetro **OUTPUT** de la cookie está documentado actualmente como **varbinary(8000)**, que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(100)**. Las aplicaciones deben reservar **varbinary(8000)** para que la aplicación siga funcionando correctamente si el tamaño de retorno de la cookie aumenta en una versión futura.  

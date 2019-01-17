@@ -11,17 +11,17 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 99119431d65cc8780cba24fbd891a1688844a769
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328595"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300312"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conexión a una instancia de SQL Server y realización de consultas con SQL Server Management Studio
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido dela documentación de SQL!](https://aka.ms/sqldocsurvey)
 
 En este tutorial aprenderá a usar SQL Server Management Studio (SSMS) para conectarse a su instancia de SQL Server y a ejecutar algunos comandos básicos de Transact-SQL (T-SQL). En el artículo se muestra cómo hacer lo siguiente:
 

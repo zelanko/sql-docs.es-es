@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3e151639595e181fb434e5144daa64cc84128892
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206234"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132455"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -187,7 +187,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Si se quita un índice clúster mediante MOVE TO, se vuelven a generar todos los índices no clúster de la tabla base, pero permanecen en sus grupos de archivos o esquemas de partición originales. Si la tabla base se mueve a un grupo de archivos o esquema de partición diferente, los índices no clúster no se mueven para hacerlos coincidir con la nueva ubicación de la tabla base (montón). Por lo tanto, aunque los índices no clúster estuvieran previamente alineados con el índice clúster, es posible que ya no lo estén con el montón. Para más información sobre la alineación de índices con particiones, vea [Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- *partition_scheme_name* **(** *column_name* **)**  
+ _partition_scheme_name_ **(** _column_name_ **)**  
  **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica un esquema de partición como la ubicación de la tabla resultante. Es necesario que el esquema de partición se haya creado previamente ejecutando [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Si no se especifica ninguna ubicación y la tabla tiene particiones, la tabla se incluye en el mismo esquema de partición que el índice clúster existente.  

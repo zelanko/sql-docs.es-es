@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b2e04e5b63000bcdd7100c297ecd9d90dd33f27
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209104"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125585"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "53209104"
  La página **Asignación de usuarios** enumera todas las bases de datos posibles y las pertenencias al rol de base de datos en esas bases de datos que se pueden aplicar al inicio de sesión. Las bases de datos seleccionadas determinan las pertenencias a roles disponibles para el inicio de sesión. En esta página están disponibles las opciones siguientes:  
   
  **Usuarios asignados a este inicio de sesión**  
- Selecciona las bases de datos a las que se puede obtener acceso con este inicio de sesión. Cuando se seleccione una base de datos, sus roles de bases de datos válidos se mostrarán en el panel **Miembros del rol de base de datos para:** *nombre_baseDeDatos* .  
+ Selecciona las bases de datos a las que se puede obtener acceso con este inicio de sesión. Cuando se seleccione una base de datos, sus roles de bases de datos válidos se mostrarán en el panel **Miembros del rol de base de datos para:** _nombre_baseDeDatos_ .  
   
  **Mapa**  
  Permite que el inicio de sesión obtenga acceso a las bases de datos que se muestran a continuación.  
@@ -149,10 +149,10 @@ ms.locfileid: "53209104"
  **Esquema predeterminado**  
  Especifica el esquema predeterminado del usuario. Cuando se crea un usuario por primera vez, el esquema predeterminado es **dbo**. Es posible especificar un esquema predeterminado que aún no existe. No puede especificar un esquema predeterminado para un usuario asignado a un grupo, un certificado o una clave asimétrica de Windows.  
   
- **Cuenta de invitado habilitada para:**  *nombre_baseDeDatos*  
+ **Guest account enabled for:**  _database_name_  
  Atributo de solo lectura que indica si la cuenta de invitado está habilitada en la base de datos seleccionada. Utilice la página **Estado** del cuadro de diálogo **Propiedades de inicio de sesión** de la cuenta de invitado para habilitarla o deshabilitarla.  
   
- **Miembros del rol de base de datos para:**  *nombre_baseDeDatos*  
+ **Database role membership for:**  _database_name_  
  Selecciona los roles para el usuario en la base de datos especificada. Todos los usuarios son miembros del rol **public** de todas las bases de datos, y no pueden eliminarse. Para obtener más información sobre los roles de base de datos, vea [Roles de nivel de base de datos](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Elementos protegibles  

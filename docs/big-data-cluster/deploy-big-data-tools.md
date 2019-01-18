@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo instalar las herramientas que se u
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 54ea67e8b85d4e9a1a8cdbe4b40cf1bb9c3f1062
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241606"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372640"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar las herramientas de macrodatos de SQL Server 2019
 
@@ -33,12 +33,19 @@ En la tabla siguiente se enumera herramientas comunes de clúster de macrodatos 
 | **kubectl**<sup>1</sup> | Sí | Herramienta de línea de comandos para supervisar el clúster Kuberentes subyacente ([obtener más información](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
 | **Azure Data Studio** | Sí | Herramienta gráfica multiplataforma para realizar consultas en SQL Server ([obtener más información](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Instalar](../azure-data-studio/download.md) |
 | **Extensión de SQL Server 2019** | Sí | Extensión de Azure Data Studio que admite la conexión al clúster de macrodatos. También proporciona a un Asistente para la virtualización de datos. | [Instalar](../azure-data-studio/sql-server-2019-extension.md) |
-| **CLI de Azure**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para la administración de servicios de Azure. Puede usar con las implementaciones de clústeres AKS macrodatos ([obtener más información](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Instalar](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **Azure CLI**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para la administración de servicios de Azure. Puede usar con las implementaciones de clústeres AKS macrodatos ([obtener más información](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Instalar](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Opcional | Interfaz de línea de comandos moderna para realizar consultas en SQL Server ([obtener más información](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **Sqlcmd** | Para algunas secuencias de comandos | Herramienta de línea de comandos heredado para realizar consultas en SQL Server ([obtener más información](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
-| **cURL** <sup>3</sup> | Para algunas secuencias de comandos | Herramienta de línea de comandos para la transferencia de datos con las direcciones URL. | [Windows](https://curl.haxx.se/windows/) \| Linux: paquete de instalación de curl |
+| **sqlcmd** | Para algunas secuencias de comandos | Herramienta de línea de comandos heredado para realizar consultas en SQL Server ([obtener más información](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **curl** <sup>3</sup> | Para algunas secuencias de comandos | Herramienta de línea de comandos para la transferencia de datos con las direcciones URL. | [Windows](https://curl.haxx.se/windows/) \| Linux: paquete de instalación de curl |
 
-<sup>1</sup> debe usar la versión de kubectl 1,10 o posterior. Además, la versión de Kubectl debe ser más o menos de una versión secundaria de un clúster de Kubernetes. Si desea instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (en Windows 10, use cmd.exe y no de Windows PowerShell para ejecutar curl).
+<sup>1</sup> debe usar la versión de kubectl 1,10 o posterior. Además, la versión de kubectl debe ser más o menos de una versión secundaria de un clúster de Kubernetes. Si desea instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (en Windows 10, use cmd.exe y no de Windows PowerShell para ejecutar curl). 
+
+> [!TIP]
+> Para usar kubectl con un clúster implementado previamente en Azure Kubernetes Service (AKS), debe establecer el contexto de clúster con el siguiente comando de CLI de Azure:
+>
+>    ```azurecli
+>    az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>
+>    ```
 
 <sup>2</sup> debe usar la CLI de Azure versión 2.0.4 o posterior. Ejecute `az --version` para buscar la versión si es necesario.
 

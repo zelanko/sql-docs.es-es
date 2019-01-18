@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526617"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202884"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite dos modelos de implementación, el modelo de implementación del proyecto y el modelo de implementación de paquetes heredados. El modelo de implementación del proyecto le permite implementar sus proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -76,7 +76,7 @@ Para más información sobre el modelo de implementación de paquetes heredada, 
 
 Si cambia la configuración predeterminada de la cuenta de servicio de SSIS, es posible que tenga que proporcionar permisos adicionales a la cuenta de servicio no predeterminada para poder implementar paquetes correctamente. Si la cuenta de servicio no predeterminada no tiene los permisos necesarios, verá el siguiente mensaje de error.
 
-*Se produjo un error de .NET Framework durante la ejecución de la rutina definida por el usuario o el agregado "deploy_project_internal": System.ComponentModel.Win32Exception: no se dispone de un privilegio requerido por el cliente.*
+*Error de .NET Framework durante la ejecución de la rutina o agregado definido por el usuario "deploy_project_internal": System.ComponentModel.Win32Exception: El cliente no dispone de un privilegio requerido.*
 
 Este error suele ser el resultado de la falta de permisos de DCOM. Para corregirlo, haga lo siguiente.
 
@@ -102,7 +102,7 @@ Para obtener más información sobre el error descrito en esta sección y los pe
   
 1.  Crear un catálogo de SSISDB, si aún no lo ha hecho. Para obtener más información, vea [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md) (Catálogo de SSIS).  
   
-2.  Convierta el proyecto al modelo de implementación de proyectos ejecutando el **Asistente para conversión de proyectos de Integration Services** . Para obtener más información, vea las instrucciones siguientes: [Para convertir un proyecto al modelo de implementación de proyectos](#convert)  
+2.  Convierta el proyecto al modelo de implementación de proyectos ejecutando el **Asistente para conversión de proyectos de Integration Services** . Para más información, vea las instrucciones siguientes: [Para convertir un proyecto al modelo de implementación de proyectos](#convert)  
   
     -   Si creó el proyecto en [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] o en una versión posterior, de forma predeterminada el proyecto utiliza el modelo de implementación de proyectos.  
   
@@ -123,7 +123,7 @@ Para obtener más información sobre el error descrito en esta sección y los pe
   
      Para obtener más información sobre la actualización de paquetes, vea [Actualizar paquetes de Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md) y [Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Implemente el proyecto en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información, vea las instrucciones siguientes: [Para implementar un proyecto en el servidor de Integration Services](#deploy).  
+3.  Implemente el proyecto en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para más información, vea las instrucciones siguientes: [Para implementar un proyecto en el servidor de Integration Services](#deploy).  
   
 4.  (Opcional) Crear un entorno para el proyecto implementado. 
   
@@ -273,7 +273,7 @@ static void Main()
   
 2.  Si el proyecto y todos los paquetes superan la prueba de compatibilidad, haga clic **Aceptar** para convertir el paquete.  
   
-> **NOTA:** Para convertir un proyecto al modelo de implementación de paquetes, use el **Asistente para la conversión de proyectos de Integration Services**. Para más información, consulte [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
+> **NOTA:** Para convertir un proyecto al modelo de implementación de paquetes, use el **Asistente para conversión de proyectos de Integration Services**. Para más información, consulte [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Asistente para implementación de Integration Services
   El **Asistente para implementación de Integration Services** admite dos modelos de implementación:
@@ -293,9 +293,9 @@ Inicie el asistente de una de estas dos formas:
 
 **OR**
 
- - Busque el archivo ejecutable **ISDeploymentWizard.exe** en la carpeta de instalación de SQL Server; por ejemplo: “C:\Archivos de programa (x86)\Microsoft SQL Server\130\DTS\Binn”. 
+ - Busque el archivo ejecutable **ISDeploymentWizard.exe** en la carpeta de instalación de SQL Server; por ejemplo: "C:\Archivos de programa (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
- > **NOTA:** Si ve la página **Introducción** , haga clic en **Siguiente** para cambiar a la página **Seleccionar origen** . 
+ > **NOTA:** Si ve la página **Introducción** , haga clic en **Siguiente** para cambiar a **Seleccionar origen** . 
  
  La configuración de esta página es diferente en cada modelo de implementación. Siga los pasos de la sección [Project Deployment Model](#ProjectModel) o [Package Deployment Model](#PackageModel) en función del modelo que haya seleccionado en esta página.  
   
@@ -409,13 +409,13 @@ Inicie el asistente de una de estas dos formas:
   
  También puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para implementar el proyecto y ejecutar los paquetes. Para obtener más información, vea los temas de la sección **Vea también** .  
   
-> [!TIP]  
+> [!TIP]
 >  Puede generar fácilmente las instrucciones Transact-SQL para los procedimientos almacenados enumerados en el procedimiento siguiente, a excepción de catalog.deploy_project, si hace lo siguiente:  
->   
+> 
 >  1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo de **Catálogos de Integration Services** en el Explorador de objetos y navegue hasta el paquete que desea ejecutar.  
 > 2.  Haga clic con el botón derecho en el paquete y, después, haga clic en **Ejecutar**.  
 > 3.  Según sea necesario, establezca los valores de parámetros, las propiedades del administrador de conexiones y las opciones de la pestaña **Avanzadas** , como el nivel de registro.  
->   
+> 
 >      Para obtener más información acerca de los niveles de registro, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
 > 4.  Antes de hacer clic en **Aceptar** para ejecutar el paquete, haga clic en **Script**. Transact-SQL aparece en una ventana del Editor de consultas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

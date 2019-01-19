@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40235280563039493bdd174de1c314809a424336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb3351abb75827c3eac7f48687823ffeed76986c
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694093"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405615"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47694093"
 |**Nombre de columna**|**Tipo**|**Descripción**|  
 |*class*|**int**|1 = Objeto o columna (incluye módulos, XP, vistas, sinónimos y tablas).<br /><br /> 4 = entidad de seguridad de base de datos<br /><br /> 5 = Ensamblado<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (índice de texto completo)<br /><br /> 12 = desencadenador DDL de base de datos<br /><br /> 19 = Ruta<br /><br /> 30 = Especificación de auditoría|  
 |*class_desc*|**nvarchar(120)**|Descripción de la clase de la entidad. Una de las siguientes acciones para que coincida con la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|Identificador de la entidad.<br /><br /> Si *clase* = 1, entonces object_id<br /><br /> Si *clase* = 4, a continuación, sys.database_principals.principal_id.<br /><br /> Si *clase* = 5, entonces sys.assemblies.assembly_id.<br /><br /> Si *clase* = 6, entonces sys.types.user_type_id.<br /><br /> Si *clase* = 7, entonces sys.indexes.index_id.<br /><br /> Si *clase* = 12, entonces sys.triggers.object_id.<br /><br /> Si *clase* = 19, entonces sys.routes.route_id.<br /><br /> Si *clase* = 30, entonces sys. database_audit_specifications.databse_specification_id.|  
+|*major_id*|**int**|Identificador de la entidad.<br /><br /> Si *clase* = 1, entonces object_id<br /><br /> Si *clase* = 4, a continuación, sys.database_principals.principal_id.<br /><br /> Si *clase* = 5, entonces sys.assemblies.assembly_id.<br /><br /> Si *clase* = 6, entonces sys.types.user_type_id.<br /><br /> Si *clase* = 7, entonces sys.indexes.index_id.<br /><br /> Si *clase* = 12, entonces sys.triggers.object_id.<br /><br /> Si *clase* = 19, entonces sys.routes.route_id.<br /><br /> Si *clase* = 30, entonces sys. database_audit_specifications.database_specification_id.|  
 |*statement_line_number*|**int**|Si la clase es un módulo, devuelve el número de línea en el que se encuentra el uso del objeto no contenido.  De lo contrario, el valor es NULL.|  
 |*statement_ offset_begin*|**int**|Si la clase es un módulo, indica en bytes, comenzando por 0, la posición inicial donde comienza el uso del objeto no contenido. De lo contrario el valor devuelto es NULL.|  
 |*statement_ offset_end*|**int**|Si la clase es un módulo, indica en bytes, comenzando por 0, la posición final del uso del objeto no contenido. El valor -1 indica el final del módulo. De lo contrario el valor devuelto es NULL.|  

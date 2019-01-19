@@ -13,12 +13,12 @@ ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe732d1647acbfdf70dacaddfc4eea3eca479d8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd519c9cafb1358f21af30d2c9ea0522e47768b7
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094805"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405745"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Crear y administrar particiones en la base de datos del área de trabajo (SSAS tabular)
   Las particiones dividen una tabla en partes lógicas. A continuación, cada partición se puede procesar (actualizar) de forma independiente o en paralelo con otras particiones. Las particiones pueden mejorar la escalabilidad y facilitar el uso de bases de datos grandes. De forma predeterminada, cada tabla tiene una partición que incluye todas las columnas. Las tareas de este tema explican cómo crear y administrar particiones en la base de datos del área de trabajo del modelo mediante el cuadro de diálogo **Administrador de particiones** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -70,7 +70,7 @@ ms.locfileid: "48094805"
 2.  En la lista **Particiones** , seleccione la partición que desea eliminar y haga clic en **Eliminar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Las particiones &#40;Tabular de SSAS&#41;](partitions-ssas-tabular.md)   
- [Procesar particiones en la base de datos del área de trabajo &#40;Tabular de SSAS&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [Particiones &#40;SSAS tabular&#41;](partitions-ssas-tabular.md)   
+ [Procesar particiones en la base de datos del área de trabajo &#40;Tabular de SSAS&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

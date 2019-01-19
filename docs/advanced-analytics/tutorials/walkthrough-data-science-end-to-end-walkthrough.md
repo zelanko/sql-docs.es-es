@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fbed76272903fb7a9b6eee037a070677411a0f5
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4b3beca0f9e9a8c714e60bde7a2e7ff067e2265e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596426"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405735"
 ---
-# <a name="tutorial-in-database-analytics-for-data-scientists-using-r"></a>Tutorial: Análisis en bases de datos para los científicos de datos mediante R
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: Desarrollo de SQL para científicos de datos de R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este tutorial para científicos de datos, aprenda a crear la solución de extremo a otro para el modelado de predicción según la compatibilidad de características de R en SQL Server 2016 o SQL Server 2017. Este tutorial se usa un [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) base de datos en SQL Server. 
@@ -34,7 +34,7 @@ Dado que el tutorial está diseñado para presentar a los desarrolladores de R [
 
 + [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
-+ [Base de datos de demostración de taxis de Nueva York](demo-data-nyctaxi-in-sql.md)
++ [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
 
 + Un IDE de R como RStudio o la herramienta RGUI integrada que se incluye con R
 

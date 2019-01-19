@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242146"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405825"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes
 
@@ -85,7 +85,7 @@ La configuración del clúster puede personalizarse mediante un conjunto de vari
 | Variable de entorno | Obligatorio | Valor predeterminado | Descripción |
 |---|---|---|---|
 | **ACCEPT_EULA** | Sí | N/D | Acepte el contrato de licencia de SQL Server (por ejemplo, ' Y').  |
-| **NOMBREDECLÚSTER** | Sí | N/D | El nombre del espacio de nombres para implementar SQLServer agrupar datos de gran tamaño en Kubernetes. |
+| **CLUSTER_NAME** | Sí | N/D | El nombre del espacio de nombres para implementar SQLServer agrupar datos de gran tamaño en Kubernetes. |
 | **CLUSTER_PLATFORM** | Sí | N/D | La plataforma que se implementa el clúster de Kubernetes. Puede ser `aks`, `minikube`, `kubernetes`|
 | **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | El número de réplicas del grupo de proceso para elaborar. En CTP 2.2 solo con valores permitido es 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | El número de datos de grupo de réplicas para elaborar. |
@@ -248,7 +248,7 @@ kubectl get svc -n <your-cluster-name>
 
 Actualmente, la única manera de actualizar un clúster de macrodatos a una nueva versión es quitar y volver a crear el clúster manualmente. Cada versión tiene una versión única de **mssqlctl** que no es compatible con la versión anterior. Además, si un clúster anterior había que descargar una imagen en un nodo nuevo, la imagen más reciente es posible que no sea compatible con las imágenes anteriores en el clúster. Para actualizar a la versión más reciente, siga estos pasos:
 
-1. Antes de eliminar el clúster antiguo, realizar una copia de seguridad de los datos en la instancia principal de SQL Server y en HDFS. Para la instancia principal de SQL Server, puede usar [SQL Server backup y restore](data-ingestion-restore-databse.md). HDFS, le [puede copiar los datos con **curl**](data-ingestion-curl.md).
+1. Antes de eliminar el clúster antiguo, realizar una copia de seguridad de los datos en la instancia principal de SQL Server y en HDFS. Para la instancia principal de SQL Server, puede usar [SQL Server backup y restore](data-ingestion-restore-database.md). HDFS, le [puede copiar los datos con **curl**](data-ingestion-curl.md).
 
 1. Eliminar el clúster antiguo con el `mssqlctl delete cluster` comando.
 
@@ -310,10 +310,10 @@ Para supervisar o solucionar problemas de una implementación, use **kubectl** p
 
    | ssNoVersion | Descripción |
    |---|---|
-   | **punto de conexión-master-pool** | Proporciona acceso a la instancia maestra.<br/>(**EXTERNAL-IP, 31433** y **SA** usuario) |
-   | **servicio-mssql-controller-lb**<br/>**servicio-mssql-controller-nodeport** | Es compatible con las herramientas y los clientes que administran el clúster. |
-   | **proxy de servicio de equilibrador de carga**<br/>**servicio de proxy-nodeport** | Proporciona acceso a la [Portal de administración de clúster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777 o el portal)|
-   | **seguridad de servicio de equilibrador de carga**<br/>**servicio-seguridad-nodeport** | Proporciona acceso a la puerta de enlace de Spark o HDFS.<br/>(**EXTERNAL-IP** y **raíz** usuario) |
+   | **endpoint-master-pool** | Proporciona acceso a la instancia maestra.<br/>(**EXTERNAL-IP, 31433** y **SA** usuario) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Es compatible con las herramientas y los clientes que administran el clúster. |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Proporciona acceso a la [Portal de administración de clúster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **service-security-lb**<br/>**service-security-nodeport** | Proporciona acceso a la puerta de enlace de Spark o HDFS.<br/>(**EXTERNAL-IP** y **raíz** usuario) |
 
    > [!NOTE]
    > Los nombres de servicio pueden variar según el entorno de Kubernetes. Al implementar en Azure Kubernetes Service (AKS), los nombres de servicio acabar **-lb**. Para las implementaciones de minikube y kubeadm, los nombres de servicio acaban **- nodeport**.

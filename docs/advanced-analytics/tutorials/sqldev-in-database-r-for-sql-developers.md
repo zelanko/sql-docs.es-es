@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e5b0bc8633e956817e778a1d5a2d75a86df8588
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596352"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405605"
 ---
-# <a name="tutorial-in-database-analytics-for-sql-developers-using-r"></a>Tutorial: Análisis en bases de datos para desarrolladores de SQL con R
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análisis de datos de R para desarrolladores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este tutorial para programadores de SQL, obtenga información sobre la integración de R mediante la creación e implementación de una máquina basados en R de aprendizaje de la solución mediante un [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) base de datos en SQL Server. 
+En este tutorial para programadores de SQL, obtenga información sobre la integración de R mediante la creación e implementación de una máquina basados en R de aprendizaje de la solución mediante un [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) base de datos en SQL Server. Usará una instancia del motor de base de datos con [Machine Learning Services], SQL Server Management Studio y Transact-SQL ([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) y la compatibilidad del lenguaje R
 
-Este tutorial presentan las funciones de R que se usa en un flujo de trabajo de modelado de datos. Los pasos incluyen la exploración de datos, crear y entrenar un modelo de clasificación binaria y la implementación de modelos. El modelo que se compilará predice si un viaje es probable que produzca una propina en función de la hora del día, la distancia recorrida y la ubicación de recogida. Todo el código de R que se usa en este tutorial se incluye en los procedimientos almacenados que crean y ejecutan en Management Studio.
+Este tutorial presentan las funciones de R que se usa en un flujo de trabajo de modelado de datos. Los pasos incluyen la exploración de datos, crear y entrenar un modelo de clasificación binaria y la implementación de modelos. El modelo que se compilará predice si un viaje es probable que produzca una propina en función de la hora del día, la distancia recorrida y la ubicación de recogida. 
+
+Todo el código de R que se usa en este tutorial se incluye en los procedimientos almacenados que crean y ejecutan en Management Studio.
 
 ## <a name="background-for-sql-developers"></a>En segundo plano para desarrolladores de SQL
 
@@ -57,7 +59,7 @@ Este tutorial supone que está familiarizado con operaciones de base de datos b�
 
 + [Permisos](../security/user-permission.md)
 
-+ [Base de datos de demostración de taxis de Nueva York](demo-data-nyctaxi-in-sql.md)
++ [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
 
 
 ## <a name="next-steps"></a>Pasos siguientes

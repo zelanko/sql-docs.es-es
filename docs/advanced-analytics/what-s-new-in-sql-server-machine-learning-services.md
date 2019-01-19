@@ -3,20 +3,21 @@ title: '¿Qué&#39;s new: SQL Server Machine Learning Services'
 description: Anuncios sobre nuevas características para cada versión de SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f9e98d59318c9c7d43fd6f99195da972c4eca0c9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 4a3450b308918e51b370865db4ad2bedeb8e004c
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432498"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397624"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services 
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Capacidades de aprendizaje automático se agregan a SQL Server en cada versión mientras seguimos expandir, ampliar, así como para ampliar la integración entre la plataforma de datos, análisis avanzado y ciencia de datos. 
@@ -32,6 +33,7 @@ Esta versión agrega las características más solicitadas para las operaciones 
 |   | [Extensión del lenguaje Java](java/extension-java.md) en Windows y Linux es nueva en versión preliminar de SQL Server 2019. Puede hacer Java compilada de código disponible para SQL Server mediante la asignación de permisos y establecer la ruta de acceso. Aplicaciones de cliente con acceso a SQL Server pueden utilizar los datos y ejecutar el código mediante una llamada a [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), el mismo procedimiento que se usa para la integración de R y Python en SQL Server. | 
 |  | El [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) introduce dos nuevos parámetros que permiten generar fácilmente varios modelos de datos con particiones. Obtenga más información en este tutorial, [crear modelos basados en la partición en R](tutorials/r-tutorial-create-models-per-partition.md). |
 |   | Compatibilidad con clústeres de conmutación por error ahora se admite en Windows y Linux, suponiendo que se inicia el servicio Launchpad de SQL Server en todos los nodos. Para obtener más información, consulte [instalación de clúster de conmutación por error de SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -71,7 +73,7 @@ Puede usar el T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) realice 
 
 | Paquete | Descripción |
 |---------|-------------|
-[**revoscalepy**](python/ref-py-revoscalepy.md)| Equivalente de Python de RevoScaleR. Puede crear modelos de Python para regresiones logísticas y lineales, árboles de decisión, árboles impulsados y bosques aleatorios, todos los que se pueden paralelizar y es capaces de que se ejecuten en contextos de cálculo remoto. Este paquete es compatible con el uso de varios orígenes de datos y contextos de cálculo remoto. El desarrollador o científico de datos puede ejecutar código de Python en un servidor SQL remoto, para explorar datos o crear modelos sin mover datos. |
+|[**revoscalepy**](python/ref-py-revoscalepy.md)| Equivalente de Python de RevoScaleR. Puede crear modelos de Python para regresiones logísticas y lineales, árboles de decisión, árboles impulsados y bosques aleatorios, todos los que se pueden paralelizar y es capaces de que se ejecuten en contextos de cálculo remoto. Este paquete es compatible con el uso de varios orígenes de datos y contextos de cálculo remoto. El desarrollador o científico de datos puede ejecutar código de Python en un servidor SQL remoto, para explorar datos o crear modelos sin mover datos. |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Equivalente de Python del paquete MicrosoftML R. |
 
 ### <a name="pre-trained-models"></a>Modelos entrenados previamente

@@ -22,18 +22,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fae417c2078be09ebe87a4d816c829fa61831bb6
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2992aa204320379866c32e02ac2a57c68b59be40
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970906"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299192"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Enumera los resultados de un conjunto de resultados. Concretamente, devuelve el número secuencial de una fila dentro de una partición de un conjunto de resultados, empezando por 1 para la primera fila de cada partición. 
   
@@ -135,7 +135,7 @@ FROM sys.databases WHERE database_id < 5;
 |3 |tempdb |SIMPLE |
 
 
-### <a name="b-returning-the-row-number-for-salespeople"></a>B. Devolver el número de fila de vendedor  
+### <a name="b-returning-the-row-number-for-salespeople"></a>b. Devolver el número de fila de vendedor  
  En el ejemplo siguiente se calcula un número de fila para los vendedores de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] según la categoría de ventas anuales hasta la fecha.  
   
 ```sql  
@@ -285,7 +285,7 @@ RowNumber  LastName            Territory  SalesQuota
 2          Ito                 4           7,804,000.00  
 ```
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
  [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
  [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)  

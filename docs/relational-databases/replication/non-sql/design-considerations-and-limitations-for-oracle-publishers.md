@@ -13,12 +13,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbef18dc28786fc6455af68e09c788a3f0e2db1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748753"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125861"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Consideraciones y limitaciones de diseño de los publicadores de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ ms.locfileid: "47748753"
   
 -   Los suscriptores de publicaciones de Oracle no se pueden inicializar automáticamente desde una copia de seguridad.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite dos tipos de validación: binaria y de recuento de filas. Los publicadores de Oracle admiten la validación de recuento de filas. Para obtener más información, vea [Validar datos replicados](../../../relational-databases/replication/validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite dos tipos de validación: binaria y de recuento de filas. Los publicadores de Oracle admiten la validación de recuento de filas. Para obtener más información, vea [Validar datos replicados](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona dos formatos de instantánea: modo bcp nativo y modo de carácter. Los publicadores de Oracle admiten las instantáneas en modo de carácter.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "47748753"
   
     -   No se puede cambiar el parámetro **@job_login** a través de [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) o [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), pero se puede cambiar la contraseña.  
   
- Para más información sobre la seguridad de replicación, vea [Seguridad y protección &#40;replicación&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md).  
+ Para más información sobre la seguridad de la replicación, vea [Ver y modificar la configuración de seguridad de la replicación](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Consideraciones administrativas para los publicadores de Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Información general de la publicación de Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  

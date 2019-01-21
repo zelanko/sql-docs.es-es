@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539189"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134372"
 ---
 # <a name="enhance-general-replication-performance"></a>Aumentar el rendimiento de la replicación general
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "52539189"
   
     -   En la replicación de mezcla, puede ser más eficaz utilizar controladores de lógica de negocios. Para obtener más información, consulte [Ejecutar lógica de negocios durante la sincronización de mezcla](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Si utiliza desencadenadores para mantener la integridad referencial en las tablas publicadas para la replicación de mezcla, especifique el orden de procesamiento de las tablas para reducir el número de reintentos requeridos por el Agente de mezcla. Para obtener más información, consulte [Especificar el orden de procesamiento de los artículos de mezcla](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+     Si utiliza desencadenadores para mantener la integridad referencial en las tablas publicadas para la replicación de mezcla, especifique el orden de procesamiento de las tablas para reducir el número de reintentos requeridos por el Agente de mezcla. Para más información, vea [Specify merge replication options](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) (Especificación de opciones de replicación de mezcla).  
   
 -   Limite el uso de tipos de datos de objetos grandes (LOB).  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52539189"
   
      Cuando sea necesario enviar grandes cantidades de cambios a los suscriptores, reinicializarlos con una nueva instantánea puede ser más rápido que utilizar la replicación para mover los cambios individuales. Para obtener más información, vea [Reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     En la replicación transaccional, el Monitor de replicación muestra, en la pestaña **Comandos sin distribuir** , información acerca del número de transacciones de la base de datos de distribución que aún no se han distribuido a un suscriptor, así como el tiempo estimado para la distribución de dichas transacciones. Para obtener más información, consulte [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     En la replicación transaccional, el Monitor de replicación muestra, en la pestaña **Comandos sin distribuir** , información acerca del número de transacciones de la base de datos de distribución que aún no se han distribuido a un suscriptor, así como el tiempo estimado para la distribución de dichas transacciones. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Consideraciones acerca de las instantáneas  
   
@@ -144,8 +144,7 @@ ms.locfileid: "52539189"
   
      Comprimir archivos de instantáneas en la carpeta de instantáneas alternativa puede reducir los requisitos de almacenamiento en disco y facilitar la transferencia de los archivos de instantáneas en medios extraíbles.  
   
-     En algunos casos, las instantáneas comprimidas pueden mejorar el rendimiento de la transferencia de archivos de instantáneas en la red. No obstante, la compresión de instantáneas requiere que el Agente de instantáneas realice un procesamiento adicional al generar los archivos de instantáneas, y otro procesamiento adicional por parte del Agente de distribución o del Agente de mezcla al aplicar los archivos de instantáneas. Esto puede ralentizar, en algunos casos, la generación de instantáneas y aumentar el tiempo de aplicación de una instantánea. Además, las instantáneas comprimidas no se pueden reanudar si se produce un error de red; por tanto, no son adecuadas para redes no confiables. Cuando utilice instantáneas comprimidas en una red, tenga en cuenta estos inconvenientes. Para obtener más información, consulte [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md) y [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md).  
-  
+     En algunos casos, las instantáneas comprimidas pueden mejorar el rendimiento de la transferencia de archivos de instantáneas en la red. No obstante, la compresión de instantáneas requiere que el Agente de instantáneas realice un procesamiento adicional al generar los archivos de instantáneas, y otro procesamiento adicional por parte del Agente de distribución o del Agente de mezcla al aplicar los archivos de instantáneas. Esto puede ralentizar, en algunos casos, la generación de instantáneas y aumentar el tiempo de aplicación de una instantánea. Además, las instantáneas comprimidas no se pueden reanudar si se produce un error de red; por tanto, no son adecuadas para redes no confiables. Cuando utilice instantáneas comprimidas en una red, tenga en cuenta estos inconvenientes. Para más información, vea [Modificación de las opciones de la instantánea](../../../relational-databases/replication/snapshot-options.md). 
 -   Considere la posibilidad de inicializar una suscripción manualmente.  
   
      En algunos casos, como aquellos en los que intervienen grandes conjuntos de datos iniciales, es preferible inicializar una suscripción mediante otro método distinto a una instantánea. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
@@ -154,11 +153,11 @@ ms.locfileid: "52539189"
   
 -   Reduzca el nivel de detalle de los agentes de replicación, excepto durante la prueba inicial, la supervisión o la depuración.  
   
-     Reduzca los parámetros **-HistoryVerboseLevel** y **-OutputVerboseLevel** de los agentes de distribución o de mezcla. Esto reducirá número de nuevas filas insertadas para realizar el seguimiento de la salida y el historial del agente. En su lugar, los mensajes anteriores del historial con el mismo estado se actualizarán a la nueva información del historial. Aumente los niveles de detalle de la prueba, la supervisión y la depuración para tener toda la información que sea posible sobre la actividad del agente.  
+     Reduzca los parámetros **–HistoryVerboseLevel** y **–OutputVerboseLevel** de los agente de distribución o agentes de mezcla. Esto reducirá número de nuevas filas insertadas para realizar el seguimiento de la salida y el historial del agente. En su lugar, los mensajes anteriores del historial con el mismo estado se actualizarán a la nueva información del historial. Aumente los niveles de detalle de la prueba, la supervisión y la depuración para tener toda la información que sea posible sobre la actividad del agente.  
   
--   Use el parámetro **-MaxBCPThreads** del Agente de instantáneas, del Agente de mezcla y del Agente de distribución (el número de subprocesos especificados no debe superar el número de procesadores del equipo). Este parámetro especifica el número de operaciones de copia masiva que se pueden realizar en paralelo cuando se crea y aplica la instantánea.  
+-   Use el parámetro **–MaxBCPThreads** del Agente de instantáneas, del Agente de mezcla y del Agente de distribución (el número de subprocesos especificados no debe superar el número de procesadores del equipo). Este parámetro especifica el número de operaciones de copia masiva que se pueden realizar en paralelo cuando se crea y aplica la instantánea.  
   
--   Use el parámetro **-UseInprocLoader** del Agente de distribución y del Agente de mezcla (este parámetro no se puede usar si las tablas publicadas incluyen columnas XML). Con este parámetro, el agente utiliza el comando BULK INSERT cuando se aplica la instantánea.  
+-   Utilice el parámetro **–UseInprocLoader** del Agente de distribución y del Agente de mezcla (este parámetro no se puede utilizar si las tablas publicadas incluyen columnas XML). Con este parámetro, el agente utiliza el comando BULK INSERT cuando se aplica la instantánea.  
   
  Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
   

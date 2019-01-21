@@ -20,12 +20,12 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcc1dd9aa113c53071363beefc5d9ad238144e28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef4d7e038c9c8ed4d22bbc49e0139f2408ca8afe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796143"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134935"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features y tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -53,7 +53,7 @@ ms.locfileid: "47796143"
 |Cuando la tarea o contenedor recibe el evento **OnTaskFailed** .|Es llamado por el host de la tarea cuando se produce un error.|  
 |Cuando la tarea o contenedor recibe el evento **OnProgress** .|Se llama para actualizar el progreso de la ejecución de la tarea.|  
 |Cuando la tarea o contenedor recibe el evento **OnQueryCancel** .|Se llama en cualquier momento durante el procesamiento de la tarea cuando puede cancelar la ejecución.|  
-|Cuando la tarea o contenedor recibe el evento **OnVariableValueChanged** .|Llamado por la biblioteca de tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando cambia el valor de una variable. Es necesario establecer el parámetro RaiseChangeEvent de la variable en **true** para generar este evento.<br /><br /> **\*\* Advertencia \*\*** La variable asociada a este punto de interrupción se tiene que definir en el ámbito del **contenedor** . Si la variable se define en el ámbito del paquete, el punto de interrupción no se llega a tocar.|  
+|Cuando la tarea o contenedor recibe el evento **OnVariableValueChanged** .|Llamado por la biblioteca de tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando cambia el valor de una variable. Es necesario establecer el parámetro RaiseChangeEvent de la variable en **true** para generar este evento.<br /><br /> **&#42;&#42; Advertencia &#42;&#42;** La variable asociada a este punto de interrupción se tiene que definir en el ámbito del **contenedor**. Si la variable se define en el ámbito del paquete, el punto de interrupción no se llega a tocar.|  
 |Cuando la tarea o contenedor recibe el evento **OnCustomEvent** .|Llamado por tareas para provocar eventos personalizados definidos por la tarea.|  
   
  Además de las condiciones de interrupción disponibles para todas las tareas y contenedores, algunas tareas y contenedores incluyen condiciones de interrupción especiales para establecer puntos de interrupción. Por ejemplo, puede habilitar una condición de interrupción en el contenedor de bucles For que establezca un punto de interrupción que suspenda la ejecución al principio de cada iteración del bucle.  
@@ -161,6 +161,6 @@ ms.locfileid: "47796143"
  **Número de llamadas**  
  Especifique el número de visitas en el que se desencadena una interrupción. Esta opción no está disponible si la interrupción está siempre activa.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas del desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Depurar un script mediante el establecimiento de puntos de interrupción en una tarea Script y un componente de script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

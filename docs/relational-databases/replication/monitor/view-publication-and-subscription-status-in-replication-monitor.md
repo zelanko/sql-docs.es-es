@@ -22,12 +22,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 851431754767545977c43c19b44880c54543872d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b11a1206e691e834c3ed44d7ab83c73ffc002ec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613444"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127741"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Ver el estado de la suscripción y la publicación en el Monitor de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47613444"
   
  **Para ver el estado de la publicación y la suscripción**  
   
--   Monitor de replicación: [Ver información y realizar tareas para una publicación&#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) y [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+-   Monitor de replicación: [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
  **Para ver información detallada de los agentes**  
   
--   Monitor de replicación: [Ver información y realizar tareas para los agentes asociados con una publicación&#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) y [Ver información y realizar tareas para los agentes asociados con una suscripción&#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Monitor de replicación: [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="publication-status-values"></a>Valores del estado de la publicación  
  En la siguiente tabla se muestran los valores de estado de la publicación y sus iconos correspondientes en orden de prioridad.  
@@ -112,7 +112,7 @@ ms.locfileid: "47613444"
 |Sincronizando|![Icono de la interfaz de usuario: agente de replicación en ejecución](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icono de la interfaz de usuario: agente de replicación en ejecución")|  
 |No se están sincronizando|![Icono de la interfaz de usuario: agente de replicación detenido](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icono de la interfaz de usuario: agente de replicación detenido")|  
   
-## <a name="see-also"></a>Ver también  
- [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+## <a name="see-also"></a>Consulte también  
+ [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

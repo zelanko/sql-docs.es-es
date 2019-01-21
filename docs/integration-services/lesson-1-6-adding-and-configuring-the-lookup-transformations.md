@@ -1,7 +1,7 @@
 ---
-title: 'Paso 6: Agregar y configurar transformaciones de búsqueda | Microsoft Docs'
+title: 'Paso 6: Adición y configuración de las transformaciones de búsqueda | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,36 +11,37 @@ ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8356a7ff8ee0cdb0e55bcd313a01a8ce1fe045ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765573"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143381"
 ---
-# <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Lección 1-6: Agregar y configurar transformaciones de búsqueda
-Tras configurar el origen de archivo plano para extraer datos del archivo de origen, la siguiente tarea consiste en definir las transformaciones de búsqueda necesarias para obtener los valores para las claves **CurrencyKey** y **DateKey**. Una transformación Búsqueda realiza una búsqueda combinando datos de la columna de entrada especificada en una columna de un conjunto de datos de referencia. El conjunto de datos de referencia puede ser una tabla o una vista existente, una tabla nueva o el resultado de una instrucción SQL. En este tutorial, la transformación Búsqueda utiliza un administrador de conexiones OLE DB para conectar con la base de datos que contiene los datos que constituyen el origen del conjunto de datos de referencia.  
+# <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lección 1-6: Adición y configuración de las transformaciones de búsqueda
+
+Tras configurar el origen de archivo plano para extraer datos del archivo de origen, se definen las transformaciones de búsqueda necesarias para obtener los valores para **CurrencyKey** y **DateKey**. Una transformación Búsqueda realiza una búsqueda combinando datos de la columna de entrada especificada en una columna de un conjunto de datos de referencia. El conjunto de datos de referencia puede ser una tabla o una vista existente, una tabla nueva o el resultado de una instrucción SQL. En este tutorial, la transformación Búsqueda usa un administrador de conexiones OLE DB para conectarse a la base de datos que contiene los datos de origen del conjunto de datos de referencia.  
   
 > [!NOTE]  
-> También puede configurar la transformación de Búsqueda para conectar con una caché que contiene el conjunto de datos de referencia. Para más información, consulte [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md).  
+> También puede configurar la transformación de Búsqueda para conectar con una caché que contiene el conjunto de datos de referencia. Para más información, vea [Transformación de búsqueda](../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-Para este tutorial, agregará y configurará los dos componentes de la transformación Búsqueda en el paquete:  
+En esta tarea, agregará y configurará los dos componentes de la transformación Búsqueda siguientes al paquete:  
   
--   Una transformación para realizar una búsqueda de valores de la columna **CurrencyKey** de la tabla de dimensiones **DimCurrency** basada en la coincidencia de valores de la columna **CurrencyID** del archivo plano.  
+-   Una transformación para realizar una búsqueda de valores de la columna **CurrencyKey** de la tabla de dimensiones **DimCurrency**, en función de la coincidencia de los valores de la columna **CurrencyID** del archivo plano.  
   
--   Una transformación para realizar una búsqueda de valores de la columna **DateKey** de la tabla de dimensiones **DimDate** basada en la coincidencia de valores de la columna **CurrencyDate** del archivo plano.  
+-   Una transformación para realizar una búsqueda de valores de la columna **DateKey** de la tabla de dimensiones **DimDate**, en función de la coincidencia de los valores de la columna **CurrencyDate** del archivo plano.  
   
-En ambos casos, la transformación de búsqueda usará el administrador de conexiones OLE DB creado anteriormente.  
+En ambos casos, en la transformación de búsqueda se usa el administrador de conexiones OLE DB creado anteriormente.  
   
-### <a name="to-add-and-configure-the-lookup-currency-key-transformation"></a>Para agregar y configurar la transformación Lookup Currency Key  
+## <a name="add-and-configure-the-lookup-currency-key-transformation"></a>Adición y configuración de la transformación Lookup Currency Key  
   
-1.  En el **cuadro de herramientas de SSIS**, expanda **Comunes**y arrastre **Búsqueda** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque Búsqueda directamente bajo el origen **Extract Sample Currency Data** .  
+1.  En el **cuadro de herramientas de SSIS**, expanda **Comunes**y arrastre **Búsqueda** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque **Búsqueda** directamente bajo el origen **Extract Sample Currency Data**.  
   
-2.  Haga clic en el origen de archivo plano **Extract Sample Currency Data** y arrastre la flecha azul a la transformación **Búsqueda** que acaba de agregar para conectar los dos componentes.  
+2.  Haga clic en el origen de archivo plano **Extract Sample Currency Data** y arrastre la flecha de color azul a la transformación **Búsqueda** recién agregada para conectar los dos componentes.  
   
-3.  En la superficie de diseño **Flujo de datos** , haga clic en **Búsqueda** en la transformación **Búsqueda** y cambie el nombre por **Lookup Currency Key**.  
+3.  En la superficie de diseño **Flujo de datos**, haga clic en **Búsqueda** en la transformación **Búsqueda** y cambie el nombre por **Lookup Currency Key**.  
   
-4.  Haga doble clic en la transformación **Lookup CurrencyKey** para mostrar el Editor de transformación Búsqueda.  
+4.  Haga doble clic en la transformación **Lookup Currency Key** para mostrar el **Editor de transformación Búsqueda**.  
   
 5.  En la página **General** , realice las selecciones siguientes:  
   
@@ -52,7 +53,7 @@ En ambos casos, la transformación de búsqueda usará el administrador de conex
   
     1.  En el cuadro de diálogo **Administrador de conexiones OLE DB** , asegúrese de que se muestra **localhost.AdventureWorksDW2012** .  
   
-    2.  Seleccione **Usar los resultados de una consulta SQL**y, a continuación, escriba o copie la instrucción SQL siguiente:  
+    2.  Seleccione **Usar los resultados de una consulta SQL** y, después, escriba o pegue la instrucción SQL siguiente:  
   
         ```sql
         SELECT * FROM [dbo].[DimCurrency]
@@ -61,6 +62,7 @@ En ambos casos, la transformación de búsqueda usará el administrador de conex
             'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
             'MXN', 'SAR', 'USD', 'VEB')
         ```  
+    3.  Haga clic en **Vista previa** para comprobar los resultados de la consulta.
   
 7.  En la página **Columnas** , realice las selecciones siguientes:  
   
@@ -68,21 +70,21 @@ En ambos casos, la transformación de búsqueda usará el administrador de conex
   
     2.  En la lista **Columnas de búsqueda disponibles** , active la casilla situada a la izquierda de **CurrencyKey**.  
   
-8.  Haga clic en **Aceptar** para volver a la superficie de diseño **Flujo de datos** .  
+8.  Haga clic en **Aceptar** para volver a la superficie de diseño **Flujo de datos**.  
   
-9. Haga clic con el botón derecho en la transformación Lookup Currency Key y haga clic en **Propiedades**.  
+9. Haga clic con el botón derecho en la transformación Lookup Currency Key y seleccione **Propiedades**.  
   
-10. En la ventana Propiedades, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** y la propiedad **DefaultCodePage** en **1252**.  
+10. En la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** y la propiedad **DefaultCodePage** en **1252**.  
   
-### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Para agregar y configurar la transformación Lookup Date Key  
+## <a name="add-and-configure-the-lookup-date-key-transformation"></a>Adición y configuración de la transformación Lookup Date Key  
   
-1.  En el **cuadro de herramientas de SSIS**, arrastre **Búsqueda** a la superficie de diseño **Flujo de datos** . Coloque Búsqueda justo debajo de la transformación **Lookup Currency Key** .  
+1.  En el **cuadro de herramientas de SSIS**, arrastre **Búsqueda** a la superficie de diseño **Flujo de datos** . Coloque esta instancia de **Búsqueda** justo debajo de la transformación **Lookup Currency Key**.  
   
-2.  Haga clic en la transformación **Lookup Currency Key** y arrastre la flecha verde hasta la transformación **Búsqueda** que acaba de agregar para conectar los dos componentes.  
+2.  Haga clic en la transformación **Lookup Currency Key** y arrastre la flecha de color azul hasta la nueva transformación **Búsqueda** para conectar los dos componentes.  
   
-3.  En el cuadro de diálogo **Selección de entrada y salida** , en el cuadro de lista **Salida** , haga clic en **Salida de entradas coincidentes de búsqueda** y, a continuación, haga clic en **Aceptar**.  
+3.  En el cuadro de diálogo **Selección de entrada y salida**, haga clic en **Salida de entradas coincidentes de búsqueda** en el cuadro de lista **Salida** y, después, haga clic en **Aceptar**.  
   
-4.  En la superficie de diseño **Flujo de datos** , haga clic en **Búsqueda** en la transformación **Búsqueda** recién agregada y cambie el nombre por **Lookup Date Key**.  
+4.  En la superficie de diseño **Flujo de datos**, seleccione el nombre **Búsqueda** en la transformación **Búsqueda** recién agregada y cambie el nombre por **Lookup Date Key**.  
   
 5.  Haga doble clic en la transformación **Lookup Date Key** .  
   
@@ -90,9 +92,9 @@ En ambos casos, la transformación de búsqueda usará el administrador de conex
   
 7.  En la página **Conexión** , realice las selecciones siguientes:  
   
-    1.  En el cuadro de diálogo **Administrador de conexiones OLEDB** , asegúrese de que se muestra **localhost.AdventureWorksDW2012** .  
+    1.  En el cuadro de diálogo **Administrador de conexiones OLEDB**, asegúrese de que se muestra **localhost.AdventureWorksDW2012**.  
   
-    2.  En el cuadro **Usar una tabla o vista** , escriba o seleccione **[dbo].[DimDate]**.  
+    2.  En el cuadro **Usar una tabla o vista**, escriba o seleccione **[dbo].[DimDate]**.  
   
 8.  En la página **Columnas** , realice las selecciones siguientes:  
   
@@ -102,17 +104,17 @@ En ambos casos, la transformación de búsqueda usará el administrador de conex
   
 9. En la página **Avanzadas** , revise las opciones de almacenamiento en memoria caché.  
   
-10. Haga clic en **Aceptar** para volver a la superficie de diseño **Flujo de datos** .  
+10. Haga clic en **Aceptar** para volver a la superficie de diseño **Flujo de datos**.  
   
-11. Haga clic con el botón derecho en la transformación Lookup Date Key y haga clic en **Propiedades.**  
+11. Haga clic con el botón derecho en la transformación **Lookup Date Key** y seleccione **Propiedades**.
   
-12. En la ventana Propiedades, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** y la propiedad **DefaultCodePage** en **1252**.  
+12. En la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** y la propiedad **DefaultCodePage** en **1252**.  
   
-## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 7: Agregar y configurar el destino de OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+## <a name="go-to-next-task"></a>Ir a la tarea siguiente
+[Paso 7: Adición y configuración del destino de OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>Ver también  
-[Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>Vea también  
+[Transformación Búsqueda](../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
   

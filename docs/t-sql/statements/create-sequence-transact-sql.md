@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d26d4d303ffb312a2dc289e9f7426fbc6d191de8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629049"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226532"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,52 +56,48 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *sequence_name*  
- Especifica el nombre exclusivo por el que se conoce la secuencia en la base de datos. El tipo es **sysname**.  
+*sequence_name*  
+Especifica el nombre exclusivo por el que se conoce la secuencia en la base de datos. El tipo es **sysname**.  
   
- [ built_in_integer_type | user-defined_integer_type  
- Una secuencia se puede definir como de cualquier tipo entero. Están permitidos los siguientes tipos  
+[ built_in_integer_type | user-defined_integer_type  
+Una secuencia se puede definir como de cualquier tipo entero. Están permitidos los siguientes tipos  
   
 -   **tinyint**: abarca de 0 a 255  
-  
 -   **smallint**: abarca de -32 768 a 32 767  
-  
 -   **int**: abarca de -2 147 483 648 a 2 147 483 647  
-  
 -   **bigint**: abarca de -9 223 372 036 854 775 808 a 9 223 372 036 854 775 807  
-  
 -   **decimal** y **numeric** con una escala de 0.  
-  
 -   Cualquier tipo de datos definido por el usuario (tipo de alias) que esté basado en uno de los tipos permitidos.  
   
- Si no se proporciona ningún tipo de datos, el tipo de datos **bigint** se usa como valor predeterminado.  
+Si no se proporciona ningún tipo de datos, el tipo de datos **bigint** se usa como valor predeterminado.  
   
- START WITH \<constant>  
- Primer valor devuelto por el objeto de secuencia. El valor **START** debe ser menor o igual que el máximo, y mayor o igual que el valor mínimo del objeto de secuencia. El valor inicial predeterminado para un nuevo objeto de secuencia es el valor mínimo para un objeto de secuencia ascendente y el valor máximo para uno descendente.  
+START WITH \<constant>  
+Primer valor devuelto por el objeto de secuencia. El valor **START** debe ser menor o igual que el máximo, y mayor o igual que el valor mínimo del objeto de secuencia. El valor inicial predeterminado para un nuevo objeto de secuencia es el valor mínimo para un objeto de secuencia ascendente y el valor máximo para uno descendente.  
   
- INCREMENT BY \<constant>  
- Valor usado para incrementar (o disminuir si es negativo) el valor del objeto de secuencia para cada llamada a la función **NEXT VALUE FOR**. Si el incremento es un valor negativo, el objeto de secuencia es descendente; de lo contrario, es ascendente. El incremento no puede ser 0. El incremento predeterminado para un nuevo objeto de secuencia es 1.  
+INCREMENT BY \<constant>  
+Valor usado para incrementar (o disminuir si es negativo) el valor del objeto de secuencia para cada llamada a la función **NEXT VALUE FOR**. Si el incremento es un valor negativo, el objeto de secuencia es descendente; de lo contrario, es ascendente. El incremento no puede ser 0. El incremento predeterminado para un nuevo objeto de secuencia es 1.  
   
- [ MINVALUE \<constant> | **NO MINVALUE** ]  
- Especifica los límites del objeto de secuencia. El valor mínimo predeterminado para un nuevo objeto de secuencia es el valor mínimo del tipo de datos del objeto de secuencia. Es cero para el tipo de datos **tinyint** y un número negativo para todos los demás.  
+[ MINVALUE \<constant> | **NO MINVALUE** ]  
+Especifica los límites del objeto de secuencia. El valor mínimo predeterminado para un nuevo objeto de secuencia es el valor mínimo del tipo de datos del objeto de secuencia. Es cero para el tipo de datos **tinyint** y un número negativo para todos los demás.  
   
- [ MAXVALUE \<constant> | **NO MAXVALUE**  
- Especifica los límites del objeto de secuencia. El valor máximo predeterminado para un nuevo objeto de secuencia es el valor máximo del tipo de datos del objeto de secuencia.  
+[ MAXVALUE \<constant> | **NO MAXVALUE**  
+Especifica los límites del objeto de secuencia. El valor máximo predeterminado para un nuevo objeto de secuencia es el valor máximo del tipo de datos del objeto de secuencia.  
   
- [ CYCLE | **NO CYCLE** ]  
- Propiedad especifica si el objeto de secuencia se debería reiniciar desde el valor mínimo (o el máximo para los objetos de secuencia descendente) o producir una excepción cuando se supera el valor mínimo o máximo. La opción de ciclo predeterminado para los nuevos objetos de secuencia es NO CYCLE.  
+[ CYCLE | **NO CYCLE** ]  
+Propiedad especifica si el objeto de secuencia se debería reiniciar desde el valor mínimo (o el máximo para los objetos de secuencia descendente) o producir una excepción cuando se supera el valor mínimo o máximo. La opción de ciclo predeterminado para los nuevos objetos de secuencia es NO CYCLE.  
   
- Tenga en cuenta que el ciclo se reinicia a partir del valor mínimo o máximo, no a partir del valor inicial.  
+> [!NOTE]
+> El ciclo de SEQUENCE se reinicia a partir del valor mínimo o máximo, no a partir del valor inicial.  
   
- [ **CACHE** [\<constant> ] | NO CACHE ]  
- Aumenta el rendimiento de las aplicaciones que utilizan objetos de secuencia al reducir el número de E/S de disco que se necesitan para generar números de secuencia. El valor predeterminado es CACHÉ.  
+[ **CACHE** [\<constant> ] | NO CACHE ]  
+Aumenta el rendimiento de las aplicaciones que utilizan objetos de secuencia al reducir el número de E/S de disco que se necesitan para generar números de secuencia. El valor predeterminado es CACHÉ.  
   
- Por ejemplo, si se elige un tamaño de caché de 50, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mantiene 50 valores individuales almacenados en memoria caché. Solo almacena en memoria caché el valor actual y el número de valores que se quedan en la memoria caché. Esto significa que la cantidad de memoria necesaria para almacenar la memoria caché siempre es dos veces la del tipo de datos del objeto de secuencia.  
+Por ejemplo, si se elige un tamaño de caché de 50, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mantiene 50 valores individuales almacenados en memoria caché. Solo almacena en memoria caché el valor actual y el número de valores que se quedan en la memoria caché. Esto significa que la cantidad de memoria necesaria para almacenar la memoria caché siempre es dos veces la del tipo de datos del objeto de secuencia.  
   
 > [!NOTE]  
->  Si la opción de memoria caché se habilita sin especificar un tamaño de caché, el Motor de base de datos seleccionará un tamaño. Sin embargo, los usuarios no deben confiar en que la selección sea coherente. [!INCLUDE[msCoName](../../includes/msconame-md.md)] puede cambiar el método de cálculo del tamaño de la memoria caché sin previo aviso.  
+> Si la opción de memoria caché se habilita sin especificar un tamaño de caché, el Motor de base de datos seleccionará un tamaño. Sin embargo, los usuarios no deben confiar en que la selección sea coherente. [!INCLUDE[msCoName](../../includes/msconame-md.md)] puede cambiar el método de cálculo del tamaño de la memoria caché sin previo aviso.  
   
- Cuando se crean con la opción **CACHE**, un apagado inesperado (como un corte de suministro eléctrico) puede provocar la pérdida de los números de secuencia que permanecen en la memoria caché.  
+Cuando se crean con la opción **CACHE**, un apagado inesperado (como un corte de suministro eléctrico) puede provocar la pérdida de los números de secuencia que permanecen en la memoria caché.  
   
 ## <a name="general-remarks"></a>Notas generales  
  Los números de secuencia se generan fuera del ámbito de la transacción actual. Se utilizan tanto si la transacción que usa el número de secuencia se confirma como si se revierte.  
@@ -167,7 +163,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  En este ejemplo se concede al usuario el permiso AdventureWorks\Larry para crear secuencias en el esquema Test.  
   
-```  
+```sql  
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
@@ -185,7 +181,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  Para crear el esquema Test, ejecute la siguiente instrucción.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
 ```  
@@ -193,17 +189,17 @@ GO
 ### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. Crear una secuencia que se incremente en 1  
  En este ejemplo, Thierry crea una secuencia denominada CountBy1 que se incrementa en uno cada vez que se usa.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 1  
     INCREMENT BY 1 ;  
 GO  
 ```  
   
-### <a name="b-creating-a-sequence-that-decreases-by-1"></a>B. Crear una secuencia que se disminuya en 1  
+### <a name="b-creating-a-sequence-that-decreases-by-1"></a>b. Crear una secuencia que se disminuya en 1  
  El ejemplo siguiente comienza en 0 y resta uno cada vez que se utiliza.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountByNeg1  
     START WITH 0  
     INCREMENT BY -1 ;  
@@ -213,7 +209,7 @@ GO
 ### <a name="c-creating-a-sequence-that-increases-by-5"></a>C. Crear una secuencia que se incremente en 5  
  El siguiente ejemplo crea una secuencia que se incrementa en 5 cada vez que se utiliza.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 5  
     INCREMENT BY 5 ;  
@@ -223,7 +219,7 @@ GO
 ### <a name="d-creating-a-sequence-that-starts-with-a-designated-number"></a>D. Crear una secuencia que se inicia con un número designado  
  Después de importar una tabla, Thierry observa que el mayor número de identificación utilizado es 24.328. Thierry necesita una secuencia que generará números a partir de 24.329. El siguiente código crea una secuencia que comienza en 24.329 y se incrementa en 1.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.ID_Seq  
     START WITH 24329  
     INCREMENT BY 1 ;  
@@ -233,13 +229,13 @@ GO
 ### <a name="e-creating-a-sequence-using-default-values"></a>E. Crear una secuencia utilizando los valores predeterminados  
  En el siguiente ejemplo se crea una secuencia mediante los valores predeterminados.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.TestSequence ;  
 ```  
   
  Ejecute la siguiente instrucción para ver las propiedades de la secuencia.  
   
-```  
+```sql  
 SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;  
 ```  
   
@@ -258,15 +254,15 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 ### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. Crear una secuencia con un tipo de datos concreto  
  En este ejemplo se crea una secuencia usando el tipo de datos **smallint**, que abarca de -32 768 a 32 767.  
   
-```  
-CREATE SEQUENCE SmallSeq  
+```sql  
+CREATE SEQUENCE SmallSeq 
     AS smallint ;  
 ```  
   
 ### <a name="g-creating-a-sequence-using-all-arguments"></a>G. Crear una secuencia utilizando todos los argumentos  
  En este ejemplo se crea una secuencia denominada DecSeq mediante el tipo de datos **decimal**, que abarca de 0 a 255. La secuencia se inicia con 125 y se incrementa en 25 cada vez que se genera un número. Dado que la secuencia se configura para recorrer en ciclo cuando el valor supera el valor máximo de 200, la secuencia se reinicia en el valor mínimo de 100.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.DecSeq  
     AS decimal(3,0)   
     START WITH 125  
@@ -280,7 +276,7 @@ CREATE SEQUENCE Test.DecSeq
   
  Ejecute la siguiente instrucción para ver el primer valor; la opción `START WITH` 125.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.DecSeq;  
 ```  
   
@@ -290,13 +286,13 @@ SELECT NEXT VALUE FOR Test.DecSeq;
   
  Ejecute el siguiente código para confirmar el tamaño de caché y ver el valor actual.  
   
-```  
+```sql  
 SELECT cache_size, current_value   
 FROM sys.sequences  
 WHERE name = 'DecSeq' ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   

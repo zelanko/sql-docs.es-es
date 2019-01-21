@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980391"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300572"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido dela documentación de SQL!](https://aka.ms/sqldocsurvey)
 
 Crea una nueva tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -981,7 +981,7 @@ Los índices de columna y de tabla se pueden especificar como parte de la instru
   
  Coloque un prefijo de signo de número único (#*table_name*) en los nombres de las tablas temporales locales y un prefijo de signo de número doble (##*table_name*) en los nombres de las tablas temporales globales.  
   
- Las instrucciones SQL hacen referencia a la tabla temporal mediante el valor especificado para *table_name* en la instrucción CREATE TABLE. Por ejemplo####:  
+ Las instrucciones SQL hacen referencia a la tabla temporal mediante el valor especificado para *table_name* en la instrucción CREATE TABLE. Por ejemplo:  
   
 ```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
@@ -990,6 +990,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  Si se ha creado más de una tabla temporal en un único procedimiento almacenado o lote, deben tener nombres distintos.  
+ 
+ Si incluye un elemento *schema_name* al crear una tabla temporal o acceder a ella, se omite.  Todas las tablas temporales se crean en el esquema dbo.
   
  Si se crea una tabla temporal local en un procedimiento almacenado o una aplicación que varios usuarios pueden ejecutar al mismo tiempo, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] tiene que ser capaz de distinguir las tablas creadas por los distintos usuarios. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza esto anexando internamente un sufijo numérico a cada nombre de tabla temporal local. El nombre completo de una tabla temporal tal como se almacena en la tabla **sysobjects** de **tempdb** consta del nombre de la tabla especificado en la instrucción CREATE TABLE y el sufijo numérico generado por el sistema. Para permitir que se agregue el sufijo, el parámetro *table_name* especificado para un nombre temporal local no puede superar los 116 caracteres.  
   

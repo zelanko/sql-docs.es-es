@@ -22,18 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce7020eb7270ffb24f1926c165a71e8db33774e0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf5737166a8613cbf20df5b6c48a720c4d366a64
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400729"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299684"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Evalúa una lista de condiciones y devuelve una de las varias expresiones de resultado posibles.  
   
@@ -162,7 +162,7 @@ GO
   
 ```  
   
-### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. Usar una instrucción SELECT con una expresión CASE de búsqueda  
+### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>b. Usar una instrucción SELECT con una expresión CASE de búsqueda  
  En una instrucción `SELECT`, la expresión `CASE` de búsqueda permite sustituir valores en el conjunto de resultados basándose en los valores de comparación. En el ejemplo siguiente se presenta el precio de venta como un comentario basado en el intervalo de precios de un producto.  
   
 ```  
@@ -354,7 +354,7 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   

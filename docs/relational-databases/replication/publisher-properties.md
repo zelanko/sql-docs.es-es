@@ -1,37 +1,83 @@
 ---
-title: Propiedades del publicador | Microsoft Docs
+title: Cuadro de diálogo Propiedades del publicador de Replicación de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
 ms.topic: conceptual
+f1_keywords:
+- sql13.rep.configdistwizard.distpubproperties.f1
+- sql13.rep.configdistwizard.pubproperties.general.f1
+- sql13.rep.configdistwizard.pubproperties.pubdb.f1
+- sql13.rep.configdistwizard.pubproperties.subscribers.f1
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eecc64d0011936415c43baa02b6601a390225437
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ba43fc3f35c1fd3cacd3bdda6d4192cf7dc75af
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729583"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129845"
 ---
-# <a name="publisher-properties"></a>Propiedades del publicador
+# <a name="sql-server-replication-publisher-properties-dialog-box"></a>Cuadro de diálogo Propiedades del publicador de Replicación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Esta sección contiene información sobre las propiedades del publicador disponibles tanto en el distribuidor como en el publicador.  
+
+En este tema se describen las distintas opciones del cuadro de diálogo Propiedades del publicador. 
+
+## <a name="general"></a>General
+  La página **General** del cuadro de diálogo **Propiedades del publicador** muestra información de solo lectura sobre el distribuidor y la base de datos de distribución usada por el publicador. Para cambiar el distribuidor o la base de datos de distribución de un publicador:  
   
--   [Propiedades del publicador: Distribuidor](../../relational-databases/replication/publisher-properties-distributor.md)  
+1.  Deshabilite la publicación en el publicador. Para obtener más información, vea [Deshabilitar la publicación y distribución](../../relational-databases/replication/disable-publishing-and-distribution.md).    
+2.  Vuelva a configurar la publicación y la distribución. Para obtener más información, consulte [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
--   [Propiedades del publicador (Publicador, General)](../../relational-databases/replication/publisher-properties-publisher-general.md)  
+## <a name="distributor"></a>Distribuidor 
+El cuadro de diálogo **Propiedades del publicador** le permitirá ver y modificar las propiedades asociadas a la relación entre el publicador y el distribuidor.  
   
--   [Propiedades del publicador - Publicador, Bases de datos de publicaciones](../../relational-databases/replication/publisher-properties-publisher-publication-databases.md)  
+### <a name="options"></a>Opciones  
+ **Conexión del agente al publicador**  
+ Especifique el contexto en el que los siguientes agentes establecerán conexiones del distribuidor al publicador:  
   
--   [Propiedades del publicador - Publicador, Suscriptores](../../relational-databases/replication/publisher-properties-publisher-subscribers.md)  
+-   Agente de lectura de cola para publicaciones transaccionales que permiten suscripciones de actualización en cola    
+-   Agente de instantáneas y Agente de registro del LOG para publicaciones de Oracle  
   
-## <a name="see-also"></a>Ver también  
+ Seleccione **Suplantar cuenta de proceso del agente** para establecer conexiones al publicador a través del contexto de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con la que se ejecutan los agentes o especifique **Autenticación de SQL Server**y escriba un valor para **Inicio de sesión** y **Contraseña**. Se recomienda seleccionar **Suplantar cuenta de proceso del agente**. Para obtener más información, vea [Modelo de seguridad del agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md).  
+  
+ Las cuentas de Windows con las que se ejecutan los agentes se especifican en el Asistente para nueva publicación. Podrá cambiar las cuentas:  
+  
+-   En el cuadro de diálogo **Propiedades del distribuidor** del Agente de lectura de cola.    
+-   En el cuadro de diálogo **Propiedades de la publicación** del Agente de instantáneas y del Agente de registro del LOG.  
+  
+ **Varios**  
+ Las propiedades **Tipo de publicador** y **Nombre de base de datos de distribución** son de solo lectura. Es posible cambiar la propiedad **Carpeta de instantáneas predeterminada** . Para obtener más información sobre la carpeta de instantáneas, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
+
+## <a name="publication-databases"></a>Bases de datos de publicación
+  La página **Bases de datos de publicaciones** del cuadro de diálogo **Propiedades del publicador** permite a un usuario que tenga el rol fijo de servidor **sysadmin** habilitar bases de datos para replicación. Al habilitar una base de datos, ésta no se publica, sino que permite que cualquier usuario del rol fijo de base de datos **db_owner** para esa base de datos cree una o varias publicaciones en la base de datos.  
+  
+## <a name="options"></a>Opciones  
+ **Transaccional**  
+ Active esta casilla para permitir que los usuarios que tengan el rol fijo de base de datos **db_owner** creen publicaciones de instantáneas o publicaciones transaccionales en la base de datos. 
+  
+ **Mezcla**  
+ Active esta casilla para permitir que los usuarios que tengan el rol fijo de base de datos **db_owner** creen publicaciones de combinación en la base de datos.  
+  
+
+## <a name="subcribers"></a>Suscriptores
+  La página **Suscriptores** del cuadro de diálogo **Propiedades del publicador** se utiliza para que los publicadores ejecuten versiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Esta página permite habilitar a los suscriptores para que reciban datos de publicaciones de este Publicador. Al habilitar un suscriptor para que reciba de desde este Publicador no se crean suscripciones para publicaciones de este publicador. Para crear una suscripción, debe utilizar el Asistente para nueva suscripción.  
+  
+### <a name="options"></a>Opciones  
+ **Suscriptores**  
+ La cuadrícula de propiedades de **Suscriptores** muestra los suscriptores que están habilitados para recibir datos de las publicaciones de este publicador. Haga clic en el botón de propiedades (**...**) que se encuentra junto a un suscriptor para ver y establecer propiedades adicionales.  
+  
+ **Agregar**  
+ Haga clic en **Agregar** para agregar un suscriptor, y luego haga clic en **Agregar suscriptor de SQL Server** o en **Agregar suscriptor que no sea de SQL Server**.  
+  
+## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Referencia de propiedades &#40;replicación&#41;](../../relational-databases/replication/properties-reference-replication.md)  
-  
+ [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
+
+
   

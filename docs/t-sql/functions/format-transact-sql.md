@@ -18,18 +18,18 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703103"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299604"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 
 Devuelve un valor con formato con el formato y la referencia cultural opcional especificados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use la función FORMAT para aplicar formato específico de la configuración regional de los valores de fecha/hora y de número como cadenas. Para las conversiones de tipos de datos generales, use CAST o CONVERT.  
@@ -76,11 +76,11 @@ FORMAT ( value, format [, culture ] )
   
 |Categoría|Tipo|Tipo de .NET|  
 |--------------|----------|---------------|  
-|Numérico|bigint|Int64|  
+|Numérico|BIGINT|Int64|  
 |Numérico|INT|Int32|  
 |Numérico|SMALLINT|Int16|  
 |Numérico|TINYINT|Byte|  
-|Numérico|decimal|SqlDecimal|  
+|Numérico|Decimal|SqlDecimal|  
 |Numérico|NUMERIC|SqlDecimal|  
 |Numérico|FLOAT|Doble|  
 |Numérico|REAL|Único|  
@@ -127,7 +127,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-format-with-custom-formatting-strings"></a>B. FORMAT con cadenas de formato personalizado  
+### <a name="b-format-with-custom-formatting-strings"></a>b. FORMAT con cadenas de formato personalizado  
  En el ejemplo siguiente se muestran valores numéricos de formato especificando un formato personalizado. En el ejemplo se da por supuesto que la fecha actual es el 27 de septiembre de 2012. Para más información sobre estos y otros formatos personalizados, vea [Cadenas con formato numérico personalizado](https://msdn.microsoft.com/library/0c899ak8.aspx).  
   
 ```sql  
@@ -211,7 +211,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
  [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   

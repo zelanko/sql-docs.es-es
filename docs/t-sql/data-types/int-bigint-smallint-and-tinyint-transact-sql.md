@@ -29,18 +29,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37d811ff0bab33f2f88760bdefbb6c56e28791d0
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: aa752fef34868c57f5f042f67c874e74da67c062
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970417"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298832"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint y tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Tipos de datos numéricos exactos que utilizan datos enteros. Para ahorrar espacio en la base de datos, use el tipo de datos más pequeño que puede contener todos los valores posibles de manera confiable. Por ejemplo, con tinyint bastaría en el caso de la edad de una persona, puesto que nadie vive más de 255 años, pero no sería suficiente en el caso de la antigüedad de un edificio, porque un edificio puede tener más de 255 años.
   

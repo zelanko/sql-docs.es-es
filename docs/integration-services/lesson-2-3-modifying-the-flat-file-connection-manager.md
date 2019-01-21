@@ -1,7 +1,7 @@
 ---
-title: 'Paso 3: Modificar el Administrador de conexiones de archivos planos | Microsoft Docs'
+title: 'Paso 3: Modificación del Administrador de conexiones de archivos planos | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,38 +11,39 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79c6f65a6ceba8eef0a61f27512fa09b6fb3f474
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1de57ab14dc4dcfc07f838494ca48f8b12da6660
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531801"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143565"
 ---
-# <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>Lección 2-3: Modificar el Administrador de conexiones de archivos planos
-En esta tarea, modificará el administrador de conexiones de archivos planos que creó y configuró en la lección 1. Cuando se creó inicialmente, el administrador de conexiones de archivos planos se configuró para cargar de forma estática un único archivo. Para permitir que el Administrador de conexiones de archivos planos cargue archivos de forma iterativa, debe modificar la propiedad ConnectionString del administrador de conexiones de modo que acepte la variable `User:varFileName`, definida por el usuario, que contiene la ruta de acceso del archivo que se cargará en tiempo de ejecución.  
+# <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lección 2-3: Modificación del Administrador de conexiones de archivos planos
+
+En esta tarea, modificará el Administrador de conexiones de archivos planos de la lección 1. El administrador de conexiones de archivos planos se ha configurado para cargar un único archivo de forma estática. Para permitir que el Administrador de conexiones de archivos planos cargue archivos de forma iterativa, modifique la propiedad ConnectionString del administrador de conexiones de modo que use la variable `User::varFileName`, definida por el usuario, que contiene la ruta de acceso del archivo que se va a cargar en tiempo de ejecución.  
   
-Al modificar el administrador de conexiones para que use la variable definida por el usuario `User::varFileName`para rellenar la propiedad ConnectionString del administrador de conexiones, este podrá conectarse a distintos archivos planos. En tiempo de ejecución, cada iteración del contenedor de bucles Foreach actualizará dinámicamente la variable `User::varFileName` . A su vez, actualizar esta variable da lugar a que el administrador de conexiones se conecte a un archivo plano distinto, y que la tarea de flujo de datos procese un conjunto de datos distinto.  
+Al modificar el administrador de conexiones para que use el valor de la variable definida por el usuario para cambiar la propiedad ConnectionString, el administrador de conexiones se conecta a otros archivos planos. En tiempo de ejecución, cada iteración del contenedor de bucles Foreach actualiza de forma dinámica la variable `User::varFileName`. A su vez, actualizar esta variable da lugar a que el administrador de conexiones se conecte a un archivo plano distinto, y que la tarea de flujo de datos procese un conjunto de datos distinto.  
   
-### <a name="to-configure-the-flat-file-connection-manager-to-use-a-variable-for-the-connection-string"></a>Para configurar el Administrador de conexiones de archivos planos de modo que utilice una variable para la cadena de conexión  
+## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>Configuración del Administrador de conexiones de archivos planos para usar una variable  
   
 1.  En el panel **Administradores de conexión** , haga clic con el botón derecho en **Sample Flat File Source Data**y, después, seleccione **Propiedades**.  
   
-2.  En la ventana Propiedades, para **Expresiones**, haga clic en la celda vacía y, después, haga clic en el botón de puntos suspensivos **(…)**.  
+2.  En la ventana **Propiedades**, para **Expresiones**, seleccione la celda vacía y, después, haga clic en el botón de puntos suspensivos **(...)**.  
   
-3.  En el cuadro de diálogo **Editor de expresiones de propiedad** , en la columna **Propiedad** , escriba o seleccione **ConnectionString**.  
+3.  En el cuadro de diálogo **Editor de expresiones de propiedad**, en la columna **Propiedad**, seleccione **ConnectionString**.  
   
 4.  En la columna **Expresión**, haga clic en el botón de puntos suspensivos **(…)** para abrir el cuadro de diálogo **Generador de expresiones**.  
   
-5.  En el cuadro de diálogo **Generador de expresiones** , expanda el nodo **Variables** .  
+5.  En el cuadro de diálogo **Generador de expresiones**, expanda el nodo **Variables**.  
   
-6.  Arrastre la variable **User::varFileName**hasta el cuadro **Expresión** .  
+6.  Arrastre la variable **User::varFileName** hasta el cuadro **Expresión**.  
   
-7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Generador de expresiones** .  
+7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Generador de expresiones**.  
   
-8.  Haga clic en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Editor de expresiones de propiedad** .  
+8.  Haga clic en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Editor de expresiones de propiedad**.  
   
-## <a name="next-lesson-task"></a>Tarea de la siguiente lección  
-[Paso 4: Probar el paquete del tutorial de la lección 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+## <a name="go-to-next-task"></a>Ir a la tarea siguiente  
+[Paso 4: Prueba del paquete del tutorial de la lección 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   
   

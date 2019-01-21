@@ -1,7 +1,7 @@
 ---
 title: Configuración de Always Encrypted con enclaves seguros | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534772"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206411"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configuración de Always Encrypted con enclaves seguros
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md) amplía la característica [Always Encrypted](always-encrypted-database-engine.md) existente para ofrecer una funcionalidad más completa en los datos confidenciales mientras mantiene la confidencialidad de estos.
@@ -26,14 +27,14 @@ ms.locfileid: "52534772"
 Para configurar Always Encrypted con enclaves seguros, use el siguiente flujo de trabajo:
 
 1. Configure la atestación del Servicio de protección de host (HGS).
-2. Instale [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] en el equipo con SQL Server.
+2. Instale [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] en el equipo con SQL Server.
 3. Instale herramientas en el equipo de desarrollo/cliente.
 4. Configure el tipo de enclave en su instancia de SQL Server.
 5. Aprovisione claves habilitadas para el enclave.
 6. Cifre las columnas con datos confidenciales.
 
->[!NOTE]
->Para ver un tutorial paso a paso sobre cómo configurar el entorno de prueba y probar la funcionalidad de Always Encrypted con enclaves seguros en SSMS, consulte [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md) (Tutorial: Introducción a Always Encrypted con enclaves seguros mediante SSMS).
+> [!NOTE]
+> Para obtener un tutorial paso a paso sobre cómo configurar un entorno de prueba y probar la funcionalidad de Always Encrypted con enclaves seguros en SSMS, vea [Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## <a name="configure-your-environment"></a>Configurar su entorno
 
@@ -45,7 +46,7 @@ El equipo que ejecuta SQL Server necesita el siguiente sistema operativo y la si
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] o posterior
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] o posterior
 
 *Windows*:
 
@@ -134,7 +135,7 @@ En el equipo de desarrollo/cliente:
    ```
 
     > [!NOTE]
-    > Los cálculos completos están deshabilitados de forma predeterminada en [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]. Deben habilitarse mediante la instrucción anterior tras cada reinicio de su instancia de SQL Server.
+    > Los cálculos completos están deshabilitados de forma predeterminada en [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]. Deben habilitarse mediante la instrucción anterior tras cada reinicio de la instancia de SQL Server.
 
 ## <a name="provision-enclave-enabled-keys"></a>Aprovisionar claves habilitadas para el enclave
 
@@ -496,13 +497,13 @@ GO
 
 Existen varias formas de habilitar la funcionalidad de enclave para una columna existente no habilitada para el enclave. El método que elija dependerá de varios factores:
 
-- **Ámbito/granularidad:** ¿desea habilitar la funcionalidad de enclave para un subconjunto de columnas, o bien para todas las columnas protegidas con una clave maestra de columna especificada?
-- **Tamaño de los datos:** ¿cuál es el tamaño de las tablas que incluyen las columnas que desea hacer que estén habilitadas para el enclave?
+- **Ámbito y granularidad:** ¿quiere habilitar la funcionalidad de enclave para un subconjunto de columnas, o bien para todas las columnas protegidas con una clave maestra de columna especificada?
+- **Tamaño de los datos:** ¿cuál es el tamaño de las tablas que incluyen las columnas que quiere hacer que estén habilitadas para el enclave?
 - ¿Desea también cambiar el tipo de cifrado para sus columnas? Recuerde que solo el cifrado aleatorio admite los cálculos completos (búsqueda de patrones, operadores de comparación). Si su columna se cifra mediante el cifrado determinista, también tendrá que volver a cifrarla con el cifrado aleatorio para desbloquear la funcionalidad completa del enclave.
 
 Estos son los tres enfoques para habilitar los enclaves para las columnas existentes:
 
-#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>Opción 1: rote la clave maestra de columna para reemplazarla por una clave maestra de columna habilitada para el enclave.
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>Opción 1: gire la clave maestra de columna para reemplazarla por una clave maestra de columna habilitada para el enclave.
   
 - Ventajas:
   - No implica que haya que volver a cifrar los datos, por lo que suele ser el enfoque más rápido. Es un enfoque recomendado para las columnas que incluyen grandes cantidades de datos, siempre que todas las columnas para las que tenga que habilitar los cálculos completos usen ya el cifrado determinista y, por tanto, no se tengan que volver a cifrar.
@@ -514,7 +515,7 @@ Estos son los tres enfoques para habilitar los enclaves para las columnas existe
   - Presenta una sobrecarga de administración de claves (debe crear una nueva clave maestra de columna y ponerla a disposición de las aplicaciones que consultan las columnas afectadas).  
 
 
-#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Opción 2: este enfoque implica dos pasos: 1) rotar la clave maestra de columna (como en la opción 1) y 2) volver a cifrar un subconjunto de columnas cifradas de manera determinista mediante el cifrado aleatorio, para habilitar los cálculos completos para esas columnas.
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Opción 2: este enfoque implica dos pasos: 1) girar la clave maestra de columna (como en la opción 1) y 2) volver a cifrar un subconjunto de columnas cifradas de manera determinista mediante el cifrado aleatorio, para habilitar los cálculos completos para esas columnas.
   
 - Ventajas:
   - Vuelve a cifrar los datos en contexto y, por tanto, es un método recomendado para habilitar las consultas completas para las columnas cifradas de manera determinista que incluyen grandes cantidades de datos. Tenga en cuenta que en el paso 1 se desbloquea el cifrado en contexto para las columnas que usan el cifrado determinista, por lo que el paso 2 puede realizarse en contexto.
@@ -524,7 +525,7 @@ Estos son los tres enfoques para habilitar los enclaves para las columnas existe
   - No le permite convertir de forma selectiva ninguna de las columnas, asociadas a una clave maestra de columna especificada.
   - Presenta una sobrecarga de administración de claves (debe crear una nueva clave maestra de columna y ponerla a disposición de las aplicaciones que consultan las columnas afectadas).
 
-#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Opción 3: volver a cifrar las columnas seleccionadas con una nueva clave de cifrado de columnas habilitada para el enclave y el cifrado aleatorio (en caso necesario) en el lado cliente.
+#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Opción 3: volver a cifrar las columnas seleccionadas con una nueva clave de cifrado de columnas habilitada para el enclave y el cifrado aleatorio (si es necesario) en el lado cliente.
   
 - Ventajas: este método:
   - Le permite habilitar de forma selectiva la funcionalidad de enclave para una columna o un pequeño subconjunto de columnas.

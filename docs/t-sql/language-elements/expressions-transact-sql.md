@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c06ef657cc4a29926c29eef8616e22ba4025201f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511917"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124105"
 ---
 # <a name="expressions-transact-sql"></a>Expresiones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,8 +89,8 @@ ms.locfileid: "52511917"
 |[ _table_name_**.** ]|Es el nombre o alias de una tabla.|  
 |*column*|Es el nombre de una columna. En una expresión solo se admite el nombre de la columna.|  
 |*variable*|Es el nombre de una variable o un parámetro. Para obtener más información, vea [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
-|**(** *expression*  **)**|Es cualquier expresión válida tal como se define en este tema. Los paréntesis son operadores de agrupación que garantizan que todos los operadores de la expresión escritos entre paréntesis se evalúen antes de que la expresión resultante se combine con otra.|  
-|**(** *scalar_subquery* **)**|Es una subconsulta que devuelve un valor. Por ejemplo:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _expression_  **)**|Es cualquier expresión válida tal como se define en este tema. Los paréntesis son operadores de agrupación que garantizan que todos los operadores de la expresión escritos entre paréntesis se evalúen antes de que la expresión resultante se combine con otra.|  
+|**(** _scalar_subquery_ **)**|Es una subconsulta que devuelve un valor. Por ejemplo:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Los operadores unarios solo se pueden aplicar a las expresiones que se evalúen como un tipo de datos numérico. Es un operador que solo tiene un operando numérico:<br /><br /> + indica que es un número positivo.<br /><br /> - indica que es un número negativo.<br /><br /> ~ indica el operador complementario.|  
 |{ *binary_operator* }|Es un operador que define la forma en que deben combinarse dos expresiones para producir un único resultado. *binary_operator* puede ser un operador aritmético, el operador de asignación (=), un operador bit a bit, un operador de comparación, un operador lógico, el operador de concatenación de cadena (+) o un operador unario. Para obtener más información sobre operadores, vea [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
 |*ranking_windowed_function*|Es cualquier función de categoría de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información, vea [Funciones de categoría &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
@@ -130,7 +130,7 @@ GO
   
  La expresión `1+2` se evalúa como `3` en cada fila del conjunto de resultados. Aunque la expresión `ProductID` genera un valor único en cada fila del conjunto de resultados, cada fila tiene solo un valor para `ProductID`.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

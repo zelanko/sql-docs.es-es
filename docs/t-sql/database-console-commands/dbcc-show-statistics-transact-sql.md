@@ -34,12 +34,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f144425f3fffa90d9c123a2c7c8013ac43babcb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234d124260e007cd43a52cc9baa8d2475d1db91a
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726976"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206341"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
  La especificación de una o varias de estas opciones limita los conjuntos de resultados devueltos por la instrucción a la opción u opciones especificadas. Si no se especifican opciones, se devuelve información de todas las estadísticas.  
   
  STATS_STREAM es [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -113,7 +113,7 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
   
 |Nombre de columna|Descripción|  
 |-----------------|-----------------|  
-|Toda la densidad|La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Con el prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6) (4, 4, 6) (4, 5, 6) (4, 5, 7). Con el prefijo (A, B) los mismos valores de columna tiene estas listas de valores distintos: (3, 5), (4, 4) y (4, 5)|  
+|Toda la densidad|La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Si se usa el prefijo (B, B, C), cada una de estas listas será una lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Si se usa el prefino (A, B) los valores de la misma columna tendrán estas listas de valores distintos: (3, 5), (4, 4) y (4, 5)|  
 |Promedio de longitud|Promedio de longitud, en bytes, para almacenar una lista de los valores de columna del prefijo de columna. Por ejemplo, si cada valor de la lista (3, 5, 6) necesita 4 bytes, la longitud es 12 bytes.|  
 |Columnas|Nombres de las columnas en el prefijo para las que se muestran Toda la densidad y Promedio de longitud.|  
   
@@ -125,7 +125,7 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
 |RANGE_ROWS|Número calculado de filas cuyo valor de columna está comprendido en un paso del histograma, sin incluir el límite superior.|  
 |EQ_ROWS|Número calculado de filas cuyo valor de columna es igual al límite superior del paso del histograma.|  
 |DISTINCT_RANGE_ROWS|Número calculado de filas que tienen un valor de columna distinto en un paso del histograma, sin incluir el límite superior.|  
-|AVG_RANGE_ROWS|Número medio de filas que tienen valores de columna duplicados en un paso del histograma, sin incluir el límite superior (RANGE_ROWS/DISTINCT_RANGE_ROWS para DISTINCT_RANGE_ROWS > 0).| 
+|AVG_RANGE_ROWS|Promedio de filas con valores de columna duplicados en un paso del histograma, sin incluir el límite superior. Cuando DISTINCT_RANGE_ROWS es mayor que 0, AVG_RANGE_ROWS se calcula dividiendo RANGE_ROWS por DISTINCT_RANGE_ROWS. Cuando DISTINCT_RANGE_ROWS es 0, AVG_RANGE_ROWS devuelve 1 para el paso del histograma.| 
   
 ## <a name="Remarks"></a> Comentarios 
 
@@ -189,7 +189,7 @@ DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);
 GO  
 ```  
   
-### <a name="b-specifying-the-histogram-option"></a>B. Especificar la opción HISTOGRAM  
+### <a name="b-specifying-the-histogram-option"></a>b. Especificar la opción HISTOGRAM  
 Esto limita la información de estadísticas mostrada en relación con el índice Customer_LastName a únicamente los datos de HISTOGRAM.
   
 ```sql
@@ -215,7 +215,7 @@ Los resultados muestran el encabezado, el vector de densidad y parte del histogr
   
 ![Resultados de DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "Resultados de DBCC SHOW_STATISTICS")
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Estadísticas](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  

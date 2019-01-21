@@ -21,12 +21,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 881cb75b8f58bb20c8418fe18aaab6499b58e442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612583"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125275"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47612583"
   
  **Para establecer la opción sync with backup**  
   
--   Programación de [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicación: [Habilitar las copias de seguridad coordinadas para la replicación transaccional &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
+-   Programación de la replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Habilitar copias de seguridad coordinadas para la replicación transaccional &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Restaurar bases de datos que participan en la replicación  
  Puede restaurar todas las bases de datos de una topología de replicación si hay copias de seguridad recientes disponibles y se siguen los pasos correctos. Los pasos de restauración de la base de datos de publicación dependen del tipo de replicación y de las opciones utilizadas. No obstante, los pasos de restauración de todas las demás bases de datos son independientes del tipo y de las opciones.  
@@ -93,7 +93,7 @@ ms.locfileid: "47612583"
   
  La restauración de las bases de datos **msdb** y **maestra** , que también se tratan en esta sección, es igual para los cuatro tipos.  
   
-#### <a name="publication-database-snapshot-replication"></a>Base de datos de publicaciones: replicación de instantáneas  
+#### <a name="publication-database-snapshot-replication"></a>Base de datos de publicación: Replicación de instantáneas  
   
 1.  Restaure la última copia de seguridad de la base de datos de publicaciones. Vaya al paso 2.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "47612583"
   
      Para más información sobre cómo quitar la replicación, vea [sp_removedbreplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Base de datos de publicaciones: replicación transaccional de solo lectura  
+#### <a name="publication-database-read-only-transactional-replication"></a>Base de datos de publicación: Replicación transaccional de solo lectura  
   
 1.  Restaure la última copia de seguridad de la base de datos de publicaciones. Vaya al paso 2.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "47612583"
   
          Para más información sobre cómo ejecutar el Agente de distribución, vea [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) y [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Para más información sobre cómo comprobar comandos, vea [Ver comandos replicados y otra información en la base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) y [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Para más información sobre cómo comprobar comandos, vea [Ver comandos replicados e información en una base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) y [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Quite la configuración de replicación del publicador, el distribuidor y los suscriptores, y vuelva a crear la configuración. Al volver a crear las suscripciones, especifique que el suscriptor ya tiene los datos. La restauración se ha completado.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "47612583"
   
          Para más información sobre cómo ejecutar el Agente de distribución, vea [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) y [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Para más información sobre cómo comprobar comandos, vea [Ver comandos replicados y otra información en la base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) y [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Para más información sobre cómo comprobar comandos, vea [Ver comandos replicados e información en una base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) y [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Utilice la [tablediff utility](../../../tools/tablediff-utility.md) u otra herramienta para sincronizar manualmente el publicador con el suscriptor. Esto le permite recuperar los datos de la base de datos de suscripciones que no estaban incluidos en la copia de seguridad de base de datos de publicación. Continúe en el paso c.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "47612583"
   
          Para obtener más información acerca de cómo especificar que el suscriptor ya tiene los datos, vea [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de datos de publicaciones: replicación transaccional con suscripciones de actualización  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de datos de publicación: Replicación transaccional con suscripciones de actualización  
   
 1.  Restaure la última copia de seguridad de la base de datos de publicaciones. Vaya al paso 2.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "47612583"
   
      Para más información sobre cómo ejecutar el Agente de distribución, vea [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) y [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-     Para más información sobre cómo comprobar comandos, vea [Ver comandos replicados y otra información en la base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) y [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Para más información sobre cómo comprobar comandos, vea [Ver comandos replicados e información en una base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) y [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Si está utilizando suscripciones de actualización en cola, conéctese a cada suscriptor y elimine todas las filas de la tabla [MSreplication_queue &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) en la base de datos de suscripciones. Vaya al paso 4.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "47612583"
   
          Para obtener más información acerca de cómo especificar que el suscriptor ya tiene los datos, vea [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Base de datos de publicaciones: replicación transaccional punto a punto  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Base de datos de publicación: Peer-to-Peer Transactional Replication  
  En los pasos siguientes, las bases de datos de publicación **A**, **B**y **C** están en una topología de replicación transaccional punto a punto. Las bases de datos **A** y **C** están en línea y funcionan correctamente; la base de datos **B** es la que se desea restaurar. El proceso descrito aquí, sobre todo los pasos 7, 10 y 11, son muy similares al proceso que se requiere para agregar un nodo a una topología punto a punto. La forma más directa de llevar a cabo estos pasos es mediante el Asistente de configuración de la topología punto a punto, pero también puede usar procedimientos almacenados.  
   
 1.  Ejecute los agentes de distribución para sincronizar las suscripciones de las bases de datos **A** y **C**. Vaya al paso 2.  
@@ -287,7 +287,7 @@ ms.locfileid: "47612583"
   
     2.  Marque todas las publicaciones para validación. Reinicialice todas las suscripciones que no superen la validación. La recuperación se ha completado.  
   
-         Para obtener más información acerca de la validación, consulte [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Para más información sobre la reinicialización, vea [Reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+         Para obtener más información acerca de la validación, consulte [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Para más información sobre la reinicialización, vea [Reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="msdb-database-distributor"></a>Base de datos msdb (distribuidor)  
   
@@ -303,7 +303,7 @@ ms.locfileid: "47612583"
   
 4.  Marque todas las publicaciones para validación. Reinicialice todas las suscripciones que no superen la validación. La recuperación se ha completado.  
   
-     Para obtener más información acerca de la validación, consulte [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Para más información sobre la reinicialización, vea [Reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+     Para obtener más información acerca de la validación, consulte [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Para más información sobre la reinicialización, vea [Reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="master-database-distributor"></a>Base de datos maestra (distribuidor)  
   
@@ -323,7 +323,7 @@ ms.locfileid: "47612583"
   
 2.  Restaure la última copia de seguridad de la base de datos de suscripciones. Vaya al paso 3.  
   
-3.  Si la base de datos de suscripciones solo contiene las suscripciones de inserción, vaya al paso 4. Si la base de datos de suscripciones contiene cualquier suscripción de extracción, hágase las preguntas siguientes: ¿está actualizada la información de suscripción? ¿La base de datos incluye todas las tablas y opciones que se establecieron en el momento del error? En caso afirmativo, continúe en el paso 4. En caso contrario, reinicialice la suscripción. La recuperación se ha completado.  
+3.  Si la base de datos de suscripciones solo contiene las suscripciones de inserción, vaya al paso 4. Si la base de datos de suscripciones contiene cualquier suscripción de extracción, hágase las preguntas siguientes: ¿Está actualizada la información de suscripción? ¿La base de datos incluye todas las tablas y opciones que se establecieron en el momento del error? En caso afirmativo, continúe en el paso 4. En caso contrario, reinicialice la suscripción. La recuperación se ha completado.  
   
 4.  Para sincronizar el suscriptor, ejecute el Agente de distribución. La recuperación se ha completado.  
   
@@ -347,7 +347,7 @@ ms.locfileid: "47612583"
   
 2.  Asegúrese de que la base de datos sea coherente con la base de datos de publicación en términos de configuración general y configuración de la replicación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Configurar distribución](../../../relational-databases/replication/configure-distribution.md)   

@@ -15,12 +15,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e6b91d754c477efe14ee0d47192beff5c735138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d13a0da50bc9a19728ecd4af6034ffc52849164
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784423"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124075"
 ---
 # <a name="replication-tutorials"></a>Tutoriales de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,21 +34,21 @@ Estos tutoriales usan NODE1\SQL2016 como publicador y distribuidor. Usan NODE2\S
 > La mayoría de las tareas que se muestran en estos tutoriales se pueden realizar mediante programación. Para más información, vea la [Documentación para desarrolladores de replicación](../../relational-databases/replication/concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Tutoriales de replicación  
-[Tutorial: Preparar el servidor para la replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
+[Tutorial: Preparación de SQL Server para la replicación (publicador, distribuidor, suscriptor)](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
  
 Aprenda cómo preparar servidores para poder ejecutar una replicación con privilegios mínimos. Debe finalizar este tutorial antes de realizar otros tutoriales de replicación.  
   
-[Tutorial: Replicar datos entre servidores conectados completamente (transaccional)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
+[Tutorial: Configuración de la replicación entre dos servidores conectados completamente (transaccional)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
 Aprenda a configurar la replicación transaccional para replicar datos entre servidores conectados completamente. Este tutorial también incluye metodología de solución de problemas para algunos errores básicos. 
 
   
-[Tutorial: Configurar la replicación (de mezcla) entre un servidor y clientes móviles](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
+[Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
 
 Aprenda a configurar la replicación de mezcla para intercambiar datos entre un servidor y uno o más clientes que solo se conectan en determinadas ocasiones.  
   
 ## <a name="see-also"></a>Vea también  
-[Seguridad y protección (replicación)](../../relational-databases/replication/security/security-and-protection-replication.md) 
+[Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
 [Replicación transaccional](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 

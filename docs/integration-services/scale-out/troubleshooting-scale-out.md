@@ -2,7 +2,7 @@
 title: Solución de problemas de escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
 description: En este artículo se describe cómo solucionar problemas comunes con Escalabilidad horizontal de SSIS.
 ms.custom: performance
-ms.date: 05/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732499"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206331"
 ---
 # <a name="troubleshoot-scale-out"></a>Solución de problemas de escalabilidad horizontal
 
@@ -38,7 +38,7 @@ Para investigar los síntomas que experimente, realice los pasos siguientes uno 
 
     En SSMS, en el Explorador de objetos, haga clic con el botón derecho en **SSISDB** y active **La característica Escalabilidad horizontal está habilitada**.
 
-    ![Escalabilidad horizontal habilitada](media\isenabled.PNG)
+    ![Escalabilidad horizontal habilitada](media/isenabled.PNG)
 
     Si el valor de la propiedad es "false", habilite la escalabilidad horizontal llamando al procedimiento almacenado `[catalog].[enable_scaleout]`.
 
@@ -62,7 +62,7 @@ Compruebe los mensajes de error en el registro del servicio de trabajo de escala
 
 ### <a name="symptoms"></a>Síntomas
 
-*"System.ServiceModel.EndpointNotFoundException: No había ningún punto de conexión escuchando en https://*[NombreMáquina]:[Puerto]*/ClusterManagement/ que pudiera aceptar el mensaje".*
+*"System.ServiceModel.EndpointNotFoundException: No había ningún punto de conexión escuchando en https://*[NombreEquipo]:[Puerto]*/ClusterManagement/ que pudiera aceptar el mensaje".*
 
 ### <a name="solution"></a>Solución
 
@@ -77,9 +77,9 @@ Compruebe los mensajes de error en el registro del servicio de trabajo de escala
 ## <a name="could-not-establish-trust-relationship"></a>No se pudo establecer una relación de confianza
 
 ### <a name="symptoms"></a>Síntomas
-*"'System.ServiceModel.Security.SecurityNegotiationException: No se pudo establecer una relación de confianza para el canal seguro SSL/TLS con la autoridad "[NombreMáquina]:[Puerto]'".*
+*""System.ServiceModel.Security.SecurityNegotiationException: No se pudo establecer una relación de confianza para el canal seguro SSL/TLS con la autoridad "[NombreEquipo]:[Puerto]"".*
 
-*"System.Net.WebException: Se ha terminado la conexión: No se puede establecer una relación de confianza para el canal seguro SSL/TLS".*
+*"System.Net.WebException: Se cerró la conexión subyacente: No se pudo establecer una relación de confianza para el canal seguro SSL/TLS".*
 
 *"System.Security.Authentication.AuthenticationException: El certificado remoto no es válido según el procedimiento de validación".*
 
@@ -97,7 +97,7 @@ Compruebe los mensajes de error en el registro del servicio de trabajo de escala
 
 ### <a name="symptoms"></a>Síntomas
 
-*"System.ServiceModel.Security.SecurityNegotiationException: No se pudo establecer un canal seguro para SSL/TLS con la autoridad '[NombreMáquina]:[Puerto]'".*
+*"System.ServiceModel.Security.SecurityNegotiationException: No se pudo establecer un canal seguro para SSL/TLS con la autoridad '[NombreDeEquipo]:[Puerto]'".*
 
 *"System.Net.WebException: Se anuló la solicitud: No se puede crear un canal seguro SSL/TLS".*
 
@@ -118,9 +118,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>Síntomas
 
-*"System.ServiceModel.Security.MessageSecurityException: Se prohibió la solicitud HTTP con el esquema de autenticación de cliente 'Anónimo'".*
+*"System.ServiceModel.Security.MessageSecurityException: Se prohibió la solicitud HTTP con el esquema de autenticación de cliente 'Anonymous'".*
 
-*"System.Net.WebException: Error en el servidor remoto: (403) Prohibido".*
+*"System.Net.WebException: El servidor remoto devolvió un error: (403) Prohibido".*
 
 ### <a name="solution"></a>Solución
 1.  Si el certificado de trabajo de escalabilidad horizontal todavía no está instalado en el almacén de certificados raíz del equipo local del nodo del Servicio principal de escalabilidad horizontal, instálelo y reinicie el servicio de trabajo.
@@ -135,7 +135,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Tipo del valor: **REG_DWORD** 
 
-    Datos del valor: **0 (False)**
+    Valor de datos: **0 (False)**
 
 4.  Si no se pueden limpiar todos los certificados no autofirmados tal y como se describe en el paso 2, establezca el valor de la siguiente clave del Registro en 2.
 
@@ -145,7 +145,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Tipo del valor: **REG_DWORD** 
 
-    Datos del valor: **2**
+    Valor de datos: **2**
 
     > [!NOTE]
     > Si tiene certificados no autofirmados en el almacén de certificados raíz, se produce un error de autenticación de certificado cliente. Para obtener más información, consulte [Internet Information Services (IIS) 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ) (Internet Information Services (IIS) 8 puede rechazar solicitudes de certificado de cliente con errores HTTP 403.7 o 403.16).
@@ -154,7 +154,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>Síntomas
 
-*"System.ServiceModel.CommunicationException: Error al hacer la solicitud HTTP a https://[NombreMáquina]:[Puerto]/ClusterManagement/. Este error puede deberse a que el certificado del servidor no está configurado correctamente con HTTP.SYS en la instrucción 'case' HTTPS. La causa puede ser también una falta de coincidencia del enlace de seguridad entre el cliente y el servidor".*
+*"System.ServiceModel.CommunicationException: Error al realizar la solicitud HTTP a https://[NombreEquipo]:[Puerto]/ClusterManagement/. Este error puede deberse a que el certificado del servidor no está configurado correctamente con HTTP.SYS en la instrucción 'case' HTTPS. La causa puede ser también una falta de coincidencia del enlace de seguridad entre el cliente y el servidor".*
 
 ### <a name="solution"></a>Solución
 1.  Para comprobar si el certificado del Servicio principal de escalabilidad horizontal está enlazado correctamente al puerto en el punto de conexión del nodo principal, ejecute el comando siguiente:
@@ -224,4 +224,4 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información, vea los siguientes artículos sobre cómo instalar y configurar la escalabilidad horizontal de SSIS:
 -   [Introducción a la escalabilidad horizontal de Integration Services (SSIS) en un único equipo](get-started-with-ssis-scale-out-onebox.md)
--   [Guía detallada: Configurar la escalabilidad horizontal de Integration Services (SSIS)](walkthrough-set-up-integration-services-scale-out.md)
+-   [Tutorial: Configuración de escalabilidad horizontal de Integration Services (SSIS)](walkthrough-set-up-integration-services-scale-out.md)

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ab973f34d0bcfb94d3df97e10efcbba69655f8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fece5fabc394ff01175273378a2fb7c23ef483cf
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724743"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256570"
 ---
 # <a name="write-international-transact-sql-statements"></a>Escribir instrucciones Transact-SQL internacionales
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "47724743"
   
     -   Las aplicaciones ADO, OLE DB y ODBC deben utilizar la siguiente marca de tiempo, fecha y cláusulas de escape de hora ODBC:  
   
-         **{ ts'** aaaa**-**_mm_**-_** dd**hh_**:**_mm_**:**_ss_[**.**_fff_] **'}** como: **{ ts'** 1998**-**09**-**24 10**:**02**:**20**' }**  
+         **{ ts"** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [**.**_fff_] **"}** como: **{ ts"1998-09-24 10:02:20"}**  
   
-         **{ d'** *aaaa* **-** *mm* **-** *dd* **'}** , como: **{ d'** 1998**-** 09**-** 24 **'}**  
+         **{ d"** _yyyy_ **-** _mm_ **-** _dd_ **"}** como: **{ d"1998-09-24"}**
   
-         **{ t'** *hh* **:** *mm* **:** *ss* **'}** , como: **{ t'** 10:02:20 **'}**  
+         **{ t"** _hh_ **:** _mm_ **:** _ss_ **"}** como: **{ t"10:02:20"}**  
   
     -   Las aplicaciones que utilizan otras API o desencadenadores, procedimientos almacenados y scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] deben utilizar las cadenas numéricas sin separar. Por ejemplo, *yyyymmdd* como en 19980924.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Configurar la replicación entre dos servidores conectados completamente (transaccional) | Microsoft Docs'
+title: 'Tutorial: Configuración de la replicación entre dos servidores conectados completamente (transaccional) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514203"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128355"
 ---
-# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar la replicación entre dos servidores conectados completamente (transaccional)
+# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configuración de la replicación entre dos servidores conectados completamente (transaccional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 La replicación transaccional es una buena solución para el problema de mover datos entre servidores conectados de forma continua. Mediante el Asistente para replicación, puede configurar y administrar fácilmente una topología de replicación. 
 
@@ -39,7 +39,7 @@ En este tutorial, aprenderá a:
   
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tutorial es para usuarios que están familiarizados con las operaciones básicas de las bases de datos, pero tienen poca experiencia con operaciones de replicación. Antes de empezar este tutorial, debe completar el [Tutorial: Preparar el servidor para la replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+Este tutorial es para usuarios que están familiarizados con las operaciones básicas de las bases de datos, pero tienen poca experiencia con operaciones de replicación. Antes de empezar este tutorial, debe haber completado [Tutorial: Preparación de SQL Server para la replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Para completar este tutorial, necesita tener SQL Server, SQL Server Management Studio (SSMS) y una base de datos de AdventureWorks:  
   
@@ -182,7 +182,7 @@ En esta sección se agrega un suscriptor a la publicación que creada anteriorme
   
    ![Escribir un nombre para la base de datos de suscripción](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. En la página **Seguridad del Agente de distribución**, haga clic en el botón de puntos suspensivos (**...**). Escriba <*Nombre_De_Equipo_Publicador>*>**rpl_distribution** el cuadro **Cuenta de proceso**, escriba la contraseña para esta cuenta, seleccione **Aceptar** y, a luego, **Siguiente**.
+8. En la página **Seguridad del Agente de distribución**, seleccione el botón de puntos suspensivos (**...**). Escriba <*Nombre_De_Equipo_Publicador>*>**rpl_distribution** el cuadro **Cuenta de proceso**, escriba la contraseña para esta cuenta, seleccione **Aceptar** y, a luego, **Siguiente**.
 
    ![Especifique una cuenta y una contraseña en el cuadro de diálogo "Seguridad del Agente de distribución".](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -226,7 +226,7 @@ En esta sección se emplean testigos de seguimiento para comprobar que los cambi
   
    A. Seleccione la pestaña **Testigos de seguimiento**.  
    B. Seleccione **Insertar seguimiento**.    
-   c. Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto especificado.
+   c. Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**, **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto especificado.
 
    ![Información para el testigo de seguimiento](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
@@ -242,4 +242,4 @@ Ha configurado correctamente el publicador y el suscriptor para la replicación 
 En este artículo se muestra cómo configurar la replicación de mezcla:  
 
 > [!div class="nextstepaction"]
-> [Tutorial: Configurar la replicación (de mezcla) entre un servidor y clientes móviles](tutorial-replicating-data-with-mobile-clients.md)
+> [Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles](tutorial-replicating-data-with-mobile-clients.md)

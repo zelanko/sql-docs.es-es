@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535280"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136075"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "52535280"
   
      Al actualizar el suscriptor a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior se actualiza el Agente de mezcla que usan las suscripciones en el suscriptor. Para aprovechar muchas de las nuevas características y optimizaciones de rendimiento, se requiere el Agente de mezcla de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior.  
   
--   Si una suscripción se sincroniza mediante una conexión rápida y los cambios se envían desde el publicador y el suscriptor, use el parámetro **-ParallelUploadDownload** en el Agente de mezcla.  
+-   Si una suscripción se sincroniza mediante una conexión rápida y los cambios se envían desde el publicador y el suscriptor, use el parámetro **–ParallelUploadDownload** en el Agente de mezcla.  
   
-     En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] se introdujo un nuevo parámetro del Agente de mezcla: **-ParallelUploadDownload**. Establecer este parámetro permite al Agente de mezcla procesar en paralelo los cambios cargados en el publicador y los descargados en el suscriptor. Esto resulta útil en entornos de grandes volúmenes con gran ancho de banda de red. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un nuevo parámetro del Agente de mezcla: **–ParallelUploadDownload**. Establecer este parámetro permite al Agente de mezcla procesar en paralelo los cambios cargados en el publicador y los descargados en el suscriptor. Esto resulta útil en entornos de grandes volúmenes con gran ancho de banda de red. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
   
     -   [Trabajar con perfiles del Agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -136,16 +136,16 @@ ms.locfileid: "52535280"
   
 -   Genere instantáneas previamente y/o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan.  
   
-     Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para obtener más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+     Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para obtener más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>Consideraciones acerca del mantenimiento y la supervisión  
   
 -   De vez en cuando, vuelva a crear los índices de tablas del sistema de la replicación de mezcla.  
   
-     Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+     Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory** y **MSmerge_tombstone**, **MSmerge_current_partition_mappings** y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Supervise el rendimiento de la sincronización utilizando la pestaña **Historial de sincronizaciones** del Monitor de replicación.  
   
-     En la replicación de mezcla, el Monitor de replicación muestra en la pestaña **Historial de sincronizaciones** estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para obtener más información sobre cómo ver estadísticas detalladas, consulte [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     En la replicación de mezcla, el Monitor de replicación muestra en la pestaña **Historial de sincronizaciones** estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para más información sobre cómo ver estadísticas detalladas, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

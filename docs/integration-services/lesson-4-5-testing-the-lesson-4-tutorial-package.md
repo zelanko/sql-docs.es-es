@@ -1,7 +1,7 @@
 ---
-title: 'Paso 5: Probar el paquete del tutorial de la lección 4 | Microsoft Docs'
+title: 'Paso 5: Prueba del paquete del tutorial de la lección 4 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,23 +11,24 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 415a49c49b21f1b4abb5d965926bfa68bb8fc3de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d0a01d83d7dd1660c2aa7ef99e2dc8144350556
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720673"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211046"
 ---
-# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Lección 4-5: Probar el paquete del tutorial de la lección 4
-En tiempo de ejecución, el archivo dañado, Currency_BAD.txt, no podrá generar una coincidencia en la transformación Lookup Currency Key. Puesto que la salida de errores de Lookup Currency Key se ha configurado para redirigir las filas con errores al nuevo destino de filas con errores, el componente no genera ningún error y el paquete se ejecuta correctamente. Todas las filas que generan un error se escriben en el archivo ErrorOutput.txt.  
+# <a name="lesson-4-5-test-the-lesson-4-package"></a>Lección 4-5: Prueba del paquete de la lección 4
+
+En tiempo de ejecución, el archivo dañado **Currency_BAD.txt** no puede generar una coincidencia en la transformación de búsqueda Currency Key. Como la salida de errores de Currency Key Lookup se ha configurado para redirigir las filas con error al nuevo destino Failed Rows, el componente no genera ningún error y el paquete se ejecuta correctamente. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] escribe todas las filas con error en **ErrorOutput.txt**.  
   
-En esta tarea, probará la configuración de la salida de error revisada ejecutando el paquete. Tras ejecutar correctamente el paquete, verá el contenido del archivo ErrorOutput.txt.  
+En esta tarea, se prueba la configuración de la salida de error revisada mediante la ejecución del paquete. Después de ejecutar correctamente el paquete, verá el contenido del archivo **ErrorOutput.txt**.  
   
 > [!NOTE]  
-> Si no desea acumular filas con errores en el archivo ErrorOutput.txt, debe eliminar manualmente el contenido del archivo entre ejecuciones de paquetes.  
+> Si no quiere acumular filas con errores en el archivo **ErrorOutput.txt**, elimine manualmente el contenido del archivo entre ejecuciones del paquete.  
   
-## <a name="checking-the-package-layout"></a>Comprobar el diseño del paquete  
-Antes de probar el paquete, debe comprobar que los flujos de datos y de control del paquete de la lección 4 contienen los objetos mostrados en los diagramas siguientes. El flujo de control debe ser idéntico al flujo de datos de las lecciones 2 a 4.  
+## <a name="check-the-package-layout"></a>Comprobación del diseño del paquete  
+Antes de probar el paquete, compruebe que los flujos de datos y de control del paquete de la lección 4 son similares a los diagramas siguientes: 
   
 **Flujo de control**  
   
@@ -37,17 +38,18 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
 ![Flujo de datos del paquete](../integration-services/media/task5lesson5data.gif "Data flow in package")  
   
-### <a name="to-run-the-lesson-4-tutorial-package"></a>Para ejecutar el paquete de tutorial de la lección 4  
+## <a name="run-the-lesson-4-tutorial-package"></a>Ejecución del paquete del tutorial de la lección 4  
   
-1.  En el menú **Depurar** , haga clic en **Iniciar depuración**.  
+1.  En el menú **Depurar**, seleccione **Iniciar depuración**.  
   
-2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
+2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar**, seleccione **Detener depuración**.  
   
-### <a name="to-verify-the-contents-of-the-erroroutputtxt-file"></a>Para comprobar el contenido del archivo ErrorOutput.txt  
+## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>Visualización del contenido del archivo ErrorOutput.txt  
   
--   En el Bloc de notas o en cualquier otro editor de texto, abra el archivo ErrorOutput.txt. El orden predeterminado de las columnas es: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
+En el Bloc de notas o en cualquier otro editor de texto, abra el archivo **ErrorOutput.txt**. El orden predeterminado de columna es: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
+ 
+Todas las filas del archivo contienen el valor "BAD" de CurrencyID sin coincidencia, el valor -1071607778 de ErrorCode, el valor 0 de ErrorColumn y el valor "La fila no produjo ninguna coincidencia durante la búsqueda" de ErrorDescription. El valor de ErrorColumn es 0 porque el error no es específico de la columna; no se ha podido realizar la operación de búsqueda.
   
-    Observe que todas las filas del archivo contienen el valor BAD de CurrencyID sin coincidencia, el valor -1071607778 de ErrorCode, el valor 0 de ErrorColumn y el valor "La fila no produjo ninguna coincidencia durante la búsqueda" de ErrorDescription. El valor de ErrorColumn se establece en 0 porque el error no es específico de columna. Es la operación de búsqueda la que ha generado el error. .  
   
-  
-  
+## <a name="next-lesson"></a>Lección siguiente
+[Lección 5: Adición de configuraciones de paquete de SSIS para el modelo de implementación de paquetes](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  

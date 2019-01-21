@@ -1,6 +1,6 @@
 ---
 title: Guía de optimización y validación posterior a la migración | Microsoft Docs
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,23 +13,25 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213624"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206371"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guía de optimización y validación posterior a la migración
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 El paso posterior a la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es fundamental para reconciliar cualquier precisión e integridad de los datos, así como para solucionar problemas de rendimiento con la carga de trabajo.
 
-# <a name="common-performance-scenarios"></a>Escenarios comunes de rendimiento 
+## <a name="common-performance-scenarios"></a>Escenarios comunes de rendimiento
+
 A continuación se muestran algunos de los escenarios comunes de rendimiento detectados después de migrar a la plataforma [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y cómo resolverlos. Puede tratarse de escenarios que son específicos de la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (versiones anteriores a las versiones más recientes), así como de la plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) a la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="CEUpgrade"></a>Consultar las regresiones debidas a un cambio en la versión CE
- 
+
 **Se aplica a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Al migrar desde una versión anterior de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o versiones más recientes y al actualizar el [nivel de compatibilidad de la base de datos](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) a la versión más reciente disponible, una carga de trabajo podría quedar expuesta a sufrir una regresión del rendimiento.
@@ -126,6 +128,7 @@ Las funciones con valores de tabla devuelven un tipo de datos de tabla que puede
 > Puesto que no se ha creado la tabla de salida de una MSTVF (función con valores de tabla de múltiples instrucciones) en tiempo de compilación, el optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se basa en la heurística (y non en las estadísticas reales) para determinar las estimaciones de fila. Aunque los índices se agreguen a las tablas base, esto no servirá de ayuda. Para MSTVF, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa una estimación fija de 1 para el número de filas que se espera que va a devolver una MSTVF (a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], esa estimación corregida es de 100 filas).
 
 ### <a name="steps-to-resolve"></a>Pasos para resolver
+
 1.  Si la TVF de múltiples instrucciones es la única instrucción, conviértala en TVF insertada.
 
     ```sql
@@ -142,7 +145,8 @@ Las funciones con valores de tabla devuelven un tipo de datos de tabla que puede
     RETURN
     END
     ```
-    A 
+
+    El ejemplo de formato en línea se muestra a continuación.
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ Las funciones con valores de tabla devuelven un tipo de datos de tabla que puede
 
 2.  Si es más complejo, considere la opción de usar los resultados intermedios que se almacenan en tablas optimizadas para memoria o tablas temporales.
 
-##  <a name="Additional_Reading"></a> Lecturas adicionales  
+##  <a name="Additional_Reading"></a> Lecturas adicionales
+
  [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [Funciones definidas por el usuario](../relational-databases/user-defined-functions/user-defined-functions.md)  

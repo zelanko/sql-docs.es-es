@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712486"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226702"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Base de datos de ejemplo para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52712486"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para SQL Server. Para obtener las instrucciones generales de hardware para OLTP en memoria, vea la entrada de blog siguiente: [Hardware considerations for In-Memory OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md) (Consideraciones de hardware para OLTP en memoria en SQL Server 2014).
+-   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para SQL Server. Para obtener instrucciones generales de hardware para OLTP en memoria, vea la entrada de blog siguiente: [Consideraciones de hardware para OLTP en memoria en SQL Server 2014](blog-hardware-in-memory-oltp.md)
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalar el ejemplo de In-Memory OLTP basado en AdventureWorks  
  Siga estos pasos para instalar el ejemplo:  
@@ -148,7 +148,7 @@ ms.locfileid: "52712486"
   
 -   *Columnas calculadas:* se omiten las columnas calculadas SalesOrderNumber y TotalDue, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite columnas calculadas en tablas optimizadas para memoria. La nueva vista Sales.vSalesOrderHeader_extended_inmem refleja las columnas SalesOrderNumber y TotalDue. Por tanto, puede usar esta vista si se necesitan estas columnas.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se admiten columnas calculadas en tablas e índices optimizados para memoria.
 
   
@@ -215,7 +215,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
  No se hace referencia a Sales.SpecialOfferProduct_inmem en la carga de trabajo de demostración, por lo que no hay necesidad de usar índices hash en esta tabla para optimizar la carga de trabajo; los índices de (SpecialOfferID, ProductID) y (ProductID) no son agrupados.  
   
- Observe que en la información anterior algunos valores de bucket_count están sobredimensionados, pero no los bucket_counts de los índices de SalesOrderHeader_inmem y SalesOrderDetail_inmem: tienen un tamaño para 10 millones de pedidos de venta. Esto se hace para permitir la instalación del ejemplo en sistemas con poca disponibilidad de memoria, aunque en esos casos la carga de trabajo de demostración producirá un error si no hay memoria suficiente. Si desea escalar el ejemplo más allá de 10 millones de pedidos de venta, no dude en aumentar los números de depósitos en consecuencia.  
+ Observe que en la información anterior algunos valores de bucket_count están sobredimensionados, pero no los bucket_counts de los índices de SalesOrderHeader_inmem y SalesOrderDetail_inmem: tienen un tamaño para 10 millones de pedidos de venta. Esto se hace para permitir la instalación del ejemplo en sistemas con poca disponibilidad de memoria, aunque en esos casos la carga de trabajo de demostración producirá un error si no hay memoria suficiente. Si desea escalar el ejemplo más allá de 10 millones de pedidos de venta, no dude en aumentar los números de cubos en consecuencia.  
   
 #### <a name="considerations-for-memory-utilization"></a>Consideraciones sobre el uso de memoria  
  El uso de memoria en la base de datos de ejemplo, tanto antes como después de ejecutar la carga de trabajo de demostración, se describe en la sección [Uso de memoria para las tablas optimizadas para memoria](#Memoryutilizationforthememory-optimizedtables).  
@@ -313,7 +313,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
  Pasos para la instalación:  
   
-1.  Descargue y ejecute el paquete de instalación x64 para las utilidades de RML desde la página siguiente: [Download Report Markup Language (RML) for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511) (Descarga de Report Markup Language (RML) para SQL Server).
+1.  Descargue y ejecute el paquete de instalación x64 para las utilidades de RML desde la página siguiente: [Download Report Markup Language (RML) for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511) (Descarga de Report Markup Language (RML) para SQL Server)
 
 2.  Si aparece un cuadro de diálogo que indica que algunos archivos están en uso, haga clic en "Continue" (Continuar).  
   
@@ -387,7 +387,7 @@ END
  En las medidas e instrucciones siguientes se usa una carga de trabajo que inserta 10 millones de pedidos de ventas. Para obtener instrucciones para ejecutar una carga de trabajo reducida que inserta 1 millón de pedidos de ventas, vea las instrucciones del archivo “In-Memory OLTP\readme.txt” incluido en el archivo SQLServer2016CTP3Samples.zip.  
   
 ##### <a name="memory-optimized-tables"></a>Tablas con optimización para memoria  
- Empezaremos ejecutando la carga de trabajo en las tablas optimizadas para memoria. El comando siguiente abre 100 subprocesos, cada uno de los cuales se ejecuta para 5.000 iteraciones.  Cada iteración inserta 20 pedidos de venta en transacciones diferentes. Hay 20 inserciones por iteración para compensar el hecho de que la base de datos se usa para generar los datos que se van a insertar. Esto produce un total de 20 * 5000 \* 100 = 10 000 000 inserciones de pedidos de venta.  
+ Empezaremos ejecutando la carga de trabajo en las tablas optimizadas para memoria. El comando siguiente abre 100 subprocesos, cada uno de los cuales se ejecuta para 5.000 iteraciones.  Cada iteración inserta 20 pedidos de venta en transacciones diferentes. Hay 20 inserciones por iteración para compensar el hecho de que la base de datos se usa para generar los datos que se van a insertar. Esto produce un total de 20 \* 5 000 \* 100 = 10 000 000 inserciones de pedidos de venta.  
   
  Abra RML Cmd Prompt y ejecute el comando siguiente:  
   
@@ -769,7 +769,7 @@ ORDER BY state, file_type
   
  En este caso, hay dos pares de archivos de punto de comprobación en el estado "under construction", lo que significa que varios pares de archivos pasaron por el estado "under construction", probablemente debido al elevado nivel de simultaneidad de la carga de trabajo. Varios subprocesos simultáneos necesitaron un nuevo par de archivos al mismo tiempo, por lo que se movió un par de "precreated" a "under construction".  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: 'Lección 4: Agregar redirección de flujo de errores con SSIS | Microsoft Docs'
+title: 'Lección 4: Adición de redireccionamiento de flujo de errores con SSIS | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,42 +11,45 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94a34901743b462ea4fd8a4f36d381b789c360f2
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 43c841010b70599803c71fd6307cfb68464b7265
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637882"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211006"
 ---
-# <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lección 4: Agregar redirección de flujo de errores con SSIS
-Para administrar los errores que puedan aparecer en el proceso de transformación, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ofrece la posibilidad de decidir para cada componente y cada columna cómo administrar los datos que no pueden transformarse. Puede optar por omitir un error en determinadas columnas, redireccionar toda la fila que ha generado el error o simplemente rechazar el componente debido a un error. De forma predeterminada, todos los componentes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] están configurados para ser rechazados si se produce un error. Rechazar el componente debido a un error, causa, a su vez, que el paquete también genere un error y que todos los procesos subsiguientes se detengan.  
+# <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lección 4: Adición de redireccionamiento de flujo de errores con SSIS
+
+Para controlar los errores que puedan aparecer en el proceso de transformación, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite decidir en función de cada componente y cada columna cómo administrar los datos que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no puede transformar. Puede optar por omitir un error en determinadas columnas, redireccionar toda la fila que ha generado el error o rechazar el componente debido a un error. De forma predeterminada, los componentes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] están configurados para ser rechazados si se produce un error. Por su parte, el componente rechazado por un error hace que el paquete también genere un error y que se detenga el procesamiento.  
   
-En lugar de dejar que los errores detengan la ejecución de los paquetes, es recomendable configurar y administrar los posibles errores de procesamiento como si se produjeran en la transformación. Si bien puede optar por omitir los errores a fin de garantizar que el paquete se ejecute correctamente, generalmente es mejor redireccionar la fila que genera el error a otra ruta de proceso en la que los datos y el error puedan persistir, puedan examinarse y puedan procesarse de nuevo más adelante.  
+En lugar de dejar que los errores detengan la ejecución de los paquetes, se pueden configurar y controlar los posibles errores de procesamiento cuando se produzcan. Una opción consiste en omitir los errores por completo para que el paquete siempre se ejecute correctamente. También se puede redirigir la fila con error a otra ruta de procesamiento, donde los datos y el error se pueden conservar, examinar o volver a procesar.  
   
-En esta lección, creará una copia del paquete que ha desarrollado en la [Lección 3: Agregar registro con SSIS](../integration-services/lesson-3-add-logging-with-ssis.md). Trabajando con este paquete nuevo, creará una versión dañada de los archivos de datos de ejemplo. El archivo dañado forzará la aparición de un error de proceso al ejecutar el paquete.  
+En esta lección, creará una copia del paquete que ha desarrollado en [Lección 3: Adición de registro con SSIS](../integration-services/lesson-3-add-logging-with-ssis.md). Con este paquete nuevo, se crea una versión dañada de uno de los archivos de datos de ejemplo. El archivo dañado fuerza la aparición de un error de procesamiento al ejecutar el paquete.  
   
-Para administrar los datos del error, agregará y configurará un destino de archivo plano que escribirá en un archivo las filas que no puedan encontrar un valor de búsqueda en la transformación Lookup Currency Key.  
+Para controlar los datos de error, se agrega y configura un destino de archivo plano que escribe las filas con errores en un archivo de error. 
   
-Antes de escribir los datos del error en el archivo, incluirá un componente de script que utiliza un script para obtener descripciones de error. A continuación, volverá a configurar la transformación Lookup Currency Key para redireccionar los datos que no hayan podido procesarse en la transformación Script.  
+Antes de que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] escriba los datos de error en el archivo, se incluye un componente de Script que obtiene las descripciones de error. Después, se vuelve a configurar la transformación Lookup Currency Key para redireccionar los datos que no se hayan podido procesar en la transformación Script.  
   
-> [!IMPORTANT]  
-> Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre cómo instalar e implementar **AdventureWorksDW2012**, [ejemplos de producto de Reporting Services en CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
-  
-## <a name="tasks-in-lesson"></a>Tareas de la lección  
+## <a name="prerequisites"></a>Prerequisites
+
+> [!NOTE]
+> Si todavía no lo ha hecho, vea los [requisitos previos de la lección 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+ 
+## <a name="lesson-task"></a>Tarea de la lección
 Esta lección contiene las siguientes tareas:  
   
--   [Paso 1: copiar el paquete de la lección 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+-   [Paso 1: Copia del paquete de la lección 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [Paso 2: Crear un archivo dañado](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
+-   [Paso 2: Creación de un archivo dañado](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Paso 3: Agregar redirección de flujo de errores](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+-   [Paso 3: Adición de redireccionamiento de flujo de errores](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Paso 4: Agregar un destino de archivo plano](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+-   [Paso 4: Adición de un destino de archivo plano](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Paso 5: Probar el paquete del tutorial de la lección 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Paso 5: Prueba del paquete del tutorial de la lección 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
-[Paso 1: Copiar el paquete de la lección 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+[Paso 1: Copia del paquete de la lección 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   

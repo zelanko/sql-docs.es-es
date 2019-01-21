@@ -13,12 +13,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 831d1b43f54e64dd52226f3bc9504e622ce7b99e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a73ae886682890c68c34ac90af33438d7f7b9644
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617783"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124185"
 ---
 # <a name="secure-the-snapshot-folder"></a>Proteger la carpeta de instantáneas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47617783"
 > [!NOTE]  
 >  Control de cuentas de usuario (UAC) ayuda a los administradores a administrar sus derechos de usuario elevados (que a veces reciben el nombre de *privilegios*). Cuando se ejecuta en sistemas operativos que tienen UAC habilitado, los administradores no utilizan sus derechos administrativos. En su lugar, realizan la mayoría de acciones como usuarios estándar (no administrativos) y solo usan sus derechos administrativos de forma temporal cuando es necesario. UAC puede impedir el acceso administrativo al recurso compartido de instantáneas. Por lo tanto, debe conceder de forma explícita permisos del recurso compartido de instantáneas a las cuentas de Windows usadas por el Agente de instantáneas, el Agente de distribución y el Agente de mezcla. Debe hacerlo incluso si las cuentas de Windows pertenecen al grupo Administradores.  
   
- Al configurar un distribuidor mediante el Asistente para configurar la distribución o el Asistente para nueva publicación, la carpeta de instantáneas toma como valor predeterminado una ruta de acceso local: X:\Archivos de programa\Microsoft SQL Server\\\*\<instancia>* \MSSQL\ReplData. Si usa un distribuidor remoto o suscripciones de extracción, debe especificar un recurso compartido de red UNC (como \\\\<*nombre de equipo>* \instantánea) en lugar de una ruta de acceso local.  
+ Al configurar un distribuidor mediante el Asistente para configurar la distribución o el Asistente para nueva publicación, la carpeta de instantáneas tiene como valor predeterminado una ruta de acceso local: X:\Archivos de programa\Microsoft SQL Server\\*\<instancia*\MSSQL\ReplData. Si usa un distribuidor remoto o suscripciones de extracción, debe especificar un recurso compartido de red UNC (como \\\\<*nombre de equipo>* \instantánea) en lugar de una ruta de acceso local.  
   
  Los permisos para tener acceso a la carpeta de instantáneas deben concederse según la forma en la que se tiene acceso a la carpeta. En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003 se utilizan las pestañas del siguiente cuadro de diálogo:  
   
@@ -52,11 +52,11 @@ ms.locfileid: "47617783"
   
  Para obtener información acerca de cómo establecer y cambiar la contraseña para tener acceso a instantáneas mediante FTP, vea la sección "Entrega de instantáneas a través de FTP" en el tema [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
-## <a name="see-also"></a>Ver también  
- [Ubicaciones alternativas para las carpetas de instantáneas](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+## <a name="see-also"></a>Consulte también  
+ [Modificación de las opciones de la instantánea](../../../relational-databases/replication/snapshot-options.md)   
  [Inicializar una suscripción con una instantánea](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Seguridad y protección &#40;replicación&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
- [Transferir instantáneas mediante FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)  
+ [Ver y modificar la configuración de seguridad de la replicación](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [Transferir instantáneas mediante FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)  
   
   

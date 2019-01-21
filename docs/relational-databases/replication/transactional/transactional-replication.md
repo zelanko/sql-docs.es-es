@@ -14,12 +14,12 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b85e937dc16ffe3e9561a6344829c9aae5af508c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d5269b19f8bfb04321ac23e01d1f85b8c0861e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791173"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129465"
 ---
 # <a name="transactional-replication"></a>replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,5 +72,15 @@ ms.locfileid: "47791173"
   
 ##  <a name="DistributionAgent"></a> Agente de distribución  
  El Agente de distribución se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. El Agente mueve las transacciones desde la base de datos de distribución al suscriptor. Si se ha marcado una suscripción para validarla, el Agente de distribución comprueba también si los datos en el publicador y en el suscriptor coinciden.  
+
+## <a name="publication-types"></a>Tipos de publicación 
+La replicación transaccional ofrece cuatro tipos de publicaciones:  
+  
+|Tipo de publicación|Descripción|  
+|----------------------|-----------------|  
+|Publicación transaccional estándar|Apropiada para topologías en las que todos los datos del suscriptor son de solo lectura (la replicación transaccional no exige que esto se cumpla en el suscriptor).<br /><br /> Las publicaciones transaccionales estándar se crean de manera predeterminada cuando se usa Transact-SQL o Replication Management Objects (RMO). Cuando se utiliza el Asistente para nueva publicación, se crean seleccionando **Publicación transaccional** en la página **Tipo de publicación** .<br /><br /> Para obtener más información sobre la creación de publicaciones, vea [Publish Data and Database Objects (Publicar datos y objetos de base de datos)](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Publicación transaccional con suscripciones actualizables|Las características de este tipo de publicación son:<br /><br /> -Cada ubicación tiene datos idénticos, con un publicador y un suscriptor. <br /> -Es posible actualizar las filas en el suscriptor<br /> -Esta topología es más apropiada para los entornos de servidor que necesitan una gran disponibilidad y escalabilidad de lectura.<br /><br />Para más información, vea [Suscripciones actualizables](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Topología punto a punto|Las características de este tipo de publicación son:<br /> - Cada ubicación tiene datos idénticos y funciona como publicador y como suscriptor.<br /> - Una misma fila solo se puede cambiar en una ubicación a la vez.<br /> - Admite la [detección de conflictos](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />- Esta topología es más apropiada para los entornos de servidor que necesitan una gran disponibilidad y escalabilidad de lectura.<br /><br />Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Replicación transaccional bidireccional|Las características de este tipo de publicación son:<br />La replicación bidireccional es similar a la replicación punto a punto, pero no proporciona resolución de conflictos. Además, la replicación bidireccional se limita a dos servidores. <br /><br /> Para más información, vea [Replicación transaccional bidireccional](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md). |  
   
   

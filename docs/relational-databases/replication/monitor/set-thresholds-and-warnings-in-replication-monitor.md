@@ -18,12 +18,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e20f280df7054596f357c4864ef95177ca3e9cf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3783bbaa861ad857efce87b82c50536757fd499
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749643"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135476"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Establecer umbrales y advertencias en el Monitor de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "47749643"
   
 5.  Haga clic en **Cerrar**.  
   
-## <a name="see-also"></a>Ver también  
- [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+## <a name="see-also"></a>Consulte también  
+ [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

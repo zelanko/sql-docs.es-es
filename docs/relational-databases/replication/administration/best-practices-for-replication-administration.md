@@ -14,16 +14,16 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791c9fc5b7a411a094d6fedc8aa16290baeea234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf073341709e2c612f89d70f566f3b2dd09283d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763353"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130335"
 ---
 # <a name="best-practices-for-replication-administration"></a>Prácticas recomendadas para la administración de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Después de configurar la replicación, es importante entender cómo administrar una topología de replicación. En este tema se proporciona una guía básica de prácticas recomendadas en varias áreas con vínculos a más información de cada área. Además de seguir la guía de procedimientos recomendados que se presenta en este tema, puede leer el tema de preguntas más frecuentes para familiarizarse con preguntas y problemas comunes: [Preguntas más frecuentes para administradores de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+  Después de configurar la replicación, es importante entender cómo administrar una topología de replicación. En este tema se proporciona una guía básica de prácticas recomendadas en varias áreas con vínculos a más información de cada área. Además de seguir las instrucciones de procedimientos recomendados que se presentan en este tema, puede leer el tema de preguntas más frecuentes para familiarizarse con preguntas y problemas comunes: [Preguntas más frecuentes para administradores de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  Es útil dividir la guía de prácticas recomendadas en dos áreas:  
   
@@ -114,16 +114,16 @@ ms.locfileid: "47763353"
 ## <a name="monitor-the-replication-topology"></a>Supervisar la topología de replicación  
  Después de aplicar la topología de replicación y configurar los umbrales y alertas, se recomienda supervisar la replicación regularmente. Supervisar una topología de replicación es un aspecto importante en la implementación de la replicación. Debido a que la actividad de replicación se distribuye, es fundamental realizar un seguimiento de la actividad y el estado de todos los equipos que participan en la replicación. Para supervisar la replicación se pueden utilizar las siguientes herramientas:  
   
--   El Monitor de replicación es la herramienta más importante para la supervisión de la replicación, ya que le permite supervisar el estado general de una topología de replicación. Para más información, consulte [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   El Monitor de replicación es la herramienta más importante para la supervisión de la replicación, ya que le permite supervisar el estado general de una topología de replicación. Para más información, consulte [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] y Replication Management Objects (RMO) proporcionan interfaces para supervisar la replicación. Para más información, consulte [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] y Replication Management Objects (RMO) proporcionan interfaces para supervisar la replicación. Para más información, consulte [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
   
 -   El Monitor de sistema también puede ser útil para supervisar el rendimiento de la replicación. Para más información, consulte [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).  
   
 ## <a name="validate-data-periodically"></a>Validar los datos periódicamente  
  La replicación no requiere validación, pero se recomienda ejecutar la validación periódicamente en la replicación transaccional y la replicación de mezcla. La validación le permite comprobar que los datos del suscriptor coinciden con los datos del publicador. Una validación satisfactoria indica que en ese momento se han replicado todos los cambios del publicador en el suscriptor (y del suscriptor en el publicador si el suscriptor admite actualizaciones) y que las dos bases de datos están sincronizadas.  
   
- Se recomienda realizar la validación de acuerdo con la programación de copia de seguridad de la base de datos de publicaciones. Por ejemplo, si se realiza una copia de seguridad completa de la base de datos de publicaciones una vez a la semana, se podría ejecutar la validación una vez a la semana tras finalizar la copia de seguridad. Para obtener más información, vea [Validar datos replicados](../../../relational-databases/replication/validate-replicated-data.md).  
+ Se recomienda realizar la validación de acuerdo con la programación de copia de seguridad de la base de datos de publicaciones. Por ejemplo, si se realiza una copia de seguridad completa de la base de datos de publicaciones una vez a la semana, se podría ejecutar la validación una vez a la semana tras finalizar la copia de seguridad. Para obtener más información, vea [Validar datos replicados](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Utilizar perfiles para cambiar los parámetros de agentes si es necesario  
  Los perfiles de agente proporcionan un método cómodo para establecer los parámetros de los agentes de replicación. También se pueden especificar los parámetros en la línea de comandos del agente, pero normalmente es más apropiado utilizar un perfil de agente predefinido o crear un perfil nuevo si necesita cambiar el valor de un parámetro. Por ejemplo, si está utilizando la replicación de mezcla y un suscriptor pasa de una conexión de banda ancha a una conexión telefónica, considere la posibilidad de utilizar el perfil **slow link** para el Agente de mezcla; este perfil utiliza un conjunto de parámetros que se ajustan mejor al vínculo de comunicaciones más lento. Para obtener más información, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
@@ -149,7 +149,7 @@ ms.locfileid: "47763353"
   
  Para obtener más información, vea [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
   
-## <a name="see-also"></a>Ver también  
- [Administración &#40;replicación&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+## <a name="see-also"></a>Consulte también  
+ [Preguntas más frecuentes para administradores de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
   

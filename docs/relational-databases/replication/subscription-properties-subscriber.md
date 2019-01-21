@@ -1,38 +1,47 @@
 ---
-title: 'Propiedades de suscripción: suscriptor | Microsoft Docs'
+title: Cuadro de diálogo Propiedades de la suscripción de Replicación de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
+- sql13.rep.newsubwizard.subproperties.publisher.f1
 - sql13.rep.newsubwizard.subproperties.subscriber.f1
-helpviewer_keywords:
-- Subscription Properties dialog box
-ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
+ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd811f69d34d39f6fd93826e88295b75ec1dc780
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43268755a3de5cf3a8a84547bafe5dc66ad1ac48
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806913"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134085"
 ---
-# <a name="subscription-properties---subscriber"></a>Propiedades de suscripción: suscriptor
+# <a name="sql-server-replication-subscription-properties-dialog-box"></a>Cuadro de diálogo Propiedades de la suscripción de Replicación de SQL Server 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite ver y establecer las propiedades de las suscripciones de extracción.  
+
+### <a name="publisher-properties"></a>Propiedades del publicador
+El cuadro de diálogo **Propiedades de la suscripción** del publicador permite ver y definir las propiedades para las suscripciones de inserción. También se pueden ver algunas propiedades para las suscripciones de extracción, pero el cuadro de diálogo **Propiedades de la suscripción** del suscriptor muestra propiedades adicionales y permite modificarlas.  
   
- Cada una de las propiedades del cuadro de diálogo **Propiedades de la suscripción** incluye una descripción. Haga clic en una propiedad para mostrar la descripción en la parte inferior del cuadro de diálogo. Este tema ofrece información adicional acerca de varias propiedades. Las propiedades se agrupan en las siguientes categorías:  
+ Cada una de las propiedades del cuadro de diálogo **Propiedades de la suscripción** incluye una descripción. Haga clic en una propiedad para mostrar la descripción en la parte inferior del cuadro de diálogo. Este tema proporciona información adicional sobre una serie de propiedades, la mayoría de las cuales se muestran en el publicador únicamente para las suscripciones de inserción. Las propiedades se agrupan en las siguientes categorías:  
   
--   Propiedades que se aplican a todas las suscripciones.  
-  
+-   Propiedades que se aplican a todas las suscripciones.    
 -   Propiedades que se aplican a las suscripciones transaccionales.  
+-   Propiedades que se aplican a las suscripciones de mezcla.  
   
+ Si una opción se muestra como de solo lectura, solamente se puede establecer durante la creación de la suscripción. Si desea establecer opciones que no están disponibles en el Asistente para nueva suscripción, cree la suscripción con los procedimientos almacenados. Para obtener más información, consulte [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) y [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
+
+### <a name="subscriber-properties"></a>Propiedades del suscriptor
+El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite ver y establecer las propiedades de las suscripciones de extracción.  
+  
+ Cada una de las propiedades del cuadro de diálogo **Propiedades de la suscripción** incluye una descripción. Haga clic en una propiedad para mostrar la descripción en la parte inferior del cuadro de diálogo. Este tema ofrece información adicional acerca de varias propiedades. Las propiedades se agrupan en las siguientes categorías:    
+-   Propiedades que se aplican a todas las suscripciones.    
+-   Propiedades que se aplican a las suscripciones transaccionales.   
 -   Propiedades que se aplican a las suscripciones de mezcla.  
   
  Si una opción se muestra como de solo lectura, solamente se puede establecer durante la creación de la suscripción. Si desea establecer opciones que no están disponibles en el Asistente para nueva suscripción, cree la suscripción con los procedimientos almacenados. Para obtener más información, consulte [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) y [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
@@ -40,20 +49,46 @@ ms.locfileid: "47806913"
 > [!NOTE]  
 >  Si aún no ha creado un Agente de distribución o un Agente de mezcla para la suscripción, no se mostrarán muchas de las propiedades de la suscripción. Para crear un trabajo de agente para una suscripción de extracción, ejecute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (para una suscripción a una publicación de instantáneas o transaccional) o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (para una suscripción a una publicación de mezcla).  
   
-## <a name="options-for-all-subscriptions"></a>Opciones para todas las suscripciones  
+## <a name="publisher-options-for-all-subscriptions"></a>Opciones de publicador para todas las suscripciones  
+ **Seguridad**  
+ Haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**...**) para cambiar la cuenta con la que el Agente de distribución o el Agente de mezcla se ejecutan en el distribuidor. Para cambiar la cuenta en la que el Agente de distribución o el Agente de mezcla realizan conexiones al suscriptor, haga clic en **Conexión de suscriptor**y, a continuación, haga clic en el botón de propiedades (**…**).  
+  
+ Para obtener más información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+  
+## <a name="publisher-options-for-transactional-subscriptions"></a>Opciones de publicador para las suscripciones transaccionales  
+ **Impedir bucles de transacciones**  
+ Determina si el agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor. Esta opción se utiliza para la replicación transaccional bidireccional. Para más información, consulte [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).  
+  
+ **Suscripción actualizable**  
+ Determina si los cambios del suscriptor se vuelven a replicar en el publicador. Es posible replicar los cambios con una actualización en cola o una actualización inmediata. La opción **Método de actualización del suscriptor** determina el método que se debe utilizar. Para más información, consulte [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+  
+## <a name="publisher-options-for-merge-subscriptions"></a>Opciones de publicador para las suscripciones de mezcla  
+ **Definición de partición (HOST_NAME)**  
+ Para una publicación en la que se usan filtros con parámetros, la replicación de mezcla evalúa una de dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+  
+ **Tipo de suscripción** y **Prioridad**  
+ Muestra si la suscripción es una suscripción de cliente o de servidor (no podrá cambiarse una vez creada la suscripción). Las suscripciones de servidor pueden volver a publicar datos en otros suscriptores y es posible asignarles una prioridad para la resolución de conflictos.  
+  
+ Si ha seleccionado un tipo de suscripción de servidor en el Asistente para nueva suscripción, el suscriptor recibe la prioridad que se utiliza durante la resolución de conflictos.  
+  
+ **Solucionar conflictos de manera interactiva**  
+ Establece si se va a utilizar la interfaz de usuario Solucionador interactivo para solucionar conflictos durante la sincronización de mezcla. Requiere un valor de **Habilitado** en **Utilizar el Administrador de sincronización de Windows**. Para obtener más información, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+
+  
+## <a name="subscriber-options-for-all-subscriptions"></a>Opciones de suscriptor para todas las suscripciones  
  **Inicializar datos publicados desde una instantánea**  
  Determina si las suscripciones se inicializan con una instantánea (opción predeterminada) o con otro método. Para más información sobre cómo inicializar suscripciones, vea [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md) (Inicializar una suscripción).  
   
  **Ubicación de la instantánea**  
  Determina la ubicación desde la que se tiene acceso a los archivos de instantáneas durante la inicialización o la reinicialización. La ubicación puede ser uno de los siguientes valores:  
   
--   **Ubicación predeterminada**: muestra la ubicación predeterminada, definida al configurar el distribuidor. Para más información, vea [Especificar la ubicación predeterminada de instantáneas &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md) (Especificar la ubicación predeterminada de instantáneas &#40;SQL Server Management Studio&#41;).  
+-   **Ubicación predeterminada**: muestra la ubicación predeterminada, definida al configurar el distribuidor. Para más información, vea [Especificación de las opciones de instantáneas](../../relational-databases/replication/snapshot-options.md).  
   
--   **Carpeta alternativa**: muestra una ubicación alternativa, que puede especificarse en el cuadro de diálogo **Propiedades de la publicación** . Para más información, consulte [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
+-   **Carpeta alternativa**: muestra una ubicación alternativa, que puede especificarse en el cuadro de diálogo **Propiedades de la publicación** . Para más información, vea [Especificación de las opciones de instantáneas](../../relational-databases/replication/snapshot-options.md).  
   
--   **Carpeta de instantáneas dinámicas**: muestra una ubicación de instantáneas para las publicaciones de combinación que utilizan filtros de fila con parámetros. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   **Carpeta de instantáneas dinámicas**: muestra una ubicación de instantáneas para las publicaciones de combinación que utilizan filtros de fila con parámetros. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
--   **Carpeta FTP**: carpeta desde la que se tiene acceso al servidor Protocolo de transferencia de archivos (FTP). Para más información, vea [Transferir instantáneas mediante FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   **Carpeta FTP**: carpeta desde la que se tiene acceso al servidor Protocolo de transferencia de archivos (FTP). Para más información, vea [Entrega de una instantánea mediante FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
  **Carpeta de instantáneas**  
  Si selecciona un valor distinto de **Ubicación predeterminada** en la opción **Ubicación de la instantánea** , deberá especificar la ruta a la carpeta de instantáneas.  
@@ -72,13 +107,13 @@ ms.locfileid: "47806913"
   
  Para obtener más información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-## <a name="options-for-transactional-subscriptions"></a>Opciones para suscripciones transaccionales  
+## <a name="subscriber-options-for-transactional-subscriptions"></a>Opciones de suscriptor para las suscripciones transaccionales  
  **Suscripción actualizable**  
  Determina si los cambios del suscriptor se vuelven a replicar en el publicador. Es posible replicar los cambios con una actualización en cola o una actualización inmediata. La opción **Método de actualización del suscriptor** determina el método que se debe utilizar. Para más información, consulte [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ## <a name="options-for-merge-subscriptions"></a>Opciones para suscripciones de mezcla  
  **Definición de partición (HOST_NAME)**  
- Para una publicación que utiliza filtros con parámetros, la replicación de mezcla evalúa una de las dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Para una publicación en la que se usan filtros con parámetros, la replicación de mezcla evalúa una de dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de suscripción** y **Prioridad**  
  Muestra si la suscripción es una suscripción de cliente o de servidor (no podrá cambiarse una vez creada la suscripción). Las suscripciones de servidor pueden volver a publicar datos en otros suscriptores y es posible asignarles una prioridad para la resolución de conflictos.  
@@ -93,17 +128,17 @@ ms.locfileid: "47806913"
   
  Si selecciona **True** para **Usar sincronización web**:  
   
--   Escriba la dirección completa del servidor IIS en **Dirección de servidor web**.  
+-   Escriba la dirección completa del servidor IIS en **Dirección de servidor web**.    
+-   Haga clic en la fila **Conexión de servidor web** y, a continuación, haga clic en el botón de propiedades (**...**) para establecer o cambiar la cuenta con la que el suscriptor se conecta al servidor IIS.    
+-   Si fuese necesario, cambie el **Tiempo de espera del servidor web** . El tiempo de espera es la cantidad de tiempo, en segundos, que transcurre antes de que expire la solicitud de sincronización web. 
+
+ 
+Para obtener más información acerca de la configuración, vea [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md). 
   
--   Haga clic en la fila **Conexión de servidor web** y, a continuación, haga clic en el botón de propiedades (**...**) para establecer o cambiar la cuenta con la que el suscriptor se conecta al servidor IIS.  
-  
--   Si fuese necesario, cambie el **Tiempo de espera del servidor web** . El tiempo de espera es la cantidad de tiempo, en segundos, que transcurre antes de que expire la solicitud de sincronización web.  
-  
- Para obtener más información acerca de la configuración, vea [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
-  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  (Ver y modificar las propiedades de una suscripción de extracción)  
  [Ver y modificar las propiedades de una suscripción de inserción](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
+
   
   

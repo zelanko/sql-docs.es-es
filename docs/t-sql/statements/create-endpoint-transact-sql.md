@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3920cdf30575d5b51948fe7789d568a1dacc961
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596224"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124585"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47596224"
   
      En esta parte, defina la carga que admite el extremo. La carga puede ser uno de los tipos admitidos: [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker y creación de reflejo de la base de datos. En esta parte, también puede incluir información específica del lenguaje.  
   
-> **NOTA:** Los servicios web XML nativos (puntos de conexión HTTP/SOAP) se quitaron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **NOTA:** Los servicios web XML nativos (extremos HTTP/SOAP) se quitaron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  Los argumentos que aparecen a continuación solo se aplican a la opción de protocolo TCP.  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT **=**_puertoDelAgenteDeEscucha_  
  Especifica el número de puerto que escucha el protocolo TCP/IP de Service Broker para las conexiones. Se usa 4022 por convención, pero cualquier número entre 1024 y 32767 es válido.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(**_dirección_IP_de_4_partes_ **)** | **(** "*dirección_IP_v6*" **)**  
  Especifica la dirección IP en la que escuchará el extremo. El valor predeterminado es ALL. Esto significa que la escucha aceptará una conexión en cualquier dirección IP válida.  
   
  Si configura la creación de reflejo de la base de datos con una dirección IP en lugar de con un nombre de dominio completo (`ALTER DATABASE SET PARTNER = partner_IP_address` o `ALTER DATABASE SET WITNESS = witness_IP_address`), tiene que especificar `LISTENER_IP =IP_address` en lugar de `LISTENER_IP=ALL` al crear los extremos de los reflejos.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Descarta los mensajes para los servicios que están ubicados en otro lugar. Ésta es la opción predeterminada.  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE **=**_tamaño_del_reenvío_  
  Especifica la cantidad máxima de almacenamiento en megabytes que se va a asignar para que el extremo la utilice cuando almacene mensajes que se van a reenviar.  
   
  **Opciones de DATABASE_MIRRORING**  

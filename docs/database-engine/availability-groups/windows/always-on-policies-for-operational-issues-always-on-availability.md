@@ -14,12 +14,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214174"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226562"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Administración basada en directivas de problemas operativos con grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53214174"
 ##  <a name="Always OnPBM"></a> Directivas predefinidas y problemas  
  En la siguiente tabla se resumen las directivas predefinidas.  
   
-|Nombre de la directiva|Problema|Categoría**\***|Faceta|  
+|Nombre de la directiva|Problema|Categoría **&#42;**|Faceta|  
 |-----------------|-----------|--------------------|-----------|  
 |Estado de clúster de WSFC|[El servicio de clúster de WSFC está sin conexión](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Crítico|Instancia de SQL Server|  
 |Estado en línea del grupo de disponibilidad|[Grupo de disponibilidad sin conexión](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Crítico|grupo de disponibilidad|  
@@ -67,7 +67,7 @@ ms.locfileid: "53214174"
 |Estado de sincronización de datos de la base de datos de disponibilidad|[El estado de sincronización de datos de bases de datos de disponibilidad no está en buen estado](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Advertencia|Base de datos de disponibilidad|  
   
 > [!IMPORTANT]
->  **\*** Para las directivas de AlwaysOn, los nombres de categoría se usan como identificadores. La acción de cambiar el nombre de una categoría de AlwaysOn interrumpirá la funcionalidad de la evaluación de estado. Por consiguiente, no modifique los nombres de las categorías de AlwaysOn.  
+>  **&#42;** Para las directivas Always On, los nombres de categoría se usan como identificadores. La acción de cambiar el nombre de una categoría de AlwaysOn interrumpirá la funcionalidad de la evaluación de estado. Por consiguiente, no modifique los nombres de las categorías de AlwaysOn.  
   
 ##  <a name="Dashboard"></a> Panel AlwaysOn  
  El panel AlwaysOn proporciona una vista global del estado de un grupo de disponibilidad. El panel AlwaysOn incluye las siguientes características:  

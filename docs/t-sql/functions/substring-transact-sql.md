@@ -25,18 +25,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1cb567055a40697ed61b30b9cff686da277e10c
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 3dea4c451c82a17e29a6d47028a35e3e61bd27ec
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970937"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298972"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Devuelve parte de una expresión de caracteres, binaria, de texto o de imagen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -114,7 +114,7 @@ bcd
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. Usar SUBSTRING con datos de tipo text, ntext e image  
+### <a name="b-using-substring-with-text-ntext-and-image-data"></a>b. Usar SUBSTRING con datos de tipo text, ntext e image  
   
 > [!NOTE]  
 >  Para ejecutar estos ejemplos, es necesario instalar la base de datos **pubs**.  
@@ -221,7 +221,7 @@ x
 bcd
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  

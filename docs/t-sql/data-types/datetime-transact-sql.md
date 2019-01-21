@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e75c6040a74f58ae0c6fb8e340a61a8a90332de
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6485ebf0eea1565a13e53a0aa7746a724352c35e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970676"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300202"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Define una fecha que se combina con una hora del día con fracciones de segundos basada en un reloj de 24 horas.
   
@@ -57,9 +57,9 @@ Define una fecha que se combina con una hora del día con fracciones de segundos
 |Precisión|Se redondea en incrementos de 0,000, 0,003 o 0.007 segundos|  
 |Valor predeterminado|1900-01-01 00:00:00|  
 |Calendario|Gregoriano (no incluye el intervalo completo de años.)|  
-|Precisión de fracciones de segundo definida por el usuario|no|  
-|Conservación y reconocimiento del ajuste de zona horaria|no|  
-|Reconocimiento del horario de verano|no|  
+|Precisión de fracciones de segundo definida por el usuario|No|  
+|Conservación y reconocimiento del ajuste de zona horaria|No|  
+|Reconocimiento del horario de verano|No|  
   
 ## <a name="supported-string-literal-formats-for-datetime"></a>Formatos del literales de cadena compatibles para datetime  
 En estas tablas se enumeran los formatos de literales de cadena compatibles para **datetime**. Excepto para ODBC, los literales de cadena de **datetime** están incluidos entre comillas simples ('), por ejemplo 'string_literaL'. Si el entorno no es **us_english**, los literales de cadena deberían estar en el formato N'string_literaL'.

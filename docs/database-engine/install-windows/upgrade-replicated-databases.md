@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668424"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124615"
 ---
 # <a name="upgrade-replicated-databases"></a>Actualizar bases de datos replicadas
 
@@ -37,7 +37,7 @@ ms.locfileid: "51668424"
     - En un suscriptor a una publicación de combinación todas las versiones pueden ser iguales o inferiores a la versión del publicador que se admite según el ciclo de soporte del ciclo de vida de las versiones.  
  
 La ruta de actualización a SQL Server es diferente según el modelo de implementación. SQL Server ofrece dos rutas de actualización en general:
-- En paralelo: se implementa un entorno en paralelo y se mueven al entorno nuevo las bases de datos junto con los objetos de nivel de instancia asociados, como los inicios de sesión, trabajos, etc. 
+- En paralelo: se implementa un entorno en paralelo y se mueven al entorno nuevo las bases de datos junto con los objetos de nivel de instancia asociados, como los inicios de sesión, los trabajos, etc. 
 - Actualización local: se permite que los medios de instalación de SQL Server actualicen la instalación de SQL Server existente mediante el reemplazo de los bits de SQL Server y la actualización de los objetos de base de datos. Para los entornos que ejecutan grupos de disponibilidad Always On o instancias de clúster de conmutación por error, una actualización local se combina con una [actualización gradual](choose-a-database-engine-upgrade-method.md#rolling-upgrade) para minimizar el tiempo de inactividad. 
 
 Un enfoque común que se ha adoptado para las actualizaciones en paralelo de las topologías de replicación es mover los pares de publicador y suscriptor por partes al nuevo entorno en paralelo, en lugar de mover toda la topología. Este enfoque por fases ayuda a controlar el tiempo de inactividad y a minimizar, hasta cierto punto, el impacto para la empresa que depende de la replicación.  
@@ -131,10 +131,10 @@ Si está planeando la actualización de la instancia de SQL Server a SQL 2016 (o
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Restaurar una base de datos replicada a partir de una versión anterior  
  Para asegurarse de que la configuración de replicación se conserva al restaurar una copia de seguridad de una base de datos replicada a partir de una versión anterior, restaure en un servidor y una base de datos con los mismos nombres que el servidor y la base de datos donde se realizó la copia de seguridad.  
   
-## <a name="see-also"></a>Ver también  
- [Administración &#40;replicación&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+## <a name="see-also"></a>Consulte también  
+ [Replicación de SQL Server](../../relational-databases/replication/sql-server-replication.md)  
+ [Preguntas más frecuentes para administradores de replicación](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilidad con versiones anteriores de replicación](../../relational-databases/replication/replication-backward-compatibility.md)   
- [Novedades &#40;Replicación&#41;](../../relational-databases/replication/what-s-new-replication.md)   
  [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
  [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/) (Actualización de una topología de replicación a SQL Server 2016)

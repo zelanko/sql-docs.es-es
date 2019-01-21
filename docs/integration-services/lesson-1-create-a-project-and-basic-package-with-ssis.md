@@ -1,7 +1,7 @@
 ---
-title: 'Lección 1: Crear un proyecto y un paquete básico con SSIS | Microsoft Docs'
+title: 'Lección 1: Creación de un proyecto y un paquete básico con SSIS | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,31 +11,41 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4431e593a74c7f6a656f78cd70abfd19c813bdd
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 56c6d8a971026f6efac7d7e76c9ab1efd13b95d1
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642082"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185021"
 ---
-# <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lección 1: Crear un proyecto y un paquete básico con SSIS
+# <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lección 1: Creación de un proyecto y un paquete básico con SSIS
 
-En esta lección, creará un paquete ETL sencillo que extrae datos de un único origen de archivo plano, transforma los datos mediante dos componentes de transformación de búsqueda y escribe esos datos en una copia de la tabla de hechos **FactCurrencyRate** de **AdventureWorksDW2012**. Como parte de esta lección, aprenderá a crear paquetes nuevos, agregar y configurar orígenes de datos y conexiones de destino, y trabajar con nuevos componentes de flujo de control y flujo de datos.  
+En esta lección, se crea un paquete ETL sencillo que extrae datos de un único origen de archivo plano, los transforma mediante dos componentes de transformación de búsqueda y escribe los datos transformados en una copia de la tabla de hechos **FactCurrencyRate** de la base de datos de muestra **AdventureWorksDW2012**. Como parte de esta lección, aprenderá a crear paquetes, agregar y configurar orígenes de datos y conexiones de destino, y trabajar con nuevos componentes de flujo de control y flujo de datos.  
   
-> [!IMPORTANT]  
-> Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre la instalación e implementación de **AdventureWorksDW2012**, consulte [Ejemplos de producto de Reporting Services en CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
+Antes de crear un paquete, debe entender el formato que se usa en los datos de origen y de destino. Después, estará listo para definir las transformaciones necesarias para asignar los datos de origen al destino.  
+
+## <a name="prerequisites"></a>Prerequisites
+
+Este tutorial se basa en Microsoft SQL Server Data Tools, un conjunto de paquetes de ejemplo y una base de datos de ejemplo.
+
+* Para instalar SQL Server Data Tools, vea [Descargar SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="understanding-the-package-requirements"></a>Descripción de los requisitos de paquete  
-Este tutorial necesita Microsoft SQL Server Data Tools.  
+* Para descargar todos los paquetes de la lección de este tutorial:
+
+    1.  Vaya a los [archivos de tutorial de Integration Services](https://www.microsoft.com/en-us/download/details.aspx?id=56827).
+
+    2.  Haga clic en el botón **DOWNLOAD** (DESCARGAR).
+
+    3.  Seleccione **Creating a Simple ETL Package.zip** (Creación de un sencillo archivo Package.zip de ETL) y, después, haga clic en **Next** (Siguiente).
+
+    4.  Después de que se descargue el archivo, descomprima el contenido en un directorio local.  
+
+* Para instalar e implementar la base de datos de ejemplo **AdventureWorksDW2012**, vea [Configuración e instalación de AdventureWorks](../samples/adventureworks-install-configure.md).
   
-Para obtener más información sobre cómo instalar SQL Server Data Tools, consulte [Descargar SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
+## <a name="look-at-the-source-data"></a>Examen de los datos de origen
+En este tutorial, los datos de origen son un conjunto de datos de moneda históricos que se encuentra en un archivo plano denominado **SampleCurrencyData.txt**. Los datos de origen tienen las cuatro columnas siguientes: tipo de cambio medio de la moneda, una clave de moneda, una clave de fecha y el tipo de cambio de final del día.  
   
-Antes de crear un paquete, debe saber qué formato se utiliza en los datos de origen y de destino. Una vez que conozca ambos formatos de datos, estará listo para definir las transformaciones necesarias para asignar los datos de origen al destino.  
-  
-### <a name="looking-at-the-source"></a>Información sobre el origen  
-En este tutorial, los datos de origen son un conjunto de datos de moneda históricos que se encuentra en el archivo plano SampleCurrencyData.txt. Los datos de origen tienen las cuatro columnas siguientes: tipo de cambio medio de la moneda, una clave de moneda, una clave de fecha y el tipo de cambio de final del día.  
-  
-A continuación se muestra un ejemplo de datos de origen del archivo SampleCurrencyData.txt:  
+Este es un ejemplo de los datos de origen del archivo SampleCurrencyData.txt:  
   
 <pre>1.00070049USD9/3/05 0:001.001201442  
 1.00020004USD9/4/05 0:001  
@@ -48,10 +58,10 @@ A continuación se muestra un ejemplo de datos de origen del archivo SampleCurre
 1.00020004USD9/11/05 0:001.001101211  
 1.00020004USD9/12/05 0:000.99970009</pre>  
   
-Cuando se trabaja con datos de origen de un archivo plano, es importante entender el modo en que el administrador de conexiones de archivos planos interpreta los datos del archivo plano. Si el origen de archivo plano es Unicode, el administrador de conexiones de archivos planos define todas las columnas como [DT_WSTR], con un ancho de columna predeterminado de 50. Si el origen de archivo plano tiene la codificación ANSI, las columnas se definen como [DT_STR], con un ancho de columna de 50. Es probable que tenga que cambiar estos valores predeterminados para que los tipos de columna de cadena sean más adecuados para los datos. Para ello, deberá saber cuál es el tipo de datos del destino en el que se escribirán los datos y luego elegir el tipo correcto dentro del administrador de conexiones de archivos planos.  
+Cuando se trabaja con datos de origen de un archivo plano, es importante entender el modo en el que el administrador de conexiones de archivos planos interpreta los datos del archivo plano. Si el origen de archivo plano es Unicode, el administrador de conexiones de archivos planos define todas las columnas como [DT_WSTR], con un ancho de columna predeterminado de 50. Si el origen de archivo plano tiene la codificación ANSI, las columnas se definen como [DT_STR], con un ancho de columna predeterminado de 50. Es probable que tenga que cambiar estos valores predeterminados para que los tipos de columna de cadena sean más adecuados para los datos. Debe examinar el tipo de datos de destino y, después, elegir ese tipo en el Administrador de conexiones de archivos planos.  
   
-### <a name="looking-at-the-destination"></a>Información sobre el destino  
-El destino último de los datos de origen es una copia de la tabla de hechos **FactCurrencyRate** de **AdventureWorksDW**. La tabla de hechos **FactCurrencyRate** tiene cuatro columnas y tiene relaciones con dos tablas de dimensiones, como se muestra en la tabla siguiente.  
+## <a name="look-at-the-destination-data"></a>Examen de los datos de destino
+El destino de los datos de origen es una copia de la tabla de hechos **FactCurrencyRate** de **AdventureWorksDW**. La tabla de hechos **FactCurrencyRate** tiene cuatro columnas y tiene relaciones con dos tablas de dimensiones, como se muestra en la tabla siguiente.  
   
 |Nombre de la columna|Tipo de datos|Tabla de búsqueda|Columna de búsqueda|  
 |---------------|-------------|----------------|-----------------|  
@@ -60,8 +70,8 @@ El destino último de los datos de origen es una copia de la tabla de hechos **F
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
 |EndOfDayRate|FLOAT|None|None|  
   
-### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Asignar datos de origen para que sean compatibles con el destino  
-El análisis de los formatos de datos de origen y de destino indica que serán necesarias búsquedas para los valores **CurrencyKey** y **DateKey** . Las transformaciones que realizarán estas búsquedas obtendrán los valores de **CurrencyKey** y **DateKey** usando las claves alternativas de las tablas de dimensiones **DimCurrency** y **DimDate** .  
+## <a name="map-the-source-data-to-the-destination"></a>Asignación de los datos de origen al destino  
+El análisis de los formatos de datos de origen y de destino indica que se necesitan búsquedas para los valores **CurrencyKey** y **DateKey**. Las transformaciones que realizan estas búsquedas obtienen esos valores mediante las claves alternativas de las tablas de dimensiones **DimCurrency** y **DimDate**.  
   
 |Columna de archivo plano|Nombre de tabla|Nombre de la columna|Tipo de datos|  
 |--------------------|--------------|---------------|-------------|  
@@ -73,24 +83,24 @@ El análisis de los formatos de datos de origen y de destino indica que serán n
 ## <a name="lesson-tasks"></a>Tareas de la lección  
 Esta lección contiene las siguientes tareas:  
   
--   [Paso 1: Crear un nuevo proyecto de Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Paso 1: Creación de un proyecto de Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Paso 2: Agregar y configurar un administrador de conexiones de archivos planos](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Paso 2: Adición y configuración de un administrador de conexiones de archivos planos](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Paso 3: Agregar y configurar un administrador de conexiones OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Paso 3: Adición y configuración de un administrador de conexiones OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Paso 4: Agregar una tarea de flujo de datos al paquete](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Paso 4: Adición de una tarea de flujo de datos al paquete](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [Paso 5: Agregar y configurar el origen de archivo plano](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [Paso 5: Adición y configuración del origen de archivo plano](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Paso 6: Agregar y configurar transformaciones de búsqueda](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Paso 6: Adición y configuración de las transformaciones de búsqueda](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Paso 7: Agregar y configurar el destino de OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Paso 7: Adición y configuración del destino de OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Paso 8: Facilitar la comprensión del paquete de la lección 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Paso 8: Anotación y formato del paquete de la lección 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Paso 9: Probar el paquete del tutorial de la lección 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Paso 9: Prueba del paquete de la lección 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
-[Paso 1: Crear un nuevo proyecto de Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+[Paso 1: Creación de un proyecto de Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   

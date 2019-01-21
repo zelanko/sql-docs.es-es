@@ -1,5 +1,5 @@
 ---
-title: Configuración del publicador | Microsoft Docs
+title: Cuadro de diálogo "Configuración del publicador" de Replicación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bfb4b85bddf33ee4631f2fa2f1799fa8cb593cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24def3d19d38356bb48886a64a0566254aeb1aec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827363"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132565"
 ---
-# <a name="publisher-settings"></a>Configuración del publicador
+# <a name="sql-server-replication-publisher-settings-dialog-box"></a>Cuadro de diálogo "Configuración del publicador" de Replicación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   El cuadro de diálogo **Configuración del publicador** permite cambiar la configuración de los publicadores que se han agregado al panel izquierdo del Monitor de replicación.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "47827363"
  **Nuevo grupo**  
  Haga clic aquí para crear un nuevo grupo de publicadores. Un grupo de publicadores proporciona una forma cómoda de organizar publicadores en el Monitor de replicación. Los grupos no afectan a la replicación de datos ni a la relación entre los servidores de una topología de replicación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

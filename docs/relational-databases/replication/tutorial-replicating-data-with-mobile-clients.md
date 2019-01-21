@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Configurar la replicación (de mezcla) entre un servidor y clientes móviles | Microsoft Docs'
+title: 'Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545545"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130725"
 ---
-# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configurar la replicación (de mezcla) entre un servidor y clientes móviles
+# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 La replicación de mezcla es una buena solución al problema de mover datos entre un servidor central y clientes móviles que solo se conectan en determinadas ocasiones. Al usar los asistentes para replicación, es más fácil configurar y administrar una topología de replicación de mezcla. 
 
@@ -37,7 +37,7 @@ En este tutorial, aprenderá a:
 > * Sincronizar la suscripción con la publicación de mezcla
   
 ## <a name="prerequisites"></a>Prerequisites  
-Este tutorial es para usuarios que están familiarizados con las operaciones básicas de las bases de datos, pero tienen una experiencia limitada en operaciones de replicación. Antes de empezar este tutorial, debe completar el [Tutorial: Preparar el servidor para la replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+Este tutorial es para usuarios que están familiarizados con las operaciones básicas de las bases de datos, pero tienen una experiencia limitada en operaciones de replicación. Antes de empezar este tutorial, debe haber completado [Tutorial: Preparación de SQL Server para la replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Para completar este tutorial, necesita tener SQL Server, SQL Server Management Studio (SSMS) y una base de datos de AdventureWorks: 
   
@@ -82,7 +82,7 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
     ![Páginas "Tipo de publicación" y "Tipos de suscriptor"](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
-6. En la página **Artículos**, expanda el nodo **Tablas**. Seleccione estas tres tablas: **Employee**, **SalesOrderHeader** y **SalesOrderDetail**. Seleccione **Siguiente**.  
+6. En la página **Artículos**, expanda el nodo **Tablas**. Seleccione las tres tablas siguientes: **Employee**, **SalesOrderHeader** y **SalesOrderDetail**. Seleccione **Siguiente**.  
 
    ![Selecciones de tabla en la página "Artículos"](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
@@ -205,7 +205,7 @@ En esta sección, se agrega una suscripción a la publicación de mezcla que se 
 
    ![Selecciones para agregar una base de datos al suscriptor](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. En la página **Seguridad del agente de mezcla**, haga clic en el botón de puntos suspensivos (**...**). Escriba <*Nombre_De_Equipo_Suscriptor*>**\repl_merge** en el cuadro **Cuenta de proceso** y especifique la contraseña para esta cuenta. Seleccione **Aceptar**, **Siguiente** y, después, elija otra vez **Siguiente**.  
+8. En la página **Seguridad del agente de mezcla**, seleccione el botón de puntos suspensivos (**...**). Escriba <*Nombre_De_Equipo_Suscriptor*>**\repl_merge** en el cuadro **Cuenta de proceso** y especifique la contraseña para esta cuenta. Seleccione **Aceptar**, **Siguiente** y, después, elija otra vez **Siguiente**.  
 
    ![Selecciones para la seguridad del Agente de mezcla](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -251,7 +251,7 @@ En esta sección, se agrega una suscripción a la publicación de mezcla que se 
 Para obtener más información, vea:  
 - [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [Instantáneas para publicaciones de combinación con filtros con parámetros](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [Instantáneas para publicaciones de combinación con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>Sincronizar la suscripción con la publicación de mezcla
 

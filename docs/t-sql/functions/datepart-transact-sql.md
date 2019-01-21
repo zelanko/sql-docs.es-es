@@ -28,18 +28,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebc5c6b688bf7871ff3e75ab30fbb7dadb31f315
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 92373c80cfd2de09e0222aa9af6ef0a3dca90cf6
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521221"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299952"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Esta función devuelve un entero que representa el parámetro *datepart* especificado del parámetro *date* especificado.
   
@@ -164,8 +164,8 @@ Es posible que los sistemas de numeración que se usan en otros países o region
 |---|---|---|---|
 |Domingo|1 de enero,<br /><br /> El primer sábado,<br /><br /> 1-7 días del año|Sí|United States|  
 |Lunes|1 de enero,<br /><br /> El primer domingo,<br /><br /> 1-7 días del año|Sí|La mayoría de los países europeos y Reino Unido|  
-|Lunes|4 de enero,<br /><br /> El primer jueves,<br /><br /> 4-7 días del año|no|ISO 8601, Noruega y Suecia|  
-|Lunes|7 de enero,<br /><br /> El primer lunes,<br /><br /> 7 días del año|no||  
+|Lunes|4 de enero,<br /><br /> El primer jueves,<br /><br /> 4-7 días del año|No|ISO 8601, Noruega y Suecia|  
+|Lunes|7 de enero,<br /><br /> El primer lunes,<br /><br /> 7 días del año|No||  
 |Miércoles|1 de enero,<br /><br /> El primer martes,<br /><br /> 1-7 días del año|Sí||  
 |Sábado|1 de enero,<br /><br /> El primer viernes,<br /><br /> 1-7 días del año|Sí||  
   

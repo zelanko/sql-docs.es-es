@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203044"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185031"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ Use el [Asistente para Always Encrypted](../../../relational-databases/security/
 >  Para ver un vídeo que incluye el uso del asistente, vea [Getting Started with Always Encrypted with SSMS (Introducción a Always Encrypted con SSMS)](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS).
 
 1.  Conéctese a una base de datos existente que contenga tablas con columnas que quiera cifrar mediante el **Explorador de objetos** de Management Studio, o cree una nueva base de datos, cree una o más tablas con columnas para cifrar y conéctese a ella.
-2.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y después haga clic en** Cifrar columnas** para abrir el **Asistente de Always Encrypted**.
+2.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas** y, luego, haga clic en **Cifrar columnas** para abrir el **Asistente de Always Encrypted**.
 3.  Revise la página **Introduction** y haga clic en **Next**.
 4.  En la página **Column Selection** , expanda las tablas y seleccione las columnas que desea cifrar.
 5.  En cada columna seleccionada para cifrado, establezca **Tipo de cifrado** en *Determinista* o *Aleatorio*.

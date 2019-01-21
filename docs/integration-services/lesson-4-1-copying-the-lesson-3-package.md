@@ -1,7 +1,7 @@
 ---
-title: 'Paso 1: Copiar el paquete de la lección 3 | Microsoft Docs'
+title: 'Paso 1: Copia del paquete de la lección 3 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,56 +11,52 @@ ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 573a0eeb49640b44af5179f0cb44ec8dfb6753f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba011dbb600ca2903aca6f9a3c6415f4663aea0a
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544721"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211076"
 ---
-# <a name="lesson-4-1---copying-the-lesson-3-package"></a>Lección 4-1: Copiar el paquete de la lección 3
-En esta tarea, creará una copia del paquete que ha creado en la lección 3, denominado Lesson 3.dtsx. Por otra parte, si no ha completado la lección 3, puede agregar al proyecto el paquete completado de la lección 3 que se incluye con el tutorial y, a continuación, copiar dicho paquete para trabajar. Usará esta nueva copia en toda la lección 4.  
+# <a name="lesson-4-1-copy-the-lesson-3-package"></a>Lección 4-1: Copia del paquete de la lección 3
+
+En esta tarea, se crea una copia del paquete Lesson 3.dtsx de la lección 3. Si no ha completado la lección 3, puede agregar al proyecto el paquete completado de la lección 3 que se incluye con el tutorial y, después, realizar una copia del paquete con la que trabajar. Esta nueva copia se usará en toda la lección 4.  
   
-### <a name="to-create-the-lesson-4-package"></a>Para crear el paquete de la lección 4  
+## <a name="create-the-lesson-4-package"></a>Creación del paquete de la lección 4  
   
-1.  Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools no está abierto, haga clic en **Inicio**, seleccione **Todos los programas**, **Microsoft SQL Server**y, después, haga clic en **SQL Server Data Tools**.  
+Siga estos pasos si va a copiar la lección 3 completada.  Para copiar el ejemplo de la lección 3, vea la sección siguiente.
+
+1.  Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools no está abierto, seleccione **Inicio** > **Todos los programas** > **Microsoft SQL Server 2017** y, después, seleccione **SQL Server Data Tools**.
+
+2.  En el menú **Archivo**, seleccione **Abrir** > **Proyecto o solución**, haga clic en la carpeta **SSIS Tutorial**, haga clic en **Abrir**, y, después, haga doble clic en **SSIS Tutorial.sln**.
+
+3.  En el **Explorador de soluciones**, haga clic con el botón derecho en **Lesson 3.dtsx** y, después, seleccione **Copiar**.
+
+4.  En el **Explorador de soluciones**, haga clic con el botón derecho en **Paquetes SSIS** y, después, seleccione **Pegar**.
+
+    De forma predeterminada, el nombre del paquete copiado es **Lesson 4.dtsx**.
+
+5.  En el **Explorador de soluciones**, haga doble clic en **Lesson 4.dtsx** para abrir el paquete.
+
+6.  Haga clic con el botón derecho en cualquier parte del fondo de la superficie de diseño de **Flujo de control** y seleccione **Propiedades**.
+
+7.  En la ventana **Propiedades**, cambie la propiedad **Nombre** a **Lesson 4**.
+
+8.  Haga clic en el cuadro de la propiedad **ID**, haga clic en la flecha desplegable y después seleccione **\<Generar nuevo Id>**.
+
+## <a name="add-the-completed-lesson-3-package"></a>Adición del paquete de la lección 3 completada
+
+1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools y el proyecto SSIS Tutorial.
+
+2.  En **el Explorador de soluciones**, haga clic con el botón derecho en **Paquetes SSIS** y seleccione **Agregar paquete existente**.
+
+3.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.
+
+4.  Haga clic en el botón Examinar **(…)**, vaya a **Lesson 3.dtsx** en el equipo y, después, haga clic en **Abrir**.
+
+5.  Copie y pegue el paquete de la lección 3 como se describe en los pasos 3 a 8 de la sección anterior.
+
   
-2.  En el menú **Archivo** , haga clic en **Abrir**, haga clic en **Proyecto o solución**, seleccione **SSIS Tutorial** , haga clic en **Abrir**y, después, haga doble clic en **SSIS Tutorial.sln**.  
-  
-3.  En el Explorador de soluciones, haga clic con el botón derecho en **Lesson 3.dtsx**y, después, haga clic en **Copiar**.  
-  
-4.  En el Explorador de soluciones, haga clic con el botón derecho en **Paquetes SSIS**y, después, haga clic en **Pegar**.  
-  
-    De forma predeterminada, el paquete copiado se denomina Lesson 4.dtsx.  
-  
-5.  En el Explorador de soluciones, haga doble clic en **Lesson 4.dtsx** para abrir el paquete.  
-  
-6.  Haga clic con el botón derecho en cualquier parte del fondo de la pestaña **Flujo de control** y haga clic en **Propiedades**.  
-  
-7.  En la ventana Propiedades, actualice la propiedad **Name** a **Lesson 4**.  
-  
-8.  Haga clic en el cuadro para la propiedad **ID** y, en la lista, haga clic en **<Generate New ID>**.  
-  
-### <a name="to-add-the-completed-lesson-3-package"></a>Para agregar el paquete de la lección 3 completada  
-  
-1.  Abra [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y abra el proyecto SSIS Tutorial.  
-  
-2.  En el Explorador de soluciones, haga clic con el botón derecho en **Paquetes SSIS**y haga clic en **Agregar paquete existente**.  
-  
-3.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.  
-  
-4.  Haga clic en el botón Examinar **(…)**, busque Lesson 3.dtsx en el equipo y, después, haga clic en **Abrir**.  
-  
-    Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
-  
-    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
-  
-    2.  Haga clic en la pestaña **DOWNLOADS** .  
-  
-    3.  Haga clic en el archivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
-  
-5.  Copie y pegue el paquete de la lección 3 tal como se describe en los pasos del 3 a 8 del procedimiento anterior.  
-  
-## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 2: Crear un archivo dañado](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
+## <a name="go-to-next-task"></a>Ir a la tarea siguiente  
+[Paso 2: Creación de un archivo dañado](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   

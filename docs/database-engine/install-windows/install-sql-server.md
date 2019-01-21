@@ -15,22 +15,25 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 89bb096f92bfd2ae5cc4da46ba99fb4ae41929d0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600895"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300372"
 ---
 # <a name="install-sql-server"></a>Instalar SQL Server
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
+
  
  A partir de [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] solo está disponible como una aplicación de 64 bits. Aquí encontrará información importante acerca de cómo obtener SQL Server y cómo instalarlo.
 
 ## <a name="installation-details"></a>Detalles de la instalación
   
-*  **Opciones**: instale, mediante el Asistente para la instalación, un símbolo del sistema o sysprep
+*  **Opciones**: instale mediante el Asistente para la instalación, un símbolo del sistema o sysprep
  
 *  **Requisitos**: antes de instalar, dedique algo de tiempo a revisar los requisitos de instalación, las comprobaciones de configuración del sistema y las consideraciones de seguridad de [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) 
 

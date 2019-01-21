@@ -21,15 +21,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15c28ceccbdaf6d4c4b69e9e15c356cffc0c085c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532748"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298452"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
   Impone condiciones en la ejecución de una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] (*sql_statement*) tras *Boolean_expression* se ejecuta si *Boolean_expression* se evalúa como TRUE. La palabra clave opcional ELSE es una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] alternativa que se ejecuta cuando *Boolean_expression* se evalúa como FALSE o NULL.  
   
@@ -72,7 +75,7 @@ ELSE PRINT 'Boolean_expression is false.' ;
 GO  
 ```  
   
-### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. Utilizar una consulta en una expresión booleana  
+### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>b. Utilizar una consulta en una expresión booleana  
  En el ejemplo siguiente se ejecuta una consulta en la expresión booleana. Dado que hay 10 bicicletas en la tabla `Product` que cumplen la cláusula `WHERE`, se ejecutará la primera instrucción de impresión. Cambie `> 5` por `> 15` para ver cómo podría ejecutarse la segunda parte de la instrucción.  
   
 ```  
@@ -137,7 +140,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. Usar una consulta como parte de una expresión booleana  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: Utilizar una consulta en una expresión booleana  
  En el ejemplo siguiente se usa `IF...ELSE` para determinar cuál de las dos respuestas se muestra al usuario, en función del peso de un elemento en la tabla `DimProduct`.  
   
 ```  
@@ -152,7 +155,7 @@ ELSE
     (SELECT @productKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' FROM DimProduct WHERE ProductKey=@productKey)  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

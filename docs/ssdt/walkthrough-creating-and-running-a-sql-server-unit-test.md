@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear y ejecutar una prueba unitaria de SQL Server | Microsoft Docs'
+title: 'Tutorial: Creación y ejecución de una prueba unitaria de SQL Server | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540936"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143595"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Tutorial: Crear y ejecutar una prueba unitaria de SQL Server
 En este tutorial, se crea una prueba unitaria de SQL Server que comprueba el comportamiento de varios procedimientos almacenados. Las pruebas unitarias de SQL Server se crean para ayudar a identificar los defectos del código que podrían producir un comportamiento incorrecto de la aplicación. Las pruebas unitarias de SQL Server y las pruebas de aplicación se pueden ejecutar como parte de un conjunto de pruebas automatizado.  
@@ -274,7 +274,7 @@ De forma predeterminada, al presionar F5 se implementa (o publica) la base de da
   
 2.  Haga clic con el botón derecho en alguno de los procedimientos almacenados y haga clic en **Crear pruebas unitarias** para mostrar el cuadro de diálogo **Crear pruebas unitarias**.  
   
-3.  Active las casillas de los cinco procedimientos almacenados: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**y **Sales.uspShowOrderDetails**.  
+3.  Active las casillas de los cinco procedimientos almacenados: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** y **Sales.uspShowOrderDetails**.  
   
 4.  En la lista desplegable **Proyecto**, seleccione **Crear un nuevo proyecto de prueba de Visual C#**.  
   
@@ -723,7 +723,7 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|Superada|  
     |Sales_uspShowOrderDetailsTest|Superada|  
-    |Sales_uspFillOrderTest|Produce el siguiente error: 'Error de la condición ScalarValueCondition (scalarValueCondition2): ResultSet 1 fila 1 columna 1: los valores no coinciden, actual: '100', esperado: '100''. Este error aparece porque la definición del procedimiento almacenado contiene un error menor.|  
+    |Sales_uspFillOrderTest|Se produce el siguiente error: “Error en la condición ScalarValueCondition (scalarValueCondition2): ResultSet 1 Fila 1 Columna 1: los valores no coinciden, real ‘-100’, esperado ‘100’”. Este error aparece porque la definición del procedimiento almacenado contiene un error menor.|  
   
     A continuación, se corregirá el error y volverá a ejecutar la prueba.  
   
@@ -968,7 +968,7 @@ Para crear y comprobar una prueba negativa, debe realizar las siguientes tareas:
     Especifique que se espera ver una excepción concreta. Opcionalmente, puede especificar un número de error concreto. Si no agrega este atributo, la prueba unitaria generará un error y aparecerá un mensaje en la ventana Resultados de pruebas  
   
     > [!IMPORTANT]  
-    > Actualmente, Visual Studio 2012 no admite el atributo ExpectedSqlException. Para obtener información sobre cómo solucionar este problema, vea [No se puede ejecutar la prueba unitaria de base de datos "Error esperado"](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Actualmente, Visual Studio 2012 no admite el atributo ExpectedSqlException. Para obtener información sobre cómo solucionar este problema, vea [No se puede ejecutar la prueba unitaria de base de datos "Error esperado"](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
   
 3.  En el menú Archivo, haga clic en Guardar SqlServerUnitTests1.cs.  
   
@@ -987,7 +987,7 @@ En un proyecto típico, se definirían pruebas unitarias adicionales para compro
   
 Después de establecer una línea base, puede crear y modificar los objetos de base de datos y crear pruebas asociadas para comprobar si un cambio interrumpirá el comportamiento esperado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Comprobar el código de base de datos con pruebas unitarias de SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Cómo: Crear una prueba unitaria de SQL Server vacía](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  

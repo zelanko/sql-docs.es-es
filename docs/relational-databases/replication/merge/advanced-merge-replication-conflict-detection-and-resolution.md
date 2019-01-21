@@ -20,30 +20,32 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206354"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130575"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicación de mezcla avanzada: detección y resolución de conflictos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cuando un publicador y un suscriptor se conectan y se produce la sincronización, el Agente de mezcla detecta si existen conflictos. Si se detectan conflictos, el Agente de mezcla utiliza un solucionador de conflictos (que se especifica cuando se agrega un artículo a una publicación) para determinar qué datos se aceptarán y se propagarán a otros sitios.  
+
+ La replicación de mezcla ofrece diversos métodos para detectar y solucionar conflictos. Para la mayoría de aplicaciones, el método predeterminado es el adecuado:  
+  
+-   Si se produce un conflicto entre un publicador y un suscriptor, el cambio del publicador se mantiene y el cambio en el suscriptor se descarta.   
+-   Si se produce un conflicto entre dos suscriptores que utilizan suscripciones de cliente (el tipo predeterminado para las suscripciones de extracción), se mantiene el cambio del primer suscriptor que se sincronice con el publicador y se descarta el cambio del segundo suscriptor. Para obtener información sobre cómo especificar las suscripciones de cliente y servidor, consulte [Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).   
+-   Si se produce un conflicto entre dos suscriptores que utilizan suscripciones de servidor (el tipo predeterminado para las suscripciones de inserción), se mantiene el cambio del suscriptor con el valor de prioridad más alto y se descarta el cambio del segundo suscriptor. Si los valores de prioridad son iguales, se mantiene el cambio del primer suscriptor que se sincronice con el publicador.  
   
 > [!NOTE]  
 >  Aunque un suscriptor se sincronice con el publicador, suelen producirse conflictos entre las actualizaciones que se realizan en suscriptores diferentes, en vez de entre las actualizaciones que se realizan en un suscriptor y en el publicador.  
   
- El comportamiento de la detección y resolución de conflictos depende de las siguientes opciones, que se describen en este tema:  
-  
--   Si especifica seguimiento por columna, seguimiento por filas o seguimiento por registro lógico.  
-  
+ El comportamiento de la detección y resolución de conflictos depende de las siguientes opciones, que se describen en este tema:    
+-   Si especifica seguimiento por columna, seguimiento por filas o seguimiento por registro lógico.    
 -   Si especifica el mecanismo de resolución basado en la prioridad predeterminada o especifica un solucionador de artículos. Un solucionador de artículos puede ser:  
   
-    -   Un *controlador de lógica de negocios* escrito en código administrado  
-  
-    -   Un *solucionador personalizado*basado en COM  
-  
+    -   Un *controlador de lógica de negocios* escrito en código administrado   
+    -   Un *solucionador personalizado*basado en COM    
     -   Un solucionador basado en COM proporcionado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
      Si se utiliza el mecanismo de resolución predeterminado, el tipo de suscripción utilizada (cliente o servidor) determina el comportamiento.  
@@ -51,18 +53,32 @@ ms.locfileid: "53206354"
 ## <a name="conflict-detection"></a>Detección de conflictos  
  Si un cambio de datos se califica como un conflicto o no depende del tipo de seguimiento de conflictos que ha especificado para un artículo:  
   
--   Si selecciona seguimiento de conflictos por columna, se considera un conflicto si los cambios se realizan en la misma columna de la misma fila en más de un nodo de replicación.  
-  
--   Si selecciona seguimiento de conflictos por filas, se considera un conflicto si los cambios se realizan en cualquier columna de la misma fila en más de un nodo de replicación (las columnas afectadas en las filas correspondientes no tienen que ser las mismas).  
-  
+-   Si selecciona seguimiento de conflictos por columna, se considera un conflicto si los cambios se realizan en la misma columna de la misma fila en más de un nodo de replicación.    
+-   Si selecciona seguimiento de conflictos por filas, se considera un conflicto si los cambios se realizan en cualquier columna de la misma fila en más de un nodo de replicación (las columnas afectadas en las filas correspondientes no tienen que ser las mismas).    
 -   Si selecciona seguimiento de conflictos por registro lógico, se considera un conflicto si los cambios se realizan en cualquier fila del mismo registro lógico en más de un nodo de replicación (las columnas afectadas en las filas correspondientes no tienen que ser las mismas).  
   
  Para más información, consulte [Detectar y solucionar conflictos en registros lógicos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [especificar el nivel de resolución y de seguimiento de conflictos para artículos de mezcla](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Para especificar el nivel de seguimiento y resolución de conflictos de un artículo, consulte [Specify merge replication properties](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) (Especificación de las propiedades de replicación de mezcla).  
   
 ## <a name="conflict-resolution"></a>Resolución de conflictos  
  Una vez detectado un conflicto, el Agente de mezcla inicia el solucionador de conflictos seleccionado y lo utiliza para determinar el ganador. La fila ganadora se aplica en el publicador y en el suscriptor, y los datos de la fila perdedora se escriben en una tabla de conflictos. Los conflictos se resuelven inmediatamente después de ejecutarse el solucionador, a menos que seleccione solucionar los conflictos de forma interactiva.  
+
+Resolución de conflictos de replicación de mezcla [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Cuando un publicador y un suscriptor se conectan y se produce la sincronización, el Agente de mezcla detecta si existen conflictos. Si se detectan conflictos, el Agente de mezcla utiliza un solucionador de conflictos para determinar qué datos se aceptarán y se propagarán a otros sitios.  
+  
+> [!NOTE]  
+>  Aunque un suscriptor se sincronice con el publicador, suelen producirse conflictos entre las actualizaciones que se realizan en suscriptores diferentes, en vez de entre las actualizaciones que se realizan entre un suscriptor y el publicador.  
+  
+ La replicación de mezcla ofrece diversos métodos para detectar y solucionar conflictos. Para la mayoría de aplicaciones, el método predeterminado es el adecuado:  
+  
+-   Si se produce un conflicto entre un publicador y un suscriptor, el cambio del publicador se mantiene y el cambio en el suscriptor se descarta.  
+  
+-   Si se produce un conflicto entre dos suscriptores que utilizan suscripciones de cliente (el tipo predeterminado para las suscripciones de extracción), se mantiene el cambio del primer suscriptor que se sincronice con el publicador y se descarta el cambio del segundo suscriptor. Para obtener información sobre cómo especificar las suscripciones de cliente y servidor, consulte [Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
+  
+-   Si se produce un conflicto entre dos suscriptores que utilizan suscripciones de servidor (el tipo predeterminado para las suscripciones de inserción), se mantiene el cambio del suscriptor con el valor de prioridad más alto y se descarta el cambio del segundo suscriptor. Si los valores de prioridad son iguales, se mantiene el cambio del primer suscriptor que se sincronice con el publicador.  
+  
+ Para obtener más información acerca de cómo detectar y solucionar conflictos en la replicación de mezcla, vea [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### <a name="resolver-types"></a>Tipos de solucionador  
  En la replicación de mezcla, la resolución de conflictos tiene lugar en el nivel de artículo. En el caso de publicaciones compuestas de varios artículos, es posible tener varios solucionadores de conflictos que proporcionen servicio a diferentes artículos o un mismo solucionador de conflictos que proporcione servicio a un artículo, a varios artículos o a todos los artículos que componen la publicación.  

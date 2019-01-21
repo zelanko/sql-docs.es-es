@@ -18,12 +18,12 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 083a4ccb00c834fba4f250aa1a2063b76ad9bd86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f8e1433d9157aed6a933d5117417be1a4fcc1c79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407632"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133750"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ejecutar lógica de negocios durante la sincronización de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407632"
   
 -   Referencia de la interfaz de programación de aplicaciones (API): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Instrucciones sobre cómo implementar un controlador de lógica de negocios: [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md) (Implementar un controlador de lógica de negocios para un artículo de mezcla)  
+-   Instrucciones para implementar un controlador de lógica de negocios: [Implementar un controlador de lógica de negocios para un artículo de mezcla](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Usos de los controladores de lógica de negocios  
  El proceso de sincronización de mezcla puede invocar controladores de lógica de negocios para que lleven a cabo las siguientes acciones:  
@@ -50,7 +50,7 @@ ms.locfileid: "52407632"
   
 -   Rechazar los datos  
   
-     Esto resulta útil para aplicaciones que no desean propagar los datos a un suscriptor o de un suscriptor determinado. Por ejemplo, un administrador puede filtrar las inserciones que no pertenezcan a la partición del suscriptor, o bien rechazar las eliminaciones realizadas en un suscriptor. O bien, una aplicación podría rechazar un pedido realizado en un suscriptor debido a que el inventario ya no está disponible.  
+     Esto resulta útil para aplicaciones que no desean propagar los datos a un suscriptor o de un suscriptor determinado. Por ejemplo, un administrador puede filtrar las inserciones que no pertenezcan a la partición del suscriptor o rechazar las eliminaciones realizadas en un suscriptor. O bien, una aplicación podría rechazar un pedido realizado en un suscriptor debido a que el inventario ya no está disponible.  
   
 -   Aceptar los datos  
   
@@ -91,7 +91,7 @@ ms.locfileid: "52407632"
   
 -   Un servidor con Internet Information Services (IIS), si se utiliza la sincronización web. Utilice una suscripción de extracción sincronizada con la sincronización web y el controlador de lógica de negocios se ejecutará en el servidor IIS.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md)  (Replicación de mezcla)  
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)  (Sincronizar datos)  

@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28bd264498c681542c9cb27e79cdd21f3cf0821c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509946"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257100"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Actualización de bases de datos mediante el Asistente para la optimización de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ QTA tiene como destino posibles patrones conocidos de regresiones de consulta de
 Los patrones de estimación de cardinalidad que busca QTA son los siguientes: 
 -  **Independencia frente a correlación**: si la suposición de independencia proporciona mejores estimaciones para la consulta específica, la sugerencia de consulta `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan de ejecución mediante la selectividad mínima al estimar predicados `AND` para que los filtros tengan en cuenta la correlación. Para obtener más información, vea [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) y [Versiones de la estimación de cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
 -  **Contención simple frente a contención base**: si otra contención de combinación proporciona mejores estimaciones para la consulta específica, la sugerencia de consulta `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan de ejecución mediante la suposición de contención simple en lugar de la suposición de contención base predeterminada. Para obtener más información, vea [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) y [Versiones de la estimación de cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
--  **Estimación de cardinalidad fija de función con valores de tabla de múltiples instrucciones (MSTVF)** de 100 filas frente a 1 fila: si la estimación fija predeterminada de TVF de 100 filas no da lugar a un plan más eficaz que el uso de la estimación fija para TVF de 1 fila (correspondiente al valor predeterminado en el modelo de estimación de cardinalidad del optimizador de consultas de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] y versiones anteriores), se usa la sugerencia de consulta `QUERYTRACEON 9488` para generar un plan de ejecución. Para obtener más información sobre MSTVF, vea [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-  **Estimación de cardinalidad fija de función con valores de tabla de múltiples instrucciones (MSTVF)** de 100 filas frente a 1 fila: si la estimación fija predeterminada para TVF de 100 filas no da lugar a un plan más eficaz que el uso de la estimación fija para TVF de 1 fila (correspondiente al valor predeterminado en el modelo de estimación de cardinalidad del optimizador de consultas de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] y versiones anteriores), se usa la sugerencia de consulta `QUERYTRACEON 9488` para generar un plan de ejecución. Para obtener más información sobre MSTVF, vea [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 > [!NOTE]
 > Como último recurso, si las sugerencias de ámbito estrecho no generan resultados lo suficientemente buenos para los patrones de consulta aptos, también se considera el uso completo de estimación de cardinalidad 70, mediante la sugerencia de consulta `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` para generar un plan de ejecución.
@@ -98,10 +98,10 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
 
        ![Ventana de configuración Nueva sesión de actualización de base de datos](../../relational-databases/performance/media/qta-new-session-settings.png "New database upgrade settings window")
 
-        > [!IMPORTANT]
-        > El valor *Tamaño máximo* propuesto es un valor arbitrario que puede ser adecuado para una carga de trabajo de breve duración.   
-        > Pero tenga en cuenta que puede ser insuficiente para contener información sobre la línea de base y las cargas de trabajo de actualización posteriores a la base de datos de cargas de trabajo muy intensivas, concretamente cuando pueden generarse muchos planes diferentes.   
-        > Si anticipa que este pueda ser el caso, escriba un valor más alto que sea adecuado.
+       > [!IMPORTANT]
+       > El valor *Tamaño máximo* propuesto es un valor arbitrario que puede ser adecuado para una carga de trabajo de breve duración.   
+       > Pero tenga en cuenta que puede ser insuficiente para contener información sobre la línea de base y las cargas de trabajo de actualización posteriores a la base de datos de cargas de trabajo muy intensivas, concretamente cuando pueden generarse muchos planes diferentes.   
+       > Si anticipa que este pueda ser el caso, escriba un valor más alto que sea adecuado.
 
 4.  La ventana **Optimización** concluye la configuración de la sesión e indica los pasos siguientes para abrir la sesión y continuar con ella. Cuando haya terminado, haga clic en **Finalizar**.
 
@@ -122,7 +122,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
     -  **Id. de sesión**
     -  **Nombre de sesión**: nombre generado por el sistema compuesto por el nombre de la base de datos y la fecha y hora de creación de la sesión.
     -  **Estado**: estado de la sesión (activa o cerrada).
-    -  **Descripción**: generada por el sistema; consta del nivel de compatibilidad de base de datos de destino seleccionado por el usuario y el número de días de la carga de trabajo de ciclo comercial.
+    -  **Descripción**: generada por el sistema; consta del nivel de compatibilidad de la base de datos de destino seleccionado por el usuario y el número de días de la carga de trabajo de ciclo comercial.
     -  **Hora de inicio**: fecha y hora de creación de la sesión.
 
     ![Página de administración de sesiones de QTA](../../relational-databases/performance/media/qta-session-management.png "QTA Session Management page")
@@ -166,7 +166,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
         -  **Métrica de línea de base**: métrica seleccionada (Duración o Tiempo de CPU) en milisegundos para la colección de datos de línea de base antes de la actualización de compatibilidad de base de datos.
         -  **Métrica observada**: métrica seleccionada (Duración o Tiempo de CPU) en milisegundos para la colección de datos después de la actualización de compatibilidad de base de datos.
         -  **% cambio**: cambio porcentual de la métrica seleccionada entre el antes y el después del estado de actualización de compatibilidad de base de datos. Un número negativo representa la cantidad de regresión medida de la consulta.
-        -  **Optimizable**: *Verdadero* o *Falso* en función de si la consulta es apta para experimentación.
+        -  **Optimizable**: *True* o *False* en función de si la consulta es apta para la experimentación.
 
 4.  **Ver análisis** permite la selección de las consultas con las que se va a experimentar y buscar oportunidades de optimización. El valor de **consultas que se van a mostrar** se convierte en el ámbito de las consultas aptas con las que se va a experimentar. Una vez activadas las consultas deseadas, haga clic en **Siguiente** para iniciar la experimentación.  
 
@@ -185,11 +185,11 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
     -  **Id. de consulta** 
     -  **Texto de consulta**: instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se puede expandir al hacer clic en el botón **...**
     -  **Estado**: muestra el estado de experimentación actual de la consulta.
-    -  **Métrica de línea de base**: métrica seleccionada (Duración o Tiempo de CPU) en milisegundos para la consulta tal como se ha ejecutado en el **Paso 2: subpaso 3**, que representa la consulta con regresión después de la actualización de compatibilidad de base de datos.
+    -  **Métrica de línea de base**: métrica seleccionada (Duración o Tiempo de CPU) en milisegundos para la consulta tal y como se ha ejecutado en el **Paso 2: subpaso 3**, que representa la consulta con regresión después de la actualización de compatibilidad de base de datos.
     -  **Métrica observada**: métrica seleccionada (Duración o Tiempo de CPU) en milisegundos para la consulta después de la experimentación, para una optimización propuesta lo suficientemente buena.
     -  **% cambio**: cambio porcentual de la métrica seleccionada entre el antes y el después del estado de experimentación, que representa la cantidad de mejora medida para la consulta con la optimización propuesta.
     -  **Opción de consulta**: vínculo a la sugerencia propuesta que mejora la métrica de ejecución de consulta.
-    -  **Puede implementar**: *Verdadero* o *Falso* en función de si la optimización de consultas propuesta se puede implementar como guía de plan.
+    -  **Puede implementar**: *True* o *False* en función de si la optimización de consultas propuesta se puede implementar como guía de plan.
 
     ![Paso 4 de QTA](../../relational-databases/performance/media/qta-step4.png "QTA Step 4")
 
@@ -209,7 +209,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
 ## <a name="permissions"></a>Permisos  
 Requiere pertenencia al rol **db_owner**.
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Niveles de compatibilidad y actualizaciones de SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
  [Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     

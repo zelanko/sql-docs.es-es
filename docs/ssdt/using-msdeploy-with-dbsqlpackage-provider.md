@@ -11,23 +11,23 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520953"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256950"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usar MSDeploy con el proveedor de dbSqlPackage
 **DbSqlPackage** es un proveedor de **MSDeploy** que permite interactuar con bases de datos de SQL Server y SQL Azure. **DbSqlPackage** admite las siguientes acciones:  
   
 -   **Extract**: crea un archivo de instantánea de base de datos (.dacpac) a partir de bases de datos de SQL Server o SQL Azure.  
   
--   **Publicar**: actualiza de forma incremental un esquema de la base de datos para que coincida con el esquema de un archivo .dacpac de origen.  
+-   **Publish**: actualiza de forma incremental un esquema de la base de datos para coincidir con el esquema de un archivo .dacpac de origen.  
   
--   **DeployReport**: crea un informe XML de los cambios que una acción de publicación realizarían.  
+-   **DeployReport**: crea un informe XML de los cambios que realizaría una acción de publicación.  
   
--   **Script**: crea un script Transact\-SQL equivalente al script ejecutado por la acción de publicación.  
+-   **Script**: crea un script de Transact\-SQL equivalente al script ejecutado por la acción de publicación.  
   
 Para más información sobre DACFx, consulte la documentación sobre la API administrada de DACFx en [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) o [SqlPackage.exe](../tools/sqlpackage.md) (herramienta de línea de comandos de DACFx).  
   
@@ -47,8 +47,8 @@ Especifique los verbos de MS-Deploy con el modificador **-verb** en la línea de
   
 |Verbo|Descripción|  
 |--------|---------------|  
-|volcado|Proporciona información, como el nombre, el número de versión y la descripción, acerca de una base de datos de origen contenida en un archivo .dacpac. Especifique la base de datos de origen con el formato siguiente en la línea de comandos:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
-|sync|Especifique las acciones dbSqlPackage usando el formato siguiente en la línea de comandos:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Vea las secciones a continuación para conocer los parámetros de origen y de destino para el verbo sync.|  
+|volcado|Proporciona información, como el nombre, el número de versión y la descripción, acerca de una base de datos de origen contenida en un archivo .dacpac. Especifique la base de datos de origen con el formato siguiente en la línea de comandos:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_ruta_de_acceso_del_archivo_.dacpac_**"**|  
+|sync|Especifique las acciones dbSqlPackage usando el formato siguiente en la línea de comandos:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,parámetros_de_origen_de_DbSqlPackage] -_**dest:dbSqlPackage**="input" *[,parámetros_de_destino_de_DbSqlPackage]*<br /><br />Vea las secciones a continuación para conocer los parámetros de origen y de destino para el verbo sync.|  
   
 ## <a name="dbsqlpackage-source"></a>Origen de dbSqlPackage  
 El proveedor de **dbSqlPackage** obtiene una entrada que es una cadena de conexión válida de SQL Server o SQL Azure o bien una ruta de acceso a un archivo .dacpac en el disco.  La sintaxis para especificar el origen de entrada para el proveedor es la siguiente:  

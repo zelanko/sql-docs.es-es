@@ -11,12 +11,12 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527918"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226542"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Cómo: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
 Puede usar Team Foundation Build para ejecutar las pruebas unitarias de SQL Server como parte de una prueba de comprobación de la compilación (BVT). Puede configurar las pruebas unitarias para implementar la base de datos, generar datos de prueba y ejecutar las pruebas seleccionadas. Si no está familiarizado con Team Foundation Build, debe revisar la siguiente información antes de seguir los procedimientos de este tema:  
@@ -262,7 +262,7 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
 9. Haga clic en **Aceptar**.  
   
-10. En el grupo **Básico**, en **Pruebas automatizadas**, especifique las pruebas que desea ejecutar. De manera predeterminada, se ejecutarán las pruebas que se encuentran en los archivos denominados *test\*.dll de la solución.  
+10. En el grupo **Básico**, en **Pruebas automatizadas**, especifique las pruebas que desea ejecutar. De forma predeterminada, se ejecutarán las pruebas que se encuentran en los archivos denominados \*test\*.dll de la solución.  
   
 11. En el menú **Archivo**, haga clic en **Guardar** *NombreDeProyecto*.  
   
@@ -282,7 +282,7 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
     Aparecerá la pestaña **Puesta en cola** del **Explorador de compilaciones**. Para más información, consulte [Administrar y ver compilaciones completadas (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) o [Administrar compilaciones en el Explorador de compilaciones (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Ejecutar pruebas unitarias de SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 [Crear una definición de compilación básica](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
 [Poner en cola una compilación](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  

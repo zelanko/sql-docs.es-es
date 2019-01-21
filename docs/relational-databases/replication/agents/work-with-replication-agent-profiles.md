@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef9738e2c6f2f2ff89f384b1c7ff46aba39b9fa2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c2b1729996b53bb3419838c0ce55dc30182c467f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536430"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135450"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabajar con perfiles del Agente de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "52536430"
   
 1.  Si el cuadro de diálogo **Perfiles de agente** muestra perfiles para varios agentes, seleccione un agente.  
   
-2.  Haga clic en el botón Propiedades (**...**) que aparece junto a un perfil.  
+2.  Haga clic en el botón Propiedades (**…**) que aparece junto a un perfil.  
   
 3.  Vea los parámetros y los valores del cuadro de diálogo **Propiedades del perfil \<NombrePerfil>**.  
   
@@ -289,7 +289,7 @@ ms.locfileid: "52536430"
 ##  <a name="FollowUp"></a> Seguimiento: después de cambiar los parámetros de agente  
 Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. A partir de SQL Server 2017 CU3, algunos cambios de parámetros de agente surten efecto sin tener que reiniciar los agentes. 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Perfiles del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)   
  [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   

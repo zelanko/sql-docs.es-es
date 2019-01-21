@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0881bb74dbd5018d194464d6a8ce58161062a901
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515462"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130585"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Supervisar el rendimiento con el Monitor de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52515462"
   
     |Excelente|Bueno|Regular|Insuficiente|Crítico|  
     |---------------|----------|----------|----------|--------------|  
-    |0 - 34 %|35 - 59 %|60 - 84 %|85 - 99 %|100% +|  
+    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
 -   En la replicación de mezcla, la calidad del rendimiento es independiente del umbral (el umbral de procesamiento de filas sí determina si se muestra un valor de **Rendimiento crítico** en la columna **Estado** ). La calidad del rendimiento se determina comparando el rendimiento de una suscripción individual con el rendimiento medio histórico de las suscripciones a la publicación que tienen el mismo tipo de conexión (de acceso telefónico o LAN). El Monitor de replicación muestra un valor una vez que se han producido cinco sincronizaciones con al menos 50 cambios en cada una a través del mismo tipo de conexión. Si ha habido menos de cinco sincronizaciones con al menos 50 cambios, o la sincronización más reciente tiene menos de 50 cambios, el Monitor de replicación no muestra ningún valor.  
   
@@ -85,21 +85,21 @@ ms.locfileid: "52515462"
   
     |Excelente|Bueno|Regular|Insuficiente|  
     |---------------|----------|----------|----------|  
-    |151+%|76 - 150 %|26 - 75 %|0 - 25 %|  
+    |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
- Para obtener más información sobre la visualización de información de suscripción, vea [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+ Para más información sobre cómo ver información de la suscripción, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>Determinar la latencia con testigos de seguimiento  
  La replicación transaccional le permite medir la latencia en un sistema insertando un token (una pequeña cantidad de datos) en el registro de transacciones de la base de datos de publicaciones y registrando cuánto tiempo tarda en llegar al distribuidor y a los suscriptores. El token también le permite identificar si los datos no están llegando al distribuidor o al suscriptor. Para más información, consulte [Medir la latencia y validar las conexiones de la replicación transaccional](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Ver detalles del rendimiento de la sincronización en la replicación de mezcla  
- En la replicación de mezcla, el Monitor de replicación muestra estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo  de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para obtener más información sobre cómo ver estadísticas detalladas, vea [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ En la replicación de mezcla, el Monitor de replicación muestra estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo  de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para más información sobre cómo ver estadísticas detalladas, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Ver transacciones y tiempos de entrega en la replicación transaccional  
- En la replicación transaccional, el Monitor de replicación muestra información sobre el número de transacciones en la base de datos de distribución que no se han distribuido todavía a un suscriptor y el tiempo estimado para distribuir dichas transacciones. Para obtener más información, vea [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ En la replicación transaccional, el Monitor de replicación muestra información sobre el número de transacciones en la base de datos de distribución que no se han distribuido todavía a un suscriptor y el tiempo estimado para distribuir dichas transacciones. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-## <a name="see-also"></a>Ver también  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  (Supervisar la replicación)  
+## <a name="see-also"></a>Consulte también  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  (Supervisar la replicación)  
  [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

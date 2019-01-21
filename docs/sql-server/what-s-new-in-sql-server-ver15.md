@@ -1,6 +1,6 @@
 ---
 title: Novedades de SQL Server 2019 | Microsoft Docs
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,16 +9,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e0a5dab4eeccc5c4e31a151ec9611d7ed8367a78
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207784"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300182"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novedades de SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+  > [!div class="nextstepaction"]
+  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en versiones anteriores para potenciar SQL Server como una plataforma que proporciona diversas opciones de lenguajes de desarrollo, tipos de datos, entornos locales o en la nube, y sistemas operativos. En este artículo se resumen las novedades de SQL Server 2019. Para obtener más información y problemas conocidos, consulte [Notas de la versión de SQL Server 2019](sql-server-ver15-release-notes.md).
 
@@ -39,7 +42,7 @@ Community Technology Preview (CTP) 2.2 es la versión pública más reciente de 
 
 ## <a name="previous-ctps"></a>Versiones de CTP anteriores
 
-En las versiones de CTP anteriores se agregaron o mejoraron las siguientes características para [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+En las versiones anteriores de CTP se agregaron o mejoraron las características siguientes para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 - [Clústeres de macrodatos](#bigdatacluster) 
   - Implementación de un clúster de macrodatos con contenedores SQL y Spark Linux en Kubernetes (CTP 2.0)

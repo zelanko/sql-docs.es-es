@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cfc88234cf7d8fea62a07969949e53b084eee17f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207794"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242248"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instrucciones RESTORE: HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -85,7 +85,7 @@ FROM <backup_device>
  Por cada copia de seguridad que hay en un dispositivo determinado, el servidor envía una fila de información de encabezado con las siguientes columnas:  
   
 > [!NOTE]
->  RESTORE HEADERONLY consulta todos los conjuntos de copia de seguridad en los medios. Por tanto, puede llevar algún tiempo generar este conjunto de resultados si se utilizan unidades de cinta de alta capacidad. Para tener una visión rápida de los medios sin obtener información sobre cada conjunto de copia de seguridad, use RESTORE LABELONLY o especifique FILE **=** *backup_set_file_number*.  
+>  RESTORE HEADERONLY consulta todos los conjuntos de copia de seguridad en los medios. Por tanto, puede llevar algún tiempo generar este conjunto de resultados si se utilizan unidades de cinta de alta capacidad. Para tener una visión rápida de los medios sin obtener información sobre cada conjunto de copia de seguridad, use RESTORE LABELONLY o especifique FILE **=** _backup_set_file_number_.  
 > 
 > [!NOTE]
 >  Debido a la naturaleza del formato de cinta de [!INCLUDE[msCoName](../../includes/msconame-md.md)], es posible que los conjuntos de copia de seguridad de otros programas de software ocupen espacio en los mismos medios que los conjuntos de copia de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El conjunto de resultados que devuelve RESTORE HEADERONLY contiene una fila por cada uno de estos otros conjuntos de copia de seguridad.  
@@ -122,7 +122,7 @@ FROM <backup_device>
 |**SoftwareVersionBuild**|**int**|Número de compilación del servidor donde se creó el conjunto de copia de seguridad.|  
 |**MachineName**|**nvarchar(128)**|Nombre del equipo donde se realizó la operación de copia de seguridad.|  
 |**Marcas**|**int**|Significados de los bits de marcas individuales si se establece en **1**:<br /><br /> **1** = La copia de seguridad de registros contiene registros de operaciones masivas.<br /><br /> **2** = Copia de seguridad de instantánea.<br /><br /> **4** = La base de datos era de solo lectura en el momento de la copia de seguridad.<br /><br /> **8** = La base de datos estaba en modo de usuario único en el momento de la copia de seguridad.<br /><br /> **16** = La copia de seguridad contiene sumas de comprobación de copia de seguridad.<br /><br /> **32** = La base de datos estaba dañada cuando se realizó la copia de seguridad, pero se solicitó que continuase a pesar de los errores.<br /><br /> **64** = Copia del final del registro.<br /><br /> **128** = Copia del final del registro con metadatos incompletos.<br /><br /> **256** = Copia del final del registro con NORECOVERY.<br /><br /> **Importante:** Se recomienda que, en lugar de **Flags**, use las columnas booleanas individuales que se enumeran a continuación, desde **HasBulkLoggedData** hasta **IsCopyOnly**.|  
-|**BindingID**|**uniqueidentifier**|Id. de enlace de la base de datos. Corresponde a **sys.database_recovery_status****database_guid**. Cuando se restaura una base de datos, se asigna un valor nuevo. Vea también **FamilyGUID** (abajo).|  
+|**BindingID**|**uniqueidentifier**|Id. de enlace de la base de datos. Corresponde a **sys.database_recovery_status database_guid**. Cuando se restaura una base de datos, se asigna un valor nuevo. Vea también **FamilyGUID** (abajo).|  
 |**RecoveryForkID**|**uniqueidentifier**|Id. de la bifurcación de recuperación final. Esta columna corresponde a **last_recovery_fork_guid** en la tabla [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).<br /><br /> En las copias de seguridad de datos, **RecoveryForkID** es igual que **FirstRecoveryForkID**.|  
 |**Intercalación**|**nvarchar(128)**|Intercalación que utiliza la base de datos.|  
 |**FamilyGUID**|**uniqueidentifier**|Id. de la base de datos original cuando se creó. Este valor permanece invariable cuando se restaura la base de datos.|  
@@ -150,7 +150,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> Tipo de sistema de cifrado usado: certificado o clave asimétrica. Si la copia de seguridad no se cifró, este valor es NULL.|  
   
 > [!NOTE]  
->  Si se definen contraseñas para los conjuntos de copia de seguridad, RESTORE HEADERONLY solo muestra información completa para el conjunto de copia de seguridad cuya contraseña coincida con la opción PASSWORD especificada en el comando. RESTORE HEADERONLY también muestra información completa para los conjuntos de copia de seguridad no protegidos. La columna **BackupName** de los otros conjuntos de copia de seguridad protegidos por contraseña que hay en los medios se establece en '***Password Protected\*\*\*' y todas las demás columnas son NULL.  
+>  Si se definen contraseñas para los conjuntos de copia de seguridad, RESTORE HEADERONLY solo muestra información completa para el conjunto de copia de seguridad cuya contraseña coincida con la opción PASSWORD especificada en el comando. RESTORE HEADERONLY también muestra información completa para los conjuntos de copia de seguridad no protegidos. La columna **BackupName** de los otros conjuntos de copia de seguridad protegidos con contraseña que hay en los medios se establece en **_Password Protected_** (Protegido con contraseña) y todas las demás columnas son NULL.  
   
 ## <a name="general-remarks"></a>Notas generales  
  Un cliente puede utilizar RESTORE HEADERONLY para obtener toda la información de encabezado de todas las copias de seguridad de un dispositivo determinado. Para cada copia de seguridad del dispositivo de copia de seguridad, el servidor envía la información del encabezado como una fila.  

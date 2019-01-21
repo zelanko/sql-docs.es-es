@@ -1,7 +1,7 @@
 ---
-title: 'Paso 7: Agregar y configurar el destino de OLE DB | Microsoft Docs'
+title: 'Paso 7: Adición y configuración del destino de OLE DB | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,52 +11,53 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f6e0e9e862590fc7a0dce63e71340c922e82a80e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f09760ea7521acb63c95f27821ba93382f8a3f2d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599513"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143265"
 ---
-# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>Lección 1-7: Agregar y configurar el destino de OLE DB
-Ahora, el paquete puede extraer datos de un origen de archivo plano y transformar dichos datos en un formato compatible con el destino. La tarea siguiente consiste realmente en cargar los datos transformados en el destino. Para cargar los datos, debe agregar un destino de OLE DB al flujo de datos. El destino de OLE DB puede utilizar una tabla de bases de datos, una vista o un comando SQL para cargar datos en distintas bases de datos compatibles con OLE DB.  
+# <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lección 1-7: Adición y configuración del destino de OLE DB
+
+Ahora, el paquete puede extraer datos de un origen de archivo plano y transformarlos a un formato compatible con el destino. La tarea siguiente consiste en cargar los datos transformados en el destino. Para cargar los datos, debe agregar un destino de OLE DB al flujo de datos. El destino de OLE DB puede usar una tabla de bases de datos, una vista o un comando SQL para cargar datos en distintas bases de datos compatibles con OLE DB.  
   
-En este procedimiento, se agrega y configura un destino de OLE DB para utilizar el administrador de conexiones de OLE DB creado con anterioridad.  
+En esta tarea, se agrega y configura un destino de OLE DB para usar el administrador de conexiones de OLE DB creado antes.  
   
-### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>Para agregar y configurar un destino de OLE DB de ejemplo  
+## <a name="add-and-configure-the-sample-ole-db-destination"></a>Adición y configuración del destino de OLE DB de ejemplo  
   
-1.  En el **Cuadro de herramientas de SSIS**, expanda **Otros destinos**y arrastre **Destino de OLE DB** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque el destino de OLE DB directamente debajo de la transformación **Lookup Date Key** .  
+1.  En el **Cuadro de herramientas de SSIS**, expanda **Otros destinos**y arrastre **Destino de OLE DB** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque el **destino de OLE DB** directamente debajo de la transformación **Lookup Date Key**.  
   
-2.  Haga clic en la transformación **Lookup Date Key** y arrastre la flecha verde hasta el **Destino de OLE DB** que acaba de agregar para conectar los dos componentes entre sí.  
+2.  Haga clic en la transformación **Lookup Date Key** y arrastre la flecha de color azul hasta el nuevo **Destino de OLE DB** para conectar los dos componentes entre sí.  
   
-3.  En el cuadro de diálogo **Selección de entrada y salida** , en el cuadro de lista **Salida** , haga clic en **Salida de entradas coincidentes de búsqueda**y, después, haga clic en **Aceptar**.  
+3.  En el cuadro de diálogo **Selección de entrada y salida**, haga clic en **Salida de entradas coincidentes de búsqueda** en el cuadro de lista **Salida** y, después, haga clic en **Aceptar**.  
   
-4.  En la superficie de diseño **Flujo de datos** , haga clic en **Destino de OLE DB** en el componente **Destino de OLE DB** que acaba de agregar y cambie el nombre por **Sample OLE DB Destination**.  
+4.  En la superficie de diseño **Flujo de datos**, haga clic en el nombre **Destino de OLE DB** en el nuevo componente **Destino de OLE DB** y cambie el nombre por **Sample OLE DB Destination**.  
   
 5.  Haga doble clic en **Sample OLE DB Destination**.  
   
-6.  En el cuadro de diálogo **Editor de destino de OLE DB** , asegúrese de que **localhost.AdventureWorksDW2012** está seleccionado en el cuadro **Administrador de conexiones OLE DB** .  
+6.  En el cuadro de diálogo **Editor de destino de OLE DB**, asegúrese de que **localhost.AdventureWorksDW2012** está seleccionado en el cuadro **Administrador de conexiones OLE DB**.  
   
-7.  En el cuadro **Nombre de la tabla o la vista** , escriba o seleccione **[dbo].[FactCurrencyRate]**.  
+7.  En el cuadro **Nombre de la tabla o la vista**, escriba o seleccione **[dbo].[FactCurrencyRate]**.  
   
-8.  Haga clic en el botón **Nuevo** para crear una nueva tabla.  Cambie el nombre de la tabla en el script a **NewFactCurrencyRate**.  Haga clic en **Aceptar**.  
+8.  Haga clic en el botón **Nuevo** para crear una tabla.  Cambie el nombre de la tabla en el script de **Sample OLE DB Destination** a **NewFactCurrencyRate**.  Seleccione **Aceptar**.  
   
-9. Al hacer clic en **Aceptar**, se cerrará el cuadro de diálogo y el **Nombre de la tabla o la vista** cambiará automáticamente a **NewFactCurrencyRate**.  
+9. Al hacer clic en **Aceptar**, se cierra el cuadro de diálogo y el **Nombre de la tabla o la vista** cambia automáticamente a **NewFactCurrencyRate**.  
   
 10. Haga clic en **Asignaciones**.  
   
 11. Compruebe que las columnas de entrada **AverageRate**, **CurrencyKey**, **EndOfDayRate**y **DateKey** están correctamente asignadas a las columnas de destino. Si hay columnas con el mismo nombre asignadas, la asignación es correcta.  
   
-12. Haga clic en **Aceptar**.  
+12. Seleccione **Aceptar**.  
   
-13. Haga clic con el botón derecho en **Sample OLE DB Destination** y haga clic en **Propiedades**.  
+13. Haga clic con el botón derecho en **Sample OLE DB Destination** y seleccione **Propiedades**.  
   
-14. En la ventana Propiedades, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** y la propiedad**DefaultCodePage** en **1252**.  
+14. En la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** y la propiedad **DefaultCodePage** en **1252**.  
   
-## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 8: Facilitar la comprensión del paquete de la lección 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+## <a name="go-to-next-task"></a>Ir a la tarea siguiente
+[Paso 8: Anotación y formato del paquete de la lección 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
 [Destino de OLE DB](../integration-services/data-flow/ole-db-destination.md)  
   
   

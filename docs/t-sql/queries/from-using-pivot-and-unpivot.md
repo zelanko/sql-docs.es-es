@@ -25,15 +25,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b8781f155f96fa9e80270eaf6f75f2438eae4549
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905776"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299482"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM: uso de PIVOT y UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
   Se pueden usar los operadores relacionales `PIVOT` y `UNPIVOT` para modificar una expresión con valores de tabla en otra tabla. `PIVOT` gira una expresión con valores de tabla convirtiendo los valores únicos de una columna de la expresión en varias columnas en la salida y realiza agregaciones donde son necesarias en cualquier valor de columna restante que se quiera en la salida final. `UNPIVOT` realiza la operación contraria a PIVOT girando las columnas de una expresión con valores de tabla a valores de columna.  
   
@@ -206,7 +209,7 @@ VendorID    Employee    Orders
   
  En la vista `Sales.vSalesPersonSalesByFiscalYears` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] se usa `PIVOT` para devolver el total de ventas de cada vendedor, para cada año fiscal. Para generar el script de la vista en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el **Explorador de objetos**, localice la vista en la carpeta **Views** de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Haga clic con el botón derecho en el nombre de la vista y después seleccione **Incluir vista como**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   

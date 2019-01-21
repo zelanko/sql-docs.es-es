@@ -16,12 +16,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f35ed02444cc1fc4773eec528af73df76cde5bb5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7f238b5b31c4e354562091bb80768b7db1e9af5c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534680"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131855"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Atributo Server  
  La cadena de conexión debe contener un atributo **Server** que proporciona el nombre del asociado inicial, que debería identificar la instancia del servidor principal actual.  
   
- La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<nombre_de_servidor>*[**\\***<nombre_de_instancia_de_SQL_Server>*]. Por ejemplo:  
+ La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<nombre_de_servidor>*[**\\**_<nombre_de_instancia_de_SQL_Server>_]. Por ejemplo:  
   
  `Server=Partner_A;`  
   
@@ -132,7 +132,7 @@ Server=123.34.45.56,4724;
 |Controlador ODBC|**Failover_Partner**|  
 |Objetos de datos ActiveX (ADO)|**Failover Partner**|  
   
- La manera más sencilla de identificar la instancia de servidor es especificando su nombre de sistema, *<nombre_de_servidor>*[**\\**<nombre_de_instancia_de_SQL_Server>*].  
+ La manera más sencilla de identificar la instancia de servidor es especificando su nombre de sistema, *<nombre_de_servidor>*[**\\**_<nombre_de_instancia_de_SQL_Server>_].  
   
  O bien, se pueden proporcionar la dirección IP y el número de puerto en el atributo **Failover Partner** . Si el intento de conexión inicial no tiene éxito durante la primera conexión a la base de datos, el intento de conectarse al asociado de conmutación por error no tendrá que retransmitirse en DNS y SQL Server Browser. Una vez que se establezca la conexión, el nombre del asociado de conmutación por error se sobrescribirá con el nombre del asociado de conmutación por error, de modo que, si se produce una conmutación por error, las conexiones redirigidas requerirán DNS y SQL Server Browser.  
   
@@ -169,7 +169,7 @@ Server=123.34.45.56,4724;
   
  El tiempo de reintento se calcula mediante la siguiente fórmula:  
   
- *TiempoDeReintento* **=** *TiempoDeReintentoAnterior* **+(** 0,08 **\****TiempoDeEsperaDeInicioDeSesión***)**  
+ _TiempoDeReintento_ **=** _TiempoDeReintentoAnterior_ **+(** 0,08 **&#42;**_TiempoDeEsperaDeInicioDeSesión_**)**  
   
  Donde *PreviousRetryTime* es inicialmente 0.  
   
@@ -177,10 +177,10 @@ Server=123.34.45.56,4724;
   
 |Redondear|Cálculo de*RetryTime* |Tiempo de reintento por intento|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1,2 segundos|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2,4 segundos|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3,6 segundos|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4,8 segundos|  
+|1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 segundos|  
+|2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 segundos|  
+|3|2,4 **+(** 0,08 **&#42;** 15 **)**|3,6 segundos|  
+|4|3,6 **+(** 0,08 **&#42;** 15 **)**|4,8 segundos|  
   
  En la siguiente ilustración se muestran los tiempos de reintento para intentos de conexión sucesivos, cada uno de los cuales se agota.  
   
@@ -247,7 +247,7 @@ Server=123.34.45.56,4724;
 |El servicio se conmuta manualmente a Partner_C (se desconectan los clientes).|Partner_C|Partner_B|El cliente trata de conectarse primero a Partner_A y, después, a Partner_B. Los dos nombres producen un error y, finalmente, se agota el tiempo de espera de la solicitud y se produce un error.|  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Posibles errores durante la creación de reflejo de la base de datos](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
   

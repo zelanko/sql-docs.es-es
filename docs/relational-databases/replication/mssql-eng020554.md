@@ -13,12 +13,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 849fc7c55957fa0f404f2886b983b548282fa7a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2067c4c267cf1b010a2a72a92b402d3f02034a7e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811013"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126635"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ ms.locfileid: "47811013"
   
 -   Para todos los casos en los que se genera el error:  
   
-     Compruebe los detalles del error en el Monitor de replicación y, a continuación, reinicie el agente si se ha detenido. Los detalles del error pueden ofrecer información adicional sobre el motivo por el que el agente no se estaba ejecutando correctamente. Si el agente se está ejecutando, no lo detenga y lo reinicie porque esto puede agravar el problema. Para obtener información sobre el modo de ver el estado del agente y los detalles del error en el Monitor de replicación, vea los siguientes temas:  
-  
-    -   Para el Agente de instantáneas, el Agente de registro del LOG y el Agente de lectura de cola, vea [Cómo ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
-  
-    -   Para el Agente de distribución y el Agente de mezcla, vea [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Compruebe los detalles del error en el Monitor de replicación y, a continuación, reinicie el agente si se ha detenido. Los detalles del error pueden ofrecer información adicional sobre el motivo por el que el agente no se estaba ejecutando correctamente. Si el agente se está ejecutando, no lo detenga y lo reinicie porque esto puede agravar el problema. Para obtener información sobre la visualización del estado y los errores en Monitor de replicación, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).    
   
 -   Si este error se genera con frecuencia porque el agente está ocupado:  
   
      Es posible que tenga que volver a diseñar la aplicación para que el agente pase menos tiempo procesando.  
   
-     Puede incrementar el intervalo en el que el estado del agente se comprueba usando el cuadro de diálogo **Propiedades del trabajo** . Para obtener información sobre el acceso a este cuadro de diálogo para trabajos de replicación, vea [Ver información y realizar tareas para un publicador &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+     Puede incrementar el intervalo en el que el estado del agente se comprueba usando el cuadro de diálogo **Propiedades del trabajo** . Para obtener información sobre el acceso a este cuadro de diálogo para trabajos de replicación, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Si un agente no puede iniciar sesión en uno de los equipos de la topología:  
   
@@ -74,13 +70,13 @@ ms.locfileid: "47811013"
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Agente de distribución de replicación](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Agente de registro del LOG de replicación](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Agente de mezcla de replicación](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Agente de lectura de cola de replicación](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Agente de instantáneas de replicación](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

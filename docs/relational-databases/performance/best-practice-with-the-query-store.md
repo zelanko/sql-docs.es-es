@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328975"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143475"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -329,17 +329,17 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> Evitar el cambio de nombre de las bases de datos si hay consultas con planes de forzados  
 
- Los planes de ejecución hacen referencia a objetos que usan nombres de tres partes `database.schema.object`.   
+Los planes de ejecución hacen referencia a objetos que usan nombres de tres partes `database.schema.object`.   
 
 Si cambia el nombre de una base de datos, al forzar el plan se producirá un error que provocará la recompilación en todas las ejecuciones de consulta subsiguientes.  
 
-##  <a name="Recovery"></a> Uso de marcas de seguimiento en servidores críticos para mejorar la recuperación ante desastres
+##  <a name="Recovery"></a> Uso de marcas de seguimiento en servidores críticos
  
-Las marcas de seguimiento globales 7745 y 7752 pueden usarse para mejorar el rendimiento del Almacén de consultas en situaciones de recuperación ante desastres y alta disponibilidad. Para obtener más información, consulte [Marcas de seguimiento](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Las marcas de seguimiento globales 7745 y 7752 pueden usarse para mejorar la disponibilidad de las bases de datos mediante el Almacén de consultas. Para más información, consulte [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
-La marca de seguimiento 7745 evitará el comportamiento predeterminado en el que el almacén de consultas escribe datos en el disco antes de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda apagarse.
+-  La marca de seguimiento 7745 evitará el comportamiento predeterminado en el que el almacén de consultas escribe datos en el disco antes de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda apagarse. Esto significa que los datos del Almacén de consultas que se han recopilado, pero que aún no han almacenado en el disco, se perderán. 
   
-La marca de seguimiento 7752 habilita la carga asincrónica del Almacén de consultas y también permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecute consultas antes de que el Almacén de consultas se haya cargado por completo. El comportamiento predeterminado del almacén de datos de consultas impide que se ejecuten las consultas antes de que se recupere el almacén de consultas.
+-  La marca de seguimiento 7752 permite la carga asincrónica del Almacén de consultas. De esta manera, la base de datos se pone en línea y las consultas se ejecutan antes de que el Almacén de consultas se haya recuperado completamente. El comportamiento predeterminado consiste en realizar la carga sincrónica del Almacén de consultas. Dicho comportamiento impide que se ejecuten las consultas antes de que el Almacén de consultas se haya recuperado, pero también impide que se pierdan las consultas en la colección de datos.
 
 > [!IMPORTANT]
 > Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible. 

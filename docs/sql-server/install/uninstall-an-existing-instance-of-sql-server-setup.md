@@ -16,15 +16,18 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e9b113a9ef0ca0905fa90833a5c9568a9318834a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 07399ad0d6b632c4d7c73aa7d7c7d1f74d8ffa7c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698822"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299252"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar una instancia existente de SQL Server (programa de instalación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
   En este artículo se describe cómo desinstalar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Siguiendo los pasos de este tema también podrá preparar el sistema para reinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -108,7 +111,7 @@ ms.locfileid: "51698822"
   
 2.  Si no puede solucionar la causa del error de desinstalación, puede ponerse en contacto con el servicio de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . En algunos casos, como en la eliminación accidental de archivos importantes, puede ser necesario reinstalar el sistema operativo antes de reinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

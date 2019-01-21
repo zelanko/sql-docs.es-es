@@ -1,7 +1,7 @@
 ---
-title: 'Paso 4: Probar el paquete del tutorial de la lección 2 | Microsoft Docs'
+title: 'Paso 4: Prueba del paquete del tutorial de la lección 2 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,23 +11,22 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f612768d1e4cd6bff6be8204b38c0a99e1eb285
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 2c17b7679a10d9273578c74dfa452b120ae2d87b
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629518"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143205"
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Lección 2-4: Probar el paquete del tutorial de la lección 2
-Con el contenedor de bucles Foreach y el administrador de conexiones de archivo plano que ha configurado, el paquete de la lección 2 puede iterarse a través de la colección de 14 archivos planos de la carpeta Datos de ejemplo. Cada vez que se encuentra un archivo que coincide con los criterios de nombre de archivo especificados, el contenedor de bucles Foreach rellena la variable definida por el usuario con el nombre de archivo. Esta variable, a su vez, actualiza la propiedad ConnectionString del administrador de conexiones de archivos planos, y se establece una conexión con el archivo plano nuevo. A continuación, el contenedor de bucles Foreach ejecuta la tarea de flujo de datos sin modificar en los datos del nuevo archivo plano antes de establecer conexión con el siguiente archivo de la carpeta.  
-  
-Utilice el procedimiento siguiente para probar la nueva función del bucle que ha agregado al paquete.  
+# <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Lección 2-4: Prueba del paquete del tutorial de la lección 2
+
+Con el contenedor de bucles Foreach y el administrador de conexiones de archivos planos ya configurados, el paquete de la lección 2 puede iterar a través de los 14 archivos planos de la carpeta Datos de ejemplo. Cada vez que un nombre de archivo coincide con los criterios especificados, el contenedor de bucles Foreach rellena la variable definida por el usuario con el nombre de archivo. Esta variable, a su vez, actualiza la propiedad ConnectionString del administrador de conexiones de archivos planos, que se conecta a ese archivo plano. Después, el contenedor de bucles Foreach ejecuta la tarea de flujo de datos sin modificar sobre los datos del archivo plano.  
   
 > [!NOTE]  
-> Si ejecutó el paquete desde la lección 1, tendrá que eliminar los registros de dbo.NewFactCurrencyRate en AdventureWorksDW2012 antes de ejecutar el paquete desde esta lección; de lo contrario, el paquete producirá errores que indican una infracción de la restricción de clave principal. Recibirá los mismos errores si ejecuta el paquete seleccionando Depurar/Iniciar la depuración (o presiona F5) porque se ejecutarán las lecciones 1 y 2. La lección 2 intentará insertar registros que ya se insertaron en la lección 1.  
+> Si ha ejecutado el paquete de la lección 1, tendrá que eliminar los registros de la tabla dbo.NewFactCurrencyRate de la base de datos AdventureWorksDW2012 antes de ejecutar el paquete de esta lección. La lección 2 intenta insertar registros ya insertados en la lección 1, lo que produce un error.  
   
-## <a name="checking-the-package-layout"></a>Comprobar el diseño del paquete  
-Antes de probar el paquete, debe comprobar que los flujos de datos y de control de la lección 2 contienen los objetos mostrados en los diagramas siguientes. El flujo de datos debe ser idéntico al flujo de datos de la lección 1.  
+## <a name="check-the-package-layout"></a>Comprobación del diseño del paquete  
+Antes de probar el paquete, compruebe que los flujos de datos y de control del paquete de la lección 2 contienen los objetos mostrados en los diagramas siguientes. El flujo de datos de la lección 2 es igual que en la lección 1.  
   
 **Flujo de control**  
   
@@ -37,19 +36,19 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
 ![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
-### <a name="to-test-the-lesson-2-tutorial-package"></a>Para probar el paquete del tutorial de la lección 2  
+## <a name="test-the-lesson-2-tutorial-package"></a>Prueba del paquete del tutorial de la lección 2  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en **Lesson 2.dtsx** y, después, haga clic en **Ejecutar paquete**.  
+1.  En el **Explorador de soluciones**, haga clic con el botón derecho en **Lesson 2.dtsx** y seleccione **Ejecutar paquete**.  
   
-    El paquete se ejecutará. Puede comprobar el estado de cada bucle en la ventana Resultado o haciendo clic en la pestaña **Progreso** . Por ejemplo, puede ver que se han agregado 1.097 líneas a la tabla de destino del archivo Currency_VEB.txt.  
+    El paquete se ejecuta. Puede comprobar el estado de cada bucle en la ventana **Salida** o si hace clic en la pestaña **Progreso**. Por ejemplo, puede ver que se han agregado 1.097 líneas a la tabla de destino desde el archivo Currency_VEB.txt.  
   
-2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
+2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar**, haga clic en **Detener depuración**.  
   
-## <a name="next-lesson"></a>Lección siguiente  
-[Lección 5: Agregar configuraciones de paquete para el modelo de implementación de paquetes](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+## <a name="go-to-next-lesson"></a>Ir a la lección siguiente  
+[Lección 3: Adición de registro con SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
-## <a name="see-also"></a>Ver también  
-[Ejecución de proyectos y paquetes](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
+## <a name="see-also"></a>Vea también  
+[Ejecución de proyectos y paquetes](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   

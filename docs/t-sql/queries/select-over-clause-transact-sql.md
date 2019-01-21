@@ -26,15 +26,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 53de562bb59b279f511e73a66ad308eff029b26e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526399"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299432"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT: cláusula OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
   Determina las particiones y el orden de un conjunto de filas antes de que se aplique la función de ventana asociada. Es decir, la cláusula OVER define una ventana o un conjunto de filas definido por el usuario en un conjunto de resultados de la consulta. Una función de ventana calcula entonces un valor para cada fila de la ventana. Puede utilizar la cláusula OVER con funciones para calcular valores agregados tales como medias móviles, agregados acumulados, totales acumulados o N elementos superiores por resultados del grupo.  
   
@@ -229,7 +232,7 @@ GO
  8               Tsoflias                1421810.9242          98055
  ```  
   
-### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. Utilizar la cláusula OVER con funciones de agregado  
+### <a name="b-using-the-over-clause-with-aggregate-functions"></a>b. Utilizar la cláusula OVER con funciones de agregado  
  En el ejemplo siguiente se utiliza la cláusula `OVER` con funciones de agregado en todas las filas devueltas por la consulta. En este ejemplo, el uso de `OVER` es más eficaz que usar subconsultas para obtener los valores agregados.  
   
 ```sql  
@@ -544,7 +547,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43659      229      2    16     18.75  
  ```
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [Funciones analíticas &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
  [Excelente entrada de blog de Itzik Ben-Gan sobre las funciones de ventana y OVER en sqlmag.com](https://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  

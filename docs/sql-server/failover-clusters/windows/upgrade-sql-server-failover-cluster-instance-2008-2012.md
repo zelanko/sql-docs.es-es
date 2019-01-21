@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394158"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257060"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
@@ -46,7 +46,7 @@ La estrategia de migración adecuada dependerá de ciertos parámetros de la top
 
 |                                   | Requiere todos los objetos de servidor y VNNS | Requiere todos los objetos de servidor y VNNS | No requiere ningún objeto de servidor ni VNN\* | No requiere ningún objeto de servidor ni VNN\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| ***¿Grupos de disponibilidad? (S/N)***                  | ***S***                              | ***N***                                                            | ***S***    | ***N***    |
+| **_¿Grupos de disponibilidad? (S/N)_**                  | **_S_**                              | **_N_**                                                            | **_S_**    | **_N_**    |
 | **El clúster solo usa FCI de SQL**         | [Escenario 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Escenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Escenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Escenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **El clúster usa instancias independientes** | [Escenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Escenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Escenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Escenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* Excluir nombres de agentes de escucha del grupo de disponibilidad
@@ -87,7 +87,7 @@ Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 11. Reanude el tráfico hacia el agente de escucha.
 
-## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Escenario 2: Windows Cluster con instancias de clúster de conmutación por error de SQL Server (FCI)
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Escenario 2: Windows Cluster con instancias de clúster de conmutación por error (FCI) de SQL Server
 
 Si tiene un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que solo usa instancias de FCI de SQL, puede realizar la migración a un nuevo clúster creando un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] paralelo en otra instancia de Windows Cluster con Windows Server 2016/2012 R2. Realizará la migración del clúster de destino "adquiriendo" los VNN de las FCI de SQL antiguas y incorporándolos a los nuevos clústeres. Esto creará tiempo de inactividad adicional en función de los tiempos de propagación de DNS.
 
@@ -242,7 +242,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 ### [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]
 
--   **Punto de conexión** **de creación de reflejo** **de la base de datos**
+-   **Punto de conexión de creación de reflejo de la base de datos**
 
     Desde el punto de vista de SQL, se realzará la migración del punto de conexión de creación de reflejo de la base de datos a la nueva instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] junto con las tablas del sistema. Antes de la migración, asegúrese de que se apliquen las reglas correspondientes en los firewall y que ningún otro proceso esté escuchando en el mismo puerto.
 
@@ -256,17 +256,17 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 ### <a name="replication"></a>REPLICATION
 
--   **Suscriptores,** **publicadores** **y distribuidores** **remotos**
+-   **Distribuidores remotos, publicadores, suscriptores**
 
     La relación entre un distribuidor y un publicador se basa solo en el VNN de los equipos que los hospeden, que se resolverán adecuadamente en el nuevo equipo. También se realizará la migración de los trabajos del agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] junto con las tablas del sistema, por lo que varios agentes de replicación podrán continuar ejecutándose normalmente. Es necesario que, antes de la migración, las cuentas de Windows que ejecuten el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o cualquier trabajo del agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tengan los mismos permisos en el entorno de destino. La comunicación con el publicador y los suscriptores se ejecutará con normalidad.
 
--   **Carpeta** **de instantáneas**
+-   **Carpeta de instantáneas**
 
     Antes de la migración, es necesario que todos los recursos compartidos de red usados por cualquier característica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estén disponibles para los equipos del entorno de destino con los mismos permisos que en el entorno original. Tendrá que asegurarse de que sea cierto antes de la migración.
 
 ### <a name="service-broker"></a>Service Broker
 
--   **Punto de conexión** **de Service** **Broker**
+-   **Punto de conexión de Service Broker**
 
     Desde el punto de vista de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], no hay ninguna consideración relacionada con el punto de conexión. Antes de la migración, tendrá que asegurarse de que no haya ningún proceso que ya esté escuchando en el mismo puerto, así como de que no haya ninguna regla de firewall que esté bloqueando o permitiendo específicamente el puerto.
 
@@ -278,7 +278,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
     Las rutas dependen del nombre de red virtual del destino, que se resolverá correctamente para los nombres de equipo y de red de FCI de SQL en los equipos adecuados del nuevo entorno. También se deberá redirigir al equipo nuevo cualquier otro VNN al que se haga referencia.
 
--   **Enlaces** **de servicio** **remoto**
+-   **Enlaces de servicio remoto**
 
     Los enlaces de servicio remoto funcionarán adecuadamente después de la migración, ya que se realizará correctamente la migración de cualquier usuario que use esta función.
 
@@ -288,7 +288,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
     Se realizará correctamente la migración de los trabajos junto con las bases de datos del sistema. Cualquier usuario que ejecute un trabajo del agente de SQL o el propio agente tendrá los mismos permisos en el equipo de destino, tal como se especifica en los requisitos previos.
 
--   **Alertas y** **operadores**
+-   **Alertas y operadores**
 
     Se realizará correctamente la migración de las alertas y los operadores junto a las bases de datos del sistema.
 

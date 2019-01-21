@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificar la directiva HIDE | Microsoft Docs'
+title: 'Ejemplo: Especificación de la directiva HIDE | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2a82be80206ef29b5e19fdad61b30621f3f4df1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 68330bfbb58bb356f055ad016245e05b5d3d029d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662224"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254720"
 ---
-# <a name="example-specifying-the-hide-directive"></a>Ejemplo: Especificar la directiva HIDE
+# <a name="example-specifying-the-hide-directive"></a>Ejemplo: Especificación de la directiva HIDE
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   En este ejemplo se muestra el uso de la directiva **HIDE** . Esta directiva es útil cuando se desea que la consulta devuelva un atributo para ordenar las filas de la tabla universal devuelta por la consulta, pero no se desea que ese atributo aparezca en el documento XML resultante.  
   
@@ -76,14 +76,14 @@ go
   <Summary>  
     <SummaryDescription>  
       <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" xmlns="">  
-        <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain. </p1:p>  
+        <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain. </p1:p>  
       </pd:Summary>  
     </SummaryDescription>  
   </Summary>  
 </ProductModel>  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

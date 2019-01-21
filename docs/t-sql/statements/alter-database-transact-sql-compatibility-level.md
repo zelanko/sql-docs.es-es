@@ -1,7 +1,7 @@
 ---
 title: Nivel de compatibilidad de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 55d919cefd20ef4b139dbf30a053bbda568f6e38
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980081"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242166"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -168,9 +168,9 @@ Para ver el flujo de trabajo recomendado para actualizar el nivel de compatibili
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Diferencias entre los niveles de compatibilidad 140 y 150  
 En esta sección se describen los nuevos comportamientos incluidos en el nivel de compatibilidad 150.
 
-El nivel de compatibilidad 150 de la base de datos está actualmente en versión preliminar privada de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Este nivel de compatibilidad de la base de datos se asociará con la próxima generación de las mejoras de procesamiento de consultas más allá de lo que se introdujo en el nivel de compatibilidad 140 de la base de datos.     
+El nivel de compatibilidad 150 de la base de datos está actualmente en versión preliminar pública para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Este nivel de compatibilidad de la base de datos se asociará con la próxima generación de las mejoras de procesamiento de consultas más allá de lo que se introdujo en el nivel de compatibilidad 140 de la base de datos.     
 
-Para obtener más información sobre las características de procesamiento de consultas habilitadas en el nivel de compatibilidad 150 de la base de datos, consulte [Novedades de SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).     
+Para más información sobre las características de procesamiento de consultas habilitadas en el nivel de compatibilidad 150 de la base de datos, consulte [Novedades de SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) y [Procesamiento de consultas inteligente en bases de datos SQL](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Diferencias entre los niveles de compatibilidad 130 y 140  
 En esta sección se describen los nuevos comportamientos incluidos en el nivel de compatibilidad 140.

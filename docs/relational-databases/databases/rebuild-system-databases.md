@@ -16,12 +16,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f0a1a40b1f4dd31a91436ae7af80f691c2e5a7c
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4225bb49eb60c61ba01575a2269120dff4a427d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559202"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125615"
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,14 +107,14 @@ ms.locfileid: "51559202"
     |/ACTION=REBUILDDATABASE|Especifica que el programa de instalación vuelva a crear las bases de datos del sistema.|  
     |/INSTANCENAME=*InstanceName*|Es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la instancia predeterminada, escriba MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Especifica las cuentas individuales o de grupos de Windows que se agregarán al rol fijo de servidor **sysadmin** . Si especifica varias cuentas, sepárelas con un espacio en blanco. Escriba, por ejemplo, **BUILTIN\Administrators MyDomain\MyUser**. Cuando está especificando una cuenta que contiene un espacio en blanco dentro del nombre, agregue la cuenta entre comillas tipográficas. Escriba, por ejemplo, **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** . Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **\*\* Nota de seguridad \*\*** La cuenta **sa** es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de **sa** .<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
+    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** . Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **&#42;&#42; Nota de seguridad &#42;&#42;** La cuenta **sa** es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de **sa** .<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Especifica una nueva intercalación de nivel de servidor. Este parámetro es opcional. Cuando no se especifica, se usa la intercalación actual del servidor.<br /><br /> **\*\* Importante \*\*** Al cambiar la intercalación de nivel de servidor, no se cambia la de las bases de datos de usuario existentes. Todas las bases de datos de usuario nuevas usarán la nueva intercalación de manera predeterminada.<br /><br /> Para obtener más información, vea [Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=númeroDeArchivos ]|Especifica el número de archivos de datos de tempdb. Este valor se puede aumentar hasta 8 o hasta el número de núcleos, lo que sea mayor.<br /><br /> Valor predeterminado: 8 o el número de núcleos, lo que sea menor.|  
     |[ /SQLTEMPDBFILESIZE=tamañoDeArchivoEnMB ]|Especifica el tamaño inicial en MB de cada archivo de datos de tempdb. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 8|  
     |[ /SQLTEMPDBFILEGROWTH=tamañoDeArchivoEnMB ]|Especifica el incremento de crecimiento de archivo en MB de cada archivo de datos de tempdb. El valor 0 indica que el crecimiento automático está desactivado y no se permite más espacio. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 64|  
-    |[ /SQLTEMPDBLOGFILESIZE=tamañoDeArchivoEnMB ]|Especifica el tamaño inicial en MB del archivo de registro de tempdb. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 8.<br /><br /> Rango permitido: Mín. = 8, Máx. = 1024.|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=tamañoDeArchivoEnMB ]|Especifica el incremento de crecimiento de archivo en MB del archivo de registro de tempdb. El valor 0 indica que el crecimiento automático está desactivado y no se permite más espacio. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 64<br /><br /> Rango permitido: Mín. = 8, Máx. = 1024.|  
-    |[ /SQLTEMPDBDIR=Directorios ]|Especifica los directorios de los archivos de datos de tempdb. Si especifica varios directorios, sepárelos con un espacio en blanco. Si se especifican varios directorios, los archivos de datos de tempdb se distribuirán por turnos entre los directorios.<br /><br /> Valor predeterminado: directorio de datos del sistema|  
+    |[ /SQLTEMPDBLOGFILESIZE=tamañoDeArchivoEnMB ]|Especifica el tamaño inicial en MB del archivo de registro de tempdb. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 8.<br /><br /> Intervalo permitido: Mín. = 8, máx. = 1024.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=tamañoDeArchivoEnMB ]|Especifica el incremento de crecimiento de archivo en MB del archivo de registro de tempdb. El valor 0 indica que el crecimiento automático está desactivado y no se permite más espacio. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 64<br /><br /> Intervalo permitido: Mín. = 8, máx. = 1024.|  
+    |[ /SQLTEMPDBDIR=Directorios ]|Especifica el directorio de los archivos de datos de tempdb. Si especifica varios directorios, sepárelos con un espacio en blanco. Si se especifican varios directorios, los archivos de datos de tempdb se distribuirán por turnos entre los directorios.<br /><br /> Valor predeterminado: directorio de datos del sistema|  
     |[ /SQLTEMPDBLOGDIR=Directorio ]|Especifica el directorio de los archivos de registro de tempdb.<br /><br /> Valor predeterminado: directorio de datos del sistema|  
   
 3.  Una vez completada la regeneración de las bases de datos del sistema, el programa de instalación regresa al símbolo del sistema sin mostrar ningún mensaje. Examine el archivo de registro Summary.txt para comprobar que el proceso se completó correctamente. Este archivo se encuentra en C:\Archivos de programa\Microsoft SQL Server\130\Setup Bootstrap\Logs.  
@@ -200,7 +200,7 @@ ms.locfileid: "51559202"
   
  Cuando se haya completado el proceso de volver a generar la base de datos, examine los registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en busca de errores. De manera predeterminada, están en C:\Archivos de programa\Microsoft SQL Server\130\Setup Bootstrap\Logs. Para encontrar el archivo de registro que contiene los resultados del proceso de volver a generar bases de datos, cambie el directorio a la carpeta Logs en un símbolo del sistema y, a continuación, ejecute `findstr /s RebuildDatabase summary*.*`. Esta búsqueda indicará los archivos de registro que contengan los resultados del proceso de volver a generar las bases de datos del sistema. Abra los archivos de registro y examine si contienen mensajes de error relevantes.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Bases de datos del sistema](../../relational-databases/databases/system-databases.md)  
   
   

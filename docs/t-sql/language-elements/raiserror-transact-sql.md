@@ -30,15 +30,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0875e5013e2a5f12468d99414ff94252ac66453a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502862"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300302"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
   Genera un mensaje de error e inicia el procesamiento de errores de la sesión. RAISERROR puede hacer referencia a un mensaje definido por el usuario almacenado en la vista de catálogo sys.messages o puede generar un mensaje dinámicamente. El mensaje se devuelve como un mensaje de error de servidor a la aplicación que realiza la llamada o a un bloque CATCH asociado de una construcción TRY…CATCH. Las nuevas aplicaciones deben usar [THROW](../../t-sql/language-elements/throw-transact-sql.md) en su lugar.  
   
@@ -249,7 +252,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. Crear un mensaje ad hoc en sys.messages  
+### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>b. Crear un mensaje ad hoc en sys.messages  
  En el siguiente ejemplo se indica cómo mostrar un mensaje almacenado en la vista de catálogo sys.messages. El mensaje se agregó a la vista de catálogo sys.messages por medio del procedimiento almacenado del sistema `sp_addmessage` con el número de mensaje `50005`.  
   
 ```  
@@ -282,7 +285,7 @@ RAISERROR (@StringVariable, -- Message text.
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
-title: 'Paso 3: Probar el paquete del tutorial de la lección 3 | Microsoft Docs'
+title: 'Paso 3: Prueba del paquete del tutorial de la lección 3 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,18 +11,19 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca00f40146d5019f770e3141d3961e40ed526ccc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 31f08374ad46929c52305cb6558b603a03b439bd
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559164"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143345"
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Lección 3-3: Probar el paquete del tutorial de la lección 3
-En esta tarea, ejecutará el paquete Lesson 3.dtsx. Al ejecutar el paquete, en la ventana Registrar eventos se mostrará una lista de las entradas del registro que se escriben en el archivo de registro. Una vez que haya finalizado la ejecución del paquete, comprobará el contenido del archivo de registro generado por el proveedor de registro.  
+# <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>Lección 3-3: Prueba del paquete del tutorial de la lección 3
+
+En esta tarea, se ejecuta el paquete **Lesson 3.dtsx**. Mientras se ejecuta el paquete, en la ventana **Eventos de registro** se enumeran las entradas del registro que SSIS escribe en el archivo de registro por el proveedor de registro. Cuando finaliza la ejecución del paquete, puede ver el contenido del archivo de registro.  
   
-## <a name="checking-the-package-layout"></a>Comprobar el diseño del paquete  
-Antes de probar el paquete, debe comprobar que los flujos de datos y de control de la lección 3 contienen los objetos mostrados en los diagramas siguientes. El flujo de control debe ser idéntico al flujo de datos de la lección 2. El flujo de datos debe ser idéntico al flujo de datos de las lecciones 1 y 2.  
+## <a name="check-the-package-layout"></a>Comprobación del diseño del paquete  
+Antes de probar el paquete, compruebe que los flujos de datos y de control del paquete de la lección 3 se parecen a los objetos mostrados en los diagramas siguientes. El flujo de control debe ser igual que en la lección 2, y el flujo de datos debe ser igual que en las lecciones 1 y 2.  
   
 **Flujo de control**  
   
@@ -32,22 +33,22 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
 ![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
-### <a name="to-run-the-lesson-3-tutorial-package"></a>Para ejecutar el paquete del tutorial de la lección 3  
+## <a name="run-the-lesson-3-tutorial-package"></a>Ejecución del paquete del tutorial de la lección 3  
   
-1.  En el menú SSIS, haga clic en Registrar eventos.  
+1.  En el menú SSIS, seleccione **Eventos de registro**.  
   
-2.  En el menú **Depurar** , haga clic en **Iniciar depuración**.  
+2.  En el menú **Depurar**, seleccione **Iniciar depuración**.  
   
-3.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
+3.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar**, seleccione **Detener depuración**.  
   
-### <a name="to-examine-the-generated-log-file"></a>Para examinar el archivo de registro generado  
+## <a name="examine-the-generated-log-file"></a>Examen del archivo de registro generado  
   
 -   Mediante el Bloc de notas o cualquier otro editor de texto, abra el archivo TutorialLog.log.  
   
--   Aunque la semántica de la información generada para los eventos **PipelineExecutionPlan** y **PipelineExecutionTrees** queda fuera del ámbito de este tutorial, puede ver que la primera línea enumera los campos de información especificados en la pestaña **Detalles** del cuadro de diálogo **Configurar registros de SSIS** . Además, puede comprobar que los dos eventos que ha seleccionado, PipelineExecutionPlan y PipelineExecutionTrees, se han registrado para cada iteración del bucle Foreach.  
+-   Una descripción completa de la información generada para los eventos **PipelineExecutionPlan** y **PipelineExecutionTrees** queda fuera del ámbito de este tutorial.  En el archivo de registro, puede ver que en la primera línea se enumeran los campos de información especificados en la pestaña **Detalles** del cuadro de diálogo **Configurar registros de SSIS**. También puede ver que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ha registrado los dos eventos que ha seleccionado, **PipelineExecutionPlan** y **PipelineExecutionTrees**,para cada iteración del bucle Foreach.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 4: Agregar redirección de flujo de errores con SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+[Lección 4: Adición de redireccionamiento de flujo de errores con SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   
   

@@ -18,12 +18,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0b8be637da67d9aa083fb4afbc024381c1b83a81
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605305"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132805"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurar un servidor para que escuche en un puerto TCP específico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ Dado que el puerto 1433 es el estándar conocido de [!INCLUDE[ssNoVersion](../..
   
      ![puertos_TCP](../../database-engine/configure-windows/media/tcp-ports.png "puertos_TCP")  
   
-4.  En el cuadro de diálogo **Propiedades de* **IP***n**, en el cuadro **Puerto TCP**, escriba el número de puerto en el que desee que esta dirección IP escuche y, a continuación, haga clic en **Aceptar**. Para especificar varios puertos, sepárelos con una coma.
+4.  En el cuadro de diálogo **Propiedades de**_IP_ **n** , en el cuadro **Puerto TCP** box, type the port number you want this Propiedades de address to listen on, and then click **Aceptar**. Para especificar varios puertos, sepárelos con una coma.
 
     > [!NOTE] 
-    > Si la opción **Escuchar todo** de la pestaña **Protocolo** está establecida en "Sí", entonces, solo se utilizarán los valores de **Puerto TCP** y **Puerto dinámico TCP** de la sección **IPAll** y se ignorarán las secciones individuales **IP***n* en su totalidad. Si la opción **Escuchar todo** está establecida en "No", se ignorarán los ajustes de **puerto TCP** y **puerto dinámico TCP** de la sección **IPAll** y se usarán los valores de **Puerto TCP**, **Puerto dinámico TCP** y **Habilitado** de las secciones individuales **IP***n* en su lugar.
-    > Cada sección **IP***n* tiene un ajuste **Habilitado** con un valor predeterminado de "No", lo que hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pase por alto esta dirección IP, incluso si tiene definido un puerto.  
+    > Si la opción **Escuchar todo** de la pestaña **Protocolo** está establecida en "Sí", solo se usarán los valores de **Puerto TCP** y **Puerto dinámico TCP** de la sección **IPAll** y se ignorarán las secciones individuales **IP**_n_ en su totalidad. Si la opción **Escuchar todo** está establecida en "No", se ignorarán los ajustes de **Puerto TCP** y **Puerto dinámico TCP** de la sección **IPAll** y se usarán los valores de **Puerto TCP**, **Puerto dinámico TCP** y **Habilitado** de las secciones individuales **IP**_n_ en su lugar.
+    > Cada sección **IP**_n_ tiene un ajuste **Habilitado** con un valor predeterminado de "No", lo que hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore esta dirección IP, incluso si tiene definido un puerto.  
   
 5.  En el panel de la consola, haga clic en **Servicios de SQL Server**.  
   
@@ -73,7 +73,7 @@ Después de haber configurado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 -   Cree un alias en el cliente; para ello, especifique el número de puerto.  
 -   Programar el cliente para conectarse mediante una cadena de conexión personalizada.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear o eliminar un alias de servidor para que lo utilice un cliente &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [Servicio SQL Server Browser](../../tools/configuration-manager/sql-server-browser-service.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35fbe2c739ac8dafcedf18a4873bc7235469648b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d33dc0d7103e821eaf2796630cada56f199eebd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857131"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133935"
 ---
 # <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "47857131"
  Esta opción se aplica únicamente a los procedimientos de almacenamiento. Determina si se debe replicar la definición del procedimiento almacenado (instrucción CREATE PROCEDURE) o su ejecución. Si replica la ejecución del procedimiento, la definición del procedimiento se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede mejorar notablemente el rendimiento para los casos en que se llevan a cabo grandes operaciones en lote. Para más información, consulte [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opciones para publicaciones de combinación  
- El cuadro de diálogo **Propiedades del artículo** para las publicaciones de combinación tiene dos pestañas: **Propiedades** y **Solucionador**.  
+ El cuadro de diálogo **Propiedades del artículo** para las publicaciones de mezcla tiene dos pestañas: **Propiedades** y **Solucionador**.  
   
 ### <a name="properties-tab"></a>Pestaña Propiedades  
  **Dirección de la sincronización**  
@@ -123,7 +123,7 @@ ms.locfileid: "47857131"
   
 ### <a name="resolver-tab"></a>Pestaña Solucionador  
  **Utilizar el solucionador predeterminado**  
- Si selecciona el solucionador predeterminado, los conflictos se resuelven sobre la base de la prioridad asignada a cada suscriptor o del primer cambio escrito en el publicador, en función del tipo de suscripciones utilizadas. Para más información, vea [Detectar y solucionar conflictos de replicación de mezcla](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+ Si selecciona el solucionador predeterminado, los conflictos se resuelven sobre la base de la prioridad asignada a cada suscriptor o del primer cambio escrito en el publicador, en función del tipo de suscripciones utilizadas. Para más información, vea [Detectar y solucionar conflictos de replicación de mezcla](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Usar un solucionador personalizado (registrada en el distribuidor)**  
  Si opta por utilizar un solucionador de artículos (puede ser una proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un escrito por el usuario), debe seleccionar un solucionador del cuadro de lista. Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
@@ -174,7 +174,7 @@ ms.locfileid: "47857131"
   
 -   Para algunos tipos, hay más de un tipo que puede seleccionar. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda el uso de la asignación predeterminada a menos que la aplicación requiera una asignación diferente. Para más información, consulte [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

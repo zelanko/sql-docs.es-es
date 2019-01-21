@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395358"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133215"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52395358"
   
 1.  En el menú **Inicio** , elija **Todos los programas**, elija **Microsoft SQL Server** y haga clic en **Administrador de configuración de SQL Server**.  
   
-2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<* nombreDeInstancia*>* y, luego, haga clic en **Propiedades**.  
+2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<_nombreDeInstancia*>* y, luego, haga clic en **Propiedades**.  
   
 3.  Para el enlace de canal y el enlace de servicio, en la pestaña **Opciones avanzadas** , establezca **Protección ampliada** en el valor adecuado.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52395358"
   
  Al utilizar IIS para tener acceso a los datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando una conexión HTTPS o HTTP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pueden sacar provecho de la protección ampliada que proporciona IIS. Para obtener más información acerca de cómo configurar IIS para utilizar la protección ampliada, vea el tema que trata cómo [configurar la protección ampliada en IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configuración de red del servidor](../../database-engine/configure-windows/server-network-configuration.md)   
  [Configuración de red de cliente](../../database-engine/configure-windows/client-network-configuration.md)   
  [Introducción a la protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkID=177943)   

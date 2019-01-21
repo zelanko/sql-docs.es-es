@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un informe de forma libre (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Creación de un informe de forma libre (Generador de informes) | Microsoft Docs'
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d473ba8f0a16fd161ec2c6edce2cd6de51a08f36
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021929"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143495"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Crear un informe de forma libre (Generador de informes)
 En este tutorial, creará un informe paginado que actúa como un boletín. Cada página muestra texto estático, objetos visuales de resumen y datos de ventas de ejemplo detallados.
@@ -48,11 +48,11 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
 1.  En el panel Datos de informe, haga clic en **Nuevo** > **Origen de datos**.  
   
-2.  En el cuadro **Nombre** , escriba: **ListDataSource**.  
+2.  En el cuadro **Nombre**, escriba: **ListDataSource**  
   
 3.  Haga clic en **Usar una conexión incrustada en mi informe**.  
   
-4.  Compruebe que el tipo de conexión es Microsoft SQL Server y luego en el cuadro **Cadena de conexión**, escriba: **Origen de datos = \<nombre de servidor>**.  
+4.  Compruebe que el tipo de conexión sea Microsoft SQL Server y, luego, en el cuadro **Cadena de conexión** , escriba: **Data Source = \<nombre_de_servidor>**  
   
     **\<nombre de servidor>**, por ejemplo Report001, especifica un equipo en el que se ha instalado una instancia del motor de base de datos de SQL Server. Dado que los datos del informe no se extraen de una base de datos de SQL Server, no necesita incluir el nombre de una base de datos. Para analizar la consulta se usa la base de datos predeterminada en el servidor especificado.  
   
@@ -64,7 +64,7 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
 1.  En el panel Datos de informe, haga clic en **Nuevo** > **Conjunto de datos**.  
   
-2.  En el cuadro **Nombre** , escriba: **ListDataset**.  
+2.  En el cuadro **Nombre**, escriba: **ListDataset**.  
   
 3.  Haga clic en **Usar un conjunto de datos insertado en el informe**y compruebe que el origen de datos es **ListDataSource**.  
   
@@ -215,7 +215,7 @@ Puede agregar cuadros de texto para mostrar texto estático que se repite en cad
     *  **20 pt**.
     *  **Tomate**.  
   
-9. Coloque el cursor debajo del texto que ha escrito en el paso 3 y escriba: **Hola,** con un espacio después para separar el texto y el campo que se va a agregar en el paso siguiente.  
+9. Coloque el cursor debajo del texto que escribió en el paso 3 y escriba: **Hello** con un espacio después de la palabra, para separar el texto del campo que se va a agregar en el paso siguiente.  
  
 10. Arrastre el campo `[FullName]` de ListDataSet en el panel Datos de informe al cuadro de texto y colóquelo después de "Hola," y luego escriba dos puntos (:).  
    
@@ -244,7 +244,7 @@ Puede agregar cuadros de texto para mostrar texto estático que se repite en cad
       *  **10 pt**.
       *  **Negro**.  
  
-20. Coloque el cursor dentro del cuadro de texto, debajo del texto que carece de sentido y escriba: **Felicidades por sus ventas totales de**, con un espacio después de la palabra para separar el texto y el campo que agregará en el paso siguiente. 
+20. Coloque el cursor dentro del cuadro de texto, debajo del texto sin significado, y escriba: **Congratulations on your total sales of** con un espacio después de la palabra, para separar el texto del campo que se va a agregar en el paso siguiente. 
   
 21. Arrastre el campo Sales hasta el cuadro de texto, colóquelo después del texto que ha escrito en el paso anterior y luego escriba un signo de exclamación (!).  
 
@@ -458,7 +458,7 @@ Los rectángulos le ayudan a controlar cómo se representa el informe. Coloque u
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Seleccione el eje del gráfico y en la pestaña *Inicio** > **Número** > **Moneda**.
+12. Seleccione el eje del gráfico y en la pestaña **Inicio** > **Número** > **Moneda**.
 
 13. Seleccione **Disminuir decimales** dos veces, de modo que el número muestre solo dólares sin centavos.      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>Para comprobar que los gráficos están dentro del rectángulo  
@@ -507,7 +507,7 @@ Para obtener más información sobre las listas, consulte:
   
 Para más información sobre los diseñadores de consultas, vea [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) e [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md) 
   
 

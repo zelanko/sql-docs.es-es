@@ -18,12 +18,12 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9378663dbe37bb6e00602cc34bc42c4a5bd4e08
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fa5285bee7041b0da548a963087493f4c5cc9b21
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530499"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134750"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Creación de reflejo de la base de datos ALTER DATABASE (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Solo se permite una opción \<partner_option> por cada cláusula SET PARTNER.  
   
- **'** *partner_server* **'**  
+ **'** _partner_server_ **'**  
  Especifica la dirección de red del servidor de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para actuar como un asociado de conmutación por error en la nueva sesión de creación de reflejo de la base de datos. Cada sesión requiere dos asociados: uno empieza como servidor principal y el otro como servidor reflejado. Se recomienda que estos asociados residan en equipos distintos.  
   
  Esta opción se especifica una vez por sesión en cada asociado. Para iniciar una sesión de creación de reflejo de la base de datos, se necesitan dos instrucciones ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'**. El orden es relevante. Primero, conéctese al servidor reflejado y especifique la instancia del servidor principal como *partner_server* (SET PARTNER **='**_principal_server_**'**). Después, establezca la conexión con el servidor principal y especifique la instancia del servidor reflejado como *partner_server* (SET PARTNER **='**_mirror_server_**'**); de este modo, se inicia una sesión de creación de reflejo de la base de datos entre estos dos asociados. Para obtener más información, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
@@ -148,7 +148,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  El comportamiento del modo de alta seguridad depende en parte del testigo, como se indica a continuación:  
   
--   Si la seguridad se establece en FULL y se establece el testigo para la sesión, dicha sesión se ejecuta en el modo de alta seguridad con conmutación automática por error. Si se pierde la conexión con el servidor principal, se produce automáticamente la conmutación por error de la sesión si la base de datos está sincronizada y la instancia del servidor reflejado y el testigo siguen conectados entre sí (es decir, tienen quórum). Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+-   Si la seguridad se establece en FULL y se establece el testigo para la sesión, dicha sesión se ejecuta en el modo de alta seguridad con conmutación automática por error. Si se pierde la conexión con el servidor principal, se produce automáticamente la conmutación por error de la sesión si la base de datos está sincronizada y la instancia del servidor reflejado y el testigo siguen conectados entre sí (es decir, tienen quórum). Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
      Si se establece un testigo para la sesión, pero está desconectado actualmente, la pérdida del servidor reflejado causa el bloqueo del servidor principal.  
   
@@ -175,7 +175,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  Para más información, consulte [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   
  WITNESS \<witness_option>  
- Controla las propiedades de base de datos que definen un testigo de creación de reflejo de la base de datos. La cláusula SET WITNESS afecta a ambas copias de la base de datos, pero solo puede especificar SET WITNESS en el servidor principal. Si se establece un testigo para una sesión, se requiere quórum para servir a la base de datos, independientemente de la configuración de SAFETY; para más información, vea [Quórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Controla las propiedades de base de datos que definen un testigo de creación de reflejo de la base de datos. La cláusula SET WITNESS afecta a ambas copias de la base de datos, pero solo puede especificar SET WITNESS en el servidor principal. Si se establece un testigo para una sesión, se requiere quórum para servir a la base de datos, independientemente de la configuración de SAFETY; para más información, vea [Quórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Se recomienda que el testigo y los asociados de conmutación por error residan en equipos distintos. Para información sobre el testigo, vea [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
@@ -195,7 +195,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Solo se permite una opción \<witness_option> por cada cláusula SET WITNESS.  
   
- **'** *witness_server* **'**  
+ **'** _witness_server_ **'**  
  Especifica una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que actúe como el servidor testigo para una sesión de creación de reflejo de la base de datos. Solo puede especificar instrucciones SET WITNESS en el servidor principal.  
   
  En una instrucción SET WITNESS **='**_witness_server_**'**, la sintaxis de *witness_server* equivale a la sintaxis de *partner_server*.  
@@ -210,7 +210,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 ### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. Crear una sesión de creación de reflejo de la base de datos con un testigo  
  La configuración de la creación de reflejo de la base de datos con un testigo requiere configurar la seguridad y preparar la base de datos reflejada, además de usar ALTER DATABASE para configurar los asociados. Para obtener un ejemplo del proceso de configuración completo, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. Conmutación manual por error en una sesión de creación de reflejo de la base de datos  
+### <a name="b-manually-failing-over-a-database-mirroring-session"></a>b. Conmutación manual por error en una sesión de creación de reflejo de la base de datos  
  La conmutación manual por error se puede iniciar desde cualquier asociado de creación de reflejo de la base de datos. Antes de llevar a cabo la conmutación por error, debe comprobar si el servidor principal actual es realmente el servidor principal. Por ejemplo, para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], ejecute la siguiente consulta en la instancia del servidor que crea que es el servidor principal actual:  
   
 ```  
@@ -246,7 +246,7 @@ GO
   
      El valor actual de `mirroring_role_desc` es ahora `Mirror`.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  

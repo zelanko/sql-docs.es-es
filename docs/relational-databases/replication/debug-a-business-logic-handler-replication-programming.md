@@ -18,12 +18,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35f53ef33d1cf9316fcb7225ab5baf67a3b33383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8b74629bcaea743026c453614f2c69e268b6bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804064"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130935"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar un controlador de lógica de negocios (programación de la replicación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47804064"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Para depurar un controlador de lógica de negocios en un equipo local  
   
-1.  Configure la publicación y la distribución, cree una publicación y cree una suscripción a la publicación. Para obtener más información, consulte [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md) y [Crear, modificar y eliminar publicaciones y artículos &#40;replicación&#41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Configure la publicación y la distribución, cree una publicación y cree una suscripción a la publicación. Para más información, vea [Configuración de la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md) y [Creación de una publicación](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Cree y registre un controlador de lógica de negocios Para más información, consulte [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47804064"
   
 11. Suponiendo que no se establezcan otros puntos de interrupción y que se repliquen los comandos adecuados, la ejecución se detiene cuando llega al punto de interrupción en el controlador de lógica de negocios.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Implementar un controlador de lógica de negocios para un artículo de mezcla](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

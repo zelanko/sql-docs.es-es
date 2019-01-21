@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21008fca4e8bb75b9daace2d83cd166dafc79eb9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9c15f88e1bf3e7d07d09c5d92ceff5a3face1ade
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521609"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135415"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Ver y modificar la configuración de seguridad de la replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,9 +144,9 @@ ms.locfileid: "52521609"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del publicador, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y, después, haga clic en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
+    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
   
-    -   Para cambiar el contexto en el que el Agente de distribución se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y después en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de distribución se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
          Si utiliza suscripciones de actualización en cola, el Agente de lectura de cola utiliza también el contexto especificado aquí para las conexiones al suscriptor.  
   
@@ -156,11 +156,11 @@ ms.locfileid: "52521609"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
+    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
   
          Si utiliza suscripciones de actualización en cola, el Agente de lectura de cola utiliza también el contexto especificado aquí para las conexiones al suscriptor.  
   
-    -   Para cambiar el contexto en el que el Agente de distribución se conecta al distribuidor, haga clic en la fila **Conexión del distribuidor** y después en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de distribución se conecta al distribuidor, haga clic en la fila **Conexión del distribuidor** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -168,9 +168,9 @@ ms.locfileid: "52521609"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del publicador, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al publicador y al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
+    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al publicador y al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
   
-    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y después en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -178,15 +178,15 @@ ms.locfileid: "52521609"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
+    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
   
-    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al publicador y al suscriptor, haga clic en la fila **Conexión de publicador** y después en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al publicador y al suscriptor, haga clic en la fila **Conexión de publicador** y, a continuación, haga clic en el botón de propiedades (**…**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Para cambiar la cuenta con la que se ejecuta el Agente de lectura de cola  
   
-1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**, haga clic en el botón de propiedades (**...**) situado junto a la base de datos de distribución.  
+1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**, haga clic en el botón de propiedades (**…**) situado junto a la base de datos de distribución.  
   
 2.  En el cuadro de diálogo **Propiedades de base de datos de distribución: \<Base de datos>**, haga clic en el botón **Configuración de seguridad** situado junto al cuadro de texto **Cuenta de proceso del agente**.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52521609"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Para cambiar la configuración de seguridad para una suscripción de extracción de actualización inmediata  
   
-1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, haga clic en la fila **Conexión de publicador** y después en el botón de propiedades (**...**) de la fila.  
+1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, haga clic en la fila **Conexión de publicador** y, después, haga clic en el botón de propiedades (**…**) de la fila.  
   
 2.  En el cuadro de diálogo **Escribir información de conexión** , seleccione una de las siguientes opciones:  
   
@@ -414,7 +414,7 @@ ms.locfileid: "52521609"
   
 2.  En cada publicador que use este distribuidor remoto, ejecute [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), especificando la contraseña del paso 1 para **@password**.  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -466,9 +466,9 @@ ms.locfileid: "52521609"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>Para cambiar la configuración de seguridad del Agente de distribución para una suscripción de extracción a una publicación transaccional  
   
-1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
+1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>y <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> para la suscripción y establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
@@ -491,7 +491,7 @@ ms.locfileid: "52521609"
   
 1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>y <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> para la suscripción y establezca la conexión del paso 1 para la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
@@ -543,7 +543,7 @@ ms.locfileid: "52521609"
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>Para cambiar la información de inicio de sesión utilizada por un suscriptor de actualización inmediata cuando se conecta al publicador transaccional  
   
-1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
+1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> para la base de datos de suscripciones. Especifique <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> y <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
@@ -571,13 +571,13 @@ ms.locfileid: "52521609"
 ##  <a name="FollowUp"></a> Seguimiento: después de modificar la configuración de seguridad de la replicación  
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Actualizar scripts de replicación &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Administrar inicios de sesión y contraseñas en la replicación](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [Identidad y control de acceso (replicación)](../../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Modelo de seguridad del Agente de replicación](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Seguridad y protección &#40;replicación&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [Ver y modificar la configuración de seguridad de la replicación](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Conceptos de procedimientos almacenados del sistema de replicación](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

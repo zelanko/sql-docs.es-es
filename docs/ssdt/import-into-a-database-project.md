@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ed0acd238ebc934c6adf5061eafe3f15ce44bef
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400398"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143465"
 ---
 # <a name="import-into-a-database-project"></a>Importar en un proyecto de base de datos
 Puede usar Importar para rellenar un proyecto con nuevos objetos a partir de una base de datos activa o un .dacpac, o para actualizar los objetos existentes en el proyecto con una nueva definición a partir de un script. Hay algunas diferencias de comportamiento que hay que destacar entre estas tres rutas, que se describen a continuación.  
@@ -31,13 +31,13 @@ Puede usar Importar para rellenar un proyecto con nuevos objetos a partir de una
   
 **Secciones de este tema**  
   
-[Importar el origen: aplicación de capa de datos o de base de datos (*.dacpac)](#bkmk_import_source_db)  
+[Origen de importación: aplicación de capa de datos o de base de datos (*.dacpac)](#bkmk_import_source_db)  
   
-[Importar el origen: Script (*.sql)](#bkmk_import_source_script)  
+[Origen de importación: script (*.sql)](#bkmk_import_source_script)  
   
 [Importar objetos cifrados](#bkmk_import_encrypted)  
   
-## <a name="bkmk_import_source_db"></a>Importar el origen: aplicación de capa de datos o de base de datos (*.dacpac)  
+## <a name="bkmk_import_source_db"></a>Origen de importación: aplicación de capa de datos o de base de datos (*.dacpac)  
 La capacidad de importar el esquema a partir de una base de datos o un archivo .dacpac solo está disponible si no hay objetos de esquema ya definidos en el proyecto. Esto no incluye los scripts RefactorLogs ni Pre/Post-Deployment.  
   
 En la importación, las definiciones de objeto se incluirán en archivos de proyecto con los valores predeterminados de la organización de SSDT para los nuevos objetos: nuevos archivos para los objetos de nivel superior, elementos secundarios jerárquicos definidos en el mismo archivo que el primario, restricciones de tabla y columna definidas insertadas siempre que sea posible. Para definir más la visibilidad y el control de cada objeto, use Comparación de esquema en lugar de Importar.  
@@ -48,7 +48,7 @@ Si el origen de la importación contiene scripts previos o posteriores a la impl
   
 ![SSDT se omite en la carpeta de importación](../ssdt/media/ssdt-ignoredonimport.gif "SSDT se omite en la carpeta de importación")  
   
-## <a name="bkmk_import_source_script"></a>Importar el origen: Script (*.sql)  
+## <a name="bkmk_import_source_script"></a>Origen de importación: script (*.sql)  
 Todos los objetos del origen de importación que *no* existan ya en el proyecto se agregarán y todos los objetos del origen de importación que *ya* existan en el proyecto sobrescribirán la definición de objeto del proyecto.  
   
 > [!NOTE]  
@@ -59,8 +59,7 @@ Todos los objetos del origen de importación que *no* existan ya en el proyecto 
   
 El proceso Importar a partir del script no comprenderá scripts previos o posteriores a la implementación, variables SQLCMD ni archivos RefactorLog. Estas y cualquier otra construcción no admitida que se detecte en la importación se colocará en un archivo **ScriptsIgnoredOnImport.sql** de una carpeta **Scripts** del proyecto.  
   
-Para más información, consulte el foro del equipo de SSDT en [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
-  
+ 
 ## <a name="bkmk_import_encrypted"></a>Importar objetos cifrados  
 Al importar los objetos cifrados en un proyecto de base de datos, el cuerpo total de la definición de objeto no siempre puede recuperarse del servidor. Por tanto, el comportamiento de la importación puede ser diferente al tratar con esta clase de objetos.  
   

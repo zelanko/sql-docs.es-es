@@ -17,12 +17,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52f86e1750858ec7fabcb8fab30dcd23b4306ace
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ab81a9e76ea17a683062431da678fa679ceffdee
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509430"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226642"
 ---
 # <a name="ftp-task"></a>Tarea FTP
   La tarea FTP descarga y carga archivos de datos, y administra directorios en servidores. Por ejemplo, un paquete puede descargar archivos de datos de un servidor remoto o de una ubicación de Internet como parte de un flujo de trabajo de paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Puede usar la tarea FTP para los siguientes fines:  
@@ -40,7 +40,7 @@ ms.locfileid: "52509430"
   
  Al tener acceso a un archivo local o un directorio local, la tarea FTP utiliza un administrador de conexiones de archivos o información de ruta de acceso almacenada en una variable. En contraste, al tener acceso a un archivo remoto o un directorio remoto, la tarea FTP utiliza una ruta especificada directamente en el servidor remoto, como se especifica en el administrador de conexiones FTP, o información de ruta almacenada en una variable. Para obtener más información, vea [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) e [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
- Esto significa que la tarea FTP puede recibir varios archivos y eliminar varios archivos remotos, pero si utiliza un administrador de conexiones, solo puede enviar un archivo y eliminar únicamente un archivo local, porque un administrador de conexiones de archivos solo puede tener acceso a un único archivo. Para tener acceso a varios archivos locales, la tarea FTP debe utilizar una variable para proporcionar la información de ruta. Por ejemplo, una variable que contiene "C:\Prueba\\*.txt" proporciona una ruta que permite eliminar o enviar todos los archivos del directorio Prueba que tienen una extensión .txt.  
+ Esto significa que la tarea FTP puede recibir varios archivos y eliminar varios archivos remotos, pero si utiliza un administrador de conexiones, solo puede enviar un archivo y eliminar únicamente un archivo local, porque un administrador de conexiones de archivos solo puede tener acceso a un único archivo. Para tener acceso a varios archivos locales, la tarea FTP debe utilizar una variable para proporcionar la información de ruta. Por ejemplo, una variable que contiene "C:\Prueba\&#42;.txt" proporciona una ruta de acceso que permite eliminar o enviar todos los archivos del directorio Prueba que tienen una extensión .txt.  
   
  Para enviar varios archivos y tener acceso a varios archivos y directorios locales, también puede ejecutar la tarea FTP varias veces incluyéndola en un contenedor de bucles Foreach. El contenedor de bucles Foreach puede recorrer los archivos de un directorio mediante el enumerador Foreach File. Para más información, consulte [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52509430"
 > [!IMPORTANT]  
 >  El administrador de conexiones FTP solo admite la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
   
- **Temas relacionados**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Temas relacionados**: [Administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor del administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  Indica si la tarea FTP termina si se produce un error en una opción FTP.  
@@ -169,7 +169,7 @@ ms.locfileid: "52509430"
   
  **Temas relacionados**: [Administrador de conexiones de archivos planos](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   

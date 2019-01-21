@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b2c8e71f65f4b6dfe4f5fe74f6030049d67c735f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020399"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226572"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configuración de correo electrónico: Modo nativo de Reporting Services (Administrador de configuración)
 Reporting Services incluye una extensión de entrega por correo electrónico para distribuir informes por correo electrónico. Según cómo defina la suscripción del correo electrónico, una entrega podría estar compuesta de una notificación, un vínculo, datos adjuntos o un informe incrustado. La extensión de entrega por correo electrónico funciona con la tecnología de servidor de correo existente. El servidor de correo debe ser un servidor SMTP o un reenviador. El servidor de informes se conecta a un servidor SMTP a través de bibliotecas de Collaboration Data Objects (CDO), cdosys.dll, que el sistema operativo proporciona.
@@ -109,7 +109,7 @@ El ejemplo siguiente muestra las opciones de configuración del archivo RSreport
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Opciones de configuración para establecer el campo Para: de un mensaje
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Opciones de configuración para configurar el campo Para: de un mensaje
 Las suscripciones definidas por el usuario que se crean según los permisos otorgados por la tarea Administrar suscripciones individuales contienen un nombre de usuario establecido previamente basado en la cuenta de usuario de dominio. Cuando el usuario crea la suscripción, el nombre del destinatario del campo **Para:** se rellena automáticamente a partir de la cuenta de usuario de dominio de la persona que está creando la suscripción.
 
 Si está utilizando un servidor SMTP o reenviador que emplee cuentas de correo electrónico distintas a la cuenta de usuario de dominio, la entrega del informe generará un error cuando el servidor SMTP intente entregar el informe al usuario.
@@ -183,7 +183,7 @@ La conexión entre el servidor de informes y un servidor o reenviador SMTP local
 
 3. Seleccione el servidor donde va a instalar Internet Information Server (IIS) y seleccione **Siguiente**.
 
-4. Seleccione **Siguiente** en la página *Roles de servidor**.
+4. Haga clic en **Siguiente** en la página *Roles de servidor*.
      
 5. En la página *Características* , seleccione **Servidor SMTP** y, después, **Siguiente**.
 
@@ -219,7 +219,7 @@ La conexión entre el servidor de informes y un servidor o reenviador SMTP local
      
 17. Guarde el archivo.
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Administrador de configuración de Reporting Services (modo nativo)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [El archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)

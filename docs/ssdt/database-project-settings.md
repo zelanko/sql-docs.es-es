@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516019"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143585"
 ---
 # <a name="database-project-settings"></a>Configuración del proyecto de base de datos
 Utilice la configuración del proyecto de base de datos para controlar aspectos de las configuraciones de base de datos, depuración y compilación. Existen varias categorías de configuraciones.  
@@ -170,8 +170,7 @@ La página de propiedades **Compilación de SQLCLR** contiene configuraciones de
   
 2.  Si el objeto se ha escrito en VB, puede elegir VB en primer lugar en la lista desplegable **Lenguaje** y, a continuación, hacer clic en el botón **Avanzadas** . Podrá encontrar descripciones de las opciones de VB en [Configuración de compilador avanzada (Cuadro de diálogo, Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
   
-Para más información, consulte [Crear las propiedades de configuración](https://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
-  
+
 ## <a name="bkmk_build"></a>Compilación  
 Puede elegir una configuración de compilación para cada proyecto de base de datos de la solución. De forma predeterminada, existe una sola configuración, pero puede agregar configuraciones personalizadas. Puede optar por esta opción si desea, por ejemplo, una configuración personalizada en la que siempre elimina y vuelve a crear la base de datos. En soluciones que contienen distintos tipos de proyecto, puede crear una configuración de solución personalizada que contenga una configuración de compilación determinada para cada proyecto.  
   
@@ -195,7 +194,7 @@ Los valores de configuración de la siguiente tabla se aplican a todas las confi
 |---------|-----------------|---------------|  
 |Ruta de acceso de salida de la compilación|bin\Debug\|Especifica dónde se creará la salida de la compilación al compilar o implementar el proyecto de base de datos. Si especifica una ruta de acceso relativa, deberá ser relativa a la ruta de acceso al proyecto de base de datos. Si la ruta de acceso no existe, se creará.|  
 |Nombre de archivo de salida de la compilación|*DatabaseProjectName*|Especifica el nombre que desea asignar a la salida generada al compilar el proyecto de base de datos.|  
-|Tratar advertencias de Transact\-SQL como errores|no|Especifica si una advertencia de Transact\-SQL debe provocar la cancelación de los procesos de compilación e implementación. Si se desactiva esta casilla, aparecen mensajes de advertencia, pero el proceso de compilación e implementación continúa. Esta configuración es específica del proyecto, no del usuario, y se almacena en el archivo .sqlproj.|  
+|Tratar advertencias de Transact\-SQL como errores|No|Especifica si una advertencia de Transact\-SQL debe provocar la cancelación de los procesos de compilación e implementación. Si se desactiva esta casilla, aparecen mensajes de advertencia, pero el proceso de compilación e implementación continúa. Esta configuración es específica del proyecto, no del usuario, y se almacena en el archivo .sqlproj.|  
 |Suprimir las advertencias de Transact\-SQL|En blanco|Especifica una lista de números de advertencia, separados por coma o punto y coma, que identifican las advertencias que se suprimen.<br /><br />Las advertencias suprimidas no aparecen en la ventana **Lista de errores** ni afectan a la correcta compilación, incluso cuando se activa la casilla **Tratar advertencias de Transact\-SQL como errores**.|  
   
 ## <a name="bkmk_sqlcmd_variables"></a>Variables SQLCMD  
@@ -222,11 +221,11 @@ Puede utilizar esta configuración para controlar la depuración del proyecto de
 |Acción de inicio|None|Especifica un script o un programa externo que se ejecutará al depurar el proyecto.|  
 |Cadena de conexión de destino|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Especifica la información de conexión del servidor de bases de datos que desea que sea el destino de la configuración de compilación especificada. La cadena de conexión predeterminada corresponde a una instancia de LocalDB y una base de datos de SQL Server creadas dinámicamente.|  
 |Implementar propiedades de base de datos|Sí|Especifica si se implementa o se actualiza la configuración de DatabaseProperties.DatabaseProperties al implementar el proyecto de base de datos.|  
-|Volver a crear siempre la base de datos|no|Especifica si se va a quitar y volver a crear la base de datos en lugar de realizar una actualización incremental. Seleccione esta casilla de verificación si desea ejecutar las pruebas unitarias de base de datos en una implementación limpia de la base de datos, por ejemplo. Si desactiva esta casilla, la base de datos existente se actualizará en lugar de eliminarse y volver a crearse.|  
+|Volver a crear siempre la base de datos|No|Especifica si se va a quitar y volver a crear la base de datos en lugar de realizar una actualización incremental. Seleccione esta casilla de verificación si desea ejecutar las pruebas unitarias de base de datos en una implementación limpia de la base de datos, por ejemplo. Si desactiva esta casilla, la base de datos existente se actualizará en lugar de eliminarse y volver a crearse.|  
 |Bloquear implementación incremental si puede dar lugar a pérdida de datos|sí|Especifica si la implementación debe detenerse si una actualización puede producir pérdida de datos. Si esta casilla está activada, los cambios que provocarían la pérdida de datos detendrían la implementación con un error, lo que impediría que se perdiesen los datos. Por ejemplo, la implementación se detendría si una columna `varchar(50)` se hubiera cambiado a `varchar(30)`.<br /><br />**NOTA:** La implementación solo se bloquea si las tablas en las que puede producirse pérdida de datos contienen datos. La implementación continúa si no se pierde ningún dato.|  
 |Objetos DROP en destino pero no en proyecto|no|Especifica si los objetos que están en la base de datos de destino pero no en el proyecto de base de datos se deben eliminar del script de implementación. Esto permite excluir algunos archivos del proyecto y quitarlos temporalmente del script de compilación. Sin embargo, es posible que le interese mantener las versiones existentes de estos objetos en la base de datos de destino. Esta casilla de verificación no tiene ningún efecto si la casilla de verificación **Volver a crear siempre la base de datos** está seleccionada, porque se quitará la base de datos.|  
-|No usar instrucciones ALTER ASSEMBLY para actualizar tipos CLR|no|Especifica si deben usarse instrucciones ALTER ASSEMBLY para actualizar tipos CLR (Common Language Runtime) o si el objeto que crea la instancia del tipo CLR se va a quitar y volver a generar al implementar los cambios.|  
-|Avanzadas...|no|Botón de comando que permite especificar opciones que controlan eventos y el comportamiento de la implementación.|  
+|No usar instrucciones ALTER ASSEMBLY para actualizar tipos CLR|No|Especifica si deben usarse instrucciones ALTER ASSEMBLY para actualizar tipos CLR (Common Language Runtime) o si el objeto que crea la instancia del tipo CLR se va a quitar y volver a generar al implementar los cambios.|  
+|Avanzadas...|No|Botón de comando que permite especificar opciones que controlan eventos y el comportamiento de la implementación.|  
   
 ## <a name="bkmk_ref_paths"></a>Rutas de acceso de referencia  
 Puede utilizar esta página para definir el servidor y las variables de la base de datos asociadas a referencias de bases de datos cruzadas. Además, puede especificar los valores de esas variables. Para obtener más información, consulte [Uso de referencias en proyectos de base de datos](https://msdn.microsoft.com/library/bb386242.aspx).  

@@ -19,18 +19,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 929557d51c90f3cac86fd98d331fdbc6bc47fbac
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 34cb5a8bb16e86215217263f956e5d8111c56785
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971106"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300002"
 ---
 # <a name="string-functions-transact-sql"></a>Funciones de cadena (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Ayude a mejorar la documentación de SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 
 Las siguientes funciones escalares realizan una operación sobre un valor de cadena de entrada y devuelven un valor de cadena o un valor numérico:  
@@ -55,7 +55,7 @@ Las siguientes funciones escalares realizan una operación sobre un valor de cad
   
  Cuando se pasan a las funciones de cadena argumentos que no son valores de cadena, el tipo de entrada se convierte explícitamente en un tipo de datos de texto. Para más información, vea [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md) (Conversión de tipos de datos [motor de base de datos]).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

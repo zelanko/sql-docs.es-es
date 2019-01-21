@@ -16,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e20ad7cab67a87dd7bb76be0117ee87752e3e66f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207444"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226672"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +84,9 @@ ms.locfileid: "53207444"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |conmutación automática por error|No|No|Sí|  
 |Conmutación por error manual planeada|No|Sí|Sí|  
-|conmutación por error forzada|Sí|Sí|Sí**\***|  
+|conmutación por error forzada|Sí|Sí|Sí **&#42;**|  
   
- **\*** Si emite un comando de conmutación por error forzada en una réplica secundaria sincronizada, la réplica secundaria se comportará igual que en el caso de una conmutación por error manual.  
+ **&#42;** Si emite un comando de conmutación por error forzada en una réplica secundaria sincronizada, la réplica secundaria se comportará igual que en el caso de una conmutación por error manual.  
   
  El período de tiempo que la base de datos no está disponible durante una conmutación por error depende del tipo de conmutación por error y su causa.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "53207444"
   
 -   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):**  Dentro de un grupo de disponibilidad dado, conjunto de dos o tres réplicas de disponibilidad (incluida la réplica principal actual) que están configuradas para el modo de confirmación sincrónica, si lo hubiera. Un conjunto de confirmación sincrónica de conmutación automática por error solo tiene efecto si las réplicas secundarias están configuradas para el modo de conmutación por error manual y al menos una réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]: **  En un grupo de disponibilidad determinado, conjunto de todas las réplicas de disponibilidad cuyo estado operativo es actualmente ONLINE, independientemente del modo de disponibilidad y el modo de conmutación por error. El conjunto completo de conmutación por error es importante cuando no hay actualmente ninguna réplica secundaria en estado SYNCHRONIZED con la réplica principal.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]:**   En un grupo de disponibilidad determinado, conjunto de todas las réplicas de disponibilidad cuyo estado operativo es actualmente ONLINE, independientemente del modo de disponibilidad y el modo de conmutación por error. El conjunto completo de conmutación por error es importante cuando no hay actualmente ninguna réplica secundaria en estado SYNCHRONIZED con la réplica principal.  
   
  Al configurar una réplica de disponibilidad como confirmación sincrónica con conmutación por error automática, la réplica de disponibilidad forma parte de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Sin embargo, que el conjunto tenga efecto dependerá de la réplica principal actual. Las formas de conmutación por error que son actualmente posibles en un momento determinado dependen de qué conjuntos de conmutación estén actualmente activos.  
   

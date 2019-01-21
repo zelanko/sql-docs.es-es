@@ -17,12 +17,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58fa9cf55a0ef120266c0398734fc6671402634c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785253"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129315"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Replicación transaccional punto a punto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47785253"
  La replicación punto a punto incluye la opción de habilitar la detección de conflictos en una topología punto a punto. Esta opción ayuda a evitar problemas que se producen por conflictos no detectados, como comportamientos incoherentes de las aplicaciones y actualizaciones perdidas. Habilitando esta opción, de forma predeterminada, un cambio conflictivo se trata como un error crítico que produce el error del Agente de distribución. En caso de un conflicto, la topología permanece en un estado incoherente hasta que se resuelve el conflicto manualmente y los datos se hacen coherentes en toda la topología. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
->  Para evitar la posible incoherencia de datos, asegúrese de evitar los conflictos en una topología punto a punto, incluso con la detección de conflictos habilitada. Para asegurarse de que las operaciones de escritura para una fila determinada se realizan en un solo nodo, las aplicaciones que tienen acceso y cambian datos deben particionar las operaciones de inserción, actualización y eliminación. Este particionamiento asegura que las modificaciones a una fila determinada que se originan en un nodo están sincronizadas con todos los demás nodos en la topología antes de que se modifique la fila por un nodo diferente. Si una aplicación requiere funcionalidades sofisticadas de detección y resolución de conflictos, use la replicación de mezcla. Para obtener más información, consulte [Replicación de mezcla](../../../relational-databases/replication/merge/merge-replication.md) y [Detectar y solucionar conflictos de replicación de mezcla](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  Para evitar la posible incoherencia de datos, asegúrese de evitar los conflictos en una topología punto a punto, incluso con la detección de conflictos habilitada. Para asegurarse de que las operaciones de escritura para una fila determinada se realizan en un solo nodo, las aplicaciones que tienen acceso y cambian datos deben particionar las operaciones de inserción, actualización y eliminación. Este particionamiento asegura que las modificaciones a una fila determinada que se originan en un nodo están sincronizadas con todos los demás nodos en la topología antes de que se modifique la fila por un nodo diferente. Si una aplicación requiere funcionalidades sofisticadas de detección y resolución de conflictos, use la replicación de mezcla. Para obtener más información, consulte [Replicación de mezcla](../../../relational-databases/replication/merge/merge-replication.md) y [Detectar y solucionar conflictos de replicación de mezcla](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="peer-to-peer-topologies"></a>Topologías punto a punto  
  En los siguientes escenarios se ilustran los usos típicos de la replicación punto a punto.  
@@ -75,7 +75,7 @@ ms.locfileid: "47785253"
   
  Cada ubicación tiene una base de datos y un servidor de aplicaciones, que los ingenieros de soporte utilizan para incluir y actualizar la información de las llamadas de los clientes. La topología se particiona por tiempo. Por consiguiente, las actualizaciones solo se producen en el nodo que está abierto; a continuación, las actualizaciones pasan al resto de bases de datos participantes. Esta topología proporciona las siguientes ventajas:  
   
--   Independencia sin aislamiento: cada oficina puede insertar, actualizar o eliminar datos de forma independiente, pero también puede compartir los datos porque se replican en el resto de bases de datos participantes.  
+-   Independencia sin aislamiento: cada oficina puede insertar, actualizar o eliminar datos de forma independiente, pero también puede compartirlos porque se replican en el resto de bases de datos participantes.  
   
 -   Alta disponibilidad en caso de error o para permitir el mantenimiento en una o más de las bases de datos participantes.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47785253"
   
 ||Solo sistemas SQL Server 2005 del mismo nivel o una mezcla de sistemas SQL Server 2005 del mismo nivel con sistemas SQL Server 2008 y superiores del mismo nivel|Solo sistemas SQL Server 2005 del mismo nivel o una mezcla de sistemas SQL Server 2005 del mismo nivel con sistemas SQL Server 2008 y superiores del mismo nivel|Sistemas SQL2008 y versiones posteriores del mismo nivel|Sistemas SQL2008 y versiones posteriores del mismo nivel|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|Agregar un nodo a la topología|2 nodos en una topología completa: no es necesario aplicar inactividad. Utilice `sync_type = 'initialize with backup'`.|Más de 2 nodos: es necesario aplicar inactividad.|`sync_type = 'replication support only'`: es necesario aplicar inactividad.|`sync_type = 'initialize with backup'` y `'initialize from lsn'`: no es necesario aplicar inactividad.|  
+|Agregar un nodo a la topología|Dos nodos en una topología completa: no es necesario aplicar inactividad. Utilice `sync_type = 'initialize with backup'`.|Más de dos nodos: es necesario aplicar inactividad.|`sync_type = 'replication support only'`: es necesario aplicar inactividad.|`sync_type = 'initialize with backup'` y `'initialize from lsn'`: no es necesario aplicar inactividad.|  
   
  Los cambios de esquema de la topología (agregar o quitar un artículo) requieren la aplicación de inactividad. Para obtener más información, consulte [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
@@ -169,9 +169,9 @@ ms.locfileid: "47785253"
   
  Los cambios de esquema de artículo (agregar o quitar columnas) no requieren la aplicación de inactividad.  
   
--   Agregar un artículo: para agregar un artículo a una configuración existente, es necesario poner el sistema en modo de inactividad, ejecutar la instrucción CREATE TABLE y cargar los datos iniciales en cada nodo de la topología, además de agregar el nuevo artículo en cada nodo de la topología.  
+-   Adición de un artículo: para agregar un artículo a una configuración existente, es necesario poner el sistema en modo de inactividad, ejecutar la instrucción CREATE TABLE y cargar los datos iniciales en cada nodo de la topología, además de agregar el artículo nuevo a cada nodo de la topología.  
   
--   Quitar un artículo: si deseamos un estado coherente en todos los nodos, necesitamos poner la topología en modo inactivo.  
+-   Quitar un artículo: si se quiere un estado coherente en todos los nodos, es necesario poner la topología en modo inactivo.  
   
  Para obtener más información, consulte [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md) (Cómo detener una topología de replicación [programación de la replicación con Transact-SQL]) y [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
@@ -179,9 +179,9 @@ ms.locfileid: "47785253"
   
 -   No puede reinicializar las suscripciones en una topología punto a punto. Si tiene que asegurarse de que un nodo tiene una copia nueva de los datos, restaure una copia de seguridad en el nodo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Tipos de publicaciones para la replicación transaccional](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
+ [Replicación transaccional](../../../relational-databases/replication/transactional/transactional-replication.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: 'Paso 8: Facilitar la comprensión del paquete de la lección 1 | Microsoft Docs'
+title: 'Paso 8: Anotación y formato del paquete de la lección 1 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,48 +11,51 @@ ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61eea29c0c8094bf5f5c70df4488a950b860bc4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5890cf61593d894daf7539d324922bfcf0d8651
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806053"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143635"
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Lección 1-8: Facilitar la comprensión del paquete de la lección 1
-Ahora que ha terminado la configuración del paquete de la lección 1, es una buena idea ordenar el diseño del paquete. Si las formas de los diseños de los flujos de datos y de control tienen tamaños aleatorios o no están alineadas o agrupadas, la funcionalidad del paquete puede resultar más difícil de comprender.  
+# <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Lección 1-8: Anotación y formato del paquete de la lección 1 
+
+Ahora que ha terminado la configuración del paquete de la lección 1, probablemente sea el momento de ordenar el diseño del paquete. Si las formas en los diseños de flujo de datos y control tienen tamaños diferentes o bien no se distribuyen de manera uniforme, es posible que sea más difícil entender el paquete.  
   
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools proporciona herramientas que permiten aplicar formato al diseño del paquete de forma rápida y sencilla. Las características de formato incluyen la capacidad de hacer que las formas tengan el mismo tamaño, de alinearlas y de manipular el espaciado horizontal y vertical entre las formas.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools proporciona herramientas para aplicar formato fácilmente al diseño del paquete. Las características de formato incluyen la capacidad de hacer que las formas tengan el mismo tamaño, de alinearlas y de cambiar el espaciado horizontal y vertical entre las formas.  
   
 Otra forma de mejorar la comprensión de la funcionalidad de un paquete es agregar anotaciones que la describan.  
   
-En esta tarea usará las características de formato de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools para mejorar el diseño del flujo de datos y agregará una anotación al flujo de datos.  
+En esta tarea, se usan las características de formato de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools para mejorar el diseño del flujo de datos y también se agrega una anotación.  
   
-### <a name="to-format-the-layout-of-the-data-flow"></a>Para aplicar formato al diseño del flujo de datos  
+## <a name="format-the-layout-of-the-data-flow"></a>Formato del diseño del flujo de datos  
   
-1.  Si el paquete de la lección 1 no está abierto todavía, haga doble clic en Lesson 1.dtsx en el Explorador de soluciones.  
+1.  Si el paquete de la lección 1 todavía no está abierto, haga doble clic en **Lesson 1.dtsx** en el **Explorador de soluciones**.  
   
-2.  Haga clic en la pestaña **Flujo de datos** .  
+2.  Haga clic en la pestaña **Flujo de datos**.  
   
-3.  Coloque el cursor en la parte superior derecha de la transformación Extract Sample Currency, haga clic y, a continuación, arrastre el cursor por todos los componentes de flujo de datos.  
+3.  Para seleccionar todos los componentes de flujo de datos a la vez, use **Editar** > **Seleccionar todo**.
   
-4.  En el menú **Formato** , seleccione **Igualar tamaño**y, a continuación, haga clic en **Ambos**.  
+4.  En el menú **Formato**, seleccione **Igualar tamaño** y después haga clic en **Ambos**.  
   
-5.  Con los objetos del flujo de datos seleccionados, en el menú **Formato** , seleccione **Alinear**y haga clic en **Lados izquierdos**.  
+5.  Con los objetos del flujo de datos seleccionados, en el menú **Formato**, seleccione **Alinear** y haga clic en **Centros**.  
+
+6.  Con los objetos del flujo de datos seleccionados, en el menú **Formato**, seleccione **Espaciado vertical** y haga clic en **Igualar**.  
   
-### <a name="to-add-an-annotation-to-the-data-flow"></a>Para agregar una anotación al flujo de datos  
+## <a name="add-an-annotation-to-the-data-flow"></a>Adición de una anotación al flujo de datos  
   
-1.  Haga clic con el botón derecho en cualquier parte de la superficie de diseño del flujo de datos y haga clic en **Agregar anotación**.  
+1.  Haga clic con el botón derecho en cualquier parte de la superficie de diseño del flujo de datos y después seleccione **Agregar anotación**.  
   
 2.  Escriba o pegue el texto siguiente en el cuadro de anotación.  
   
-    **El flujo de datos extrae datos de un archivo, busca valores en la columna CurrencyKey de la tabla DimCurrency y la columna DateKey de la tabla DimDate, y escribe los datos en la tabla NewFactCurrencyRate.**  
+        The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the DateKey column in the DimDate table, and writes the data to the NewFactCurrencyRate table.
   
-    Para ajustar el texto en el cuadro de anotación, coloque el cursor donde desee empezar una nueva línea y presione la tecla Intro.  
+    Para ajustar el texto en el cuadro de anotación, coloque el cursor donde quiera empezar una nueva línea y presione **Intro**.  
   
     Si no agrega texto al cuadro de anotación, desaparecerá al hacer clic fuera del cuadro.  
   
-## <a name="next-steps"></a>Next Steps  
-[Paso 9: Probar el paquete del tutorial de la lección 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+## <a name="go-to-next-task"></a>Ir a la tarea siguiente
+[Paso 9: Prueba del paquete de la lección 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
   

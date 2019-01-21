@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd3811f05891f7a270e059a7d36296f9d9ab3eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638723"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100900"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,14 +107,15 @@ OBJECTPROPERTY ( id , property )
 |IsRule|Cualquier objeto en el ámbito de esquema|Regla enlazada.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsScalarFunction|Función|Función escalar.<br /><br /> 1 = Función escalar<br /><br /> 0 = Función no escalar|  
 |IsSchemaBound|Función, vista|Función o vista enlazada al esquema creada mediante SCHEMABINDING.<br /><br /> 1 = Enlazada al esquema<br /><br /> 0 = No enlazada al esquema.|  
-|IsSystemTable|Table|Tabla del sistema.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsSystemTable|Table|Tabla del sistema.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Objeto|SQL Server puede comprobar las propiedades de determinismo y precisión del objeto.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|Table|Tabla.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|Función|Función con valores de tabla.<br /><br /> 1 = Función con valores de tabla<br /><br /> 0 = Función con valores no de tabla.|  
 |IsTrigger|Cualquier objeto en el ámbito de esquema|Desencadenador.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Cualquier objeto en el ámbito de esquema|Restricción UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table|Tabla definida por el usuario.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Ver|Vista.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Cualquier objeto en el ámbito de esquema|Propietario del objeto.<br /><br /> **Nota:** El propietario del esquema no es necesariamente el propietario del objeto. Por ejemplo, los objetos secundarios (aquellos en los que *parent_object_id* no es NULL) siempre devolverán el mismo identificador de propietario que el primario.<br /><br /> Distinto de NULL = Identificador de usuario de base de datos que corresponde al propietario del objeto.|  
+|OwnerId|Cualquier objeto en el ámbito de esquema|Propietario del objeto.<br /><br /> **Nota:**  El propietario del esquema no es necesariamente el propietario del objeto. Por ejemplo, los objetos secundarios (aquellos en los que *parent_object_id* no es NULL) siempre devolverán el mismo identificador de propietario que el primario.<br /><br /> Distinto de NULL = Identificador de usuario de base de datos que corresponde al propietario del objeto.|  
 |TableDeleteTrigger|Table|La tabla tiene un desencadenador DELETE.<br /><br /> >1 = Identificador del primer desencadenador con el tipo especificado.|  
 |TableDeleteTriggerCount|Table|La tabla tiene el número especificado de desencadenadores DELETE.<br /><br /> >0 = Número de desencadenadores DELETE.|  
 |TableFullTextMergeStatus|Table|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica si una tabla que tiene un índice de texto completo se está combinando actualmente.<br /><br /> 0 = La tabla no tiene un índice de texto completo o el índice de texto completo no se está combinando.<br /><br /> 1 = El índice de texto completo se está combinando.|  
@@ -122,7 +123,7 @@ OBJECTPROPERTY ( id , property )
 |TableFulltextCatalogId|Table|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador del catálogo de texto completo en el que residen los datos de índice de texto completo para la tabla.<br /><br /> Distinto de cero = Identificador del catálogo de texto completo, asociado al índice único que identifica las filas en una tabla indizada de texto completo.<br /><br /> 0 = La tabla no tiene un índice de texto completo.|  
 |TableFulltextChangeTrackingOn|Table|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> La tabla tiene habilitado el seguimiento de cambios de texto completo.<br /><br /> 1 = TRUE<br /><br /> 0 = False|  
 |TableFulltextDocsProcessed|Table|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de filas procesadas desde el comienzo de la indización de texto completo. En una tabla que se indiza para búsquedas en texto completo, todas las columnas de una fila se consideran como parte de un documento que se va a indizar.<br /><br /> 0 = No se ha completado ningún rastreo activo ni ninguna indización de texto completo.<br /><br /> > 0 = Uno de los siguientes (A o B): A) El número de documentos procesados por operaciones de inserción o actualización desde el inicio del rellenado de seguimiento de cambios completo, incremental o manual. B) El número de filas procesadas por operaciones de inserción o actualización desde que se habilitó el seguimiento de cambios con el rellenado del índice de actualización en segundo plano, la modificación del esquema de índice de texto completo, la regeneración del catálogo de texto completo o el reinicio de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], etc.<br /><br /> NULL = La tabla no tiene un índice de texto completo.<br /><br /> Esta propiedad no supervisa ni cuenta las filas eliminadas.|  
-|TableFulltextFailCount|Table|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de filas no indizadas por Búsqueda de texto completo.<br /><br /> 0 = El rellenado se ha completado.<br /><br /> > 0 = Uno de los siguientes (A o B): A) El número de documentos que no se han indizado desde el inicio del llenado de seguimiento de cambios de actualización completa, incremental o manual. B) En el seguimiento de cambios con actualización de índices en segundo plano, el número de filas no indizadas desde el comienzo del rellenado o desde su reinicio. Esto puede deberse a un cambio del esquema, a la regeneración del catálogo, al reinicio del servidor, etc.<br /><br /> NULL = La tabla no tiene un índice de texto completo.|  
+|TableFulltextFailCount|Table|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de filas no indizadas por Búsqueda de texto completo.<br /><br /> 0 = El rellenado se ha completado.<br /><br /> > 0 = Uno de los siguientes (A o B): A) El número de documentos que no se han indexado desde el inicio del llenado de seguimiento de cambios de actualización completo, incremental o manual. B) En el seguimiento de cambios con actualización de índices en segundo plano, el número de filas no indizadas desde el comienzo del rellenado o desde su reinicio. Esto puede deberse a un cambio del esquema, a la regeneración del catálogo, al reinicio del servidor, etc.<br /><br /> NULL = La tabla no tiene un índice de texto completo.|  
 |TableFulltextItemCount|Table|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de filas para las que se crearon índices de texto completo correctamente.|  
 |TableFulltextKeyColumn|Table|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador de la columna asociada al índice de columna único que participa en la definición de índice de texto completo.<br /><br /> 0 = La tabla no tiene un índice de texto completo.|  
 |TableFulltextPendingChanges|Table|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de entradas de seguimiento de cambios pendientes de procesamiento.<br /><br /> 0 = El seguimiento de cambios no está habilitado.<br /><br /> NULL = La tabla no tiene un índice de texto completo.|  
@@ -199,7 +200,7 @@ GO
   
 ```  
   
-### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Comprobar si una función escalar definida por el usuario es determinista  
+### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>b. Comprobar si una función escalar definida por el usuario es determinista  
  En el siguiente ejemplo se comprueba si es determinista la función escalar definida por el usuario, `ufnGetProductDealerPrice`, que devuelve un valor **money**.  
   
 ```  
@@ -216,7 +217,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C. Buscar las tablas que pertenecen a un esquema específico  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: Búsqueda de las tablas que pertenecen a un esquema específico  
  En el siguiente ejemplo se devuelven todas las tablas del esquema dbo.  
   
 ```  
@@ -231,7 +232,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>D. Comprobar si un objeto es una tabla  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D: Comprobar si un objeto es una tabla  
  En el ejemplo siguiente se comprueba si `dbo.DimReseller` es una tabla de la base de datos [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  
@@ -244,7 +245,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   

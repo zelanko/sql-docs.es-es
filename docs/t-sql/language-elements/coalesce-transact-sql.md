@@ -22,15 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c65bb6348afa4d095971b5833f26e8e33dd5a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111d7cb0790bd0cbdb9c9bb17a6ebcb78ac3b04a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666779"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298612"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Evalúa los argumentos en orden y devuelve el valor actual de la primera expresión que inicialmente no se evalúa como `NULL`. Por ejemplo, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` devuelve el tercer valor porque el tercer valor es el primer valor que no es NULL. 
   
@@ -125,7 +128,7 @@ COALESCE(Class, Color, ProductNumber) AS FirstNotNull
 FROM Production.Product;  
 ```  
   
-### <a name="b-running-a-complex-example"></a>B. Ejecutar un ejemplo complejo  
+### <a name="b-running-a-complex-example"></a>b. Ejecutar un ejemplo complejo  
  En este ejemplo, la tabla `wages` incluye tres columnas con información acerca del sueldo anual de los empleados: la tarifa por hora, el salario y la comisión. No obstante, un empleado recibe solo un tipo de sueldo. Para determinar el importe total pagado a todos los empleados, utilice `COALESCE` para obtener solo los valores no NULL que se encuentran en `hourly_wage`, `salary` y `commission`.  
   
 ```sql  
@@ -190,7 +193,7 @@ GO
  (12 row(s) affected)
  ```  
   
-### <a name="c-simple-example"></a>C: ejemplo sencillo  
+### <a name="c-simple-example"></a>C: Ejemplo sencillo  
  En el ejemplo siguiente se muestra cómo `COALESCE` selecciona los datos de la primera columna que tiene un valor que no es NULL. Para este ejemplo, se supone que la tabla `Products` contiene estos datos:  
   
  ```  
@@ -220,7 +223,7 @@ FROM Products ;
   
  Observe que en la primera fila, el valor `FirstNotNull` es `PN1278`, no `Socks, Mens`. Esto se debe a que en el ejemplo la columna `Name` no se especificó como un parámetro para `COALESCE`.  
   
-### <a name="d-complex-example"></a>D: ejemplo complejo  
+### <a name="d-complex-example"></a>D: Ejemplo complejo  
  En el ejemplo siguiente se usa `COALESCE` para comparar los valores de tres columnas y devolver solo el valor distinto de NULL que se encuentra en las columnas.  
   
 ```sql  
@@ -294,7 +297,7 @@ ORDER BY TotalSalary;
  120000.00
  ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   

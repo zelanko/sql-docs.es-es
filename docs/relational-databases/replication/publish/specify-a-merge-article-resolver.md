@@ -15,32 +15,19 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef65d698db19d1ada3c9c5260f19fa39c4140e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821943"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136005"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Especificar un solucionador de artículos de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo especificar un solucionador de artículos de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+
   
- **En este tema**  
-  
--   **Antes de empezar:**  
-  
-     [Recomendaciones](#Recommendations)  
-  
--   **Para especificar un solucionador de artículos de mezcla con:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
-  
-###  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="recommendations"></a>Recomendaciones  
   
 -   La replicación de mezcla admite los siguientes tipos de solucionadores de artículos:  
   
@@ -112,7 +99,7 @@ ms.locfileid: "47821943"
     > [!NOTE]  
     >  La ubicación de instalación predeterminada de la aplicación ejecutable de Agente de mezcla es [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM.  
   
-#### <a name="to-specify-a-custom-resolver-when-defining-a-merge-article"></a>Para especificar un solucionador personalizado al definir un artículo de mezcla  
+## <a name="specify-a-custom-resolver-when-defining-a-merge-article"></a>Especificación de un solucionador personalizado al definir un artículo de mezcla  
   
 1.  Si tiene previsto utilizar un solucionador de conflictos personalizado, cree y registre el solucionador mediante el procedimiento anterior.  
   
@@ -120,7 +107,7 @@ ms.locfileid: "47821943"
   
 3.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique el nombre del solucionador del paso 2 para **@article_resolver** y cualquier entrada necesaria para el solucionador personalizado utilizando el parámetro **@resolver_info** . Para los solucionadores personalizados basados en un procedimiento almacenado, **@resolver_info** es el nombre del procedimiento almacenado. Para más información sobre la entrada requerida por solucionadores de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vea [Solucionadores basados en Microsoft COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Para especificar o cambiar un solucionador personalizado para un artículo de mezcla existente  
+## <a name="specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Especificación o cambio de un solucionador personalizado para un artículo de mezcla existente  
   
 1.  Para determinar si se ha definido un solucionador personalizado para un artículo u obtener el nombre del solucionador, ejecute [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Si hay un solucionador personalizado definido para el artículo, su nombre se mostrará en el campo **article_resolver** . Cualquier entrada proporcionada al solucionador se mostrará en el campo **resolver_info** del conjunto de resultados.  
   
@@ -130,7 +117,7 @@ ms.locfileid: "47821943"
   
 4.  Para cambiar alguna entrada necesaria para el solucionador personalizado, ejecute de nuevo [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique el valor **resolver_info** para **@property** y cualquier entrada necesaria para el solucionador personalizado para **@value**. Para los solucionadores personalizados basados en un procedimiento almacenado, **@resolver_info** es el nombre del procedimiento almacenado. Para más información sobre la entrada requerida, vea [Solucionadores basados en Microsoft COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-unregister-a-custom-conflict-resolver"></a>Para eliminar del registro un solucionador de conflictos personalizado  
+## <a name="unregister-a-custom-conflict-resolver"></a>Eliminación del registro de un solucionador de conflictos personalizado  
   
 1.  En el publicador, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) y tenga en cuenta el nombre del solucionador personalizado para quitar en el campo **value** del conjunto de resultados.  
   
@@ -145,8 +132,8 @@ ms.locfileid: "47821943"
   
  [!code-sql[HowTo#sp_changemerge_resolver](../../../relational-databases/replication/codesnippet/tsql/specify-a-merge-article-_2.sql)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implementar un controlador de lógica de negocios para un artículo de mezcla](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

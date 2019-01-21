@@ -22,12 +22,12 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cad1677bccbb6db5516c1c93c79ad493ca8a27e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3a6b17b2e157042c41690c3c2cdf6ab92cd84a09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699934"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125995"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  Es el nombre de la función de agregado que desea crear.  
   
- **@** *param_name*  
+ **@** _param_name_  
  Uno o más parámetros en el agregado definido por el usuario. El usuario debe proporcionar un valor del parámetro cuando se ejecute la función de agregado. Especifique un nombre de parámetro con una arroba (**@**) como primer carácter. El nombre del parámetro debe cumplir las mismas reglas para [identifiers](../../relational-databases/databases/database-identifiers.md). Los parámetros son locales para la función.  
   
  *system_scalar_type*  
@@ -79,7 +79,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Es el nombre de un tipo definido por el usuario CLR que ya está creado en la base de datos actual. Si no se especifica *udt_schema_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da por supuesto que el tipo pertenece al esquema del usuario actual.  
   
- *assembly_name* [ **.***class_name* ]  
+ *nombre_del_ensamblado* [ **.**_nombre_de_la_clase_ ]  
  Especifica el ensamblado que se va a vincular con la función de agregado definida por el usuario y, opcionalmente, el nombre del esquema al que pertenece el ensamblado y el nombre de la clase del ensamblado que implementa el agregado definido por el usuario. El ensamblado debe haberse creado con antelación en la base de datos mediante una instrucción CREATE ASSEMBLY. *class_name* debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y coincidir con el nombre de una clase que exista en el ensamblado. *class_name* puede ser un nombre completo de espacio de nombres si el lenguaje de programación usado para escribir la clase usa espacios de nombres, como C#. Si no se especifica *class_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que es el mismo que *aggregate_name*.  
   
 ## <a name="remarks"></a>Notas  
@@ -116,7 +116,7 @@ EXTERNAL NAME [StringUtilities].[Microsoft.Samples.SqlServer.Concatenate];
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

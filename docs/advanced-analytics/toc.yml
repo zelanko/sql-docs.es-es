@@ -94,7 +94,7 @@ items:
     items:
     - name: Creación de modelos basados en particiones
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: Análisis en base de datos para desarrolladores de SQL
+    - name: R para desarrolladores de SQL
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
       - name: 1 - Exploración de datos
@@ -105,7 +105,7 @@ items:
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
       - name: 4 - Predicciones
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: Análisis en base de datos para científicos de datos
+    - name: SQL para científicos de datos R
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
       - name: 1 - Exploración de datos
@@ -154,7 +154,7 @@ items:
     items:
     - name: Creación de un modelo de Python mediante revoscalepy
       href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Información sobre análisis en base de datos
+    - name: Python para desarrolladores de SQL
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
       - name: 1 - Exploración de datos
@@ -329,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: 9e76e68b7b970c64050136b3ae9cb9c486c297c2
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 2f3ba355f5d2cb9a7ddcb60cfa8a59e93a1203de
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046605"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405696"

@@ -33,18 +33,18 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a5a265f75e983ec6994114196b6890f13d94e850
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299972"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420230"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Ediciones y características admitidas de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   > [!div class="nextstepaction"]
-  > [Comparta sus comentarios sobre la tabla de contenido dela documentación de SQL!](https://aka.ms/sqldocsurvey)
+  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 En este tema se proporcionan detalles de las características compatibles con las ediciones de SQL Server.  En este momento, no hay ningún cambio en las características compatibles con las ediciones de SQL Server 2017.  
   
@@ -145,7 +145,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Creación de reflejo de base de datos|Sí|Sí<br /><br /> Solo seguridad completa|Solo testigo|Solo testigo|Solo testigo| 
 |Compresión de copia de seguridad|Sí|Sí|No|No|No| 
 |Instantáneas de base de datos|Sí|Sí <sup>3</sup>|Sí <sup>3</sup>|Sí <sup>3</sup>|Sí <sup>3</sup>|
-|Instancias de clúster de conmutación por error de AlwaysOn|Sí<br /><br /> El número de nodos es el sistema operativo máximo|Sí<br /><br /> Compatibilidad con 2 nodos|No|No|No|  
+|Instancias de clúster de conmutación por error de AlwaysOn|Sí<br /><br /> 16|Sí<br /><br /> Compatibilidad con 2 nodos|No|No|No|  
 |Grupos de disponibilidad AlwaysOn|Sí<br /><br /> Hasta 8 réplicas secundarias, incluidas 2 réplicas secundarias sincrónicas|No|No|No|No|
 |Grupos de disponibilidad básica <sup>2</sup>|No|Sí<br /><br /> Compatibilidad con 2 nodos|No|No|No|
 |Restauración de archivos y páginas en línea|Sí|No|No|No|No|

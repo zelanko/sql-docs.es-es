@@ -15,15 +15,15 @@ helpviewer_keywords:
 - revoking permissions to access tables
 - object permissions [SQL Server], revoking
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55c06191de80cf76f6ced789f2fe10ff8c1c79ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623463"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327706"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE (permisos de objeto de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ALL  
  Si revoca ALL no se revocan todos los permisos posibles. Revocar ALL es equivalente a revocar todos los permisos [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 aplicables al objeto especificado. El significado de ALL varía de la siguiente forma:  
   
- Permisos de función escalar: EXECUTE, REFERENCES.  
+ Permisos de la función escalar: EXECUTE, REFERENCES.  
   
  Permisos de función con valores de tabla: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
@@ -158,7 +158,7 @@ REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;
 GO  
 ```  
   
-### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>B. Revocar el permiso EXECUTE en un procedimiento almacenado  
+### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>b. Revocar el permiso EXECUTE en un procedimiento almacenado  
  En el siguiente ejemplo se revoca el permiso `EXECUTE` para el procedimiento almacenado `HumanResources.uspUpdateEmployeeHireInfo` a un rol de aplicación denominado `Recruiting11`.  
   
 ```  
@@ -178,7 +178,7 @@ REVOKE REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [Permisos de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  

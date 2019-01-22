@@ -1,7 +1,7 @@
 ---
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,19 +17,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 591d2dcbb8a14cff7e4595bdeeab93787f51c5cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980121"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419880"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Devuelve la cadena proporcionada como primer argumento después de que algunos caracteres especificados en el segundo argumento se hayan convertido en un conjunto de destino de caracteres especificado en el tercer argumento.
 
-## <a name="syntax"></a>Sintaxis   
+## <a name="syntax"></a>Sintaxis
+
 ```
 TRANSLATE ( inputString, characters, translations) 
 ```
@@ -45,7 +47,8 @@ TRANSLATE ( inputString, characters, translations)
 *translations*   
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cadena que contiene los caracteres de sustitución. *translations* debe tener el mismo tipo de datos y la misma longitud que *characters*.
 
-## <a name="return-types"></a>Tipos devueltos   
+## <a name="return-types"></a>Tipos devueltos
+
 Devuelve una expresión de caracteres del mismo tipo de datos que `inputString`, donde se reemplazan los caracteres del segundo argumento con los caracteres coincidentes del tercer argumento.
 
 ## <a name="remarks"></a>Notas   
@@ -57,15 +60,19 @@ El comportamiento de la función `TRANSLATE` es equivalente a usar varias funcio
 
 `TRANSLATE` siempre reconoce la intercalación de SC.
 
-## <a name="examples"></a>Ejemplos   
+## <a name="examples"></a>Ejemplos
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Reemplazar corchetes y llaves con llaves normales    
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Reemplazar corchetes y llaves con llaves normales
+
 En esta consulta se reemplazan corchetes y llaves en la cadena de entrada entre paréntesis:
-```
+
+```sql
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
+
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-```
+
+```plain_text
 2*(3+4)/(7-2)
 ```
 
@@ -98,8 +105,10 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>b. Convertir puntos GeoJSON en WKT    
-GeoJSON es un formato para codificar una variedad de estructuras de datos geográficos. Con la función `TRANSLATE`, los desarrolladores pueden convertir fácilmente los puntos GeoJSON a formato WKT y viceversa. En esta consulta se reemplazan corchetes y llaves en la entrada con llaves normales:   
+###  <a name="b-convert-geojson-points-into-wkt"></a>b. Convertir puntos GeoJSON en WKT
+
+GeoJSON es un formato para codificar una variedad de estructuras de datos geográficos. Con la función `TRANSLATE`, los desarrolladores pueden convertir fácilmente los puntos GeoJSON a formato WKT y viceversa. En esta consulta se reemplazan corchetes y llaves en la entrada con llaves normales:
+
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -107,11 +116,9 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 
-
 |Punto  |Coordenadas |  
----------|--------- |
-(137.4  72.3) |[137.4,72.3] |
-
+|---------|--------- |
+|(137.4  72.3) |[137.4,72.3] |
 
 ### <a name="c-use-the-translate-function"></a>C. Uso de la función TRANSLATE
 
@@ -128,6 +135,7 @@ Los resultados son:
 
 
 ## <a name="see-also"></a>Consulte también
+
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

@@ -14,18 +14,18 @@ ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0aba0eeb6d3d6450a0493a4cf06a8c58bb21d23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6737a995db78f2a5ba625ddf200a0171582026ae
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656003"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419740"
 ---
 # <a name="installing-the-software-odbc"></a>Instalar el Software (ODBC)
 > [!IMPORTANT]  
 >  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, use el controlador ODBC proporcionado por Oracle.  
   
- El controlador ODBC para Oracle es uno de los componentes de acceso a datos. Acompaña a otros componentes ODBC, como el Administrador de orígenes de datos ODBC y debe estar instalada. El controlador también se puede encontrar en "Controladores y otras descargas" en el sitio Web en línea de Microsoft Product Support Services en www.microsoft.com.  
+ El controlador ODBC para Oracle es uno de los componentes de acceso a datos. Acompaña a otros componentes ODBC, como el Administrador de orígenes de datos ODBC y debe estar instalada. El controlador también puede encontrarse bajo "Controladores y otras descargas" en el sitio Web en línea de Microsoft Product Support Services en [www.microsoft.com](https://www.microsoft.com).  
   
  Debe instalarse el software de red según su propia documentación. El controlador ODBC para Oracle no requiere ninguna consideración especial instalación siempre que el software de red es compatible.  
   

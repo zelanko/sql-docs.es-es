@@ -14,16 +14,16 @@ helpviewer_keywords:
 - database permissions [SQL Server], revoking
 - REVOKE statement, databases
 ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f20ccd8161e887a40848c2304d9ce098453bf82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e746730f0a2da408bc838e9074b9049d748a1682
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676523"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326416"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE (permisos de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -216,7 +216,7 @@ REVOKE CREATE CERTIFICATE FROM MelanieK;
 GO  
 ```  
   
-### <a name="b-revoking-references-permission-from-an-application-role"></a>B. Revocar el permiso REFERENCES a un rol de aplicación  
+### <a name="b-revoking-references-permission-from-an-application-role"></a>b. Revocar el permiso REFERENCES a un rol de aplicación  
  En el siguiente ejemplo se revoca el permiso `REFERENCES` para la base de datos `AdventureWorks2012` del rol de aplicación `AuditMonitor`.  
   
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
@@ -236,7 +236,7 @@ REVOKE VIEW DEFINITION FROM CarmineEs CASCADE;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [GRANT &#40;permisos de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   

@@ -24,16 +24,16 @@ helpviewer_keywords:
 - cryptography [SQL Server], certificates
 - CREATE CERTIFICATE statement
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58c5ec598ca1577c9ab4c3480260350f435e7262
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42a486a50e49e2d64024355617e77a84833edba9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825833"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326546"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -199,7 +199,7 @@ CREATE CERTIFICATE Shipping04
 GO  
 ```  
   
-### <a name="b-creating-a-certificate-from-a-file"></a>B. Crear un certificado desde un archivo  
+### <a name="b-creating-a-certificate-from-a-file"></a>b. Crear un certificado desde un archivo  
  En el ejemplo siguiente se crea un certificado en la base de datos y se carga el par de claves desde los archivos.  
   
 ```  
@@ -243,7 +243,7 @@ CREATE CERTIFICATE Shipping04
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   

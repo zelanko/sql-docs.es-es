@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397614"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419800"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54397614"
   Contiene información sobre cada plan de ejecución asociado con una consulta.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|Clave principal.|  
 |**query_id**|**bigint**|Clave externa. Se une a [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
 |**plan_group_id**|**bigint**|Id. de grupo del plan. Las consultas de cursor suele requieran varios (rellenar y capturar) planes. Rellenar y son los planes de recuperación que se compilan juntos en el mismo grupo.<br /><br /> 0 significa que el plan no está en un grupo.|  
@@ -57,13 +57,8 @@ ms.locfileid: "54397614"
 |**last_execution_time**|**datetimeoffset**|Último tiempo de ejecución hace referencia a la última hora de finalización del plan de consulta.|  
 |**avg_compile_duration**|**float**|Planee las estadísticas de compilación.|  
 |**last_compile_duration**|**bigint**|Planee las estadísticas de compilación.|  
-|**plan_forcing_type**|**int**|Tipo de forzar el plan.<br /><br />
-0: Ninguno<br /><br />
-1: MANUAL<br /><br />
-2: AUTO| |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />
-NINGUNO: No forzar el plan<br /><br />
-MANUAL: Plan forzado por el usuario<br /><br />
-AUTO: Plan forzado por el ajuste automático |
+|**plan_forcing_type**|**int**|Tipo de forzar el plan.<br /><br />0: Ninguno<br /><br />1: MANUAL<br /><br />2: AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Descripción de texto de plan_forcing_type.<br /><br />NINGUNO: No forzar el plan<br /><br />MANUAL: Plan forzado por el usuario<br /><br />AUTO: Plan forzado por el ajuste automático|  
 
 ## <a name="plan-forcing-limitations"></a>Limitaciones de forzar el plan
 El Almacén de consultas dispone de un mecanismo para obligar al optimizador de consultas a usar un determinado plan de ejecución. Pero existen algunas limitaciones que pueden evitar la aplicación de un plan. 

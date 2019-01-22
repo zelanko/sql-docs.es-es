@@ -13,15 +13,15 @@ helpviewer_keywords:
 - DENY statement, objects
 - table permissions [SQL Server]
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01c2e711b68cf8bd143c19be0567bb6de8265701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662793"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326776"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY (permisos de objeto de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ DENY <permission> [ ,...n ] ON
  ALL  
  Si deniega ALL no se deniegan todos los permisos posibles. Denegar ALL es equivalente a denegar todos los permisos ANSI-92 aplicables al objeto especificado. El significado de ALL varía de la siguiente forma:  
   
- - Permisos de función escalar: EXECUTE, REFERENCES.  
+ - Permisos de la función escalar: EXECUTE, REFERENCES.  
  - Permisos de función con valores de tabla: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
  - Permisos de procedimiento almacenado: EXECUTE.  
  - Permisos de tabla: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
@@ -148,7 +148,7 @@ DENY SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. Denegar el permiso EXECUTE en un procedimiento almacenado  
+### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>b. Denegar el permiso EXECUTE en un procedimiento almacenado  
  En el siguiente ejemplo se deniega el permiso `EXECUTE` para el procedimiento almacenado `HumanResources.uspUpdateEmployeeHireInfo` a un rol de aplicación denominado `Recruiting11`.  
   
 ```  
@@ -166,7 +166,7 @@ DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  

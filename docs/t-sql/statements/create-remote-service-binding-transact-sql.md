@@ -35,15 +35,15 @@ helpviewer_keywords:
 - conversation security [Service Broker]
 - remote service bindings [Service Broker], creating
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 53b43fece12144b60a4d6b0cfcd0918997e55613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00726a70cc40548f3c75b786a9fa2b601ec9dd57
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710513"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326376"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser ;  
 ```  
   
-### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. Crear un enlace de servicio remoto con autenticación anónima  
+### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>b. Crear un enlace de servicio remoto con autenticación anónima  
  En el ejemplo siguiente se crea un enlace para el servicio `//Adventure-Works.com/services/AccountsPayable`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utiliza el certificado de la entidad de seguridad de base de datos `APUser` para intercambiar la clave de cifrado de sesión con el servicio remoto. Service Broker no se autentica en el servicio remoto. En la base de datos que hospeda el servicio remoto, los mensajes se entregan como usuario **guest** (invitado).  
   
 ```  
@@ -115,7 +115,7 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser, ANONYMOUS=ON ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
  [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

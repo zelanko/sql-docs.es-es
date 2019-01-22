@@ -1,7 +1,7 @@
 ---
 title: Cambios sustanciales en la base de datos del motor de las características de SQL Server 2014 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: release-landing
@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe4dc2f55b8d9b1bc9475e936341d24d16ce77a6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375277"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420210"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Cambios recientes en las características del Motor de base de datos de SQL Server 2014
   En este tema se describe cambios importantes en el [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] y versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Estos cambios pueden provocar errores en las aplicaciones, en los scripts o en las funcionalidades basados en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Podría encontrar estos problemas al actualizar. Para obtener más información, vea [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -42,7 +42,6 @@ ms.locfileid: "53375277"
 |ALTER TABLE|La instrucción ALTER TABLE solo permite nombres de tabla de dos partes (esquema.objeto). Especifica el nombre de una tabla con los siguientes formatos ahora produce un error en tiempo de compilación con el error 117:<br /><br /> servidor.baseDeDatos.esquema.tabla<br /><br /> .baseDeDatos.esquema.tabla<br /><br /> ..esquema.tabla<br /><br /> En versiones anteriores, al especificar el formato servidor.baseDeDatos.esquema.tabla se devolvía el error 4902. La especificación del formato .baseDeDatos.esquema.tabla o ..esquema.tabla se realizaba correctamente. Para resolver el problema, quite el uso de un prefijo de 4 partes.|  
 |Examinar los metadatos|Al consultar una vista con FOR BROWSE o SET NO_BROWSETABLE ON, ahora se devuelven los metadatos de la vista, no los metadatos del objeto subyacente. Este comportamiento ahora se corresponde al de otros métodos de examinar los metadatos.|  
 |SOUNDEX|Bajo el nivel 110 de la compatibilidad de la base de datos, la función SOUNDEX implementa las nuevas reglas que pueden causar que los valores computados por la función sean diferentes que los valores computados bajo niveles anteriores de compatibilidad. Después de actualizar al nivel de compatibilidad 110, es posible que tenga que regenerar los índices, los montones o las restricciones CHECK que usan la función SOUNDEX. Para más información, vea [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql).
- .|  
 |Mensaje de recuento de filas para las instrucciones DML con error|En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssDE](../includes/ssde-md.md)] devolverá continuamente el token TDS DONE con RowCount: 0 a los clientes cuando se produzca un error en una instrucción DML. En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se enviaba un valor incorrecto de -1 al cliente cuando la instrucción DML con error se encontraba en un bloque TRY-CATCH y tenía parámetros automáticos con [!INCLUDE[ssDE](../includes/ssde-md.md)] o el bloque TRY-CATCH no estaba en el mismo nivel que la instrucción con el error. Por ejemplo, si un bloque de TRY-CATCH llama a un procedimiento almacenado y se produce un error en una instrucción DML del procedimiento, el cliente recibirá incorrectamente un valor de -1.<br /><br /> Se producirán errores en las aplicaciones que se basen en este comportamiento incorrecto.|  
 |SERVERPROPERTY ('Edition')|Edición de producto instalada de la instancia de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Utilice el valor de esta propiedad para determinar las características y los límites, como por ejemplo el número máximo de CPU admitidas por el producto instalado.<br /><br /> Según la edición Enterprise instalada, puede devolver 'Enterprise Edition' o ' Enterprise Edition: Las licencias basadas en núcleo '. Las ediciones Enterprise se diferencian en función de la capacidad de procesamiento máximo de una sola instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información sobre los límites de capacidad de proceso en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consulte [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|El `CREATE LOGIN WITH PASSWORD = '` *contraseña* `' HASHED` opción no se puede usar con los valores hash creados por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 o anterior.|  
@@ -57,7 +56,7 @@ ms.locfileid: "53375277"
 |sys.dm_os_memory_cache_entries|La columna pages_allocated_count columna ha sido pages_kb cuyo nombre ha cambiado.|  
 |sys.dm_os_memory_clerks|Se ha quitado el multi_pages_kb de columna.<br /><br /> La columna single_pages_kb columna ha sido pages_kb cuyo nombre ha cambiado.|  
 |sys.dm_os_memory_nodes|Se han cambiado las columnas siguientes:<br /><br /> single_pages_kb es ahora: <br />                            pages_kb<br /><br /> multi_pages_kb es ahora: <br />                            foreign_committed_kb|  
-|sys.dm_os_memory_objects|Se ha cambiado el nombre de las siguientes columnas.<br /><br /> pages_allocated_count es ahora:<br />                            pages_in_bytes<br /><br /> max_pages_allocated_count es ahora: max_pages_in_bytes|  
+|sys.dm_os_memory_objects|Se ha cambiado el nombre de las siguientes columnas.<br /><br /> pages_allocated_count es ahora:<br />                            pages_in_bytes<br /><br /> max_pages_allocated_count is now: max_pages_in_bytes|  
 |sys.dm_os_sys_info|Se han cambiado las columnas siguientes:<br /><br /> physical_memory_in_bytes es ahora: <br />                            physical_memory_kb<br /><br /> valor de bpool_commit_target es ahora: <br />                            committed_target_kb<br /><br /> bpool_visible es ahora: <br />                            visible_target_kb<br /><br /> virtual_memory_in_bytes es ahora: <br />                            virtual_memory_kb<br /><br /> bpool_commited es ahora:<br />                            committed_kb|  
 |sys.dm_os_workers|La columna regional se ha quitado.|  
   
@@ -146,7 +145,7 @@ ms.locfileid: "53375277"
 #### <a name="affected-xquery-functions-and-operators"></a>Funciones y operadores de XQuery afectados  
  Las funciones y los operadores de XQuery siguientes ahora administran los pares suplentes UTF-16 correctamente en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]:  
   
--   **fn: longitud**. Sin embargo, si se pasa un par suplente no válido o parcial como argumento, el comportamiento de **longitud de cadena** es indefinido.  
+-   **fn:string-length**. Sin embargo, si se pasa un par suplente no válido o parcial como argumento, el comportamiento de **longitud de cadena** es indefinido.  
   
 -   **fn:substring**.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "53375277"
   
  Las siguientes funciones demuestran el nuevo comportamiento descrito anteriormente solo cuando el URI del espacio de nombres predeterminado corresponde al espacio de nombres en la recomendación final, es decir, [ http://www.w3.org/2005/xpath-functions ](http://www.w3.org/2005/xpath-functions). Cuando el nivel de compatibilidad es 110 o superior, de forma predeterminada, [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] enlaza el espacio de nombres de función predeterminado a este espacio de nombres. No obstante, estas funciones demuestran el nuevo comportamiento cuando se usa este espacio de nombres independientemente del nivel de compatibilidad.  
   
--   **fn-longitud**  
+-   **fn:string-length**  
   
 -   **fn:substring**  
   
@@ -215,7 +214,7 @@ ms.locfileid: "53375277"
 |Ver|Descripción|  
 |----------|-----------------|  
 |sys.dm_os_sys_info|Se quitan las columnas sqlserver_start_time_cpu_ticks y cpu_ticks_in_ms.|  
-|Sys.dm_exec_query_resource_semaphoressys.dm_exec_query_memory_grants|La columna resource_semaphore_id no es un identificador único en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Este cambio puede afectar a la solución de problemas de ejecución de consultas. Para obtener más información, consulte [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
+|sys.dm_exec_query_resource_semaphoressys.dm_exec_query_memory_grants|La columna resource_semaphore_id no es un identificador único en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Este cambio puede afectar a la solución de problemas de ejecución de consultas. Para obtener más información, consulte [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
   
 ### <a name="errors-and-events"></a>Errores y eventos  
   

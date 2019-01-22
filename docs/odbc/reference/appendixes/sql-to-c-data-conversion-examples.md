@@ -1,7 +1,7 @@
 ---
 title: SQL a ejemplos de conversión de datos de C | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,34 +14,35 @@ ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c528a4a7bf60aae399924d651443e574ba9ae4fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db00ac11e2e3ec8cc0119dfa7f34452409689d6d
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778733"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420111"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL a los ejemplos de conversión de datos de C
+
 Los ejemplos que se muestra en la tabla siguiente muestran cómo el controlador convierte datos de SQL a C datos:  
   
 |Tipo SQL<br /><br /> identificador|SQL data<br /><br /> value|Tipo de C<br /><br /> identificador|Búfer<br /><br /> length|**TargetValuePtr*|SQLSTATE|  
 |-----------------------------|------------------------|---------------------------|-----------------------|------------------------|--------------|  
 |SQL_CHAR|abcdef|SQL_C_CHAR|7|abcdef\0 [a]|n/d|  
-|SQL_CHAR|abcdef|SQL_C_CHAR|6|abcde\0 [a]|01004|  
-|SQL_DECIMAL|1234.56|SQL_C_CHAR|8|1234.56\0 [a]|n/d|  
-|SQL_DECIMAL|1234.56|SQL_C_CHAR|5|1234\0 [a]|01004|  
+|SQL_CHAR|abcdef|SQL_C_CHAR|6|abcde\0[a]|01004|  
+|SQL_DECIMAL|1234.56|SQL_C_CHAR|8|1234.56\0[a]|n/d|  
+|SQL_DECIMAL|1234.56|SQL_C_CHAR|5|1234\0[a]|01004|  
 |SQL_DECIMAL|1234.56|SQL_C_CHAR|4|----|22003|  
 |SQL_DECIMAL|1234.56|SQL_C_FLOAT|no se tiene en cuenta|1234.56|n/d|  
 |SQL_DECIMAL|1234.56|SQL_C_SSHORT|no se tiene en cuenta|1234|01S07|  
 |SQL_DECIMAL|1234.56|SQL_C_STINYINT|no se tiene en cuenta|----|22003|  
-SQL_DOUBLE|1.2345678|SQL_C_DOUBLE|no se tiene en cuenta|1.2345678|n/d|  
+|SQL_DOUBLE|1.2345678|SQL_C_DOUBLE|no se tiene en cuenta|1.2345678|n/d|  
 |SQL_DOUBLE|1.2345678|SQL_C_FLOAT|no se tiene en cuenta|1.234567|n/d|  
 |SQL_DOUBLE|1.2345678|SQL_C_STINYINT|no se tiene en cuenta|1|n/d|  
-|SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|11|1992-12-31\0 [a]|n/d|  
+|SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|11|1992-12-31\0[a]|n/d|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|10|-----|22003|  
-|SQL_TYPE_DATE|1992-12-31|SQL_C_TIMESTAMP|no se tiene en cuenta|1992,12,31, 0,0,0,0 [b]|n/d|  
-|SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|23|1992-12-31 23:45:55.12\0 [a]|n/d|  
-SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|22|1992-12-31 23:45:55.1\0 [a]|01004|  
+|SQL_TYPE_DATE|1992-12-31|SQL_C_TIMESTAMP|no se tiene en cuenta|1992,12,31, 0,0,0,0[b]|n/d|  
+|SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|23|1992-12-31 23:45:55.12\0[a]|n/d|  
+|SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|22|1992-12-31 23:45:55.1\0[a]|01004|  
 |SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|18|----|22003|  
   
  [a] "\0" representa un byte de una terminación null. El controlador siempre termina en null los datos SQL_C_CHAR.  

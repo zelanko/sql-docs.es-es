@@ -16,16 +16,16 @@ helpviewer_keywords:
 - DENY statement, database scoped credentials
 - denying permissions [SQL Server], database scoped credential
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4074d587bd170351c00a71bca81f6169b1cc021f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2f58fa15ba67cfcf84a35f130fa70eff0d981c0e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506097"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327366"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>Credencial de ámbito de base de datos DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ DENY permission  [ ,...n ]
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso CONTROL en la credencial de ámbito de base de datos. Si se utiliza la cláusula AS, la entidad de seguridad especificada debe poseer la credencial de ámbito de base de datos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Credencial de ámbito de base de datos GRANT (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
  [Credencial de ámbito de base de datos REVOKE (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   

@@ -6,28 +6,28 @@ manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01585c399d648bbc72d7d2811d24b2558b947bff
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e95415c689fda43c2a9d118713c96d0a1d531904
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400608"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420000"
 ---
 # <a name="backup-and-restore"></a>Copias de seguridad y restauración
+
 Describe cómo los datos de copia de seguridad y restauración para el almacenamiento de datos paralelos (PDW). Operaciones de copia de seguridad y restauración se utilizan para la recuperación ante desastres. También se pueden usar copias de seguridad y restauración para copiar una base de datos de un dispositivo a otro dispositivo.  
     
-## <a name="BackupRestoreBasics"></a>Conceptos básicos de copia de seguridad y restauración  
+## <a name="BackupRestoreBasics"></a>Conceptos básicos de copia de seguridad y restauración
+
 Un PDW *copia de seguridad de base de datos* es una copia de una base de datos del dispositivo, se almacenan en un formato para que se puede usar para restaurar la base de datos original en un dispositivo.  
   
 Se crea una copia de seguridad de la base de datos PDW con el [copia de seguridad de la base de datos](../t-sql/statements/backup-database-parallel-data-warehouse.md) instrucción t-SQL y con formato para su uso con el [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md) instrucción; resulta inutilizable para otros fines. Solo se puede restaurar la copia de seguridad a un dispositivo con el mismo número o un número mayor de nodos de proceso.  
   
 <!-- MISSING LINKS
-
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
-
 -->
   
 PDW usa tecnología de copia de seguridad de SQL Server para copias de seguridad y restaurar bases de datos del dispositivo. Opciones de copia de seguridad de SQL Server están preconfiguradas para usar la compresión de copia de seguridad. No se pueden establecer opciones de copia de seguridad como la compresión, suma de comprobación, tamaño de bloque y recuento de búferes.  
@@ -36,7 +36,8 @@ Las copias de seguridad de base de datos se almacenan en uno o más servidores c
   
 Las copias de seguridad se almacenan en el servidor de copia de seguridad como un conjunto de archivos en el sistema de archivos de Windows. Solo se puede restaurar una copia de seguridad de base de datos PDW para PDW. Sin embargo, puede archivar copias de seguridad de base de datos desde el servidor de copia de seguridad en otra ubicación mediante el uso de procesos de copia de seguridad de archivos de Windows estándares. Para obtener más información acerca de los servidores de copia de seguridad, consulte [adquirir y configurar un servidor de copia de seguridad](acquire-and-configure-backup-server.md).  
   
-## <a name="BackupTypes"></a>Tipos de copia de seguridad de base de datos  
+## <a name="BackupTypes"></a>Tipos de copia de seguridad de base de datos
+
 Hay dos tipos de datos que requieren una copia de seguridad: bases de datos de usuario y del sistema (por ejemplo, la base de datos maestra). PDW no copia de seguridad del registro de transacciones.  
   
 Una copia de seguridad completa de la base de datos es una copia de seguridad de una base de datos completa de PDW. Este es el tipo de copia de seguridad predeterminado. Una copia de seguridad completa de una base de datos de usuario incluye usuarios de base de datos y roles de base de datos. Una copia de seguridad de master incluye inicios de sesión.  
@@ -49,7 +50,8 @@ Una copia de seguridad diferencial solo se admite para bases de datos de usuario
   
 Para el dispositivo completo de copia de seguridad, deberá realizar una copia de seguridad de todas las bases de datos de usuario y una copia de seguridad de la base de datos maestra.  
   
-## <a name="BackupProc"></a>Proceso de copia de seguridad de base de datos  
+## <a name="BackupProc"></a>Proceso de copia de seguridad de base de datos
+
 El siguiente diagrama muestra el flujo de datos durante una copia de seguridad de base de datos.  
   
 ![Proceso de copia de seguridad PDW](media/backup-process.png "proceso de copia de seguridad de PDW")  
@@ -82,14 +84,16 @@ El proceso de copia de seguridad funciona del siguiente modo:
   
     -   No se puede cambiar el nombre de la copia de seguridad antes de realizar una restauración. El nombre del directorio de copia de seguridad debe coincidir con el nombre del nombre original de la copia de seguridad. El nombre original de la copia de seguridad se encuentra en el archivo backup.xml dentro del directorio de copia de seguridad. Para restaurar una base de datos con un nombre diferente, puede especificar el nuevo nombre en el comando restore. Por ejemplo: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
-## <a name="RestoreModes"></a>Modos de restauración de bases de datos  
+## <a name="RestoreModes"></a>Modos de restauración de bases de datos
+
 Una restauración completa de la base de datos vuelve a crea la base de datos PDW con los datos en la copia de seguridad de base de datos. La restauración de base de datos se realiza mediante la restauración en primer lugar una copia de seguridad completa y, a continuación, si lo desea restaurar una copia de seguridad diferencial. La restauración de base de datos incluye los usuarios de base de datos y roles de base de datos.  
   
 Una restauración solo encabezado devuelve la información de encabezado para una base de datos. No restaurar datos en el dispositivo.  
   
 Una restauración de dispositivo es una restauración de la aplicación completa. Esto incluye la restauración de todas las bases de datos de usuario y la base de datos maestra.  
   
-## <a name="RestoreProc"></a>Proceso de restauración  
+## <a name="RestoreProc"></a>Proceso de restauración
+
 El siguiente diagrama muestra el flujo de datos durante una restauración de base de datos.  
   
 ![Proceso de restauración](media/restore-process.png "proceso de restauración")  
@@ -130,7 +134,8 @@ Después de la redistribución, cada nodo de ejecución contendrá menos datos r
 |---------------------------|---------------|  
 |Prepare un servidor como un servidor de copia de seguridad.|[Adquirir y configurar un servidor de copia de seguridad ](acquire-and-configure-backup-server.md)|  
 |Copia de seguridad de una base de datos.|[BASE DE DATOS DE COPIA DE SEGURIDAD](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|Restaurar una base de datos.|[RESTAURAR BASE DE DATOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|Restaurar una base de datos.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+
 <!-- MISSING LINKS
 |Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.| 

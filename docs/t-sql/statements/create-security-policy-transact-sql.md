@@ -23,15 +23,15 @@ helpviewer_keywords:
 - CREATE SECURITY POLICY statement
 - Row-Level Security
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01417c90e5583b8b2276f05ec92347758689d284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f5732c63ae381c0ca9c120b64aef3915dc6db926
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532482"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326086"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ADD FILTER PREDICATE [rls].[fn_securitypredicate]([CustomerId])
 ON [dbo].[Customer];  
 ```  
   
-### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>B. Creación de una directiva que afecta a varias tablas  
+### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>b. Creación de una directiva que afecta a varias tablas  
  La siguiente sintaxis crea una directiva de seguridad con tres predicados de filtro en tres tablas diferentes y habilita la directiva de seguridad.  
   
 ```  
@@ -140,7 +140,7 @@ CREATE SECURITY POLICY rls.SecPol
     ADD BLOCK PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales AFTER INSERT;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   

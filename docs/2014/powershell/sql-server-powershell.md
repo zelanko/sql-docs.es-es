@@ -1,7 +1,7 @@
 ---
 title: SQL Server PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 481e31b23dde3f1fd37ac1af513cf7790dc31250
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349649"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420080"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] admite Windows PowerShell, que es un poderoso shell de scripting que permite a los administradores y desarrolladores automatizar la administración de servidores y la implementación de aplicaciones. El lenguaje de Windows PowerShell admite una lógica más compleja que los scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] , con lo que se permite a los administradores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generar poderosos scripts de administración. Los scripts de Windows PowerShell también se pueden utilizar para administrar otros productos de servidor de [!INCLUDE[msCoName](../includes/msconame-md.md)] . Esto ofrece a los administradores un lenguaje común de scripting para los diferentes servidores.  
@@ -39,8 +39,7 @@ ms.locfileid: "53349649"
 |Describe el mecanismo preferido para ejecutar los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell; para abrir una sesión de PowerShell y cargar el módulo de `sqlps`. Las cargas de módulos `sqlps` de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] del proveedor y cmdlets de PowerShell, y los ensamblados (SMO) de objetos de administración de SQL Server usados por el proveedor y cmdlets.|[Importar el módulo SQLPS](../database-engine/import-the-sqlps-module.md)|  
 |Describe cómo cargar solo los ensamblados SMO sin el proveedor o los cmdlets.|[Cargar ensamblados SMO en Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)|  
 |Describe cómo ejecutar una sesión de Windows PowerShell haciendo clic con el botón derecho en un nodo del **Explorador de objetos**. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] inicia una sesión de Windows PowerShell, carga el `sqlps` módulo y establece la ruta de acceso del proveedor de SQL Server en el objeto seleccionado.|[Ejecutar Windows PowerShell desde SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
-|Describe cómo crear los pasos de trabajo del Agente SQL Server que ejecutan un script de Windows PowerShell. Los trabajos entonces se pueden programar para ejecutarse a horas específicas o en respuesta a eventos.|[Pasos de ejecución de Windows PowerShell del Agente SQL Server] (run-windows-powershell-steps-in-sql-server-agent.md
-)|  
+|Describe cómo crear los pasos de trabajo del Agente SQL Server que ejecutan un script de Windows PowerShell. Los trabajos entonces se pueden programar para ejecutarse a horas específicas o en respuesta a eventos.|[Ejecutar los pasos Windows PowerShell del Agente SQL Server](run-windows-powershell-steps-in-sql-server-agent.md)|  
 |Describe cómo usar las rutas de acceso del proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para navegar por una jerarquía de objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Proveedor de SQL Server PowerShell Provider](sql-server-powershell-provider.md)|  
 |Describe cómo usar los cmdlets de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que especifican acciones de [!INCLUDE[ssDE](../includes/ssde-md.md)] como ejecutar un script de [!INCLUDE[tsql](../includes/tsql-md.md)] .|[Utilizar los cmdlets del motor de base de datos](../database-engine/use-the-database-engine-cmdlets.md)|  
 |Describe cómo especificar los identificadores delimitados de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que contienen caracteres no admitidos por Windows PowerShell.|[Identificadores de SQL Server en PowerShell](sql-server-identifiers-in-powershell.md)|  

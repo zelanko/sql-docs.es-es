@@ -1,7 +1,7 @@
 ---
 title: Tipos de datos de Microsoft Access | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11f45698a5ad8b7fd05052cbb2d23520790c425a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692983"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420180"
 ---
 # <a name="microsoft-access-data-types"></a>Tipos de datos de Microsoft Access
 En la tabla siguiente se muestra los tipos de datos de Microsoft Access, tipos de datos utilizados para crear tablas y los tipos de datos SQL de ODBC.  
@@ -38,8 +38,8 @@ En la tabla siguiente se muestra los tipos de datos de Microsoft Access, tipos d
 |FECHA Y HORA|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |BINARIO LARGO|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXTO LARGO|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
-|MEMORANDO|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
+|TEXTO LARGO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
+|MEMORANDO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |NÚMERO (tamaño del campo = SOLTERO)|ÚNICO|SQL_REAL|  
 |NÚMERO (tamaño del campo = doble)|DOUBLE|SQL_DOUBLE|  
 |NÚMERO (tamaño del campo = BYTE)|BYTE SIN SIGNO|SQL_TINYINT|  
@@ -47,8 +47,8 @@ En la tabla siguiente se muestra los tipos de datos de Microsoft Access, tipos d
 |NÚMERO (tamaño del campo = entero largo)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|SQL_WVARCHAR SQL_VARCHAR [1] [2]|  
-ARBINARY|VARBINARY|SQL_VARBINARY|  
+|TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
+|VARBINARY|VARBINARY|SQL_VARBINARY|  
   
  [1] aplicaciones de acceso 4.0. Longitud máxima de 4.000 bytes. Comportamiento es similar al LONGBINARY.  
   

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - denying permissions [SQL Server], application roles
 - application roles [SQL Server], permissions
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 739abfdbf2d25d5df634e7a085c393af9176a659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749373"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327686"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (permisos de entidad de seguridad de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ DENY permission [ ,...n ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>A. Denegar el permiso CONTROL en un usuario para otro usuario  
- En el siguiente ejemplo se deniega el permiso `CONTROL` para el usuario `Wanida` de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] al usuario `RolandX`.  
+ En el siguiente ejemplo se deniega el permiso `CONTROL` para el usuario [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de `Wanida` al usuario `RolandX`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -160,8 +160,8 @@ DENY CONTROL ON USER::Wanida TO RolandX;
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>B. Denegar el permiso VIEW DEFINITION para un rol a un usuario para el que se concedió con GRANT OPTION  
- En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` para el rol `SammamishParking` de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] al usuario de base de datos `JinghaoLiu`. Se especifica la opción `CASCADE` porque al usuario `JinghaoLiu` se le concedió el permiso VIEW DEFINITION con WITH GRANT OPTION.  
+### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>b. Denegar el permiso VIEW DEFINITION para un rol a un usuario para el que se concedió con GRANT OPTION  
+ En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` para el rol [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de `SammamishParking` al usuario de base de datos `JinghaoLiu`. Se especifica la opción `CASCADE` porque al usuario `JinghaoLiu` se le concedió el permiso VIEW DEFINITION con WITH GRANT OPTION.  
   
 ```  
 USE AdventureWorks2012;  
@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Denegar el permiso IMPERSONATE para un usuario a un rol de aplicación  
- En el ejemplo siguiente se deniega el permiso `IMPERSONATE` para el usuario `HamithaL` al rol de aplicación `AccountsPayable17` de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+ En el ejemplo siguiente se deniega el permiso `IMPERSONATE` para el usuario `HamithaL` al rol de aplicación [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de `AccountsPayable17`.  
   
 **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
@@ -181,7 +181,7 @@ DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;
 GO    
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [GRANT &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
  [REVOKE &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   

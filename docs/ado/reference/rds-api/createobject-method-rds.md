@@ -14,12 +14,12 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed2d80793d70418e02d22bf104d21b6d3bec6c4d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599537"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419930"
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea al proxy para el objeto de negocios de destino y devuelve un puntero a él. El proxy paquetes y ordena los datos en el código auxiliar del lado servidor para las comunicaciones con el objeto de negocios enviar solicitudes y datos a través de Internet. Para los objetos del componente en proceso, se utiliza ningún proxy, se proporciona solo un puntero al objeto.  
@@ -32,8 +32,8 @@ Crea al proxy para el objeto de negocios de destino y devuelve un puntero a él.
   
 |Protocolo|Sintaxis|  
 |--------------|------------|  
-|HTTP|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
-|HTTPS|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
+|HTTP|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "https\://awebsrvr")|  
+|HTTPS|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "https\://awebsrvr")|  
 |DCOM|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "computername")|  
 |En curso|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "")|  
   
@@ -41,10 +41,10 @@ Crea al proxy para el objeto de negocios de destino y devuelve un puntero a él.
  *Objeto*  
  Una variable de objeto que se evalúa como un objeto que es del tipo especificado en *ProgID*.  
   
- *Espacio de datos*  
+ *DataSpace*  
  Una variable de objeto que representa un [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto utilizado para crear una instancia del nuevo objeto.  
   
- *Id. de programa*  
+ *ProgID*  
  Un **cadena** valor que contiene el identificador de programación que se especifica un objeto de negocios de servidor que implementa las reglas de negocios de la aplicación.  
   
  *awebsrvr* o *computername*  

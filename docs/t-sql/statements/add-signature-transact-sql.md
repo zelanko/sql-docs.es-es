@@ -15,15 +15,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6a1c422dd7ae2c190f844b70c5a780c0390f86e7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c86a8bf325bc12ce9fc4843038898a579c2308be
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812291"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327916"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Firmar un procedimiento almacenado mediante el uso de un BLOB firmado  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>b. Firmar un procedimiento almacenado mediante el uso de un BLOB firmado  
  En el siguiente ejemplo se crea una base de datos nueva y un certificado que se utilizará en el ejemplo. El ejemplo crea y firma un procedimiento almacenado simple y recupera la firma BLOB de `sys.crypt_properties`. La firma se quita y se agrega otra vez. En el ejemplo se firma el procedimiento utilizando la sintaxis WITH SIGNATURE.  
   
 ```  
@@ -246,7 +246,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
  [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
   

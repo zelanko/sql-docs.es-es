@@ -14,15 +14,15 @@ helpviewer_keywords:
 - REVOKE statement, server permissions
 - servers [SQL Server], permissions
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa458e9c4aef71e7439cb3c40a03f6a6e450f422
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 56703c5c0a2b3bb833b0e600c8dbfbca929ae75a
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704013"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326566"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE (permisos de servidor de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ REVOKE VIEW SERVER STATE FROM WanidaBenshoof;
 GO  
 ```  
   
-### <a name="b-revoking-the-with-grant-option"></a>B. Revocar la opción WITH GRANT  
+### <a name="b-revoking-the-with-grant-option"></a>b. Revocar la opción WITH GRANT  
  En el siguiente ejemplo se revoca el derecho a conceder `CONNECT SQL` desde el inicio de sesión `JanethEsteves` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
@@ -166,7 +166,7 @@ GO
   
  El inicio de sesión todavía dispone del permiso CONNECT SQL, pero ya no puede conceder el permiso a otras entidades de seguridad.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [DENY &#40;permisos de servidor de Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: Configuración predeterminada del protocolo de red de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 197b694f0ff68b459bff7517bbf5701a0452d48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f98a6e019790e7bc4e102a400c6f28f53c344e92
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622093"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419621"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuración predeterminada de protocolo de red de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +32,16 @@ Use el nodo Configuración de red de [!INCLUDE[ssNoVersion_md](../../includes/ss
 
 En la tabla siguiente se describe la configuración tras la instalación.
 
-Edición | Nueva instalación e instalación anterior presente | Memoria compartida | TCP/IP    | Canalizaciones con nombre
+|Edición | Nueva instalación e instalación anterior presente | Memoria compartida | TCP/IP | Canalizaciones con nombre|
 | -------- | -- | -- | -- | --  |  
-Enterprise  | Nueva instalación  | Habilitado   | Habilitado   | Deshabilitadas para las conexiones de red.
-Estándar    | Nueva instalación  | Habilitado   | Habilitado   | Deshabilitadas para las conexiones de red.
-Web | Nueva instalación  | Habilitado   | Habilitado   | Deshabilitadas para las conexiones de red.
-Desarrollador   | Nueva instalación  | Habilitado   | Deshabilitado  | Deshabilitadas para las conexiones de red.
-Evaluation  | Nueva instalación  | Habilitado   | Habilitado   | Deshabilitadas para las conexiones de red.
-SQL Server Express  | Nueva instalación  | Habilitado   | Deshabilitado  | Deshabilitadas para las conexiones de red.
-Todas las ediciones    | Hay una instalación anterior presente, pero no se actualiza.   | Igual que en una instalación nueva  | Igual que en una instalación nueva  | Igual que en una instalación nueva
-Todas las ediciones    | UPGRADE   | Habilitado   | Se conserva la configuración de la instalación anterior.    | Se conserva la configuración de la instalación anterior.
+|Enterprise | Nueva instalación | Habilitado | Habilitado | Deshabilitadas para las conexiones de red.|
+|Estándar | Nueva instalación | Habilitado | Habilitado | Deshabilitadas para las conexiones de red.|
+|Web | Nueva instalación | Habilitado | Habilitado | Deshabilitadas para las conexiones de red.|
+|Desarrollador | Nueva instalación | Habilitado | Deshabilitado | Deshabilitadas para las conexiones de red.|
+|Evaluation | Nueva instalación | Habilitado | Habilitado | Deshabilitadas para las conexiones de red.|
+|SQL Server Express | Nueva instalación | Habilitado | Deshabilitado | Deshabilitadas para las conexiones de red.|
+|Todas las ediciones | Hay una instalación anterior presente, pero no se actualiza. | Igual que en una instalación nueva | Igual que en una instalación nueva | Igual que en una instalación nueva|
+|Todas las ediciones | UPGRADE | Habilitado | Se conserva la configuración de la instalación anterior. | Se conserva la configuración de la instalación anterior.|
 
 
 >[!NOTE]
@@ -68,7 +68,7 @@ El servicio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser
 * Cuando se instala una instancia con nombre del motor de base de datos que incluye todas las instancias de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Express.
 * Cuando se instala una instancia con nombre de Analysis Services.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 

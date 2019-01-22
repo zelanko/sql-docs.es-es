@@ -16,16 +16,16 @@ helpviewer_keywords:
 - SERVER ROLE, ALTER
 - ALTER SERVER ROLE statement
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1b80f0d2ee798eea6aafb92d10aae50c14ceee2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df9cc3231b9e883857563b2f7ed0bf8bc8d1a2f3
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541255"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327336"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -105,7 +105,7 @@ ALTER SERVER ROLE Product WITH NAME = Production ;
 GO  
 ```  
   
-### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Agregar una cuenta de dominio a un rol de servidor  
+### <a name="b-adding-a-domain-account-to-a-server-role"></a>b. Agregar una cuenta de dominio a un rol de servidor  
 En el siguiente ejemplo se agrega una cuenta de dominio denominada `adventure-works\roberto0` al rol de servidor definido por el usuario denominado `Production`.  
   
 ```  
@@ -173,7 +173,7 @@ En el siguiente ejemplo se quita el rol de Ana del rol de servidor `LargeRC`.
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
 [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
 [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   

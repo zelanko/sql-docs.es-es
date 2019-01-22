@@ -23,15 +23,15 @@ helpviewer_keywords:
 - switching execution context
 - functions [SQL Server], execution context
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17d2a3ce8ff7fba2cc8e34472911287e25c61e08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b20360492be7a7667f8f43b686bc04c723bd5e9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761063"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326536"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS (cláusula de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ DDL Triggers with Database Scope
   
  La cadena de propiedad tiene las siguientes limitaciones:  
   
--   Solo se aplica a instrucciones DML: SELECT, INSERT, UPDATE y DELETE.  
+-   Se aplica solamente a instrucciones DML: SELECT, INSERT, UPDATE y DELETE.  
   
 -   Los propietarios de los objetos que llaman y llamados deben ser los mismos.  
   
@@ -222,7 +222,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   

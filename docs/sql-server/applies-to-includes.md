@@ -1,7 +1,7 @@
 ---
 title: Archivos de inclusión de la documentación de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/15/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -10,12 +10,12 @@ ms.author: mathoma
 manager: craigg
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 61cee54e6f49ffaf7e996cf593388ad22e8a7b44
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 6f2e8a96d6f9a6270cec06aaa47f33b3b830f4e5
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731962"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419750"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>Archivos de inclusión de SQL Server para el control de versiones y "applies-to"
 
@@ -67,7 +67,7 @@ Estos archivos de inclusión applies-to omiten la versión de SQL Server.
 
 Estos archivos de inclusión applies-to especifican las versiones de SQL a las que se aplica la documentación.
 
- Nombre de archivo| Ejemplo de Markdown |imagen|
+| Nombre de archivo| Ejemplo de Markdown |imagen|
 | :-------------| :----------| :-------------------|
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |

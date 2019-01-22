@@ -11,12 +11,12 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1605b608550446ecb31a79e6074a7e8cfa7ea916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420709"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361675"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Referencia de la API de Always Encrypted para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,6 +42,7 @@ ms.locfileid: "52420709"
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|Modifica la configuración de la propiedad de conexión sendTimeAsDatetime.|
 
  **Clase SQLServerConnectionPoolProxy**
+ 
 |Nombre|Descripción|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | Devuelve el valor de la propiedad de conexión sendTimeAsDatetime.|
@@ -74,8 +75,8 @@ ms.locfileid: "52420709"
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Descifra el valor cifrado especificado de una clave de cifrado de columna. Se espera que el valor cifrado se haya cifrado mediante el certificado con la ruta de acceso a la clave especificada y mediante el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso a la clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<alias_certificado><br /><br /> (Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (String, String, Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Cifra una clave de cifrado de columna mediante el certificado con la ruta de acceso a la clave especificada y con el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso a la clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<alias_certificado><br /><br /> (Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (String, String, Byte[]).)|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Descifra el valor cifrado especificado de una clave de cifrado de columna. Se espera que el valor cifrado se haya cifrado mediante el certificado con la ruta de acceso a la clave especificada y mediante el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso a la clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<alias_certificado><br /><br /> (Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Cifra una clave de cifrado de columna mediante el certificado con la ruta de acceso a la clave especificada y con el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso a la clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<alias_certificado><br /><br /> (Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|Establece el nombre de este proveedor de almacén de claves.|
 |`public String getName ()`|Obtiene el nombre de este proveedor de almacén de claves.|
   
@@ -93,8 +94,8 @@ ms.locfileid: "52420709"
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes una clave de cifrado de columna cifrada (CEK). Este descifrado se realiza con un algoritmo de cifrado de RSA que se utiliza la clave asimétrica especificada por la ruta de acceso de la clave maestra.<br />(Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (String, String, Byte[]).) |  
-| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | Cifra una clave de cifrado de columna, proporcionando la clave maestra de columna especificada para el algoritmo especificado.<br />(Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (String, String, Byte[]).) |  
+| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes una clave de cifrado de columna cifrada (CEK). Este descifrado se realiza con un algoritmo de cifrado de RSA que se utiliza la clave asimétrica especificada por la ruta de acceso de la clave maestra.<br />(Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).) |  
+| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | Cifra una clave de cifrado de columna, proporcionando la clave maestra de columna especificada para el algoritmo especificado.<br />(Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).) |  
 |`public void setName (String name)`|Establece el nombre de este proveedor de almacén de claves.|
 |`public String getName ()`|Obtiene el nombre de este proveedor de almacén de claves.|  
   
@@ -152,6 +153,7 @@ ms.locfileid: "52420709"
 
   
 Nuevos tipos en **microsoft.sql.Types** clase
+
 |Nombre|Descripción|  
 |----------|-----------------|  
 |DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Usar estos tipos como los tipos de SQL de destino al enviar valores de parámetro **cifrados** datetime, smalldatetime, money, smallmoney, columnas uniqueidentifier mediante `setObject()/updateObject()` métodos de API.|  
@@ -192,7 +194,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  Si Always Encrypted está deshabilitado para una consulta y la consulta devuelve los resultados de las columnas cifradas, la consulta devolverá valores cifrados. Los valores cifrados tendrán el tipo de datos varbinary.  
   
- ## <a name="see-also"></a>Ver también  
+ ## <a name="see-also"></a>Consulte también  
  [Usar Always Encrypted con el controlador JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
 

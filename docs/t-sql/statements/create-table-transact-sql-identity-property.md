@@ -18,16 +18,16 @@ helpviewer_keywords:
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507390"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326646"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propiedad)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -78,7 +78,7 @@ IDENTITY [ (seed , increment) ]
   
  Solo se puede crear una columna de identidad para cada tabla.  
   
- En las tablas optimizadas para memoria, el valor de inicialización y el valor de incremento debe establecerse en 1,1. Si seed o increment se establecen en un valor distinto de 1, se produce este error: The use of seed and increment values other than 1 is not supported with memory optimized tables (No se admite el uso de valores seed e increment distintos de 1 con tablas optimizadas en memoria).  
+ En las tablas optimizadas para memoria, el valor de inicialización y el valor de incremento debe establecerse en 1,1. Si establece el valor de inicialización o de incremento en un valor que no sea 1, se produce el siguiente error: El uso de valores de inicialización y de incremento distintos a 1 no es compatible con las tablas con optimización para memoria.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -110,7 +110,7 @@ VALUES
    ('Pirkko', 'O', 'Koskitalo');  
 ```  
   
-### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>B. Utilizar la sintaxis genérica para buscar espacios en los valores de identidad  
+### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>b. Utilizar la sintaxis genérica para buscar espacios en los valores de identidad  
  En este ejemplo se muestra la sintaxis genérica utilizada para buscar espacios en valores de identidad cuando se quitan datos.  
   
 > [!NOTE]  
@@ -168,7 +168,7 @@ SELECT @minidentval = MIN($IDENTITY) FROM img
 SET IDENTITY_INSERT img OFF;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   

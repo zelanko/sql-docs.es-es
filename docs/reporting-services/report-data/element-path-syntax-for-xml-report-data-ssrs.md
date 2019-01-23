@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: ffa45f4eb7fdd8d989810dcdea6cfab0cd4cb4cc
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813808"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420200"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
   En el Diseñador de informes, se define una ruta de acceso de elemento que distingue mayúsculas de minúsculas para especificar los datos que se van a utilizar en un informe desde un origen de datos XML. Una ruta de acceso de elemento indica cómo se deben recorrer los nodos jerárquicos XML y sus atributos en el origen de datos XML. Para utilizar la ruta de acceso de elemento predeterminada, mantenga vacía la consulta del conjunto de datos o el elemento XML **ElementPath** del elemento XML **Query** . Cuando se recuperan datos del origen de datos XML, los nodos de elemento que tienen valores de texto y atributos de nodo de elemento se convierten en columnas en el conjunto de resultados. Los valores de los nodos y atributos pasan a ser datos de fila al ejecutar la consulta. Las columnas aparecen como la colección de campos del conjunto de datos en el panel Datos de informe. En este tema se describe la sintaxis de la ruta de acceso de elemento.  
@@ -94,10 +94,10 @@ XMLLocalName :: =
   
 |Pedido de|Qty|Id.|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Table|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https\://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https\://www.adventure-works.com|  
   
  **Ejemplo 2**: `Customers {}/Customer`  
   
@@ -201,7 +201,7 @@ XMLLocalName :: =
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tipo de conexión XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  

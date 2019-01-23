@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dd018941567ec56619177928d55b83681c07a039
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302908"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317815"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Para restaurar una base de datos cifrada, debe tener acceso al certificado o la 
     
 Si restaura una base de datos de una versión anterior en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualizará automáticamente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esto evita que la base de datos se use con una versión anterior de [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Pero esto se relaciona con el estado de los metadatos y no afecta al [nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Si el nivel de compatibilidad de una base de datos de usuario es 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad es 90 antes de la actualización, en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-Normalmente, la base de datos está disponible inmediatamente. Pero si una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, según la configuración de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Según de la cantidad de datos que se indexen, la opción de importar puede tardar varias horas y la opción de volver a generar puede requerir hasta diez veces más.     
+Normalmente, la base de datos está disponible inmediatamente. Pero si una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, según la configuración de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Según la cantidad de datos que se indexen, la importación puede tardar varias horas y la opción de recompilación puede necesitar hasta diez veces más.     
     
 Si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo**, vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
@@ -71,7 +71,7 @@ Para obtener más información sobre la restauración de SQL Server en el servic
         -   Cuadro de diálogo**Seleccionar dispositivos de copia de seguridad**   
         
             **Tipo de medio de copia de seguridad**  
-         Seleccione un tipo de medio en la lista desplegable **Tipo de medio de copia de seguridad** .  Nota: La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el equipo; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.
+         Seleccione un tipo de medio en la lista desplegable **Tipo de medio de copia de seguridad** .  Nota: La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el sistema; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.
 
             **Agregar**  
             En función del tipo de medio que seleccione en la lista desplegable **Tipo de medio de copia de seguridad** , al hacer clic en **Agregar** , se abrirá uno de los siguientes cuadros de diálogo. (Si la lista del cuadro de lista **Medio de copia de seguridad** está llena, el botón **Agregar** no está disponible).
@@ -94,7 +94,7 @@ Para obtener más información sobre la restauración de SQL Server en el servic
     
              Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .    
     
-         En el cuadro de lista **Origen: Dispositivo: Base de datos** , seleccione el nombre de la base de datos que se debe restaurar.    
+         En el cuadro de lista **Origen: Dispositivo: Base de datos**, seleccione el nombre de la base de datos que se debe restaurar.    
     
          > [!NOTE]
          > Esta lista solo está disponible cuando se selecciona la opción **Dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en el dispositivo seleccionado.    
@@ -142,10 +142,10 @@ En el ejemplo siguiente se restaura una copia de seguridad de disco anterior de 
 4.  Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad. Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
 5.  Haga clic en **Aceptar** para volver a la página **General** .
 6.  Haga clic en **Opciones** en el panel **Seleccionar una página** .
-7.  En la sección **Opciones de restauración**, active **Sobrescribir la base de datos existente (WITH REPLACE)**.
+7.  En la sección **Opciones de restauración** , active **Sobrescribir la base de datos existente (WITH REPLACE)**.
 
     > [!NOTE]
-    > Si no activa esta opción, podría recibir el siguiente mensaje de error: "System.Data.SqlClient.SqlError: El conjunto de copia de seguridad contiene una copia de una base de datos distinta de la existente '`Sales`'. (Microsoft.SqlServer.SmoExtended)"
+    > Si no activa esta opción, puede aparecer el mensaje de error siguiente: "System.Data.SqlClient.SqlError: El conjunto de copia de seguridad contiene una copia de una base de datos distinta de la existente "`Sales`". (Microsoft.SqlServer.SmoExtended)"
 
 8.  En la sección **Copia del final del registro**, desactive **Realizar copia del final del registro de la cola antes de la restauración**.
 
@@ -154,10 +154,10 @@ En el ejemplo siguiente se restaura una copia de seguridad de disco anterior de 
 
     Esta opción no está disponible para las bases de datos en el modelo de recuperación SIMPLE.
 
-9.  En la sección **Conexiones de servidor**, active **Cerrar las conexiones existentes con la base de datos de destino**.
+9.  En la sección **Conexiones de servidor** , active **Cerrar las conexiones existentes con la base de datos de destino**.
 
     > [!NOTE]
-    > Si no activa esta opción, podría recibir el siguiente mensaje de error: "System.Data.SqlClient.SqlError: No se pudo obtener acceso exclusivo porque la base de datos está en uso. (Microsoft.SqlServer.SmoExtended)"
+    > Si no activa esta opción, puede aparecer el mensaje de error siguiente: "System.Data.SqlClient.SqlError: No se pudo obtener acceso exclusivo porque la base de datos está en uso. (Microsoft.SqlServer.SmoExtended)"
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -250,7 +250,7 @@ La base de datos `Sales` se restaurará en el contenedor de almacenamiento de Mi
 11. Especifique el contenedor, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, en los cuadros de texto para **Carpeta de archivos de datos:** y **Carpeta de archivos de registro:**.
 12. Haga clic en **Aceptar**.
 
-## <a name="see-also"></a>Ver también    
+## <a name="see-also"></a>Consulte también    
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     
  [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [Restaurar una base de datos a una nueva ubicación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     

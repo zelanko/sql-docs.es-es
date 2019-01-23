@@ -1,7 +1,7 @@
 ---
 title: Opción de conmutación por error de detección del estado de la base de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 04/28/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7bb2a0c9582fcf5e0092ef23009b9270a7b0d010
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525109"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419970"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ La detección del estado del nivel de la base de datos de un grupo de disponibil
 
 Por ejemplo, si la opción de detección del estado del nivel de la base de datos está activada y se da el caso de que SQL Server no puede escribir en el archivo de registro de transacciones de una de las bases de datos, el estado de esa base de datos cambiaría para indicar el error, el grupo de disponibilidad conmutaría por error enseguida y la aplicación podría volver a conectarse y a seguir trabajando con una interrupción mínima cuando las bases de datos vuelvan a estar en línea.
 
-<a name="enabling-database-level-health-detection"></a>Habilitar la detección del estado del nivel de la base de datos
-----
+### <a name="enabling-database-level-health-detection"></a>Habilitar la detección del estado del nivel de la base de datos
+
 Aunque es recomendable en general, la opción de estado de la base de datos está **desactivada de forma predeterminada**, a fin de mantener la compatibilidad con la configuración predeterminada en las versiones anteriores.
 
 Existen varias formas muy sencillas de habilitar la opción de detección del estado del nivel de la base de datos:
@@ -52,7 +52,7 @@ Existen varias formas muy sencillas de habilitar la opción de detección del es
 
 3. Use la sintaxis de Transact-SQL **CREATE AVAILABILITY GROUP** para crear un grupo de disponibilidad. El parámetro DB_FAILOVER acepta valores ON u OFF.
 
-   ```Transact-SQL
+   ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
    FOR DATABASE [AutoHa-Sample]
@@ -65,7 +65,7 @@ Existen varias formas muy sencillas de habilitar la opción de detección del es
 
 4. Use la sintaxis de Transact-SQL **ALTER AVAILABILITY GROUP** para modificar un grupo de disponibilidad. El parámetro DB_FAILOVER acepta valores ON u OFF.
 
-   ```Transact-SQL
+   ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
 
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
@@ -89,23 +89,23 @@ Con la detección del estado del nivel de la base de datos se implementa una dir
 
 La DMV del sistema sys.availability_groups muestra una columna db_failover que indica si la opción de detección del estado del nivel de la base de datos está desactivada (0) o activada (1).
 
-```Transact-SQL
+```sql
 select name, db_failover from sys.availability_groups
 ```
 
 
 Ejemplo de resultado de esta DMV:
 
-NAME  |  db_failover
----------|---------
-| Contoso-ag |  1  |
+|NAME  |  db_failover|
+|---------|---------|
+| Contoso-ag | 1  |
 
 ### <a name="errorlog"></a>ErrorLog
 El registro de errores de SQL Server (o el texto recogido en sp_readerrorlog) mostrará el mensaje de error 41653 si un grupo de disponibilidad ha conmutado por error a causa de las comprobaciones de detección del estado del nivel de la base de datos.
 
 Por ejemplo, este extracto del registro de errores pone de manifiesto que una escritura del registro de transacciones ha acabado en error debido a un problema de disco, lo que llevó a cerrar la base de datos denominada AutoHa-Sample y ello hizo que la detección del estado del nivel de la base de datos conmutara por error el grupo de disponibilidad.
 
->2016-04-25 12:20:21.08 spid1s      Error: 17053, Severity: 16, State: 1.
+>2016-04-25 12:20:21.08 spid1s      Error: 17053, Severity: 16, estado: 1.
 >
 >2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: Operating system error 21(The device is not ready.) encountered.
 >2016-04-25 12:20:21.08 spid1s      Write error during log flush.
@@ -135,7 +135,8 @@ Este evento extendido se desencadena únicamente en la réplica principal, y lo 
 Este es un ejemplo sobre cómo crear una sesión de XEvent que captura este evento. Como no se especifica ninguna ruta de acceso, el archivo de salida de XEvent se pondrá de forma predeterminada en la ruta del registro de errores de SQL Server. Ejecute lo siguiente en la réplica principal del grupo de disponibilidad:
 
 Ejemplo de script de sesión de evento extendido
-```
+
+```sql
 CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
@@ -151,32 +152,32 @@ En SQL Server Management Studio, conéctese al servidor SQL Server principal, ex
 
 Explicación de los campos:
 
-|Datos de columna    | Descripción
-|---------|---------
-|availability_group_id  |Identificador del grupo de disponibilidad.
-|availability_group_name    |El nombre del grupo de disponibilidad.
-|availability_replica_id    |Identificador de la réplica de disponibilidad.
-|availability_replica_name  |Nombre de la réplica de disponibilidad.
-|database_name  |Nombre de la base de datos que informa del error.
-|database_replica_id    |Identificador de la base de datos de la réplica de disponibilidad.
-|failover_ready_replicas    |Número de réplicas secundarias de conmutación automática por error que están sincronizadas.
-|fault_type     | Identificador de error notificado. Valores posibles:  <br/> 0: ninguno <br/>1: desconocido<br/>2: apagado
-|is_critical    | Desde SQL Server 2016, este valor siempre debe devolver true para el XEvent.
+|Datos de columna | Descripción|
+|---------|---------|
+|availability_group_id |Identificador del grupo de disponibilidad.|
+|availability_group_name |El nombre del grupo de disponibilidad.|
+|availability_replica_id |Identificador de la réplica de disponibilidad.|
+|availability_replica_name |Nombre de la réplica de disponibilidad.|
+|database_name |Nombre de la base de datos que informa del error.|
+|database_replica_id |Identificador de la base de datos de la réplica de disponibilidad.|
+|failover_ready_replicas |Número de réplicas secundarias de conmutación automática por error que están sincronizadas.|
+|fault_type  | Identificador de error notificado. Valores posibles:  <br/> 0: ninguno <br/>1: desconocido<br/>2: apagado|
+|is_critical | Desde SQL Server 2016, este valor siempre debe devolver true para el XEvent.|
 
 
 En esta salida de ejemplo, fault_type (tipo de error 2: apagado) refleja que se ha producido un evento crítico en el grupo de disponibilidad Contoso-ag, en la réplica llamada SQLSERVER-1, a causa del nombre de base de datos AutoHa-Sample2.
 
-|Campo  | Valor
-|---------|---------
-|availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
-|availability_group_name |  Contoso-ag
-|availability_replica_id    | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
-|availability_replica_name |    SQLSERVER-1
-|database_name |    AutoHa-Sample2
-|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
-|fault_type |   2
-|is_critical    | True
+|Campo  | Valor|
+|---------|---------|
+|availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
+|availability_group_name | Contoso-ag|
+|availability_replica_id | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1|
+|availability_replica_name | SQLSERVER-1|
+|database_name | AutoHa-Sample2|
+|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00|
+|failover_ready_replicas | 1|
+|fault_type | 2|
+|is_critical | True|
 
 
 ### <a name="related-references"></a>Referencias relacionadas

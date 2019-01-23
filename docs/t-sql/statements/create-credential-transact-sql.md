@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e0481611eb666b893395581805c923cf03921ad9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509383"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327786"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ WITH IDENTITY = 'identity_name'
  SECRET **='**_secret_**'**  
  Especifica el secreto necesario para la autenticación de salida.  
   
- Cuando se usa la credencial para acceder a Azure Key Vault, el argumento **SECRET** de **CREATE CREDENTIAL** requiere que los valores de *\<Client ID>* (sin guiones) y *\<Secret>* de una **entidad de servicio** en Azure Active Directory se pasen entre sí sin un espacio entre ellos. Vea el ejemplo C más adelante. Cuando la credencial usa una Firma de acceso compartido (SAS), **SECRET** es el token de la Firma de acceso compartido. Vea el ejemplo D de abajo.  Para más información sobre cómo crear una directiva de acceso almacenada y una Firma de acceso compartido en un contenedor de Azure, vea [Lección 1: Creación de una directiva de acceso almacenada y una firma de acceso compartido](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+ Cuando se usa la credencial para acceder a Azure Key Vault, el argumento **SECRET** de **CREATE CREDENTIAL** requiere que los valores de *\<Client ID>* (sin guiones) y *\<Secret>* de una **entidad de servicio** en Azure Active Directory se pasen entre sí sin un espacio entre ellos. Vea el ejemplo C más adelante. Cuando la credencial usa una Firma de acceso compartido (SAS), **SECRET** es el token de la Firma de acceso compartido. Vea el ejemplo D de abajo.  Para información sobre cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure, consulte [Lección 1: Crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
  Especifica el nombre de un *Proveedor de administración de claves de la empresa (EKM)*. Para más información sobre la administración de claves, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
@@ -96,7 +96,7 @@ CREATE CREDENTIAL AlterEgo WITH IDENTITY = 'Mary5',
 GO  
 ```  
   
-### <a name="b-creating-a-credential-for-ekm"></a>B. Crear una credencial de EKM  
+### <a name="b-creating-a-credential-for-ekm"></a>b. Crear una credencial de EKM  
  En el ejemplo siguiente se utiliza una cuenta creada previamente denominada `User1OnEKM` en un módulo EKM a través de las herramientas de administración de EKM, con un tipo de cuenta y una contraseña básicos. La cuenta **sysadmin** del servidor crea una credencial que se usa para conectar la cuenta de EKM y la asigna a la cuenta `User1` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```  
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Crear una credencial con un token de SAS  
  **Se aplica a**: de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- En el siguiente ejemplo se crea una credencial de firma de acceso compartido con un token de SAS.  Para obtener un tutorial sobre cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure y, luego, crear una credencial usando la firma de acceso compartido, vea [Tutorial: Usar el servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ En el siguiente ejemplo se crea una credencial de firma de acceso compartido con un token de SAS.  Para ver un tutorial sobre cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure y, luego, crear una credencial usando la firma de acceso compartido, consulte [Tutorial: Uso del servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  El argumento **CREDENCIAL NAME** requiere que el nombre coincida con la ruta de acceso del contenedor, comience por https y no contenga una barra diagonal. El argumento **IDENTITY** requiere el nombre, *SHARED ACCESS SIGNATURE*. El argumento **SECRET** requiere el token de firma de acceso compartido.  
@@ -159,7 +159,7 @@ CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystora
 GO    
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
  [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   

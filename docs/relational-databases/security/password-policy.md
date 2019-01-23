@@ -1,7 +1,7 @@
 ---
 title: Directiva de contraseñas | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2015
+ms.date: 01/16/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -33,79 +33,85 @@ ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 310e44e1f38d986a45e910248c708255548c76a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d8b1196eb1292532320c77559cd4578532957ac
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770863"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361623"
 ---
 # <a name="password-policy"></a>Directiva de contraseñas
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar los mecanismos de directiva de contraseñas de Windows. La directiva de contraseñas se aplica a un inicio de sesión que usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a un usuario con contraseña de una base de datos independiente.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede aplicar las mismas directivas de complejidad y expiración que se usan en Windows a las contraseñas que se usan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta funcionalidad depende de la API `NetValidatePasswordPolicy` .  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aplica la complejidad de las contraseñas. Las secciones de expiración de contraseñas y cumplimiento de directivas no se aplican a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+> [!NOTE]
+> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aplica la complejidad de las contraseñas. Las secciones de expiración de contraseñas y cumplimiento de directivas no se aplican a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="password-complexity"></a>Complejidad de las contraseñas  
+
  Las directivas de complejidad de contraseñas están diseñadas para impedir ataques por fuerza bruta mediante el aumento del número de contraseñas posibles. Cuando se aplica la directiva de complejidad de contraseñas, se exige que las nuevas contraseñas cumplan las siguientes directrices:  
   
--   La contraseña no debe contener el nombre de la cuenta del usuario.  
+- La contraseña no debe contener el nombre de la cuenta del usuario.  
   
--   La contraseña debe tener una longitud de ocho caracteres como mínimo.  
+- La contraseña debe tener una longitud de ocho caracteres como mínimo.  
   
--   La contraseña debe contener caracteres de tres de las siguientes categorías:  
+- La contraseña debe contener caracteres de tres de las siguientes categorías:  
   
-    -   Letras en mayúsculas del alfabeto Latín (de la A a la Z)  
+  - Letras en mayúsculas del alfabeto Latín (de la A a la Z)  
   
-    -   Letras en minúsculas del alfabeto Latín (de la "a" a la "z")  
+  - Letras en minúsculas del alfabeto Latín (de la "a" a la "z")  
   
-    -   Dígitos en base 10 (del 0 al 9)  
+  - Dígitos en base 10 (del 0 al 9)  
   
-    -   Caracteres que no sean alfanuméricos, como signo de admiración (!), signo de moneda ($), signo de almohadilla (#) o porcentaje (%).  
+  - Caracteres que no sean alfanuméricos, como signo de admiración (!), signo de moneda ($), signo de almohadilla (#) o porcentaje (%).  
   
- Las contraseñas pueden tener hasta 128 caracteres. Se recomienda utilizar contraseñas lo más largas y complejas posible.  
+ Las contraseñas pueden tener hasta 128 caracteres. Use contraseñas lo más largas y complejas posible.  
   
 ## <a name="password-expiration"></a>Expiración de las contraseñas  
+
  Las directivas de expiración de contraseñas se utilizan para administrar la duración de una contraseña. Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica la directiva de expiración de contraseñas, se recuerda a los usuarios que cambien las contraseñas antiguas, y las cuentas con contraseñas que han expirado se deshabilitan.  
   
 ## <a name="policy-enforcement"></a>Aplicación de las directivas  
+
  La aplicación de la directiva de contraseñas se puede configurar independientemente para cada inicio de sesión de SQL Server. Use [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) para configurar las opciones de la directiva de contraseñas de un inicio de sesión de SQL Server. Se aplican las siguientes reglas a la configuración de la aplicación de directivas de contraseñas:  
   
--   Cuando el valor de CHECK_POLICY se cambia a ON, ocurre lo siguiente:  
+- Cuando el valor de CHECK_POLICY se cambia a ON, ocurre lo siguiente:  
   
-    -   CHECK_EXPIRATION también se establece en ON, salvo que se haya establecido de forma explícita en OFF.  
+  - CHECK_EXPIRATION también se establece en ON, salvo que se haya establecido de forma explícita en OFF.  
   
-    -   El historial de contraseñas se inicializa con el valor del hash de contraseña actual.  
+  - El historial de contraseñas se inicializa con el valor del hash de contraseña actual.  
   
-    -   **Duración de bloqueo de cuenta**, **Umbral de bloqueo de cuenta**y **Restablecer recuento de bloqueos de cuentas tras** también están habilitadas.  
+  - **Duración de bloqueo de cuenta**, **Umbral de bloqueo de cuenta**y **Restablecer recuento de bloqueos de cuentas tras** también están habilitadas.  
   
--   Cuando el valor de CHECK_POLICY se cambia a OFF, ocurre lo siguiente:  
+- Cuando el valor de CHECK_POLICY se cambia a OFF, ocurre lo siguiente:  
   
-    -   La opción CHECK_EXPIRATION también se cambia a OFF.  
+  - La opción CHECK_EXPIRATION también se cambia a OFF.  
   
-    -   Se borra el historial de contraseñas.  
+  - Se borra el historial de contraseñas.  
   
-    -   Se restablece el valor de `lockout_time` .  
+  - Se restablece el valor de `lockout_time` .  
   
  Algunas combinaciones de opciones de directiva no se admiten.  
   
--   Si se especifica MUST_CHANGE, CHECK_EXPIRATION y CHECK_POLICY, deben establecerse en ON. Si no es así, la instrucción producirá un error.  
+- Si se especifica MUST_CHANGE, CHECK_EXPIRATION y CHECK_POLICY, deben establecerse en ON. Si no es así, la instrucción produce un error.  
   
--   Si CHECK_POLICY se establece en OFF, CHECK_EXPIRATION no puede establecerse en ON. Una instrucción ALTER LOGIN con esta combinación de opciones dará error.  
+- Si CHECK_POLICY se establece en OFF, CHECK_EXPIRATION no puede establecerse en ON. Una instrucción ALTER LOGIN con esta combinación de opciones dará error.  
   
- Establecer CHECK_POLICY = ON impide la creación de las contraseñas que sean:  
+- El establecimiento de CHECK_POLICY = ON impide la creación de contraseñas que sean:  
   
--   NULL o vacías  
+  - NULL o vacías  
   
--   Iguales al nombre del equipo o el inicio de sesión  
+  - Iguales al nombre del equipo o el inicio de sesión  
   
--   Una de las siguientes: "password", "admin", "administrator", "sa", "sysadmin"  
+  - Una de las siguientes: "password", "admin", "administrator", "sa", "sysadmin"  
   
  La directiva de seguridad se podría establecer en Windows o se podría recibir del dominio. Para ver la directiva de contraseñas en el equipo, use el complemento de MMC Directiva de seguridad local (**secpol.msc**).  
   
 ## <a name="related-tasks"></a>Related Tasks  
+
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)  
@@ -119,6 +125,6 @@ ms.locfileid: "47770863"
  [Crear un usuario de base de datos](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
+
  [Contraseñas seguras](../../relational-databases/security/strong-passwords.md)  
-  
-  
+ 

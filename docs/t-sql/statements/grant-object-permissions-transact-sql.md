@@ -13,16 +13,16 @@ helpviewer_keywords:
 - granting permissions [SQL Server], objects
 - GRANT statement, objects
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a03e07f20c2e33c4ffad59d7050793cd1b52b9c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed580cb28c65eab7f0abd7702cab623bcf9fcd2e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621223"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326326"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT (permisos de objeto de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  Si concede ALL no se conceden todos los permisos posibles. Conceder ALL es equivalente a conceder todos los permisos [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 aplicables al objeto especificado. El significado de ALL varía de la siguiente forma:  
   
-- Permisos de función escalar: EXECUTE, REFERENCES.  
+- Permisos de la función escalar: EXECUTE, REFERENCES.  
 - Permisos de función con valores de tabla: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - Permisos de procedimiento almacenado: EXECUTE.  
 - Permisos de tabla: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
@@ -116,7 +116,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
->  En algunos casos, una combinación de los permisos ALTER y REFERENCE podría permitir al receptor ver datos o ejecutar funciones no autorizadas. Por ejemplo, un usuario con el permiso ALTER en una tabla y el permiso REFERENCE en una función puede crear una columna calculada sobre una función y hacer que se ejecute. En este caso, el usuario también necesitaría el permiso SELECT en la columna calculada.  
+>  En algunos casos, una combinación de los permisos ALTER y REFERENCE podría permitir al receptor ver datos o ejecutar funciones no autorizadas. Por ejemplo: Un usuario con el permiso ALTER en una tabla y el permiso REFERENCE en una función puede crear una columna calculada sobre una función y hacer que se ejecute. En este caso, el usuario también necesitaría el permiso SELECT en la columna calculada.  
   
  Puede ver la información acerca de objetos en varias vistas de catálogo. Para más información, vea [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md) [Vistas de catálogo de objetos &#40;Transact-SQL&#41;].  
   
@@ -163,7 +163,7 @@ GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>B. Conceder el permiso EXECUTE para un procedimiento almacenado  
+### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>b. Conceder el permiso EXECUTE para un procedimiento almacenado  
  En el siguiente ejemplo, se concede el permiso `EXECUTE` para el procedimiento almacenado `HumanResources.uspUpdateEmployeeHireInfo` a un rol de aplicación denominado `Recruiting11`.  
   
 ```  
@@ -207,7 +207,7 @@ GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Permisos de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
  [REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  

@@ -17,23 +17,23 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673584"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327876"
 ---
 # <a name="always-encrypted-wizard"></a>Asistente para Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Use el **Asistente para Always Encrypted** para ayudar a proteger los datos confidenciales almacenados en una base de datos de SQL Server. Always Encrypted permite a los clientes cifrar datos confidenciales en aplicaciones de cliente y nunca revelar las claves de cifrado en SQL Server. Como resultado, Always Encrypted proporciona una separación entre aquellos que poseen los datos (y pueden verlos) y aquellos que los administran (pero que no deberían tener acceso).  Para obtener una descripción completa de la característica, vea [Always Encrypted &#40;motor de base de datos&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
  
- - Para ver un tutorial completo en el que se muestra cómo configurar Always Encrypted con el asistente y cómo usarlo en una aplicación cliente, vea [SQL Database tutorial: Protect sensitive data with Always Encrypted (Tutorial de Base de datos SQL: proteger información confidencial con Always Encrypted)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
+ - Para ver un tutorial completo en el que se muestra cómo configurar Always Encrypted con el asistente y cómo usarlo en una aplicación cliente, consulte [Tutorial de SQL Database: Protección de datos confidenciales con Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
  
  - Para ver un vídeo que incluye el uso del asistente, vea [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Protección de la información confidencial con Always Encrypted). Consulte también el blog del equipo de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps (Asistente para cifrado de SSMS: habilitación de Always Encrypted en unos sencillos pasos)](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
  
- - **Permisos:** para consultar columnas cifradas y seleccionar claves mediante este asistente, debe tener los permisos `VIEW ANY COLUMN MASTER KEY DEFINITION` y `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Para crear nuevas claves, además debe tener los permisos `ALTER ANY COLUMN MASTER KEY` y `ALTER ANY COLUMN ENCRYPTION KEY` .  
+ - **Permisos:** para consultar columnas cifradas y seleccionar claves mediante este asistente, debe tener los permisos `VIEW ANY COLUMN MASTER KEY DEFINITION` y `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`. Para crear nuevas claves, además debe tener los permisos `ALTER ANY COLUMN MASTER KEY` y `ALTER ANY COLUMN ENCRYPTION KEY` .  
  
  #### <a name="to-open-the-always-encrypted-wizard"></a>Para abrir el Asistente para Always Encrypted  
  
@@ -57,7 +57,7 @@ Use el **Asistente para Always Encrypted** para ayudar a proteger los datos conf
  
    - **Almacenar una clave maestra en el Almacén de claves de Azure** Para obtener más información, consulte [Introducción al Almacén de claves de Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
- - Para generar una clave maestra de columna en el Almacén de claves de Azure, el usuario debe tener los permisos **WrapKey**, **UnwrapKey**, **Verify**y **Sign** para el almacén de claves. Los usuarios también podrían necesitar los permisos **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**y **Restore** . Para obtener más información, vea [¿Qué es el Almacén de claves de Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) y   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
+ - Para generar una clave maestra de columna en el Almacén de claves de Azure, el usuario debe tener los permisos **WrapKey**, **UnwrapKey**, **Verify**y **Sign** para el almacén de claves. Los usuarios también podrían necesitar los permisos **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**y **Restore** . Para más información, consulte [¿Qué es Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) y [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
  
  - El asistente solo admite dos opciones. Los módulos de seguridad de hardware y los almacenes de cliente deben configurarse mediante [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
  
@@ -71,6 +71,6 @@ Use el **Asistente para Always Encrypted** para ayudar a proteger los datos conf
 
  - Las**claves de cifrado de columna** se usan para cifrar la información confidencial almacenada en las columnas de la base de datos. Todos los valores de una columna se pueden cifrar mediante una clave de cifrado de columna única. Los valores cifrados de las claves de cifrado de columna se almacenan en la base de datos de vistas de catálogo del sistema. Debe almacenar las claves de cifrado de columna en una ubicación segura o de confianza como copia de seguridad.  
 
- ## <a name="see-also"></a>Ver también  
+ ## <a name="see-also"></a>Consulte también  
  - [Always Encrypted &#40;motor de base de datos&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  

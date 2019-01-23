@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 483696e8ecc717e0ead5c7be16a627c046cb47ca
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 96c6292c4c14f97ce0cf0dda17f107a5d5e1bb15
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300072"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395430"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,6 +102,8 @@ Configure el Firewall de Windows con **Microsoft Management Console** o **netsh*
     -   [Cómo usar el contexto "netsh advfirewall firewall" en lugar del contexto "netsh firewall" para controlar el comportamiento del Firewall de Windows en Windows Server 2008 y en Windows Vista](https://support.microsoft.com/kb/947709)  
   
     -   [El comando "netsh firewall" junto con el parámetro "profile=all" no configura el perfil público en un equipo basado en Windows Vista](https://support.microsoft.com/kb/947213)  
+    
+- **Para Linux**: en Linux, también debe abrir los puertos asociados con los servicios a los que necesita acceso. Las distintas distribuciones de Linux y los distintos firewalls tienen sus propios procedimientos. Para ver dos ejemplos, consulte [SQL Server en Red Hat](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-red-hat?view=sqlallproducts-allversions) y [SQL Server en SUSE](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-suse?view=sqlallproducts-allversions). 
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Puertos utilizados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Las tablas siguientes pueden ayudarle a identificar los puertos que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

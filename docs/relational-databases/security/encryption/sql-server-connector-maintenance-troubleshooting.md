@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520690"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327846"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Mantenimiento y solución de problemas del conector de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "52520690"
   
  Para TDE, así es cómo se lograría:  
   
--   **En PowerShell:** cree una nueva clave asimétrica (con un nombre diferente de la clave asimétrica de TDE actual) en el Almacén de claves.  
+-   **En PowerShell:** cree una nueva clave asimétrica (con un nombre diferente de la clave asimétrica de TDE actual) en Key Vault.  
   
     ```powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Mediante [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** use las instrucciones siguientes, tal como se muestra en el paso 3, sección 3.  
+-   **Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** use las siguientes instrucciones, como se muestra en el paso 3 de la sección 3.  
   
      Importe la nueva clave asimétrica.  
   
@@ -152,7 +152,7 @@ En resumen, estos son los pasos:
 * Conceda permisos a la entidad de servicio de SQL Server para que use este nuevo almacén.  
 * Modifique la credencial de SQL Server que usa el motor de base de datos para reflejar el nuevo nombre de almacén (si es necesario).  
   
-Se pueden restaurar las copias de seguridad de claves en regiones de Azure, siempre y cuando permanezcan en la misma región geográfica o nube nacional: Estados Unidos, Canadá, Japón, Australia, India, APAC, Brasil y Europa, China, gobierno de Estados Unidos o Alemania.  
+Las copias de seguridad de claves se pueden restaurar entre regiones de Azure, siempre que permanezcan en la misma región geográfica o nube nacional: Estados Unidos, Canadá, Japón, Australia, India, APAC, Europa, Brasil, China, US Government o Alemania.  
   
   
 ##  <a name="AppendixB"></a> B. Preguntas más frecuentes  
@@ -293,7 +293,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
 -   Referencia de [cmdlets del Almacén de claves de Azure](https://msdn.microsoft.com/library/dn868052.aspx) de PowerShell  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled (opción de configuración del servidor)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  

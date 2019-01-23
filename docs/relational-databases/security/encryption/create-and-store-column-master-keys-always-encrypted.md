@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3893672f6d253bf3f428198dd58d63e3cac30baa
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534760"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326426"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Crear y almacenar claves maestras de columna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,16 +120,16 @@ En el ejemplo siguiente se crea un nuevo Almacén de claves de Azure y una clave
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure subscription ID>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
-$azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
@@ -145,7 +145,7 @@ Para aprovisionar claves de cifrado de columnas que se protegen con una clave ma
 
 #### <a name="using-powershell"></a>Usar PowerShell
 
-Para permitir que los usuarios y las aplicaciones tengan acceso a las claves actuales del Almacén de claves de Azure, debe establecer la directiva de acceso del almacén ([Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)):
+Para permitir que los usuarios y las aplicaciones accedan a las claves reales en Azure Key Vault, debe establecer la directiva de acceso del almacén ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
 
 ```
 $vaultName = "<vault name>"
@@ -154,9 +154,9 @@ $userPrincipalName = "<user to grant access to>"
 $clientId = "<client Id>"
 
 # grant users permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
+Set-AzKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
 # grant applications permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
+Set-AzKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
 ```
 
 ## <a name="creating-column-master-keys-in-hardware-security-modules-using-cng"></a>Crear claves maestras de columna en módulos de seguridad de hardware con CNG
@@ -211,7 +211,7 @@ Para que un HSM esté disponible para las aplicaciones de un equipo determinado,
 
 Un CSP debe admitir el algoritmo RSA para usarse con Always Encrypted.
 
-Windows incluye los siguientes CSP basados en software (no están respaldados por un HSM) que admiten RSA y pueden usarse con fines de pruebas: el proveedor de servicios criptográficos RSA y AES mejorado de Microsoft.
+Windows incluye los siguientes CSP basados en software (no respaldados por un HSM) que admiten RSA, y pueden usarse con fines de pruebas: Microsoft ha mejorado el proveedor de servicios criptográficos RSA y AES.
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-capicsp"></a>Crear claves maestras de columna en un almacén de claves con CAPI o CSP
 

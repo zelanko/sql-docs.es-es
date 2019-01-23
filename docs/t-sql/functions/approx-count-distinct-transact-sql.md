@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 01/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b0eb2db49a4bda6fc8be884790c3caf9cfdb7bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 718d03619165f94ae9b0820a7c2c6319549069be
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836733"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372647"
 ---
 # <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de c
 
 La implementación de la función garantiza una tasa de error de hasta 2 % dentro de una probabilidad del 97 %. 
 
-`APPROX_COUNT_DISTINCT` requiere menos memoria que una operación COUNT DISTINCT exhaustiva.  Dada la menor superficie de memoria, es menos probable que `APPROX_COUNT_DISTINCT` desborde memoria en el disco en comparación con una operación COUNT DISTINCT precisa. 
+`APPROX_COUNT_DISTINCT` requiere menos memoria que una operación COUNT DISTINCT exhaustiva.  Dada la menor superficie de memoria, es menos probable que `APPROX_COUNT_DISTINCT` desborde memoria en el disco en comparación con una operación COUNT DISTINCT precisa. Para más información sobre el algoritmo usado para conseguir esto, consulte [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog).
 
 > [!NOTE]
 > Con cadenas que distinguen la intercalación, la versión preliminar pública de APPROX_COUNT_DISTINCT usa una combinación binaria y proporciona resultados que se habrían generado en presencia de intercalaciones BIN y no BIN2. 
@@ -79,7 +79,7 @@ Approx_Distinct_OrderKey
 15164704
 ```
   
-### <a name="b-using-approxcountdistinct-with-group-by"></a>B. Uso de APPROX_COUNT_DISTINCT con GROUP BY 
+### <a name="b-using-approxcountdistinct-with-group-by"></a>b. Uso de APPROX_COUNT_DISTINCT con GROUP BY 
 Este ejemplo devuelve el número aproximado de claves de pedido diferentes según el estado del pedido desde la tabla de pedidos. 
   
 ```sql

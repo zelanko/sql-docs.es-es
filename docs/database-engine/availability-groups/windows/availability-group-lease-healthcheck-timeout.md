@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d04f3383409e51be48498853068c93b2d1a66725
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 05501a3d084921f52088a76d7e1a69390cd48998
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211096"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405805"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Instrucciones y mecanismos de los tiempos de espera de comprobación de estado, clúster y concesión para grupos de disponibilidad Always On 
 
@@ -46,7 +46,7 @@ A diferencia de otros mecanismos de conmutación por error, la instancia de SQL 
 
 El mecanismo de concesión exige la sincronización entre SQL Server y el clúster de conmutación por error de Windows Server. Cuando se emite un comando de conmutación por error, el servicio de clúster realiza una llamada sin conexión a la DLL de recursos de la réplica principal actual. La DLL de recursos primero intenta tomar el grupo de disponibilidad sin conexión mediante un procedimiento almacenado. Si este procedimiento almacenado produce un error o agota el tiempo de espera, el error se notifica al servicio de clúster, que luego emite un comando de finalización. La finalización intenta volver a ejecutar el mismo procedimiento almacenado, pero esta vez el clúster no espera a que la DLL de recursos notifique el estado correcto o de error antes de poner el grupo de disponibilidad en línea en una nueva réplica. Si se produce un error en esta segunda llamada de procedimiento, el host de recursos tendrá que confiar en este mecanismo de concesión para poner la instancia sin conexión. Cuando se llama a la DLL de recursos para poner el grupo de disponibilidad sin conexión, la DLL de recursos señala el evento de detención de concesión y reactiva el subproceso de trabajo de concesión de SQL Server para poner el grupo de disponibilidad sin conexión. Incluso si no se señala a este evento de detención, la concesión expirará y la réplica cambiará al estado de resolución. 
 
-La concesión es principalmente un mecanismo de sincronización entre la instancia principal y el clúster, pero también puede crear condiciones de error donde no había ninguna necesidad de conmutación por error. Por ejemplo, elevado uso de CPU, condiciones de memoria insuficiente, falta de respuesta de los procesos de SQL al generar un volcado de memoria, bloqueo de todo el sistema, desconexión del clúster (WSFC) debido a la pérdida de cuórum o presión de tempdb que pueden agotar el subproceso de trabajo de concesión, de forma que no es posible la renovación de la concesión de la instancia de SQL y provoca una conmutación por error. 
+La concesión es principalmente un mecanismo de sincronización entre la instancia principal y el clúster, pero también puede crear condiciones de error donde no había ninguna necesidad de conmutación por error. Por ejemplo, elevado uso de CPU, condiciones de memoria insuficiente (poca memoria virtual, paginación de procesos), falta de respuesta de los procesos de SQL al generar un volcado de memoria, bloqueo de todo el sistema, desconexión del clúster (WSFC) debido, por ejemplo, a la pérdida de cuórum, que pueden impedir la renovación de la concesión de la instancia de SQL y provocar una conmutación por error. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Directrices para valores de tiempo de espera del clúster 
 

@@ -1,7 +1,7 @@
 ---
 title: Suscriptores de replicación y grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/08/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,20 +14,20 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46348ec891fba60479633f824a96232290859cd3
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 3148948d4ccc162a18f114ed99c36393b3b78c86
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298512"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372660"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Suscriptores de replicación y grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Cuando el grupo de disponibilidad AlwaysOn que contiene una base de datos que es un suscriptor de replicación realiza una conmutación por error, se puede producir un error en la suscripción de replicación. Para los suscriptores transaccionales, el agente de escucha seguirá replicando automáticamente si la suscripción usa el nombre del agente de escucha del grupo de disponibilidad del suscriptor. Para los suscriptores de mezcla, un administrador de replicación debe volver a configurar manualmente el suscriptor volviendo a crear la suscripción.  
+  Cuando el grupo de disponibilidad AlwaysOn que contiene una base de datos que es un suscriptor de replicación realiza una conmutación por error, se puede producir un error en la suscripción de replicación. Para los suscriptores de inserción de replicación transaccional, el agente de distribución se seguirá replicando automáticamente después de una conmutación por error si la suscripción se creó mediante el nombre de la escucha de grupo de disponibilidad. Para los suscriptores de extracción de replicación transaccional, el agente de distribución se seguirá replicando automáticamente después de una conmutación por error si la suscripción se creó mediante el nombre de la escucha de grupo de disponibilidad y el servidor del suscriptor original está activo y en ejecución. El motivo es que los trabajos del agente de distribución solo se crean en el suscriptor original (réplica principal del grupo de disponibilidad). Para los suscriptores de mezcla, un administrador de replicación debe volver a configurar manualmente el suscriptor volviendo a crear la suscripción.  
   
 ## <a name="what-is-supported"></a>Qué se admite  
- La replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la conmutación por error automática del publicador y la conmutación por error automática de los suscriptores transaccionales. No se admite la conmutación por error de un distribuidor de una base de datos de disponibilidad. Los suscriptores de mezcla pueden ser parte de un grupo de disponibilidad, pero se requieren acciones manuales para configurar el suscriptor nuevo después de una conmutación por error. Los grupos de disponibilidad no se pueden combinar con escenarios de Websync y SQL Server Compact.  
+ La replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la conmutación por error automática del publicador y la conmutación por error automática de los suscriptores transaccionales. Los suscriptores de mezcla pueden ser parte de un grupo de disponibilidad, pero se requieren acciones manuales para configurar el suscriptor nuevo después de una conmutación por error. Los grupos de disponibilidad no se pueden combinar con escenarios de Websync y SQL Server Compact.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Cómo crear una suscripción transaccional en un entorno de AlwaysOn  
  Para la replicación transaccional, utilice los pasos siguientes para configurar y conmutar por error un grupo de disponibilidad de suscriptor:  

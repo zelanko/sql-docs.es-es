@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logins [SQL Server], revoking
 - REVOKE statement, logins
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2fbc40b5efc4bdab813e36f384fc7914b156f72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32ddb009c4cbeb843e3c2150431a43d86219fc5d
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661284"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326076"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE (permisos de entidad de seguridad de servidor de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ REVOKE IMPERSONATE ON LOGIN::WanidaBenshoof FROM [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-with-cascade"></a>B. Revocar el permiso VIEW DEFINITION con CASCADE  
+### <a name="b-revoking-view-definition-permission-with-cascade"></a>b. Revocar el permiso VIEW DEFINITION con CASCADE  
  En el siguiente ejemplo se revoca el permiso `VIEW DEFINITION` para el inicio de sesión `EricKurjan` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del inicio de sesión `RMeyyappan` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La opción `CASCADE` indica que el permiso `VIEW DEFINITION` para `EricKurjan` también se revocará a las entidades de seguridad a las que `RMeyyappan` concedió el permiso.  
   
 ```  
@@ -141,7 +141,7 @@ REVOKE VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [GRANT &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   

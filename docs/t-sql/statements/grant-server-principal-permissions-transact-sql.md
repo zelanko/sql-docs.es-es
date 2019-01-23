@@ -19,15 +19,15 @@ helpviewer_keywords:
 - logins [SQL Server], granting access
 - granting permissions [SQL Server], impersonation
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 19cccc7c8199e3cdfc425cf8269c363549ad69de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11caad507a8d8af50bae6c3d2b51807287ee694c
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781413"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326606"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT (permisos de entidad de seguridad de servidor de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. Conceder el permiso VIEW DEFINITION con GRANT OPTION  
+### <a name="b-granting-view-definition-permission-with-grant-option"></a>b. Conceder el permiso VIEW DEFINITION con GRANT OPTION  
  En el siguiente ejemplo se concede `VIEW DEFINITION` para el inicio de sesión `EricKurjan` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el inicio de sesión de `RMeyyappan` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con `GRANT OPTION`.  
   
 ```  
@@ -138,7 +138,7 @@ GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

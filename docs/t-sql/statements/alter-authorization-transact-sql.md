@@ -23,16 +23,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], permissions
 - TAKE OWNERSHIP
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6855f45379f113f91c54b46e3d1c77a913c853f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730713"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327551"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -171,7 +171,7 @@ ALTER AUTHORIZATION ON
  Si la entidad de destino no es una base de datos y la entidad se va a transferir a un nuevo propietario, se quitarán todos los permisos del destino.    
     
 > [!CAUTION]    
->  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el comportamiento de los esquemas es distinto del de las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si en el código se supone que los esquemas son equivalentes a usuarios de base de datos, los resultados obtenidos podrían ser incorrectos. Las vistas de catálogo antiguas, incluida sysobjects, no deben usarse en una base de datos en la que se haya usado alguna de las siguientes instrucciones DDL: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. En una base de datos en la que se ha usado alguna de estas instrucciones, deben usarse las nuevas vistas de catálogo. En las nuevas vistas de catálogo se tiene en cuenta la separación de entidades de seguridad y esquemas que se presentó en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre las vistas de catálogo, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).    
+>  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el comportamiento de los esquemas es distinto del de las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si en el código se supone que los esquemas son equivalentes a usuarios de base de datos, los resultados obtenidos podrían ser incorrectos. No se deben usar vistas de catálogo antiguas, como sysobjects, en una base de datos en la que nunca se haya usado ninguna de las instrucciones DDL siguientes: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. En una base de datos en la que se ha usado alguna de estas instrucciones, deben usarse las nuevas vistas de catálogo. En las nuevas vistas de catálogo se tiene en cuenta la separación de entidades de seguridad y esquemas que se presentó en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre las vistas de catálogo, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).    
     
  Tenga en cuenta los siguientes aspectos:    
     
@@ -306,7 +306,7 @@ ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. Transferir la propiedad de una vista al propietario del esquema    
+### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>b. Transferir la propiedad de una vista al propietario del esquema    
  En el siguiente ejemplo se transfiere la propiedad de la vista `ProductionView06` al propietario del esquema que la contiene. La vista se encuentra dentro del esquema `Production`.    
     
 ```    
@@ -360,7 +360,7 @@ ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];
  Tenga en cuenta que para los usuarios de Azure AD hay que utilizar los corchetes que encierran el nombre de usuario.  
   
     
-## <a name="see-also"></a>Ver también    
+## <a name="see-also"></a>Consulte también    
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)     
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)     
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    

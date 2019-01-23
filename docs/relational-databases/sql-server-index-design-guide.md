@@ -1,7 +1,7 @@
 ---
 title: Guía de diseño y de arquitectura de índices de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712706"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420190"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -218,7 +218,7 @@ Use estas vistas de metadatos para ver los atributos de los índices. Puede obte
 |-|-|
 |[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -824,7 +824,7 @@ Los índices no agrupados son uno de los posibles tipos de índice de una tabla 
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Arquitectura de los índices no agrupados en memoria
 
-Los índices no agrupados en memoria se implementan mediante una estructura de datos llamada "árbol BW", concebida y descrita originalmente por Microsoft Research en 2011. Un árbol BW es la variación sin bloqueos ni bloqueos temporales de un árbol B. Para obtener más información, vea [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/) (Árbol BW: un árbol B para nuevas plataformas de hardware). 
+Los índices no agrupados en memoria se implementan mediante una estructura de datos llamada "árbol BW", concebida y descrita originalmente por Microsoft Research en 2011. Un árbol BW es la variación sin bloqueos ni bloqueos temporales de un árbol B. Para más información, consulte [Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/) (Árbol B: un árbol B para nuevas plataformas de hardware). 
 
 En un nivel muy alto, el árbol BW puede entenderse como una asignación de páginas organizadas por un identificador de página (PidMap), un recurso para asignar y reutilizar identificadores de página (PidAlloc), y un conjunto de páginas vinculadas a la asignación de páginas y también entre sí. Estos tres subcomponentes de alto nivel constituyen la estructura interna básica de un árbol BW.
 
@@ -856,9 +856,9 @@ Se aplica una operación de división en dos pasos atómicos. En la imagen que h
 
 ![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "División de páginas")
 
-**Paso 1:** Asigne dos nuevas páginas P1 y P2, y divida las filas de la anterior página P1 en estas nuevas páginas, incluida la fila que se acaba de insertar. Se usa un nuevo espacio en la tabla de asignación de páginas para almacenar la dirección física de la página P2. Ninguna operación simultánea puede acceder todavía a estas páginas, P1 y P2. Además, se establece el puntero lógico de P1 a P2. Después, en un paso atómico, se actualiza la tabla de asignación de páginas para cambiar el puntero de la anterior P1 a la nueva P1. 
+**Paso 1:** Asigne dos nuevas páginas P1 y P2, y divida las filas de la página P1 anterior en estas nuevas páginas, incluida la fila que se acaba de insertar. Se usa un nuevo espacio en la tabla de asignación de páginas para almacenar la dirección física de la página P2. Ninguna operación simultánea puede acceder todavía a estas páginas, P1 y P2. Además, se establece el puntero lógico de P1 a P2. Después, en un paso atómico, se actualiza la tabla de asignación de páginas para cambiar el puntero de la anterior P1 a la nueva P1. 
 
-**Paso 2:** La página no hoja apunta a la página P1, pero no hay ningún puntero directo de una página no hoja a la página P2. Solo se puede acceder a P2 mediante P1. Para crear un puntero de una página no hoja a una P2, asigne una nueva página no hoja (página de índice interno), copie todas las filas de la antigua página no hoja y agregue una nueva fila para que apunte a P2. Una vez lo haya hecho, en un paso atómico, actualice la tabla de asignación de páginas para cambiar el puntero de la antigua página no hoja a la nueva página no hoja.
+**Paso 2:** La página que no es hoja apunta a la página P1, pero no hay ningún puntero directo desde una página que no es hoja a la página P2. Solo se puede acceder a P2 mediante P1. Para crear un puntero de una página no hoja a una P2, asigne una nueva página no hoja (página de índice interno), copie todas las filas de la antigua página no hoja y agregue una nueva fila para que apunte a P2. Una vez lo haya hecho, en un paso atómico, actualice la tabla de asignación de páginas para cambiar el puntero de la antigua página no hoja a la nueva página no hoja.
 
 #### <a name="merge-page"></a>Combinación de páginas
 Cuando una operación `DELETE` provoca que una página tenga menos de un 10 % del tamaño máximo de página (actualmente, de 8 KB) o bien contenga una sola fila, la página se combinará con una contigua.
@@ -869,11 +869,11 @@ En la imagen siguiente, pongamos que una operación `DELETE` elimina el valor de
 
 ![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Combinación de páginas")
 
-**Paso 1:** Se crea una página delta que representa el valor de clave 10 (triángulo azul), y el puntero correspondiente de la página no hoja Pp1 se establece en la nueva página delta. Además, se crea una página delta de combinación (triángulo verde) y se vincula para que apunte a la página delta. En este punto, ninguna transacción simultánea puede ver las dos páginas (delta y delta de combinación). En un paso atómico, el puntero a la página de nivel hoja P1 de la tabla de asignación de páginas se actualiza para que apunte a la página delta de combinación. Después de este paso, la entrada del valor de clave 10 en Pp1 apuntará a la página delta de combinación. 
+**Paso 1:** Se crea una página delta que representa el valor de clave 10 (triángulo azul), y el puntero correspondiente de la página que no es hoja Pp1 se establece en la nueva página delta. Además, se crea una página delta de combinación (triángulo verde) y se vincula para que apunte a la página delta. En este punto, ninguna transacción simultánea puede ver las dos páginas (delta y delta de combinación). En un paso atómico, el puntero a la página de nivel hoja P1 de la tabla de asignación de páginas se actualiza para que apunte a la página delta de combinación. Después de este paso, la entrada del valor de clave 10 en Pp1 apuntará a la página delta de combinación. 
 
-**Paso 2:** Debe eliminarse la fila que representa el valor de clave 7 en la página no hoja Pp1 y debe actualizarse la entrada del valor de clave 10 para que apunte a P1. Para ello, se asigna una nueva página no hoja Pp2 y todas las filas de Pp1 se copian, excepto la que representa el valor de clave 7. Después, la fila del valor de clave 10 se actualiza para que apunte a la página P1. Una vez hecho esto, en un paso atómico, la entrada de la tabla de asignación de páginas que apunta a Pp1 se actualiza para que apunte a Pp2. Ya no se puede acceder a Pp1. 
+**Paso 2:** Debe eliminarse la fila que representa el valor de clave 7 en la página que no es hoja Pp1 y debe actualizarse la entrada del valor de clave 10 para que apunte a P1. Para ello, se asigna una nueva página no hoja Pp2 y todas las filas de Pp1 se copian, excepto la que representa el valor de clave 7. Después, la fila del valor de clave 10 se actualiza para que apunte a la página P1. Una vez hecho esto, en un paso atómico, la entrada de la tabla de asignación de páginas que apunta a Pp1 se actualiza para que apunte a Pp2. Ya no se puede acceder a Pp1. 
 
-**Paso 3:** Se combinan las páginas de nivel hoja P2 y P1, y se eliminan las páginas delta. Para ello, se asigna una nueva página P3, se combinan las filas de la P2 a la P1 y los cambios de la página delta se incluyen en la nueva P3. Después, en un paso atómico, la entrada de la tabla de asignación de páginas que apunta a la página P1 se actualiza para que apunte a la página P3. 
+**Paso 3:** Se combinan las páginas de nivel de hoja P2 y P1, y se eliminan las páginas delta. Para ello, se asigna una nueva página P3, se combinan las filas de la P2 a la P1 y los cambios de la página delta se incluyen en la nueva P3. Después, en un paso atómico, la entrada de la tabla de asignación de páginas que apunta a la página P1 se actualiza para que apunte a la página P3. 
 
 ### <a name="performance-considerations"></a>Consideraciones de rendimiento
 

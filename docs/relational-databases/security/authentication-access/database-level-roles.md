@@ -1,7 +1,7 @@
 ---
 title: Roles de nivel de base de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 06/29/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,14 +39,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f90a0ac06ed8852410874ffc2fb4a26b04ebf3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780833"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420100"
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Para administrar con facilidad los permisos en las bases de datos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona varios *roles* , que son las entidades de seguridad que agrupan a otras entidades de seguridad. Son como los ***grupos*** del sistema operativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Los roles de nivel de base de datos se aplican a toda la base de datos en lo que respecta a su ámbito de permisos.  
@@ -92,11 +93,11 @@ Estos roles de base de datos solo existen en la base de datos maestra virtual. S
 
 |Nombre de rol|Descripción|  
 |--------------------|-----------------|
-**dbmanager** | Puede crear y eliminar bases de datos. Un miembro del rol dbmanager que crea una base de datos se convierte en el propietario de dicha base de datos, lo que permite que el usuario se conecte a ella como el usuario dbo. El usuario dbo tiene todos los permisos de base de datos en la base de datos. Los miembros del rol dbmanager no necesariamente tienen permiso para obtener acceso a las bases de datos que no son de su propiedad.
-**loginmanager** | Puede crear y eliminar inicios de sesión en la base de datos maestra virtual.  
+|**dbmanager** | Puede crear y eliminar bases de datos. Un miembro del rol dbmanager que crea una base de datos se convierte en el propietario de dicha base de datos, lo que permite que el usuario se conecte a ella como el usuario dbo. El usuario dbo tiene todos los permisos de base de datos en la base de datos. Los miembros del rol dbmanager no necesariamente tienen permiso para obtener acceso a las bases de datos que no son de su propiedad.|
+|**loginmanager** | Puede crear y eliminar inicios de sesión en la base de datos maestra virtual.|
 
 > [!NOTE]
-> La entidad de seguridad a nivel de servidor y el administrador de Azure Active Directory (si está configurado) tienen todos los permisos en [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sin la necesidad de ser miembros de ninguno de los roles. Para más información, consulte [Autorización y autenticación de SQL Database: concesión de acceso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> La entidad de seguridad a nivel de servidor y el administrador de Azure Active Directory (si está configurado) tienen todos los permisos en [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sin la necesidad de ser miembros de ninguno de los roles. Para más información, consulte [Autorización y autenticación de SQL Database: concesión de acceso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/) 
   
 ## <a name="msdb-roles"></a>Roles de msdb  
  La base de datos msdb contiene los roles con fines especiales que se muestran en la tabla siguiente.  

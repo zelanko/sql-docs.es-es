@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257100"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317805"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Actualización de bases de datos mediante el Asistente para la optimización de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Como punto de partida de QTA se da por supuesto que una base de datos de una ver
 
 Para obtener más información sobre cómo asociar una base de datos, vea [Adjuntar y separar bases de datos](../../relational-databases/databases/database-detach-and-attach-sql-server.md#AttachDb).
 
-Vea a continuación cómo QTA básicamente solo cambia los últimos pasos del flujo de trabajo recomendado para actualizar el nivel de compatibilidad mediante el Almacén de consultas visto arriba. En lugar de dar la opción de elegir entre el plan de ejecución actualmente ineficaz y el último plan de ejecución bueno conocido, QTA presenta las opciones de optimización específicas para las consultas con regresión seleccionadas para crear un nuevo estado mejorado con planes de ejecución optimizados.
+Vea a continuación cómo QTA básicamente solo cambia los últimos pasos del flujo de trabajo recomendado para actualizar el nivel de compatibilidad mediante el Almacén de consultas visto arriba. En lugar de dar la opción de elegir entre el plan de ejecución actualmente ineficaz y el último plan de ejecución bueno conocido, QTA presenta opciones de optimización que son específicas de las consultas con regresión seleccionadas, con el fin de crear un nuevo estado mejorado con planes de ejecución optimizados.
 
 ![Flujo de trabajo recomendado de actualización de base de datos mediante QTA](../../relational-databases/performance/media/qta-usage.png "Recommended database upgrade workflow using QTA")
 
@@ -84,7 +84,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
 
 3.  En la ventana del asistente QTA, se requieren dos pasos para configurar una sesión:
 
-    1.  En la ventana **Instalación**, configure el Almacén de consultas para capturar el equivalente a un ciclo comercial completo de datos de carga de trabajo para analizar y optimizar. 
+    1.  En la ventana **Setup** (Configuración), configure el Almacén de consultas para capturar el equivalente a un ciclo comercial completo de datos de carga de trabajo para analizar y optimizar. 
         -  Especifique la duración de la carga de trabajo esperada en días (el mínimo es 1 día). Se usa para proponer la configuración recomendada del Almacén de consultas para permitir que se recopile la línea de base completa. La captura de una buena línea de base es importante para garantizar que las consultas con regresión detectadas después de cambiar el nivel de compatibilidad de la base de datos se puedan analizar. 
         -  Establezca el nivel de compatibilidad previsto de la base de datos de destino en el que debería estar la base de datos de usuario una vez completado el flujo de trabajo de QTA.
         Cuando termine, haga clic en **Siguiente**.
@@ -92,7 +92,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
        ![Ventana de instalación Nueva sesión de actualización de base de datos](../../relational-databases/performance/media/qta-new-session-setup.png "New database upgrade setup window")  
   
     2.  En la ventana **Configuración**, dos columnas muestran el estado **Actual** del Almacén de consultas de la base de destino, así como la configuración **Recomendada**. 
-        -  La configuración Recomendada está seleccionada de forma predeterminada, pero al hacer clic en el botón de radio de la columna Actual, se acepta la configuración actual y también se permite ajustar con precisión la configuración actual del Almacén de consultas. 
+        -  La configuración recomendada se selecciona de forma predeterminada, pero al hacer clic en el botón de radio en la columna actual, se acepta la configuración actual y también se permite ajustar con precisión la configuración actual del Almacén de consultas. 
         -  El valor de *Umbral de consultas obsoletas* propuesto es dos veces la duración de la carga de trabajo esperada en días. Esto se debe a que el Almacén de consultas debe contener información sobre la carga de trabajo de línea de base y la carga de trabajo de actualización posterior a la base de datos.
         Cuando termine, haga clic en **Siguiente**.
 
@@ -162,7 +162,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
         La lista contiene la información siguiente:
         -  **Id. de consulta** 
         -  **Texto de consulta**: instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se puede expandir al hacer clic en el botón **...**
-        -  **Ejecuciones**: muestra el número de ejecuciones de esa consulta para la colección de cargas de trabajo completa.
+        -  **Ejecuciones**: muestra el número de ejecuciones de esa consulta para la colección completa de cargas de trabajo.
         -  **Métrica de línea de base**: métrica seleccionada (Duración o Tiempo de CPU) en milisegundos para la colección de datos de línea de base antes de la actualización de compatibilidad de base de datos.
         -  **Métrica observada**: métrica seleccionada (Duración o Tiempo de CPU) en milisegundos para la colección de datos después de la actualización de compatibilidad de base de datos.
         -  **% cambio**: cambio porcentual de la métrica seleccionada entre el antes y el después del estado de actualización de compatibilidad de base de datos. Un número negativo representa la cantidad de regresión medida de la consulta.
@@ -207,7 +207,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
     > En su lugar, busque guías de plan mediante la tabla del sistema [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) y elimine manualmente mediante [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
-Requiere pertenencia al rol **db_owner**.
+Requiere la pertenencia al rol **db_owner**.
   
 ## <a name="see-also"></a>Consulte también  
  [Niveles de compatibilidad y actualizaciones de SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    

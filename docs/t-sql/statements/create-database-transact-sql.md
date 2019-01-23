@@ -38,20 +38,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5642af0a47cff5ffa7c45aa910fb3101ad831df0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532555"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327893"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
-Crea una nueva base de datos. 
+Crea una nueva base de datos.
 
 Haga clic en una de las pestañas siguientes para obtener la sintaxis, los argumentos, los comentarios, los permisos y los ejemplos para una versión de SQL concreta con la que está trabajando.
 
-Para obtener más información sobre las convenciones de sintaxis, vea [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+Para obtener más información sobre las convenciones de sintaxis, vea [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="click-a-product"></a>Haga clic en un producto.
 
@@ -72,12 +72,11 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 En SQL Server, esta instrucción crea una base de datos nueva y los archivos usados y sus grupos de archivos. También puede usarse para crear una instantánea de base de datos o adjuntar archivos de base de datos para crear una base de datos de los archivos desasociados de otra base de datos. 
 
-
 ## <a name="syntax"></a>Sintaxis  
 
 Crear una base de datos.  
 
-```  
+```
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -164,7 +163,8 @@ CREATE DATABASE database_snapshot_name
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
+
  *database_name*  
  Es el nombre de la nueva base de datos. Los nombres de base de datos deben ser únicos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
@@ -455,7 +455,8 @@ CREATE DATABASE database_snapshot_name
   
  Para obtener más información, vea "Instantáneas de base de datos" en la sección Comentarios.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Notas
+
  Cada vez que se crea, modifica o quita una base de datos de usuario, se debe hacer una copia de seguridad de la [base de datos maestra](../../relational-databases/databases/master-database.md).  
   
  La instrucción CREATE DATABASE debe ejecutarse en modo de confirmación automática (el modo predeterminado de administración de transacciones) y no se permite en una transacción explícita o implícita.  
@@ -479,14 +480,16 @@ Algunas características de la base de datos dependen de características o capa
 - Creación de instantáneas de bases de datos
 - Grupo de archivos de datos optimizados para memoria
    
-## <a name="database-files-and-filegroups"></a>Archivos y grupos de archivos de base de datos  
+## <a name="database-files-and-filegroups"></a>Archivos y grupos de archivos de base de datos
+
  Todas las bases de datos tienen al menos dos archivos (un *archivo principal* y un *archivo de registro de transacciones*) y un grupo de archivos como mínimo. Para cada base de datos pueden especificarse hasta 32.767 archivos y 32.767 grupos de archivos.  
   
  Cuando cree una base de datos, defina el mayor tamaño posible para los archivos de datos según la cantidad de datos máxima prevista para la base datos.  
   
  Se recomienda usar una red de área de almacenamiento (SAN), una red basada en iSCSI o un disco conectado localmente para almacenar los archivos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], porque esta configuración optimiza el rendimiento y la confiabilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="database-snapshots"></a>Instantáneas de base de datos  
+## <a name="database-snapshots"></a>Instantáneas de base de datos
+
  Se puede utilizar la instrucción CREATE DATABASE para crear una vista estática de solo lectura, es decir, una *instantánea de base de datos* de la *base de datos de origen*. Desde el punto de vista transaccional, una instantánea de base de datos es coherente con la base de datos de origen tal como se encontraba en el momento de crear la instantánea. Una base de datos de origen puede tener varias instantáneas.  
   
 > [!NOTE]  
@@ -498,20 +501,24 @@ Algunas características de la base de datos dependen de características o capa
   
  Para más información, vea [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
-## <a name="database-options"></a>Opciones de base de datos  
+## <a name="database-options"></a>Opciones de base de datos
+
  Cuando se crea una base de datos, se establecen automáticamente varias opciones de base de datos. Para obtener una lista de estas opciones, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-## <a name="the-model-database-and-creating-new-databases"></a>Base de datos modelo y creación de nuevas bases de datos  
+## <a name="the-model-database-and-creating-new-databases"></a>Base de datos modelo y creación de nuevas bases de datos
+
  Todos los objetos definidos por el usuario en la [base de datos modelo](../../relational-databases/databases/model-database.md) se copiarán en todas las bases de datos recién creadas. Puede agregar a la base de datos model todos los objetos (tablas, vistas, procedimientos almacenados, tipos de datos, etc.) que desee incluir en todas las bases de datos creadas recientemente.  
   
  Cuando se especifica una instrucción CREATE DATABASE *database_name* sin parámetros de tamaño adicionales, el archivo de datos principal pasa a tener el mismo tamaño que el archivo principal de la base de datos model.  
   
  A menos que se especifique FOR ATTACH, todas las bases de datos nuevas heredan los valores de las opciones de la base de datos model. Por ejemplo, la opción de base de datos de reducción automática se establece en **true** en la base de datos model y en cualquier base de datos nueva que se cree. Si se cambian las opciones de la base de datos model, los nuevos valores de estas opciones se utilizarán en las nuevas bases de datos que se creen. Las operaciones de modificación de la base de datos model no afectan a las bases de datos existentes. Si se especifica FOR ATTACH en la instrucción CREATE DATABASE, la nueva base de datos hereda los valores de las opciones de la base de datos original.  
   
-## <a name="viewing-database-information"></a>Ver la información de la base de datos  
+## <a name="viewing-database-information"></a>Ver la información de la base de datos
+
  Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos almacenados del sistema para devolver información sobre bases de datos, archivos y grupos de archivos. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permisos
+
  Requiere el permiso CREATE DATABASE, CREATE ANY DATABASE o ALTER ANY DATABASE.  
   
  Para mantener el control del uso del disco en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el permiso para crear bases de datos suele limitarse a un número reducido de cuentas de inicio de sesión.  
@@ -525,7 +532,8 @@ GRANT CREATE DATABASE TO [Fay];
 GO  
 ```  
   
-### <a name="permissions-on-data-and-log-files"></a>Permisos en archivos de datos y de registro  
+### <a name="permissions-on-data-and-log-files"></a>Permisos en archivos de datos y de registro
+
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], algunos permisos se establecen en los archivos de datos y de registro de cada base de datos. Siempre que se realizan las operaciones siguientes en una base de datos, se establecen estos permisos:  
   
 |||  
@@ -541,8 +549,9 @@ GO
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-creating-a-database-without-specifying-files"></a>A. Crear una base de datos sin especificar archivos  
- En este ejemplo se crea la base de datos `mytest`, y los archivos principal y de registro de transacciones correspondientes. Debido a que la instrucción no tiene elementos \<filespec>, el archivo de la base de datos principal tiene el tamaño del archivo principal de la base de datos model. El registro de transacciones se establece en el mayor de estos valores: 512 KB o el 25 % del tamaño del archivo de datos principal. Como no se ha especificado MAXSIZE, los archivos pueden crecer hasta llenar todo el espacio disponible en el disco. En este ejemplo también se muestra la forma de quitar la base de datos denominada `mytest` si existe, antes de crear la base de datos `mytest`.  
+### <a name="a-creating-a-database-without-specifying-files"></a>A. Crear una base de datos sin especificar archivos
+
+ En este ejemplo se crea la base de datos `mytest`, y los archivos principal y de registro de transacciones correspondientes. Debido a que la instrucción no tiene elementos \<filespec>, el archivo de la base de datos principal tiene el tamaño del archivo principal de la base de datos model. El registro de transacciones se establece en el mayor de los valores siguientes: 512 KB o el 25 % del tamaño del archivo de datos principal. Como no se ha especificado MAXSIZE, los archivos pueden crecer hasta llenar todo el espacio disponible en el disco. En este ejemplo también se muestra la forma de quitar la base de datos denominada `mytest` si existe, antes de crear la base de datos `mytest`.  
   
 ```sql  
 USE master;  
@@ -559,7 +568,8 @@ WHERE name = N'mytest';
 GO  
 ```  
   
-### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Crear una base de datos que especifica los archivos de datos y de registro de transacciones  
+### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>b. Crear una base de datos que especifica los archivos de datos y de registro de transacciones
+
  En el ejemplo siguiente se crea la base de datos `Sales`. Debido a que no se usa la palabra clave PRIMARY, el primer archivo (`Sales_dat`) se convierte en el principal. Como no se especifica MB ni KB en el parámetro SIZE del archivo `Sales_dat` , se utiliza MB y el tamaño se asigna en megabytes. Cada vez que se crea, modifica o quita una base de datos de usuario, se debe hacer una copia de seguridad de la base de datos `Sales_log` se asigna en megabytes porque el sufijo `MB` se ha indicado explícitamente en el parámetro `SIZE` .  
   
 ```sql  
@@ -581,7 +591,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. Crear una base de datos especificando múltiples archivos de datos y de registro de transacciones  
+### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. Crear una base de datos especificando múltiples archivos de datos y de registro de transacciones
+
  En el ejemplo siguiente se crea la base de datos `Archive`, que tiene tres archivos de datos de `100-MB` y dos archivos de registro de transacciones de `100-MB`. El archivo principal es el primer archivo de la lista y se especifica explícitamente con la palabra clave `PRIMARY`. Los archivos de registro de transacciones se especifican a continuación de las palabras clave `LOG ON`. Tenga en cuenta las extensiones usadas para los archivos en la opción `FILENAME`: `.mdf` se usa para archivos de datos principales, `.ndf` para archivos de datos secundarios y `.ldf` para archivos de registro de transacciones. En este ejemplo se coloca la base de datos en la unidad `D:`, en lugar de con la base de datos `master`.  
   
 ```sql  
@@ -619,7 +630,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="d-creating-a-database-that-has-filegroups"></a>D. Crear una base de datos que tenga grupos de archivos  
+### <a name="d-creating-a-database-that-has-filegroups"></a>D. Crear una base de datos que tenga grupos de archivos
+
  En el ejemplo siguiente se crea la base de datos `Sales`, que tiene los siguientes grupos de archivos:  
   
 -   El grupo de archivos principal, con los archivos `Spri1_dat` y `Spri2_dat`. El incremento de FILEGROWTH para estos archivos se especifica como `15%`.  
@@ -676,7 +688,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="e-attaching-a-database"></a>E. Adjuntar una base de datos  
+### <a name="e-attaching-a-database"></a>E. Adjuntar una base de datos
+
  En el ejemplo siguiente se separa la base de datos `Archive` creada en el ejemplo D y, a continuación, se adjunta mediante la cláusula `FOR ATTACH`. `Archive` se ha definido para contener varios archivos de datos y de registro. Sin embargo, dado que la ubicación de los archivos no ha cambiado desde que se crearon, solo es necesario especificar el archivo principal en la cláusula `FOR ATTACH`. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], los archivos de texto completo que formen parte de la base de datos que se va a adjuntar se adjuntarán con la base de datos.  
   
 ```sql  
@@ -690,7 +703,8 @@ CREATE DATABASE Archive
 GO  
 ```  
   
-### <a name="f-creating-a-database-snapshot"></a>F. Crear una instantánea de base de datos  
+### <a name="f-creating-a-database-snapshot"></a>F. Crear una instantánea de base de datos
+
  En el ejemplo siguiente se crea la instantánea de base de datos `sales_snapshot0600`. Debido a que la instantánea de base de datos es de solo lectura, no se puede especificar un archivo de registro. De acuerdo con la sintaxis, se especifican todos los archivos de la base de datos de origen, pero los grupos de archivos no se especifican.  
   
  La base de datos de origen en este ejemplo es la base de datos `Sales` creada en el ejemplo D.  
@@ -709,7 +723,8 @@ AS SNAPSHOT OF Sales ;
 GO  
 ```  
   
-### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Crear una base de datos y especificar un nombre de intercalación y sus opciones  
+### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Crear una base de datos y especificar un nombre de intercalación y sus opciones
+
  En el ejemplo siguiente se crea la base de datos `MyOptionsTest`. Se especifica un nombre de intercalación y las opciones `TRUSTYWORTHY` y `DB_CHAINING` se establecen en `ON`.  
   
 ```sql  
@@ -729,7 +744,8 @@ WHERE name = N'MyOptionsTest';
 GO  
 ```  
   
-### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. Adjuntar un catálogo de texto completo que se ha movido  
+### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. Adjuntar un catálogo de texto completo que se ha movido
+
  En el ejemplo siguiente se adjunta el catálogo de texto completo `AdvWksFtCat` junto con los archivos de datos y de registro de `AdventureWorks2012`. En el ejemplo, el catálogo de texto completo se mueve desde su ubicación predeterminada hasta una nueva ubicación `c:\myFTCatalogs`. Los archivos de datos y de registro permanecen en sus ubicaciones predeterminadas.  
   
 ```sql  
@@ -748,7 +764,8 @@ FOR ATTACH;
 GO  
 ```  
   
-### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>I. Crear una base de datos que especifique un grupo de archivos de filas y dos grupos de archivos FILESTREAM  
+### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>I. Crear una base de datos que especifique un grupo de archivos de filas y dos grupos de archivos FILESTREAM
+
  En el ejemplo siguiente se crea la base de datos `FileStreamDB`. La base de datos se crea con un grupo de archivos de filas y dos grupos de archivos FILESTREAM. Cada grupo de archivos contiene un archivo:  
   
 -   `FileStreamDB_data` contiene los datos de fila. Contiene un archivo, `FileStreamDB_data.mdf` con la ruta de acceso predeterminada.  
@@ -806,7 +823,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. Crear una base de datos que tenga un grupo de archivos FILESTREAM con varias filas  
+### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. Crear una base de datos que tenga un grupo de archivos FILESTREAM con varias filas
+
  En el ejemplo siguiente se crea la base de datos `BlobStore1`. La base de datos se crea con un grupo de archivos de filas y un grupo de archivos FILESTREAM, `FS`. El grupo de archivos FILESTREAM contiene dos archivos, `FS1` y `FS2`. Después, la base de datos se altera agregando un tercer archivo, `FS3`, al grupo de archivos FILESTREAM.  
   
 ```sql  
@@ -855,7 +873,8 @@ TO FILEGROUP [FS];
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también
+
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -887,6 +906,7 @@ En el servidor lógico de Azure SQL Database, esta instrucción puede utilizarse
 ## <a name="syntax"></a>Sintaxis 
 
 ### <a name="create-a-database"></a>Crear una base de datos
+
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 {  
@@ -966,7 +986,7 @@ Especifica el tamaño máximo de la base de datos. El valor de MAXSIZE debe ser 
 
 **Modelo basado en DTU para bases de datos únicas y agrupadas en un servidor lógico**
 
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** | 
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|
@@ -990,28 +1010,32 @@ Especifica el tamaño máximo de la base de datos. El valor de MAXSIZE debe ser 
 |1024 GB|N/D|N/D|√|√|√ (D)|
 |Desde 1024 GB hasta 4096 GB en incrementos de 256 GB* |N/D|N/D|N/D|N/D|√|√|  
   
-\* P11 y P15 permiten un valor de MAXSIZE de hasta 4 TB, con 1024 GB como tamaño predeterminado.  P11 y P15 pueden usar hasta 4 TB de almacenamiento incluido sin cargos adicionales. En el nivel Premium, un valor de MAXSIZE superior a 1 TB está actualmente disponible en las siguientes regiones: Este de EE. UU. 2, Oeste de EE. UU., Virginia Gob. EE. UU., Europa Occidental, Centro de Alemania, Asia Suroriental, Japón Oriental, Este de Australia, Canadá Central y Canadá Oriental. Para obtener más información sobre las limitaciones de recursos para el modelo basado en DTU, consulte [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Límites de recursos basados en DTU).  
+\* P11 y P15 permiten un valor de MAXSIZE de hasta 4 TB, con 1024 GB como tamaño predeterminado.  P11 y P15 pueden usar hasta 4 TB de almacenamiento incluido sin cargos adicionales. En el nivel Premium, un valor de MAXSIZE mayor de 1 TB está actualmente disponible en las regiones siguientes: Este de EE. UU. 2, Oeste de EE. UU., Virginia Gob. EE. UU., Europa Occidental, Centro de Alemania, Sudeste Asiático, Japón Oriental, Este de Australia, Centro de Canadá y Este de Canadá. Para obtener más información sobre las limitaciones de recursos para el modelo basado en DTU, consulte [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Límites de recursos basados en DTU).  
 
 El valor MAXSIZE para el modelo basado en DTU, si se especifica, tiene que ser un valor válido según se muestra en la tabla anterior para el nivel de servicio especificado.
  
 **Modelo basado en núcleo virtual para bases de datos únicas y agrupadas en un servidor lógico**
 
 **Nivel de servicio de uso general: plataforma de procesos de 4.ª generación**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |Tamaño máximo de datos (GB)|1024|1024|1536|3072|4096|4096|
 
 **Nivel de servicio de uso general: plataforma de procesos de 5.ª generación**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Tamaño máximo de datos (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
 
 **Nivel de servicio crítico para la empresa: plataforma de procesos de 4.ª generación**
+
 |Nivel de rendimiento|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |Tamaño máximo de datos (GB)|1024|1024|1024|1024|1024|1024|
 
 **Nivel de servicio crítico para la empresa: plataforma de procesos de 5.ª generación**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Tamaño máximo de datos (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -1021,16 +1045,19 @@ Si no hay ningún valor `MAXSIZE` establecido al utilizar el modelo de núcleo v
 **Modelo basado en núcleo virtual para bases de datos en una instancia administrada**
 
 **Nivel de servicio de uso general: plataforma de procesos de 4.ª generación**
+
 |MAXSIZE|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |
 |Tamaño máximo de datos (TB)|8|8|8|
 
 **Nivel de servicio de uso general: plataforma de procesos de 5.ª generación**
+
 |MAXSIZE|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|
 |Tamaño máximo de datos (TB)|8|8|8|8|8|
 
 Las reglas siguientes se aplican a los argumentos MAXSIZE y EDITION:  
+
 - Si se especifica EDITION pero no se especifica MAXSIZE, se usa el valor predeterminado de la edición. Por ejemplo, si EDITION está establecido en Standard y el valor de MAXSIZE no se especifica, este último se establece automáticamente en 250 MB.  
 - Si no se especifican los valores de MAXSIZE ni EDITION, este último se establece en Standard (S0) y MAXSIZE en 250 GB.  
 
@@ -1049,13 +1076,13 @@ Para obtener las descripciones de los objetivos de servicio y más información 
   
 ELASTIC_POOL (name = \<elastic_pool_name>)
  
-**Válido para:** solo bases de datos únicas y agrupadas. No se aplica a bases de datos en el nivel de servicio Hyperscale.
+**Se aplica a:** Solo bases de datos únicas y agrupadas. No se aplica a bases de datos en el nivel de servicio Hyperscale.
 
 Para crear una base de datos en un grupo de bases de datos elásticas, establezca el valor SERVICE_OBJECTIVE de la base de datos en ELASTIC_POOL e indique el nombre del grupo. Para obtener más información, vea [Create and manage a SQL Database elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/) (Creación y administración de un grupo elástico de SQL Database).  
   
 AS COPY OF [source_server_name.]source_database_name
 
-**Válido para:** solo bases de datos únicas y agrupadas.
+**Se aplica a:** Solo bases de datos únicas y agrupadas.
 
 Para copiar una base de datos al mismo o a otro servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -1082,11 +1109,11 @@ El argumento CATALOG_COLLATION solo está disponible durante la creación de la 
   
 ## <a name="database-copies"></a>Copias de la base de datos  
 
-**Válido para:** solo bases de datos únicas y agrupadas.
+**Se aplica a:** Solo bases de datos únicas y agrupadas.
 
 La copia de una base de datos mediante la instrucción `CREATE DATABASE` es una operación asincrónica. Por tanto, no es necesaria una conexión con el servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] durante todo el proceso de copia. La instrucción `CREATE DATABASE` devuelve el control al usuario una vez que se crea la entrada en sys.databases, pero antes de que se complete la operación de copia de la base de datos. Es decir, la instrucción `CREATE DATABASE` vuelve correctamente cuando la copia de la base de datos aún está en curso.  
   
-- Supervisar el proceso de copia en un servidor de [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]: consulte las columnas `percentage_complete` o `replication_state_desc` en [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) o la columna `state` en la vista **sys.databases**. También se puede usar la vista [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md), ya que devuelve el estado de las operaciones de la base de datos, incluida la copia de esta.  
+- Supervisión del proceso de copia en un servidor de [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]: Consulte las columnas `percentage_complete` o `replication_state_desc` de [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) o la columna `state` en la vista **sys.databases**. También se puede usar la vista [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md), ya que devuelve el estado de las operaciones de la base de datos, incluida la copia de esta.  
   
 Cuando se completa correctamente el proceso de copia, la base de datos de destino es transaccionalmente coherente con la base de datos de origen.  
   
@@ -1103,7 +1130,8 @@ Se aplican las siguientes reglas semánticas y de sintaxis al uso del argumento 
   
  Para obtener más información, consulte [Crear una copia de una base de datos de SQL Azure mediante Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).  
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permisos
+
 Para crear una base de datos, el inicio de sesión debe ser uno de los siguientes: 
   
 - El inicio de sesión de entidad de seguridad a nivel de servidor  
@@ -1114,14 +1142,16 @@ Para crear una base de datos, el inicio de sesión debe ser uno de los siguiente
   
 ## <a name="examples"></a>Ejemplos
   
-### <a name="simple-example"></a>Ejemplo sencillo  
+### <a name="simple-example"></a>Ejemplo sencillo
+
  Un ejemplo sencillo para crear una base de datos.  
   
 ```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
-### <a name="simple-example-with-edition"></a>Ejemplo sencillo con Edition  
+### <a name="simple-example-with-edition"></a>Ejemplo sencillo con Edition
+
  Un ejemplo sencillo para crear una base de datos estándar.  
   
 ```sql  
@@ -1129,7 +1159,8 @@ CREATE DATABASE TestDB2
 ( EDITION = 'GeneralPurpose' );  
 ```  
   
-### <a name="example-with-additional-options"></a>Ejemplo con opciones adicionales  
+### <a name="example-with-additional-options"></a>Ejemplo con opciones adicionales
+
  Un ejemplo en el que se usan varias opciones.  
   
 ```sql  
@@ -1138,10 +1169,11 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ( MAXSIZE = 500 MB, EDITION = 'GeneralPurpose', SERVICE_OBJECTIVE = 'GP_GEN4_8' ) ;  
 ```  
   
-### <a name="creating-a-copy"></a>Crear una copia  
+### <a name="creating-a-copy"></a>Crear una copia
+
  Un ejemplo en el que se crea una copia de una base de datos.  
   
-**Válido para:** solo bases de datos únicas y agrupadas.
+**Se aplica a:** Solo bases de datos únicas y agrupadas.
 
 ```sql  
 CREATE DATABASE escuela 
@@ -1152,16 +1184,17 @@ AS COPY OF school;
 
 Crea una nueva base de datos en un grupo denominado S3M100:  
 
-**Válido para:** solo bases de datos únicas y agrupadas.
+**Se aplica a:** Solo bases de datos únicas y agrupadas.
   
 ```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
-### <a name="creating-a-copy-of-a-database-on-another-server"></a>Crear una copia de una base de datos en otro servidor  
+### <a name="creating-a-copy-of-a-database-on-another-server"></a>Crear una copia de una base de datos en otro servidor
+
 En el siguiente ejemplo se crea una copia de la base de datos db_original, denominada db_copy, en el nivel de rendimiento P2 para una única base de datos.  Esto es válido independientemente de si db_original está en un grupo elástico o un nivel de rendimiento para una única base de datos.  
   
-**Válido para:** solo bases de datos únicas y agrupadas.
+**Se aplica a:** Solo bases de datos únicas y agrupadas.
 
 ```sql  
 CREATE DATABASE db_copy 
@@ -1170,7 +1203,7 @@ CREATE DATABASE db_copy
   
 En el siguiente ejemplo se crea una copia de la base de datos db_original, denominada db_copy, en un grupo elástico llamado ep1.  Esto es válido independientemente de si db_original está en un grupo elástico o un nivel de rendimiento para una única base de datos. Si db_original está en un grupo elástico con un nombre distinto, db_copy se sigue creando en ep1.  
   
-**Válido para:** solo bases de datos únicas y agrupadas.
+**Se aplica a:** Solo bases de datos únicas y agrupadas.
 
 ```sql  
 CREATE DATABASE db_copy 
@@ -1244,7 +1277,8 @@ Estas son limitaciones `CREATE DATABASE`:
    > [!TIP]
    > Como solución alternativa, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi). después de `CREATE DATABASE` para establecer opciones de base de datos y para agregar archivos.  
 
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permisos
+
 Para crear una base de datos, el inicio de sesión debe ser uno de los siguientes: 
   
 - El inicio de sesión de entidad de seguridad a nivel de servidor  
@@ -1253,7 +1287,8 @@ Para crear una base de datos, el inicio de sesión debe ser uno de los siguiente
   
 ## <a name="examples"></a>Ejemplos
   
-### <a name="simple-example"></a>Ejemplo sencillo  
+### <a name="simple-example"></a>Ejemplo sencillo
+
  Un ejemplo sencillo para crear una base de datos.  
   
 ```sql  
@@ -1302,7 +1337,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
+
 *database_name*  
 El nombre de la nueva base de datos. Este nombre debe ser único en el servidor SQL, que puede hospedar tanto bases de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] como de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], y cumplir con las reglas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para identificadores. Para obtener más información, consulte [Identificadores](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
@@ -1317,35 +1353,38 @@ Especifica el nivel de servicio de la base de datos. Para [!INCLUDE[ssSDW](../..
 *MAXSIZE*  
 El valor predeterminado es 245 760 GB (240 TB).  
 
-**Se aplica a:** optimizado para Compute Gen1
+**Se aplica a:** Optimizado para Compute Gen1
 
 El tamaño máximo permitido para la base de datos. La base de datos no puede superar el valor de MAXSIZE. 
 
-**Se aplica a:** optimizado para Compute Gen2
+**Se aplica a:** Optimizado para Compute Gen2
 
 Tamaño máximo permitido para los datos de almacenamiento de filas de la base de datos. Los datos almacenados en tablas de almacenamiento de filas, en el almacén delta de un índice de almacén de columnas o en un índice no agrupado de un índice de almacén de columnas en clúster no pueden superar el valor de MAXSIZE.  Los datos comprimidos en formato de almacén de columnas no tienen un límite de tamaño y no están restringidos por el valor de MAXSIZE.
   
 SERVICE_OBJECTIVE  
 Especifica el nivel de rendimiento. Para más información sobre los objetivos de servicio para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vea [Niveles de rendimiento](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
-## <a name="general-remarks"></a>Notas generales  
+## <a name="general-remarks"></a>Notas generales
+
 Use [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) para ver las propiedades de la base de datos.  
   
 Use [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw) para cambiar el tamaño máximo o los valores de objetivo de servicio más adelante.   
 
 SQL Data Warehouse está establecido en COMPATIBILITY_LEVEL 130 y no se puede cambiar. Para más información, vea [Rendimiento de consultas mejorado con el nivel de compatibilidad 130 en Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permisos
+
 Permisos necesarios:  
   
 -   Inicio de sesión principal en el nivel de servidor, creado por el proceso de aprovisionamiento, o  
   
 -   Miembro del rol de base de datos `dbmanager`.  
   
-## <a name="error-handling"></a>Tratamiento de errores  
+## <a name="error-handling"></a>Tratamiento de errores
 Si el tamaño de la base de datos alcanza el valor de MAXSIZE, recibirá el código de error 40544. Cuando esto sucede, no es posible insertar ni actualizar datos, ni tampoco crear nuevos objetos (como tablas, procedimientos almacenados, vistas y funciones). Sin embargo, todavía puede leer y eliminar datos, truncar tablas, quitar tablas e índices, y recompilar índices. Seguidamente, puede actualizar MAXSIZE a un valor mayor que el tamaño actual de la base de datos o eliminar algunos datos para liberar espacio de almacenamiento. Puede haber un retraso de hasta quince minutos antes de que pueda insertar nuevos datos.  
   
-## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
+## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
+
 Debe estar conectado a la base de datos maestra para crear una base de datos.  
   
 La instrucción `CREATE DATABASE` debe ser la única de un lote [!INCLUDE[tsql](../../includes/tsql-md.md)].
@@ -1354,7 +1393,8 @@ No se puede cambiar la intercalación de base de datos una vez creada la base de
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
   
-### <a name="a-simple-example"></a>A. Ejemplo sencillo  
+### <a name="a-simple-example"></a>A. Ejemplo sencillo
+
 Un ejemplo sencillo de cómo crear una base de datos de almacenamiento de datos. De esta forma se crea la base de datos con el tamaño más pequeño, 10 240 GB, la intercalación predeterminada, SQL_Latin1_General_CP1_CI_AS, y la potencia de proceso más reducida, DW100.  
   
 ```  
@@ -1362,7 +1402,8 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');  
 ```  
   
-### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. Crear una base de datos de almacenamiento de datos con todas las opciones  
+### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>b. Crear una base de datos de almacenamiento de datos con todas las opciones
+
 Un ejemplo de cómo crear un almacenamiento de datos de 10 terabytes usando todas las opciones.  
   
 ```  
@@ -1370,7 +1411,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 (MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también
+
 [ALTER DATABASE &#40;Azure SQL Data Warehouse&#40;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw)
 [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
 [DROP DATABASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
@@ -1440,7 +1482,8 @@ WITH (
   
  Si AUTOGROW está establecido en OFF, se devolverá un error al usuario si intenta realizar cualquier acción que suponga aumentar el tamaño del registro más allá de *log_size* en un nodo de ejecución concreto.  
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permisos
+
  Requiere el permiso **CREATE ANY DATABASE** en la base de datos maestra o pertenecer al rol fijo de servidor **sysadmin**.  
   
  En el ejemplo siguiente se proporciona el permiso para crear una base de datos al usuario de base de datos Fay.  
@@ -1452,10 +1495,12 @@ GRANT CREATE ANY DATABASE TO [Fay];
 GO  
 ```  
   
-## <a name="general-remarks"></a>Notas generales  
+## <a name="general-remarks"></a>Notas generales
+
  Las bases de datos se crean con el nivel de compatibilidad de base de datos 120, que es el nivel de compatibilidad de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. De este modo, se asegura que la base de datos podrá usar toda la funcionalidad de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] que PDW usa.  
   
-## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
+## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
+
  La instrucción CREATE DATABASE no se puede usar en una transacción explícita. Para más información, vea [Statements](../../t-sql/statements/statements.md) (Instrucciones).  
   
  Para más información sobre las limitaciones mínimas y máximas en las bases de datos, vea la sección sobre valores mínimos y máximos de la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -1468,15 +1513,18 @@ GO
   
 -   Registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tengan un tamaño de (*log_size*/número de nodos de ejecución).  
   
-## <a name="locking"></a>Bloqueo  
+## <a name="locking"></a>Bloqueo
+
  Toma un bloqueo compartido en el objeto DATABASE.  
   
-## <a name="metadata"></a>Metadatos  
+## <a name="metadata"></a>Metadatos
+
  Después de que esta operación se realice correctamente, aparecerá una entrada relativa a esta base de datos en las vistas de metadatos [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) y [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-basic-database-creation-examples"></a>A. Ejemplos básicos de creación de base de datos  
+### <a name="a-basic-database-creation-examples"></a>A. Ejemplos básicos de creación de base de datos
+
  En el siguiente ejemplo se crea la base de datos `mytest` con una asignación de almacenamiento de 100 GB por nodo de ejecución para las tablas replicadas, 500 GB por dispositivo para las tablas distribuidas y 100 GB por dispositivo para el registro de transacciones. En este ejemplo, AUTOGROW está desactivado de forma predeterminada.  
   
 ```  
@@ -1498,7 +1546,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB);  
 ```  
   
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. Crear una base de datos con tamaños de gigabyte parciales  
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>b. Crear una base de datos con tamaños de gigabyte parciales
+
  En el siguiente ejemplo se crea la base de datos `mytest` con AUTOGROW desactivado y con una asignación de almacenamiento de 1,5 GB por nodo de ejecución para las tablas replicadas, 5,25 GB por dispositivo para las tablas distribuidas y 10 GB por dispositivo para el registro de transacciones.  
   
 ```  
@@ -1509,7 +1558,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 10 GB);  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también
+
  [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)  (ALTER DATABASE [Almacenamiento de datos paralelos])  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   

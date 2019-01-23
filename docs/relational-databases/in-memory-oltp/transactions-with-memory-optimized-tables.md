@@ -12,17 +12,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f84b4801446fd970c0d1e42054782d533b18574
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fab75b8f4550f30e8448bc427ab41a158c1656ee
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670724"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395414"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
 En este artículo se describen todos los aspectos de las transacciones específicos de las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa.  
   
 Los niveles de aislamiento de transacción en SQL Server se aplican de manera diferente en las tablas optimizadas para memoria y en las tablas basadas en disco, y los mecanismos subyacentes son diferentes. Entender las diferencias ayuda al programador a diseñar un sistema de alto rendimiento. El objetivo común en todos los casos es garantizar la integridad de las transacciones.  
@@ -30,9 +29,6 @@ Los niveles de aislamiento de transacción en SQL Server se aplican de manera di
 Para ver condiciones de error específicas de las transacciones en tablas optimizadas para memoria, vaya a la sección [Detección de conflictos y lógica de reintento](#confdetretry34ni).
   
 Para obtener información general, consulte [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
-  
-  
-<a name="pessvoptim22ni"/>  
   
 ## <a name="pessimistic-versus-optimistic"></a>Pesimista frente a optimista  
   
@@ -44,8 +40,6 @@ Las diferencias funcionales se deben a las diferencias entre un enfoque pesimist
   - El error 1205, un interbloqueo, no puede producirse en una tabla optimizada para memoria.  
   
 El enfoque optimista está menos sobrecargado y normalmente es más eficaz, en parte porque los conflictos de transacciones no son comunes en la mayoría de las aplicaciones. La principal diferencia funcional entre los enfoques pesimista y optimista es que, si se produce un conflicto, en el enfoque pesimista hay que esperar, mientras que en el enfoque optimista se genera un error en una de las transacciones de modo que el cliente debe reintentarla. Las diferencias funcionales son mayores cuando el nivel de aislamiento REPEATABLE READ está en vigor, y lo son todavía más para el nivel SERIALIZABLE.  
-  
-<a name="txninitmodes24ni"/>  
   
 ## <a name="transaction-initiation-modes"></a>Modos de inicio de transacciones  
   
@@ -60,8 +54,6 @@ SQL Server tiene los siguientes modos de inicio de transacciones:
 - **Implícito** : cuando la instrucción SET IMPLICIT_TRANSACTION ON está en vigor. Quizás IMPLICIT_BEGIN_TRANSACTION habría sido un nombre mejor, ya que todo lo que hace esta opción es realizar implícitamente el equivalente de una instrucción BEGIN TRANSACTION explícita antes de cada instrucción UPDATE si 0 = @@trancount. Por lo tanto, depende del código T-SQL que se emita finalmente una instrucción COMMIT TRANSACTION explícita.   
   
 - **ATOMIC BLOCK**: todas las instrucciones de los bloques ATOMIC siempre se ejecutan como parte de una única transacción. Las acciones del bloque ATOMIC se confirman de forma conjunta en caso de éxito, o bien todas se revierten cuando se produce un error. Cada procedimiento almacenado compilado de forma nativa requiere un bloque ATOMIC.  
-  
-<a name="codeexamexpmode25ni"/>  
   
 ### <a name="code-example-with-explicit-mode"></a>Ejemplo de código con el modo explícito  
   
@@ -87,10 +79,9 @@ BEGIN TRANSACTION;  -- Explicit transaction.
 SELECT * FROM  
            dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
       JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
-     
 COMMIT TRANSACTION;
 ```
-  
+
 Se puede prescindir de la sugerencia `WITH (SNAPSHOT)` si se usa la opción de base de datos `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`. Cuando esta opción se establece en `ON`, el acceso a una tabla optimizada para memoria en un nivel inferior se eleva automáticamente al aislamiento SNAPSHOT.  
 
 ```sql
@@ -98,15 +89,11 @@ ALTER DATABASE CURRENT
     SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
 ```
 
-<a name="rowver28ni"/>  
-  
 ## <a name="row-versioning"></a>Versiones de fila  
   
 Las tablas con optimización para memoria usan un sistema de versiones de fila muy sofisticado que hace que el enfoque optimista sea eficaz, incluso en el nivel de aislamiento SERIALIZABLE más estricto. Para obtener más información, consulte [Introducción a las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 Las tablas basadas en disco tienen indirectamente un sistema básico de versiones de fila cuando el nivel de aislamiento READ_COMMITTED_SNAPSHOT o SNAPSHOT está en vigor. Este sistema se basa en tempdb, mientras que las estructuras de datos optimizados para memoria tienen integradas las versiones de fila para lograr la máxima eficiencia.  
-  
-<a name="confdegreeiso30ni"/>  
   
 ## <a name="isolation-levels"></a>Niveles de aislamiento 
   
@@ -120,11 +107,6 @@ En la tabla siguiente se muestran los posibles niveles de aislamiento de transac
 | REPEATABLE READ | Se admite para las tablas optimizadas para memoria. La garantía que reporta el aislamiento REPEATABLE READ consiste en que, en el tiempo de confirmación, ninguna transacción simultánea ha actualizado ninguna fila leída por esta transacción. <br/><br/> Debido al modelo optimista, no se impide a las transacciones simultáneas actualizar las filas leídas por esta transacción. En su lugar, esta transacción valida en el tiempo de confirmación si el aislamiento REPEATABLE READ no se ha infringido. Si se ha infringido, esta transacción se revierte y hay que reintentarla. | 
 | SERIALIZABLE | Se admite para las tablas optimizadas para memoria. <br/><br/> Se denomina *Serializable* porque el aislamiento es tan estricto que se trata prácticamente de transacciones ejecutándose en serie, más que de forma simultánea. | 
 
-
-
-
-<a name="txnphaslife32ni"/>  
-  
 ## <a name="transaction-phases-and-lifetime"></a>Duración y fases de la transacción  
   
 Cuando está implicada una tabla optimizada para memoria, la duración de una transacción progresa a través de las fases, tal como se muestra en la siguiente imagen:
@@ -133,24 +115,22 @@ Cuando está implicada una tabla optimizada para memoria, la duración de una tr
   
 A continuación se muestran las descripciones de las fases.  
   
-#### <a name="regular-processing-phase-1-of-3"></a>Procesamiento normal: fase 1 (de 3)  
+#### <a name="regular-processing-phase-1-of-3"></a>Procesamiento normal: Fase 1 (de 3)  
   
 - Esta fase se compone de la ejecución de todas las consultas y las instrucciones DML en la consulta.  
 - Durante esta fase, las instrucciones consultan la versión de las tablas optimizadas para memoria en el momento de inicio lógico de la transacción.  
   
-#### <a name="validation-phase-2-of-3"></a>Validación: fase 2 (de 3)  
+#### <a name="validation-phase-2-of-3"></a>Validación: Fase 2 (de 3)  
   
 - La fase de validación arranca con la asignación de la hora de finalización, esto es, marcando la transacción como completa lógicamente. Tras la finalización de este paso, todos los cambios de la transacción quedan visibles para las demás transacciones, que crearán una dependencia de esta transacción. Las transacciones dependientes no se pueden confirmar hasta no haber confirmado correctamente esta transacción. Además, las transacciones que conservan estas dependencias no pueden devolver conjuntos de resultados al cliente para procurar que el cliente solamente vea los datos confirmados correctamente en la base de datos.  
 - Esta fase incluye la validación de lectura repetible y la validación serializable. En la primera, comprueba si alguna de las filas leídas por la transacción se ha actualizado desde la última vez que se comprobó, mientras que, en el caso de la segunda, comprueba si alguna de las filas se ha insertado en un rango de datos analizado por esta transacción. Según la tabla de [Niveles de aislamiento y conflictos](#confdegreeiso30ni), la validación de lectura repetible y la validación serializable pueden ocurrir cuando se usa el aislamiento SNAPSHOT para validar la coherencia de las restricciones de clave única y externa.  
   
-#### <a name="commit-processing-phase-3-of-3"></a>Procesamiento de confirmación: fase 3 (de 3)  
+#### <a name="commit-processing-phase-3-of-3"></a>Confirmación del procesamiento: Fase 3 (de 3)  
   
 - Durante la fase de confirmación, los cambios en las tablas durables se escriben en el registro y el registro se escribe en disco. Después, el control se devuelve al cliente.  
 - Una vez completado el proceso de confirmación, se notificará a todas las transacciones dependientes que pueden confirmarse.  
   
 Como siempre, debe intentar mantener las unidades de trabajo transaccionales en un nivel tan mínimo y breve como sea válido para las necesidades de los datos.  
-  
-<a name="confdetretry34ni"/>  
   
 ## <a name="conflict-detection-and-retry-logic"></a>Detección de conflictos y lógica de reintento 
 
@@ -168,15 +148,12 @@ A continuación, se indican las condiciones de error que pueden provocar errores
 | **41301** | Error de dependencia: existe una dependencia con otra transacción que no se ha podido confirmar posteriormente. | Esta transacción (Tx1) ha creado una dependencia con otra transacción (Tx2) leyendo los datos escritos por dicha transacción Tx2 mientras esta se encontraba en su fase de procesamiento de confirmación o de validación. En consecuencia, Tx2 no se pudo confirmar posteriormente. Las causas más comunes para que Tx2 no se pueda confirmar son errores de validación de lectura repetible (41305) y serializables (41325). Una menos habitual son los errores de E/S de registro. |
 | **41823** y **41840** | Se alcanzó la cuota para los datos de usuario en las tablas optimizadas para memoria y las variables de tablas. | El error 41823 se aplica a las ediciones Express, Web y Standard de SQL Server, así como a las bases de datos independientes de [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. El error 41840 se aplica a los grupos elásticos de [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> En la mayoría casos, estos errores indican que se ha alcanzado el tamaño máximo de datos de usuario, y la forma para resolver el error es eliminar datos de las tablas optimizadas para memoria. Sin embargo, hay casos poco frecuentes en los que este error es transitorio. Por lo tanto, le recomendamos que vuelva a intentarlo cuando se encuentre por primera vez con estos errores.<br/><br/> Al igual que con otros errores de esta lista, los errores 41823 y 41840 provocan que la transacción activa se anule. |
 | **41839** | La transacción supera el número máximo de dependencias de confirmación. |**Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Las versiones posteriores de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] no tienen ningún límite en el número de dependencias de confirmación.<br/><br/> Existe un límite en cuanto al número de transacciones de las que una transacción determinada (Tx1) puede depender. Se trata de las dependencias salientes. De igual modo, existe un límite en cuanto al número de transacciones que pueden depender de una transacción determinada (Tx1). Se trata de las dependencias entrantes. El límite en ambos casos es 8. <br/><br/> El caso más común de este error tiene lugar cuando existe un gran número de transacciones de lectura que están teniendo acceso a los datos escritos por una sola transacción de escritura. La probabilidad de que se produzca esta situación aumenta si las transacciones de lectura examinan los mismos datos de forma extensiva y, por tanto, el procesamiento de validación o de confirmación de la transacción de escritura tarda mucho tiempo en completarse. Así, por ejemplo, cuando la transacción de escritura realiza exploraciones grandes en el aislamiento SERIALIZABLE (se prolonga la fase de validación) o cuando el registro de transacciones se coloca en un dispositivo de E/S de registro lento (se prolonga el procesamiento de confirmación). Si las transacciones de lectura están examinando grandes cantidades de datos cuando se espera que solo tengan acceso a unas pocas filas, podría ser un indicio de que falta un índice. De forma similar, si la transacción de escritura usa el aislamiento SERIALIZABLE y examina grandes cantidades de datos cuando se espera que solo tenga acceso a unas pocas filas, esto también podría denotar una falta de índice. <br/><br/> El límite del número de dependencias de confirmación se puede incrementar con la marca de seguimiento **9926**. Use esta marca de seguimiento única y exclusivamente si esta condición de error se sigue produciendo después de confirmar que no falta ningún índice, ya que podrían enmascarar estos problemas en las situaciones anteriores. Otro aspecto con el que hay que tener cuidado es que los gráficos de dependencias complejos (donde cada transacción tiene un gran número de dependencias tanto entrantes como salientes y las transacciones individuales poseen muchos niveles de dependencias) pueden reducir la eficacia del sistema.  |
- 
   
 ### <a name="retry-logic"></a>Lógica de reintento 
 
 Cuando una transacción da error debido a alguna de las condiciones mencionadas anteriormente, hay que reintentarla.
   
 La lógica de reintento se puede implementar en el lado tanto cliente como servidor. La recomendación general es implementar la lógica de reintento en el lado cliente, ya que es más eficaz y permite trabajar con los conjuntos de resultados devueltos por la transacción antes de que el error se produzca.  
-  
-<a name="retrytsqlcodeexam35ni"/>  
   
 #### <a name="retry-t-sql-code-example"></a>Ejemplo de reintento con código T-SQL  
   
@@ -238,17 +215,13 @@ GO
 --  EXECUTE usp_update_salesorder_dates;
 ```
 
-
-<a name="crossconttxn38ni"/>  
-  
 ## <a name="cross-container-transaction"></a>Transacción entre contenedores  
-  
   
 Una transacción se denomina una transacción entre contenedores si:  
   
 - Tiene acceso a una tabla optimizada para memoria de Transact-SQL interpretado; o  
-- Ejecuta un procedimiento nativo cuando una transacción ya está abierta (XACT_STATE() = 1).  
-  
+- Ejecuta un procedimiento nativo cuando una transacción ya está abierta (XACT_STATE() = 1). 
+
 El término "entre contenedores" obedece al hecho de que la transacción se ejecuta en los dos contenedores de administración de transacciones, uno relativos a las tablas basadas en disco y otro a las tablas optimizadas para memoria.  
   
 Dentro de una única transacción entre contenedores se pueden usar distintos niveles de aislamiento para tener acceso a las tablas basadas en disco y optimizadas para memoria. Esta diferencia se expresa a través de sugerencias de tabla explícitas como WITH (SERIALIZABLE) o con la opción de base de datos MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT, que eleva implícitamente el nivel de aislamiento de las tablas optimizadas para memoria a SNAPSHOT si TRANSACTION ISOLATION LEVEL está configurado como READ COMMITTED o READ UNCOMMITTED.  
@@ -285,20 +258,13 @@ COMMIT TRANSACTION;
 go
 ```
 
-
-<a name="limitations40ni"/>  
-  
 ## <a name="limitations"></a>Limitaciones  
-  
   
 - Las transacciones entre bases de datos no se admiten para las tablas optimizadas para memoria. Si una transacción tiene acceso a una tabla optimizada para memoria, la transacción no puede tener acceso a cualquier otra base de datos, excepto para:  
   - Bases de datos tempdb.  
   - Acceso de solo lectura desde la base de datos maestra.  
   
-- No se admiten transacciones distribuidas: cuando se usa BEGIN DISTRIBUTED TRANSACTION, la transacción no puede tener acceso a una tabla optimizada para memoria.  
-  
-  
-<a name="natcompstorprocs42ni"/>  
+- No se admiten transacciones distribuidas: Cuando se usa BEGIN DISTRIBUTED TRANSACTION, la transacción no puede tener acceso a una tabla optimizada para memoria.  
   
 ## <a name="natively-compiled-stored-procedures"></a>procedimientos almacenados compilados de forma nativa  
   
@@ -308,8 +274,6 @@ go
 - No están permitidas las instrucciones de control de transacciones explícitas dentro del cuerpo de un procedimiento nativo. Las instrucciones BEGIN TRANSACTION y ROLLBACK TRANSACTION, entre otras, no están permitidas.  
   
 - Para obtener más información sobre el control de transacciones con bloques ATOMIC, vea [Bloques atomic](atomic-blocks-in-native-procedures.md).  
-  
-<a name="othertxnlinks44ni"/>  
   
 ## <a name="other-transaction-links"></a>Otros vínculos de transacción  
   

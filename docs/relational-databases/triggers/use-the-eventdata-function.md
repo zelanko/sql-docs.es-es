@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5930a5fb03fdab282e575049cf026dd23f17c6f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06c73cfa612b5348659fec9c8a2022b11ddc5936
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830813"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405585"
 ---
 # <a name="use-the-eventdata-function"></a>Usar la función EVENTDATA
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,9 +129,9 @@ GO
 > [!NOTE]  
 >  Cuando quiera devolver datos de evento, se recomienda usar el método XQuery **value()** en vez del método **query()** . El método **query()** devuelve XML e instancias de retorno de carro y avance de línea (CRLF) con el carácter de escape Y comercial en el resultado, mientras que el método **value()** representa instancias de CRLF invisibles en el resultado.  
   
- Un ejemplo de desencadenador DDL parecido se proporciona con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obtener el ejemplo, localice la carpeta Database Triggers mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Haga clic con el botón derecho en **ddlDatabseTriggerLog** y seleccione **Incluir desencadenador de base de datos como**. De forma predeterminada, el desencadenador DDL **ddlDatabseTriggerLog** está deshabilitado.  
+ Un ejemplo de desencadenador DDL parecido se proporciona con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obtener el ejemplo, localice la carpeta Database Triggers mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Haga clic con el botón derecho en **ddlDatabaseTriggerLog** y seleccione **Script Database Trigger as** (desencadenador de base de datos de script como). De forma predeterminada, el desencadenador DDL **ddlDatabaseTriggerLog** está deshabilitado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Eventos DDL](../../relational-databases/triggers/ddl-events.md)   
  [Grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md)  
   

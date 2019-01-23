@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522925"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327356"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps (Pasos de instalación de Administración extensible de claves de SQL Server TDE mediante Azure Key Vault)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
 2016 | [Visual C++ Redistributable para Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Parte I: Configurar una entidad de servicio de Active Directory de Azure  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Parte I: Configuración de una entidad de servicio de Azure Active Directory  
  Para conceder permisos de acceso a SQL Server a su Almacén de claves de Azure, necesitará una cuenta de entidad de servicio en Azure Active Directory (AAD).  
   
 1.  Vaya a [Azure Portal](https://ms.portal.azure.com/) e inicie sesión.  
@@ -58,7 +58,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>Parte II: Crear un almacén de claves y una clave  
+## <a name="part-ii-create-a-key-vault-and-key"></a>Parte II: Creación de una instancia de Key Vault y una clave  
  El motor de base de datos de SQL Server usará el almacén de claves y la clave creados aquí para la protección de claves de cifrado.  
   
 > [!IMPORTANT]  
@@ -69,7 +69,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
      Instale e inicie la última versión de [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 o superior). Inicie sesión en su cuenta de Azure con el siguiente comando:  
   
     ```powershell  
-    Login-AzureRmAccount  
+    Connect-AzAccount  
     ```  
   
      La instrucción devuelve:  
@@ -83,14 +83,14 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
     ```  
   
     > [!NOTE]  
-    >  Si tiene varias suscripciones y desea especificar una en concreto para usar con el almacén, use `Get-AzureRmSubscription` para ver las suscripciones y `Select-AzureRmSubscription` para elegir la suscripción correcta. De lo contrario, PowerShell seleccionará una de forma predeterminada.  
+    >  Si tiene varias suscripciones y desea especificar una en concreto para usar con el almacén, use `Get-AzSubscription` para ver las suscripciones y `Select-AzSubscription` para elegir la suscripción correcta. De lo contrario, PowerShell seleccionará una de forma predeterminada.  
   
 2.  **Crear un nuevo grupo de recursos**  
   
      Todos los recursos de Azure creados mediante Azure Resource Manager deben estar contenidos en grupos de recursos. Cree un grupo de recursos para alojar el almacén de claves. En este ejemplo se usa `ContosoDevRG`. Elija su propio grupo de recursos **único** y el nombre del almacén de claves, ya que todos los nombres de almacén de claves son únicos y globales.  
   
     ```powershell  
-    New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
+    New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
      La instrucción devuelve:  
@@ -109,10 +109,10 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
 3.  **Crear un almacén de claves**  
   
-     El cmdlet `New-AzureRmKeyVault` requiere un nombre de grupo de recursos, un nombre de almacén de claves y una ubicación geográfica. Por ejemplo, para un almacén de claves denominado `ContosoDevKeyVault`, escriba:  
+     El cmdlet `New-AzKeyVault` requiere un nombre de grupo de recursos, un nombre de almacén de claves y una ubicación geográfica. Por ejemplo, para un almacén de claves denominado `ContosoDevKeyVault`, escriba:  
   
     ```powershell  
-    New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
@@ -152,20 +152,20 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
     > [!IMPORTANT]  
     >  La entidad de servicio de Azure Active Directory debe tener al menos los permisos `get`, `wrapKey` y `unwrapKey` para el almacén de claves.  
   
-     Tal y como se muestra a continuación, use el **id. de cliente** de la Parte I para el parámetro `ServicePrincipalName` . El `Set-AzureRmKeyVaultAccessPolicy` se ejecuta en modo silencioso sin resultados si se ejecuta correctamente.  
+     Tal y como se muestra a continuación, use el **id. de cliente** de la Parte I para el parámetro `ServicePrincipalName` . El `Set-AzKeyVaultAccessPolicy` se ejecuta en modo silencioso sin resultados si se ejecuta correctamente.  
   
     ```powershell  
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     Llame al cmdlet `Get-AzureRmKeyVault` para confirmar los permisos. En el resultado de la instrucción en "Directivas de acceso", debería aparecer el nombre de la aplicación de AAD como otro inquilino con acceso a este almacén de claves.  
+     Llame al cmdlet `Get-AzKeyVault` para confirmar los permisos. En el resultado de la instrucción en "Directivas de acceso", debería aparecer el nombre de la aplicación de AAD como otro inquilino con acceso a este almacén de claves.  
   
        
 5.  **Generar una clave asimétrica en el Almacén de claves**  
   
-     Hay dos maneras de generar una clave en Azure Key Vault: 1) Importar una clave existente o 2) Crear una nueva clave.  
+     Hay dos maneras de generar una clave en Azure Key Vault: 1) importar una clave existente o 2) crear una clave.  
                   
       > [!NOTE]
         >  SQL Server solo admite claves RSA de 2048 bits.
@@ -185,7 +185,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
     ### <a name="types-of-keys"></a>Tipos de claves:
     Hay dos tipos de claves que se pueden generar en Azure Key Vault que funcionarán con SQL Server. Ambas son claves RSA de 2048 bits asimétricas.  
   
-    -   **Protegida mediante software:** procesada en el software y cifrada en reposo. Las operaciones en claves protegidas mediante software se producen en las máquinas virtuales de Azure. Se recomienda para las claves que no se usan en una implementación de producción.  
+    -   **Protegida por software:** procesada en el software y cifrada en reposo. Las operaciones en claves protegidas mediante software se producen en las máquinas virtuales de Azure. Se recomienda para las claves que no se usan en una implementación de producción.  
   
     -   **Protegida por HSM:** creada y protegida por un módulo de seguridad de hardware (HSM) para disponer de seguridad adicional. El precio es de aproximadamente 1 USD por versión de clave.  
   
@@ -238,7 +238,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
     >  El Almacén de claves admite varias versiones de la clave con mismo nombre, pero las claves que use el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no deberían tener versiones y revertirse. Si el administrador quiere revertir la clave que se usa para el cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe crear una nueva clave con otro nombre en el almacén y usar la nueva clave para cifrar la clave de cifrado de datos (DEK).  
    
   
-## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>Parte III: Instalar el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>Parte III: Instalación del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Descargue el conector de SQL Server desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700). (Esto debe hacerlo el administrador del equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
 
 > [!NOTE]  
@@ -262,7 +262,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
 -   [C. Explicaciones de código de error para el conector de SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>Parte IV: Configurar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>Parte IV: configurar la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Consulte [B. Preguntas más frecuentes](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) para ver una nota sobre los niveles de permisos mínimos necesarios para cada acción de esta sección.  
   
 1.  **Inicie sqlcmd.exe o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio**  
@@ -359,6 +359,6 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
 Ahora que ha completado la configuración básica, consulte cómo [Use SQL Server Connector con características de cifrado de SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)(Usar el conector de SQL Server con características de cifrado de SQL)   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
 [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)

@@ -14,12 +14,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ef7392b4e41271bacd91b5e1a9244bbfe1c1139
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558642"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405865"
 ---
 # <a name="master-database"></a>Base de datos maestra
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,34 +49,34 @@ En la siguiente tabla se enumera el valor predeterminado de cada opción de base
 
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|no|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
 |ANSI_NULL_DEFAULT|OFF|Sí|  
 |ANSI_NULLS|OFF|Sí|  
 |ANSI_PADDING|OFF|Sí|  
 |ANSI_WARNINGS|OFF|Sí|  
 |ARITHABORT|OFF|Sí|  
-|AUTO_CLOSE|OFF|no|  
+|AUTO_CLOSE|OFF|No|  
 |AUTO_CREATE_STATISTICS|ON|Sí|  
-|AUTO_SHRINK|OFF|no|  
+|AUTO_SHRINK|OFF|No|  
 |AUTO_UPDATE_STATISTICS|ON|Sí|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|no|  
+|CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> no<br /><br /> no|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|ON|no|  
-|ENCRYPTION|OFF|no|  
-|MIXED_PAGE_ALLOCATION|ON|no|  
+|DB_CHAINING|ON|No|  
+|ENCRYPTION|OFF|No|  
+|MIXED_PAGE_ALLOCATION|ON|No|  
 |NUMERIC_ROUNDABORT|OFF|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
 |QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|no|  
+|READ_COMMITTED_SNAPSHOT|OFF|No|  
 |RECOVERY|SIMPLE|Sí|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
-|Opciones de Service Broker|DISABLE_BROKER|no|  
+|Opciones de Service Broker|DISABLE_BROKER|No|  
 |TRUSTWORTHY|OFF|Sí|  
   
 Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  

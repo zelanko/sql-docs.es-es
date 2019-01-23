@@ -1,7 +1,7 @@
 ---
 title: Marcas de seguimiento (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206471"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361695"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON: marcas de seguimiento (Transact-SQL)
 
@@ -145,6 +145,7 @@ En la siguiente tabla se enumeran y se describen las marcas de seguimiento dispo
 |**9488**|<a name="9488"></a>Establece la estimación fija para las funciones con valores de tabla en el valor predeterminado de 1 (correspondiente al valor predeterminado del modelo de estimación de la cardinalidad del optimizador de consultas de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] y versiones anteriores) cuando se usa el modelo de estimación de la cardinalidad del optimizador de consultas de las versiones de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />**Ámbito**: global, sesión o consulta|
 |**9495**|Deshabilita el paralelismo durante la inserción de operaciones INSERT...SELECT y se aplica a las tablas temporales y del usuario. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/3180087).<br /><br />**Ámbito**: global o sesión| 
 |**9567**|Habilita la compresión del flujo de datos para los grupos de disponibilidad Always On durante la propagación automática. La compresión puede reducir significativamente el tiempo de transferencia durante la propagación automática y aumentará la carga del procesador. Para más información, vea [Inicializar automáticamente grupos de disponibilidad Always On](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) y [Optimizar la compresión para los grupos de disponibilidad](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Ámbito**: global o sesión|
+|**9571**|Deshabilita la inicialización automática de los grupos de disponibilidad en la ruta de acceso de la base de datos predeterminada. Para más información, consulte [Diseño de discos](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md).<br /><br />**Ámbito**: global o sesión| 
 |**9591**|Deshabilita la compresión del bloque de registro en Grupos de disponibilidad AlwaysOn. La compresión del bloque de registro es el comportamiento predeterminado que se usa con las réplicas sincrónicas y asincrónicas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la compresión solo se usa con las réplicas asincrónicas. <br /><br />**Ámbito**: global o sesión|
 |**9592**|Habilita la compresión de secuencias de registro para los grupos de disponibilidad sincrónica. Esta característica está deshabilitada de forma predeterminada en los grupos de disponibilidad sincrónica porque la compresión agrega latencia. Para obtener más información, consulte [Tune compression for availability group (Optimizar la compresión para el grupo de disponibilidad)](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Ámbito**: global o sesión| 
 |**9929**|Reduce cada archivo de punto de comprobación en memoria a 1 MB. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/3147012).<br /><br />**Ámbito**: solo global|  

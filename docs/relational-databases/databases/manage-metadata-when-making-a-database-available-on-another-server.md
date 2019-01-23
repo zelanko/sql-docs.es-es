@@ -35,12 +35,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8480a8b8f3889a1686d29bcd3858ee3921383cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a73e8c25d891350f26bfff0ce62a2835fc5355d0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559481"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405845"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51559481"
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- Las opciones de base de datos DB_CHAINING y TRUSTWORTHY se establecen, de forma predeterminada, en OFF. Si alguna de estas opciones se establece en ON para la base de datos original, es posible que deba habilitarlas en la base de datos de la instancia de servidor de destino. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ Las opciones de base de datos DB_CHAINING y TRUSTWORTHY se establecen, de forma predeterminada, en OFF. Si alguna de estas opciones se establece en ON para la base de datos original, es posible que deba habilitarlas en la base de datos de la instancia de servidor de destino. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Las operaciones de adjuntar y separar deshabilitan el encadenamiento de propiedad entre bases de datos. Para obtener información sobre cómo habilitar el encadenamiento, vea [cross db ownership chaining (opción de configuración del servidor)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
@@ -131,7 +131,7 @@ ms.locfileid: "51559481"
   
  Para habilitar el cifrado automático de la clave maestra de una instancia de servidor, se cifra una copia de esta clave mediante la clave maestra de servicio. Esta copia cifrada se almacena en la base de datos y en **maestra**. Por lo general, la copia almacenada en la base de datos **maestra** se actualiza automáticamente al cambiar la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta primero descifrar la clave maestra de base de datos con la clave maestra de servicio de la instancia. Si ese descifrado produce errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buscará en el almacén de credenciales las credenciales de clave maestra con el mismo GUID de familia que la base de datos para la que necesita la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará después descifrar la clave maestra de la base de datos con cada credencial coincidente hasta que el descifrado se realice correctamente o no queden más credenciales. Para abrir una clave maestra que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción OPEN MASTER KEY y una contraseña.  
   
- Cuando se copia, restaura o adjunta una base de datos a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia de la clave maestra de la base de datos cifrada por la clave maestra de servicio no se almacena en **maestra** en la instancia de servidor de destino. Se debe abrir la clave maestra de la base de datos en esta instancia. Para abrir la clave maestra, ejecute la siguiente instrucción: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_contraseña_**'**. Se recomienda habilitar el descifrado automático de la clave maestra de la base de datos ejecutando la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. La instrucción ALTER MASTER KEY proporciona a la instancia de servidor una copia de la clave maestra de la base de datos que se ha cifrado con la clave maestra de servicio. Para obtener más información, vea [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Cuando se copia, restaura o adjunta una base de datos a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia de la clave maestra de la base de datos cifrada por la clave maestra de servicio no se almacena en **maestra** en la instancia de servidor de destino. Se debe abrir la clave maestra de la base de datos en esta instancia. Para abrir la clave maestra, ejecute la instrucción siguiente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**. Se recomienda habilitar luego el descifrado automático de la clave maestra de la base de datos mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. La instrucción ALTER MASTER KEY proporciona a la instancia de servidor una copia de la clave maestra de la base de datos que se ha cifrado con la clave maestra de servicio. Para obtener más información, vea [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Para obtener información sobre cómo habilitar el descifrado automático de la clave maestra de base de datos de una base de datos reflejada, vea [Establecer una base de datos reflejada cifrada](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -158,7 +158,7 @@ ms.locfileid: "51559481"
 ### <a name="windows-management-instrumentation-wmi-events"></a>Eventos de Instrumental de administración de Windows (WMI)  
  El proveedor WMI para eventos de servidor le permite utilizar el Instrumental de administración de Windows (WMI) para supervisar eventos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toda aplicación que dependa de eventos de servidor expuestos a través del proveedor WMI del que depende la base de datos se debe definir en el equipo de la instancia de servidor de destino. El proveedor de eventos WMI crea notificaciones de evento con un servicio de destino definido en **msdb**.  
   
-> **NOTA:** Para más información, consulte [Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
+> **NOTA:** Para obtener más información, vea [Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
  **Para crear una alerta WMI mediante SQL Server Management Studio**  
   
@@ -291,7 +291,7 @@ ms.locfileid: "51559481"
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>Permisos de nivel de servidor para un certificado o clave asimétrica  
  Los permisos de nivel de servidor para un certificado o clave asimétrica no se pueden conceder directamente. En su lugar, los permisos de nivel de servidor se conceden a un inicio de sesión asignado que se crea exclusivamente para un certificado o clave asimétrica. Por lo tanto, cada certificado o clave asimétrica que requiere permisos de nivel de servidor, necesita su propio *inicio de sesión asignado a un certificado* o *inicio de sesión asignado a una clave asimétrica*. Para conceder permisos de nivel de servidor para un certificado o clave asimétrica, conceda los permisos a su inicio de sesión asignado.  
   
-> **NOTA:** Un inicio de sesión asignado solo se usa para la autorización con código firmado con el certificado o la clave asimétrica correspondiente. Los inicios de sesión asignados no se pueden utilizar para la autenticación.  
+> **NOTA:** Un inicio de sesión asignado solo se utiliza para la autorización de código firmado con el certificado o clave asimétrica correspondiente. Los inicios de sesión asignados no se pueden utilizar para la autenticación.  
   
  El inicio de sesión asignado y sus permisos residen en la base de datos **maestra**. Si un certificado o clave asimétrica reside en una base de datos que no sea **maestra**, se debe volver a crear en **maestra** y asignarlo a un inicio de sesión. Si la base de datos se mueve, copia o restaura en otra instancia del servidor, se deben volver a crear sus certificados o claves asimétricas en la base de datos **maestra** de la instancia del servidor de destino, asignarlos a un inicio de sesión y conceder a este los permisos necesarios de nivel de servidor.  
   
@@ -335,7 +335,7 @@ La propiedad de base de datos TRUSTWORTHY sirve para indicar si esta instancia d
  Para obtener más información acerca de esta característica, vea [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)   
  [Copiar bases de datos en otros servidores](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   

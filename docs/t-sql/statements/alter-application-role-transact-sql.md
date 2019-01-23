@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ALTER APPLICATION ROLE statement
 - application roles [SQL Server], modifying
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 58cac793f7bcf356f8055c27b598c9521f0c7bce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b272b3b5df01931cfabf1f19945bba477cc680bc
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690233"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326716"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ALTER APPLICATION ROLE application_role_name
  Los roles de aplicación se pueden ver en la vista de catálogo sys.database_principals.  
   
 > [!CAUTION]  
->  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el comportamiento de los esquemas es distinto del de las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si en el código se supone que los esquemas son equivalentes a usuarios de base de datos, los resultados obtenidos podrían ser incorrectos. Las vistas de catálogo antiguas, incluida sysobjects, no deben usarse en una base de datos en la que se haya usado alguna de las siguientes instrucciones DDL: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. En una base de datos en la que se ha usado alguna de estas instrucciones, deben usarse las nuevas vistas de catálogo. En las nuevas vistas de catálogo se tiene en cuenta la separación de entidades de seguridad y esquemas que se establece en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre las vistas de catálogo, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+>  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el comportamiento de los esquemas es distinto del de las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si en el código se supone que los esquemas son equivalentes a usuarios de base de datos, los resultados obtenidos podrían ser incorrectos. No se deben usar vistas de catálogo antiguas, como sysobjects, en una base de datos en la que nunca se haya usado ninguna de las instrucciones DDL siguientes: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. En una base de datos en la que se ha usado alguna de estas instrucciones, deben usarse las nuevas vistas de catálogo. En las nuevas vistas de catálogo se tiene en cuenta la separación de entidades de seguridad y esquemas que se establece en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre las vistas de catálogo, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY APPLICATION ROLE en la base de datos. Para cambiar el esquema predeterminado, el usuario también tiene que cambiar el permiso en el rol de aplicación. Un rol de aplicación puede alterar su propio esquema predeterminado, pero no su nombre ni su contraseña.  
@@ -91,7 +91,7 @@ ALTER APPLICATION ROLE weekly_receipts
 GO  
 ```  
   
-### <a name="b-changing-the-password-of-application-role"></a>B. Cambiar la contraseña de un rol de aplicación  
+### <a name="b-changing-the-password-of-application-role"></a>b. Cambiar la contraseña de un rol de aplicación  
  En el ejemplo siguiente, se cambia la contraseña del rol de aplicación `receipts_ledger`.  
   
 ```  
@@ -111,7 +111,7 @@ ALTER APPLICATION ROLE receipts_ledger
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md)   
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   

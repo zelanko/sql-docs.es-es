@@ -1,7 +1,7 @@
 ---
 title: Configurar la base de datos de distribución de SQL Server en un grupo de disponibilidad | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126455"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372687"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar la base de datos de distribución de replicación en un grupo de disponibilidad AlwaysOn
 
@@ -34,7 +34,9 @@ En este artículo se explica cómo configurar una base de datos de distribución
 SQL Server 2017 CU6 y SQL Server 2016 SP2-CU3 incorporan compatibilidad con la base de datos de distribución de replicación en un AG mediante los siguientes mecanismos:
 
 - El AG de la base de datos de distribución debe tener un agente de escucha. Cuando el publicador agrega el distribuidor, usa el nombre del agente de escucha como nombre del distribuidor.
-- Los trabajos de replicación se crean con el nombre del agente de escucha como nombre del distribuidor.
+- Los trabajos de replicación se crean con el nombre del agente de escucha como nombre del distribuidor. Los trabajos de la instantánea de replicación, el lector de registros y el agente de distribución (suscripción de inserción) creados en el servidor de distribución se crean en todas las réplicas secundarias del grupo de disponibilidad para la base de datos de distribución.
+ >[!NOTE]
+ >Los trabajos del agente de distribución para las suscripciones de extracción se crean en el servidor del suscriptor y no en el servidor de distribución. 
 - Un trabajo nuevo supervisa el estado (principal o secundario en un AG) de las bases de datos de distribución y habilita o deshabilita los trabajos de replicación en función del estado de las bases de datos de distribución.
 
 Después de configurar una base de datos de distribución en el AG según los pasos que se describen a continuación, los trabajos de configuración de replicación y los trabajos de tiempo de ejecución se pueden ejecutar correctamente antes y después de una conmutación por error del AG de la base de datos de distribución.

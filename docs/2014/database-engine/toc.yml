@@ -34,13 +34,24 @@
           href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
         - name: Cambios de comportamiento de las características de las herramientas de administración en SQL Server 2014
           href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
+- name: Continuidad empresarial
+  href: ../sql-server/failover-clusters/high-availability-solutions-sql-server.md
+  items:
+    - name: Grupos de disponibilidad AlwaysOn
+      href: availability-groups/windows/toc.yml
+    - name: Instancia de clúster de conmutación por error
+      href: ../sql-server/failover-clusters/toc.yml
+    - name: Creación de reflejo de base de datos
+      href: database-mirroring/toc.yml
+    - name: Trasvase de registros +
+      href: log-shipping/toc.yml
 - name: Características y tareas del motor de base de datos
   href: database-engine-features-and-tasks.md
 - name: Instancias del motor de base de datos (SQL Server)
   href: configure-windows/database-engine-instances-sql-server.md
   items:
     - name: Configurar instancias del motor de base de datos +
-      href: configure-windows/configure-database-engine-instances-sql-server.md
+      href: configure-windows/toc.yml
     - name: Compatibilidad con la intercalación y Unicode +
       href: ../relational-databases/collations/collation-and-unicode-support.md
     - name: Servidores vinculados (motor de base de datos)
@@ -123,12 +134,6 @@
       items:
         - name: Abrir el Monitor de actividad (SQL Server Management Studio)
           href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
-- name: Grupos de disponibilidad AlwaysOn +
-  href: availability-groups/windows/always-on-availability-groups-sql-server.md
-- name: El punto de conexión de creación de reflejo de la base de datos +
-  href: database-mirroring/the-database-mirroring-endpoint-sql-server.md
-- name: Acerca del trasvase de registros +
-  href: log-shipping/about-log-shipping-sql-server.md
 - name: Centro de seguridad para el motor de base de datos SQL Server y Azure SQL Database +
   href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: Referencia técnica

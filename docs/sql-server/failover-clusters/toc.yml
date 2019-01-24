@@ -1,57 +1,76 @@
-- name: Soluciones de alta disponibilidad
-  href: high-availability-solutions-sql-server.md
-- name: 'Reparación de página automática (grupos de disponibilidad: creación de reflejo de base de datos)'
-  href: automatic-page-repair-availability-groups-database-mirroring.md
-- name: Administración de inicios de sesión y trabajos tras la conmutación de roles
-  href: management-of-logins-and-jobs-after-role-switching-sql-server.md
-- name: Solucionar problemas de usuarios huérfanos
-  href: troubleshoot-orphaned-users-sql-server.md
-- name: Instalación de clústeres de conmutación por error
-  href: install/sql-server-failover-cluster-installation.md
-- name: Clústeres de conmutación por error de Windows Server (WSFC) con SQL Server
+- name: Información general
   href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
   items:
-    - name: 'Configuración de los votos y modos de quórum WSFC '
-      href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+    - name: Instancias de clúster de conmutación por error de AlwaysOn
+      href: windows/always-on-failover-cluster-instances-sql-server.md
+- name: Instrucciones
+  items:
+    - name: Implementación
       items:
-        - name: Ver la configuración de NodeWeight de quórum de clúster
-          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: Antes de la instalación
+          href: install/before-installing-failover-clustering.md
+        - name: Installation
+          href: install/sql-server-failover-cluster-installation.md
+        - name: Crear un clúster
+          href: install/create-a-new-sql-server-failover-cluster-setup.md
+        - name: Instalar las herramientas de cliente en un clúster de conmutación por error
+          href: install/install-client-tools-on-a-sql-server-failover-cluster.md
+        - name: Agregar o quitar nodos
+          href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+        - name: Quitar un clúster de conmutación por error
+          href: install/remove-a-sql-server-failover-cluster-instance-setup.md
+        - name: Actualizar una instancia del clúster de conmutación por error
+          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+          items:
+            - name: Actualizar una instancia del clúster de conmutación por error de SQL Server
+              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+            - name: Actualizar una instancia de clúster de conmutación por error de SQL Server (Windows Server 2008/2008 R2/2012)
+              href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
+    - name: Configuración
+      items:
+        - name: Cambiar el nombre del clúster de conmutación por error
+          href: install/rename-a-sql-server-failover-cluster-instance.md
+        - name: Agregar dependencias a un recurso de SQL Server
+          href: windows/add-dependencies-to-a-sql-server-resource.md
         - name: Configurar los valores de NodeWeight de quórum de clúster
           href: windows/configure-cluster-quorum-nodeweight-settings.md
-    - name: Recuperación ante desastres WSFC mediante quórum forzado
-      href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
-      items:
-        - name: Forzar el inicio de un clúster WSFC sin un quórum
-          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-    - name: Agrupación en clústeres de varias subredes de SQL Server
-      href: windows/sql-server-multi-subnet-clustering-sql-server.md
-    - name: Solucionar problemas de clústeres de conmutación por error
-      href: windows/failover-cluster-troubleshooting.md
-- name: Instancias de clúster de conmutación por error de AlwaysOn
-  href: windows/always-on-failover-cluster-instances-sql-server.md
-  items:
-    - name: Directiva de conmutación por error para instancias de clústeres de conmutación por error
-      href: windows/failover-policy-for-failover-cluster-instances.md
-      items:
+        - name: Cambiar la dirección IP de una instancia de clúster de conmutación por error
+          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
         - name: Configurar los valores de la propiedad HealthCheckTimeout
           href: windows/configure-healthchecktimeout-property-settings.md
         - name: Configurar los valores de la propiedad FailureConditionLevel
           href: windows/configure-failureconditionlevel-property-settings.md
+    - name: Administración
+      items:
+        - name: Ver la configuración de NodeWeight de quórum de clúster
+          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: Recuperación ante desastres WSFC mediante quórum forzado
+          href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+        - name: Forzar el inicio de un clúster WSFC sin un quórum
+          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+        - name: Solucionar problemas de clústeres de conmutación por error
+          href: windows/failover-cluster-troubleshooting.md
+        - name: Solucionar problemas de usuarios huérfanos
+          href: troubleshoot-orphaned-users-sql-server.md
         - name: Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error
           href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
-    - name: Administración y mantenimiento de la instancia de clúster de conmutación por error
-      href: windows/failover-cluster-instance-administration-and-maintenance.md
-      items:
-        - name: Agregar dependencias a un recurso de SQL Server
-          href: windows/add-dependencies-to-a-sql-server-resource.md
+        - name: Administración y mantenimiento de la instancia de clúster de conmutación por error
+          href: windows/failover-cluster-instance-administration-and-maintenance.md
         - name: Recuperarse de un error en una instancia de clúster de conmutación por error
           href: windows/recover-from-failover-cluster-instance-failure.md
-        - name: Cambiar la dirección IP de una instancia de clúster de conmutación por error
-          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
-    - name: Actualizar una instancia del clúster de conmutación por error de SQL Server
-      href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+- name: Conceptos
+  items:
+    - name: Configuración
       items:
-        - name: Actualizar una instancia de clúster de conmutación por error de SQL Server (programa de instalación)
-          href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-        - name: Actualizar una instancia de clúster de conmutación por error de SQL Server (Windows Server 2008/2008 R2/2012)
-          href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
+        - name: 'Configuración de los votos y modos de quórum WSFC '
+          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+        - name: Agrupación en clústeres de varias subredes de SQL Server
+          href: windows/sql-server-multi-subnet-clustering-sql-server.md
+        - name: Directiva de conmutación por error para instancias de clústeres de conmutación por error
+          href: windows/failover-policy-for-failover-cluster-instances.md
+    - name: Administración
+      items:
+        - name: Reparación de página automática
+          href: automatic-page-repair-availability-groups-database-mirroring.md
+        - name: Administración de inicios de sesión y trabajos tras la conmutación de roles
+          href: management-of-logins-and-jobs-after-role-switching-sql-server.md

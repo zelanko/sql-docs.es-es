@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 8a1b27787c1b987c4fc881c3d1e170efae937670
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419800"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838102"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -43,20 +43,20 @@ ms.locfileid: "54419800"
 |**compatibility_level**|**smallint**|Nivel de compatibilidad de base de datos de la base de datos al que hace referencia en la consulta.|  
 |**query_plan_hash**|**binary(8)**|Hash MD5 de los planes individuales.|  
 |**query_plan**|**nvarchar(max)**|SHOWPLAN XML del plan de consulta.|  
-|**is_online_index_plan**|**bit**|Plan utilizó durante la generación de índice en línea.|  
-|**is_trivial_plan**|**bit**|Plan es un plan trivial (salida en la etapa 0 del optimizador de consultas).|  
-|**is_parallel_plan**|**bit**|Plan es paralelo.|  
-|**is_forced_plan**|**bit**|Plan está marcado como fuerza cuando el usuario ejecuta el procedimiento almacenado **sys.sp_query_store_force_plan**. Mecanismo de forzado *no garantiza* que se utilizará para la consulta hace referenciada exactamente a este plan **query_id**. Forzar el plan produce se vuelve a compilar la consulta y normalmente produce exactamente el plan iguales o similar para el plan al que hace referencia **plan_id**. Si no tiene éxito al forzar el plan, **force_failure_count** se incrementa y **last_force_failure_reason** se rellena con el motivo del error.|  
-|**is_natively_compiled**|**bit**|Plan incluye procedimientos compilados de forma nativa optimizados en memoria. (0 = FALSE, 1 = TRUE).|  
-|**force_failure_count**|**bigint**|Número de veces que forzar este plan ha fallado. Se puede incrementar solo cuando se vuelve a compilar la consulta (*no en cada ejecución*). Se restablece a 0 cada vez **is_plan_forced** se cambia de **FALSE** a **TRUE**.|  
-|**last_force_failure_reason**|**int**|Motivo de error de forzar el plan.<br /><br /> 0: ningún error, en caso contrario, número de error del error que provocó el forzado de un error<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<otro valor >: GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Descripción textual del last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: consulta intenta modificar los datos mientras la tabla de destino tiene un índice que se está generando en línea<br /><br /> INVALID_STARJOIN: plan contiene la especificación de StarJoin no válida<br /><br /> TIME_OUT: Optimizador superado el número de operaciones permitidas durante la búsqueda del plan especificado por el plan forzado<br /><br /> NO_DB: Una base de datos especificada en el plan no existe.<br /><br /> HINT_CONFLICT: No se puede compilar la consulta porque el plan está en conflicto con una sugerencia de consulta<br /><br /> DQ_NO_FORCING_SUPPORTED: No se puede ejecutar la consulta porque el plan está en conflicto con el uso de la consulta distribuida u operaciones de texto completo.<br /><br /> NO_PLAN: Procesador de consultas no pudo producir el plan de consulta porque no se puede comprobar el plan forzado a ser válido para la consulta<br /><br /> NO_INDEX: El índice especificado en el plan ya no existe<br /><br /> VIEW_COMPILE_FAILED: No se pudo forzar el plan de consulta debido a un problema en una vista indizada que se hace referencia en el plan<br /><br /> GENERAL_FAILURE: error de forzar general (no se tratan con motivos anteriores)|  
+|**is_online_index_plan**|**bit**|Plan utilizó durante la generación de índice en línea. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**is_trivial_plan**|**bit**|Plan es un plan trivial (salida en la etapa 0 del optimizador de consultas). <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**is_parallel_plan**|**bit**|Plan es paralelo. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá uno (1).|  
+|**is_forced_plan**|**bit**|Plan está marcado como fuerza cuando el usuario ejecuta el procedimiento almacenado **sys.sp_query_store_force_plan**. Mecanismo de forzado *no garantiza* que se utilizará para la consulta hace referenciada exactamente a este plan **query_id**. Forzar el plan produce se vuelve a compilar la consulta y normalmente produce exactamente el plan iguales o similar para el plan al que hace referencia **plan_id**. Si no tiene éxito al forzar el plan, **force_failure_count** se incrementa y **last_force_failure_reason** se rellena con el motivo del error. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**is_natively_compiled**|**bit**|Plan incluye procedimientos compilados de forma nativa optimizados en memoria. (0 = FALSE, 1 = TRUE). <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**force_failure_count**|**bigint**|Número de veces que forzar este plan ha fallado. Se puede incrementar solo cuando se vuelve a compilar la consulta (*no en cada ejecución*). Se restablece a 0 cada vez **is_plan_forced** se cambia de **FALSE** a **TRUE**. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**last_force_failure_reason**|**int**|Motivo de error de forzar el plan.<br /><br /> 0: ningún error, en caso contrario, número de error del error que provocó el forzado de un error<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<otro valor >: GENERAL_FAILURE <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Descripción textual del last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: consulta intenta modificar los datos mientras la tabla de destino tiene un índice que se está generando en línea<br /><br /> INVALID_STARJOIN: plan contiene la especificación de StarJoin no válida<br /><br /> TIME_OUT: Optimizador superado el número de operaciones permitidas durante la búsqueda del plan especificado por el plan forzado<br /><br /> NO_DB: Una base de datos especificada en el plan no existe.<br /><br /> HINT_CONFLICT: No se puede compilar la consulta porque el plan está en conflicto con una sugerencia de consulta<br /><br /> DQ_NO_FORCING_SUPPORTED: No se puede ejecutar la consulta porque el plan está en conflicto con el uso de la consulta distribuida u operaciones de texto completo.<br /><br /> NO_PLAN: Procesador de consultas no pudo producir el plan de consulta porque no se puede comprobar el plan forzado a ser válido para la consulta<br /><br /> NO_INDEX: El índice especificado en el plan ya no existe<br /><br /> VIEW_COMPILE_FAILED: No se pudo forzar el plan de consulta debido a un problema en una vista indizada que se hace referencia en el plan<br /><br /> GENERAL_FAILURE: error de forzar general (no se tratan con motivos anteriores) <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá *NONE*.|  
 |**count_compiles**|**bigint**|Planee las estadísticas de compilación.|  
 |**initial_compile_start_time**|**datetimeoffset**|Planee las estadísticas de compilación.|  
 |**last_compile_start_time**|**datetimeoffset**|Planee las estadísticas de compilación.|  
 |**last_execution_time**|**datetimeoffset**|Último tiempo de ejecución hace referencia a la última hora de finalización del plan de consulta.|  
-|**avg_compile_duration**|**float**|Planee las estadísticas de compilación.|  
-|**last_compile_duration**|**bigint**|Planee las estadísticas de compilación.|  
+|**avg_compile_duration**|**float**|Planee las estadísticas de compilación. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**last_compile_duration**|**bigint**|Planee las estadísticas de compilación. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
 |**plan_forcing_type**|**int**|Tipo de forzar el plan.<br /><br />0: Ninguno<br /><br />1: MANUAL<br /><br />2: AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Descripción de texto de plan_forcing_type.<br /><br />NINGUNO: No forzar el plan<br /><br />MANUAL: Plan forzado por el usuario<br /><br />AUTO: Plan forzado por el ajuste automático|  
 

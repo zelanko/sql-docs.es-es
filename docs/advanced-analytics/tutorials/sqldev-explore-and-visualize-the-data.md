@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: b6822892547b8fa4ff3ad4dced02908d10cd39ec
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405785"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54899000"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lección 1: Explorar y visualizar los datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
 
-En esta lección, podrá revisar los datos de ejemplo y, a continuación, generará algunos trazados mediante [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) desde [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) y genérico [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) función en r de base. Estas funciones de R ya están incluidas en [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+En este paso, deberá revisar los datos de ejemplo y, a continuación, generará algunos trazados mediante [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) desde [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) y genérico [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) función en r de base. Estas funciones de R ya están incluidas en [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
 Un objetivo clave de esta lección muestra cómo llamar a funciones de R desde [!INCLUDE[tsql](../../includes/tsql-md.md)] en procedimientos almacenados y guardar los resultados en formatos de archivo de aplicación:
 

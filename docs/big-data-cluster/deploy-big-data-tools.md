@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 0413da85b4f213eb75a1b9ed5d80852663870c74
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372640"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898961"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar las herramientas de macrodatos de SQL Server 2019
 
-En este artículo se describe las herramientas de cliente que se deben instalar para crear, administrar, y con SQL Server 2019 macrodatos clústeres (versión preliminar).
+En este artículo se describe las herramientas de cliente que se deben instalar para crear, administrar, y con SQL Server 2019 macrodatos clústeres (versión preliminar). La siguiente sección proporciona una lista de herramientas y vínculos a instrucciones de instalación. Antes de implementar un clúster de macrodatos, configure las herramientas marcadas como necesarias en Windows o Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -63,5 +63,10 @@ La tabla anterior proporciona todas las herramientas comunes que se usan con los
 Las herramientas restantes son necesarias solo en determinados escenarios. **CLI de Azure** puede usarse para administrar los servicios de Azure asociados con implementaciones de AKS. **MSSQL-cli** es una herramienta opcional pero muy útil que le permite conectarse a la instancia principal de SQL Server en el clúster y ejecutar consultas desde la línea de comandos. Y **sqlcmd** y **curl** son necesarios si va a instalar los datos de ejemplo con el script de GitHub.
 
 ## <a name="next-steps"></a>Pasos siguientes
+
+Después de configurar las herramientas, implemente un clúster de macrodatos de 2019 de SQL Server en Kubernetes en la nube o local. Para obtener más información, consulte los siguientes artículos de implementación:
+
+- [Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
+- [Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md)
 
 Para obtener más información acerca de los clústeres de datos de gran tamaño, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos?](big-data-cluster-overview.md).

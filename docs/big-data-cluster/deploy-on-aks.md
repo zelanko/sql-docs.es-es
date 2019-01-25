@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8e6e91836b3daf0392da082df1f4ec806e9faf94
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a5dcc1c2726eaf234056fc77979df4d21a0dea17
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241246"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898930"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configuración de Azure Kubernetes Service para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019
 
@@ -26,7 +26,7 @@ AKS simplifica crear, configurar y administrar un clúster de máquinas virtuale
 En este artículo se describe los pasos para implementar en Kubernetes en AKS mediante la CLI de Azure. Si no tiene una suscripción de Azure, cree una cuenta gratuita antes de comenzar.
 
 > [!TIP] 
-> Para un script de python de ejemplo que implementa el clúster de macrodatos AKS y SQL Server, vea [implementar un clúster de macrodatos en Azure Kubernetes Service (AKS) de SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+> Para un script de python de ejemplo que implementa el clúster de macrodatos AKS y SQL Server, vea [inicio rápido: Implementar SQL Server en Azure Kubernetes Service (AKS) del clúster de macrodatos](quickstart-big-data-cluster-deploy.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -34,7 +34,7 @@ En este artículo se describe los pasos para implementar en Kubernetes en AKS me
    - **kubectl**
    - **Azure Data Studio**
    - **Extensión de SQL Server 2019**
-   - **CLI de Azure**
+   - **Azure CLI**
 
 - Versión mínima 1.10 para servidor de Kubernetes. Para AKS, deberá usar `--kubernetes-version` parámetro para especificar una versión distinta de la predeterminada.
 
@@ -106,6 +106,6 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Los pasos descritos en este artículo, configuran un clúster de Kubernetes en AKS. El siguiente paso es implementar datos de gran tamaño 2019 de SQL Server en el clúster.
+Los pasos descritos en este artículo, configuran un clúster de Kubernetes en AKS. El siguiente paso es implementar datos de gran tamaño 2019 de SQL Server en el clúster. Para obtener más información sobre cómo implementar clústeres de datos de gran tamaño, consulte el artículo siguiente:
 
-[Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
+[Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md)

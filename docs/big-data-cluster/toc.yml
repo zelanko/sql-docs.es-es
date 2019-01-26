@@ -5,10 +5,28 @@ items:
     href: big-data-cluster-overview.md
   - name: Notas de la versión
     href: big-data-cluster-release-notes.md
-- name: Tutoriales rápidos
+- name: Install
   items:
-  - name: Implementar el clúster de macrodatos de SQL Server
-    href: quickstart-big-data-cluster-deploy.md
+  - name: Instalar herramientas
+    items:
+    - name: Instalación de herramientas de macrodatos
+      href: deploy-big-data-tools.md
+    - name: Instalación de mssqlctl
+      href: deploy-install-mssqlctl.md
+  - name: Scripts de implementación
+    items:
+    - name: Azure Kubernetes Service
+      href: quickstart-big-data-cluster-deploy.md
+  - name: Guía para la implementación
+    items:
+    - name: Guía para la implementación
+      href: deployment-guidance.md
+    - name: Azure Kubernetes Service
+      href: deploy-on-aks.md
+    - name: Kubeadm
+      href: deploy-with-kubeadm.md
+    - name: Minikube
+      href: deploy-on-minikube.md
 - name: Tutoriales
   items:
   - name: 1_Carga de datos de muestra
@@ -41,24 +59,6 @@ items:
     href: concept-security.md
 - name: Guías de procedimientos
   items:
-  - name: Install
-    items:
-    - name: Implementación de clústeres de macrodatos
-      items:
-      - name: Guía para la implementación
-        href: deployment-guidance.md
-      - name: Implementar en Minikube
-        href: deploy-on-minikube.md
-      - name: Implementar en AKS
-        href: deploy-on-aks.md
-      - name: Implementación con Kubeadm
-        href: deploy-with-kubeadm.md
-    - name: Instalar herramientas
-      items:
-      - name: Instalación de herramientas de macrodatos
-        href: deploy-big-data-tools.md
-      - name: Instalación de mssqlctl
-        href: deploy-install-mssqlctl.md
   - name: Virtualización de datos
     items:
     - name: Virtualización de datos relacionales
@@ -109,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Solicitar acceso a clústeres de macrodatos
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 0878ec62a789072b9796c928aad8e7c0b6af6e65
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: d9229242d1c56e36c854ef8f7ecdd94145398b87
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405565"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898920"

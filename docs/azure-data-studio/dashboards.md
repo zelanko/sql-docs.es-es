@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 26e93209e2cbd9809d607f90c7eff4da32d2cd98
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030489"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045034"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Paneles en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -84,6 +84,7 @@ Ejemplo de configuración de control flotante Insight detalles
     },
     "value": "second_column_and_condition_check_value_column_for_summary_list_view",
 ```
+
 |propiedad|Tipo|value|Valor predeterminado|description|comment|
 |:---|:---|:---|:---|:---|:---|
 |detalles|objeto JSON|||propiedad obligatoria para definir las definiciones de detalle de información dentro de su estructura||
@@ -93,7 +94,7 @@ Ejemplo de configuración de control flotante Insight detalles
 |column|string|||indicar el nombre de la primera columna en la vista de lista de resumen del conjunto de resultados de consulta|en el futuro se cambiará el nombre de esta propiedad en un nombre más intuitivo|
 |value|string|||indicar el nombre de la segunda columna en la vista de lista de resumen del conjunto de resultados de consulta. El valor de esta columna se utiliza para comprobar las condiciones y establecer el color de cada punto de color de elementos de vista de lista de resumen|en el futuro se cambiará el nombre de esta propiedad en algo más intuitivo|
 |condición|objeto JSON|||define la comprobación de condición de valor de la columna y determinar el color de cada elemento de vista de lista de resumen||
-|if|string|siempre, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||operador de comprobación de condición|en el futuro se cambiará el nombre de propiedad al operador|
+|if|string|always, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||operador de comprobación de condición|en el futuro se cambiará el nombre de propiedad al operador|
 |equals|string|||valor de comprobación de condición|en el futuro cambiará el nombre de esta propiedad en 'value'|
 
 ## <a name="insight-actions"></a>Acciones de Insight

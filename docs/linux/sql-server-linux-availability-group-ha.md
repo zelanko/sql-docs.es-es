@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031028"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044938"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad
 
@@ -59,12 +59,13 @@ Esta configuración consta de tres réplicas sincrónicas. De forma predetermina
 
 Escalado de lectura, alta disponibilidad y protección de datos, puede proporcionar un grupo de disponibilidad con tres réplicas sincrónicas. En la tabla siguiente se describe el comportamiento de disponibilidad. 
 
-| |escalado de lectura|Alta disponibilidad & </br> protección de datos | Protección de los datos
-|:---|---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une. 
-|Interrupción de réplica secundaria  | La réplica principal es R / w. No hay conmutación automática por error si se produce un error en la principal. |La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. | Principal no está disponible para las transacciones de usuario. 
-<sup>*</sup> Valor predeterminado
+| |escalado de lectura|Alta disponibilidad & </br> protección de datos | Protección de los datos|
+|:---|---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
+|Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une. |
+|Interrupción de réplica secundaria  | La réplica principal es R / w. No hay conmutación automática por error si se produce un error en la principal. |La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. | Principal no está disponible para las transacciones de usuario. |
+
+<sup>\*</sup> Valor predeterminado
 
 <a name="twoSynch"></a>
 
@@ -76,15 +77,16 @@ Esta configuración habilita la protección de datos. Al igual que las demás co
 
 Un grupo de disponibilidad con dos réplicas sincrónicas proporciona protección de datos y escalado de lectura. En la tabla siguiente se describe el comportamiento de disponibilidad. 
 
-| |escalado de lectura |Protección de los datos
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es R / w.| Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une.
-|Interrupción de réplica secundaria  |Réplica principal es de lectura/escritura, ejecución se expone a pérdida de datos. |Principal no está disponible para las transacciones de usuario hasta que se recupere la secundaria.
-<sup>*</sup> Valor predeterminado
+| |escalado de lectura |Protección de los datos|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es R / w.| Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une.|
+|Interrupción de réplica secundaria  |Réplica principal es de lectura/escritura, ejecución se expone a pérdida de datos. |Principal no está disponible para las transacciones de usuario hasta que se recupere la secundaria.|
 
->[!NOTE]
->El escenario anterior es el comportamiento antes de SQL Server 2017 CU 1. 
+<sup>\*</sup> Valor predeterminado
+
+> [!NOTE]
+> El escenario anterior es el comportamiento antes de SQL Server 2017 CU 1. 
 
 <a name = "configOnly"></a>
 
@@ -99,38 +101,39 @@ Un grupo de disponibilidad con réplicas sincrónicas de dos (o más) y una rép
 
 En el diagrama del grupo de disponibilidad, una réplica principal envía datos de configuración a la réplica secundaria y la réplica de solo configuración. La réplica secundaria también recibe datos de usuario. La réplica de solo configuración no recibe los datos de usuario. La réplica secundaria está en modo de disponibilidad sincrónica. La réplica de solo configuración no contiene las bases de datos en el grupo de disponibilidad: solo los metadatos sobre el grupo de disponibilidad. Datos de configuración en la réplica de solo configuración se confirma sincrónicamente.
 
->[!NOTE]
->Un grupo de availabilility con réplica de solo configuración es nuevo en SQL Server 2017 CU1. Todas las instancias de SQL Server en el grupo de disponibilidad deben ser SQL Server 2017 CU1 o una versión posterior. 
+> [!NOTE]
+> Un grupo de availabilility con réplica de solo configuración es nuevo en SQL Server 2017 CU1. Todas las instancias de SQL Server en el grupo de disponibilidad deben ser SQL Server 2017 CU1 o una versión posterior. 
 
 El valor predeterminado de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 0. En la tabla siguiente se describe el comportamiento de disponibilidad. 
 
-| |Alta disponibilidad & </br> protección de datos | Protección de los datos
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Interrupción principal | Conmutación por error automática. La nueva réplica principal es R / w. | Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario. 
-|Interrupción de la réplica secundaria | Réplica principal es de lectura/escritura, ejecución se expone a pérdida de datos (si la principal se produce un error y no se puede recuperar). No hay conmutación automática por error si la principal produce un error también. | Principal no está disponible para las transacciones de usuario. No hay ninguna réplica de la conmutación por error a si la principal produce un error también. 
-|Interrupción de réplica de solo configuración | La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. | La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. 
-|Elemento secundario sincrónico + configuración sólo la interrupción de réplica| Principal no está disponible para las transacciones de usuario. Ninguna conmutación por error automática. | Principal no está disponible para las transacciones de usuario. No hay ninguna réplica en conmutación por error como si principal se produce un error también. 
-<sup>*</sup> Valor predeterminado
+| |Alta disponibilidad & </br> protección de datos | Protección de los datos|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|Interrupción principal | Conmutación por error automática. La nueva réplica principal es R / w. | Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario. |
+|Interrupción de la réplica secundaria | Réplica principal es de lectura/escritura, ejecución se expone a pérdida de datos (si la principal se produce un error y no se puede recuperar). No hay conmutación automática por error si la principal produce un error también. | Principal no está disponible para las transacciones de usuario. No hay ninguna réplica de la conmutación por error a si la principal produce un error también. |
+|Interrupción de réplica de solo configuración | La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. | La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. |
+|Elemento secundario sincrónico + configuración sólo la interrupción de réplica| Principal no está disponible para las transacciones de usuario. Ninguna conmutación por error automática. | Principal no está disponible para las transacciones de usuario. No hay ninguna réplica en conmutación por error como si principal se produce un error también. |
 
->[!NOTE]
->La instancia de SQL Server que hospeda la réplica de solo configuración también puede hospedar a otras bases de datos. También puede participar como una configuración única base de datos de más de un grupo de disponibilidad. 
+<sup>\*</sup> Valor predeterminado
+
+> [!NOTE]
+> La instancia de SQL Server que hospeda la réplica de solo configuración también puede hospedar a otras bases de datos. También puede participar como una configuración única base de datos de más de un grupo de disponibilidad. 
 
 ## <a name="requirements"></a>Requisitos
 
-* Todas las réplicas de un grupo de disponibilidad con una réplica de solo configuración deben ser SQL Server 2017 CU 1 o posterior.
-* Cualquier edición de SQL Server puede hospedar una réplica de solo configuración, incluido SQL Server Express. 
-* El grupo de disponibilidad necesita al menos una réplica secundaria - además de la réplica principal.
-* Las réplicas sola configuración no cuentan para el número máximo de réplicas por cada instancia de SQL Server. SQL Server standard edition permite hasta tres réplicas, SQL Server Enterprise Edition permite hasta 9.
+- Todas las réplicas de un grupo de disponibilidad con una réplica de solo configuración deben ser SQL Server 2017 CU 1 o posterior.
+- Cualquier edición de SQL Server puede hospedar una réplica de solo configuración, incluido SQL Server Express. 
+- El grupo de disponibilidad necesita al menos una réplica secundaria - además de la réplica principal.
+- Las réplicas sola configuración no cuentan para el número máximo de réplicas por cada instancia de SQL Server. SQL Server standard edition permite hasta tres réplicas, SQL Server Enterprise Edition permite hasta 9.
 
 ## <a name="considerations"></a>Consideraciones
 
-* Réplica de solo de no más de una configuración por grupo de disponibilidad. 
-* Una réplica de solo configuración no puede ser una réplica principal.
-* No se puede modificar el modo de disponibilidad de una réplica de solo configuración. Para cambiar de una réplica de solo configuración a una réplica secundaria sincrónica o asincrónica, quite la réplica de solo configuración y agregar una réplica secundaria con el modo de disponibilidad necesarios. 
-* Una réplica de solo configuración está sincronizada con los metadatos del grupo de disponibilidad. No hay ningún dato de usuario. 
-* Un grupo de disponibilidad con una réplica principal y réplica de solo una configuración, pero no hay ninguna réplica secundaria no es válido. 
-* No se puede crear un grupo de disponibilidad en una instancia de SQL Server Express edition. 
+- Réplica de solo de no más de una configuración por grupo de disponibilidad. 
+- Una réplica de solo configuración no puede ser una réplica principal.
+- No se puede modificar el modo de disponibilidad de una réplica de solo configuración. Para cambiar de una réplica de solo configuración a una réplica secundaria sincrónica o asincrónica, quite la réplica de solo configuración y agregar una réplica secundaria con el modo de disponibilidad necesarios. 
+- Una réplica de solo configuración está sincronizada con los metadatos del grupo de disponibilidad. No hay ningún dato de usuario. 
+- Un grupo de disponibilidad con una réplica principal y réplica de solo una configuración, pero no hay ninguna réplica secundaria no es válido. 
+- No se puede crear un grupo de disponibilidad en una instancia de SQL Server Express edition. 
 
 <a name="pacemakerNotify"></a>
 
@@ -150,8 +153,8 @@ Por ejemplo, un grupo de disponibilidad con tres réplicas sincrónicas: una ré
 
 En este escenario, las dos réplicas tienen que responder para que la conmutación por error para que se desencadene. Correcta conmutación automática por error tras una interrupción de la réplica principal, ambas réplicas secundarias deben actualizada y responder a la notificación previa a la promoción. Si son sincrónicas y en línea, tienen el mismo número de secuencia. El grupo de disponibilidad promueve una de ellas. Si solo una de las réplicas secundarias responde a la acción previa a la promoción no puede garantizar el agente de recursos que la base de datos secundaria que ha respondido tenga el sequence_number más alto y no se desencadena una conmutación por error.
 
->[!IMPORTANT]
->Cuando `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 0, existe riesgo de pérdida de datos. Durante una interrupción de la réplica principal, el agente de recursos no desencadenará automáticamente una conmutación por error. Puede esperar principal recuperar o una conmutación manual utilizando `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+> [!IMPORTANT]
+> Cuando `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 0, existe riesgo de pérdida de datos. Durante una interrupción de la réplica principal, el agente de recursos no desencadenará automáticamente una conmutación por error. Puede esperar principal recuperar o una conmutación manual utilizando `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
 Puede elegir invalidar el comportamiento predeterminado y evitar que el recurso de grupo de disponibilidad configuración `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automáticamente.
 
@@ -167,8 +170,8 @@ Para revertir al valor predeterminado, según la configuración del grupo de dis
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
->[!NOTE]
->Al ejecutar los comandos anteriores, la réplica principal está temporalmente degradan a una réplica secundaria, promover de nuevo. La actualización de recursos hace que todas las réplicas detener y reiniciar. El nuevo valor de`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` sólo se establece una vez que se reinicien las réplicas, no al instante.
+> [!NOTE]
+> Al ejecutar los comandos anteriores, la réplica principal está temporalmente degradan a una réplica secundaria, promover de nuevo. La actualización de recursos hace que todas las réplicas detener y reiniciar. El nuevo valor de`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` sólo se establece una vez que se reinicien las réplicas, no al instante.
 
 ## <a name="see-also"></a>Vea también
 

@@ -14,14 +14,15 @@ ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 67cc6adbb21071484a444c72baf2abb154411a33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e044c08c45bc71f51eca16a891d8920a9e42cad6
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613404"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044581"
 ---
 # <a name="adox-collections"></a>Colecciones de ADOX
+
 |||  
 |-|-|  
 |[Columnas](../../../ado/reference/adox-api/columns-collection-adox.md)|Todos los contiene **columna** objetos de una tabla, índice o clave.|  

@@ -20,12 +20,12 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420240"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044362"
 ---
 # <a name="sqlsetdescfield-function"></a>Función SQLSetDescField
 
@@ -147,7 +147,7 @@ SQLRETURN SQLSetDescField(
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: LECTURA/ESCRITURA IPD: L/E|DESCARTAR: Ptr null APD: Ptr null IRD: Ptr null IPD: Ptr null|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: Ptr null APD: Ptr null IRD: IPD sin usar: No utilizado|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: No utilizado<br /><br /> IPD: No utilizado|  
-SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD 0: 0 IRD: D IPD: 0|  
+|SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD 0: 0 IRD: D IPD: 0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN*|DESCARTAR: APD sin usar: IRD sin usar: LECTURA/ESCRITURA IPD: L/E|DESCARTAR: APD sin usar: IRD sin usar: Ptr null IPD: Ptr null|  
   
  [1] estos campos se definen sólo cuando la IPD se rellena automáticamente con el controlador. Si no, son indefinidos. Si una aplicación intenta establecer estos campos, HY091 SQLSTATE se devolverán (identificador de campo descriptor no válido).  

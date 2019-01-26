@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 99e51be32264dd90b126860b33abe35c7a27781a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819110"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044631"
 ---
-# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>Sys.dm_exec_query_statistics_xml (Transact-SQL)
+# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Devuelve el plan de ejecución para que finalicen las solicitudes de consultas. Utilice esta DMV para recuperar el plan de presentación XML con estadísticas transitorias. 
@@ -46,12 +46,13 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>Tabla devuelta
+
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|Id. de la sesión. No acepta valores NULL.|
 |request_id|**int**|Identificador de la solicitud. No acepta valores NULL.|
-|sql_handle|**varbinary (64)**|Asignación hash del texto SQL de la solicitud. Acepta valores NULL.|
-|plan_handle|**varbinary (64)**|Asignación hash del plan de consulta. Acepta valores NULL.|
+|sql_handle|**varbinary(64)**|Asignación hash del texto SQL de la solicitud. Acepta valores NULL.|
+|plan_handle|**varbinary(64)**|Asignación hash del plan de consulta. Acepta valores NULL.|
 |query_plan|**xml**|SHOWPLAN XML con estadísticas parciales. Acepta valores NULL.|
 
 ## <a name="remarks"></a>Comentarios

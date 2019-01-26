@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300192"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044551"
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura SQL Graph  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -135,6 +135,7 @@ Se agregan las siguientes funciones integradas. Le ayudarán a los usuarios extr
 Obtenga información sobre la [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensiones incluidas en SQL Server y Azure SQL Database, que permiten crear y consultar objetos de grafos. Las extensiones de lenguaje de consulta ayudan a consultas y recorren el grafo con la sintaxis de arte ASCII.
  
 ### <a name="data-definition-language-ddl-statements"></a>Instrucciones de lenguaje de definición (DDL) de datos
+
 |Tarea   |Artículo relacionado  |Notas
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` Ahora se amplía para admitir la creación de una tabla como nodo o PERIMETRAL AS. Tenga en cuenta que una tabla perimetral puede o no tener ningún atributo definido por el usuario.  |
@@ -145,6 +146,7 @@ Obtenga información sobre la [!INCLUDE[tsql-md](../../includes/tsql-md.md)] ext
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Instrucciones de lenguaje de manipulación (DML) de datos
+
 |Tarea   |Artículo relacionado  |Notas
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Insertar en una tabla de nodo no es diferente a insertar en una tabla relacional. Los valores de `$node_id` columna se genera automáticamente. Intentar insertar un valor en `$node_id` o `$edge_id` columna se producirá un error. Los usuarios deben proporcionar valores para `$from_id` y `$to_id` columnas al insertar en una tabla perimetral. `$from_id` y `$to_id` son el `$node_id` valores de los nodos que se conecta un borde determinado.  |
@@ -154,6 +156,7 @@ Obtenga información sobre la [!INCLUDE[tsql-md](../../includes/tsql-md.md)] ext
 
 
 ### <a name="query-statements"></a>Instrucciones de consulta
+
 |Tarea   |Artículo relacionado  |Notas
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Los nodos y bordes se almacenan internamente como tablas, por lo tanto, admite la mayoría de las operaciones admitidas en una tabla en SQL Server o Azure SQL Database en las tablas perimetrales y de nodo  |

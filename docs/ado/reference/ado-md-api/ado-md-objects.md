@@ -14,21 +14,22 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e7f6cb865ec06e1031cd627316821ef4f666a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b0aed3c63b1303e4d8743ea441348c351be822
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828716"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044922"
 ---
 # <a name="ado-md-objects"></a>Objetos de ADO MD
+
 |||  
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Representa una posición o el eje del filtro de un conjunto de celdas que contiene a los miembros seleccionados de uno o más dimensiones.|  
 |[Catálogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contiene información de esquema multidimensional (es decir, los cubos y dimensiones subyacentes, jerarquías, niveles y miembros) específico de un proveedor de datos multidimensionales (MDP).|  
-|[celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa los datos en la intersección de coordenadas del eje, contenidos en un conjunto de celdas.|  
-|[Conjunto de celdas](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Representa los resultados de una consulta multidimensional. Es una colección de celdas seleccionadas de cubos u otros conjuntos de celdas.|  
-|[Objeto CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Representa un cubo de un esquema multidimensional, que contiene un conjunto de dimensiones relacionadas.|  
+|[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa los datos en la intersección de coordenadas del eje, contenidos en un conjunto de celdas.|  
+|[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Representa los resultados de una consulta multidimensional. Es una colección de celdas seleccionadas de cubos u otros conjuntos de celdas.|  
+|[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Representa un cubo de un esquema multidimensional, que contiene un conjunto de dimensiones relacionadas.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Representa una de las dimensiones de un cubo multidimensional, que contiene una o más jerarquías de miembros.|  
 |[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Representa una forma en que los miembros de una dimensión se pueden agregar o "acumular." Una dimensión puede agregarse a una o más jerarquías.|  
 |[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contiene un conjunto de miembros, cada uno de los cuales tiene el mismo rango dentro de una jerarquía.|  

@@ -1,5 +1,5 @@
 ---
-title: Sys.Configurations (Transact-SQL) | Microsoft Docs
+title: sys.configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,26 +20,27 @@ ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f1a2ae2d0d8f8c5eea00ed5d31ad8aadb88e5ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa2bae15b2da81dcf69ca1e486c74e7b4ccd5ba8
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596113"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045001"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una fila para cada valor de opción de configuración de todo el servidor en el sistema.  
+
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Id. exclusivo del valor de configuración.|  
 |**Nombre**|**nvarchar(35)**|Nombre de la opción de configuración.|  
-|**Valor**|**sql_variant**|Valor configurado para esta opción.|  
+|**value**|**sql_variant**|Valor configurado para esta opción.|  
 |**Mínimo**|**sql_variant**|Valor mínimo para la opción de configuración.|  
 |**Máximo**|**sql_variant**|Valor máximo para la opción de configuración.|  
 |**value_in_use**|**sql_variant**|Valor actual de esta opción.|  
-|**Descripción**|**nvarchar(255)**|Descripción de la opción de configuración.|  
+|**description**|**nvarchar(255)**|Descripción de la opción de configuración.|  
 |**is_dynamic**|**bit**|1 = La variable que surte surte efecto cuando se ejecuta la instrucción RECONFIGURE.|  
 |**is_advanced**|**bit**|1 = la variable se muestra solo cuando el **mostrar advancedoption** está establecido.|  
   

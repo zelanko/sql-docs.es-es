@@ -15,12 +15,12 @@ ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02841248c28561183543b4edef1fb97b3f55f6c9
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 0db6ba98ec318cfc9780984f54ff04a3cedd20cf
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419770"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044451"
 ---
 # <a name="manipulating-data-mdx"></a>Manipular datos (MDX)
 
@@ -35,6 +35,7 @@ Las expresiones multidimensionales (MDX) pueden utilizarse para manipular los da
 |[Descripción de orden de paso y orden de resolución &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|Proporciona información detallada sobre los conceptos del orden de resolución y cómo esta característica puede afectar a las expresiones, instrucciones y scripts MDX.|  
 
 <!-- ??
+
 |[Script for Search and Replace] function on the analysis of multidimensional data.|
 
 GeneMi is removing this commented row because it is unclear what article its link meant to link to.

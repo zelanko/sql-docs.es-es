@@ -16,14 +16,15 @@ ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5227985c56d5e2fd4730c86fe9182c8b16b2cb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804463"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044471"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Opciones de configuración mediante programación para el controlador de acceso
+
 |Opción|Descripción|Método|  
 |------------|-----------------|------------|  
 |Tamaño del búfer|El tamaño del búfer interno, en kilobytes, que es utilizado por Microsoft Access para transferir datos hacia y desde el disco. El tamaño de búfer predeterminado es 2048 KB (se muestra como 2048). Se puede especificar cualquier valor de entero divisible por 256.|Para establecer esta opción dinámicamente, use la palabra clave MAXBUFFERSIZE en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  

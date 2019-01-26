@@ -14,28 +14,29 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 176afb0ed710087ec150838e1e6bc6c49eb9e908
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637233"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044669"
 ---
 # <a name="adox-properties"></a>Propiedades ADOX
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica la propiedad ADO **conexión** objeto al que pertenece el catálogo.|  
 |[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Describe las características de la columna.|  
-|[En clúster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica si el índice está agrupado.|  
+|[Agrupado](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica si el índice está agrupado.|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|Especifica un ADO **comando** objeto que puede usarse para crear o ejecutar el procedimiento.|  
-|[recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica la fecha en que se creó el objeto.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indica la fecha en que se modificó por última vez el objeto.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indica el tamaño máximo indicado de la columna.|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Indica la acción realizada cuando se elimina una clave principal.|  
 |[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Indica si los registros que tienen valores null en sus campos de índice tienen entradas de índice.|  
 |[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Indica a un miembro específico de una colección, por nombre o número ordinal.|  
-|[Nombre](../../../ado/reference/adox-api/name-property-adox.md)|Indica el nombre del objeto.|  
+|[Name](../../../ado/reference/adox-api/name-property-adox.md)|Indica el nombre del objeto.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Indica la escala de un valor numérico de la columna.|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Especifica el catálogo del elemento primario de una tabla o columna para proporcionar acceso a propiedades específicas del proveedor.|  
 |[Precisión](../../../ado/reference/adox-api/precision-property-adox.md)|Indica la precisión máxima de valores de datos de la columna.|  

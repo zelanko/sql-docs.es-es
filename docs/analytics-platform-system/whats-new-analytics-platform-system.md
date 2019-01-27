@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626359"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044712"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacén de datos MPP de escalabilidad horizontal
 Vea cuáles son las novedades en las últimas actualizaciones de dispositivo de Microsoft Analytics Platform System (APS). APS es una aplicación de escalabilidad horizontal en el entorno local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server. 
@@ -31,6 +31,7 @@ APS CU7.3 mejora el rendimiento de consultas con la eliminación de subexpresion
 Hemos publicado una nueva versión de conectores de Informatica para puntos de acceso que funciona con la versión 10.2.0 de Informatica. Los nuevos conectores pueden descargarse desde [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### <a name="supported-versions"></a>Versiones admitidas
+
 | Versión APS | Informatica PowerCenter | Controlador |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
@@ -147,13 +148,13 @@ APS AU6 es compatible con estas mejoras de compatibilidad de Transact-SQL.  Esto
 
 - [Intercalaciones de SQL de nivel de columna][] ahora son compatibles, además de las intercalaciones de Windows.
 - [Índices no clúster en índices de almacén de columnas agrupado][] mejorar el rendimiento de las consultas que buscan valores específicos en el índice de almacén de columnas agrupado. 
-- [SELECCIONE... EN][] 
+- [SELECT...INTO][] 
 - [sp_spaceused()][] muestra el espacio en disco utilizado o reservadas en una tabla o una base de datos.
 - [Tablas anchas][] compatibilidad es igual que SQL Server 2016. El límite anterior de 32 KB para el tamaño de fila ya no existe. 
 
 **Tipos de datos**
 
-- [Varchar (max)][], [nvarchar (max)][] y [varbinary (max)][]. Estos tipos de datos LOB tienen un tamaño máximo de 2 GB. Para cargar estos objetos utilizan [bcp (utilidad)][]. PolyBase y dwloader no admite actualmente estos tipos de datos. 
+- [Varchar (max)][], [NVARCHAR(MAX)][] y [VARBINARY(MAX)][]. Estos tipos de datos LOB tienen un tamaño máximo de 2 GB. Para cargar estos objetos utilizan [bcp (utilidad)][]. PolyBase y dwloader no admite actualmente estos tipos de datos. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] y tipos de datos DECIMAL.
@@ -174,7 +175,7 @@ APS AU6 es compatible con estas mejoras de compatibilidad de Transact-SQL.  Esto
 **Funciones adicionales**
 
 - [NEWID()][]
-- [RAND][]
+- [RAND()][]
 
 ### <a name="polybasehadoop-enhancements"></a>Mejoras de PolyBase/Hadoop
 
@@ -216,10 +217,10 @@ The proper formats have at least two big advantages.  One big advantage is that 
 
 [Índices no clúster en índices de almacén de columnas agrupado]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
-[NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
-[VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+[NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
+[VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SELECCIONE... EN]:/sql/t-sql/queries/select-into-clause-transact-sql
+[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Tablas anchas]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
@@ -235,7 +236,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
 [HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
 [NEWID()]:/sql/t-sql/functions/newid-transact-sql
-[RAND]:/sql/t-sql/functions/rand-transact-sql
+[RAND()]:/sql/t-sql/functions/rand-transact-sql
 
 
   

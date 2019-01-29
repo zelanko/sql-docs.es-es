@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b4ac8b044308ad7bfb2431e35429558b9deb3cf5
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: bd33483d148b3f94ae54c1a1b94dbaf21acbac27
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405885"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045088"
 ---
 # <a name="database-engine-errors"></a>Errores del motor de base de datos
 
@@ -578,6 +578,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-1000-to-1999"></a>Errores 1000 a 1999
+
 | Error| Severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   No  |   Línea %d: especificación de longitud o precisión %d no válida.   |
@@ -1009,6 +1010,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-2000-to-2999"></a>Errores 2000 a 2999
+
 | Error| Severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   No  |   No se puede crear un procedimiento para la replicación con un número de grupo mayor que uno.   |
@@ -1381,6 +1383,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>Errores 3000 a 3999
+
 | Error| Severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   No  |   No se puede usar BACKUP o RESTORE para una instantánea de base de datos.   |
@@ -1821,6 +1824,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-4000-to-4999"></a>Errores 4000 a 4999
+
 | Error| Severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   No  |   El cliente envía una sp_reset_connection mientras todavía hay solicitudes pendientes, el servidor se está desconectando.  |
@@ -3155,6 +3159,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-7000-to-7999"></a>Errores 7000 a 7999
+
 | Error| Severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   No  |   El tipo de datos del parámetro de identificador de documentos de OPENXML debe ser int. |
@@ -3598,6 +3603,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-8000-to-8999"></a>Errores 8000 a 8999
+
 | Error| Severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   No  |   La secuencia del protocolo de llamada a procedimiento remoto (RPC) del flujo TDS entrante es incorrecta. La metainformación no es válida para el parámetro Sql Variant. |

@@ -9,22 +9,25 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 1dbe3213ae6b5774cd08efa6f6a24b799f74a6a7
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 426b0eed5b53760e872ebd18b11fce4de5ff22b9
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732002"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044928"
 ---
 # <a name="sql-server-monitoring-partners"></a>Asociados de supervisión de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Para supervisar los servicios de SQL Server, elija entre una amplia variedad de herramientas líderes del sector. En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de supervisión compatibles con Microsoft SQL Server.
 
 <!--
+
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Asociados de supervisión de Microsoft
+
 | Asociado | Descripción | Vínculos |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager es una solución de diagnóstico y supervisión de rendimiento eficaz que alerta de forma proactiva a los administradores de problemas de mantenimiento, rendimiento y disponibilidad en entornos de SQL Server desde una consola central.<br><br>[Requisitos del sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sitio web][idera_website]<br>[Twitter][idera_twitter]<br>[Vídeo][idera_youtube] | |

@@ -18,12 +18,12 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9177f154af1085a28c902e137cad0640f5702fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354896"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087904"
 ---
 # <a name="thread-pool-properties"></a>Propiedades de grupos de subprocesos
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa el subprocesamiento múltiple para realizar muchas operaciones, mejorando el rendimiento global del servidor al ejecutar varios trabajos en paralelo. Para administrar los subprocesos de manera más eficaz, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza grupos de subprocesos para preasignar subprocesos y facilitar la disponibilidad de subprocesos para el trabajo siguiente.  
@@ -193,13 +193,13 @@ ms.locfileid: "53354896"
   
  Los nodos NUMA se pasan por alto. Solo habrá un grupo de subprocesos IOProcess y todos los subprocesos de ese grupo de subprocesos tendrán afinidad con todos los procesadores lógicos. De forma predeterminada (donde PerNumaNode=-1), este es el valor operativo si el equipo tiene menos de 4 nodos NUMA.  
   
- ![Correspondencia de grupo de NUMA, procesador y subproceso](../media/ssas-threadpool-numaex0.PNG "Numa, procesador y subproceso de correspondencia de grupo")  
+ ![NUMA, procesador y subproceso del grupo correspondencia](../media/ssas-threadpool-numaex0.PNG "Numa, procesador y subproceso del grupo correspondencia")  
   
  **PerNumaNode=1**  
   
  Se crean grupos de subprocesos IOProcess para cada nodo NUMA. El hecho de tener grupos de subprocesos independiente mejora el acceso coordinado a los recursos locales, como la memoria caché local en un nodo NUMA.  
   
- ![Correspondencia de grupo de NUMA, procesador y subproceso](../media/ssas-threadpool-numaex1.PNG "Numa, procesador y subproceso de correspondencia de grupo")  
+ ![NUMA, procesador y subproceso del grupo correspondencia](../media/ssas-threadpool-numaex1.PNG "Numa, procesador y subproceso del grupo correspondencia")  
   
  **PerNumaNode=2**  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53354896"
   
  En el ejemplo siguiente, en un sistema que tiene 4 nodos NUMA y 32 procesadores lógicos, establecer `PerNumaNode` en 2 se tendrían 32 grupos de subprocesos de IOProcess. Los subprocesos de los 8 primeros grupos de subprocesos tendrían afinidad con todos los procesadores lógicos del nodo NUMA 0, pero con el procesador ideal establecido en 0, 1, 2 hasta 7. Los 8 grupos de subprocesos siguientes tendrían afinidad con todos los procesadores lógicos del nodo NUMA 1, con el procesador ideal establecido en 8, 9, 10 hasta 15, y así sucesivamente.  
   
- ![Correspondencia de grupo de NUMA, procesador y subproceso](../media/ssas-threadpool-numaex2.PNG "Numa, procesador y subproceso de correspondencia de grupo")  
+ ![NUMA, procesador y subproceso del grupo correspondencia](../media/ssas-threadpool-numaex2.PNG "Numa, procesador y subproceso del grupo correspondencia")  
   
  En este nivel de afinidad, el programador siempre intenta utilizar el procesador lógico ideal primero, dentro del nodo NUMA preferido. Si el procesador lógico no está disponible, el programador elige otro procesador del mismo nodo, o del mismo grupo de procesadores si no hay otros subprocesos disponibles. Para más información y ejemplos, vea [Valores de configuración de Analysis Services 2012 (blog de Wordpress)](https://go.microsoft.com/fwlink/?LinkId=330387).  
   

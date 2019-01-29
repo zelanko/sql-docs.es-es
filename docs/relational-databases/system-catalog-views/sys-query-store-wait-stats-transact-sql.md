@@ -1,5 +1,5 @@
 ---
-title: Sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs
+title: sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/21/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43cd85210c437520d2f72b7e9a16fbe2aab84514
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521252"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087844"
 ---
-# <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
+# <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
@@ -46,7 +46,7 @@ ms.locfileid: "52521252"
 |**avg_query_wait_time_ms**|**float**|Promedio de duración para el plan de consulta por ejecución dentro de la categoría de espera y de intervalo de agregación (comunicada en milisegundos) de espera.|
 |**last_query_wait_time_ms**|**bigint**|Último espere la duración del plan de consulta dentro del intervalo de agregación y categoría (comunicado en milisegundos) de espera.|
 |**min_query_wait_time_ms**|**bigint**|Mínimo `CPU wait` para el plan de consulta dentro del intervalo de agregación de tiempo y categoría (comunicado en milisegundos) de espera.|
-|**max_query_wait_time_ms**|**bigint**|Espera de CPU de máximo '''' para el plan de consulta dentro del intervalo de agregación de tiempo y categoría (comunicado en milisegundos) de espera.|
+|**max_query_wait_time_ms**|**bigint**|Máximo `CPU wait` para el plan de consulta dentro del intervalo de agregación de tiempo y categoría (comunicado en milisegundos) de espera.|
 |**stdev_query_wait_time_ms**|**float**|`Query wait` desviación estándar de duración de la consulta plan dentro del intervalo de agregación y categoría (comunicado en milisegundos) de espera.|
 
 ## <a name="wait-categories-mapping-table"></a>Tabla de asignación de categorías de espera
@@ -58,16 +58,16 @@ ms.locfileid: "52521252"
 |**0**|**Unknown**|Desconocido |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Subproceso de trabajo**|THREADPOOL|
-|**3**|**Bloqueo**|LCK_M_ %|
-|**4**|**Bloqueo temporal**|LATCH_ %|
-|**5**|**Bloqueo temporal del búfer**|PAGELATCH_ %|
-|**6**|**Búfer de E/S**|PAGEIOLATCH_ %|
+|**3**|**Bloqueo**|LCK_M_%|
+|**4**|**Latch**|LATCH_%|
+|**5**|**Bloqueo temporal del búfer**|PAGELATCH_%|
+|**6**|**Búfer de E/S**|PAGEIOLATCH_%|
 |**7**|**Compilación***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**CLR DE SQL**|CLR %, % SQLCLR|
+|**8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**La creación de reflejo**|DBMIRROR %|
-|**10**|**Transaction**|XACT %, % DTC, TRAN_MARKLATCH_ %, % MSQL_XACT_ TRANSACTION_MUTEX|
-|**11**|**Inactivo**|SLEEP_ %, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_ COLA, XE_TIMER_EVENT|
-|**12**|**PreEmptive**|PREEMPTIVE_ %|
+|**10**|**Transaction**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
+|**11**|**Idle**|SLEEP_ %, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_ COLA, XE_TIMER_EVENT|
+|**12**|**Preemptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_ % **(pero no BROKER_RECEIVE_WAITFOR)**|
 |**14**|**Registro de tran**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOGF|
 |**15**|**E/S de red**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
@@ -84,7 +84,7 @@ ms.locfileid: "52521252"
 
 ## <a name="permissions"></a>Permisos
 
- Requiere el **VIEW DATABASE STATE** permiso.  
+ Requiere el permiso `VIEW DATABASE STATE`.  
   
 ## <a name="see-also"></a>Vea también
 

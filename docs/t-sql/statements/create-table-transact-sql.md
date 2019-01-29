@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cbf03f09ce4d72a738fe018bd0ca0cd67af3d107
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300572"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838152"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Comparta sus comentarios sobre la tabla de contenido dela documentación de SQL!](https://aka.ms/sqldocsurvey)
+> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Crea una nueva tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -479,8 +479,6 @@ column_name <data_type>
   
  IDENTITY  
  Indica que la nueva columna es una columna de identidad. Cuando se agrega una fila nueva a la tabla, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente con las restricciones PRIMARY KEY como identificadores de fila únicos de la tabla. La propiedad IDENTITY se puede asignar a columnas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)**. Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. En este caso, deben especificarse el valor de inicialización y el incremento, o ninguno de esto valores. Si no se especifica ninguno, el valor predeterminado es (1,1).  
-  
- En una tabla optimizada para memoria, el único valor permitido tanto para *seed* como para *increment* es 1; (1,1) es el valor predeterminado para *seed* e *increment*.  
   
  *seed*  
  Es el valor que se utiliza para la primera fila cargada en la tabla.  

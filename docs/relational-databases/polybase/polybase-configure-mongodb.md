@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68fb5c69d30e9ba30f27bcd23347ed5543c7e792
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 6c4ccf371cdcac99d50c3142ec42641380623501
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947590"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044501"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurar PolyBase para acceder a datos externos en MongoDB
 
@@ -95,7 +95,7 @@ En esta sección se crearán estos objetos:
      );
      ```
 
-1. **Opcional:** cree estadísticas en una tabla externa.
+1. **Opcional:** Cree estadísticas en una tabla externa.
 
     Se recomienda crear estadísticas en las columnas de tabla externa, sobre todo en las que se usan para las combinaciones, filtros y agregados, para obtener un rendimiento óptimo de las consultas.
 
@@ -142,6 +142,7 @@ La dirección del objeto se acoplará de la siguiente manera:
 * El campo anidado restaurant.address.zipcode se convierte en restaurant.address_zipcode
 
 Las calificaciones de la matriz se acoplará de la siguiente manera:
+
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
 |1393804800000 |Un |2|

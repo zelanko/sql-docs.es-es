@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fd38e30039ee174ed2558a88c1ddc1e3785238d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4601435dcaf7cbc82cb4fb6e6e00ea911ef12f9f
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514548"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044392"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Novedades de los índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,6 +99,7 @@ ms.locfileid: "52514548"
   
 ### <a name="supportability"></a>Compatibilidad  
 Las siguientes vistas del sistema son nuevas para el almacén de columnas:  
+
 ||| 
 |-|-|
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -107,6 +108,7 @@ Las siguientes vistas del sistema son nuevas para el almacén de columnas:
 |[sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)||  
   
 Estas DMV basadas en OLTP en memoria contienen actualizaciones para el almacén de columnas:  
+
 ||| 
 |-|-|
 |[sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)|[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)|  
@@ -137,7 +139,7 @@ Estas DMV basadas en OLTP en memoria contienen actualizaciones para el almacén 
 -   El índice de almacén de columnas siempre necesita almacenamiento adicional, normalmente un 10 % más que el almacén de filas, ya que almacena una copia de los datos.  
 -   El procesamiento por lotes se traduce en que las consultas rinden el doble de bien o mejor, pero solo está disponible para la ejecución de consultas en paralelo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Guía de diseño de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
  [Guía de carga de datos de los índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

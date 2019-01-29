@@ -14,12 +14,12 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 37d6a896057085353d81e8c9acbd161a25014d51
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 891e3e41bab9be82145bfeb905e9243b7bf31340
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380956"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044352"
 ---
 # <a name="resource-governor-resource-pool"></a>Grupo de recursos de servidor del regulador de recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,7 @@ En la tabla siguiente se muestran algunos de los conceptos anteriores. La tabla 
 |predeterminados|0|100|30|30|El valor MAX efectivo se calcula como: min (100,100 - (20+50)) = 30. El % compartido calculado es el MAX efectivo - MIN = 30.|  
 |Grupo 1|20|100|50|30|El valor MAX efectivo se calcula como: min(100,100-50) = 50. El % compartido calculado es el MAX efectivo - MIN = 30.|  
 |Grupo 2|50|70|70|20|El valor MAX efectivo se calcula como: min(70,100-20) = 70. El % compartido calculado es el MAX efectivo - MIN = 20.|  
+
 Las fórmulas siguientes se usan para calcular el porcentaje máximo efectivo y el porcentaje compartido en la tabla anterior:  
   
 -   Min(X,Y) se refiere al valor mínimo de X e Y.  

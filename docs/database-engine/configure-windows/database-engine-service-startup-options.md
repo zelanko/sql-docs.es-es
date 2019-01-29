@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a4a31e52cbaa9e91219c2e67341de968d5c7e2c
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: e0c9cf64fa8e2b4304e2ba25536a298edbd306ac
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626335"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044332"
 ---
 # <a name="database-engine-service-startup-options"></a>Opciones de inicio del servicio de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "53626335"
   
 ## <a name="list-of-startup-options"></a>Lista de opciones de inicio  
 ### <a name="default-startup-options"></a>Opciones de inicio predeterminadas  
+
 |Opciones|Descripción|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Ruta de acceso completa del archivo de base de datos maestra (normalmente, C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Si no proporciona esta opción, se usarán los parámetros del Registro existentes.|  
@@ -56,6 +57,7 @@ ms.locfileid: "53626335"
 |**-l**  *master_log_path*|Ruta de acceso completa del archivo de registro de la base de datos maestra (normalmente, C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf). Si no especifica esta opción, se usarán los parámetros del Registro existentes.|  
   
 ### <a name="other-startup-options"></a>Otras opciones de inicio   
+
 |Opciones |Descripción|   
 |---------------------------|-----------------|  
 |**-c**|Acorta el tiempo de inicio al iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el símbolo del sistema. Normalmente, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se inicia como un servicio llamando al Administrador de control de servicios. Dado que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] no se inicia como un servicio cuando se inicia desde el símbolo del sistema, use **-c** para omitir este paso.|  

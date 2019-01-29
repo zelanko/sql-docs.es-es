@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 0cfe6b67217521f829f7b4745d42283e70a411fe
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645324"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147033"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Instalar SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,6 +27,8 @@ En SQL Server 2017, se ofrece la integración de R en [Machine Learning Services
 ## <a name="pre-install-checklist"></a>Lista de comprobación previa a la instalación
 
 + Se requiere una instancia del motor de base de datos. No se puede instalar solo R, aunque se puede agregar gradualmente a una instancia existente.
+
++ Para la continuidad empresarial, [siempre en grupos de disponibilidad:](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) son compatibles con R Services. Tendrá que instalar R Services y configurar paquetes, en cada nodo.
 
 + No instale R Services en un clúster de conmutación por error. El mecanismo de seguridad que se usa para aislar los procesos de R no es compatible con un entorno de clúster de conmutación por error de Windows Server.
 

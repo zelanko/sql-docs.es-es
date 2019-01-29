@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419879"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087716"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Panel de administración de PowerPivot y datos de uso
   El Panel de administración de PowerPivot es una colección de informes predefinidos y elementos web de Administración central de SharePoint que ayudan a administrar una implementación de SQL Server PowerPivot para SharePoint. El Panel de administración proporciona información relacionada con el estado del servidor, la actividad de los libros y la actualización de datos. El panel usa datos de la recopilación de datos de uso de SharePoint.  
@@ -67,7 +67,7 @@ ms.locfileid: "52419879"
 ### <a name="change-the-current-service-application"></a>Cambiar la aplicación de servicio actual  
  Para cambiar la aplicación de servicio PowerPivot actual en el panel de administración:  
   
-1.  En la parte superior del panel de administración de PowerPivot, observe el nombre de la aplicación de servicio actual; por ejemplo, **Aplicación de servicio PowerPivot predeterminada**.  
+1.  En la parte superior del panel de administración de PowerPivot, observe el nombre de la aplicación de servicio actual, por ejemplo **aplicación de servicio PowerPivot predeterminada**.  
   
 2.  En el panel **Acciones** , haga clic en **Enumerar aplicaciones de servicio**.  
   

@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805781"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1132,9 +1132,9 @@ Los problemas de propiedad y permisos de la dirección URL pueden interferir con
 En los tres ejemplos siguientes se hace una copia de seguridad COPY_ONLY de `Sales` en el servicio Microsoft Azure Blob Storage.  El nombre de la cuenta de almacenamiento es `mystorageaccount`.  El contenedor se denomina `myfirstcontainer`.  Se ha creado una directiva de acceso almacenada con derechos de lectura, escritura, eliminación y lista.  La credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, se creó con una Firma de acceso compartido asociada a la directiva de acceso almacenada.  Para obtener información sobre la copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servicio Microsoft Azure Blob Storage, vea [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) y [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql  
-BACKUP DATABASE Sales WITH COPY_ONLY
+BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
-WITH STATS = 5;
+WITH STATS = 5, COPY_ONLY;
 ```
 
   

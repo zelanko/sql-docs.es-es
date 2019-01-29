@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ccfcd29c7389ee1724994561bca382ae98e13b9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46cfdd9075bd950b287bef399ca3a505a1261f5d
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516384"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087834"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Lista de comprobación: Usar PowerShell para comprobar PowerPivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ TypeName                                  Status Applications                   
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
 ```  
   
- **PowerPivotEngineSerivce**  
+ **PowerPivotEngineService**  
   
 > [!NOTE]  
 >  **Omita este script si** está usando SharePoint 2013. PowerPivotEngineService no forma parte de una implementación de SharePoint 2013. Si ejecuta el cmdlet Get-PowerPivotEngineService en SharePoint 2013, verá un mensaje de error similar al siguiente. Este mensaje de error aparece aunque haya ejecutado el comando Add-PSSnapin que se describe en la sección de requisitos previos de este tema.  
@@ -454,7 +454,7 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
-Write-Host -ForegroundColor Green "PowerPivotEngineSerivce and PowerPivotSystemService"  
+Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
 Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  

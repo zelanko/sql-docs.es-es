@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bcbbd26ed97fd0df20abfb997495105fe2f726a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0b5003b20a1cfa477cde724a7ddfa32914eab9ef
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203314"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044461"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Cómo agrupar en clústeres el servicio DTC para un grupo de disponibilidad Always On
 
@@ -26,12 +26,14 @@ ms.locfileid: "53203314"
 En este tema se describen los requisitos y los pasos para agrupar en clústeres el servicio Microsoft DTC (Coordinador de transacciones distribuidas) para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obtener más información sobre las transacciones distribuidas y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
  ## <a name="checklist-preliminary-requirements"></a>Lista de comprobación: Requisitos preliminares
+
 ||Tarea|Referencia|  
 |------|-----------------|----------|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Asegúrese de que todos los nodos, servicios y el grupo de disponibilidad se han configurado correctamente.|[Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Asegúrese de que se han cumplido los requisitos de DTC del grupo de disponibilidad.|[Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
 ## <a name="checklist-clustered-dtc-resource-dependencies"></a>Lista de comprobación: Dependencias de recursos de DTC en clúster
+
 ||Tarea|Referencia|  
 |------|-----------------|----------|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Una unidad de almacenamiento compartido.|[Configuración de la unidad de almacenamiento compartido](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Considere la posibilidad de usar la letra de unidad **M**.|
@@ -43,6 +45,7 @@ Una vez que haya creado el recurso de grupo de disponibilidad, cree un recurso D
 
 
 ## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Lista de comprobación: publicación de configuraciones del recurso del DTC
+
 ||Tarea|Referencia|  
 |------|-----------------|----------|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Habilite el acceso de red de forma segura para el recurso del DTC en clúster.|[Habilitar el acceso de red de forma segura para MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|

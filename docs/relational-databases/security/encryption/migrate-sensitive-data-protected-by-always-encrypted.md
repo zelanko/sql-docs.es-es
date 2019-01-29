@@ -14,17 +14,18 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebe1af350632325d56fdf0251b790082fb443e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45a3b887688186aaedfc66423b4982629914f159
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769243"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880538"
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Migración de datos confidenciales protegidos mediante Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
- Para cargar datos cifrados sin tener que volver realizar comprobaciones de metadatos en el servidor durante las operaciones de copia masiva, cree el usuario con la opción **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Esta opción se ha diseñado para usarse con herramientas heredadas de versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (por ejemplo, bcp.exe) o flujos de trabajo de extracción, transformación y carga (ETL) de terceros que no pueden usar Always Encrypted. De esta forma, el usuario puede mover de forma segura los datos cifrados de un conjunto de tablas, que contengan las columnas cifradas, a otro conjunto de tablas con columnas cifradas (en la misma base de datos o en otra diferente).  
- -  
+
+Para cargar datos cifrados sin tener que volver realizar comprobaciones de metadatos en el servidor durante las operaciones de copia masiva, cree el usuario con la opción **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Esta opción se ha diseñado para usarse con herramientas heredadas de versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (por ejemplo, bcp.exe) o flujos de trabajo de extracción, transformación y carga (ETL) de terceros que no pueden usar Always Encrypted. De esta forma, el usuario puede mover de forma segura los datos cifrados de un conjunto de tablas, que contengan las columnas cifradas, a otro conjunto de tablas con columnas cifradas (en la misma base de datos o en otra diferente).  
+
  ## <a name="the-allowencryptedvaluemodifications-option"></a>La opción ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
  Tanto [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) como [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) tienen la opción ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Cuando el valor se establece en ON (la opción predeterminada es OFF), esta opción suprime las comprobaciones de metadatos criptográficos del servidor en operaciones de copia masiva, lo que permite al usuario copiar los datos de forma masiva entre tablas o bases de datos sin descifrar los datos.  
   
@@ -71,7 +72,7 @@ En las herramientas o las aplicaciones de copia masiva que se ejecutan en period
  
 No utilice esta opción para desarrollar nuevas aplicaciones. En su lugar, use un controlador de cliente (como ADO 4.6.1), que ofrece una API para suprimir las comprobaciones de metadatos criptográficos en una sola sesión.  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
 [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
 [Always Encrypted &#40;motor de base de datos&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

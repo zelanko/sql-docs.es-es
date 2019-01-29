@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40f54f79c918f580d758dec342508dec96ae5b45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a85c169421f4ab794ed95f8696d32e5215f6c9
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686133"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087934"
 ---
 # <a name="troubleshoot-reporting-services"></a>Solución de problemas de Reporting Services
   Los temas de esta sección le ayudarán a identificar y solucionar problemas con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "47686133"
 
 +  [Solución de problemas de representación de informes de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md)  
 
-+  [Solucionar problemas con la publicación o la visualización de un informe en un servidor de informes en modo nativo](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
++  [Solución de problemas de publicación o visualización de un informe en un servidor de informes en modo nativo](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
 +  [Solución de problemas de conexión de base de datos y servidor con Reporting Services](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
@@ -39,7 +39,7 @@ ms.locfileid: "47686133"
 
 +  [Causa y resolución de errores de Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 
 -  [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
 -   [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  

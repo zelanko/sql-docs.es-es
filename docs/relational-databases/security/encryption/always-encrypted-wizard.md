@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805721"
 ---
 # <a name="always-encrypted-wizard"></a>Asistente para Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ Use el **Asistente para Always Encrypted** para ayudar a proteger los datos conf
  
  - **Permisos:** para consultar columnas cifradas y seleccionar claves mediante este asistente, debe tener los permisos `VIEW ANY COLUMN MASTER KEY DEFINITION` y `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`. Para crear nuevas claves, además debe tener los permisos `ALTER ANY COLUMN MASTER KEY` y `ALTER ANY COLUMN ENCRYPTION KEY` .  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>Para abrir el Asistente para Always Encrypted  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>Para abrir el Asistente para Always Encrypted
  
  1.  Conéctese a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el componente del Explorador de objetos de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
    
  2.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en **Cifrar columnas**.  
    
- ## <a name="column-selection-page"></a>Página de selección de columnas  
+ ## <a name="column-selection-page"></a>Página de selección de columnas
  - Busque una tabla y una columna y, después, seleccione un tipo de cifrado (determinista o aleatorio) y una clave de cifrado para las columnas seleccionadas. Para descifrar una columna que actualmente está cifrada, seleccione **Plaintext**(Texto simple). Para girar una clave de cifrado de columna, seleccione una clave de cifrado diferente y el asistente descifrará la columna y la volverá a cifrar con la clave nueva. (El cifrado de tablas temporales y en memoria es compatible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , pero no se puede configurar mediante este asistente).  
  
 ## <a name="master-key-configuration-page"></a>Página de configuración de la clave maestra  

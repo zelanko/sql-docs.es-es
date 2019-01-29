@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d0b91668141b73b8ce5e4708cb403b7cc09b4ce9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432838"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087744"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>Diferencias en la instalación de SQL Server Machine Learning Services en SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ Como antes, sigue siendo necesaria para una configuración adicional *autenticac
 
 ## <a name="symbolic-link-created-by-setup"></a>Vínculo simbólico creado por el programa de instalación
 
-Se crea un vínculo simbólico para el valor predeterminado actual **R_SERVICES** y **PYTHON_SERIVCES** como parte del programa de instalación de SQL Server. Si no desea crear este vínculo, una alternativa es conceder el permiso de lectura 'todos los paquetes de aplicación' a la jerarquía que hicieron nacer a la carpeta.
+Se crea un vínculo simbólico para el valor predeterminado actual **R_SERVICES** y **PYTHON_SERVICES** como parte del programa de instalación de SQL Server. Si no desea crear este vínculo, una alternativa es conceder el permiso de lectura 'todos los paquetes de aplicación' a la jerarquía que hicieron nacer a la carpeta.
 
 
 ## <a name="see-also"></a>Vea también

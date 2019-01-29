@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: d46ff8318543d4e2a4b4dc547c9f19640d463f49
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785966"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087874"
 ---
 # <a name="thread-pool-properties"></a>Propiedades de grupos de subprocesos
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -173,13 +173,13 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
   
  Los nodos NUMA se pasan por alto. Solo habrá un grupo de subprocesos IOProcess y todos los subprocesos de ese grupo de subprocesos tendrán afinidad con todos los procesadores lógicos. De forma predeterminada (donde PerNumaNode=-1), este es el valor operativo si el equipo tiene menos de 4 nodos NUMA.  
   
- ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, procesador y subproceso de correspondencia de grupo")  
+ ![NUMA, procesador y subproceso del grupo correspondencia](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, procesador y subproceso del grupo correspondencia")  
   
  **PerNumaNode=1**  
   
  Se crean grupos de subprocesos IOProcess para cada nodo NUMA. El hecho de tener grupos de subprocesos independiente mejora el acceso coordinado a los recursos locales, como la memoria caché local en un nodo NUMA.  
   
- ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, procesador y subproceso de correspondencia de grupo")  
+ ![NUMA, procesador y subproceso del grupo correspondencia](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, procesador y subproceso del grupo correspondencia")  
   
  **PerNumaNode=2**  
   
@@ -187,7 +187,7 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
   
  En el ejemplo siguiente, en un sistema que tiene 4 nodos NUMA y 32 procesadores lógicos, al establecer **PerNumaNode** en 2 se tendrían 32 grupos de subprocesos IOProcess. Los subprocesos de los 8 primeros grupos de subprocesos tendrían afinidad con todos los procesadores lógicos del nodo NUMA 0, pero con el procesador ideal establecido en 0, 1, 2 hasta 7. Los 8 grupos de subprocesos siguientes tendrían afinidad con todos los procesadores lógicos del nodo NUMA 1, con el procesador ideal establecido en 8, 9, 10 hasta 15, y así sucesivamente.  
   
- ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, procesador y subproceso de correspondencia de grupo")  
+ ![NUMA, procesador y subproceso del grupo correspondencia](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, procesador y subproceso del grupo correspondencia")  
   
  En este nivel de afinidad, el programador siempre intenta utilizar el procesador lógico ideal primero, dentro del nodo NUMA preferido. Si el procesador lógico no está disponible, el programador elige otro procesador del mismo nodo, o del mismo grupo de procesadores si no hay otros subprocesos disponibles. Para más información y ejemplos, vea [Valores de configuración de Analysis Services 2012 (blog de Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   

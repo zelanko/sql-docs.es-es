@@ -14,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
-ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
+ms.openlocfilehash: 4a76d8d657f2451c52aea74c99576ffd89b30c8c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738121"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044491"
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
 
@@ -130,6 +130,7 @@ ms.locfileid: "53738121"
 ||**SecurityMemberProcessInterval**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , frecuencia, en segundos, con que se aplican los permisos de usuario y de grupo establecidos en la pestaña **Miembros de la jerarquía** . El valor predeterminado es **3600** segundos (60 minutos).|  
 
 ##  <a name="Performance"></a> Configuración de rendimiento  
+
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 |**Habilitar configuración de mejora del rendimiento**|**PerformanceImprovementEnable**|Esta opción se habilita de forma predeterminada (**se establece en 1**) para que la carga de la página relacionada con los permisos tenga un buen rendimiento. Pero en esta situación, la creación o modificación de entidades, atributos, usuarios o grupos tendrá un bajo rendimiento. Para evitarlo, puede deshabilitar esta configuración (**Establecido en 0**). Después de cambiar esta configuración. Tendrá que ejecutar el comando "**EXEC [mdm].[udpPerformanceToggleSwitch];**" para asegurarse de que la vista y los datos son los correctos.|  

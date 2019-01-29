@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdacecf1c6d6c8c08411eff57c65adc0872dd39
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bfe74821b37a5e658ffc9abe3ff9710d8e53f592
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531514"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087774"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,8 +78,7 @@ CREATE TABLE t_hk
   col8 char (30) NOT NULL,   
   col9 char (50) NOT NULL  
 
-  WITH (memory_optimized = on)  
-);
+)   WITH (memory_optimized = on)  ;
 GO  
 ```  
 
@@ -193,7 +192,7 @@ Las variables de tabla definidas en un lote de SQL de gran tamaño, en comparaci
 
 Los cálculos anteriores estiman sus necesidades de memoria para la tabla tal y como es actualmente. Además de esta memoria, debe calcular el crecimiento de la tabla y proporcionar la memoria adecuada para permitir ese crecimiento.  Por ejemplo, si prevé un crecimiento del 10 %, necesita multiplicar los resultados anteriores por 1,1 para obtener la memoria total necesaria para la tabla.  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
 

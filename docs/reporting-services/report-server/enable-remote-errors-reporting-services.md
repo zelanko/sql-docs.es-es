@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 758917c8f3fd11d79162ac650cd29efd709e9dd3
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1f604f75c685e1d06edf4287ea86a71020197188
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457458"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Habilitar los errores remotos (Reporting Services)
   Es posible establecer propiedades de servidor en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para devolver información adicional sobre condiciones de error que se produzcan en servidores remotos. Si un mensaje de error incluye el texto "Para obtener más información acerca de este error, navegue hasta el servidor de informes en el equipo del servidor local o habilite los errores remotos", puede establecer la propiedad **EnableRemoteErrors** para obtener información adicional que pueda ayudarle a solucionar el problema. Para obtener más información, vea [Propiedades del sistema del servidor de informes](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -108,7 +108,7 @@ ms.locfileid: "51813129"
   
 ##  <a name="bkmk_ConfigurationInfo"></a> Modificar la tabla ConfigurationInfo (modo nativo)  
   
-1.  > [!NOTE]  
-    >  Puede editar la tabla **ConfigurationInfo** de la base de datos del servidor de informes para establecer **EnableRemoteErrors** en **True**, pero si el servidor de informes se utiliza mucho, debe usar SQL Server Management Studio o un script para modificar la configuración. Si modifica el valor de la base de datos, debe reiniciar el servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para que los cambios surtan efecto.  
+> [!NOTE]  
+>  Puede editar la tabla **ConfigurationInfo** de la base de datos del servidor de informes para establecer **EnableRemoteErrors** en **True**, pero si el servidor de informes se utiliza mucho, debe usar SQL Server Management Studio o un script para modificar la configuración. Si modifica el valor de la base de datos, debe reiniciar el servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para que los cambios surtan efecto.  
   
   

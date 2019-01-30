@@ -1,7 +1,7 @@
 ---
 title: 'Paso 2: Convertir el proyecto al modelo de implementación de proyectos | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,47 +11,46 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce29d9e39b2abd46845a035183e6dee80f6c7236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfa218409ae82f5e59f81e110cffafb1775c6dd3
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767713"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880421"
 ---
-# <a name="lesson-6-2---converting-the-project-to-the-project-deployment-model"></a>Lección 6-2: Convertir el proyecto al modelo de implementación del proyectos
-En esta tarea, usará al Asistente para conversión de proyectos de Integration Services para convertir el proyecto en el modelo de implementación del proyecto.  
+# <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>Lección 6-2: Convertir el proyecto al modelo de implementación de proyectos
+
+En esta tarea se usa al Asistente para la conversión de proyectos de Integration Services para convertir el proyecto al modelo de implementación de proyectos.  
   
-### <a name="converting-the-project-to-the-project-deployment-model"></a>Convertir el proyecto al modelo de implementación del proyectos  
+1.  En el menú **Proyecto**, seleccione **Convertir al modelo de implementación de proyectos**.  
   
-1.  En el menú Proyecto, haga clic en Convertir al modelo de implementación de proyectos.  
+2.  En la página **Introducción** del **Asistente para la conversión de proyectos de Integration Services**, revise los pasos y seleccione **Siguiente**.  
   
-2.  En la página de introducción del Asistente para conversión de proyectos de Integration Services, revise los pasos y haga clic en Siguiente.  
+3.  En la página **Seleccionar paquetes**, en la lista **Paquetes**, desactive todas las casillas excepto **Lesson 6.dtsx** y seleccione **Siguiente**.  
   
-3.  En la página Seleccionar paquetes, en la lista de paquetes, desactive todas las casillas de verificación excepto Lesson 6.dtsx y haga clic en Siguiente.  
+4.  En la página **Especificar propiedades del proyecto**, seleccione **Siguiente**.  
   
-4.  En la página Especificar propiedades del proyecto, haga clic en Siguiente.  
+5.  En la página **Actualizar tarea Ejecutar paquete**, seleccione **Siguiente**.  
   
-5.  En la página Actualizar tarea Ejecutar paquete, haga clic en Siguiente.  
+6.  En la página **Seleccionar configuraciones**, asegúrese de que el paquete **Lesson 6.dtsx** está seleccionado en la lista **Configuraciones** y seleccione **Siguiente**.  
   
-6.  En la página Seleccionar configuración, asegúrese de que el paquete Lesson 6.dtsx está seleccionado en la lista de configuraciones y haga clic en Siguiente.  
+7.  En la página **Crear parámetros**, asegúrese de que el paquete **Lesson 6.dtsx** está seleccionado.  Compruebe que el **Ámbito** es **Paquete** en la lista **Propiedades de configuración** y luego seleccione **Siguiente**.  
   
-7.  En la página Crear parámetros, asegúrese de que el paquete Lesson 6.dtsx está seleccionado y el ámbito está configurado en Paquete, en la lista de propiedades de configuración, y haga clic en Siguiente.  
+8.  En la página **Configurar parámetros**, compruebe que los valores de **Nombre** y **Valor** son los mismos especificados en la lección 5 para la variable y el valor de configuración y seleccione **Siguiente**.  
   
-8.  En la página Configurar parámetros, compruebe que los valores de Nombre y Valor son el mismo nombre y el mismo valor especificados en Lesson 5 para la variable y el valor de configuración, y haga clic en Siguiente.  
+9. En la página **Revisar**, en el panel **Resumen**, tenga en cuenta que el asistente ha usado la información del archivo de configuración para establecer las **Propiedades** que se van a convertir.  
   
-9. En la página Revisar, en el panel de resumen, tenga en cuenta que el asistente ha usado la información del archivo de configuración para establecer las propiedades que se van a convertir.  
+10. Seleccione **Convertir**.  
   
-10. Haga clic en Convertir.  
+    Una vez finalizada la conversión, aparece un mensaje de advertencia de que los cambios no se guardan hasta que se guarda el proyecto. Seleccione **Aceptar** para cerrar el cuadro de diálogo de advertencia.  
   
-    Cuando la conversión finaliza, se muestra un mensaje que advierte que los cambios no se guardarán hasta que el proyecto se guarde en Visual Studio. Haga clic en Aceptar del cuadro de diálogo de advertencia.  
+11. En el **Asistente para la conversión de proyectos de Integration Services**, seleccione **Cerrar**.  
   
-11. En el Asistente para conversión de proyectos de Integration Services, haga clic en Cerrar.  
+12. En **SQL Server Data Tools**, seleccione el menú **Archivo** y luego **Guardar** para guardar el paquete convertido.  
   
-12. En Herramientas de datos de SQL Server, haga clic en el menú Archivo y haga clic en Guardar para guardar el paquete convertido.  
+13. Seleccione la pestaña **Parámetros** y compruebe que el paquete ya contiene un parámetro para **VarFolderName**. Ese valor de parámetro es la misma ruta de acceso especificada para la carpeta **Nuevos datos de ejemplo** en el archivo de configuración de la lección 5.  
   
-13. Haga clic en la ficha Parámetros y compruebe que el paquete contiene un parámetro para VarFolderName, y que el valor es la misma ruta de acceso especificada para la carpeta Nuevos datos de ejemplo del archivo de configuración Lesson 5.  
-  
-## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
+## <a name="go-to-next-task"></a>Ir a la tarea siguiente
 [Paso 3: Probar el paquete de la lección 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
   
   

@@ -12,18 +12,43 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213454"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087894"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Registro de cambios para SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este registro de cambios hace referencia a [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver entradas detalladas sobre las novedades y los cambios, consulte [el blog del equipo de SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1590"></a>SSDT para Visual Studio 2017 (15.9.0)
+Número de compilación: 14.0.16186.0  
+Fecha de publicación: 28 de enero de 2019
+
+### <a name="whats-new"></a>Novedades
+**SSIS:**
+1. Incorpora el origen de Power Query (versión preliminar) para SSIS 2017.
+2. Vuelve a incorporar soporte técnico para SSIS 2012.
+3. Incorpora origen y destino de Oracle para SSIS 2019.
+4. Se corrige un problema por el que no se puede cargar la tarea o el componente Script al migrar desde versiones anteriores de SSIS.
+5. Se corrige un problema por el que el visor de datos no funciona en Windows 7 SP1 y Windows 8.1.
+6. Se corrige un problema por el que, en algunos casos, al guardar el paquete, Visual Studio se bloquea. 
+7. Se corrige un problema por el que, en algunos casos, el paquete no se puede ejecutar cuando el nivel de protección es EncryptSensitiveWithPassword y la versión del servidor de destino es anterior a SQL 2017.
+8. Se corrige un problema por el que las anotaciones con fuente predeterminada no se muestran en SSDT.
+9. ISDeploymentWizard admite autenticación SQL, autenticación integrada de Azure Active Directory y autenticación de contraseña de Azure Active Directory en el modo de línea de comandos.
+
+### <a name="known-issues"></a>Problemas conocidos:
+
+- La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
+- SSDT para Visual Studio 2017 superior a 15.8 no es compatible con el diseño de paquetes que contienen orígenes y destinos de Teradata. Utilice SSDT para Visual Studio 2017 (15.8).
+- El origen de Power Query puede no admitir OData v4 cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio.
+- El origen de Power Query puede no admitir el empleo de ODBC para conectarse a Oracle cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio.
+- El origen de Power Query no está localizado.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT para Visual Studio 2017 (15.8.2)

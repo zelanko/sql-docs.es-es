@@ -11,18 +11,18 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c854d2e332d38443646de560a906826c419705b7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300552"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087914"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   > [!div class="nextstepaction"]
-  > [Comparta sus comentarios sobre la tabla de contenido dela documentación de SQL!](https://aka.ms/sqldocsurvey)
+  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 En este artículo, se proporcionan detalles sobre las actualizaciones, mejoras y correcciones de errores de las versiones actuales y anteriores de SSMS. Descargue las [versiones de SSMS anteriores](#previous-ssms-releases).
 
@@ -308,13 +308,13 @@ La ausencia de una etiqueta *versión preliminar 5* o *versión preliminar 6* in
   - Se ha corregido un problema por el que el usuario no podía adjuntar una base de datos cuando el nombre de archivo físico del archivo .mdf no coincide con el nombre de archivo original.
   - Se ha corregido un problema por el que era posible que SSMS no encontrase un plan de restauración válido o encontrase uno que fuera poco óptimo. Para obtener información detallada, consulte https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752.
   - Se ha corregido un bloqueo en SSMS al intentar restaurar una copia de seguridad de dirección URL (esto era una regresión introducida en versiones preliminares anteriores).
-  - [Novedad de la versión preliminar 5] Se ha corregido un problema que provocaba que el Asistente para "Adjuntar base de datos" no mostrara los archivos secundarios de los que se ha cambiado el nombre. Ahora, se muestra el archivo y se agrega un comentario sobre él (por ejemplo "No se ha encontrado"). Para obtener información detallada, vea https://feedback.azure.com/forums/908035/suggestions/32897434.
+  - [Novedad de la versión preliminar 5] Se ha corregido un problema que provocaba que el Asistente para "Adjuntar base de datos" no mostrara los archivos secundarios de los que se ha cambiado el nombre. Ahora se muestra el archivo y se agrega un comentario sobre él (por ejemplo, "No se ha encontrado"). Para obtener información detallada, vea https://feedback.azure.com/forums/908035/suggestions/32897434.
 
 - **Monitor de actividad de trabajo**
   - Se ha corregido un bloqueo al usar el Monitor de actividad (con filtros).
 
 - **Compatibilidad con Instancia administrada**
-  - Se ha mejorado y perfeccionado la compatibilidad con instancias administradas: se han deshabilitado opciones no admitidas en la interfaz de usuario y una corrección para la opción Ver registros de auditoría para controlar la dirección URL de destino de auditoría.
+  - Se ha mejorado/perfeccionado la compatibilidad con instancias administradas: se han deshabilitado opciones no admitidas en la interfaz de usuario y una corrección a la opción Ver registros de auditoría para controlar la dirección URL de destino de auditoría.
   - El asistente para "generar y publicar scripts" crea scripts de cláusulas CREATE DATABASE no admitidas.
   - Se ha deshabilitado Estadísticas de consultas dinámicas para las instancias de CL.
   - Propiedades de la base de datos->Archivos incluía un scripting ALTER DB ADD FILE incorrecto.

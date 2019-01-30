@@ -13,20 +13,20 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 768f9d00e1eea9b97c32d35c240befdaf555122f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e07bfa316330a24e9a7b9db5a2486ddd7cad470c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254930"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087805"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-La familia de características de **procesamiento de consultas inteligente** incluye características con un gran impacto que mejoran el rendimiento de las cargas de trabajo existentes con un esfuerzo de implementación mínimo.
+La familia de características de **procesamiento de consultas inteligente** incluye características con un gran impacto que mejoran el rendimiento de las cargas de trabajo existentes con un esfuerzo de implementación mínimo.  Puede beneficiarse automáticamente de esta familia de características si migra al nivel de compatibilidad de base de datos aplicable.
 
-![Características de procesamiento de consultas inteligentes](./media/3_IQPFeatureFamily2.png)
+![Características de procesamiento de consultas inteligentes](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Procesamiento de consultas adaptable
 

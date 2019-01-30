@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/16/2018
-ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.date: 01/15/2019
+ms.openlocfilehash: b041e4a7f672468f5c2959f8ecb86ddaa62f09fd
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805751"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
 
@@ -80,6 +80,28 @@ El valor de tiempo de espera de procesamiento de informes predeterminado, en seg
 **SystemSnapshotLimit**  
 Número máximo de instantáneas almacenadas para un informe. Los valores válidos para esta propiedad van desde **-1** a **2** **147** **483** **647**. Si el valor es **-1**, no hay ningún límite de instantáneas.  
 
+**AccessControlAllowCredentials**  
+Indica si la respuesta a la solicitud del cliente puede exponerse cuando la marca 'credentials' está establecida en true. El valor predeterminado es **false**.
+
+**AccessControlAllowHeaders** Lista separada por comas de encabezados que el servidor permitirá cuando un cliente realice una solicitud. Esta propiedad puede ser una cadena vacía; si se especifica *, se permiten todos los encabezados.
+
+**AccessControlAllowMethods** Lista separada por comas de métodos HTTP que el servidor permitirá cuando un cliente realice una solicitud. Los valores predeterminados son (GET, PUT, POST, PATCH, DELETE); si se especifica *, se permiten todos los métodos.
+
+**AccessControlAllowOrigin** Lista separada por comas de los orígenes que el servidor permitirá cuando un cliente realice una solicitud. El valor predeterminado es en blanco, lo que evita todas las solicitudes; si se especifica *, se permiten todos los orígenes siempre que no haya credenciales establecidas; si hay credenciales especificadas, se debe especificar una lista explícita de orígenes.
+
+**AccessControlExposeHeaders** Lista separada por comas de encabezados que el servidor va a exponer a los clientes. Está en blanco de forma predeterminada.
+
+**AccessControlMaxAge** Especifica el número de segundos durante los que se pueden almacenar en caché los resultados de la solicitud preparatoria. El valor predeterminado es 600 (10 minutos).
+
+**AllowedResourceExtensionsForUpload** ***(solo Power BI Report Server)*** Establece las extensiones de recursos que se pueden cargar en el servidor de informes. No es necesario incluir extensiones para tipos de archivos integrados como &ast;.rdl y &ast;.pbix. El valor predeterminado es "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx". 
+
+
+**EditSessionCacheLimit**  
+Especifica el número de entradas de datos en memoria caché que pueden estar activas en una sesión de edición de informes. El número predeterminado es 5.  
+
+**EditSessionTimeout**  
+Especifica el número de segundos tras los cuales se agotará el tiempo de espera para una sesión de edición de informes. El valor predeterminado es 7200 segundos (dos horas).  
+
 **EnableIntegratedSecurity**  
 Determina si se admite la seguridad integrada de Windows para las conexiones de origen de datos de informes. El valor predeterminado es **True**. Los valores válidos son los siguientes:
 
@@ -97,25 +119,6 @@ Al desactivar esta opción, se mitiga una amenaza en la que un usuario malintenc
 
 **EnableRemoteErrors**  
 Incluye información de errores externa (por ejemplo, sobre los orígenes de datos de informe) con los mensajes de error que se devuelven para los usuarios que solicitan informes de los equipos remotos. Los valores válidos son **true** y **false**. El valor predeterminado es **false**. Para más información, vea [Habilitar errores remotos &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
-
-**AccessControlAllowCredentials**  
-Indica si la respuesta a la solicitud del cliente puede exponerse cuando la marca 'credentials' está establecida en true. El valor predeterminado es **false**.
-
-**AccessControlAllowHeaders** Lista separada por comas de encabezados que el servidor permitirá cuando un cliente realice una solicitud. Esta propiedad puede ser una cadena vacía; si se especifica *, se permiten todos los encabezados.
-
-**AccessControlAllowMethods** Lista separada por comas de métodos HTTP que el servidor permitirá cuando un cliente realice una solicitud. Los valores predeterminados son (GET, PUT, POST, PATCH, DELETE); si se especifica *, se permiten todos los métodos.
-
-**AccessControlAllowOrigin** Lista separada por comas de los orígenes que el servidor permitirá cuando un cliente realice una solicitud. El valor predeterminado es en blanco, lo que evita todas las solicitudes; si se especifica *, se permiten todos los orígenes siempre que no haya credenciales establecidas; si hay credenciales especificadas, se debe especificar una lista explícita de orígenes.
-
-**AccessControlExposeHeaders** Lista separada por comas de encabezados que el servidor va a exponer a los clientes. Está en blanco de forma predeterminada.
-
-**AccessControlMaxAge** Especifica el número de segundos durante los que se pueden almacenar en caché los resultados de la solicitud preparatoria. El valor predeterminado es 600 (10 minutos).
-
-**EditSessionCacheLimit**  
-Especifica el número de entradas de datos en memoria caché que pueden estar activas en una sesión de edición de informes. El número predeterminado es 5.  
-
-**EditSessionTimeout**  
-Especifica el número de segundos tras los cuales se agotará el tiempo de espera para una sesión de edición de informes. El valor predeterminado es 7200 segundos (dos horas).  
 
 **EnableCustomVisuals** ***(solo en Power BI Report Server)*** Para habilitar la visualización de los objetos visuales personalizados de Power BI. Los valores son True o False. *El valor predeterminado es True.*  
 
@@ -137,6 +140,8 @@ Especifica el número de segundos tras los cuales se agotará el tiempo de esper
 
 **ShowDownloadMenu** Habilita el menú de descarga de herramientas cliente. *El valor predeterminado es true.*
 
+**SupportedHyperlinkSchemes** ***(solo Power BI Report Server)*** Establece una lista separada por comas de los esquemas de URI que se pueden definir en acciones de hipervínculo que pueden representarse o "&ast;" para habilitar todos los esquemas de hipervínculo. Por ejemplo, al establecer "http, https" se permitirían los hipervínculos a "https://www. contoso.com", pero se quitarían los hipervínculos a "mailto:bill@contoso.com" o "javascript:window.open(‘www.contoso.com’, ‘_blank’)". El valor predeterminado es "&ast;".
+
 **TimeInitialDelaySeconds** Establece cuánto tiempo se quiere retrasar en segundos la hora inicial. *El valor predeterminado es 60.*
 
 **TrustedFileFormat** Establece todos los formatos de archivo externos que se abren dentro del explorador en el sitio de portal de Reporting Services. Los formatos de archivo externos no enumerados indican que se descargue la opción en el explorador. Los valores predeterminados son jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web y png.
@@ -150,7 +155,7 @@ Tiempo de espera de actualización de datos en minutos para la actualización pr
 **EnableTestConnectionDetailedErrors**  
 Indica si se envían mensajes de error detallados al equipo cliente cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es **true**. Si la opción se establece en **false**, solo se enviarán mensajes de error genéricos.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

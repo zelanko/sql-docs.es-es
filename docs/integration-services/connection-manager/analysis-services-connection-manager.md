@@ -1,7 +1,7 @@
 ---
 title: Administrador de conexiones de Analysis Services | Microsoft Docs
 ms.custom: ''
-ms.date: 10/31/2018
+ms.date: 1/25/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38addbd487a0d3e5f348d59028c85e16bca1dd5c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5251e9b5842f7b5aa4dde71866c1c625faa81d5e
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639172"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044481"
 ---
 # <a name="analysis-services-connection-manager"></a>administrador de conexiones de Analysis Services
   Un administrador de conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite que un paquete se conecte con un servidor que se ejecuta en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o con un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que proporciona acceso a datos de cubo y dimensiones. Solo puede conectarse a un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mientras desarrolla paquetes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Durante el tiempo de ejecución, los paquetes se conectan al servidor y la base de datos en la que se implementó el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -41,7 +41,7 @@ ms.locfileid: "51639172"
 -   Si se está conectando a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], especifique el modo de autenticación.  
 
 > [!NOTE]    
->  Si usa SSIS en Azure Data Factory (ADF) y quiere conectarse a una instancia de Azure Analysis Services (AAS), no puede usar una cuenta con Multi-Factor Authentication (MFA) habilitado, sino que debe usar una entidad de servicio en su lugar. Vea [aquí](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal) cómo crear una, seleccione **Use a specific user name and password** (Usar un nombre de usuario y una contraseña concretos) para iniciar sesión en el servidor en el administrador de conexiones y escriba la clave o el Id. de aplicación como nombre de usuario o contraseña. Por último, también debe instalar las bibliotecas de cliente necesarias en la instancia de Azure-SSIS Integration Runtime (IR) a través de la instalación personalizada; vea el ejemplo de **AAS** en [Customizing your SSIS IR](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) (Personalización de la instancia de SSIS IR).
+>  Si usa SSIS en Azure Data Factory (ADF) y quiere conectarse a una instancia de Azure Analysis Services (AAS), no puede usar una cuenta con Multi-Factor Authentication (MFA) habilitado, sino que debe usar una cuenta que no requiera ninguna interactividad o MFA o una entidad de servicio en su lugar. Para usar esta última, [aquí](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal) puede ver cómo crear una y asignarle el rol de administrador del servidor, luego seleccione **Use a specific user name and password** (Usar un nombre de usuario y una contraseña concretos) para iniciar sesión en el servidor en el administrador de conexiones y, por último, escriba `User name: app:YourApplicationID` y `Password: YourAuthorizationKey`.
   
 -   Indicar si la conexión creada desde el administrador de conexiones se conserva en el tiempo de ejecución.  
   

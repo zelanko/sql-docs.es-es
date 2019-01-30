@@ -11,17 +11,18 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9249cac94f2e066d0502e16e40656de4e8b8bdc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b7bf852fcebd390d3659fcd2bff53fa0446d0c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848323"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045058"
 ---
 # <a name="odata-source-properties"></a>Propiedades de orígenes OData
 Al hacer clic con el botón derecho en **Origen OData** en el flujo de datos y hacer clic en **Propiedades**, verá las propiedades del componente de **Origen OData** en la ventana **Propiedades**.  
 
 ## <a name="properties"></a>Propiedades 
+
 |Propiedad|Descripción|  
 |-|-|  
 |CollectionName|Nombre de la colección que se va a recuperar del servicio OData. La propiedad **CollectionName** se usa cuando **UseResourcePath** es False.<br /><br /> Esta propiedad se puede incluir en expresiones, lo que permite establecer el valor en tiempo de ejecución. Sin embargo, si los metadatos de la colección no coinciden con los metadatos que se usaron en tiempo de diseño, se producirá un error de validación, lo que producirá un error en la ejecución del flujo de datos.|  
@@ -30,5 +31,5 @@ Al hacer clic con el botón derecho en **Origen OData** en el flujo de datos y h
 |ResourcePath|Use esta propiedad cuando necesite especificar una ruta de acceso completa a recursos, en lugar de seleccionar simplemente el nombre de una colección. Esta propiedad se usa cuando **UseResourcePath** es True.|  
 |UseResourcePath|Cuando se establece en True, el valor **ResourcePath** se anexa a la dirección URL base para determinar la ubicación de la fuente OData. Cuando se establece en False, se usa el valor **CollectionName** .<br /><br /> **Valor predeterminado:** False|  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [Origen OData](odata-source.md)

@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8c5e406cdab8f4950a897cc66556e54a1faa53f1
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805731"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint
 
@@ -20,7 +20,7 @@ ms.locfileid: "52502817"
 
 El elemento web Visor de informes es un elemento web personalizado que se puede usar para ver informes de SQL Server Reporting Services (modo nativo) en el sitio de SharePoint. Puede usar el elemento web para ver, explorar, imprimir y exportar informes en un servidor de informes. El elemento web Visor de informes está asociado a archivos de definición de informe (.rdl) que procesa un servidor de informes de SQL Server Reporting Services o Power BI Report Server. Este elemento web Visor de informes no puede usarse con informes de Power BI hospedados en Power BI Report Server.
 
-Use las instrucciones siguientes para implementar manualmente el paquete de solución que agrega el elemento web Visor de informes a un entorno de SharePoint Server 2013 o SharePoint Server 2016. La implementación de la solución es un paso necesario para configurar el elemento web.
+Siga las instrucciones que se indican a continuación para implementar manualmente el paquete de solución que agrega el elemento web Visor de informes a un entorno de SharePoint Server 2013, SharePoint Server 2016 o SharePoint Server 2019. La implementación de la solución es un paso necesario para configurar el elemento web.
 
 **El elemento web Visor de informes es un paquete de solución independiente y no está asociado con el modo integrado de SharePoint para SQL Server Reporting Services.**
 
@@ -32,6 +32,7 @@ Use las instrucciones siguientes para implementar manualmente el paquete de solu
 >
 
 **Compatibilidad con versiones de SharePoint Server:**
+* SharePoint Server 2019
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -67,7 +68,7 @@ En esta sección se muestra cómo implementar el paquete de solución en la gran
     Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
-    **SharePoint 2016**
+    **SharePoint Server 2016 y 2019**
 
     ```
     Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}

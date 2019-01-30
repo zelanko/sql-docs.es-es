@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457678"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ ON SERVER
  WITH ( \<event_session_options> [ ,...*n*] ) Especifica las opciones que se usarán con la sesión de eventos.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- Especifica la cantidad máxima de memoria que se asigna a la sesión para el almacenamiento en búfer de los eventos. El valor predeterminado es 4 MB. *size* es un número entero y puede expresarse en kilobytes (KB) o en megabytes (MB).  
+ Especifica la cantidad máxima de memoria que se asigna a la sesión para el almacenamiento en búfer de los eventos. El valor predeterminado es 4 MB. *size* es un número entero y puede expresarse en kilobytes (KB) o en megabytes (MB). La cantidad máxima no puede superar los 2 GB (menos de 2048 MB). Pero no se recomienda usar valores de memoria del intervalo GB.
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  Especifica el modo de retención de eventos usado para controlar las pérdidas de eventos.  
@@ -260,7 +260,7 @@ ON SERVER
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   

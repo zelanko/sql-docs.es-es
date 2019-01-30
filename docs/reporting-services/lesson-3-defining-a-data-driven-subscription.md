@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 4de4f510bcb584e0ec409f89eaba8c13ba6d8c6e
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457658"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lección 3: Definir una suscripción controlada por datos
 En esta lección del tutorial [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará las páginas de suscripción controlada por datos de los portales web de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para conectarse a un origen de datos de suscripción, crear una consulta que recupere datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  
   
 > [!NOTE]  
 > Antes de empezar, compruebe que el servicio del **Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** esté en ejecución. Si no es así, no podrá guardar la suscripción.  Un método para comprobarlo es abrir el [Administrador de configuración de SQL Server](../relational-databases/sql-server-configuration-manager.md).
-En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, consulte [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, vea [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>Iniciar el Asistente para suscripciones controladas por datos  
   
@@ -60,8 +60,9 @@ En esta lección se supone que completó la lección 1 y la lección 2, y que el
 1. Seleccione **Usar las siguientes credenciales**.
 2. Seleccione **Nombre de usuario y contraseña de Windows**.
 3.  En **Nombre de usuario** y **Contraseña**, escriba el nombre de usuario y la contraseña del dominio. Incluya tanto el dominio como la cuenta de usuario al especificar **Nombre de usuario**.
-    > [!NOTE]  
-    > Las credenciales usadas para conectarse a un origen de datos de suscriptor no se devuelven a [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Si modifica la suscripción más adelante, deberá volver a escribir la contraseña utilizada para conectarse al origen de datos.
+
+> [!NOTE]  
+> Las credenciales usadas para conectarse a un origen de datos de suscriptor no se devuelven a [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Si modifica la suscripción más adelante, deberá volver a escribir la contraseña utilizada para conectarse al origen de datos.
 
 ## <a name="query"></a>Consulta      
 1.  En el cuadro de consultas, escriba la consulta siguiente:  
@@ -103,7 +104,7 @@ La página de suscripción del portal web contendrá la fecha de **Última ejecu
   
 Con este paso finaliza el tutorial "Definir una suscripción controlada por datos".   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Suscripciones y entrega &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
 [Suscripciones controladas por datos](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Cómo crear, modificar y eliminar suscripciones controladas por datos](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  

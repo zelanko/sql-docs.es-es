@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 13684012e1b5f7bfa17fbaf2fdf2ce5e0af4c72d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaa93142b7a00f581d90dcb0a7be4a94a4ae6477
+ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521447"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072860"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
 
@@ -32,19 +32,19 @@ Este artículo sirve como guía para describir el proceso de depuración de ese 
 
 ## <a name="introduction"></a>Introducción
 
-Es útil comprender en primer lugar el protocolo Kerberos en un alto nivel. Aquí participan tres actores:
+Ayuda a comprender el protocolo Kerberos por encima. Aquí participan tres actores:
 
 1. Cliente Kerberos (SQL Server)
 1. Recursos protegidos (HDFS, MR2, YARN, historial de trabajos, etc.)
 1. Centro de distribución de claves (que en Active Directory se denomina controlador de dominio)
 
-Cada uno de los recursos protegidos de Hadoop está registrado con el  **Centro de distribución de claves (KDC)**  con un  **nombre de entidad de seguridad de servicio (SPN)**  único como parte del proceso de kerberización del clúster de Hadoop. El objetivo es que el cliente obtenga un vale de usuario temporal, llamado  **Vale de concesión de vales (TGT)**, para solicitar otro vale temporal, llamado  **Vale de servicio (ST)**, desde el Centro de distribución de claves contra el nombre de entidad de seguridad de servicio concreto al que quiere acceder.  
+Cada uno de los recursos protegidos de Hadoop se registra en el  **Centro de distribución de claves (KDC)**  con un  **nombre de entidad de seguridad de servicio (SPN)** único cuando Kerberos se configura en el clúster de Hadoop. El objetivo es que el cliente obtenga un vale de usuario temporal, llamado  **Vale de concesión de vales (TGT)**, para solicitar otro vale temporal, llamado  **Vale de servicio (ST)**, desde el Centro de distribución de claves contra el nombre de entidad de seguridad de servicio concreto al que quiere acceder.  
 
 En PolyBase, cuando se solicita autenticación con respecto a cualquier recurso protegido con Kerberos, se produce el siguiente protocolo de enlace de cuatro recorridos de ida y vuelta:
 
 1. SQL Server se conecta con el Centro de distribución de claves y obtiene un TGT para el usuario. El TGT se cifra con la clave privada del Centro de distribución de claves.
-1. SQL Server llama al recurso protegido de Hadoop (por ejemplo, HDFS) y determina para qué nombre de entidad de seguridad de servicio necesita un ST.
-1. SQL Server vuelve al Centro de distribución de claves, regresa el TGT y solicita un ST para acceder a ese recurso protegido en particular. El ST se cifra con la clave privada del servicio protegido.
+1. SQL Server llama al recurso protegido de Hadoop, HDFS, y determina para qué nombre de entidad de seguridad de servicio necesita un ST.
+1. SQL Server vuelve al Centro de distribución de claves, vuelve a pasar el TGT y solicita un ST para acceder a ese recurso protegido concreto. El ST se cifra con la clave privada del servicio protegido.
 1. SQL Server desvía el ST a Hadoop y se autentica para que se cree una sesión contra ese servicio.
 
 ![](./media/polybase-sqlserver.png)
@@ -53,7 +53,7 @@ Los problemas con la autenticación pertenecen a uno o más de los cuatro pasos 
 
 ## <a name="troubleshooting"></a>Solucionar problemas
 
-PolyBase tiene varios XML de configuración que contienen las propiedades del clúster de Hadoop. En concreto, son los siguientes archivos:
+PolyBase tiene los siguientes archivos XML de configuración que contienen las propiedades del clúster de Hadoop:
 
 - core-site.xml
 - hdfs-site.xml
@@ -64,11 +64,11 @@ PolyBase tiene varios XML de configuración que contienen las propiedades del cl
 
 Estos archivos se encuentran en:
 
-\\[Unidad del sistema\\]:{ruta de acceso de instalación}\\{instancia}\\{nombre}\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf
+`\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-Por ejemplo, el valor predeterminado para SQL Server 2016 sería "C:\\Archivos de programa\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf".
+Por ejemplo, el valor predeterminado para SQL Server 2016 es `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
-Actualice uno de los archivos de configuración de PolyBase,  **core-site.xml**, con las tres propiedades siguientes con los valores establecidos según el entorno:
+Actualice  **core-site.xml** y agregue las tres propiedades siguientes. Establezca los valores según el entorno:
 
 ```xml
 <property>
@@ -98,10 +98,10 @@ La herramienta se ejecuta de forma independiente de SQL Server, por lo que no es
 
 | Argumento | Descripción|
 | --- | --- |
-| *Dirección del nodo de nombre* | La dirección IP o el nombre de dominio completo del nodo de nombre. Esto hace referencia al argumento "LOCATION" en CREATE EXTERNAL DATA SOURCE T-SQL.|
-| *Puerto del nodo de nombre* | El puerto del nodo de nombre. Esto hace referencia al argumento "LOCATION" en CREATE EXTERNAL DATA SOURCE T-SQL. Habitualmente es 8020. |
-| *Entidad de servicio* | La entidad de servicio de administración del Centro de distribución de claves. Debe coincidir con el argumento que usa como "IDENTITY" en CREATE DATABASE SCOPED CREDENTIAL T-SQL.|
-| *Contraseña del servicio* | En lugar de escribir la contraseña en la consola, almacénela en un archivo y pase aquí la ruta de acceso al archivo. El contenido del archivo debe coincidir con el argumento que usa como "SECRET" en CREATE DATABASE SCOPED CREDENTIAL T-SQL. |
+| *Dirección del nodo de nombre* | La dirección IP o el nombre de dominio completo del nodo de nombre. Hace referencia al argumento "LOCATION" de CREATE EXTERNAL DATA SOURCE T-SQL.|
+| *Puerto del nodo de nombre* | El puerto del nodo de nombre. Hace referencia al argumento "LOCATION" de CREATE EXTERNAL DATA SOURCE T-SQL. Por ejemplo, 8020. |
+| *Entidad de servicio* | La entidad de servicio de administración del Centro de distribución de claves. Coincide con el argumento "IDENTITY" de `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
+| *Contraseña del servicio* | En lugar de escribir la contraseña en la consola, almacénela en un archivo y pase aquí la ruta de acceso al archivo. El contenido del archivo debe coincidir con el que use como argumento "SECRET" en `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
 | *Ruta de acceso al archivo HDFS remoto (opcional) * | La ruta de acceso de un archivo existente al cual acceder. Si no se especifica, se usará la raíz "/". |
 
 ## <a name="example"></a>Ejemplo
@@ -116,7 +116,7 @@ Los extractos siguientes provienen de un Centro de distribución de claves de MI
 
 ## <a name="checkpoint-1"></a>Punto de comprobación 1
 
-Debe haber un volcado hexadecimal de un vale con la entidad de seguridad del servidor = krbtgt/*MYREALM.COM@MYREALM.COM*. Esto indica que SQL Server se autenticó correctamente en el Centro de distribución de claves y recibió un TGT. Si no es así, el problema se encuentra estrictamente entre SQL Server y el Centro de distribución de claves, no en Hadoop.
+Debe haber un volcado hexadecimal de un vale con `Server Principal = krbtgt/MYREALM.COM@MYREALM.COM`. Indica que SQL Server se ha autenticado correctamente en el Centro de distribución de claves y ha recibido un TGT. Si no es así, el problema se encuentra estrictamente entre SQL Server y el Centro de distribución de claves, no en Hadoop.
 
 PolyBase **no** admite relaciones de confianza entre AD y MIT y se debe configurar respecto del mismo Centro de distribución de claves que se configuró en el clúster de Hadoop. En dichos entornos, funcionará la creación manual de una cuenta de servicio en ese Centro de distribución de claves y su uso para realizar la autenticación.
 
@@ -185,7 +185,7 @@ Un segundo volcado hexadecimal indica que SQL Server usó correctamente el TGT y
 
 ## <a name="checkpoint-4"></a>Punto de comprobación 4
 
-Por último, las propiedades de la ruta de acceso de destino se deberían imprimir junto con un mensaje de confirmación. Esto indica que Hadoop autenticó a SQL Server mediante el vale de servicio y se concedió una sesión para acceder al recurso protegido.
+Por último, las propiedades de la ruta de acceso de destino se deberían imprimir junto con un mensaje de confirmación. Las propiedades del archivo confirman que Hadoop ha autenticado SQL Server mediante el ST y que se ha concedido una sesión para acceder al recurso protegido.
 
 Si llega a este punto, se confirma que: (i) los tres actores se pueden comunicar correctamente, (ii) los archivos core-site.xml y jaas.conf son correctos y (iii) el Centro de distribución de claves reconoció sus credenciales.
 
@@ -202,9 +202,9 @@ Si se ejecutó la herramienta y *no* se imprimieron las propiedades de archivo d
 | --- | --- |
 | org.apache.hadoop.security.AccessControlException<br>La autenticación SIMPLE no está habilitada. Disponible:[TOKEN, KERBEROS] | El archivo core-site.xml no tiene la propiedad hadoop.security.authentication establecida en "KERBEROS".|
 |javax.security.auth.login.LoginException<br>No se encuentra el cliente en la base de datos de Kerberos (6) - CLIENT_NOT_FOUND |    La entidad de servicio de administración que se suministró no existe en el dominio kerberos especificado en core-site.xml.|
-| javax.security.auth.login.LoginException<br> Suma de comprobación errónea |    La entidad de servicio de administración existe, pero la contraseña es incorrecta. |
-| Nombre de configuración nativa: C:\Windows\krb5.ini<br>Cargado desde la configuración nativa | No se trata de una excepción, sino que indica que el módulo krb5LoginModule de Java detectó una configuración de cliente personalizada en la máquina. Compruebe la configuración de cliente personalizada porque puede estar causando problemas. |
-| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Nombre de entidad no válido admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: ninguna regla se aplica a admin_user@CONTOSO.COM | Agregue la propiedad “hadoop.security.auth_to_local” a core-site.xml con las reglas correspondientes por clúster de Hadoop. |
+| javax.security.auth.login.LoginException<br> Suma de comprobación errónea |La entidad de servicio de administración existe, pero la contraseña es incorrecta. |
+| Nombre de configuración nativa: C:\Windows\krb5.ini<br>Cargado desde la configuración nativa | Este mensaje indica que el módulo krb5LoginModule de Java ha detectado configuraciones de cliente personalizadas en el equipo. Compruebe la configuración de cliente personalizada porque puede estar causando problemas. |
+| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Nombre de entidad de seguridad no válido admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: Ninguna regla se aplica a admin_user@CONTOSO.COM. | Agregue la propiedad “hadoop.security.auth_to_local” a core-site.xml con las reglas correspondientes por clúster de Hadoop. |
 | java.net.ConnectException<br>Intento de acceder al sistema de archivos externo en el URI: hdfs://10.193.27.230:8020<br>Error de llamada desde IAAS16981207/10.107.0.245 a 10.193.27.230:8020 en la excepción de conexión | La autenticación en el Centro de distribución de claves se realizó correctamente, pero no se pudo tener acceso al nodo de nombre de Hadoop. Compruebe el puerto y la dirección IP del nodo de nombre. Compruebe que el firewall esté deshabilitado en Hadoop. |
 | java.io.FileNotFoundException<br>El archivo no existe: /test/data.csv |    La autenticación se realizó correctamente, pero la ubicación especificada no existe. Compruebe la ruta de acceso o pruebe primero con la raíz "/". |
 
@@ -212,9 +212,9 @@ Si se ejecutó la herramienta y *no* se imprimieron las propiedades de archivo d
 
 ### <a name="mit-kdc"></a>KDC de MIT  
 
-Puede ver todos los nombres de entidad de seguridad de servicio registrados con el KDC, incluidos los administradores, si ejecuta  **kadmin.local** > (inicio de sesión de administrador) > **listprincs**  en el host de KDC o en cualquier cliente de KDC configurado. Si el clúster de Hadoop se kerberizó correctamente, debería haber un SPN para cada uno de los numerosos servicios disponibles en el clúster (por ejemplo, nn, dn, rm, yarn, spnego, etc.) De manera predeterminada, los archivos keytab correspondientes (sustitutos de la contraseña) se pueden ver en  **/etc/security/keytabs**. Se cifran con la clave privada del Centro de distribución de claves.  
+Puede ver todos los nombres de entidad de seguridad de servicio registrados con el KDC, incluidos los administradores, si ejecuta  **kadmin.local** > (inicio de sesión de administrador) > **listprincs**  en el host de KDC o en cualquier cliente de KDC configurado. Si Kerberos está bien configurado en el clúster de Hadoop, debería haber un SPN para cada uno de los servicios disponibles en el clúster (por ejemplo: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.) De manera predeterminada, los archivos keytab correspondientes (sustitutos de la contraseña) se pueden ver en  **/etc/security/keytabs**. Se cifran con la clave privada del Centro de distribución de claves.  
 
-Considere también la posibilidad de usar la herramienta  [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)  para comprobar las credenciales de administrador en el Centro de distribución de claves localmente. Un uso de ejemplo podría ser:  *kinit identity@MYREALM.COM*. Un mensaje para una contraseña indica que la identidad existe.  De manera predeterminada, los registros de KDC están disponibles en  **/var/log/krb5kdc.log**, lo que incluye todas las solicitudes de vales, incluida la dirección IP del cliente que hizo la solicitud. Debe haber dos solicitudes desde la dirección IP del equipo SQL Server en el que se ejecutó la herramienta: en primer lugar, para el TGT del servidor de autenticación como **AS\_REQ**, seguido de  **TGS\_REQ**  para el vale de servicio del servidor de concesión de vales.
+Considere también la posibilidad de usar [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) para comprobar las credenciales de administrador en el Centro de distribución de claves localmente. Un uso de ejemplo sería:  `kinit identity@MYREALM.COM`. Un mensaje para una contraseña indica que la identidad existe.  De manera predeterminada, los registros de KDC están disponibles en  **/var/log/krb5kdc.log**, lo que incluye todas las solicitudes de vales, incluida la dirección IP del cliente que hizo la solicitud. Debe haber dos solicitudes desde la dirección IP del equipo SQL Server en el que se ejecutó la herramienta: en primer lugar, para el TGT del servidor de autenticación como **AS\_REQ**, seguido de  **TGS\_REQ**  para el vale de servicio del servidor de concesión de vales.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -224,7 +224,33 @@ Considere también la posibilidad de usar la herramienta  [kinit](https://web.m
 
 ### <a name="active-directory"></a>Active Directory 
 
-En Active Directory, puede ver los nombres de entidad de seguridad de servicio si va a Panel de control > Usuarios y equipos de Active Directory > *Mi_dominio_kerberos* > *Mi_unidad_organizativa*. Si el clúster de Hadoop se kerberizó correctamente, debería haber un SPN para cada uno de los numerosos servicios disponibles (por ejemplo, nn, dn, rm, yarn, spnego, etc.)
+En Active Directory, puede ver los nombres de entidad de seguridad de servicio si va a Panel de control > Usuarios y equipos de Active Directory > *Mi_dominio_kerberos* > *Mi_unidad_organizativa*. Si Kerberos está bien configurado en el clúster de Hadoop, hay un SPN para cada uno de los servicios disponibles (por ejemplo: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.)
+
+### <a name="general-debugging-tips"></a>Sugerencias generales de depuración
+
+Resulta útil tener cierta experiencia en Java para revisar los registros y depurar los problemas de Kerberos, que son independientes de la característica PolyBase de SQL Server.
+
+Si sigue teniendo problemas para acceder a Kerberos, siga los pasos que hay a continuación para depurar:
+
+1. Asegúrese de que puede acceder a los datos de HDFS de Kerberos desde fuera de SQL Server. Puede elegir entre lo siguiente: 
+
+    - Escribir su propio programa de Java, o
+    - Usar la clase `HdfsBridge` desde la carpeta de instalación de PolyBase. Por ejemplo:
+
+      ```java
+      -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt
+      ```
+
+     En el ejemplo anterior, `admin_user` solo incluye el nombre de usuario, ningún elemento del dominio.
+
+2. Si no puede acceder a datos de HDFS de Kerberos desde fuera de PolyBase:
+    - Existen dos tipos de autenticación de Kerberos: Autenticación de Kerberos de Active Directory y autenticación de Kerberos de MIT.
+    - Asegúrese de que el usuario existe en la cuenta de dominio y use la misma cuenta de usuario al intentar acceder a HDFS.
+
+3. En el caso de Kerberos de Active Directory, asegúrese de que puede ver el vale en caché con el comando `klist` en Windows.
+    - Inicie sesión en el equipo de PolyBase y ejecute `klist` y `klist tgt` en el símbolo del sistema para ver si el Centro de distribución de claves, el nombre de usuario y los tipos de cifrado son correctos.
+
+4.  Si el Centro de distribución de claves solo puede admitir AES256, asegúrese de que los [archivos de directiva de JCE](http://www.oracle.com/technetwork/java/javase/downloads/index.html) estén instalados.
 
 ## <a name="see-also"></a>Vea también
 

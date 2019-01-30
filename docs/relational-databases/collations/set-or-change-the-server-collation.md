@@ -1,7 +1,7 @@
 ---
 title: Configurar o cambiar la intercalación del servidor | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2017
+ms.date: 01/22/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
-ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
+ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
+ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52954399"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443701"
 ---
 # <a name="set-or-change-the-server-collation"></a>Configurar o cambiar la intercalación del servidor
 
@@ -61,8 +61,8 @@ ms.locfileid: "52954399"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Configuración de la intercalación del servidor en Instancia administrada
 
-La intercalación del servidor en Instancia administrada de Azure SQL (versión preliminar) se puede especificar al crear la instancia (actualmente solo con PowerShell). La intercalación de nivel de servidor predeterminada es **SQL_Latin1_General_CP1_CI_AS**. No se pueden especificar intercalaciones UTF-8 ni exclusivas de Unicode la intercalación como nivel de servidor.
-Para obtener una plantilla de script en la que se muestra cómo establecer la intercalación de nivel de servidor en Instancia administrada de Azure SQL Database, vea [Uso de PowerShell junto con una plantilla de Azure Resource Manager para crear una instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template). Si va a migrar bases de datos de SQL Server a Instancia administrada, compruebe la intercalación del servidor en la instancia de SQL Server de origen mediante la función `SERVERPROPERTY(N'Collation')` y cree una Instancia administrada que coincida con la intercalación de SQL Server. Es posible que la migración de una base de datos de SQL Server a Instancia administrada con intercalaciones de nivel de servidor que no coinciden produzca varios errores inesperados en las consultas. No se puede cambiar la intercalación de nivel de servidor en la Instancia administrada existente.
+La intercalación de nivel de servidor (versión preliminar) en Instancia administrada de Azure SQL se puede especificar al crear la instancia y no se puede cambiar posteriormente. Puede establecer la intercalación de nivel de servidor a través de [Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) o [PowerShell y la plantilla de Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) mientras crea la instancia. La intercalación de nivel de servidor predeterminada es **SQL_Latin1_General_CP1_CI_AS**. No se pueden especificar intercalaciones UTF-8 ni exclusivas de Unicode la intercalación como nivel de servidor.
+Si va a migrar bases de datos de SQL Server a Instancia administrada, compruebe la intercalación del servidor en la instancia de SQL Server de origen mediante la función `SERVERPROPERTY(N'Collation')` y cree una Instancia administrada que coincida con la intercalación de SQL Server. Es posible que la migración de una base de datos de SQL Server a Instancia administrada con intercalaciones de nivel de servidor que no coinciden produzca varios errores inesperados en las consultas. No se puede cambiar la intercalación de nivel de servidor en la Instancia administrada existente.
 
 ## <a name="see-also"></a>Consulte también
 

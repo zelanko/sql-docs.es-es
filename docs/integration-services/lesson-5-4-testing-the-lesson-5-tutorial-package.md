@@ -1,7 +1,7 @@
 ---
-title: 'Paso 4: Probar el paquete del tutorial de la lección 5 | Microsoft Docs'
+title: 'Paso 4: Probar el paquete de la lección 5 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,20 +11,21 @@ ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f23e1e6e9321d4211c53a176242c81cad6ff8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36b0fe9670eceb2520c1c792cf247a9d4da47598
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664563"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880458"
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Lección 5-4: Probar el paquete del tutorial de la lección 5
-Durante la ejecución, el paquete obtendrá el valor de la propiedad **Directory** de una variable actualizada en tiempo de ejecución, en lugar de utilizar el nombre de directorio original especificado al crear el paquete. El valor de la variable lo rellena el archivo SSISTutorial.dtsConfig.  
+# <a name="lesson-5-4-test-the-lesson-5-package"></a>Lección 5-4: Probar el paquete de la lección 5
+
+En tiempo de ejecución, el paquete obtiene el valor de la propiedad **Directory** de una variable de configuración, en lugar de hacerlo del nombre de directorio especificado al crear el paquete. El valor de la variable proviene del archivo XML **SSISTutorial.dtsConfig**.  
   
-Para comprobar que, durante la ejecución, el paquete actualiza la propiedad Directory con el nuevo valor, simplemente debe ejecutar el paquete. Puesto que en el directorio solamente se copiaron tres archivos de datos de ejemplo, el flujo de datos solamente se ejecutará tres veces, en lugar de repetirse a través de los 14 archivos de la carpeta original.  
+Para comprobar que el paquete actualiza la propiedad **Directory** con el nuevo valor durante el tiempo de ejecución, ejecute el paquete. Dado que solo hay tres archivos de datos de ejemplo en el nuevo directorio, el flujo de datos solo se ejecuta tres veces.  
   
 ## <a name="checking-the-package-layout"></a>Comprobar el diseño del paquete  
-Antes de probar el paquete, debe comprobar que los flujos de datos y de control de la lección 5 contienen los objetos mostrados en los diagramas siguientes. El flujo de control debe ser idéntico al flujo de datos de la lección 4. El flujo de datos debe ser idéntico al flujo de datos de la lección 4.  
+Antes de probar el paquete, compruebe que los flujos de datos y de control del paquete de la lección 5 son similares a los objetos mostrados en los diagramas siguientes:  
   
 **Flujo de control**  
   
@@ -34,11 +35,11 @@ Antes de probar el paquete, debe comprobar que los flujos de datos y de control 
   
 ![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
-### <a name="to-test-the-lesson-5-tutorial-package"></a>Para probar el paquete de tutorial de la lección 5  
+## <a name="test-the-lesson-5-package"></a>Probar el paquete de la lección 5  
   
-1.  En el menú **Depurar** , haga clic en **Iniciar depuración**.  
+1.  En el menú **Depurar**, seleccione **Iniciar depuración**.  
   
-2.  Una vez que haya finalizado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
+2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar**, seleccione **Detener depuración**.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
 [Lección 6: Uso de parámetros con el modelo de implementación de proyectos en SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

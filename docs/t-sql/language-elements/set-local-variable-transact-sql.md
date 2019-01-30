@@ -83,7 +83,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *udt_name*  
  Es el nombre de un tipo definido por el usuario CLR (Common Language Runtime).  
   
- { **.** | **::** }  
+ { **.** |  **::** }  
  Especifica el método de un tipo definido por el usuario CLR. En métodos de instancia (no estáticos), use un punto (**.**). En métodos estáticos, use dos puntos dobles (**::**). Para invocar un método, propiedad o campo de un tipo definido por el usuario CLR, debe tener el permiso EXECUTE para el tipo.  
   
  _method_name_ **(** _argument_ [ **,**... *n* ] **)**  

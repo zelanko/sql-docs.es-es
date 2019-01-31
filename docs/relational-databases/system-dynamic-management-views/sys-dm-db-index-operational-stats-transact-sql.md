@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514314"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428662"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>Argumentos    
- *database_id* | NULL | 0 | VALOR PREDETERMINADO    
+ *database_id* | NULL | 0 | DEFAULT    
  Identificador de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
     
  Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar NULL para *object_id*, *index_id*, y *partition_number*.    
@@ -85,9 +85,9 @@ sys.dm_db_index_operational_stats (
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|Id. de la base de datos.|    
 |**object_id**|**int**|Identificador de la tabla o vista.|    
-|**index_id**|**int**|Identificador del índice o montón.<br /><br /> 0 = Montón|    
-|**hobt_id**|**bigint**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Id. del montón de datos o conjunto de filas de árbol B que realiza el seguimiento de los datos internos para un índice de almacén de columnas.<br /><br /> NULL: esto no es un conjunto de filas del almacén de columnas interno.<br /><br /> Para obtener más información, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
-|**partition_number**|**int**|Número de partición en base 1 en el índice o montón.|    
+|**index_id**|**int**|Identificador del índice o montón.<br /><br /> 0 = Montón| 
+|**partition_number**|**int**|Número de partición en base 1 en el índice o montón.| 
+|**hobt_id**|**bigint**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Id. del montón de datos o conjunto de filas de árbol B que realiza el seguimiento de los datos internos para un índice de almacén de columnas.<br /><br /> NULL: esto no es un conjunto de filas del almacén de columnas interno.<br /><br /> Para obtener más información, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Recuento acumulado de inserciones en el nivel hoja.|    
 |**leaf_delete_count**|**bigint**|Recuento acumulado de eliminaciones en el nivel hoja. leaf_delete_count sólo se incrementa para los registros eliminados que no están marcados como fantasma en primer lugar. Para los registros eliminados se reflejó en primer lugar, **leaf_ghost_count** se incrementa en su lugar.|    
 |**leaf_update_count**|**bigint**|Recuento acumulado de actualizaciones en el nivel hoja.|    

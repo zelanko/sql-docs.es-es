@@ -16,12 +16,12 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70853b86d60eab82feb1fe12b03fabbd61dafb6e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f8f1a91210cbd263a9225cef54bcf27a81bf2bf4
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211924"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428602"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +45,24 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
  [  **@publication=** ] **'***publicación***'**  
  Es el nombre de la publicación en la que se ha insertado el token de seguimiento. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@tracer_id=** ] *tracer_id*  
+ [ **@tracer_id=** ] *tracer_id*  
  Es el identificador del token de seguimiento que se va a eliminar. *tracer_id* es **int**, su valor predeterminado es null. Si **null**, a continuación, se eliminan todos los testigos de seguimiento que pertenecen a la publicación.  
   
- [  **@cutoff_date=** ] *cutoff_date*  
+ [ **@cutoff_date=** ] *cutoff_date*  
  Especifica una fecha límite, de modo que se quitan todos los tokens de seguimiento insertados en la publicación antes de esa fecha. *cutoff_date* es de tipo datetime y su valor predeterminado es null.  
   
- [  **@publisher=** ] **'***publisher***'**  
+ [ **@publisher=** ] **'***publisher***'**  
  El nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]
->  Este parámetro solo debe especificarse para que no sean de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
+>  Este parámetro solo debe especificarse para que no sean de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editores o cuando se ejecuta el procedimiento almacenado desde el distribuidor.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
+ [ **@publisher_db=** ] **'***publisher_db***'**  
  El nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Si el procedimiento almacenado se ejecuta en el publicador, se omite este parámetro.  
   
+> [!NOTE]
+>  Este parámetro debe especificarse cuando se ejecuta el procedimiento almacenado desde el distribuidor.  
+
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   

@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_geo_replication_link_status (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/13/2016
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,14 +20,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 251dcb7121b568444387a1e864294095a556b827
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 94d5a2e924cfe4aa7625f6cfce40c5758eecb6a5
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396028"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421162"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contiene una fila para cada vínculo de replicación entre bases de datos principales y secundarias en una asociación de replicación geográfica. Esto incluye las bases de datos principales y secundarias. Si existe más de un vínculo de replicación continua para una base de datos principal, esta tabla contiene una fila para cada una de las relaciones. La vista se crea en todas las bases de datos, incluida a la maestra lógica. Sin embargo, al consultar esta vista en la maestra lógica se devuelve un conjunto vacío.  
@@ -35,8 +36,8 @@ ms.locfileid: "52396028"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|Id. exclusivo del vínculo de replicación.|  
-|partner_server|**sysname**|Nombre del servidor lógico que contiene la base de datos vinculado.|  
-|partner_database|**sysname**|Nombre de la base de datos vinculada en el servidor lógico vinculado.|  
+|partner_server|**sysname**|Nombre del servidor de base de datos SQL que contiene la base de datos vinculado.|  
+|partner_database|**sysname**|Nombre de la base de datos vinculada en la que reside el servidor de SQL Database vinculado.|  
 |last_replication|**datetimeoffset**|La marca de tiempo de confirmación de la última transacción mediante la base de datos secundaria según el reloj de la base de datos principal. Este valor está disponible en la base de datos principal solo.|  
 |replication_lag_sec|**int**|Diferencia de tiempo en segundos entre el valor de last_replication y la marca de tiempo de confirmación de la transacción en el servidor principal según el reloj de la base de datos principal.  Este valor está disponible en la base de datos principal solo.|  
 |replication_state|**tinyint**|El estado de replicación geográfica para esta base de datos, uno de:.<br /><br /> 1 = la inicialización. Se está propagando el destino de replicación geográfica pero las dos bases de datos no se ha sincronizado. Hasta que se complete la propagación, no se puede conectar a la base de datos secundaria. Quitar la base de datos secundaria de la réplica principal se cancelará la operación de propagación.<br /><br /> 2 = puesta al día. La base de datos secundaria está en un estado transaccionalmente coherente y se está sincronizando constantemente con la base de datos principal.<br /><br /> 4 = suspendido. Esto no es una relación de copia continua activa. Este estado suele indicar que el ancho de banda disponible para el interlink es insuficiente para el nivel de actividad de transacción en la base de datos principal. Sin embargo, la relación de copia continua sigue intacta.|  

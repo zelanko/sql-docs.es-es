@@ -9,18 +9,19 @@ ms.technology:
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Advanced
+- VS.ToolsOptionsPages.Text_Editor.SQL_Server_Tools.Advanced
 dev_langs:
 - TSQL
 ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 470a1305582b578934dc117abf6592741ebf79b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5472e7d0c910c03f49425c263293fd721320eba9
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136045"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484634"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>Opciones (Editor de texto de Transact-SQL: IntelliSense)
   El cuadro de diálogo **Opciones** le permite modificar las opciones de IntelliSense para el Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)] . Estas opciones se encuentran disponibles cuando, en el menú **Herramientas**, se hace clic en **Opciones**, se expande la carpeta **Editor de texto**, se expande la carpeta **Transact-SQL** y se selecciona **Avanzadas**.  

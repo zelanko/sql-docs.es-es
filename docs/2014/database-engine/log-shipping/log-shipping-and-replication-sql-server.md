@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8f0eaa3be9d6dbdd27eb52ce66ebc652dd19f7d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127006"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513884"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Trasvase de registros y replicación (SQL Server)
   El trasvase de registros incluye dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos principal se propagan mediante el trasvase de registros a la otra copia de la base de datos, conocida como la base de datos secundaria. El trasvase de registros incluye la aplicación a la base de datos secundaria del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos principal.  
@@ -109,9 +109,9 @@ ms.locfileid: "54127006"
   
     -   Si la publicación no está filtrada, debe poder actualizar la base de datos de publicaciones sincronizándola con el suscriptor más actualizado.  
   
-    -   Si la publicación está filtrada, es posible que no pueda actualizar la base de datos de publicaciones. Considere una tabla que se crean particiones de forma que cada suscripción recibe los datos del cliente sólo de una sola región: Norte, este, sur y oeste. Si hay al menos un suscriptor para cada partición de datos, al sincronizar cada partición con un suscriptor se debería actualizar la base de datos de publicaciones. Sin embargo, si los datos de la partición oeste, por ejemplo, no se han replicado en ningún suscriptor, no se podrán actualizar estos datos en el publicador. En este caso, se recomienda reinicializar todas las suscripciones de manera que los datos del publicador y de los suscriptores converjan. Para obtener más información, vea [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md).  
+    -   Si la publicación está filtrada, es posible que no pueda actualizar la base de datos de publicaciones. Considere una tabla dividida de forma que cada suscripción reciba únicamente datos de clientes de una región: norte, este, sur y oeste. Si hay al menos un suscriptor para cada partición de datos, al sincronizar cada partición con un suscriptor se debería actualizar la base de datos de publicaciones. Sin embargo, si los datos de la partición oeste, por ejemplo, no se han replicado en ningún suscriptor, no se podrán actualizar estos datos en el publicador. En este caso, se recomienda reinicializar todas las suscripciones de manera que los datos del publicador y de los suscriptores converjan. Para obtener más información, vea [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     Si se sincroniza con un suscriptor que ejecute una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la suscripción no puede ser anónima, sino que debe ser una suscripción de cliente o de servidor (llamadas suscripciones locales y suscripciones globales en versiones anteriores). Para obtener más información, vea [Sincronizar datos](../../relational-databases/replication/synchronize-data.md).  
+     Si se sincroniza con un suscriptor que ejecute una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la suscripción no puede ser anónima, sino que debe ser una suscripción de cliente o de servidor (llamadas suscripciones locales y suscripciones globales en versiones anteriores). Para obtener más información, vea [Sincronizar datos](../../relational-databases/replication/synchronize-data.md).   
   
 ## <a name="see-also"></a>Vea también  
  [Replicación de SQL Server](../../relational-databases/replication/sql-server-replication.md)   

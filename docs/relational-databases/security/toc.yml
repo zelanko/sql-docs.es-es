@@ -1,61 +1,200 @@
 items:
 - name: Información general
   href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
-- name: Proteger SQL Server
-  href: securing-sql-server.md
-- name: Auditoría
-  href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
-- name: Acceso de autenticación
-  href: ../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
-- name: Cifrado
-  href: ../../relational-databases/security/encryption/sql-server-encryption.md
-- name: Proteger su propiedad intelectual de SQL Server
-  href: protecting-your-sql-server-intellectual-property.md
-- name: Elementos protegibles
-  href: securables.md
-- name: 'Usuarios de base de datos independiente: hacer que la base de datos sea portátil'
-  href: contained-database-users-making-your-database-portable.md
-- name: Elegir un modo de autenticación
-  href: choose-an-authentication-mode.md
-- name: Configuración de visibilidad de los metadatos
-  href: metadata-visibility-configuration.md
-- name: Configuración de Área expuesta
-  href: surface-area-configuration.md
-- name: Inyección de código SQL
-  href: sql-injection.md
-- name: Evaluación de vulnerabilidad de SQL
-  href: sql-vulnerability-assessment.md
-- name: Clasificación y detección de datos de SQL
-  href: sql-data-discovery-and-classification.md
-- name: Propiedad de base de datos TRUSTWORTHY
-  href: trustworthy-database-property.md
-- name: Permisos
-  href: permissions-database-engine.md
-- name: Jerarquía de permisos
-  href: permissions-hierarchy-database-engine.md
-- name: Página Permisos o Elementos protegibles
-  href: permissions-or-securables-page.md
-- name: Directiva de contraseñas
-  href: password-policy.md
-- name: Contraseñas seguras
-  href: strong-passwords.md
-- name: Seguridad de nivel de fila
-  href: row-level-security.md
-- name: Enmascaramiento de datos dinámicos
-  href: dynamic-data-masking.md
-- name: Enmascaramiento de datos estáticos
-  href: static-data-masking.md
-- name: Certificados y claves asimétricas de SQL Server
-  href: sql-server-certificates-and-asymmetric-keys.md
+  items:
+  - name: Proteger SQL Server
+    href: securing-sql-server.md
+- name: Instrucciones
+  items:
+  - name: Proteger SQL Server
+    items:
+    - name: Configuración del área expuesta
+      href: surface-area-configuration.md
+    - name: Herramienta de evaluación de vulnerabilidad de SQL
+      href: sql-vulnerability-assessment.md
+    - name: Clasificación y detección de datos
+      href: sql-data-discovery-and-classification.md
+    - name: Solución de problemas del conector de SQL Server
+      href: encryption/sql-server-connector-maintenance-troubleshooting.md
+    - name: Acceso mediante autenticación
+      items:
+      - name: Determinar los permisos efectivos
+        href: authentication-access/determining-effective-database-engine-permissions.md
+      - name: Crea un inicio de sesión
+        href: authentication-access/create-a-login.md
+      - name: Creación de un usuario de base de datos
+        href: authentication-access/create-a-database-user.md
+      - name: Creación de un esquema de la base de datos
+        href: authentication-access/create-a-database-schema.md
+      - name: Combinación de un rol
+        href: authentication-access/join-a-role.md
+      - name: Conceder permiso a una entidad de seguridad
+        href: authentication-access/grant-a-permission-to-a-principal.md
+      - name: Creación de un rol del servidor
+        href: authentication-access/create-a-server-role.md
+      - name: Creación de un rol de aplicación
+        href: authentication-access/create-an-application-role.md
+      - name: Creación de una credencial
+        href: authentication-access/create-a-credential.md
+    - name: Cifrado
+      items:
+      - name: Selección de un algoritmo
+        href: encryption/choose-an-encryption-algorithm.md
+      - name: Configuración de Always Encrypted con enclaves seguros
+        href: encryption/configure-always-encrypted-enclaves.md
+        items:
+        - name: Configuración con SQL Server Management Studio
+          href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
+        - name: Configuración con PowerShell
+          href: encryption/configure-always-encrypted-using-powershell.md
+        - name: Creación y almacenamiento de claves maestras de columnas
+          href: encryption/create-and-store-column-master-keys-always-encrypted.md
+        - name: Configuración de las claves con PowerShell
+          href: encryption/configure-always-encrypted-keys-using-powershell.md
+        - name: Rotación de las claves con PowerShell
+          href: encryption/rotate-always-encrypted-keys-using-powershell.md
+        - name: Configuración del cifrado de columna con PowerShell
+          href: encryption/configure-column-encryption-using-powershell.md
+        - name: Migración de información confidencial
+          href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+        - name: Desarrollo de aplicaciones con .NET Framework
+          href: encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+      - name: Traslado de una base de datos protegida por TDE
+        href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+      - name: Activación de TDE con EKM
+        href: encryption/enable-tde-on-sql-server-using-ekm.md
+      - name: Copia de seguridad de la clave maestra de servicio
+        href: encryption/back-up-the-service-master-key.md
+      - name: Restauración de la clave maestra de servicio
+        href: encryption/restore-the-service-master-key.md
+      - name: Creación de la clave maestra de una base de datos
+        href: encryption/create-a-database-master-key.md
+      - name: Copia de seguridad de la clave maestra de base de datos
+        href: encryption/back-up-a-database-master-key.md
+      - name: Restauración de la clave maestra de base de datos
+        href: encryption/restore-a-database-master-key.md
+      - name: Creación de claves simétricas idénticas en dos servidores
+        href: encryption/create-identical-symmetric-keys-on-two-servers.md
+      - name: Cifrado de una columna de datos
+        href: encryption/encrypt-a-column-of-data.md
+    - name: Seguridad de Azure SQL Database
+      items:
+      - name: Conector de SQL Server con cifrado
+        href: encryption/use-sql-server-connector-with-sql-encryption-features.md
+      - name: Bring Your Own Key
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
+      - name: Rotación de claves BYOK de TDE
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
+      - name: Eliminación del protector de TDE
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
+      - name: EKM mediante Azure Key Vault
+        href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+    - name: Auditoría
+      items:
+      - name: Creación de una especificación de auditoría del servidor
+        href: auditing/create-a-server-audit-and-server-audit-specification.md
+      - name: Creación de una especificación de auditoría de la base de datos
+        href: auditing/create-a-server-audit-and-database-audit-specification.md
+      - name: Consulta del registro de auditoría
+        href: auditing/view-a-sql-server-audit-log.md
+      - name: Escritura de eventos de auditoría en el registro de Windows
+        href: auditing/write-sql-server-audit-events-to-the-security-log.md
+- name: Conceptos
+  items:
+  - name: Protección de la propiedad intelectual de SQL Server
+    href: protecting-your-sql-server-intellectual-property.md
+    items:
+    - name: Inyección de código SQL
+      href: sql-injection.md
+    - name: Propiedad de base de datos TRUSTWORTHY
+      href: trustworthy-database-property.md
+    - name: Directiva de contraseñas
+      href: password-policy.md
+    - name: Contraseñas seguras
+      href: strong-passwords.md
+    - name: Seguridad de nivel de fila
+      href: row-level-security.md
+    - name: Enmascaramiento estático de datos
+      href: static-data-masking.md
+    - name: Certificados y claves asimétricas
+      href: sql-server-certificates-and-asymmetric-keys.md
+  - name: Acceso mediante autenticación
+    href: authentication-access/getting-started-with-database-engine-permissions.md
+    items:
+    - name: Entidades de seguridad
+      href: authentication-access/principals-database-engine.md
+    - name: Roles de nivel de servidor
+      href: authentication-access/server-level-roles.md
+    - name: Roles de nivel de base de datos
+      href: authentication-access/database-level-roles.md
+    - name: Roles de aplicación
+      href: authentication-access/application-roles.md
+    - name: Credenciales
+      href: authentication-access/credentials-database-engine.md
+    - name: Elementos protegibles
+      href: securables.md
+    - name: Usuarios de bases de datos independientes
+      href: contained-database-users-making-your-database-portable.md
+    - name: Modo de autenticación
+      href: choose-an-authentication-mode.md
+    - name: Visibilidad de los metadatos
+      href: metadata-visibility-configuration.md
+    - name: Permisos
+      href: permissions-database-engine.md
+    - name: Jerarquía de los permisos
+      href: permissions-hierarchy-database-engine.md
+  - name: Cifrado
+    href: encryption/sql-server-encryption.md
+    items:
+    - name: Hierarchy
+      href: encryption/encryption-hierarchy.md
+    - name: Always Encrypted
+      href: encryption/always-encrypted-database-engine.md
+      items:
+      - name: Always Encrypted con enclaves seguros
+        href: encryption/always-encrypted-enclaves.md
+      - name: Administración de claves
+        href: encryption/overview-of-key-management-for-always-encrypted.md
+      - name: Cryptography
+        href: encryption/always-encrypted-cryptography.md
+      - name: Desarrollo de cliente
+        href: encryption/always-encrypted-client-development.md
+    - name: Cifrado de datos transparente (TDE)
+      href: encryption/transparent-data-encryption.md
+    - name: TDE con Azure SQL Database
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
+      items:
+      - name: Bring Your Own Key
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: Claves de cifrado
+      href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+      items:
+      - name: Clave maestra de servicio
+        href: encryption/service-master-key.md
+      - name: Administración extensible de claves (EKM)
+        href: encryption/extensible-key-management-ekm.md
+      - name: EKM mediante Azure Key Vault
+        href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
+    - name: Auditoría
+      href: auditing/sql-server-audit-database-engine.md
+      items:
+      - name: Acciones y grupos de acciones
+        href: auditing/sql-server-audit-action-groups-and-actions.md
+      - name: Registros de auditoría
+        href: auditing/sql-server-audit-records.md
 - name: Tutoriales
   items:
-  - name: Always Encrypted
-    items:
-    - name: Introducción a Always Encrypted con enclaves seguros con SSMS
-      href: tutorial-getting-started-with-always-encrypted-enclaves.md
-ms.openlocfilehash: 24922a9e1d58dcf4c82c3acecb55d7236a682e36
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+  - name: Always Encrypted con enclaves seguros con SSMS
+    href: tutorial-getting-started-with-always-encrypted-enclaves.md
+- name: Referencia
+  items:
+  - name: Página Permisos o Elementos protegibles
+    href: permissions-or-securables-page.md
+  - name: Asistente para Always Encrypted
+    href: encryption/always-encrypted-wizard.md
+ms.openlocfilehash: 07f901c76f2f1c1e0570df85bf066e084390688b
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629498"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513895"

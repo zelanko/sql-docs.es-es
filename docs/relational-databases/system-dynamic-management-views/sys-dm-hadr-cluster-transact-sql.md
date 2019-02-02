@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_hadr_cluster (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_cluster (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -21,12 +21,12 @@ ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2c4e66ed6471ec0959cfece477af4b939fb129c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58450f8e43c5f1f736fb4388008f7af3325e430d
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748243"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570738"
 ---
 # <a name="sysdmhadrcluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47748243"
 
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**nombreDeClúster**|**nvarchar(128)**|Nombre de clúster de WSFC que hospeda las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitadas para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].|  
-|**quorum_type**|**tinyint**|Tipo de quórum utilizado por este clúster de WSFC; puede ser:<br /><br /> 0 = Mayoría de nodo. Esta configuración de quórum puede admitir errores de la mitad de los (con redondeo por exceso) menos uno. Por ejemplo, en un clúster de siete nodos, esta configuración de quórum puede admitir errores de tres nodos.<br /><br /> 1 = Nodo y mayoría de disco. Si el testigo de disco permanece en línea, esta configuración de quórum puede admitir errores de la mitad del número de nodos (con redondeo por exceso). Por ejemplo, un clúster de seis nodos en el que el testigo de disco está en línea puede admitir errores de tres nodos. Si el testigo de disco se queda sin conexión o sufre un error, esta configuración de quórum puede admitir errores de la mitad de los nodos (con redondeo por exceso) menos uno. Por ejemplo, un clúster de seis nodos con un testigo de disco con errores puede admitir errores de 3-1=2 nodos.<br /><br /> 2 = Nodo y mayoría de recurso compartido de archivos. Esta configuración de quórum funciona de forma similar a Nodo y mayoría del disco, pero utiliza un testigo de recurso compartido de archivos en lugar de un testigo de disco.<br /><br /> 3 = Sin mayoría: solo disco. Si el disco de quórum está en línea, esta configuración de quórum puede admitir errores de todos los nodos excepto uno.|  
-|**quorum_type_desc**|**varchar(50)**|Descripción de **quorum_type**, uno de:<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY: _DISK_ONLY|  
+|**cluster_name**|**nvarchar(128)**|Nombre de clúster de WSFC que hospeda las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitadas para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].|  
+|**quorum_type**|**tinyint**|Tipo de quórum utilizado por este clúster de WSFC; puede ser:<br /><br /> 0 = Mayoría de nodo. Esta configuración de quórum puede admitir errores de la mitad de los (con redondeo por exceso) menos uno. Por ejemplo, en un clúster de siete nodos, esta configuración de quórum puede admitir errores de tres nodos.<br /><br /> 1 = Nodo y mayoría de disco. Si el testigo de disco permanece en línea, esta configuración de quórum puede admitir errores de la mitad del número de nodos (con redondeo por exceso). Por ejemplo, un clúster de seis nodos en el que el testigo de disco está en línea puede admitir errores de tres nodos. Si el testigo de disco se queda sin conexión o sufre un error, esta configuración de quórum puede admitir errores de la mitad de los nodos (con redondeo por exceso) menos uno. Por ejemplo, un clúster de seis nodos con un testigo de disco con errores puede admitir errores de 3-1=2 nodos.<br /><br /> 2 = Nodo y mayoría de recurso compartido de archivos. Esta configuración de quórum funciona de forma similar a Nodo y mayoría del disco, pero utiliza un testigo de recurso compartido de archivos en lugar de un testigo de disco.<br /><br /> 3 no = mayoría: Solo disco. Si el disco de quórum está en línea, esta configuración de quórum puede admitir errores de todos los nodos excepto uno.<br /><br /> 4 = quórum desconocido. Quórum desconocido para el clúster.<br /><br /> 5 = testigo en la nube. Clúster utiliza Microsoft Azure para el arbitraje de quórum. Si el testigo en la nube está disponible, el clúster puede admitir errores en mitad de los nodos (redondeando).|  
+|**quorum_type_desc**|**varchar(50)**|Descripción de **quorum_type**, uno de:<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY: _DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
 |**quorum_state**|**tinyint**|Estado del quórum de WSFC, uno de los siguientes:<br /><br /> 0 = estado de quórum desconocido<br /><br /> 1 = Quórum normal<br /><br /> 2 = Quórum forzado|  
 |**quorum_state_desc**|**varchar(50)**|Descripción de **quorum_state**, uno de:<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
   

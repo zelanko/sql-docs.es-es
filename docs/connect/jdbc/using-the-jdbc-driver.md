@@ -1,7 +1,7 @@
 ---
 title: Usar el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e1d9d72cef09c12bb00a6cdcfd2db9b9818a93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e0f803b68f2ab9f62c3df27c6930da8e3a8a4a0
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845333"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737096"
 ---
 # <a name="using-the-jdbc-driver"></a>Usar el controlador JDBC
 
@@ -27,6 +27,8 @@ En esta sección se proporciona una serie de instrucciones rápidas para estable
 ## <a name="choosing-the-right-jar-file"></a>Elegir el archivo JAR adecuado
 
 Microsoft JDBC Driver proporciona diferentes archivos JAR que se usará en la correspondencia con su configuración preferida de Java Runtime Environment (JRE), como en:
+
+Proporciona el 7.2 de Microsoft JDBC Driver para SQL Server **mssql-jdbc-7.2.0.jre8.jar**, y **mssql-jdbc-7.2.0.jre11.jar** los archivos de biblioteca de clases.
 
 Proporciona la 7.0 de Microsoft JDBC Driver para SQL Server **mssql-jdbc-7.0.0.jre8.jar**, y **mssql-jdbc-7.0.0.jre10.jar** los archivos de biblioteca de clases.
 
@@ -52,7 +54,29 @@ Si usar JDBC Driver 6.4, Establece la ruta de clase para incluir el **mssql-jdbc
 
 Si usa JDBC Driver 7.0, Establece la ruta de clase para incluir el **mssql-jdbc-7.0.0.jre8.jar** o **mssql-jdbc-7.0.0.jre10.jar**.
 
+Si uso 7.2 de controlador JDBC, Establece la ruta de clase para incluir el **mssql-jdbc-7.2.0.jre8.jar** o **mssql-jdbc-7.2.0.jre11.jar**.
+
 Si la ruta de clase falta una entrada para el archivo Jar correcto, una aplicación iniciará el común `Class not found` excepción.  
+
+### <a name="for-microsoft-jdbc-driver-72"></a>De Microsoft JDBC Driver 7.2
+
+El **mssql-jdbc-7.2.0.jre8.jar** o **mssql-jdbc-7.2.0.jre11.jar** archivos se instalan en las siguientes ubicaciones:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.0.jre11.jar
+```
+
+El siguiente fragmento de código es un ejemplo de la instrucción CLASSPATH usada para una aplicación Windows:
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.0.jre11.jar`
+
+El siguiente fragmento de código es un ejemplo de la instrucción CLASSPATH usada para una aplicación Unix/Linux:
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.0.jre11.jar`
+
+Asegúrese de que la instrucción CLASSPATH contiene solamente un [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], por ejemplo, ya sea **mssql-jdbc-7.2.0.jre8.jar** o **mssql-jdbc-7.2.0.jre11.jar**.
   
 ### <a name="for-microsoft-jdbc-driver-70"></a>De Microsoft JDBC Driver 7.0
 
@@ -182,6 +206,6 @@ Cuando se llama al método getConnection de la clase DriverManager, un controlad
 
 Para obtener más información sobre cómo conectar con orígenes de datos y use una dirección URL de conexión, consulte [generar URL de conexión](../../connect/jdbc/building-the-connection-url.md) y [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

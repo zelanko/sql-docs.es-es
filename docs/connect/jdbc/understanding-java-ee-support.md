@@ -1,7 +1,7 @@
 ---
 title: Descripción de la compatibilidad con Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76032ffa6737e39556a9047e91b0d2666ddea39b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da575f8c0fecd03e21bc2d24800cde05105a5a3c
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702143"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736936"
 ---
 # <a name="understanding-java-ee-support"></a>Descripción de la compatibilidad con Java EE
 
@@ -35,6 +35,8 @@ Para JDBC Driver 6.2, el controlador se encuentra en **mssql-jdbc-6.2.2.jre7.jar
 Para JDBC Driver 6.4, el controlador se encuentra en **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, o **mssql-jdbc-6.4.0.jre9.jar**.
 
 Para JDBC Driver 7.0, el controlador se encuentra en **mssql-jdbc-7.0.0.jre8.jar**, o **mssql-jdbc-7.0.0.jre10.jar**.
+
+Para 7.2 de controlador JDBC, el controlador se encuentra en **mssql-jdbc-7.2.0.jre8.jar**, o **mssql-jdbc-7.2.0.jre11.jar**.
   
 El nombre de clase se usa cada vez que se carga el controlador con la clase DriverManager de JDBC. Se usa también cada vez que se deba especificar el nombre de clase del controlador en la configuración de cualquier controlador. Por ejemplo, configurar un origen de datos dentro de un servidor de aplicaciones de Java EE podría requerir que se escribiera el nombre de clase del controlador.  
   
@@ -73,6 +75,6 @@ Connection c = ds.getConnection("user", "pwd");
 
 Para obtener más información acerca de las propiedades del origen de datos, vea [establecer las propiedades del origen de datos](../../connect/jdbc/setting-the-data-source-properties.md).  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

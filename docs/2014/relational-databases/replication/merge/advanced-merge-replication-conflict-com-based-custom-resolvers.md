@@ -32,16 +32,16 @@ ms.locfileid: "54134955"
   
 -   Los tipos de cambios de fila que desea solucionar, como actualizaciones, inserciones y eliminaciones, y si el solucionador se invocará durante la carga de cambios de mezcla, la descarga, o ambas. Puede especificar un tipo de cambio, todos los cambios o cualquier combinación. El solucionador de conflictos de mezcla predeterminado controla los conflictos que no cubre un solucionador personalizado.  
   
--   Si se utiliza el seguimiento por columnas al solucionar el conflicto. Cuando está activo el seguimiento por columnas, solo se marcan como conflicto las columnas en las que se producen conflictos; los demás datos se mezclan normalmente. Sin embargo, los conflictos se resuelven del mismo modo que con el seguimiento por filas: el ganador por prioridad sobrescribe toda la fila de datos (pero los datos pueden ser una mezcla de valores del publicador, de los suscriptores o algunos valores alterados que no proceden del publicador ni de los suscriptores). Para más información, consulte [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-conflict-detection-and-resolution.md).  
+-   Si se utiliza el seguimiento por columnas al solucionar el conflicto. Cuando está activo el seguimiento por columnas, solo se marcan como conflicto las columnas en las que se producen conflictos; los demás datos se mezclan normalmente. Sin embargo, los conflictos se resuelven del mismo modo que con el seguimiento por filas: el ganador por prioridad sobrescribe toda la fila de datos (pero los datos pueden ser una mezcla de valores del publicador, de los suscriptores o algunos valores alterados que no proceden del publicador ni de los suscriptores). Para más información, vea [Detectar y solucionar conflictos de replicación de mezcla](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Para implementar un solucionador de conflictos personalizado para COM, vea [Implement a Custom Conflict Resolver for a Merge Article](../implement-a-custom-conflict-resolver-for-a-merge-article.md).  
+ Para implementar un solucionador de conflictos personalizado para COM, vea [Implementar un solucionador de conflictos personalizado para un artículo de mezcla](../implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
  Un solucionador personalizado se especifica para un artículo y no para una publicación completa. Puede utilizar el mismo solucionador con más de un artículo, pero la lógica de los solucionadores personalizados es con frecuencia específica para una tabla concreta. Si se modifica la tabla utilizada en el artículo después de crear el solucionador (por ejemplo, si se cambia el nombre de la columna que se utiliza en la resolución de conflictos), es posible que necesite modificar y volver a compilar el solucionador personalizado.  
   
- Para especificar un solucionador personalizado, vea [Specify a Merge Article Resolver](../publish/specify-a-merge-article-resolver.md).  
+ Para especificar un solucionador personalizado, vea [Especificar un solucionador de artículos de mezcla](../publish/specify-a-merge-article-resolver.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Microsoft COM-Based Resolvers](advanced-merge-replication-conflict-com-based-resolvers.md)  
+ [Detección y resolución de conflictos de replicación de mezcla avanzada](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Solucionadores basados en Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

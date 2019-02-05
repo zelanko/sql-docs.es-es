@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226532"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428652"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ Cuando se crean con la opción **CACHE**, un apagado inesperado (como un corte d
   
 3.  El valor calculado se devuelve a la instrucción que realiza la llamada.  
   
- **Opción CACHE cuando se agota la memoria caché**  
+**Opción CACHE cuando se agota la memoria caché**  
   
  Cada vez que se solicita un objeto de secuencia para generar el valor siguiente para la opción **CACHE**, si se ha agotado la memoria caché, tiene lugar el siguiente proceso:  
   
@@ -139,7 +139,7 @@ Cuando se crean con la opción **CACHE**, un apagado inesperado (como un corte d
   
 3.  Se bloquea la fila de la tabla del sistema para el objeto de secuencia y el valor calculado en el paso 2 (el último valor) se escribe en la tabla del sistema. Se activa un xevent agotado en caché para notificar al usuario el nuevo valor conservado.  
   
- **Opción NO CACHE**  
+**Opción NO CACHE**  
   
  Cada vez que se solicita que un objeto de secuencia genere el valor siguiente para la opción **NO CACHE**, tiene lugar el siguiente proceso:  
   

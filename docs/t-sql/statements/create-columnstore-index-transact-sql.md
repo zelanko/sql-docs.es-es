@@ -132,7 +132,7 @@ Especifica el nombre del nuevo índice.
   
 Si la tabla ya tiene un índice clúster de almacén de columnas, puede especificar el mismo nombre que el índice existente o puede usar la opción DROP EXISTING para especificar uno nuevo.  
   
-ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Especifica el nombre de una, dos o tres partes de la tabla que se almacenará como un índice clúster de almacén de columnas. Si la tabla es un montón o un índice clúster, se convierte de almacén de filas en un almacén de columnas. Si la tabla ya es un almacén de columnas, esta instrucción vuelve a compilar el índice clúster de almacén de columnas.  
   
 #### <a name="with-options"></a>Opciones de WITH  
@@ -215,7 +215,7 @@ Crea un índice no clúster de almacén de columnas en memoria en una tabla de a
     Especifica las columnas que se van a almacenar. Un índice no clúster de almacén de columnas está limitado a 1024 columnas.  
    Cada columna debe ser de un tipo de datos compatible con los índices de almacén de columnas. Vea [Limitaciones y restricciones](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obtener una lista de los tipos de datos admitidos.  
 
-ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Especifica el nombre de una, dos o tres partes de la tabla que contiene el índice.  
 
 #### <a name="with-options"></a>Opciones de WITH

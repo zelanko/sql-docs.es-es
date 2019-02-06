@@ -10,12 +10,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5de90c3be35ca5989498872e4c86f4303d17ffc0
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747967"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760078"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Paso 2: Habilitar y configurar las configuraciones de paquetes
   En esta tarea, convertirá el proyecto al modelo de implementación de paquetes y habilitará las configuraciones de paquetes mediante el Asistente para configuración de paquetes. Utilizará este asistente para generar un archivo de configuración XML que contiene parámetros de configuración para la propiedad `Directory` del contenedor de bucles Foreach. El valor de la propiedad Directory se proporciona a través de una variable nueva de nivel de paquete que puede actualizarse durante la ejecución. Además, rellenará una carpeta nueva de datos de ejemplo que utilizará durante las pruebas.  
@@ -43,7 +43,7 @@ ms.locfileid: "52747967"
   
 9. En el **Editor de expresiones de propiedad**, haga clic en el **propiedad** lista y seleccione `Directory`.  
   
-10. En el cuadro **Expresión**, haga clic en el botón de puntos suspensivos **(…)**.  
+10. En el **expresión** cuadro, haga clic en el botón de puntos suspensivos **(...)** .  
   
 11. En el **Generador de expresiones**, expanda la carpeta Variables y arrastre la variable **User:varFolderName** al cuadro **Expresión** .  
   
@@ -87,13 +87,13 @@ ms.locfileid: "52747967"
   
 16. Haga clic en **Cerrar**.  
   
-17. El asistente crea un archivo de configuración, denominado SSISTutorial.dtsConfig, que contiene parámetros de configuración para el valor (v`alue`) de la variable que, a su vez, establece la propiedad `Directory` del enumerador.  
+17. El asistente crea un archivo de configuración, denominado SSISTutorial.dtsConfig, que contiene los valores de configuración para el `value` de la variable que a su vez establece el `Directory` propiedad del enumerador.  
   
     > [!NOTE]  
     >  Generalmente, un archivo de configuración contiene información compleja sobre las propiedades de un paquete, pero en este tutorial la única información de configuración debería ser  
     > <Configuration ConfiguredType="Property"  
-    > Path="\package.variables[user::varFolderName]. Propiedades [valor]"ValueType ="String"\>  
-    >  \<ConfiguredValue >\</ConfiguredValue >  
+    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"\>  
+    >  \<ConfiguredValue>\</ConfiguredValue>  
     > \</ Configuración >.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Para crear y rellenar una carpeta nueva de datos de ejemplo  

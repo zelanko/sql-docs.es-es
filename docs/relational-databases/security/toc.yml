@@ -16,89 +16,89 @@ items:
       href: sql-data-discovery-and-classification.md
     - name: Solución de problemas del conector de SQL Server
       href: encryption/sql-server-connector-maintenance-troubleshooting.md
-    - name: Acceso mediante autenticación
+  - name: Acceso mediante autenticación
+    items:
+    - name: Determinar los permisos efectivos
+      href: authentication-access/determining-effective-database-engine-permissions.md
+    - name: Crea un inicio de sesión
+      href: authentication-access/create-a-login.md
+    - name: Creación de un usuario de base de datos
+      href: authentication-access/create-a-database-user.md
+    - name: Creación de un esquema de la base de datos
+      href: authentication-access/create-a-database-schema.md
+    - name: Combinación de un rol
+      href: authentication-access/join-a-role.md
+    - name: Conceder permiso a una entidad de seguridad
+      href: authentication-access/grant-a-permission-to-a-principal.md
+    - name: Creación de un rol del servidor
+      href: authentication-access/create-a-server-role.md
+    - name: Creación de un rol de aplicación
+      href: authentication-access/create-an-application-role.md
+    - name: Creación de una credencial
+      href: authentication-access/create-a-credential.md
+  - name: Cifrado
+    items:
+    - name: Selección de un algoritmo
+      href: encryption/choose-an-encryption-algorithm.md
+    - name: Configuración de Always Encrypted con enclaves seguros
+      href: encryption/configure-always-encrypted-enclaves.md
       items:
-      - name: Determinar los permisos efectivos
-        href: authentication-access/determining-effective-database-engine-permissions.md
-      - name: Crea un inicio de sesión
-        href: authentication-access/create-a-login.md
-      - name: Creación de un usuario de base de datos
-        href: authentication-access/create-a-database-user.md
-      - name: Creación de un esquema de la base de datos
-        href: authentication-access/create-a-database-schema.md
-      - name: Combinación de un rol
-        href: authentication-access/join-a-role.md
-      - name: Conceder permiso a una entidad de seguridad
-        href: authentication-access/grant-a-permission-to-a-principal.md
-      - name: Creación de un rol del servidor
-        href: authentication-access/create-a-server-role.md
-      - name: Creación de un rol de aplicación
-        href: authentication-access/create-an-application-role.md
-      - name: Creación de una credencial
-        href: authentication-access/create-a-credential.md
-    - name: Cifrado
-      items:
-      - name: Selección de un algoritmo
-        href: encryption/choose-an-encryption-algorithm.md
-      - name: Configuración de Always Encrypted con enclaves seguros
-        href: encryption/configure-always-encrypted-enclaves.md
-        items:
-        - name: Configuración con SQL Server Management Studio
-          href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
-        - name: Configuración con PowerShell
-          href: encryption/configure-always-encrypted-using-powershell.md
-        - name: Creación y almacenamiento de claves maestras de columnas
-          href: encryption/create-and-store-column-master-keys-always-encrypted.md
-        - name: Configuración de las claves con PowerShell
-          href: encryption/configure-always-encrypted-keys-using-powershell.md
-        - name: Rotación de las claves con PowerShell
-          href: encryption/rotate-always-encrypted-keys-using-powershell.md
-        - name: Configuración del cifrado de columna con PowerShell
-          href: encryption/configure-column-encryption-using-powershell.md
-        - name: Migración de información confidencial
-          href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-        - name: Desarrollo de aplicaciones con .NET Framework
-          href: encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-      - name: Traslado de una base de datos protegida por TDE
-        href: encryption/move-a-tde-protected-database-to-another-sql-server.md
-      - name: Activación de TDE con EKM
-        href: encryption/enable-tde-on-sql-server-using-ekm.md
-      - name: Copia de seguridad de la clave maestra de servicio
-        href: encryption/back-up-the-service-master-key.md
-      - name: Restauración de la clave maestra de servicio
-        href: encryption/restore-the-service-master-key.md
-      - name: Creación de la clave maestra de una base de datos
-        href: encryption/create-a-database-master-key.md
-      - name: Copia de seguridad de la clave maestra de base de datos
-        href: encryption/back-up-a-database-master-key.md
-      - name: Restauración de la clave maestra de base de datos
-        href: encryption/restore-a-database-master-key.md
-      - name: Creación de claves simétricas idénticas en dos servidores
-        href: encryption/create-identical-symmetric-keys-on-two-servers.md
-      - name: Cifrado de una columna de datos
-        href: encryption/encrypt-a-column-of-data.md
-    - name: Seguridad de Azure SQL Database
-      items:
-      - name: Conector de SQL Server con cifrado
-        href: encryption/use-sql-server-connector-with-sql-encryption-features.md
-      - name: Bring Your Own Key
-        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
-      - name: Rotación de claves BYOK de TDE
-        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
-      - name: Eliminación del protector de TDE
-        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
-      - name: EKM mediante Azure Key Vault
-        href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
-    - name: Auditoría
-      items:
-      - name: Creación de una especificación de auditoría del servidor
-        href: auditing/create-a-server-audit-and-server-audit-specification.md
-      - name: Creación de una especificación de auditoría de la base de datos
-        href: auditing/create-a-server-audit-and-database-audit-specification.md
-      - name: Consulta del registro de auditoría
-        href: auditing/view-a-sql-server-audit-log.md
-      - name: Escritura de eventos de auditoría en el registro de Windows
-        href: auditing/write-sql-server-audit-events-to-the-security-log.md
+      - name: Configuración con SQL Server Management Studio
+        href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
+      - name: Configuración con PowerShell
+        href: encryption/configure-always-encrypted-using-powershell.md
+      - name: Creación y almacenamiento de claves maestras de columnas
+        href: encryption/create-and-store-column-master-keys-always-encrypted.md
+      - name: Configuración de las claves con PowerShell
+        href: encryption/configure-always-encrypted-keys-using-powershell.md
+      - name: Rotación de las claves con PowerShell
+        href: encryption/rotate-always-encrypted-keys-using-powershell.md
+      - name: Configuración del cifrado de columna con PowerShell
+        href: encryption/configure-column-encryption-using-powershell.md
+      - name: Migración de información confidencial
+        href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+      - name: Desarrollo de aplicaciones con .NET Framework
+        href: encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+    - name: Traslado de una base de datos protegida por TDE
+      href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+    - name: Activación de TDE con EKM
+      href: encryption/enable-tde-on-sql-server-using-ekm.md
+    - name: Copia de seguridad de la clave maestra de servicio
+      href: encryption/back-up-the-service-master-key.md
+    - name: Restauración de la clave maestra de servicio
+      href: encryption/restore-the-service-master-key.md
+    - name: Creación de la clave maestra de una base de datos
+      href: encryption/create-a-database-master-key.md
+    - name: Copia de seguridad de la clave maestra de base de datos
+      href: encryption/back-up-a-database-master-key.md
+    - name: Restauración de la clave maestra de base de datos
+      href: encryption/restore-a-database-master-key.md
+    - name: Creación de claves simétricas idénticas en dos servidores
+      href: encryption/create-identical-symmetric-keys-on-two-servers.md
+    - name: Cifrado de una columna de datos
+      href: encryption/encrypt-a-column-of-data.md
+  - name: Seguridad de Azure SQL Database
+    items:
+    - name: Conector de SQL Server con cifrado
+      href: encryption/use-sql-server-connector-with-sql-encryption-features.md
+    - name: Bring Your Own Key
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: Rotación de claves BYOK de TDE
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: Eliminación del protector de TDE
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: EKM mediante Azure Key Vault
+      href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+  - name: Auditoría
+    items:
+    - name: Creación de una especificación de auditoría del servidor
+      href: auditing/create-a-server-audit-and-server-audit-specification.md
+    - name: Creación de una especificación de auditoría de la base de datos
+      href: auditing/create-a-server-audit-and-database-audit-specification.md
+    - name: Consulta del registro de auditoría
+      href: auditing/view-a-sql-server-audit-log.md
+    - name: Escritura de eventos de auditoría en el registro de Windows
+      href: auditing/write-sql-server-audit-events-to-the-security-log.md
 - name: Conceptos
   items:
   - name: Protección de la propiedad intelectual de SQL Server
@@ -175,13 +175,13 @@ items:
         href: encryption/extensible-key-management-ekm.md
       - name: EKM mediante Azure Key Vault
         href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
-    - name: Auditoría
-      href: auditing/sql-server-audit-database-engine.md
-      items:
-      - name: Acciones y grupos de acciones
-        href: auditing/sql-server-audit-action-groups-and-actions.md
-      - name: Registros de auditoría
-        href: auditing/sql-server-audit-records.md
+  - name: Auditoría
+    href: auditing/sql-server-audit-database-engine.md
+    items:
+    - name: Acciones y grupos de acciones
+      href: auditing/sql-server-audit-action-groups-and-actions.md
+    - name: Registros de auditoría
+      href: auditing/sql-server-audit-records.md
 - name: Tutoriales
   items:
   - name: Always Encrypted con enclaves seguros con SSMS
@@ -192,9 +192,9 @@ items:
     href: permissions-or-securables-page.md
   - name: Asistente para Always Encrypted
     href: encryption/always-encrypted-wizard.md
-ms.openlocfilehash: 07f901c76f2f1c1e0570df85bf066e084390688b
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 774564c5eed9bf7c531ef1ed0c49f73c95f490cf
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513895"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689918"

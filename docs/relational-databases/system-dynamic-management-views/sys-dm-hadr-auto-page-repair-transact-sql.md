@@ -1,7 +1,7 @@
 ---
 title: sys.dm_hadr_auto_page_repair (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 02/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -21,12 +21,12 @@ ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: be4bd3af61ef81c81dffc695ed3489c620b42903
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d46e5ee0b350e7164c0dfec55666d4b6c8e34a7
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688233"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771331"
 ---
 # <a name="sysdmhadrautopagerepair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47688233"
 |**file_id**|**int**|Identificador del archivo en el que se encuentra la página.|  
 |**page_id**|**bigint**|Identificador de la página en el archivo.|  
 |**error_type**|**int**|Tipo del error. Los valores pueden ser:<br /><br /> **-** 1 = todos los errores de hardware 823<br /><br /> 1 = 824 errores que no sea una suma de comprobación incorrecta o una página rasgada (por ejemplo, un identificador de página incorrecto)<br /><br /> 2 = Suma de comprobación incorrecta<br /><br /> 3 = Página rasgada|  
-|**page_status**|**int**|El estado del intento de reparación de la página:<br /><br /> 2 = En cola para la solicitud del socio.<br /><br /> 3 = Solicitud enviada al socio.<br /><br /> 4 = En cola para la reparación de página automática (respuesta recibida del socio).<br /><br /> 5 = La reparación de página automática tuvo éxito y la página debería ser utilizable.<br /><br /> 6 = Irreparable. Esto indica que se produjo un error durante el intento de reparación de la página, por ejemplo, porque la página también está dañada en el socio, el socio está desconectado o existe un problema de red. Este estado no es definitivo; si se vuelve a producir un daño en la página, se solicitará de nuevo la página del socio.|  
+|**page_status**|**int**|El estado del intento de reparación de la página:<br /><br /> 2 = En cola para la solicitud del socio.<br /><br /> 3 = Solicitud enviada al socio.<br /><br /> 4 = página se ha reparado correctamente.<br /><br /> 5 = no se pudo reparar la página durante el último intento / reparación de página automática intentará reparar la página de nuevo.|  
 |**modification_time**|**datetime**|Hora del último cambio en el estado de la página.|  
   
 ## <a name="security"></a>Seguridad  
@@ -50,7 +50,7 @@ ms.locfileid: "47688233"
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="see-also"></a>Vea también  
- [Reparación de página automática &#40;grupos de disponibilidad/creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Reparación de página automática &#40;grupos de disponibilidad: creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

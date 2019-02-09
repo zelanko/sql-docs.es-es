@@ -4,19 +4,19 @@ description: Explore distintas formas de usar e interactuar con SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ae57a6f453cf15dbb22158b49aad990cc0c3df67
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: e143ba46fd4c288367b3eb75c15b073ebfb9cf34
+ms.sourcegitcommit: 428b0d2951a785bc72f8dac9ac7cea7cda4dc059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100740"
+ms.lasthandoff: 02/09/2019
+ms.locfileid: "55972208"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imágenes de contenedor de SQL Server en Docker
 
@@ -99,7 +99,7 @@ Puede conectarse y realizar consultas de SQL Server en un contenedor desde fuera
 
 Puede conectarse a la instancia de SQL Server en la máquina de Docker desde cualquier herramienta externa de Linux, Windows o macOS que admite las conexiones de SQL. Algunas herramientas comunes incluyen:
 
-- [Sqlcmd](sql-server-linux-setup-tools.md)
+- [sqlcmd](sql-server-linux-setup-tools.md)
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) en Windows](sql-server-linux-manage-ssms.md)
 
@@ -350,6 +350,62 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```PowerShell
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
+## <a id="tz"></a> Configurar la zona horaria
+
+Para ejecutar SQL Server en un contenedor de Linux con una zona horaria concreto, configure el **TZ** variable de entorno. Para buscar el valor de la zona horaria correcta, ejecute el **tzselect** comando desde un símbolo del sistema de bash de Linux:
+
+```bash
+tzselect
+```
+
+Después de seleccionar la zona horaria, **tzselect** muestra un resultado similar al siguiente:
+
+```bash
+The following information has been given:
+
+        United States
+        Pacific
+
+Therefore TZ='America/Los_Angeles' will be used.
+```
+
+Puede usar esta información para establecer la misma variable de entorno en el contenedor de Linux. El ejemplo siguiente muestra cómo ejecutar SQL Server en un contenedor en el `Americas/Los_Angeles` zona horaria:
+
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+```bash
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -p 1433:1433 --name sql1 \
+   -e 'TZ=America/Los_Angeles'\
+   -d mcr.microsoft.com/mssql/server:2017-latest 
+```
+
+```PowerShell
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -p 1433:1433 --name sql1 `
+   -e "TZ=America/Los_Angeles" `
+   -d mcr.microsoft.com/mssql/server:2017-latest 
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```bash
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -p 1433:1433 --name sql1 \
+   -e 'TZ=America/Los_Angeles'\
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+```PowerShell
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -p 1433:1433 --name sql1 `
+   -e "TZ=America/Los_Angeles" `
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+::: moniker-end
 
 ## <a id="tags"></a> Ejecución de una imagen de contenedor de SQL Server específica
 

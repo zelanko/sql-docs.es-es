@@ -35,7 +35,7 @@ ms.locfileid: "54129515"
   
 #### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>Para configurar una tabla optimizada para memoria como suscriptor  
   
-1.  Cree una publicación transaccional. Para más información, consulte [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Cree una publicación transaccional. Para obtener más información, vea [Crear una suscripción](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Agregue artículos a la publicación. Para más información, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -44,24 +44,24 @@ ms.locfileid: "54129515"
   
 3.  En la ventana de propiedades del artículo, establezca **Habilitar optimización para memoria** en **true**.  
   
-4.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+4.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para más información, consulte [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-5.  Ahora cree una nueva suscripción. En el **Asistente para nueva suscripción** , establezca **Memory Optimized Subscription** (Suscripción optimizada para memoria) en **true**.  
+5.  Ahora cree una nueva suscripción. En el **Asistente para nueva suscripción** , establezca **Suscripción optimizada para memoria** en **true**.  
   
  Las tablas con optimización para memoria deben empezar ahora a recibir actualizaciones del publicador.  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>Reconfiguración de una replicación de transacción existente  
   
-1.  Vaya a las propiedades de suscripción de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y establezca **Memory Optimized Subscription** (Suscripción optimizada para memoria) en **true**. Los cambios no se aplican hasta que se reinicializa la suscripción.  
+1.  Vaya a las propiedades de suscripción de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y establezca **Suscripción optimizada para memoria** en **true**. Los cambios no se aplican hasta que se reinicializa la suscripción.  
   
      Si la configuración se realiza mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] , establezca el nuevo parámetro **@memory_optimized** del procedimiento almacenado **sp_addsubscription** en true.  
   
-2.  Vaya a las propiedades del artículo de una publicación en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y establezca **Enable Memory Optimization** (Habilitar optimización para memoria) en true.  
+2.  Vaya a las propiedades del artículo de una publicación en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y establezca **Habilitar optimización para memoria** en true.  
   
      Si la configuración se realiza mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** del procedimiento almacenado **sp_addarticle** en   
     **0x40000000000**.  
   
-3.  Las tablas con optimización para memoria no admiten índices agrupados. Para hacer posible esto, la replicación los convierte en índices no agrupados estableciendo **Convert clustered index to nonclustered for memory optimized article** (Convertir índice agrupado en no agrupado para un artículo optimizado para memoria) en true.  
+3.  Las tablas con optimización para memoria no admiten índices agrupados. Para hacer posible esto, la replicación los convierte en índices no agrupados estableciendo **Convertir índice agrupado en no agrupado para un artículo optimizado para memoria** en true.  
   
      Si la configuración se realiza mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** del procedimiento almacenado **sp_addarticle** en  **0x0000080000000000**.  
   

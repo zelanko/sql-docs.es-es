@@ -41,13 +41,13 @@ Esta versión de ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnove
 La opción -l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de `bcp.exe` en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp.exe` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito. Un tiempo de espera de inicio de sesión de menos de 10 segundos (aproximadamente) no resulta confiable.  
   
 ### <a name="driver-aware-connection-pooling"></a>Agrupación de conexiones dependientes del controlador  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Para obtener más información, consulte [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Para obtener más información, consulte [Agrupación de conexiones dependientes del controlador en ODBC Driver for SQL Server | Microsoft Docs](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Ejecución asincrónica (método de notificación)  
 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [ejecución asincrónica (método de notificación)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx). Para obtener un ejemplo de uso, vea [Ejemplo de ejecución asincrónica &#40;método de notificación&#41;](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
   
 ### <a name="connection-resiliency"></a>Resistencia de conexión
-Para garantizar que las aplicaciones permanecen conectadas a una base de datos SQL de Microsoft Azure, el controlador ODBC de Windows puede restaurar conexiones inactivas. Para obtener más información, consulte [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
+Para garantizar que las aplicaciones permanecen conectadas a una base de datos SQL de Microsoft Azure, el controlador ODBC de Windows puede restaurar conexiones inactivas. Para obtener más información, consulte [Resistencia de conexión en el controlador Windows ODBC](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
   
 ## <a name="behavior-changes"></a>Cambios de comportamiento
 

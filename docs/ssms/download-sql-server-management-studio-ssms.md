@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 12/19/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
+ms.reviewer: sstein
 ms.technology: ssms
 ms.topic: conceptual
 keywords:
@@ -21,21 +21,21 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-author: stevestein
-ms.author: sstein
+author: dnethi
+ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: 685e2ca3c202a93cc290cce4342fe8eaa8151c10
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: a27101c4cefd2a02fcfe199cba909dd37d1167db
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298693"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760028"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Comparta sus comentarios sobre la tabla de contenido dela documentación de SQL!](https://aka.ms/sqldocsurvey)
+> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 SSMS es un entorno integrado para administrar cualquier infraestructura de SQL, desde SQL Server a Azure SQL Database. SSMS proporciona herramientas para configurar, supervisar y administrar instancias de SQL. Use SSMS para implementar, supervisar y actualizar los componentes de capa de datos usados por las aplicaciones, además de compilar consultas y scripts.
 

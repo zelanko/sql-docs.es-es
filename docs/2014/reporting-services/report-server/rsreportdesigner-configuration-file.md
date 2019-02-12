@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ad5a5660e642c13a604b9fdb1a7e5aac516686ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8c979e7ee3d3dcb2f4dba96e73b1d38c526bcb7a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211713"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012896"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>archivo de configuración RSReportDesigner
-  En el archivo RSReportDesigner.config se almacenan las configuraciones de las extensiones de representación y procesamiento de datos disponibles para el Diseñador de informes. Información de la extensión de procesamiento de datos se almacena en el `Data` elemento. La información de la extensión de representación se almacena en el elemento `Render`. El elemento `Designer` enumera los generadores de consultas que se utilizan en el Diseñador de informes.  
+  En el archivo RSReportDesigner.config se almacenan las configuraciones de las extensiones de representación y procesamiento de datos disponibles para el Diseñador de informes. La información de la extensión de procesamiento de datos se almacena en el elemento `Data`. La información de la extensión de representación se almacena en el elemento `Render`. El elemento `Designer` enumera los generadores de consultas que se utilizan en el Diseñador de informes.  
   
  El Diseñador de informes utiliza funcionalidad incrustada del servidor de informes para obtener una vista previa de los informes. La configuración relacionada con el servidor puede especificarse para admitir el procesamiento en el servidor local de las operaciones de vista previa. Para obtener más información sobre las opciones de configuración del servidor de informes, vea [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48211713"
 ## <a name="editing-guidelines"></a>Directrices para editar  
  No modifique la configuración de este archivo, a no ser que vaya a implementar o a quitar una extensión personalizada, a deshabilitar el almacenamiento en caché durante la vista previa o a registrar una nueva extensión de procesamiento de datos después de una actualización de Service Pack.  
   
- Las instrucciones concretas para editar archivos de configuración están disponibles cuando se está personalizando la configuración de la extensión de representación. Para obtener más información, consulte [personalizar parámetros de extensión de representación en RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md).  
+ Las instrucciones concretas para editar archivos de configuración están disponibles cuando se está personalizando la configuración de la extensión de representación. Para más información, vea [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
  Para obtener instrucciones generales sobre cómo editar archivos de configuración, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
@@ -62,9 +62,9 @@ ms.locfileid: "48211713"
 |`SessionCookies`|Especifica si el servidor de informes utiliza cookies del explorador para mantener información de la sesión. Los valores válidos incluyen `true` y `false`. De manera predeterminada, es `true`. Si este valor se establece en false, los datos de la sesión se almacenan en la base de datos **reportservertempdb** .|  
 |`SessionTimeoutMinutes`|Especifica el período durante el cual una cookie de sesión es válida. El valor predeterminado es 3 minutos.|  
 |`PolicyLevel`|Especifica el archivo de configuración de la directiva de seguridad. El valor válido es Rspreviewpolicy.config. Para obtener más información, vea [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
-|`CacheDataForPreview`|Cuando se establece en `True`, el Diseñador de informes almacena los datos en un archivo de caché en el equipo local. Los valores válidos son `True` (valor predeterminado) y `False`. Para más información, consulte [Previewing Reports](../reports/previewing-reports.md).|  
-|`Render`|Enumera las extensiones de representación que están disponibles en el Diseñador de informes para obtener vistas previas. Las extensiones de representación que se utilicen para la vista previa deberían ser idénticas a las instaladas con el servidor de informes.<br /><br /> `Name` Especifica la extensión de representación. Si va a invocar una extensión de representación mediante código, utilice este valor para llamar una extensión específica.<br /><br /> `Type` Especifica el nombre de clase completo de la clase de extensión, junto con el nombre de la biblioteca, separados por comas.<br /><br /> `Visible` especifica si el nombre aparece en una interfaz de usuario. Este valor puede ser `True` (valor predeterminado) o `False`. Si es `True`, aparece en las interfaces de usuario.|  
-|`Data`|Enumera las extensiones de procesamiento de datos que están disponibles en el Diseñador de informes para conectarse a orígenes de datos que proporcionan información a los informes. Las extensiones de procesamiento de datos utilizadas en el Diseñador de informes pueden ser idénticas a las instaladas con el servidor de informes. Si agrega o quita extensiones personalizadas, consulte [implementar una extensión de procesamiento de datos](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> `Name` especifica la extensión de procesamiento de datos.<br /><br /> `Type` Especifica el nombre de clase completo de la clase de extensión, junto con el nombre de la biblioteca, separados por comas.|  
+|`CacheDataForPreview`|Cuando se establece en `True`, el Diseñador de informes almacena los datos en un archivo caché en el equipo local. Los valores válidos son `True` (predeterminado) y `False`. Para más información, consulte [Previewing Reports](../reports/previewing-reports.md).|  
+|`Render`|Enumera las extensiones de representación que están disponibles en el Diseñador de informes para obtener vistas previas. Las extensiones de representación que se utilicen para la vista previa deberían ser idénticas a las instaladas con el servidor de informes.<br /><br /> `Name` especifica la extensión de representación. Si va a invocar una extensión de representación mediante código, utilice este valor para llamar una extensión específica.<br /><br /> `Type` especifica el nombre completo de clase de la extensión, junto con el nombre de la biblioteca, separados por comas.<br /><br /> `Visible` especifica si el nombre aparece en una interfaz de usuario. Este valor puede ser `True` (predeterminado) o `False`. Si es `True`, aparece en las interfaces de usuario.|  
+|`Data`|Enumera las extensiones de procesamiento de datos que están disponibles en el Diseñador de informes para conectarse a orígenes de datos que proporcionan información a los informes. Las extensiones de procesamiento de datos utilizadas en el Diseñador de informes pueden ser idénticas a las instaladas con el servidor de informes. Si agrega o quita extensiones personalizadas, vea [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> `Name` especifica la extensión de procesamiento de datos.<br /><br /> `Type` especifica el nombre completo de clase de la extensión, junto con el nombre de la biblioteca, separados por comas.|  
 |`Designer`|Enumera los generadores de consultas que están disponibles para el Diseñador de informes. Los generadores de consultas proporcionan una interfaz de usuario para crear consultas que recuperan los datos utilizados en los informes. Los generadores de consultas pueden variar entre las diferentes extensiones de procesamiento de datos. De forma predeterminada, Reporting Services proporciona una interfaz de usuario de herramienta de datos visual para todas las extensiones de procesamiento de datos que se incluyen en el producto. Sin embargo, si genera o utiliza extensiones de procesamiento de datos de otros fabricantes, es posible que se apliquen otras interfaces de generador de consultas.|  
 |`PreviewProcessingServiceStartupTimeoutSeconds`|Especifica el período que el servicio de procesamiento de vista previa debe esperar para iniciarse antes de mostrar un mensaje de error. El valor predeterminado es 15 segundos.|  
   

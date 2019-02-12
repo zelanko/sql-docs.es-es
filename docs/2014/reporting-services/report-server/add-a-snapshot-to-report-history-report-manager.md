@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e0c9e553ebff35c865adabfeea164a56b5cffce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 859d4ae6557300582b866d6dcd6d0cd3ed124d2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075975"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014986"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>Agregar una instantánea al historial de informes (Administrador de informes)
   El historial de informes es un conjunto de instantáneas de informe que se crean a lo largo del tiempo. Una instantánea de informe es un informe que contiene información de diseño y resultados de consultas que se recuperaron en un momento concreto. A diferencia de los informes a petición, que obtienen resultados de consulta actualizados cuando se seleccionan, las instantáneas de informe se procesan según una programación y luego se guardan en un servidor de informes. Al seleccionar una instantánea de informe para su visualización, el servidor de informes recupera el informe almacenado en la base de datos del servidor de informes y muestra los datos y el diseño actualizados para el informe en el momento en que se creó la instantánea.  
@@ -38,7 +38,7 @@ ms.locfileid: "48075975"
 3.  Haga clic en **Nueva instantánea**. Se crea una nueva instantánea en la columna **Cuando se ejecuta** .  
   
     > [!NOTE]  
-    >  Para ello, el administrador debe haber configurado el historial de informes con la opción **Permitir que el historial se cree manualmente**. Para obtener más información, consulte [limitar el historial de informe &#40;el Administrador de informes&#41;](../reports/limit-report-history-report-manager.md).  
+    >  Para ello, el administrador debe haber configurado el historial de informes con la opción **Permitir que el historial se cree manualmente**. Para obtener más información, vea [Limitar el historial de informe &#40;Administrador de informes&#41;](../reports/limit-report-history-report-manager.md).  
   
 4.  Haga clic en **Aplicar**.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "48075975"
 5.  Haga clic en **Aplicar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades de ejecución de un informe &#40;el Administrador de informes&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Abrir y cerrar un informe &#40;el Administrador de informes&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Limitar el historial de informes &#40;Administrador de informes&#41;](../reports/limit-report-history-report-manager.md)   
+ [Configurar las propiedades de ejecución de un informe &#40;Administrador de informes&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [Abrir y cerrar un informe &#40;Administrador de informes&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Limitar el historial de informe &#40;Administrador de informes&#41;](../reports/limit-report-history-report-manager.md)   
  [Programaciones](../subscriptions/schedules.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   

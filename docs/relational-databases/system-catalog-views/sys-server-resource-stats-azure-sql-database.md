@@ -2,10 +2,8 @@
 title: Sys.server_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: carlrab, edmaca
-ms.technology: ''
 ms.topic: language-reference
 f1_keywords:
 - resource_stats
@@ -21,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 82cd70d9f1baa7741f4ecc449167d5c56e7fe954
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b8a5aaa7d0aecd992905e0eaf53ef362f24b1485
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392638"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009657"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,12 +40,12 @@ El **sys.server_resource_stats** vista tiene definiciones diferentes dependiendo
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Hora UTC que indica el inicio del intervalo de informes de quince segundos|  
 |end_time|**datetime**|Hora UTC que indica el final del intervalo de informes de quince segundos|
-|resource_type|nvarchar (128)|Tipo de recurso para el que se proporcionan métricas|
+|resource_type|Nvarchar(128)|Tipo de recurso para el que se proporcionan métricas|
 |resource_name|nvarchar(128)|Nombre del recurso.|
 |sku|nvarchar(128)|Administrar el nivel de servicio de instancia de la instancia. Los posibles valores son los siguientes: <br><ul><li>Uso general</li></ul><ul><li>Crucial para la empresa</li></ul>|
 |hardware_generation|nvarchar(128)|Identificador de generación de hardware: por ejemplo, Gen 4 o Gen 5|
 |virtual_core_count|INT|Representa el número de núcleos virtuales por instancia (8, 16 o 24 en versión preliminar pública)|
-|avg_cpu_percent|decimal (5,2)|Promedio de uso en porcentaje del límite del nivel de servicio de instancia administrada usado por la instancia de proceso. Se calcula como la suma del tiempo de CPU de todos los grupos de recursos para todas las bases de datos en la instancia y dividido por el tiempo de CPU disponible para ese nivel en el intervalo especificado.|
+|avg_cpu_percent|decimal(5,2)|Promedio de uso en porcentaje del límite del nivel de servicio de instancia administrada usado por la instancia de proceso. Se calcula como la suma del tiempo de CPU de todos los grupos de recursos para todas las bases de datos en la instancia y dividido por el tiempo de CPU disponible para ese nivel en el intervalo especificado.|
 |reserved_storage_mb|BIGINT|Reservado el almacenamiento por instancia (cantidad de almacenamiento de espacio que el cliente comprado para la instancia administrada)|
 |storage_space_used_mb|decimal(18,2)|Almacenamiento utilizado por los archivos de todas las instancia administrada las bases de datos (incluidas las bases de datos de usuario y del sistema)|
 |io_request|BIGINT|Número total de operaciones de e/s física dentro del intervalo|

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1fb4f5bc-1756-45ca-9cd7-411a8c5992a9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4dfbb3d917be60ced676882895d70247e4a5f8d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202665"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035116"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Crear un modelo de agrupación en clústeres de secuencia relacionado (tutorial intermedio de minería de datos)
   En el modelo de agrupación en clústeres de secuencia aprendió que otros atributos como Region o Income influyen considerablemente en los modelos; por tanto, para ampliar sus conocimientos sobre las secuencias, creará un modelo de agrupación en clústeres de secuencia relacionado y quitará los atributos relacionados con los datos demográficos de los clientes.  

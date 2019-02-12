@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7f735e1a46e5b42ec226d3d885dad00d11dcc39f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5952850708057016c5f9b8144254682a7f47fd9d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589364"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029396"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Guardar informes en el equipo (Generador de informes)
   En el Generador de informes, puede guardar las definiciones de informe en el equipo. Sin embargo, cuando se guarden en el equipo, otros usuarios no podrán verlos y los informes que hagan referencia a orígenes de datos compartidos o que almacenen elementos de informe del almacén, como imágenes y subinformes, podrían no ejecutarse externamente. Se recomienda que guarde los informes en un servidor de informes o sitio de SharePoint.  

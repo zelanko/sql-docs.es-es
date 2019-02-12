@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c5399dd2ae5979fad310bbb048e9c3f3c2147db5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9f9f1dd070ecfd2f680ce68460e2adc5c9727097
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199995"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041676"
 ---
 # <a name="define-query-parameters-dialog-box"></a>Cuadro de diálogo Definir parámetros de consulta
   Use el cuadro de diálogo **Definir parámetros de consulta** cuando desee especificar valores de parámetros mientras ejecuta una consulta en un diseñador de consultas en tiempo de diseño a fin de ver datos de ejemplo. Los parámetros de consulta filtran los datos del origen de datos y ayudan a limitar la cantidad de datos que un informe procesa. Estos valores no se guardan en la definición de informe.  

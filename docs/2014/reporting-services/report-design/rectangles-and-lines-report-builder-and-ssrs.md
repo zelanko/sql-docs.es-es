@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5aa5aca2f152a66d838fd49662c937932586338a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181175"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043116"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rectángulos y líneas (Generador de informes y SSRS)
   Los rectángulos y las líneas pueden crear efectos visuales en un informe. Puede configurar las propiedades de presentación de estos elementos de informe desde la sección Borde de la pestaña Inicio, así como configurar otras propiedades utilizando el panel Propiedades. Puede agregar a un rectángulo características como un color o una imagen de fondo, una información sobre herramientas o un marcador.  
@@ -42,18 +42,18 @@ ms.locfileid: "48181175"
 
   
 ##  <a name="ReportBorder"></a> Agregar un borde al informe  
- Puede agregar un borde a un informe agregando bordes a los encabezados, pies de página y cuerpo del informe, sin tener que agregar líneas o rectángulos. Para más información, vea [Add a Border to a Report &#40;Report Builder and SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
+ Puede agregar un borde a un informe agregando bordes a los encabezados, pies de página y cuerpo del informe, sin tener que agregar líneas o rectángulos. Para más información, vea [Agregar un borde a un informe &#40;Generador de informes y SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Agregar un borde a un informe &#40;generador de informes y SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
+ [Agregar un borde a un informe &#40;Generador de informes y SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
- [Agregar un rectángulo o contenedor &#40;generador de informes y SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [Agregar un rectángulo o un contenedor &#40;Generador de informes y SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
- [Agregar y modificar una línea &#40;generador de informes y SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
+ [Agregar y modificar una línea &#40;Generador de informes y SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar un rectángulo o contenedor &#40;generador de informes y SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [Agregar un rectángulo o un contenedor &#40;Generador de informes y SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

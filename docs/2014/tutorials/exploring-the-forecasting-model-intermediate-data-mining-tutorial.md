@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d49bda5b1616a2052542b6047c1291dd64763e1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401710"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040036"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de previsión (tutorial intermedio de minería de datos)
   Ahora que ha creado el modelo de minería de datos de pronóstico, puede explorar los resultados utilizando la **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos. El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de Series temporales contiene dos pestañas: **Los gráficos** y **modelo**.  

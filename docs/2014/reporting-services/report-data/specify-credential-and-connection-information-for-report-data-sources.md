@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52fac65fdc332f6c0868af84fbeb84c195e1b0f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082252"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039266"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar información de credenciales y conexión para los orígenes de datos de informes
   Un servidor de informes utiliza credenciales para conectarse a orígenes de datos externos que proporcionan contenido a informes o información de destinatarios a una suscripción controlada por datos. Puede especificar credenciales que utilicen la autenticación de Windows, la autenticación de la base de datos, la autenticación personalizada o que no utilicen autenticación. Al enviar una solicitud de conexión a través de la red, el servidor de informes suplantará una cuenta de usuario o una cuenta de ejecución desatendida. Para obtener más información acerca del contexto de seguridad en el que se realiza una solicitud de conexión, vea [Configuración de orígenes de datos y conexiones de red](#DataSourceConfigurationConnections) más adelante en este tema.  
@@ -111,7 +111,7 @@ ms.locfileid: "48082252"
     2.  Si aparece la cuenta en la lista, selecciónela y, a continuación, haga clic en **Quitar**.  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>Usar la suplantación con credenciales almacenadas  
- También puede utilizar las credenciales para suplantar la identidad de otro usuario. Las bases de datos de SQL Server, debe usar la suplantación opciones establece el [SETUSER](/sql/t-sql/statements/setuser-transact-sql) función.  
+ También puede utilizar las credenciales para suplantar la identidad de otro usuario. En el caso de las bases de datos de SQL Server, al usar las opciones de suplantación, se establece la función [SETUSER](/sql/t-sql/statements/setuser-transact-sql) .  
   
 > [!IMPORTANT]  
 >  No utilice la suplantación para informes que admitan suscripciones o que utilicen programaciones para generar el historial del informe o para actualizar una instantánea de ejecución de informes.  
@@ -134,18 +134,18 @@ ms.locfileid: "48082252"
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |Seguridad integrada|Suplantar al usuario actual|Para todos los tipos de orígenes de datos, conectar mediante la cuenta de usuario actual.|  
 |Credenciales de Windows|Suplantar al usuario especificado|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB: conectar mediante la cuenta de usuario suplantado.|  
-|Credenciales de base de datos|Suplantar la cuenta de ejecución desatendida o la cuenta de servicio.<br /><br /> Reporting Services quita los permisos de administrador cuando la solicitud de conexión se envía utilizando la identidad de servicio.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB:<br /><br /> Anexe el nombre de usuario y la contraseña a la cadena de conexión.<br /><br /> Para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La conexión será satisfactoria si está utilizando el protocolo TCP/IP; de lo contrario, la conexión generará error.<br /><br /> Para XML:<br /><br /> La conexión dará error en el servidor de informes si se utilizan las credenciales de la base de datos.|  
-|None|Suplantar la cuenta de ejecución desatendida.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB:<br /><br /> Use las credenciales definidas en la cadena de conexión. La conexión generará error en el servidor de informes si la cuenta de ejecución desatendida está sin definir.<br /><br /> Para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La conexión siempre generará error si no se han especificado credenciales, aunque se haya definido la cuenta de ejecución desatendida.<br /><br /> Para XML:<br /><br /> Conéctese como usuario anónimo si la cuenta de ejecución desatendida se ha definido; de lo contrario, la conexión generará error.|  
+|Credenciales de base de datos|Suplantar la cuenta de ejecución desatendida o la cuenta de servicio.<br /><br /> Reporting Services quita los permisos de administrador cuando la solicitud de conexión se envía utilizando la identidad de servicio.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB:<br /><br /> Anexe el nombre de usuario y la contraseña a la cadena de conexión.<br /><br /> Si trabaja con [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La conexión será satisfactoria si está utilizando el protocolo TCP/IP; de lo contrario, la conexión generará error.<br /><br /> Para XML:<br /><br /> La conexión dará error en el servidor de informes si se utilizan las credenciales de la base de datos.|  
+|None|Suplantar la cuenta de ejecución desatendida.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB:<br /><br /> Use las credenciales definidas en la cadena de conexión. La conexión generará error en el servidor de informes si la cuenta de ejecución desatendida está sin definir.<br /><br /> Si trabaja con [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La conexión siempre generará error si no se han especificado credenciales, aunque se haya definido la cuenta de ejecución desatendida.<br /><br /> Para XML:<br /><br /> Conéctese como usuario anónimo si la cuenta de ejecución desatendida se ha definido; de lo contrario, la conexión generará error.|  
   
 ## <a name="setting-credentials-programmatically"></a>Establecer credenciales mediante programación  
- Puede establecer credenciales en el código para controlar el acceso a informes y al servidor de informes. Para obtener más información, consulte [orígenes de datos y métodos de conexión](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
+ Puede establecer credenciales en el código para controlar el acceso a informes y al servidor de informes. Para más información, consulte [Data Sources and Connection Methods](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Administrar orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Configurar propiedades del origen de datos para un informe &#40;el Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

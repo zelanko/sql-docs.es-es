@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bbd72a6eadac5f65d292b742885c1af957a637e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159525"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039686"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definir parámetros en el diseñador de consultas MDX para Analysis Services (Generador de informes y SSRS)
   Si desea incluir parámetros en una consulta MDX para un origen de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , debe agregar un parámetro de consulta a la consulta. En el diseñador de consultas MDX, puede agregar un parámetro de consulta tanto en el modo de diseño como en el modo de consulta mediante la especificación de un filtro. Después de definir la consulta con un parámetro de consulta, Reporting Services crea automáticamente un parámetro de informe y un conjunto de datos para proporcionar la lista de valores válidos. Esto permite al usuario especificar un valor que se pasa directamente a la consulta.  
@@ -32,7 +32,7 @@ ms.locfileid: "48159525"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Para definir un parámetro de consulta en MDX en el modo de diseño  
   
-1.  En el panel datos de informe, haga doble clic en un conjunto de datos creado a partir de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de origen de datos y, a continuación, haga clic en **consulta**. El diseñador de consultas MDX se abre en el modo de diseño.  
+1.  En el panel Datos de informe, haga clic con el botón secundario en un conjunto de datos creado a partir de un tipo de origen de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y, a continuación, haga clic en **Consulta**. El diseñador de consultas MDX se abre en el modo de diseño.  
   
 2.  Arrastre una dimensión hacia el área de filtro y colóquela en la primera celda de la columna **Dimensión** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48159525"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Para definir un parámetro de consulta en MDX en el modo de consulta  
   
-1.  En el panel datos de informe, haga doble clic en un conjunto de datos creado a partir de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de origen de datos y, a continuación, haga clic en **consulta**. El diseñador de consultas MDX se abre en el modo de diseño.  
+1.  En el panel Datos de informe, haga clic con el botón secundario en un conjunto de datos creado a partir de un tipo de origen de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y, a continuación, haga clic en **Consulta**. El diseñador de consultas MDX se abre en el modo de diseño.  
   
 2.  En la barra de herramientas, haga clic en **Diseño** para cambiar al modo de consulta.  
   
@@ -84,6 +84,6 @@ ms.locfileid: "48159525"
   
 ## <a name="see-also"></a>Vea también  
  [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [Interfaz de usuario del diseñador de consultas MDX de Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
+ [Interfaz de usuario del Diseñador de consultas MDX de Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
   
   

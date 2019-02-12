@@ -12,14 +12,14 @@ f1_keywords:
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6b41dd0e97f8a729d2c58b7fd6b8f0d443fe9c3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115771"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015025"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Cuadro de diálogo Propiedades de meridiano de mapa, Etiquetas
   Use la **MapMeridian propiedades** cuadro de diálogo para cambiar las opciones de etiqueta de la cuadrícula vertical en la ventanilla del mapa. Un meridiano representa el valor siguiente en función del sistema de coordenadas especificado para la ventanilla:  
@@ -31,13 +31,13 @@ ms.locfileid: "48115771"
  Haga clic en el botón **Expresión** (*fx*) para modificar una expresión que establezca el valor de la opción.  
   
 ## <a name="options"></a>Opciones  
- **Intervalo**  
+ **Interval**  
  Escriba un valor entero, en grados, que especifica el intervalo entre los meridianos. La opción seleccionada de forma predeterminada es **Automático** . **Automático** indica que los datos espaciales determinan automáticamente el valor.  
   
  **Mostrar etiquetas**  
  Seleccione esta opción para mostrar etiquetas para los meridianos.  
   
- **selección de ubicación**  
+ **Placement**  
  Seleccione una ubicación para mostrar las etiquetas en relación con la parte superior, central e inferior de la ventanilla. La posición predeterminada es **Cerca**.  
   
 -   **Cerca** Muestra las etiquetas en el borde izquierdo.  

@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce835764cc8964fdd5b6dfb5a6cb19a383ea79b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0bd8ee198a2627d9caaba340c4357bb0de0f30aa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088865"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014806"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configuración de la extensión de entrega de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contiene una extensión de entrega por correo electrónico y una extensión de entrega a recursos compartidos de archivos. La entrega por correo electrónico proporciona una manera de enviar un informe a usuarios individuales o grupos a través del correo electrónico. La entrega a recursos compartidos de archivos permite enviar los informes representados automáticamente a un recurso compartido de la red. Puede utilizar cualquiera de las dos extensiones de entrega admitidas con las suscripciones estándar o las suscripciones controladas por datos. La configuración de entrega específica del tipo de extensión de entrega se pasa siempre que se llama a los métodos <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>,<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>,<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> y <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Para recuperar mediante programación una lista de configuración de entrega, utilice el método <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  
@@ -48,7 +48,7 @@ ms.locfileid: "48088865"
 |**ReplyTo**|Dirección de correo electrónico que aparece en el encabezado `Reply-To` del mensaje. El valor debe ser una dirección de correo electrónico única. Opcional.|  
 |`IncludeReport`|Valor que indica si incluir el informe en la entrega por correo electrónico. El valor `true` indica que el informe se entrega en el cuerpo del mensaje de correo electrónico.|  
 |**RenderFormat**|Nombre de la extensión de representación que se usa para generar el informe representado. El nombre debe corresponder a una de las extensiones de representación visibles instaladas en el servidor de informes. Se requiere este valor si el valor `IncludeReport` está establecido en `true`.|  
-|**Prioridad**|Prioridad con la que se envía el mensaje de correo electrónico. Los valores válidos son `LOW`, `NORMAL`, y `HIGH`. El valor predeterminado es `NORMAL`.|  
+|**Prioridad**|Prioridad con la que se envía el mensaje de correo electrónico. Valores válidos son `LOW`, `NORMAL` y `HIGH`. El valor predeterminado es `NORMAL`.|  
 |**Asunto**|El texto de la línea de asunto del mensaje de correo electrónico.|  
 |**Comentario**|Texto incluido en el cuerpo del mensaje de correo electrónico.|  
 |**IncludeLink**|Valor que indica si incluir un vínculo al informe en el cuerpo del correo electrónico.|  
@@ -64,7 +64,7 @@ ms.locfileid: "48088865"
 |**RENDER_FORMAT**|Formato del informe que se guarda en el disco.|  
 |**USERNAME**|Nombre de usuario necesario para tener acceso al recurso de la red o disco.|  
 |**PASSWORD**|Contraseña necesaria para tener acceso al recurso de la red o disco.|  
-|**WRITEMODE**|Modo de escritura que utilizar al tener acceso al disco. Los valores válidos son `None`, `Overwrite`, y `AutoIncrement`.|  
+|**WRITEMODE**|Modo de escritura que utilizar al tener acceso al disco. Valores válidos son `None`, `Overwrite` y `AutoIncrement`.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md)   

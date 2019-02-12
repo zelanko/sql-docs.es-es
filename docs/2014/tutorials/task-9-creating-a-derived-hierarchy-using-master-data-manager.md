@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3004c9d5ae6637f288a87c50444b46fb958e7d22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076885"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039336"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Tarea 9: crear una jerarquía derivada mediante Master Data Manager
   En esta tarea, creará una jerarquía derivada mediante Master Data Manager. Esta jerarquía derivada se deriva de las relaciones de atributo basado en dominio entre la **proveedor** y **estado** entidades.  
@@ -64,6 +61,6 @@ ms.locfileid: "48076885"
      ![Derivado de la jerarquía en el explorador](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "derivados de la jerarquía en el explorador")  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Lección 5: Automatizar la limpieza y la búsqueda de coincidencias con SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+ [Lección 5: Automatizar la limpieza y búsqueda de coincidencias con SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

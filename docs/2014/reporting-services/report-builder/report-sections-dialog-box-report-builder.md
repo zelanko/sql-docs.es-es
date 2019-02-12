@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39d3aab1e36d51df8eabf14bbd5fb4ecf6824591
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f52afcf99e1727e8de255ca62aa74c893a24273
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050558"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015036"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Cuadro de diálogo Secciones del informe (Generador de informes)
   Al abrir un informe, el Generador de informes comprueba que el informe contenga solo un elemento **\<Section>** del lenguaje RDL (Report Definition Language). No se permite abrir un informe con varios elementos **\<Section>**.  
@@ -30,6 +30,6 @@ ms.locfileid: "48050558"
  Haga clic en **Aceptar** para continuar.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

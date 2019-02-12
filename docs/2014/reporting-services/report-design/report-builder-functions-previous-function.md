@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0c4a4a8f66f00e8446c189bddfe31ed626d0170
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3e856bf37328c5abaf4edd5bf296c1d557a2be7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118215"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010686"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Función Previous (Generador de informes y SSRS)
   Devuelve el valor o el valor agregado especificado para la instancia anterior de un elemento dentro del ámbito especificado.  
@@ -33,13 +33,13 @@ Previous(expression, scope)
   
 #### <a name="parameters"></a>Parámetros  
  *expression*  
- (`Variant` o `Binary`) expresión que se usa para identificar los datos y para que se va a recuperar el valor anterior, por ejemplo, `Fields!Fieldname.Value` o `Sum(Fields!Fieldname.Value)`.  
+ (`Variant` o `Binary`). Expresión que se debe usar para identificar los datos cuyo valor anterior se desea recuperar; por ejemplo, `Fields!Fieldname.Value` o `Sum(Fields!Fieldname.Value)`.  
   
  *ámbito*  
- (`String`) Opcional. El nombre de un grupo o región de datos o null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica el ámbito de la que se va a recuperar el valor anterior especificado por *expresión*.  
+ (`String`) (opcional). El nombre de un grupo o región de datos o null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica el ámbito de la que se va a recuperar el valor anterior especificado por *expresión*.  
   
 ## <a name="return-type"></a>Tipo devuelto  
- Devuelve un `Variant` o `Binary`.  
+ Devuelve un valor `Variant` o `Binary`.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `Previous` devuelve el valor anterior para la expresión evaluada en el ámbito especificado después de aplicar todos los filtros y la configuración de ordenación.  
@@ -64,7 +64,7 @@ Previous(expression, scope)
 ### <a name="description"></a>Descripción  
  Cuando se coloca en la fila de datos predeterminada de una región de datos, el ejemplo de código siguiente proporciona el valor para el campo `LineTotal` de la fila anterior.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 =Previous(Fields!LineTotal.Value)  
@@ -75,16 +75,16 @@ Previous(expression, scope)
   
  Por ejemplo, para una región de datos con un grupo primario denominado `Year`, su grupo secundario se denomina `Month`y su grupo secundario se denomina `Day` (3 niveles anidados). Si se sitúa la expresión `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` en una fila asociada al grupo `Day` , devuelve el valor de las ventas correspondiente al mismo día y mes del año anterior.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 =Sum(Fields!Sales.Value) & " " & Previous(Sum(Fields!Sales.Value,"GroupbyDay"),"GroupbyYear")  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e5f5958b52e59f3eb741f0f593a49e865dfb300e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 302e7f1b58fdb2a63af9f2a1b4e9dad3127c6d57
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217935"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034516"
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Referencia de la biblioteca de proveedores WMI de Reporting Services (SSRS)
   El proveedor de Instrumental de administración de Windows (WMI) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite operaciones de WMI que le permiten escribir scripts y código para modificar la configuración del servidor de informes y del Administrador de informes.  
@@ -41,7 +41,7 @@ ms.locfileid: "48217935"
  Para obtener más información acerca de las operaciones WMI, vea la documentación de SDK WMI que se incluye con el SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Acceso al proveedor WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md)   
+ [Obtener acceso al proveedor WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md)   
  [Referencia técnica &#40;SSRS&#41;](../technical-reference-ssrs.md)  
   
   

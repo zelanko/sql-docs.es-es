@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6f52a6d9a1a28d103f407da049814bbf4a6c0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1ff256deda15e2abdecbff4dc94cc1dcd9d2d5c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166315"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035176"
 ---
 # <a name="secure-my-reports"></a>Proteger Mis informes
   La característica Mis informes proporciona un área de trabajo administrada por el usuario para trabajar con informes. A fin de cumplir su propósito, la carpeta Mis informes precisa permisos menos restrictivos que otras carpetas disponibles para uso general. Los usuarios que solo tienen permisos para ver y ejecutar informes en otras carpetas pueden necesitar un conjunto expandido de permisos para administrar sus carpetas Mis informes y el contenido que poseen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una asignación de roles especializada y una definición de roles para este fin.  
@@ -49,7 +49,7 @@ ms.locfileid: "48166315"
 ## <a name="denying-access-to-my-reports"></a>Denegar acceso a Mis informes  
  Puede impedir que los usuarios tengan acceso a Mis informes:  
   
--   Mediante la deshabilitación de Mis informes en la página Configuración del sitio. Para obtener más información, consulte [habilitar y deshabilitar Mis informes](../report-server/enable-and-disable-my-reports.md).  
+-   Mediante la deshabilitación de Mis informes en la página Configuración del sitio. Para más información, vea [Habilitar y deshabilitar Mis informes](../report-server/enable-and-disable-my-reports.md).  
   
 -   Mediante la eliminación de todas las tareas del rol **Mis informes** .  
   

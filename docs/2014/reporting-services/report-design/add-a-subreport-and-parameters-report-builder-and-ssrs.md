@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2d7ab908fa5f9696c5db4c49f3d99338c9f01a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68165234bcafbb91ef30b45b44fbcf4f64d8657e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166195"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017196"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Agregar un subinforme y parámetros (Generador de informes y SSRS)
   Agregue subinformes a un informe cuando desee crear un informe principal que actúe como contenedor para varios informes relacionados. Un subinforme es una referencia a otro informe. Para relacionar informes mediante valores de datos (por ejemplo, para que varios informes muestren datos del mismo cliente), debe diseñar un informe con parámetros (por ejemplo, un informe que muestre los detalles de un cliente concreto) como el subinforme. Al agregar un subinforme al informe principal, puede especificar los parámetros que se deben pasar al subinforme.  
   
  También puede agregar subinformes a filas o columnas dinámicas de una tabla o matriz. Cuando se procesa el informe principal, se procesa el subinforme para cada fila. En este caso, considere la posibilidad de lograr el efecto deseado usando regiones de datos o regiones de datos anidadas.  
   
- Para agregar un subinforme a un informe, primero debe crear el informe que actuará como el subinforme. Para obtener más información sobre la creación del subinforme, vea [subinformes &#40;generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md).  
+ Para agregar un subinforme a un informe, primero debe crear el informe que actuará como el subinforme. Para obtener más información sobre la creación del subinforme, vea [Subinformes &#40;Generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -73,7 +73,7 @@ ms.locfileid: "48166195"
      Cambiar el orden de un parámetro de subinforme no afecta al procesamiento del subinforme.  
   
 ## <a name="see-also"></a>Vea también  
- [Los subinformes &#40;generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md)   
+ [Subinformes &#40;Generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

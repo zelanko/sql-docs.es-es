@@ -4,19 +4,19 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 84033f550894c29a895ad63e8ee62ce5ce6d461b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15d32c3f97791c6c87b95e431f02e4d75bf8da6f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506402"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026526"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -78,9 +78,9 @@ JSON_MODIFY convierte todos los caracteres especiales en el nuevo valor si el ti
 |Valor existente|La ruta de acceso existe|Modo lax|Modo strict|  
 |--------------------|-----------------|--------------|-----------------|  
 |Not NULL|Sí|Se actualiza el valor existente.|Se actualiza el valor existente.|  
-|Not NULL|no|Se intenta crear un par clave-valor en la ruta de acceso especificada.<br /><br /> Esto puede producir un error. Por ejemplo, si se especifica la ruta de acceso `$.user.setting.theme`, JSON_MODIFY no inserta la clave `theme` si los objetos `$.user` o `$.user.settings` no existen, o bien si la configuración es una matriz o un valor escalar.|Error: INVALID_PROPERTY|  
+|Not NULL|No|Se intenta crear un par clave-valor en la ruta de acceso especificada.<br /><br /> Esto puede producir un error. Por ejemplo, si se especifica la ruta de acceso `$.user.setting.theme`, JSON_MODIFY no inserta la clave `theme` si los objetos `$.user` o `$.user.settings` no existen, o bien si la configuración es una matriz o un valor escalar.|Error: INVALID_PROPERTY|  
 |NULL|Sí|Se elimina la propiedad existente.|El valor actual se establece en NULL.|  
-|NULL|no|No sucede nada. El primer argumento se devuelve como resultado.|Error: INVALID_PROPERTY|  
+|NULL|No|No sucede nada. El primer argumento se devuelve como resultado.|Error: INVALID_PROPERTY|  
   
  En el modo lax, JSON_MODIFY intenta crear un par clave-valor, pero en algunos casos se podría producir un error.  
   
@@ -303,7 +303,7 @@ WHERE EmployeeID=17
  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

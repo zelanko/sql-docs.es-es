@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af0db1ac3d03fa03ea7bb3267656597d164c5302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f92c0886bf3e1e5d5022cde96ad39671588225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222221"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019346"
 ---
 # <a name="server-properties-general-page"></a>Propiedades del servidor (página General)
   Use esta página para ver o modificar el título usado en el Administrador de informes, habilitar o deshabilitar Mis informes, seleccionar una definición de roles para la seguridad de Mis informes, y habilitar o deshabilitar el control de impresión del cliente.  
@@ -28,7 +28,7 @@ ms.locfileid: "48222221"
  El modo de servidor determina qué propiedades de servidor se pueden establecer. Si está administrando un servidor de informes configurado para el modo integrado con SharePoint, no puede habilitar Mis informes o establecer el título de la aplicación para el Administrador de informes.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba un nombre de aplicación que aparece en el Administrador de informes. De forma predeterminada, este valor es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El nombre que especificó solamente aparece en el Administrador de informes.  
   
  **Versión**  
@@ -50,13 +50,13 @@ ms.locfileid: "48222221"
  Especifique una definición de roles para usarla para la seguridad de Mis informes. La definición de roles identifica el conjunto de tareas que se admiten en cada carpeta Mis informes.  
   
  **Habilitar descarga para el control de impresión de ActiveX client**  
- Establece el `EnableClientPrinting` propiedad del sistema de servidor de informes. Si habilita la impresión del cliente, los usuarios que tienen permisos de administrador local tienen la opción de descargar un control de ActiveX firmado para imprimir informes HTML. Para obtener más información, consulte [habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Establece la propiedad del sistema del servidor de informes `EnableClientPrinting`. Si habilita la impresión del cliente, los usuarios que tienen permisos de administrador local tienen la opción de descargar un control de ActiveX firmado para imprimir informes HTML. Para más información, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Habilitar y deshabilitar Mis informes](../report-server/enable-and-disable-my-reports.md)   
  [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
- [Protección de Mis informes](../security/secure-my-reports.md)  
+ [Proteger Mis informes](../security/secure-my-reports.md)  
   
   

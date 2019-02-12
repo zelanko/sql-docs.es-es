@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dd75468674f4013c3587f98ef32d112c8442438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a79771080b1b9c2b7009e7d6228e943e48edbc04
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188665"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027106"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Administrar mis alertas de datos en el Administrador de alertas de datos
   Los usuarios de SharePoint pueden ver una lista de las alertas de datos que han creado e información acerca de las alertas. También pueden eliminar sus alertas, abrir las definiciones de las alertas para modificarlas en el Diseñador de alertas de datos y ejecutar sus alertas. En la imagen siguiente se muestran las características disponibles en el Administrador de alertas de datos para los usuarios.  
@@ -47,7 +47,7 @@ ms.locfileid: "48188665"
   
 -   Haga clic con el botón derecho en la alerta de datos cuya definición de alerta quiere modificar y haga clic en **Editar**.  
   
-     La definición de alerta se abre en el Diseñador de alertas de datos. Para obtener más información, consulte [modificar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md) y [Diseñador de alertas de datos](../../2014/reporting-services/data-alert-designer.md).  
+     La definición de alerta se abre en el Diseñador de alertas de datos. Para más información, vea [Modificar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md) y [Diseñador de alertas de datos](../../2014/reporting-services/data-alert-designer.md).  
   
     > [!NOTE]  
     >  Solo el usuario que creó la definición de alerta de datos puede modificarla.  
@@ -68,7 +68,7 @@ ms.locfileid: "48188665"
      Se crea la instancia de alerta y el mensaje de alerta de datos se envía inmediatamente, independientemente de las opciones de programación que haya especificado en el Diseñador de alertas de datos. Por ejemplo, se enviará una alerta configurada para su envío semanal y solo si cambian los resultados.  
   
 ## <a name="see-also"></a>Vea también  
- [Administrador de alertas de datos para los administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Administrador de alertas de datos para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Alertas de datos de Reporting Services](../ssms/agent/alerts.md)  
   
   

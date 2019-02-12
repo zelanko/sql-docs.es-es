@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139465"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034556"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nueva programación: Editar página de programación (Administrador de informes)
   Utilice la página Nueva programación/Editar programación para crear una programación para un informe. Las programaciones se usan con las suscripciones para actualizar los informes almacenados en caché y para crear instantáneas como elementos independientes o en un historial de informes.  
@@ -79,7 +79,7 @@ ms.locfileid: "48139465"
   
 -   **Hora** define una programación que se ejecuta a intervalos de horas. Use la sección **Fechas de inicio y fin** para especificar el día en el que se va a ejecutar la programación.  
   
--   **Día** define una programación que se ejecuta en los días seleccionados a una hora específica. Puede especificar los días de las siguientes maneras: cada \< *día*>, todos los días laborables y cada \< *número*> días. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
+-   **Día** define una programación que se ejecuta en los días seleccionados a una hora específica. Puede especificar los días de las maneras siguientes: Cada \< *día*>, todos los días laborables y cada \< *número*> días. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
   
 -   **Semana** define una programación que se ejecuta en intervalos semanales a una hora específica. El intervalo puede ser una semana completa (por ejemplo, cada dos semanas) o días de una semana.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48139465"
  Cuando las programaciones dejan de tener validez, no se notifica. Después de la fecha de finalización, ya no vuelven a ejecutarse. Las programaciones expiradas no se eliminan. Las programaciones solo se pueden eliminar manualmente. De esta manera, si decide seguir utilizándola, puede ampliar la fecha de finalización.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 55f7b30650abdacc9a7fe85ec1e9de77d36cecd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185395"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023586"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS)
   Los tipos de gráficos basados en coordenadas (de columnas, de barras, de áreas, de puntos, de líneas y de intervalos) tienen dos ejes que se usan para clasificar y mostrar las relaciones entre los datos. A cada eje se le aplican distintos tipos de formato.  
@@ -52,7 +52,7 @@ ms.locfileid: "48185395"
   
  Cuando se arrastra un campo desde un conjunto de datos a la superficie del gráfico, el gráfico determinará si este campo pertenece al eje de categorías o al de valores.  
   
- El eje de valores normalmente es el eje vertical o eje Y, del gráfico. Se usa para mostrar los valores de los datos numéricos que se representan gráficamente. Si se arrastra un campo a la región de datos, se representará en el eje de valores. El eje de categorías normalmente es el eje horizontal o eje X del gráfico. Para los gráficos de barras, estos ejes se invierten. En los tipos de gráficos de barras, el eje de categorías es el eje vertical y el eje de valores es el eje horizontal. Para obtener más información, consulte [gráficos de barras &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ El eje de valores normalmente es el eje vertical o eje Y, del gráfico. Se usa para mostrar los valores de los datos numéricos que se representan gráficamente. Si se arrastra un campo a la región de datos, se representará en el eje de valores. El eje de categorías normalmente es el eje horizontal o eje X del gráfico. Para los gráficos de barras, estos ejes se invierten. En los tipos de gráficos de barras, el eje de categorías es el eje vertical y el eje de valores es el eje horizontal. Para más información, vea [Gráficos de barras &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 ## <a name="how-the-chart-calculates-axis-label-intervals"></a>Cómo calcula el gráfico los intervalos de las etiquetas de los ejes  
  Antes de dar formato a las etiquetas de los ejes, debería entender cómo calcula el gráfico los intervalos de las etiquetas de los ejes. Esto le permitirá establecer las propiedades necesarias para lograr que las etiquetas de los ejes se muestren como desea.  
@@ -92,13 +92,13 @@ ms.locfileid: "48185395"
  El campo Nombre se muestra a lo largo del eje de categorías. El gráfico calcula entre cuatro y seis etiquetas, y calcula valores de ajuste automático para determinar cómo deben situarse las etiquetas en el eje de categorías sin producir colisiones entre ellas. Como consecuencia, es posible que se omitan algunas etiquetas de categoría. Puede invalidar las opciones de ajuste automático para cada eje por separado.  
   
 ## <a name="displaying-all-labels-on-the-category-axis"></a>Mostrar todas las etiquetas en el eje de categorías.  
- En el eje de valores, los intervalos de eje proporcionan una medida coherente de los puntos de datos representados en el gráfico. Sin embargo, en el eje de categorías, esta funcionalidad puede provocar que las categorías aparezcan sin etiquetas en los ejes. Normalmente, deseará que todas las categorías tengan etiquetas. Puede establecer el número de intervalos en 1 para que se muestren todas las categorías.  Para obtener más información, consulte [especificar un intervalo de eje &#40;generador de informes y SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
+ En el eje de valores, los intervalos de eje proporcionan una medida coherente de los puntos de datos representados en el gráfico. Sin embargo, en el eje de categorías, esta funcionalidad puede provocar que las categorías aparezcan sin etiquetas en los ejes. Normalmente, deseará que todas las categorías tengan etiquetas. Puede establecer el número de intervalos en 1 para que se muestren todas las categorías.  Para más información, vea [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Cuando se reemplazan las características de etiquetado automático por un intervalo manual en un eje, el gráfico debe cambiar el tamaño de todos los demás elementos en consecuencia. Como resultado, puede que observe resultados imprevisibles en cuanto al tamaño y la posición de las etiquetas o al tamaño de otros elementos del gráfico.  
   
 ## <a name="variable-axis-intervals"></a>Intervalos de eje variables  
- El gráfico calcula aproximadamente cinco intervalos de etiquetas del eje sin tener en cuenta el tamaño del gráfico. En gráficos más anchos o más altos, si solo muestra cinco etiquetas en un eje, pueden aparecer grandes huecos entre las etiquetas. Esto hace que resulte más difícil identificar el valor de cada punto de datos con relación al eje. Para evitar este comportamiento en gráficos más anchos o más altos, puede establecer un intervalo de eje variable. El gráfico calculará el número óptimo de etiquetas que pueden aparecer en el eje basándose en el ancho o el alto del gráfico, dependiendo del eje correspondiente. Para obtener más información, consulte [especificar un intervalo de eje &#40;generador de informes y SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
+ El gráfico calcula aproximadamente cinco intervalos de etiquetas del eje sin tener en cuenta el tamaño del gráfico. En gráficos más anchos o más altos, si solo muestra cinco etiquetas en un eje, pueden aparecer grandes huecos entre las etiquetas. Esto hace que resulte más difícil identificar el valor de cada punto de datos con relación al eje. Para evitar este comportamiento en gráficos más anchos o más altos, puede establecer un intervalo de eje variable. El gráfico calculará el número óptimo de etiquetas que pueden aparecer en el eje basándose en el ancho o el alto del gráfico, dependiendo del eje correspondiente. Para más información, vea [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Ordenar los valores de los ejes  
  Las categorías aparecen a lo largo del eje X en el orden en que aparecen en el conjunto de resultados. Puede cambiar el orden del grupo agregando un comando SORT a la consulta u ordenando el conjunto de datos mediante una expresión. Las regiones de datos del gráfico se ordenan igual que todas las demás regiones de datos. Para más información sobre cómo ordenar datos, vea [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md).  
@@ -113,18 +113,18 @@ ms.locfileid: "48185395"
 -   Seleccione un campo o escriba una expresión para la opción **Campo de categorías** en el cuadro de diálogo **Propiedades de la serie** . El gráfico agregará intervalos al eje para todos los valores del campo de categorías que especificó.  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Agregar o quitar los márgenes laterales del eje de categorías  
- En los gráficos de barras, de dispersión y de columnas, el gráfico agrega automáticamente márgenes laterales en los extremos del eje X. No puede cambiar el tamaño del margen. En todos los demás tipos de gráficos, el gráfico no agrega márgenes laterales. Para obtener más información, consulte [agregar o quitar márgenes de un gráfico &#40;generador de informes y SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
+ En los gráficos de barras, de dispersión y de columnas, el gráfico agrega automáticamente márgenes laterales en los extremos del eje X. No puede cambiar el tamaño del margen. En todos los demás tipos de gráficos, el gráfico no agrega márgenes laterales. Para más información, vea [Agregar o quitar márgenes de un gráfico &#40;Generador de informes y SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Dar formato a las etiquetas de eje como fechas o moneda &#40;generador de informes y SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+ [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [Colocar etiquetas en un gráfico &#40;generador de informes y SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [Colocar etiquetas en un gráfico &#40;Generador de informes y SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
- [Especifique un intervalo de eje &#40;generador de informes y SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [Agregar o quitar márgenes de un gráfico &#40;generador de informes y SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Agregar o quitar márgenes de un gráfico &#40;Generador de informes y SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Especificar una escala logarítmica &#40;generador de informes y SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Especificar una escala logarítmica &#40;Generador de informes y SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

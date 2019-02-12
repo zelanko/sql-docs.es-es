@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a6f13d8d76854c3fdf01dceeeb61c4d06f2a0e16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142465"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024146"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Generador de informes y SSRS)
   Los indicadores son medidores mínimos que comunican el estado del valor de un dato de un vistazo. Los iconos que representan a los indicadores y sus estados son simples y visualmente efectivos incluso cuando su tamaño es pequeño.  
@@ -44,7 +44,7 @@ ms.locfileid: "48142465"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona conjuntos de indicadores integrados e iconos de indicadores para usarlos tal cual, pero también puede personalizar iconos de indicadores individuales y conjuntos de indicadores para satisfacer sus necesidades.  
   
- Para obtener más información sobre el uso de indicadores como KPI, vea [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Para obtener más información sobre el uso de indicadores como KPI, vea [Tutorial: Agregar un KPI a un informe &#40;generador de informes&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Puede publicar indicadores por separado de un informe como elementos de informe. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -90,7 +90,7 @@ ms.locfileid: "48142465"
   
 -   Eliminar iconos del conjunto de indicadores para que los datos se muestren de forma más sencilla, utilizando solo unos cuantos iconos.  
   
- Para obtener más información, vea [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Cambiar iconos de indicador y conjuntos de indicadores &#40;Generador de informes y SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
   
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> Usar indicadores en tablas y matrices  
@@ -100,23 +100,23 @@ ms.locfileid: "48142465"
   
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
- Para obtener más información sobre cómo agregar, modificar y eliminar indicadores, vea [Add or Delete an Indicator &#40;Report Builder and SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md).  
+ Para obtener más información sobre cómo agregar, modificar y eliminar indicadores, vea [Agregar o eliminar un indicador &#40;Generador de informes y SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md).  
   
- La primera vez que se agrega un indicador a un informe, se configura para que use los valores predeterminados. Posteriormente, los valores se pueden cambiar para que el indicador represente los datos de la manera deseada. Puede cambiar la apariencia de los iconos del indicador, la manera en que el indicador elige qué icono utilizar, y cambiar los iconos utilizados por un conjunto de indicadores. Para obtener más información, vea [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
+ La primera vez que se agrega un indicador a un informe, se configura para que use los valores predeterminados. Posteriormente, los valores se pueden cambiar para que el indicador represente los datos de la manera deseada. Puede cambiar la apariencia de los iconos del indicador, la manera en que el indicador elige qué icono utilizar, y cambiar los iconos utilizados por un conjunto de indicadores. Para obtener más información, vea [Cambiar iconos de indicador y conjuntos de indicadores &#40;Generador de informes y SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
- De forma predeterminada, los indicadores se configuran para utilizar los porcentajes como la unidad de medida y detectar automáticamente los valores máximo y mínimo en los datos. Cada icono del conjunto de indicadores tiene un intervalo de porcentaje. El número de intervalos de porcentaje depende del número de iconos en el conjunto de iconos, pero los intervalos tienen el mismo tamaño y son secuenciales. Por ejemplo, si el conjunto de iconos tiene cinco iconos, hay cinco intervalos de porcentaje, cada uno de un tamaño del 20 por ciento. El primero comienza en 0 y finaliza en 20, el segundo comienza en 20 y finaliza en 40, y así sucesivamente. El indicador del informe utiliza el icono del conjunto de indicadores que tenga un intervalo de porcentaje dentro del que se encuentra el valor de los datos del indicador. Puede cambiar el intervalo de porcentaje para cada icono del conjunto. Los valores máximo y mínimo se pueden establecer explícitamente proporcionando un valor o una expresión. Puede cambiar la unidad de medida para que sea un valor numérico en su lugar. En esta situación, no se especifica el valor mínimo ni el máximo de los datos. Por el contrario, solo se proporcionan los valores de inicio y finalización para cada icono que el indicador utiliza. Para obtener más información, consulte [conjunto y configurar unidades de medida &#40;generador de informes y SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
+ De forma predeterminada, los indicadores se configuran para utilizar los porcentajes como la unidad de medida y detectar automáticamente los valores máximo y mínimo en los datos. Cada icono del conjunto de indicadores tiene un intervalo de porcentaje. El número de intervalos de porcentaje depende del número de iconos en el conjunto de iconos, pero los intervalos tienen el mismo tamaño y son secuenciales. Por ejemplo, si el conjunto de iconos tiene cinco iconos, hay cinco intervalos de porcentaje, cada uno de un tamaño del 20 por ciento. El primero comienza en 0 y finaliza en 20, el segundo comienza en 20 y finaliza en 40, y así sucesivamente. El indicador del informe utiliza el icono del conjunto de indicadores que tenga un intervalo de porcentaje dentro del que se encuentra el valor de los datos del indicador. Puede cambiar el intervalo de porcentaje para cada icono del conjunto. Los valores máximo y mínimo se pueden establecer explícitamente proporcionando un valor o una expresión. Puede cambiar la unidad de medida para que sea un valor numérico en su lugar. En esta situación, no se especifica el valor mínimo ni el máximo de los datos. Por el contrario, solo se proporcionan los valores de inicio y finalización para cada icono que el indicador utiliza. Para obtener más información, vea [Establecer y configurar unidades de medida &#40;Generador de informes y SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
   
  Los indicadores transmiten los valores de datos sincronizando los valores de datos del indicador que están en un ámbito especificado. De forma predeterminada, el ámbito es el contenedor primario del indicador, por ejemplo la tabla o matriz que contiene el indicador. Puede cambiar la sincronización del indicador eligiendo otro ámbito, por ejemplo un grupo, en función del diseño del informe. El indicador puede omitir la sincronización. Para obtener más información, vea [Establecer el ámbito de sincronización &#40;Generador de informes y SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md).  
   
  Para obtener información general sobre la descripción y el ámbito de configuración de informes, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Los indicadores solo usan un valor único. Si tiene que mostrar varios valores de datos, use un minigráfico o una barra de datos en lugar de un indicador. Los indicadores pueden representar varios valores de datos, pero son sencillos, fáciles de entender en tamaños pequeños y funcionan bien en tablas y matrices. Para obtener más información, vea [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
+ Los indicadores solo usan un valor único. Si tiene que mostrar varios valores de datos, use un minigráfico o una barra de datos en lugar de un indicador. Los indicadores pueden representar varios valores de datos, pero son sencillos, fáciles de entender en tamaños pequeños y funcionan bien en tablas y matrices. Para obtener más información, vea [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
   
 ##  <a name="SizingIndicatators"></a> Ajustar el tamaño de los indicadores para maximizar su impacto visual  
  Además del color, dirección y forma, puede usar el tamaño para maximizar el impacto visual de los indicadores. Imagine un informe que utilice indicadores para mostrar la satisfacción del cliente con distintos tipos de bicicletas. El icono utilizado por el indicador se puede configurar para que tenga tamaños distintos en función de la satisfacción del cliente. Cuanto mayor sea el grado de satisfacción, más grande será el icono que se muestra en el informe. En la siguiente imagen se muestra un informe sobre ventas de bicicletas; los tamaños del icono reflejan la cantidad de las ventas.  
   
- Puede usar expresiones para establecer de manera dinámica el tamaño de las estrellas, en función de los valores del campo utilizado por el indicador. Para obtener más información, consulte [especificar el tamaño de un indicador al usar una expresión &#40;generador de informes y SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
+ Puede usar expresiones para establecer de manera dinámica el tamaño de las estrellas, en función de los valores del campo utilizado por el indicador. Para obtener más información, vea [Especificar el tamaño de un indicador al usar una expresión &#40;Generador de informes y SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
   
  Para obtener más información sobre cómo escribir y usar expresiones, vea [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
@@ -128,9 +128,9 @@ ms.locfileid: "48142465"
   
  ![rs_GaugePanelWithIndicatorAndGauge](../media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- Para obtener más información, vea [Include Indicators and Gauges in a Gauge Panel &#40;Report Builder and SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Incluir indicadores y medidores en un panel de medidores &#40;Generador de informes y SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
   
- Para obtener más información sobre el uso de medidores, vea [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
+ Para obtener más información sobre el uso de medidores, vea [Medidores &#40;Generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
   
 ##  <a name="SequenceIndicatorStates"></a> Secuencia de estados de indicador  
@@ -188,22 +188,22 @@ ms.locfileid: "48142465"
 ##  <a name="HowTo"></a> Temas de procedimientos  
  En esta sección se enumeran procedimientos que muestran cómo agregar, cambiar y eliminar indicadores, cómo configurar y personalizar indicadores, y cómo usar indicadores en medidores.  
   
--   [Agregar o eliminar un indicador &#40;generador de informes y SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [Agregar o eliminar un indicador &#40;Generador de informes y SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [Cambiar iconos de indicador y conjuntos de indicadores &#40;generador de informes y SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Cambiar iconos de indicador y conjuntos de indicadores &#40;Generador de informes y SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Establecer y configurar unidades de medida &#40;generador de informes y SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Establecer y configurar unidades de medida &#40;Generador de informes y SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Establecer el ámbito de sincronización &#40;generador de informes y SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Establecer el ámbito de sincronización &#40;Generador de informes y SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [Especifique el tamaño de un indicador utilizando una expresión &#40;generador de informes y SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [Especificar el tamaño de un indicador al usar una expresión &#40;Generador de informes y SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [Incluir indicadores y medidores en un Panel de medidores &#40;generador de informes y SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [Incluir indicadores y medidores en un panel de medidores &#40;Generador de informes y SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>Vea también  
- [Los medidores &#40;generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Medidores &#40;Generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Los gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

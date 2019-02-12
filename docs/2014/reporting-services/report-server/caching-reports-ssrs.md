@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f026e83f5f968480b9484c0a1251929a299055b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e0e063b662d83655eb9c8a99b8ec1317dfffa263
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069423"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029706"
 ---
 # <a name="caching-reports-ssrs"></a>Informes almacenados en caché (SSRS)
   Un servidor de informes puede almacenar en memoria caché una copia de un informe procesado y devolverla cuando el usuario abra el informe. Para un usuario, la única prueba visible que indica que el informe es una copia en caché es la fecha y la hora de ejecución. Si la fecha o la hora no son actuales y el informe no es una instantánea, significa que éste se ha obtenido de la caché.  
@@ -63,7 +63,7 @@ ms.locfileid: "48069423"
   
  Almacenar en caché un informe resulta especialmente útil si se desea almacenar en caché varias instancias de un informe con parámetros, en el que se utilizan distintos valores de parámetros para generar diferentes instancias de informe. Tenga en cuenta que en el informe solamente se pueden especificar parámetros basados en consultas.  
   
- Cuando se especifica una programación o se crea la suscripción controlada por datos, se debe programar la frecuencia con que se entregan los informes en la memoria caché. Para que se entreguen copias nuevas en la memoria caché, las antiguas deben haber expirado. Por lo tanto, las propiedades de Ejecución del informe se deben configurar de modo que se incluyan parámetros de expiración de la caché. La configuración de expiración debe ser coherente con la programación definida para la suscripción. Por ejemplo, si se crea una suscripción que se ejecute cada noche, la caché también debería expirar cada noche antes de la ejecución de la suscripción. Si las propiedades de ejecución no contemplan las horas de expiración, se omitirán las entregas más recientes. Para obtener más información acerca de los planes de actualización de caché, consulte [programaciones](../subscriptions/schedules.md). Para obtener más información acerca de las propiedades de configuración, consulte [establecer propiedades de procesamiento de informes](set-report-processing-properties.md). Para obtener más información sobre el uso de las suscripciones controladas por datos, consulte [suscripciones controladas por datos](../subscriptions/data-driven-subscriptions.md).  
+ Cuando se especifica una programación o se crea la suscripción controlada por datos, se debe programar la frecuencia con que se entregan los informes en la memoria caché. Para que se entreguen copias nuevas en la memoria caché, las antiguas deben haber expirado. Por lo tanto, las propiedades de Ejecución del informe se deben configurar de modo que se incluyan parámetros de expiración de la caché. La configuración de expiración debe ser coherente con la programación definida para la suscripción. Por ejemplo, si se crea una suscripción que se ejecute cada noche, la caché también debería expirar cada noche antes de la ejecución de la suscripción. Si las propiedades de ejecución no contemplan las horas de expiración, se omitirán las entregas más recientes. Para más información sobre los planes de actualización de la memoria caché, vea [Programaciones](../subscriptions/schedules.md). Para más información sobre cómo establecer las propiedades, vea [Establecer las propiedades de procesamiento de informes](set-report-processing-properties.md). Para más información sobre cómo usar suscripciones controladas por datos, vea [Suscripciones controladas por datos](../subscriptions/data-driven-subscriptions.md).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Situaciones que pueden provocar la expiración de la memoria caché  
  Un informe en caché pierde su validez como consecuencia de las siguientes situaciones: una modificación de la definición de informe o de los parámetros del informe, un cambio de las credenciales del origen de datos o un cambio de las opciones de ejecución del informe. Si elimina un informe almacenado en caché, también se elimina la versión en caché.  
@@ -71,8 +71,8 @@ ms.locfileid: "48069423"
  Si un informe no puede representarse desde una instancia en caché por cualquier motivo (por ejemplo, si los valores de los parámetros que especifica un usuario son distintos de los que se utilizan para generar el informe en caché), el servidor de informes vuelve a ejecutar el informe.  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer opciones de procesamiento &#40;modo integrado de Reporting Services en SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Establecer las propiedades de procesamiento de informes](set-report-processing-properties.md)   
+ [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Establecer las propiedades del procesamiento de informes](set-report-processing-properties.md)   
  [Conceptos de Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](preload-the-cache-report-manager.md)   
  [Programaciones](../subscriptions/schedules.md)   

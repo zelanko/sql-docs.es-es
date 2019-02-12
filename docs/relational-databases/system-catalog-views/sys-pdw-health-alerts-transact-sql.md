@@ -1,25 +1,24 @@
 ---
-title: Sys.pdw_health_alerts (Transact-SQL) | Microsoft Docs
+title: sys.pdw_health_alerts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d26b8d9b19b29a92481c3dccf9d4809e74691a44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41ae6d70399dea79a92cbc4fd77ba6e08f660d7c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794473"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025456"
 ---
-# <a name="syspdwhealthalerts-transact-sql"></a>Sys.pdw_health_alerts (Transact-SQL)
+# <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Almacena las propiedades de las diferentes alertas que se pueden producir en el sistema; se trata de una tabla de catálogo para las alertas.  
@@ -27,7 +26,7 @@ ms.locfileid: "47794473"
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |alert_id|**int**|Identificador único de la alerta.<br /><br /> Clave para esta vista.|NOT NULL|  
-|IdComponente|**int**|Identificador del componente al que se aplica esta alerta. El componente es un identificador de componente generales, como "Alimentación" y no es específico para una instalación. Consulte [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
+|component_id|**int**|Identificador del componente al que se aplica esta alerta. El componente es un identificador de componente generales, como "Alimentación" y no es específico para una instalación. Consulte [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
 |alert_name|**nvarchar(255)**|Nombre de la alerta.|NOT NULL|  
 |state|**nvarchar(32)**|Estado de la alerta.|NOT NULL<br /><br /> Valores posibles:<br /><br /> 'Operational'<br /><br /> 'No operativa'<br /><br /> Está "Degradado"<br /><br /> 'Error'|  
 |severity|**nvarchar(32)**|Gravedad de la alerta.|NOT NULL<br /><br /> Valores posibles:<br /><br /> "Informativo"<br /><br /> "Advertencia"<br /><br /> 'Error'|  

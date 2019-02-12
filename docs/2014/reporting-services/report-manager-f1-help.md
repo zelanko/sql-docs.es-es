@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133295"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019326"
 ---
 # <a name="report-manager-f1-help"></a>Administrador de informes (Ayuda F1)
   Los temas siguientes ofrecen ayuda para las páginas del Administrador de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Hay un tema para cada página de la aplicación. Puede que no todas las páginas estén disponibles. La configuración de seguridad determina las páginas a las que se puede obtener acceso. Para obtener acceso a estos temas desde el Administrador de informes, haga clic en **Ayuda** en la barra de herramientas principal.  
@@ -104,9 +104,9 @@ ms.locfileid: "48133295"
  Para obtener más información acerca del Administrador de informes y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en MSDN.  
   
 ## <a name="see-also"></a>Vea también  
- [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Referencia de características (Reporting Services)](feature-reference-reporting-services.md)   
- [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Administrador de informes](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Información general del componente de Reporting Services](tools/reporting-services-tools.md)  
   

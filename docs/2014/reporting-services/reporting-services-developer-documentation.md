@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16c0f4451b66b0aa0c004476a4dc332acf973a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97d59933a1df11123b153e11f7ae75d926829dcb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116015"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023446"
 ---
 # <a name="developer39s-guide-reporting-services"></a>Desarrollador&#39;guía (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varias interfaces de programación que puede aprovechar en sus propias aplicaciones. Puede utilizar las características y capacidades existentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para generar herramientas personalizadas de administración y elaboración de informes en los sitios web y en las aplicaciones Windows, o para ampliar la plataforma de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varias interfaces de programación que puede aprovechar en sus propias aplicaciones. Puede utilizar las características y capacidades existentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para generar herramientas personalizadas de administración y elaboración de informes en los sitios web y en las aplicaciones Windows, o para ampliar la plataforma de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
  Extender la plataforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye crear nuevos componentes y recursos que se pueden utilizar para el acceso a los datos, la entrega de informes, etcétera. Puede comercializar estos componentes y recursos para las compañías que utilizan [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en la organización.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48116015"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite un conjunto completo de solicitudes basadas en direcciones URL que se pueden usar como punto de acceso rápido y sencillo para la navegación y visualización de informes. Puede utilizar esta tecnología junto con el servicio web del servidor de informes para integrar una solución de informes completa en aplicaciones empresariales personalizadas. El acceso URL es particularmente útil al integrar informes como parte de un portal web o al ver los informes desde un explorador web.  
   
  [Extensiones de Reporting Services](extensions/reporting-services-extensions.md)  
- La arquitectura modular de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se ha diseñado para permitir ampliaciones. Hay una API de código administrado que permite desarrollar, instalar y administrar con facilidad las extensiones que usan numerosos componentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Puede crear ensamblados mediante [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] y agregar una nueva funcionalidad de procesamiento de datos, representación, seguridad y entrega de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para satisfacer sus necesidades empresariales en evolución.  
+ La arquitectura modular de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se ha diseñado para permitir ampliaciones. Hay una API de código administrado que permite desarrollar, instalar y administrar con facilidad las extensiones que usan numerosos componentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Puede crear ensamblados mediante [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] y agregar una nueva funcionalidad de procesamiento de datos, representación, seguridad y entrega de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para satisfacer sus necesidades empresariales en evolución.  
   
  [Elementos de informe personalizados](custom-report-items/custom-report-items.md)  
  Describe cómo crear los elementos de informe personalizado para agregar la funcionalidad a RDL o extender la funcionalidad de los controles existentes.  

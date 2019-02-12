@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505640"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023126"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilidad RS.exe (SSRS)
   La utilidad rs.exe procesa el script que proporcione en un archivo de entrada. Use esta utilidad para automatizar las tareas de implementación y administración del servidor de informes.  
@@ -65,7 +65,7 @@ ms.locfileid: "52505640"
  **-?**  
  (Opcional) Muestra la sintaxis de los argumentos de **rs** .  
   
- `-i` *archivo_entrada*  
+ `-i` *input_file*  
  (Obligatorio) Especifica el archivo .rss que debe ejecutarse. Este valor puede ser una ruta de acceso relativa o una ruta de acceso completa al archivo .rss.  
   
  `-s` *serverURL*  
@@ -74,7 +74,7 @@ ms.locfileid: "52505640"
  `-u` [*dominio*\\]*nombre de usuario*  
  (Opcional) Especifica una cuenta de usuario que se utiliza para conectarse al servidor de informes. Si se omiten `-u` y `-p`, se usa la cuenta de usuario actual de Windows.  
   
- `-p` *Contraseña*  
+ `-p` *password*  
  (Obligatorio si se especifica `-u`) Especifica la contraseña que debe utilizarse con el argumento `-u`. Este valor distingue mayúsculas de minúsculas.  
   
  `-e`  
@@ -90,13 +90,13 @@ ms.locfileid: "52505640"
   
  Si no se especifica ningún valor, se utilizará el extremo Mgmt2005. Para obtener más información acerca de los extremos SOAP, vea [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
- `-l` *tiempo_de_espera*  
+ `-l` *time_out*  
  (Opcional) Especifica el número de segundos que deben transcurrir antes de que se agote el tiempo de espera de la conexión al servidor. El valor predeterminado es 60 segundos. Si no se especifica ningún valor de tiempo de espera, se utiliza el valor predeterminado. El valor `0` indica que nunca se agota el tiempo de espera de la conexión.  
   
  **-b**  
  (Opcional) Especifica que los comandos del archivo de script se ejecutan en un lote. Si se produce un error en alguno de los comandos, se revierte el lote. Algunos comandos no se pueden ejecutar por lotes y se ejecutan de la manera habitual. Solo si se producen excepciones que no se controlan dentro del script tiene lugar una operación de reversión. Si el script controla una excepción y vuelve con normalidad desde `Main`, se confirma el lote. Si omite este parámetro, los comandos se ejecutan sin crear un lote. Para obtener más información, consulte [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
- `-v` *GlobalVar*  
+ `-v` *globalvar*  
  (Opcional) Especifica las variables globales que se usan en el script. Si el script utiliza variables globales, debe especificar este argumento. El valor que especifique debe ser válido para la variable global definida en el archivo .rss. Debe especificar una variable global para cada argumento **-v**.  
   
  El argumento `-v` se especifica en la línea de comandos y se usa para establecer el valor de una variable global que se define en el script en tiempo de ejecución. Por ejemplo, si el script contiene una variable con nombre *parentFolder*, puede especificar un nombre para dicha carpeta en la línea de comandos:  

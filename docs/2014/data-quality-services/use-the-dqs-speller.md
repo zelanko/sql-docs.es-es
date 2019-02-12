@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d3e0ab451344b443452052960c16f9ccfdc9462
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7e043e20af78653fccfa0ed3a2b227a1023e0657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412952"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016088"
 ---
 # <a name="use-the-dqs-speller"></a>Utilizar el corrector ortográfico de DQS
   El corrector ortográfico de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) comprueba la sintaxis, la ortografía y la estructura de las frases de los valores de cadena de un dominio. El corrector ortográfico es una característica independiente, del lado cliente, que no se integra con los motores del servidor y no tiene ninguna implicación en los flujos o estados actuales. El corrector ortográfico identifica los valores de cadena que considera posibles errores, y los marca con un carácter de subrayado rojo en la misma ubicación en la que se realizan otros cambios manuales en los valores de dominio. Entre estas ubicaciones se incluyen:  
@@ -64,7 +64,7 @@ ms.locfileid: "52412952"
   
 6.  Si desea agregar el valor al diccionario, haga clic en **Agregar al diccionario**. El carácter de subrayado rojo desaparecerá del valor.  
   
-##  <a name="FollowUp"></a> Sigue: Después de utilizar el corrector ortográfico  
+##  <a name="FollowUp"></a> Seguimiento: Después de utilizar el corrector ortográfico  
  Una vez ejecutado el corrector ortográfico, complete la actividad en la que se encuentra el dominio para usar las correcciones sugeridas por dicho corrector. Si se encuentra en la actividad Detección de conocimiento, Administración de dominios o Directiva de coincidencia, publique la base de conocimiento para que los resultados del análisis del corrector ortográfico estén disponibles para su uso en ella. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> Cómo funciona el corrector ortográfico  

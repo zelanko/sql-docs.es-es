@@ -19,37 +19,37 @@ helpviewer_keywords:
 - id-prefix annotation [SQLXML]
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37b1505d0d35300fcf088e78d4c46ae2f69f4aa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5b2e9be930bf7ef2cfc70ab9e900ae8f957152c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733473"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034666"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>Interpretación de anotaciones: otras anotaciones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Además de las anotaciones descritas en los temas anteriores de esta sección, la carga masiva de XML interpreta estas otras anotaciones del modo siguiente:  
   
- **SQL: ID-prefijo**  
+ **sql:id-prefix**  
  Si el esquema especifica prefijos para los datos XML, la carga masiva de XML quita los prefijos antes de enviar los datos a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- **SQL: use-cdata**  
+ **sql:use-cdata**  
  La carga masiva de XML lee el texto que está almacenado en las secciones CDATA y lo envía a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- **SQL: url-encode**  
+ **sql:url-encode**  
  La carga masiva de XML no admite esta anotación. Por ejemplo, no puede especificar una dirección URL en la entrada de datos XML y esperar que la carga masiva de XML lea los datos de esa ubicación para almacenarlos en la base de datos.  
   
- **SQL: is-mapping-schema**  
+ **sql:is-mapping-schema**  
  La carga masiva de XML no admite esta anotación, ni tampoco admite **sql:id**.  
   
 > [!NOTE]  
 >  La carga masiva de XML no admite los esquemas de asignación insertados.  
   
- **SQL: Key-campos**  
+ **sql:key-fields**  
  La carga masiva de XML omite siempre esta anotación.  
   
 ## <a name="see-also"></a>Vea también  

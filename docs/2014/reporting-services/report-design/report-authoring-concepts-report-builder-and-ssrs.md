@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: df8a54eb3f130da611c5ad79bcb411fe8318da88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220015"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026802"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceptos de creación de informes (Generador de informes y SSRS)
   En esta sección se definen brevemente los conceptos clave que se usan en la documentación del Generador de informes y del Diseñador de informes. Para obtener definiciones de términos o palabras específicas, vea el [Glosario &#40;Generador de informes&#41;](../report-builder/glossary-report-builder.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48220015"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Los informes, elementos de informe y definiciones de informe &#40;generador de informes y SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Describe la diversidad de términos que se usan para describir un informe en distintos estados, incluyendo la definición inicial, el informe publicado y el informe visualizado tal cual aparece ante el usuario.  
   
  [Incrustados y compartidos de conexiones de datos u orígenes de datos &#40;generador de informes y SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "48220015"
  [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Explica las diferencias de crear, almacenar y administrar conjuntos de datos incrustados y compartidos.  
   
- [Regiones de datos y mapas &#40;generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)  
+ [Regiones de datos y mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)  
  Describe los tipos de regiones de datos que se pueden agregar al diseño de un informe. Las regiones de datos determinan la apariencia de un informe: en forma de tabla, matriz, lista o gráfico.  
   
  [Concepto de parámetros de informe &#40;generador de informes y SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  

@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccabc5546cd61f7b685480cf2c2819d6594aee1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182678"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015986"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visor HTML y la barra de herramientas del informe
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona un Visor HTML que se usa para mostrar informes a petición conforme se solicitan del servidor de informes. El Visor HTML ofrece un marco para ver informes en HTML. Incluye una barra de herramientas de informe, una sección de parámetros, una sección de credenciales y un mapa del documento. La barra de herramientas de informe del Visor HTML incluye características que se pueden usar para trabajar con un informe, incluidas las opciones de exportación para verlo con formatos distintos de HTML. La sección de parámetros y el mapa del documento solamente aparecen cuando se abren informes configurados para usar parámetros y un control de mapa de documento.  
   
 > [!NOTE]  
->  Aunque no se puede modificar la barra de herramientas de informe, puede configurar los parámetros de una URL de informe para ocultarla en un informe. Para obtener más información acerca de cómo ocultar la barra de herramientas de informe, vea [URL Access Parameter Reference](url-access-parameter-reference.md).  
+>  Aunque no se puede modificar la barra de herramientas de informe, puede configurar los parámetros de una URL de informe para ocultarla en un informe. Para obtener más información sobre cómo ocultar la barra de herramientas de informe, vea [Referencia de parámetros de acceso URL](url-access-parameter-reference.md).  
   
 ## <a name="report-toolbar"></a>Barra de herramientas de informe  
  La barra de herramientas de informe proporciona funcionalidades para navegación, zoom, actualización, búsqueda, exportación, impresión y fuentes de distribución de datos para los informes representados con la extensión de representación HTML.  
@@ -34,18 +34,18 @@ ms.locfileid: "48182678"
   
  La barra de herramientas de informe es similar a la que se muestra en la siguiente ilustración. Es posible que la suya difiera un poco de la que se muestra en la ilustración, dependiendo de las características del informe o las opciones de representación disponibles.  
   
- ![Barra de herramientas de informe](media/htmlviewer-toolbar.gif "Barra de herramientas de informe")  
+ ![Report toolbar](media/htmlviewer-toolbar.gif "Report toolbar")  
   
  En la tabla siguiente se describen las características más comunes de la barra de herramientas de informe. Cada característica se identifica con el control que se utiliza para obtener acceso a ella.  
   
 |Utilice este icono o control||En|  
 |------------------------------|-|--------|  
-|![Controles de navegación de página](media/htmlviewer-pagenav.gif "controles de navegación de página")|**Controles de navegación en páginas**|Abrir la primera o la última página de un informe, ver un informe página a página y abrir una página concreta de un informe. Para ver una página específica, escriba el número de página y presione ENTRAR.|  
-|![Controles para mostrar páginas](media/htmlviewer-pagesize.gif "controles para mostrar páginas")|**Controles para mostrar páginas**|Aumentar o reducir el tamaño de la página del informe. Además de los cambios basados en porcentajes, puede seleccionar **Ancho de página** para que la página del informe se ajuste al ancho de la ventana del explorador o **Toda la página** para que la página del informe se ajuste al alto de la ventana. **Internet Explorer 5.5 y versiones posteriores admiten la opción** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
-|![Campo de búsqueda](media/htmlviewer-search.gif "campo de búsqueda")|**Campo Buscar**|Buscar contenido del informe escribiendo una palabra o una frase que se desee encontrar (la longitud máxima del valor es 256 caracteres). La función de búsqueda distingue entre mayúsculas y minúsculas, y se inicia en la página o sección seleccionada. En una operación de búsqueda, solo se incluye el contenido visible. Para buscar más repeticiones del mismo valor, haga clic en **Siguiente**.|  
-|![Formatos de exportación](media/htmlviewer-export.GIF "formatos de exportación")|**Formatos de exportación**|Abrir una nueva ventana del explorador y representar el informe con el formato seleccionado. Los formatos disponibles vienen determinados por las extensiones de representación que se hayan instalado en el servidor de informes. Para imprimir se recomienda TIFF. Haga clic en **Exportar** para ver el informe con el formato seleccionado.|  
-|![Icono de mapa de documento](media/htmlviewer-docmap.GIF "icono de mapa de documento")|**Icono de mapa de documento**|Mostrar u ocultar el panel del mapa del documento en un informe que incluya un mapa de documento. Un mapa de documento es un control de navegación en informes similar al panel de navegación de un sitio web. Se puede hacer clic en los elementos del mapa para navegar a un grupo, una página o un subinforme determinado.|  
-|![Icono de la impresora](media/printer-icon.gif "icono de la impresora")|**Icono de impresora**|Abrir el cuadro de diálogo Imprimir, en el que puede especificar las opciones de impresión e imprimir un informe. Cuando se use por primera vez, al hacer clic en este icono se le pedirá que descargue el control de impresión.|  
+|![Controles de navegación en páginas](media/htmlviewer-pagenav.gif "Controles de navegación en páginas")|**Controles de navegación en páginas**|Abrir la primera o la última página de un informe, ver un informe página a página y abrir una página concreta de un informe. Para ver una página específica, escriba el número de página y presione ENTRAR.|  
+|![Controles para mostrar páginas](media/htmlviewer-pagesize.gif "Controles para mostrar páginas")|**Controles para mostrar páginas**|Aumentar o reducir el tamaño de la página del informe. Además de los cambios basados en porcentajes, puede seleccionar **Ancho de página** para que la página del informe se ajuste al ancho de la ventana del explorador o **Toda la página** para que la página del informe se ajuste al alto de la ventana. **Internet Explorer 5.5 y versiones posteriores admiten la opción** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
+|![Campo Buscar](media/htmlviewer-search.gif "Campo Buscar")|**Campo Buscar**|Buscar contenido del informe escribiendo una palabra o una frase que se desee encontrar (la longitud máxima del valor es 256 caracteres). La función de búsqueda distingue entre mayúsculas y minúsculas, y se inicia en la página o sección seleccionada. En una operación de búsqueda, solo se incluye el contenido visible. Para buscar más repeticiones del mismo valor, haga clic en **Siguiente**.|  
+|![Formatos de exportación](media/htmlviewer-export.GIF "Formatos de exportación")|**Formatos de exportación**|Abrir una nueva ventana del explorador y representar el informe con el formato seleccionado. Los formatos disponibles vienen determinados por las extensiones de representación que se hayan instalado en el servidor de informes. Para imprimir se recomienda TIFF. Haga clic en **Exportar** para ver el informe con el formato seleccionado.|  
+|![Icono de mapa de documento](media/htmlviewer-docmap.GIF "Icono de mapa de documento")|**Icono de mapa de documento**|Mostrar u ocultar el panel del mapa del documento en un informe que incluya un mapa de documento. Un mapa de documento es un control de navegación en informes similar al panel de navegación de un sitio web. Se puede hacer clic en los elementos del mapa para navegar a un grupo, una página o un subinforme determinado.|  
+|![Icono de impresora](media/printer-icon.gif "Icono de impresora")|**Icono de impresora**|Abrir el cuadro de diálogo Imprimir, en el que puede especificar las opciones de impresión e imprimir un informe. Cuando se use por primera vez, al hacer clic en este icono se le pedirá que descargue el control de impresión.|  
 ||**Iconos para mostrar y ocultar**|Mostrar u ocultar los campos de valores de parámetros y el botón **Ver informe** en un informe que incluya parámetros.|  
 |![Botón para actualizar el explorador de la barra de herramientas](media/htmlviewer-refresh.GIF "Botón para actualizar el explorador de la barra de herramientas")|**Icono para actualizar informe**|Actualizar el informe. Se actualizarán los datos de los informes activos. Los informes almacenados en caché se volverán a cargar desde su lugar de almacenamiento.|  
 |![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Icono de fuente de distribución de datos**|Fuentes de distribución de datos generadas a partir de informes.|  

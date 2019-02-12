@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3c908bfa457c9bc692c56a1625a64116365958db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9d4052b6e330bab1c32650b7cdeae7ecb5c7b21f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144645"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031086"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Configurar las propiedades de ejecución de un informe (Administrador de informes)
   Puede establecer las opciones de procesamiento de informes para especificar cuándo se recuperan los datos para un informe. Resulta útil programar el procesamiento de datos para un informe si el origen de datos externo se actualiza en momentos concretos (por ejemplo, un almacenamiento de datos que se actualiza diariamente o semanalmente) y desea evitar la sobrecarga de recuperar los mismos datos cada vez que se solicita un informe. La programación del procesamiento de datos también resulta útil si desea controlar la carga del procesamiento en el servidor de bases de datos externo o si desea proporcionar resultados coherentes para varios usuarios que deben trabajar con conjuntos idénticos de datos. Si los datos no son estables, un informe a petición puede producir resultados diferentes en pocos minutos. Por el contrario, una instantánea de informe permite hacer comparaciones válidas con otros informes o herramientas de análisis que tengan los datos existentes en el mismo instante.  
@@ -48,10 +48,10 @@ ms.locfileid: "48144645"
 3.  Haga clic en **Aplicar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer las propiedades de procesamiento de informes](../report-server/set-report-processing-properties.md)   
- [Abrir y cerrar un informe &#40;el Administrador de informes&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [El contenido de página &#40;el Administrador de informes&#41;](../contents-page-report-manager.md)   
- [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Establecer las propiedades del procesamiento de informes](../report-server/set-report-processing-properties.md)   
+ [Abrir y cerrar un informe &#40;Administrador de informes&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Contenido &#40;página del Administrador de informes&#41;](../contents-page-report-manager.md)   
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Página de propiedades Opciones de procesamiento &#40;Administrador de informes&#41;](../processing-options-properties-page-report-manager.md)  
   
   

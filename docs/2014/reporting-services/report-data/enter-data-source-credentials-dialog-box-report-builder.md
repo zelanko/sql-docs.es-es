@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5299d9deccbec3d9ba842961d408f72767fa5b04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 571e95646caa58a94e92768e1a5fbcc8ed7656b3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080915"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020546"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Escribir credenciales de origen de datos (cuadro de diálogo del Generador de informes)
   Use el cuadro de diálogo **Escribir credenciales de origen de datos** para proporcionar las credenciales necesarias para poder recuperar datos del origen de datos.  
@@ -31,9 +31,9 @@ ms.locfileid: "48080915"
  Escriba la contraseña con la que iniciar sesión en el origen de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Propiedades del origen de datos (cuadro de diálogo), General &#40;Generador de informes&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
  [Especificar credenciales en el Generador de informes](../specify-credentials-in-report-builder.md)   
- [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

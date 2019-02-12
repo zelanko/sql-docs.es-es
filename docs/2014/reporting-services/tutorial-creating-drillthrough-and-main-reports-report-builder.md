@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512549"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023757"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
   Este tutorial le enseña cómo crear dos tipos de informes: un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. En la siguiente ilustración se muestran los informes que creará.  
@@ -213,7 +213,7 @@ ms.locfileid: "52512549"
   
 7.  Haga clic en **Siguiente**.  
   
-##  <a name="DLayout"></a> 1C. Organizar los datos en grupos  
+##  <a name="DLayout"></a> 1c. Organizar los datos en grupos  
  Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -239,7 +239,7 @@ ms.locfileid: "52512549"
   
 6.  Haga clic en **Siguiente**.  
   
-##  <a name="DTotals"></a> 1 día. Agregar subtotales y totales  
+##  <a name="DTotals"></a> 1d. Agregar subtotales y totales  
  Después de crear grupos, puede agregar filas y darles formato, donde se mostrarán los valores agregados para los campos. Puede decidir también si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para agregar subtotales y totales  
@@ -250,7 +250,7 @@ ms.locfileid: "52512549"
   
 2.  Haga clic en **Siguiente**.  
   
-##  <a name="DStyle"></a> 1E. Elegir un estilo  
+##  <a name="DStyle"></a> 1e. Elegir un estilo  
  Un estilo especifica un estilo de fuente, un conjunto de colores y un estilo de borde.  
   
 #### <a name="to-specify-a-style"></a>Para especificar un estilo  
@@ -536,7 +536,7 @@ ms.locfileid: "52512549"
   
 6.  Haga clic en **Siguiente**.  
   
-##  <a name="MLayout"></a> 1C. Organizar los datos en grupos  
+##  <a name="MLayout"></a> 1c. Organizar los datos en grupos  
  Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -555,7 +555,7 @@ ms.locfileid: "52512549"
   
      Los pasos 3 y 4 especifican los datos que deben mostrarse en la matriz.  
   
-##  <a name="MTotals"></a> 1 día. Agregar subtotales y totales  
+##  <a name="MTotals"></a> 1d. Agregar subtotales y totales  
  Puede mostrar subtotales y totales generales en informes. Los datos del informe principal muestran como un indicador; quitará el total general cuando complete el asistente.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Agregar subtotales y totales generales  
@@ -566,7 +566,7 @@ ms.locfileid: "52512549"
   
 2.  Haga clic en **Siguiente**.  
   
-##  <a name="MStyle"></a> 1E. Elegir un estilo  
+##  <a name="MStyle"></a> 1e. Elegir un estilo  
  Aplique el estilo Pizarra al informe. Es el mismo estilo que usa el informe detallado.  
   
 #### <a name="to-specify-a-style"></a>Para especificar un estilo  

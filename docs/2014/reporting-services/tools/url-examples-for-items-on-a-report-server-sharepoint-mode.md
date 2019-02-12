@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157935"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026536"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Ejemplos de dirección URL para los elementos de informe publicados en un servidor de informes en modo de SharePoint (SSRS)
   Para publicar informes y elementos relacionados en una biblioteca de SharePoint, puede publicar el contenido con las herramientas de creación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como, por ejemplo, el Diseñador de informes o puede cargar el contenido mediante acciones del sitio de SharePoint.  
@@ -76,7 +76,7 @@ ms.locfileid: "48157935"
  Una definición de informe puede incluir un archivo de imagen almacenado como un archivo externo. Puede hacer referencia a ese archivo en la definición de informe estableciendo una dirección URL completa al archivo de imagen. Puede almacenarse en un sitio de SharePoint o en un equipo remoto.  
   
 > [!IMPORTANT]  
->  Si la dirección URL externa es para una imagen en un sitio de SharePoint, el icono de imagen rota aparecerá al obtener una vista previa del informe en el Generador de informes. Al cargar el informe en el sitio de SharePoint y representarlo en modo conectado, el icono de imagen rota aparecerá si solo tiene `View Items` permisos.  
+>  Si la dirección URL externa es para una imagen en un sitio de SharePoint, el icono de imagen rota aparecerá al obtener una vista previa del informe en el Generador de informes. Al cargar el informe en el sitio de SharePoint y representarlo en modo conectado, el icono de la imagen rota aparecerá si solo tiene permisos de `View Items`.  
   
  Independientemente del modo del servidor de informes, las referencias a un archivo de imagen externo en un informe deben ser direcciones URL completas. Además, cuando se hace referencia a un archivo de imagen externo, normalmente es necesario configurar la cuenta de procesamiento de informes en modo desatendido.  
   
@@ -138,6 +138,6 @@ ms.locfileid: "48157935"
 ## <a name="see-also"></a>Vea también  
  [Publicar un informe en una biblioteca de SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publicación de un origen de datos compartido en una biblioteca de SharePoint](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Cuadro Páginas de propiedades del proyecto](project-property-pages-dialog-box.md)  
+ [Páginas de propiedades del proyecto (cuadro de diálogo)](project-property-pages-dialog-box.md)  
   
   

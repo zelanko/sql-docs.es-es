@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un informe de tabla básico (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Creación de un informe de tabla básico (generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 438ea8d61900a78c6522cf8897b960598d8d3976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189115"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020436"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Creación de un informe de tabla básico (generador de informes)
   Este tutorial muestra cómo crear un informe de tabla básico basado en datos de ventas de ejemplo. En la siguiente ilustración se muestra el informe que va a crear.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -164,7 +164,7 @@ ms.locfileid: "48189115"
   
 4.  Haga clic en **Siguiente**.  
   
-##  <a name="Groups"></a> 1C. Organizar datos en grupos en el Asistente para tablas  
+##  <a name="Groups"></a> 1c. Organizar datos en grupos en el Asistente para tablas  
  Al seleccionar los campos por los que desea agrupar, diseña una tabla que tiene filas y columnas en las que se muestran datos detallados y datos agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -191,7 +191,7 @@ ms.locfileid: "48189115"
   
 6.  Haga clic en **Siguiente**.  
   
-##  <a name="Subtotals"></a> 1 día. Agregar filas de subtotal y de total en el Asistente para tablas  
+##  <a name="Subtotals"></a> 1d. Agregar filas de subtotal y de total en el Asistente para tablas  
  Después de crear grupos, puede agregar filas y darles formato, para mostrar en ellas los valores agregados de los campos. Puede decidir si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para agregar subtotales y totales  
@@ -216,7 +216,7 @@ ms.locfileid: "48189115"
   
 4.  Haga clic en **Siguiente**.  
   
-##  <a name="Style"></a> 1E. Elegir un estilo en el Asistente para tablas  
+##  <a name="Style"></a> 1e. Elegir un estilo en el Asistente para tablas  
  Un estilo especifica un estilo de fuente, un conjunto de colores y un estilo de borde.  
   
 #### <a name="to-specify-a-table-style"></a>Para especificar un estilo de tabla  
@@ -229,7 +229,7 @@ ms.locfileid: "48189115"
   
 3.  Haga clic en **Finalizar**.  
   
- La tabla se agrega a la superficie de diseño. La tabla tiene 5 columnas y 5 filas. El panel Grupos de filas muestra tres grupos de filas: SalesDate, Subcategory y Details. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
+ La tabla se agrega a la superficie de diseño. La tabla tiene 5 columnas y 5 filas. El panel de grupos de filas muestra tres grupos de filas: SalesDate, Subcategory y Details. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
   
 ##  <a name="FormatCurrency"></a> 2. Dar formato a los datos como moneda  
  De forma predeterminada, los datos de resumen del campo Sales se muestran en forma de número general. Aplíquele el formato adecuado para mostrar el número como moneda. Alterne **Estilos de marcador de posición** para mostrar los cuadros de texto con formato y el texto de marcador de posición como valores de ejemplo.  

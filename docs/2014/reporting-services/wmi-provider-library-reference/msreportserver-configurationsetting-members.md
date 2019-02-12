@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 981db90ba9114b26b0581f9b1e3d62561c8b6939
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7acfc09d226c3e352feae42e76d85f1dd8d1a531
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180625"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024176"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>Miembros MSReportServer_ConfigurationSetting
   La clase MSReportServer_ConfigurationSetting contiene los siguientes métodos y propiedades.  
@@ -55,7 +55,7 @@ ms.locfileid: "48180625"
 |[SMTPServer](configurationsetting-property-smtpserver.md)|Obtiene la propiedad de servidor SMTP a partir del archivo RSReportServer.config. Solo lectura.|  
 |[UnattendedExecutionAccount](configurationsetting-property-unattendedexecutionaccount.md)|Especifica la cuenta de usuario de inicio de sesión que el servidor de informes suplanta al ejecutarse los informes de forma desatendida. Solo lectura.|  
 |[Versión](configurationsetting-property-version.md)|Devuelve la versión del servidor de informes.|  
-|[Propiedad VirtualDirectoryReportManager &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|Devuelve el directorio virtual para la aplicación de administrador de informes.|  
+|[Propiedad VirtualDirectoryReportManager &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|Devuelve el directorio virtual para la aplicación de administrador de informes.|  
 |[Propiedad VirtualDirectoryReportServer &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|Devuelve el directorio virtual para la aplicación de servicio web del servidor de informes.|  
 |[WindowsServiceIdentityActual](configurationsetting-property-windowsserviceidentityactual.md)|Devuelve la identidad en la que se ejecuta en la actualidad el servicio de Windows de servidor de informes. Solo lectura.|  
 |[WindowsServiceIdentityConfigured](windowsserviceidentityconfigured-property.md)|Devuelve la última identidad en la que se configuró el servicio Servidor de informes de Windows para ejecutarse. Solo lectura.|  
@@ -75,11 +75,11 @@ ms.locfileid: "48180625"
 |[GetDatabaseVersionDisplayName](configurationsetting-method-getdatabaseversiondisplayname.md)|Obtiene el nombre para mostrar para una cadena de versión de base de datos del servidor de informes determinada.|  
 |[InitializeReportServer](configurationsetting-method-initializereportserver.md)|Inicializa la instancia del servidor de informes especificada.|  
 |[Método ListInstalledSharePointVersions &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|Devuelve un conjunto de tokens que representan las versiones de [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] que se instalan en el mismo equipo que el servidor de informes.|  
-|[Método ListIPAddresses &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-method-listipaddresses.md)|Enumera las direcciones IP del equipo.|  
+|[Método ListIPAddresses &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listipaddresses.md)|Enumera las direcciones IP del equipo.|  
 |[ListReportServersInDatabase](configurationsetting-method-listreportserversindatabase.md)|Devuelve una lista de las instalaciones del servidor de informes que se encuentran en la base de datos del servidor de informes, sin tener en cuenta si esas instalaciones tienen acceso a la información segura.|  
 |[Método ListReservedURLs &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-method-listreservedurls.md)|Enumera las direcciones URL reservadas para todas las aplicaciones en el servidor de informes.|  
-|[Método ListSSLCertificateBindings &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-method-listsslcertificatebindings.md)|Enumera los enlaces de certificados SSL que existen en HTTP.SYS y los esperados a partir de rsreportserver.config.|  
-|[Método ListSSLCertificates &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-method-listsslcertificates.md)|Enumera los certificados SSL instalados en el equipo.|  
+|[Método ListSSLCertificateBindings &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificatebindings.md)|Enumera los enlaces de certificados SSL que existen en HTTP.SYS y los esperados a partir de rsreportserver.config.|  
+|[Método ListSSLCertificates &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificates.md)|Enumera los certificados SSL instalados en el equipo.|  
 |[ReencryptSecureInformation](configurationsetting-method-reencryptsecureinformation.md)|Genera una nueva clave de cifrado y vuelve a cifrar toda la información segura en la base de datos del servidor de informes utilizando esta nueva clave.|  
 |[Método RemoveSSLCertificateBindings &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-method-removesslcertificatebinding.md)|Quita un enlace de certificado SSL.|  
 |[RemoveUnattendedExecutionAccount](configurationsetting-method-removeunattendedexecutionaccount.md)|Elimina la entrada de cuenta de ejecución desatendida de la configuración del servidor de informes.|  
@@ -97,6 +97,6 @@ ms.locfileid: "48180625"
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|Hace que el servicio Windows del servidor de informes se ejecute como el usuario de Windows especificado y concede a esta cuenta suficientes permisos de sistema de archivos para que el servidor de informes pueda funcionar.|  
   
 ## <a name="see-also"></a>Vea también  
- [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting Class](msreportserver-configurationsetting-class.md)  
   
   

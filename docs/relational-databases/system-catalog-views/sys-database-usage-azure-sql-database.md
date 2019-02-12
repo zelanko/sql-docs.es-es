@@ -2,10 +2,9 @@
 title: Sys.database_usage (base de datos de SQL Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - database_usage
@@ -22,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 62942e939c1221b90b623db12c922f3dcc580c99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656744"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024906"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "51656744"
 |Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |time|Fecha en que se produjeron los eventos de uso.|  
-|sku|El tipo de nivel de servicio para la base de datos: **Web**, **Business**, **básica**, **estándar**, **Premium**|  
+|sku|Tipo de nivel de servicio de la base de datos: **Web**, **Business**, **básica**, **estándar**, **Premium**|  
 |quantity|El número máximo de bases de datos de un tipo SKU que existía durante ese día.|  
   
 ## <a name="permissions"></a>Permisos  

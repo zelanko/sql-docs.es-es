@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b5d3115fd6d87152b09a12c3b5806c440d5c423e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf21ba6211a016676ea7d1f2547bf4d96b1e6fb4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224195"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023767"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>Propiedad DatabaseQueryTimeout (MSReportServer_ConfigurationSetting de WMI)
   Especifica el número de segundos que deben transcurrir antes de que el servidor de informes asuma un error del comando o que necesita demasiado tiempo para ejecutarse. El servidor de informes ajusta el tiempo de la consulta con respecto al catálogo de SQL, no a un origen de datos para el informe. Lectura/escritura  
@@ -40,7 +40,7 @@ public UInt32 DatabaseQueryTimeout;
 ```  
   
 ## <a name="property-values"></a>Valores de propiedad  
- 32 bits sin signo `integer` objeto que representa el número de segundos que se puede ejecutar la consulta.  
+ Un objeto `integer` de 32 bits sin signo que representa el número de segundos en que puede ejecutarse la consulta.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

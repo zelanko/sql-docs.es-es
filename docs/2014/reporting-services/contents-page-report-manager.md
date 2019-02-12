@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b4b342251e2b7bac68aa8c7015be82ec9dc1df19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96092da800b6df640ffa9f99b2fe851460edacc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056255"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019437"
 ---
 # <a name="contents-page-report-manager"></a>Contenido (página del Administrador de informes)
   Use la página Contenido para ver el contenido de la carpeta actual, seleccionar elementos para verlos o navegar a otras carpetas. Esta página se abre cuando se selecciona una carpeta. Es también la página principal del Administrador de informes.  
@@ -56,8 +56,8 @@ ms.locfileid: "48056255"
  Haga clic para cambiar la posición de un elemento dentro de la jerarquía de carpetas. Antes de hacer clic en **Mover**, active la casilla situada junto a cada elemento que desee mover. Al hacerlo, se abre la página para mover elementos, en la que puede examinar las carpetas para seleccionar una nueva ubicación.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

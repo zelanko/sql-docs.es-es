@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f87a00c79af0fdf1f2ecc164c7d14421318e052a
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 85dcae394c84a6af889dc6483e9989bc6dbe2ead
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032932"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014303"
 ---
 # <a name="building-a-knowledge-base"></a>Crear una base de conocimiento
   Una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) es un repositorio de conocimiento sobre los datos que le permite comprenderlos y mantener su integridad. Una base de conocimiento consta de dominios, cada uno de los cuales representa los datos de un campo de datos. DQS utiliza la base de conocimiento para realizar la limpieza de datos y la eliminación de datos duplicados en una base de datos. Para preparar la base de conocimiento para la limpieza de datos, puede ejecutar un análisis asistido por PC de una muestra de los datos, así como administrar de forma interactiva los valores de los dominios. DQS le permite importar conocimiento, crear reglas y relaciones, cambiar los valores de los datos directamente y utilizar una base de datos predeterminada.  

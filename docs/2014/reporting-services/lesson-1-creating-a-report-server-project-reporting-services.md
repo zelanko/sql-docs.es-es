@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3a57bbc055c226fdfa9d4454ba22f2160dee06c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220975"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032366"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lección 1: Crear un proyecto de servidor de informes (Reporting Services)
   Para crear un informe en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], primero debe crear un proyecto de servidor de informes donde guardará el archivo de definición de informe (.rdl) y cualquier otro archivo de recursos que necesite para el informe. Luego creará el archivo de definición de informe real, definirá un origen de datos para el informe, definirá un conjunto de datos y establecerá el diseño del informe. Cuando ejecuta el informe, los datos reales se recuperan y combinan con el diseño y luego se representan en pantalla, desde donde se pueden exportar, imprimir o guardar.  
@@ -52,12 +52,12 @@ ms.locfileid: "48220975"
   
      Se abrirá el Diseñador de informes y se mostrará el nuevo archivo .rdl en la vista Diseño.  
   
- El Diseñador de informes es un componente de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que se ejecuta en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Tiene dos vistas: **Diseño** y **Vista previa**. Haga clic en cada pestaña para cambiar las vistas.  
+ El Diseñador de informes es un componente de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que se ejecuta en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Tiene dos vistas: **Diseño** y **Preview**. Haga clic en cada pestaña para cambiar las vistas.  
   
  Los datos se definen en el panel **Datos de informe** . El diseño del informe se define en la vista **Diseño** . Puede ejecutar el informe y ver su aspecto en la vista **Vista previa** .  
   
 ## <a name="next-task"></a>Tarea siguiente  
- Ha creado un proyecto de informe denominado "Tutorial" y ha agregado un archivo de definición de informe (.rdl) al proyecto del informe correctamente. A continuación, debe especificar un origen de datos para utilizarlo con el informe. Vea [Lección 2: Especificar información de conexión &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md).  
+ Ha creado un proyecto de informe denominado "Tutorial" y ha agregado un archivo de definición de informe (.rdl) al proyecto del informe correctamente. A continuación, debe especificar un origen de datos para utilizarlo con el informe. Consulte [lección 2: Especificar información de conexión &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  

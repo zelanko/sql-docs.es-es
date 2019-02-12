@@ -12,20 +12,20 @@ f1_keywords:
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4b939fe20f4bcd280c00dc6279ebb1c8ba3a1f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c6a9c5445e5ed0371922a7c5aad929519ed4e0d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082255"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022786"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la leyenda, General (Generador de informes y SSRS)
   Use el cuadro de diálogo **Leyenda** para definir el aspecto y el diseño de la leyenda del gráfico. Para obtener más información, consulte [aplicar formato a la leyenda en un gráfico &#40;generador de informes y SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre de la leyenda.  
   
  **Diseño**  
@@ -50,11 +50,11 @@ ms.locfileid: "48082255"
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Aplicar formato a la leyenda en un gráfico &#40;generador de informes y SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Definir los colores de un gráfico mediante una paleta &#40;Generador de informes y SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Trazar datos en un eje secundario &#40;generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Aplicar formato a la leyenda en un gráfico &#40;generador de informes y SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [Agregar una media móvil a un gráfico &#40;generador de informes y SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Agregar una media móvil a un gráfico &#40;Generador de informes y SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -1,9 +1,9 @@
 ---
-title: Sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9be76f5f308213f905224de5ade9b604ec119c30
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 634cded452697c91dfd2ff60635faa7fe1163958
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514649"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027506"
 ---
-# <a name="sysdmpdwresourcewaits-transact-sql"></a>Sys.dm_pdw_resource_waits (Transact-SQL)
+# <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Información para todos los tipos de recursos en espera de muestra [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "52514649"
 |state|**nvarchar(50)**|Estado del estado de espera.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|Prioridad del elemento de espera.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |concurrency_slots_used|**int**|Número de espacios de simultaneidad (máximo 32) reservado para esta solicitud.|1 - en SmallRC<br /><br /> 3 - por MediumRC<br /><br /> 7 para LargeRC<br /><br /> 22 - para XLargeRC|  
-|resource_class|**nvarchar (20)**|La clase de recursos para esta solicitud.|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
+|resource_class|**nvarchar(20)**|La clase de recursos para esta solicitud.|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de administración dinámica de almacenamiento de datos en paralelo y SQL Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c040f3afade749772ae1560e9f99af8cd4ac0a85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e145eb63a357c628d46ce4c57218cbac1dfc149
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114295"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029153"
 ---
 # <a name="rename-a-report-server-computer"></a>Cambiar el nombre de un equipo que ejecuta un servidor de informes
   Al cambiar el nombre de un equipo, también se cambia el nombre correspondiente del servidor web y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (si está en el mismo equipo). En algunos casos, puede que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no esté accesible después de un cambio en el nombre de equipo. Siga los pasos que aparecen en este tema para volver a configurar un servidor de informes después de haber cambiado el nombre de un equipo.  
   
 ## <a name="renaming-a-sql-server-database-engine"></a>Cambiar el nombre de un motor de base de datos de SQL Server  
- Si cambia el nombre de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instancia que se ejecuta la base de datos del servidor de informes, haga lo siguiente:  
+ Si cambia el nombre de la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que ejecuta la base de datos del servidor de informes, haga lo siguiente:  
   
 1.  Inicie la herramienta de configuración de Reporting Services y conéctese al servidor de informes que utiliza la base de datos en el servidor de informes que ha cambiado de nombre.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48114295"
 ## <a name="renaming-a-report-server-computer"></a>Cambiar el nombre de un equipo que ejecuta un servidor de informes  
  Si cambia el nombre de un equipo que ejecuta un servidor de informes, haga lo siguiente:  
   
-1.  Abra **RSReportServer.config** en un editor de texto y modifique la `UrlRoot` para reflejar el nuevo nombre del servidor. La extensiones de entrega utilizan el valor `UrlRoot` para crear la dirección URL utilizada para obtener acceso a elementos almacenados en el servidor de informes. Cambiar la dirección URL de servidor de informes requiere que actualice el `UrlRoot` configuración para que las suscripciones sigan entregando informes correctamente.  
+1.  Abra **RSReportServer.config** en un editor de texto y modifique la `UrlRoot` para reflejar el nuevo nombre del servidor. La extensiones de entrega utilizan el valor `UrlRoot` para crear la dirección URL utilizada para obtener acceso a elementos almacenados en el servidor de informes. Cambiar la dirección URL del servidor requiere actualizar la configuración de `UrlRoot` para que las suscripciones sigan entregando informes correctamente.  
   
-2.  En el mismo archivo, si se establece, modifique el `ReportServerUrl` para reflejar el nuevo nombre del servidor. Observe que esta configuración no se utiliza en todas las instalaciones. Si está en blanco, no haga nada.  
+2.  En el mismo archivo, si se establece, modifique el valor `ReportServerUrl` para reflejar el nuevo nombre del servidor. Observe que esta configuración no se utiliza en todas las instalaciones. Si está en blanco, no haga nada.  
   
     > [!NOTE]  
     >  Si utiliza el Servicio de nombres Internet de Windows (WINS) en su red corporativa, el servidor de informes y el Administrador de informes continuarán estando disponibles con el nombre anterior durante algún tiempo. WINS asigna una dirección IP a cada uno de los equipos a los que sirve. Después de que WINS actualice la dirección IP para el equipo que ha cambiado de nombre, el nombre antiguo no podrá utilizarse para obtener acceso a un servidor de informes ni al Administrador de informes.  

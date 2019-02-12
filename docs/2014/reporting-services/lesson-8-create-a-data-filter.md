@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d5004ad7cb8283be11d7e89f96ee46bd29ccccd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 581da37baeead00355e6ada1b822731833e5adaf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189925"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037077"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lección 8: Crear un filtro de datos
   Después de agregar una acción de obtención de detalles en el informe primario, el paso siguiente consiste en crear un filtro de los datos de la tabla de datos que definió para el informe secundario.  
@@ -44,7 +44,7 @@ ms.locfileid: "48189925"
   
 5.  Haga clic en el igual (**=**) operador en el **operador** lista desplegable.  
   
-6.  Haga clic en el botón de expresión junto a la **valor** , a continuación, haga clic en **parámetros** en el **categoría** área y, a continuación, haga doble clic en `productid` en el  **Valores** área. El campo **Establecer expresión para: Valor** ahora debe contener una expresión similar a **=Parameters!productid.Value**.  
+6.  Haga clic en el botón de expresión junto a la **valor** , a continuación, haga clic en **parámetros** en el **categoría** área y, a continuación, haga doble clic en `productid` en el  **Valores** área. El **Establecer expresión para: Valor** campo ahora debe contener una expresión similar a **= parámetros! productid. Valor**.  
   
 7.  Haga clic en **Aceptar,** y **Aceptar** nuevo en el **propiedades de Tablix** cuadro de diálogo.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "48189925"
   
 2.  Cree una nueva función que acepte un parámetro, `productid`, de tipo Integer y devuelva un objeto `datatable` y haga lo siguiente.  
   
-    1.  Crea una instancia del conjunto de datos, `DataSet2`, que se creó en el paso 2 de [lección 4: definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea una instancia del conjunto de datos, `DataSet2`, que se creó en el paso 2 de [lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Cree una conexión a la base de datos de SQL Server para ejecutar la consulta definida en la **Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario**.  
+    2.  Crear una conexión a la base de datos de SQL Server para ejecutar la consulta definida en **lección 4: Definir datos de una conexión y DataTable para el informe secundario**.  
   
     3.  La consulta devolverá datos sin filtrar.  
   
@@ -166,9 +166,9 @@ ms.locfileid: "48189925"
   
 2.  Cree una nueva función que acepte un parámetro, `productid`, de tipo Integer, y devuelva un objeto `datatable` y haga lo siguiente.  
   
-    1.  Crea una instancia del conjunto de datos, `DataSet2`, que se creó en el paso 2 de [lección 4: definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea una instancia del conjunto de datos, `DataSet2`, que se creó en el paso 2 de [lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Cree una conexión a la base de datos de SQL Server para ejecutar la consulta definida en la **Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario**.  
+    2.  Crear una conexión a la base de datos de SQL Server para ejecutar la consulta definida **lección 4: Definir datos de una conexión y DataTable para el informe secundario**.  
   
     3.  La consulta incluirá un parámetro, `productid`, para asegurarse de que los datos devueltos se filtran en función del `ProductID` seleccionado en el informe primario.  
   

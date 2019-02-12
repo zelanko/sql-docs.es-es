@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e5ec066e467ba83c33b95d46b4ed3cc593ecc551
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7534c317f2e690e0766299961f4f21d35a674702
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220315"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020656"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Informes, elementos de informe y definiciones de informe (Generador de informes y SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos términos para describir un informe en distintos Estados, incluida la definición inicial, el informe publicado y el informe visualizado tal cual aparece ante el usuario.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos términos para describir un informe en distintos estados, incluida la definición inicial, el informe publicado y el informe visualizado tal como aparece ante el usuario.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,7 +64,7 @@ ms.locfileid: "48220315"
  Suscribirse a un informe, que se entrega a una bandeja de entrada de correo electrónico o a un recurso compartido de archivos en un formato que especifique. El formato de representación predeterminado para un informe es HTML 4.0. Además del formato HTML, los informes se pueden representar en varios formatos de salida, entre los que se incluyen Excel, Word, XML, PDF, TIFF y CSV. Al igual que ocurre con los informes publicados, los informes representados no se pueden editar ni volver a guardar en el servidor de informes. Para obtener más información, consulte [exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos de creación de informes &#40;generador de informes y SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Generador de informes en SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Instalar, desinstalar y asistencia del generador de informes](../install-uninstall-and-report-builder-support.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

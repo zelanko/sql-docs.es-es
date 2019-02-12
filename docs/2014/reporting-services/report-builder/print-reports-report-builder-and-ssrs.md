@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b0f0b2087471d8f0c905b1a173eff57a0be7fd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096705"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031216"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Imprimir informes (Generador de informes y SSRS)
   Después de guardar un informe en un servidor de informes, puede ver e imprimir el informe desde un explorador, el Administrador de informes o cualquier aplicación que use para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  
@@ -34,25 +34,25 @@ ms.locfileid: "48096705"
 3.  En la mayoría de los informes exportados, las copias impresas de los informes incluyen todo lo que es visible en el informe, tal y como lo ve el usuario en el monitor de un equipo. Se conserva el espacio en blanco de la superficie de diseño del informe. Para agregar o quitar páginas en blanco adicionales en formato horizontal, cambie el ancho de página del informe.  
   
 > [!NOTE]  
->  Si utiliza el comando Imprimir del explorador, es probable que las copias impresas de los informes HTML solo incluyan el contenido de la primera página. Es posible obtener mejores resultados en la impresión de informes HTML usando la funcionalidad de impresión del cliente de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, consulte [imprimir informes desde un explorador con el Control de impresión &#40;generador de informes y SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md).  
+>  Si utiliza el comando Imprimir del explorador, es probable que las copias impresas de los informes HTML solo incluyan el contenido de la primera página. Es posible obtener mejores resultados en la impresión de informes HTML usando la funcionalidad de impresión del cliente de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [Imprimir informes desde un explorador usando el control de impresión &#40;Generador de informes y SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Imprimir informes desde un explorador con el Control de impresión &#40;generador de informes y SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
+ [Imprimir informes desde un explorador usando el control de impresión &#40;Generador de informes y SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  Describe cómo utilizar la impresión del lado cliente para imprimir informes desde el explorador web o el Administrador de informes.  
   
- [Imprimir informes desde otras aplicaciones &#40;generador de informes y SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [Imprimir informes desde otras aplicaciones &#40;Generador de informes y SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
  Describe cómo imprimir informes exportados a otra aplicación.  
   
- [Imprimir un informe &#40;generador de informes y SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- Proporciona instrucciones paso a paso sobre cómo imprimir informes, cómo controlar los márgenes de una página y cómo especificar el tamaño del papel para los informes que se representarán mediante representadores de saltos de página manuales: PDF, Image o Print.  
+ [Imprimir un informe &#40;Generador de informes y SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ Proporciona instrucciones paso a paso sobre cómo imprimir un informe, cómo controlar los márgenes de una página y sobre cómo especificar el tamaño del papel para los informes que se representarán mediante representadores de saltos de página duros: PDF, Image o Print.  
   
 ## <a name="see-also"></a>Vea también  
  [Exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [Encabezados y pies de página &#40;generador de informes y SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Imágenes &#40;generador de informes y SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
+ [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Imágenes &#40;Generador de informes y SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

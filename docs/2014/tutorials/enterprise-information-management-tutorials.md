@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9e40202ef0230fbbdddd1c596e5dc41b4d44a0fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ee7cc12f4fde3a2e5116458034ae3d4a8cc1c13a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373997"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015116"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Tutoriales de Administración de información empresarial
   Esta sección contiene tutoriales sobre la administración de información en una empresa mediante las tecnologías de Administración de información empresarial (EIM) incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Administración de información empresarial (EIM) de la empresa proporciona una cartera de soluciones que permiten a las organizaciones confiar en la credibilidad y la coherencia de sus datos para poder tomar decisiones empresariales críticas. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dispone de las siguientes tecnologías que le ayudan a implementar soluciones de EIM en la empresa.  

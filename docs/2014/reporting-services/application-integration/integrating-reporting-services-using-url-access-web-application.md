@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b23f670aa6ddabbf3789da4b06fb8b9b1a4d1e13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a8957c3dbc7fdf627edde70814227833d81f4c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211198"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036037"
 ---
 # <a name="using-url-access-in-a-web-application"></a>Usar acceso URL en una aplicación web
   El acceso URL en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está diseñado específicamente para habilitar el acceso a informes individuales a través de una red. Este tipo de acceso es mejor para integrar la visualización y navegación por los informes en una aplicación web personalizada. Para utilizar el acceso URL en las aplicaciones web, puede:  

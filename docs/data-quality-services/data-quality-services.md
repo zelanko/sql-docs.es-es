@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3392f524dff3c237912a7564e083a3cb7ecdd0ed
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 7d65dee84a2636508af997a4aac2c851e7bd9e72
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617185"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017206"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -47,7 +47,7 @@ ms.locfileid: "52617185"
   
  ![Icono pequeño de carpeta de archivos](../analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") [Seguridad de DQS](../data-quality-services/dqs-security.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Introducción a Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Conceptos de Data Quality Services](../data-quality-services/data-quality-services-concepts.md)   
  [Recursos de DQS](https://technet.microsoft.com/sqlserver/hh780961)   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d13cec7bac124a8fb1289de6086ec0326789501e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e63f964d61fa5f7402244186f292d6d0543b9304
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366707"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037616"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service
   En este tema se describen los contadores de rendimiento para los siguientes objetos de rendimiento [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  

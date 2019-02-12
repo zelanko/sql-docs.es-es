@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6484ee2466fc58c6d7330822f4f47e43fcdcd955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 185b7c9119dbd5a6105152aadcf1241abc6b82ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148305"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025046"
 ---
 # <a name="pdf-device-information-settings"></a>Configuración de la información del dispositivo PDF
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para representar informes en formato PDF.  

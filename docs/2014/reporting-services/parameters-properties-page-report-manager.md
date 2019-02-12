@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 37b865f5f1e0ff029f030fcfab5bc1534fcb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b41d68eea7ced40f88fa505db1f8342c8c9faeb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153736"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020756"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Parámetros (página de propiedades del Administrador de informes)
   Utilice la página de propiedades Parámetros para ver o modificar la configuración de los parámetros de un informe con parámetros.  
@@ -56,7 +56,7 @@ ms.locfileid: "48153736"
  **Null**  
  Active esta casilla para especificar Null como valor predeterminado. Un valor Null implica que el informe se ejecuta incluso aunque el usuario no proporcione un valor de parámetro. Si no hay ninguna casilla en esta columna, el parámetro no acepta valores Null.  
   
- **Ocultar**  
+ **Hide**  
  Active esta casilla para ocultar el parámetro en el área de parámetros que aparece en la parte superior del informe. El parámetro seguirá apareciendo en las páginas de definición de suscripciones y todavía se podrá especificar en una dirección URL de informe. Ocultar el parámetro resulta útil si se desea que el informe se ejecute siempre con un valor predeterminado que especifique.  
   
  Desactive la casilla si desea que el parámetro esté visible en el informe.  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 73e2eae28d1c906e065b205e5964081e52da6ac9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 46b6a89d5ce643aa67f3f514052c19ea77e6e72e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374127"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035646"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Límites de tamaño de informes e instantáneas
   Los responsables de administrar una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden usar la información de este tema para conocer los límites de tamaño de los informes cuando se publican en un servidor de informes, cuando se representan en tiempo de ejecución y cuando se guardan en el sistema de archivos. En este tema también se incluyen directrices prácticas para medir el tamaño de una base de datos del servidor de informes y se describe cómo afecta el tamaño de las instantáneas al rendimiento del servidor.  

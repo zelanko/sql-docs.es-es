@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ae167ee18dd7fe3c511f758493f891e5303c24fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b7418b2118e42217150605521d121123b8582a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092955"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034066"
 ---
 # <a name="debugging-data-processing-extension-code"></a>Depurar el código de extensión de procesamiento de datos
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona varias herramientas de depuración que pueden ayudarle a analizar el código de extensión del procesamiento de datos y localizar errores en él. La herramienta más conveniente dependerá de lo que intente llevar a cabo. Este ejemplo usa [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "48092955"
   
 1.  Inicie [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] y abra el proyecto de extensión de procesamiento de datos.  
   
-2.  Genere el proyecto e implemente el ensamblado de extensión de procesamiento de datos y el archivo .pdb acompañante en el Diseñador de informes. Para más información sobre la implementación, vea [How to: Deploy a Data Processing Extension to Report Designer](deploying-a-data-processing-extension-to-report-designer.md) (Cómo implementar una extensión de procesamiento de datos en el Diseñador de informes).  
+2.  Genere el proyecto e implemente el ensamblado de extensión de procesamiento de datos y el archivo .pdb acompañante en el Diseñador de informes. Para obtener más información acerca de la implementación, consulte [Cómo: Implementar una extensión de procesamiento de datos en el Diseñador de informes](deploying-a-data-processing-extension-to-report-designer.md).  
   
 3.  Abra un nuevo proyecto de informe en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] al tiempo que deja el código de la extensión de procesamiento de datos abierto en una ventana independiente de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   

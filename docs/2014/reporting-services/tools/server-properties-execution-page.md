@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 239ca089feac4b814600234f2b80b2de398bb989
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 835aa0c500e53ab28df491fe8209d2af27083365
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074328"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015266"
 ---
 # <a name="server-properties-execution-page"></a>Propiedades del servidor (página Ejecución)
   Utilice esta página para establecer un valor de tiempo de espera para la ejecución de informes. Este valor se aplica a todos los informes que se procesan mediante la instancia del servidor de informes actual. Puede sobrescribir este valor para informes individuales. El valor que especifica debe alojar todo el procesamiento de informes que se produce en el servidor de informes, más el procesamiento de consultas realizado en el servidor de bases de datos cuando el servidor de informes recupera datos que se usan en el informe.  
@@ -35,8 +35,8 @@ ms.locfileid: "48074328"
 ## <a name="see-also"></a>Vea también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Establecer las propiedades de procesamiento de informes](../report-server/set-report-processing-properties.md)   
+ [Establecer las propiedades del procesamiento de informes](../report-server/set-report-processing-properties.md)   
  [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)   
- [Servidor de informes en Management Studio (Ayuda F1)](report-server-in-management-studio-f1-help.md)  
+ [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)  
   
   

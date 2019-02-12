@@ -1,27 +1,26 @@
 ---
-title: 'Lección 3: Acceder al servicio Web | Microsoft Docs'
+title: 'Lección 3: Obtener acceso al servicio Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c93def5590b634d2fb3f8374b5fb875fd2d740eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108305"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024836"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>Lección 3: obtener acceso al servicio web
-  Una vez haya agregado al proyecto una referencia del servicio web del servidor de informes, el paso siguiente consiste en crear una instancia de la clase proxy del servicio web. A continuación, puede tener acceso a los métodos del servicio web llamando a los métodos de la clase proxy. Cuando la aplicación llama a estos métodos, el proxy de código generado por la clase [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] controla las comunicaciones entre la aplicación y el servicio Web.  
+# <a name="lesson-3-accessing-the-web-service"></a>Lección 3: Obtener acceso al servicio web
+  Una vez haya agregado al proyecto una referencia del servicio web del servidor de informes, el paso siguiente consiste en crear una instancia de la clase proxy del servicio web. A continuación, puede tener acceso a los métodos del servicio web llamando a los métodos de la clase proxy. Cuando la aplicación llama a estos métodos, el código de la clase proxy generado por [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] controla las comunicaciones entre la aplicación y el servicio web.  
   
- En primer lugar, creará una instancia de la clase de proxy del servicio Web, <xref:ReportService2010.ReportingService2010>. A continuación, hará una llamada al método <xref:ReportService2010.ReportingService2010.GetProperties%2A> del servicio web utilizando la clase proxy. Utilizará la llamada para recuperar el nombre y la descripción de uno de los informes de ejemplo, Company Sales.  
+ En primer lugar, va a crear una instancia de la clase proxy del servicio web, <xref:ReportService2010.ReportingService2010>. A continuación, hará una llamada al método <xref:ReportService2010.ReportingService2010.GetProperties%2A> del servicio web utilizando la clase proxy. Utilizará la llamada para recuperar el nombre y la descripción de uno de los informes de ejemplo, Company Sales.  
   
 > [!NOTE]  
 >  Cuando tenga acceso a un servicio web que se ejecuta en [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] con Advanced Services, debe agregar "$SQLExpress" a la ruta de acceso de "ReportServer". Por ejemplo:  
@@ -114,14 +113,14 @@ ms.locfileid: "48108305"
   
 4.  Guarde la solución.  
   
- El código de ejemplo de tutorial usa el <xref:ReportService2010.ReportingService2010.GetProperties%2A> método del servicio Web para recuperar las propiedades del informe de ejemplo, Company Sales 2012. El <xref:ReportService2010.ReportingService2010.GetProperties%2A> método toma dos argumentos: el nombre del informe para el que desea recuperar información de la propiedad y una matriz de **Property []** objetos que contiene los nombres de propiedades cuyos valores se van a recuperar. El método devuelve también una matriz de objetos **Property[]** con los nombres y valores de las propiedades especificadas en el argumento de propiedades.  
+ El código de ejemplo de la visita guiada utiliza el método <xref:ReportService2010.ReportingService2010.GetProperties%2A> del servicio web para recuperar las propiedades del informe de ejemplo, Company Sales 2012. El <xref:ReportService2010.ReportingService2010.GetProperties%2A> método toma dos argumentos: el nombre del informe para el que desea recuperar información de la propiedad y una matriz de **Property []** objetos que contiene los nombres de propiedades cuyos valores se van a recuperar. El método devuelve también una matriz de objetos **Property[]** con los nombres y valores de las propiedades especificadas en el argumento de propiedades.  
   
 > [!NOTE]  
 >  Si proporciona una matriz **Property[]** vacía para el argumento de propiedades, se devuelven todas las propiedades disponibles.  
   
  En el ejemplo anterior, el código utiliza el método <xref:ReportService2010.ReportingService2010.GetProperties%2A> para devolver el nombre y la descripción del informe de ejemplo, Company Sales 2012. A continuación, el código utiliza un bucle `foreach` para escribir las propiedades y los valores en la consola.  
   
- Para obtener más información sobre cómo crear y usar una clase de proxy para el servicio Web del servidor de informes, vea [crear el Proxy de servicio Web](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
+ Para obtener más información acerca de la creación y utilización de una clase proxy para el servicio web del servidor de informes, vea [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Lección 4: Ejecutar la aplicación &#40;VC de VB&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   

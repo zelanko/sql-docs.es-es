@@ -2,10 +2,8 @@
 title: Sys.dm_continuous_copy_status (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9cbd0997a7d675c0c7630b730d6ba7514070ab8f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d5e62117f620a93d61d9216ad46383c116c930ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665944"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023886"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ Si usa SQL Database V12 debe usar [sys.dm_geo_replication_link_status](../../rel
 |**partner_database**|**sysname**|Nombre de la base de datos vinculada en la que reside el servidor de SQL Database vinculado.|  
 |**last_replication**|**datetimeoffset**|La marca de tiempo de la última transacción replicada aplicada.|  
 |**replication_lag_sec**|**int**|Diferencia de tiempo en segundos entre la hora actual y la marca de tiempo de la última transacción confirmada correctamente en la base de datos principal que la base de datos secundaria activa no ha confirmado.|  
-|**replication_state**|**tinyint**|El estado de replicación de copia continua para esta base de datos. Los siguientes son los valores posibles y sus descripciones.<br /><br /> 1: la propagación. El destino de replicación se está inicializando y está en un estado transaccionalmente incoherente. Hasta que la inicialización se completa, no puede conectarse a la base de datos secundaria activa. <br />2: poniendo al día. La base de datos secundaria activa se está poniendo al día con la base de datos principal y está en un estado transaccionalmente coherente.<br />3: volver a la propagación. La base de datos secundaria activa se está reinicializando automáticamente debido a un error de replicación irrecuperable.<br />4: suspendido. Esto no es una relación de copia continua activa. Este estado suele indicar que el ancho de banda disponible para el interlink es insuficiente para el nivel de actividad de transacción en la base de datos principal. Sin embargo, la relación de copia continua sigue intacta.|  
+|**replication_state**|**tinyint**|El estado de replicación de copia continua para esta base de datos. Los siguientes son los valores posibles y sus descripciones.<br /><br /> 1: La propagación. El destino de replicación se está inicializando y está en un estado transaccionalmente incoherente. Hasta que la inicialización se completa, no puede conectarse a la base de datos secundaria activa. <br />2: Puesta al día. La base de datos secundaria activa se está poniendo al día con la base de datos principal y está en un estado transaccionalmente coherente.<br />3: Reinicialización. La base de datos secundaria activa se está reinicializando automáticamente debido a un error de replicación irrecuperable.<br />4: Suspendido. Esto no es una relación de copia continua activa. Este estado suele indicar que el ancho de banda disponible para el interlink es insuficiente para el nivel de actividad de transacción en la base de datos principal. Sin embargo, la relación de copia continua sigue intacta.|  
 |**replication_state_desc**|**nvarchar(256)**|Descripción del estado de replication_state, uno de los siguientes:<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|Siempre se establece en 0|  
 |**is_target_role**|**bit**|0 = Origen de la relación de copia<br /><br /> 1 = Destino de la relación de copia|  

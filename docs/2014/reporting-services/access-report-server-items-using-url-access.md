@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1af38969f461cc607eb2b002fbc88aea77a2880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0fe057b1fc441a41d536e4890cd4971202df7e38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098605"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018037"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Acceder a elementos del servidor de informes mediante el acceso URL
   En este tema se explica cómo acceder a los elementos del catálogo de diferentes tipos en una base de datos del servidor de informes o en un sitio de SharePoint con *rs:Command*=*Value*.  
   
  No es necesario agregar esta cadena de parámetro. Si la omite, el servidor de informes evalúa el tipo de elemento y selecciona el valor de parámetro apropiado automáticamente. Pero, si se usa la cadena *rs:Command*=*Value* en la dirección URL, mejora el rendimiento del servidor de informes.  
   
- Observe la sintaxis del proxy `_vti_bin` en los ejemplos siguientes. Para obtener más información sobre el uso de la sintaxis de proxy, consulte [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Observe la sintaxis del proxy `_vti_bin` en los ejemplos siguientes. Para obtener más información acerca de cómo usar la sintaxis de proxy, vea [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
 ## <a name="access-a-report"></a>Acceder a un informe  
  Para ver un informe en el explorador, use el parámetro *rs:Command*=*Render* . Por ejemplo:  
@@ -66,7 +66,7 @@ ms.locfileid: "48098605"
 </DataSourceDefinition>  
 ```  
   
- Se devuelve la cadena de conexión según el valor **SecureConnectionLevel** del servidor de informes. Para obtener más información sobre la **SecureConnectionLevel** , vea [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
+ Se devuelve la cadena de conexión según el valor **SecureConnectionLevel** del servidor de informes. Para obtener más información acerca de la configuración **SecureConnectionLevel** , vea [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
 ## <a name="access-the-contents-of-a-folder"></a>Acceder al contenido de una carpeta  
  Para acceder al contenido de una carpeta, use el parámetro *rs:Command*=*GetChildren* . Se devuelve una página de navegación por carpetas genérica que contiene vínculos a las subcarpetas, informes, orígenes de datos y recursos en la carpeta solicitada. Por ejemplo:  

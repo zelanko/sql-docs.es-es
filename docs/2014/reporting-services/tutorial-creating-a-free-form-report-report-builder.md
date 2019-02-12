@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un informe de forma libre (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Creación de un informe de forma libre (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068995"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013756"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Crear un informe de forma libre (Generador de informes)
   Este tutorial le enseña a crear un informe de forma libre de SSRS que se asemeja a una carta de formularios. Puede organizar los elementos de informe para crear un formulario con cuadros de texto, imágenes y otras regiones de datos.  
@@ -75,7 +75,7 @@ ms.locfileid: "48068995"
   
 3.  Haga clic en **Usar una conexión incrustada en mi informe**.  
   
-4.  Compruebe que el tipo de conexión es Microsoft SQL Server y luego en el cuadro **Cadena de conexión**, escriba: **Origen de datos = \<nombre de servidor>**.  
+4.  Compruebe que el tipo de conexión sea Microsoft SQL Server y, luego, en el cuadro **Cadena de conexión** , escriba: **Data Source = \<nombre_de_servidor>**  
   
      \<ServerName >, por ejemplo Report001, especifica un equipo en el que se instala una instancia del motor de base de datos de SQL Server. Dado que los datos del informe no se extraen de una base de datos de SQL Server, no necesita incluir el nombre de una base de datos. Para analizar la consulta se utiliza la base de datos predeterminada en el servidor especificado.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "48068995"
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Se agregará una nueva columna a la lista. La columna contiene la celda `[Territory].`  
+     Se agregará una nueva columna a la lista. La columna contiene la celda `[Territory].`.  
   
 4.  Haga clic con el botón derecho en la columna Territory de la lista y, después, seleccione **Eliminar columnas**.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "48068995"
   
 2.  En la pestaña **Insertar** de la cinta de opciones, haga clic en **Cuadro de texto**y, después, arrastre un cuadro de texto hacia la esquina superior izquierda de la lista, pero dentro del rectángulo que agregó previamente. Haga el cuadro de texto de unas 3 pulgadas de alto y 5 de ancho.  
   
-3.  Coloque el cursor en la parte superior del cuadro de texto y, a continuación, escriba: **Boletín para** .  
+3.  Coloque el cursor en la parte superior del cuadro de texto y después escriba: **Boletín para** .  
   
      ![Agregar un texto de encabezado del boletín](../../2014/tutorials/media/tutorial-newsletterfor.png "Agregar un texto de encabezado del boletín")  
   
@@ -279,7 +279,7 @@ ms.locfileid: "48068995"
   
      ![Añadir texto al boletín](../../2014/tutorials/media/tutorial-newslettertext.png "añadir texto al boletín")  
   
-20. Coloque el cursor debajo del texto que pegó en el paso 15, y, a continuación, escriba: **Felicidades por sus ventas totales de** .  
+20. Coloque el cursor debajo del texto que pegó en el paso 15 y luego escriba: **Felicidades por sus ventas totales de** .  
   
     > [!NOTE]  
     >  Asegúrese de incluir el espacio adicional después de la palabra "de". El espacio separa el texto y el campo que agregará en el paso siguiente.  
@@ -466,7 +466,7 @@ ms.locfileid: "48068995"
   
 10. Haga clic con el botón secundario en el título del gráfico y luego haga clic en **Propiedades del título**.  
   
-11. En el cuadro de diálogo **Propiedades del título del gráfico** , en texto de título, escriba: **Cantidades de producto vendidas**.  
+11. En el **propiedades del título del gráfico** cuadro de diálogo, en el texto de título, escriba: **Cantidades de producto vendidas**.  
   
 12. Haga clic en la pestaña **Fuente** y en la lista **Tamaño** haga clic en **10 pto**.  
   
@@ -500,7 +500,7 @@ ms.locfileid: "48068995"
   
 10. Haga clic con el botón secundario en el título del gráfico y luego haga clic en **Propiedades del título**.  
   
-11. En el cuadro de diálogo **Propiedades del título del gráfico** , en texto de título, escriba: **Ventas de producto**.  
+11. En el **propiedades del título del gráfico** cuadro de diálogo, en el texto de título, escriba: **Ventas de producto**.  
   
 12. Haga clic en la pestaña **Fuente** y, en la lista **Tamaño** , haga clic en **10 pto**y luego en **Aceptar**.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "48068995"
   
 1.  Haga clic en el rectángulo que agregó anteriormente en esta lección.  
   
-     En el panel Propiedades, el `Name` propiedad muestra el nombre del rectángulo.  
+     En el panel Propiedades, la propiedad `Name` muestra el nombre del rectángulo.  
   
      ![Nombre del rectángulo](../../2014/tutorials/media/tutorial-rectanglename.png "nombre del rectángulo")  
   

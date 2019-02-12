@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 304c1048c206f179d5e29d3b5aa097d21a124512
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9ca7b2b7ed4cc66a3c47b2f2ad8044775d69c6ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065335"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015006"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modificar un archivo de configuración de Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena la configuración de la aplicación en un conjunto de archivos de configuración. La instalación crea los archivos de configuración para cada instancia del servidor de informes que instala. Dentro de cada archivo, los valores se establecen durante la instalación o al usar herramientas y aplicaciones para configurar un servidor para la operación. En algunos casos, debe modificar directamente un archivo para agregar o configurar la configuración avanzada. Los parámetros de configuración se especifican como atributos o elementos XML. Si comprende XML y los archivos de configuración, puede utilizar un editor de texto o de código para modificar las opciones de configuración definibles por el usuario.  
@@ -95,10 +95,10 @@ ms.locfileid: "48065335"
  [Archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md)   
  [Archivo de configuración ReportingServicesService](reportingservicesservice-configuration-file.md)   
  [Archivo de configuración RSReportDesigner](rsreportdesigner-configuration-file.md)   
- [Implementación de una extensión de procesamiento de datos](../extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Implementar una extensión de procesamiento de datos](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Implementación de una extensión de entrega](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Implementación de una extensión de representación](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Cómo implementar un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [Cómo: Implementar un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Archivos de configuración de Reporting Services](reporting-services-configuration-files.md)  
   
   

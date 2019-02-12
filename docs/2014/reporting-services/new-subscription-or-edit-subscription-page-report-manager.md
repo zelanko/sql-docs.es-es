@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a89c8c66eab37f20c8816823b44cefcfb77ad9ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6194516bfc230c73df928bda5095c106776beff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208401"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030136"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Página Nueva suscripción o Editar suscripción (Administrador de informes)
   Use la página Nueva suscripción o Editar suscripción para crear una nueva suscripción a un informe o modificar una existente. Las opciones de esta página varían dependiendo de los roles que tenga asignados. Los usuarios con permisos avanzados pueden trabajar con más opciones.  
   
- Las suscripciones se admiten para informes que se pueden ejecutar en modo desatendido. Como mínimo, el informe debe usar credenciales almacenadas o ninguna credencial. Si el informe utiliza parámetros, debe especificarse un valor predeterminado. Las suscripciones pueden pasar a estar inactivas si se cambia la configuración de ejecución del informe o si se quitan los valores predeterminados que se utilizan en las propiedades de los parámetros. Para obtener más información, consulte [crear y administrar suscripciones para servidores de informes de modo nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
+ Las suscripciones se admiten para informes que se pueden ejecutar en modo desatendido. Como mínimo, el informe debe usar credenciales almacenadas o ninguna credencial. Si el informe utiliza parámetros, debe especificarse un valor predeterminado. Las suscripciones pueden pasar a estar inactivas si se cambia la configuración de ejecución del informe o si se quitan los valores predeterminados que se utilizan en las propiedades de los parámetros. Para obtener más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
   
 > [!NOTE]  
 >  Esta característica no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "48208401"
   
 3.  En el menú desplegable, siga uno de estos procedimientos:  
   
-    -   Haga clic en **Administrar**. Se abrirá la página de propiedades General correspondiente al informe. A continuación, seleccione la pestaña **Suscripciones** . En la barra de herramientas, haga clic en **nueva suscripción**, o seleccione una suscripción existente y haga clic en **editar**.  
+    -   Haga clic en **Administrar**. Se abrirá la página de propiedades General correspondiente al informe. A continuación, seleccione la pestaña **Suscripciones** . En la barra de herramientas, haga clic en **Nueva suscripción**o seleccione una suscripción existente y haga clic en **Editar**.  
   
     -   Haga clic en **Suscribir**. Se abrirá la página **Nueva suscripción** para el informe.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48208401"
   
 ## <a name="see-also"></a>Vea también  
  [Configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

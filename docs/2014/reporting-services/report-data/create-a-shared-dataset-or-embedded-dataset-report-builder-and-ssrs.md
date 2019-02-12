@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39f8f2b9f8926a81c808e82f57cad13934336902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 95772746d8f13993962f67bff863865dec519f70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133265"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011166"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS)
   Puede crear un conjunto de datos incrustado para usarlo en un solo informe o un conjunto de datos compartido, que se guardará en un servidor de informes, para usarlo en varios informes. Para crear un conjunto de datos, debe tener un origen de datos incrustado o compartido.  
@@ -117,7 +117,7 @@ ms.locfileid: "48133265"
  [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)   
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

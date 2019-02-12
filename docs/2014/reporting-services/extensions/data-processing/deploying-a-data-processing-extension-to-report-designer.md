@@ -1,5 +1,5 @@
 ---
-title: Cómo implementar una extensión de procesamiento de datos en el Diseñador de informes | Microsoft Docs
+title: 'Cómo: Implementar una extensión de procesamiento de datos en el Diseñador de informes | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 242071ac3ee49932f1767d6736cba5c17993ff40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ded3d366450ab3d5ea3375bb02929b4b52337d0f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088494"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011567"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Cómo implementar una extensión de procesamiento de datos en el Diseñador de informes
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Cómo: Implementar una extensión de procesamiento de datos en el Diseñador de informes
   El Diseñador de informes utiliza las extensiones de procesamiento de datos para recuperar y procesar los datos mientras se diseñan los informes. Debería implementar el ensamblado de extensión de procesamiento de datos para el Diseñador de informes como un ensamblado privado. También tiene que realizar una entrada en el archivo de configuración del Diseñador de informes, RSReportDesigner.config.  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Para implementar un ensamblado de extensión de procesamiento de datos  

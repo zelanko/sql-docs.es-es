@@ -1,11 +1,10 @@
 ---
-title: Sys.dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: pdw
+ms.technology: data-warehouse
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0661b5bd203cd1bca26ed6fb5bf380d6882dc5e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d9e18284ac4d97efaa217802682fe79ebb2dfc5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609923"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041526"
 ---
-# <a name="sysdmpdwnetworkcredentials-transact-sql"></a>Sys.dm_pdw_network_credentials (Transact-SQL)
+# <a name="sysdmpdwnetworkcredentials-transact-sql"></a>sys.dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Devuelve una lista de todas las credenciales de red se almacena en el [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dispositivo para todos los servidores de destino. Los resultados se muestran para el nodo de Control y cada nodo de proceso.  
@@ -31,7 +30,7 @@ ms.locfileid: "47609923"
 |pdw_node_id|**int**|Identificador numérico único asociado al nodo.|  
 |target_server_name|**nvarchar(32)**|Dirección IP del servidor de destino que [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] tendrá acceso mediante las credenciales de usuario y la contraseña.|  
 |username|**nvarchar(32)**|Nombre de usuario para el que se almacena la contraseña.|  
-|LAST_MODIFIED|**datetime**|Fecha y hora de la última operación que puede modificar la credencial.|  
+|last_modified|**datetime**|Fecha y hora de la última operación que puede modificar la credencial.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el estado de vista del servidor.  

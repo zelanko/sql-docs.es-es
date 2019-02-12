@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e12e4c4bcde1887de25e3ed75479da8b4eb5433
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053051"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012766"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Usar la obtención de detalles en datos de estructura (Tutorial básico de minería de datos)
-  Como parte de su campaña de publicidad [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] está enviando un formulario a los clientes potenciales de entre 34 y 40 años de edad demográficos. El departamento de marketing ha decidido que les gustaría también enviar el formulario a los clientes que compraron bicicletas de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] hace más de cinco años. En esta lección, identificará los clientes con bicicletas anteriores y recuperará su información de contacto. Esta información no está incluida en el modelo, pero se incluye en la estructura. Para recuperar la información de contacto, primero se asegurará de que la obtención de detalles está habilitada para la estructura y, a continuación, la utilizará para revelar los nombres y direcciones de los clientes objetivo.  
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] está enviando un formulario a los clientes potenciales de entre 34 y 40 años de edad como parte de su campaña de publicidad. El departamento de marketing ha decidido que quieren enviar también el formulario a los clientes que compraron bicicletas de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] hace más de cinco años. En esta lección, identificará los clientes con bicicletas anteriores y recuperará su información de contacto. Esta información no está incluida en el modelo, pero se incluye en la estructura. Para recuperar la información de contacto, primero se asegurará de que la obtención de detalles está habilitada para la estructura y, a continuación, la utilizará para revelar los nombres y direcciones de los clientes objetivo.  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>Para habilitar la obtención de detalles en un modelo de minería de datos  
   
-1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el **modelos de minería de datos** ficha del Diseñador de minería de datos, haga clic en el **TM_Decision_Tree** del modelo y seleccione **propiedades**.  
+1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en la pestaña **Modelos de minería de datos** del Diseñador de minería de datos, haga clic con el botón secundario en el modelo **TM_Decision_Tree** y seleccione **Propiedades**.  
   
 2.  En las ventanas Propiedades, haga clic en **AllowDrillThrough**y seleccione **True**.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48053051"
  Felicidades, ha completado el Tutorial básico de minería de datos. Ahora que conoce más las herramientas de minería de datos, recomendamos que también complete el Tutorial intermedio de minería de datos, que demuestra cómo crear modelos de pronóstico, análisis de la cesta de la compra y agrupación en clústeres de secuencia.  
   
 ## <a name="previous-task-in-lesson"></a>Tarea anterior de la lección  
- [Crear predicciones &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Crear predicciones &#40;Tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una consulta de predicción con el Generador de consultas de predicción](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

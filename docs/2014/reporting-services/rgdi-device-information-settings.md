@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0e97f5d7ce3f8d1b9ebd6afcbc5e2a743608d6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c2296933a6cced349dac17ead5a78cf0f999e23f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202515"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039036"
 ---
 # <a name="rgdi-device-information-settings"></a>Configuración de la información del dispositivo RGDI
   En la tabla siguiente se muestra la configuración de la información de dispositivo para la representación en formato RGDI.  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 44db8007a7b8abfed99d65c93037dd647cc4cb41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 70b4e9e4dcaf70a34287ae6b216b9faf1749b55b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074453"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016206"
 ---
 # <a name="secureconnectionlevel-property-wmi-msreportserverconfigurationsetting"></a>Propiedad SecureConnectionLevel (WMI MSReportServer_ConfigurationSetting)
   Devuelve el nivel de conexión segura especificado en el archivo RSReportServer.config. Solo lectura.  

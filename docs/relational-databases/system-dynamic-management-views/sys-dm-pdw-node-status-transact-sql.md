@@ -1,11 +1,10 @@
 ---
-title: Sys.dm_pdw_node_status (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: pdw
+ms.technology: data-warehouse
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fef824d594ea77e1c13df2251872b780e21344b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c56d169e8aa55e83b86713e1b9fa476bc213ae3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796843"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014156"
 ---
-# <a name="sysdmpdwnodestatus-transact-sql"></a>Sys.dm_pdw_node_status (Transact-SQL)
+# <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Contiene información adicional (a través de [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) sobre el rendimiento y el estado de todos los nodos del dispositivo. Muestra una fila por cada nodo en el dispositivo.  
@@ -30,12 +29,12 @@ ms.locfileid: "47796843"
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Identificador numérico único asociado al nodo.<br /><br /> Clave para esta vista.|Es único en todo el dispositivo, independientemente del tipo.|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|nombreDeProceso|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
+|process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |allocated_memory|**bigint**|Memoria total asignada en este nodo.||  
 |available_memory|**bigint**|Memoria total disponible en este nodo.||  
 |process_cpu_usage|**bigint**|Uso de CPU de proceso total, en tics.||  
 |total_cpu_usage|**bigint**|Uso total de CPU, en tics.||  
-|Thread_Count|**bigint**|Número total de subprocesos en uso en este nodo.||  
+|thread_count|**bigint**|Número total de subprocesos en uso en este nodo.||  
 |handle_count|**bigint**|Número total de identificadores en uso en este nodo.||  
 |total_elapsed_time|**bigint**|Tiempo total transcurrido desde que el sistema, iniciar o reiniciar.|Tiempo total transcurrido desde que el sistema, iniciar o reiniciar. Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), provocará el error de materialización debido al desbordamiento.<br /><br /> El valor máximo en milisegundos equivale a 24,8 días.|  
 |is_available|**bit**|Marca que indica si este nodo está disponible.||  

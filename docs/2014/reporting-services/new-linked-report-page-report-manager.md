@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: baca8a9c339ff55ad25f390ac73a2957fdd26447
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 11ccc376b2c325056acbe545f8ac7310b4386245
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119375"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010876"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Nuevo informe vinculado (página del Administrador de informes)
   Use la página Nuevo informe vinculado para crear un informe vinculado. Un informe vinculado es un informe con una configuración y propiedades propias pero que está vinculado a la definición de otro informe. Los informes vinculados son de gran utilidad cuando se dispone de un informe base que se desea modificar para determinados grupos o usuarios; por ejemplo, un informe regional que devuelva datos diferentes en función del código de región que especifique como parámetro. Normalmente, un informe vinculado se crea a partir de un informe parametrizado cuando se desea modificar y después guardar distintos valores de parámetro con cada instancia del informe. No obstante, se puede crear un informe vinculado a partir de cualquier informe al que se tenga acceso.  
@@ -45,7 +45,7 @@ ms.locfileid: "48119375"
 4.  En la barra de herramientas del elemento, haga clic en **Crear informe vinculado**.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Especifique el nombre del informe vinculado. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. Sin embargo, no deben utilizarse los caracteres ; ? : \@ & = +, $ / * \< > | "o / al especificar un nombre.  
   
  **Descripción**  

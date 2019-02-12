@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078105"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042356"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Página de propiedades de opciones de instantánea (Administrador de informes)
   Use la página de propiedades Opciones de instantánea para programar las instantáneas de informe que se van a agregar al historial del informe, y para establecer los límites del número de ellas que se almacenarán en el historial.  
@@ -62,8 +62,8 @@ ms.locfileid: "48078105"
  Haga clic para guardar los cambios.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar una instantánea al historial del informe &#40;el Administrador de informes&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Crear, modificar y eliminar instantáneas del historial de informes](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

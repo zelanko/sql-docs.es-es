@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2029cd6fd95916b71ee673713978a1fe3a1ccd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 15bac4bb872e1fb3fc42fb62cf355f53358442b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082546"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014576"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>archivo de configuración ReportingServicesService
   El archivo ReportingServicesService.exe.config incluye valores que configuran la traza.  
@@ -29,7 +29,7 @@ ms.locfileid: "48082546"
  Este archivo se encuentra en la carpeta \Reporting Services\Report Server\Bin.  
   
 ## <a name="editing-guidelines"></a>Directrices para editar  
- Puede modificar este archivo para cambiar el nombre del archivo de registro, o bien para aumentar o disminuir los niveles de seguimiento. No modifique ningún otro parámetro. Para obtener instrucciones, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Para obtener más información acerca de los registros de seguimiento, vea [Report Server Service Trace Log](report-server-service-trace-log.md).  
+ Puede modificar este archivo para cambiar el nombre del archivo de registro, o bien para aumentar o disminuir los niveles de seguimiento. No modifique ningún otro parámetro. Para obtener instrucciones, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Para más información sobre los registros de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Ejemplo de configuración  
  El siguiente ejemplo muestra los parámetros de configuración y los valores predeterminados que se encuentran en el archivo ReportingServicesService.exe.config.  

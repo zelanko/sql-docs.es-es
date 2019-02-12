@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32578d4810140314964d3e7e2ceaa8d836aa99bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137395"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010435"
 ---
 # <a name="design-view"></a>Vista de diseño
   Utilice la vista Diseño para organizar los elementos de informe en el informe. En ocasiones, la vista Diseño se conoce como vista de presentación o vista de superficie de diseño.  
@@ -52,7 +52,7 @@ ms.locfileid: "48137395"
  Utilice el panel Propiedades para ver las propiedades del elemento de informe seleccionado en la superficie de diseño o el grupo seleccionado en el panel de agrupación. También puede hacer clic con el botón derecho en un elemento de informe o grupo seleccionado y hacer clic después en **Propiedades** para abrir el cuadro de diálogo **Propiedades** correspondiente del elemento de informe o grupo.  
   
 ## <a name="see-also"></a>Vea también  
- [Encabezados y pies de página &#40;generador de informes y SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Sugerencias para el diseño de informes &#40;Generador de informes y SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

@@ -12,14 +12,14 @@ f1_keywords:
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0e1fd77ed97e42eaadd76f7b9c50f74d6b5007a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 411dd5fdcd58b9f009ffe8fbdefa39e39c273435
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162745"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012886"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Cuadro de diálogo Propiedades de ventanilla de mapa, Optimización
   Seleccione **Optimización** para que el cuadro de diálogo **Propiedades de ventanilla de mapa** sirva de ayuda para controlar la resolución para ver un mapa en un informe.  
@@ -40,6 +40,6 @@ ms.locfileid: "48162745"
   
 ## <a name="see-also"></a>Vea también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de informes: Informes de mapa &#40;generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de los informes: Informes de mapa &#40;generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

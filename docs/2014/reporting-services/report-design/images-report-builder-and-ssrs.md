@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff2a701c3425fce737c75c6fb0b6bc01698d8277
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b8a9b295df0cfa4d49e0964a6d6c83e62fefb8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227145"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031646"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Imágenes (Generador de informes y SSRS)
   Una imagen es un elemento de informe que contiene una referencia a una imagen incrustada en el informe, o almacenada en una base de datos, en el servidor de informes o en cualquier lugar de Internet. Una imagen puede ser una imagen que se repite con filas de datos. También se puede utilizar una imagen como fondo para determinados elementos del informe.  
@@ -45,7 +45,7 @@ ms.locfileid: "48227145"
 ##  <a name="EmbedImages"></a> Incrustar imágenes  
  Se pueden incrustar imágenes en un informe de manera que todos los datos de imagen se almacenen en la definición de informe. Cuando se incrusta una imagen, esta se codifica como MIME y se almacena como texto en la definición de informe. El uso de imágenes incrustadas garantiza su disponibilidad permanente en el informe, pero también aumenta el tamaño de la definición de informe.  
   
- Para obtener más información sobre cómo insertar una imagen, vea [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
+ Para obtener más información sobre cómo insertar una imagen, vea [Incrustar una imagen en un informe &#40;Generador de informes y SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 
   
@@ -56,7 +56,7 @@ ms.locfileid: "48227145"
   
  Cuando el informe se ejecuta en el Generador de informes o en el Diseñador de informes, la vista previa usa las credenciales del usuario para mostrar la imagen. Cuando el informe se ejecuta en el servidor de informes, no se puede mostrar la imagen del informe si las credenciales del servidor no son suficientes para tener acceso a la imagen. En ese caso, póngase en contacto con su administrador del sistema.  
   
- Para obtener más información sobre cómo agregar una imagen externa a un informe, vea [Add an External Image &#40;Report Builder and SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
+ Para obtener más información sobre cómo agregar una imagen externa a un informe, vea [Agregar una imagen externa &#40;Generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
   
  
   
@@ -66,28 +66,28 @@ ms.locfileid: "48227145"
 > [!NOTE]  
 >  Algunas extensiones de representación, como la extensión de representación en HTML, representan la imagen de fondo del cuerpo del informe en el cuerpo, el encabezado de página y el pie de página. Se puede definir una imagen de fondo diferente para el encabezado y pie de página, pero, si no se define ninguna, el informe usa la imagen de fondo del cuerpo. Otras extensiones de representación, como la extensión de representación en imágenes, no representan la imagen de fondo del cuerpo en el encabezado y pie de página.  
   
- Para obtener más información sobre cómo agregar una imagen de fondo, vea [Add a Background Image &#40;Report Builder and SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
+ Para obtener más información sobre cómo agregar una imagen de fondo, vea [Agregar una imagen de fondo &#40;Generador de informes y SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
   
  
   
 ##  <a name="DataboundImages"></a> Imágenes enlazadas a datos  
- Es posible agregar imágenes almacenadas en una base de datos a los informes. Se puede usar el mismo elemento de informe de imagen que para las imágenes estáticas, pero con un conjunto de propiedades que indica que la imagen está almacenada en una base de datos. Para obtener instrucciones sobre cómo trabajar con imágenes enlazadas a datos, vea [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
+ Es posible agregar imágenes almacenadas en una base de datos a los informes. Se puede usar el mismo elemento de informe de imagen que para las imágenes estáticas, pero con un conjunto de propiedades que indica que la imagen está almacenada en una base de datos. Para obtener instrucciones sobre cómo trabajar con imágenes enlazadas a datos, vea [Agregar una imagen enlazada a datos &#40;Generador de informes y SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
   
 
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Agregar una imagen externa &#40;generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
+ [Agregar una imagen externa &#40;Generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
- [Incrustar una imagen en un informe &#40;generador de informes y SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
+ [Incrustar una imagen en un informe &#40;Generador de informes y SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [Agregar una imagen de fondo &#40;generador de informes y SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [Agregar una imagen de fondo &#40;Generador de informes y SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
   
- [Agregar una imagen enlazada a datos &#40;generador de informes y SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
+ [Agregar una imagen enlazada a datos &#40;Generador de informes y SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>Vea también  
- [Exportar a un archivo de imagen &#40;generador de informes y SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [Exportar a un archivo de imagen &#40;Generador de informes y SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

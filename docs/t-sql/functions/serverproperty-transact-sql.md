@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa8a6867c9b83763e7bd32444337b922271bfd18
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 397922e30eee608cc3fc32a841d204bab3d45e2f
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411892"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421352"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,8 +54,8 @@ SERVERPROPERTY ( 'propertyname' )
 |Intercalación|El nombre de la intercalación predeterminada para el servidor.<br /><br /> NULL = La entrada no es válida o es un error.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |CollationID|Id. de la intercalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Tipo de datos base: **int**|  
 |ComparisonStyle|Estilo de comparación de Windows de la intercalación.<br /><br /> Tipo de datos base: **int**|  
-|ComputerNamePhysicalNetBIOS|El nombre NetBIOS del equipo local en el que se está ejecutando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> En el caso de una instancia en clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un clúster de conmutación por error, este valor cambia conforme la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conmuta por error con otros nodos del clúster de conmutación por error.<br /><br /> En una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este valor permanece constante y devuelve el mismo valor que la propiedad MachineName.<br /><br /> **Nota**: Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentra en un clúster de conmutación por error y quiere obtener el nombre de la instancia en el clúster de conmutación por error, use la propiedad MachineName.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
-|Edición|Edición de producto instalada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use el valor de esta propiedad para determinar las características y los límites, como por ejemplo [Límites de la capacidad de cálculo de cada edición de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Las versiones de 64 bits del [!INCLUDE[ssDE](../../includes/ssde-md.md)] anexan (64 bits) a la versión.<br /><br /> Devuelve:<br /><br /> 'Enterprise Edition'<br /><br /> 'Enterprise Edition: licencia basada en núcleo'<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' indica [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo de datos base: **nvarchar(128)**|  
+|ComputerNamePhysicalNetBIOS|El nombre NetBIOS del equipo local en el que se está ejecutando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> En el caso de una instancia en clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un clúster de conmutación por error, este valor cambia conforme la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conmuta por error con otros nodos del clúster de conmutación por error.<br /><br /> En una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este valor permanece constante y devuelve el mismo valor que la propiedad MachineName.<br /><br /> **Nota:** Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentra en un clúster de conmutación por error y desea obtener el nombre de la instancia en clúster de conmutación por error, utilice la propiedad MachineName.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
+|Edición|Edición de producto instalada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use el valor de esta propiedad para determinar las características y los límites, como por ejemplo [Límites de la capacidad de cálculo de cada edición de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Las versiones de 64 bits del [!INCLUDE[ssDE](../../includes/ssde-md.md)] anexan (64 bits) a la versión.<br /><br /> Devuelve:<br /><br /> 'Enterprise Edition'<br /><br /> "Enterprise Edition: licencia basada en núcleo".<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' indica [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |EditionID|EditionID representa la edición instalada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use el valor de esta propiedad para determinar las características y los límites, como por ejemplo [Límites de la capacidad de cálculo de cada edición de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: licencia basada en núcleo<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express con Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database o SQL Data Warehouse<br /><br /> Tipo de base de datos: **bigint**|  
 |EngineEdition|Edición de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada en el servidor.<br /><br /> 1 = Personal o Desktop Engine (No está disponible en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores.)<br /><br /> 2 = Standard (se devuelve para Standard, Web y Business Intelligence.)<br /><br /> 3 = Enterprise (es el valor que se devuelve en las ediciones Evaluation, Developer y las dos ediciones Enterprise)<br /><br /> 4 = Express (se devuelve para Express, Express with Tools y Express con Advanced Services.)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 - [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = instancia administrada<br /><br /> Tipo de datos base: **int**|  
 |HadrManagerStatus|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica si el administrador de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ha iniciado.<br /><br /> 0 = No iniciado, pendiente de comunicación.<br /><br /> 1 = Iniciado y en ejecución.<br /><br /> 2 = No iniciado y con error.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.|  
@@ -120,7 +120,7 @@ GO
 > [!NOTE]  
 > Somos conscientes de que hay un problema en el que las propiedades de la versión notificadas por SERVERPROPERTY son incorrectas para Azure SQL Database. La versión del motor de base de datos de SQL Server que ejecuta Azure SQL Database va siempre por delante de la versión local de SQL Server e incluye las correcciones de seguridad más recientes. Esto significa que el nivel de revisión siempre va a la par de la versión local de SQL Server, o incluso por delante, y que las características más recientes disponibles en SQL Server están disponibles en Azure SQL Database.
 >
-> Para determinar mediante programación la edición del motor, use SELECT SERVERPROPERTY('EngineEdition'). Esta consulta devolverá "5" para las bases de datos independiente y "8" para las instancias administradas en Azure SQL Database. 
+> Para determinar mediante programación la edición del motor, use SELECT SERVERPROPERTY('EngineEdition'). Esta consulta devolverá "5" para los grupos elásticos y bases de datos únicas y "8" para las instancias administradas en Azure SQL Database. 
 >
 > Una vez que se resuelva este problema, se actualizará la documentación.
 
@@ -141,7 +141,7 @@ SELECT
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ediciones y componentes de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  
   
   

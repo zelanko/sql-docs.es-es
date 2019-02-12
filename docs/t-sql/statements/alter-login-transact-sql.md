@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/06/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a373c46a00f6e83461f41974bafa269e50468bca
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 3475aa24fe585c5f3133e5116573915c0462612f
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327826"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421362"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -47,7 +47,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[Servidor lógico de <br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -285,11 +285,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|**_\* Servidor lógico de <br />SQL Database \*_**|[Instancia administrada de <br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|**_\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_**|[Instancia administrada de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Servidor lógico de Azure SQL Database
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Grupo de bases de datos elásticas o base de datos única de Azure SQL Database
 
 ## <a name="sql-server"></a>SQL Server
  
@@ -446,7 +446,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[Servidor lógico de <br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* Instancia administrada de <br />SQL Database \*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* Instancia administrada de <br />SQL Database \*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -455,7 +455,7 @@ GO
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database Managed Instance
+-- Syntax for SQL Server and Azure SQL Database managed instance
   
 ALTER LOGIN login_name   
     {   
@@ -494,7 +494,7 @@ ALTER LOGIN login_name
 > Los inicios de sesión de Azure AD para Instancia administrada de SQL Database están en **versión preliminar pública**.
   
 ```  
--- Syntax for Azure SQL Database Managed Instance using Azure AD logins
+-- Syntax for Azure SQL Database managed instance using Azure AD logins
   
 ALTER LOGIN login_name   
   {   
@@ -653,7 +653,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
  En el ejemplo siguiente se asigna el inicio de sesión `Mary5` a la credencial EKM `EKMProvider1`.  
   
  
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], e Instancia administrada de SQL Database
+**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], e Instancia administrada de Azure SQL Database.
   
 ```sql  
 ALTER LOGIN Mary5  
@@ -682,7 +682,7 @@ GO
 ### <a name="g-changing-the-password-of-a-login-using-hashed"></a>G. Cambiar la contraseña de un inicio de sesión utilizando HASHED  
  En el ejemplo siguiente se cambia la contraseña de inicio de sesión de `TestUser` a un valor que ya tiene aplicado hash.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], e Instancia administrada de SQL Database
+**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], e Instancia administrada de Azure SQL Database.
   
 ```sql  
 ALTER LOGIN TestUser WITH   
@@ -711,7 +711,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[Servidor lógico de <br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Almacenamiento de datos<br /> paralelos](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Almacenamiento de datos<br /> paralelos](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -872,7 +872,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[Servidor lógico de <br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Almacenamiento de datos<br /> paralelos \*_**
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Almacenamiento de datos<br /> paralelos \*_**
 
 &nbsp;
 

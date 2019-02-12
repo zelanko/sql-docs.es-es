@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 304e5ec2722f8556c2d9c873f4ff5c3cfab4b7d2
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169034"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421092"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='**_next\_hop\_address_'  
 
- Para la Instancia administrada de SQL Database, `ADDRESS` debe ser local.
+ Para la Instancia administrada de Azure SQL Database, `ADDRESS` debe ser local.
 
  Especifica la dirección de red para esta ruta. En *dirección_de_próximo_salto* se especifica una dirección TCP/IP en el formato siguiente:  
   
@@ -154,7 +154,7 @@ ALTER ROUTE ExpenseRoute
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
 ```  
   
-### <a name="b-changing-the-target-database-for-a-route"></a>B. Cambiar la base de datos de destino para una ruta  
+### <a name="b-changing-the-target-database-for-a-route"></a>b. Cambiar la base de datos de destino para una ruta  
  En el ejemplo siguiente se cambia la base de datos de destino para la ruta `ExpenseRoute` a la base de datos identificada por el identificador único `D8D4D268-00A3-4C62-8F91-634B89B1E317.`  
   
 ```  
@@ -182,7 +182,7 @@ ALTER ROUTE ExpenseRoute
      ADDRESS = 'TCP://www.Adventure-Works.com:1234';  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

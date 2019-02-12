@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f3f0b40e022db23cfcd650c5f2da4a5a14082d1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327586"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421222"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "54327586"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -127,7 +127,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+-- Syntax for users based on Azure AD logins for Azure SQL Database managed instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER

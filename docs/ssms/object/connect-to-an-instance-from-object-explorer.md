@@ -1,7 +1,7 @@
 ---
 title: Conexión a SQL Server o Azure SQL Database | Microsoft Docs
 ms.custom: ''
-ms.date: 08/25/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,18 +11,19 @@ ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e07d1bb2c38fdf5284a09d49a7b81419872720b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8770ad0e7a5d04a2a1de96c15cb709b8321a5d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847429"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421292"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Conexión a SQL Server o Azure SQL Database
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Para trabajar con servidores y bases de datos, primero debe conectarse al servidor. Puede conectarse a varios servidores al mismo tiempo.
 
-[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) admite varios tipos de conexiones. En este artículo se proporcionan detalles para conectarse a SQL Server y Azure SQL Database (mediante la conexión a un servidor lógico de SQL Azure). Para obtener información sobre las otras opciones de conexión, consulte los [vínculos](#see-also) en la parte inferior de esta página.
+[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) admite varios tipos de conexiones. En este artículo se proporcionan detalles para conectarse a SQL Server y Azure SQL Database (mediante la conexión a un grupo elástico o una base de datos única de Azure SQL). Para obtener información sobre las otras opciones de conexión, consulte los [vínculos](#see-also) en la parte inferior de esta página.
   
 ## <a name="connecting-to-a-server"></a>Conectar a un servidor  
 
@@ -52,7 +53,7 @@ Para trabajar con servidores y bases de datos, primero debe conectarse al servid
 
 [Diseño, creación y actualización de tablas](../visual-db-tools/design-tables-visual-database-tools.md)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
 [Descarga de SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)

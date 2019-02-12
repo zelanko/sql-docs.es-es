@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a24090fdcb1bd8b8576f545dfef11764f22a192f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595693"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421155"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -153,7 +153,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://www.Adventure-Works.com:1234' ;  
 ```  
   
-### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. Crear una ruta TCP/IP con un nombre NetBIOS  
+### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>b. Crear una ruta TCP/IP con un nombre NetBIOS  
  En el ejemplo siguiente se crea una ruta al servicio `//Adventure-Works.com/Expenses`. La ruta especifica que los mensajes para este servicio se desplazan por TCP hasta el puerto `1234` del host identificado mediante el nombre NetBIOS `SERVER02`. Cuando llega el mensaje, la sesión de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo entrega a la instancia de base de datos indicada por el identificador único `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  
@@ -225,7 +225,7 @@ CREATE ROUTE TransportRoute
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
  [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

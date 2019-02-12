@@ -41,12 +41,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 72d978967591fbffa8d25b3954c78256149f7592
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: a3257e1c92460f29eef8a9f82749746d18ee8a28
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045098"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421422"
 ---
 # <a name="restore-statements-transact-sql"></a>Instrucciones RESTORE (Transact-SQL)
 Restaura copias de seguridad de bases de datos de SQL realizadas con el comando BACKUP. 
@@ -64,7 +64,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |**_\* SQL Server \*_**|[Instancia administrada de <br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Almacenamiento de datos<br /> paralelos](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[Instancia administrada de<br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Almacenamiento de datos<br /> paralelos](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -766,7 +766,7 @@ Las siguientes opciones de base de datos se establecen/invalidan y no se pueden 
 - Se agrega un grupo de archivos optimizado para memoria, al que se asigna el nombre XTP si no estaba en el archivo .bak de origen. Se cambia el nombre de todos los grupos de archivos optimizados para memoria existentes a XTP
 - Las opciones SINGLE_USER y RESTRICTED_USER se convierten en MULTI_USER
 
-## <a name="limitations---sql-database-managed-instance"></a>Limitaciones: instancia administrada de SQL Database
+## <a name="limitations---sql-database-managed-instance"></a>Limitaciones: Instancia administrada de SQL Database
 Se aplican las siguientes limitaciones:
 
 - Los archivos .BAK que contienen varios conjuntos de copia de seguridad no se pueden restaurar.
@@ -775,7 +775,7 @@ Se aplican las siguientes limitaciones:
 - Las copias de seguridad que contienen bases de datos que tienen objetos en memoria activos no se pueden restaurar en una instancia administrada de uso general.
 - Las copias de seguridad que contienen bases de datos en modo de solo lectura no se pueden restaurar en estos momentos. Esta limitación se quitará próximamente.
 
-Para obtener más información, vea [Instancia administrada](/azure/sql-database/sql-database-managed-instance).
+Para obtener más información, consulte [Instancia administrada](/azure/sql-database/sql-database-managed-instance).
 
 ## <a name="restoring-an-encrypted-database"></a>Restaurar una base de datos cifrada  
 Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para obtener más información, consulte [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
@@ -840,7 +840,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[Instancia administrada de <br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Almacenamiento de datos<br /> paralelos \*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[Instancia administrada de<br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Almacenamiento de datos<br /> paralelos \*_**
 
 &nbsp;
 

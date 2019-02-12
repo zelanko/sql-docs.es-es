@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64c4819bd307afe3b7e4b310949148deabb8c938
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d393b8f634290069bfe12d3b69c1917fb6ac559f
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327817"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421472"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -51,7 +51,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[Servidor lógico de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -288,15 +288,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* Servidor lógico de <br />SQL Database \*_** &nbsp;|[Instancia administrada de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_**&nbsp;|[Instancia administrada de<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Servidor lógico de Azure SQL Database
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Grupo de bases de datos elásticas o base de datos única de Azure SQL Database
 
 ## <a name="overview"></a>Información general
 
-En Azure SQL Database, use esta instrucción para modificar una base de datos en un servidor lógico. Use esta instrucción para cambiar el nombre de una base de datos, cambiar el objetivo de edición y servicio de la base de datos, unir la base de datos a un grupo elástico o quitarla de uno, establecer las opciones de base de datos, agregar o quitar la base de datos como una base de datos secundaria en una relación de replicación geográfica y establecer el nivel de compatibilidad de base de datos.
+En Azure SQL Database, use esta instrucción para modificar una base de datos en un grupo elástico o una base de datos única. Use esta instrucción para cambiar el nombre de una base de datos, cambiar el objetivo de edición y servicio de la base de datos, unir la base de datos a un grupo elástico o quitarla de uno, establecer las opciones de base de datos, agregar o quitar la base de datos como una base de datos secundaria en una relación de replicación geográfica y establecer el nivel de compatibilidad de base de datos.
 
 Debido a su longitud, la sintaxis de ALTER DATABASE se divide en varios artículos.  
 
@@ -653,7 +653,7 @@ ALTER DATABASE db1 FAILOVER
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Servidor lógico de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* Instancia administrada de <br />SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* Instancia administrada de <br />SQL Database \*_**&nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -776,7 +776,7 @@ ALTER DATABASE WideWorldImporters
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Servidor lógico de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Almacenamiento de datos<br /> paralelos](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Almacenamiento de datos<br /> paralelos](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -898,7 +898,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Servidor lógico de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Almacenamiento de datos<br /> paralelos \*_** &nbsp;|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Almacenamiento de datos<br /> paralelos \*_** &nbsp;|  
 
 &nbsp;
 

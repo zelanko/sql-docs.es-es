@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c29c19a67e3cbbfa4131e25151e33c67fe667169
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8448d5fd564ff001d847e7af981bc34734cef727
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327906"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421412"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[Servidor lógico de <br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -262,11 +262,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* Servidor lógico de <br />SQL Database \*_**|[Instancia administrada de <br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_**|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Servidor lógico de Azure SQL Database
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Grupo de bases de datos elásticas o base de datos única de Azure SQL Database
   
 ## <a name="syntax"></a>Sintaxis 
   
@@ -282,7 +282,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Argumentos  
 *login_name*  
-Especifica el nombre del inicio de sesión que se va a crear. El servidor lógico de Azure SQL Database solo admite los inicios de sesión SQL. 
+Especifica el nombre del inicio de sesión que se va a crear. El grupo de bases de datos elásticas o la base de datos única de Azure SQL Database solo admite inicios de sesión de SQL. 
 
 PASSWORD **="** contraseña**"*  
 Especifica la contraseña del inicio de sesión SQL que se está creando. Utilice una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la información de la contraseña almacenada se calcula con las funciones SHA-512 de la contraseña salada. 
@@ -320,7 +320,7 @@ Solo pueden crear inicios de sesión el inicio de sesión de entidad de segurida
 
 ## <a name="logins"></a>Inicios de sesión
 - Debe tener el permiso **ALTER ANY LOGIN** en el servidor o la pertenencia al rol fijo de servidor **securityadmin**. Solo la cuenta de Azure Active Directory (Azure AD) con el permiso **ALTER ANY LOGIN** en el servidor o la pertenencia al permiso securityadmin pueden ejecutar este comando.
-- Debe ser un miembro de Azure AD en el mismo directorio que se use para el servidor lógico de Azure SQL.
+- Debe ser un miembro de Azure AD en el mismo directorio que se use para el servidor de Azure SQL Database.
   
 ## <a name="after-creating-a-login"></a>Después de crear un inicio de sesión  
 Después de crear un inicio de sesión, el inicio de sesión se puede conectar a SQL Database, pero solo tiene los permisos concedidos al rol **public**. Considere la posibilidad de realizar algunas de las actividades siguientes. 
@@ -378,7 +378,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Servidor lógico de <br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Instancia administrada de <br />SQL Database \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Instancia administrada de <br />SQL Database \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -387,7 +387,7 @@ GO
 ## <a name="syntax"></a>Sintaxis 
   
 ```sql
--- Syntax for Azure SQL Database Managed Instance
+-- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
 <option_list> ::=
@@ -553,7 +553,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Servidor lógico de <br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Almacenamiento de datos<br /> paralelos](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Almacenamiento de datos<br /> paralelos](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -665,7 +665,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Servidor lógico de <br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Almacenamiento de datos<br /> paralelos \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Almacenamiento de datos<br /> paralelos \*_**
 
 &nbsp;
 

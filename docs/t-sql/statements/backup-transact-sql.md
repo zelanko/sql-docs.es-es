@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: a098756919cec261d9416149a508b311c48cd147
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805781"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421502"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,7 +71,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[Instancia administrada de <br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Almacenamiento de datos<br /> paralelos](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Almacenamiento de datos<br /> paralelos](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -940,7 +940,7 @@ WITH STATS = 5;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instancia administrada de <br />SQL Database \*_** &nbsp;|[Almacenamiento de datos<br /> paralelos](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instancia administrada de <br />SQL Database \*_**&nbsp;|[Almacenamiento de datos<br /> paralelos](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -990,7 +990,7 @@ Especifica una copia de seguridad completa de la base de datos. Durante una copi
 > [!IMPORTANT]
 > Una copia de seguridad de base de datos creada en una instancia administrada solo se puede restaurar en otra instancia administrada. No se puede restaurar en una instancia local de SQL Server (de la misma forma que no se puede restaurar una copia de seguridad de una base de datos de SQL Server 2016 en una instancia de SQL Server 2012).
   
-Al restaurar una copia de seguridad creada por BACKUP DATABASE (una *copia de seguridad de datos*), se restaura la copia de seguridad completa. Para restaurar desde copias de seguridad automáticas de una instancia administrada de Azure SQL Database, vea [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore) (Restaurar SQL Database)  
+Al restaurar una copia de seguridad creada por BACKUP DATABASE (una *copia de seguridad de datos*), se restaura la copia de seguridad completa. Para restaurar desde copias de seguridad automáticas de una instancia administrada de Azure SQL Database, vea [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore) (Restaurar SQL Database).  
   
 { *database_name* | **@**_database\_name\_var_ }   
 Es la base de datos desde la que se realiza la copia de seguridad de la base de datos completa. Si se proporciona como una variable (**@**_database\_name\_var_), este nombre se puede especificar como una constante de cadena (**@**_database\_name\_var_**=**_database name_) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
@@ -1148,7 +1148,7 @@ WITH STATS = 5, COPY_ONLY;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instancia administrada de <br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Almacenamiento de datos<br /> paralelos \*_** &nbsp;|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Almacenamiento de datos<br /> paralelos \*_** &nbsp;|  
 
 &nbsp;
 

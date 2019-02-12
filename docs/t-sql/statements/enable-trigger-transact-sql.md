@@ -23,19 +23,19 @@ ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a92ebf725860db4537b03d4d5eb917475774201a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599443"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652524"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Habilita un desencadenador DML, DDL o logon.  
+Habilita un desencadenador DML, DDL o logon.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,41 +45,41 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *schema_name*  
- Es el nombre del esquema al que pertenece el desencadenador. *schema_name* no se puede especificar para los desencadenadores DDL o de inicio de sesión.  
+*schema_name*  
+Es el nombre del esquema al que pertenece el desencadenador. *schema_name* no se puede especificar para los desencadenadores DDL o de inicio de sesión.  
   
- *trigger_name*  
- Es el nombre del desencadenador que se va a habilitar.  
+*trigger_name*  
+Es el nombre del desencadenador que se va a habilitar.  
   
- ALL  
- Indica que todos los desencadenadores del ámbito de la cláusula ON están habilitados.  
+ALL  
+Indica que todos los desencadenadores del ámbito de la cláusula ON están habilitados.  
   
- *object_name*  
- Es el nombre de la tabla o la vista en la que se creó el desencadenador DML *trigger_name* para su ejecución.  
+*object_name*  
+Es el nombre de la tabla o la vista en la que se creó el desencadenador DML *trigger_name* para su ejecución.  
   
- DATABASE  
- En el caso de un desencadenador DDL, indica que *trigger_name* se creó o se modificó para ejecutarse en el ámbito de la base de datos.  
+DATABASE  
+En el caso de un desencadenador DDL, indica que *trigger_name* se creó o se modificó para ejecutarse en el ámbito de la base de datos.  
   
- ALL SERVER  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ALL SERVER  
+**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- En el caso de un desencadenador DDL, indica que *trigger_name* se creó o se modificó para ejecutarse en el ámbito de servidor. ALL SERVER también se aplica a los desencadenadores de inicio de sesión.  
+En el caso de un desencadenador DDL, indica que *trigger_name* se creó o se modificó para ejecutarse en el ámbito de servidor. ALL SERVER también se aplica a los desencadenadores de inicio de sesión.  
   
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
 ## <a name="remarks"></a>Notas  
- Si se habilita un desencadenador, éste no se vuelve a crear. Un desencadenador deshabilitado sigue existiendo como objeto en la base de datos actual, pero no se activa. La habilitación de un desencadenador hace que se active cuando se ejecute cualquier instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en que se programó originalmente. Los desencadenadores se deshabilitan con [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Los desencadenadores DML definidos en tablas también se pueden habilitar o deshabilitar mediante el uso de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+Si se habilita un desencadenador, no se vuelve a crear. Un desencadenador deshabilitado sigue existiendo como objeto en la base de datos actual, pero no se activa. La habilitación de un desencadenador hace que se active cuando se ejecute cualquier instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en que se programó originalmente. Los desencadenadores se deshabilitan con [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Los desencadenadores DML definidos en tablas también se pueden habilitar o deshabilitar mediante el uso de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
- Para habilitar un desencadenador DML, como mínimo, el usuario debe tener permiso ALTER en la tabla o vista en la que se creó el desencadenador.  
+Para habilitar un desencadenador DML, como mínimo, el usuario debe tener permiso ALTER en la tabla o vista en la que se creó el desencadenador.  
   
- Para habilitar un desencadenador DDL con ámbito del servidor (ON ALL SERVER) o un desencadenador logon, el usuario debe tener el permiso CONTROL SERVER en el servidor. Para habilitar un desencadenador DDL con ámbito de la base de datos (ON DATABASE), un usuario debe tener permiso ALTER ANY DATABASE DDL TRIGGER en la base de datos actual.  
+Para habilitar un desencadenador DDL con ámbito del servidor (ON ALL SERVER) o un desencadenador logon, el usuario debe tener el permiso CONTROL SERVER en el servidor. Para habilitar un desencadenador DDL con ámbito de la base de datos (ON DATABASE), un usuario debe tener permiso ALTER ANY DATABASE DDL TRIGGER en la base de datos actual.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. Habilitar un desencadenador DML en una tabla  
- En este ejemplo se deshabilita el desencadenador `uAddress` que se creó en la tabla `Address` de la base de datos AdventureWorks y, después, se habilita.  
+En este ejemplo se deshabilita el desencadenador `uAddress` que se creó en la tabla `Address` de la base de datos AdventureWorks y, después, se habilita.  
   
 ```  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
@@ -88,8 +88,8 @@ ENABLE Trigger Person.uAddress ON Person.Address;
 GO  
 ```  
   
-### <a name="b-enabling-a-ddl-trigger"></a>B. Habilitar un desencadenador DDL  
- En este ejemplo se crea un desencadenador DDL `safety` con ámbito de base de datos y, después, se deshabilita y se habilita.  
+### <a name="b-enabling-a-ddl-trigger"></a>b. Habilitar un desencadenador DDL  
+En este ejemplo se crea un desencadenador DDL `safety` con ámbito de base de datos y, después, se deshabilita y se habilita.  
   
 ```  
 CREATE TRIGGER safety   
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. Habilitar todos los desencadenadores que se definieron con el mismo ámbito  
- En el ejemplo siguiente se habilitan todos los desencadenadores DDL creados en el ámbito del servidor.  
+En el ejemplo siguiente se habilitan todos los desencadenadores DDL creados en el ámbito del servidor.  
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -115,7 +115,7 @@ ENABLE Trigger ALL ON ALL SERVER;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8924de6099e947e02023ea92853ee84a94b0f48d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee8626047df76aaf9186295c092623a7cee6d263
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804263"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570668"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,43 +60,45 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## <a name="return-value"></a>Valor devuelto  
  **varbinary** (máximo de 8000 bytes)  
-  
+
+## <a name="remarks"></a>Notas  
+Plantéese usar `CHECKSUM` o `BINARY_CHECKSUM` como alternativas para calcular un valor hash.
+
+Los algoritmos MD2, MD4, MD5, SHA y SHA1 no están disponibles en el nivel de compatibilidad 130 y posterior. Use SHA2_256 o SHA2_512 en su lugar.
+
 ## <a name="examples"></a>Ejemplos  
-  
-### <a name="a-return-the-hash-of-a-variable"></a>A. Devolver el valor hash de una variable  
+### <a name="return-the-hash-of-a-variable"></a>Devuelve el valor hash de una variable  
  En el siguiente ejemplo se devuelve el hash `SHA1` de los datos **nvarchar** almacenados en la variable `@HashThis`.  
   
-```  
+```sql  
 DECLARE @HashThis nvarchar(4000);  
 SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
 SELECT HASHBYTES('SHA1', @HashThis);  
-  
 ```  
   
-### <a name="b-return-the-hash-of-a-table-column"></a>B. Devolver el valor hash de una columna de tabla  
+### <a name="return-the-hash-of-a-table-column"></a>Devuelve el valor hash de una columna de tabla  
  En el ejemplo siguiente se devuelve el valor hash SHA1 de los valores de la columna `c1` de la tabla `Test1`.  
   
-```  
+```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
 SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 -------------------------------------------  
 0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
 0xF643A82F948DEFB922B12E50B950CEE130A934D6  
   
 (2 row(s) affected)  
-  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-  
+## <a name="see-also"></a>Consulte también  
+[Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[BINARY_CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
   

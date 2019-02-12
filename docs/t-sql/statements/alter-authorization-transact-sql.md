@@ -1,7 +1,7 @@
 ---
 title: ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,14 +27,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327551"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421232"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Cambia la propiedad de un elemento protegible.    
@@ -196,6 +197,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-sql-server"></a>En SQL Server:  
 **Requisitos del nuevo propietario:**   
 La nueva entidad propietaria debe ser una de las siguientes:  
+
 -   Un inicio de sesión para la autenticación de SQL Server.  
 -   Un inicio de sesión para la autenticación de Windows que represente un usuario de Windows (no un grupo).  
 -   Un usuario de Windows que se autentica a través de un inicio de sesión de autenticación de Windows que representa un grupo de Windows.  
@@ -206,6 +208,7 @@ Si no es un miembro del rol fijo de servidor **sysadmin**, debe tener al menos e
 ### <a name="for-azure-sql-database"></a>En Azure SQL Database:  
 **Requisitos del nuevo propietario:**   
 La nueva entidad propietaria debe ser una de las siguientes:  
+
 -   Un inicio de sesión para la autenticación de SQL Server.  
 -   Un usuario federado (no un grupo) presente en Azure AD.  
 -   Un usuario administrado (no un grupo) o una aplicación presente en Azure AD.    
@@ -217,7 +220,8 @@ La nueva entidad propietaria debe ser una de las siguientes:
 Debe conectarse a la base de datos de destino para cambiar el propietario de dicha base de datos.  
 
 El propietario de una base de datos se puede cambiar en los siguientes tipos de cuentas. 
-* El inicio de sesión de la entidad de seguridad a nivel de servicio. (El administrador de SQL Azure proporcionado cuando se creó el servidor lógico).  
+
+* El inicio de sesión de la entidad de seguridad a nivel de servicio. (El administrador de SQL Azure proporcionado cuando se creó el servidor de SQL Database).  
 * El administrador de Active Directory para Azure SQL Server.   
 * El propietario actual de la base de datos.   
  

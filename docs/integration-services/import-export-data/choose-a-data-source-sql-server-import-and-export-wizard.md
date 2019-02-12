@@ -1,7 +1,7 @@
 ---
 title: Elegir un origen de datos (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,20 +13,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e337704f95b432c30a6451aabe8a85b4609d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
+ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806025"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290425"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Elegir un origen de datos (Asistente para importación y exportación de SQL Server)
-  Después de la página de bienvenida, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Elegir un origen de datos**. En esta página, debe proporcionar información sobre el origen de datos y la manera de conectarse a él.
+  Después de la página de bienvenida, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Elegir un origen de datos**. En esta página, debe proporcionar información sobre el origen de los datos y la manera de conectarse a él.
   
 Para más información sobre los orígenes de datos que puede usar, vea [¿Qué orígenes de datos y destinos puedo usar?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
+> [!NOTE]
+> El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza SQL Server Integration Services (SSIS). Por lo tanto, las mismas limitaciones que se aplican a SSIS, también se aplican al asistente.  Por ejemplo, las columnas ErrorCode y ErrorColumn, que se agregan de forma predeterminada, como se describe en [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).
+
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>Captura de pantalla de la página Seleccionar un origen de datos 
-En la captura de pantalla siguiente, se muestra la primera parte de la página **Seleccionar un origen de datos** del asistente. El resto de la página tiene un número variable de opciones que dependen del origen de datos que elija aquí.
+En la imagen siguiente, se muestra la primera parte de la página **Seleccionar un origen de datos** del asistente. El resto de la página tiene un número variable de opciones que dependen del origen de datos que elija aquí.
 
 ![Elegir origen](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -66,10 +69,12 @@ Para conectarse a un origen de datos de uso frecuente, consulte una de las pági
 
 Para obtener más información sobre cómo conectarse a un origen de datos que no aparezca en esta lista, consulte [The Connection Strings Reference (Referencia de cadenas de conexión)](https://www.connectionstrings.com/). Este sitio de terceros contiene cadenas de conexión de ejemplo y más información acerca de los proveedores de datos y la conexión que estos necesitan.
 
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>¿Qué sigue?
  Después de proporcionar información sobre el origen de datos y la manera de conectarse a él, la página siguiente es **Elegir un destino**. En esta página, debe proporcionar información sobre el destino de datos y la manera de conectarse a él. Para más información, vea [Elegir un destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
- 
+
 ## <a name="see-also"></a>Vea también
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

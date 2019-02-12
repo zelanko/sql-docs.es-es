@@ -2,7 +2,7 @@
 title: Base de datos tempdb | Microsoft Docs
 description: En este tema se proporcionan detalles relacionados con la configuración y el uso de la base de datos tempdb en SQL Server en Azure SQL Database.
 ms.custom: P360
-ms.date: 07/17/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,14 +18,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29682619886dc257ba2b2583f4c4d256158df797
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df57b6d99e07b107770db1a98a7a97e76c392254
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535310"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421278"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La base de datos del sistema **tempdb** es un recurso global disponible para todos los usuarios conectados a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a SQL Database. Tempdb se usa para contener:  
   
@@ -39,7 +40,7 @@ ms.locfileid: "52535310"
   > Cada objeto interno usa un mínimo de nueve páginas, una página IAM y una extensión de ocho páginas. Para obtener más información acerca de las páginas y las extensiones, vea [Páginas y extensiones](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
 
   > [!IMPORTANT]
-  > El servidor lógico de Azure SQL Database admite tablas temporales globales y procedimientos almacenados temporales globales que se almacenan en tempdb y que tienen como ámbito el nivel de base de datos. Las tablas temporales globales y los procedimientos almacenados temporales globales se comparten entre todos los usuarios en la misma base de datos de Azure SQL. Las sesiones de usuario de otras bases de datos de Azure SQL no pueden acceder a tablas temporales globales. Para obtener más información, vea [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database) (Tablas temporales globales con ámbito de base de datos [Azure SQL Database]). [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) admite los mismos objetos temporales que SQL Server. En el caso del servidor lógico de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos tempdb. Para familiarizarse con el concepto de servidor lógico y base de datos maestra lógica, vea [¿Qué es un servidor lógico de Azure SQL?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server) Para ver información sobre tempdb en el contexto del servidor lógico de Azure SQL Database, consulte [tempdb Database in Azure SQL Database logical server](#tempdb-database-in-sql-database) (Base de datos tempdb en el servidor lógico de Azure SQL Database). En el caso de Instancia administrada de Azure SQL Database, se aplican todas las bases de datos del sistema. 
+  > Los grupos elásticos y las bases de datos únicas de Azure SQL Database admiten tablas temporales globales y procedimientos almacenados temporales globales que se almacenan en tempdb y que tienen como ámbito el nivel de base de datos. Las tablas temporales globales y los procedimientos almacenados temporales globales se comparten entre todos los usuarios en la misma base de datos de Azure SQL. Las sesiones de usuario de otras bases de datos de Azure SQL no pueden acceder a tablas temporales globales. Para obtener más información, vea [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database) (Tablas temporales globales con ámbito de base de datos [Azure SQL Database]). [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) admite los mismos objetos temporales que SQL Server. En el caso de los grupos elásticos y las bases de datos únicas de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos tempdb. Para obtener más información, vea la [Qué es un servidor de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Para obtener una explicación de tempdb en el contexto de los grupos elásticos y las bases de datos únicas de Azure SQL Database, consulte [tempdb Database](#tempdb-database-in-sql-database). En el caso de Instancia administrada de Azure SQL Database, se aplican todas las bases de datos del sistema.
 
 - **Almacenes de versiones**, que son una colección de páginas de datos que contiene las filas de datos que son necesarias para admitir las características que utilizan versiones de fila. Hay dos almacenes de versiones: un almacén de versiones común y otro de generación de índices en línea. Los almacenes de versión contienen:
   - Versiones de fila generadas por las transacciones de modificación de datos en una base de datos que utiliza transacciones de lectura confirmada que usan transacciones de aislamiento de versiones de fila o de aislamiento de instantáneas.  
@@ -48,6 +49,7 @@ ms.locfileid: "52535310"
 Las operaciones de **tempdb** se registran de forma mínima, por lo que las transacciones se pueden revertir. **tempdb** se vuelve a crear cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , de forma que el sistema siempre se inicia con una copia limpia de la base de datos. Las tablas y los procedimientos almacenados temporales se quitan automáticamente en la desconexión y ninguna conexión permanece activa cuando se cierra el sistema. Por tanto, en la base de datos **tempdb** no hay nada que deba guardarse de una a otra sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No se permite realizar operaciones de copia de seguridad y restauración en **tempdb**.  
   
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Propiedades físicas de tempdb en SQL Server
+
  En la tabla siguiente se muestran los valores iniciales de configuración de los archivos de datos y registro de **tempdb** en SQL Server, que se basan en los valores predeterminados para la base de datos modelo. El tamaño de estos archivos puede variar ligeramente para diferentes ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Archivo|Nombre lógico|Nombre físico|Tamaño inicial|Crecimiento del archivo|  
@@ -61,10 +63,12 @@ Las operaciones de **tempdb** se registran de forma mínima, por lo que las tran
 > [!NOTE]
 > El valor predeterminado para el número de archivos de datos se basa en las directrices [KB 2154845](https://support.microsoft.com/kb/2154845/).  
   
-### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>Mover los archivos de datos y registro de tempdb en SQL Server  
+### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>Mover los archivos de datos y registro de tempdb en SQL Server 
+ 
  Para mover los archivos de registro y de datos de **tempdb** , vea [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md).  
   
-### <a name="database-options-for-tempdb-in-sql-server"></a>Opciones de base de datos de tempdb en SQL Server  
+### <a name="database-options-for-tempdb-in-sql-server"></a>Opciones de base de datos de tempdb en SQL Server 
+ 
  En la siguiente tabla se muestra el valor predeterminado de las opciones de base de datos de la base de datos **tempdb** y se indica si la opción se puede modificar. Para ver la configuración actual de estas opciones, utilice la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
@@ -75,29 +79,29 @@ Las operaciones de **tempdb** se registran de forma mínima, por lo que las tran
 |ANSI_PADDING|OFF|Sí|  
 |ANSI_WARNINGS|OFF|Sí|  
 |ARITHABORT|OFF|Sí|  
-|AUTO_CLOSE|OFF|no|  
+|AUTO_CLOSE|OFF|No|  
 |AUTO_CREATE_STATISTICS|ON|Sí|  
-|AUTO_SHRINK|OFF|no|  
+|AUTO_SHRINK|OFF|No|  
 |AUTO_UPDATE_STATISTICS|ON|Sí|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|no|  
+|CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> no<br /><br /> no|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|ON|no|  
-|ENCRYPTION|OFF|no|  
-|MIXED_PAGE_ALLOCATION|OFF|no|  
+|DB_CHAINING|ON|No|  
+|ENCRYPTION|OFF|No|  
+|MIXED_PAGE_ALLOCATION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Sí|  
 |PAGE_VERIFY|CHECKSUM para las nuevas instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE para las actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
 |QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|no|  
-|RECOVERY|SIMPLE|no|  
+|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|RECOVERY|SIMPLE|No|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
 |Opciones de Service Broker|ENABLE_BROKER|Sí|  
-|TRUSTWORTHY|OFF|no|  
+|TRUSTWORTHY|OFF|No|  
   
  Para obtener una descripción de estas opciones de la base de datos, vea [Opciones de ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
@@ -275,6 +279,6 @@ Para obtener más información sobre la mejora del rendimiento en tempdb, consul
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
  [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con tempdb en SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
  [Troubleshooting Insufficient Disk Space in tempdb](https://msdn.microsoft.com/library/ms176029.aspx) (Solucionar problemas de espacio en disco insuficiente en tempdb) 

@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 60f477889bab268ed6e5f8ff7916972d29047059
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: d296a30e017172e1e753d6dbaaa065b0644792bb
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55148063"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55513977"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio
 
@@ -51,8 +51,8 @@ El instalador enumera las instancias disponibles de Visual Studio a las que se v
 [![descargar](../ssdt/media/download.png) Descargar SSDT para Visual Studio 2017 (15.9.0) ](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
-> - Antes de instalar SSDT para Visual Studio 2017 (15.8.2), desinstale las extensiones *Proyectos de Analysis Services* y *Proyectos de Reporting Services*, si están instaladas, y cierre todas las instancias de VS.
-> - SSDT para Visual Studio 2017 (15.8.2) no es compatible con el diseño de paquetes que contienen orígenes y destinos de Teradata. Utilice SSDT para Visual Studio 2017 (15.8).
+> - Antes de instalar SSDT para Visual Studio 2017 (15.9.0), desinstale las extensiones *Proyectos de Analysis Services* y *Proyectos de Reporting Services*, si están instaladas, y cierre todas las instancias de VS.
+> - SSDT para Visual Studio 2017 (desde 15.8.2) no es compatible con el diseño de paquetes que contienen orígenes y destinos de Teradata. Utilice SSDT para Visual Studio 2017 (15.8).
 
 
 

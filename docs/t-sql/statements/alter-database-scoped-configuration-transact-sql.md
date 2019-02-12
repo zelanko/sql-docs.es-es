@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838125"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421322"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -216,7 +216,7 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 Permite la configuración de la funcionalidad para quitar automáticamente las [tablas temporales globales](create-table-transact-sql.md). El valor predeterminado es ON, lo que significa que las tablas temporales globales se quitan automáticamente cuando no están en uso en ninguna sesión. Cuando se establece en OFF, las tablas temporales globales deben quitarse explícitamente mediante una instrucción DROP TABLE o se quitarán automáticamente al reiniciar el servidor.
 
-- En el servidor lógico de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta opción se puede establecer en las bases de datos de usuario individuales del servidor lógico.
+- En los grupos elásticos y bases de datos únicas de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta opción se puede establecer en las bases de datos de usuario individuales del servidor de SQL Database.
 - En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Instancia administrada de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta opción se establece en `TempDB` y la configuración de las bases de datos de usuario individuales no surte ningún efecto.
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }

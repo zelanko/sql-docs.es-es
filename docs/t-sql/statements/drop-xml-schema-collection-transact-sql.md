@@ -20,22 +20,22 @@ helpviewer_keywords:
 - dropping XML schema collections
 - DROP XML SCHEMA COLLECTION statement
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 320c11c78f95f644e373b1cd410858a81e72edad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6dccd502689a91cd006c5f20961923ec2c740fc9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804493"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041086"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Elimina toda la colección de esquemas XML y todos sus componentes.  
+Elimina toda la colección de esquemas XML y todos sus componentes.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,22 +45,22 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *relational_schema*  
- Identifica el nombre del esquema relacional. Si no se especifica, se usará el esquema relacional predeterminado.  
+*relational_schema*  
+Identifica el nombre del esquema relacional. Si no se especifica, se usará el esquema relacional predeterminado.  
   
- *sql_identifier*  
- Es el nombre de la colección de esquemas XML que se va a quitar.  
+*sql_identifier*  
+Es el nombre de la colección de esquemas XML que se va a quitar.  
   
 ## <a name="remarks"></a>Notas  
- La eliminación de una colección de esquemas XML es una operación transaccional. Esto significa que si quita una colección de esquemas XML de una transacción y, después, revierte la transacción, no se quitará la colección de esquemas XML.  
+La eliminación de una colección de esquemas XML es una operación transaccional. Esto significa que, si quita una colección de esquemas XML de una transacción y, después, revierte la transacción, no se quitará la colección de esquemas XML.  
   
- No podrá quitar una colección de esquemas XML cuando esté en uso. Esto significa que la colección que se desea quitar no puede cumplir ninguna de las condiciones siguientes:  
+No podrá quitar una colección de esquemas XML cuando esté en uso. Por tanto, la colección que se desea quitar no puede cumplir ninguna de las condiciones siguientes:  
   
 -   Estar asociada a cualquier columna o parámetro de tipo **xml**.  
   
 -   Estar especificada en restricciones de tabla.  
   
--   Estar referenciada en una función enlazada a esquema o a un procedimiento almacenado. Por ejemplo, la función siguiente bloqueará la colección de esquemas XML `MyCollection` porque la función especifica `WITH SCHEMABINDING`. Si la quita, no habrá ningún bloqueo en XML SCHEMA COLLECTION.  
+-   Estar referenciada en una función enlazada a esquema o a un procedimiento almacenado. Por ejemplo, la función siguiente bloqueará la colección de esquemas XML `MyCollection` porque la función específica `WITH SCHEMABINDING`. Si la quita, no habrá ningún bloqueo en XML SCHEMA COLLECTION.  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  
@@ -75,17 +75,17 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     ```  
   
 ## <a name="permissions"></a>Permisos  
- Para quitar una colección de esquemas XML (XML SCHEMA COLLECTION) es necesario el permiso DROP sobre la colección.  
+Para quitar una colección de esquemas XML (XML SCHEMA COLLECTION) es necesario el permiso DROP sobre la colección.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se muestra cómo eliminar una colección de esquemas XML.  
+En el ejemplo siguiente se muestra cómo eliminar una colección de esquemas XML.  
   
 ```  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

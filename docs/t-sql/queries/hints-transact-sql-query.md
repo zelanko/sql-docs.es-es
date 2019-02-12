@@ -1,7 +1,7 @@
 ---
 title: Sugerencias de consulta (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 96f34d4ececcb05f91e5fc6329a598907269501e
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306282"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736976"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -264,7 +264,9 @@ ms.locfileid: "53306282"
 *  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"       
    Deshabilita las combinaciones adaptables del modo por lotes. Para obtener más información, vea [Combinaciones adaptables del modo por lotes](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
 *  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"       
-   Deshabilita los comentarios de concesión de memoria en modo por lotes. Para obtener más información, vea [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+   Deshabilita los comentarios de concesión de memoria en modo por lotes. Para obtener más información, vea [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).   
+* "DISABLE_DEFERRED_COMPILATION_TV"    
+  Deshabilita la compilación diferida de variables de tabla. Para obtener más información, consulte [Compilación diferida de variables de tabla](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 *  "DISABLE_INTERLEAVED_EXECUTION_TVF"      
    Deshabilita la ejecución intercalada de las funciones con valores de tabla de múltiples instrucciones. Para más información, consulte [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
 *  "DISABLE_OPTIMIZED_NESTED_LOOP"      
@@ -292,11 +294,11 @@ ms.locfileid: "53306282"
 *  'QUERY_PLAN_PROFILE'      
  Habilita la generación de perfiles ligera para la consulta. Cuando finaliza una consulta que contiene esta nueva sugerencia, se activa un nuevo evento extendido: query_plan_profile. Este evento extendido expone las estadísticas de ejecución y el plan de ejecución real XML similar al evento extendido query_post_execution_showplan, pero solo para las consultas que contiene la nueva sugerencia. **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
 
-  > [!NOTE]
-  > Si habilita la recopilación del evento extendido query_post_execution_showplan, se agregará la infraestructura de generación de perfiles estándar para todas las consultas que se están ejecutando en el servidor, por lo que podría resultar afectado el rendimiento global del servidor.      
-  > Si habilita la recopilación del evento extendido *query_thread_profile* para usar en su lugar la generación de perfiles ligera, habrá una sobrecarga de rendimiento mucho mejor, pero seguirá resultando afectado el rendimiento global del servidor.       
-  > Si habilita el evento extendido query_plan_profile, solo se habilitará la infraestructura ligera de generación de perfiles para una consulta que se ejecutó con QUERY_PLAN_PROFILE, con lo que las otras cargas de trabajo del servidor no resultarán afectadas. Use esta sugerencia para generar perfiles de una consulta específica sin que esto afecte a otras partes de la carga de trabajo del servidor.
-  > Para más información sobre la generación de perfiles de baja intensidad, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).
+   > [!NOTE]
+   > Si habilita la recopilación del evento extendido query_post_execution_showplan, se agregará la infraestructura de generación de perfiles estándar para todas las consultas que se están ejecutando en el servidor, por lo que podría resultar afectado el rendimiento global del servidor.      
+   > Si habilita la recopilación del evento extendido *query_thread_profile* para usar en su lugar la generación de perfiles ligera, habrá una sobrecarga de rendimiento mucho mejor, pero seguirá resultando afectado el rendimiento global del servidor.       
+   > Si habilita el evento extendido query_plan_profile, solo se habilitará la infraestructura ligera de generación de perfiles para una consulta que se ejecutó con QUERY_PLAN_PROFILE, con lo que las otras cargas de trabajo del servidor no resultarán afectadas. Use esta sugerencia para generar perfiles de una consulta específica sin que esto afecte a otras partes de la carga de trabajo del servidor.
+   > Para más información sobre la generación de perfiles de baja intensidad, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).
  
 Puede consultar la lista de todos los nombres de USE HINT compatibles mediante la vista de administración dinámica [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
 

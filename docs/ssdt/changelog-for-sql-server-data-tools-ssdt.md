@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: a82fe061c8886dc88af8b44faf4b4fb86ccda2e6
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087894"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428682"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Registro de cambios para SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ Fecha de publicación: 28 de enero de 2019
 
 ### <a name="whats-new"></a>Novedades
 **SSIS:**
-1. Incorpora el origen de Power Query (versión preliminar) para SSIS 2017.
-2. Vuelve a incorporar soporte técnico para SSIS 2012.
-3. Incorpora origen y destino de Oracle para SSIS 2019.
+1. Incorpora el origen de Power Query (versión preliminar) para SSIS en ADF 2017.
+2. Se ha agregado compatibilidad con SQL Server 2012.
+3. Incorpora origen y destino de Oracle para SQL Server 2019.
 4. Se corrige un problema por el que no se puede cargar la tarea o el componente Script al migrar desde versiones anteriores de SSIS.
 5. Se corrige un problema por el que el visor de datos no funciona en Windows 7 SP1 y Windows 8.1.
 6. Se corrige un problema por el que, en algunos casos, al guardar el paquete, Visual Studio se bloquea. 
-7. Se corrige un problema por el que, en algunos casos, el paquete no se puede ejecutar cuando el nivel de protección es EncryptSensitiveWithPassword y la versión del servidor de destino es anterior a SQL 2017.
+7. Se corrige un problema por el que, en algunos casos, el paquete no se puede ejecutar cuando el nivel de protección es EncryptSensitiveWithPassword y la versión del servidor de destino es anterior a SQL Server 2017.
 8. Se corrige un problema por el que las anotaciones con fuente predeterminada no se muestran en SSDT.
 9. ISDeploymentWizard admite autenticación SQL, autenticación integrada de Azure Active Directory y autenticación de contraseña de Azure Active Directory en el modo de línea de comandos.
 

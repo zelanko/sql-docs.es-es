@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: 23f7329c6964f59cb0b7cb9f0d2db6d3b4b825ad
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960769"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420952"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -153,10 +153,10 @@ Colima
 Chiapas
 ```  
   
-### <a name="b-additional-examples"></a>B. Otros ejemplos  
+### <a name="b-additional-examples"></a>b. Otros ejemplos  
  Para ver más ejemplos en los que se usa **COLLATE**, consulte el ejemplo de [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples)**G. Crear una base de datos y especificar un nombre de intercalación y sus opciones**, y el ejemplo de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column)**V. Cambiar la intercalación de columnas**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
  [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)    
  [Prioridad de intercalación](../../t-sql/statements/collation-precedence-transact-sql.md)     

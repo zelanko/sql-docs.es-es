@@ -2,8 +2,7 @@
 title: CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 372ebf82b2903c8e3f6b235978d39bb578508acd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980489"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025516"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -289,7 +288,7 @@ Para obtener información sobre los límites mínimo y máximo, vea [Límites de
 ### <a name="determining-the-number-of-table-partitions"></a>Determinar el número de particiones de tabla
 Cada tabla definida por el usuario se divide en varias tablas más pequeñas que se almacenan en ubicaciones independientes llamadas distribuciones. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usa 60 distribuciones. En [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], el número de distribuciones depende del número de nodos de ejecución.
  
-Cada distribución contiene todas las particiones de tabla. Por ejemplo, si hay 60 distribuciones y cuatro particiones de tabla, habrá 320 particiones. Si la tabla es un índice de almacén de columnas en clúster, habrá un índice de almacén de columnas por partición, lo que significa que tendrá 320 índices de almacén de columnas.
+Cada distribución contiene todas las particiones de tabla. Por ejemplo, si hay 60 distribuciones y 4 particiones de tabla, además de una partición vacía, habrá 300 particiones (5 x 60 = 300). Si la tabla es un índice de almacén de columnas en clúster, habrá un índice de almacén de columnas por partición, lo que significa que tendrá 300 índices de almacén de columnas.
 
 Se recomienda el uso de menos particiones de tabla para asegurar que cada índice de almacén de columnas tiene suficientes filas para aprovechar las ventajas de los índices de almacén de columnas. Para obtener instrucciones adicionales, vea [Creación de particiones de tablas en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) e [lndexación de tablas en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 

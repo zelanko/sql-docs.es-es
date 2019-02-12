@@ -14,41 +14,43 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83725ee74e17a91465356b426b13afc0c265f851
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 03827d700e268baf2695c23d9c9ea3021ebb74e2
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536385"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570688"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Cambios substanciales en las características del Motor de base de datos de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  En este tema se describen los principales cambios en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] y versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Estos cambios pueden provocar errores en las aplicaciones, en los scripts o en las funcionalidades basados en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Podría encontrar estos problemas al actualizar.  
+  En este tema se describen los cambios recientes en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] y versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Estos cambios pueden provocar errores en las aplicaciones, en los scripts o en las funcionalidades basados en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Podría encontrar estos problemas al actualizar.  
   
 ##  <a name="SQL15"></a> Cambios recientes en [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
--   La columna sample_ms de sys.dm_io_virtual_file_stats ha pasado de ser un tipo de datos **int** a **bigint** .  
+-   La columna *sample_ms* de `sys.dm_io_virtual_file_stats` ha pasado de ser un tipo de datos **int** a **bigint**.  
   
--   La columna TimeStamp de sys.fn_virtualfilestats pasó de ser un tipo de datos **int** a un tipo de datos **bigint** .  
+-   La columna *TimeStamp* de `sys.fn_virtualfilestats` pasó de ser un tipo de datos **int** a un tipo de datos **bigint**.  
 
--   El empleo de los algoritmos de hash MD2, MD4, MD5, SHA o SHA1 (no recomendado) exige establecer el nivel de compatibilidad de base de datos en anterior a 130.  
+-   Los algoritmos MD2, MD4, MD5, SHA y SHA1 no están disponibles en el nivel de compatibilidad 130. **No se recomienda** usar los algoritmos de hash MD2, MD4, MD5, SHA o SHA1, pero se puede establecer el nivel de compatibilidad de base de datos en anterior a 130.  
 
--   Por debajo del nivel de compatibilidad de base de datos 130, las conversiones implícitas de los tipos de datos **datetime** a **datetime2** muestran una mayor precisión al reflejar las fracciones de milisegundos, lo que se traduce en diferentes valores convertidos. Use una conversión explícita del tipo de datos datetime2 siempre que haya un escenario de comparación mixto entre tipos de datos datetime y datetime2. Para obtener más información, consulte este [artículo del servicio de soporte técnico de Microsoft](https://support.microsoft.com/help/4010261).
+-   Por debajo del nivel de compatibilidad de base de datos 130, las conversiones implícitas de los tipos de datos **datetime** a **datetime2** muestran una mayor precisión al reflejar las fracciones de milisegundos, lo que se traduce en diferentes valores convertidos. Use una conversión explícita del tipo de datos datetime2 siempre que haya un escenario de comparación mixto entre tipos de datos datetime y datetime2. Para obtener más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/help/4010261).
+
+-   En el nivel de compatibilidad de la base de datos 130, las operaciones que realizan las conversiones implícitas entre determinados tipos de datos numéricos y de fecha y hora muestran una mayor precisión y pueden generar diferentes valores convertidos. Esto incluye el uso de funciones que requieren cálculos, como `DATEDIFF` y `ROUND`. Para obtener más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/help/4010261).
 
 ## <a name="previous-versions"></a> Versiones anteriores  
 
-Para obtener información sobre los cambios importantes en SQL Server versión 2014 y en algunas versiones anteriores, vea [Cambios recientes en las características del Motor de base de datos de SQL Server 2014](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14).
+Para obtener información sobre los cambios importantes en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y en algunas versiones anteriores, vea [Cambios recientes en las características del Motor de base de datos de SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md#SQL14).
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>Documentación archivada para las versiones muy antiguas de SQL Server
 
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características desusadas del motor de base de datos de SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [Mejoras de SQL Server 2016 o 2017 en Windows en la manipulación de algunos tipos de datos y operaciones infrecuentes](https://support.microsoft.com/help/4010261)
+ [Mejoras de SQL Server 2016 o 2017 en Windows en la manipulación de algunos tipos de datos y operaciones infrecuentes](https://support.microsoft.com/help/4010261)   
   
   

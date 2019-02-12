@@ -1,7 +1,7 @@
 ---
 title: Planeación de la adopción de características de OLTP en memoria en SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519562"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421192"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planear la adopción de características de OLTP en memoria en SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Una tabla optimizada para memoria que contiene 200 GB de datos requiere que más
 
 Para una base de datos hospedada en el servicio en la nube de Base de datos SQL de Azure, el nivel de servicio elegido afecta a la cantidad de memoria activa que la base de datos puede consumir. Debe planear la supervisión del uso de memoria de la base de datos mediante una alerta. Para obtener detalles, consulte:
 
-- Revisar los límites de almacenamiento de OLTP en memoria de su [plan de tarifa](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- Revisar los límites de almacenamiento de OLTP en memoria de su [plan de tarifa](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)
 - [Supervisión del almacenamiento OLTP en memoria](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variables de tabla con optimización para memoria
@@ -118,7 +118,7 @@ Para obtener instrucciones sobre si las características de OLP en memoria puede
 
 
 
-## <a name="b-unsupported-features"></a>B. Características no admitidas
+## <a name="b-unsupported-features"></a>b. Características no admitidas
 
 Las características que no se admiten en determinados escenarios de OLP en memoria se describen en:
 
@@ -284,7 +284,7 @@ Cuando el plan de consulta de un procedimiento nativo requiere una fase de agreg
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. Diseño de aplicación: transacciones y lógica de reintento
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. Diseño de aplicaciones: transacciones y lógica de reintento
 
 Una transacción que implica una tabla optimizada para memoria puede llegar a ser dependiente de otra transacción que implique la misma tabla. Si el recuento de transacciones dependientes supera el máximo permitido se producirá un error en todas las transacciones dependientes.
 

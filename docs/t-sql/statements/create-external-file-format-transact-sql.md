@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a0d6bedfb15334850e3cf21eed6dadfd21abf1f
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517707"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484854"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ WITH (
  *file_format_name*  
  Especifica un nombre para el formato de archivo externo.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] Especifica el formato de los datos externos.
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Especifica el formato de los datos externos.
   
    -   PARQUET Especifica un formato Parquet.
   
@@ -171,7 +171,7 @@ PolyBase solo usa el formato de fecha personalizado para importar los datos. No 
   
 -   DateTimeOffset: 'aaaa-MM-dd HH:mm:ss'  
   
--   Time: 'HH:mm:ss'  
+-   Hora: "HH:mm:ss"  
   
 Los **formatos de fecha de ejemplo** se encuentran en la tabla siguiente:
   
@@ -320,7 +320,7 @@ WITH (
 );  
 ```  
   
-### <a name="b-create-an-rcfile-external-file-format"></a>B. Crear un formato de archivo externo RCFile  
+### <a name="b-create-an-rcfile-external-file-format"></a>b. Crear un formato de archivo externo RCFile  
  En este ejemplo se crea un formato de archivo externo para un RCFile que usa el método de serialización/deserialización org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. Además se especifica el uso del códec predeterminado para el método de compresión de datos. Si no se especifica DATA_COMPRESSION, el valor predeterminado es ninguna compresión.
   
 ```  
@@ -367,7 +367,7 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
 )
 ```   
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

@@ -2,7 +2,7 @@
 title: Opciones de ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Aprenda a configurar las opciones de base de datos, como la optimización automática, el cifrado y el almacén de consultas, en SQL Server y Azure SQL Database.
 ms.custom: ''
-ms.date: 1/10/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dee3b66253935a979aa483de87c42dc4bb53e3f
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 077af312704185c66c2aa2cd5d8c777af2b90776
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211136"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421462"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL) 
 
@@ -54,7 +54,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[Servidor lógico de <br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
+> |**_\* SQL Server \*_** &nbsp;|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
 
 &nbsp;
 
@@ -1282,11 +1282,11 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\* Servidor lógico de <br />SQL Database \*_** &nbsp;|[Instancia administrada de <br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_**&nbsp;|[Instancia administrada de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Servidor lógico de Azure SQL Database
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Grupo de bases de datos elásticas o base de datos única de Azure SQL Database
 
 Los niveles de compatibilidad son opciones de `SET`, pero se describe en [Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -2069,7 +2069,7 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[Servidor lógico de <br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instancia administrada de <br />SQL Database \*_** &nbsp;|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instancia administrada de <br />SQL Database \*_**&nbsp;|
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: Base de datos maestra (master) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,21 +14,23 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 7369d4793b803b538435267399b2deaff777ba21
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405865"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421172"
 ---
 # <a name="master-database"></a>Base de datos maestra
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La base de datos **maestra** registra toda la información de sistema de un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dentro de esta información se incluyen los metadatos de una sola instancia, como las cuentas de inicio de sesión, los extremos, los servidores vinculados y la configuración del sistema. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los objetos de sistema ya no se almacenan en la base de datos **maestra** , sino en la [base de datos de recursos](../../relational-databases/databases/resource-database.md). Asimismo, **maestra** es la base de datos que registra la existencia de las demás bases de datos, la ubicación de los archivos de las bases de datos y la información de inicialización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede iniciarse si la base de datos **maestra** no está disponible.  
 
 > [!IMPORTANT]
-> En el caso del servidor lógico de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos tempdb. Para familiarizarse con el concepto de servidor lógico y base de datos maestra lógica, consulte [¿Qué es un servidor lógico de Azure SQL?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server) Para ver información sobre tempdb en el contexto de Azure SQL Database, vea [Base de datos tempdb en SQL Database](tempdb-database.md#tempdb-database-in-sql-database). En el caso de Instancia administrada de Azure SQL Database, se aplican todas las bases de datos del sistema. Para más información sobre Instancias administradas en Azure SQL Database, consulte [¿Qué es Instancia administrada de SQL Database?](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> En el caso de los grupos elásticos y las bases de datos únicas de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos tempdb. Para obtener más información, vea la [Qué es un servidor de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Para ver información sobre tempdb en el contexto de Azure SQL Database, vea [Base de datos tempdb en SQL Database](tempdb-database.md#tempdb-database-in-sql-database). En el caso de Instancia administrada de Azure SQL Database, se aplican todas las bases de datos del sistema. Para más información sobre Instancias administradas en Azure SQL Database, consulte [¿Qué es Instancia administrada de SQL Database?](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
-## <a name="physical-properties-of-master"></a>Propiedades físicas de la base de datos maestra  
+## <a name="physical-properties-of-master"></a>Propiedades físicas de la base de datos maestra
+
 En la siguiente tabla se enumeran los valores de configuración iniciales de los archivos de registro y datos **maestros** para SQL Server e Instancia administrada de Azure SQL Database. El tamaño de estos archivos puede variar ligeramente para diferentes ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Archivo|Nombre lógico|Nombre físico|Crecimiento del archivo|  
@@ -39,13 +41,14 @@ En la siguiente tabla se enumeran los valores de configuración iniciales de los
 Para obtener información sobre cómo mover los archivos de registro y los datos **maestros** , vea [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md).  
 
 > [!IMPORTANT]
-> En el caso del servidor lógico de Azure SQL Database, el usuario no tiene control sobre el tamaño de la base de datos **maestra**.
+> En el caso del servidor de Azure SQL Database, el usuario no tiene control sobre el tamaño de la base de datos **maestra**.
   
-### <a name="database-options"></a>Opciones de base de datos  
+### <a name="database-options"></a>Opciones de base de datos
+
 En la siguiente tabla se enumera el valor predeterminado de cada opción de base de datos en la base de datos **maestra** para SQL e Instancia administrada de Azure SQL Database y se indica si la opción se puede modificar. Para ver la configuración actual de estas opciones, utilice la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 > [!IMPORTANT]
-> En el caso del servidor lógico de Azure SQL Database, el usuario no tiene control sobre estas opciones de base de datos.
+> En el caso de los grupos elásticos y las bases de datos únicas de SQL Database, el usuario no tiene control sobre estas opciones de base de datos.
 
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
 |---------------------|-------------------|---------------------|  

@@ -2,7 +2,7 @@
 title: Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad
 description: Una descripción de los requisitos previos, las restricciones y las recomendaciones para implementar un grupo de disponibilidad Always On.
 ms.custom: seodec18
-ms.date: 06/05/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202994"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570808"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "53202994"
     -   Una instancia de SQL Server utiliza hasta 100 subprocesos para puesta al día en paralelo para las réplicas secundarias. Cada base de datos utiliza hasta la mitad del número total de núcleos de CPU, pero no más de 16 subprocesos por base de datos. Si el número total de subprocesos necesarios para una única instancia supera los 100, SQL Server utiliza un solo subproceso de puesta al día para cada base de datos restante. Los subprocesos de rehacer en serie se liberan después de unos 15 segundos de inactividad. 
     
     > [!NOTE]
-    > Las bases de datos se eligen para un único subproceso en función de su identificador de base de datos ascendente. Como tal, el orden de creación de la base de datos se debe considerar para las instancias de SQL Server que hospedan más bases de datos de grupos de disponibilidad que los subprocesos de trabajo disponibles. Por ejemplo, en un sistema con 32 o más núcleos de CPU, todas las bases de datos a partir de la 7ª que se unieron a un grupo de disponibilidad estarán en modo de rehacer en serie con independencia de la carga de trabajo de rehacer real para cada base de datos. Las bases de datos que requieren rehacer en paralelo deben agregarse primero al grupo de disponibilidad.    
+    > Las bases de datos se eligen para un único subproceso en función de su identificador de base de datos ascendente. Como tal, el orden de creación de la base de datos se debe considerar para las instancias de SQL Server que hospedan más bases de datos de grupos de disponibilidad que los subprocesos de trabajo disponibles. Por ejemplo, en un sistema con más de 32 núcleos de CPU, las seis primeras bases de datos (ordenados por identificador de base de datos) de un grupo o de varios grupos de disponibilidad usarán el modo de fase de puesta al día en paralelo, y todas las bases de datos usarán el modo de fase de puesta al día única.
   
 -   Además, los grupos de disponibilidad usan subprocesos no compartidos, de la manera siguiente:  
   

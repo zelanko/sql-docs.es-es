@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d096f978b138de32c9aae7cdadd1480484dd095f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5c62d4244b025ab987100a58aef1b2a10a7efa17
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206125"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022986"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Ordenación interactiva (Generador de informes y SSRS)
   Puede agregar botones de ordenación interactiva para permitir a los usuarios alternar entre el orden ascendente y descendente para las filas de una tabla o para las filas y columnas de una matriz. El uso más común de la ordenación interactiva es agregar un botón de ordenación a cada encabezado de columna. De esta forma, el usuario podrá elegir la columna por la que desea realizar la ordenación.  
@@ -28,17 +28,17 @@ ms.locfileid: "48206125"
   
  Al agregar una ordenación interactiva, es necesario especificar los elementos siguientes:  
   
--   **Qué ordenar:** ¿filas o columnas?  
+-   **Qué ordenar:** ¿Filas o columnas?  
   
--   **Los datos por los que se debe realizar la ordenación:** ¿un campo que se muestra en una columna de una tabla? ¿Un campo que no se muestra?  
+-   **Qué ordenar por:** ¿Un campo que se muestra en una columna de tabla? ¿Un campo que no se muestra?  
   
--   **El contexto en el que se va a realizar la ordenación:** por ejemplo, se puede ordenar por las filas asociadas a grupos de filas; por las columnas asociadas a grupos de columnas; por filas de detalles; por grupos secundarios dentro de un grupo primario; o por un grupo primario y un grupo secundario al mismo tiempo.  
+-   **Para ordenar en qué contexto:** Por ejemplo, puede ordenar por las filas asociadas a grupos de filas; columnas asociadas a grupos de columnas; filas de detalles; grupos secundarios dentro de un grupo primario; o el grupo primario y secundario al mismo tiempo.  
   
--   **El cuadro de texto al que se va a agregar el botón de ordenación:** ¿en el encabezado de columna o en el encabezado de fila de grupo?  
+-   **El cuadro de texto para agregar el botón de ordenación:** ¿En el encabezado de columna o en el encabezado de fila de grupo?  
   
--   **Si se debe sincronizar la ordenación para varias regiones de datos:** puede diseñar un informe de forma que, cuando el usuario alterne el criterio de ordenación, también se ordenen otras regiones de datos con el mismo antecesor.  
+-   **Si se debe sincronizar a la ordenación para varias regiones de datos:** Puede diseñar un informe para que cuando el usuario alterne el criterio de ordenación, también se ordenen otras regiones de datos con el mismo antecesor.  
   
- Para obtener instrucciones detalladas, consulte [agregar una ordenación interactiva a una tabla o matriz &#40;generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Para obtener instrucciones paso a paso, vea [Agregar una ordenación interactiva a una tabla o una matriz &#40;Generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  En la tabla siguiente se resumen los efectos que se pueden conseguir usando los botones de ordenación interactiva.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "48206125"
 ## <a name="adding-interactive-sort-for-multiple-groups"></a>Agregar una ordenación interactiva para varios grupos  
  En una tabla con grupos de filas anidados y basados en un único campo de conjunto de datos, puede agregar un botón de ordenación interactiva que ordene los valores del grupo primario, los valores del grupo secundario o las filas de detalles. Sin embargo, quizás desee ofrecer al usuario la posibilidad de ordenar la tabla por los valores del grupo primario y los del grupo secundario sin tener que hacer clic varias veces.  
   
- Para ello, debe volver a diseñar la tabla para realizar la agrupación por una expresión que combine varios campos. Por ejemplo, para un conjunto de datos con recuentos del inventario, si la tabla original está agrupada por tamaño y, a continuación, por color, puede especificar un único grupo con una expresión de grupo que sea una combinación de tamaño y color. Para obtener más información, consulte [agregar una ordenación interactiva a una tabla o matriz &#40;generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Para ello, debe volver a diseñar la tabla para realizar la agrupación por una expresión que combine varios campos. Por ejemplo, para un conjunto de datos con recuentos del inventario, si la tabla original está agrupada por tamaño y, a continuación, por color, puede especificar un único grupo con una expresión de grupo que sea una combinación de tamaño y color. Para obtener más información, vea [Agregar una ordenación interactiva a una tabla o una matriz &#40;Generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Agregar una ordenación interactiva a una tabla o matriz &#40;generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Agregar una ordenación interactiva a una tabla o una matriz &#40;Generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

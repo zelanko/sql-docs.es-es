@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc8c6adf930df4d6eaf721db4782d5d1627439c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84199b2bf01101a1bcc67b6e3d0870824a116860
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166275"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013596"
 ---
 # <a name="manage-a-running-process"></a>Administrar un proceso en ejecución
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supervisa el estado de los trabajos que se ejecutan en el servidor de informes. Periódicamente, el servidor de informes realiza un recorrido de los trabajos en curso y escribe la información sobre su estado en su propia base de datos o en las bases de datos de aplicación de servicio para el modo de SharePoint. Un trabajo está en curso si se está llevando a cabo alguno de los siguientes procesos: ejecución de consultas en un servidor de bases de datos remoto o local, procesamiento de informes o representación de informes.  
@@ -57,7 +57,7 @@ ms.locfileid: "48166275"
  Cuando se cancela un trabajo, únicamente se cancelan los procesos que están en ejecución en el servidor de informes. Dado que el servidor de informes no administra el procesamiento de datos que se produce en otros equipos, se deben cancelar manualmente los procesos de consulta que quedan huérfanos posteriormente en otros sistemas. Es aconsejable especificar valores de tiempo de espera para cancelar automáticamente las consultas que tardan demasiado en ejecutarse. Para más información, vea [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Para obtener más información sobre la detención temporal de un informe, vea [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
->  En algunas circunstancias poco frecuentes, quizás resulte necesario reiniciar el servidor para cancelar un proceso. Para el modo de SharePoint, quizás necesite reiniciar el grupo de aplicaciones que hospeda la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [Iniciar y detener el servicio del servidor de informes](../report-server/start-and-stop-the-report-server-service.md).  
+>  En algunas circunstancias poco frecuentes, quizás resulte necesario reiniciar el servidor para cancelar un proceso. Para el modo de SharePoint, quizás necesite reiniciar el grupo de aplicaciones que hospeda la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Iniciar y detener el servicio del servidor de informes](../report-server/start-and-stop-the-report-server-service.md).  
   
  En este tema:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48166275"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>Cómo cancelar una suscripción o procesamiento de informes  
   
-1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], conéctese al servidor de informes. Para obtener instrucciones, consulte [conectarse a un servidor de informes en Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
+1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], conéctese al servidor de informes. Para obtener instrucciones, vea [Conectar con un servidor de informes en Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Abra la carpeta **Trabajos** .  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48166275"
   
 1.  Abra el archivo RSReportServer.config en un editor de texto.  
   
-2.  Buscar `IsNotificationService`.  
+2.  Busque `IsNotificationService`.  
   
 3.  Establézcalo en `False`.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48166275"
 7.  Guarde el archivo.  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Configurar los ajustes de frecuencia para recuperar el estado del trabajo  
- Un trabajo en ejecución se almacena en la base de datos temporal del servidor de informes. Los parámetros de configuración del archivo RSReportServer.config se pueden modificar para controlar la frecuencia con la que el servidor de informes recorre los trabajos en curso y el intervalo después del cual cambia el estado de un trabajo en ejecución de nuevo a en ejecución. El `RunningRequestsDbCycle` configuración especifica la frecuencia con el servidor de informes recorre los procesos en ejecución. De forma predeterminada, la información de estado se registra cada 60 segundos. El `RunningRequestsAge` especifica el intervalo que se pasa un trabajo nuevo a en ejecución.  
+ Un trabajo en ejecución se almacena en la base de datos temporal del servidor de informes. Los parámetros de configuración del archivo RSReportServer.config se pueden modificar para controlar la frecuencia con la que el servidor de informes recorre los trabajos en curso y el intervalo después del cual cambia el estado de un trabajo en ejecución de nuevo a en ejecución. El parámetro `RunningRequestsDbCycle` especifica la frecuencia con la que el servidor de informes recorre los procesos en ejecución. De forma predeterminada, la información de estado se registra cada 60 segundos. El parámetro `RunningRequestsAge` especifica el intervalo que transcurre hasta que un trabajo pasa de considerarse "nuevo" a "en ejecución".  
   
 ##  <a name="bkmk_sharepoint"></a> Ver y cancelar trabajos (modo de SharePoint)  
  La administración de trabajos en una implementación de SharePoint se lleva a cabo con Administración central de SharePoint, para cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -124,7 +124,7 @@ ms.locfileid: "48166275"
  [Propiedades del trabajo &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
  [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Supervisión del rendimiento del servidor de informes](../report-server/monitoring-report-server-performance.md)  
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Supervisar el rendimiento del servidor de informes](../report-server/monitoring-report-server-performance.md)  
   
   

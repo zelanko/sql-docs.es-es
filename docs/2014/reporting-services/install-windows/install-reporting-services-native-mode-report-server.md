@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39f3b68f816594d275f48723865c7497f5352fbb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: f0c52d22f9592d149f25f6ae8a6de2813dfcba1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527708"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043296"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Instalar el servidor de informes en modo nativo de Reporting Services
   Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede instalar desde el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o desde la línea de comandos. En el Asistente para la instalación, puede seleccionar 1) instalar archivos y configurar el servidor con los valores predeterminados o 1) instalar solo los archivos y el Asistente para la instalación no configura el servidor. En este tema se examina la *configuración predeterminada para el modo nativo* donde el programa de instalación instala y configura una instancia del servidor de informes. Cuando finalice el programa de instalación, el servidor de informes estará en ejecución y listo para ser utilizado. Un servidor de informes en modo nativo se ejecuta como servidor de aplicaciones independiente. El modo nativo es el modo de servidor predeterminado.  

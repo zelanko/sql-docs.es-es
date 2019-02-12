@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7b41acb95312ac9675d711c0c02817e58dfe2106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221715"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042856"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Especificar las rutas de acceso a los elementos externos (Generador de informes y SSRS)
   Especifique rutas de acceso en las propiedades de los elementos de informe para hacer referencia a elementos tales como informes detallados, subinformes y archivos de imagen que son externos al archivo de definición de informe y se guardan en un servidor de informes.  
@@ -40,12 +40,12 @@ ms.locfileid: "48221715"
   
 -   **Una ruta de acceso completa al elemento.**  
   
-    -   **En un servidor de informes:** la ruta de acceso empieza desde **/**, la carpeta particular. Por ejemplo, /Informes/TodosLosSubinformes/Subinforme1.  
+    -   **En un servidor de informes:** La ruta de acceso se inicia desde **/**, la carpeta Inicio. Por ejemplo, /Informes/TodosLosSubinformes/Subinforme1.  
   
-    -   **En un sitio de SharePoint** : debe especificar el nombre del informe en una expresión, con la dirección URL completa del elemento y la extensión de archivo .rdl. Por ejemplo, `="http://server/site/library/folder/Report1.rdl"`.  
+    -   **En un sitio de SharePoint:** Debe especificar el nombre del informe en una expresión, con la dirección URL completa del elemento y la extensión de archivo .rdl. Por ejemplo, `="http://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar una imagen externa &#40;generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [Agregar una imagen externa &#40;Generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
  [Agregar un subinforme y parámetros &#40;Generador de informes y SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Agregar una acción de obtención de detalles en un informe &#40;Generador de informes y SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   

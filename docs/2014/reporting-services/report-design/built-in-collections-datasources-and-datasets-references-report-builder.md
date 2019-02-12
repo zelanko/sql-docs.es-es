@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b2d11854134eb7b83182b35b113b591687f2775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b3663c9cdb9fd83dc0caa4298a81f73adcae87cd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095116"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039276"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Usar referencias a las colecciones DataSources y DataSets (Generador de informes y SSRS)
-  La colección `DataSources` representa todos los orígenes de datos usados en un informe. De forma similar, la `DataSets` colección representa todos los conjuntos de datos para todos los orígenes de datos en un informe. Use el panel **Datos de informe** para obtener acceso a una vista jerárquica en la que aparezcan los conjuntos de datos de informe organizados debajo del origen de datos al que hacen referencia. Si incluye referencias a estas colecciones, no verá los valores cuando obtenga acceso a una vista previa del informe. Estas colecciones solo están disponibles una vez publicado el informe en un servidor de informes.  
+  La colección `DataSources` representa todos los orígenes de datos usados en un informe. De igual forma, la colección `DataSets` representa todos los conjuntos de datos de todos los orígenes de datos existentes en un informe. Use el panel **Datos de informe** para obtener acceso a una vista jerárquica en la que aparezcan los conjuntos de datos de informe organizados debajo del origen de datos al que hacen referencia. Si incluye referencias a estas colecciones, no verá los valores cuando obtenga acceso a una vista previa del informe. Estas colecciones solo están disponibles una vez publicado el informe en un servidor de informes.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -33,7 +33,7 @@ ms.locfileid: "48095116"
 |`Type`|`String`|Tipo de proveedor de datos para el origen de datos. Por ejemplo, `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  
- La colección `DataSets` representa los conjuntos de datos a los que se hace referencia en una definición de informe. Puede decidir incluir la consulta en el informe en un cuadro de texto, de modo que un usuario que esté interesado en saber exactamente qué datos están en el informe pueda ver el texto del comando original. Esta colección no está disponible en el modo **Vista previa** . En la tabla siguiente se describe los miembros de la `DataSets` colección.  
+ La colección `DataSets` representa los conjuntos de datos a los que se hace referencia en una definición de informe. Puede decidir incluir la consulta en el informe en un cuadro de texto, de modo que un usuario que esté interesado en saber exactamente qué datos están en el informe pueda ver el texto del comando original. Esta colección no está disponible en el modo **Vista previa** . En la siguiente tabla, se describen los miembros de la colección `DataSets`.  
   
 |**Miembro**|`Type`|**Descripción**|  
 |----------------|--------------|---------------------|  

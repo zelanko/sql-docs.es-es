@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2dfb27e467dc762c6591c8b820cb71302eac99fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1273eed3bc53b5f23bd51430f1fd2fbe2b712d5d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116915"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019006"
 ---
 # <a name="csv-device-information-settings"></a>Configuración de la información del dispositivo CSV
   La configuración de la información de dispositivo para la extensión de representación CSV permite cambiar los delimitadores y certificadores, y controlar el salto de línea que se va a especificar. También se puede enviar la extensión del archivo, así como la codificación e inclusión de filas de encabezado en la salida. Dado que es probable que los delimitadores sean caracteres especiales, debería codificarlos en una sección CDATA, si la configuración se escribe como XML.  
@@ -35,7 +35,7 @@ ms.locfileid: "48116915"
 |**NoHeader**|Indica si la fila de encabezado se excluye de la salida. El valor predeterminado es `false`.|  
 |`Qualifier`|Cadena del certificador donde colocar los resultados que contienen el delimitador de campo o de registro. Si los resultados contienen el certificador, este se repite. El valor `Qualifier` debe ser diferente de los valores `FieldDelimiter` y `RecordDelimiter`. El valor predeterminado es la comilla (").|  
 |`RecordDelimiter`|El delimitador de registros que colocar al final de cada registro. El valor predeterminado es \<cr>\<lf>.|  
-|**SuppressLineBreaks**|Indica si los saltos de línea se quitan de los datos incluidos en la salida. El valor predeterminado es `false`. Si el valor es `true`, `FieldDelimiter`, `RecordDelimiter`, y `Qualifier` configuración no puede ser un carácter de espacio.|  
+|**SuppressLineBreaks**|Indica si los saltos de línea se quitan de los datos incluidos en la salida. El valor predeterminado es `false`. Si el valor es `true`, `FieldDelimiter`, los valores `RecordDelimiter` y `Qualifier` no pueden ser un carácter de espacio en blanco.|  
 |`UseFormattedValues`|Indica si las cadenas con formato se colocan en la salida CSV. El valor predeterminado es `true` cuando `ExcelMode` es `true`; de lo contrario es `false`.|  
   
 ## <a name="see-also"></a>Vea también  

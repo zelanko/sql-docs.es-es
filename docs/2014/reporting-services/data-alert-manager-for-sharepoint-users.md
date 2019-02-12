@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 859a0ba0757b141bbcba6869d1138c7a3862a3c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b5834091c16072dd143fa9ae582ea6c128331a8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049065"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018846"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Administrador de alertas de datos para los usuarios de SharePoint
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona el Administrador de alertas de datos para que los trabajadores de la información administren las alertas de datos. Pueden ver la información sobre las alertas que crearon, eliminar alertas, abrir definiciones de alertas para su edición y ejecutar alertas a petición. Pueden optar por ver las alertas de un único informe o de todos los informes. La imagen siguiente muestra las características disponibles para los trabajadores de la información en el Administrador de alertas de datos.  
@@ -40,7 +40,7 @@ ms.locfileid: "48049065"
   
  ![Abrir el Administrador de alertas desde el menú contextual del informe](media/rs-openalertmanager.gif "Abrir el Administrador de alertas desde el menú contextual del informe")  
   
- El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del creador de la definición de la alerta, el número de veces que se envió el mensaje de alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado de la última alerta. Si el mensaje de alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para obtener más información, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
+ El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del creador de la definición de la alerta, el número de veces que se envió el mensaje de alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado de la última alerta. Si el mensaje de alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para más información,vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
   
  En la tabla siguiente se muestran datos de ejemplo de una tabla del Administrador de alertas de datos. Cuando se produce un error, el mensaje de error y el identificador de la entrada del registro (un GUID) se incluyen en el campo **Estado** de la tabla.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "48049065"
   
   
 ##  <a name="DeleteAlerts"></a> Eliminar alertas de datos  
- Las definiciones de alertas se eliminan desde el Administrador de alertas de datos. Como trabajador de la información puede eliminar las definiciones de alerta que haya creado. No puede eliminar las definiciones de alerta creadas por otras personas. Para obtener más información, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
+ Las definiciones de alertas se eliminan desde el Administrador de alertas de datos. Como trabajador de la información puede eliminar las definiciones de alerta que haya creado. No puede eliminar las definiciones de alerta creadas por otras personas. Para más información,vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
   
- Cuando elimina una definición alerta, esta se elimina permanentemente. Si solo desea pausar los mensajes de alerta, debe cambiar el patrón de periodicidad o la fecha de inicio o finalización en la definición de la alerta. Para obtener más información, vea [Modificar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md).  
+ Cuando elimina una definición alerta, esta se elimina permanentemente. Si solo desea pausar los mensajes de alerta, debe cambiar el patrón de periodicidad o la fecha de inicio o finalización en la definición de la alerta. Para más información, vea [Modificar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md).  
   
   
   
@@ -74,7 +74,7 @@ ms.locfileid: "48049065"
 ##  <a name="HowTo"></a> Tareas relacionadas  
  En esta sección se enumeran los procedimientos que le explican cómo administrar sus alertas y modificar las definiciones de las mismas.  
   
--   [Administración de mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md)  
+-   [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md)  
   
 -   [Modificación de una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md)  
   

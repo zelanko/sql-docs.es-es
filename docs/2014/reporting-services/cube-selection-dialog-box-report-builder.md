@@ -11,14 +11,14 @@ f1_keywords:
 - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c3d17a430edf17a0fd9d016e897a28f1526c392d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 26ae33e722e1da42a648248df198c23c4fc4ddf5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180575"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011037"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>Selección de cubo (cuadro de diálogo del Generador de informes)
   Use el cuadro de diálogo **Selección de cubo** para seleccionar otro cubo como origen de datos para un informe. Al seleccionar otro cubo, es posible que la consulta deje de ser válida.  

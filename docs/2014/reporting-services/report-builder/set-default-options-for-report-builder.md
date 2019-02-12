@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3071399edd3a7138d4cee68a162f0c44cfca29ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218235"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032976"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Cuadro de diálogo Opciones del Generador de informes, Configuración (Generador de informes)
   Haga clic en el **Report Builder** botón y, a continuación, haga clic en **opciones** para establecer las opciones para mostrar archivos recientes y las conexiones. También puede cambiar el servidor de informes predeterminado o agregar uno si no lo tiene predeterminado.  
@@ -47,6 +47,6 @@ ms.locfileid: "48218235"
  Borre las listas actuales de sitios y servidores recientes, de conjuntos de datos compartidos, de conexiones a orígenes de datos compartidos y de documentos.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

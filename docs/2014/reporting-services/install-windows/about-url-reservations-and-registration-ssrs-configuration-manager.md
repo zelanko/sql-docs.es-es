@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fb1f04a10837088a9c427d6c0994af4334e8988f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374327"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035106"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Acerca de las reservas y el registro de resrvas de URL (Administrador de configuración de SSRS)
   Las direcciones URL de las aplicaciones de Reporting Services se definen como reservas de direcciones URL en HTTP.SYS. Una reserva de direcciones URL define la sintaxis de un extremo de dirección URL para una aplicación web. Las reservas de direcciones URL se definen tanto para el servicio web del servidor de informes como para el Administrador de informes al configurar las aplicaciones en el servidor de informes. Las reservas de direcciones URL se crean automáticamente al configurar direcciones URL a través del programa de instalación o de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -63,7 +63,7 @@ ms.locfileid: "53374327"
   
 |Reserva de direcciones URL en HTTP.SYS|Dirección URL|Explicación|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<nombreDeEquipo > / reportserver<br /><br /> http://\<direcciónIP > / reportserver<br /><br /> http://localhost/reportserver|La reserva de direcciones URL especifica un carácter comodín (+) en el puerto 80. Esto coloca en la cola del servidor de informes cualquier solicitud entrante que especifique un host que se resuelva como el equipo del servidor de informes en el puerto 80. Observe que con esta reserva de direcciones URL se puede usar una cantidad cualquiera de direcciones URL para tener acceso al servidor de informes.<br /><br /> Ésta es la reserva de direcciones URL predeterminada para un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la mayoría de los sistemas operativos.|  
+|http://+:80/reportserver|http://\<computername>/reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|La reserva de direcciones URL especifica un carácter comodín (+) en el puerto 80. Esto coloca en la cola del servidor de informes cualquier solicitud entrante que especifique un host que se resuelva como el equipo del servidor de informes en el puerto 80. Observe que con esta reserva de direcciones URL se puede usar una cantidad cualquiera de direcciones URL para tener acceso al servidor de informes.<br /><br /> Ésta es la reserva de direcciones URL predeterminada para un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la mayoría de los sistemas operativos.|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Esta reserva de direcciones URL especifica una dirección IP y es mucho más restrictiva que la que tiene un carácter comodín. Solo las direcciones URL que incluyen la dirección IP se pueden utilizar para conectarse al servidor de informes. Dada esta reserva de dirección URL, una solicitud para un servidor de informes en http://\<nombreDeEquipo > / reportserver o http://localhost/reportserver produciría un error.|  
   
 ##  <a name="DefaultURLs"></a> Direcciones URL predeterminadas  
@@ -86,10 +86,10 @@ ms.locfileid: "53374327"
   
 |Tipo de instancia|Application|Dirección URL predeterminada|Reserva de direcciones URL real en HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Instancia predeterminada|servicio web del servidor de informes|http://\<servername > / reportserver|http://\<nombreDeServidor >: 80/reportserver.|  
-|Instancia predeterminada|Administrador de informes|http://\<servername > / reportserver|http://\<nombreDeServidor >: 80/reportserver.|  
-|Instancia con nombre|servicio web del servidor de informes|http://\<servername > / reportserver_\<instancename >|http://\<nombreDeServidor >: 80/reportserver_\<instancename >|  
-|Instancia con nombre|Administrador de informes|http://\<servername > / reports_\<instancename >|http://\<nombreDeServidor >: 80/reports_\<instancename >|  
+|Instancia predeterminada|servicio web del servidor de informes|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|Instancia predeterminada|Administrador de informes|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|Instancia con nombre|servicio web del servidor de informes|http://\<servername>/reportserver_\<instancename>|http://\<servername>:80/reportserver_\<instancename>|  
+|Instancia con nombre|Administrador de informes|http://\<servername>/reports_\<instancename>|http://\<servername>:80/reports_\<instancename>|  
 |SQL Server Express|servicio web del servidor de informes|http://\<servername > / reportserver_SQLExpress|http://\<nombreDeServidor >: 80/reportserver_SQLExpress|  
 |SQL Server Express|Administrador de informes|http://\<servername > / reports_SQLExpress|http://\<nombreDeServidor >: 80/reports_SQLExpress|  
   

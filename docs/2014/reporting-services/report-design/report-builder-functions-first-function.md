@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 517ee5ae6690e2c2cc835c3f44862545e5ea94e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3aad13a60182b4fe040d21ce132763e55f412f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208675"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026076"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>Función First (Generador de informes y SSRS)
   Devuelve el primer valor de la expresión especificada en el ámbito especificado.  
@@ -33,10 +33,10 @@ First(expression, scope)
   
 #### <a name="parameters"></a>Parámetros  
  *expression*  
- (`Variant` o `Binary`) expresión en la que se va a realizar la agregación, por ejemplo, `=Fields!FieldName.Value`.  
+ (`Variant` o `Binary`). Expresión en la que se lleva a cabo la agregación, por ejemplo, `=Fields!FieldName.Value`.  
   
  *ámbito*  
- (`String`) Opcional. Nombre de un conjunto de datos, un grupo o una región de datos que contiene los elementos de informe a los que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
+ (`String`) (opcional). Nombre de un conjunto de datos, un grupo o una región de datos que contiene los elementos de informe a los que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  Varía según el tipo de expresión.  
@@ -44,9 +44,9 @@ First(expression, scope)
 ## <a name="remarks"></a>Comentarios  
  La función `First` devuelve el primer valor de un conjunto de datos después de aplicar todos los filtros y la configuración de ordenación al ámbito especificado.  
   
- El `First` función no se puede usar en expresiones de filtro de grupo con el ámbito (valor predeterminado) actual.  
+ La función `First` solo se puede usar en expresiones de filtro de grupo con el ámbito actual (valor predeterminado).  
   
- También puede usar `First` en un encabezado de página para devolver el primer valor de la `ReportItems` colección para una página con el fin de generar los encabezados de estilo diccionario que muestren la primera y última entrada en una página.  
+ También puede usar `First` en un encabezado de página para devolver el primer valor de la colección `ReportItems` para una página; esto permite generar encabezados de estilo diccionario que muestren la primera y la última entrada de cada página.  
   
  El valor de *scope* tiene que ser una constante de cadena y no puede ser una expresión. Para los agregados exteriores o los que no especifican a otros agregados, *scope* debe hacer referencia al ámbito actual o a un ámbito de contenido. Para los agregados de agregados, los agregados anidados pueden especificar un ámbito secundario.  
   
@@ -72,9 +72,9 @@ First(expression, scope)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

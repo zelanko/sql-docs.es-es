@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1de13a23edc8a248008dcdad415e58e108e9d0e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202035"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017286"
 ---
 # <a name="planning-a-report-report-builder"></a>Planear un informe (Generador de informes)
   El Generador de informes permite crear muchos tipos de informes. Por ejemplo, puede crear informes que muestren los datos de ventas detallados o resumidos, las tendencias de marketing y de ventas, los informes de operaciones o los paneles. También puede crear informes que aprovechen el texto de formato enriquecido, por ejemplo, para pedidos de ventas, catálogos de productos o circulares. Todos estos informes se crean utilizando combinaciones diferentes de los mismos bloques de creación básicos en el Generador de informes. Para crear un informe útil, de fácil comprensión, sirve de ayuda planearlo primero. A continuación se detallan algunos de los aspectos que quizá desee considerar antes de empezar:  
@@ -38,7 +38,7 @@ ms.locfileid: "48202035"
   
 -   **¿Qué datos desea que se presenten a sus lectores? ¿Quiere filtrar los datos o el formato para destinatarios distintos?**  
   
-     Quizá prefiera restringir el ámbito del informe a ubicaciones o usuarios concretos, o a un período de tiempo determinado. Para filtrar los datos del informe, utilice los parámetros para recuperar y mostrar solo los datos que desea. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md).  
+     Quizá prefiera restringir el ámbito del informe a ubicaciones o usuarios concretos, o a un período de tiempo determinado. Para filtrar los datos del informe, utilice los parámetros para recuperar y mostrar solo los datos que desea. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md).  
   
 -   **¿Necesita crear sus propios cálculos?**  
   
@@ -50,11 +50,11 @@ ms.locfileid: "48202035"
   
 -   **¿Cómo va a distribuir el informe?**  
   
-     Puede guardar el informe en el equipo local y continuar trabajando en él, o ejecutarlo localmente para obtener su propia información. Sin embargo, para compartir el informe con otros usuarios, tendrá que guardarlo en un servidor de informes configurado en el modo nativo o en un servidor de informes en el modo integrado de SharePoint. Guardarlo en un servidor permite a otros usuarios ejecutarlo cuando lo deseen. Como alternativa, el administrador del servidor de informes puede configurar una suscripción al informe o configurar la distribución del informe por correo electrónico a otros individuos. Puede hacer que el informe se entregue en un formato de exportación concreto si lo prefiere. Para obtener más información, consulte [buscar, ver y administrar informes &#40;generador de informes y SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+     Puede guardar el informe en el equipo local y continuar trabajando en él, o ejecutarlo localmente para obtener su propia información. Sin embargo, para compartir el informe con otros usuarios, tendrá que guardarlo en un servidor de informes configurado en el modo nativo o en un servidor de informes en el modo integrado de SharePoint. Guardarlo en un servidor permite a otros usuarios ejecutarlo cuando lo deseen. Como alternativa, el administrador del servidor de informes puede configurar una suscripción al informe o configurar la distribución del informe por correo electrónico a otros individuos. Puede hacer que el informe se entregue en un formato de exportación concreto si lo prefiere. Para obtener más información, vea [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Generador de informes en SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
- [Conceptos de creación de informes &#40;generador de informes y SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Tutoriales &#40;generador de informes&#41;](../report-builder-tutorials.md)  
   
   

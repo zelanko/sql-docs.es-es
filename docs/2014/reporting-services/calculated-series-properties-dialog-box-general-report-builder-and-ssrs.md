@@ -12,14 +12,14 @@ f1_keywords:
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8b202d3eadef7abc2f638cc8c084849249f8eaab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8dd12cb87bdc4c88aca9fe68455a179bcd5896c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096735"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033666"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de la serie calculada, General (Generador de informes y SSRS)
   Seleccione **Fórmula** en el cuadro de diálogo **Propiedades de la serie calculada** para agregar o modificar una serie que se calculará en función de fórmulas integradas que usan datos de series existentes como entrada.  
@@ -60,6 +60,6 @@ ms.locfileid: "48096735"
  Especifique los parámetros para la fórmula seleccionada.  
   
 ## <a name="see-also"></a>Vea también  
- [Los gráficos &#40;generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
   

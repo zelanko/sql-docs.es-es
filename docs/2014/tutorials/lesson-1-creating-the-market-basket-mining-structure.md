@@ -1,24 +1,23 @@
 ---
-title: 'Lección 1: Crear la estructura de minería de datos Market Basket | Microsoft Docs'
+title: 'Lección 1: Creación de la estructura de minería de datos Market Basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a817c8d1-aff4-42b4-b194-ad9cc1c60f35
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be8768c5d638904240cc1499a594b0d2c8a97aa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128885"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033636"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lección 1: Crear la estructura de minería de la cesta de la compra
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lección 1: Creación de la estructura de minería de datos Market Basket
   En esta lección creará una estructura de minería de datos que permita predecir qué productos de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiende a adquirir un cliente simultáneamente. Si no está familiarizado con las estructuras de minería de datos y su función en la minería de datos, vea [estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  La estructura de minería de datos de asociación que creará en esta lección admite la adición de modelos de minería de datos según la [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). En lecciones posteriores utilizará los modelos de minería de datos para predecir el tipo de productos que un cliente tiende a adquirir simultáneamente, lo que se denomina análisis de cesta de mercado (Market Basket). Por ejemplo, es posible que averigüe que los clientes tienden a comprar bicicletas de montaña, ruedas y cascos simultáneamente.  
@@ -188,6 +187,6 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  En la siguiente lección agregará modelos de minería de datos a la estructura de minería de datos Market Basket que acaba de crear.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Agregar modelos de minería a la estructura de minería de Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

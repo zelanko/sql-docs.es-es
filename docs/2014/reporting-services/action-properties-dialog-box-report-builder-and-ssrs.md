@@ -31,15 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 63c9b4e601faad155d6f843b6ccef2f1cac7698a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370657"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017987"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de acción (Generador de informes y SSRS)
   El cuadro de diálogo **Acción** se puede usar para habilitar las opciones de hipervínculo para los elementos de gráfico, medidor y mapa que admitan vínculos. Defina una acción para que un usuario pueda hacer clic en el informe y vincularse a una dirección URL, a un informe diferente en el mismo servidor de informes o a un sitio de SharePoint integrado con un servidor de informes, o a una ubicación diferente del mismo informe.  

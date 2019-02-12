@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d34dafd60f2165f2ae90661feca2bafac462dab7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4a02db047e17c7bacf7183a10a0db93d8ac905e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101055"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031392"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Página de selección de conjuntos de datos compartidos (Administrador de informes)
   Utilice la página de selección de conjuntos de datos compartidos para revisar y modificar los conjuntos de datos compartidos que están asociados actualmente a un informe.  
@@ -50,11 +50,11 @@ ms.locfileid: "48101055"
  Guarde los cambios.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [El contenido de página &#40;el Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Contenido &#40;página del Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Administrar conjuntos de datos compartidos](report-data/manage-shared-datasets.md)   
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
- [Elementos de informe y conjuntos de datos en el generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Elementos de informe y conjuntos de datos en el Generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

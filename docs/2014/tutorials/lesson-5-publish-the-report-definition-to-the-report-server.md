@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 57fab70f-4a72-4413-a0ad-d0525caca3f7
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3430994f0c5cb2b4c09c47a4a8bebaa7da3eba3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163375"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033626"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lección 5: Publicar la definición de informe en el servidor de informes
   El último paso de la actualización de la definición de informe es su publicación en el servidor de informes.  
@@ -78,7 +77,7 @@ ms.locfileid: "48163375"
     ```  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- En la siguiente lección compilará y ejecutará el `SampleRDLSchema` aplicación. Consulte [lección 6: ejecutar la aplicación del esquema RDL &#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ En la siguiente lección compilará y ejecutará el `SampleRDLSchema` aplicación. Consulte [lección 6: Ejecute la aplicación del esquema RDL &#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar informes con clases generadas a partir del esquema RDL &#40;Tutorial de SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

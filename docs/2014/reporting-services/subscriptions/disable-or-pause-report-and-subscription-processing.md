@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c15666aecbbdde8ca95eaf684bf9909454d3d42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d6284f7b7b832b37806d2fb39e506689a3b031
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129316"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040686"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Pausar el procesamiento de informes y suscripciones
   No es posible pausar un informe o una suscripción directamente. No obstante, se puede interrumpir su procesamiento antes del inicio del proceso o cuando se realiza una conexión al origen de datos. También es posible impedir el procesamiento de un informe o una suscripción haciendo que los usuarios no puedan obtener acceso a los mismos.  
@@ -49,7 +49,7 @@ ms.locfileid: "48129316"
   
 ## <a name="see-also"></a>Vea también  
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Página de propiedades de seguridad, elementos &#40;Administrador de informes&#41;](../security-properties-page-items-report-manager.md)  
   
   

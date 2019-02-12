@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 03c0dde2c3df8d8403897b660ed81ba7dbe75f43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 31c2c4392ebfcd055975078e3d92fdaf5e302d15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163735"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028596"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Seguridad de acceso del código en Reporting Services
   La seguridad de acceso del código se centra en torno a estos conceptos principales: evidencia, grupos de código y conjuntos de permisos con nombre. En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], los componentes Administrador de informes, Diseñador de informes y Servidor de informes tienen cada uno de ellos un archivo de directiva que configura la seguridad de acceso del código para los ensamblados personalizados así como los datos, la entrega, la representación y las extensiones de seguridad. Las secciones siguientes proporcionan información general de seguridad de acceso del código. Para obtener información detallada sobre los temas tratados en esta sección, vea "Modelo de directiva de seguridad" en la documentación del SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

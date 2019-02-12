@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 80b5c2e77c5e10a543c7847bd2bd2e60d9d50920
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9861bc63a8fd1e4dd76fb030baf2a11c2774961a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221755"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027580"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Agregar una acción de obtención de detalles en un informe (Generador de informes y SSRS)
   El informe que se abre al hacer clic en el vínculo del informe principal se denomina *informe detallado*. Este vínculo de obtención de detalles habilita una acción de obtención de detalles.  
@@ -61,8 +61,8 @@ ms.locfileid: "48221755"
 7.  Para probar el vínculo, ejecute el informe y haga clic en el elemento de informe en el que ha establecido este vínculo.  
   
 ## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo Propiedades de acción &#40;generador de informes y SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
- [Aplicar formato a los puntos de datos en un gráfico &#40;generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo Propiedades de acción &#40;Generador de informes y SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
+ [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   

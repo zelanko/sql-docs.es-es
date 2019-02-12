@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 707a18ee54776bee46c58fc9db843c06d14a2ff4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544605"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031736"
 ---
 # <a name="url-access-parameter-reference"></a>Referencia de parámetros de acceso URL
   Puede utilizar los parámetros siguientes como parte de una dirección URL para configurar la apariencia de los informes. Los parámetros más comunes se muestran en esta sección. Los parámetros distinguen entre mayúsculas y minúsculas y empiezan con el prefijo de parámetro *rs:* si se dirige al servidor de informes y *rc:* si se dirige a un Visor HTML. También puede especificar parámetros que son específicos de dispositivos o extensiones de representación. Para obtener más información sobre parámetros específicos del dispositivo, vea [Especificar la configuración de la información del dispositivo en una dirección URL](specify-device-information-settings-in-a-url.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "52544605"
 |*FallbackPage*|Establece el número de la página que se mostrará si se produce un error en una búsqueda o en una selección de mapa del documento.|El valor predeterminado es el número de la página actual.|  
 |*GetImage*|Obtiene un icono determinado para la interfaz de usuario del Visor HTML.||  
 |*Icono*|Obtiene el icono de una extensión de representación determinada.||  
-|*Hoja de estilos*|Especifica una hoja de estilos que se va a aplicar al Visor HTML.||  
+|*Stylesheet*|Especifica una hoja de estilos que se va a aplicar al Visor HTML.||  
 |Configuración de información del dispositivo|Especifica una configuración de información de dispositivo en forma de `rc:tag=value`, donde *etiqueta* es el nombre de la información de un dispositivo de configuración específica para la extensión de representación que se usa actualmente (vea la descripción de la  *Dar formato a* parámetro). Por ejemplo, puede usar la configuración de información del dispositivo *OutputFormat* para que la extensión de representación IMAGE represente el informe en imágenes JPEG con los siguientes parámetros en la cadena de acceso URL: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Para obtener más información sobre toda la configuración de información del dispositivo específica de la extensión, vea [Configuración de información de dispositivos para las extensiones de representación &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md).||  
   
 ## <a name="report-server-commands-rs"></a>Comandos del servidor de informes (rs:)  
@@ -63,7 +63,7 @@ ms.locfileid: "52544605"
 |*Snapshot*|Representa un informe basándose en una instantánea del historial de informes. Para obtener más información, vea [Representar instantáneas del historial de informes mediante acceso URL](render-a-report-history-snapshot-using-url-access.md).<br /><br /> Por ejemplo en modo `Native`, recupera una instantánea del historial de informes con fecha 2003-04-07 con una marca de tiempo de 13:40: 02.<br /><br /> `http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02`|  
 |*PersistStreams*|Representa un informe en un flujo almacenado único. El procesador de imagen utiliza este parámetro para transmitir el informe representado fragmento por fragmento. Después de utilizar este parámetro en una cadena de acceso de dirección URL, utilice la misma cadena de acceso de dirección URL con el parámetro *GetNextStream* en lugar del parámetro *PersistStreams* para obtener el fragmento siguiente en el flujo almacenado. Este comando de dirección URL devolverá a la larga un flujo de cero bytes para indicar el fin del flujo almacenado. El valor predeterminado es `false`.|  
 |*GetNextStream*|Obtiene el siguiente grupo de datos en una transmisión persistente a la que se tiene acceso con el parámetro *PersistStreams* . Para obtener más información, vea la descripción de *PersistStreams*. El valor predeterminado es `false`.|  
-|*Id. de sesión*|Especifica una sesión de informe activa establecida entre la aplicación cliente y el servidor de informes. El valor de este parámetro se establece en el identificador de la sesión.<br /><br /> Puede especificar el identificador de sesión como una cookie o como parte de la dirección URL. Cuando el servidor de informes se ha configurado para no usar las cookies de sesión, la primera solicitud sin un identificador de sesión especificado resulta en una redirección con un identificador de sesión. Para obtener más información sobre las sesiones del servidor de informes, vea [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).|  
+|*SessionID*|Especifica una sesión de informe activa establecida entre la aplicación cliente y el servidor de informes. El valor de este parámetro se establece en el identificador de la sesión.<br /><br /> Puede especificar el identificador de sesión como una cookie o como parte de la dirección URL. Cuando el servidor de informes se ha configurado para no usar las cookies de sesión, la primera solicitud sin un identificador de sesión especificado resulta en una redirección con un identificador de sesión. Para obtener más información sobre las sesiones del servidor de informes, vea [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).|  
 |*ClearSession*|Un valor de `true` indica al servidor de informes que quite un informe de la sesión de informe. Todas las instancias del informe asociadas a un usuario autenticado se quitan de la sesión de informe. (Una instancia del informe se define como el mismo informe ejecutado varias veces con diferentes valores de parámetro de informe). El valor predeterminado es `false`.|  
 |*ResetSession*|Un valor de `true` indica al servidor de informes que restablezca la sesión del informe y que quite la asociación de la sesión del informe con todas las instantáneas de informe. El valor predeterminado es `false`.|  
 |*ShowHideToggle*|Alterna el estado de mostrar u ocultar de una sección del informe. Especifique un entero positivo para representar la sección que desea alternar.|  

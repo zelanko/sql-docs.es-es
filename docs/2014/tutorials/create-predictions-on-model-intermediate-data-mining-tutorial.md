@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0b67ad103cee685ebcbc5455340df9e4d7890e15
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfilee
+ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529232"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041306"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Crear predicciones en un modelo de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
   Una vez que comprenda el mejor modelo de clústeres examinando en el Visor de secuencia, puede crear consultas de predicción utilizando el generador de consultas de predicción en el **predicción de modelo de minería de datos** ficha en el Diseñador de minería de datos. Para crear una predicción, seleccione primero el modelo de agrupación en clústeres de secuencia y, a continuación, seleccione los datos de entrada. Para las entradas, puede utilizar un origen de datos externo o puede crear una consulta singleton y proporcionar los valores en un cuadro de diálogo.  

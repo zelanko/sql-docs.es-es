@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d03d6ebec2a3d2c40b8cd674e51dee56160bc26b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f71ac2824a1cefe7d601bbc3e21168c02a285025
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205975"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015826"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>Propiedad MachineAccountIdentity (WMI)
   Obtiene la identidad de la cuenta del equipo en el que está instalado el servidor de informes.  
@@ -34,7 +34,7 @@ public string MachineAccountIdentity;
 ```  
   
 ## <a name="property-values"></a>Valores de propiedad  
- Un `String` valor que contiene la identidad de la cuenta de equipo del equipo que está instalado el servidor de informes.  
+ Un valor `String` que contiene la identidad de la cuenta del equipo en el que está instalado el servidor de informes.  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

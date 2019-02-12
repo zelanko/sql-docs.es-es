@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 87bdd8c30468f18a30de5bcb3ee122469ac3958c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189615"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024476"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Página de propiedades de seguridad, elementos (Administrador de informes)
   Use la página Propiedades de seguridad para ver o modificar la configuración de seguridad que determina el acceso a carpetas, informes, modelos, recursos y orígenes de datos compartidos. Esta página está disponible para los elementos para los que tenga permiso de protección.  

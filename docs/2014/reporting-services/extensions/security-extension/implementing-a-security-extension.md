@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ba1efc734b49f62b1f7b3b3876a8ea0db2732da7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0e3248ab676386ad510639d782738915e9636193
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373357"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024466"
 ---
 # <a name="implementing-a-security-extension"></a>Implementar una extensión de seguridad
   La autenticación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows constituye el sistema principal para proteger los informes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. En ciertos casos, sin embargo, puede necesitar extender el sistema de seguridad de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para organizar la seguridad personalizada en una empresa. Para ello, puede usar la plataforma de desarrollo que proporciona la API de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. En esta sección se presentará información general sobre las extensiones de seguridad en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

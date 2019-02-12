@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4382ecd50979efb6877d8eb19e8aff7dc340d847
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355666"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017937"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
   En versiones recientes del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, la protección ampliada es un conjunto de mejoras. La protección ampliada mejora cómo protegen las aplicaciones las credenciales y la autenticación. La propia característica no proporciona directamente protección contra ataques específicos como el reenvío de credenciales, sino que proporciona una infraestructura para aplicaciones como [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] con el fin de aplicar la protección ampliada para la autenticación.  
@@ -166,7 +166,7 @@ ms.locfileid: "53355666"
  [Conectar al motor de base de datos con protección ampliada](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
  [Introducción a la protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkID=177943)   
  [Autenticación de Windows integrada con protección ampliada](https://go.microsoft.com/fwlink/?LinkId=179922)   
- [Aviso de seguridad de Microsoft: Protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkId=179923)   
+ [Microsoft Security Advisory: Protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [Registro de seguimiento del servicio del servidor de informes](../report-server/report-server-service-trace-log.md)   
  [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Método SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

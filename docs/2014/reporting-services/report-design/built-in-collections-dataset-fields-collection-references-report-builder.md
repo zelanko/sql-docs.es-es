@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f6ea6edf61734e794cc588c82aefa4e60141365c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093317"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037167"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Referencias a la colección de campos de conjunto de datos (Generador de informes y SSRS)
   Cada conjunto de datos de un informe contiene una colección Fields. La colección Fields es el conjunto de campos especificados por la consulta de conjunto de datos, más los campos calculados adicionales que se hayan creado. Una vez creado el conjunto de datos, la colección de campos aparece en el panel **Datos de informe** .  
@@ -41,7 +41,7 @@ ms.locfileid: "48093317"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Detectar campos inexistentes en las consultas dinámicas en tiempo de ejecución  
- De manera predeterminada, los elementos de la colección Fields tienen dos propiedades: Value e IsMissing. La propiedad IsMissing indica si un campo que se ha definido para un conjunto de datos en tiempo de diseño se encuentra entre los campos recuperados en tiempo de ejecución. Por ejemplo, la consulta podría llamar a un procedimiento almacenado en el que el conjunto de resultados varía con un parámetro de entrada, o podría ser `SELECT * FROM` *\<tabla>* donde cambió la definición de tabla.  
+ De forma predeterminada, los elementos de la colección Fields tienen dos propiedades: Value e IsMissing. La propiedad IsMissing indica si un campo que se ha definido para un conjunto de datos en tiempo de diseño se encuentra entre los campos recuperados en tiempo de ejecución. Por ejemplo, la consulta podría llamar a un procedimiento almacenado en el que el conjunto de resultados varía con un parámetro de entrada, o podría ser `SELECT * FROM` *\<tabla>* donde cambió la definición de tabla.  
   
 > [!NOTE]  
 >  IsMissing detecta cambios en el esquema de conjunto de datos entre el tiempo de diseño y el de ejecución para cualquier tipo de origen de datos. IsMissing no se puede usar para detectar miembros vacíos en un cubo multidimensional y no está relacionado con los conceptos del lenguaje de consulta MDX de `EMPTY` y `NON EMPTY`.  
@@ -89,7 +89,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>Usar propiedades de campo extendidas  
  Las propiedades de campo extendidas son propiedades adicionales que la extensión de procesamiento de datos define en un campo, extensión que está determinada por el tipo de origen de datos del conjunto de datos. Las propiedades de campo extendidas pueden ser predefinidas o específicas de un tipo de origen de datos. Para obtener más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
- Si especifica una propiedad que no se admite para ese campo, la expresión se evalúa como `null` (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Si un proveedor de datos no admite propiedades de campo extendidas o si no se encuentra el campo cuando se ejecuta la consulta, el valor de la propiedad es `null` (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) para las propiedades de tipo `String` y `Object`, y cero (0) para las propiedades de tipo `Integer`. Una extensión de procesamiento de datos puede sacar partido de las propiedades predefinidas optimizando consultas que incluyan esta sintaxis.  
+ Si especifica una propiedad no admitida para ese campo, la expresión se evalúa como `null` (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Si un proveedor de datos no admite propiedades de campo extendidas o si no se encuentra el campo al ejecutar la consulta, el valor de la propiedad será `null` (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) para las propiedades de tipo `String` y `Object`, y cero (0) para las propiedades de tipo `Integer`. Una extensión de procesamiento de datos puede sacar partido de las propiedades predefinidas optimizando consultas que incluyan esta sintaxis.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f9a7213b59e435f797609a7abb7fcd560c4890e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f287e26bac61f2c29b1a60d72f66f4fd32bca966
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116211"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025756"
 ---
 # <a name="excel-device-information-settings"></a>Configuración de la información del dispositivo Excel
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato de [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
@@ -28,7 +28,7 @@ ms.locfileid: "48116211"
 |-------------|-----------|  
 |**OmitDocumentMap**|Indica si omitir el mapa del documento para los informes que lo admiten. El valor predeterminado es `false`.|  
 |**OmitFormulas**|Indica si omitir las fórmulas del informe representado. El valor predeterminado es `false`.|  
-|`SimplePageHeade`RS|Indica si el encabezado de página del informe se representa en el encabezado de página de Excel. Un valor de `false` indica que el encabezado de página se representa en la primera fila de la hoja de cálculo. El valor predeterminado es `false`.|  
+|`SimplePageHeade`rs|Indica si el encabezado de página del informe se representa en el encabezado de página de Excel. El valor `false` indica que el encabezado de página se representa en la primera fila de la hoja de cálculo. El valor predeterminado es `false`.|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

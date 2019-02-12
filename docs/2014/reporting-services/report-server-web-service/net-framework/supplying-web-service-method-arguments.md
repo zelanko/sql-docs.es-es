@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 92cbee94cad189a4752a2fb3300894dcb1c4c5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 82e389f0c09ddc75fb7bbfa09e24cb18cf154f3e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074005"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033846"
 ---
 # <a name="supplying-web-service-method-arguments"></a>Proporcionar argumentos de métodos de servicio web
   Un método de servicio web del servidor de informes envía una solicitud al servicio en una dirección URL determinada utilizando SOAP sobre HTTP. El servicio recibe la solicitud, la procesa y, a continuación, devuelve una respuesta. Estas solicitudes y respuestas tienen forma de documentos XML.  

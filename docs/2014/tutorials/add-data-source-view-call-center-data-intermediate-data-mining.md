@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f212c6436af0e35c7cfaceadf8c519765d0a07a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171955"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035046"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Agregar una vista del origen de datos para datos del centro de llamadas (Tutorial intermedio de minería de datos)
   En esta tarea, agregará una vista del origen de datos que se usará para tener acceso a los datos del centro de llamadas. Se usarán los mismos datos para crear tanto el modelo de red neuronal inicial para la exploración como el modelo de regresión logístico que se empleará para hacer las recomendaciones.  
@@ -70,7 +69,7 @@ ms.locfileid: "48171955"
 |FactCallCenterID|Una clave arbitraria que se creó cuando se importaron los datos al almacenamiento de datos.<br /><br /> Esta columna identifica los registros únicos y debe usarse como clave de caso para el modelo de minería de datos.|  
 |DateKey|La fecha de la operación en el centro de llamadas, expresada como un entero. Las claves de fecha se usan a menudo en los almacenamientos de datos, pero puede que desee obtener la fecha con formato de fecha y hora si va a agrupar los valores por fecha.<br /><br /> Observe que las fechas no son únicas, ya que el proveedor facilita un informe independiente para cada turno de cada día de trabajo.|  
 |WageType|Indica si el día fue un día laborable, un fin de semana o un día festivo.<br /><br /> Es posible que haya una diferencia en la calidad de servicio al cliente los fines de semana frente a los días laborables por lo que usará esta columna como entrada.|  
-|Shift|Indica el turno para el que se registran las llamadas. Este centro de llamadas divide su jornada laboral en cuatro turnos: uno por la mañana (AM), dos por la tarde (PM1 y PM2) y uno por la noche (Midnight).<br /><br /> Es posible que el turno afecte a la calidad del servicio al cliente; por eso usará esto como entrada.|  
+|Shift|Indica el turno para el que se registran las llamadas. Este centro de llamadas divide la jornada laboral en cuatro turnos: A. M., medianoche, PM1 y PM2.<br /><br /> Es posible que el turno afecte a la calidad del servicio al cliente; por eso usará esto como entrada.|  
 |LevelOneOperators|Indica el número de operadores de nivel 1 en derecho.<br /><br /> Los empleados de centro de llamadas comienzan en el nivel 1, de modo que estos empleados tienen menos experiencia.|  
 |LevelTwoOperators|Indica el número de operadores de nivel 2 en servicio.<br /><br /> Un empleado debe llevar un número determinado de horas de servicio para ser calificadas como un operador de nivel 2.|  
 |TotalOperators|Número total de operadores presentes durante el turno.|  

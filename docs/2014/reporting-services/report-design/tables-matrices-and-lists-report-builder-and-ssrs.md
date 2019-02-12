@@ -35,13 +35,13 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cf80cbb87916ccf6887f3d6508126c5770d7666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220855"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017807"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tablas, matrices y listas (Generador de informes y SSRS)
   Las tablas, matrices y listas son regiones de datos en las que se muestran los datos del informe en celdas organizadas en filas y columnas. Normalmente, las celdas contienen datos como texto, fechas y números, pero también pueden contener medidores, gráficos o elementos de informe como imágenes. Colectivamente, las tablas, matrices y listas se denominan a menudo regiones de datos Tablix.  
@@ -56,7 +56,7 @@ ms.locfileid: "48220855"
   
  ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Para empezar a trabajar rápidamente con tablas, matrices y listas, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../tutorial-creating-a-matrix-report-report-builder.md) y [Tutorial: Crear un informe de forma libre &#40;Generador de informes&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Para empezar rápidamente con tablas, matrices y listas, vea [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Crear un informe de matriz &#40;generador de informes&#41;](../tutorial-creating-a-matrix-report-report-builder.md), y [Tutorial: Creación de un informe de forma libre &#40;generador de informes&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Puede publicar tablas, matrices y listas por separado de un informe como elementos de informe. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48220855"
   
  ![Nueva matriz agregada desde el cuadro de herramientas, seleccionada](../media/rs-matrixtemplatenewselected.gif "Nueva matriz agregada desde el cuadro de herramientas, seleccionada")  
   
- Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. En tiempo de ejecución, cuando se combinan las regiones de datos y los datos del informe, una matriz crece en horizontal y vertical en la página al irse agregando columnas a los grupos de columnas y filas a los grupos de filas. Las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Por ejemplo, si la matriz tiene un grupo de filas (Categoría) y dos grupos de columnas (Territorio y Año) que muestran la suma de las ventas, el informe muestra dos celdas con las sumas de ventas de cada valor del grupo de categorías. El ámbito de las celdas es las dos intersecciones: Categoría y Territorio y Categoría y Año. La matriz puede tener grupos anidados y adyacentes. Los grupos anidados tienen una relación primario-secundario y los adyacentes una relación del mismo nivel. Puede agregar los subtotales a cualquiera de los niveles de grupos anidados de filas y columnas de la matriz.  
+ Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. En tiempo de ejecución, cuando se combinan las regiones de datos y los datos del informe, una matriz crece en horizontal y vertical en la página al irse agregando columnas a los grupos de columnas y filas a los grupos de filas. Las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Por ejemplo, si la matriz tiene un grupo de filas (Categoría) y dos grupos de columnas (Territorio y Año) que muestran la suma de las ventas, el informe muestra dos celdas con las sumas de ventas de cada valor del grupo de categorías. El ámbito de las celdas son las dos intersecciones: Categoría y territorio y categoría y año. La matriz puede tener grupos anidados y adyacentes. Los grupos anidados tienen una relación primario-secundario y los adyacentes una relación del mismo nivel. Puede agregar los subtotales a cualquiera de los niveles de grupos anidados de filas y columnas de la matriz.  
   
  Para que los datos de la matriz sean más legibles y resaltar los datos a los que desea dar énfasis, puede combinar celdas, dividir los datos en horizontal y en vertical, o aplicar formato a los datos y encabezados de grupo.  
   
@@ -131,51 +131,51 @@ ms.locfileid: "48220855"
 ##  <a name="HowTo"></a> Temas de procedimientos  
  En esta sección se describen procedimientos que muestran, paso a paso, cómo trabajar con tablas, matrices y listas en los informes; cómo mostrar los datos en filas y columnas, agregar y eliminar columnas, combinar celdas, e incluir subtotales para los grupos de filas y columnas.  
   
--   [Agregar un grupo de detalles &#40;generador de informes y SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
+-   [Agregar un grupo de detalles &#40;Generador de informes y SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [Agregar un Total a un grupo o región de datos Tablix &#40;generador de informes y SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [Cambiar un elemento de una celda &#40;generador de informes y SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [Cambiar un elemento de una celda &#40;Diseñador de informes y SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [Cambiar el alto de fila o el ancho de columna &#40;generador de informes y SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [Cambiar el alto de fila o el ancho de columna &#40;Generador de informes y SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [Insertar o eliminar una columna &#40;generador de informes y SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [Insertar o eliminar una columna &#40;Generador de informes y SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [Insertar o eliminar una fila &#40;generador de informes y SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [Insertar o eliminar una fila &#40;Generador de informes y SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [Combinar celdas en una región de datos &#40;generador de informes y SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Combinar celdas en una región de datos &#40;Generador de informes y SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Crear un grupo de jerarquía recursiva &#40;generador de informes y SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [Crear un grupo de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [Agregar o eliminar un grupo en una región de datos &#40;generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Mostrar encabezados y pies de página con un grupo &#40;generador de informes y SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [Mostrar encabezados y pies de página con un grupo &#40;Generador de informes y SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [Crear un informe escalonado &#40;generador de informes y SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [Crear un informe escalonado &#40;Generador de informes y SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [Agregar, mover o eliminar una tabla, matriz o lista &#40;generador de informes y SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [Agregar, mover o eliminar una tabla, una matriz o una lista &#40;Generador de informes y SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="InThisSection"></a> En esta sección  
  En los siguientes temas se proporciona información adicional acerca de cómo trabajar con la región de datos Tablix.  
   
- [Región de datos Tablix &#40;generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
  Explica los conceptos clave relacionados con la región de datos Tablix, por ejemplo las áreas de Tablix, datos detallados y agrupados, grupos de filas y columnas, filas y columnas dinámicas y estáticas.  
   
- [Agregar datos a una región de datos Tablix &#40;generador de informes y SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [Agregar datos a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Proporciona información detallada sobre cómo agregar a una región de datos Tablix datos detallados y agrupados, subtotales y totales, y etiquetas.  
   
- [Controlar la presentación de la región de datos Tablix en una página de informe &#40;generador de informes y SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Se describen las propiedades que puede modificar en una región de datos Tablix para cambiar la manera en la que aparece dicha región al verla en un informe.  
   
- [Controlar los encabezados de columna y fila &#40;generador de informes y SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [Controlar los encabezados de fila y de columna &#40;Generador de informes y SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  Se describe cómo controlar los encabezados de filas y columnas cuando región de datos de tabla, matriz o lista abarca varias páginas horizontal o verticalmente.  
   
- [Creación de grupos de jerarquía recursiva &#40;generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  Se describe cómo mostrar datos recursivos donde la relación entre el elemento primario y el elemento secundario se representa mediante campos en el conjunto de datos.  
   
- [Descripción de los grupos &#40;generador de informes y SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
  Se explica qué son los grupos y cuándo utilizarlos, y se describen los grupos disponibles para las distintas regiones de datos Tablix.  
   
 

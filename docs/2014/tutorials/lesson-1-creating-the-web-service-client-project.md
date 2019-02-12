@@ -1,24 +1,23 @@
 ---
-title: 'Lección 1: Crear el proyecto de cliente del servicio Web | Microsoft Docs'
+title: 'Lección 1: Crear el proyecto de cliente de servicio Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bf5a2f15aaed3c50c456eb635b34a19973a51f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080805"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025296"
 ---
-# <a name="lesson-1-creating-the-web-service-client-project"></a>Lección 1: crear el proyecto cliente del servicio web
+# <a name="lesson-1-creating-the-web-service-client-project"></a>Lección 1: Crear el proyecto cliente del servicio web
   Para esta visita guiada, creará una aplicación de consola sencilla con acceso al servicio web del servidor de informes. En este tutorial se da por supuesto que la programación se realiza con [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ### <a name="to-create-a-console-application"></a>Crear una aplicación de consola  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - upgrading caching for Lookup transformation
 - upgrading Lookup transformation
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 652cec720eae440106a0c8e30bd9910140dcff0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 159779bc43edf7d30182e86aee545e6e9db8135a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182625"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032376"
 ---
 # <a name="upgrade-lookup-transformations"></a>Actualizar las transformaciones de búsqueda
   Al actualizar de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tiene la opción de modificar los paquetes para aprovechar las nuevas características de la transformación Búsqueda. La transformación admite los tipos de almacenamiento en memoria caché y las opciones de salida de datos disponibles en [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]. Para obtener más información sobre adicional los resultados de datos y almacenamiento en caché, consulte el [transformación búsqueda](../../integration-services/data-flow/transformations/lookup-transformation.md).  
@@ -34,6 +34,6 @@ ms.locfileid: "48182625"
  Para obtener más información, consulte [Editor de transformación búsqueda &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación Búsqueda](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

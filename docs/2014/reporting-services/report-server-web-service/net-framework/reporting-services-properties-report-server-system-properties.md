@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c0cd5fd82a77d85b59de9fb4ebedebfd560c759f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: be59ff45f9bf2457c81fc67568b1d578430ba893
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211352"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024136"
 ---
 # <a name="report-server-system-properties"></a>Propiedades del sistema del servidor de informes
   Los siguientes nombres de propiedades de sistema están reservados. No puede crear propiedades definidas por el usuario con el mismo nombre. Puede leer o modificar muchas de estas propiedades utilizando los métodos de servicio web.  
@@ -30,14 +30,14 @@ ms.locfileid: "48211352"
 |Property|Descripción|  
 |--------------|-----------------|  
 |SiteName|Nombre del sitio del servidor de informes mostrado en la interfaz de usuario. El valor predeterminado es `Microsoft Report Server`. Esta propiedad puede ser una cadena vacía. La longitud máxima es de 8000 caracteres.|  
-|SystemSnapshotLimit|Número máximo de instantáneas almacenadas para un informe. Los valores válidos son `-1` a través de `2`,`147`,`483`,`647`. Si el valor es `-1`, no hay ningún límite de instantáneas.|  
-|SystemReportTimeout|El valor de tiempo de espera de procesamiento de informes predeterminado, en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos son `-1` a través de `2`,`147`,`483`,`647`. Si el valor es `-1`, no se agota el tiempo de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es `1800`.|  
+|SystemSnapshotLimit|Número máximo de instantáneas almacenadas para un informe. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no hay ningún límite de instantáneas.|  
+|SystemReportTimeout|El valor de tiempo de espera de procesamiento de informes predeterminado, en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no se agota el tiempo de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es `1800`.|  
 |UseSessionCookies|Indica si el servidor de informes debería usar cookies de sesión al comunicarse con exploradores cliente. El valor predeterminado es `true`.|  
 |SessionTimeout|El período, en segundos, que una sesión permanece activa. El valor predeterminado es `600`.|  
-|EnableMyReports|Indica si la característica Mis informes está habilitada. Un valor de `true` indica que la característica está habilitada.|  
+|EnableMyReports|Indica si la característica Mis informes está habilitada. El valor `true` indica que la característica está habilitada.|  
 |MyReportsRole|El nombre del rol que se usa al crear directivas de seguridad en las carpetas Mis informes del usuario. El valor predeterminado es `My Reports Role`.|  
 |EnableExecutionLogging|Indica si el registro de ejecución de informes está habilitado. El valor predeterminado es `true`.|  
-|ExecutionLogDaysKept|Número de días que mantener la información de ejecución de informes en el registro de ejecución. Los valores válidos para esta propiedad incluyen `0` a través de `2`,`147`,`483`,`647`. Si el valor es `0` no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es `60`.|  
+|ExecutionLogDaysKept|Número de días que mantener la información de ejecución de informes en el registro de ejecución. Los valores válidos de esta propiedad son de `0` a `2`,`147`,`483`,`647`. Si el valor es `0` no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es `60`.|  
 |SnapshotCompression|Define la manera en la que se comprimen las instantáneas. El valor predeterminado es `SQL`. Los valores válidos son los siguientes:<br /><br /> `SQL` = las instantáneas se comprimen cuando se almacenan en la base de datos del servidor de informes. Éste es el comportamiento actual.<br /><br /> **None =** no se comprimen las instantáneas.<br /><br /> `All` = las instantáneas se comprimen para todas las opciones de almacenamiento, lo que incluye la base de datos del servidor de informes o el sistema de archivos.|  
 |EnableClientPrinting|Determina si el control ActiveX RSClientPrint está disponible para descargarlo del servidor de informes. Los valores válidos son `true` y `false`. El valor predeterminado es `true`. Para más información sobre opciones de configuración adicionales necesarias para este control, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).|  
 |EnableIntegratedSecurity|Determina si se admite la seguridad integrada para las conexiones de origen de datos del informe. De manera predeterminada, es `True`. Los valores válidos son los siguientes:<br /><br /> `True` = la seguridad integrada está habilitada.<br /><br /> `False` = la seguridad integrada no está habilitada. No se ejecutarán los orígenes de datos de informes que estén configurados para usar la seguridad integrada.|  

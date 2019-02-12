@@ -1,24 +1,23 @@
 ---
-title: 'Lección 4: Explorar los modelos de correo directo (Tutorial de minería de datos básicos) | Microsoft Docs'
+title: 'Lección 4: Explorar los modelos de distribución de correo directo (Tutorial de minería de datos básicos) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147324"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039906"
 ---
-# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lección 4: Explorar los modelos de correo directo (tutorial básico de minería de datos)
+# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lección 4: Explorar los modelos de distribución de correo directo (Tutorial de minería de datos básicos)
   Una vez procesados los modelos del proyecto, puede explorarlos para buscar tendencias interesantes. Puesto que los patrones pueden ser complejos y difíciles simplemente examinando números, Minería de datos de SQL Server proporciona algunas herramientas visuales que le ayudan a investigar los datos y entender las reglas y relaciones que los algoritmos han detectado en los datos. También puede utilizar diversas pruebas de precisión para validar el conjunto de datos o detectar qué modelo funciona mejor antes de implementarlo.  
   
  Cuando usas [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para explorar los modelos, cada modelo creado aparece en el **Visor de modelos de minería de datos** ficha en el Diseñador de minería de datos. Puede usar los visores para explorar los modelos. Estos visores también están disponibles en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -52,10 +51,10 @@ ms.locfileid: "48147324"
  [Lección 3: Agregar y procesar los modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 5: Probar los modelos &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Lección 5: Probar modelos &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas del Visor de modelo de minería de datos y procedimientos](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Visores de modelos de minería de datos](../../2014/analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

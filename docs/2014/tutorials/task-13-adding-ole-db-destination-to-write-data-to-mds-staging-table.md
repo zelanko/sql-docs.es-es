@@ -1,24 +1,21 @@
 ---
-title: 'Tarea 13: Agregar destino de OLE DB para escribir datos en la tabla de ensayo de MDS | Microsoft Docs'
+title: 'Tarea 13: Agregar el destino de OLE DB para escribir datos en la tabla de ensayo de MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bf8a96891040a6a751e0a6e34c902d77cec9dd35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223105"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035076"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarea 13: agregar el destino de OLE DB para escribir datos en la tabla de ensayo de MDS
   Ahora que ha agregado **ImportType** y **BatchTag** valores de todos los registros, está listo para enviarlos a MDS para el almacenamiento provisional. En esta tarea, utilice el destino de OLE DB para escribir los datos en **stg.supplier_Leaf** tabla de ensayo.  
@@ -52,6 +49,6 @@ ms.locfileid: "48223105"
      ![Completar el flujo de datos](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "completado el flujo de datos")  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 14: Agregar la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [Tarea 14: Agregar tarea Ejecutar SQL al flujo de Control para ejecutar el procedimiento almacenado de MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

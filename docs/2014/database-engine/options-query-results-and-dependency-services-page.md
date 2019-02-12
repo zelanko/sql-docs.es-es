@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f587ee792809f9612ca9fca1264794e843172a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5c7afe44889dd380e9048044a34a94410213f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118625"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035206"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Opciones (Resultados de la consulta/página Servicios de dependencia)
   Utilice esta página para especificar el servidor al que desea conectarse para Servicios de dependencia. Servicios de dependencia le permite extraer información sobre las dependencias existentes entre los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y los de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] almacenados en servidores diferentes. Ver las dependencias del objeto mediante el **dependencias del objeto** cuadro de diálogo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
@@ -53,6 +52,4 @@ ms.locfileid: "48118625"
  Si está utilizando Autenticación de SQL Server, proporcione una contraseña.  
   
  **Prueba**  
- Haga clic en esta opción para comprobar la conexión.  
-  
-  
+ Haga clic en esta opción para comprobar la conexión.

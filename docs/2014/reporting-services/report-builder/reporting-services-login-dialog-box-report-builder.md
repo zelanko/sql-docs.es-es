@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f593da2103d0efda0b70e5628e23249e437fedfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223215"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030426"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Inicio de sesión de Reporting Services (cuadro de diálogo del Generador de informes)
   Utilice el cuadro de diálogo **Inicio de sesión de Reporting Services** para proporcionar credenciales para publicar informes en el servidor de informes. Para obtener ayuda con estos credenciales, póngase en contacto con el administrador del servidor de informes.  
@@ -34,6 +34,6 @@ ms.locfileid: "48223215"
  Escriba la contraseña con la que iniciar sesión en el servicio web.  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

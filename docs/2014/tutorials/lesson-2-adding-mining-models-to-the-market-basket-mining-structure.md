@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461981"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041456"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lección 2: Agregar modelos de minería a la estructura de minería cesta de la compra
-  En esta lección, agregará dos modelos de minería de datos a la estructura de minería de datos Market Basket que creó en [lección 1: creación de la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estos modelos de minería de datos le permitirán crear predicciones.  
+  En esta lección, agregará dos modelos de minería de datos a la estructura de minería de datos Market Basket que creó en [lección 1: Creación de la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estos modelos de minería de datos le permitirán crear predicciones.  
   
  Para predecir los tipos de productos que los clientes tienden a comprar al mismo tiempo, creará dos modelos de minería de datos mediante el [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) y dos valores diferentes para el *MINIMUM_PROBABILTY* parámetro.  
   
@@ -286,6 +285,6 @@ ADD MINING MODEL [<mining model name>]
  En esta siguiente lección procesará la estructura de minería de datos Market Basket junto con sus modelos de minería de datos asociados.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Procesar la estructura de minería de Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lección 3: Procesar la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

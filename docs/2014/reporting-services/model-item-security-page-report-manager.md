@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08742a78d0992467a8fb596ecc4f267576f00701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195075"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025796"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página Seguridad de elemento de modelo (Administrador de informes)
   Use esta página para proteger partes de un modelo concediendo o revocando permisos de solo lectura en elementos concretos. La seguridad del elemento de modelo afecta a la exploración de datos ad hoc en tiempo de ejecución y a la capacidad de usar partes de un modelo publicado cuando se crean informes en el Generador de informes. Para usar esta característica, debe tener permisos de Administrador de contenido.  

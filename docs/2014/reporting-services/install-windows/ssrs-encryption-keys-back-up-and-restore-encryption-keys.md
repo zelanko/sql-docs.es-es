@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19bdabaab24d9276386095cb8ef97b0130a13c58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 558c27c978ec6343b6185fab3792906c6d21ad52
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530381"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036596"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services
   Una parte importante de la configuración del servidor de informes es la creación de una copia de seguridad de la clave simétrica utilizada para cifrar información confidencial. La copia de seguridad de la clave se necesita para varias operaciones rutinarias y, además, permite volver a utilizar una base de datos del servidor de informes existente en una nueva instalación.  

@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ba16d9d50faaaef740f3aa4c4eaff5122fdff438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 93a8d8b8c93dc340b4ffa0337f14478bc4bf910a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081045"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015776"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>Cambiar el texto de un elemento de leyenda (Generador de informes y SSRS)
   Cuando se coloca un campo en el área Valores del gráfico, se genera automáticamente un elemento de leyenda que contiene el nombre de este campo. Cada elemento de leyenda se conecta a una serie individual del gráfico, a excepción de los gráficos de formas, donde la leyenda se conecta a puntos de datos individuales en lugar de a series individuales.  
   
- En los gráficos de formas, puede cambiar el texto de un elemento de leyenda para mostrar más información sobre los puntos de datos individuales. Por ejemplo, si desea mostrar los valores de los puntos de datos como porcentajes en la leyenda, puede usar una palabra clave como `#PERCENT`. Puede anexar códigos de formato de .NET Framework junto con las palabras clave para aplicar formatos numéricos y de fecha. Para obtener más información sobre las palabras clave, vea [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ En los gráficos de formas, puede cambiar el texto de un elemento de leyenda para mostrar más información sobre los puntos de datos individuales. Por ejemplo, si desea mostrar los valores de los puntos de datos como porcentajes en la leyenda, puede utilizar una palabra clave como `#PERCENT`. Puede anexar códigos de formato de .NET Framework junto con las palabras clave para aplicar formatos numéricos y de fecha. Para obtener más información sobre las palabras clave, vea [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
  ![Gráfico nítido](../media/sharpchart.png "Gráfico nítido")  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48081045"
 2.  Haga clic en **Leyenda** y, en el cuadro **Texto de leyenda personalizado** , escriba una etiqueta de leyenda. La serie se actualizada con el texto especificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a la leyenda en un gráfico &#40;generador de informes y SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Ocultar elementos de leyenda en el gráfico &#40;Generador de informes y SSRS&#41;](chart-legend-hide-items-report-builder.md)  
   

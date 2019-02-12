@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ade652a874d8519fb0ff85c7622e2955248286d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137375"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017786"
 ---
 # <a name="task-5-adding-data-flow-task"></a>Tarea 5: agregar una tarea Flujo de datos
   En esta tarea, agregará una tarea Flujo de datos al flujo de control del paquete SSIS.  
@@ -34,6 +31,6 @@ ms.locfileid: "48137375"
 4.  Haga doble clic en el **Data Flow Task** para cambiar a la **de flujo de datos** ficha.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 6: Agregar el origen de Excel al flujo de datos](task-6-adding-excel-source-to-the-data-flow.md)  
+ [Tarea 6: Agregar origen de Excel al flujo de datos](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

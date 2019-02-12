@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 173696f4f75d14cbb0ea1b78104b69db50af7a2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d7c74eb4f69bf40446a4f912ed6673b57890c64b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065565"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029556"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega por correo electrónico en Reporting Services
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega de correo electrónico que permite enviar por correo electrónico un informe a grupos o usuarios individuales. La extensión de entrega de correo electrónico se configura con el Administrador de configuración de Reporting Services y mediante la edición de los archivos de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega de correo electrónico que permite enviar por correo electrónico un informe a grupos o usuarios individuales. La extensión de entrega de correo electrónico se configura con el Administrador de configuración de Reporting Services y mediante la edición de los archivos de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Para distribuir o recibir un informe por correo electrónico, defina una suscripción estándar o controlada por datos. Puede suscribirse o distribuir solo un informe a la vez. No puede crear una suscripción que entregue varios informes en un solo mensaje de correo electrónico. Para obtener más información acerca de las suscripciones, vea [crear, modificar y eliminar suscripciones estándar &#40;Reporting Services en modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48065565"
   
  Para obtener información sobre cómo configurar un servidor de informes en modo de SharePoint, vea lo siguiente:  
   
--   [Configurar el correo electrónico para la aplicación de servicio de Reporting Services &#40;SharePoint 2010 y SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Configurar el correo electrónico para una aplicación de servicio de Reporting Services &#40;SharePoint 2010 y SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Tareas y permisos](../security/tasks-and-permissions.md)   

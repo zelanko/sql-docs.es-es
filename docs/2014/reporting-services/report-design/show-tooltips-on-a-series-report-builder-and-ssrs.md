@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e5981a6f029391369d47d9eb1d70e7372ed5b9ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5e9e02af6adf0e674d6af2775cb427440b4471c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078218"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029657"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Mostrar la información sobre herramientas en una serie (Generador de informes y SSRS)
   Puede agregar una información sobre herramientas a cada uno de los puntos de datos de la serie de un gráfico para mostrar información relacionada con el punto de datos, como el nombre del grupo, el valor del punto de datos o el porcentaje del punto de datos en relación con el total de la serie, cuando los usuarios mantienen el mouse sobre el punto de datos en un informe representado.  
@@ -30,10 +30,10 @@ ms.locfileid: "48078218"
   
 1.  Haga clic con el botón derecho en la serie o en el campo del área **Valores** y seleccione **Propiedades de la serie**.  
   
-2.  Haga clic en **Datos de las series** y, para la propiedad **ToolTip** , escriba una cadena o una expresión. Puede usar cualquier palabra clave específica del gráfico para representar otro elemento del gráfico. Para obtener más información, consulte [puntos de datos de formato de un gráfico &#40;generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+2.  Haga clic en **Datos de las series** y, para la propiedad **ToolTip** , escriba una cadena o una expresión. Puede usar cualquier palabra clave específica del gráfico para representar otro elemento del gráfico. Para más información, vea [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a los puntos de datos en un gráfico &#40;generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Agregar una acción de obtención de detalles en un informe &#40;Generador de informes y SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  

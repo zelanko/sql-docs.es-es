@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 50c898ebd6f6add1c1358c37d3320bf5e7334271
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b20ecf14b789ef87b818463f36eea47879938b4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188815"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041066"
 ---
 # <a name="securable-items"></a>Elementos protegibles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la seguridad basada en roles para controlar el acceso a los elementos que se almacenan en un servidor de informes. Cuando concede un acceso de usuario a un servidor de informes, normalmente lo hace creando un par de asignaciones de roles:  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224485"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031686"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personalizar y procesar el modelo de pronóstico (tutorial intermedio de minería de datos)
   El algoritmo de serie temporal de [!INCLUDE[msCoName](../includes/msconame-md.md)] proporciona varios parámetros que afectan al modo de creación de un modelo y al modo en que se analizan los datos temporales. Cambiar estas propiedades puede afectar de forma significativa a la manera en que el modelo de minería de datos realiza las predicciones.  
@@ -25,7 +24,7 @@ ms.locfileid: "48224485"
   
 1.  Va a personalizar la manera en que el modelo controla los períodos de tiempo agregando un nuevo valor para el *PERIODICITY_HINT* parámetro.  
   
-2.  Aprenderá otros dos parámetros importantes para el algoritmo de serie temporal de Microsoft: FORECAST_METHOD, que le permite controlar el método usado para la predicción, y PREDICTION_SMOOTHING, que permite personalizar la combinación de predicciones a largo plazo y a corto plazo.  
+2.  Obtendrá información sobre otros aproximadamente dos parámetros importantes para el algoritmo de serie temporal de Microsoft: FORECAST_METHOD, que le permite controlar el método usado para la predicción, y PREDICTION_SMOOTHING, que le permite personalización la combinación de predicciones a corto plazo y a largo plazo.  
   
 3.  Opcionalmente, indicará al algoritmo cómo desea que se imputen los valores ausentes.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48224485"
 ## <a name="handling-missing-data-optional"></a>Manejar la ausencia de datos (opcional)  
  En muchos casos, los datos de ventas podrían tener huecos que se rellenan con caracteres nulos, o es posible que un almacén no haya podido cumplir la fecha tope de notificación, con lo que se ha dejado una celda vacía al final de la serie. En estos escenarios, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] genera el error siguiente y no procesa el modelo.  
   
- "Error (minería de datos): marcas de tiempo no sincronizadas empiezan con la serie \<nombre de la serie >, del modelo de minería de datos, \<nombre de modelo >. Todas las series temporales deben terminar en la misma marca de tiempo y no pueden tener puntos de datos ausentes arbitrarios. Cuando el valor del parámetro MISSING_VALUE_SUBSTITUTION es Previous o una constante numérica, se revisarán automáticamente los puntos de datos ausentes siempre que sea posible."  
+ "Error (minería de datos): Marcas de tiempo no sincronizadas empiezan con la serie \<nombre de la serie >, del modelo de minería de datos, \<nombre de modelo >. Todas las series temporales deben terminar en la misma marca de tiempo y no pueden tener puntos de datos ausentes arbitrarios. Cuando el valor del parámetro MISSING_VALUE_SUBSTITUTION es Previous o una constante numérica, se revisarán automáticamente los puntos de datos ausentes siempre que sea posible."  
   
  Para evitar este error, puede especificar que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporcione automáticamente los valores nuevos para rellenar los huecos utilizando uno de los métodos siguientes:  
   
@@ -89,7 +88,7 @@ ms.locfileid: "48224485"
   
 #### <a name="to-process-the-forecasting-model"></a>Para procesar el modelo de pronóstico  
   
-1.  En el **Mining Model** menú de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], seleccione **procesar estructura de minería de datos y todos los modelos**.  
+1.  En el menú **Modelo de minería de datos** de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], seleccione **Procesar estructura de minería de datos y todos los modelos**.  
   
 2.  En la advertencia en la que se pregunta si desea generar e implementar el proyecto, haga clic en **Sí**.  
   

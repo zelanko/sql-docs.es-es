@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1003de5a101720c0ad5dc86869f17f2f8508a059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a1b926b148874573c8c1106be2982dd0e929c50d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080601"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032207"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserverconfigurationsetting"></a>Propiedad WindowsServiceIdentityActual (MSReportServer_ConfigurationSetting de WMI)
   La identidad en la que se ejecuta el servicio Windows del servidor de informes. Solo lectura.  
@@ -40,7 +40,7 @@ public string WindowsServiceIdentityActual;
 ```  
   
 ## <a name="property-values"></a>Valores de propiedad  
- Un `String` objeto que contiene la identidad que se ejecuta el servicio Windows del servidor de informes.  
+ Un objeto `String` que contiene la identidad en la que se ejecuta el servicio Windows del servidor de informes.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

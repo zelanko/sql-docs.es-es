@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 27b487c787a82f67fc861153939eb5838373fca1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 83a9233d9d5016be3307b797bb9a5a84ead276be
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108005"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039296"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaz de usuario del diseñador gráfico de consultas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas y un diseñador de consultas basado en texto con los que se pueden crear consultas y recuperar datos de una base de datos relacional para un conjunto de datos de informe del Diseñador de informes. Use el diseñador gráfico de consultas para generar una consulta de forma interactiva y ver los resultados para los tipos de orígenes de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB y ODBC. Use el diseñador de consultas basado en texto para especificar varias instrucciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , sintaxis compleja de consultas o comandos, y consultas basadas en expresiones. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto](../text-based-query-designer-user-interface.md). Para obtener más información sobre cómo trabajar con tipos de orígenes de datos específicos, consulte [agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "48108005"
  .  
   
 ## <a name="graphical-query-designer"></a>Diseñador gráfico de consultas  
- Este diseñador gráfico de consultas admite tres tipos de comandos de consulta: **Text**, **StoredProcedure**o **TableDirect**. Antes de crear una consulta para el conjunto de datos, debe seleccionar una opción de tipo de comando en la página Consulta del cuadro de diálogo [Propiedades del conjunto de datos](../dataset-properties-dialog-box-query.md) .  
+ Este diseñador gráfico de consultas admite tres tipos de comandos de consulta: **Texto**, **StoredProcedure**, o **TableDirect**. Antes de crear una consulta para el conjunto de datos, debe seleccionar una opción de tipo de comando en la página Consulta del cuadro de diálogo [Propiedades del conjunto de datos](../dataset-properties-dialog-box-query.md) .  
   
  Dispone de tres tipos de consultas:  
   

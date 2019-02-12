@@ -12,14 +12,14 @@ f1_keywords:
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c2911f9ac2da57e284bd6841df7b4b1ec5b2b105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 690f092b98a76ddd9ccc18d15f4250e7e856efa0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144185"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030656"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades del eje, Opciones del eje (Generador de informes y SSRS)
   Seleccione **opciones del eje** en el **Horizontal** o **propiedades del eje vertical** cuadro de diálogo para definir la apariencia del eje del gráfico especificado. En versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], el gráfico mostraba todas las etiquetas en el eje X de forma predeterminada. Sin embargo, en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, el gráfico omite las etiquetas para generar una imagen más limpia en el gráfico y evitar las colisiones entre etiquetas. Para más información, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48144185"
  **Máximo**  
  Escriba una expresión o un valor para el valor máximo del eje X. Si se omite, el valor máximo se determina mediante los datos devueltos por el conjunto de datos.  
   
- **Intervalo**  
+ **Interval**  
  Escriba una expresión o un valor para el intervalo entre las etiquetas del eje. Por ejemplo, escriba 1 para mostrar cada etiqueta de categoría en el eje. Escriba 2 para mostrar una de cada dos etiquetas de categoría. Si se omite, las etiquetas se calculan automáticamente basándose en los valores del conjunto de datos.  
   
  **Tipo de intervalo**  
@@ -68,6 +68,6 @@ ms.locfileid: "48144185"
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Trazar datos en un eje secundario &#40;generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Agregar o quitar márgenes de un gráfico &#40;generador de informes y SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Agregar o quitar márgenes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

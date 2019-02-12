@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8972427f2ba2529880715ca12d85a560a02eb31f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6e11a7d35550c881157ab4be6aa78048346653c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405020"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011257"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
   El registro de la ejecución del servidor de informes contiene información sobre los informes que se ejecutan en el servidor o en varios servidores de una implementación escalada en modo nativo o de una granja de servidores de SharePoint. Puede usar el registro de la ejecución de informes para averiguar con qué frecuencia se solicita el informe, qué formatos de salida se usan más y cuántos milisegundos del tiempo de procesamiento se dedica a cada fase del procesamiento. El registro contiene información sobre el tiempo de ejecución de la consulta de conjunto de datos de un informe y el tiempo empleado en el procesamiento de los datos. Si es administrador del servidor de informes, puede revisar la información del registro e identificar las tareas de ejecución prolongada, y realizar sugerencias a los autores de informes en las áreas del informe (conjunto de datos o procesamiento) que se puedan mejorar.  
@@ -115,16 +115,16 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ItemPath|Ruta de acceso donde se almacena un informe o un elemento de informe.|  
 |UserName|Identificador del usuario.|  
 |ExecutionID|Identificador interno asociado a una solicitud. Las solicitudes en las mismas sesiones de usuario comparten el mismo identificador de ejecución.|  
-|RequestType|Valores posibles:<br />**Interactivo**<br />**Suscripción**<br /><br /> <br /><br /> El análisis de los datos de registro filtrados por RequestType=Subscription y ordenados por TimeStart pueden revelar los periodos de mucho uso de suscripciones y puede indicar la conveniencia de modificar algunas de las suscripciones de informe a un momento diferente.|  
+|RequestType|Valores posibles:<br />**Interactive**<br />**Suscripción**<br /><br /> <br /><br /> El análisis de los datos de registro filtrados por RequestType=Subscription y ordenados por TimeStart pueden revelar los periodos de mucho uso de suscripciones y puede indicar la conveniencia de modificar algunas de las suscripciones de informe a un momento diferente.|  
 |Formato|Formato de representación.|  
 |Parámetros|Valores de parámetros utilizados para la ejecución de un informe.|  
-|ItemAction|Valores posibles:<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **FindString**<br /><br /> **Ejecutar**<br /><br /> **RenderEdit**|  
+|ItemAction|Valores posibles:<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Ejecutar**<br /><br /> **RenderEdit**|  
 |TimeStart|Horas de inicio y detención que indican la duración del procesamiento de un informe.|  
 |TimeEnd||  
 |TimeDataRetrieval|Número de milisegundos empleados en recuperar los datos.|  
 |TimeProcessing|Número de milisegundos empleados en procesar el informe.|  
 |TimeRendering|Número de milisegundos empleados en representar el informe.|  
-|Origen|Origen de la ejecución del informe. Valores posibles:<br /><br /> **Live**<br /><br /> **Caché**: Indica una ejecución almacenada en caché, por ejemplo, conjunto de datos en directo no se ejecutan las consultas.<br /><br /> **Snapshot**<br /><br /> **Historial**<br /><br /> **Ad hoc** : hace referencia a un informe detallado basado en un modelo de informe generado dinámicamente, o bien a un informe del Generador de informes del cual se puede obtener una vista previa en un cliente mediante el uso de un servidor de informes para el procesamiento y representación.<br /><br /> **Sesión**: hace referencia a una solicitud de seguimiento en una sesión que ya se ha establecido.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> **Rdce**:  Indica una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
+|Origen|Origen de la ejecución del informe. Valores posibles:<br /><br /> **Live**<br /><br /> **Cache**: Indica una ejecución almacenada en caché, por ejemplo, conjunto de datos en directo no se ejecutan las consultas.<br /><br /> **Snapshot**<br /><br /> **Historial**<br /><br /> **AdHoc** : hace referencia a un informe detallado basado en un modelo de informe generado dinámicamente, o bien a un informe del Generador de informes del cual se puede obtener una vista previa en un cliente mediante el uso de un servidor de informes para el procesamiento y representación.<br /><br /> **Sesión**: hace referencia a una solicitud de seguimiento en una sesión que ya se ha establecido.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> **Rdce**:  Indica una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
 |Estado|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  

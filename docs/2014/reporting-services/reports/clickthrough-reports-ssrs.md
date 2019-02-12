@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 344d5706af4e7e963c0dbdd643efc3d0fb6b1b10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: caf23eb7e7d0e06a9e79dbaa6b9a0120725a4b10
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205714"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031056"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Informes click-through (SSRS)
   Un informe click-through es aquel que proporciona información detallada sobre los datos incluidos en el informe principal. Un informe click-through se muestra cuando el usuario hace clic en los datos interactivos que aparecen en el informe principal. Estos informes son generados automáticamente por el servidor de informes. El usuario, como diseñador del modelo, determina lo que se ve en los informes click-through estableciendo las propiedades `DefaultDetailAttribute` y `DefaultAggregateAttribute` que se asignan a una entidad del modelo de informe.  

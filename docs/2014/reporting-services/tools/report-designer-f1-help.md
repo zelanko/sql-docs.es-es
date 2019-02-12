@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9bde9b551f3a2b8308dc8d87bb9a97cc59c1c2de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d815caf1e67b1dd5b4b40838e8a0ef2dd7eb6d05
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189845"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036556"
 ---
 # <a name="report-designer-f1-help"></a>Diseñador de informes (Ayuda F1)
-  Esta sección proporciona ayuda F1 para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] asistentes, vistas y cuadros de diálogo de diseñador de informes. También puede abrir la Ayuda F1 mientras trabaja en un cuadro de diálogo; para ello, presione F1 o haga clic en el botón Ayuda que se muestra en el cuadro de diálogo.  
+  En esta sección se proporciona Ayuda F1 para los asistentes, vistas y cuadros de diálogo del Generador de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . También puede abrir la Ayuda F1 mientras trabaja en un cuadro de diálogo; para ello, presione F1 o haga clic en el botón Ayuda que se muestra en el cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de características &#40;Reporting Services&#41;](../feature-reference-reporting-services.md)   

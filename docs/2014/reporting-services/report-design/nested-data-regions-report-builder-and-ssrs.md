@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3b3ff687b0ac3f9319351b45a49f8f272444ce9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110025"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026058"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Anidar regiones de datos (Generador de informes y SSRS)
   Normalmente, una región de datos, como un gráfico, se anida dentro de otra, como una matriz, para mostrar resúmenes de los datos de una manera concisa o para mostrar los datos de forma gráfica, además de hacerlo en una tabla o una matriz.  
@@ -27,7 +27,7 @@ ms.locfileid: "48110025"
   
  En esta ilustración, el gráfico circular de la celda de la esquina y los gráficos sparkline de las filas son regiones de datos anidadas.  
   
- Por definición, las regiones de datos anidadas se basan en el mismo conjunto de datos de informe. No puede anidar regiones de datos basadas en conjuntos de datos diferentes. Para mostrar datos de conjuntos de datos diferentes, plantéese la posibilidad de usar informes o subinformes detallados. Para más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md).  
+ Por definición, las regiones de datos anidadas se basan en el mismo conjunto de datos de informe. No puede anidar regiones de datos basadas en conjuntos de datos diferentes. Para mostrar datos de conjuntos de datos diferentes, plantéese la posibilidad de usar informes o subinformes detallados. Para obtener más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -87,10 +87,10 @@ ms.locfileid: "48110025"
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Los medidores &#40;generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Medidores &#40;Generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un KPI al informe &#40;Generador de informes&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [Aplicar formato a las escalas de un medidor &#40;generador de informes y SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Tutorial: Agregar un KPI a un informe &#40;generador de informes&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

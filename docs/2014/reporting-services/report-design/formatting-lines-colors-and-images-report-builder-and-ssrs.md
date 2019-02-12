@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 345523929eddcefc072bc7f55be49fc5e26057d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 74b66ac83d47d87d82db9826424b8e0237d123d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192635"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028306"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Aplicar formato a líneas, colores e imágenes (Generador de informes y SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le permite dar formato a las líneas, los colores, las regiones de datos, las imágenes y otros elementos de informe.  
@@ -44,7 +44,7 @@ ms.locfileid: "48192635"
   
  Además de los marcos de borde estándar, también puede aplicar a los gráficos marcos de borde adicionales. Para más información, vea [Agregar un marco de borde a un gráfico &#40;Generador de informes y SSRS&#41;](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md).  
   
- También puede agregar un borde al propio informe. Para más información, vea [Add a Border to a Report &#40;Report Builder and SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
+ También puede agregar un borde al propio informe. Para más información, vea [Agregar un borde a un informe &#40;Generador de informes y SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 ## <a name="applying-background-colors"></a>Aplicar colores de fondo  
  Se puede agregar un color sólido al fondo de todo el informe, de un cuadro de texto del informe o de una celda o grupo de celdas de una región de datos. El color de fondo predeterminado es el blanco; no obstante, puede seleccionar otro color en la pestaña **Relleno** del cuadro de diálogo **Propiedades** del elemento de informe. Por ejemplo, si quiere cambiar el color de fondo de un cuadro de texto, haga clic con el botón derecho en el cuadro de texto y seleccione **Propiedades de cuadro de texto**. Haga clic en **Relleno** y, a continuación, seleccione el color que desea usar. En este cuadro de diálogo, puede seleccionar un color de fondo para el elemento seleccionado o puede agregar una imagen para que aparezca como fondo.  
@@ -57,8 +57,8 @@ ms.locfileid: "48192635"
  También puede agregar imágenes, como los logotipos, al fondo de su informe o a un rectángulo, cuadro de texto, tabla, matriz o algunas partes de un gráfico o a las secciones de página y al cuerpo de un informe. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a texto y marcadores de posición &#40;generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Aplicar formato a números y fechas &#40;generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Cuadro de diálogo Relleno &#40;Generador de informes y SSRS&#41;](../fill-dialog-box-report-builder-and-ssrs.md)  
   

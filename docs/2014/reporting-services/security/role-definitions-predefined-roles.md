@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b18501020d1764399315202d2c7efe9a31549172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5567ee441075f015a7d6418761b30d29c591698f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167225"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035136"
 ---
 # <a name="predefined-roles"></a>Roles predefinidos
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala junto con roles predefinidos que puede usar para conceder acceso a operaciones del servidor de informes. Cada rol predefinido describe una recopilación de tareas relacionadas. Puede asignar grupos y cuentas de usuario a los roles predefinidos para proporcionar acceso inmediato a las operaciones del servidor de informes.  
@@ -31,7 +31,7 @@ ms.locfileid: "48167225"
   
 2.  Identifique qué usuarios y grupos requieren acceso al servidor de informes y en qué nivel. A la mayoría de los usuarios se les debería asignar el rol **Explorador** o el rol **Generador de informes** . A un pequeño número de usuarios se les debería asignar el rol **Publicador** . A el rol **Administrador de contenido**conviene asignar muy pocos usuarios.  
   
-3.  Cuando esté preparado para asignar cuentas de usuario y de grupo a roles concretos, use el Administrador de informes. Para más información, consulte [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
+3.  Cuando esté preparado para asignar cuentas de usuario y de grupo a roles concretos, use el Administrador de informes. Para obtener más información, vea [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md)conviene asignar muy pocos usuarios.  
   
 ##  <a name="bkmk_rolelist"></a> Definiciones de roles predefinidos  
  Los roles predefinidos se definen de acuerdo con las tareas que admiten. Puede modificar estos roles o reemplazarlos por roles personalizados.  
@@ -70,7 +70,7 @@ ms.locfileid: "48167225"
 |Administrar historial de informe|Crear, ver y eliminar el historial del informe, ver propiedades del historial del informe; ver y modificar la configuración que determina los límites del historial de instantáneas y cómo funciona el almacenamiento en caché.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionen contenido al informe, vea y modifique definiciones de informe y establezca directivas de seguridad de nivel de informe.|  
 |Administrar recursos|Cree, modifique y elimine recursos; vea y modifique propiedades de recursos.|  
-|Establecer la seguridad de elementos individuales|Definir directivas de seguridad para informes, informes vinculados, carpetas, recursos y orígenes de datos. Para obtener más información, consulte [elementos protegibles](securable-items.md).|  
+|Establecer la seguridad de elementos individuales|Definir directivas de seguridad para informes, informes vinculados, carpetas, recursos y orígenes de datos. Para obtener más información, vea [Elementos protegibles](securable-items.md).|  
 |Ver orígenes de datos|Vea elementos de orígenes de datos compartidos en la jerarquía de carpetas.|  
 |Ver informes|Ejecutar informes y ver propiedades de informes.|  
 |Ver modelos|Ver los modelos de la jerarquía de carpetas, utilizar modelos como orígenes de datos para un informe y ejecutar consultas en el modelo para recuperar datos.|  
@@ -189,7 +189,7 @@ ms.locfileid: "48167225"
 |Tarea|Descripción|  
 |----------|-----------------|  
 |Ejecutar definiciones de informe|Inicie la ejecución de la definición del informe sin publicarlo en un servidor de informes.|  
-|Administrar trabajos|Vea y cancele trabajos que se estén ejecutando. Para obtener más información, consulte [administrar un proceso en ejecución](../subscriptions/manage-a-running-process.md).|  
+|Administrar trabajos|Vea y cancele trabajos que se estén ejecutando. Para obtener más información, vea [Administrar un proceso en ejecución](../subscriptions/manage-a-running-process.md).|  
 |Administrar propiedades del servidor de informes|Vea y modifique propiedades que se apliquen al servidor de informes y a elementos administrados por el servidor de informes.<br /><br /> Esta tarea permite cambiar el nombre del Administrador de informes, habilitar Mis informes y establecer los valores predeterminados del historial del informe.|  
 |Administrar roles|Cree, vea, modifique y elimine definiciones de roles.<br /><br /> Los miembros del rol **Administrador del sistema** pueden utilizar la página Configuración del sitio para administrar roles.|  
 |Administrar programaciones compartidas|Cree, vea, modifique y elimine programaciones compartidas que sirven para ejecutar o actualizar informes.|  
@@ -214,7 +214,7 @@ ms.locfileid: "48167225"
  [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md)   
  [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](role-assignments-modify-or-delete.md)   
- [Conceder permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
+ [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
  [Tareas y permisos](tasks-and-permissions.md)  
   
   

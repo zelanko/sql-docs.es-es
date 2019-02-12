@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b81c8eb53247caa2a0f0a4d931df10f9f43cd602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 368ee35385a7147c849a4800cf9419b19986545d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221285"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020506"
 ---
 # <a name="report-server-item-properties"></a>Propiedades de los elementos del servidor de informes
   Las propiedades de los elementos son específicas de los elementos de la base de datos del servidor de informes. Tales elementos incluyen informes, informes vinculados, carpetas, recursos, modelos y orígenes de datos.  
@@ -37,11 +37,11 @@ ms.locfileid: "48221285"
 |**CreatedBy**|Nombre del usuario que agregó originalmente el elemento para la base de datos del servidor de informes.|  
 |**CreationDate**|Fecha y hora cuando el elemento se agregó a la base de datos del servidor de informes.|  
 |**Descripción**|Descripción del elemento.|  
-|**Oculto**|Valor que indica si el elemento está visible y disponible para los usuarios.|  
+|**Hidden**|Valor que indica si el elemento está visible y disponible para los usuarios.|  
 |**ID**|Identificador de un elemento de la base de datos del servidor de informes.|  
 |**ModifiedBy**|Nombre del usuario que modificó el elemento de la base de datos del servidor de informes en último lugar.|  
 |**ModifiedDate**|Fecha y hora cuando el usuario modificó el elemento por última vez.|  
-|**Nombre**|Nombre de un elemento de la base de datos del servidor de informes.|  
+|**Name**|Nombre de un elemento de la base de datos del servidor de informes.|  
 |**Ruta de acceso**|Nombre de la ruta de acceso completa del elemento. La ruta de acceso de cualquier elemento de la base de datos del servidor de informes tiene una longitud máxima de 260 caracteres.|  
 |**Tamaño**|El tamaño, en bytes, de un elemento en la base de datos del servidor de informes.|  
 |**Tipo**|Tipo de un elemento de la base de datos del servidor de informes.|  
@@ -60,7 +60,7 @@ ms.locfileid: "48221285"
 |Property|Descripción|  
 |--------------|-----------------|  
 |**Lenguaje**|Lenguaje utilizado en un informe. El valor es un código de idioma definido en la especificación del Grupo de trabajo de ingeniería de Internet (IETF) RFC1766. La primera parte es una designación de dos caracteres del lenguaje de bajo nivel. La segunda parte se separa con un guión y designa la variación o dialecto del lenguaje. Si no se especifica un valor en el elemento `Style` asociado al elemento `Body` en la definición de informe, el valor predeterminado es el lenguaje del servidor de informes.|  
-|`ReportProcessingTimeout`|Tiempo de espera, en segundos, para un informe individual. Si se establece este valor, el servidor de informes intenta detener el procesamiento de un informe cuando ha transcurrido el tiempo especificado. Los valores válidos son `-1` a través de `2`,`147`,`483`,`647`. Si el valor es `-1`, no se agota el tiempo del informe durante el procesamiento. Si el valor es `null`, el valor de propiedad del sistema `ReportProcessingTimeout` se utiliza para el tiempo de espera del procesamiento del informe. El valor predeterminado es `null`. Para más información, vea [Propiedades del sistema del servidor de informes](reporting-services-properties-report-server-system-properties.md).|  
+|`ReportProcessingTimeout`|Tiempo de espera, en segundos, para un informe individual. Si se establece este valor, el servidor de informes intenta detener el procesamiento de un informe cuando ha transcurrido el tiempo especificado. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no se agota el tiempo del informe durante el procesamiento. Si el valor es `null`, el valor de propiedad del sistema `ReportProcessingTimeout` se utiliza para el tiempo de espera del procesamiento del informe. El valor predeterminado es `null`. Para más información, vea [Propiedades del sistema del servidor de informes](reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Fecha y hora cuando una instantánea de informe se creó por última vez para un informe.|  
 |**CanRunUnattended**|Valor que indica si un informe se puede ejecutar de forma desatendida. Si esta propiedad se establece en `true`, se definen valores predeterminados para los parámetros de informe y las credenciales del origen de datos se almacenan con el informe, o la opción de recuperación de credenciales se establece en `None`. Si esta propiedad se establece en `false`, los requisitos previos para ejecutar un informe desatendido no se cumplen. Vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) para más información.|  
 |**HasParameterDefaultValues**|Valor que indica si el informe tiene establecidos los valores predeterminados válidos para todos los parámetros de informe. El valor también es `true` si un informe no tiene los parámetros de informe. Si esta propiedad se establece en `false`, uno o más parámetros de informe no tienen un valor predeterminado válido.|  

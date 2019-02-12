@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 21cf0a14492c31c33d7923ea34c7cb00fa69bb29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b3b42828eab3a439cb21c6d32ff0881debc663e8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162365"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011896"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Agregar o quitar un encabezado o un pie de página (Generador de informes y SSRS)
   Puede agregar texto estático, imágenes, líneas, rectángulos y bordes a encabezados y pies de página. Puede colocar expresiones e imágenes enlazadas a datos en un cuadro de texto si desea incluir datos variables o calculados en un encabezado o pie de página.  
@@ -48,7 +48,7 @@ ms.locfileid: "48162365"
   
     -   **Rectángulo**  
   
-    -   **Imagen**  
+    -   **Image**  
   
 3.  Haga clic con el botón derecho en el encabezado de página y, después, haga clic en **Propiedades de encabezado** para agregar bordes, imágenes de fondo o colores, o para ajustar el ancho del encabezado. A continuación, haga clic en **Aceptar**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48162365"
 >  Cuando se quita un encabezado o pie de página, se elimina del informe. Los elementos que agregó previamente al encabezado o el pie de página no aparecerán de nuevo si vuelve a agregar uno u otro.  
   
 ## <a name="see-also"></a>Vea también  
- [Encabezados y pies de página &#40;generador de informes y SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 61965f9d07ebef7d3f30623df318125e67587890
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 22eb90e4fc162d2805f760e8f0b3152c3791111f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349392"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017706"
 ---
 # <a name="troubleshoot-report-builder"></a>Solucionar problemas del Generador de informes
   El Generador de informes es una herramienta de creación de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que le permite generar informes desde muchos tipos diferentes de orígenes de datos y publicarlos en un servidor de informes o en un sitio de SharePoint. Los informes que cree pueden verse en el generador de informes en un explorador Web, o como parte de un [!INCLUDE[msCoName](../includes/msconame-md.md)] aplicación de Windows o el sitio de SharePoint.  
@@ -26,7 +26,7 @@ ms.locfileid: "53349392"
  Los temas siguientes pueden ayudarle a solucionar problemas de informes, dependiendo de si es autor del informe o administrador del servidor de informes.  
   
 ## <a name="report-authors"></a>Autores de informes  
- [Solucionar problemas de informes: Informes de mapa &#40;generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de los informes: Informes de mapa &#40;generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [Solucionar problemas de elementos de informe &#40;generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   

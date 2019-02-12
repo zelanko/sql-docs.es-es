@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 50ac9bd023b8fb581f423a039b629015de7b423d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196405"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025496"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar un elemento (Generador de informes y SSRS)
   Establezca la visibilidad de un elemento de informe cuando desee ocultar condicionalmente un elemento basándose en un parámetro de informe o en alguna otra expresión que especifique.  
@@ -71,7 +71,7 @@ ms.locfileid: "48196405"
 3.  En el cuadro de diálogo **Visibilidad de columna** , siga los pasos 3 y 4 del primer procedimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Acción de obtención de detalles &#40;generador de informes y SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
  [Agregar una acción de expandir y contraer a un elemento &#40;Generador de informes y SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   

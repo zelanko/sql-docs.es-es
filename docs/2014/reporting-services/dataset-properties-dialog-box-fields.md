@@ -12,14 +12,14 @@ f1_keywords:
 - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b2300dc39ec07b25fe79586846929de3954b5631
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5ef58bedad50c21b17c6ea5ace674480b58a5c2c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128411"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032908"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>Propiedades del conjunto de datos (cuadro de diálogo), Campos
   Seleccione **Campos** en el cuadro de diálogo **Propiedades del conjunto de datos** para cambiar la colección de campos para el conjunto de datos del informe. La lista de campos se rellena automáticamente, pero puede utilizar **Campos** para agregar, editar y eliminar campos calculados y de consulta.  

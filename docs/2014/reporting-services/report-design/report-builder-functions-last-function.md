@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5d2b74428de2ae01b2b514309b0d825a6151b44c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2bf3deb1614e586e38ce05f7016e92ec3f802e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199572"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034776"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Función Last (Generador de informes y SSRS)
   Devuelve el último valor de la expresión especificada en el ámbito especificado.  
@@ -33,7 +33,7 @@ Last(expression, scope)
   
 #### <a name="parameters"></a>Parámetros  
  *expression*  
- (`Variant` o `Binary`) expresión en la que se va a realizar la agregación, por ejemplo, `=Fields!Fieldname.Value`.  
+ (`Variant` o `Binary`). Expresión en la que se lleva a cabo la agregación, por ejemplo, `=Fields!Fieldname.Value`.  
   
  *ámbito*  
  (`String`) (opcional). Nombre de un conjunto de datos, una región de datos o un grupo que contiene los elementos de informe a los que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
@@ -44,9 +44,9 @@ Last(expression, scope)
 ## <a name="remarks"></a>Comentarios  
  La función `Last` devuelve el último valor de un conjunto de datos después de aplicar todos los filtros y la configuración de ordenación al ámbito especificado.  
   
- El `Last` función no se puede usar en expresiones de filtro de grupo con el ámbito (valor predeterminado) actual.  
+ La función `Last` solo se puede usar en expresiones de filtro de grupo con el ámbito actual (valor predeterminado).  
   
- También puede usar `Last` en un encabezado de página para devolver el último valor de la `ReportItems` colección para una página con el fin de generar los encabezados de estilo diccionario que muestren la primera y última entrada en una página.  
+ También puede usar `Last` en un encabezado de página para devolver el último valor de la colección `ReportItems` para una página; esto permite generar encabezados de estilo diccionario que muestren la primera y la última entrada de cada página.  
   
  El valor de *scope* tiene que ser una constante de cadena y no puede ser una expresión. Para los agregados exteriores o los que no especifican a otros agregados, *scope* debe hacer referencia al ámbito actual o a un ámbito de contenido. Para los agregados de agregados, los agregados anidados pueden especificar un ámbito secundario.  
   
@@ -72,9 +72,9 @@ Last(expression, scope)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

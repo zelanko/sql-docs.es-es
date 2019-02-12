@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6557db236aba57db2c6f06a29faee1f05bdc30cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6c1d4289f9785d6975c6bba85e8215f208a3c537
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179295"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018257"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Cuadro de diálogo de Reglas de color de mapa, General
   Seleccione **General** en el cuadro de diálogo **Propiedades de reglas de color** para definir las opciones de color de los elementos de mapa en esta capa. Entre los elementos de mapa se incluyen los polígonos, líneas y puntos. Las reglas de color se pueden aplicar cuando se haya creado una relación entre los elementos de mapa basada en los datos espaciales y los datos analíticos desde un campo de conjunto de datos o desde un campo de origen de datos espaciales.  
@@ -44,7 +44,7 @@ ms.locfileid: "48179295"
   
  Seleccione el campo de datos analíticos que se usará en la lista desplegable. Según el origen de datos espaciales, la lista muestra los campos del origen de datos espaciales y de un conjunto de datos de informe que tiene una relación entre los datos espaciales y los datos analíticos. Para crear este tipo de relación, establezca las opciones de datos en la página Datos analíticos de la capa de mapa seleccionada.  
   
- **Paleta**  
+ **Palette**  
  Escriba o seleccione el nombre de la paleta de colores.  
   
  **Color inicial**  
@@ -61,6 +61,6 @@ ms.locfileid: "48179295"
   
 ## <a name="see-also"></a>Vea también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;generador de informes y SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

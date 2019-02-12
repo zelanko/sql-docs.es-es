@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182715"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034826"
 ---
 # <a name="secure-folders"></a>Proteger carpetas
   La seguridad de las carpetas es fundamental para proteger todo el contenido de un servidor de informes. Puesto que la seguridad se hereda en toda la estructura de carpetas, puede designar secciones grandes o pequeñas de la jerarquía de carpetas para permitir ciertos tipos de acceso.  
@@ -37,7 +37,7 @@ ms.locfileid: "48182715"
   
 |Seleccione esta tarea|Para conceder permiso para|  
 |----------------------|---------------------------|  
-|Ver carpetas|Ver la jerarquía de carpetas y las propiedades de solo lectura que indican cuándo se creó y modificó la carpeta.<br /><br /> Los usuarios no pueden ver los elementos de la carpeta a no ser que estén asignados a los roles que también incluyan las tareas siguientes: "Ver informes", "Ver modelos", "Ver recursos" y "Ver orígenes de datos".|  
+|Ver carpetas|Ver la jerarquía de carpetas y las propiedades de solo lectura que indican cuándo se creó y modificó la carpeta.<br /><br /> Los usuarios no pueden ver elementos en la carpeta a menos que se asignan a roles que también se incluyen las siguientes tareas: "Ver informes", "Modelos de vista", "Ver recursos" y "Ver orígenes de datos".|  
 |Administrar carpetas|Ver las propiedades de la carpeta, cambiar el nombre o la descripción, o bien mover la carpeta a otra ubicación. Esta tarea permite a los usuarios crear carpetas.|  
 |Administrar informes|Agregar informes del sistema de archivos a una carpeta, así como publicar informes desde el Diseñador de informes al servidor de informes.|  
 |Administrar orígenes de datos|Agregar nuevos elementos de orígenes de datos compartidos a una carpeta y cambiar los orígenes de datos compartidos existentes.|  
@@ -45,7 +45,7 @@ ms.locfileid: "48182715"
   
 ## <a name="see-also"></a>Vea también  
  [Proteger informes y recursos](secure-reports-and-resources.md)   
- [Protección de elementos de orígenes de datos compartidos](secure-shared-data-source-items.md)   
+ [Proteger elementos de orígenes de datos compartidos](secure-shared-data-source-items.md)   
  [Concesión de permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)  
   
   

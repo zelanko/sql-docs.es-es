@@ -19,14 +19,14 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e5d96e743587a0f4c00e7f5f7777b95667e1ea84
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176945"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036576"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Administrador de informes (Modo nativo de SSRS)
   El Administrador de informes es una herramienta basada en Web para el acceso a informes y su administración que se utiliza para administrar una única instancia de servidor de informes desde una ubicación remota a través de una conexión HTTP. También puede utilizar el Administrador de informes por su visor de informes y sus características de navegación. En este tema:  
@@ -48,7 +48,7 @@ ms.locfileid: "48176945"
   
 -   Configurar propiedades de ejecución del informe, historial del informe y parámetros del informe.  
   
--   Crear modelos de informe que conexión y recuperan datos desde un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origen de datos o desde un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] origen de datos relacional.  
+-   Crear modelos de informe que se conectan a datos y recuperan datos de un origen de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o de un origen de datos relacional de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   Establezca la seguridad de los elementos del modelo para permitir el acceso a entidades concretas del modelo o asigne entidades a informes click-through predefinidos creados previamente.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "48176945"
  [Planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Generador de informes &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Herramientas de Reporting Services](tools/reporting-services-tools.md)   
- [Administración de contenido del servidor de informes &#40;modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Ver y explorar los informes en modo nativo usando elementos Web de SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

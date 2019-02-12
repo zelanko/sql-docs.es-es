@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3be68007b9398b356d86cb0c1395be62c60aac0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166822"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016018"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los colores de serie de un gráfico (Generador de informes y SSRS)
   Reporting Services proporciona varias paletas integradas para los gráficos, pero también se puede definir una paleta personalizada. De forma predeterminada, los gráficos usan la integrada **BrightPastel** paleta de colores para rellenar las series. Estos colores también aparecen en la leyenda. Cuando se agregan varias series al gráfico, este asigna un color a cada serie siguiendo el orden en el que se han definido los colores en la paleta.  
@@ -46,14 +46,14 @@ ms.locfileid: "48166822"
 ## <a name="using-a-color-fill-on-each-series"></a>Usar un relleno en color para cada serie  
  También puede definir sus propios colores para el gráfico especificando un color para cada serie. Para ello, abra el cuadro de diálogo **Propiedades de la serie** y establezca la propiedad **Color** para **Relleno**. Esto invalidará todas las paletas definidas. Normalmente, es mejor usar una paleta personalizada para definir los colores porque el número de series del conjunto de datos no se suele conocer hasta que se procesa el informe.  
   
- Esta opción resulta más conveniente si se desea establecer los colores de la serie de forma condicional en función de una expresión.  Para obtener más información, consulte [puntos de datos de formato de un gráfico &#40;generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Esta opción resulta más conveniente si se desea establecer los colores de la serie de forma condicional en función de una expresión.  Para más información, vea [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Especificar colores coherentes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  [Definir los colores de un gráfico mediante una paleta &#40;Generador de informes y SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
- [Resaltar datos en el gráfico agregando franjas &#40;generador de informes y SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
+ [Resaltar datos en el gráfico agregando franjas &#40;Generador de informes y SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

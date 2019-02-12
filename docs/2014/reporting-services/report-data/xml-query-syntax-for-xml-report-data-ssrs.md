@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c8a1a3b41bd30702a04ce6cbb49b70bc561e508
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ac63791bd33d9f6f774cd1d56601a28d3683b249
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369897"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037146"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxis de consulta XML para los datos de informe XML (SSRS)
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML `Query` o una ruta de acceso de elemento. Un documento XML `Query` comienza con un  **\<consulta >** etiqueta e incluye espacios de nombres y elementos XML que varían según el origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](report-data-ssrs.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "53369897"
 |Elemento de consulta XML|Campos resultantes en el conjunto de datos|  
 |-----------------------|-------------------------------------|  
 |\<Query/>|Valor A: https://schemas.microsoft.com/...<br /><br /> Valor B: https://schemas.microsoft.com/...<br /><br /> Valor C: https://schemas.microsoft.com/...|  
-|\<XmlDP:Query xmlns:xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns = "https://schemas.microsoft.com/..." ><br /><br /> \<XmlDP:ElementPath > raíz {}/ns:Element2 / nodo\</xmldp:ElementPath ><br /><br /> \</XmlDP:Query >|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
+|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  
  Puede copiar este documento XML y guardarlo en una dirección URL disponible para el Diseñador de informes con objeto de poder usarlo como origen de datos XML, por ejemplo, http://localhost/DPNamespace.xml.  

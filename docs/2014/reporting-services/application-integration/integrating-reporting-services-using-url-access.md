@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2fe9b635b53a83699cfc40eddadd7d73bd7948c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c87cd3d902f80b73475dd68726df091971ef0dff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132345"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036006"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrar Reporting Services utilizando un acceso URL
   Con el acceso URL, el acceso a los informes se realiza a través de una dirección URL del servidor de informes. Una solicitud URL permite tener acceso a un servidor de informes concreto así como a los informes, recursos y otros elementos en la base de datos del servidor de informes. También puede personalizar la experiencia de visualización y navegación en los informes para los usuarios. La cadena de consulta de la dirección URL contiene la configuración de la información de los dispositivos, así como los parámetros de informe de destino del informe y la salida de representación elegida. La manera en el servidor de informes administra las solicitudes URL depende de los parámetros, los prefijos de parámetro y el tipo de elemento al que está teniendo acceso a través de la dirección URL.  

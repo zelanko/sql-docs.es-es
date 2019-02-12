@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6db486a5d497ba6b6c5bfe312197d78a5656d388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177505"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041436"
 ---
-# <a name="lesson-4-executing-market-basket-predictions"></a>Lección 4: Ejecutar predicciones de cesta de la compra
-  En esta lección, usará el DMX `SELECT` instrucción para crear predicciones basadas en la asociación que creó en los modelos [lección 2: agregar modelos de minería a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Para crear una consulta de predicción se usa la instrucción `SELECT` de DMX y se agrega una cláusula `PREDICTION JOIN`. Para obtener más información sobre la sintaxis de una combinación de predicción, vea [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
+# <a name="lesson-4-executing-market-basket-predictions"></a>Lección 4: Predicciones de cesta de la ejecución
+  En esta lección, usará el DMX `SELECT` instrucción para crear predicciones basadas en la asociación que creó en los modelos [lección 2: Agregar modelos de minería de datos a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Para crear una consulta de predicción se usa la instrucción `SELECT` de DMX y se agrega una cláusula `PREDICTION JOIN`. Para obtener más información sobre la sintaxis de una combinación de predicción, vea [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  El **SELECT FROM \<modelo > PREDICTION JOIN** formulario de la `SELECT` instrucción consta de tres partes:  
   
@@ -219,7 +218,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  En la barra de herramientas, haga clic en el **Execute** botón.  
   
-     La consulta devuelve una tabla que contiene tres artículos: HL Mountain Tire, Water Bottle y Fender Set - Mountain. En la tabla se enumeran estos productos por orden de probabilidad. El producto que aparece al principio de la tabla es el producto con mayor probabilidad de estar incluido en el mismo carro de la compra que los tres artículos especificados en la consulta. Los productos restantes son los siguientes con mayor probabilidad de estar incluidos en el carro de la compra. La tabla también contiene estadísticas que describen la precisión de la predicción.  
+     La consulta devuelve una tabla que contiene tres productos: HL Mountain Tire, Water Bottle y Fender Set - Mountain. En la tabla se enumeran estos productos por orden de probabilidad. El producto que aparece al principio de la tabla es el producto con mayor probabilidad de estar incluido en el mismo carro de la compra que los tres artículos especificados en la consulta. Los productos restantes son los siguientes con mayor probabilidad de estar incluidos en el carro de la compra. La tabla también contiene estadísticas que describen la precisión de la predicción.  
   
      Puede ver en los resultados de esta consulta que el valor de la *MINIMUM_PROBABILITY* parámetro afecta a los resultados devueltos por la consulta.  
   
@@ -228,7 +227,7 @@ SELECT <select list> FROM [<mining model>]
  Para obtener información sobre cómo utilizar DMX en otro escenario de predicción, vea [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de consultas de modelo de asociación](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
+ [Ejemplos de consultas del modelo de asociación](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
  [Interfaces de consultas de minería de datos](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
   
   

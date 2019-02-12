@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395808"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037726"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura y un modelo de red neuronal (Tutorial intermedio de minería de datos)
   Para crear un modelo de minería de datos, debe usar en primer lugar el Asistente para minería de datos con el objeto de crear una nueva estructura de minería de datos basada en la nueva vista del origen de datos. En esta tarea, utilizará el asistente para crear una estructura de minería de datos y al mismo tiempo crear el modelo inicial de minería de datos que se basa en el algoritmo de red neuronal de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -122,7 +121,7 @@ ms.locfileid: "52395808"
   
  ![distribución de valores de nivel de servicio](../../2014/tutorials/media/skt-service-grade-valuesc.gif "distribución de valores de nivel de servicio")  
   
- Como resultado, al procesar el modelo los resultados pueden aparecer de forma diferente a la que se espera. Por ejemplo, si utiliza la agrupación en clústeres para identificar los mejores grupos de valores, el algoritmo divide los valores de ServiceGrade en intervalos como éste: 0,0748051948 - 0,09716216215. Aunque esta agrupación es matemáticamente precisa, tales intervalos podrían no ser significativos para los usuarios empresariales.  
+ Como resultado, al procesar el modelo los resultados pueden aparecer de forma diferente a la que se espera. Por ejemplo, si utiliza la agrupación en clústeres para identificar los mejores grupos de valores, el algoritmo divide los valores de ServiceGrade en intervalos como éste: 0.0748051948 - 0.09716216215. Aunque esta agrupación es matemáticamente precisa, tales intervalos podrían no ser significativos para los usuarios empresariales.  
   
  En este paso, para que el resultado sea más intuitivo, agrupará los valores numéricos de manera diferente, creando copias de la columna de datos numéricos.  
   
@@ -140,26 +139,26 @@ ms.locfileid: "52395808"
 |Value|Support|  
 |-----------|-------------|  
 |Missing|0|  
-|0,09875|120|  
+|0.09875|120|  
   
  Discretizado mediante agrupación en clústeres  
   
 |Value|Support|  
 |-----------|-------------|  
-|\< 0,0748051948|34|  
-|0,0748051948 - 0,09716216215|27|  
-|0,09716216215 - 0.13297297295|39|  
+|\< 0.0748051948|34|  
+|0.0748051948 - 0.09716216215|27|  
+|0.09716216215 - 0.13297297295|39|  
 |0.13297297295 - 0.167499999975|10|  
-|> = 0.167499999975|10|  
+|>= 0.167499999975|10|  
   
  Discretizado mediante áreas iguales  
   
 |Value|Support|  
 |-----------|-------------|  
-|\< 0,07|26|  
-|0,07 - 0,00|22|  
-|0,09 - 0,11|36|  
-|> = 0,12|36|  
+|\< 0.07|26|  
+|0.07 - 0.00|22|  
+|0.09 - 0.11|36|  
+|>= 0.12|36|  
   
 > [!NOTE]  
 >  Puede obtener estas estadísticas a partir del nodo de estadísticas marginales del modelo una vez que se hayan procesado todos los datos. Para obtener más información acerca del nodo de estadísticas marginales, vea [Mining Model Content para los modelos de red neuronal &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  

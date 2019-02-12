@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b1ee55e0ec602ee2723b9e31b5dc80c611071b8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e0a2d0a723629ae1e9b7e7277ff646c63a86aec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073885"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043266"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Base de datos del servidor de informes (Modo nativo de SSRS)
   Un servidor de informes es un servidor sin estado que usa el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para almacenar metadatos y definiciones de objeto. Una instalación en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] emplea dos bases de datos para separar los requisitos de almacenamiento persistente de datos de los de almacenamiento temporal. Las bases de datos se crean juntas y se enlazan mediante el nombre. De forma predeterminada, los nombres de base de datos son **reportserver** y **reportservertempdb**, respectivamente.  
@@ -32,7 +32,7 @@ ms.locfileid: "48073885"
   
  Las bases de datos se pueden ejecutar en una instancia local o remota del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . La elección de una instancia local es útil si tiene recursos suficientes del sistema o si desea conservar licencias de software, pero la ejecución de las bases de datos en un equipo remoto puede mejorar el rendimiento.  
   
- Puede trasladar o reutilizar una base de datos de servidor de informes existente de una instalación anterior u otra instancia con otra instancia del servidor de informes. El esquema de la base de datos del servidor de informes debe ser compatible con la instancia del servidor de informes. Si la base de datos está en un formato anterior, se le solicitarán que la actualice al formato actual. Las versiones más recientes no se pueden pasar a una versión anterior. Si tiene una base de datos de servidor de informes más reciente, no puede utilizarla con una versión anterior de una instancia del servidor de informes. Para obtener más información sobre cómo se actualizan las bases de datos del servidor de informes a formatos más recientes, consulte [actualizar una base de datos del servidor de informes](../install-windows/upgrade-a-report-server-database.md).  
+ Puede trasladar o reutilizar una base de datos de servidor de informes existente de una instalación anterior u otra instancia con otra instancia del servidor de informes. El esquema de la base de datos del servidor de informes debe ser compatible con la instancia del servidor de informes. Si la base de datos está en un formato anterior, se le solicitarán que la actualice al formato actual. Las versiones más recientes no se pueden pasar a una versión anterior. Si tiene una base de datos de servidor de informes más reciente, no puede utilizarla con una versión anterior de una instancia del servidor de informes. Para más información sobre cómo se actualizan las bases de datos del servidor de informes a formatos más recientes, vea [Actualizar una base de datos del servidor de informes](../install-windows/upgrade-a-report-server-database.md).  
   
 > [!IMPORTANT]  
 >  La estructura de tabla para las bases de datos se optimiza para las operaciones de servidor y no se debe modificar ni ajustar. [!INCLUDE[msCoName](../../includes/msconame-md.md)] podría cambiar la estructura de tabla en una versión posterior. Si modifica o amplía la base de datos, es posible que esté limitando o anulando la capacidad de ejecutar futuras actualizaciones o aplicar Service Pack. También podría realizar cambios que dificultaran las operaciones del servidor de informes. Por ejemplo, si activa READ_COMMITTED_SNAPSHOT en la base de datos ReportServer, interrumpirá la característica de ordenación interactiva.  
@@ -66,10 +66,10 @@ ms.locfileid: "48073885"
  Si realiza una copia de seguridad de la base de datos temporal y posteriormente la restaura, debería eliminar el contenido. Generalmente, se puede eliminar el contenido de la base de datos temporal en cualquier momento. No obstante, deberá reiniciar el servicio Servidor de informes de Windows una vez realizada esa operación.  
   
 ## <a name="see-also"></a>Vea también  
- [Hospedar una base de datos del servidor de informes en un clúster de conmutación por error SQL Server](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [Hospedar una base de datos del servidor de informes en un clúster de conmutación por error de SQL Server](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Servidor de informes de Reporting Services](../reporting-services-report-server.md)   
- [Administrar una base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server-database-ssrs-native-mode.md)   
+ [Administrar una base de datos del servidor de informes &#40;modo nativo de SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Operaciones de copia de seguridad y restauración de Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)  
   

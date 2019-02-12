@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a4636dd2c129a6efad2bb9349082e5bcfe40fd9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8600fd0e9da41644e99950a7d3df1d7d4764b99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076749"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038456"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
   La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo `Value` e `IsMissing` en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Puede incluir valores de propiedad de campo extendidas en el informe, escriba expresiones que especifiquen por su nombre usa el método integrado `Fields` colección.  
   
- Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes a varios orígenes de datos que se asignan a nombres de propiedad de campo específicos y pueden obtenerse a través de los integrados `Fields` colección por nombre. Las propiedades personalizadas son específicas de cada proveedor de datos y se puede tener acceso a ellas mediante la colección `Fields` integrada, pero solo mediante la sintaxis que usa el nombre de la propiedad extendida como una cadena.  
+ Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes para varios orígenes de datos que se asignan a nombres de propiedades de campo específicos y a las que se tiene acceso por su nombre mediante la colección `Fields` integrada. Las propiedades personalizadas son específicas de cada proveedor de datos y se puede tener acceso a ellas mediante la colección `Fields` integrada, pero solo mediante la sintaxis que usa el nombre de la propiedad extendida como una cadena.  
   
  Al usar el diseñador de consultas MDX para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo gráfico para definir la consulta, se agrega automáticamente un conjunto predefinido de propiedades de celda y propiedades de dimensión a la consulta MDX. Solo puede usar las propiedades extendidas que se indican de forma específica en la consulta MDX del informe. En función del informe, puede que desee modificar el texto del comando MDX predeterminado para incluir otras propiedades de dimensión o personalizadas definidas en el cubo. Para más información sobre los campos extendidos disponibles en los orígenes de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Crear y usar los valores de propiedad &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Trabajar con propiedades de campo en un informe  
- Las propiedades de campo extendidas incluyen propiedades predefinidas y propiedades específicas del proveedor de datos. Las propiedades de campo no aparecen con la lista de campos del panel **Datos de informe** , aunque estén en la consulta creada para un conjunto de datos; por tanto, las propiedades de campo no se pueden arrastrar a la superficie de diseño del informe. En su lugar, debe arrastrar el campo al informe y, a continuación, cambiar el `Value` propiedad del campo a la propiedad que desea usar. Por ejemplo, si ya se ha dado formato a los datos de celda de un cubo, puede usar la propiedad de campo FormattedValue con la siguiente expresión: `=Fields!FieldName.FormattedValue`.  
+ Las propiedades de campo extendidas incluyen propiedades predefinidas y propiedades específicas del proveedor de datos. Las propiedades de campo no aparecen con la lista de campos del panel **Datos de informe** , aunque estén en la consulta creada para un conjunto de datos; por tanto, las propiedades de campo no se pueden arrastrar a la superficie de diseño del informe. En su lugar, debe arrastrar el campo al informe y, después, cambiar la propiedad `Value` del campo a la propiedad que se desee usar. Por ejemplo, si ya se ha dado formato a los datos de celda de un cubo, puede usar la propiedad de campo FormattedValue con la siguiente expresión: `=Fields!FieldName.FormattedValue`.  
   
  Para hacer referencia a una propiedad extendida no predefinida, se utiliza la siguiente sintaxis en una expresión:  
   
@@ -141,7 +141,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- Si crea un conjunto de datos de informe con esta consulta y lo enlaza con una tabla, puede ver la propiedad VALUE predeterminada para un campo (por ejemplo, `=Fields!Month_of_Year!Value`). Si establece esta expresión como la expresión de ordenación para la tabla, serán los resultados ordenar la tabla alfabéticamente por mes, porque el campo de valor usa un `String` tipo de datos. Para ordenar la tabla de modo que los meses aparezcan en el orden normal de enero a diciembre, use la siguiente expresión:  
+ Si crea un conjunto de datos de informe con esta consulta y lo enlaza con una tabla, puede ver la propiedad VALUE predeterminada para un campo (por ejemplo, `=Fields!Month_of_Year!Value`). Si establece esta expresión como la expresión de ordenación para la tabla, el resultado es la ordenación alfabética de la tabla por mes, ya que el campo de valor usa un tipo de datos `String`. Para ordenar la tabla de modo que los meses aparezcan en el orden normal de enero a diciembre, use la siguiente expresión:  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -151,7 +151,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Colecciones integradas en expresiones &#40;generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

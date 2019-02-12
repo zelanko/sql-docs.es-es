@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74bc6afe0c5c3bddd4b36ebe844ae963da8fbe28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185495"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041806"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>Predicciones de serie temporal que usan datos actualizados (tutorial intermedio de minería de datos)
     
@@ -70,7 +69,7 @@ ms.locfileid: "48185495"
   
     4.  Arrastre el campo cantidad desde el **Mining Model** panel en el **criterios o argumento** columna.  
   
-    5.  En el **criterios o argumento** columna, después del nombre de campo, escriba el siguiente texto: **5, EXTEND_MODEL_CASES**  
+    5.  En el **criterios o argumento** columna, después del nombre de campo, escriba el texto siguiente:  **5,EXTEND_MODEL_CASES**  
   
          El texto completo de la **criterios o argumento** cuadro de texto debería ser como sigue: `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
@@ -103,6 +102,6 @@ ms.locfileid: "48185495"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia técnica del algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Contenido del modelo para los modelos de serie temporal de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

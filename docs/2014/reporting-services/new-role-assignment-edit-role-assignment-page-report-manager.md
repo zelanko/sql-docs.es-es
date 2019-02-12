@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e9b964ba4be7587836da9e8852261a43f1e8f43c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc92d5e8bba2200bb1a88739cd83c12b2f0bdd12
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181795"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025556"
 ---
-# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Nueva asignación de roles y Editar asignación de roles (páginas del Administrador de informes)
+# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Nueva asignación de roles: Editar página de asignación de roles (Administrador de informes)
   Utilice la página Nueva Asignación de roles o Editar asignación de roles para conceder permisos a operaciones y elementos del servidor de informes. Cada usuario que requiere acceso a un servidor de informes debe poseer una asignación de roles que define el nivel de acceso. Puede crear las asignaciones de roles en el nodo raíz o en un determinado informe, modelo, carpeta, recurso u origen de datos compartido. La seguridad de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se establece a través de asignaciones de roles que se aplican a elementos. Una asignación de roles asocia grupos o usuarios a una definición de roles; cada definición de roles identifica las tareas que los grupos o usuarios pueden realizar respecto a un elemento específico.  
   
- Las asignaciones de roles de nivel de elemento pueden tener un gran impacto. Aunque se asocien a un solo informe o a una sola carpeta, si se definen en un nivel alto de la jerarquía de carpetas, las carpetas y los elementos inferiores en el árbol las heredarán. Para más información, consulte [Grant User Access to a Report Server &#40;Report Manager&#41;](security/grant-user-access-to-a-report-server.md).  
+ Las asignaciones de roles de nivel de elemento pueden tener un gran impacto. Aunque se asocien a un solo informe o a una sola carpeta, si se definen en un nivel alto de la jerarquía de carpetas, las carpetas y los elementos inferiores en el árbol las heredarán. Para más información, consulte [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](security/grant-user-access-to-a-report-server.md).  
   
 ## <a name="navigation"></a>Navegación  
  Utilice el procedimiento siguiente para navegar hasta esta ubicación en la interfaz de usuario (IU).  
@@ -61,9 +61,9 @@ ms.locfileid: "48181795"
 ## <a name="see-also"></a>Vea también  
  [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)   
  [Conceder permisos en un servidor de informes en modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
  [Asignaciones de roles](security/role-assignments.md)   
- [Conceda al usuario el acceso a un servidor de informes &#40;el Administrador de informes&#41;](security/grant-user-access-to-a-report-server.md)  
+ [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](security/grant-user-access-to-a-report-server.md)  
   
   

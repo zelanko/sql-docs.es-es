@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6d441d6d6b87799ea33cd25f69027f4ea9704f20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72c49b9bb1b7d018f6650b8042e306234fd74caf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102545"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036896"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega a recursos compartidos de archivos en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incorpora una extensión de entrega a recursos compartidos de archivos que permite entregar un informe a una carpeta. Esta extensión está disponible de forma predeterminada y no requiere configuración adicional. Para que la entrega de archivos sea satisfactoria, debe establecer permisos de escritura en la carpeta compartida. Además, los usuarios que necesitan acceso a los informes deben tener permisos de lectura en la carpeta compartida.  
@@ -41,7 +41,7 @@ ms.locfileid: "48102545"
 -   [Opciones de archivo](#bkmk_file_options)  
   
 ##  <a name="bkmk_Characteristics"></a> Características de los informes que se entregan a una carpeta compartida  
- A diferencia de los informes que se hospedan y administran en un servidor de informes, los informes que se entregan a una carpeta compartida son archivos estáticos. Las características interactivas que se hayan definido para el informe no funcionarán para los informes almacenados como archivos en el sistema de archivos. Las características interactivas aparecen representadas como elementos estáticos. Por ejemplo, si entrega un informe de matriz, el archivo resultante muestra la vista de nivel superior del informe; no se pueden expandir las filas ni las columnas para ver datos complementarios. Si el informe incluye gráficos, se utiliza la presentación predeterminada. Si el informe se vincula a otro informe, el vínculo se representa como texto estático. Si desea conservar las características interactivas de un informe entregado, utilice la entrega por correo electrónico. Para obtener más información, vea [Entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md).  
+ A diferencia de los informes que se hospedan y administran en un servidor de informes, los informes que se entregan a una carpeta compartida son archivos estáticos. Las características interactivas que se hayan definido para el informe no funcionarán para los informes almacenados como archivos en el sistema de archivos. Las características interactivas aparecen representadas como elementos estáticos. Por ejemplo, si entrega un informe de matriz, el archivo resultante muestra la vista de nivel superior del informe; no se pueden expandir las filas ni las columnas para ver datos complementarios. Si el informe incluye gráficos, se utiliza la presentación predeterminada. Si el informe se vincula a otro informe, el vínculo se representa como texto estático. Si desea conservar las características interactivas de un informe entregado, utilice la entrega por correo electrónico. Para más información, vea [Entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
 ##  <a name="bkmk_target_folders"></a> Carpetas de destino  
  Cuando defina una suscripción que utilice entrega a recursos compartidos de archivos, debe especificar una carpeta existente como la carpeta de destino. El servidor de informes no crea carpetas en el sistema de archivos. La carpeta que especifique debe ser accesible a través de una conexión de red.  

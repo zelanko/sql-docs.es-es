@@ -17,14 +17,14 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180615"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012036"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Compatibilidad con características de informes de Access (SSRS)
   Cuando se importa un informe al Diseñador de informes, el proceso de importación convierte el informe de [!INCLUDE[msCoName](../includes/msconame-md.md)] Access en un archivo RDL (Report Definition Language) de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite varias características de Access; no obstante, debido a las diferencias entre Access y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], algunos elementos deben modificarse ligeramente para que sean admitidos. En este tema, se describe cómo se convierten las características de informes de Access a RDL.  
@@ -57,7 +57,7 @@ ms.locfileid: "48180615"
   
 |||||  
 |-|-|-|-|  
-|imagen|Etiqueta|Línea|Rectángulo|  
+|Imagen|Etiqueta|Línea|Rectángulo|  
 |SubForm|SubReport<br /><br /> **Tenga en cuenta** mientras que un control SubReport se convierte en el informe principal, el subinforme propiamente dicho se convierte de forma independiente.|TextBox||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no admite los controles siguientes:  
@@ -256,7 +256,7 @@ ms.locfileid: "48180615"
   
 |||||  
 |-|-|-|-|  
-|Choose|IIf|Switch||  
+|Choose|IIf|Modificador||  
   
 #### <a name="sql-aggregate-functions"></a>Funciones de agregado de SQL  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite las funciones de agregado de SQL siguientes:  
@@ -264,7 +264,7 @@ ms.locfileid: "48180615"
 |||||  
 |-|-|-|-|  
 |Avg|Count|Max|Min|  
-|StDev|StDevP|SUM|Var|  
+|StDev|StDevP|Sum|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>Funciones de texto  

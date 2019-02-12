@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08798562f2c7a011e775c46482efa92493311177
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f3e86324f580968df31b15ee12895072895e587
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065085"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040696"
 ---
 # <a name="editionname-property-wmi-msreportserverinstance"></a>Propiedad EditionName (MSReportServer_Instance de WMI)
   Devuelve el nombre legible de la edición del servidor de informes. Solo lectura.  
@@ -34,7 +34,7 @@ public string EditionName;
 ```  
   
 ## <a name="property-value"></a>Valor de la propiedad  
- Un `string` que contiene el nombre legible de la edición del servidor de informes.  
+ `string` que contiene el nombre legible de la edición del servidor de informes.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
@@ -43,6 +43,6 @@ public string EditionName;
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Miembros MSReportServer_Instance](msreportserver-instance-members.md)  
+ [Miembros de MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

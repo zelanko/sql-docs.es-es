@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b97cec782c7f95de42ee64d7db0ce56ffa916c3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176617"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040212"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Especificar el tipo de datos y el tipo de contenido (Tutorial básico de minería de datos)
   Ahora que ha seleccionado qué columnas utilizar para generar la estructura y entrenar los modelos, realice los cambios necesarios en los datos predeterminados y tipos de contenido que establece el asistente.  
@@ -41,7 +40,7 @@ ms.locfileid: "48176617"
     |**Email Address**|**Discretos**|**Texto**|  
     |**English Education**|**Discretos**|**Texto**|  
     |**English Occupation**|**Discretos**|**Texto**|  
-    |**firstName**|**Discretos**|**Texto**|  
+    |**FirstName**|**Discretos**|**Texto**|  
     |**Sexo**|**Discretos**|**Texto**|  
     |**Clave geográfica**|**Discretos**|**Texto**|  
     |**House Owner Flag**|**Discretos**|**Texto**|  

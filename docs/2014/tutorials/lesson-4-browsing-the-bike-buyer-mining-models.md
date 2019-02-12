@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+manager: kfile
+ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147350"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011534"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lección 4: Examinar los modelos de minería de datos de Bike Buyer
-  En esta lección, usará el [SELECT (DMX)](/sql/dmx/select-dmx) instrucción para explorar el contenido en el árbol de decisión y agrupación en clústeres de minería de datos que haya creado en los modelos [lección 2: agregar modelos de minería a la estructura de minería de datos predictivos](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lección 4: Examinar los modelos de minería de Bike Buyer
+  En esta lección, usará el [SELECT (DMX)](/sql/dmx/select-dmx) instrucción para explorar el contenido en el árbol de decisión y agrupación en clústeres de minería de datos que haya creado en los modelos [lección 2: Agregar modelos de minería de datos a la estructura de minería de datos predictivos](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Las columnas incluidas en un modelo de minería de datos no son las columnas definidas por la estructura de minería de datos, sino un conjunto específico de columnas que describen las tendencias y los patrones encontrados por el algoritmo. Estas columnas del modelo de minería de datos se describen en la [de filas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) de filas de esquema. Por ejemplo, la columna MODEL_NAME del conjunto de filas del esquema de contenido incluye el nombre del modelo de minería de datos. Para un modelo de minería de datos de agrupación en clústeres, la columna NODE_CAPTION contiene el nombre de cada clúster y la columna NODE_DESCRIPTION, una descripción de las características de cada clúster. Puede examinar estas columnas mediante el uso de SELECT FROM \<modelo >. Instrucción contenido en DMX. También puede utilizar esta instrucción para explorar los datos utilizados para crear el modelo de minería de datos. La obtención de detalles debe estar habilitada en la estructura de minería de datos para poder usar esta instrucción. Para obtener más información acerca de la instrucción, consulte [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   

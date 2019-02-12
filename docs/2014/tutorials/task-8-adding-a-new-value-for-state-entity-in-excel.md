@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04fe6fa0a9036ca3835fd4bc0afcb0e35854fd85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222165"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032036"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tarea 8: agregar un nuevo valor para la entidad Estado en Excel
   En esta tarea, agregará un valor para la entidad Estado en Excel y publicará el cambio en el servidor de MDS.  
@@ -29,11 +26,11 @@ ms.locfileid: "48222165"
   
 2.  En **Excel**, haga clic en el **datos maestros** pestaña en el menú y, a continuación, haga clic en **Mostrar explorador** en la cinta de opciones.  
   
-3.  En el **Explorador de datos maestros**, seleccione **proveedores** para **modelo**. Debería ver dos entidades: **proveedor** y **estado** en la lista de entidades.  
+3.  En el **Explorador de datos maestros**, seleccione **proveedores** para **modelo**. Debe ver dos entidades: **Proveedor** y **estado** en la lista de entidades.  
   
 4.  Haga doble clic en **estado** en la lista. Todos los miembros de la **estado** entidades de MDS deben mostrarse en la hoja de cálculo.  
   
-5.  Ahora, agregue una fila al final con los siguientes valores: **Carolina del Norte** para **nombre** y **NC** para **código**. La codificación de colores distingue los registros nuevos y actualizados de los demás registros.  
+5.  Ahora, agregue una fila al final con los valores siguientes: **Carolina del Norte** para **nombre** y **NC** para **código**. La codificación de colores distingue los registros nuevos y actualizados de los demás registros.  
   
      ![Excel - agregar North Carolina a estados](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel - agregar North Carolina a Estados")  
   
@@ -56,6 +53,6 @@ ms.locfileid: "48222165"
 12. En Excel, haga clic en el **estado** hoja de cálculo en la parte inferior y haga clic en **eliminar** para eliminar la hoja de cálculo. Al eliminar la hoja de cálculo no se eliminan los datos del servidor de MDS.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 9: Crear una jerarquía derivada mediante Master Data Manager](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+ [Tarea 9: Creación de una jerarquía derivada mediante Master Data Manager](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

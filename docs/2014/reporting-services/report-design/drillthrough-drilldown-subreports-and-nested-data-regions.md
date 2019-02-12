@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 764f4a6f84b710be9ac0b6a7c6a8f4989530ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 13383c305b9e2e8f1c1ece754c55e5d0f0bd6955
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179545"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022826"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas (Generador de informes y SSRS)
   Puede organizar los datos de distintas formas para mostrar la relación entre lo general y lo detallado.  Puede incluir todos los datos en el informe, pero establecer que permanezcan ocultos hasta que un usuario haga clic para mostrar los detalles; esta es una acción *de obtención de detalles* . Puede mostrar los datos en una región de datos, como una tabla o un gráfico, que *está anidada* en otra, como una tabla o matriz. Puede mostrar los datos en un *subinforme* que esté completamente incluido dentro de un informe principal. O también, puede colocar los datos detallados en informes *detallados* , informes independientes que se muestran cuando un usuario hace clic en un vínculo.  
@@ -25,7 +25,7 @@ ms.locfileid: "48179545"
   
  A. Informe detallado  
   
- B. subinforme  
+ b. subinforme  
   
  C. Regiones de datos anidadas  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48179545"
 |Recuperación de datos|Los datos se recuperan al mismo tiempo que el informe principal.|Los datos se recuperan en un informe detallado cada vez.|Los datos se recuperan todos al mismo tiempo que el informe principal.|  
 |Proceso y representación|Con el informe principal|Cuando se hace clic en el vínculo.|Con el informe principal|  
 |Rendimiento|Más lento (pero recupera todos los datos con el informe principal).|Más rápido (pero no recupera todos los datos con el informe principal).|Más rápido (y recupera todos los datos con el informe principal).|  
-|Uso de parámetros|Sí|Sí|no|  
+|Uso de parámetros|Sí|Sí|No|  
 |Reusabilidad|Como informe, subinforme o informe detallado en otros informes.|Como informe, subinforme o informe detallado en otros informes.|No se puede volver a utilizar.|  
 |Ubicación|Fuera del informe principal, en el mismo servidor de informes o en otro distinto.|Fuera del informe principal, en el mismo servidor de informes.|Dentro del informe principal.|  
 |Presentación|En el informe principal|En otro informe|En el informe principal|  
@@ -83,19 +83,19 @@ ms.locfileid: "48179545"
 
   
 ##  <a name="InThisSection"></a> En esta sección  
- [Los informes detallados &#40;generador de informes y SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+ [Informes detallados &#40;Generador de informes y SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
  Se explican los informes que se abren cuando un usuario hace clic en un vínculo de un informe principal.  
   
- [Los subinformes &#40;generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md)  
+ [Subinformes &#40;Generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md)  
  Se explican los informes que se muestran dentro del cuerpo de un informe principal.  
   
- [Regiones de datos anidadas &#40;generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
  Se explica cómo anidar una región de datos dentro de otra; por ejemplo, un gráfico anidado en el interior de una matriz.  
   
  [Acción de obtención de detalles &#40;generador de informes y SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
  Explica cómo utilizar la acción de obtención de detalles para ocultar y mostrar elementos de informe.  
   
- [Especificar rutas de acceso a los elementos externos &#40;generador de informes y SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explica cómo hacer referencia a elementos que están fuera del archivo de definición de informe.  
   
 ## <a name="see-also"></a>Vea también  

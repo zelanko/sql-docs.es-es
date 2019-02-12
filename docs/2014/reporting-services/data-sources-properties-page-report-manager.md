@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192145"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031995"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Orígenes de datos (página de propiedades del Administrador de informes)
   Use la página de propiedades Orígenes de datos para definir la manera en que el informe actual se conecta a un origen de datos externo. Puede reemplazar la información de conexión con el origen de datos originalmente publicada con el informe. Si se utilizan varios orígenes de datos con un informe, cada uno tiene su propia sección en la página de propiedades. Los orígenes de datos se muestran en el orden en que se definieron en el informe.  
@@ -67,17 +67,17 @@ ms.locfileid: "48192145"
  **Credenciales suministradas por el usuario que ejecuta el informe**  
  Cada usuario debe escribir un nombre de usuario y una contraseña para acceder al origen de datos. Puede definir el texto del mensaje que solicita las credenciales del usuario. La cadena de texto predeterminada es "Especifique un nombre de usuario y una contraseña para tener acceso al origen de datos".  
   
- Seleccione **Usar como credenciales de Windows para la conexión al origen de datos** si las credenciales que el usuario suministra son las credenciales de autenticación de Windows. No seleccione esta casilla si está usando la autenticación de base de datos (por ejemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación).  
+ Seleccione **Usar como credenciales de Windows para la conexión al origen de datos** si las credenciales que el usuario suministra son las credenciales de autenticación de Windows. No active esta casilla si va a usar la autenticación de la base de datos (por ejemplo, autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
  **Credenciales almacenadas de forma segura en el servidor de informes**  
  Almacene un nombre de usuario y una contraseña cifrados en la base de datos del servidor de informes. Seleccione esta opción para ejecutar un informe de manera desatendida; por ejemplo, informes iniciados por programaciones o eventos en lugar de una acción del usuario. Si va a usar la seguridad predeterminada, el nombre de usuario debe ser una cuenta de dominio de Windows. Especifique la cuenta con este formato: \<dominio >\\< nombre de usuario\>. La cuenta que especifica debe tener permisos de inicio de sesión local en el equipo que hospeda el origen de datos usado por el informe.  
   
- Active la casilla **Utilizar como credenciales de Windows para la conexión al origen de datos** si las credenciales son las credenciales de autenticación de Windows. No seleccione esta casilla si está usando la autenticación de base de datos (por ejemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación).  
+ Active la casilla **Utilizar como credenciales de Windows para la conexión al origen de datos** si las credenciales son las credenciales de autenticación de Windows. No active esta casilla si va a usar la autenticación de la base de datos (por ejemplo, autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
- Seleccione **Suplantar al usuario autenticado después de realizar una conexión al origen de datos** para permitir la delegación de credenciales, pero solo si un origen de datos admite la suplantación. Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bases de datos, esta opción establece la función SETUSER.  
+ Seleccione **Suplantar al usuario autenticado después de realizar una conexión al origen de datos** para permitir la delegación de credenciales, pero solo si un origen de datos admite la suplantación. En el caso de las bases de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , esta opción establece la función SETUSER.  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]solo admite credenciales de cuenta de Windows. Por lo tanto, debe seleccionar ambas opciones "Utilizar como credenciales de Windows al conectarse al origen de datos" y "suplantar al usuario autenticado después de realizar una conexión al origen de datos" para un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origen de datos.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]solo admite credenciales de cuenta de Windows. Por lo tanto debe seleccionar ambas opciones "Utilizar como credenciales de Windows para la conexión al origen de datos" y "Suplantar al usuario autenticado después de realizar una conexión al origen de datos" para un origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Seguridad integrada de Windows**  
  Use las credenciales de Windows del usuario actual para obtener acceso al origen de datos. Seleccione esta opción cuando las credenciales que se usan para obtener acceso a un origen de datos son las mismas que se usaron para iniciar sesión en el dominio de red. Esta opción funciona de manera óptima cuando la autenticación Kerberos está habilitada para el dominio o cuando el origen de datos se encuentra en el mismo equipo que el servidor de informes. Si Kerberos no está habilitado, se pueden pasar las credenciales de Windows a otro equipo. Si se requieren más conexiones de equipos, obtendrá un error en lugar de los datos esperados.  

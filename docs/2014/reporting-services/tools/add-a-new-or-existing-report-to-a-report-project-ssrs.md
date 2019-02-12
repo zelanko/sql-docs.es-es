@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bffdacee7496c27f41db7897861e3ec1f015dc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc714c2ffb7f4483823e7e49e9825c070a0b9672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173605"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021416"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Agregar un informe nuevo o existente a un proyecto de informe (SSRS)
-  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puede agregar un nuevo informe de utilizando el Asistente para informes o agregando un nuevo informe en blanco al proyecto. También puede agregar un informe existente. Después de agregar un informe, puede ver el nombre de informe en la lista que se muestra bajo la carpeta **Informes** del proyecto.  
+  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puede agregar un nuevo informe utilizando el Asistente para informes o agregando un nuevo informe en blanco al proyecto. También puede agregar un informe existente. Después de agregar un informe, puede ver el nombre de informe en la lista que se muestra bajo la carpeta **Informes** del proyecto.  
   
 > [!NOTE]  
 >  Para obtener la vista previa de un informe con orígenes de datos existentes, debe tener permisos en el origen de datos del cliente de creación de informes. Para obtener más información, consulte [crear incrustado o a un origen de datos compartido &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48173605"
   
     -   **Elegir un tipo de informe.** El siguiente paso es seleccionar el tipo de informe que desea. Puede elegir un informe tabular o de matriz. Un informe tabular tiene un número fijo de columnas. Un informe de matriz, o tabla de referencias cruzadas, tiene un número variable de columnas en función de los resultados de la consulta. Un informe de mapa muestra datos analíticos con un fondo geográfico.  
   
-    -   **Elija un estilo.** El siguiente paso es aplicar un estilo al informe mediante una plantilla de estilo. Seleccione una plantilla para aplicar estilos al informe, como fuente, color y borde. El Diseñador de informes proporciona seis plantillas de estilo: Pizarra, Bosque, Corporativo, Negrita, Océano y Genérico. También puede agregar otras plantillas de estilo.  
+    -   **Elija un estilo.** El siguiente paso es aplicar un estilo al informe mediante una plantilla de estilo. Seleccione una plantilla para aplicar estilos al informe, como fuente, color y borde. El Diseñador de informes proporciona seis plantillas de estilo: Pizarra, bosque, corporativo, negrita, Océano y genérico. También puede agregar otras plantillas de estilo.  
   
         > [!NOTE]  
         >  Puede modificar las plantillas existentes o agregar algunas nuevas editando el archivo StyleTemplates.XML situado en la \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>carpeta, donde \<lang > es el lenguaje que utilizas (por ejemplo, si está utilizando la versión de idioma inglés [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], el nombre de la carpeta será "EN"). Esta carpeta se encuentra en el equipo donde está instalado el Diseñador de informes. Hay dos copias del archivo StyleTemplates.xml. Para modificar los estilos que se aplican mediante el Asistente para informes, modifique el archivo que se encuentra en la carpeta creada para el idioma que está usando.  

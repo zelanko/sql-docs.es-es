@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99d7bcaf87fec0181392fd8673cb90df37849308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082835"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043276"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
   Cuando cree un informe, es importante que conozca el comportamiento de los representadores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para asegurarse de que el informe representado tiene la apariencia que desea, incluidos el diseño y los saltos de página. Probablemente también desee asegurarse de que el informe representado cabe en el tamaño de papel que usted o su organización suelen utilizar.  
@@ -49,14 +49,14 @@ ms.locfileid: "48082835"
 ##  <a name="RenderingExtensions"></a> Representadores  
  Reporting Services incluye un conjunto de representadores, denominados también extensiones de representación, que puede utilizar para exportar los informes a diferentes formatos. Hay tres tipos de representadores:  
   
--   **Representadores de datos** : los representadores de datos quitan todo el formato e información de diseño del informe y muestran solo los datos. El archivo resultante se puede usar para importar los datos del informe sin formato en otro tipo de archivo, como Excel; en otra base de datos; en un mensaje de datos XML o en una aplicación personalizada. Los datos disponibles se representan como CSV y XML.  
+-   **Representadores de datos** : los representadores de datos quitan todo el formato e información de diseño del informe y muestran solo los datos. El archivo resultante se puede usar para importar los datos del informe sin formato en otro tipo de archivo, como Excel; en otra base de datos; en un mensaje de datos XML o en una aplicación personalizada. Las representaciones de datos disponibles son: CSV y XML.  
   
     > [!NOTE]  
     >  Aunque no permite la exportación directa a un formato diferente, la representación de Atom genera los archivos de datos de los informes.  
   
 -   **Representadores de saltos de página automáticos** Los representadores de saltos de página automáticos mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para la visualización y la entrega basada en la presentación en pantalla, como en una página web. Los representadores de saltos de página automáticos disponibles son: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] palabra, archivo Web (MHTML) y el código HTML.  
   
--   **Representadores de saltos de página duros** : los representadores de saltos de página duros mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para que su aspecto no varíe al imprimirlo o para ver el informe en pantalla con formato de libro. Los representadores de saltos de página manuales disponibles que se admiten son TIFF y PDF.  
+-   **Representadores de saltos de página manuales** Los representadores de saltos de página manuales mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para que su aspecto no varíe al imprimirlo o para ver el informe en pantalla con formato de libro. Se admiten los representadores de saltos de página manuales disponibles: TIFF y PDF.  
   
  Cuando se obtiene una vista previa de un informe en el Generador de informes o el Diseñador de informes o se ejecuta un informe en el Administrador de informes, siempre se representa primero en HTML. Después de ejecutar el informe, puede exportarlo a otros formatos de archivo. Para obtener más información, consulte [exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
@@ -95,33 +95,33 @@ ms.locfileid: "48082835"
 ##  <a name="HowTo"></a> Temas de procedimientos  
  En esta sección se enumeran procedimientos que muestran, paso a paso, cómo trabajar con la paginación en los informes.  
   
--   [Agregar un salto de página &#40;generador de informes y SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [Agregar un salto de página &#40;Generador de informes y SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [Mostrar encabezados de fila y columna en varias páginas &#40;generador de informes y SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [Mostrar encabezados de fila y de columna en varias páginas &#40;Generador de informes y SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [Agregar o quitar un encabezado o pie de página &#40;generador de informes y SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [Agregar o quitar un encabezado o un pie de página &#40;Generador de informes y SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [Mantener visibles los encabezados al desplazarse a través de un informe &#40;generador de informes y SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [Mantener visibles los encabezados al desplazarse a través de un informe &#40;Generador de informes y SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [Mostrar números de página u otras propiedades del informe &#40;generador de informes y SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [Mostrar números de página u otras propiedades del informe &#40;Generador de informes y SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [Ocultar un encabezado de página o pie de página en la primera o última página &#40;generador de informes y SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [Ocultar un encabezado o un pie de página en la primera o en la última página &#40;Generador de informes y SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
 ##  <a name="InThisSection"></a> En esta sección  
  En los temas siguientes se proporciona información adicional sobre el diseño y la representación de páginas.  
   
- [Encabezados y pies de página &#40;generador de informes y SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  Proporciona información sobre cómo utilizar encabezados y pies de página en informes, y cómo controlar la paginación al usarlos.  
   
- [Controlar saltos de página, encabezados, columnas y filas &#40;generador de informes y SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [Controlar saltos de página, encabezados, columnas y filas &#40;Generador de informes y SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Proporciona información sobre cómo utilizar saltos de página.  
   
   
   
 ## <a name="see-also"></a>Vea también  
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

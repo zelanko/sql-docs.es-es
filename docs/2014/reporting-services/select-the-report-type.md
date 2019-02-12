@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.selectreporttype.f1
 ms.assetid: 725bf110-31a9-4220-afaa-c56c0a39d458
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d18c3524b769e210520dcffde1416cb9ef72ca9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 422fcf70501d0ffea9288d33962e15ce86cb0e64
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091515"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031436"
 ---
 # <a name="select-the-report-type"></a>Seleccionar el tipo de informe
   Utilice esta página del Asistente para informes para seleccionar un informe tabular o un informe de matriz.  

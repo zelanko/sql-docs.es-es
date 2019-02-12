@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 190114bb10a0caf094f3902a7a1b15e94673565c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e75931e56b62f80716d07fbdf2a7ad73ff10452d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059265"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037706"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Establecer las propiedades del servidor de informes (Management Studio)
   Puede establecer las propiedades del sistema del servidor de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar características o establecer valores predeterminados de servidor.  

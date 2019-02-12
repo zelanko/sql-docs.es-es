@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2e6e59b2562928d22a3d9e0b74830d630d77728d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2076f53b428320f8635de98f7993232e65c2e29c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072015"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019038"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>Agregar estilos con bisel, relieve y textura a un gráfico (Generador de informes y SSRS)
   Cuando use determinados tipos de gráficos, puede especificar efectos de dibujo que aumenten el impacto visual del gráfico. Estos efectos de dibujo solamente se aplican a las series del gráfico. No afectan a ningún otro elemento del gráfico.  
@@ -25,7 +25,7 @@ ms.locfileid: "48072015"
   
  Cuando use cualquier variante de un gráfico de barras o de columnas, puede aplicar estilos de textura, como cilindros, cuñas y degradados a barras o columnas individuales.  
   
- Además de estos estilos de dibujo, puede agregar bordes y sombras a muchos elementos del gráfico para crear una sensación de profundidad. Para obtener más información sobre otras formas de dar formato al gráfico, vea [dar formato a un gráfico &#40;generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md).  
+ Además de estos estilos de dibujo, puede agregar bordes y sombras a muchos elementos del gráfico para crear una sensación de profundidad. Para más información sobre otras maneras de dar formato al gráfico, vea [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -61,9 +61,9 @@ ms.locfileid: "48072015"
  ![Gráfico de barras con efecto de dibujo LightToDark](../media/rs-bardrawingeffects-lighttodark.gif "Gráfico de barras con efecto de dibujo LightToDark")  
   
 ## <a name="see-also"></a>Vea también  
- [Los gráficos de barras &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Gráficos de barras &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [Los gráficos circulares &#40;generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
- [Aplicar formato a un gráfico &#40;generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Gráficos circulares &#40;Generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
+ [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

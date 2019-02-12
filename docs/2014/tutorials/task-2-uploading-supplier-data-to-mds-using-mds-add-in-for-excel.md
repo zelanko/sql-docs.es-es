@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 36e50a34f708bc13da489591d73ca0521cdb5a6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101215"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025666"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Tarea 2: cargar datos de proveedor en MDS con el complemento MDS para Excel
   En esta tarea, publica los datos limpios y de proveedor a **MDS** utilizando el **complemento MDS para Excel**. Crear una entidad denominada **proveedor** en el **proveedores** modelo que creó en la lección anterior. La entidad tendrá un atributo para cada columna del archivo de Excel. Los atributos de código y el nombre de la entidad proveedor corresponden a la **SupplierID** y **Supplier Name** las columnas de Excel.  

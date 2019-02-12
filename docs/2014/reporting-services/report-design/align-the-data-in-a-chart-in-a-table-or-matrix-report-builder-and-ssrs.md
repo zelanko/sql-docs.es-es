@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7277e8a0b50fb8e67a6601218190241c11efbd74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ea4000b6d02965d7e050704889e9cf449db9f684
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102415"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036477"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>Alinear los datos en un gráfico en una tabla o una matriz (Generador de informes y SSRS)
   Los minigráficos y barras de datos son gráficos pequeños y sencillos que comunican mucha información con pocos detalles. Al activar esta opción, los valores de los minigráficos y las barras de datos se alinearán en todas las celdas distintas de la tabla o matriz, aun cuando falten valores en los datos en que se basan.  
@@ -38,6 +38,6 @@ ms.locfileid: "48102415"
   
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Agregar minigráficos y barras de datos &#40;generador de informes y SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Agregar minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
   

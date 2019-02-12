@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2330060b0a659715f8a8b80c3d2e1fbe24e93d04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050913"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017705"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Representar elementos de informe (Generador de informes y SSRS)
   El número, tamaño y ubicación de los elementos de informe afectan a la manera en que los representadores paginan el cuerpo del informe. A continuación se incluye una descripción de cómo se representan los distintos elementos de informe.  
@@ -78,7 +78,7 @@ ms.locfileid: "48050913"
   
 -   Encabezados de columna y encabezados de fila repetidos.  
   
-     Los encabezados tienen prioridad sobre los pies de página. Los grupos repetidos internos tienen prioridad sobre los grupos externos. Elementos donde el `RepeatWith` propiedad se establece que están más cerca de la región de datos de destino tienen prioridad sobre los elementos situados más lejos de la región de datos.  
+     Los encabezados tienen prioridad sobre los pies de página. Los grupos repetidos internos tienen prioridad sobre los grupos externos. Los elementos en los que se establece la propiedad `RepeatWith` y que están más cerca de la región de datos de destino tienen prioridad sobre los elementos situados más lejos de dicha región.  
   
 -   Elementos de informe pequeños, como cuadros de texto o rectángulos, con una propiedad KeepTogether explícita establecida en `true`.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48050913"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

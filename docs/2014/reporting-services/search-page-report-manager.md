@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51f062efce64d7e8f29e156c51b2972624f46d5e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206135"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037358"
 ---
 # <a name="search-page-report-manager"></a>Buscar (página del Administrador de informes)
   Use la página Resultados de la búsqueda para ver los resultados de una operación de búsqueda especificada para un informe, un informe vinculado, un modelo de informe, un origen de datos compartido, una carpeta o un recurso. Los resultados de la búsqueda se muestran ordenados alfabéticamente. Se pueden ordenar por tipo, nombre o descripción.  
@@ -65,7 +65,7 @@ ms.locfileid: "48206135"
  Mantenga el mouse sobre un elemento y haga clic en la flecha de lista desplegable para abrir el menú desplegable donde podrá obtener acceso a las propiedades del elemento seleccionado y configurarlas.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5e9ac249f6fd3c6626084f254ad60889066c334
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8f4fbe5a3990348edc2e8b3716ca869c4166e145
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029817"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043286"
 ---
 # <a name="data-quality-projects-dqs"></a>Proyectos de calidad de datos (DQS)
   Un proyecto de calidad de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) utiliza una base de conocimiento para mejorar la calidad de los datos de origen mediante la realización de actividades de *limpieza de datos* y *búsqueda de coincidencias de datos* , y la posterior exportación de los datos resultantes a una base de datos de SQL Server o a un archivo .csv. Puede crear un proyecto de calidad de datos como un proyecto de limpieza o como un proyecto de búsqueda de coincidencias para realizar las actividades respectivas. Los proyectos de limpieza y de búsqueda de coincidencias se pueden ejecutar usando la misma base de conocimiento, ya que el conocimiento de estos procesos se puede generar en la misma base de conocimiento.  
@@ -28,7 +28,7 @@ ms.locfileid: "51029817"
   
 -   Proporciona un asistente que le guiará durante las actividades de limpieza y búsqueda de coincidencias, y le permitirá exportar los datos al lugar de su elección: una base de datos de SQL Server o un archivo .csv. El administrador de datos puede utilizar el proyecto de calidad de datos para ejecutar y controlar los pasos de las actividades de limpieza (tanto la asistida por PC como la interactiva) y búsqueda de coincidencias.  
   
-##  <a name="Cleansing"></a> Proyecto de calidad de datos: actividad de limpieza  
+##  <a name="Cleansing"></a> Proyecto de calidad de datos: Actividad de limpieza  
  Un proyecto de calidad de datos de limpieza permite limpiar los datos de origen basándose en una base de conocimiento. La actividad de limpieza de datos de DQS es un proceso de dos pasos:  
   
 1.  Un proceso de limpieza de datos *asistido por PC* que analiza los datos de origen comparándolos con el conocimiento de la base de conocimiento y propone cambios. DQS organiza los datos procesados por categorías (sugerido, nuevo, no válido, corregido y correcto) y los muestra al usuario para su procesamiento posterior.  
@@ -37,7 +37,7 @@ ms.locfileid: "51029817"
   
  Para obtener información detallada acerca de la actividad de limpieza en un proyecto de calidad de datos, vea [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
   
-##  <a name="Matching"></a> Proyecto de calidad de datos: actividad de búsqueda de coincidencias  
+##  <a name="Matching"></a> Proyecto de calidad de datos: Actividad de coincidencia  
  Un proyecto de calidad de datos de búsqueda de coincidencias permite realizar la actividad de búsqueda de coincidencias basándose en la directiva de coincidencia de una base de conocimiento para evitar la duplicación de datos; para ello, se identifican las coincidencias exactas o aproximadas, lo que permite quitar los datos duplicados. Se recomienda limpiar los datos antes de ejecutar en ellos la actividad de búsqueda de coincidencias. Para ello:  
   
 1.  Cree un proyecto de calidad de los datos, seleccione la actividad **Limpieza** , complete la actividad de limpieza de datos con los datos de origen y, a continuación expórtelos a una tabla de una base de datos de SQL Server.  

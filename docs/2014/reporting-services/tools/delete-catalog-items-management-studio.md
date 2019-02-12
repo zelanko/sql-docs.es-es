@@ -12,25 +12,25 @@ f1_keywords:
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13a64b2cd44f5df1dfe8201b56c351937849364a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 089bd1fbfeaf86c2f5a96e2cfcf790a90431a452
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141545"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036536"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Eliminar elementos del catálogo (Management Studio)
   Utilice esta página para eliminar programaciones compartidas y definiciones de roles.  
   
- Si elimina una programación compartida usada por varios informes y suscripciones, el servidor de informes creará calendarios individuales para cada informe y suscripción que haya usado anteriormente la programación compartida. Cada nueva programación individual contendrá la fecha, la hora y el patrón de periodicidad que se especificó en la programación compartida. Tenga en cuenta que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no proporciona la administración central de las programaciones individuales. Si elimina una programación compartida, tendrá que mantener ahora la información de programación para cada elemento individual. Antes de eliminar una programación compartida, use la [página informes](schedule-properties-reports-page.md) para determinar qué informes usan actualmente la programación compartida.  
+ Si elimina una programación compartida usada por varios informes y suscripciones, el servidor de informes creará calendarios individuales para cada informe y suscripción que haya usado anteriormente la programación compartida. Cada nueva programación individual contendrá la fecha, la hora y el patrón de periodicidad que se especificó en la programación compartida. Tenga en cuenta que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no proporciona la administración central de las programaciones individuales. Si elimina una programación compartida, tendrá que mantener ahora la información de programación para cada elemento individual. Antes de eliminar una programación compartida, use la [página Informes](schedule-properties-reports-page.md) para determinar qué informes usan actualmente la programación compartida.  
   
  Para las definiciones de roles, solo se pueden eliminar las que no se usan en una asignación de roles activamente. Si intenta eliminar un rol que se encuentra actualmente en uso, el servidor de informes no eliminará el rol y verá un mensaje de error para dicho efecto. Si esta página contiene una definición de roles única que no se encuentra actualmente en uso, se eliminará al hacer clic en **Aceptar**. Si esta página contiene varios roles, no puede seleccionar qué roles desea mantener o quitar. Se eliminarán todas las definiciones de roles no usadas al hacer clic en **Aceptar**.  
   
  No puede deshacer una operación de eliminación. Si desea recuperar un elemento eliminado, debe volver a crearlo o restaurar una copia de seguridad de la base de datos de servidor de informes.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Especifica el nombre del elemento que va a eliminar.  
   
  **Tipo**  
@@ -48,6 +48,6 @@ ms.locfileid: "48141545"
 ## <a name="see-also"></a>Vea también  
  [Eliminar un elemento &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
- [Creación, modificación y eliminación de programaciones](../subscriptions/create-modify-and-delete-schedules.md)  
+ [Crear, modificar y eliminar programaciones](../subscriptions/create-modify-and-delete-schedules.md)  
   
   

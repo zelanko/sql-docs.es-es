@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359867"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040166"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: informe de asignaciones (Generador de informes)
   Este tutorial le ayudará a obtener información sobre las características de mapa que puede utilizar para mostrar los datos de informe sobre un fondo geográfico.  
@@ -396,7 +396,7 @@ ms.locfileid: "53359867"
   
  La escala de colores muestra cinco colores: rojo, naranja, amarillo, verde amarillento y verde. Cada color representa un rango de ventas que se calcula automáticamente de acuerdo con las ventas por condado.  
   
-###  <a name="ColorScale"></a> 6C. Dar formato a los datos en la escala de color como moneda  
+###  <a name="ColorScale"></a> 6c. Dar formato a los datos en la escala de color como moneda  
  De forma predeterminada, los datos tienen un formato general. Puede aplicar formatos personalizados.  
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>Establecer el formato de la escala de colores  
@@ -415,7 +415,7 @@ ms.locfileid: "53359867"
   
  La escala de colores muestra las ventas anuales en el formato de moneda para cada rango.  
   
-###  <a name="NewLegend"></a> 6D. Crear una nueva leyenda  
+###  <a name="NewLegend"></a> 6d. Crear una nueva leyenda  
  De forma predeterminada, todas las reglas se muestran en la primera leyenda. Para mejorar la presentación de un mapa, puede agregar leyendas.  
   
  Cambiar la presentación predeterminada requiere dos pasos: crear una nueva leyenda y, a continuación, asociar los resultados de la regla para una capa de mapa con la nueva leyenda.  
@@ -438,7 +438,7 @@ ms.locfileid: "53359867"
   
  La leyenda se expande para mostrar el título.  
   
-###  <a name="Associate"></a> 6E. Asociar la leyenda y las reglas de color  
+###  <a name="Associate"></a> 6e. Asociar la leyenda y las reglas de color  
  Cada leyenda puede mostrar uno o más conjuntos de resultados de la regla.  
   
 ##### <a name="to-associate-a-legend-with-color-rules"></a>Asociar una leyenda a reglas de color  

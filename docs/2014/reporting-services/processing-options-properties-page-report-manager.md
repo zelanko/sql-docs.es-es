@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cc57e9b4e38377769006738ed44427b4a52c06ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7265c833b5fbfe4c2018de895d7a488501304486
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076495"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013106"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Página de propiedades Opciones de procesamiento (Administrador de informes)
   Use la página de propiedades Opciones de procesamiento para establecer las propiedades de ejecución de informes del informe actualmente seleccionado. Estas opciones determinan cuándo se produce el procesamiento de datos para el informe. Pueden usarse para recuperar los datos de informe durante las horas de menor actividad. Si tiene un informe al que se obtiene acceso con frecuencia, se pueden almacenar en caché copias temporales del mismo para que los usuarios no tengan que esperar si tienen acceso al mismo informe con diferencia de minutos.  
@@ -62,7 +62,7 @@ ms.locfileid: "48076495"
  Este valor se aplica al procesamiento de informes en un servidor de informes. No establece un tiempo de espera para el procesamiento de datos en el servidor de bases de datos que proporciona los datos para el informe. Sin embargo, el valor especificado debe ser el suficiente para completar el procesamiento de datos y el procesamiento de informes. El contador de procesamiento del informe empieza cuando se selecciona el informe y termina cuando éste se abre.  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer las propiedades de procesamiento de informes](report-server/set-report-processing-properties.md)   
+ [Establecer las propiedades del procesamiento de informes](report-server/set-report-processing-properties.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  

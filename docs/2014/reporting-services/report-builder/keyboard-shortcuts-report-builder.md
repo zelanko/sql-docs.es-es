@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ad184e1faf16a06de851475d4f96fc89d398b758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: dd30631b5ecdcfb55fcb571bd8bf3c1eb39713dc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081955"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031946"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Métodos abreviados de teclado (Generador de informes)
   Cuando se trabaja en el Generador de informes se tiene acceso a todas las teclas de método abreviado para navegación que proporciona el entorno de Windows. Puede seleccionar entre varios esquemas de asignación de teclado estándar.  

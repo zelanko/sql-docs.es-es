@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202735"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032756"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Página de propiedades generales, conjuntos de datos compartidos (Administrador de informes)
   Utilice la página Conjunto de datos compartido para ver y administrar las propiedades de un elemento de conjunto de datos compartido.  
@@ -37,7 +37,7 @@ ms.locfileid: "48202735"
 3.  En la lista desplegable, haga clic en **Administrar**. Se abre la página de propiedades General.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba un nombre para el conjunto de datos compartido, que se usa para identificar el elemento en la jerarquía de carpetas del servidor de informes.  
   
  **Descripción**  
@@ -65,12 +65,12 @@ ms.locfileid: "48202735"
  Reemplace la definición del conjunto de datos compartido por otra diferente de un archivo .rsd que se encuentra en el sistema de archivos.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [El contenido de página &#40;el Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Contenido &#40;página del Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
  [Opciones de actualización de caché &#40;el Administrador de informes&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Página almacenamiento en caché, conjuntos de datos compartidos &#40;el Administrador de informes&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [Administrar conjuntos de datos compartidos](report-data/manage-shared-datasets.md)   
- [Caché de conjuntos de datos compartidos &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
+ [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

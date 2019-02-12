@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 39fa21f9bb7af15885abdf1d8c78d2651e2fbdab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: effd50dc38610b4a3f059df8609cb9279e268b13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079165"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017146"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamientos de la representación (Generador de informes y SSRS)
   Dependiendo del representador que seleccione, se aplican ciertas reglas al cuerpo del informe y a su contenido al representar un informe. La forma en la que los elementos de informe se ajustan en una página viene determinada por la combinación de estos factores:  
@@ -129,8 +129,8 @@ ms.locfileid: "48079165"
 -   No se mantienen los saltos de página lógicos definidos en elementos en celdas de tablas o matriz. Esto no se aplica a los elementos en listas.  
   
 ## <a name="see-also"></a>Vea también  
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Representar en HTML &#40;Generador de informes y SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Representación y diseño de página &#40;generador de informes y SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

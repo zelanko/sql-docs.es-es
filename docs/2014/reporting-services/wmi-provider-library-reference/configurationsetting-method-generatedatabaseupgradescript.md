@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 553afbfe7e6ad274261172740d7d55b27729b546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5309932735310bc0e794d10766312b650b6eb934
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057305"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018976"
 ---
 # <a name="generatedatabaseupgradescript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)
   Genera un script que se puede utilizar para actualizar la base de datos del servidor de informes al esquema de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  

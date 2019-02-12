@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19434a73f39e0701479f754b5af5dbe9ab4d8030
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ef44bd8ee92bb293aac06aa28b56dc23e8ca9602
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149095"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027926"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Almacenar datos cifrados del servidor de informes (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena valores cifrados en la base de datos del servidor de informes y en archivos de configuración. La mayoría de los valores cifrados son credenciales que se utilizan para obtener acceso a orígenes de datos externos que proporcionan datos para informes. En este tema se describen los valores que se cifran, la funcionalidad de cifrado usada en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y otros tipos de datos confidenciales almacenados que debe conocer.  
@@ -37,13 +37,13 @@ ms.locfileid: "48149095"
   
 -   Credenciales almacenadas que utiliza un servidor de informes para conectarse a orígenes de datos externos que proporcionan datos a un informe.  
   
-     Estos valores se definen durante la configuración de la información de origen de datos para un informe y se almacenan después como valores cifrados en una base de datos del servidor de informes. El servidor de informes utiliza una clave simétrica para cifrar y descifrar estos datos. Para obtener más información sobre las credenciales almacenadas, vea [especificar credenciales y la información de conexión de orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+     Estos valores se definen durante la configuración de la información de origen de datos para un informe y se almacenan después como valores cifrados en una base de datos del servidor de informes. El servidor de informes utiliza una clave simétrica para cifrar y descifrar estos datos. Para obtener más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../integration-services/connection-manager/data-sources.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Cuenta de usuario desatendida que el servidor de informes utiliza para conectarse a otros equipos y recuperar archivos de imágenes o datos externos empleados en un informe.  
   
      Esta cuenta se utiliza cuando se necesita una conexión a un equipo remoto y no hay más credenciales disponibles para realizar la conexión. Esta cuenta se utiliza principalmente para admitir el procesamiento de informes en modo desatendido de los informes que no utilizan credenciales para obtener acceso a un origen de datos. Si crea informes en función de los orígenes de datos que no requieren o utilizan credenciales cuando obtienen acceso a los datos, debe configurar esta cuenta para que el servidor de informes la utilice.  
   
-     Esta cuenta es necesaria en ciertas circunstancias y solo puede crearse mediante la herramienta de configuración de Reporting Services o **rsconfig**. Este valor también se almacena en el archivo rsreportserver.config. Esta cuenta debe crearse manualmente. Para más información sobre esta cuenta y cómo se usa, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Esta cuenta es necesaria en ciertas circunstancias y solo puede crearse mediante la herramienta de configuración de Reporting Services o **rsconfig**. Este valor también se almacena en el archivo rsreportserver.config. Esta cuenta debe crearse manualmente. Para obtener más información sobre esta cuenta y cómo se usa, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 -   Clave simétrica utilizada para el cifrado.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "48149095"
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no admite el almacenamiento en caché o el historial de informes para informes que usan parámetros basados en la identidad de seguridad del usuario.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

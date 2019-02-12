@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bfcf78ea493794527d22a0bc1b62051ede2871b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 13131359ddf4df667e18a674533954f95d8a6665
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171525"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023496"
 ---
 # <a name="create-the-rsexecrole"></a>Crear el RSExecRole
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza un rol de base de datos predefinido denominado `RSExecRole` para conceder permisos de servidor para la base de datos de informes. El `RSExecRole` rol se crea automáticamente con la base de datos del servidor de informes. Por lo general, nunca se debe modificar el rol ni asignar otros usuarios al mismo. Sin embargo, cuando se mueve una base de datos del servidor de informes a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] nuevo o diferente, se debe volver a crear el rol en las bases de datos del sistema MSDB y maestra.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza un rol de base de datos predefinido denominado `RSExecRole` para conceder permisos de servidor de informes a la base de datos del servidor de informes. El `RSExecRole` rol se crea automáticamente con la base de datos del servidor de informes. Por lo general, nunca se debe modificar el rol ni asignar otros usuarios al mismo. Sin embargo, cuando se mueve una base de datos del servidor de informes a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  
   
  Usando estas instrucciones realizará los siguientes pasos:  
   
@@ -34,9 +34,9 @@ ms.locfileid: "48171525"
   
 ## <a name="before-you-start"></a>Antes de empezar  
   
--   Realice una copia de seguridad de las claves de cifrado para poder restaurarlas después de mover la base de datos. Este paso afecta directamente a su capacidad para crear y aprovisionar el `RSExecRole`, pero debe tener una copia de seguridad de las claves para comprobar el trabajo. Para obtener más información, vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
+-   Realice una copia de seguridad de las claves de cifrado para poder restaurarlas después de mover la base de datos. Este paso no afecta directamente a la capacidad personal para crear y proporcionar el rol `RSExecRole`, pero se debe disponer de una copia de seguridad de las claves para comprobar el trabajo. Para obtener más información, vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
--   Compruebe que ha iniciado la sesión como una cuenta de usuario que tenga `sysadmin` permisos en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia.  
+-   Compruebe que ha iniciado sesión con una cuenta de usuario que tenga permisos `sysadmin` en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Compruebe que el servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está instalado y se está ejecutando en la instancia de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] que piensa utilizar.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "48171525"
  Las instrucciones para crear manualmente el rol `RSExecRole` están destinadas a utilizarse en el contexto de migración de una instalación del servidor de informes. Las tareas importantes como realizar una copia de seguridad y mover la base de datos del servidor de informes no se tratan en este tema, pero se incluyen en la documentación del motor de base de datos.  
   
 ## <a name="create-rsexecrole-in-master"></a>Crear RSExecRole en la base de datos maestra  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza procedimientos almacenados extendidos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio del agente para admitir las operaciones programadas. En los pasos siguientes se explica cómo conceder permisos de ejecución para los procedimientos al rol `RSExecRole`.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza procedimientos almacenados extendidos para que el servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admita las operaciones programadas. En los pasos siguientes se explica cómo conceder permisos de ejecución para los procedimientos al rol `RSExecRole`.  
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Para crear el rol RSExecRole en la base de datos del sistema maestra mediante Management Studio  
   
-1.  Iniciar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y conéctese a la [!INCLUDE[ssDE](../../../includes/ssde-md.md)] instancia que hospeda la base de datos del servidor de informes.  
+1.  Inicie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y conéctese a una instancia de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] que hospede la base de datos del servidor de informes.  
   
 2.  Abra **Bases de datos**.  
   
@@ -229,9 +229,9 @@ ms.locfileid: "48171525"
 15. Haga clic en el vínculo para abrir el Administrador de informes. Debe ver los elementos del servidor de informes de la base de datos del servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  
- [Mover las bases de datos del servidor de informes a otro equipo &#40;modo nativo de SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+ [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Copia de seguridad y restauración de claves de cifrado de Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

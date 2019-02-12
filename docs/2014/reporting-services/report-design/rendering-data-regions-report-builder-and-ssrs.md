@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaae13c2bda044a304fbe9c8b8602174b05a679
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33710b2ee804f299d5769c5e2443bdd68ce77be2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057655"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020377"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Representar regiones de datos (Generador de informes y SSRS)
   Además de los comportamientos generales de representación que se aplican a todos los elementos de informe, las regiones de datos están sujetas a comportamientos de paginación y de representación adicionales. Las reglas de representación específicas de las regiones de datos describen la forma en la que crece una región de datos, cómo se representan las celdas especiales, como la celda de la esquina o las celdas de encabezado, y cómo se representa una región de datos para la lectura de derecha a izquierda. En este tema se explica cómo se representan las distintas partes de una región de datos.  
@@ -42,7 +42,7 @@ ms.locfileid: "48057655"
  La esquina superior izquierda es la que se denomina esquina de Tablix. La esquina de Tablix puede contener otros elementos de informe pero, si se insertan saltos de página lógicos en la esquina, éstos se omitirán al representar la región de datos Tablix.  
   
 ### <a name="tablix-body"></a>Cuerpo del Tablix  
- El cuerpo del Tablix se compone de las celdas de Tablix. El cuerpo del Tablix se representa teniendo en cuenta las reglas de paginación y los comportamientos de representación de los elementos de informe. Para obtener más información, consulte [representar elementos de informe &#40;generador de informes y SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md).  
+ El cuerpo del Tablix se compone de las celdas de Tablix. El cuerpo del Tablix se representa teniendo en cuenta las reglas de paginación y los comportamientos de representación de los elementos de informe. Para obtener más información, vea [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md).  
   
 ## <a name="chart-gauge-and-map-data-regions"></a>Regiones de datos Gráfico, Medidor y Mapa  
  Las regiones de datos Gráfico, Medidor y Mapa se comportan como imágenes cuando se representan y se muestran en el cuerpo del informe. Los valores existentes dentro de la región de datos pueden tener acciones asociadas, como vincularse con otro informe o desplazarse a un marcador, y éstas acciones también se pueden representar, si el representador lo admite.  
@@ -50,7 +50,7 @@ ms.locfileid: "48057655"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   

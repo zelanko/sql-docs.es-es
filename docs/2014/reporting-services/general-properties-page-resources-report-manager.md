@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5b0ae98d40a6f5e1e2c830c2d5aca4cc1c99e230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181655"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032429"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Página de propiedades generales, recursos (Administrador de informes)
   Use la página de propiedades General de los recursos para cambiar de nombre, eliminar, mover o reemplazar un recurso. En la parte superior de la página, se muestra información sobre quién agregó el recurso o modificó las propiedades.  
@@ -35,7 +35,7 @@ ms.locfileid: "48181655"
 3.  En el menú desplegable, haga clic en **Administrar**. Se abrirá la página de propiedades General correspondiente al recurso.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Especifique un nombre para el recurso. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ / * \< > | "o / al especificar un nombre.  
   
  **Descripción**  
@@ -60,7 +60,7 @@ ms.locfileid: "48181655"
  Haga clic para abrir la página Importar recurso, que se utiliza para seleccionar un archivo de recursos en un recurso compartido de archivos.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Página Ver, recursos &#40;el Administrador de informes&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
  [Página de propiedades de seguridad, elementos &#40;Administrador de informes&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  

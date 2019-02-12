@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9ffac7320bc284547a8b5d0598c5523e5c0b09b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e0296acddd21319949ff2f76757c5297eb1bceb4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141708"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023796"
 ---
 # <a name="search-a-report-using-url-access"></a>Buscar un informe mediante un acceso URL
   Puede buscar un conjunto concreto de texto en un informe utilizando el acceso URL. Para buscar en un informe, establezca el valor del parámetro *rc:FindString* en la URL igual al texto que desea buscar. Además, utilice los parámetros *rc:StartFind* y *rc:EndFind* para restringir su búsqueda a las páginas determinadas dentro del informe.  

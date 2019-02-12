@@ -2,8 +2,7 @@
 title: sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0d9a6ec090e799b4b6f0aad7e7335d1e36999dd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630243"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022995"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47630243"
 > [!IMPORTANT]  
 >  El [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad se ve afectado por **sp_pdw_log_user_data_masking** repítalas [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad. **sp_pdw_log_user_data_masking** no afecta a los registros de transacciones de base de datos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los registros de errores.  
   
- **En segundo plano:** en la configuración predeterminada [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad completo contienen [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y puede que en algunos casos incluyen los datos contenidos en las operaciones, como **insertar**,  **ACTUALIZACIÓN**, y **seleccione** instrucciones. En el caso de un problema en el dispositivo, esto permite que el análisis de las condiciones que causó el problema sin necesidad de reproducir el problema. Con el fin de evitar que los datos de usuario que se escriben en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad, los clientes pueden elegir activar el enmascaramiento de datos de usuario mediante el uso de este procedimiento almacenado. Las instrucciones todavía se escribirán en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad, pero todos los literales de instrucciones que pueden contener datos de usuario se enmascarará; reemplazado con algunos valores constantes predefinidas.  
+ **En segundo plano:** En la configuración predeterminada [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad completo contienen [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y puede que en algunos casos incluyen los datos contenidos en las operaciones, como **insertar**, **actualización**, y **Seleccione** instrucciones. En el caso de un problema en el dispositivo, esto permite que el análisis de las condiciones que causó el problema sin necesidad de reproducir el problema. Con el fin de evitar que los datos de usuario que se escriben en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad, los clientes pueden elegir activar el enmascaramiento de datos de usuario mediante el uso de este procedimiento almacenado. Las instrucciones todavía se escribirán en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad, pero todos los literales de instrucciones que pueden contener datos de usuario se enmascarará; reemplazado con algunos valores constantes predefinidas.  
   
  Cuando se habilita el cifrado de datos transparente en el dispositivo, enmascaramiento de los datos de usuario [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad se activa automáticamente.  
   
@@ -41,7 +40,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [  **@masking_mode=** ] *masking_mode*  
+ [ **@masking_mode=** ] *masking_mode*  
  Determina si está habilitados el enmascaramiento de datos del usuario de registro de cifrado transparente de los datos. *masking_mode* es **int**, y puede tener uno de los siguientes valores:  
   
 -   0 = deshabilitado, los datos aparecen en el usuario la [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad.  

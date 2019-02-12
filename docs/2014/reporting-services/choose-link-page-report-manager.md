@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bf61e09dbb1e1a98b1af609cb092cf072821a14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae9bebff71148f9b88228c77fb3946919c7fd197
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106051"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036126"
 ---
 # <a name="choose-link-page-report-manager"></a>Elegir vínculo (página del Administrador de informes)
   Use la página Elegir vínculo para elegir un informe diferente en el que basar el informe vinculado actualmente seleccionado. Los informes vinculados se basan en otros informes ya publicados en un servidor de informes. Un informe vinculado usa el diseño y los datos del informe base, pero tiene páginas de propiedades independientes para que pueda personalizar propiedades de parámetro, configuración de seguridad, nombre, descripción y ubicación.  

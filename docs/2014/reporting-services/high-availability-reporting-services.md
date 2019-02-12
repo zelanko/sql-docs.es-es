@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c71fd13052c02b36c7b725e4058fd827076d6a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 097a118a23bcec722710bc404e9e6452d6504b69
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058355"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032466"
 ---
 # <a name="high-availability-reporting-services"></a>Alta disponibilidad (Reporting Services)
-  Un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] es un servidor sin estado que almacena dato de la aplicación, contenido, propiedades e información de la sesión en dos bases de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relacionales. Como tal, la mejor manera de garantizar la disponibilidad de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] funcionalidad consiste en hacer lo siguiente:  
+  Un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] es un servidor sin estado que almacena dato de la aplicación, contenido, propiedades e información de la sesión en dos bases de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relacionales. Como tal, la mejor manera de asegurarse la disponibilidad de la funcionalidad de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] es hacer el siguiente:  
   
--   Usar las características de alta disponibilidad de la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] para maximizar el tiempo de actividad de las bases de datos del servidor de informes. Si configura un [!INCLUDE[ssDE](../includes/ssde-md.md)] de la instancia para ejecutarse en un clúster de conmutación por error, puede seleccionar dicha instancia al crear una base de datos del servidor de informes.  
+-   Use las características de alta disponibilidad del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] para maximizar el tiempo de funcionamiento de las bases de datos del servidor de informes. Si configura una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)] para que se ejecute en un clúster de conmutación por error, puede seleccionar dicha instancia al crear una base de datos del servidor de informes.  
   
 -   Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)] con los orígenes de datos y las bases de datos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , según sea posible. Para más información, vea [Reporting Services con Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md).  
   
@@ -39,6 +39,6 @@ ms.locfileid: "48058355"
   
 ## <a name="see-also"></a>Vea también  
  [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Configurar una implementación escalada de servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

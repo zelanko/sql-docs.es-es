@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e6a022b50d4fb37474ba1183abc432ca4a7de463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bf1d2d6a884f3751cd2d252bbba38d62aeea5bf9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080825"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023726"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>Propiedades MSReportServer_ConfigurationSetting
   La clase MSReportServer_ConfigurationSetting representa los parámetros de instalación y tiempo de ejecución de una instancia del servidor de informes. La configuración se guarda en el archivo de configuración RSReportServer.config.  
@@ -55,7 +55,7 @@ ms.locfileid: "48080825"
 |[SMTPServer](configurationsetting-property-smtpserver.md)|Obtiene la propiedad de servidor SMTP a partir del archivo RSReportServer.config. Solo lectura.|  
 |[UnattendedExecutionAccount](configurationsetting-property-unattendedexecutionaccount.md)|Especifica la cuenta de usuario de inicio de sesión que el servidor de informes suplanta al ejecutarse los informes de forma desatendida. Solo lectura.|  
 |[Versión](configurationsetting-property-version.md)|Devuelve la versión del servidor de informes.|  
-|[Propiedad VirtualDirectoryReportManager &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|Devuelve el directorio virtual para la aplicación de administrador de informes.|  
+|[Propiedad VirtualDirectoryReportManager &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|Devuelve el directorio virtual para la aplicación de administrador de informes.|  
 |[Propiedad VirtualDirectoryReportServer &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|Devuelve el directorio virtual para la aplicación de servicio web del servidor de informes.|  
 |[WindowsServiceIdentityActual](configurationsetting-property-windowsserviceidentityactual.md)|Devuelve la identidad en la que se ejecuta en la actualidad el servicio de Windows de servidor de informes. Solo lectura.|  
 |[WindowsServiceIdentityConfigured](windowsserviceidentityconfigured-property.md)|Devuelve la última identidad en la que se configuró el servicio Servidor de informes de Windows para ejecutarse. Solo lectura.|  

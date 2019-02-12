@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1dca610c7d18f43552b02340f81455910927a633
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fd9eaf6c8fc7bc29ddf6ba84745fed69fe6cc569
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114025"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013126"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Configuración de información de dispositivos para las extensiones de representación (Reporting Services)
   En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la configuración de información de dispositivos se utiliza para pasar los parámetros de representación a una extensión de representación. Cada extensión de representación acepta un conjunto de valores específico.  
@@ -37,6 +37,6 @@ ms.locfileid: "48114025"
 |[Configuración de la información del dispositivo RGDI](rgdi-device-information-settings.md)|Describe la configuración de información de dispositivos asociada a una salida de representación RGDI.|  
   
 ## <a name="see-also"></a>Vea también  
- [Personalización de los parámetros de extensión de representación en RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+ [Personalizar los parámetros de extensión de representación en RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   

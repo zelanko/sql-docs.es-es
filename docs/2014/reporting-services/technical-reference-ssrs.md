@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5f4904cf11ac1cb84acf9b6c0362d453d7b0fc0b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 455eaec943cb649023ecea1b9ee4964a23961191
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371147"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037746"
 ---
 # <a name="technical-reference-ssrs"></a>Referencia técnica (SSRS)
   Buscar las herramientas y documentación de referencia de PowerShell para usar o admenistrar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

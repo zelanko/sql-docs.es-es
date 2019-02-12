@@ -1,11 +1,10 @@
 ---
-title: 'Lección 2: Creación de un escenario de pronóstico (Tutorial de minería de datos intermedios) | Microsoft Docs'
+title: 'Lección 2: Generar un escenario de pronóstico (Tutorial de minería de datos intermedios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series [Analysis Services]
@@ -14,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67e4843931587d9c627b229bc221a784237cc5d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122607"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020786"
 ---
-# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Lección 2: generar un escenario de pronóstico (Tutorial intermedio de minería de datos)
+# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Lección 2: Generar un escenario de pronóstico (Tutorial de minería de datos intermedios)
   Como analista de ventas de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], se le ha solicitado un pronóstico de las ventas de productos para el próximo año. En concreto, se le ha solicitado que compare las previsiones de las distintas regiones y líneas de productos. Además, debe determinar si las ventas de diferentes productos varían en función de la época del año.  
   
- Para hallar la información solicitada, en esta lección resumirá los datos de ventas mensuales de la compañía y también resumirá las cifras de ventas en tres regiones: Europa, Norteamérica y Pacífico.  
+ Para buscar la información solicitada, en esta lección resumirá los datos de ventas de la empresa en el nivel mensuales, y también resumirá las cifras de ventas en tres regiones: Europa, Norteamérica y Pacífico.  
   
  Una vez que haya completado las tareas de esta lección, podrá responder a las preguntas siguientes:  
   
@@ -41,10 +40,10 @@ ms.locfileid: "48122607"
   
 -   La segunda parte le guía por la creación de un modelo general de series temporales basándose en todas las regiones. Puede usar este modelo general para la *predicción cruzada*.  
   
- Para completar las tareas en esta lección, que se enumeran a continuación, utilizará el [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] del origen de datos creada en [lección 1: crear la solución de minería de datos intermedio &#40;Tutorial intermedio de minería de datos&#41; ](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
+ Para completar las tareas en esta lección, que se enumeran a continuación, utilizará el [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] del origen de datos creada en [lección 1: Creación de la solución de minería de datos intermedios &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
   
 > [!WARNING]  
->  Las fechas en el [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] base de datos de ejemplo se han actualizado para esta versión. Si usa una versión anterior de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], puede crear el modelo según estos pasos, pero podría ver resultados diferentes.  
+>  Las fechas de la base de datos de ejemplo de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se han actualizado para esta versión. Si usa una versión anterior de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], puede crear el modelo según estos pasos, pero podría ver resultados diferentes.  
   
  **Crear un modelo de pronóstico Simple**  
   
@@ -76,18 +75,18 @@ ms.locfileid: "48122607"
  [Descripción de los requisitos para una serie temporal modelo &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>Todas las lecciones  
- [Lección 1: Crear la solución de minería de datos intermedios &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [Lección 1: Creación de la solución de minería de datos intermedios &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- Lección 2: Escenario de pronóstico (tutorial intermedio de minería de datos)  
+ Lección 2: Previsión (Tutorial de minería de datos intermedios) del escenario  
   
  [Lección 3: Generar un escenario de cesta &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [Lección 4: Generar una escenario de clústeres de secuencia &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Lección 4: Creación de una escenario de clústeres de secuencia &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [Lección 5: Generar modelos de regresión logística y Red neuronal &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lección 5: Creación de modelos de regresión logística y Red neuronal &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Tutorial de minería de datos básicos](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Tutorial de minería de datos de datos intermedio &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   

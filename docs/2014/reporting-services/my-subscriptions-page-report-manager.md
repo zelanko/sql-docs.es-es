@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ecb5d4b5216139c7d762b03fd5a8a8fbc6a1b5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165965"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026906"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Mis suscripciones (página del Administrador de informes)
   Use la página Mis suscripciones para ver todas sus suscripciones en un solo lugar. Desde esta página, puede obtener acceso a cualquier suscripción de su propiedad, modificarla o eliminarla. Es propietario solamente de las suscripciones que ha creado. No puede obtener acceso a las suscripciones de otros usuarios, ni siquiera aunque las utilice (por ejemplo, si se ha agregado su nombre a una suscripción existente definida por otro usuario). Desde esta página no se pueden crear suscripciones. Para obtener más información sobre cómo crear suscripciones, vea el [página nueva suscripción o Editar suscripción &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  

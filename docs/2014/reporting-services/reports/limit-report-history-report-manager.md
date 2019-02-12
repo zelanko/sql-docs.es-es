@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d6f4508dda8496d9065655f5a8e298feaa4e9ad3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7f600e646e4690ed735b908861bd61516337cfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134036"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042866"
 ---
 # <a name="limit-report-history-report-manager"></a>Limitar el historial de informe (Administrador de informes)
   El historial de informes es un conjunto de instantáneas de informe que se crean a lo largo del tiempo. Puede crear el historial de informes a petición o programar la frecuencia con que una instantánea se crea y se agrega al historial de informes.  
@@ -48,7 +48,7 @@ ms.locfileid: "48134036"
 4.  Seleccione las opciones para el informe y haga clic en **Aplicar**. Para más información sobre cada opción, vea [Página de propiedades de opciones de instantánea &#40;Administrador de informes&#41;](../snapshot-options-properties-page-report-manager.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar una instantánea al historial del informe &#40;el Administrador de informes&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   
   

@@ -24,14 +24,14 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e73924828fcae11908e83f2383e63dd68670071e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b0f5f3d9c3dc788a4b55932e8a28b43a6b4135bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117895"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031396"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Ver o eliminar el historial de informes (Administrador de informes)
   El historial de informe se conserva junto con el informe en el que se basa. Cualquier usuario con permiso para ver un informe puede ver su historial.  
@@ -55,10 +55,10 @@ ms.locfileid: "48117895"
 3.  Active la casilla situada junto a la instantánea del historial que desea eliminar y, a continuación, haga clic en **eliminar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar una instantánea al historial del informe &#40;el Administrador de informes&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Página Historial del informe &#40;el Administrador de informes&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
- [Establecer las propiedades de procesamiento de informes](report-server/set-report-processing-properties.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Establecer las propiedades del procesamiento de informes](report-server/set-report-processing-properties.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Creación, modificación y eliminación de instantáneas del historial de informes](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd0335165c27487433b0130f5e40ecb1846fe7ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cebdfdbccf21ca3370cf2670d97d6cea6e4c7836
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505412"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036886"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig (utilidad) (SSRS)
   La utilidad **rsconfig.exe** cifra y almacena valores de cuenta y conexión en el archivo RSReportServer.config. Los valores cifrados incluyen la información de conexión de la base de datos del servidor de informes y los valores de cuenta utilizados para el procesamiento de informes desatendido.  
@@ -54,7 +54,7 @@ ms.locfileid: "52505412"
 |`-m`  *ComputerName*|Requerido si configura una instancia de servidor de informes remoto.|Especifica el nombre del equipo donde está hospedado el servidor de informes. Si se omite este argumento, el valor predeterminado es `localhost`.|  
 |**-s**  *nombreDeServidor*|Requerido.|Especifica la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos del servidor de informes.|  
 |`-i`  *nombreDeInstancia*|Requerido si utiliza instancias con nombre.|Si ha utilizado una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar la base de datos del servidor de informes, este valor especifica la instancia con nombre.|  
-|`-d`  *DatabaseName*|Requerido.|Especifica el nombre de la base de datos de servidor de informes.|  
+|`-d`  *databasename*|Requerido.|Especifica el nombre de la base de datos de servidor de informes.|  
 |`-a`  *método AuthMethod*|Requerido.|Especifica el método de autenticación que el servidor de informes utiliza para conectarse a la base de datos de servidor de informes. Los valores válidos son `Windows` o `SQL` (este argumento no distingue entre mayúsculas y minúsculas).<br /><br /> `Windows` especifica que el servidor de informes utilice la autenticación de Windows.<br /><br /> `SQL` especifica que el servidor de informes utilice la autenticación de SQL Server.|  
 |`-u`  *[dominio\\] nombre de usuario*|Requerido con `-e`. Opcional con `-c`.|Especifica una cuenta de usuario para la conexión de base de datos del servidor de informes o para la cuenta desatendida.<br /><br /> Para **rsconfig -e**, este argumento es obligatorio. Debe ser una cuenta de usuario de dominio.<br /><br /> Para **rsconfig - c** y `-a SQL`, este argumento debe especificar un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión.<br /><br /> Para **rsconfig - c** y `-a Windows`, este argumento puede especificar un usuario de dominio, una cuenta integrada o credenciales de cuenta de servicio. Si especifica una cuenta de dominio, especifique un *dominio* y un *nombre de usuario* en el formato *dominio\nombre de usuario*. Si está utilizando una cuenta integrada, este argumento es opcional. Si desea utilizar las credenciales de la cuenta de servicio, omita este argumento.|  
 |`-p`  *Contraseña*|Requerido si se especifica `-u`.|Especifica la contraseña que se utilizará con el argumento *username* . Este argumento se puede establecer en un valor en blanco si la cuenta no requiere una contraseña. Este valor distingue entre mayúsculas y minúsculas para cuentas de dominio.|  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4c0128e6e7bb5ca0020d8dbcf34858d0f5d6bf2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085722"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037186"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Cambiar un tipo de gráfico (Generador de informes y SSRS)
   Cuando se inserta un gráfico en un informe por primera vez, aparece el cuadro de diálogo **Seleccionar tipo de gráfico** . Si cancela este cuadro de diálogo, se agrega un gráfico de columnas de forma predeterminada.  
@@ -39,7 +39,7 @@ ms.locfileid: "48085722"
   
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Los medidores &#40;generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)   
- [Agregar un gráfico a un informe &#40;generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Medidores &#40;Generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

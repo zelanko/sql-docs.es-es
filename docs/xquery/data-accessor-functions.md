@@ -15,12 +15,12 @@ ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca466042ba90915076b0be47f867d74c3ab86e68
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 1c28f61a39e45ea101f2e999d5787dfa23cb29c2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292071"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031796"
 ---
 # <a name="data-accessor-functions"></a>Funciones del descriptor de acceso a datos
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "51292071"
 ## <a name="understanding-fndata-fnstring-and-text"></a>Información acerca de fn:data (), fn:string () y text()  
  XQuery tiene una función **fn:Data()** para extraer valores escalares con tipo de nodos, una prueba de nodo **text()** para devolver los nodos de texto y la función **fn:String()** que devuelve el valor de cadena de un nodo. Su uso puede resultar confuso. A continuación, se presentan las directrices para usarlas correctamente en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La instancia XML \<age > 12 \< /age > se usa con fines ilustrativos.  
   
--   XML sin tipo: la expresión de ruta de acceso /age/text() devuelve el nodo de texto "12". La función fn:data(/age) devuelve el valor de cadena "12", igual que fn:string(/age).  
+-   XML sin tipo: El /age/text() de expresión de ruta de acceso, se devuelve el nodo de texto "12". La función fn:data(/age) devuelve el valor de cadena "12", igual que fn:string(/age).  
   
--   XML con tipo: /age/text() de la expresión devuelve un error para cualquier tipada simple estático \<age > elemento. Por otro lado, fn:data (/edad) devuelve el entero 12. La función fn:string(/age) produce la cadena "12".  
+-   XML con tipo: /Age/text() de la expresión devuelve un error para cualquier tipada simple estático \<age > elemento. Por otro lado, fn:data (/edad) devuelve el entero 12. La función fn:string(/age) produce la cadena "12".  
   
 ## <a name="in-this-section"></a>En esta sección  
   

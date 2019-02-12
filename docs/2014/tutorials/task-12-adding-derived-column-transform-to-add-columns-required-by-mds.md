@@ -1,24 +1,21 @@
 ---
-title: 'Tarea 12: Adición de transformación columna derivada para agregar columnas necesarias en MDS | Microsoft Docs'
+title: 'Tarea 12: Agregar transformación columna derivada para agregar columnas necesarias en MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 104fdfdebf01bece9f5a3762b33b9e31f40d06d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125335"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036517"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tarea 12: agregar la transformación Columna derivada para agregar las columnas necesarias en MDS
   En esta tarea, agregará la transformación Columna derivada al flujo de datos. Agregar dos columnas derivadas, **ImportType** y **BatchTag**, a los registros pasados a esta transformación. Debe agregar estas columnas antes de cargar los datos en las tablas de ensayo en MDS. Son dos columnas necesarias para las tablas de ensayo en MDS. Consulte [tablas de ensayo de miembros hoja](../master-data-services/leaf-member-staging-table-master-data-services.md) para obtener más detalles.  

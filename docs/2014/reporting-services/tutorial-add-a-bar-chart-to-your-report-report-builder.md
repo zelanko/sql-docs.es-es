@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar un gráfico de barras a un informe (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Agregar un gráfico de barras a un informe (generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d3fafc654ab1c272d7688e49d67cd2af5d1820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106805"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041426"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de barras a un informe (generador de informes)
   Un gráfico de barras muestra los datos de categoría horizontalmente. Esto puede ayudar a:  
   
 -   Mejorar la legibilidad de los nombres de categoría largos.  
@@ -55,7 +55,7 @@ ms.locfileid: "48106805"
 10. [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, crear un conjunto de datos y elegir un origen de datos, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, crear un conjunto de datos y elija un origen de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 15 minutos.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48106805"
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Seleccione las palabras **título del gráfico** en la parte superior del gráfico y, a continuación, escriba el siguiente texto: **ventas para 2008 y 2009**.  
+2.  Seleccione las palabras **título del gráfico** en la parte superior del gráfico y, a continuación, escriba el texto siguiente: **Ventas de 2008 y 2009**.  
   
 3.  Haga clic en cualquier lugar fuera del texto.  
   
@@ -294,7 +294,7 @@ ms.locfileid: "48106805"
   
 5.  Haga clic en **Agregar**. Aparece un nuevo filtro en blanco.  
   
-6.  En **expresión**, tipo **[SUM (salesyear2009)]**. Esto crea la expresión subyacente `=Sum(Fields!SalesYear2009.Value)`, que puede ver si hace clic en el **fx** botón.  
+6.  En **expresión**, tipo **[SUM (salesyear2009)]**. Esto crea la expresión subyacente `=Sum(Fields!SalesYear2009.Value)`, que puede ver si hace clic en el botón **fx** .  
   
 7.  Compruebe que el tipo de datos es **Texto**.  
   

@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f800d28a8c7e1440308761abc3d05c4d41995f00
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6fff4c4110f6f51c8e2363cff1fb64633caeb888
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372127"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024306"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Especificar credenciales en el Generador de informes
   Las credenciales autentican al usuario que intenta recuperar datos de un origen de datos. El propietario del origen de datos determina el tipo de credenciales que se deben utilizar. Por ejemplo, un administrador de bases de datos podría especificar que el usuario debe proporcionar un nombre de usuario y una contraseña de Windows.  

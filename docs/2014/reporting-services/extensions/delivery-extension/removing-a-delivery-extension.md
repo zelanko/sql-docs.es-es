@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1aa999d8ec8eaa1ef16fdaf34c52d48cb230fc47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5efe51d0c91a0321a17e539aeddbb26f0dc3a5fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155935"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036264"
 ---
 # <a name="removing-a-delivery-extension"></a>Quitar una extensión de entrega
   Para quitar una extensión de entrega de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], basta con quitar el elemento **Extension** para la extensión de entrega del archivo de configuración. Después de quitar la información de configuración, la extensión de entrega deja de estar disponible en el servidor de informes.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 40cf4da099d5b9a9055b6fcd266c1f6169d8aaee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086915"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025836"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Servidor de informes de Reporting Services (modo nativo)
   Un servidor de informes configurado para el modo nativo se ejecuta como un servidor de aplicaciones que proporciona todas las funcionalidades de procesamiento y administración exclusivamente a través de los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "48086915"
   
 -   Equilibrar las peticiones de procesamiento de informes que se envían al servidor mediante la programación del procesamiento de informes y la especificación de los informes que pueden ejecutarse a petición y de los que se cargan desde la memoria caché.  
   
- El permiso para realizar tareas de administración se proporciona a través de dos roles predefinidos: **Administrador del sistema** y **Administrador de contenido**. La administración efectiva del contenido del servidor de informes requiere que esté asignado a ambos roles. Para más información sobre estos roles predefinidos, vea [Roles y permisos &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
+ Permiso para realizar tareas de administración se proporcionan dos roles predefinidos: **Administrador del sistema** y **Administrador de contenido**. La administración efectiva del contenido del servidor de informes requiere que esté asignado a ambos roles. Para más información sobre estos roles predefinidos, vea [Roles y permisos &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
   
  Las herramientas para administrar contenido del servidor de informes son [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el Administrador de informes. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite establecer valores predeterminados y habilitar características. El Administrador de informes se usa para conceder acceso de usuario a las operaciones y elementos del servidor de informes, ver y usar informes y otros tipos de contenido, y ver y usar todos los elementos compartidos y características de distribución de informes.  
   
@@ -109,6 +109,6 @@ ms.locfileid: "48086915"
   
 ## <a name="see-also"></a>Vea también  
  [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Solución de problemas en una instalación de Reporting Services](../install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [Solucionar problemas en una instalación de Reporting Services](../install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   

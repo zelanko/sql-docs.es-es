@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d91acd160949d0438c73d21ac3e422f57a3522cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081695"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017917"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Crear una suscripción controlada por datos (Tutorial de SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona suscripciones controladas por datos para que pueda personalizar la distribución de un informe basándose en datos dinámicos de suscriptores. Las suscripciones controladas por datos están destinadas a los escenarios siguientes:  
@@ -34,13 +34,13 @@ ms.locfileid: "48081695"
   
  El tutorial está compuesto por tres lecciones:  
   
- [Lección 1: crear una base de datos de suscriptor de ejemplo](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Lección 1: Creación de una base de datos de suscriptor de ejemplo](lesson-1-creating-a-sample-subscriber-database.md)  
  En esta lección aprenderá a crear una base de datos local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con información de suscriptores.  
   
- [Lección 2: modificar las propiedades del origen de datos de informe](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Lección 2: Modificar las propiedades del origen de datos de informe](lesson-2-modifying-the-report-data-source-properties.md)  
  En esta lección aprenderá a modificar propiedades del origen de datos de informe de manera que el informe pueda ejecutarse en modo desatendido. El procesamiento desatendido requiere las credenciales almacenadas. Además, modificará el conjunto de datos de informe para que incluya un parámetro proporcionado por los datos del suscriptor.  
   
- [Lección 3: definir una suscripción controlada por datos](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lección 3: Definir una suscripción controlada por datos](lesson-3-defining-a-data-driven-subscription.md)  
  En esta lección aprenderá a definir una suscripción controlada por datos. Esta lección le guía a través de cada página del Asistente para suscripciones controladas por datos.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -56,7 +56,7 @@ ms.locfileid: "48081695"
   
 -   Se debe ejecutar el servicio del Agente SQL Server.  
   
--   Un informe que contenga parámetros. Este tutorial supone que el informe de ejemplo `Sales Orders` crear con el tutorial [crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+-   Un informe que contenga parámetros. En este tutorial, se supone que usa el informe de ejemplo `Sales Orders` que creó con el tutorial [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   La base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], que proporciona datos para el informe de ejemplo.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48081695"
  **Tiempo estimado para completar este tutorial:** 30 minutos. Otros 30 minutos si no ha completado el tutorial de informe básico.  
   
 ## <a name="see-also"></a>Vea también  
- [Suscripciones controladas por datos](subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

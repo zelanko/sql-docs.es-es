@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5482a935a5357d4557a6ffd202feac6be07900e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71ccf123b9c8f5dba751affaae0374c90b5a8d99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130365"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020228"
 ---
 # <a name="update-a-resource-report-manager"></a>Actualizar un recurso (Administrador de informes)
   Puede actualizar un recurso reemplazándolo por una versión más reciente. Los recursos son elementos almacenados en un servidor de informes que contienen el contenido de un archivo que el usuario carga. Puede reemplazar un recurso existente importando el contenido de archivo nuevo o diferente en el recurso existente. La actualización de un recurso proporciona un modo de actualizar contenido preservando las propiedades existentes y la configuración de seguridad del recurso.  
@@ -45,9 +45,9 @@ ms.locfileid: "48130365"
  Si el recurso que está actualizando contiene una imagen que se utiliza en un informe, debe actualizar el informe para ver la imagen actualizada.  
   
 ## <a name="see-also"></a>Vea también  
- [El contenido de página &#40;el Administrador de informes&#41;](../contents-page-report-manager.md)   
- [Página Cargar archivo &#40;Administrador de informes&#41;](../upload-file-page-report-manager.md)   
- [Carga de archivos a una carpeta](upload-files-to-a-folder.md)   
+ [Contenido &#40;página del Administrador de informes&#41;](../contents-page-report-manager.md)   
+ [Cargar archivo &#40;página del Administrador de informes&#41;](../upload-file-page-report-manager.md)   
+ [Cargar archivos a una carpeta](upload-files-to-a-folder.md)   
  [Administrador de informes (Ayuda F1)](../report-manager-f1-help.md)  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6a562c7b9a888f6bfbb071e3068a3c4cf661c3ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 19f87ffa52dcc8cc1434afa7e6519e93bd580cb5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215535"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026896"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Modificar o eliminar una asignación de roles (Administrador de informes)
   Una asignación de roles asigna un grupo o cuenta de usuario a una definición de roles predefinida que incluye tareas que se pueden realizar. Determina los tipos de operaciones que un usuario puede realizar con relación a una carpeta, informe, modelo u otro tipo de contenido. Para crear, modificar o eliminar asignaciones de roles, use el Administrador de informes. Después de crear una asignación de roles para un grupo o usuario concreto, puede modificarla posteriormente seleccionando un rol diferente. Si desea revocar los permisos a un servidor de informes, puede eliminar una asignación de roles del servidor de informes.  
@@ -67,6 +67,6 @@ ms.locfileid: "48215535"
  (crear-y-administrar-rol-assignments.md)   
  [Asignaciones de roles](role-assignments.md)   
  [Página Configuración del sitio &#40;Administrador de informes&#41;](../site-settings-page-report-manager.md)   
- [Nueva asignación de roles del sistema y Editar asignaciones de roles del sistema &#40;páginas del Administrador de informes&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [Nueva asignación de roles de sistema: Editar página de asignaciones de roles de sistema &#40;el Administrador de informes&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

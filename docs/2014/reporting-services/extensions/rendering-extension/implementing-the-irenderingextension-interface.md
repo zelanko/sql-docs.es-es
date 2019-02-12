@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f7e331f7b7617e85ec8b577ac8c922ba41e4075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227275"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040046"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementar la interfaz IRenderingExtension
   La extensión de representación toma los resultados de una definición de informe que se combina con los datos reales y representa los datos resultantes en un formato que se puede usar. La transformación de los datos combinados y el formato se efectúan utilizando una clase de Common Language Runtime (CLR) que implementa <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. De esta forma se transforma el modelo de objetos en un formato de salida que puede usar un visor, impresora u otro destino de salida.  
@@ -51,7 +51,7 @@ ms.locfileid: "48227275"
 -   *createAndRegisterStream* es una función delegada a la que se va a llamar para obtener una secuencia en la que representar.  
   
 ### <a name="deviceinfo-parameter"></a>Parámetro de deviceInfo  
- El parámetro *deviceInfo* contiene los parámetros de representación, no los parámetros de informe. Estos parámetros de representación se pasan a la extensión de representación. El servidor de informes convierte los valores de *deviceInfo* en un objeto <xref:System.Collections.Specialized.NameValueCollection>. Los elementos del parámetro *deviceInfo* se tratan como valores que no distinguen mayúsculas y minúsculas. Si la solicitud de representación se ha producido como resultado de un acceso URL, los parámetros de dirección URL con el formato `rc:key=value` se convierten en pares de clave-valor en el objeto de diccionario *deviceInfo*. El código de detección de explorador también proporciona los elementos siguientes en el diccionario *clientCapabilities*: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type y AcceptLanguage. Se omite cualquier par de nombre-valor del parámetro *deviceInfo* que la extensión de representación no entienda. La muestra de código siguiente muestra un método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> de muestra que recupera los iconos.  
+ El parámetro *deviceInfo* contiene los parámetros de representación, no los parámetros de informe. Estos parámetros de representación se pasan a la extensión de representación. El servidor de informes convierte los valores de *deviceInfo* en un objeto <xref:System.Collections.Specialized.NameValueCollection>. Los elementos del parámetro *deviceInfo* se tratan como valores que no distinguen mayúsculas y minúsculas. Si la solicitud de representación se ha producido como resultado de un acceso URL, los parámetros de dirección URL con el formato `rc:key=value` se convierten en pares de clave-valor en el objeto de diccionario *deviceInfo*. El código de detección de explorador también proporciona los siguientes elementos en el *clientCapabilities* diccionario: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, tipo y AcceptLanguage. Se omite cualquier par de nombre-valor del parámetro *deviceInfo* que la extensión de representación no entienda. La muestra de código siguiente muestra un método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> de muestra que recupera los iconos.  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  

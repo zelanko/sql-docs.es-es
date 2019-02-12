@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 59f66df0022d81c3aa12015b265ccd8b7d735190
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184665"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031456"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Seleccionar color (Generador de informes y SSRS)
   Use el cuadro de diálogo **Seleccionar color** para especificar las opciones de color para el fondo de una o varias celdas de una región de datos o un cuadro de texto de un gráfico.  
@@ -60,10 +60,10 @@ ms.locfileid: "48184665"
  **Verde**  
  El valor decimal para la parte verde del color RGB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
- **Azul**  
+ **Blue**  
  El valor decimal para la parte azul del color RGB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
- **alfa**  
+ **Alpha**  
  El valor decimal para alfa o la transparencia del color. Cuando este valor está habilitado, puede usar el control deslizante para ajustar el grado de transparencia que desee.  
   
  **Matiz**  
@@ -80,6 +80,6 @@ ms.locfileid: "48184665"
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Aplicar formato a texto y marcadores de posición &#40;generador de informes y SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

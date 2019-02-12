@@ -9,20 +9,20 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 3a62e345-d67f-4387-a7ca-e5c4728a7b16
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: decfd7d4bd62c144193eeabb95772e3baaa6a06b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 776d52c5e34bb44942fc4dedfee83164f3121166
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205805"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022106"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>Cuadros de diálogo de gráficos (Generador de informes y SSRS)
   Esta sección contiene Ayuda para algunos de los cuadros de diálogo correspondientes a los gráficos. También puede abrir la Ayuda presionando F1 o haciendo clic en el botón Ayuda que se muestra en el cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

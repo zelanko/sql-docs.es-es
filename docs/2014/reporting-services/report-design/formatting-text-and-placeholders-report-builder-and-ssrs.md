@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b2dc831119ae6356761b525f76fe11b37236724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 12daff3490a0ca11fefa5c120952b30499118a4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111755"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037436"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Aplicar formato a texto y a marcadores de posición (Generador de informes y SSRS)
   Un cuadro de texto puede ser un elemento de informe o una celda individual de una región de datos que contiene texto, un campo calculado, un puntero a un campo de una base de datos, o una combinación de los tres elementos. Puede mezclar fuentes y colores, agregar los estilos negrita y cursiva, y usar estilos de párrafo como la alineación y las sangrías francesas. Puede dar formato a un cuadro de texto completo o a determinados números, expresiones, campos o cadenas de texto del cuadro de texto.  
@@ -34,7 +34,7 @@ ms.locfileid: "48111755"
   
  En esta ilustración, el propio cuadro de texto tiene un borde y todo el texto se encuentra en el mismo cuadro de texto, pero el texto tiene diferentes formatos.  
   
- Para más información, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../tutorial-format-text-report-builder.md).  
+ Para empezar rápidamente, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -46,7 +46,7 @@ ms.locfileid: "48111755"
   
 -   Arrastre un campo desde el panel **Datos de informe** y colóquelo en el cuadro de texto. Si arrastra la expresión hasta cualquier otro lugar del cuerpo del informe, se creará un nuevo cuadro de texto con el marcador de posición dentro de él. El valor de este marcador de posición será la expresión de campo correspondiente al campo que se quitó.  
   
--   Haga clic con el botón derecho en cualquier lugar del cuadro de texto y seleccione **Insertar marcador de posición**. En el cuadro de diálogo **Propiedades del marcador de posición** , puede especificar una expresión como el valor del marcador de posición. Para obtener más información, consulte [cuadro de diálogo de propiedades de marcador de posición, General &#40;generador de informes y SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
+-   Haga clic con el botón derecho en cualquier lugar del cuadro de texto y seleccione **Insertar marcador de posición**. En el cuadro de diálogo **Propiedades del marcador de posición** , puede especificar una expresión como el valor del marcador de posición. Para más información, vea [Cuadro de diálogo Propiedades del marcador de posición, General &#40;Generador de informes y SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
 -   Escriba cualquier expresión simple o compleja en el cuadro de texto. Por ejemplo, si escribe **Name: [Name]** en el cuadro de texto, el texto **[Name]** se mostrará como un marcador de posición que representa la expresión `=Fields!Name.Value`.  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48111755"
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Cuadro de diálogo Propiedades del marcador de posición, General &#40;Generador de informes y SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [Los cuadros de texto &#40;generador de informes y SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
+ [Cuadros de texto &#40;Generador de informes y SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

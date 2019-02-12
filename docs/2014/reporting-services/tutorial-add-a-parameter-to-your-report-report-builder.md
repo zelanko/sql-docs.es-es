@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar un parámetro a un informe (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Agregar un parámetro a un informe (generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec3f74d9237d917fd4b5d94e029cb5a15ea6e59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190305"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018886"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
   Agregue un parámetro a un informe para permitir que los usuarios filtren los datos del informe desde el origen de datos o el informe. Los parámetros del informe se crean automáticamente para cada parámetro de la consulta que incluya en una consulta del conjunto de datos. El tipo de datos de parámetro determina cómo aparece en la barra de herramientas de visualización de informe.  
@@ -55,7 +55,7 @@ ms.locfileid: "48190305"
 10. [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, elija un origen de datos y crear un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 25 minutos.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48190305"
   
 #### <a name="to-create-a-new-matrix-report"></a>Para crear un nuevo informe de matriz  
   
-1.  Haga clic en **iniciar**, apunte a **programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **Inicio**, seleccione **Programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**Generador de informes**y luego haga clic en **Generador de informes**.  
   
      Aparecerá el cuadro de diálogo **Introducción** .  
   
@@ -119,7 +119,7 @@ ms.locfileid: "48190305"
   
      Esta consulta no contiene parámetros de consulta. Agregará los parámetros de consulta posteriormente en este tutorial.  
   
-11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). El conjunto de resultados muestra 11 filas de datos que muestran la cantidad de elementos vendidos para cada subcategoría de cuatro almacenes e incluye las columnas siguientes: StoreID, Subcategory, Quantity.  
+11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). El conjunto de resultados muestra 11 filas de datos que muestran la cantidad de elementos vendidos para cada subcategoría de cuatro almacenes e incluye las siguientes columnas: StoreID, Subcategory, Quantity.  
   
 12. Haga clic en **Siguiente**.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "48190305"
   
  El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
   
-##  <a name="DefaultValues"></a> 4 núcleos. Especificar valores predeterminados para que el informe se ejecute automáticamente  
+##  <a name="DefaultValues"></a> 4c. Especificar valores predeterminados para que el informe se ejecute automáticamente  
  Puede especificar un valor predeterminado para cada parámetro de modo que el informe se ejecute automáticamente.  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>Para especificar un valor predeterminado de un conjunto de datos  
@@ -327,7 +327,7 @@ ms.locfileid: "48190305"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     El encabezado de columna del almacén contiene el texto para mostrar una expresión compleja:  **< \<Expr >>**.  
+     El encabezado de columna del almacén contiene el texto para mostrar una expresión compleja: **<\<Expr>>**.  
   
 8.  Obtenga una vista previa del informe.  
   

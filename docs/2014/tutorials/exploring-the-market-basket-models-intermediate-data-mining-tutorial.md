@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211945"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035306"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Explorar los modelos Market Basket (tutorial intermedio de minería de datos)
   Ahora que ha creado el `Association` modelo, puede explorar utilizando el [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de asociación de la **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos. Este tutorial le guía a través del uso del visor para explorar las relaciones entre los elementos. El visor le ayuda a saber de un vistazo qué productos tienden a aparecer juntos y a obtener una idea general de los patrones que surgen.  
   
- El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de asociación contiene tres fichas: **reglas**, **conjuntos de elementos**, y **red de dependencias**. Dado que cada pestaña revela una vista ligeramente diferente de los datos, cuando explore un modelo, normalmente alternará entre los diferentes paneles varias veces mientras obtiene más detalles.  
+ El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de asociación contiene tres fichas: **Las reglas de**, **conjuntos de elementos**, y **red de dependencias**. Dado que cada pestaña revela una vista ligeramente diferente de los datos, cuando explore un modelo, normalmente alternará entre los diferentes paneles varias veces mientras obtiene más detalles.  
   
 -   [Pestaña red de dependencias](#bkmk_DepNet)  
   
@@ -81,11 +80,11 @@ ms.locfileid: "48211945"
 ##  <a name="bkmk_Itemsets"></a> Pestaña conjuntos de elementos  
  Luego, obtendrá más información sobre las reglas y conjuntos de elementos generados por el modelo para los productos Touring Tire Tube y Touring Tire. El **conjuntos de elementos** ficha muestra tres extractos de información importantes relacionados con los conjuntos de elementos que el [!INCLUDE[msCoName](../includes/msconame-md.md)] detecta el algoritmo de asociación:  
   
--   **Soporte técnico:** el número de transacciones en el que se produce el conjunto de elementos.  
+-   **Soporte técnico:** El número de transacciones en el que se produce el conjunto de elementos.  
   
--   **Tamaño:** el número de elementos del conjunto de elementos.  
+-   **Tamaño:** El número de elementos del conjunto de elementos.  
   
--   **Elementos:** una lista de los elementos incluidos en cada conjunto de elementos.  
+-   **Elementos:** Una lista de los elementos incluidos en cada conjunto de elementos.  
   
  Dependiendo de cómo se configuren los parámetros del algoritmo, éste podría generar muchos conjuntos de elementos. Cada conjunto de elementos que se devuelve en el visor representa las transacciones en las que se vendió el elemento. Mediante el uso de los controles en la parte superior de la **conjuntos de elementos** ficha, puede filtrar el Visor para mostrar solo los conjuntos de elementos que contienen un tamaño mínimo especificado de soporte técnico y el conjunto de elementos.  
   
@@ -138,13 +137,13 @@ ms.locfileid: "48211945"
 ##  <a name="bkmk_Rules"></a> Pestaña reglas  
  El **reglas** pestaña muestra la siguiente información relacionada con las reglas que se encuentra el algoritmo.  
   
--   **Probabilidad:** el *probabilidad* de una regla, definida como la probabilidad de que el elemento dado el elemento del lado izquierdo del lado derecho.  
+-   **Probabilidad:** El *probabilidad* de una regla, definida como la probabilidad de que el elemento dado el elemento del lado izquierdo del lado derecho.  
   
--   **Importancia:** una medida de la utilidad de una regla. Un valor mayor significa una regla mejor.  
+-   **Importancia:** Una medida de la utilidad de una regla. Un valor mayor significa una regla mejor.  
   
      La importancia se proporciona para ayudarle a calibrar la utilidad de una regla, porque la probabilidad por sí sola puede ser engañosa. Por ejemplo, si cada transacción contuviera una botella de agua, quizás agregada automáticamente al carro de cada cliente como parte de una promoción, el modelo crearía una regla que predice que la botella de agua tiene una probabilidad de 1. Si se basa en la probabilidad únicamente, esta regla es muy precisa, pero no proporciona información útil.  
   
--   **Regla:** la definición de la regla. Para un modelo de cesta de la compra, una regla describe una combinación concreta de elementos.  
+-   **Regla:** La definición de la regla. Para un modelo de cesta de la compra, una regla describe una combinación concreta de elementos.  
   
  Cada regla puede usarse para predecir la presencia de un elemento de una transacción en función de la presencia de otros elementos. Al igual que en el **conjuntos de elementos** ficha, puede filtrar las reglas para que se muestren solo las reglas más interesantes. Si está trabajando con un modelo de minería de datos que no tiene ninguna regla, podría desear cambiar los parámetros de algoritmo para bajar el umbral de probabilidad de las reglas.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "48211945"
   
 ## <a name="see-also"></a>Vea también  
  [Lección 3: Generar un escenario de cesta &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
- [Lección 4: Generar una escenario de clústeres de secuencia &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
+ [Lección 4: Creación de una escenario de clústeres de secuencia &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
  [Algoritmo de asociación de Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Referencia técnica del algoritmo de asociación de Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  
   

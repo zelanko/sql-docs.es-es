@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 03d555f967b50b503d608244bdd4a8885cede61e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358827"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025866"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Crear un componente de tiempo de diseño de elemento de informe personalizado
   Un componente de tiempo de diseño de elemento de informe personalizado es un control que se puede utilizar en el entorno de Visual Studio Report Designer. El componente de tiempo de diseño de elemento de informe personalizado proporciona una superficie de diseño activada que puede aceptar las operaciones de arrastrar y colocar, la integración con el explorador de propiedades de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], y la capacidad de proporcionar los editores de propiedades personalizados.  
@@ -194,7 +194,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Componentes de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Tutorial: Crear un Control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio  
+-   Tutorial: Creación de un control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio  
   
 ## <a name="see-also"></a>Vea también  
  [Arquitectura de elementos de informe personalizados](custom-report-item-architecture.md)   

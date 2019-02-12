@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dfcef8a18d1d3fae45d8ebabe85da1bf5d3fbbe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3fb36315de4a9d2f83e4a6c11f129f5603147e25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165175"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024666"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>clase MSReportServer_ConfigurationSetting
   Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.  
   
- Para obtener una lista de todos los miembros de este tipo, consulte [miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md).  
+ Para obtener una lista de todos los miembros de este tipo, vea [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +46,7 @@ public class MSReportServer_ConfigurationSetting
  Todos los miembros estáticos (**compartidos** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) públicos de este tipo son seguros para operaciones multiproceso. No se garantiza que los miembros de instancia sean seguros para subprocesos.  
   
 ## <a name="example"></a>Ejemplo  
- Para ejecutar el código siguiente, agregue el nombre del servidor en lugar de cada \<*nombreDeServidor*>. Actualice la ruta de acceso para que señale su ubicación de instalación si no es el valor predeterminado. El ejemplo de código siguiente recorre en iteración cada propiedad en el [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) (clase), imprimiendo el nombre de cada propiedad y su valor en la consola.  
+ Para ejecutar el código siguiente, agregue el nombre del servidor en lugar de cada \<*nombreDeServidor*>. Actualice la ruta de acceso para que señale su ubicación de instalación si no es el valor predeterminado. En el ejemplo de código siguiente se recorre en iteración cada propiedad en la clase [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) , imprimiendo el nombre de cada propiedad y su valor en la consola.  
   
 ```vb  
 Imports System  

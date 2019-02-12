@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 76c8b145b5ad43cdba6a2d55cdcf62fedc0e2ff3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fdd1083f5e8d8e725378dd5cbec62351249ec1bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225967"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043256"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportar a un archivo CSV (Generador de informes y SSRS)
   La extensión de representación de valores separados por comas (CSV) representa los informes como una representación sin estructura jerárquica de los datos a partir de un informe estándar y sin formato para que resulten fáciles de leer e intercambiar con muchas aplicaciones.  
   
- La extensión de representación CSV usa un delimitador de caracteres de cadena para separar los campos y las filas, y permite configurar dicho delimitador para que sea otro carácter distinto de la coma. El archivo resultante puede abrirse en un programa de hoja de cálculo como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o usarse como un formato de importación para otros programas. El informe exportado se convierte en un archivo .csv y devuelve un tipo MIME de `text/csv`.  
+ La extensión de representación CSV usa un delimitador de caracteres de cadena para separar los campos y las filas, y permite configurar dicho delimitador para que sea otro carácter distinto de la coma. El archivo resultante puede abrirse en un programa de hoja de cálculo como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o usarse como un formato de importación para otros programas. El informe exportado se convierte en un archivo .csv y devuelve un tipo MIME `text/csv`.  
   
  Si desea trabajar con datos relacionados con gráficos, barras de datos, minigráficos, medidores e indicadores en [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], exporte el informe a un archivo CSV y, a continuación, abra el archivo en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48225967"
   
 -   Línea  
   
--   imagen  
+-   Imagen  
   
 -   Rectángulo  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48225967"
 |Elemento|Comportamiento de la representación|  
 |----------|------------------------|  
 |Cuadro de texto|Representa el contenido del cuadro de texto. En el modo predeterminado, se da formato a los elementos según las propiedades de formato de los mismos. En modo compatible, la configuración de la información del dispositivo puede cambiar el formato. Para obtener más información sobre los modos de representación de CSV, vea la sección correspondiente a continuación.|  
-|Tabla|Realiza la representación mediante la expansión de la tabla y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila. No se admiten informes detallados.|  
+|Table|Realiza la representación mediante la expansión de la tabla y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila. No se admiten informes detallados.|  
 |Matriz|Realiza la representación mediante la expansión de la matriz y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila.|  
 |Lista|Representa un registro para cada instancia o fila de detalle de la lista.|  
 |Subinforme|El elemento primario se repite en todas las instancias del contenido.|  
@@ -78,7 +78,7 @@ ms.locfileid: "48225967"
 |Minigráfico|Se representa como un gráfico. Normalmente, un minigráfico no incluye jerarquías ni etiquetas.|  
 |Medidor|Se representa como un único registro con los valores máximo y mínimo de la escala lineal, los valores inicial y final del intervalo, y el valor del puntero.|  
 |Indicador|Se representa como un único registro con el nombre del estado activo, los estados disponibles y el valor de los datos.|  
-|Mapa|Se representa como una fila con las etiquetas y los valores para cada miembro de mapa de una capa de mapa.<br /><br /> Si el mapa tiene varias capas, los valores de las filas varía, en función de si las capas de mapa usan las mismas regiones de datos de mapa u otras diferentes. Si varias capas de mapa utilizan la misma región de datos, las filas contienen datos de todas.|  
+|Asignación|Se representa como una fila con las etiquetas y los valores para cada miembro de mapa de una capa de mapa.<br /><br /> Si el mapa tiene varias capas, los valores de las filas varía, en función de si las capas de mapa usan las mismas regiones de datos de mapa u otras diferentes. Si varias capas de mapa utilizan la misma región de datos, las filas contienen datos de todas.|  
   
 ### <a name="hierarchical-and-grouped-data"></a>Datos jerárquicos y agrupados  
  Para que los datos jerárquicos y los datos agrupados puedan representarse en el formato CSV, es necesario quitar la información de estructura jerárquica.  
@@ -93,7 +93,7 @@ ms.locfileid: "48225967"
   
 -   Las regiones de datos del mismo nivel son regiones de datos o grupos dinámicos que comparten una región de datos común o un antecesor dinámico. Los datos del mismo nivel se identifican creando una bifurcación del árbol sin información de estructura jerárquica.  
   
- Para más información, vea [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ Para obtener más información, consulte [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48225967"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

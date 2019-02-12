@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -18,12 +18,12 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: b311660253d893673927966ffe6309d2f3530d79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2df74dbf5ee1205a801ea816c4bd48b255c6c80f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687311"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013396"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

@@ -17,12 +17,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7548f79744f3a48633d42249da6f1946459571a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04c32636d566cca1c5dd280b20b59aba2614dc56
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791803"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043086"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Uso de XEvent Profiler de SSMS
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Para acceder a XEvent Profiler, siga estos pasos:
 
    ![Visor de XE Profiler](media/xevents-xe-profiler-start-viewer.png)
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  
 [Herramientas de eventos extendidos](../../relational-databases/extended-events/extended-events-tools.md)  
   

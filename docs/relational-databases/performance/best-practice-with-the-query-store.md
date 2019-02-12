@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 15838ca2bb994aba32cd4aa83d7e8e23c78743f9
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143475"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760108"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -345,8 +345,9 @@ Las marcas de seguimiento globales 7745 y 7752 pueden usarse para mejorar la dis
 > Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible. 
 
 ## <a name="see-also"></a>Consulte también  
- [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [Uso del almacén de consultas con OLTP en memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [Supervisión del rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md)  
+[Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
+[Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
+[Uso del almacén de consultas con OLTP en memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     
+[Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)      
+[Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md)     
   

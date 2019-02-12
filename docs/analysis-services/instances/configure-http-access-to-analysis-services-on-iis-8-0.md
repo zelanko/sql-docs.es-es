@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420656"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079471"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurar el acceso HTTP a Analysis Services en IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -110,7 +110,9 @@ ms.locfileid: "52420656"
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<unidad >: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  El Administrador de IIS podría no ser capaz de conectarse a Analysis Services en la versión actual, si la base de datos es una copia de seguridad de uno anterior. Esto es debido a cambios en el MSMDPUMP y debe solucionarse copiando el archivo msmdpump.dll de la versión anterior del trabajo.
   
 ##  <a name="bkmk_appPool"></a> Paso 2: Crear un grupo de aplicaciones y un directorio virtual en IIS  
  A continuación, cree un grupo de aplicaciones y un extremo al bombeo.  

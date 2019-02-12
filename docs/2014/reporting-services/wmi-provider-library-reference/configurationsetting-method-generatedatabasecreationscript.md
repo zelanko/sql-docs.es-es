@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5d456e0949f38a402b4947c72a3f3f9ec029f2a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2dbd112c340662ed90632a06904c0b3bd1939a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213495"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022116"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseCreationScript (MSReportServer_ConfigurationSetting de WMI)
   Genera un script SQL que se puede utilizar para crear una base de datos del servidor de informes.  
@@ -53,7 +53,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Indica si se desea crear la base de datos en modo nativo o en modo de SharePoint.  
   
 > [!IMPORTANT]  
->  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` no se admite porque en el modo de SharePoint, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es el servicio compartido de SharePoint y no esté controlado por el proveedor de WMI. Este parámetro siempre debe establecerse `False`.  
+>  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` no se admite porque en el modo de SharePoint, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es el servicio compartido de SharePoint y no esté controlado por el proveedor de WMI. Este parámetro siempre debe establecerse en `False`.  
   
  *Script*  
  [out] Cadena que contiene el script SQL generado.  

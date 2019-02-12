@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71ef931fc857841365919073cb470c725c3714e0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030704"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019926"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acceso a datos para las operaciones de DQS
   Para usar los datos de origen para las operaciones del [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) y exportar los datos procesados, puede realizar una de las acciones siguientes:  
@@ -40,13 +40,13 @@ ms.locfileid: "51030704"
   
 4.  En el cuadro de diálogo **Propiedades de inicio de sesión** , haga clic en la página **Asignación de usuarios** en el panel izquierdo.  
   
-5.  En el panel derecho, seleccione la casilla en la columna **Asignar** para la base de datos **DQS_STAGING_DATA** y, después, seleccione los siguientes roles en el panel **Pertenencia al rol de base de datos para: DQS_STAGING_DATA** :  
+5.  En el panel derecho, seleccione la casilla situada bajo la **mapa** columna para el **DQS_STAGING_DATA** de base de datos y, a continuación, seleccione los siguientes roles en el **pertenencia al rol de la base de datos: DQS_STAGING_DATA** panel:  
   
-    -   **db_datareader**: leer datos de las tablas y de las vistas.  
+    -   **db_datareader**: Leer datos de tablas o vistas.  
   
-    -   **db_datawriter**: agregar, eliminar o cambiar los datos de las tablas.  
+    -   **db_datawriter**: Agregar, eliminar o cambiar datos en tablas.  
   
-    -   **db_ddladmin**: crear, modificar o eliminar las tablas o vistas.  
+    -   **db_ddladmin**: Crear, modificar o eliminar tablas o vistas.  
   
 6.  En el cuadro de diálogo **Propiedades de inicio de sesión** , haga clic en **Aceptar** para aplicar los cambios.  
   

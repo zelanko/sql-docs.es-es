@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d30e91edb402af3797bf88aa67492032206159cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b24350f3ab377170a51333716b710b4a3f44ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064955"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020136"
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar y deshabilitar Mis informes
   La característica Mis informes asigna espacio de almacenamiento personal en la base de datos del servidor de informes para que los usuarios puedan guardar sus propios informes en una carpeta privada. Los administradores de servidores de informes pueden habilitar o deshabilitar esta característica o cambiar su funcionamiento modificando la configuración de seguridad que controla las acciones que los usuarios llevan a cabo en esta área de trabajo.  
@@ -32,7 +32,7 @@ ms.locfileid: "48064955"
 ## <a name="how-to-enable-and-disable-my-reports"></a>Habilitar y deshabilitar Mis informes  
  Para habilitar Mis informes con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia del servidor de informes y abra la página **Propiedades del servidor** . Después, en la pestaña **General** , seleccione la opción **Habilitar una carpeta Mis informes para cada usuario** .  
   
- La definición de roles empleada para Mis informes determinará las acciones admitidas en el área de trabajo Mis informes. Por ejemplo, si el rol Mis informes excluye "Crear informes vinculados", los usuarios no podrán crear informes vinculados en las carpetas Mis informes. Para obtener más información, vea [Proteger Mis informes](../security/secure-my-reports.md).  
+ La definición de roles empleada para Mis informes determinará las acciones admitidas en el área de trabajo Mis informes. Por ejemplo, si el rol Mis informes excluye "Crear informes vinculados", los usuarios no podrán crear informes vinculados en las carpetas Mis informes. Para más información, vea [Proteger Mis informes](../security/secure-my-reports.md).  
   
  Para desactivar Mis informes, desactive la opción **Habilitar una carpeta Mis informes para cada usuario**. Al desactivar la característica Mis informes, se quitan todas las indicaciones visibles para los usuarios de la carpeta Mis informes. Las carpetas que ofrecen almacenamiento real (es decir, las subcarpetas de Carpetas de usuarios) deben eliminarse manualmente tras deshabilitar la característica.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48064955"
  Tenga en cuenta que, si activa Mis informes, el servidor de informes creará una carpeta Mis informes para cada usuario que tenga una cuenta de dominio y que haga clic en el vínculo Mis informes, incluso si el usuario no desea, o no necesita, una carpeta Mis informes. No existe ningún modo sistemático de determinar las carpetas que se utilizan. Es preciso revisar manualmente las carpetas para comprobar las que contienen algo.  
   
 ## <a name="see-also"></a>Vea también  
- [Proteger mis informes](../security/secure-my-reports.md)   
+ [Proteger Mis informes](../security/secure-my-reports.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server-content-management-ssrs-native-mode.md)  
   
   

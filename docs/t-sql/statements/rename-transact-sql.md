@@ -2,8 +2,7 @@
 title: RENAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
@@ -11,12 +10,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 616bf8096b8632eb357e65816bda21eabe0d6e4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8930c37da669565a6ea5d7e03444a3d173d2622c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821973"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019086"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -115,7 +114,7 @@ RENAME DATABASE AdWorks to AdWorks2;
   
  Al cambiar el nombre de una tabla, se actualizan todos los objetos y propiedades asociados a esa tabla para que hagan referencia al nombre de la nueva tabla. Así, por ejemplo, se actualizan las definiciones, índices, restricciones y permisos de la de tabla. Las vistas no se actualizan.  
   
-### <a name="b-rename-a-table"></a>B. Cambiar de nombre una tabla  
+### <a name="b-rename-a-table"></a>b. Cambiar de nombre una tabla  
  **SE APLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  En este ejemplo se cambia el nombre de la tabla Customer a Customer1.  

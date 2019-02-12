@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2cf353aedff8d906ebb2aa53a4bab269f6083854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071295"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019336"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar la autenticación básica en el servidor de informes
   De forma predeterminada, Reporting Services acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si su implementación incluye aplicaciones cliente o exploradores que utilizan la autenticación básica, debe agregar esta autenticación a la lista de tipos admitidos. Además, si desea utilizar el Generador de informes, debe permitir el acceso anónimo a los archivos del Generador de informes.  
@@ -41,7 +41,7 @@ ms.locfileid: "48071295"
   
      El archivo se encuentra en  *\<unidad >:* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Busque <`Authentication`>.  
+2.  Buscar <`Authentication`>.  
   
 3.  De las estructuras XML siguientes, copie la que mejor se ajuste a sus necesidades. La primera estructura XML proporciona marcadores de posición para especificar todos los elementos, que se describen en la sección siguiente:  
   
@@ -68,9 +68,9 @@ ms.locfileid: "48071295"
   
 4.  Péguela sobre las entradas existentes para <`Authentication`>.  
   
-     Si usa varios tipos de autenticación, agregue simplemente el `RSWindowsBasic` elemento pero no elimine las entradas de `RSWindowsNegotiate`, `RSWindowsNTLM`, o `RSWindowsKerberos`.  
+     Si usa varios tipos de autenticación, basta con que agregue el elemento `RSWindowsBasic`, pero no elimine las entradas correspondientes a `RSWindowsNegotiate`, `RSWindowsNTLM` o `RSWindowsKerberos`.  
   
-     Para admitir el explorador Safari, no puede configurar el servidor de informes de modo que use varios tipos de autenticación. Sólo se debe especificar `RSWindowsBasic` y eliminar las demás entradas.  
+     Para admitir el explorador Safari, no puede configurar el servidor de informes de modo que use varios tipos de autenticación. Debe especificar solo `RSWindowsBasic` y eliminar las demás entradas.  
   
      Observe que no puede utilizar `Custom` con otros tipos de autenticación.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48071295"
   
 |Elemento|Obligatorio|Valores válidos|  
 |-------------|--------------|------------------|  
-|LogonMethod|Sí<br /><br /> Si no especifica un valor, se usará 3.|`2` = Inicio de sesión, diseñado para que servidores de alto rendimiento para autenticar las contraseñas de texto sin formato.<br /><br /> `3` : Inicio de sesión, que conserva las credenciales de inicio de sesión en el paquete de autenticación que se envía con cada solicitud HTTP, permitiendo al servidor suplantar al usuario al conectarse a otros servidores en la red. (Es el valor predeterminado).<br /><br /> Nota: Los valores 0 (para el inicio de sesión interactivo) y 1 (para el inicio de sesión por lotes) no se admiten en [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Sí<br /><br /> Si no especifica un valor, se usará 3.|`2` = inicio de sesión en red; diseñado para servidores de alto rendimiento para autenticar las contraseñas de texto simple.<br /><br /> `3`: inicio de sesión con texto no cifrado, que conserva las credenciales de inicio de sesión en el paquete de autenticación que se envía con cada solicitud HTTP. Esto permite que el servidor suplante al usuario a la hora de establecer la conexión con otros servidores de la red. (Es el valor predeterminado).<br /><br /> Nota: Los valores 0 (para el inicio de sesión interactivo) y 1 (para el inicio de sesión por lotes) no se admiten en [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Dominio|Opcional|Especifica una partición de recurso que incluye características de autorización y de autenticación que se utilizan para controlar el acceso a los recursos protegidos de una organización.|  
 |DominioPredeterminado|Opcional|Especifica el dominio que utiliza el servidor para autenticar al usuario. Este valor es opcional, pero si lo omite, el servidor de informes utilizará el nombre de equipo como dominio. Si el equipo es miembro de dominio, ese dominio es el predeterminado. Si instaló el servidor de informes en un controlador de dominio, el dominio que se utilizará será el controlado por el equipo .|  
   
@@ -136,13 +136,13 @@ ms.locfileid: "48071295"
     </configuration>  
     ```  
   
-     Modo de autenticación debe establecerse en `Windows` si incluye un archivo Web.config.  
+     El modo de autenticación debe estar establecido en `Windows` si incluye un archivo Web.config.  
   
      `Identity impersonate` puede ser `True` o `False`.  
   
     -   Establézcalo en `False` si no desea que ASP.NET lea el token de seguridad. La solicitud se ejecutará en el contexto de seguridad del servicio del servidor de informes.  
   
-    -   Establézcalo en `True` si desea que ASP.NET lea el token de seguridad desde el nivel de host. Si lo establece en `True`, también debe especificar `userName` y `password` para designar una cuenta anónima. Las credenciales que especifique determinarán el contexto de seguridad bajo el que se emite la solicitud.  
+    -   Establézcalo en `True` si desea que ASP.NET lea el token de seguridad del nivel de host. Si lo establece en `True`, también debe especificar `userName` y `password` para designar una cuenta anónima. Las credenciales que especifique determinarán el contexto de seguridad bajo el que se emite la solicitud.  
   
 5.  Guarde el archivo Web.config en la carpeta ReportBuilder\bin.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48071295"
 8.  Reinicie el servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  
- [Dominios de aplicación para las aplicaciones de servidor de informes](../report-server/application-domains-for-report-server-applications.md)   
+ [Dominios de aplicación para las aplicaciones del servidor de informes](../report-server/application-domains-for-report-server-applications.md)   
  [Seguridad y protección de Reporting Services](reporting-services-security-and-protection.md)  
   
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e531467e69271eacd535fbfd59e127d73513cf2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 44bf77f23724f51ddc75f708e5663b43e607df0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023916"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
   Esta sección contiene temas sobre el procesamiento, la supervisión y el control de las suscripciones. La administración de suscripciones se realiza de forma distinta para las suscripciones estándar y las controladas por datos. Las suscripciones estándar suelen ser propiedad de un usuario que las administra. Por el contrario, las suscripciones controladas por datos suelen ser creadas y mantenidas por el administrador de un servidor de informes.  

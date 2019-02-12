@@ -9,17 +9,17 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0704648805ce9538e16ec504a8c3508b71f1c6ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e1f048a91f8e20255050772f1503e6dfa387954b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053745"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017356"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exportar un informe como otro tipo de archivo (Generador de informes y SSRS)
-  Puede representar el informe en otro formato de archivo, como CSV, Imagen, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)] o [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] mientras obtiene una vista previa del mismo en el Generador de informes o el Diseñador de informes, o puede representar el informe mientras lo ve en el servidor de informes. Representar el informe en un formato concreto resulta útil si se desea guardar el informe de manera inmediata como otro tipo de archivo sin publicarlo en el servidor de informes o si se desea ver el aspecto que presentará su diseño cuando se entregue a los lectores en un formato determinado. Representar el informe en el servidor de informes resulta útil si se configuran suscripciones o se entregan informes a través del correo electrónico o si se desea guardar un informe que está disponible en el servidor de informes. Para obtener más información, vea [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
+  Puede representar el informe en otro formato de archivo, como CSV, Imagen, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)]o [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]mientras obtiene una vista previa del mismo en el Generador de informes o el Diseñador de informes, o puede representar el informe mientras lo ve en el servidor de informes. Representar el informe en un formato concreto resulta útil si se desea guardar el informe de manera inmediata como otro tipo de archivo sin publicarlo en el servidor de informes o si se desea ver el aspecto que presentará su diseño cuando se entregue a los lectores en un formato determinado. Representar el informe en el servidor de informes resulta útil si se configuran suscripciones o se entregan informes a través del correo electrónico o si se desea guardar un informe que está disponible en el servidor de informes. Para obtener más información, vea [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  

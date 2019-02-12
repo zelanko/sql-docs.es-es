@@ -1,7 +1,7 @@
 ---
 title: GetDescendant (motor de base de datos) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64e16514d4f78009522de651f55f8749d6b70319
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 28face7dd893a43b9167ff162a3c741b99c65eab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695781"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018876"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ VALUES
 'adventure-works\FirstNewEmployee', 'Application Intern', '3/11/07') ;  
 ```  
   
-### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. Insertar una fila como un nodo más descendiente  
+### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>b. Insertar una fila como un nodo más descendiente  
 Se contrata a otro empleado nuevo, que es subordinado del mismo jefe que en el ejemplo A. Ejecute el siguiente código para insertar la fila nueva con el método GetDescendant, usando el argumento child1 para especificar que el nodo de la nueva fila vendrá después del nodo del ejemplo A, convirtiéndose en `/3/1/2/`:
   
 ```sql

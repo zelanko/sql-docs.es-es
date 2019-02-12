@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512050"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019696"
 ---
 # <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
   En este tema se describe cómo realizar la búsqueda de coincidencias de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias identifica los clústeres de registros coincidentes en función de las reglas de coincidencia existentes en la directiva de coincidencia, designa un registro de cada clúster como el registro que permanece basándose en una regla de permanencia, y exporta los resultados. DQS realiza el proceso de búsqueda de coincidencias, también denominado eliminación de datos duplicados, en un proceso asistido por PC, pero es usted quien crea las reglas de coincidencia de forma interactiva y quien selecciona la regla de permanencia entre varias opciones, por lo que también es quien controla el proceso de búsqueda de coincidencias.  
@@ -164,7 +164,7 @@ ms.locfileid: "52512050"
     > [!NOTE]  
     >  Si finaliza un proyecto de búsqueda de coincidencias y, más adelante, lo vuelve a utilizar, este usará la base de conocimiento que tenía cuando se publicó. No usará ninguno de los cambios realizados en la base de conocimiento desde la finalización del proyecto. Para utilizar estos cambios, o para utilizar una base de conocimiento nueva, tendrá que crear un proyecto de búsqueda de coincidencias nuevo. Por otro lado, si ha creado, pero no finalizado, un proyecto de búsqueda de coincidencias, los cambios que haya publicado en la directiva de coincidencia se utilizarán si ejecuta la búsqueda de coincidencias en el proyecto.  
   
-##  <a name="FollowUp"></a> Sigue: Después de ejecutar un proyecto de coincidencia  
+##  <a name="FollowUp"></a> Seguimiento: Después de ejecutar un proyecto de coincidencia  
  Después de ejecutar un proyecto de búsqueda de coincidencias, puede cambiar la directiva de coincidencia en la base de conocimiento y crear y ejecutar otro proyecto de búsqueda de coincidencias basado en la directiva de coincidencia actualizada. Para obtener más información, consulte [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Pestañas Generador de perfiles y Resultados  

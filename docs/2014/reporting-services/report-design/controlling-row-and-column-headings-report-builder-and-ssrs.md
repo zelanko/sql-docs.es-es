@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b8732495ad9eadf6660104f9a3edb4c991dce800
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f844db8f44e501ef373de73d0b0676730877db62
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183475"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019936"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controlar los encabezados de fila y de columna (Generador de informes y SSRS)
   Una región de datos de tabla, de matriz o de lista puede abarcar varias páginas en horizontal o vertical. Puede especificar si los encabezados de fila o de columna se repiten en cada página. En un representador interactivo como el Administrador de informes o la vista previa del informe también puede especificar si inmovilizar o no los encabezados de filas o de columnas para mantenerlos a la vista al desplazarse por un informe. En una tabla o matriz, la primera fila suele contener los encabezados de columna que etiquetan los datos de cada columna; la primera columna suele contener los encabezados de fila que etiquetan los datos de cada fila. En los grupos anidados, es posible que desee repetir el conjunto inicial de encabezados de fila y columna que contienen etiquetas de grupo. De forma predeterminada, una región de datos de lista no incluye encabezados.  
@@ -113,7 +113,7 @@ ms.locfileid: "48183475"
   
  ![Grupo de fila, modo avanzado con miembros estáticos](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Grupo de fila, modo avanzado con miembros estáticos")  
   
- Se muestran cuatro miembros Tablix: **Estático**, (**Estático**), Categoría y (**Detalles**). Un miembro Tablix que incluya paréntesis () indica que no hay un encabezado de grupo correspondiente. Si desea repetir o inmovilizar los encabezados de columna, seleccione el miembro Tablix Estático y establezca propiedades en el panel de propiedades.  
+ Se muestran cuatro miembros Tablix: **Estática**, (**estático**), categoría, y (**detalles**). Un miembro Tablix que incluya paréntesis () indica que no hay un encabezado de grupo correspondiente. Si desea repetir o inmovilizar los encabezados de columna, seleccione el miembro Tablix Estático y establezca propiedades en el panel de propiedades.  
   
  [Volver al principio](#Top)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "48183475"
   
  ![Grupos de fila, avanzados, sin encabezado de grupo.](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Grupos de fila, avanzados, sin encabezado de grupo")  
   
- En el panel Grupos de filas, se enumeran los siguientes miembros Tablix: (**Estático**), (Categoría), (**Estático**) y (**Detalles**). Si quiere repetir o inmovilizar los encabezados de columna, seleccione el miembro Tablix (**Estático**) superior y establezca propiedades en el panel de propiedades.  
+ En el panel Grupos de filas, se enumeran los siguientes miembros Tablix: (**Estático**), (categoría), (**estático**), y (**detalles**). Si quiere repetir o inmovilizar los encabezados de columna, seleccione el miembro Tablix (**Estático**) superior y establezca propiedades en el panel de propiedades.  
   
  [Volver al principio](#Top)  
   

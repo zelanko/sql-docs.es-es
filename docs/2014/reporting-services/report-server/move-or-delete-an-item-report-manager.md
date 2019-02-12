@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d049c93c74ebc60b708ab9c5f1b5da37b5a6d924
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03107ceb9c09cd3a48a0d547882b02b951d4d3c2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056265"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020156"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover o eliminar un elemento (Administrador de informes)
   Los informes y los elementos relacionados con los informes que se publican en un servidor de informes se almacenan en carpetas. Puede mover los elementos a una carpeta diferente, y el servidor de informes se ocupará de mantener las referencias a ellos automáticamente. Antes de eliminar un elemento, piense si otros elementos dependen de él.  
@@ -38,7 +38,7 @@ ms.locfileid: "48056265"
 |![Icono de origen de datos compartido](../media/hlp-16datasource.png "Icono de origen de datos compartido")|Origen de datos compartido|  
 ||Conjunto de datos compartidos|  
   
- No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Este permiso se concede mediante la selección de las siguientes tareas durante la asignación de roles del elemento en cuestión: "Administrar informes", "Administrar modelos", "Administrar carpetas" y "Administrar orígenes de datos".  
+ No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Permiso para mover un elemento se muestra cuando se seleccionan las siguientes tareas en la asignación de roles para el elemento en cuestión: "Administrar informes," "Administrar modelos", "Administran carpetas" y "Administración orígenes de datos".  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>Para mover un elemento de la página Contenido  
   

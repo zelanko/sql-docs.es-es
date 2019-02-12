@@ -3,7 +3,6 @@ title: Enlazar datos relacionales dentro de datos XML | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35fb6b6485578defa05c2e54d4797d9994af4225
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44eba48983d2dd9e3610b5534997ca6a4a3849b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713113"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019076"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Enlazar datos relacionales dentro de datos XML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1
   
  **sql:column()** se puede usar de manera similar y ofrece otras ventajas. Los índices de la columna favorecen la eficiencia, según lo decida el optimizador de consultas basado en costos. Además, la columna calculada puede almacenar una propiedad promocionada.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)  
   
   

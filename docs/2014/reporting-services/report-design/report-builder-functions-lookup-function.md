@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217505"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026047"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Función Lookup (Generador de informes y SSRS)
   Devuelve el primer valor coincidente para el nombre especificado de un conjunto de datos que contiene pares nombre/valor.  
@@ -45,10 +45,10 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  Una constante que especifica el nombre de un conjunto de datos del informe. Por ejemplo, "Productos".  
   
 ## <a name="return"></a>Devolución  
- Devuelve un `Variant`, o `Nothing` si no hay ninguna coincidencia.  
+ Devuelve `Variant` o `Nothing` si no hay ninguna coincidencia.  
   
 ## <a name="remarks"></a>Comentarios  
- Use `Lookup` para recuperar el valor del conjunto de datos especificado para un par nombre/valor donde hay una relación de 1 a 1. Por ejemplo, para un campo de identificador, puede usar `Lookup` para recuperar el campo Name correspondiente de un conjunto de datos que no está enlazado a la región de datos.  
+ Use `Lookup` para recuperar el valor del conjunto de datos especificado correspondiente a un par nombre/valor donde hay una relación de uno a uno. Por ejemplo, para un campo de identificador, puede usar `Lookup` para recuperar el campo Name correspondiente de un conjunto de datos que no está enlazado a la región de datos.  
   
  `Lookup` hace lo siguiente:  
   
@@ -72,7 +72,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Las expresiones de origen, destino y resultado no pueden incluir referencias a variables de informe o de grupo.  
   
--   `Lookup` no se puede usar como una expresión para los elementos de informe siguientes:  
+-   `Lookup` no se puede usar como una expresión para los siguientes elementos de informe:  
   
     -   Cadenas de conexión dinámicas para un origen de datos.  
   
@@ -98,9 +98,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

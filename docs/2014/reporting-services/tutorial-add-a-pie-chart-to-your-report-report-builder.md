@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar un gráfico circular a un informe (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Agregar un gráfico circular a un informe (generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 12c567f91d526d3ac44485704f7c76fdfa345c11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202535"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020106"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico circular a un informe (Generador de informes)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico circular a un informe (generador de informes)
   Los gráficos circulares y los gráficos de anillos muestran los datos como una proporción del total. Los gráficos circulares se usan normalmente para realizar comparaciones entre grupos. Los gráficos circulares y de anillos, junto con los gráficos de pirámide y embudo, forman un grupo de gráficos conocidos como gráficos de formas. Los gráficos de formas no tienen ejes. Cuando se coloca un campo numérico en un gráfico de formas, el gráfico calcula el porcentaje de cada valor en relación con el total.  
   
  Si hay demasiados puntos de datos en un gráfico circular, es posible que las etiquetas de los puntos de datos estén demasiado amontonadas y no puedan leerse. En ese caso, considere la posibilidad de usar un gráfico de líneas. Considere usar únicamente gráficos circulares después de haber agregado los datos en algunos puntos de datos.  
@@ -45,7 +45,7 @@ ms.locfileid: "48202535"
 7.  [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se encuentran reunidos en dos procedimientos. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, agregar un origen de datos y agregar un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se encuentran reunidos en dos procedimientos. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, agregar un origen de datos y agregar un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 10 minutos  
   

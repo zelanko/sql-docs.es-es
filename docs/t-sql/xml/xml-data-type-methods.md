@@ -3,7 +3,6 @@ title: Métodos de tipo de datos xml | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bee0dcb0b0673d9ea565e0c4ed6b05c4573633e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 715effa0eb16a298f5064f08d2751df07bfa8677
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674103"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020217"
 ---
 # <a name="xml-data-type-methods"></a>Métodos de tipo de datos xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ FROM   Table
 > [!NOTE]  
 >  Los métodos de tipo de datos **xml** **query()**, **value()** y **exist()** devuelven NULL si se ejecutan en una instancia NULL de XML. Además, **modify()** no devuelve ningún resultado, pero **nodes()** devuelve conjuntos de filas y un conjunto de filas vacío con una entrada NULL.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md)  
   

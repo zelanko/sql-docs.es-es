@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627c3d071609b1b0053e7f8b79d20b9bff08c921
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505576"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019676"
 ---
 # <a name="perform-knowledge-discovery"></a>Realizar la detección de conocimiento
   En este tema se describe cómo crear una base de conocimiento mediante la detección de conocimiento. Durante el proceso de detección, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analiza los datos de un origen de datos de ejemplo mediante un proceso asistido por PC, y agrega el conocimiento adquirido a la base de conocimiento. Este conocimiento se puede modificar y mejorar en el paso **Administrar valores del dominio** de la actividad de detección de conocimiento, o en la actividad de administración de dominios.  
@@ -171,7 +171,7 @@ ms.locfileid: "52505576"
   
     -   **Establecer el valor de dominio seleccionado como valor principal de su grupo**: Cambiar el valor inicial del grupo seleccionando un valor en el grupo que no se haya designado como valor inicial y, a continuación, haga clic en el **establecer el valor de dominio seleccionado como valor inicial de su grupo** botón.  
   
-6.  **Corrector ortográfico**: Si ha habilitado el corrector ortográfico en la página de propiedades del dominio, busque los valores que tienen un subrayado rojo ondulado, el valor que indica que el corrector ortográfico está sugiriendo una corrección. Haga clic con el botón secundario en el valor subrayado y seleccione una corrección si es necesario. El tipo de valor pasará a ser (o permanecerá como) erróneo, y la corrección se agregará a la columna **Corregir a** . Haga clic en la flecha abajo para ver correcciones propuestas adicionales. Escriba manualmente una corrección para agregarla al diccionario del corrector ortográfico y poder seleccionarla como corrección. Para obtener más información, consulte [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) y [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+6.  **Speller**: Si ha habilitado el corrector ortográfico en la página de propiedades del dominio, busque los valores que tienen un subrayado rojo ondulado, el valor que indica que el corrector ortográfico está sugiriendo una corrección. Haga clic con el botón secundario en el valor subrayado y seleccione una corrección si es necesario. El tipo de valor pasará a ser (o permanecerá como) erróneo, y la corrección se agregará a la columna **Corregir a** . Haga clic en la flecha abajo para ver correcciones propuestas adicionales. Escriba manualmente una corrección para agregarla al diccionario del corrector ortográfico y poder seleccionarla como corrección. Para obtener más información, consulte [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) y [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Para utilizar el corrector ortográfico, puede habilitarlo en la página **Propiedades del dominio** o, si está deshabilitado en la página **Propiedades del dominio** , puede hacer clic en el icono **Habilitar o deshabilitar el corrector ortográfico** de la página **Administrar resultados de detección de datos** para habilitarlo en esta página.  
@@ -186,7 +186,7 @@ ms.locfileid: "52505576"
   
 11. Haga clic en **Finalizar** para completar la actividad de detección de conocimiento. Se mostrará un cuadro emergente si no ha revisado cada uno de los dominios. Haga clic en **Sí** para seguir con la revisión o en **No** para continuar. Si hace clic en No, aparecerá un cuadro emergente con las opciones siguientes:  
   
-    1.  **Publicar**: Se publicará la base de conocimiento para que el usuario actual u otros usuarios puedan usar. La base de conocimiento no se bloqueará, su estado se establecerá en "vacía" (en la tabla de bases de conocimiento), y las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio. Para completar el proceso, haga clic en **Sí** en el menú emergente.  
+    1.  **Publish**: Se publicará la base de conocimiento para que el usuario actual u otros usuarios puedan usar. La base de conocimiento no se bloqueará, su estado se establecerá en "vacía" (en la tabla de bases de conocimiento), y las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio. Para completar el proceso, haga clic en **Sí** en el menú emergente.  
   
     2.  **No**: Se guardará su trabajo, la base de conocimiento permanecerá bloqueada y el estado de la base de conocimiento se establecerá en el trabajo. Las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "52505576"
   
     -   Haga clic en **Atrás** para volver a la página **Detectar** . Después de hacer clic **cerrar**, para realizar la actividad de administración de dominios, tendría que hacer clic en **Knowledgediscovery** desde el **abrir base de conocimiento** pantalla, continúe con el **Administración de la Base de conocimiento: Administrar términos del dominio** pantalla, haga clic en **finalizar**y, a continuación, haga clic en **Sí** para publicar la base de conocimiento o **No** para guardar el trabajo en la base de conocimiento y salir.  
   
-##  <a name="FollowUp"></a> Sigue: Después de realizar la detección de conocimiento  
+##  <a name="FollowUp"></a> Seguimiento: Después de realizar la detección de conocimiento  
  Una vez agregado el conocimiento a la base de conocimiento durante el proceso de detección de conocimiento asistido por PC, puede utilizar la base de conocimiento para un proyecto de limpieza de forma inmediata, o puede realizar antes la administración de dominios. Para más información sobre la limpieza de datos o la administración de dominios, vea [Limpieza de datos](../../2014/data-quality-services/data-cleansing.md) o [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Meaning"></a> El significado de los valores Correcto, Error y No válido  

@@ -11,14 +11,14 @@ f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 496b94444e79666c0ce57904f5ef6d7da81ed26f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c42d509f3ef228b08555c26f5fdfc6ddd62a0c8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905085"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022136"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Propiedades del informe (cuadro de diálogo), Configurar página (Generador de informes)
   Seleccione **Configurar página** en el **propiedades del informe**, cuadro de diálogo para establecer las opciones de página para todo el informe.  
@@ -51,10 +51,10 @@ ms.locfileid: "48905085"
  **parte inferior**  
  Define la distancia entre la parte inferior del informe y la parte inferior de la última línea del mismo.  
   
- **Izquierda**  
+ **Left**  
  Define la distancia entre el borde izquierdo del informe y el borde izquierdo de las filas del mismo.  
   
- **Correcto**  
+ **Right**  
  Define la distancia entre el borde derecho del informe y el borde derecho de las filas del mismo.  
   
 ## <a name="see-also"></a>Vea también  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 785557e57defba45f23c7a4abb041d4e8ba04884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b73227ae13d9534a98e4fc68030f5447f8db9cf7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165335"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023516"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Subinformes (Generador de informes y SSRS)
   Un subinforme es un elemento de informe que muestra otro informe dentro del cuerpo del informe principal. Como concepto, un subinforme de un informe es como un marco en una página web. Se utiliza para incrustar un informe dentro de un informe. Cualquier informe puede utilizarse como subinforme. El informe que se muestra como el subinforme se almacena en un servidor de informes, normalmente en la misma carpeta que el informe primario. Es posible diseñar el informe primario para que pase sus parámetros al subinforme. Este tipo de informe puede repetirse dentro de las regiones de datos mediante un parámetro que filtre los datos de cada instancia del subinforme.  
@@ -36,7 +36,7 @@ ms.locfileid: "48165335"
   
  Utilice regiones de datos para anidar grupos de datos del mismo origen de datos en una única región de datos. Utilice subinformes para anidar grupos de datos de distintos orígenes de datos en una única región de datos, volver a utilizar un subinforme en varios informes primarios o mostrar un informe independiente dentro de otro informe. Por ejemplo, puede crear un "libro de instrucciones" mediante la inclusión de varios subinformes en el cuerpo de otro informe.  
   
- Las regiones de datos ofrecen casi la misma funcionalidad y flexibilidad que los subinformes, pero con un mejor rendimiento. Puesto que el servidor de informes procesa cada instancia de un subinforme como un informe independiente, el rendimiento se puede ver afectado. Para obtener más información, vea [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
+ Las regiones de datos ofrecen casi la misma funcionalidad y flexibilidad que los subinformes, pero con un mejor rendimiento. Puesto que el servidor de informes procesa cada instancia de un subinforme como un informe independiente, el rendimiento se puede ver afectado. Para más información, vea [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="using-parameters-in-subreports"></a>Usar parámetros en subinformes  
  Para pasar parámetros del informe primario al subinforme, defina un parámetro de informe en el informe que utiliza como subinforme. Cuando se coloca el subinforme en el informe primario, se puede seleccionar el parámetro de informe y el valor que se van a pasar desde el informe primario al parámetro de informe del subinforme.  
@@ -56,6 +56,6 @@ ms.locfileid: "48165335"
  En el Generador de informes, para obtener una vista previa de un subinforme en un informe principal, ambos informes se deben encontrar en el mismo servidor de informes o se debe especificar una ruta de acceso completa al subinforme.  
   
 ## <a name="see-also"></a>Vea también  
- [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;generador de informes y SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

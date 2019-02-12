@@ -1,9 +1,9 @@
 ---
-title: Sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ddc8e7ee7f160d6673e9a698075e923740041b8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 756943d49a794781d9422071dd5e233ce4e37806
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663024"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027366"
 ---
-# <a name="sysdmpdwdmsworkers-transact-sql"></a>Sys.dm_pdw_dms_workers (Transact-SQL)
+# <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene información sobre todos los trabajadores DMS de pasos.  
@@ -37,7 +37,7 @@ ms.locfileid: "51663024"
 |bytes_per_sec|**bigint**|Rendimiento de lectura o escritura en el último segundo.|Mayor o igual que 0. Es NULL si se ha cancelado o error antes de que el trabajador se pudo ejecutar la consulta.|  
 |bytes_processed|**bigint**|Número total de bytes procesado por este trabajador.|Mayor o igual que 0. Es NULL si se ha cancelado o error antes de que el trabajador se pudo ejecutar la consulta.|  
 |rows_processed|**bigint**|Número de filas leídas o escritas para este trabajo.|Mayor o igual que 0. Es NULL si se ha cancelado o error antes de que el trabajador se pudo ejecutar la consulta.|  
-|start_time|**datetime**|Hora en que empezó la ejecución de este trabajador.|Mayor o igual a la hora de inicio de este trabajo pertenece el paso de consulta. Consulte [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|start_time|**datetime**|Hora en que empezó la ejecución de este trabajador.|Mayor o igual a la hora de inicio de este trabajo pertenece el paso de consulta. See [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Hora a la que finalizó la ejecución, no se pudo o se ha cancelado.|NULL para los trabajadores en curso o en cola. En caso contrario, es mayor que start_time.|  
 |total_elapsed_time|**int**|Tiempo total empleado en ejecución, en milisegundos.|Mayor o igual que 0.<br /><br /> Tiempo total transcurrido desde que el sistema, iniciar o reiniciar. Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), provocará el error de materialización debido al desbordamiento.<br /><br /> El valor máximo en milisegundos equivale a 24,8 días.|  
 |cpu_time|**bigint**|Tiempo de CPU utilizado por este trabajo, en milisegundos.|Mayor o igual que 0.|  

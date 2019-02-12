@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0bfe72762875d2c92b78a985a5b8239eefd9256a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d726e3982636b89819afed3a8500a581eebffc13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182705"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019626"
 ---
 # <a name="msreportserverconfigurationsetting-methods"></a>Métodos MSReportServer_ConfigurationSetting
   La clase MSReportServer_ConfigurationSetting del proveedor de WMI del servidor de informes proporciona los siguientes métodos públicos.  
@@ -67,6 +67,6 @@ ms.locfileid: "48182705"
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|Hace que el servicio del servidor de informes se ejecute como el usuario de Windows especificado y concede a esta cuenta suficientes permisos de sistema de archivos para que el servidor de informes pueda funcionar.|  
   
 ## <a name="see-also"></a>Vea también  
- [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting Class](msreportserver-configurationsetting-class.md)  
   
   

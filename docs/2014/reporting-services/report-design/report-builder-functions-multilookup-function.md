@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147462"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021610"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Función Multilookup (Generador de informes y SSRS)
   Devuelve el conjunto de valores de primera coincidencia para el conjunto especificado de nombres a partir de un conjunto de datos que contiene pares nombre/valor.  
@@ -33,7 +33,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>Parámetros  
  *source_expression*  
- (`VariantArray`) Una expresión que se evalúa en el ámbito actual y que especifica el conjunto de nombres o claves para buscar. Por ejemplo, para un parámetro de varios valores, `=Parameters!IDs.value`.  
+ (`VariantArray`) Una expresión que se evalúa en el ámbito actual y que especifica el conjunto de nombres o claves que se buscará. Por ejemplo, para un parámetro de varios valores, `=Parameters!IDs.value`.  
   
  *destination_expression*  
  (`Variant`) Una expresión que se evalúa para cada fila de un conjunto de datos y que especifica el nombre o la clave que se hará coincidir. Por ejemplo, `=Fields!ID.Value`.  
@@ -45,10 +45,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  Una constante que especifica el nombre de un conjunto de datos del informe. Por ejemplo, "Colores".  
   
 ## <a name="return"></a>Devolución  
- Devuelve un `VariantArray`, o `Nothing` si no hay ninguna coincidencia.  
+ Devuelve `VariantArray` o `Nothing` si no hay ninguna coincidencia.  
   
 ## <a name="remarks"></a>Comentarios  
- Use `Multilookup` para recuperar un conjunto de valores de un conjunto de datos para los pares de nombre-valor donde cada par tiene una relación de 1 a 1. `MultiLookup` es el equivalente de llamar a `Lookup` para un conjunto de nombres o claves. Por ejemplo, para un parámetro de varios valores que se basa en identificadores de clave principal, puede usar `Multilookup` en una expresión en un cuadro de texto en una tabla para recuperar los valores asociados de un conjunto de datos que no está enlazado al parámetro ni a la tabla.  
+ Use `Multilookup` para recuperar un conjunto de valores de un conjunto de datos para los pares de nombre-valor donde cada par tiene una relación 1 a 1. `MultiLookup` es equivalente de llamar `Lookup` para un conjunto de nombres o de claves. Por ejemplo, para un parámetro de varios valores que se base en identificadores de clave principal, puede usar `Multilookup` en una expresión de un cuadro de texto en una tabla para recuperar los valores asociados de un conjunto de datos que no esté enlazado al parámetro ni a la tabla.  
   
  `Multilookup` hace lo siguiente:  
   
@@ -62,7 +62,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Se aplican las siguientes restricciones:  
   
--   `Multilookup` se evalúa después de aplicarán todas las expresiones de filtro  
+-   Se evalúa `Multilookup` después de aplicar todas las expresiones de filtro.  
   
 -   Solo se admite un nivel de búsqueda. Un origen, un destino o una expresión de resultado no pueden incluir una referencia a una función de búsqueda.  
   
@@ -70,7 +70,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Las expresiones de origen, destino y resultado no pueden incluir referencias a variables de informe o de grupo.  
   
--   `Multilookup` no se puede usar como una expresión para los elementos de informe siguientes:  
+-   `Multilookup` no se puede usar como una expresión para los siguientes elementos de informe:  
   
     -   Cadenas de conexión dinámicas para un origen de datos.  
   
@@ -96,9 +96,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|Componentes|  
   
- Para buscar los nombres que corresponden a la lista de identificadores, use `Multilookup`. Primero debe dividir la lista en una matriz de cadenas, llamada `Multilookup` para recuperar los nombres de categoría y concatenar los resultados en una cadena.  
+ Para buscar los nombres que corresponden a la lista de identificadores, use `Multilookup`. Primero debe dividir la lista en una matriz de cadenas, llamar a `Multilookup` para recuperar los nombres de categoría y concatenar los resultados en una cadena.  
   
  La expresión siguiente, cuando se coloca en un cuadro de texto en una región de datos enlazada al conjunto de datos Category, muestra "Bikes, Components, Bikes, Accessories":  
   
@@ -124,9 +124,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

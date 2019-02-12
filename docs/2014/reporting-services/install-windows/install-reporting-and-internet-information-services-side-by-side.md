@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8b9724139d6a89e345d1a8dd0c967f51afe5f8c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9fed65b504d8e76cdd6c827126ab752950ae821c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183485"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025376"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Instalar Reporting Services e Internet Information Services en paralelo (modo nativo de SSRS)
   Puede instalar y ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) e Internet Information Services (IIS) en el mismo equipo. La versión de IIS que utilice determinará los problemas de interoperabilidad que debe tratar.  
@@ -50,12 +50,12 @@ ms.locfileid: "48183485"
 |http://+:80|Recibe solicitudes que aún no se han recibido por otras aplicaciones, para cualquier extremo de aplicación asignado a **Todas asignadas**.|  
 |http://*:80|Recibe solicitudes que aún no se han recibido por otras aplicaciones, para cualquier extremo de aplicación asignado a **Todas sin asignar**.|  
   
- Una indicación de que hay un conflicto en el puerto es que verá el siguiente mensaje de error: 'System.IO.FileLoadException: El proceso no puede tener acceso al archivo porque está siendo utilizado en otro proceso. (Excepción de HRESULT: 0x80070020).'.  
+ Una indicación de un conflicto de puerto es que verá el mensaje de error siguiente: 'System.IO.FileLoadException: El proceso no puede acceder al archivo porque otro proceso lo está usando. (Excepción de HRESULT: 0x80070020).'  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>Reservas de direcciones URL para IIS 6.0, 7.0, 8.0 y 8.5 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
  Dadas las reglas de prioridad descritas en la sección anterior, puede empezar a entender cómo las reservas de direcciones URL definidas para Reporting Services e IIS promueven la interoperabilidad. Reporting Services recibe las solicitudes que especifican explícitamente los nombres de directorio virtual para sus aplicaciones; IIS recibe todas las solicitudes restantes, que se pueden dirigir a continuación a las aplicaciones que se ejecutan dentro del modelo de proceso de IIS.  
   
-|Aplicación|Reserva de direcciones URL|Descripción|Confirmación de solicitud|  
+|Application|Reserva de direcciones URL|Descripción|Confirmación de solicitud|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Servidor de informes|http://+:80/ReportServer|Carácter comodín fuerte en el puerto 80, con directorio virtual del servidor de informes.|Recibe todas las solicitudes del puerto 80 que especifican el directorio virtual del servidor de informes. El servicio web del servidor de informes recibe todas las solicitudes para http://\<nombreDeEquipo>/reportserver.|  
 |Administrador de informes|http://+:80/Reports|Carácter comodín fuerte en el puerto 80, con directorio virtual Reports.|Recibe todas las solicitudes del puerto 80 que especifican el directorio virtual de informes. El Administrador de informes recibe todas las solicitudes para http://\<nombreDeEquipo > / reports.|  
@@ -74,13 +74,13 @@ ms.locfileid: "48183485"
   
  Para asegurarse de que todas las aplicaciones reciben solicitudes, siga estas directrices:  
   
--   Para las instalaciones de Reporting Services, use nombres de directorios virtuales que no haya usado previamente ningún sitio web de IIS en el mismo puerto que Reporting Services. Si se produce un conflicto, instale Reporting Services en el modo "solo archivos" (mediante la opción "Instalar, pero no configurar el servidor de informes" del Asistente para la instalación), de manera que pueda configurar los directorios virtuales una vez finalizada la instalación. Una indicación de que hay un conflicto en la configuración es que verá el siguiente mensaje de error: System.IO.FileLoadException: El proceso no puede tener acceso al archivo porque está siendo utilizado en otro proceso. (Excepción de HRESULT: 0x80070020).  
+-   Para las instalaciones de Reporting Services, use nombres de directorios virtuales que no haya usado previamente ningún sitio web de IIS en el mismo puerto que Reporting Services. Si se produce un conflicto, instale Reporting Services en el modo "solo archivos" (mediante la opción "Instalar, pero no configurar el servidor de informes" del Asistente para la instalación), de manera que pueda configurar los directorios virtuales una vez finalizada la instalación. Una indicación de que la configuración tiene un conflicto es que verá el mensaje de error: System.IO.FileLoadException: El proceso no puede acceder al archivo porque otro proceso lo está usando. (Excepción de HRESULT: 0x80070020).  
   
 -   Para las instalaciones que configure manualmente, adopte las convenciones de nomenclatura predeterminadas en las direcciones URL que configure. Si instala [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] como una instancia con nombre, incluya el nombre de la instancia al crear un directorio virtual.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las direcciones URL de servidor de informes &#40;Administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Instalar el servidor de informes de modo nativo de Reporting Services](install-reporting-services-native-mode-report-server.md)  
+ [Instalar el servidor de informes en modo nativo de Reporting Services](install-reporting-services-native-mode-report-server.md)  
   
   

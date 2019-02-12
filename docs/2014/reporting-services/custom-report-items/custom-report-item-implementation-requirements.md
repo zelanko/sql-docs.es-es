@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 534197a9ed148685d58c5f3ff17b6b329e9ee913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: dc2898fd9bca67b0b6838e685ad0cb7e2739e3c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219475"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029816"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Requisitos de implementación de elementos de informe personalizados
   En este tema se explican los requisitos previos para desarrollar e implementar elementos de informe personalizados.  
@@ -50,7 +50,7 @@ ms.locfileid: "48219475"
 ## <a name="see-also"></a>Vea también  
  [Creación de un componente de tiempo de ejecución de elemento de informe personalizado](creating-a-custom-report-item-run-time-component.md)   
  [Creación de un componente de tiempo de diseño de elemento de informe personalizado](creating-a-custom-report-item-design-time-component.md)   
- [Cómo implementar un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)   
+ [Cómo: Implementar un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)   
  [Bibliotecas de clases de elemento de informe personalizado](custom-report-item-class-libraries.md)  
   
   

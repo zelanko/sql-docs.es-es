@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45acf7bef608bb23d697fc18381872f741cc2e21
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401370"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013746"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Explorar el modelo de árbol de decisión (tutorial básico de minería de datos)
   El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../includes/msconame-md.md)] predice qué columnas influyen en la decisión de comprar una bicicleta en función de las columnas restantes del conjunto de entrenamiento.  

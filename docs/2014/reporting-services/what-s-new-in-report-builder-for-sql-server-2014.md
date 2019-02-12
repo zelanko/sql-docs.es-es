@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 06a517f2444c032e52b72f86f115167a0151fea2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b3b79652df1ae0265e281f78626c0f880b21866c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371097"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027866"
 ---
 # <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>¿Qué&#39;s en el generador de informes para SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] presenta diversas características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

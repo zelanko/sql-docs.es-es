@@ -11,14 +11,14 @@ f1_keywords:
 - "10082"
 ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7e6f4a3f590c196731ed186f95cf5dc4078a1fc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4acfe27815dc8eeb2f15a685937d5870fd74368b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504141"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040996"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>Propiedades del informe (cuadro de diálogo), Referencias (Generador de informes)
   Seleccione **Referencias** en el cuadro de diálogo **Propiedades del informe** para agregar o quitar referencias a ensamblados personalizados u otros ensamblados externos, así como instancias de clases personalizadas que las expresiones usarán en la definición de informe. Los ensamblados personalizados no se admiten en el modo local en el Generador de informes. Para crear informes que usan los ensamblados personalizados, use el Diseñador de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

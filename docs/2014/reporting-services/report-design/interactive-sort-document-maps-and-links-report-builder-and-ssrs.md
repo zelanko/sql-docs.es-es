@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 68e73b7fc2d7b1982724da4040c4912473f30d78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 62ed0c324711ab38460c59ecc0e74291a1080d2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352576"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017736"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Ordenación interactiva, mapas de documento y vínculos (Generador de informes y SSRS)
   En entornos basados en web, puede agregar varias características que permitan a los usuarios interactuar con los informes. Los usuarios pueden cambiar el criterio de ordenación de los valores del informe, mostrar u ocultar elementos del informe o hacer clic en vínculos que llevan a otros informes con páginas web. También puede agregar una tabla de contenido o mapa de documento. Los usuarios de los informes pueden hacer clic en los elementos de la tabla de contenido o el mapa de documento para desplazarse a las distintas áreas de un informe.  

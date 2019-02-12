@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b554ec2044e95304c995a0dde7d67c444fa2dc05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: de398500fb9511ae083277e1c23087a743f3d8e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166125"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009637"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>Agregar efectos 3D a un gráfico (Generador de informes y SSRS)
   Se pueden usar efectos tridimensionales (3D) para dar profundidad y agregar impacto visual a un gráfico. Por ejemplo, si desea resaltar un sector específico de un gráfico circular seccionado, puede girar y cambiar la perspectiva del gráfico para que los usuarios se fijen primero en dicho sector. Cuando se aplican efectos 3D al gráfico, se deshabilitan todos los colores de degradado y los estilos de sombreado.  
@@ -30,7 +30,7 @@ ms.locfileid: "48166125"
   
 2.  En **Opciones 3D**, seleccione la opción **Habilitar 3D** .  
   
-3.  (Opcional) En **Opciones 3D**, puede establecer diversas propiedades relacionadas con opciones de ángulos y escenas 3D. Para obtener más información acerca de estas propiedades, vea [3D, bisel y otros efectos a un gráfico &#40;generador de informes y SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md).  
+3.  (Opcional) En **Opciones 3D**, puede establecer diversas propiedades relacionadas con opciones de ángulos y escenas 3D. Para obtener más información sobre estas propiedades, vea [Aplicar 3D, bisel y otros efectos a un gráfico &#40;Generador de informes y SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md).  
   
 4.  Haga clic en **Aceptar**.  
   
@@ -85,8 +85,8 @@ ms.locfileid: "48166125"
     4.  Para la propiedad **DrawingStyle** , especifique el valor **Cylinder** .  
   
 ## <a name="see-also"></a>Vea también  
- [3D, bisel y otros efectos a un gráfico &#40;generador de informes y SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [Aplicar 3D, bisel y otros efectos a un gráfico &#40;Generador de informes y SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Los gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bb79a52e8ce910425de44b5cf475400daa3f40aa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 644b80d6a547c58b058c4c932a261762a0235430
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356538"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032796"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tarea 6: agregar el origen de Excel al flujo de datos
   En esta tarea, agregará un origen de Excel al flujo de datos para leer datos de proveedor del archivo de Excel de origen. El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de Microsoft Excel. Vea el tema [Origen de Excel](../integration-services/data-flow/excel-source.md) para obtener más detalles.  

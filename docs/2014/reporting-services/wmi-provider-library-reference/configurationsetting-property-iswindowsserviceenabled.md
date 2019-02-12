@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8547320f6ac9cda5f98da04209060f433da1436e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 98ac0b972d9833a72345df2603452de5b39abbf0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191765"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027666"
 ---
 # <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>Propiedad IsWindowsServiceEnabled (MSReportServer_ConfigurationSetting de WMI)
   Indica si el servicio Servidor de informes de Windows está habilitado. Solo lectura.  

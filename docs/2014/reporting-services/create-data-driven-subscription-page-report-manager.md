@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d3abebe357646aab1a09e3bc6a59130461d268bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116876"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027046"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Crear suscripción controlada por datos (Administrador de informes)
   Use las páginas Crear suscripción controlada por datos para generar o modificar una suscripción que consulte una base de datos de suscriptor cada vez que se ejecuta la suscripción. Las suscripciones controladas por datos usan los resultados de la consulta para determinar los destinatarios de la suscripción, la configuración de entrega y los valores de parámetro de informe. En tiempo de ejecución, el servidor de informes ejecuta una consulta para obtener los valores utilizados para la configuración de la suscripción. Puede usar las páginas Crear suscripción controlada por datos para definir la consulta y asignar los valores de consulta a la configuración de suscripción. Los valores y las opciones que se especifican para una suscripción controlada por datos se reparten entre varias páginas, de manera similar a un asistente. En total, hay siete páginas.  
@@ -51,9 +51,9 @@ ms.locfileid: "48116876"
  **Especifique cómo se notifica a los destinatarios**  
  Seleccione la extensión de entrega que se va a utilizar para distribuir el informe. Para cada suscripción solo se puede utilizar una extensión de entrega. Las siguientes opciones están disponibles:  
   
--   Seleccione **Recurso compartido del Servidor de informes** para entregar informes a un recurso compartido de archivos. El informe se entregará como un archivo estático, desconectado del servidor de informes. Para obtener más información, vea [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
+-   Seleccione **Recurso compartido del Servidor de informes** para entregar informes a un recurso compartido de archivos. El informe se entregará como un archivo estático, desconectado del servidor de informes. Para más información, consulte [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
   
--   Seleccione **Recurso compartido del Servidor de informes** para entregar informes a una bandeja de entrada de correo electrónico. Para obtener más información, vea [Entrega por correo electrónico en Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Seleccione **Recurso compartido del Servidor de informes** para entregar informes a una bandeja de entrada de correo electrónico. Para más información, consulte [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 -   Seleccione **Proveedor de entrega NULL** para entregar informes a la base de datos del servidor de informes. Esta opción crea instantáneas de informe. Elija esta opción cuando desee cargar previamente en el servidor de informes instantáneas de informe con parámetros o específicas del usuario según una programación determinada. Para más información, vea [Informes almacenados en caché &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
@@ -148,11 +148,11 @@ ms.locfileid: "48116876"
 ## <a name="schedule-a-subscription-page-7"></a>Programar una suscripción (página 7)  
  Si programa la suscripción, debe especificar la frecuencia con la que se entrega el informe. El primer conjunto de opciones especifica una categoría de frecuencia (horaria, diaria, semanal, etc.). El segundo conjunto de opciones que aparece se basa en la selección inicial.  
   
- **Por hora**  
+ **Hourly**  
  Defina una programación que se ejecute a intervalos de horas.  
   
  **Diaria**  
- Defina una programación que se ejecute los días seleccionados a una hora específica. Puede especificar los días de las siguientes maneras: cada  *\<día >*, todos los días laborables y cada  *\<número >* día. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
+ Defina una programación que se ejecute los días seleccionados a una hora específica. Puede especificar los días de las maneras siguientes: Cada  *\<día >*, todos los días laborables y cada  *\<número >* día. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
   
  **Semanal**  
  Defina una programación que se ejecute en intervalos semanales a una hora específica. El intervalo puede ser una semana completa (por ejemplo, cada dos semanas) o días de una semana.  
@@ -170,8 +170,8 @@ ms.locfileid: "48116876"
  Cuando hay información suficiente para la suscripción, se habilita el botón **Finalizar** . Haga clic en **Finalizar** para completar la suscripción.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Suscripciones controladas por datos](subscriptions/data-driven-subscriptions.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   

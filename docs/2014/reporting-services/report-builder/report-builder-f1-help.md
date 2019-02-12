@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Help, dialog boxes
 - user interface, dialog boxes
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7de56465834506c6ac4a72d2608f179d4ce41a1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d58568873ebb3a96676bc17f2b5ef46a9ca68234
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051695"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043036"
 ---
 # <a name="report-builder-f1-help"></a>Generador de informes (Ayuda F1)
   Esta sección contiene ayuda para los asistentes, vistas, paneles y cuadros de diálogo Generador de informes. También puede abrir la ayuda presionando F1 o haciendo clic en el botón Ayuda en un cuadro de diálogo.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0a3ae0e5-897b-4898-a60d-5455eec3d305
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2dcb1e84335100eda4155fa1f0a8a1cc9c65206e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159990"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027532"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtrar un tabla anidada en un modelo de minería de datos (tutorial intermedio de minería de datos)
   Una vez creado y explorado el modelo, tal vez decida centrarse en un subconjunto de datos del cliente. Por ejemplo, es posible que solo desee analizar las cestas que contienen un producto específico o los datos demográficos de los clientes que no han realizado ninguna compra en un determinado período.  
@@ -111,7 +110,7 @@ ms.locfileid: "48159990"
  [Predecir asociaciones &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos y sintaxis de filtro del modelo &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Sintaxis y ejemplos del filtro de modelos &#40;Analysis Services: Minería de datos&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

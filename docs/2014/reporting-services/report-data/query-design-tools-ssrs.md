@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 396542d6c29a463eae83442e3b3398b68cd01b11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa4be367b9f04fb8d96bb228b7d040aae0e120d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180357"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041266"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Herramientas de diseño de consultas en las herramientas de datos de SQL Server del Diseñador de informes (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ofrece varias herramientas de diseño de consultas que puede usar para crear consultas de conjuntos de datos en el Diseñador de consultas. El tipo de origen de datos con el que trabaje determinará la disponibilidad de un diseñador de consultas concreto. Además, algunos diseñadores de consultas ofrecen modos alternativos que le permiten elegir entre trabajar en modo visual o directamente en el idioma de la consulta. En este tema se presentan todas las herramientas y se describe el tipo de origen de datos que admite cada una de ellas. En esta sección se describen las siguientes herramientas:  
@@ -55,7 +55,7 @@ ms.locfileid: "48180357"
  El diseñador de consultas basado en texto se recomienda para crear consultas complejas, usar procedimientos almacenados, realizar consultas en datos XML y escribir consultas dinámicas. Según el origen de datos, es posible que pueda alternar el botón **Editar como texto** de la barra de herramientas para cambiar entre el diseñador gráfico de consultas y el diseñador de consultas basado en texto. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto](../text-based-query-designer-user-interface.md).  
   
 ##  <a name="Graphical"></a> Diseñador gráfico de consultas  
- El diseñador gráfico de consultas se utiliza para crear o modificar consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan con una base de datos relacional. Esta herramienta de diseño de consultas se utiliza en varios productos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] y en otros componentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Dependiendo del tipo de origen de datos, admite los modos Text, StoredProcedure y TableDirect. En la imagen siguiente se ilustra el diseñador gráfico de consultas.  
+ El diseñador gráfico de consultas se utiliza para crear o modificar consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan con una base de datos relacional. Esta herramienta de diseño de consultas se utiliza en varios productos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] y en otros componentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dependiendo del tipo de origen de datos, admite los modos Text, StoredProcedure y TableDirect. En la imagen siguiente se ilustra el diseñador gráfico de consultas.  
   
  ![Diseñador gráfico de consultas para consultas SQL](../media/rsqd-dsaw-sql.gif "Diseñador gráfico de consultas para consultas SQL")  
   
@@ -80,10 +80,10 @@ ms.locfileid: "48180357"
   
  ![Diseñador de consultas DMX de Analysis Services, vista de diseño](../media/rsqd-dsawas-dmx-designmode.gif "Diseñador de consultas DMX de Analysis Services, vista de diseño")  
   
- Para utilizar el diseñador de consultas DMX, debe definir un origen de datos que tenga disponible un modelo de minería de datos válido. Al definir un conjunto de datos para el origen de datos, puede abrir la consulta en el diseñador de consultas DMX. Si es necesario, utilice los botones MDX y DMX en la barra de herramientas para cambiar entre los modos MDX y DMX. Después de seleccionar el modelo, puede crear consultas de predicción de minería de datos que proporcionen datos para un informe. Para más información, consulte [Interfaz de usuario del Diseñador de consultas DMX de Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
+ Para utilizar el diseñador de consultas DMX, debe definir un origen de datos que tenga disponible un modelo de minería de datos válido. Al definir un conjunto de datos para el origen de datos, puede abrir la consulta en el diseñador de consultas DMX. Si es necesario, utilice los botones MDX y DMX en la barra de herramientas para cambiar entre los modos MDX y DMX. Después de seleccionar el modelo, puede crear consultas de predicción de minería de datos que proporcionen datos para un informe. Para más información, consulte [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md).  
   
 ##  <a name="SAPBW"></a> Diseñador de consultas de Sap NetWeaver BI  
- El diseñador de consultas de [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] se utiliza para recuperar los datos de una base de datos de [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] . Para usar este diseñador de consultas, debe tener un [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] origen de datos que tiene al menos un InfoCube, MultiProvider o consulta habilitada para Web definidos. En la imagen siguiente se ilustra el diseñador de consultas [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] .  
+ El diseñador de consultas de [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] se utiliza para recuperar los datos de una base de datos de [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] . Para usar este diseñador de consultas, necesita tener un origen de datos de [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] que tenga definida como mínimo una consulta InfoCube, MultiProvider o habilitada para web. En la imagen siguiente se ilustra el diseñador de consultas [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] .  
   
  ![Diseñador de consultas que usa MDX en modo de diseño](../media/rsqd-dssapbw-mdx-designmode.gif "Diseñador de consultas que usa MDX en modo de diseño")  
   

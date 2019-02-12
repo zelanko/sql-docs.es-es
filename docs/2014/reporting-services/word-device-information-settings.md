@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c6a084e7d2093d2f0bfc7d55ef7f16be5b83e1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 494bf45f2aeb4fce5ed3b259665b1e7759879184
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126885"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022346"
 ---
 # <a name="word-device-information-settings"></a>Configuración de la información del dispositivo web
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato de [!INCLUDE[ofprword](../includes/ofprword-md.md)] .  

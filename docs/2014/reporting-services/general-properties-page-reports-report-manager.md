@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8606f2ee9afeb0e5e3ab0663290471b0d2d4463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206171"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030276"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página d propiedades generales, informes (Administrador de informes)
   Use la página de propiedades General de informes para cambiar de nombre, eliminar, mover o reemplazar una definición de informe. Esta página se puede utilizar también para crear un informe vinculado. En la parte superior de la página, se incluye información detallada sobre quién creó o modificó el informe, y cuándo tuvieron lugar los cambios.  
@@ -33,8 +33,8 @@ ms.locfileid: "48206171"
 3.  En el menú desplegable, haga clic en **Administrar**. Se abrirá la página de propiedades General correspondiente al informe.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
- Especifique un nombre para el informe. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ * \< >  
+ **Name**  
+ Especifique un nombre para el informe. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = + , $ * \< >  
   
  " o / al especificar el nombre.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48206171"
   
  La copia que se abre es idéntica a la definición de informe original publicada inicialmente en el servidor de informes. Las propiedades del informe establecidas después de publicarlo, como los parámetros y las propiedades del origen de datos, no se reflejan en el informe que se abre.  
   
- Puede modificar la definición del informe y guardarla como un archivo nuevo en una carpeta compartida, y cargar la definición del informe en el servidor de informes como un nuevo elemento. Las modificaciones que realice en la definición de informe mientras está abierto en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (u otra aplicación) no se guardan directamente en el servidor de informes. Deberá cargar el archivo para publicar el informe modificado en el servidor de informes.  
+ Puede modificar la definición del informe y guardarla como un archivo nuevo en una carpeta compartida, y cargar la definición del informe en el servidor de informes como un nuevo elemento. Las modificaciones que realice en la definición de informe desde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (o desde otra aplicación) no se guardan directamente en el servidor de informes. Deberá cargar el archivo para publicar el informe modificado en el servidor de informes.  
   
  **Reemplazar**  
  Haga clic para reemplazar la definición de informe que se usa en el informe actual por una distinta obtenida del archivo .rdl ubicado en el sistema de archivos. Si actualiza una definición de informe, debe restablecer la configuración del origen de datos cuando la actualización haya finalizado.  
@@ -70,7 +70,7 @@ ms.locfileid: "48206171"
  Haga clic para seleccionar una definición de informe diferente para el informe vinculado. Esta opción aparece si el informe es un informe vinculado. Si el informe es vinculado, puede establecer esta propiedad de manera que reemplace la definición de informe.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 90649f491fac7d867ebad0516d1ccea5fc41d4a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a1b5ead3e2ab16eea905af3312779631ae6344ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134175"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026787"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configuración de Reporting Services para utilizar un nombre alternativo del asunto
   En este tema se explica cómo configurar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) para usar un nombre alternativo del asunto (SAN) modificando el archivo rsreportserver.config y usando la herramienta Netsh.exe.  
@@ -29,9 +29,9 @@ ms.locfileid: "48134175"
   
  Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, firmado y tener la clave privada. No puede utilizar un certificado autofirmado  
   
- Las direcciones URL en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede configurarse para usar un certificado SSL. Normalmente, un certificado solo tiene un nombre de asunto, lo que permite solo una dirección URL para una sesión SSL (Secure Sockets Layer). El SAN es un campo adicional del certificado que permite a un servicio SSL escuchar y ser válido para varias direcciones URL, y compartir el puerto SSL con otras aplicaciones. El SAN es tiene un aspecto parecido a lo siguiente: www.s2.com.  
+ Las direcciones URL en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se pueden configurar para utilizar un certificado SSL. Normalmente, un certificado solo tiene un nombre de asunto, lo que permite solo una dirección URL para una sesión SSL (Secure Sockets Layer). El SAN es un campo adicional del certificado que permite a un servicio SSL escuchar y ser válido para varias direcciones URL, y compartir el puerto SSL con otras aplicaciones. El SAN es tiene un aspecto parecido a lo siguiente: www.s2.com.  
   
- Para obtener más información sobre la configuración de SSL para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [configurar conexiones SSL en un servidor de informes de modo nativo](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Para más información sobre la configuración de SSL para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Configurar conexiones SSL en un servidor de informes en modo nativo](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configure SSRS para utilizar un nombre alternativo del asunto para la dirección URL del servicio web  
   

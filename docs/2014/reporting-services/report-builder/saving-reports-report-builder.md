@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e549fa2b443d0ec634c6d226b79bbcc33d674a3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 01fcf6ef333a9b7c8a5c99630e6e9573f70d8059
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011237"
 ---
 # <a name="saving-reports-report-builder"></a>Guardar informes (Generador de informes)
   En el Generador de informes puede guardar un informe en un servidor de informes, una biblioteca de SharePoint, un recurso compartido de archivos en el que tenga permiso de escritura o su equipo. Puede guardar un informe en la misma ubicación desde la que lo abrió, guardarlo en una ubicación diferente o guardarlo con un nuevo nombre en la misma ubicación o en otra. De forma predeterminada, un informe es vuelve a guardar en la ubicación desde la que se abrió. Al guardar el informe, lo que realmente se guarda es la definición de informe, que describe su diseño. No se guardan los datos. Cada vez que ejecuta el informe, sus datos se actualizan y es probable que sean diferentes a los de antes de la ejecución.  

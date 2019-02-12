@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b44064191e56dc16e212fb79794918b3023e3dc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 46984681329be6e236cac6271d3768705a26dd7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370597"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027556"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Especificar un intervalo de eje (Generador de informes y SSRS)
   El intervalo de eje define el número de etiquetas y marcas de graduación asociadas que aparecen en un eje. En el eje de valores, los intervalos de eje proporcionan una medida coherente de los puntos de datos representados en el gráfico. Sin embargo, en el eje de categorías, esta funcionalidad puede provocar que las categorías aparezcan sin etiquetas en los ejes. Puede especificar el número de intervalos que quiere en la propiedad Intervalo del eje. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcula el número de intervalos en tiempo de ejecución, según los datos del conjunto de resultados. Para más información sobre cómo se calculan los intervalos de los ejes, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dc026c697b07c8c16922a623dc2bce79d6cf89e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: f161edf881b4f1157a0473eeb543d780239e5909
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531548"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030186"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requieren el Agente SQL Server y la configuración de permisos del mismo. Si ve mensajes de error que indican que se requiere el Agente SQL Server y ha comprobado que se está ejecutando, actualice o compruebe los permisos. El ámbito de este tema es [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint y en él se describen tres formas de actualizar los permisos del Agente SQL Server con suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las credenciales que use para los pasos de este tema deben disponer de los permisos adecuados para conceder permisos de ejecución a RSExecRole para los objetos de la aplicación de servicio, msdb y las bases de datos maestras.  

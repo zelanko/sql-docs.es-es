@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2d0efbb500a3c433f4670c3ec2ad2e35d88b8b59
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+manager: kfile
+ms.openlocfilehash: ad9c1fed7e328540513ee3955b95704d51e8008f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168930"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039156"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Guardar informes en un servidor de informes (Generador de informes)
   En el Generador de informes, puede guardar una definición de informe en un servidor de informes (a lo que también se hace referencia como publicar un informe). Cuando el informe está guardado en un servidor de informes, otros usuarios pueden verlo. Cada vez que ejecute el informe publicado, recuperará los datos más actuales. Para guardar una copia estática de un informe representado, exporte el informe a un formato de archivo diferente y guárdelo o utilice la característica de historial de informes para guardar las versiones de los informes representados.  

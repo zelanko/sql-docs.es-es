@@ -1,11 +1,10 @@
 ---
-title: 'Lección 5: Generar modelos de regresión logística (Tutorial de minería de datos intermedio) y la red neuronal | Microsoft Docs'
+title: 'Lección 5: Creación de red neuronal y modelos de regresión logística (Tutorial de minería de datos intermedios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1bbfd2344b46e015e26d2dba393aea689329949c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108825"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035816"
 ---
-# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Lección 5: Generar modelos de red neuronal y de regresión logística (Tutorial intermedio de minería de datos)
+# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Lección 5: Creación de red neuronal y modelos de regresión logística (Tutorial de minería de datos intermedios)
   
   
  El departamento de operaciones de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] está ocupado en un proyecto para mejorar la satisfacción del cliente con su centro de llamadas. Han contratado a un proveedor para administrar el centro de llamadas y proporcionar métricas sobre la efectividad del centro de llamadas, y le han solicitado el análisis de algunos datos preliminares que proporciona el proveedor. Ellos desean saber si hay algún resultado interesante. En particular, desean saber si los datos sugieren algún problema con el personal o métodos para mejorar la satisfacción del cliente.  
@@ -58,18 +57,18 @@ ms.locfileid: "48108825"
  [Agregar datos de una vista de datos del centro de llamadas del origen &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
 ## <a name="all-lessons"></a>Todas las lecciones  
- [Lección 1: Crear la solución de minería de datos intermedios &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [Lección 1: Creación de la solución de minería de datos intermedios &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- [Lección 2: Creación de un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
  [Lección 3: Generar un escenario de cesta &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [Lección 4: Generar una escenario de clústeres de secuencia &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Lección 4: Creación de una escenario de clústeres de secuencia &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- Lección 5: Modelo de red neuronal y de regresión logística (tutorial intermedio de minería de datos)  
+ Lección 5: Red neuronal y el escenario de regresión logística (Tutorial de minería de datos intermedios)  
   
 ## <a name="see-also"></a>Vea también  
- [Tutorial de minería de datos básicos](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Tutorial de minería de datos de datos intermedio &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

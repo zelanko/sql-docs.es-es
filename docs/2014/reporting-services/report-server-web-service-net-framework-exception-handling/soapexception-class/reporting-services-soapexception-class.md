@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: de33b2cdbc082e609e392d36aa53b8c5bbd2ce4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ac8b0b7a36cc3ecff37ba0d74167b99458eb5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160502"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027207"
 ---
 # <a name="reporting-services-soapexception-class"></a>Clase SoapException de Reporting Services
   Debería solucionar cualquier error concreto de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que podría producirse. Por ejemplo, en una aplicación en la que pida al usuario que cree una carpeta, podría ser posible que el usuario intente crear una que ya exista. Como programador, no tiene control sobre lo que el usuario escribe en los campos de ruta de acceso y nombre de la carpeta de la aplicación, pero tiene puede controlar su experiencia cuando alguien intenta a propósito crear un elemento que ya existe.  

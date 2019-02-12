@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 79565c22eab900eb152f8b5fa52748b3e5a09a16
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 40c66dfbb4ed728df49e3756af7baea17197b502
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034836"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Mostrar encabezados de fila y de columna en varias páginas (Generador de informes y SSRS)
   Puede controlar si se deben repetir los encabezados de fila y de columna en cada página de una región de datos Tablix que abarca varias páginas. Una región de datos Tablix puede ser una tabla, una matriz o una lista.  

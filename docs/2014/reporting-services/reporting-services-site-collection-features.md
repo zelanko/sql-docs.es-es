@@ -10,29 +10,29 @@ ms.topic: conceptual
 ms.assetid: e05ae162-a4b2-489d-9853-d6b09414e632
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1bf79e0cfdb6ab21011ec35ba0cf1536f852e04f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b9915a1071fa8b3ea0485c6a10790b2efd0a1e33
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182815"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034406"
 ---
 # <a name="reporting-services-site-collection-features"></a>Características de la colección de sitios Reporting Services
-  El modo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint proporciona tres características de la colección de sitios de SharePoint. Las características admiten el general [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] informes entorno, de modo SharePoint [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], una característica de la [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complemento para [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition y las operaciones de administración para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en Administración Central de SharePoint.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint proporciona tres características de la colección de sitios de SharePoint. Las características admiten el entorno de informes de modo SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] general, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], una característica del Complemento [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition, y las operaciones de administración para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en Administración central de SharePoint.  
   
 ## <a name="site-collection-features"></a>Características de la colección de sitios  
- En la siguiente tabla, se describen las características de la colección de sitios [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ En la siguiente tabla, se describen las características de la colección de sitios [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 |Característica|Descripción|  
 |-------------|-----------------|  
-|**Característica Administración central del servidor de informes**|Habilita las características para administrar la integración con un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Esta característica solo se instala y se puede usar en la colección de sitios de Administración central de SharePoint.<br /><br /> La característica de integración del servidor de informes se activa automáticamente en la colección de sitios de Administración Central de SharePoint después de instalar el [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] complemento para productos de SharePoint. En algunas situaciones, tendrá que activar la característica de forma manual. Para activar la característica del servidor de informes, use las páginas de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de la página Configuración de sitio de Administración central de SharePoint.<br /><br /> El [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] versión o posterior del complemento para SharePoint productos activará la característica de integración del servidor de informes para todas las colecciones de sitios existentes cuando se instala el complemento. Además, la característica estará activa automáticamente para las nuevas colecciones de sitios.|  
+|**Característica Administración central del servidor de informes**|Habilita las características para administrar la integración con un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Esta característica solo se instala y se puede usar en la colección de sitios de Administración central de SharePoint.<br /><br /> La característica de integración del servidor de informes se activa de forma automática en la colección de sitios Administración central de SharePoint tras instalar el Complemento [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] para los productos de SharePoint. En algunas situaciones, tendrá que activar la característica de forma manual. Para activar la característica del servidor de informes, use las páginas de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de la página Configuración de sitio de Administración central de SharePoint.<br /><br /> La versión de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o posterior de los productos del Complemento para SharePoint activará la característica de integración del servidor de informes para todas las colecciones de sitios existentes cuando se instale el complemento. Además, la característica estará activa automáticamente para las nuevas colecciones de sitios.|  
 |**Característica de integración del servidor de informes**|Habilita el informe completo mediante [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> Esta característica está activa de forma predeterminada.|  
 |**Característica Power View Integration**|Habilita la exploración interactiva de los datos y la presentación visual de los libros de trabajo PowerPivot y las bases de datos tabulares de Analysis Services.<br /><br /> Se puede tener acceso a la característica en los menús contextuales de los siguientes orígenes de datos:<br /><br /> .rdlx<br /><br /> .rsds<br /><br /> archivo de conexión .bism<br /><br /> <br /><br /> Si [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] no aparece en los menús contextuales, compruebe que la **característica Power View Integration** está activada.<br /><br /> Esta característica está desactivada de forma predeterminada.|  
   
 ## <a name="see-also"></a>Vea también  
- [Activar el servidor de informes y Power View Integration Features in SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
- [Configuración del sitio de servicios y características del sitio de informes&#40;el modo de SharePoint&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)   
+ [Activar las características de integración del servidor de informes y Power View en SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
+ [Valores de configuración del sitio de Reporting Services y características del sitio &#40;modo de SharePoint&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)   
  [Activar la característica de sincronización de archivos del servidor de informes en Administración central de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   
   

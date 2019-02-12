@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 659b7a4e-f687-44d9-a60a-86490ccbf90f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 983f5547f816785e592aa27c442db6a92b519cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177435"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019457"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura y un modelo de cesta de la compra (Tutorial intermedio de minería de datos)
   Ahora que ha creado una vista del origen de datos, utilizará el Asistente para minería de datos con el fin de crear una nueva estructura de minería de datos. En esta tarea, creará una estructura y un modelo de minería de datos que se basen en el algoritmo de asociación de [!INCLUDE[msCoName](../includes/msconame-md.md)].  

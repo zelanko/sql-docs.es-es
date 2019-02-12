@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60c12e1ea7f184770d07fcd4af42b81ca41d13db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082024"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030566"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Agregar y comprobar una conexión de datos o un origen de datos (generador de informes y SSRS)
   En el Generador de informes, puede agregar un origen de datos compartido del servidor de informes o crear un origen de datos incrustado para el informe. En el Diseñador de informes, puede crear un origen de datos compartido o un origen de datos incrustado e implementarlo en un servidor de informes.  
@@ -59,7 +59,7 @@ ms.locfileid: "48082024"
   
     2.  Especifique una cadena de conexión usando una de las alternativas siguientes:  
   
-    -   Escriba la cadena de conexión directamente en el cuadro de texto **Cadena de conexión** . Para obtener una lista de cadenas de conexión de ejemplo, vea [conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+    -   Escriba la cadena de conexión directamente en el cuadro de texto **Cadena de conexión** . Para obtener ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
     -   Haga clic en el botón de expresión (**fx** ) para crear una expresión que dé como resultado una cadena de conexión. En el cuadro de diálogo **Expresión** , escriba la expresión en el panel Expresión. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -81,13 +81,13 @@ ms.locfileid: "48082024"
   
 2.  Haga clic en **Probar conexión**.  
   
-3.  Si la conexión es correcta, aparece el mensaje siguiente: "Conexión creada correctamente". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Si la conexión se realiza correctamente, aparece el mensaje siguiente: "Conexión creada correctamente". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Si la conexión no es correcta, aparece un mensaje similar al siguiente: "No se puede establecer conexión con el origen de datos".  
+4.  Si la conexión no se realiza correctamente, aparece el mensaje siguiente: "No se puede conectar al origen de datos."  
   
 5.  Haga clic en **Detalles**y utilice la información para corregir el problema.  
   
-     Para más información, vea [Especificar credenciales en el Generador de informes](../specify-credentials-in-report-builder.md).  
+     Para obtener más información, vea [Especificar credenciales en el Generador de informes](../specify-credentials-in-report-builder.md).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -95,6 +95,6 @@ ms.locfileid: "48082024"
  [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
+ [Conexiones de datos, orígenes de datos y cadenas de conexión (Generador de informes y SSRS)](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
   

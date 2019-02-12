@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 202d2331364480cfdac89019dfa918c327544b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: aace9882e358bcd5e5626cc625ed3dbbe4495cce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090265"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017046"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Crear una base de datos del servidor de informes de modo nativo (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de modo nativo usa una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el almacenamiento interno. La base de datos es un componente necesario y se utiliza para almacenar los informes publicados, modelos, orígenes de datos compartidos, datos de sesión, recursos y metadatos del servidor.  
@@ -33,7 +33,7 @@ ms.locfileid: "48090265"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>Cuándo crear o configurar la base de datos del servidor de informes  
  Debe crear y configurar la base de datos del servidor de informes si lo instaló en el modo de solo archivos.  
   
- Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la configuración de forma predeterminada para el modo nativo, la base de datos del servidor de informes se creó y configuró automáticamente cuando se instaló la instancia del servidor de informes. Puede utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para ver o modificar los valores que el programa de configuración estableció automáticamente.  
+ Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la configuración predeterminada para el modo nativo, la base de datos del servidor de informes se creó y configuró automáticamente cuando se instaló la instancia del servidor de informes. Puede utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para ver o modificar los valores que el programa de configuración estableció automáticamente.  
   
 ##  <a name="rsdbrequirements"></a> Antes de empezar  
  La creación o configuración de una base de datos del servidor de informes son procesos que constan de varios pasos. Antes de crear la base de datos del servidor de informes, considere cómo desea especificar los elementos siguientes:  
@@ -116,12 +116,12 @@ ms.locfileid: "48090265"
   
 7.  Revise la información de la página Resumen para comprobar que la configuración es correcta y, a continuación, haga clic en **Siguiente**.  
   
-8.  Compruebe la conexión haciendo clic en una dirección URL en las páginas Dirección URL del servidor de informes o Dirección URL del Administrador de informes. Las direcciones URL deben estar definidas para que esta prueba funcione. Si la conexión de base de datos del servidor de informes es válida, verá la jerarquía de carpetas del servidor de informes o el Administrador de informes en una ventana del explorador. Para obtener más información, consulte [comprobar una instalación de Reporting Services](verify-a-reporting-services-installation.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+8.  Compruebe la conexión haciendo clic en una dirección URL en las páginas Dirección URL del servidor de informes o Dirección URL del Administrador de informes. Las direcciones URL deben estar definidas para que esta prueba funcione. Si la conexión de base de datos del servidor de informes es válida, verá la jerarquía de carpetas del servidor de informes o el Administrador de informes en una ventana del explorador. Para obtener más información, vea [Comprobar una instalación de Reporting Services](verify-a-reporting-services-installation.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar una conexión de base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Base de datos &#40;modo nativo de SSRS&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Administrar un servidor de informes de modo nativo de Reporting Services](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Administrar un servidor de informes en modo nativo de Reporting Services](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

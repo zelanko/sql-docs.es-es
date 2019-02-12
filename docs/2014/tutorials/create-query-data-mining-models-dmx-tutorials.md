@@ -1,26 +1,25 @@
 ---
-title: 'Crear y consultar modelos de minería de datos con DMX: tutoriales (Analysis Services - minería de datos) | Microsoft Docs'
+title: 'Crear y consultar modelos de minería de datos con DMX: Tutoriales (Analysis Services - minería de datos) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc23d274fc086168f580031d9dd7f44b1afd05c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176995"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012526"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Crear y consultar modelos de minería de datos con DMX: tutoriales (Analysis Services - minería de datos)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Crear y consultar modelos de minería de datos con DMX: Tutoriales (Analysis Services - minería de datos)
   Después de haber creado una solución de minería de datos mediante el uso de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede crear consultas en los modelos de minería de datos para predecir tendencias, recuperar patrones en los datos y medir la precisión de los modelos de minería de datos.  
   
  Los tutoriales paso a paso en la lista siguiente le ayudará a obtener información sobre cómo compilar y ejecutar consultas de minería de datos mediante el uso de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para que pueda obtener el máximo partido de sus datos.  
@@ -40,9 +39,9 @@ ms.locfileid: "48176995"
      Este tutorial crea un modelo de pronóstico para mostrar el uso de la instrucción CREATE MODEL (DMX). A continuación, agregará modelos relacionados y personalizará el comportamiento de cada uno de ellos cambiando los parámetros del algoritmo de serie temporal de Microsoft. Por último, creará predicciones y las actualizará con nuevos datos. La capacidad de actualizar una serie temporal al realizar predicciones se agregó en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ## <a name="reference"></a>Referencia  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Extensiones de minería de datos &#40;DMX&#41; referencia](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541850"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038266"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
   Extrae, restaura, crea y elimina la clave simétrica usada para proteger contra el acceso no autorizado los datos importantes del servidor de informes. Esta utilidad también se usa para unir instancias del servidor de informes en una implementación de ampliación horizontal. Una *implementación escalada del servidor de informes* se refiere a varias instancias del servidor de informes que comparten una sola base de datos de servidor de informes.  
@@ -79,7 +79,7 @@ ms.locfileid: "52541850"
  **-r**  *installationID*  
  Quita la información de clave simétrica de una instancia de servidor de informes concreta y, por lo tanto, quita el servidor de informes de una implementación escalada. *installationID* es un valor de GUID que se puede encontrar en el archivo RSReportserver.config.  
   
- `-f`  *Archivo*  
+ `-f`  *file*  
  Especifica una ruta válida al archivo que almacena una copia de seguridad de las claves simétricas.  
   
  Para **rskeymgmt -e**, la clave simétrica se escribe en el archivo especificado.  
@@ -98,7 +98,7 @@ ms.locfileid: "52541850"
  `-n`  
  Especifica el nombre de la instancia del servidor de informes en un equipo remoto. Este argumento es opcional si ha instalado el servidor de informes en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminada (el valor predeterminado para `-n` es MSSQLSERVER). Si ha instalado el servidor de informes como una instancia con nombre, se requiere `-n`.  
   
- `-u`  *USERACCOUNT*  
+ `-u`  *useraccount*  
  Especifica la cuenta de administrador del equipo remoto que está combinando con la implementación escalada. Si no se especifica una cuenta, se usan las credenciales del usuario actual.  
   
  `-v`  *Contraseña*  

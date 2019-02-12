@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 63154af6d155dd05e1f07d38185830fefc30068a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ddbb228cf4f5d71df60dd1de73ab0d1484925f70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371367"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040796"
 ---
 # <a name="use-my-subscriptions"></a>Usar Mis suscripciones
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] El Administrador de informes incluye un **Mis suscripciones** página que organiza todas las suscripciones en un solo lugar. Puede utilizar Mis suscripciones para ver, modificar y eliminar suscripciones existentes. Sin embargo, no puede utilizar esta página para crear suscripciones.  

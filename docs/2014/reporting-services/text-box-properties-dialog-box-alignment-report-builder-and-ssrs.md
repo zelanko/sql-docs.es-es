@@ -12,14 +12,14 @@ f1_keywords:
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b39bed7faeba38ff8275d61ae5bf3350a43bff28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c87901e77de5ed975db5f9e05834f569f3923cc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144675"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040536"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de cuadro de texto, Alineación (Generador de informes y SSRS)
   Seleccione **Alineación** en el cuadro de diálogo **Propiedades de cuadro de texto** para situar los valores dentro de la celda o región de datos seleccionada.  
@@ -31,10 +31,10 @@ ms.locfileid: "48144675"
  **Vertical**  
  Especifique si el valor está colocado verticalmente dentro de una celda o región de datos seleccionada. La opción seleccionada de forma predeterminada es **Predeterminada** . El valor de Predeterminada es **Superior**. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
- **Izquierda**  
+ **Left**  
  Especifique el relleno (o espacio) que hay entre el borde izquierdo de una celda y el valor mostrado dentro de la celda. El valor predeterminado es 2 puntos. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
- **Correcto**  
+ **Right**  
  Especifique el relleno (o espacio) que hay entre el borde derecho de una celda y el valor mostrado dentro de la celda. El valor predeterminado es 2 puntos. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
  **Top**  

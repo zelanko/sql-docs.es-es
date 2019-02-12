@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6b883e43-209d-489a-8dc3-9349f88acae8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83aa949e71977971b69f93f0e04b0c74ff99a226
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143895"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024886"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lección 4: Crear predicciones de serie temporal con DMX
-  En esta lección y en la siguiente lección, usará las extensiones de minería de datos (DMX) para crear diferentes tipos de predicciones basados en los modelos de serie temporal que creó en [lección 1: creación de un modelo de minería de datos de serie temporal y la estructura de minería de datos](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)y [lección 2: agregar modelos de minería de datos a la estructura de minería de datos de serie temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
+  En esta lección y en la siguiente lección, usará las extensiones de minería de datos (DMX) para crear diferentes tipos de predicciones basados en los modelos de serie temporal que creó en [lección 1: Creación de una serie temporal del modelo de minería de datos y la estructura de minería de datos](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) y [lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de serie temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
   
  Con un modelo de serie temporal, tiene muchas opciones para realizar predicciones:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48143895"
  REPLACE_MODEL_CASES  
  Use [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) con el argumento REPLACE_MODEL_CASES para reemplazar los datos originales con una nueva serie de datos y, a continuación, crear predicciones basadas en aplicar los patrones en el modelo de minería de datos a los nuevos datos serie.  
   
- Para obtener un ejemplo de cómo usar REPLACE_MODEL_CASES, vea [lección 2: generar un escenario de previsión &#40;Tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ Para obtener un ejemplo de cómo usar REPLACE_MODEL_CASES, vea [lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  En esta lección realizará las tareas siguientes:  
@@ -145,12 +144,12 @@ WHERE [<criteria>]
  En la lección siguiente, creará una consulta que proporciona los datos nuevos al modelo y comparará los resultados de esa predicción con la recién creada.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Lección 5: Extender el modelo de serie temporal](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Lección 5: Ampliación de la serie temporal de modelo](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## <a name="see-also"></a>Vea también  
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
  [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)   
- [Ejemplos de consultas de modelo de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [Lección 2: Creación de un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Ejemplos de consultas de modelos de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   

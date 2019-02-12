@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a69f0a79ce10a17825490bd77e48a26d0d823af4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a461f3dfa1dca66efb2708e15f56c7fa30c58dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184255"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037466"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implementar una extensión de entrega
   Las extensiones de entrega proporcionan su información de configuración en forma de archivo de configuración XML. El archivo XML cumple el esquema XML definido para las extensiones de entrega. Las extensiones de entrega proporcionan la infraestructura para establecer y modificar el archivo de configuración.  
@@ -37,7 +37,7 @@ ms.locfileid: "48184255"
   
 |Attribute|Descripción|  
 |---------------|-----------------|  
-|`Name`|Un nombre único para la extensión (por ejemplo, "Correo electrónico del servidor de informes", para la extensión de entrega por correo electrónico, o "Recurso compartido de archivos del servidor de informes", para la extensión de entrega en recursos compartidos de archivos). La longitud máxima para el atributo `Name` es de 255 caracteres. El nombre debe ser único entre todas las entradas en el `Extension` elemento de un archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
+|`Name`|Un nombre único para la extensión (por ejemplo, "Correo electrónico del servidor de informes", para la extensión de entrega por correo electrónico, o "Recurso compartido de archivos del servidor de informes", para la extensión de entrega en recursos compartidos de archivos). La longitud máxima para el atributo `Name` es de 255 caracteres. El nombre debe ser único entre todas las entradas en el elemento `Extension` del archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
 |`Type`|Lista separada por comas que incluye el espacio de nombres completo junto con el nombre del ensamblado.|  
 |`Visible`|El valor `false` indica que la extensión de entrega no debería estar visible en las interfaces de usuario. Si el atributo no está incluido, el valor predeterminado es `true`.|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48184255"
   
 2.  Una vez copiado el archivo de ensamblado, abra el archivo RSReportServer.config. El archivo RSReportServer.config se encuentra en el %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<NombreDeInstancia > \Reporting Services\ReportServer. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión de entrega. Puede abrir el archivo de configuración con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un simple editor de texto, como el Bloc de notas.  
   
-3.  Busque el `Delivery` elemento en el archivo RSReportServer.config. En la ubicación siguiente se debería realizar una extensión de entrega creada recientemente:  
+3.  Busque el elemento `Delivery` en el archivo RSReportServer.config. En la ubicación siguiente se debería realizar una extensión de entrega creada recientemente:  
   
     ```  
     <Extensions>  
@@ -99,7 +99,7 @@ ms.locfileid: "48184255"
   
 2.  Una vez copiado el archivo de ensamblado, abra el archivo RSReportServer.config. El archivo RSReportServer.config se encuentra en el %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<NombreDeInstancia > \Reporting Services\ReportServer. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión de entrega. Puede abrir el archivo de configuración con Visual Studio .NET o un editor de texto simple, como el Bloc de notas.  
   
-3.  Busque el `DeliveryUI` elemento en el archivo RSReportServer.config. En la ubicación siguiente se debería realizar una extensión de entrega creada recientemente:  
+3.  Busque el elemento `DeliveryUI` en el archivo RSReportServer.config. En la ubicación siguiente se debería realizar una extensión de entrega creada recientemente:  
   
     ```  
     <Extensions>  

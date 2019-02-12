@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 45546e63eff82c5ba4467193811b572756331513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201505"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040516"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Agregar datos a un informe (Generador de informes y SSRS)
   Para agregar datos a un informe, cree conjuntos de datos. Cada conjunto de datos representa el conjunto de resultados obtenidos al ejecutar un comando de consulta en un origen de datos. Las columnas del conjunto de resultados son la colección de campos y las filas, los datos. Un conjunto de resultados no contiene los datos reales, sino la información necesaria para recuperar un conjunto de datos específico a partir de un origen de datos.  
@@ -39,7 +39,7 @@ ms.locfileid: "48201505"
   
  Además, puede agregar conjuntos de datos a un informe agregando elementos de informe que incluyan los conjuntos de datos de los que dependen. [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- Para aprender a crear un informe donde se muestren datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Para crear un informe que contenga sus propios datos, vea [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Para obtener información sobre cómo crear un informe que muestra los datos de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de datos, vea [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Para generar un informe que incluye sus propios datos, vea [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;generador de informes&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "48201505"
   
 -   [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [Los gráficos &#40;generador de informes y SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [Gráficos &#40;Generador de informes y SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -74,9 +74,9 @@ ms.locfileid: "48201505"
   
 -   [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Elementos de informe &#40;generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [Elementos de informe &#40;Generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [Filtrar, agrupar y ordenar datos &#40;generador de informes y SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
@@ -110,17 +110,17 @@ ms.locfileid: "48201505"
   
  [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Crear una consulta en el Diseñador de consultas relacionales &#40;generador de informes y SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Crear una consulta en el Diseñador de consultas relacionales &#40;Generador de informes y SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;generador de informes y SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;Generador de informes y SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Establecer un mensaje cuando no hay datos para una región de datos &#40;generador de informes y SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Establecer un mensaje para cuando no hay datos en una región de datos &#40;Generador de informes y SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Asociar un parámetro de consulta con un parámetro de informe &#40;generador de informes y SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [Asociar un parámetro de consulta a un parámetro de informe &#40;Generador de informes y SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Definir parámetros en el Diseñador de consultas MDX para Analysis Services &#40;generador de informes y SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Definir parámetros en el diseñador de consultas MDX para Analysis Services &#40;Generador de informes y SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
@@ -139,6 +139,6 @@ ms.locfileid: "48201505"
   
 ## <a name="see-also"></a>Vea también  
  [Vista de diseño de informe &#40;Generador de informes&#41;](../report-builder/report-design-view-report-builder.md)   
- [Conceptos de creación de informes &#40;generador de informes y SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

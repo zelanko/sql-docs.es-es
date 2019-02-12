@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb208d3b19e7ca2d49198a2f57edaf48214bb78f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395378"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025120"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparar las predicciones de los modelos de predicción (Tutorial intermedio de minería de datos)
   En los pasos anteriores de este tutorial, ha creado varios modelos de serie temporal:  
@@ -46,12 +45,12 @@ ms.locfileid: "52395378"
   
 |**M200 Pacífico**|Datos actualizados de ventas reales|Previsión antes de agregar datos|Predicción ampliada|  
 |----------------------|-----------------------------|------------------------------------|-------------------------|  
-|25-7/2008|**65**|32|**65**|  
-|25-8/2008|**54**|37|**54**|  
+|7-25-2008|**65**|32|**65**|  
+|8-25-2008|**54**|37|**54**|  
 |9-25-2008|**61**|32|**61**|  
 |10-25-2008|Sin datos|36|32|  
 |11-25-2008|Sin datos|31|41|  
-|25-12-2008|Sin datos|34|32|  
+|12-25-2008|Sin datos|34|32|  
   
  Puede observar que los pronósticos con los datos extendidos (que se muestran aquí en negrita) repiten exactamente los puntos de datos reales. La repetición es por diseño. Mientras haya puntos de datos reales para usar, la consulta de predicción devolverá los valores reales y generará nuevos valores de predicción solo después de que se hayan usado los nuevos puntos de datos reales.  
   

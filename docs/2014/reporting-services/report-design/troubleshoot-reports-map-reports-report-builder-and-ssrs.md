@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 87904dc6e53bdf25739bd49267ddb1dc402186f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375347"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036826"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de informes: informes de mapa (Generador de informes y SSRS)
   Podrían producirse problemas con los mapas de un informe al agregar un mapa o una capa de mapa a un informe, personalizar un mapa o una capa de mapa existentes en un informe, obtener una vista previa de un mapa en un informe o publicar un informe con un mapa. Utilice este tema como ayuda para solucionar estos problemas.  

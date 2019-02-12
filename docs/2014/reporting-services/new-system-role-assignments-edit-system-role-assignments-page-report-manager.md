@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 26a2ca4499787fce12508e55bb5197b6f0c6f527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7c1354228c1afbebe519a94d16973d024b84caac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053995"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032396"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nueva asignación de roles del sistema y Editar asignaciones de roles del sistema (páginas del Administrador de informes)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nueva asignación de roles de sistema: Editar página de asignaciones de rol de sistema (Administrador de informes)
   Use la página Nueva asignación de roles del sistema o Editar asignaciones de roles del sistema para definir la seguridad del servidor de informes. Toda la seguridad se define a través de asignaciones de roles, que asocian usuarios o grupos específicos a las tareas que pueden realizar. La lista de tareas se presenta como una definición de roles que se selecciona cuando se realiza una asignación de roles.  
   
  Las asignaciones de roles que se crean o modifican en el nivel de sistema se aplican al servidor de informes como un conjunto. Por ejemplo, la posibilidad de crear programaciones compartidas se especifica en el nivel de sistema porque estas programaciones se utilizan en todo el sistema.  
@@ -52,9 +52,9 @@ ms.locfileid: "48053995"
  **Roles**  
  Proporciona una lista de roles del nivel del sistema que puede asignar a otros usuarios. Puede especificar varios roles para una asignación de roles única.  
   
- El Administrador de informes no muestra las tareas en cada rol ni proporciona una manera de agregar o modificar las tareas. Debe usar los roles como se definen. Para crear, modificar, o eliminar roles, utilice [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obtener más información, consulte [crear, eliminar o modificar un rol &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ El Administrador de informes no muestra las tareas en cada rol ni proporciona una manera de agregar o modificar las tareas. Debe usar los roles como se definen. Para crear, modificar o eliminar roles, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para más información, consulte [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
- Tenga en cuenta que si usa [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] con Advanced Services, debe usar los roles predeterminados que se proporcionan.  
+ Tenga en cuenta que si está usando [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] con Advanced Services, debe usar los roles predeterminados proporcionados.  
   
  **Descripciones**  
  Muestra información adicional sobre el rol. En el caso de los roles predefinidos, como Usuario del sistema o Administrador del sistema, la descripción es un resumen de las tareas que admite cada rol.  

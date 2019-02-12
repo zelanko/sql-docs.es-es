@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e91d3e4ec882793ded89c934a598cafd1b4ca6e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0b745a3d9cfd88bb65b60720903768672fbe1e88
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352354"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019096"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de informes de Reporting Services
   En este tema se ofrece información general del servidor de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , el componente central de una instalación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Está compuesto por un par de motores de procesamiento, además de una serie de extensiones con finalidades especiales que administran la autenticación, el procesamiento de datos, la representación y las operaciones de entrega. Un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se ejecuta en uno de dos modos de implementación: modo nativo o modo de SharePoint. Consulte la sección [Comparación de características de SharePoint en modo nativo](#bkmk_featuresupport) para obtener una comparación de las características.  

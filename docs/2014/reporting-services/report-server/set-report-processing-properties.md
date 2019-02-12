@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 90928774eb2429430da0cbc1e8904ec5b1dc0c08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d77a978ca0d1f8f1f175871d5acd6de0aa5c6e64
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161735"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019126"
 ---
 # <a name="set-report-processing-properties"></a>Establecer las propiedades del procesamiento de informes
   Las propiedades de ejecución del informe controlan el modo en que se procesa un informe. Estas propiedades deben establecerse de forma individual para cada uno de los informes.  
@@ -57,8 +57,8 @@ ms.locfileid: "48161735"
  Cuando se cumpla esta condición, el servidor de informes deshabilitará la suscripción la próxima vez que esté programada su ejecución. Para volver a activarla, abra y guarde la suscripción. Al abrir la suscripción, el servidor de informes actualiza los valores de parámetro de la suscripción con los valores especificados para la instantánea. Para más información sobre las suscripciones, vea [Suscripciones y entrega &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer opciones de procesamiento &#40;modo integrado de Reporting Services en SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Configurar las propiedades de ejecución de un informe &#40;el Administrador de informes&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Configurar las propiedades de ejecución de un informe &#40;Administrador de informes&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Conceptos de Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Cómo: Agregar una instantánea al historial de informes](add-a-snapshot-to-report-history-report-manager.md)   
  [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

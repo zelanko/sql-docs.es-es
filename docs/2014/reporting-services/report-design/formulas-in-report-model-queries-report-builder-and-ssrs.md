@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 60a6c6a9271245e36c3e491b946c36e175f12d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 18390c8cb1df552b746f16c5eb569f08063e7763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209475"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026566"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Utilizar fórmulas en consultas de modelo de informe (Generador de informes y SSRS)
   Las fórmulas son los cálculos que se realizan en los valores de un informe que utiliza un modelo de informe como origen de datos. Una fórmula puede contener funciones, operadores, constantes y referencias a campos o entidades. Las fórmulas permiten combinar, agregar, filtrar y evaluar datos numéricos y de texto. Puede crear fórmulas y guardarlas como campos nuevos, o puede modificar las fórmulas de campos existentes.  
@@ -53,7 +53,7 @@ ms.locfileid: "48209475"
  **Operador de concatenación de texto** Use la Y comercial (&) para unir, o concatenar, una o más cadenas de texto a fin de generar un único fragmento de texto.  
   
 ##  <a name="Constants"></a> Constantes  
- Una constante es un valor que no se calcula y que, por lo tanto, no cambia. Informe de generador utiliza las siguientes constantes: `True`, `False`, y `Empty`. Estas constantes se utilizan para evaluar campos booleanos. Por ejemplo, imagine que tiene un campo denominado IsDiscontinued. Los únicos valores válidos para este campo son True, False o Empty (" ").  
+ Una constante es un valor que no se calcula y que, por lo tanto, no cambia. El Generador de informes utiliza las constantes siguientes: `True`, `False` y `Empty`. Estas constantes se utilizan para evaluar campos booleanos. Por ejemplo, imagine que tiene un campo denominado IsDiscontinued. Los únicos valores válidos para este campo son True, False o Empty (" ").  
   
 ##  <a name="Functions"></a> Funciones  
  Las funciones son fórmulas predefinidas que realizan cálculos utilizando valores específicos, denominados *argumentos*, especificados en un orden concreto. Los argumentos pueden ser valores o campos literales, o combinaciones de ambos. Cuando se utilizan campos en las fórmulas, el nombre de campo representa a cada instancia del campo. Si el argumento es un valor literal, quizás deba indicar que lo es mediante caracteres específicos.  

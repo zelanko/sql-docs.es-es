@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 61eaf801c3033200626c0a28294be2d3af66efb1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518013"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018077"
 ---
 # <a name="data-alert-designer"></a>Diseñador de alertas de datos
   Las definiciones de alertas de datos se crean y editan en el Diseñador de alertas de datos. Una definición de alerta es una colección de metadatos, que incluye los datos del informe de su interés, las reglas que deben satisfacer los datos del informe para que se creen instancias de alertas de datos y se envíen mensajes de alertas de datos, los destinatarios del mensaje de alerta, etc.  

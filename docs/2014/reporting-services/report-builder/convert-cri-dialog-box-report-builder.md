@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 871f16c520d6682de0afb384577c17c096cdf18a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 40828dd4e7767688a329b641610a65dc0f3493c1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150425"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018207"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>Actualización de CRI (cuadro de diálogo del Generador de informes)
   Este informe contiene elementos de informe personalizados (CRI) con características no admitidas. Los CRI son extensiones del lenguaje RDL (Report Definition Language) que admiten objetos personalizados que muestran datos en un informe. Los CRI incluyen componentes de tiempo de diseño y de tiempo de ejecución proporcionados por otros fabricantes de software.  
@@ -31,7 +31,7 @@ ms.locfileid: "48150425"
   
  Algunos CRI se pueden convertir en elementos de informe en el nuevo formato de definición de informe. Al abrir el informe, se le pregunta si desea actualizar. Use la información siguiente para determinar si deben convertirse los CRI de este informe:  
   
--   **Sí** : elija **Sí** para convertir todos los CRI del informe, siempre que sea posible. Las características no admitidas de los CRI no se pueden actualizar y se quitan del archivo de definición de informe. Para obtener la lista de características no admitidas, consulte [actualizar informes](../install-windows/upgrade-reports.md). Al ver el informe, es posible que observe diferencias en la manera en que se muestran los CRI en el informe.  
+-   **Sí** : elija **Sí** para convertir todos los CRI del informe, siempre que sea posible. Las características no admitidas de los CRI no se pueden actualizar y se quitan del archivo de definición de informe. Para obtener la lista de las características no admitidas, vea [Actualizar informes](../install-windows/upgrade-reports.md). Al ver el informe, es posible que observe diferencias en la manera en que se muestran los CRI en el informe.  
   
 -   **No** : elija **No** si no desea convertir los CRI del informe. El procesador de informes no puede mostrar la versión actual de estos CRI. Si el administrador del sistema tiene pensado instalar una nueva versión de los CRI de otros fabricantes de software que es compatible con el nuevo formato de definición de informe, debería elegir **No**. Hasta que estén disponibles las nuevas versiones, los CRI se muestran en el informe como un cuadro de texto vacío con una X roja.  
   
@@ -44,6 +44,6 @@ ms.locfileid: "48150425"
  Para identificar el formato de definición de informe actual de un informe, un servidor de informes o un proyecto, o bien para el entorno de creación de informes, vea [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

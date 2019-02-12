@@ -15,15 +15,15 @@ helpviewer_keywords:
 - DENY statement, XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 096bc5aa18727eec1e01d1cf2da1fbd0c48834f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f5938d06c836e4b523c1e21df91c449db88bc7f4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534076"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023090"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY (permisos de colección de esquemas XML de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ DENY EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [GRANT &#40;permisos de colección de esquemas XML de Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
  [REVOKE &#40;permisos de colección de esquemas XML de Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
  [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   

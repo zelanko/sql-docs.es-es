@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9170ab9d3765d1310fdaf5c91039713db6d6ab20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 2fcaaf1e12e685ef029d758216eb10f9b21526bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081845"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041736"
 ---
 # <a name="report-f1-help"></a>Ayuda F1 del informe
   Los temas de esta sección proporcionan información acerca de las opciones que se pueden establecer en informe en el cuadro de diálogo **Propiedades del informe** . Para abrir el cuadro de diálogo **Propiedades del informe** , haga clic con el botón secundario en el fondo del Diseñador de informes y haga clic en **Propiedades del informe**.  

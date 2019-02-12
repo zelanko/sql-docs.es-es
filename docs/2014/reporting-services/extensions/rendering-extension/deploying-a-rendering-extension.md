@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f2f0c56138572873c51de852f282edcfbae1c104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 302f00feeb5b240a80d6ce969343797202ebe484
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190885"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040056"
 ---
 # <a name="deploying-a-rendering-extension"></a>Implementar una extensión de representación
-  Después de haber escrito y compilado la extensión de representación de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], es necesario hacer que el servidor de informes y el Diseñador de informes la puedan reconocer. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  
+  Después de haber escrito y compilado la extensión de representación de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , es necesario hacer que el servidor de informes y el Diseñador de informes la puedan reconocer. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento Extension de representación de archivos de configuración  
- Una vez compilada una extensión de representación en una .DLL, agregue una entrada al archivo rsreportserver.config. De forma predeterminada, la ubicación es %Archivos de programa%\Microsoft SQL Server\MSRS10_50.\<nombreDeInstancia>\Reporting Services\ReportServer. El elemento primario es \<Render>. Bajo el elemento Render hay un elemento Extension para cada extensión de representación. El `Extension` elemento contiene dos atributos, Name y Type.  
+ Una vez compilada una extensión de representación en una .DLL, agregue una entrada al archivo rsreportserver.config. De forma predeterminada, la ubicación es %Archivos de programa%\Microsoft SQL Server\MSRS10_50.\<nombreDeInstancia>\Reporting Services\ReportServer. El elemento primario es \<Render>. Bajo el elemento Render hay un elemento Extension para cada extensión de representación. El elemento `Extension` contiene dos atributos, Name y Type.  
   
  En la tabla siguiente se describe los atributos para el `Extension` (elemento) para las extensiones de representación:  
   
 |Attribute|Descripción|  
 |---------------|-----------------|  
-|**Nombre**|Nombre único de la extensión. La longitud máxima para el atributo **Name** es de 255 caracteres. El nombre debe ser único entre todas las entradas dentro del elemento **Extensions** del archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
+|**Name**|Nombre único de la extensión. La longitud máxima para el atributo **Name** es de 255 caracteres. El nombre debe ser único entre todas las entradas dentro del elemento **Extensions** del archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
 |**Tipo**|Lista separada por comas que incluye el espacio de nombres completo junto con el nombre del ensamblado.|  
 |**Visible**|El valor `false` indica que la extensión de representación no debería estar visible en las interfaces de usuario. Si el atributo no está incluido, el valor predeterminado es `true`.|  
 |**LogAllExecutionRequests**|Un valor `false` indica que una entrada solo se registra para la primera ejecución de un informe en una sesión. Si el atributo no está incluido, el valor predeterminado es `true`.<br /><br /> Por ejemplo, este valor de configuración determina si se ha de registrar una entrada solo para la primera página representada en un informe (en el caso de `false`) o una entrada para cada página representada en el informe (en el caso de `true`).|  
@@ -46,7 +46,7 @@ ms.locfileid: "48190885"
   
 1.  Copie el ensamblado de la ubicación provisional al directorio bin del servidor de informes en el que desea utilizar la extensión de representación. La ubicación predeterminada del directorio Bin del servidor de informes es %Archivos de programa%\Microsoft SQL Server\MSRS10_50.\<nombreDeInstancia>\Reporting Services\ReportServer\Bin.  
   
-2.  Una vez copiado el archivo de ensamblado, abra el archivo rsreportserver.config. El archivo rsreportserver.config también se encuentra en el directorio bin del servidor de informes. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión. Puede abrir el archivo con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un simple editor de texto.  
+2.  Una vez copiado el archivo de ensamblado, abra el archivo rsreportserver.config. El archivo rsreportserver.config también se encuentra en el directorio bin del servidor de informes. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión. Puede abrir el archivo con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un editor de texto simple.  
   
      Para más información, consulte [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md).  
   

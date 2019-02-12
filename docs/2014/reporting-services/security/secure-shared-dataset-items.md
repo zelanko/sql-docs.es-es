@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 590d24fb56a91ce4bea13e5404c24a395986a397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 12f37232f9f108a2764123d1bce567e9048a8b6d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098815"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035016"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger los elementos de un conjunto de datos compartido
   En un servidor de informes, los elementos de un conjunto de datos compartido se pueden usar en varios informes. Puede proteger los conjuntos de datos compartidos para controlar el grado de acceso que los usuarios tienen. De forma predeterminada, solo los usuarios que son miembros del grupo integrado **Administradores** pueden ver los conjuntos de datos compartidos, modificar las propiedades, habilitar el almacenamiento en caché, crear planes de actualización de caché y eliminar elementos. Para todos los demás usuarios se deben crear asignaciones de roles que permitan el acceso a un conjunto de datos compartido.  
@@ -47,7 +47,7 @@ ms.locfileid: "48098815"
 |Usar informes|Ver la definición del conjunto de datos compartido.|Administrador de contenido<br /><br /> Generador de informes|  
 |Establecer la seguridad de elementos individuales|Crear y modificar asignaciones de roles que controlen el acceso al conjunto de datos compartido. Esta tarea debe utilizarse con las tareas "Ver informes" o "Administrar informes". De lo contrario, no surte efecto porque el usuario no puede seleccionar el elemento.|Administrador de contenido|  
   
- Para obtener más información, consulte [tareas de nivel de elemento](tasks-and-permissions-item-level-tasks.md) y [Roles predefinidos](role-definitions-predefined-roles.md).  
+ Para más información, vea [Tareas de nivel de elemento](tasks-and-permissions-item-level-tasks.md) y [Roles predefinidos](role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Administrar conjuntos de datos compartidos](../report-data/manage-shared-datasets.md)   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 44973c4366f6d88cf0a5a815e4a6dcdaf88e75ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5141ca13693d140e56700b46e030e1eb2b14e0e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081475"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027006"
 ---
 # <a name="authorization-in-reporting-services"></a>La autorización en Reporting Services
   La autorización es el proceso de determinar si se debería conceder a una identidad el tipo solicitado de acceso a un recurso determinado en la base de datos del servidor de informes. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza una arquitectura de autorización basada en roles que concede a los usuarios acceso a un recurso determinado según la asignación de roles del usuario para la aplicación. Las extensiones de seguridad para [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contienen una implementación de un componente de autorización que se utiliza para conceder acceso a los usuarios una vez autenticados en el servidor de informes. La autorización se invoca cuando un usuario intenta realizar una operación en el sistema o en un elemento del servidor de informes a través del acceso de dirección URL y la API SOAP. Esto se posibilita a través de la interfaz de extensión de la seguridad **IAuthorizationExtension**. Según se ha indicado previamente, todas las extensiones heredan de **IExtension** la interfaz básica de cualquier extensión que implemente. **IExtension** e **IAuthorizationExtension** son miembros del espacio de nombres **Microsoft.ReportingServices.Interfaces** .  
@@ -70,7 +70,7 @@ public bool CheckAccess(
  Los descriptores de seguridad se crean utilizando los métodos <xref:ReportService2010.ReportingService2010.SetPolicies%2A> y <xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A> del servicio web.  
   
 ### <a name="authorization-flow"></a>Flujo de la autorización  
- La extensión de seguridad configurada actualmente para ejecutarse en el servidor controla la autorización de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La autorización se basa en los roles y está limitada a los permisos y operaciones que proporciona la arquitectura de seguridad de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. El diagrama siguiente describe el proceso para autorizar a los usuarios para operar en los elementos de la base de datos del servidor de informes:  
+ La extensión de seguridad configurada actualmente para ejecutarse en el servidor controla la autorización de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La autorización se basa en los roles y está limitada a los permisos y operaciones que proporciona la arquitectura de seguridad de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . El diagrama siguiente describe el proceso para autorizar a los usuarios para operar en los elementos de la base de datos del servidor de informes:  
   
  ![Flujo de autorización de seguridad de Reporting Services](../../media/rosettasecurityextensionauthorizationflow.gif "Flujo de autorización de seguridad de Reporting Services")  
   

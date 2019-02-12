@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ab5e18825ec9a328db926829355b706cff2a58d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366717"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022994"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Crear un informe de tabla básico (Tutorial de SSRS)
   Este tutorial está diseñado para ayudarle a crear un informe de tabla básico basado en la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] mediante el Diseñador de informes de la base de datos. También puede crear informes con el Generador de informes o con el Asistente para informes. En este tutorial, creará un proyecto de informes, configurará la información de conexión, definirá una consulta, agregará una región de datos de tabla, agrupará y calculará los totales de varios campos, y obtendrá una vista previa del informe.  
@@ -45,17 +45,17 @@ ms.locfileid: "53366717"
  También debe disponer de permisos de solo lectura para recuperar datos de la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
   
 ## <a name="tasks"></a>Tareas  
- [Lección 1: Crear un proyecto de servidor de informes &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
+ [Lección 1: Creación de un proyecto de servidor de informes &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
   
- [Lección 2: Especificar información de conexión &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
+ [Lección 2: Especificación de información de conexión &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
   
- [Lección 3: Definir un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
+ [Lección 3: Definición de un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   
- [Lección 4: Agregar una tabla al informe &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
+ [Lección 4: Adición de una tabla al informe &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
   
- [Lección 5: Aplicar formato a un informe &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
+ [Lección 5: Aplicación de formato a un informe &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
   
- [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
+ [Lección 6: Adición de grupos y totales &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
 >  Consultar los tutoriales, le recomendamos que agregue **siguiente** y **anterior** botones a la barra de herramientas del Visor de documentos. Para obtener más información, vea:  

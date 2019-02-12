@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e0bee469bd6dbbc93a48051e7c2e236c6c65c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180925"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028896"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Especificar un conjunto de datos de pruebas para la estructura (Tutorial básico de minería de datos)
   En las pantallas finales del Asistente para minería de datos dividirá los datos en un conjunto de pruebas y en un conjunto de entrenamiento. Después, asignará nombre a la estructura y habilitará la obtención de detalles en el modelo.  
@@ -35,7 +34,7 @@ ms.locfileid: "48180925"
 ## <a name="specifying-drillthrough"></a>Especificar la obtención de detalles  
  La obtención de detalles puede habilitarse en los modelos y en las estructuras. La casilla de este cuadro de diálogo habilita la obtención de detalles en el modelo con nombre. Una vez procesado el modelo, podrá recuperar información detallada de los datos de entrenamiento usados para crear el modelo.  
   
- Si la estructura de minería de datos subyacente también se ha configurado para permitir la obtención de detalles, puede recuperar información detallada tanto de los casos de modelos como de la estructura, incluidas las columnas que no estaban incluidas en el modelo de minería de datos. Para más información, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Si la estructura de minería de datos subyacente también se ha configurado para permitir la obtención de detalles, puede recuperar información detallada tanto de los casos de modelos como de la estructura, incluidas las columnas que no estaban incluidas en el modelo de minería de datos. Para obtener más información, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### <a name="to-name-the-model-and-structure-and-specify-drillthrough"></a>Para denominar el modelo y la estructura, y especificar la obtención de detalles  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48180925"
   
 ## <a name="see-also"></a>Vea también  
  [Habilitar obtención de detalles para un modelo de minería de datos](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
- [Las consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [Especifique los datos de entrenamiento &#40;Asistente para minería de datos&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
   
   

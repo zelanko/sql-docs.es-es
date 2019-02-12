@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16ba4327d2ca82e2c85c104b1617fdea68849654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb19d703480532c66ff06de8c6885779652f8385
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165325"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013616"
 ---
 # <a name="delete-an-item-management-studio"></a>Eliminar un elemento (Management Studio)
   Cuando se conecta a una instancia del servidor de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], puede eliminar definiciones de roles y programaciones compartidas. No puede eliminar informes, modelos u otros elementos de un servidor de informes. Para eliminar el contenido del servidor de informes, use el Administrador de informes en su lugar. O bien, si el servidor de informes está configurado para el modo integrado de SharePoint, use las características de administración de elementos en la biblioteca de SharePoint que incluye su contenido.  

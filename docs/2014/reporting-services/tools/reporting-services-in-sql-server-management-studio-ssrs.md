@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6cbd9cc0723f6b1ce01799423a88c6a0f62e801
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d11f943dcbe22080609c8e10a457e2c64d904de2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132191"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036766"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services en SQL Server Management Studio (SSRS)
   Los administradores del servidor de informes pueden usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para:  
@@ -35,7 +35,7 @@ ms.locfileid: "48132191"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Conexión con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)  
+-   [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)  
   
 -   [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)  
   

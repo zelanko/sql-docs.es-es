@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59ec5bbacf23d0f86f88a17a68faaf27162ebdcb
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596796"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032956"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning Services (R, Python) en SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ SQL Server 2017 Machine Learning Services es un complemento a una instancia del 
 
 Si usó anteriormente [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services en SQL Server 2017 es la próxima generación de soporte técnico de R, con las versiones actualizadas de base R, RevoScaleR, MicrosoftML, y otras bibliotecas incorporaron en 2016. 
 
-En Azure SQL Database, [Machine Learning Services (con R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r) está actualmente en versión preliminar pública.
+En Azure SQL Database, [Machine Learning Services (con R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) está actualmente en versión preliminar pública.
 
 La propuesta de valor de clave de Machine Learning Services es la potencia de su empresa R y paquetes de Python para ofrecer análisis avanzado a escala y la capacidad de poner los cálculos y procesamiento de donde residen los datos, lo que elimina la necesidad de extraer los datos a través de la red.
 
@@ -126,8 +126,8 @@ SQL Server 2017 Machine Learning Services es la próxima generación de SQL Serv
 
 | Nombre del producto | Versión del motor | Fecha de la versión |
 |--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (en bases de datos) | R Server 9.2.1 <br/> Server 9.2 de Python | Octubre de 2017 |
-| Machine Learning Server (independiente) de SQL Server 2017 | R Server 9.2.1 <br/> Server 9.2 de Python | Octubre de 2017 |
+| SQL Server 2017 Machine Learning Services (en bases de datos) | R Server 9.2.1 <br/> Python Server 9.2 | Octubre de 2017 |
+| Machine Learning Server (independiente) de SQL Server 2017 | R Server 9.2.1 <br/> Python Server 9.2 | Octubre de 2017 |
 | SQL Server 2016 R Services (In-Database) | R Server 9.1  | Julio de 2017  |
 | SQL Server 2016 R Server (independiente)  |  R Server 9.1 | Julio de 2017 |
 

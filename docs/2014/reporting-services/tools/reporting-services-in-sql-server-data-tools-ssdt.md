@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: df8e06b5de6824ee33fb8e923411ecf3e24e2ca9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: kfile
+ms.openlocfilehash: 4b12edf108fd82b9aab3696eefa1d34691688ee6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125145"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017936"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] es un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] entorno con mejoras específicas para soluciones de inteligencia empresarial. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] se incluye con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

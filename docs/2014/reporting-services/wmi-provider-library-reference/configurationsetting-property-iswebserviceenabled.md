@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a03753602b0a44cac213cf001406bd537ede695b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68875a9d3f93fc952d0f1d384e526a65e1f20fab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079925"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022036"
 ---
 # <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>Propiedad IsWebServiceEnabled (MSReportServer_ConfigurationSetting de WMI)
   Indica si el servicio web del servidor de informes está habilitado. Solo lectura.  
@@ -40,7 +40,7 @@ public boolean IsWebServiceEnabled;
 ```  
   
 ## <a name="property-values"></a>Valores de propiedad  
- Solo lectura `Boolean` valor. Un valor de `true` indica que el servicio Web del servidor de informes está habilitado.  
+ Un valor de tipo `Boolean` de solo lectura. Un valor de `true` indica que el servicio web del servidor de informes está habilitado.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

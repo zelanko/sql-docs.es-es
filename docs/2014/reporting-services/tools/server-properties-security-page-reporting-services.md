@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9513e66b92a97f1d546d7b33cc20849e8bff868a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89d8b7165bf32d4d4d300f753b9c3821b6f23134
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161445"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041176"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Propiedades del servidor (página de seguridad) - Reporting Services
   Use esta página para desactivar características que pueden poner en peligro un servidor de informes. Al desactivar estas características, se limitará alguna funcionalidad, pero puede mejorar la seguridad total del servidor de informes mitigando amenazas concretas.  
@@ -34,9 +34,9 @@ ms.locfileid: "48161445"
  **Habilitar la notificación ad hoc**  
  Especifica si los usuarios pueden realizar consultas ad hoc desde un informe del Generador de informes, en el que los nuevos informes se generan automáticamente cuando un usuario hace clic en los datos de interés.  
   
- Al establecer esta opción se determina si la propiedad `EnableLoadReportDefinition` en el servidor de informes está se establece en `True` o `False`. Si desactiva esta opción, la propiedad se establecerá en `False` y el servidor no generará informes Click-through que se crean durante la exploración de datos de informe. Se bloquearán todas las llamadas al método `LoadReportDefinition`.  
+ Al establecer esta opción se determina si la propiedad `EnableLoadReportDefinition` en el servidor de informes está se establece en `True` o `False`. Si borra esta opción, la propiedad se establecerá en `False` y el servidor de informes no generará informes click-through que se crean durante la exploración de datos. Se bloquearán todas las llamadas al método `LoadReportDefinition`.  
   
- Al desactivar esta opción mitiga una amenaza que un usuario malintencionado inicia un ataque de denegación de servicio sobrecargando el servidor de informes con `LoadReportDefinition` solicitudes.  
+ Al desactivar esta opción, se mitiga una amenaza en la que un usuario malintencionado inicia un ataque por denegación de servicio sobrecargando el servidor de informes con solicitudes `LoadReportDefinition`.  
   
 ## <a name="see-also"></a>Vea también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117855"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043056"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controlar la presentación de la región de datos Tablix en una página de informe (Generador de informes y SSRS)
   En este tema se describen las propiedades que puede modificar en una región de datos Tablix para cambiar el modo en que aparece dicha región al visualizarla en un informe.  
@@ -56,7 +56,7 @@ ms.locfileid: "48117855"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Controlar cómo se representan grupos de filas y columnas de Tablix  
  Para controlar cómo se representa un grupo de región de datos Tablix, hay que tener en cuenta la estructura de grupo. Una región de datos Tablix puede tener cuatro áreas, tal y como se muestra en la ilustración siguiente:  
   
- ![Las áreas de regiones de datos Tablix](../media/rs-tablixareas.gif "las áreas de regiones de datos Tablix")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  El área del grupo de filas y el área del grupo de columnas contienen encabezados de grupo. Cuando una región de datos Tablix tiene encabezados de grupo, puede controlar la repetición de las filas y las columnas estableciendo las propiedades en la página **General** del cuadro de diálogo **Propiedades de Tablix** .  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48117855"
 ## <a name="see-also"></a>Vea también  
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Controlar saltos de página, encabezados, columnas y filas &#40;generador de informes y SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Controlar saltos de página, encabezados, columnas y filas &#40;Generador de informes y SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

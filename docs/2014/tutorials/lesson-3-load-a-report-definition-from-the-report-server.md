@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9555f2ec58aefa5f0a3b071b0d4cf7c8ee7ff14
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813878"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025646"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lección 3: Cargar una definición de informe desde el servidor de informes
   Una vez que haya creado el proyecto y generado las clases con el esquema RDL, estará listo para cargar una definición de informe desde el servidor de informes.  
@@ -98,7 +97,7 @@ ms.locfileid: "51813878"
     ```  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- En la siguiente lección escribirá el código para actualizar la definición de informe que se cargó desde el servidor de informes. Consulte [lección 4: actualizar la definición de informe mediante programación](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ En la siguiente lección escribirá el código para actualizar la definición de informe que se cargó desde el servidor de informes. Consulte [lección 4: Actualizar la definición de informe mediante programación](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar informes con clases generadas a partir del esquema RDL &#40;Tutorial de SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

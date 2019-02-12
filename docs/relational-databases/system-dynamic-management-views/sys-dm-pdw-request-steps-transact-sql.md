@@ -1,9 +1,9 @@
 ---
-title: Sys.dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8543933aa102a6962846164b7267fad7df222cdd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 63a39ab5ace1ec3666b3f5c70cc628268304ce92
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393599"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039056"
 ---
-# <a name="sysdmpdwrequeststeps-transact-sql"></a>Sys.dm_pdw_request_steps (Transact-SQL)
+# <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene información sobre todos los pasos que componen una solicitud determinada o una consulta en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Muestra una fila por cada paso de consulta.  
@@ -31,7 +31,7 @@ ms.locfileid: "52393599"
 |step_index|**int**|request_id y step_index conforman la clave para esta vista.<br /><br /> La posición de este paso en la secuencia de pasos que componen la solicitud.|de 0 a (n-1) para una solicitud de n pasos.|  
 |operation_type|**nvarchar(35)**|Tipo de operación representada por este paso.|**Operaciones de DMS query plan:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Operaciones de plan de consulta SQL:** 'OnOperation', 'RemoteOperation'<br /><br /> **Otras operaciones del plan de consulta:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operaciones externas para las lecturas:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operaciones externas de MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operaciones externas para operaciones de escritura:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Para obtener más información, vea "Descripción planes de consulta" en el [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
 |distribution_type|**nvarchar(32)**|Tipo de distribución que se someterá este paso.|'AllNodes', "AllDistributions", "AllComputeNodes", 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'No se especifica'|  
-|valor location_type|**nvarchar(32)**|Donde se ejecuta el paso.|'Compute', 'Control', 'DMS'|  
+|location_type|**nvarchar(32)**|Donde se ejecuta el paso.|'Compute', 'Control', 'DMS'|  
 |status|**nvarchar(32)**|Estado de este paso.|Pendiente, ejecución, completado, error, UndoFailed, PendingCancel, cancelado, deshacer, anulado|  
 |error_id|**nvarchar(36)**|Identificador único del error asociado con este paso, si procede.|Consulte error_id de [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Es NULL si se ha producido ningún error.|  
 |start_time|**datetime**|Hora en que inició el paso de ejecución.|Menor o igual a la hora actual y mayor o igual que end_compile_time de la consulta a la que pertenece este paso. Para obtener más información sobre las consultas, vea [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  

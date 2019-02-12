@@ -12,20 +12,20 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: cbbe4fe5917419bc07cef81629c7b2e38b7cff15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108435"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019646"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la imagen, General (Generador de informes y SSRS)
   Seleccione **General** en el cuadro de diálogo **Propiedades de la imagen** para agregar una imagen, cambiar el nombre predeterminado de la imagen y agregar texto de información sobre herramientas.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre del elemento. El nombre debe ser único en el informe. De forma predeterminada, se asigna un nombre general como Image1 o Image2.  
   
  **Información sobre herramientas**  
@@ -58,7 +58,7 @@ ms.locfileid: "48108435"
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Imágenes &#40;generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Imágenes &#40;Generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

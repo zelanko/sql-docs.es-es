@@ -12,15 +12,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db937bd1a5ce723e071acb5077059235a9261193
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5715e1c5744450963026e990f50781321abd74ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739461"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022336"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (índices XML selectivos)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DROP INDEX index_name ON <object>
 DROP INDEX sxi_index ON tbl;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Índices XML selectivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Crear, modificar y quitar índices XML selectivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

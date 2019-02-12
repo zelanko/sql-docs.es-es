@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e43bf28f3908c50bb22fb1d426c84c943321c376
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0cd7ef91cd1e682c7a238c029f6a072613b2efb9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058895"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025676"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
   En el Diseñador de informes, se define una ruta de acceso de elemento que distingue mayúsculas de minúsculas para especificar los datos que se van a utilizar en un informe desde un origen de datos XML. Una ruta de acceso de elemento indica cómo se deben recorrer los nodos jerárquicos XML y sus atributos en el origen de datos XML. Para utilizar la ruta de acceso de elemento predeterminada, mantenga vacía la consulta del conjunto de datos o el elemento XML `ElementPath` del elemento XML `Query`. Cuando se recuperan datos del origen de datos XML, los nodos de elemento que tienen valores de texto y atributos de nodo de elemento se convierten en columnas en el conjunto de resultados. Los valores de los nodos y atributos pasan a ser datos de fila al ejecutar la consulta. Las columnas aparecen como la colección de campos del conjunto de datos en el panel Datos de informe. En este tema se describe la sintaxis de la ruta de acceso de elemento.  
@@ -77,15 +77,15 @@ XMLLocalName :: =
 |----------|----------------|  
 |Ruta de acceso de elemento|Define la secuencia de nodos que deben recorrerse en el documento XML para recuperar los datos de campo de un conjunto de datos con un origen de datos XML.|  
 |`ElementNode`|Nodo XML en el documento XML. Los nodos se designan mediante etiquetas y existen en una relación jerárquica con otros nodos. Por ejemplo, \<Customers> es el nodo de elemento raíz. \<Customer> es un subelemento de \<Customers>.|  
-|`XMLName`|Nombre del nodo. Por ejemplo, el nombre del nodo Customers es Customers. Un `XMLName` puede agregarse como prefijo un identificador de espacio de nombres al nombre único a cada nodo.|  
-|`Encoding`|Indica que el `Value` para este elemento está codificado XML y debe descodificarse e incluirse como un subelemento de este elemento.|  
-|`FieldList`|Define el conjunto de elementos y atributos que se van a utilizar para recuperar datos.<br /><br /> Si no se especifica, se usan como campos todos los atributos y subelementos. Si se especifica la lista de campos vacíos (**{}**), no se usará ningún campo de este nodo.<br /><br /> Un `FieldList` no puede contener tanto un `Value` y un `Element` o `ElementNode`.|  
+|`XMLName`|Nombre del nodo. Por ejemplo, el nombre del nodo Customers es Customers. `XMLName` puede incluir delante un identificador de espacio de nombres para asignar un nombre único a cada nodo.|  
+|`Encoding`|Indica que `Value` para este elemento es XML codificado y debe descodificarse e incluirse como un subelemento de este elemento.|  
+|`FieldList`|Define el conjunto de elementos y atributos que se van a utilizar para recuperar datos.<br /><br /> Si no se especifica, se usan como campos todos los atributos y subelementos. Si se especifica la lista de campos vacíos (**{}**), no se usará ningún campo de este nodo.<br /><br /> `FieldList` no puede contener a la vez `Value` y `Element` o `ElementNode`.|  
 |`Field`|Especifica los datos que se recuperan como campo de conjunto de datos.|  
-|`Attribute`|Un par de nombre y valor dentro de la `ElementNode`. Por ejemplo, en el nodo de elemento \<Customer ID = "1" >, `ID` es un atributo y `@ID(Integer)` devuelve "1" como un tipo entero en el campo de datos correspondiente `ID`.|  
+|`Attribute`|Par de nombre y valor de `ElementNode`. Por ejemplo, en el nodo de elemento \<Customer ID = "1" >, `ID` es un atributo y `@ID(Integer)` devuelve "1" como un tipo entero en el campo de datos correspondiente `ID`.|  
 |`Value`|Valor del elemento. `Value` solo se puede usar en el último `ElementNode` de la ruta de acceso del elemento. Por ejemplo, porque \<devolver > es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, el valor de `Return {@}` es `Chair`.|  
 |`Element`|Valor del subelemento con nombre. Por ejemplo, Customers {}/Customer {}/LastName recupera valores únicamente para el elemento LastName.|  
 |`Type`|Tipo de datos opcional que se usa para el campo creado a partir de este elemento.|  
-|`NamespacePrefix`|`NamespacePrefix` se define en el elemento XML Query. Si no existe ningún elemento de consulta XML, espacios de nombres en el XML `ElementPath` se omiten. Si hay un elemento XML Query, el elemento XML `ElementPath` tiene un atributo `IgnoreNamespaces` opcional. Si IgnoreNamespaces es `true`, espacios de nombres en el XML `ElementPath` y se pasan por alto el documento XML. Para más información, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](report-data-ssrs.md).|  
+|`NamespacePrefix`|`NamespacePrefix` se define en el elemento XML Query. Si no existe ningún elemento XML Query, se pasan por alto los espacios de nombres del elemento XML `ElementPath`. Si hay un elemento XML Query, el elemento XML `ElementPath` tiene un atributo `IgnoreNamespaces` opcional. Si IgnoreNamespaces es `true`, espacios de nombres en el XML `ElementPath` y se pasan por alto el documento XML. Para más información, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](report-data-ssrs.md).|  
   
 ## <a name="example---no-namespaces"></a>Ejemplo: sin espacios de nombres  
  En los ejemplos siguientes se usa el documento XML Customers.xml. En esta tabla se muestran ejemplos de sintaxis de ruta de acceso de elemento y los resultados que se obtienen al utilizar la ruta de acceso de elemento en una consulta que define un conjunto de datos, basándose en el documento XML como origen de datos.  

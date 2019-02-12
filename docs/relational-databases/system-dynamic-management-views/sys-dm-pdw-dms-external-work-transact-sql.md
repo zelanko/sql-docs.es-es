@@ -1,9 +1,9 @@
 ---
-title: Sys.dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9c80038b344a942068f040bde040d4a9a29edcae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9e79803a1c06a78f67a37a6a669af1c5ab4683f5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419317"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021577"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52419317"
 |estimated_bytes_processed|**bigint**|Número de bytes procesados por este trabajador.|Mayor o igual que 0.|  
 |length|**bigint**|Número de bytes en el archivo de división.<br /><br /> Para Hadoop, esto es el tamaño del bloque de HDFS.|Definido por el usuario. El valor predeterminado es 64 MB.|  
 |status|**nvarchar(32)**|Estado del trabajo.|Pendiente, en proceso, terminado, error, anulado|  
-|start_time|**datetime**|Hora en que empezó la ejecución de este trabajador.|Mayor o igual a la hora de inicio de este trabajo pertenece el paso de consulta. Consulte [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|start_time|**datetime**|Hora en que empezó la ejecución de este trabajador.|Mayor o igual a la hora de inicio de este trabajo pertenece el paso de consulta. See [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Hora a la que finalizó la ejecución, no se pudo o se ha cancelado.|NULL para los trabajadores en curso o en cola. En caso contrario, es mayor que start_time.|  
 |total_elapsed_time|**int**|Tiempo total empleado en ejecución, en milisegundos.|Mayor o igual que 0.<br /><br /> Si total_elapsed_time supera el valor máximo de un entero, continuará total_elapsed_time sea el valor máximo. Esta condición generará la advertencia "se superó el valor máximo."<br /><br /> El valor máximo en milisegundos equivale a 24,8 días.|  
   

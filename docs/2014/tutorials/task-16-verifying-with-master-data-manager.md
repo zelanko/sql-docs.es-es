@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 57ad9d3e-8f95-4df6-af01-c291ccf49164
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b0f8c608384e3840f0c154233e90a79d4319bbad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b9e24e062695c3b8b4c1aacd37b464fafd99558
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203195"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023606"
 ---
 # <a name="task-16-verifying-with-master-data-manager"></a>Tarea 16: comprobar con Master Data Manager
   En esta tarea, comprobará el estado del trabajo por lotes enviado por el paquete de SSIS y comprobará que los datos se cargaron en el servidor de MDS con Master Data Manager.  
@@ -35,7 +32,7 @@ ms.locfileid: "48203195"
   
 5.  Asegúrese de que **proveedores** modelo está seleccionado para **modelo** y **VERSION_1** está seleccionada para **versión**y haga clic en  **Explorador**.  
   
-6.  Puede ver el paquete de datos de SSIS importado en MDS. Los datos deben estar limpios y tener ningún **código** valores (Nota: **SupplierID** columna en Excel corresponde a **código** atributo de entidad del proveedor en MDS).  
+6.  Puede ver el paquete de datos de SSIS importado en MDS. Los datos deben estar limpios y tener ningún **código** valores (tenga en cuenta: **SupplierID** columna en Excel corresponde a **código** atributo de entidad del proveedor en MDS).  
   
 ## <a name="next-step"></a>Paso siguiente  
  [Tarea 17: Revisar el proyecto de limpieza de DQS creado por el paquete SSIS](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  

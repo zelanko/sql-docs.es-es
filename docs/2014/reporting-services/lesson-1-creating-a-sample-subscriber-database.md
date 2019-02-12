@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear una base de datos de suscriptor de ejemplo | Microsoft Docs'
+title: 'Lección 1: Creación de una base de datos de suscriptor de ejemplo | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 516353788009feae4ac643182cac644b65e422f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a754f0d81714e3f483ee5abeab1850c61592ab6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156045"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039246"
 ---
-# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lección 1: Crear una base de datos de suscriptor de ejemplo
+# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lección 1: Creación de una base de datos de suscriptor de ejemplo
   Antes de que pueda definir una suscripción controlada por datos, debe disponer de un origen de datos que proporcione datos de suscripción. En este paso, creará una pequeña base de datos para almacenar los datos de suscripción utilizados en este tutorial. Más adelante, cuando la suscripción se haya procesado, el servidor de informes recupera estos datos y los utiliza para personalizar los resultados del informe, las opciones de entrega y el formato de presentación del informe.  
   
  En esta lección se da por supuesto que usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para crear un [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] base de datos.  
@@ -61,7 +61,7 @@ ms.locfileid: "48156045"
 7.  Use una instrucción SELECT para comprobar que tiene tres filas de datos. Por ejemplo: `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha creado correctamente los datos de suscripción que controlarán la distribución de informes y cambiarán los resultados del informe para cada suscriptor. A continuación, modificará las propiedades del origen de datos del informe que distribuirá a los suscriptores. Las propiedades del origen de datos se modifican con el fin de preparar el informe para la entrega de la suscripción controlada por datos. Además, modificará el diseño de informe para que incluya un parámetro usará la suscripción con los datos del suscriptor. [Lección 2: Modificar las propiedades del origen de datos de informe](lesson-2-modifying-the-report-data-source-properties.md).  
+ Ha creado correctamente los datos de suscripción que controlarán la distribución de informes y cambiarán los resultados del informe para cada suscriptor. A continuación, modificará las propiedades del origen de datos del informe que distribuirá a los suscriptores. Las propiedades del origen de datos se modifican con el fin de preparar el informe para la entrega de la suscripción controlada por datos. Además, modificará el diseño de informe para que incluya un parámetro usará la suscripción con los datos del suscriptor. [Lección 2: Propiedades del origen de modificación de los datos del informe](lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   

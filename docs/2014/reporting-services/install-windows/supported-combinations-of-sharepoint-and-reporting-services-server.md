@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b2335e06f5821bedefad8aeb558a3528632ad1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b4e1a516f10c15b8e84d80ff91de1aa9d66d8e1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102725"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034106"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Combinaciones admitidas del servidor y el complemento de SharePoint y Reporting Services (SQL Server 2014)
   Los servidores de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden instalarse en modo de SharePoint e integrarse con una implementación de SharePoint. No todas las características se admiten en todas las combinaciones de servidor de informes, complemento de Reporting Services para SharePoint y productos de SharePoint. En este tema se resumen las combinaciones admitidas. En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] la integración es el resultado de la combinación de las siguientes acciones:  
@@ -44,7 +44,7 @@ ms.locfileid: "48102725"
 |1|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2013|Sí|  
 |2|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Sí|  
 |3|[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2013|Sí|  
-|4|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Sí<br /><br /> Excepción: no se admite la integración de Power View.|  
+|4|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Sí<br /><br /> Excepción: No se admite la integración de Power view.|  
 |5|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|SharePoint 2010|Sí|  
 |6|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Sí|  
 |7|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2010|Sí|  
@@ -63,10 +63,10 @@ ms.locfileid: "48102725"
   
 -   Los servidores de informes de SQL Server 2012 (o posterior) no admiten el complemento de SQL Server 2008 R2. El instalador de requisitos previos de SharePoint 2010 instala automáticamente el complemento de SQL Server 2008 R2. Debe desinstalarse antes de instalar las versiones más recientes del complemento. No se admite la actualización en contexto del complemento.  
   
--   **Actualización:** SharePoint 2010 con el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado no se puede actualizar en contexto a SharePoint 2013. SharePoint 2013 requiere la versión de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o posterior del complemento y el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información acerca de la actualización, consulte [actualizar y migrar Reporting Services](upgrade-and-migrate-reporting-services.md).  
+-   **Actualización:** SharePoint 2010 con el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complemento instalado, no se pueden actualizar en contexto a SharePoint 2013. SharePoint 2013 requiere la versión de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o posterior del complemento y el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información acerca de la actualización, vea [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Dónde encontrar el complemento de Reporting Services para productos de SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
+ [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [Características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Actualizar y migrar Reporting Services](upgrade-and-migrate-reporting-services.md)  
   

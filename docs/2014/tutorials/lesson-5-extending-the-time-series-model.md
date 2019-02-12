@@ -1,24 +1,23 @@
 ---
-title: 'Lección 5: Extender la serie temporal de modelo | Microsoft Docs'
+title: 'Lección 5: Ampliación de la serie temporal de modelo | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b67d295f79188cf83994225125886142c961e3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138244"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028826"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Lección 5: Extender el modelo de serie temporal
+# <a name="lesson-5-extending-the-time-series-model"></a>Lección 5: Ampliación de la serie temporal de modelo
   En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, es posible agregar datos nuevos a un modelo de serie temporal e incorporarlos automáticamente al mismo. Los nuevos datos se agregan a un modelo de minería de datos de serie temporal de una de estas dos maneras:  
   
 -   Usando una instrucción PREDICTION JOIN  para unir los datos de un origen externo a los datos de entrenamiento.  
@@ -156,7 +155,7 @@ PREDICTION JOIN <source query>
   
  La tabla siguiente muestra cómo los valores nuevos proporcionados para M200 en Europa afectan a las predicciones. No proporcionó ningún dato nuevo para el producto M200 en la región de Pacífico, pero esta serie se presenta para poder comparar:  
   
- **Producto y región: M200 Europa**  
+ **Producto y región: M200 Europe**  
   
 |||||  
 |-|-|-|-|  
@@ -219,7 +218,7 @@ WHERE [ModelRegion] = 'M200 Europe'
   
  Los resultados de la predicción se inician en el intervalo de tiempo 3, que está después de los datos nuevos para 2 meses que proporcionó.  
   
- **Producto y región: M200 Europa**  
+ **Producto y región: M200 Europe**  
   
  Modelo con datos actualizados (PredictTimeSeries con EXTEND_MODEL_CASES)  
   
@@ -231,10 +230,10 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>Realizar predicciones con REPLACE_MODEL_CASES  
- La sustitución de los casos del modelo resulta útil si desear entrenar un modelo en un conjunto de casos y, a continuación, aplicar ese modelo a una serie de datos diferente. Un tutorial detallado sobre este escenario se presenta en [lección 2: generar un escenario de previsión &#40;Tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ La sustitución de los casos del modelo resulta útil si desear entrenar un modelo en un conjunto de casos y, a continuación, aplicar ese modelo a una serie de datos diferente. Un tutorial detallado sobre este escenario se presenta en [lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de consultas de modelo de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Ejemplos de consultas de modelos de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

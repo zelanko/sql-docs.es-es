@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 30068c028b497b00408ca87cf1e796df8ba34926
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081716"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014956"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de formas (Generador de informes y SSRS)
   Los gráficos de formas muestran los datos de valores como porcentajes de un total. Los gráficos de formas se usan normalmente para mostrar comparaciones proporcionales entre distintos valores de un conjunto. Las categorías se representan mediante segmentos individuales de la forma. El tamaño del segmento lo determina el valor. Los gráficos de formas son similares en cuanto a uso a los gráficos circulares, excepto en que los primeros ordenan las categorías de mayor a menor.  
   
- Un gráfico de embudo muestra los valores como proporciones que van decreciendo de forma progresiva. El tamaño del área lo determina el valor de la serie como un porcentaje del total de todos los valores. Por ejemplo, puede usar un gráfico de embudo para mostrar las tendencias de los visitantes de un sitio web. Es probable que el gráfico de embudo muestre un área amplia en la parte superior para indicar que la página más visitada es la página principal, y que las demás áreas sean proporcionalmente menores. Para obtener más información acerca de cómo agregar datos a un gráfico de embudo, vea [gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Un gráfico de embudo muestra los valores como proporciones que van decreciendo de forma progresiva. El tamaño del área lo determina el valor de la serie como un porcentaje del total de todos los valores. Por ejemplo, puede usar un gráfico de embudo para mostrar las tendencias de los visitantes de un sitio web. Es probable que el gráfico de embudo muestre un área amplia en la parte superior para indicar que la página más visitada es la página principal, y que las demás áreas sean proporcionalmente menores. Para más información sobre cómo agregar datos a un gráfico de embudo, vea [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  En la ilustración siguiente se muestra un ejemplo de gráfico de embudo.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "48081716"
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Los gráficos circulares &#40;generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [Gráficos circulares &#40;Generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

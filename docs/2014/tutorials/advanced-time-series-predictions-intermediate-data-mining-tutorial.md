@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544328"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032806"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Predicciones de serie temporal avanzadas (Tutorial intermedio de minería de datos)
   Al explorar el modelo de predicción, observó que, aunque las ventas de la mayoría de las regiones siguen un patrón similar, algunas regiones y algunos modelos, como el modelo M200 en la región del Pacífico, muestran tendencias muy diferentes. Esto no le sorprende, ya que sabe que las diferencias entre regiones son comunes y pueden deberse a muchos factores, como las promociones de marketing, los informes inexactos o los acontecimientos geopolíticos.  

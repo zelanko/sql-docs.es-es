@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7d8e61f4f82df496a475717b34f0ce54db07d4a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: b097b327121656cda3ff8c93ec24bfe1cb35921e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413700"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035036"
 ---
 # <a name="site-settings-page-report-manager"></a>Página Configuración del sitio (Administrador de informes)
   Use la página Configuración del sitio para cambiar el título de la aplicación, establecer los valores predeterminados para los valores de tiempo de espera de procesamiento de informes y límites del historial de informes, administrar asignaciones de roles del nivel del sistema y administrar programaciones compartidas. Debe tener permisos de Administrador de contenido y Administrador del sistema para ver esta página.  

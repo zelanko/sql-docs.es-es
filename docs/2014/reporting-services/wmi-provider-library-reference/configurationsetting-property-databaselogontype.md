@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 98dc45752779a6610d735040e16bc5783447396d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8bbbcc9ba9f1eefad4801a0e9294affea4ef39a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107074"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020608"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>Propiedad DatabaseLogonType (WMI MSReportServer_ConfigurationSetting)
   Especifica si el servidor de informes usa una cuenta de servicio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, una cuenta de usuario de Windows o un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para tener acceso a la base de datos del servidor de informes. Solo lectura.  
@@ -54,9 +54,9 @@ public int DatabaseLogonType;
   
 -   2 para el inicio de sesión como un servicio  
   
- Si especifica 0 (Windows), debe establecer el valor el [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) propiedad en una cuenta de usuario de Windows válida correspondiente.  
+ Si especifica 0 (Windows), debe establecer el valor de la propiedad [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) en una cuenta de usuario de Windows válida correspondiente.  
   
- Si especifica 1 (SQL Server), asegúrese de que el valor de la [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) corresponde a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión.  
+ Si especifica 1 (SQL Server), asegúrese de que el valor de [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) se corresponda con un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido.  
   
  Si especifica 2 (servicio de Windows), el servidor de informes usará una cuenta de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] y la cuenta de servicio de Windows para tener acceso a la base de datos del servidor de informes. Se omite la propiedad DatabaseLogonAccount.  
   

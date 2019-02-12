@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4a7545fd-37a3-4766-ad59-0946f1bd3524
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d5dc03fefedbf95d9e84069c2875db9e8a4be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066175"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022176"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Procesar el modelo de agrupación en clústeres de secuencia
   Después de crear una nueva estructura de minería de datos, debe implementar los cambios que realizó en la solución de minería de datos, y, a continuación, procesar la estructura. Una vez finalizado el procesamiento de la nueva estructura y del modelo de minería datos, puede examinar el modelo de minería de datos.  
@@ -25,7 +24,7 @@ ms.locfileid: "48066175"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>Para procesar la estructura y el modelo de minería de datos  
   
-1.  En el **Mining Model** menú de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], seleccione **procesar estructura de minería de datos y todos los modelos**.  
+1.  En el menú **Modelo de minería de datos** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], seleccione **Procesar estructura de minería de datos y todos los modelos**.  
   
 2.  En la advertencia en la que se pregunta si desea generar e implementar el proyecto, haga clic en **Sí**.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48066175"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñador de minería de datos](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Algoritmo de clústeres de secuencia de Microsoft](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

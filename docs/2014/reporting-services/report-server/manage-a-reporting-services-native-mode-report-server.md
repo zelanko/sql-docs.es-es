@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c6190ec6494e5a723aa449c5d4053c12979076c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8a3ee59a669d08d495b55d5c36699fd9ef2f42a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206115"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023026"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Administrar un servidor de informes en modo nativo de Reporting Services
   Esta sección contiene procedimientos para configurar una instancia de servidor de informes en modo nativo utilizando el Administrador de configuración de Reporting Services.  
@@ -35,7 +35,7 @@ ms.locfileid: "48206115"
  [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
  Explica cómo especificar la información de cuenta y contraseña para el servicio Servidor de informes.  
   
- [Registrar un nombre de entidad de servicio &#40;SPN&#41; para un servidor de informes](register-a-service-principal-name-spn-for-a-report-server.md)  
+ [Registrar un nombre principal de servicio &#40;SPN&#41; para un servidor de informes](register-a-service-principal-name-spn-for-a-report-server.md)  
  Explica cómo registrar manualmente un SPN para un servidor de informes que se ejecuta en una cuenta de usuario de dominio en una red que utiliza la autenticación Kerberos.  
   
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "48206115"
  Proporciona los pasos para crear una base de datos de servidor de informes. Este paso es necesario para implementar una instalación de Reporting Services.  
   
 ### <a name="advanced-or-optional-configuration"></a>Configuración avanzada u opcional  
- [Configurar una implementación escalada de servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Proporciona los pasos para configurar varios servidores de informes para compartir una base de datos del servidor de informes.  
   
  [Configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
@@ -54,16 +54,16 @@ ms.locfileid: "48206115"
  [Configurar un firewall para el acceso al servidor de informes](configure-a-firewall-for-report-server-access.md)  
  Explica cómo abrir los puertos que se usan para las solicitudes entrantes y las respuestas salientes desde un servidor de informes.  
   
- [Configurar un servidor de informes de modo nativo para la administración Local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+ [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
  Describe los pasos adicionales necesarios para conectarse al Administrador de informes o a un servidor de informes mediante http://localhost.  
   
  [Configuración de un servidor de informes para la administración remota](configure-a-report-server-for-remote-administration.md)  
  Explica cómo configurar una instancia del servidor de informes remota para que pueda conectarse y configurarla desde un equipo diferente.  
   
- [Activación o desactivación de las características de Reporting Services](turn-reporting-services-features-on-or-off.md)  
+ [Activar o desactivar las características de Reporting Services](turn-reporting-services-features-on-or-off.md)  
  Explica cómo quitar las características que no se usan en una instalación de Reporting Services.  
   
- [Habilitar errores remotos &#40;Reporting Services&#41;](enable-remote-errors-reporting-services.md)  
+ [Habilitar los errores remotos &#40;Reporting Services&#41;](enable-remote-errors-reporting-services.md)  
  Explica cómo establecer las propiedades de servidor en un servidor de informes para devolver información adicional sobre condiciones de error que se produzcan en servidores remotos.  
   
 ## <a name="see-also"></a>Vea también  

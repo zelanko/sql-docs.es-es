@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbca550f6ecb985248975b6dce332fb9ca05fe9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218325"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040407"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Página Propiedades generales, Orígenes de datos compartidos (Administrador de informes)
   Use la página de propiedades General para ver o modificar las propiedades de un elemento de origen de datos compartido. Al hacer clic en **Aplicar**, los cambios efectuados en las propiedades afectan a todos los informes que hagan referencia al elemento.  
@@ -33,7 +33,7 @@ ms.locfileid: "48218325"
 3.  En el menú desplegable, haga clic en **Administrar**. Esto abre la página de propiedades General del origen de datos compartido.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Especifica un nombre para el origen de datos compartido, que se utiliza para identificar el elemento en el espacio de nombres del servidor de informes.  
   
  **Descripción**  
@@ -48,10 +48,10 @@ ms.locfileid: "48218325"
  **Tipo de origen de datos**  
  Especifica la extensión de procesamiento de datos que se va a utilizar para procesar los datos del origen de datos. El servidor de informes incluye extensiones de procesamiento de datos para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC y OLE DB. Es posible que otros fabricantes ofrezcan extensiones de procesamiento de datos adicionales.  
   
- Tenga en cuenta que si está usando [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition con Advanced Services, solo puede elegir orígenes de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Tenga en cuenta que si está usando [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition con Advanced Services, solo puede elegir orígenes de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Cadena de conexión**  
- Especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. El tipo de conexión determina la sintaxis que debería usar. Por ejemplo, una cadena de conexión para la extensión de procesamiento de datos XML es una dirección URL a un documento XML. En la mayoría de los casos, la cadena de conexión típica especifica el servidor de bases de datos y un archivo de datos. El ejemplo siguiente muestra una cadena de conexión utilizada para conectarse a la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] base de datos:  
+ Especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. El tipo de conexión determina la sintaxis que debería usar. Por ejemplo, una cadena de conexión para la extensión de procesamiento de datos XML es una dirección URL a un documento XML. En la mayoría de los casos, la cadena de conexión típica especifica el servidor de bases de datos y un archivo de datos. En el ejemplo siguiente, se muestra la cadena de conexión que se usa para establecer conexión con la base de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] :  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -71,9 +71,9 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Credenciales almacenadas de forma segura en el servidor de informes**  
  Almacene un nombre de usuario y una contraseña cifrados en la base de datos del servidor de informes. Seleccione esta opción para ejecutar un informe de manera desatendida; por ejemplo, informes iniciados por programaciones o eventos en lugar de una acción del usuario. Si va a usar la seguridad predeterminada, el nombre de usuario debe ser una cuenta de dominio de Windows. Especifique la cuenta con este formato: \<dominio >\\< nombre de usuario\>. La cuenta que especifica debe tener permisos de inicio de sesión local en el equipo que hospeda el origen de datos usado por el informe.  
   
- Active la casilla **Utilizar como credenciales de Windows para la conexión al origen de datos** si las credenciales son las credenciales de autenticación de Windows. No seleccione esta casilla si está usando la autenticación de base de datos (por ejemplo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación).  
+ Active la casilla **Utilizar como credenciales de Windows para la conexión al origen de datos** si las credenciales son las credenciales de autenticación de Windows. No active esta casilla si va a usar la autenticación de la base de datos (por ejemplo, autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
- Si está usando autenticación de la base de datos, seleccione **Suplantar al usuario autenticado después de realizar una conexión al origen de datos (Conectar utilizando)** para permitir la delegación de credenciales de la base de datos pero solo si un servidor de bases de datos admite la suplantación. Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bases de datos, esta opción establece la función SETUSER.  
+ Si está usando autenticación de la base de datos, seleccione **Suplantar al usuario autenticado después de realizar una conexión al origen de datos (Conectar utilizando)** para permitir la delegación de credenciales de la base de datos pero solo si un servidor de bases de datos admite la suplantación. En el caso de las bases de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , esta opción establece la función SETUSER.  
   
  **Seguridad integrada de Windows**  
  Use las credenciales de Windows del usuario actual para obtener acceso al origen de datos. Seleccione esta opción cuando las credenciales que se usan para obtener acceso a un origen de datos son las mismas que se usaron para iniciar sesión en el dominio de red. Esta opción funciona de manera óptima cuando Kerberos está habilitado para el dominio o cuando el origen de datos se encuentra en el mismo equipo que el servidor de informes. Si Kerberos no está habilitado, se pueden pasar las credenciales de Windows a otro equipo. Si se requieren más conexiones de equipos, obtendrá un error en lugar de los datos esperados.  
@@ -100,7 +100,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  Haga clic para crear un nuevo modelo basado en el origen de datos compartido.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Nuevo origen de datos &#40;página del Administrador de informes&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
  [Especificación de información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 77a4a9b2749eefbe43cac04351fd1d2bd2c9300e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cfc294f1ae01241dbcabfff954aa42c242f6aad7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138769"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018237"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Colocar etiquetas en un gráfico (Generador de informes y SSRS)
   Dado que cada tipo de gráfico tiene una forma diferente, las etiquetas de punto de datos se colocan en una ubicación óptima para no interferir en el gráfico. La posición predeterminada de las etiquetas depende del tipo de gráfico:  
@@ -79,7 +79,7 @@ ms.locfileid: "48138769"
   
 6.  Seleccione un valor para la propiedad BarLabelStyle.  
   
- Cuando el estilo de la etiqueta de la barra se establece en `Outside`, la etiqueta se colocará fuera de la barra, siempre y cuando quepa en el área del gráfico. Si la etiqueta no se puede colocar fuera de la barra, pero sí dentro del área del gráfico, la etiqueta se situará dentro de la barra en la posición más próxima al extremo de la misma.  
+ Si el estilo de la etiqueta de la barra se establece en `Outside`, la etiqueta se colocará fuera de la barra, siempre y cuando quepa en el área del gráfico. Si la etiqueta no se puede colocar fuera de la barra, pero sí dentro del área del gráfico, la etiqueta se situará dentro de la barra en la posición más próxima al extremo de la misma.  
   
 ### <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>Para cambiar la posición de las etiquetas de punto de datos en una gráfico de áreas, de columnas, de líneas o de dispersión  
   
@@ -96,11 +96,11 @@ ms.locfileid: "48138769"
 6.  Seleccione un valor para la propiedad Position.  
   
 ## <a name="see-also"></a>Vea también  
- [Los gráficos circulares &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Los gráficos de barras &#40;generador de informes y SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [Gráficos circulares &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Gráficos de barras &#40;Generador de informes y SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Punto de datos para mostrar las etiquetas fuera de un gráfico circular &#40;generador de informes y SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular &#40;Generador de informes y SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

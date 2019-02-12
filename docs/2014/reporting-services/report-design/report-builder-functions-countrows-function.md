@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d0d844f9f58b22a2982c19ca0347bd75f41da1a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5967303b875ed7bc2ddaba8d1c77c169d0025d04
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106915"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015656"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Función CountRows (Generador de informes y SSRS)
   Devuelve el número de filas del ámbito especificado, incluidas las filas con valores NULL.  
@@ -36,13 +36,13 @@ CountRows(scope, recursive)
  (`String`) Nombre de un conjunto de datos, una región de datos o un grupo que contiene los elementos de informe que hay que contar.  
   
  *recursivos*  
- (**Tipo enumerado**) Opcional. `Simple` (valor predeterminado) o `RdlRecursive`. Especifica si se debe realizar la agregación de forma recursiva.  
+ (**Tipo enumerado**) Opcional. `Simple` (predeterminado) o `RdlRecursive`. Especifica si se debe realizar la agregación de forma recursiva.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  Devuelve un `Integer`.  
   
 ## <a name="remarks"></a>Comentarios  
- `CountRows` cuenta todas las filas del ámbito especificado, incluidas las filas que tienen valores null.  
+ `CountRows` cuenta todas las filas del ámbito especificado, incluso las filas que contienen valores NULL.  
   
  El valor de *scope* no puede ser una expresión y debe hacer referencia al ámbito actual o a un ámbito contenedor.  
   
@@ -58,9 +58,9 @@ CountRows(scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

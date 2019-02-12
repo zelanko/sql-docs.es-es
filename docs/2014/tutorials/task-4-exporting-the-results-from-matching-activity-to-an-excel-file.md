@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: abded209f6367308c23e548962e1d4a5362791f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127635"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020446"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarea 4: exportar los resultados de la actividad de coincidencia a un archivo de Excel
   En esta tarea, exportará los resultados de la actividad de coincidencia a un archivo de Excel.  
@@ -35,9 +32,9 @@ ms.locfileid: "48127635"
   
     1.  **Registro más completo:** el registro de permanencia es el que tiene el mayor número de campos rellenos.  
   
-    2.  **Registro más largo:** el registro de permanencia es el que tiene el mayor número de términos en campos de origen.  
+    2.  **Registro más largo:** el registro de permanencia es el que tiene el mayor número de términos en los campos de origen.  
   
-    3.  **Registro más completo y más largo:** el registro de permanencia es el que tiene el mayor número de campos rellenos y con el mayor número de términos en cada campo.  
+    3.  **Registro más completo y más largo:** el registro de supervivencia es el que tiene el mayor número de campos rellenos y el mayor número de términos en cada campo.  
   
      ![Exportar los resultados de la página coincidencia](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "exportar los resultados de la página coincidencia")  
   

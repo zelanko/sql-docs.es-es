@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1862d4d8a1437f223e688b0b2b95ad5b5768e6a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 97a619b1618c1e733a61e5cd9ea825e07efddcac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224447"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031956"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Conexiones de datos u orígenes de datos incrustados y compartidos (Generador de informes y SSRS)
   Los informes usan las conexiones de datos para recuperar datos para un informe cuando se ejecuta una consulta o cuando se procesa el informe. Puede elegir en una lista de tipos de conexión de datos incrustadas para conectarse a una base de datos relacional, una base de datos multidimensional, un servicio web u otro tipo de origen de datos. Los siguientes términos se usan para describir las conexiones de datos.  
@@ -45,11 +45,11 @@ ms.locfileid: "48224447"
 ## <a name="shared-data-sources"></a>Orígenes de datos compartidos  
  Los orígenes de datos compartidos resultan útiles cuando se poseen orígenes de datos de uso frecuente. Se recomienda que utilice los orígenes de datos compartidos tanto como sea posible. Facilitan la administración de los informes y del acceso a ellos, y ayudan a mantener una mayor seguridad en el acceso a los informes y los orígenes de datos. Si necesita un origen de datos compartido, pida a su administrador del sistema que le cree uno.  
   
- En el Generador de informes, no puede crear un origen de datos compartido. Puede ir a un origen de datos compartido y seleccionarlo en el servidor de informes. Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ En el Generador de informes, no puede crear un origen de datos compartido. Puede ir a un origen de datos compartido y seleccionarlo en el servidor de informes. Para obtener más información, consulte [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
  En el Diseñador de informes, no puede ir a un origen de datos compartido que esté en el servidor de informes. Puede crear orígenes de datos compartidos como parte de un proyecto en el Explorador de soluciones y decidir si se han de implementar en un servidor de informes. Puede decidir usarlos solo de forma local como consecuencia de las diferencias de las credenciales necesarias del equipo o del servidor de informes. Para más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- El siguiente icono indica un elemento de origen de datos compartido en la jerarquía de carpetas del servidor de informes: ![icono de origen de datos compartido](media/hlp-16datasource.png "icono de origen de datos compartido")  
+ El siguiente icono indica que existe un elemento de origen de datos compartido en la jerarquía de carpetas del servidor de informes: ![Icono de origen de datos compartido](media/hlp-16datasource.png "Icono de origen de datos compartido")  
   
 ## <a name="embedded-data-sources"></a>Orígenes de datos incrustados  
  Un origen de datos incrustado es una conexión de datos que se guarda en la definición de informe. La información de conexión a orígenes de datos insertados solo puede utilizarla el informe en el que se incrusta la información. Para definir y administrar los orígenes de datos insertados, utilice el cuadro de diálogo **Propiedades del origen de datos** .  
@@ -70,7 +70,7 @@ ms.locfileid: "48224447"
   
 ## <a name="see-also"></a>Vea también  
  [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Conceptos de creación de informes &#40;generador de informes y SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  

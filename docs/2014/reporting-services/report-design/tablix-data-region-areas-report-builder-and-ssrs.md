@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a640d8a5950f8a1f37b34becf470daf423ee49e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210945"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021386"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Describir las áreas de la región de datos Tablix (Generador de informes y SSRS)
   Una región de datos Tablix se compone de cuatro áreas que contienen las celdas de Tablix: la esquina, el área de grupo de filas, el área de grupo de columnas y el cuerpo. En cada área, las celdas tienen una función diferente. Las celdas que se agregan al cuerpo de Tablix tienen como finalidad mostrar datos detallados y agrupados. Si crea un grupo para mostrar valores de instancia de grupo, el Generador de informes y el Diseñador de informes agregan celdas al área de grupo de filas o al área de grupo de columnas. El Generador de informes y el Diseñador de informes crean las celdas de esquina de Tablix si existen grupos de filas y grupos de columnas.  
@@ -26,7 +26,7 @@ ms.locfileid: "48210945"
   
  En la superficie de diseño, las líneas de puntos representan las cuatro áreas de la región de datos Tablix que se encuentra seleccionada. En la ilustración siguiente, se muestran las áreas de una región de datos Tablix que tiene grupos de filas anidados basados en la categoría y la subcategoría, grupos de columnas anidados basados en la geografía y el país o región, y un grupo de columnas adyacente basado en el año.  
   
- ![Las áreas de regiones de datos Tablix](../media/rs-tablixareas.gif "las áreas de regiones de datos Tablix")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  En la lista siguiente, se describe cada área:  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48210945"
  [Tablas &#40;Generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Región de datos Tablix &#40;generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

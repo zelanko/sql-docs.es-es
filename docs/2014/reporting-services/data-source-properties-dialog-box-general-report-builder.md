@@ -11,14 +11,14 @@ f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138755"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031856"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Propiedades del origen de datos (cuadro de diálogo), General (Generador de informes)
   Seleccione **General** en el cuadro de diálogo **Propiedades del origen de datos** para seleccionar un origen de datos compartido desde un servidor de informes o para crear o modificar información de conexión de un origen de datos incrustado en el informe.  
@@ -41,7 +41,7 @@ ms.locfileid: "48138755"
  Si las credenciales especificadas están incompletas (por ejemplo, se requiere una contraseña), el Generador de informes vuelve a solicitar las credenciales de tiempo de ejecución cuando es necesario conectarse al origen de datos. Las credenciales de tiempo de diseño están almacenadas y no se solicitan de nuevo.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre del origen de datos. Dicho nombre debe ser único en el informe. De forma predeterminada, al origen de datos se le asigna un nombre general, como DataSource1 o DataSource2.  
   
  **Usar una conexión compartida**  
@@ -67,8 +67,8 @@ ms.locfileid: "48138755"
 ## <a name="see-also"></a>Vea también  
  [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Cuadro de diálogo de propiedades, las credenciales del origen de datos &#40;generador de informes&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

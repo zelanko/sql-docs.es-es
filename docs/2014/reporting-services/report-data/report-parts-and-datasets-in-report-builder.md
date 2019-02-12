@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 00094e630c9beaf7f5093d944f267a2884c22da7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7c6cb19da853387f4684c301e183276a0f4b7e96
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059351"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027676"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Elementos de informe y conjuntos de datos en el Generador de informes
   En el Generador de informes, la manera más fácil de incluir datos en un informe es agregar elementos de informe de la galería de elementos de informe. Los elementos de informe contienen los conjuntos de datos de los que dependen, que se conocen como *conjuntos de datos dependientes*. Los conjuntos de datos dependientes están ubicados en orígenes de datos compartidos y pueden ser conjuntos de datos incrustados o conjuntos de datos compartidos.  
@@ -57,13 +57,13 @@ ms.locfileid: "48059351"
 2.  Al salir del Generador de informes o iniciar otro informe, se le pide que guarde el informe. Si no lo guarda, la próxima vez que abra este informe y publique elementos informe, podría publicar nuevas copias de los mismos conjuntos de datos. Para evitar que se guarden varias copias de conjuntos de datos compartidos en el servidor de informes, se recomienda que guarde el informe.  
   
 > [!IMPORTANT]  
->  Para asegurarse de que usted y otros usuarios pueden seguir usando correctamente los datos de un conjunto de datos compartido, debe entender los principios básicos sobre la protección de los elementos de informe. Para obtener más información, vea [Proteger los elementos de un conjunto de datos compartido](../security/secure-shared-dataset-items.md).  
+>  Para asegurarse de que usted y otros usuarios pueden seguir usando correctamente los datos de un conjunto de datos compartido, debe entender los principios básicos sobre la protección de los elementos de informe. Para más información, vea [Proteger los elementos de un conjunto de datos compartido](../security/secure-shared-dataset-items.md).  
   
   
 ## <a name="see-also"></a>Vea también  
  [Vista de diseño de informe &#40;Generador de informes&#41;](../report-builder/report-design-view-report-builder.md)   
  [Seguridad &#40;Generador de informes&#41;](../report-builder/security-report-builder.md)   
- [Elementos de informe &#40;generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Elementos de informe &#40;Generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

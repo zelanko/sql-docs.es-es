@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6737a32eb7597f8115a7ee6797bcf1aedbd006b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: be32765c6d996bcc67580949176c2265a0741eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220785"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039016"
 ---
 # <a name="image-device-information-settings"></a>Configuración de la información del dispositivo de imagen
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato IMAGE.  
@@ -31,13 +31,13 @@ ms.locfileid: "48220785"
 |`DpiX`|Resolución horizontal de la imagen de salida. El valor predeterminado es **96**. Se aplica a `BMP`, `GIF`, `PNG`, y `TIFF` formatos de salida.|  
 |`DpiY`|Resolución vertical de la imagen de salida. El valor predeterminado es **96**. Se aplica a `BMP`, `GIF`, `PNG`, y `TIFF` formatos de salida.|  
 |**EndPage**|Última página del informe que se va a representar. El valor predeterminado es el de `StartPage`.|  
-|**MarginBottom**|Valor del margen inferior, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o decimal seguido de "in" (por ejemplo, `1in`). Este valor invalida la configuración original del informe.|  
-|**MarginLeft**|El valor del margen izquierdo, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o decimal seguido de "in" (por ejemplo, `1in`). Este valor invalida la configuración original del informe.|  
-|**MarginRight**|El valor del margen derecho, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o decimal seguido de "in" (por ejemplo, `1in`). Este valor invalida la configuración original del informe.|  
-|**MarginTop**|El valor del margen superior, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o decimal seguido de "in" (por ejemplo, `1in`). Este valor invalida la configuración original del informe.|  
-|**OutputFormat**|Uno de los [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) admite los formatos de salida: `BMP`, `EMF`, `GIF`, `JPEG`, `PNG`, o `TIFF`.|  
-|**PageHeight**|El alto de la página, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o decimal seguido de "in" (por ejemplo, `11in`). Este valor invalida la configuración original del informe.|  
-|**PageWidth**|El ancho de la página, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o decimal seguido de "in" (por ejemplo, `8.5in`). Este valor invalida la configuración original del informe.|  
+|**MarginBottom**|Valor del margen inferior, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o un valor decimal seguido de "in" (por ejemplo, `1in`). Este valor invalida la configuración original del informe.|  
+|**MarginLeft**|El valor del margen izquierdo, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o un valor decimal seguido de "in" (por ejemplo, `1in`). Este valor invalida la configuración original del informe.|  
+|**MarginRight**|El valor del margen derecho, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o un valor decimal seguido de "in" (por ejemplo, `1in`). Este valor invalida la configuración original del informe.|  
+|**MarginTop**|El valor del margen superior, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o un valor decimal seguido de "in" (por ejemplo, `1in`). Este valor invalida la configuración original del informe.|  
+|**OutputFormat**|Uno de los formatos de salida admitidos por [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]): `BMP`, `EMF`, `GIF`, `JPEG`, `PNG` o `TIFF`.|  
+|**PageHeight**|El alto de la página, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o un valor decimal seguido de "in" (por ejemplo, `11in`). Este valor invalida la configuración original del informe.|  
+|**PageWidth**|El ancho de la página, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o un valor decimal seguido de "in" (por ejemplo, `8.5in`). Este valor invalida la configuración original del informe.|  
 |**PrintDpiX**|Resolución horizontal de la imagen de salida. El valor predeterminado es `300`. Se aplica a metarchivo mejorado (`EMF`) formato de salida.|  
 |**PrintDpiY**|Resolución vertical de la imagen de salida. El valor predeterminado es `300`. Se aplica a metarchivo mejorado (`EMF`) formato de salida.|  
 |`StartPage`|Primera página del informe que se va a representar. El valor `0` indica que se representan todas las páginas. El valor predeterminado es `1`.|  

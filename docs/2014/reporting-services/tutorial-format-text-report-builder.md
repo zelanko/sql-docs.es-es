@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff0a14a546a14d37461193b71b4d682deb25925a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350104"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030632"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Dar formato al texto (generador de informes)
   En este tutorial, puede practicar el proceso de dar formato al texto de varias maneras. Después de configurar el informe en blanco con el origen de datos y el conjunto de datos, puede escoger y elegir los pasos que desea explorar.  
@@ -71,11 +71,11 @@ ms.locfileid: "53350104"
   
 1.  En el panel Datos de informe, haga clic en **Nuevo**y, a continuación, haga clic en **Origen de datos**.  
   
-2.  En el **nombre** , escriba: **TextDataSource**  
+2.  En el cuadro **Nombre**, escriba: **TextDataSource**  
   
 3.  Haga clic en **Usar una conexión incrustada en mi informe**.  
   
-4.  Compruebe que el tipo de conexión sea Microsoft SQL Server y, luego, en el cuadro **Cadena de conexión** , escriba: **Origen de datos = \<servername >**  
+4.  Compruebe que el tipo de conexión sea Microsoft SQL Server y, luego, en el cuadro **Cadena de conexión** , escriba: **Data Source = \<nombre_de_servidor>**  
   
     > [!NOTE]  
     >  La expresión \<servername >, por ejemplo Report001, especifica un equipo en el que se instala una instancia del motor de base de datos de SQL Server. Este tutorial no necesita datos concretos; solo necesita una conexión a una base de datos de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Si ya tiene una conexión a un origen de datos enumerada bajo **Conexiones de origen de datos**, puede seleccionarla e ir al procedimiento siguiente, "Para crear un conjunto de datos". Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "53350104"
   
 2.  Compruebe que el origen de datos es **TextDataSource**.  
   
-3.  En el **nombre** , escriba: **TextDataset.**  
+3.  En el cuadro **Nombre**, escriba: **TextDataset.**  
   
 4.  Compruebe que el tipo de consulta **Texto** está seleccionado, y, a continuación, haga clic en **Diseñador de consultas**.  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aa6b0aed3bafb760f73875e941815579406496b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: c355a6ecdecc5ad17dbdba788e736dfaf701d099
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353741"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021555"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Archivos de registro y orígenes de Reporting Services
   Los servidores de informes y los entornos de servidor de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] admiten diversos destinos de archivos registro para registrar información sobre las operaciones y el estado del servidor. Hay dos categorías básicas de registro: registro de ejecución y registro de seguimiento. El registro de ejecución incluye información sobre las estadísticas de ejecución de informes, auditoría, diagnóstico de rendimiento y optimización. El registro de seguimiento es información sobre los mensajes de error y diagnósticos generales.  

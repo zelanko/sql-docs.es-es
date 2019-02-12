@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d7df59d182c7183fb843a0eb2763bc19b1eefb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c798ce1bd5f25b1a844894b8aa609a4c641e4c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223345"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013536"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>Ocultar elementos de leyenda en el gráfico (Generador de informes y SSRS)
   De forma predeterminada, cualquier serie que se agregue a un gráfico que no sea un gráfico de formas se agregará como elemento en la leyenda. En los gráficos circulares, de anillos, de embudo y piramidales, cualquier serie que se agregue al gráfico agregará puntos de datos individuales a la leyenda.  
@@ -36,8 +36,8 @@ ms.locfileid: "48223345"
     >  No puede ocultar una serie para un grupo y dejarla visible para los demás. Si ha agregado un campo al área **Grupos de series** , se ocultarán todas las series que pertenecen a este grupo.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a la leyenda en un gráfico &#40;generador de informes y SSRS&#41;](chart-legend-formatting-report-builder.md)   
- [Aplicar formato a los puntos de datos en un gráfico &#40;generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Agregar una media móvil a un gráfico &#40;Generador de informes y SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
  [Cuadro de diálogo de Propiedades de la leyenda, General &#40;Generador de informes y SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)  

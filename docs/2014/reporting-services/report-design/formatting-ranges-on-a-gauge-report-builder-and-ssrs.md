@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 82ae72d5639f4ea22e6a3762e72f65f3354d315a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: de1906afd22e5a6e33fad54e331431611d9c0998
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223025"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037966"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a los rangos de un medidor (Generador de informes y SSRS)
   Un intervalo de medidor es una zona o área en la escala del medidor que indica una subsección importante de valores en el medidor. Use un intervalo de medidor para indicar visualmente el momento en el que el valor de puntero entra en cierto intervalo de valores. Los intervalos están definidos por un valor inicial y un valor final.  
@@ -32,7 +32,7 @@ ms.locfileid: "48223025"
  [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Aplicar formato a los punteros de un medidor &#40;Generador de informes y SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Establecer un valor mínimo o máximo en un medidor &#40;Generador de informes y SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un KPI al informe &#40;Generador de informes&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutorial: Agregar un KPI a un informe &#40;generador de informes&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Medidores &#40;Generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

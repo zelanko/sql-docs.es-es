@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7d3a6843ea643ac447e42a1d78f5f2e7b3bc09da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194125"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040886"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Referencia a las funciones de agregado (Generador de informes y SSRS)
   Para incluir valores de agregado en un informe, puede utilizar las funciones de agregado integradas en las expresiones. La función de agregado predeterminada para los campos numéricos es SUM. Puede modificar la expresión y utilizar una función de agregado integrada diferente o especificar un ámbito diferente. El ámbito identifica qué conjunto de datos utilizar para el cálculo.  
@@ -56,7 +56,7 @@ ms.locfileid: "48194125"
 |**Función**|**Descripción**|  
 |------------------|---------------------|  
 |[Avg](report-builder-functions-avg-function.md)|Devuelve el promedio de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
-|[recuento](report-builder-functions-count-function.md)|Devuelve un recuento de los valores no NULL especificados por la expresión, que se evalúa en el contexto del ámbito indicado.|  
+|[Count](report-builder-functions-count-function.md)|Devuelve un recuento de los valores no NULL especificados por la expresión, que se evalúa en el contexto del ámbito indicado.|  
 |[CountDistinct](report-builder-functions-countdistinct-function.md)|Devuelve un recuento de todos los valores no NULL distintos especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
 |[Max](report-builder-functions-max-function.md)|Devuelve el valor máximo de todos los valores numéricos no NULL especificados por la expresión, en el contexto del ámbito especificado. Puede usarla para especificar un valor máximo para el eje del gráfico para controlar la escala.|  
 |[Min](report-builder-functions-min-function.md)|Devuelve el valor mínimo de todos los valores numéricos no NULL especificados por la expresión, en el contexto del ámbito especificado. Puede usarla para especificar un valor mínimo para el eje del gráfico para controlar la escala.|  
@@ -73,18 +73,18 @@ ms.locfileid: "48194125"
 |Ubicación en informe|Campos|Parámetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Encabezado de página<br /><br /> Pie de página|Sí|Sí|A lo sumo uno<br /><br /> Nota 1|Sí|Sí|Sí|Sí|  
-|Cuerpo|Sí<br /><br /> Nota 2|Sí|Solo los elementos del ámbito actual o de un ámbito que lo contenga<br /><br /> Nota 3|no|Sí|Sí|Sí|  
-|Parámetro de informe|no|Solo los parámetros anteriores en la lista<br /><br /> Nota 4|no|no|no|no|no|  
-|Campo|Sí|Sí|no|no|no|no|no|  
-|Parámetro de consulta|no|Sí|no|no|no|no|no|  
-|Expresión de grupo|Sí|Sí|no|no|Sí|no|no|  
-|Expresión de ordenación|Sí|Sí|no|no|Sí|Sí<br /><br /> Nota 5|no|  
-|Expresión de filtro|Sí|Sí|no|no|Sí|Sí<br /><br /> Nota 6|no|  
-|código|no|Sí<br /><br /> Nota 7|no|no|no|no|no|  
-|Idioma de los informes|no|Sí|no|no|no|no|no|  
-|Variables|Sí|Sí|no|no|Sí|Ámbito actual o que lo contiene|no|  
-|Agregados|Sí|Sí|Solo en encabezado de página o pie de página|Solo en agregados de elementos de informe|Sí|no|no|  
-|Funciones de búsqueda|Sí|Sí|Sí|no|Sí|no|no|  
+|Cuerpo|Sí<br /><br /> Nota 2|Sí|Solo los elementos del ámbito actual o de un ámbito que lo contenga<br /><br /> Nota 3|No|Sí|Sí|Sí|  
+|Parámetro de informe|No|Solo los parámetros anteriores en la lista<br /><br /> Nota 4|No|No|No|No|No|  
+|Campo|Sí|Sí|No|No|No|No|No|  
+|Parámetro de consulta|No|Sí|No|No|No|No|No|  
+|Expresión de grupo|Sí|Sí|No|No|Sí|No|No|  
+|Expresión de ordenación|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 5|No|  
+|Expresión de filtro|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 6|No|  
+|Código|No|Sí<br /><br /> Nota 7|No|No|No|No|No|  
+|Idioma de los informes|No|Sí|No|No|No|No|No|  
+|Variables|Sí|Sí|No|No|Sí|Ámbito actual o que lo contiene|No|  
+|Agregados|Sí|Sí|Solo en encabezado de página o pie de página|Solo en agregados de elementos de informe|Sí|No|No|  
+|Funciones de búsqueda|Sí|Sí|Sí|No|Sí|No|No|  
   
 -   **Nota 1.** ReportItems debe existir en la página del informe representado o su valor es Null. Si la visibilidad de un elemento de informe depende de una expresión que se evalúa como False, el elemento de informe no existe en la página.  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48194125"
   
 |Contexto|RunningValue|RowNumber|Primero<br /><br /> Último|Previous|Funciones de suma y otras de ordenación previa|Agregados ReportItem|Funciones de búsqueda|Función de agregado|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valor actual|no|no|no|no|Sí|no|Sí|no|  
-|Primero<br /><br /> Último|no|no|no|no|Sí|no|no|no|  
-|Previous|Sí|Sí|Sí|no|Sí|no|Sí|no|  
-|Funciones de suma y otras de ordenación previa|no|no|no|no|Sí|no|Sí|no|  
-|Agregados ReportItem|no|no|no|no|no|no|no|no|  
-|Funciones de búsqueda|Sí|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|no|no|  
-|Función de agregado|no|no|no|no|no|no|no|no|  
+|Valor actual|No|No|No|No|Sí|No|Sí|No|  
+|Primero<br /><br /> Último|No|No|No|No|Sí|No|No|No|  
+|Previous|Sí|Sí|Sí|No|Sí|No|Sí|No|  
+|Funciones de suma y otras de ordenación previa|No|No|No|No|Sí|No|Sí|No|  
+|Agregados ReportItem|No|No|No|No|No|No|No|No|  
+|Funciones de búsqueda|Sí|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|No|No|  
+|Función de agregado|No|No|No|No|No|No|No|No|  
   
 -   **Nota 1.** Las funciones de agregado solo se permiten dentro de la expresión *Source* de una función de búsqueda si la función de búsqueda no está contenida en un agregado. Las funciones de agregado no se permiten dentro de las expresiones *Destination* o *Result* de una función Lookup.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48194125"
   
 |**Función**|**Descripción**|  
 |------------------|---------------------|  
-|[RowNumber](report-builder-functions-rownumber-function.md)|Devuelve un recuento actualizado del número de filas para el ámbito especificado. El `RowNumber` función reinicia el recuento en 1, no en 0.|  
+|[RowNumber](report-builder-functions-rownumber-function.md)|Devuelve un recuento actualizado del número de filas para el ámbito especificado. La función `RowNumber` reinicia el recuento en 1, no en 0.|  
 |[RunningValue](report-builder-functions-runningvalue-function.md)|Devuelve un agregado actualizado de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
   
 ##  <a name="RetrievingRowCounts"></a> Recuperar recuentos de filas  
@@ -142,13 +142,13 @@ ms.locfileid: "48194125"
 |[Función Multilookup](report-builder-functions-multilookup-function.md)|Devuelve el conjunto de valores de primera coincidencia para un conjunto de nombres a partir de un conjunto de datos que contiene pares de nombre/valor.|  
   
 ##  <a name="RetrievingPostsortValues"></a> Recuperar valores dependientes de la ordenación  
- Las funciones integradas siguientes devuelven el primer valor, el último valor o el valor anterior dentro de un ámbito determinado. Estas funciones dependen del criterio de ordenación de los valores de datos. Por ejemplo, use estas funciones para encontrar el primer y el último valor de una página para crear un encabezado de página de estilo diccionario. Use `Previous` para comparar un valor de una fila con el valor de la fila anterior dentro de un ámbito específico, por ejemplo, para encontrar los porcentajes de año a valores de año de una tabla.  
+ Las funciones integradas siguientes devuelven el primer valor, el último valor o el valor anterior dentro de un ámbito determinado. Estas funciones dependen del criterio de ordenación de los valores de datos. Por ejemplo, use estas funciones para encontrar el primer y el último valor de una página para crear un encabezado de página de estilo diccionario. Use `Previous` para comparar un valor de una fila con el valor de la fila anterior dentro de un ámbito específico, como por ejemplo, para encontrar los valores de los porcentajes de año a año en una tabla.  
   
 |**Función**|**Descripción**|  
 |------------------|---------------------|  
 |[Primero](report-builder-functions-first-function.md)|Devuelve el primer valor de la expresión especificada en el ámbito especificado.|  
 |[Último](report-builder-functions-last-function.md)|Devuelve el último valor de la expresión especificada en el ámbito especificado.|  
-|[Anterior](report-builder-functions-previous-function.md)|Devuelve el valor o el valor agregado especificado para la instancia anterior de un elemento dentro del ámbito especificado.|  
+|[Previous](report-builder-functions-previous-function.md)|Devuelve el valor o el valor agregado especificado para la instancia anterior de un elemento dentro del ámbito especificado.|  
   
 ##  <a name="RetrievingServerAggregates"></a> Recuperar agregados de servidor  
  La función integrada siguiente recupera agregados personalizados del proveedor de datos. Por ejemplo, usando un tipo de origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede recuperar agregados calculados en el servidor del origen de datos para su uso en un encabezado de grupo.  
@@ -165,15 +165,15 @@ ms.locfileid: "48194125"
 |[InScope](report-builder-functions-inscope-function.md)|Indica si la instancia actual de un elemento se halla en el ámbito especificado.|  
   
 ##  <a name="RetrievingRecursiveLevel"></a> Recuperar nivel recursivo  
- La función integrada siguiente recupera el nivel actual cuando se procesa una jerarquía recursiva. Usar el resultado de esta función con el `Padding` propiedad en un cuadro de texto para controlar el nivel de sangría de una jerarquía visual para un grupo recursivo. Para obtener más información, vea [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+ La función integrada siguiente recupera el nivel actual cuando se procesa una jerarquía recursiva. Use el resultado de esta función con la propiedad `Padding` de un cuadro de texto para controlar el nivel de sangría de una jerarquía visual para un grupo recursivo. Para obtener más información, vea [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 |Función|Descripción|  
 |--------------|-----------------|  
-|[Level](report-builder-functions-level-function.md)|Devuelve el nivel actual de profundidad de una jerarquía recursiva.|  
+|[Nivel](report-builder-functions-level-function.md)|Devuelve el nivel actual de profundidad de una jerarquía recursiva.|  
   
 ## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Ámbito de expresión para totales, agregados y colecciones integradas &#40;generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

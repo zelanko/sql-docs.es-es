@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 50df73e41d67b69479782385244031f85baf5652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df14375ad8ae54377f7dbbd599d0bcc7b50aa2d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138795"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010796"
 ---
 # <a name="new-model-page-report-manager"></a>Página Nuevo modelo (Administrador de informes)
-  Use esta página para generar un modelo de informe predeterminado desde un origen de datos compartido. Solo puede generar modelos de informe desde [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] orígenes de datos multidimensionales, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] orígenes de datos relacionales y orígenes de datos relacionales de Oracle.  
+  Use esta página para generar un modelo de informe predeterminado desde un origen de datos compartido. Solo puede generar modelos de informe desde orígenes de datos multidimensionales de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , orígenes de datos relacionales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y orígenes de datos relacionales de Oracle.  
   
  Los modelos que se generan en el Administrador de informes se basan en el esquema del origen de datos compartido. Las entidades, las carpetas y los campos se crean para todas las tablas y columnas del origen de datos. No puede excluir elementos ni puede establecer opciones que determinen la manera en la que se genera el modelo. Si desea personalizar o perfeccionar un modelo, debe usar el Diseñador de modelos.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "48138795"
     -   Haga clic en **Administrar** para abrir la página de propiedades General del informe. A continuación, haga clic en **Generar modelo** para abrir la página Nuevo modelo.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Especifica el nombre del modelo. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No utilice los caracteres siguientes al especificar un nombre:  
   
- ; ? : \@ & = +, $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Descripción**  
  Muestra una descripción del modelo. Los usuarios que ven este elemento a través del Administrador de informes ven esta descripción al examinar la jerarquía de carpetas.  

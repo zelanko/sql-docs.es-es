@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc149e8d8af6b2b5f08d849f3fda261849ff9d8f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 30401dfbc8d9ea9e4c77dad1516b9301d6dae833
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361097"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030406"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
   La extensión de representación de Word representa informes en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. El formato es Office Open XML.  
@@ -77,9 +77,9 @@ ms.locfileid: "53361097"
   
  Esto ocurre porque el representador de Word analiza el informe para ver si hay campos relacionados con la paginación, como **PageNumber** y **TotalPages** , y solo administra referencias simples, no llamadas a una función. En este caso, la expresión llama a la función **ToString** . Las dos expresiones siguientes son equivalentes y ambas se representan correctamente al obtener una vista previa del informe en el Generador de informes o en el Diseñador de informes, o al representar el informe publicado en el Administrador de informes o en una biblioteca de SharePoint. Sin embargo, el representador de Word solo analiza correctamente la segunda expresión y representa los números de página correctos.  
   
--   **Expresión compleja:**  La expresión es `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Expresión compleja:**  la expresión es `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expresión con ejecuciones de texto:** Texto, **promedio de ventas**y expresión, `=Avg(Fields!YTDPurchase.Value, "Sales)`y texto, **número de página**y expresión `=Globals!PageNumber`  
+-   **Expresión con ejecuciones de texto:** Texto, **Promedio de ventas** y expresión, `=Avg(Fields!YTDPurchase.Value, "Sales)` y texto, **Número de página** y expresión `=Globals!PageNumber`  
   
  Para evitar este problema, use varias ejecuciones de texto en vez de una expresión compleja cuando use expresiones en encabezados y pies de página. Las dos siguientes expresiones son equivalentes. La primera es una expresión compleja y la segunda usa ejecuciones de texto. El representador de Word solo analiza correctamente la segunda expresión.  
   

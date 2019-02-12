@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c40f02e86f736b96398de4bb9e3d1183de2f9c6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54082236bed728d81d060b73ecdc03fb53d82825
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162865"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016607"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Usar una conexión de datos de Office (.odc) con informes (Reporting Services en el modo integrado de SharePoint)
   En escenarios limitados, puede usar un archivo de conexión de datos de Office (.odc) existente para proporcionar información de conexión a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Al crear un origen de datos compartido, puede usarse un archivo .odc en lugar de un archivo .rsds. El servidor de informes usa un archivo .odc de la misma forma que usa un archivo .rsds; lee el archivo para el tipo de origen de datos, una cadena de conexión y la información de credenciales.  
@@ -35,7 +35,7 @@ ms.locfileid: "48162865"
   
 -   El archivo .odc debe especificar una cadena de conexión.  
   
--   Se pueden establecer las credenciales en `None`, `Stored`, o `Integrated`. Si el método de credenciales se establece en `Stored`, el servidor de informes solicitará al usuario las credenciales en lugar de usar las credenciales almacenadas. El servidor de informes no puede usar credenciales almacenadas, tal y como se define en el archivo .odc.  
+-   Las credenciales se pueden establecer en `None`, `Stored` o `Integrated`. Si el método de credenciales se establece en `Stored`, el servidor de informes solicitará al usuario las credenciales en lugar de usar las credenciales almacenadas. El servidor de informes no puede usar credenciales almacenadas, tal y como se define en el archivo .odc.  
   
 -   El origen de datos debe tener un esquema idéntico al utilizado para crear el informe. Si las estructuras de datos son distintas, no se ejecutará el informe.  
   

@@ -11,14 +11,14 @@ f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5821d8d747609abfc8433a3ff9ad0ecf2676be7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183495"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011017"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes
   Para incluir datos en un informe, debe crear conexiones de datos y conjuntos de datos. Una conexión de datos contiene información acerca de cómo tener acceso a un origen de datos externo. Un conjunto de datos contiene un comando de consulta que especifique los datos que se van a incluir mediante la conexión de datos.  
@@ -49,21 +49,21 @@ ms.locfileid: "48183495"
   
 |**Origen de datos**|**Ejemplo**|**Descripción**|  
 |---------------------|-----------------|---------------------|  
-|Base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el servidor local|`data source="(local)";initial catalog=AdventureWorks2012`|Establezca el tipo de origen de datos `SQL Server`.|  
-|Base de datos de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Establezca el tipo de origen de datos `SQL Server`.|  
-|Base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Establezca el tipo de origen de datos `SQL Server`.|  
-|Base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el servidor local|`data source=localhost;initial catalog=Adventure Works DW 2012`|Establezca el tipo de origen de datos `SQL Server Analysis Services`.|  
-|Lista de SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Establezca el tipo de origen de datos `SharePoint List`.|  
+|Base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el servidor local|`data source="(local)";initial catalog=AdventureWorks2012`|Establezca el tipo de origen de datos en `SQL Server`.|  
+|Base de datos de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Establezca el tipo de origen de datos en `SQL Server`.|  
+|Base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Establezca el tipo de origen de datos en `SQL Server`.|  
+|Base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el servidor local|`data source=localhost;initial catalog=Adventure Works DW 2012`|Establezca el tipo de origen de datos en `SQL Server Analysis Services`.|  
+|Lista de SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Establezca el tipo de origen de datos en `SharePoint List`.|  
 ||||  
 |Modelos de informe|No aplicable.|No necesita una cadena de conexión para un modelo de informe. En el Generador de informes, vaya al servidor de informes y seleccione el archivo .smdl que constituye el modelo de informe.|  
-|Servidor Oracle|`data source=myserver`|Establece el tipo de origen de datos en `Oracle`. También es necesario instalar las herramientas de cliente de Oracle tanto en el equipo del Generador de informes como en el servidor de informes.|  
-|Origen de datos SAP Netweaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Establece el tipo de origen de datos en `SAP NetWeaver BI`.|  
-|Origen de datos de Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Establece el tipo de origen de datos en `Hyperion Essbase`.|  
-|Origen de datos de Teradata|`data source=` *\<NN &GT;. \<NNN &GT;. \<NNN &GT;. \<N &GT;* `;`|Establece el tipo de origen de datos en `Teradata`. La cadena de conexión es una dirección IP (protocolo de Internet) formada por cuatro campos, donde cada campo puede tener de uno a tres dígitos.|  
+|Servidor Oracle|`data source=myserver`|Configure el tipo de origen de datos en `Oracle`. También es necesario instalar las herramientas de cliente de Oracle tanto en el equipo del Generador de informes como en el servidor de informes.|  
+|Origen de datos SAP Netweaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Configure el tipo de origen de datos en `SAP NetWeaver BI`.|  
+|Origen de datos de Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Configure el tipo de origen de datos en `Hyperion Essbase`.|  
+|Origen de datos de Teradata|`data source=` *\<NN>.\<NNN>.\<NNN>.\<N>* `;`|Configure el tipo de origen de datos en `Teradata`. La cadena de conexión es una dirección IP (protocolo de Internet) formada por cuatro campos, donde cada campo puede tener de uno a tres dígitos.|  
 |Origen de datos de Teradata|`Database=` *\<nombre de la base de datos>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Establezca el tipo de origen de datos en `Teradata`, de modo similar a como se hizo en el ejemplo anterior. Usa solamente la base de datos predeterminada que se especifica en la etiqueta de la base de datos, sin detectar automáticamente las relaciones de los datos.|  
-|Origen de datos XML, servicio web|`data source=http://adventure-works.com/results.aspx`|Establece el tipo de origen de datos en `XML`. La cadena de conexión es una dirección URL de un servicio web que admite el Lenguaje de definición de servicios web (WSDL).|  
-|Origen de datos XML, documento XML|`http://localhost/XML/Customers.xml`|Establece el tipo de origen de datos en `XML`. La cadena de conexión es una dirección URL que lleva al documento XML.|  
-|Origen de datos XML, documento XML incrustado|*Vacía*|Establece el tipo de origen de datos en `XML`. Los datos XML se incrustan en la definición de informe.|  
+|Origen de datos XML, servicio web|`data source=http://adventure-works.com/results.aspx`|Configure el tipo de origen de datos en `XML`. La cadena de conexión es una dirección URL de un servicio web que admite el Lenguaje de definición de servicios web (WSDL).|  
+|Origen de datos XML, documento XML|`http://localhost/XML/Customers.xml`|Configure el tipo de origen de datos en `XML`. La cadena de conexión es una dirección URL que lleva al documento XML.|  
+|Origen de datos XML, documento XML incrustado|*Vacía*|Configure el tipo de origen de datos en `XML`. Los datos XML se incrustan en la definición de informe.|  
   
  Para obtener más información acerca de cada tipo de conexión, consulte [agregar datos de orígenes de datos externos &#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md) y [orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -81,6 +81,6 @@ ms.locfileid: "48183495"
   
 ## <a name="see-also"></a>Vea también  
  [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Elementos de informe &#40;generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Elementos de informe &#40;Generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

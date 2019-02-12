@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ca387618f1b996f620a1697053196926ed9dfd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123015"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010179"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Agregar, mover o eliminar un cuadro de texto (Generador de informes y SSRS)
   Los cuadros de texto son los elementos de informe más usados en los informes. Puede agregar un cuadro de texto al cuerpo del informe para mostrar información como títulos, opciones de parámetros, campos integrados y fechas.  
@@ -74,8 +74,8 @@ ms.locfileid: "48123015"
     >  Si hace clic en el cuadro de texto y está en modo de edición, presione ESC para seleccionar el cuadro de texto.  
   
 ## <a name="see-also"></a>Vea también  
- [Los cuadros de texto &#40;generador de informes y SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Cuadros de texto &#40;Generador de informes y SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Métodos abreviados de teclado &#40;generador de informes&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
+ [Métodos abreviados de teclado &#40;Generador de informes&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
   
   

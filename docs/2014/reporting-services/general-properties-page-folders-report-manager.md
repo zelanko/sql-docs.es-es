@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8fca88baa1a3886f06e0c812164d0c759e7d835
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2181e4ab949eef70c5ba9cb06c4fc8cfe82435dc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156464"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031596"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Página de propiedades generales, carpetas (Administrador de informes)
   Use la página de propiedades General de carpetas para ver y establecer las propiedades de las carpetas que cree. En la parte superior de la página, aparece información sobre quién creó o modificó la carpeta y cuándo se modificó en la página Propiedades generales.  
@@ -35,7 +35,7 @@ ms.locfileid: "48156464"
 2.  En el título de la carpeta, en la barra de herramientas, haga clic en **Configuración de carpeta**.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Especifique un nombre para la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ * \< > | "o / al especificar un nombre.  
   
  **Descripción**  
@@ -54,7 +54,7 @@ ms.locfileid: "48156464"
  Haga clic para cambiar de posición un informe o una carpeta dentro del espacio de nombres del servidor de informes. Al hacer clic en este botón, se abre la página Mover elementos, que permite buscar una nueva ubicación de carpeta.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

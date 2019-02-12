@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e1fb1f7f249d8252873eb7ecc879aac05fb496b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081555"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011508"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opciones de actualización de memoria caché (Administrador de informes)
   Utilice la página Opciones de actualización de caché a fin de crear las programaciones para cargar previamente la memoria caché con copias temporales de datos para un informe o un conjunto de datos compartido. Un plan de actualización incluye una programación y la opción para especificar o invalidar los valores de los parámetros. Para un conjunto de datos compartido, no puede invalidar los valores para los parámetros que estén marcados como de solo lectura. Puede crear y utilizar más de un plan de actualización como parte de la página de opciones de actualización.  
@@ -66,12 +66,12 @@ ms.locfileid: "48081555"
  **Configurar**  
  Haga clic para abrir la página Programación, que se usa para especificar información de frecuencia.  
   
- Para obtener más información, consulte [nueva programación: Editar página de programación &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
+ Para obtener más información, consulte [nueva programación: Editar programación página &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
  **Programación compartida**  
  Seleccione esta opción para seleccionar una programación existente.  
   
- Para obtener más información, consulte [crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md).  
+ Para obtener más información, consulte [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md).  
   
  **@\<** *Parámetro* **>**  
  Especifique una combinación de valores de parámetros. Esta sección solo aparece si el conjunto de datos actual o el informe tienen parámetros.  
@@ -103,7 +103,7 @@ ms.locfileid: "48081555"
   
  Si la definición del conjunto de datos compartido especifica la opción **Omitir de la consulta** para un parámetro, no necesita proporcionar un valor predeterminado. Esta marca indica que el parámetro del conjunto de datos no se utiliza en la consulta. Por ejemplo, el parámetro aparece en la definición del conjunto de datos compartido porque es un parámetro de informe que solo se utiliza en el filtro del conjunto de datos.  
   
- Para ver o cambiar las opciones de los parámetros de conjunto de datos, debe modificar la definición del conjunto de datos compartido. Para obtener más información, consulte [administrar conjuntos de datos compartidos](report-data/manage-shared-datasets.md).  
+ Para ver o cambiar las opciones de los parámetros de conjunto de datos, debe modificar la definición del conjunto de datos compartido. Para más información, vea [Administrar conjuntos de datos compartidos](report-data/manage-shared-datasets.md).  
   
 ### <a name="report-parameters"></a>Parámetros de informe  
  En un informe, cada valor de parámetro debe ser válido para poder crear correctamente un plan de actualización de caché. Debe escribir o seleccionar un valor predeterminado para cada parámetro de informe. El valor que establece invalida el predeterminado que se define para el parámetro de informe en el servidor de informes.  
@@ -130,7 +130,7 @@ ms.locfileid: "48081555"
   
 ## <a name="see-also"></a>Vea también  
  [Tareas de nivel de elemento](security/tasks-and-permissions-item-level-tasks.md)   
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Administración de conjuntos de datos compartidos](report-data/manage-shared-datasets.md)  

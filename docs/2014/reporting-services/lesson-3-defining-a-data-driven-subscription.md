@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccb9733badf6ec9bac12d383c20d4aea5090c0a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058735"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015546"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lección 3: Definir una suscripción controlada por datos
   En esta lección, utilizará las páginas de suscripción controladas por datos para conectar a un origen de datos de suscripción, crear una consulta que recupera datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  
   
 > [!NOTE]  
 >  Antes de empezar, compruebe que el servicio del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esté en ejecución. Si no es así, no podrá guardar la suscripción.  
   
- En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, consulte [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+ En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, vea [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
  En este tema:  
   
@@ -141,8 +141,8 @@ ms.locfileid: "48058735"
 ## <a name="see-also"></a>Vea también  
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Suscripciones controladas por datos](subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Crear, modificar y eliminar una suscripción controlada por datos](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Usar un origen de datos externos para los datos del suscriptor &#40;suscripción controlada por datos&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Usar un origen de datos externo para obtener información de los suscriptores &#40;suscripción controlada por datos&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

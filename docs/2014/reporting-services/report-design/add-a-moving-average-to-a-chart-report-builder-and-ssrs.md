@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a636209c9db85065c79d4ef6aa158ab5b312c263
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d7e25415949df060c04f4355b7895ed2085a4baf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134135"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038086"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Agregar una media móvil a un gráfico (Generador de informes y SSRS)
   Una media móvil es una media de los datos de la serie, calculada en un período de tiempo definido. La media móvil se puede mostrar en el gráfico para identificar tendencias significativas.  

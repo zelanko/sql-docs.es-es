@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0e1d1e31588945a12eed2d82ddf05ad2a7977e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e7f3faff05a318c302f12ded3a6ec4c864b7054
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183135"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012376"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Almacenar en caché conjuntos de datos compartidos (SSRS)
   Los resultados de las consultas para un conjunto de datos compartido se pueden copiar en una memoria caché para proporcionar datos coherentes a varios informes y mejorar el tiempo de respuesta de la consulta del conjunto de datos. Al igual que los informes, puede configurar un conjunto de datos compartido que se va a almacenar en memoria caché al usarse por primera vez o especificando una programación.  
@@ -57,7 +57,7 @@ ms.locfileid: "48183135"
  Puede especificar cuánto tiempo se mantendrán los datos en la memoria caché antes de que expiren. Para más información, vea [Página de almacenamiento en caché, conjuntos de datos compartidos &#40;Administrador de informes&#41;](../caching-page-shared-datasets-report-manager.md).  
   
 ## <a name="preloading-the-cache"></a>Cargar previamente la memoria caché  
- Puede cargar previamente la memoria caché creando un plan de actualización de caché. Con un plan de actualización, puede especificar la frecuencia de la actualización de la memoria caché utilizando una programación específica de los elementos o una programación compartida. Para evitar varias entradas en la memoria caché para el mismo elemento, la programación que especifique debería permitir suficiente tiempo para el procesamiento de las consultas en el origen de datos externo. Por ejemplo, si la consulta tarda 20 minutos en ejecutarse, la programación de la actualización debería ser mayor de 20 minutos. Para obtener más información, consulte [programaciones](../subscriptions/schedules.md).  
+ Puede cargar previamente la memoria caché creando un plan de actualización de caché. Con un plan de actualización, puede especificar la frecuencia de la actualización de la memoria caché utilizando una programación específica de los elementos o una programación compartida. Para evitar varias entradas en la memoria caché para el mismo elemento, la programación que especifique debería permitir suficiente tiempo para el procesamiento de las consultas en el origen de datos externo. Por ejemplo, si la consulta tarda 20 minutos en ejecutarse, la programación de la actualización debería ser mayor de 20 minutos. Para obtener más información, vea [Schedules](../subscriptions/schedules.md).  
   
  Para crear un plan de actualización de caché para un conjunto de datos compartido, se aplican las siguientes condiciones.  
   

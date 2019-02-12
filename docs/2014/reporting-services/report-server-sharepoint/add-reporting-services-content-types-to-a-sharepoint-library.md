@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ea197ddd0c24a487d152c8c6aa9eb9e177605d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105895"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030697"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Agregar el elemento web Visor de informes a una página web (Reporting Services en el modo integrado de SharePoint)
   Puede usar el elemento web Visor de informes para ver informes que se ejecutan en un servidor de informes configurado para ejecutarse en el modo integrado con SharePoint. Puede usar el elemento web para mostrar archivos de definición de informe (.rdl) que haya creado en el Generador de informes o el Diseñador de informes y cargado en una biblioteca.  
@@ -57,8 +57,8 @@ ms.locfileid: "48105895"
 9. Haga clic en **Aplicar** en la parte inferior del panel de herramientas y, a continuación, haga clic en **Aceptar** para cerrar el panel.  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento de Web del Visor de informes en un sitio de SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
- [Personalizar el elemento Web Visor de informes](../customize-the-report-viewer-web-part.md)   
+ [Elemento web Visor de informes en un sitio de SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Personalizar el elemento web Visor de informes](../customize-the-report-viewer-web-part.md)   
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Instalar o desinstalar el complemento Servicios de informes para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   

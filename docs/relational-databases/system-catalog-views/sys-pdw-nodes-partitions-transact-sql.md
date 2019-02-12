@@ -1,9 +1,9 @@
 ---
-title: Sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aadbe305d7ad72858a46b1df2af4ef2cb0e940be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70d11a9161461a01189bbfe69e1959eed124543
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843363"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012556"
 ---
-# <a name="syspdwnodespartitions-transact-sql"></a>Sys.pdw_nodes_partitions (Transact-SQL)
+# <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene una fila para cada partición de todas las tablas y la mayoría de los tipos de índices en una [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] base de datos. Todas las tablas e índices contienen al menos una partición, si se crean particiones de forma explícita.  
@@ -42,13 +42,13 @@ ms.locfileid: "47843363"
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Ejemplo A: las filas de la pantalla en cada partición dentro de cada distribución 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Ejemplo A: Mostrar las filas de cada partición dentro de cada distribución 
 
 Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 Para mostrar el número de filas de cada partición dentro de cada distribución, utilice [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Ejemplo B: vistas usos del sistema para ver las filas de cada partición de cada distribución de una tabla
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Ejemplo B: Usa las vistas del sistema para ver las filas de cada partición de cada distribución de una tabla
 
 Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  

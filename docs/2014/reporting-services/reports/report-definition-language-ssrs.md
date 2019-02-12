@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f21bfe746f409b40b2535da231da4dd2725f4f7a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 32442fad5d3d6f265769927d291c3154ff362f38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367023"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010436"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   El lenguaje RDL (Report Definition Language) es una representación XML de una definición de informe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definición de informe contiene información acerca de la recuperación y el diseño de los datos de un informe. RDL está formado por elementos XML que cumplen la sintaxis XML creada para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Puede agregar sus propias funciones personalizadas para controlar los valores de elemento de informe, los estilos y el formato si obtiene acceso a los ensamblados de código en los archivos de definición de informe.  
@@ -44,7 +44,7 @@ ms.locfileid: "53367023"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> Definición de esquema XML de RDL  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se valida con un archivo de definición de esquema XML (XSD). El esquema define las reglas para dónde se pueden producir elementos RDL en un archivo .rdl. Un elemento incluye su tipo de datos y cardinalidad, es decir, el número de repeticiones que se permiten. Los elementos pueden ser simples o complejos. Un elemento simple no tiene elementos o atributos secundarios. Un elemento complejo tiene elementos secundarios y opcionalmente, atributos.  
   
- Por ejemplo, el esquema incluye el elemento RDL `ReportParameters` que es del tipo complejo `ReportParametersType`. Por convención, un tipo complejo para un elemento es el nombre del elemento seguido de la palabra `Type`. Un elemento `ReportParameters` puede estar contenido en el elemento `Report` (un tipo complejo) y puede contener elementos `ReportParameter`. Un `ReportParameterType` es un tipo simple que solo puede tener uno de los siguientes valores: `Boolean`, `DateTime`, `Integer`, `Float` o `String`. Para obtener más información acerca de los tipos de datos de esquema XML, vea [XML Schema Part 2: Los tipos de datos segunda edición](https://go.microsoft.com/fwlink/?linkid=4871).  
+ Por ejemplo, el esquema incluye el elemento RDL `ReportParameters` que es del tipo complejo `ReportParametersType`. Por convención, un tipo complejo para un elemento es el nombre del elemento seguido de la palabra `Type`. Un elemento `ReportParameters` puede estar contenido en el elemento `Report` (un tipo complejo) y puede contener elementos `ReportParameter`. Un `ReportParameterType` es un tipo simple que solo puede tener uno de los siguientes valores: `Boolean`, `DateTime`, `Integer`, `Float` o `String`. Para obtener más información sobre los tipos de datos de esquema XML, vea [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871) (Parte 2 del esquema XML: tipos de datos, segunda edición).  
   
  El XSD de RDL está disponible en el archivo ReportDefinition.xsd, que se encuentra en la carpeta Extras del CD-ROM del producto. También está disponible en el servidor de informes a través de la siguiente dirección URL: http://servername/reportserver/reportdefinition.xsd.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53367023"
 |----------|-----------------|  
 |`Binary`|Una propiedad con un valor binario codificado de base 64.|  
 |`Boolean`|Propiedad con `true` o `false` como valor del objeto. A menos que se especifique lo contrario, el valor de un objeto booleano opcional omitido es `False`.|  
-|`Date`|Una propiedad con un valor de fecha o fecha y hora especificado completamente especificado en formato de fecha ISO8601: YYYY-MM-DD[THH:MM[:SS[.S]]].|  
+|`Date`|Propiedad con un valor de fecha o fecha y hora especificado por completo con el formato de fecha ISO8601: YYYY-MM-DD[THH:MM[:SS[.S]]].|  
 |`Enum`|Propiedad con un valor de texto de cadena que debe estar en una lista de valores designados.|  
 |`Float`|Propiedad con un valor de tipo Float. Se utiliza un punto (.) como separador decimal opcional.|  
 |`Integer`|Propiedad con un valor de tipo Integer (int32).|  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5cfb22d29120f7ee27e378329045c79f57252d61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c5534c1946cc07e35f64ab3baf3654a589a60706
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194297"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017156"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Cargar documentos en una biblioteca de SharePoint (Reporting Services en el modo integrado de SharePoint)
   Puede cargar definiciones de informe y modelos de informe en una biblioteca de SharePoint. Al cargar un elemento del servidor de informes, debe seleccionar una biblioteca o una carpeta dentro de una biblioteca. No se puede cargar un elemento del servidor de informes en una lista o en una página.  
@@ -28,7 +28,7 @@ ms.locfileid: "48194297"
  No puede cargar un archivo de origen de datos (.rds). No obstante, puede publicar archivos .rds de una herramienta de diseño, como el Diseñador de informes, en una biblioteca de SharePoint. Durante la publicación, se crea un nuevo archivo .rsds a partir del archivo .rds original de la solución. También puede crear un nuevo archivo .rsds en una biblioteca de SharePoint y, a continuación, establecer las propiedades de conexión de origen de datos en los informes y modelos cargados para usar la nueva conexión.  
   
 > [!NOTE]  
->  El servidor de informes debe configurarse para el modo de SharePoint y la instancia del producto de SharePoint debe tener el complemento de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], que proporciona archivos de programa para almacenar y obtener acceso a los elementos del servidor de informes desde un sitio de SharePoint.  
+>  El servidor de informes debe configurarse para el modo de SharePoint y la instancia del producto de SharePoint debe tener el complemento de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , que proporciona archivos de programa para almacenar y obtener acceso a los elementos del servidor de informes desde un sitio de SharePoint.  
   
  Para cargar un documento en una biblioteca, debe contar con el permiso "Agregar elementos" en el nivel de sitio. Si está utilizando la configuración de seguridad predeterminada, este permiso se concederá a los miembros del grupo **Propietarios** que tengan un nivel de permiso Control total y a los miembros del grupo **Miembros** que tengan un nivel de permiso Colaborar.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48194297"
   
 ## <a name="see-also"></a>Vea también  
  [Publicar un informe en una biblioteca de SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publicación de un origen de datos compartido en una biblioteca de SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Concesión de permisos sobre elementos del servidor de informes en un sitio de SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Publicar un origen de datos compartido en una biblioteca de SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

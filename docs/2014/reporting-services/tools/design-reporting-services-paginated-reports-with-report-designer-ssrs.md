@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145895"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037816"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Diseñar informes con el Diseñador de informes (SSRS)
   Use el Diseñador de informes para crear informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y soluciones de informes completos. El Diseñador de informes proporciona una interfaz gráfica en la que se pueden definir orígenes de datos, conjuntos de datos y consultas, posiciones de diseño del informe para las regiones de datos y campos, y características interactivas como parámetros y conjuntos de informes que funcionan conjuntamente.  
@@ -34,7 +34,7 @@ ms.locfileid: "48145895"
   
 -   Mantener un conjunto de copias maestras para los informes y elementos relacionados. Después de la implementación, los informes publicados se pueden modificar accidentalmente.  
   
- Use la información de este tema para diseñar informes y elementos relacionados para un solo proyecto de informes en una solución de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Para más información sobre soluciones y proyectos múltiples en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vea [Reporting Services en SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
+ Use la información de este tema para diseñar informes y elementos relacionados para un solo proyecto de informes en una solución de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Para más información sobre soluciones y proyectos múltiples en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vea [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_SharedDataSources"></a> Orígenes de datos compartidos  
  Usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implementar orígenes de datos compartidos para una solución de informes. Los orígenes de datos compartidos se pueden implementar independientemente de otros elementos de un proyecto mediante las propiedades **OverwriteDataSources** y **TargetDataSourceFolder** . Para más información, vea [Establecer propiedades de implementación &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "48145895"
   
     -   Presione F5.  
   
-     Si usa una configuración de proyecto que genera el informe pero no lo implementa, el informe que se especifica en el `StartItem` propiedad de la configuración actual se abre en una ventana de vista previa independiente.  
+     Si utiliza una configuración de proyecto que genera el informe pero no lo implementa, el informe especificado en la propiedad `StartItem` de la configuración actual se abrirá en una ventana de vista previa distinta.  
   
     > [!NOTE]  
     >  Para usar el modo de depuración, debe establecer un elemento de inicio. En el Explorador de soluciones, haga clic en el proyecto de informe, haga clic en **propiedades**y en `StartItem`, seleccione el nombre del informe para mostrar.  
@@ -183,7 +183,7 @@ ms.locfileid: "48145895"
 |3|Problemas de la generación poco importantes que cambian el diseño del informe de una manera insignificante que podría no ser apreciable.|  
 |4|Solo se utiliza para publicar advertencias.|  
   
- Cuando se intenta obtener una vista previa o implementar un informe que contiene los elementos de informe nuevos en [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], como mapas y barras de datos, pueden quitarse los elementos de informe del informe. De forma predeterminada, la propiedad ErrorLevel de la configuración está establecida en 2, lo que haría que la compilación del informe diera un error al quitarse el mapa. Pero si cambia el valor de la propiedad ErrorLevel a 0 o 1, se quita el mapa, se emite una advertencia y el proceso de compilación continúa.  
+ Al intentar ofrecer una vista previa de un informe que contiene elementos de informe nuevos o implementarlo en [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], por ejemplo mapas y barras de datos, esos elementos de informe se pueden quitar del informe. De forma predeterminada, la propiedad ErrorLevel de la configuración está establecida en 2, lo que haría que la compilación del informe diera un error al quitarse el mapa. Pero si cambia el valor de la propiedad ErrorLevel a 0 o 1, se quita el mapa, se emite una advertencia y el proceso de compilación continúa.  
   
   
 ## <a name="see-also"></a>Vea también  

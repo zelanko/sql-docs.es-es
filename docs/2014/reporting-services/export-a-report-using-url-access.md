@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b90f1ad3e67aafa2ee8b967f8a04ddb16daf4e53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 589f1d42936d243bff9aa77740cefce14ab8856e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132915"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014606"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar un informe mediante el acceso URL
   Opcionalmente, puede especificar el formato en el que se va a representar un informe de utilizando el *rs: Format* parámetro. Por ejemplo, para obtener una copia PDF de un informe directamente desde un servidor de informes en modo nativo:  

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb1c984abec2667a09587eda673ed02176aa8e8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220743"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010578"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Página (Administrador de informes) Informes click-through
   Un informe click-through muestra una tabla de datos relacionados cuando se hace clic en los datos interactivos incluidos en el informe. El servidor de informes genera estos informes basándose en la información incluida en el modelo usado para crear el informe. Si no desea usar los informes click-through que el servidor de informes genera, puede crear informes personalizados que publica en un servidor de informes y asigna a los puntos de datos interactivos definidos en el modelo. Los informes personalizados se deben crear en el Generador de informes desde el mismo modelo y, a continuación, se deben publicar en el servidor de informes. Para asignar informes personalizados a los elementos del modelo, use la página Informes click-through en el Administrador de informes.  
@@ -32,7 +32,7 @@ ms.locfileid: "48220743"
  Aunque puede seleccionar cualquier informe al que tenga acceso, seleccione solo los creados específicamente para el modelo que está configurando.  
   
 > [!NOTE]  
->  Informes Click-through no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Si no está seguro de la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la que trabaja su organización, póngase en contacto con el administrador de la base de datos.  
+>  Los informes click-through no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Si no está seguro de la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la que trabaja su organización, póngase en contacto con el administrador de la base de datos.  
   
 ## <a name="navigation"></a>Navegación  
  Utilice el procedimiento siguiente para navegar hasta esta ubicación en la interfaz de usuario (IU).  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7df0a7c71dbc0298b2f9448f19287f83d34a8617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209545"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030486"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Generador de informes en SQL Server 2014
   El Generador de informes es un entorno de creación de informes destinado a los usuarios empresariales que prefieren trabajar en el entorno de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Al diseñar un informe, especifica dónde obtener los datos, qué datos obtener y cómo mostrar los datos. Al ejecutar el informe, el procesador de informes toma toda la información especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede obtener una vista previa de los informes en el Generador de informes o publicar el informe en un servidor de informes o en un servidor de informes en el modo integrado de SharePoint, donde otros usuarios podrán ejecutarlo.  
@@ -38,7 +38,7 @@ ms.locfileid: "48209545"
   
 -   **Comience con la tabla, la matriz o el Asistente para gráficos**. Elija una conexión de origen de datos, arrastre y coloque campos para crear una consulta de conjunto de datos, seleccione un diseño y un estilo y personalice el informe.  
   
--   **Comience con el Asistente para mapas** para crear informes que muestren datos agregados con un fondo geográfico o geométrico. Los datos de mapa pueden ser datos espaciales de una consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] o un archivo de forma del Environmental Systems Research Institute, Inc. (ESRI). También puede agregar un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] fondo de mosaicos de Bing Maps.  
+-   **Comience con el Asistente para mapas** para crear informes que muestren datos agregados con un fondo geográfico o geométrico. Los datos de mapa pueden ser datos espaciales de una consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] o un archivo de forma del Environmental Systems Research Institute, Inc. (ESRI). También puede agregar un fondo de mosaico de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing Maps.  
   
 
   
@@ -79,22 +79,22 @@ ms.locfileid: "48209545"
  [Novedades en el Generador de informes para SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Describe las nuevas características de esta versión del Generador de informes, incluidos los mapas.  
   
- [Tutorial: Crear un informe de gráfico rápido sin conexión](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Tutorial: Creación de un informe de gráfico rápido sin conexión](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Presenta el Generador de informes y los asistentes disponibles para ayudarle a crear los informes. El tutorial proporciona un conjunto de datos para que los use de modo que no tenga que conectarse a un origen de datos para empezar.  
   
- [Planear un informe &#40;generador de informes&#41;](../report-design/planning-a-report-report-builder.md)  
+ [Planear un informe &#40;Generador de informes&#41;](../report-design/planning-a-report-report-builder.md)  
  Proporciona información acerca de lo que debería tener en cuenta antes de empezar a generar el informe.  
   
- [Conceptos de creación de informes &#40;generador de informes y SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Define conceptos clave usados a lo largo de toda la documentación del Generador de informes.  
   
- [Vista Diseño del informe &#40;generador de informes&#41;](report-design-view-report-builder.md)  
+ [Vista de diseño de informe &#40;Generador de informes&#41;](report-design-view-report-builder.md)  
  Explica los diferentes paneles y regiones de la vista de diseño del informe.  
   
- [Vista de diseño de conjunto de datos compartido &#40;generador de informes&#41;](shared-dataset-design-view-report-builder.md)  
+ [Vista de diseño de conjunto de datos compartidos &#40;Generador de informes&#41;](shared-dataset-design-view-report-builder.md)  
  Explica los diferentes paneles y regiones de la vista de diseño del conjunto de datos compartido.  
   
- [Métodos abreviados de teclado &#40;generador de informes&#41;](keyboard-shortcuts-report-builder.md)  
+ [Métodos abreviados de teclado &#40;Generador de informes&#41;](keyboard-shortcuts-report-builder.md)  
  Describe las teclas de método abreviado disponibles para navegar y diseñar informes en el Generador de informes.  
   
  [Iniciar el generador de informes &#40;generador de informes&#41;](start-report-builder.md)  

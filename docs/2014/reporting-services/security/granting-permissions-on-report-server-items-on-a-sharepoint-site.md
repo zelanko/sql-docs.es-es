@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a1ba908e9db3764ccfc0bd35f8dbb901245519e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9afb10180087998afd0cc891af895a9db669feb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087025"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017266"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ofrece características de seguridad integradas que puede usar para conceder acceso a los elementos del servidor de informes a los que accede desde sitios y bibliotecas de SharePoint. Si ya asignó permisos a los usuarios, dichos usuarios tendrán acceso a los elementos y las operaciones del servidor de informes inmediatamente después de configurarse la integración entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] y un servidor de informes. Puede usar los permisos existentes para cargar definiciones de informe y otros documentos, ver informes, crear suscripciones y administrar elementos.  
@@ -30,7 +30,7 @@ ms.locfileid: "48087025"
   
 1.  En la documentación del producto para [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], lea la sección acerca de la configuración de seguridad predeterminada de los grupos estándar de SharePoint para obtener información acerca de cómo administrar los permisos y el acceso de usuario.  
   
-2.  Revise la lista de permisos que afectan de forma específica a los elementos y las operaciones del servidor de informes. Para obtener más información, consulte [usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+2.  Revise la lista de permisos que afectan de forma específica a los elementos y las operaciones del servidor de informes. Para más información, vea [Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
 3.  Asigne cuentas de usuario y de grupo a los grupos de SharePoint predefinidos.  
   
@@ -71,28 +71,28 @@ ms.locfileid: "48087025"
   
  Los grupos de SharePoint tienen niveles de permiso que proporcionan un acceso inmediato a diversas operaciones del servidor de informes. Si la configuración de seguridad integrada no proporciona el nivel de acceso necesario, puede crear grupos o niveles de permiso personalizados.  
   
- Para obtener más información sobre qué informes se admiten las operaciones del servidor a través de las características de seguridad predeterminadas, vea [usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+ Para más información sobre las operaciones del servidor de informes que son compatibles con las características de seguridad predeterminadas, vea [Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
  Para usar las características de seguridad integradas, debe asignar cuentas de usuario o de grupo de Windows a los grupos de SharePoint. Excepto en el caso del administrador del servidor y el propietario del sitio del portal, con acceso automático a [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] una vez instalado el software, se deben conceder permisos a los demás usuarios para que tengan acceso al servidor.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Uso de la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Explica cómo se pueden usar los grupos de SharePoint y los niveles de permiso predefinidos para tener acceso a los elementos del servidor de informes.  
   
  [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Proporciona una referencia de todos los permisos de los productos de SharePoint que se pueden usar para tener acceso a las operaciones del servidor de informes.  
   
- [Establecimiento de permisos para las operaciones del servidor de informes en una aplicación web de SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Describe los requisitos de permisos de la notificación ad hoc y recomienda enfoques para que las características estén disponibles.  
   
- [Comparación de roles y tareas en Reporting Services con grupos y permisos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Proporciona un breve resumen de cómo comparar los grupos de SharePoint con las definiciones de roles predefinidas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;modo integrado de Reporting Services en SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Proporciona instrucciones para crear grupos de SharePoint nuevos con permiso para iniciar el Generador de informes y establecer la seguridad de elementos de modelo. En este tema también se incluyen instrucciones generales acerca de cómo establecer permisos personalizados para cualquier elemento u operación del servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;modo integrado de Reporting Services en SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Seguridad y protección de Reporting Services](reporting-services-security-and-protection.md)  
   
   

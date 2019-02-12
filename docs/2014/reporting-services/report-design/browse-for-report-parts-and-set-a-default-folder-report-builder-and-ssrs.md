@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0162c6e640c13e743d3ad816e7fcb3286758f635
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae8fddf7e008c1c97c30c18deb2d8aec60b77415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222255"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009587"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Buscar elementos de informe y establecer una carpeta predeterminada (Generador de informes y SSRS)
   La manera más fácil de crear un informe es agregarle elementos, como tablas y gráficos, de la galería de elementos de informe. Al agregar un elemento de informe al informe, también agrega todo lo que debe tener para que funcione. Por ejemplo, cualquier elemento de informe que muestre los datos depende de un conjunto de datos, es decir, una consulta y una conexión a un origen de datos. Después de agregar el elemento de informe a un informe, puede modificarlo como convenga.  
   
  Puede establecer una carpeta predeterminada para publicar elementos de informe en el servidor de informes o el sitio de SharePoint integrado con un servidor de informes.  
   
- Para más información, vea [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Para más información, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
 ### <a name="to-browse-for-report-parts"></a>Para buscar elementos de informe  
   
@@ -65,9 +65,9 @@ ms.locfileid: "48222255"
   
 ## <a name="see-also"></a>Vea también  
  [Buscar o desactivar actualizaciones &#40;generador de informes y SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Elementos de informe &#40;generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Elementos de informe y conjuntos de datos en el generador de informes](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Elementos de informe &#40;Generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Elementos de informe y conjuntos de datos en el Generador de informes](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Solucionar problemas de elementos de informe &#40;generador de informes y SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Publicar y volver a publicar elementos de informe &#40;generador de informes y SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [Publicar y volver a publicar elementos de informe &#40;Generador de informes y SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

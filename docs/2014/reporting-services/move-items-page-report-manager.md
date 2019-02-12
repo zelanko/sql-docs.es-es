@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6c4d822448b452cd66cbc59beffb8fe2d6f0fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082755"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009692"
 ---
 # <a name="move-items-page-report-manager"></a>Mover elementos (página del Administrador de informes)
   Use la página Mover elementos para mover un informe, una carpeta u otro elemento a una nueva ubicación del servidor de informes. Puede escribir la ruta de acceso a la nueva ubicación o utilizar la vista de árbol para desplazarse hasta la nueva ubicación en el espacio de nombres del servidor de informes. Solo puede mover los elementos para los que tenga permiso para mover y que estén almacenados en el servidor de informes actual.  
@@ -66,7 +66,7 @@ ms.locfileid: "48082755"
 4.  En la barra de herramientas del elemento, haga clic en **Mover**.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Página de propiedades generales, carpetas &#40;el Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Página de propiedades generales, informes &#40;Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Página de propiedades generales, recursos &#40;el Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   

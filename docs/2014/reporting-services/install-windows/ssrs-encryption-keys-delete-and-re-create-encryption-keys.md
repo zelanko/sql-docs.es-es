@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ff8e8792079fcca8ed4affa373964ec6cb39fe1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111029"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012467"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Eliminar y volver a crear claves de cifrado (Administrador de configuración de SSRS)
   Las actividades de eliminación y nueva creación de claves de cifrado quedan fuera del mantenimiento rutinario de las claves de cifrado. Estas tareas se realizan en respuesta a una amenaza específica al servidor de informes o como último recurso cuando ya no se tiene acceso a una base de datos del servidor de informes.  
@@ -37,11 +37,11 @@ ms.locfileid: "48111029"
   
  Solo se puede volver a crear la clave simétrica cuando el servidor de informes se encuentre en un estado de funcionamiento. La creación de claves de cifrado y el cifrado de contenido interrumpen las operaciones del servidor. Debe poner el servidor en modo sin conexión durante el proceso de nuevo cifrado. No se deben realizar solicitudes al servidor de informes durante este proceso.  
   
- Para restablecer la clave simétrica y los datos cifrados, se puede usar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** . Para más información sobre cómo se crea la clave simétrica, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
+ Para restablecer la clave simétrica y los datos cifrados, se puede usar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** . Para obtener más información sobre cómo se crea la clave simétrica, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Cómo volver a crear claves de cifrado (herramienta de configuración de Reporting Services)  
   
-1.  Deshabilitar el acceso HTTP y el servicio Web del servidor de informes modificando la `IsWebServiceEnabled` propiedad en el archivo rsreportserver.config. Este paso evita temporalmente que las solicitudes de autenticación se envíen al servidor de informes sin cerrar el servidor completamente. Debe tener el servicio mínimo para poder volver a crear las claves.  
+1.  Deshabilite el acceso HTTP y el servicio web del servidor de informes modificando la propiedad `IsWebServiceEnabled` en el archivo rsreportserver.config. Este paso evita temporalmente que las solicitudes de autenticación se envíen al servidor de informes sin cerrar el servidor completamente. Debe tener el servicio mínimo para poder volver a crear las claves.  
   
      Si vuelve a crear claves de cifrado para una implementación escalada del servidor de informes, deshabilite esta propiedad en todas las instancias de la implementación.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48111029"
   
     2.  Abra el archivo rsreportserver.config.  
   
-    3.  Para el `IsWebServiceEnabled` propiedad, especifique `False`y, a continuación, guarde los cambios.  
+    3.  Para la propiedad `IsWebServiceEnabled`, especifique `False` y, a continuación, guarde los cambios.  
   
 2.  Inicie la herramienta de configuración de Reporting Services y, a continuación, conéctese a la instancia del servidor de informes que desea configurar.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48111029"
   
 4.  Reinicie el servicio Servidor de informes de Windows. Si vuelve a crear claves de cifrado para una implementación escalada, reinicie el servicio en todas las instancias.  
   
-5.  Volver a habilitar el acceso HTTP y el servicio Web modificando la `IsWebServiceEnabled` propiedad en el archivo rsreportserver.config. Hágalo para todas las instancias si está trabajando con una implementación escalada.  
+5.  Vuelva a habilitar el acceso HTTP y el servicio web modificando la propiedad `IsWebServiceEnabled` en el archivo rsreportserver.config. Hágalo para todas las instancias si está trabajando con una implementación escalada.  
   
 #### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>Cómo volver a crear claves de cifrado (rskeymgmt)  
   
@@ -110,14 +110,14 @@ ms.locfileid: "48111029"
   
 1.  En cada origen de datos compartido se debe volver a escribir la cadena de conexión.  
   
-2.  Para cada informe y origen de datos compartido que utilice credenciales almacenadas, debe volver a escribir el nombre de usuario y la contraseña y luego guardarlos. Para obtener más información, consulte [especificar credenciales y la información de conexión de orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+2.  Para cada informe y origen de datos compartido que utilice credenciales almacenadas, debe volver a escribir el nombre de usuario y la contraseña y luego guardarlos. Para obtener más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../integration-services/connection-manager/data-sources.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 3.  Para cada suscripción controlada por datos, ábrala y vuelva a escribir las credenciales de la base de datos de suscripciones.  
   
 4.  Para suscripciones que utilizan datos cifrados (como la extensión de entrega de recurso compartido de archivos y todas las extensiones de entrega de terceros que utilicen cifrado), abra cada suscripción y vuelva a escribir las credenciales. Las suscripciones que usan entrega por correo electrónico del Servidor de informes no emplean datos cifrados y, por tanto, no les afecta el cambio de clave.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Store los datos del servidor de informes cifrados &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8439c48f7379b983b46edcaf1111606c1a3fbcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193205"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040646"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo de SharePoint
   Puede crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para entregar informes desde una aplicación web de SharePoint que esté integrada con un servidor de informes en el modo de SharePoint. Las suscripciones pueden entregar informes a una biblioteca de documentos, a una carpeta de archivos o como un correo electrónico. En este tema se resumen los requisitos y los pasos para crear una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -31,11 +31,11 @@ ms.locfileid: "48193205"
   
  Cuando se crea una suscripción, hay tres formas de especificar su entrega:  
   
--   **Biblioteca de documentos**: puede crear una suscripción que entrega un documento basado en el informe original a una biblioteca dentro del mismo sitio de SharePoint que el informe original. No puede entregar el documento a una biblioteca en otro servidor u otro sitio dentro de la misma colección de sitios. Para entregar el documento, debe tener el permiso Agregar elementos para la biblioteca a la que se entrega el informe.  
+-   **Biblioteca de documentos**: Puede crear una suscripción que entregue un documento basado en el informe original a una biblioteca que se encuentre en el mismo sitio de SharePoint que el informe original. No puede entregar el documento a una biblioteca en otro servidor u otro sitio dentro de la misma colección de sitios. Para entregar el documento, debe tener el permiso Agregar elementos para la biblioteca a la que se entrega el informe.  
   
--   **Carpeta de archivos** : puede entregar un documento basado en el informe original a una carpeta compartida del sistema de archivos. Debe seleccionar una carpeta existente que sea accesible a través de una conexión de red.  
+-   **Carpeta de archivos:** Puede entregar un documento basado en el informe original a una carpeta compartida del sistema de archivos. Debe seleccionar una carpeta existente que sea accesible a través de una conexión de red.  
   
--   **Correo electrónico** : si el servidor de informes está configurado para usar la extensión de entrega de correo electrónico del servidor de informes, puede crear una suscripción que envíe un informe o un archivo de informe exportado (guardado en un formato de salida) a la bandeja de entrada. Para recibir simplemente la notificación sin la dirección URL del informe o sin el informe propiamente dicho, desactive las casillas **Incluir un vínculo al informe** y **Mostrar informe dentro del mensaje** .  
+-   **Correo electrónico:** Si el servidor de informes está configurado para usar la extensión de entrega de correo electrónico del servidor de informes, puede crear una suscripción que envía un informe o un archivo de informe exportado (guardado en un formato de salida) a la Bandeja de entrada. Para recibir simplemente la notificación sin la dirección URL del informe o sin el informe propiamente dicho, desactive las casillas **Incluir un vínculo al informe** y **Mostrar informe dentro del mensaje** .  
   
  **En este tema:**  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48193205"
 ## <a name="see-also"></a>Vea también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md)   
- [Entrega a recursos compartidos en Reporting Services](file-share-delivery-in-reporting-services.md)   
+ [Entrega a recursos compartidos de archivos en Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Entrega de la biblioteca de SharePoint en Reporting Services](sharepoint-library-delivery-in-reporting-services.md)   
  [Configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   

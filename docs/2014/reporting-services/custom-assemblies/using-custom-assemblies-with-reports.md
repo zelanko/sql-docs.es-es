@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0ab2fc2b4411fa97f99b2888142ad7783d9b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf4880c3f979bbafaa1591fb21d29501c581deb9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219445"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031356"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Usar ensamblados personalizados con informes
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede escribir código personalizado para los valores de elementos de informe, estilos y formato. Por ejemplo, puede utilizar código personalizado para dar formato a las monedas según la configuración regional, marcar ciertos valores con formato especial o aplicar otras reglas de negocios en vigor en la compañía. Una manera de incluir este código en los informes es crear un ensamblado de código personalizado mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] al que puede hacer referencia desde dentro de los archivos de definición de informe. El servidor llama a las funciones de los ensamblados personalizados cuando se ejecuta un informe. Los ensamblados personalizados se pueden utilizar para recuperar funciones especializadas que piensa utilizar en los informes.  
@@ -45,7 +45,7 @@ ms.locfileid: "48219445"
  [Inicialización de objetos de ensamblados personalizados](initializing-custom-assembly-objects.md)  
  Describe cómo inicializar los valores para los objetos de ensamblado personalizados llamados desde un informe.  
   
- [Depuración de ensamblados personalizados](how-to-debug-custom-assemblies.md)  
+ [Cómo: Depurar ensamblados personalizados](how-to-debug-custom-assemblies.md)  
  Describe cómo depurar el código de ensamblado personalizado.  
   
 ## <a name="see-also"></a>Vea también  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8365b0718f389e6417f8f7e1a76cf403e268b574
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e8ad4dbb79f67591abbd1853757cddc749bf225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081831"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014726"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>Método SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting)
   Configura la extensión de entrega de correo electrónico utilizada por el servidor de informes para enviar el correo electrónico.  

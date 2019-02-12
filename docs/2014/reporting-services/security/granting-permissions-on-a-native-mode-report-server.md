@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0ea2e775edd95ec7a30dc6cbf9f9d04bc62a162
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 892349a6a4ce2bbdd51670a92231c626129ae53b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161475"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014566"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Conceder permisos en un servidor de informes en modo nativo
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la autorización basada en roles y un subsistema de autenticación para determinar quién puede realizar operaciones y tener acceso a los elementos de un servidor de informes. La autorización basada en roles divide en roles el conjunto de acciones que puede realizar un usuario o un grupo. La autenticación se basa en la autenticación de Windows integrada o en un módulo de autenticación personalizado proporcionado por el usuario. Puede usar los roles predefinidos o los personalizados con cualquier tipo de autenticación.  
@@ -40,7 +40,7 @@ ms.locfileid: "48161475"
   
  Para conceder acceso a operaciones y elementos del servidor de informes, siga estas directrices:  
   
-1.  Revise los roles predefinidos para determinar si puede utilizarlos tal y como están. Si necesita ajustar las tareas o definir roles adicionales, conviene que lo haga antes de empezar a asignar usuarios a roles específicos. Para obtener más información acerca de cada rol, consulte [Roles predefinidos](role-definitions-predefined-roles.md).  
+1.  Revise los roles predefinidos para determinar si puede utilizarlos tal y como están. Si necesita ajustar las tareas o definir roles adicionales, conviene que lo haga antes de empezar a asignar usuarios a roles específicos. Para obtener más información sobre cada rol, vea [Roles predefinidos](role-definitions-predefined-roles.md).  
   
 2.  Identifique qué usuarios y grupos requieren acceso al servidor de informes y en qué nivel. A la mayoría de los usuarios se les debería asignar el rol **Explorador** o el rol **Generador de informes** . A un pequeño número de usuarios se les debería asignar el rol **Publicador** . A el rol **Administrador de contenido**conviene asignar muy pocos usuarios.  
   
@@ -51,14 +51,14 @@ ms.locfileid: "48161475"
 5.  Cree las asignaciones de roles adicionales que necesite para carpetas, informes y otros elementos específicos. No cree un número elevado de asignaciones de roles. Si crea demasiadas, resultará difícil realizar un seguimiento de los distintos niveles de permisos para cada usuario.  
   
 > [!NOTE]  
->  Si ha configurado un servidor de informes para que se ejecute en el modo integrado de SharePoint, debe establecer permisos en el sitio de SharePoint para conceder acceso a los elementos del servidor de informes. Para más información, vea [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
+>  Si ha configurado un servidor de informes para que se ejecute en el modo integrado de SharePoint, debe establecer permisos en el sitio de SharePoint para conceder acceso a los elementos del servidor de informes. Para obtener más información, vea [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
 ## <a name="who-sets-permissions"></a>Quién establece permisos  
  Inicialmente, solo los usuarios que son miembros del grupo local de administradores pueden tener acceso al servidor de informes. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está instalado con dos asignaciones de roles predeterminadas que conceden acceso de nivel de elemento y de nivel de sistema para los miembros del grupo local de administradores. Estas asignaciones de roles integradas permiten a los administradores locales administrar los elementos del servidor de informes y conceder a los demás usuarios acceso al servidor de informes. Las asignaciones de roles integradas no se pueden eliminar. Un administrador local siempre tiene permiso para administrar totalmente una instancia del servidor de informes.  
   
  Dado que los permisos totales en un servidor de informes incluyen permisos de nivel de elemento y permisos de nivel de sistema, a un administrador local se le asignan los roles siguientes:  
   
- Antes de poder administrar una instancia del servidor de informes en un equipo local que ejecuta Windows Vista o Windows Server 2008, son necesarios algunos pasos de configuración adicionales. Para obtener más información, vea [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Antes de poder administrar una instancia del servidor de informes en un equipo local que ejecuta Windows Vista o Windows Server 2008, son necesarios algunos pasos de configuración adicionales. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="how-permissions-are-stored"></a>Cómo se almacenan los permisos  
  Las asignaciones y las definiciones de roles se almacenan en la base de datos del servidor de informes. Si está utilizando varias herramientas cliente o interfaces de programación, todo el acceso estará sujeto a los permisos que se hayan definido para la instancia del servidor de informes en conjunto. Si está configurando varios servidores de informes en una implementación escalada, las asignaciones de roles que define en una instancia se almacenan en una base de datos compartida y las utilizan todas las demás instancias de la misma implementación escalada. Dado que las asignaciones de roles se almacenan junto con los elementos a los que protegen, se puede mover la base de datos a otra instancia del servidor de informes sin perder los permisos definidos.  
@@ -69,7 +69,7 @@ ms.locfileid: "48161475"
 |Herramienta|Tareas|  
 |----------|-----------|  
 |Management Studio: se usa para ver, modificar, crear y eliminar definiciones de roles.|[Crear, eliminar o modificar un rol &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
-|Administrador de informes: se usa para asignar usuarios y grupos a los roles.|[Conceda al usuario el acceso a un servidor de informes &#40;el Administrador de informes&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](role-assignments-modify-or-delete.md)|  
+|Administrador de informes: se usa para asignar usuarios y grupos a los roles.|[Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Roles predefinidos](role-definitions-predefined-roles.md)   

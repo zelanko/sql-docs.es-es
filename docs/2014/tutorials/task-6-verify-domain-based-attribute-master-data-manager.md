@@ -1,24 +1,21 @@
 ---
-title: 'Tarea 6: Comprobar que se crea el atributo basado en dominio mediante Master Data Manager | Microsoft Docs'
+title: 'Tarea 6: Compruebe que el atributo basado en dominio se crea mediante Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 042cff6f687bb54466afb2334ad95402de319e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207115"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037736"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tarea 6: comprobar que se crea el atributo basado en dominio mediante Master Data Manager
   En esta tarea, comprobará que se crea la entidad **Estado** en **MDS** y que el atributo **State** de la entidad **Proveedor** es un atributo basado en dominio que depende de la entidad **Estado** mediante **Master Data Manager**.  
@@ -29,7 +26,7 @@ ms.locfileid: "48207115"
   
 3.  Asegúrese de que el modelo **Proveedores** está seleccionado y haga clic en **Explorador**. Puede actualizar la página si ya tiene abierto **Explorador**.  
   
-4.  Mantenga el mouse sobre **Entidades** en la barra de menús y observe que ahora hay dos entidades: **Proveedor** y **Estado**.  
+4.  Mantenga el mouse sobre **entidades** en la barra de menús y observe que ahora hay dos entidades: **Proveedor** y **estado**.  
   
      ![Menú de entidades con estado y proveedor](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "menú entidades con estado y proveedor")  
   
@@ -41,7 +38,7 @@ ms.locfileid: "48207115"
   
 8.  Repita los pasos anteriores para otros estados.  
   
-    |código|Nombre|  
+    |Código|Nombre|  
     |----------|----------|  
     |CA|California|  
     |CO|Colorado|  

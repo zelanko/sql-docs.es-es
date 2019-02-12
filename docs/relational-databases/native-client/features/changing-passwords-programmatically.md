@@ -3,6 +3,7 @@ title: Cambiar las contraseñas mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d296eb992dc9683faee721e2b825105c82f362e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c42f8bf47d90bde4f6ffdaa3bb7e22b88c238bb7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675044"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010633"
 ---
 # <a name="changing-passwords-programmatically"></a>Cambiar las contraseñas mediante programación
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "51675044"
   
 |Código de error de SQL Server|Mensaje de error|  
 |---------------------------|-------------------|  
-|15113|Error de inicio de sesión del usuario '%. * ls'. Motivo: error de validación de contraseña. Se ha bloqueado la cuenta.|  
-|18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no se puede utilizar en este momento.|  
-|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
-|18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
-|18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
-|18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
-|18468|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. Error inesperado durante la validación de la contraseña.|  
-|18487|Error de inicio de sesión del usuario '%.*ls'. Motivo: la contraseña de la cuenta expiró.|  
-|18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: se debe cambiar la contraseña de la cuenta. |  
+|15113|Error de inicio de sesión para el usuario ' %. *. motivo ls': Error de validación de contraseña. Se ha bloqueado la cuenta.|  
+|18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no se puede utilizar en este momento.|  
+|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
+|18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
+|18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
+|18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
+|18468|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. Error inesperado durante la validación de la contraseña.|  
+|18487|Error de inicio de sesión del usuario '%.*ls'. Motivo: La contraseña de la cuenta ha expirado.|  
+|18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: Debe cambiarse la contraseña de la cuenta.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite la expiración de contraseña aunque una interfaz de usuario y mediante programación.  

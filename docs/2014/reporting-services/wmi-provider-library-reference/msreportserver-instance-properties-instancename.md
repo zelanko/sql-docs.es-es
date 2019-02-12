@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 664c86fd8540f51d45c3f72f0454fb6d513eea34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e02d4074b731de6b6800bc9858d9aa6e5c766bf3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221775"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014996"
 ---
 # <a name="instancename-property-wmi-msreportserverinstance"></a>Propiedad InstanceName (MSReportServer_Instance de WMI)
   Devuelve el nombre de una instancia del servidor de informes en un equipo específico. Solo lectura.  
@@ -40,7 +40,7 @@ public string InstanceName;
 ```  
   
 ## <a name="property-value"></a>Valor de la propiedad  
- Un `String` objeto que representa el nombre de la instancia del servidor de informes.  
+ Un objeto `String` que representa el nombre de la instancia del servidor de informes.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
@@ -49,6 +49,6 @@ public string InstanceName;
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Miembros MSReportServer_Instance](msreportserver-instance-members.md)  
+ [Miembros de MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

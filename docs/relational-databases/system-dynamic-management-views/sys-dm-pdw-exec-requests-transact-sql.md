@@ -1,9 +1,9 @@
 ---
-title: Sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ed96138b4808448fef815fad90342e671f37ed5f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: edbed9f5f0e8672c4f779431f810099b50470a9a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409601"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016796"
 ---
-# <a name="sysdmpdwexecrequests-transact-sql"></a>Sys.dm_pdw_exec_requests (Transact-SQL)
+# <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene información sobre todas las solicitudes activas actualmente o recientemente en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Muestra una fila por cada solicitud o consulta.  
@@ -28,7 +28,7 @@ ms.locfileid: "52409601"
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Clave para esta vista. Identificador numérico único asociado a la solicitud.|Es único en todas las solicitudes en el sistema.|  
-|session_id|**nvarchar(32)**|Identificador numérico único asociado con la sesión en el que se ejecutó esta consulta. Consulte [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|session_id|**nvarchar(32)**|Identificador numérico único asociado con la sesión en el que se ejecutó esta consulta. See [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
 |status|**nvarchar(32)**|Estado actual de la solicitud.|'Ejecutar', 'Suspendido', 'Completado', 'Cancelar', 'Error'.|  
 |submit_time|**datetime**|Hora a la que se envió la solicitud para su ejecución.|Válido **datetime** menor o igual a la hora actual y start_time.|  
 |start_time|**datetime**|Hora a la que se inició la ejecución de la solicitud.|NULL para las solicitudes en cola; de lo contrario, válido **datetime** menor o igual que la hora actual.|  
@@ -39,7 +39,7 @@ ms.locfileid: "52409601"
 |error_id|**nvarchar(36)**|Identificador único del error asociado a la solicitud, si existe.|Consulte [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); se establece en NULL si se ha producido ningún error.|  
 |database_id|**int**|Identificador de base de datos usada el contexto explícito (por ejemplo, USE DB_X).|Vea el Id. de [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |comando|**nvarchar(4000)**|Contiene el texto completo de la solicitud como enviado por el usuario.|Cualquier texto de consulta o de solicitud válido. Las consultas que duran más de 4000 bytes se truncan.|  
-|resource_class|**nvarchar (20)**|La clase de recursos para esta solicitud. Consulte el artículo relacionado **concurrency_slots_used** en [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
+|resource_class|**nvarchar(20)**|La clase de recursos para esta solicitud. Consulte el artículo relacionado **concurrency_slots_used** en [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
  Para obtener información sobre el número máximo de filas retenidas por esta vista, vea "Como mínimo y máximo Values" en el [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   

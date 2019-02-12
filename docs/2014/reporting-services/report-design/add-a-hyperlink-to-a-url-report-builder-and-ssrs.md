@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1219998db8ec07de6e03aa14b3aefaee6515e235
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366177"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010196"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS)
   Puede agregar un hipervínculo a un elemento de informe si desea que los usuarios puedan hacer clic en un vínculo de un informe y abrir el explorador para la dirección URL especificada. Los hipervínculos pueden ser una dirección URL estática o una expresión que se evalúe como una dirección URL. Si un campo de una base de datos contiene direcciones URL, una expresión pueden contener dicho campo, lo que dará lugar a una lista dinámica de hipervínculos en el informe. Puede agregar hipervínculos a cuadros de texto, imágenes, gráficos y medidores. Debe asegurarse de que los usuarios tienen acceso a la dirección URL proporcionada.  
@@ -28,7 +28,7 @@ ms.locfileid: "53366177"
   
  Puede agregar un hipervínculo a una dirección URL a cualquier elemento que tenga una propiedad **Acción** , como por ejemplo, un cuadro de texto, una imagen o una serie calculada en un gráfico. Cuando el usuario haga clic en el elemento de informe, tendrá lugar la acción que haya definido. Para más información, vea [Cuadro de diálogo Propiedades de acción &#40;Generador de informes y SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) y [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
- Para obtener información, consulte [Tutorial: Dar formato al texto &#40;generador de informes&#41;](../tutorial-format-text-report-builder.md).  
+ Para empezar rápidamente, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Los vínculos que se enlazan a los campos de conjunto de datos pueden ser vulnerables a la alteración con fines malintencionados. Para más información, vea [Proteger informes y recursos](../security/secure-reports-and-resources.md) en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=154888) en msdn.microsoft.com.  

@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81ad874c4d7e3c417058b2403c1307893300feaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 231fbf5211654d126f09ceb048501c7b2eacf0c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118785"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039586"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Use este tema para obtener información acerca de cómo crear, modificar y eliminar programaciones.  
@@ -200,7 +200,7 @@ ms.locfileid: "48118785"
  Si elimina una programación compartida usada por varios informes y suscripciones, el servidor de informes creará calendarios individuales para cada informe y suscripción que haya usado anteriormente la programación compartida. Cada nueva programación individual contendrá la fecha, la hora y el patrón de periodicidad que se especificó en la programación compartida. Tenga en cuenta que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no proporciona la administración central de las programaciones individuales. Si elimina una programación compartida, tendrá que mantener la información de programación para cada elemento individual. Antes de eliminar una programación compartida, use la [página Informes](../tools/schedule-properties-reports-page.md) para determinar qué informes usan actualmente la programación compartida.  
   
 ## <a name="see-also"></a>Vea también  
- [Programaciones](schedules.md)   
+ [Schedules](schedules.md)   
  [Pausar y reanudar las programaciones compartidas](pause-and-resume-shared-schedules.md)   
  [Almacenar en caché un informe &#40;Administrador de informes&#41;](../report-server/cache-a-report-report-manager.md)   
  [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)  

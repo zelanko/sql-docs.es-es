@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 277ee4ff416ad9710eecf501651b5a5143b0fa68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0ad789a8246479c16ed5ceba17c3e7d9cf19d6ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210215"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010896"
 ---
 # <a name="create-a-linked-report"></a>Crear un informe vinculado
   Un informe vinculado es un elemento del servidor de informes que proporciona un punto de acceso a un informe existente. Conceptualmente, es similar a los accesos directos a programa que se usan para ejecutar un programa o abrir un archivo.  
@@ -35,7 +35,7 @@ ms.locfileid: "48210215"
   
 2.  Escriba un nombre para el nuevo informe vinculado. Si lo desea, escriba una descripción.  
   
-3.  Para guardar el informe en una carpeta diferente, haga clic en **Cambiar ubicación**. Haga clic en la carpeta que desee utilizar o escriba el nombre de la carpeta en el cuadro **Ubicación** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si no selecciona una carpeta diferente, el informe vinculado se crea en la carpeta actual (donde está almacenado el informe se basa en).  
+3.  Para guardar el informe en una carpeta diferente, haga clic en **Cambiar ubicación**. Haga clic en la carpeta que desee utilizar o escriba el nombre de la carpeta en el cuadro **Ubicación** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si no selecciona una carpeta distinta, el informe vinculado se creará en la carpeta actual (donde está almacenado el informe en que se basa).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se abre el informe vinculado.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48210215"
      ![Icono de informe vinculado](../media/hlp-16linked.gif "Icono de informe vinculado")  
   
 ## <a name="see-also"></a>Vea también  
- [Abrir y cerrar un informe &#40;el Administrador de informes&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Abrir y cerrar un informe &#40;Administrador de informes&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [Nuevo informe vinculado &#40;página del Administrador de informes&#41;](../new-linked-report-page-report-manager.md)   
  [Elegir página de ubicación del elemento &#40;Administrador de informes&#41;](../choose-item-location-page-report-manager.md)   
  [Página de propiedades generales, informes &#40;Administrador de informes&#41;](../general-properties-page-reports-report-manager.md)   

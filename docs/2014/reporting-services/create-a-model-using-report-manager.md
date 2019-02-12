@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 781a9f469692f26cc7742920935531f6cb0f2353
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064855"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010448"
 ---
 # <a name="create-a-model-using-report-manager"></a>Crear un modelo con el Administrador de informes
   Puede generar modelos a partir de un cubo de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o una base de datos de Oracle mediante el Administrador de informes. Los modelos de informe se generan a partir de orígenes de datos compartidos que se han publicado en el servidor de informes. Si no tiene un origen de datos compartido, deberá crearlo.  
@@ -47,7 +47,7 @@ ms.locfileid: "48064855"
   
 8.  Seleccione el método de conexión que utilizarán los usuarios del Generador de informes para conectarse a la base de datos.  
   
-    -   Autenticación de Windows: seleccione esta opción cuando desee que el sistema operativo autentique a los usuarios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Esta opción permite que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilice las características de seguridad de Windows, como el cifrado de contraseñas, para autenticar a los usuarios. Se recomienda encarecidamente seleccionar esta opción.  
+    -   Autenticación de Windows: Seleccione esta opción cuando desee que el sistema operativo para autenticar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a los usuarios. Esta opción permite que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilice las características de seguridad de Windows, como el cifrado de contraseñas, para autenticar a los usuarios. Se recomienda encarecidamente seleccionar esta opción.  
   
     -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Autenticación: Seleccione esta opción cuando desee que los usuarios utilicen un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cuenta de inicio de sesión que creó. Los usuarios deben proporcionar un nombre y una contraseña de inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] válidos.  
   

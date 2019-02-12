@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cfe2b65ec8f8260d87636384953101e3c674a0d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb8c7b6467b862d13f242debf0d963012b44bb61
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149705"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015491"
 ---
 # <a name="user-role-properties-management-studio"></a>Propiedades de rol de usuario (Management Studio)
   Use esta página para ver qué tareas se incluyen en una definición de roles de nivel de elemento. También puede usar esta página para cambiar la lista de tareas o modificar una descripción de roles.  
@@ -31,7 +31,7 @@ ms.locfileid: "48149705"
 >  Las asignaciones de roles de usuario solo se usan en un servidor de informes que se ejecuta en modo nativo. Si el servidor de informes se configura para la integración con SharePoint, esta página muestra la información de solo lectura sobre los roles y los niveles de permisos que se definen en el sitio de SharePoint.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Especifica el nombre de la definición de roles.  
   
  **Descripción**  

@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 97dce14bed313a8044486f4e7609557e2ad13057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0d9610544543e88fd8e50e9d3ccc2fc64ecb84a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112687"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016116"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la imagen, Tamaño (Generador de informes y SSRS)
   Seleccione **Tamaño** en el cuadro de diálogo **Propiedades de la imagen** para configurar el tamaño de las imágenes mostradas en un campo o en el área de diseño, o para cambiar la cantidad de espacio adicional entre el borde de una celda o un cuadro de texto y la imagen o el valor contenido dentro de la celda o el cuadro de texto.  
@@ -37,10 +37,10 @@ ms.locfileid: "48112687"
  **Clip**  
  Elija esta opción para mostrar una imagen desde la esquina superior izquierda hasta ocupar el alto y el ancho de la celda o del cuadro de texto. Los bordes de la imagen pueden reducir o aumentar su tamaño para ajustarse a la imagen. Si la imagen es más grande que la celda o el cuadro de texto, solo se mostrará una parte de la misma.  
   
- **Izquierda**  
+ **Left**  
  Especifique el relleno (o espacio) que hay entre el borde izquierdo de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
- **Correcto**  
+ **Right**  
  Especifique el relleno (o espacio) que hay entre el borde inferior de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
  **Top**  
@@ -52,7 +52,7 @@ ms.locfileid: "48112687"
 ## <a name="see-also"></a>Vea también  
  [Cuadro de diálogo de propiedades General de la imagen &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Imágenes &#40;generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Imágenes &#40;Generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518899"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037766"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de centro de llamadas (Tutorial intermedio de minería de datos)
   Ahora que ha creado el modelo de exploración, puede usarlo para obtener más información sobre los datos mediante las herramientas siguientes que se proporcionan en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -110,8 +109,8 @@ ms.locfileid: "52518899"
   
 |Attribute|Valor|Favorece \< 0,07|Favorece >= 0,12|  
 |---------------|-----------|--------------------|----------------------|  
-|Average Time Per Issue|89.087 120.000||Puntuación:  100<br /><br /> Probabilidad de Value1: 4,45%<br /><br /> Probabilidad de Value2: % 51.94<br /><br /> Elevación de Value1: 0.19<br /><br /> Elevación de Value2: 1,94|  
-|Average Time Per Issue|44.000 70.597|Puntuación: 92,35<br /><br /> Probabilidad de Value1: 60,06%<br /><br /> Probabilidad de Value2: 8,30%<br /><br /> Elevación de Value1: 2,61<br /><br /> Elevación de Value2: 0,31||  
+|Average Time Per Issue|89.087 - 120.000||Puntuación:  100<br /><br /> Probabilidad de Value1: 4.45 %<br /><br /> Probabilidad de Value2: 51.94 %<br /><br /> Elevación de Value1: 0.19<br /><br /> Elevación de Value2: 1.94|  
+|Average Time Per Issue|44.000 - 70.597|Puntuación: 92.35<br /><br /> Probabilidad de Value1: 60.06 %<br /><br /> Probabilidad de Value2: 8.30 %<br /><br /> Elevación de Value1: 2.61<br /><br /> Elevación de Value2: 0.31||  
   
  [Volver al principio](#bkmk_NNviewer)  
   

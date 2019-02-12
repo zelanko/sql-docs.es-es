@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eea42bfc7b02c4964f34ebc6fe5f4b067a33d21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1905dbe53d5c869c25fcf6f9b07b46bf48dcaf98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084545"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013256"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Representar en HTML (Generador de informes y SSRS)
   La extensión de representación en HTML representa un informe en formato HTML. La extensión de representación también puede generar páginas HTML completas o fragmentos de HTML para incrustarlos en otras páginas HTML. Todos los HTML se generan con la codificación UTF-8.  
   
  La extensión de representación en HTML es la predeterminada para los informes que se visualizan en un explorador, lo que incluye también cuando se ejecutan en el Administrador de informes.  
   
- La extensión de representación en HTML es la predeterminada para los informes que se visualizan en un explorador, lo que incluye también cuando se ejecutan en el Administrador de informes. La extensión de representación en HTML puede representar HTML como un fragmento o como un documento HTML completo. Si el código HTML es un fragmento, el `HEAD`, `HTML`, y `BODY` se quitan etiquetas del documento HTML. Solo se representa el contenido de la etiqueta `BODY`. Esto resulta de gran utilidad para incrustar el HTML en HTML generado en otra aplicación.  
+ La extensión de representación en HTML es la predeterminada para los informes que se visualizan en un explorador, lo que incluye también cuando se ejecutan en el Administrador de informes. La extensión de representación en HTML puede representar HTML como un fragmento o como un documento HTML completo. Si el HTML es un fragmento, se quitan las etiquetas `HEAD`, `HTML` y `BODY` del documento HTML. Solo se representa el contenido de la etiqueta `BODY`. Esto resulta de gran utilidad para incrustar el HTML en HTML generado en otra aplicación.  
   
- En algunos escenarios, los parámetros de informe se pueden utilizar para iniciar ataques de inserción de script al representar los informes en HTML. Para más información sobre cómo proteger informes, vea [Proteger informes y recursos](../security/secure-reports-and-resources.md).  
+ En algunos escenarios, los parámetros de informe se pueden utilizar para iniciar ataques de inserción de script al representar los informes en HTML. Para obtener más información sobre cómo proteger informes, vea [Proteger informes y recursos](../security/secure-reports-and-resources.md).  
   
  Para obtener más información sobre los exploradores, vea [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48084545"
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

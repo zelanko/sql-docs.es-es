@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8b857d0aab5cc64255e3d041d58fdc7ab398358
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cc661c1241ce6d265fc949d7324ed4c54a5793f5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216625"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029506"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Representar instantáneas del historial de informes mediante acceso URL
   Puede representar un informe basado en una instantánea del historial de informes si proporciona el parámetro *rs:Snapshot* y establece su valor en un identificador de instantánea válido. El valor del parámetro está en el formato AAAA-MM-DDTHH:MM:SS, según el estándar 8601 de la Organización internacional de normalización (ISO).  
   
- Si omite este parámetro, el informe se representa según la configuración de la ejecución del informe y de la administración de la memoria caché del servidor de informes. Para obtener más información acerca de la ejecución de informes, vea [establecer propiedades de procesamiento de informes](report-server/set-report-processing-properties.md).  
+ Si omite este parámetro, el informe se representa según la configuración de la ejecución del informe y de la administración de la memoria caché del servidor de informes. Para obtener más información sobre la ejecución del informe, vea [Establecer las propiedades del procesamiento de informes](report-server/set-report-processing-properties.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra una dirección URL que recupera una instantánea del historial de informes:  

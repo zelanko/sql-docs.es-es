@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 19c2f599a00548ed85853720c0aad86d38950c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222525"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029306"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Cuadros de texto (Generador de informes y SSRS)
   Al pensar en un cuadro de texto, probablemente se imagina un cuadro independiente que contiene el texto en una superficie como la de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. En el Generador de informes algunos cuadros de texto son así y pueden mostrar el texto literal de títulos, descripciones y etiquetas, o texto dinámico basado en expresiones. Además, todas las celdas de una tabla o una matriz (región de datos de Tablix) contienen un cuadro de texto, al que se puede dar formato de la misma manera que a los cuadros de texto independientes de un informe.  
@@ -35,13 +35,13 @@ ms.locfileid: "48222525"
   
  La expresión de un cuadro de texto puede incluir texto literal, apuntar a un campo de la base de datos o calcular datos. Todas las expresiones se muestran como texto de marcador de posición para que pueda dar formato a los números, colores y otras propiedades de aspecto. También puede combinar marcadores de posición con texto literal en el mismo cuadro de texto.  
   
- Puede dar formato al texto de cada uno de los cuadros de texto con variedad de fuentes, colores, estilos y acciones. Para más información, vea [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+ Puede dar formato al texto de cada uno de los cuadros de texto con variedad de fuentes, colores, estilos y acciones. Para más información, vea [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="GrowShrinkTextBox"></a> Aumentar y disminuir el tamaño de un cuadro de texto  
- De manera predeterminada, los cuadros de texto tienen un tamaño fijo. Puede permitir que un cuadro de texto se reduzca o se expanda verticalmente según su contenido. Para obtener más información, consulte [permitir que un cuadro de texto aumente o disminuya &#40;generador de informes y SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
+ De manera predeterminada, los cuadros de texto tienen un tamaño fijo. Puede permitir que un cuadro de texto se reduzca o se expanda verticalmente según su contenido. Para más información, vea [Permitir que un cuadro de texto aumente o se reduzca &#40;Generador de informes y SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="orienting-a-text-box"></a>Orientar un cuadro de texto  
  Orientar los cuadros de texto puede ayudarle a crear informes más legibles, permitir una orientación del texto específica de la configuración regional, ajustar más columnas en un informe impreso a tamaño de página fijo y crear informes con más atractivo gráfico. Un cuadro de texto se puede orientar en direcciones diferentes: horizontal, vertical o girado 270 grados. La opción vertical se suele utilizar más para los idiomas de Asia oriental que se escriben de arriba abajo. En la mayoría de los representadores, la opción vertical controla la propiedad de giro de glifo para que el texto se escriba de arriba abajo, pero los caracteres no estén en los lados. Para otros idiomas, el texto de las opciones vertical y girado 270 grados se escribe de lado.  
@@ -54,19 +54,19 @@ ms.locfileid: "48222525"
   
  La orientación se establece en el cuadro de texto y se aplica a todo el texto del cuadro. No puede especificar una orientación diferente para las partes del cuadro de texto.  
   
- Para empezar rápidamente con el cambio de orientación del texto, vea la sección sobre cómo girar texto en el [Tutorial: dar formato al texto &#40;Report Builder&#41;](../tutorial-format-text-report-builder.md). Para obtener más información, consulte [establecer orientación del cuadro de texto &#40;generador de informes y SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
+ Para empezar rápidamente con el cambio de orientación del texto, vea la sección sobre cómo girar texto en el [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../tutorial-format-text-report-builder.md). Para obtener más información, consulte [establecer orientación del cuadro de texto &#40;generador de informes y SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Agregar, mover o eliminar un cuadro de texto &#40;generador de informes y SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+ [Agregar, mover o eliminar un cuadro de texto &#40;Generador de informes y SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
- [Dar formato al texto en un cuadro de texto &#40;generador de informes y SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [Establecer la orientación del cuadro de texto &#40;generador de informes y SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [Establecer la orientación del cuadro de texto &#40;Generador de informes y SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [Permitir que un cuadro de texto aumente o disminuya &#40;generador de informes y SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [Permitir que un cuadro de texto aumente o se reduzca &#40;Generador de informes y SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a texto y marcadores de posición &#40;generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Aplicar formato a números y fechas &#40;generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

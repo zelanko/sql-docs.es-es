@@ -1,7 +1,7 @@
 ---
 title: Conectarse a una base de datos SQL de Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4caaa9ca14fd2f8eb396ef2c2869ba30bd48420
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602215"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736986"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectarse a una base de datos de SQL Azure
 
@@ -78,17 +78,17 @@ shutdown /r /t 1
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>Anexar el nombre de servidor al identificador de usuario en la cadena de conexión  
 
 Antes de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], al conectarse a una [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], se tenía que anexar el nombre de servidor al identificador de usuario en la cadena de conexión. Por ejemplo, user@servername. A partir de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ya no es necesario anexar @servername al identificador de usuario en la cadena de conexión.  
-  
+
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Usar el cifrado requiere establecer hostNameInCertificate
 
-Cuando se conecta a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe especificar **hostNameInCertificate** si especifica **cifrar = true**. (Si es el nombre del servidor en la cadena de conexión *shortName*. *domainName*, establezca el **hostNameInCertificate** propiedad \*. *domainName*.)  
-  
-Por ejemplo:  
+Antes de la versión 7.2 de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], al conectarse a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe especificar **hostNameInCertificate** si especifica **cifrar = true** (si el nombre de servidor en la conexión cadena es *shortName*. *domainName*, establezca el **hostNameInCertificate** propiedad \*. *domainName*.). Esta propiedad es opcional a partir de la versión 7.2 del controlador.
+
+Por ejemplo:
 
 ```java
-jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
+jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

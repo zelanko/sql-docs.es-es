@@ -4,20 +4,21 @@ hide_bc: true
 title: Documentación de Microsoft Azure
 description: Obtenga información sobre cómo compilar y administrar potentes aplicaciones mediante Microsoft Azure Cloud Services. Obtenga documentación, un código de ejemplo, tutoriales y mucho más.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: 36bd708bfe57e775c479ee474f9f2e5028c00655
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8a4fb39ae8b2d6b65701d6bb7ad863c8b0351283
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697953"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079321"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51697953"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Descargar SQL Server</span>
+                                    <span class="likeAnH3">Probar SQL Server 2019 (versión preliminar)</span>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +74,7 @@ ms.locfileid: "51697953"
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server: Centro de Education</h1>
+        <h1>SQL Server: centro de aprendizaje</h1>
         <h2>Tutoriales rápidos</h2>
          <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
                         <li>

@@ -3,7 +3,7 @@ title: Extensión de SQL Server 2019 (versión preliminar)
 titleSuffix: Azure Data Studio
 description: Extensión de la versión preliminar de SQL Server de 2019 para Azure Data Studio
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 02/13/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,16 +12,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c41c2a08f0b8d608ef21cd44a60a2d63cdeb5fed
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143318"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231062"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
 
-La extensión de SQL Server 2019 (versión preliminar) proporciona compatibilidad de versión preliminar para las nuevas características y herramientas de apoyo de envío [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esto incluye compatibilidad con la versión preliminar [clústeres de SQL Server 2019 macrodatos](../big-data-cluster/big-data-cluster-overview.md), un enfoque integrado [experiencia de cuaderno](../big-data-cluster/notebooks-guidance.md), un PolyBase [asistente Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)y [Azure Resource Explorer](azure-resource-explorer.md).
+La extensión de SQL Server 2019 (versión preliminar) proporciona compatibilidad de versión preliminar para las nuevas características y herramientas de apoyo de envío [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esto incluye compatibilidad con la versión preliminar [clústeres de SQL Server 2019 macrodatos](../big-data-cluster/big-data-cluster-overview.md), un enfoque integrado [experiencia de cuaderno](../big-data-cluster/notebooks-guidance.md)y un PolyBase [asistente Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Instalar la extensión de SQL Server 2019 (versión preliminar)
 
@@ -31,9 +31,9 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 
    |Plataforma|Descargar|Fecha de la versión|Versión
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051167)|09 de enero de 2019 |0.9.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051166)|09 de enero de 2019 |0.9.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051165)|09 de enero de 2019 |0.9.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|13 de febrero de 2019 |0.10.2
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|13 de febrero de 2019 |0.10.2
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|13 de febrero de 2019 |0.10.2
 
 1. En Azure Data Studio elija **la extensión de instalación de paquete VSIX** desde el **archivo** menú y seleccione el archivo .vsix descargado.
 
@@ -44,6 +44,37 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 1. Después de volver a cargar, la extensión instalará las dependencias. Puede ver el progreso en la ventana de salida, y puede tardar varios minutos.
 
 1. Las dependencias después de finalizar la instalación, cierre y vuelva a abrir Azure Data Studio. El **clúster de SQL Server macrodatos** tipo de conexión no está disponible hasta que reinicie Azure Data Studio.
+
+## <a name="release-notes-v0102"></a>Notas de la versión (v0.10.2)
+### <a name="sql-server-2019-support"></a>Compatibilidad con SQL Server 2019
+Se ha actualizado la compatibilidad con SQL Server 2019. Acerca de cómo conectarse a un clúster grande de datos de SQL Server, instancia de un nuevo _Data Services_ carpeta aparecerá en el árbol del explorador. Esto tiene puntos de inicio para acciones como abrir un nuevo cuaderno en la conexión, envío de trabajos de Spark y trabajar con HDFS. Tenga en cuenta que para algunas acciones como _Create External Data_ a través de un archivo o carpeta HDFS, el _versión preliminar de SQL Server de 2019_ debe instalarse la extensión.
+
+### <a name="notebook-support"></a>Soporte técnico de Bloc de notas
+Se han realizado actualizaciones importantes para la interfaz de usuario de Bloc de notas en esta versión. Nuestro objetivo era lo que facilita leer blocs de notas que se comparten con usted. Esto significaba quitando todos los cuadros de las celdas de esquema a menos que o mantuve el mouse, adición de soporte técnico al mantener el mouse para acciones de nivel de celda fácil sin necesitan seleccionar una celda y aclarar el estado de ejecución mediante la adición de recuento de ejecuciones, un elemento animado _Detener ejecución_ botón y mucho más. También agregamos métodos abreviados de teclado para _nuevo cuaderno_ (`Ctrl+Shift+N`), _ejecutar celda_ (`F5`), _nueva celda de código_ (`Ctrl+Shift+C`),  _Nueva celda de texto_ (`Ctrl+Shift+T`). Queremos tener todas las acciones claves que se puede iniciar mediante acceso directo nos sabe lo que se encuentra en adelante!
+
+Otras mejoras y correcciones se incluyen:
+* El _versión preliminar de SQL Server de 2019_ extensión ahora usa indicaciones para elegir un directorio de instalación de dependencias de Python. También incluye Python en ya no la `.vsix file`, lo que reduce el tamaño general de la extensión. Las dependencias de Python son necesarios para admitir los kernels de Spark y Python3, para instalar esta extensión es necesaria para usar estos.
+* Se agregó compatibilidad para iniciar un nuevo cuaderno desde la línea de comandos. Iniciar con los argumentos `--command=notebook.command.new --server=myservername` debería abrir un nuevo cuaderno y conectarse a este servidor.
+* Revisiones de rendimiento para equipos portátiles con una longitud de código de gran tamaño en las celdas. Si las celdas de código son más de 250 líneas tendrán un agregado de la barra de desplazamiento.
+* Compatibilidad de archivo .ipynb mejorada. Ahora se admite la versión 3 o posterior. Tenga en cuenta que al guardar los archivos se actualizarán a la versión 4 o superior.
+* El `notebook.enabled` configuración de usuario ha sido quitado ahora que la compilación en el Bloc de notas es estable Visor
+* El tema de contraste alto ahora es compatible con una serie de correcciones a disposición de los objetos en este caso.
+* Se ha corregido 3680 # donde salidas a veces se ha mostrado un número de `,,,` caracteres incorrectamente
+* Editor de #3602 fijo desaparece para celdas después de salir de studio datos de azure
+* Se agregó compatibilidad para utilizar las vistas de cuadrícula para el `application/vnd.dataresource+json` tipo MIME de salida. Esto significa que muchos portátiles que usan este (por ejemplo, configurando `pd.options.display.html.table_schema` en un cuaderno de Python) tendrá resultados tabulares más bonito fijo #3959 Azure Data Studio intenta apagar el servidor de Bloc de notas dos veces después de cerrar el Bloc de notas
+
+#### <a name="known-issues"></a>Problemas conocidos
+* Al abrir un cuaderno aparecerá el cuadro de diálogo de instalación de python. Cancelar la instalación dará como resultado los Kernels y adjuntar a las listas desplegables no se muestran los valores esperados. La solución consiste en completar la instalación de Python.
+* Cuando se abre un bloc de notas con un kernel que no es compatible, los kernels y _adjuntar a_ listas desplegables hará que Azure Data Studio deje de responder. Deberá cerrar Data Studio de Azure y asegúrese de usar un kernel compatible (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
+* Se produce un error en el vínculo de la interfaz de usuario de Spark al usar PySpark3 o kernels Spark en el punto de conexión de SQL Server. Como alternativa, haga clic en la interfaz de usuario de Spark desde el panel, o conectarse con el tipo de conexión del clúster de macrodatos de SQL Server, ya que esto tendrá el hipervínculo correcto de la interfaz de usuario de Spark
+
+### <a name="extensibility-improvements"></a>Mejoras de extensibilidad
+En esta versión se ha agregado una serie de mejoras que ayudan a los extensores
+* Un nuevo `ObjectExplorerNodeProvider` API permite que las extensiones contribuir a las carpetas en SQL Server o en otros nodos de conexión. Se trata cómo el `Data Services` nodo se agrega debajo de las instancias de SQL Server 2019 pero se puede usar para agregar supervisión u otras carpetas fácilmente a la interfaz de usuario.
+* Dos nuevos valores clave de contexto están disponibles para ayudar a las contribuciones de mostrar u ocultar en el panel.
+  * `mssql:iscluster` indica si se trata de un clúster grande de datos de SQL Server de 2019
+  * `mssql:servermajorversion` tiene la versión del servidor (15 para SQL Server 2019, 14 para SQL Server 2017 y así sucesivamente). Esto puede ayudar si características solo se deben mostrar para SQL Server 2017 o superior, por ejemplo.
+
 
 ## <a name="release-notes-v080"></a>Notas de la versión (v0.8.0)
 *Blocs de notas*:

@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898990"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231072"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -171,56 +171,7 @@ Cuando finalice el script de implementación, la salida le informa de éxito:
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-Ahora se implementa el clúster de macrodatos de SQL Server en AKS. Ahora puede usar Azure Data Studio para conectarse a la instancia principal de SQL Server y los puntos de conexión de Spark o HDFS mediante Azure Data Studio.
-
-### <a id="master"></a> Instancia principal
-
-La instancia principal de SQL Server es una instancia de SQL Server tradicional que contienen bases de datos relacionales de SQL Server. Los pasos siguientes describen cómo conectarse a la instancia maestra mediante Azure Data Studio.
-
-1. Desde la línea de comandos, busque la dirección IP de la instancia maestra con el siguiente comando:
-
-   ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
-   ```
-
-1. En Azure Data Studio, presione **F1** > **nueva conexión**.
-
-1. En **tipo de conexión**, seleccione **Microsoft SQL Server**.
-
-1. Escriba la dirección IP de la instancia principal de SQL Server en **nombre del servidor** (por ejemplo: **\<Dirección IP\>, 31433**).
-
-1. Escriba un inicio de sesión SQL **nombre de usuario** (`SA`) y **contraseña** (la contraseña que escribió en el script de implementación).
-
-1. Cambiar el destino **nombre de base de datos** a una de las bases de datos relacionales.
-
-   ![Conéctese a la instancia maestra](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
-
-1. Presione **Connect**y el **panel Server** debería aparecer.
-
-### <a id="hdfs"></a> Puerta de enlace de Spark o HDFS
-
-El **puerta de enlace de Spark o HDFS** le permite conectar con el fin de trabajar con el bloque de almacenamiento HDFS y para ejecutar trabajos de Spark. Los pasos siguientes describen cómo conectar con Azure Data Studio.
-
-1. Desde la línea de comandos, busque la dirección IP de la puerta de enlace de Spark o HDFS con el siguiente comando:
-
-   ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
- 
-1. En Azure Data Studio, presione **F1** > **nueva conexión**.
-
-1. En **tipo de conexión**, seleccione **clúster grande de datos de SQL Server**.
-   
-   > [!TIP]
-   > Si no ve el **clúster grande de datos de SQL Server** conexión escriba, asegúrese de que ha instalado el [extensión de SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) y que reinicie Azure Data Studio después de la extensión de completado instalación de.
-
-1. Escriba la dirección IP del clúster de macrodatos en **nombre del servidor** (no especifique un puerto).
-
-1. Escriba `root` para el **usuario** y especifique el **contraseña** a su clúster de macrodatos que escribió en el script de implementación.
-
-   ![Conectarse a la puerta de enlace de Spark o HDFS](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
-
-1. Presione **Connect**y el **panel Server** debería aparecer.
+Ahora se implementa el clúster de macrodatos de SQL Server en AKS. Ahora puede usar Azure Data Studio para conectarse al clúster. Para obtener más información, consulte [conectar a SQL Server del clúster macrodatos con Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## <a name="clean-up"></a>Limpiar
 

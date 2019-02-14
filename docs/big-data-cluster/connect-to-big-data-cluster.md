@@ -5,20 +5,28 @@ description: Obtenga información sobre cómo conectarse a la instancia principa
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/10/2018
+ms.date: 02/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9129b436f33092054a19b858fa5bcdb8aebadec2
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241826"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231042"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectarse a un clúster de macrodatos de SQL Server con Azure Data Studio
 
-En este artículo se describe cómo conectarse a un clúster de macrodatos de 2019 de SQL Server (versión preliminar) desde Azure Data Studio.
+En este artículo se describe cómo conectarse a un clúster de macrodatos de 2019 de SQL Server (versión preliminar) desde Azure Data Studio. Hay dos puntos de conexión principales que se usan para interactuar con un clúster de macrodatos:
+
+| Extremo | Descripción |
+|---|---|
+| Instancia de SQL Server Master | La instancia principal de SQL Server en el clúster que contiene bases de datos relacionales de SQL Server. |
+| Puerta de enlace de Spark o HDFS | Acceso al almacenamiento HDFS en el clúster y la capacidad de ejecutar trabajos de Spark. |
+
+> [!TIP]
+> Con la versión de febrero de 2019 de Azure Data Studio, conectarse automáticamente a la instancia principal de SQL Server proporciona acceso de interfaz de usuario a la puerta de enlace de Spark o HDFS.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -28,13 +36,9 @@ En este artículo se describe cómo conectarse a un clúster de macrodatos de 20
    - **Extensión de SQL Server 2019**
    - **kubectl**
 
-## <a name="connect-to-the-cluster"></a>Conéctese al clúster
+## <a id="master"></a> Conéctese al clúster
 
-Cuando se conecta a un clúster de macrodatos, tiene la opción de conectarse a la instancia principal de SQL Server o a la puerta de enlace de Spark o HDFS. Las secciones siguientes muestran cómo conectarse a cada uno.
-
-## <a id="master"></a> Instancia principal
-
-La instancia principal de SQL Server es una instancia de SQL Server tradicional que contienen bases de datos relacionales de SQL Server. Los pasos siguientes describen cómo conectarse a la instancia maestra mediante Azure Data Studio.
+Para conectarse a un clúster de macrodatos con Azure Data Studio, realice una conexión nueva a la instancia principal de SQL Server en el clúster. Los pasos siguientes describen cómo conectarse a la instancia maestra mediante Azure Data Studio.
 
 1. Desde la línea de comandos, busque la dirección IP de la instancia maestra con el siguiente comando:
 
@@ -59,9 +63,20 @@ La instancia principal de SQL Server es una instancia de SQL Server tradicional 
 
 1. Presione **Connect**y el **panel Server** debería aparecer.
 
-## <a id="hdfs"></a> Puerta de enlace de Spark o HDFS
+Con la versión de febrero de 2019 de Azure Data Studio, conectarse a la instancia principal de SQL Server también le permite interactuar con la puerta de enlace de Spark o HDFS. Esto significa que no es necesario usar una conexión independiente para HDFS y Spark que se describe en la sección siguiente.
 
-El **puerta de enlace de Spark o HDFS** le permite conectar con el fin de trabajar con el bloque de almacenamiento HDFS y para ejecutar trabajos de Spark. Los pasos siguientes describen cómo conectar con Azure Data Studio.
+- El Explorador de objetos contiene ahora un nuevo **Data Services** nodo con el soporte técnico de contextual para las tareas de clúster de macrodatos, como crear nuevos cuadernos o enviar trabajos de spark. 
+- El **Data Services** nodo también contiene un **HDFS** carpeta para la exploración de HDFS y realizar acciones como crear una tabla externa o analizar en el Bloc de notas.
+- El **panel Server** para la conexión también contiene las pestañas **clúster grande de datos de SQL Server** y **(versión preliminar) de SQL Server 2019** cuando se instala la extensión.
+
+   ![Nodo de servicios de datos de Azure Studio datos](./media/connect-to-big-data-cluster/connect-data-services-node.png)
+
+> [!IMPORTANT]
+> Si ve **error desconocido** en la interfaz de usuario, es posible que deba [conectarse directamente a la puerta de enlace de Spark o HDFS](#hdfs). Una causa de este error son diferentes contraseñas para la instancia principal de SQL Server y la puerta de enlace de Spark o HDFS. Azure Data Studio, se da por supuesto que se usa la misma contraseña para ambos.
+  
+## <a id="hdfs"></a> Conectarse a la puerta de enlace de Spark o HDFS
+
+En la mayoría de los casos, conectarse a la instancia principal de SQL Server proporciona acceso a la HDFS y también a través de Spark la **Data Services** nodo. Sin embargo, puede crear una conexión dedicada a la **puerta de enlace de Spark o HDFS** si es necesario. Los pasos siguientes describen cómo conectar con Azure Data Studio.
 
 1. Desde la línea de comandos, busque la dirección IP de la puerta de enlace de Spark o HDFS con uno de los siguientes comandos.
    

@@ -1,7 +1,7 @@
 ---
 title: Mediante la API de copia masiva para la operación de inserción por lotes para el controlador JDBC de MSSQL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/27/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e27f24693a2dfaa6fcff2245cf45288a12b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696566"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737106"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso de la API de copia masiva para la operación de inserción por lotes
 
@@ -65,7 +65,7 @@ Actualmente existen estas limitaciones que se aplican a esta característica.
 * Inserte las consultas que contienen expresiones INSERT-SELECT (por ejemplo, `INSERT INTO TABLE SELECT * FROM TABLE2`), no se admiten.
 * Inserte las consultas que contienen varias expresiones de valor (por ejemplo, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), no se admiten.
 * No se admiten consultas de inserción que son seguidas por la cláusula OPTION, combinadas con varias tablas o seguidas de otra consulta.
-* Debido a las limitaciones de API de copia masiva, `DATETIME`, `SMALLDATETIME`,`GEOMETRY`, y `GEOGRAPHY` tipos de datos, no se admiten para esta característica.
+* Debido a las limitaciones de API de copia masiva, `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, y `GEOGRAPHY` tipos de datos, no se admiten para esta característica.
 
 Si se produce un error en la consulta debido a que no son errores relacionados con "SQL server", el controlador registrará el mensaje de error y de respaldo en la lógica de inserción por lotes original.
 
@@ -140,6 +140,6 @@ Starting batch operation using Bulk Copy API.
 Finished. Time taken : 1058 milliseconds.
 ```
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Mejorar el rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

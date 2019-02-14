@@ -1,7 +1,7 @@
 ---
 title: Usar la autenticación integrada de Kerberos para conectar con SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7bd04090fd6c6a0cc7a0b8374930f3aba378113
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396166"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736996"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Mediante la autenticación integrada de Kerberos para conectarse a SQL Server
 
@@ -48,7 +48,7 @@ A partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], una aplicación p
 
 - Si especifica **authenticationScheme = Kerberos** pero no se especifica también **integratedSecurity = true**, el controlador omitirá la **authenticationScheme** propiedad de conexión y esperará buscar las credenciales de nombre y la contraseña de usuario en la cadena de conexión.
 
-Cuando se usa un origen de datos para crear conexiones, se puede establecer mediante programación el esquema de autenticación con setAuthenticationScheme y, opcionalmente, establecer el SPN para las conexiones de Kerberos mediante **setServerSpn**.
+Cuando se usa un origen de datos para crear conexiones, se puede establecer mediante programación el esquema de autenticación con **setAuthenticationScheme** y, opcionalmente, establecer el SPN para las conexiones de Kerberos mediante **setServerSpn**.
 
 Se ha agregado un nuevo registrador para admitir la autenticación Kerberos: com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Para obtener más información, vea [Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md).
 
@@ -66,7 +66,7 @@ Las directrices siguientes le ayudarán a configurar Kerberos:
 
 Un nombre principal de servicio (SPN) es el nombre por el que un cliente identifica de forma unívoca una instancia de un servicio.
 
-Puede especificar el SPN con la propiedad de conexión **serverSpn** o simplemente dejar que el controlador lo genere automáticamente (el valor predeterminado). Esta propiedad tiene el formato: "MSSQLSvc/fqdn:port\@REALM", donde fqdn es el nombre de dominio completo, port es el número de puerto y REALM es el dominio Kerberos de SQL Server en letras mayúsculas. La parte del dominio Kerberos de esta propiedad es opcional si el dominio Kerberos predeterminado de la configuración Kerberos es el mismo que el del servidor y no se incluye de forma predeterminada. Si desea admitir un escenario de autenticación entre dominios Kerberos donde el dominio Kerberos predeterminado en la configuración de Kerberos es diferente del dominio Kerberos del servidor, debe establecer el SPN con la propiedad serverSpn.
+Puede especificar el SPN con la propiedad de conexión **serverSpn** o simplemente dejar que el controlador lo genere automáticamente (el valor predeterminado). Esta propiedad tiene el formato "MSSQLSvc/fqdn:port\@REALM", donde fqdn es el nombre de dominio completo, port es el número de puerto y REALM es el dominio Kerberos de SQL Server en letras mayúsculas. La parte del dominio Kerberos de esta propiedad es opcional si el dominio Kerberos predeterminado de la configuración Kerberos es el mismo que el del servidor y no se incluye de forma predeterminada. Si desea admitir un escenario de autenticación entre dominios Kerberos donde el dominio Kerberos predeterminado en la configuración de Kerberos es diferente del dominio Kerberos del servidor, debe establecer el SPN con la propiedad serverSpn.
 
 Por ejemplo, el SPN sería: "MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ. CORP. CONTOSO.COM"
 
@@ -112,17 +112,17 @@ Cada entrada de un archivo de configuración de un módulo de inicio de sesión 
 
 Además de permitir al controlador adquirir credenciales de Kerberos usando las configuraciones especificadas en el archivo de configuración del módulo de inicio de sesión, el controlador puede emplear credenciales existentes. Esto puede resultar útil cuando la aplicación necesite crear conexiones usando credenciales de más de un usuario.
 
-El controlador intentará usar credenciales existentes si están disponibles, antes de intentar el inicio de sesión usando el módulo de inicio de sesión especificado. Así, cuando se usa el método Subject.doAs para ejecutar código bajo un contexto determinado, se creará una conexión con las credenciales pasadas a la llama a Subject.doAs.
+El controlador intentará usar credenciales existentes si están disponibles, antes de intentar el inicio de sesión usando el módulo de inicio de sesión especificado. Así, cuando se usa el método `Subject.doAs` para ejecutar código bajo un contexto determinado, se creará una conexión con las credenciales pasadas a la llamada a `Subject.doAs`.
 
 Para obtener más información, vea [JAAS Login Configuration File](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html) (Archivo de configuración de inicio de sesión JAAS) y [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html) (Clase Krb5LoginModule).
 
-A partir de Microsoft JDBC Driver 6.2, opcionalmente se puede pasar el nombre del archivo de configuración del módulo de inicio de sesión mediante jaasConfigurationName de propiedad de conexión, esto permite que cada conexión a tener su propia configuración de inicio de sesión.
+A partir de Microsoft JDBC Driver 6.2, nombre de archivo de configuración del módulo de inicio de sesión, opcionalmente, se puede pasar mediante la propiedad de conexión `jaasConfigurationName`, esto permite que cada conexión a tener su propia configuración de inicio de sesión.
 
 ## <a name="creating-a-kerberos-configuration-file"></a>Crear un archivo de configuración de Kerberos
 
 Para obtener más información sobre los archivos de configuración de Kerberos, vea [Requisitos de Kerberos](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/KerberosReq.html).
 
-A continuación se muestra un archivo de configuración de dominio de ejemplo, donde YYYY e ZZZZ son nombres de dominio de su sitio.
+A continuación se muestra un archivo de configuración de dominio de ejemplo, donde YYYY y ZZZZ son los nombres de dominio.
 
 ```ini
 [libdefaults]  
@@ -153,7 +153,7 @@ forwardable = yes
 
 Puede habilitar un archivo de configuración de dominio con -Djava.security.krb5.conf. Puede permitir que un archivo de configuración del módulo de inicio de sesión con **-Djava.security.auth.login.config**.
 
-Por ejemplo, al iniciar la aplicación podría usar esta línea de comandos:
+Por ejemplo, se puede usar el siguiente comando para iniciar la aplicación:
 
 ```bash
 Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.krb5.conf=krb5.ini <APPLICATION_NAME>  
@@ -193,6 +193,33 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 
 La propiedad de nombre de usuario no requiere el dominio KERBEROS si el usuario pertenece a la default_realm establecido en el archivo krb5.conf. Cuando `userName` y `password` se establece junto con `integratedSecurity=true;` y `authenticationScheme=JavaKerberos;` propiedad, la conexión se establece con el valor de nombre de usuario como el Principal de Kerberos a lo largo de con la contraseña proporcionada.
 
-## <a name="see-also"></a>Ver también
+## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Mediante la autenticación de Kerberos desde los equipos Unix en el mismo dominio
+
+Esta guía se da por supuesto un trabajo ya existe la configuración de Kerberos. Ejecute el siguiente código en un equipo Windows con la autenticación Kerberos para comprobar si el anterior es verdadero de trabajo. El código imprimirá "esquema de autenticación: KERBEROS"en la consola si se realiza correctamente. No hay marcas de tiempo de ejecución adicionales, dependencias o configuración del controlador es necesarios fuera de las que se proporcionan. El mismo bloque de código se puede ejecutar en Linux para comprobar las conexiones correctas.
+
+```java
+SQLServerDataSource ds = new SQLServerDataSource();
+ds.setServerName("<server>");
+ds.setPortNumber(1433); // change if necessary
+ds.setIntegratedSecurity(true);
+ds.setAuthenticationScheme("JavaKerberos");
+ds.setDatabaseName("<database>");
+
+try (Connection c = ds.getConnection(); Statement s = c.createStatement();
+        ResultSet rs = s.executeQuery("select auth_scheme from sys.dm_exec_connections where session_id=@@spid")) {
+    while (rs.next()) {
+        System.out.println("Authentication Scheme: " + rs.getString(1));
+    }
+}
+```
+
+1. Dominio de unir el equipo cliente al mismo dominio que el servidor.
+2. (Opcional) Establecer la ubicación predeterminada del vale de Kerberos. Esto se hace más cómodamente estableciendo el `KRB5CCNAME` variable de entorno.
+3. Obtener el vale de Kerberos, ya sea mediante la generación de una nueva o colocando una existente en la ubicación predeterminada del vale de Kerberos. Para generar un vale, simplemente use un terminal e inicializar la incidencia a través de `kinit USER@DOMAIN.AD` donde "USER" y "dominio. AD"es el principal y el dominio, respectivamente. Ejemplo: `kinit SQL_SERVER_USER03@MICROSOFT.COM`. El vale se generarán en la ubicación predeterminada del vale o en el `KRB5CCNAME` ruta de acceso si establece.
+4. El terminal le pedirá una contraseña, escriba la contraseña.
+5. Comprobar las credenciales en el vale mediante `klist` y confirme las credenciales son los que se va a utilizar para la autenticación.
+6. Ejecute el código de ejemplo anterior y confirme que la autenticación Kerberos se realizó correctamente.
+
+## <a name="see-also"></a>Consulte también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -1,7 +1,7 @@
 ---
 title: Uso de los tipos de datos espaciales | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460550"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737016"
 ---
 # <a name="using-spatial-datatypes"></a>Utilizar tipos de datos espaciales
 
@@ -107,13 +107,13 @@ Estas son las nuevas API públicas que se han introducido con esta versión, en 
 |Método|Descripción|
 |:------|:----------|
 |STGeomFromText (wkt String, int SRID) de geometría| Constructor para una instancia de Geometry a partir de una representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC), ampliada con los valores Z (elevación) y M (medida) pertenecientes a la instancia.
-|STGeomFromWKB (byte [] wkb) de geometría| Constructor para una instancia de Geometry a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
+|Geometry STGeomFromWKB(byte[] wkb)| Constructor para una instancia de Geometry a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
 |Geometrías deserializar (byte [] wkb)| Constructor para una instancia de geometría de un formato interno de SQL Server para los datos espaciales.
 |Análisis de geometría (cadena wkt)| Constructor para una instancia de Geometry a partir de una representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC). Identificador de referencia espacial valor predeterminado es 0.
 |Punto de geometría (doble, x, doble y SRID int)| Constructor para una instancia de Geometry que representa una instancia Point de sus valores X e Y y un identificador de referencia espacial.
 |Cadena STAsText()| Devuelve la representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC) de una instancia de Geometry. Este texto no contendrá ningún valor Z (elevación) ni M (medida) perteneciente a la instancia.
-|Byte [] STAsBinary()| Devuelve la representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC) de una instancia de Geometry. Este valor no contendrá ningún valor Z o M perteneciente a la instancia.
-|Byte [] serialize()| Devuelve los bytes que representan un formato interno de SQL Server del tipo Geometry.
+|byte[] STAsBinary()| Devuelve la representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC) de una instancia de Geometry. Este valor no contendrá ningún valor Z o M perteneciente a la instancia.
+|byte[] serialize()| Devuelve los bytes que representan un formato interno de SQL Server del tipo Geometry.
 |booleano hasM()| Devuelve si el objeto contiene un valor M (medida).
 |booleano hasZ()| Devuelve si el objeto contiene un valor Z (elevación).
 |GetX() dobles| Devuelve el valor de la coordenada X.
@@ -122,9 +122,9 @@ Estas son las nuevas API públicas que se han introducido con esta versión, en 
 |GetZ() dobles| Devuelve el valor Z (elevación) del objeto.
 |int getSrid()| Devuelve el valor de identificador de referencia espacial (SRID).
 |isNull() booleano| Devuelve si el objeto Geometry es null.
-|int stnumpoints)| Devuelve el número de puntos en el objeto de geometría.
-|Cadena STGeometryType()| Devuelve el nombre del tipo de Open Geospatial Consortium (OGC) representado por una instancia de Geometry.
-|Cadena asTextZM()| Devuelve la representación Well-Known Text (WKT) del objeto Geometry.
+|int STNumPoints()| Devuelve el número de puntos en el objeto de geometría.
+|String STGeometryType()| Devuelve el nombre del tipo de Open Geospatial Consortium (OGC) representado por una instancia de Geometry.
+|String asTextZM()| Devuelve la representación Well-Known Text (WKT) del objeto Geometry.
 |String toString()| Devuelve la representación de la cadena del objeto Geometry.
 
 ### <a name="geography"></a>Geografía
@@ -132,24 +132,24 @@ Estas son las nuevas API públicas que se han introducido con esta versión, en 
 |Método|Descripción|
 |:------|:----------|
 |STGeomFromText (wkt String, int SRID) de geografía| Constructor para una instancia de Geography a partir de una representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC), ampliada con los valores Z (elevación) y M (medida) pertenecientes a la instancia.
-|STGeomFromWKB (byte [] wkb) de geografía| Constructor para una instancia de Geography a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
-|Geography deserializar (byte [] wkb)| Constructor para una instancia de Geography desde un formato interno de SQL Server para los datos espaciales.
+|Geography STGeomFromWKB(byte[] wkb)| Constructor para una instancia de Geography a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
+|Geography deserialize(byte[] wkb)| Constructor para una instancia de Geography desde un formato interno de SQL Server para los datos espaciales.
 |Análisis de geografía (cadena wkt)| Constructor para una instancia de Geography a partir de una representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC). Identificador de referencia espacial valor predeterminado es 0.
-|Punto de geografía (doble lat, lon doble, SRID int)| Constructor para una instancia de Geography que representa una instancia de Point a partir de sus valores de latitud y longitud, y un identificador de referencia espacial.
+|Punto de geografía (doble lon, LAT. doble, SRID int)| Constructor para una instancia de Geography que representa una instancia de Point a partir de su longitud y latitud y un identificador de referencia espacial.
 |Cadena STAsText()| Devuelve la representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC) de una instancia de Geography. Este texto no contendrá ningún valor Z (elevación) ni M (medida) perteneciente a la instancia.
-|Byte [] STAsBinary())| Devuelve la representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC) de una instancia de Geography. Este valor no contendrá ningún valor Z o M perteneciente a la instancia.
-|Byte [] serialize()| Devuelve los bytes que representan un formato interno de SQL Server del tipo Geography.
+|byte[] STAsBinary())| Devuelve la representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC) de una instancia de Geography. Este valor no contendrá ningún valor Z o M perteneciente a la instancia.
+|byte[] serialize()| Devuelve los bytes que representan un formato interno de SQL Server del tipo Geography.
 |booleano hasM()| Devuelve si el objeto contiene un valor M (medida).
 |booleano hasZ()| Devuelve si el objeto contiene un valor Z (elevación).
 |GetLatitude() dobles| Devuelve el valor de latitud.
-|GetLongitude() dobles| Devuelve el valor de longitud.
+|Double getLongitude()| Devuelve el valor de longitud.
 |GetM() dobles| Devuelve el valor M (medida) del objeto.
 |GetZ() dobles| Devuelve el valor Z (elevación) del objeto.
 |int getSrid()| Devuelve el valor de identificador de referencia espacial (SRID).
 |isNull() booleano| Devuelve si el objeto de geografía es null.
-|int stnumpoints)| Devuelve el número de puntos en el objeto de geografía.
-|Cadena STGeographyType()| Devuelve el nombre del tipo de Open Geospatial Consortium (OGC) representado por una instancia de Geography.
-|Cadena asTextZM()| Devuelve la representación Well-Known Text (WKT) del objeto Geography.
+|int STNumPoints()| Devuelve el número de puntos en el objeto de geografía.
+|String STGeographyType()| Devuelve el nombre del tipo de Open Geospatial Consortium (OGC) representado por una instancia de Geography.
+|String asTextZM()| Devuelve la representación Well-Known Text (WKT) del objeto Geography.
 |String toString()| Devuelve la representación de la cadena del objeto Geography.
 
 ## <a name="limitations-of-spatial-datatypes"></a>Limitaciones de los tipos de datos espaciales
@@ -160,6 +160,6 @@ Estas son las nuevas API públicas que se han introducido con esta versión, en 
 
 3. Procedimientos almacenados, TVP y BulkCopy actualmente no se admiten operaciones con tipos de datos espaciales.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Ejemplo de tipos de datos espaciales (JDBC)](../../connect/jdbc/spatial-data-types-sample.md)

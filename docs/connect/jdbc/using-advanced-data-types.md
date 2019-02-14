@@ -1,7 +1,7 @@
 ---
 title: Uso de tipos de datos avanzados | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510501"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736826"
 ---
 # <a name="using-advanced-data-types"></a>Usar tipos de datos avanzados
 
@@ -26,16 +26,19 @@ ms.locfileid: "52510501"
   
 ## <a name="remarks"></a>Notas
 
-La siguiente tabla muestra las asignaciones predeterminadas entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avanzados, JDBC y del lenguaje de programación Java.  
+En la siguiente tabla se muestran las asignaciones predeterminadas entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avanzados, JDBC y del lenguaje de programación Java.  
   
 |Tipos de SQL Server|Tipos de JDBC (Tipos de java.sql.)|Tipos del lenguaje Java|  
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> imagen|LONGVARBINARY|byte[] \(default), Blob, InputStream, String|  
 |texto<br /><br /> ntext|LONGVARCHAR|String (default), Clob, InputStream|  
-|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob (Java SE 6.0)|  
-|xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (default), InputStream, Clob, byte[], Blob, SQLXML (Java SE 6.0)|  
+|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob|  
+|xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (default), byte[], InputStream|  
-  
+|sqlvariant|SQLVARIANT|Objeto|  
+|geometry<br /><br /> geography|VARBINARY|byte[]|  
+
+
 <sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite el envío y recuperación de UDT de CLR como datos binarios, pero no admite la manipulación de metadatos CLR.  
   
 Las siguientes secciones proporcionan ejemplos de cómo puede usar el controlador JDBC y los tipos de datos avanzados.  
@@ -162,12 +165,20 @@ Para más información sobre los tipos de datos **xml**, vea "Tipos de datos XML
   
 ## <a name="user-defined-data-type"></a>Tipos de datos definidos por el usuario  
 
-La introducción de tipos definidos por el usuario (UDT) en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] amplia el sistema de tipos de SQL al permitirle almacenar estructuras de datos y objetos personalizados en una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los UDT pueden contener varios tipos de datos y pueden presentar distintos comportamientos, lo que los diferencia de los tipos de datos de alias tradicionales que constan de un único tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los UDT se definen con cualquiera de los lenguajes compatibles con Microsoft .NET Common Language Runtime (CLR) que producen código comprobable. Esto incluye Microsoft Visual C# y Visual Basic .NET. Los datos se exponen como campos y propiedades de una clase o una estructura basada en .NET Framework, y los comportamientos se definen con métodos de la clase o la estructura.  
+La introducción de tipos definidos por el usuario (UDT) en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] amplía el sistema de tipos de SQL al permitirle almacenar estructuras de datos personalizados y objetos en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los UDT pueden contener varios tipos de datos y pueden presentar distintos comportamientos, lo que los diferencia de los tipos de datos de alias tradicionales que constan de un único tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los UDT se definen con cualquiera de los lenguajes compatibles con Microsoft .NET Common Language Runtime (CLR) que producen código comprobable. Esto incluye Microsoft Visual C# y Visual Basic .NET. Los datos se exponen como campos y propiedades de una clase o una estructura basada en .NET Framework, y los comportamientos se definen con métodos de la clase o la estructura.  
   
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se pueden usar los UDT como definiciones de columnas de una tabla, como una variable de un lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] o como un argumento de una función o un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 Para más información sobre los tipos de datos definidos por el usuario, vea "Usar y modificar instancias de tipos definidos por el usuario" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Ver también
+## <a name="sqlvariant-data-type"></a>Tipo de datos Sql_variant
+
+Para obtener información sobre el tipo de datos sql_variant, consulte [utilizando el tipo de datos de Sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+
+## <a name="spatial-data-types"></a>Tipos de datos espaciales
+
+Para obtener información acerca de los tipos de datos espaciales, vea [utilizando tipos de datos espaciales](../../connect/jdbc/use-spatial-datatypes.md).  
+
+## <a name="see-also"></a>Consulte también
 
 [Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

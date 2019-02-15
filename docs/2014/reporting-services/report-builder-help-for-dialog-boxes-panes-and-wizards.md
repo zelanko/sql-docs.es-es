@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Help, dialog boxes
 - user interface, dialog boxes
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7be737e0c8534b936d08aaf8f37fc320f831b509
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e01b814bad72c5ff8a481fd361b2409b9adbda99
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034196"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293433"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes
   Esta sección contiene Ayuda para muchos de los asistentes, vistas, paneles y cuadros de diálogo del Generador de informes. También puede abrir la Ayuda presionando F1 o haciendo clic en el botón Ayuda que se muestra en el cuadro de diálogo.  

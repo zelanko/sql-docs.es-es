@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.general.f1
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e743eac09bc3a39899c6cc6a86674b428f369717
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: feaf57f433b0f21b4bf4bb6600e22010e68d9fef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041236"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296135"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Propiedades del origen de datos compartidos (cuadro de diálogo), General
   Use el cuadro de diálogo **Propiedades del origen de datos compartidos** para mostrar y modificar la información de conexión de un origen de datos compartido del informe.  

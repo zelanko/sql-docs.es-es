@@ -19,15 +19,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 60d8938b8fd74a5a62ac9b122c897dc0008d4f9f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036906"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290743"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Cómo buscar e iniciar herramientas de Reporting Services (SSRS)
   En este tutorial se presentan las herramientas utilizadas para configurar un servidor de informes, administrar las operaciones y el contenido del servidor de informes, y crear y publicar informes. La finalidad de este tutorial es ayudar a los nuevos usuarios a comprender cómo encontrar y abrir las distintas herramientas. Si ya está familiarizado con estas herramientas, puede pasar a los otros tutoriales que le ayudarán a adquirir conocimientos para utilizar [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Para obtener más información acerca de otros tutoriales, consulte [tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

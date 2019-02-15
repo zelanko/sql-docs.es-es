@@ -1,7 +1,7 @@
 ---
 title: Parse (motor de base de datos) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40647221fe39df637407056d8b41c0e7e75428f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 55ac77cc4332ce7fe71f1dc2f1fc57d29a05a1e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417146"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041696"
 ---
 # <a name="parse-database-engine"></a>Parse (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>Argumentos  
 *input*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]: Valor de tipo de datos de carácter que se va a convertir.
+[!INCLUDE[tsql](../../includes/tsql-md.md)]: valor de tipo de datos de carácter que se va a convertir.
   
-CLR: Valor de cadena que se va a evaluar.
+CLR: valor de cadena que se va a evaluar.
   
 ## <a name="return-types"></a>Tipos devueltos  
 **Tipo de valor devuelto de SQL Server: hierarchyid**
@@ -82,7 +82,7 @@ hierarchyidRepresentation    StringRepresentation
 0x5ADE                       /1/1/3/
 ```
   
-### <a name="b-clr-example"></a>B. Ejemplo de CLR  
+### <a name="b-clr-example"></a>b. Ejemplo de CLR  
 En el fragmento de código siguiente se llama al método Parse():
   
 ```sql

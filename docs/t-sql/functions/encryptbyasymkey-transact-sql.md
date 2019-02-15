@@ -20,19 +20,19 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 773d575a65edaca18d76ba3e2109fe81bb20f88f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6b961d0390e7b327f24b70cdd5e780a7c13d895
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819483"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079381"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Esta función cifra los datos con una clave asimétrica.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -78,7 +78,7 @@ datos.
 **varbinary**, con un tamaño máximo de 8 000 bytes.  
   
 ## <a name="remarks"></a>Notas  
-Las operaciones de cifrado y descifrado en las que se usan claves asimétricas consumen muchos recursos y, por tanto, son muy costosas, en comparación con el descifrado y cifrado de claves simétricas. Se recomienda que los desarrolladores eviten el cifrado y descifrado de claves asimétricas en grandes conjuntos de datos (por ejemplo, conjuntos de datos de usuario almacenados en tablas de base de datos). En su lugar, se recomienda que los desarrolladores cifren primero los datos con una clave simétrica segura y, después, cifren esa clave simétrica con una clave asimétrica.  
+Las operaciones de cifrado y descifrado en las que se usan claves asimétricas consumen muchos recursos y, por tanto, son muy costosas en comparación con el descifrado y cifrado de claves simétricas. Se recomienda que los desarrolladores eviten el cifrado y descifrado de claves asimétricas en grandes conjuntos de datos (por ejemplo, conjuntos de datos de usuario almacenados en tablas de base de datos). En su lugar, se recomienda que los desarrolladores cifren primero los datos con una clave simétrica segura y, después, cifren esa clave simétrica con una clave asimétrica.  
   
 En función del algoritmo, `ENCRYPTBYASYMKEY` devuelve **NULL** si la entrada supera un número determinado de bytes. Los límites específicos:
 
@@ -86,7 +86,7 @@ En función del algoritmo, `ENCRYPTBYASYMKEY` devuelve **NULL** si la entrada su
 + una clave de 1024 bits puede cifrar hasta 117 bytes
 + una clave de 2048 bits puede cifrar hasta 245 bytes
 
-Tenga en cuenta que en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tanto los certificados como las claves asimétricas sirven de contenedores de claves RSA.  
+En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tanto los certificados como las claves asimétricas sirven de contenedores de claves RSA.  
   
 ## <a name="examples"></a>Ejemplos  
 En este ejemplo se cifra el texto almacenado en `@cleartext` con la clave asimétrica `JanainaAsymKey02`. La instrucción inserta los datos cifrados en la tabla `ProtectedData04`.  
@@ -98,9 +98,8 @@ INSERT INTO AdventureWorks2012.Sales.ProtectedData04
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

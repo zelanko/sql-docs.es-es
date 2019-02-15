@@ -18,12 +18,12 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a34866fb7c83098f3cb060ab009e4b187fc3c0e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 507318d5cb779d64e78df6cc7f23e4eaa94f26b3
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681113"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079441"
 ---
 # <a name="ranking-functions-transact-sql"></a>Funciones de categoría (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47681113"
 |[DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)|[ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)|  
   
 ## <a name="examples"></a>Ejemplos  
- A continuación se muestran las cuatro funciones de categoría usadas en la misma consulta. Consulte cada función de categoría para ver ejemplos específicos de las funciones.  
+ En el ejemplo siguiente se muestran las cuatro funciones de categoría usadas en la misma consulta. Consulte cada función de categoría para ver ejemplos específicos de las funciones.  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,8 +76,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Jae|Pak|12|6|2|4|5 015 682,3752|98055|  
 |Ranjit|Varkey Chudukatil|13|6|2|4|3 827 950,238|98055|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
   

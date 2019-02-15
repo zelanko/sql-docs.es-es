@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05501a3d084921f52088a76d7e1a69390cd48998
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 6a581e981829d6a2bbd8ed0181decc2d2af5e316
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405805"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742105"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Instrucciones y mecanismos de los tiempos de espera de comprobación de estado, clúster y concesión para grupos de disponibilidad Always On 
 
@@ -153,6 +153,13 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
   - SameSubnetDelay \<= CrossSubnetDelay 
+  
+ | Configuración de tiempo de espera | Finalidad | Entre | Usos | IsAlive y LooksAlive | Causas | Resultado 
+ | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
+ | Tiempo de espera de concesión </br> **Predeterminado: 20000** | Evitar cerebro dividido (split-brain) | Principal a clúster </br> (HADR) | [Objetos de eventos de Windows](/windows/desktop/Sync/event-objects)| Usado en ambas | Falta de respuesta del sistema operativo, memoria virtual baja, generación de volcado de memoria, CPU fijado, WSFC caído (pérdida de cuórum) | Recurso de grupo de disponibilidad sin conexión-en línea, conmutación por error |  
+ | Tiempo de espera de sesión </br> **Predeterminado: 10 000** | Informar de problema de comunicación entre réplica principal y secundaria | Secundaria a principal </br> (HADR) | [Sockets de TCP (mensajes enviados a través del extremo DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | No se usa en ninguna | Comunicación de red, </br> problemas en la réplica secundaria - caída, falta de respuesta del SO, contención de recursos | Secundaria - DESCONECTADA | 
+ |Tiempo de espera de HealthCheck  </br> **Predeterminado: 30000** | Indicar el tiempo de espera al intentar determinar el estado de la réplica principal | Clúster a principal </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Usado en ambas | Cumple las condiciones de error, falta de respuesta del sistema operativo, memoria virtual baja, reducción de espacio de trabajo, generación de volcado de memoria, WSFC (pérdida de cuórum), problemas del programador (programadores bloqueados)| Recursos de grupo de disponibilidad sin conexión-en línea o conmutación por error, reinicio o conmutación por error de FCI |  
+  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Consulte también    
 

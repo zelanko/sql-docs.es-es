@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ead34cab28f4988f649c6bc9dcfec5d282a08f1
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 72ac098f34438d35de4b0c1ac0ebef0ffc30a043
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617825"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039026"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Abrir, desbloquear, cambiar nombre y eliminar un proyecto de calidad de los datos
 
@@ -63,9 +63,9 @@ ms.locfileid: "52617825"
   
 4.  El proyecto de calidad de datos se abre en el mismo estado de la actividad en que se cerró por última vez. Un proyecto de calidad de datos tiene los estados siguientes:  
   
-    -   Para la actividad **Limpieza**, un proyecto de calidad de datos puede tener los estados siguientes: **Limpieza: asignar**, **Limpieza: limpiar**, **Limpieza: administrar y ver resultados** y **Limpieza: exportar**.  
+    -   Para la actividad **Limpieza**, un proyecto de calidad de datos puede tener los siguientes estados: **Limpieza: asignar**, **Limpieza: limpiar**, **Limpieza: administrar y ver resultados** y **Limpieza: exportar**.  
   
-    -   Para la actividad **Coincidencia**, un proyecto de calidad de datos puede tener los estados siguientes: **Coincidencia: asignar**, **Coincidencia: coincidencia**, **Coincidencia: permanencia** y **Coincidencia: exportar**.  
+    -   Para la actividad **Coincidencia**, un proyecto de calidad de datos puede tener los siguientes estados: **Coincidencia: asignar**, **Coincidencia: coincidencia**, **Coincidencia: permanencia** y **Coincidencia: exportar**.  
   
 ##  <a name="Unlock"></a> Desbloquear un proyecto de calidad de datos  
  Cuando se crea un proyecto de calidad de datos, queda bloqueado para evitar su uso o modificación por parte de otros usuarios. Si desea que otros usuarios puedan trabajar en el proyecto de calidad de datos, deberá desbloquearlo después de finalizar su trabajo. Para los proyectos que están bloqueados se muestra un símbolo con un candado.  

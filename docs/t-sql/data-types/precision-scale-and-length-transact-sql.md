@@ -1,7 +1,7 @@
 ---
 title: Precisión, escala y longitud (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bf6c6caf1162c3b2257ffea9c051fa7634250fd2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4a5023afdfe6b1ebe4267c0bff9741f6651e4bde
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507263"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020426"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precisión, escala y longitud (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la precisión máx
   
 La longitud de un tipo de datos numérico es el número de bytes utilizados para almacenar el número. La longitud para una cadena de caracteres o tipo de datos Unicode es el número de caracteres. La longitud de los tipos de datos **binary**, **varbinary** e **image** es el número de bytes. Por ejemplo, un tipo de datos **int** que puede contener 10 dígitos se almacena en 4 bytes y no acepta puntos decimales. El tipo de datos **int** tiene una precisión de 10, una longitud de 4 y una escala de 0.
   
-Cuando se concatenan dos expresiones **char**, **varchar**, **binary** o **varbinary**, la longitud de la expresión resultante es la suma de las longitudes de las dos expresiones de origen u 8000 caracteres, lo que sea menor.
+Cuando se concatenan dos expresiones **char**, **varchar**, **binary** o **varbinary**, la longitud de la expresión resultante es la suma de las longitudes de las dos expresiones de origen, hasta 8000 caracteres.
   
-Cuando se concatenan dos expresiones **nchar** o **nvarchar**, la longitud de la expresión resultante es la suma de las longitudes de las dos expresiones de origen o 4000 caracteres, lo que sea menor.
+Cuando se concatenan dos expresiones **nchar** o **nvarchar**, la longitud de la expresión resultante es la suma de las longitudes de las dos expresiones de origen, hasta 4000 caracteres.
   
-Cuando se comparan dos expresiones del mismo tipo de datos pero de distintas longitudes mediante UNION, EXCEPT o INTERSECT, la longitud resultante es la longitud máxima de las dos expresiones.
+Cuando se comparan dos expresiones del mismo tipo de datos pero de distintas longitudes mediante UNION, EXCEPT o INTERSECT, la longitud resultante es la longitud mayor de las dos expresiones.
   
-La precisión y la escala de los tipos de datos numéricos, además de los **decimales**, son fijas. Si un operador aritmético tiene dos expresiones del mismo tipo, el resultado tiene el mismo tipo de datos con la precisión y la escala definidas para ese tipo de datos. Si un operador tiene dos expresiones con tipos de datos numéricos diferentes, las reglas de prioridad de tipos de datos definen el tipo de datos del resultado. El resultado tiene la precisión y la escala definidas para el tipo de datos que le corresponde.
+La precisión y la escala de los tipos de datos numéricos, además de los **decimales**, son fijas. Si un operador aritmético tiene dos expresiones del mismo tipo, el resultado tiene el mismo tipo de datos con la precisión y la escala definidas para ese tipo. Si un operador tiene dos expresiones con tipos de datos numéricos diferentes, las reglas de prioridad de tipos de datos definen el tipo de datos del resultado. El resultado tiene la precisión y la escala definidas para el tipo de datos que le corresponde.
   
-En la tabla siguiente se define la forma de calcular la precisión y la escala del resultado cuando el resultado de una operación es de tipo **decimal**. El resultado es **decimal** cuando se cumple alguna de las siguientes condiciones:
+En la tabla siguiente se define la forma de calcular la precisión y la escala del resultado cuando el resultado de una operación es de tipo **decimal**. El resultado es **decimal** cuando:
 -   Ambas expresiones son de tipo **decimal**.  
 -   Una expresión es **decimal** y la otra es de un tipo de datos con una prioridad menor que **decimal**.  
   
-Las expresiones de operando se denotan como expresión e1, con precisión p1 y escala s1, y expresión e2, con precisión p2 y escala s2. La precisión y la escala de cualquier expresión que no sea **decimal** son la precisión y la escala definidas para el tipo de datos de la expresión.
+Las expresiones de operando se denotan como expresión e1, con precisión p1 y escala s1, y expresión e2, con precisión p2 y escala s2. La precisión y la escala de cualquier expresión que no sea **decimal** son las del tipo de datos de la expresión.
   
 |Operación|Precisión del resultado|Escala del resultado *|  
 |---|---|---|
@@ -63,7 +63,7 @@ Las expresiones de operando se denotan como expresión e1, con precisión p1 y e
   
 \* La precisión del resultado y la escala tienen un máximo absoluto igual a 38. Cuando la precisión de un resultado es mayor que 38, se reduce a 38, y la escala correspondiente se reduce para intentar evitar que la parte entera del resultado se trunque. En algunos casos, como en la multiplicación o la división, el factor de escala no se reduce para conservar la precisión decimal, aunque se pueda generar un error por desbordamiento.
 
-Además de las operaciones de suma y resta, necesitamos que los sitios `max(p1 - s1, p2 - s2)` almacenen las partes enteras de los números decimales. Si no hay suficiente espacio para almacenarlas, por ejemplo, `max(p1 - s1, p2 - s2) < min(38, precision) - scale`, la escala se reduce para proporcionar suficiente espacio para integrar la parte entera. La escala resultante es `MIN(precision, 38) - max(p1 - s1, p2 - s2)`, con lo que la parte fraccionaria se puede redondear para que entre en la escala resultante.
+Además de las operaciones de suma y resta, necesitamos que los sitios `max(p1 - s1, p2 - s2)` almacenen las partes enteras de los números decimales. Si no hay suficiente espacio para almacenarlas, es decir, `max(p1 - s1, p2 - s2) < min(38, precision) - scale`, la escala se reduce para proporcionar suficiente espacio para integrar la parte entera. La escala resultante es `MIN(precision, 38) - max(p1 - s1, p2 - s2)`, con lo que la parte fraccionaria se puede redondear para que entre en la escala resultante.
 
 En las operaciones de multiplicación y división necesitamos que los sitios `precision - scale` almacenen la parte entera del resultado. La escala se puede reducir utilizando las reglas siguientes:
 1.  La escala resultante se reduce a `min(scale, 38 - (precision-scale))` si la parte entera es menor que 32, porque no puede ser mayor que `38 - (precision-scale)`. En este caso, el resultado se puede redondear.
@@ -76,7 +76,7 @@ La siguiente expresión devuelve resultados `0.00000090000000000` sin redondear,
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
 En este caso, la precisión es 61 y la escala es 40.
-La parte entera (escala de precisión = 21) es menor que 32, por lo que este es el caso (1) de las reglas de multiplicación y la escala se calcula como `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17`. El tipo de resultado es `decimal(38,17)`.
+La parte entera (precision-scale = 21) es menor que 32, por lo que este es el caso (1) de las reglas de multiplicación y la escala se calcula como `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17`. El tipo de resultado es `decimal(38,17)`.
 
 La siguiente expresión devuelve resultados `0.000001` que caben en `decimal(38,6)`:
 ```sql
@@ -88,5 +88,4 @@ La escala es mayor que 6 y la parte entera (`precision-scale = 41`) es mayor que
 ## <a name="see-also"></a>Vea también
 [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
-  
   

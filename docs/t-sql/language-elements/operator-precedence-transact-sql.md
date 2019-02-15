@@ -18,19 +18,19 @@ ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 933212da81784d7d186fc6ef7c0cdfaa4edab24b
-ms.sourcegitcommit: 7ead3a042d369315fc83a9ccc3d74f62e7b05bc0
+ms.openlocfilehash: 41cdf947d16cc5dc2366ae27c9008fe4d53c158f
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012321"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079331"
 ---
 # <a name="operator-precedence-transact-sql"></a>Prioridad de operador (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Cuando una expresión compleja tiene múltiples operadores, la prioridad de operador determina la secuencia en que se realiza la operación. El orden de ejecución puede afectar de manera significativa al valor resultante.  
+  Cuando una expresión compleja tiene múltiples operadores, la prioridad de operador determina la secuencia en que se realizan las operaciones. El orden de ejecución puede afectar de manera significativa al valor resultante.  
   
- Los operadores tienen los niveles de prioridad que se muestran en la siguiente tabla. Un operador en niveles más altos se evalúa antes que un operador en un nivel inferior (en la tabla siguiente, 1 es el nivel más alto y 8 el más bajo).
+ Los operadores tienen los niveles de prioridad que se muestran en la siguiente tabla. Un operador de los niveles más altos se evalúa antes que un operador de un nivel más bajo. En la tabla siguiente, 1 es el nivel más alto y 8 es el nivel más bajo.
   
 |Nivel|Operadores|  
 |-----------|---------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "54012321"
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
 |8|= (asignación)|  
   
- Cuando en una expresión dos operadores tengan el mismo nivel de prioridad de operador, se evalúan de izquierda a derecha en función de su posición dentro de la expresión. Por ejemplo, en la expresión utilizada en la siguiente instrucción `SET`, el operador de resta se evalúa antes que el operador de suma.  
+ Cuando en una expresión dos operadores tienen el mismo nivel de prioridad, se evalúan de izquierda a derecha en función de su posición dentro de la expresión. Por ejemplo, en la expresión utilizada en la siguiente instrucción `SET`, el operador de resta se evalúa antes que el operador de suma.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -52,9 +52,9 @@ SET @MyNumber = 4 - 2 + 27;
 SELECT @MyNumber;  
 ```  
   
- Utilice paréntesis para suplantar la prioridad definida de los operadores en una expresión. Todo lo que está dentro del paréntesis se evalúa en primer lugar para producir un valor antes de que dicho valor lo pueda utilizar cualquier otro operador que se encuentre fuera del paréntesis.  
+ Utilice paréntesis para suplantar la prioridad definida de los operadores en una expresión. Todo el contenido dentro del paréntesis se evalúa para obtener un valor único. Ese valor puede ser utilizado por cualquier otro operador fuera de los paréntesis.  
   
- Por ejemplo, en la expresión utilizada en la siguiente instrucción `SET`, el operador de multiplicación tiene una prioridad mayor que el operador de suma. Por lo tanto, se evalúa antes; el resultado de la expresión es `13`.  
+ Por ejemplo, en la expresión utilizada en la siguiente instrucción `SET`, el operador de multiplicación tiene una prioridad mayor que el operador de suma. La operación de multiplicación se evalúa antes; el resultado de la expresión es `13`.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -72,7 +72,7 @@ SET @MyNumber = 2 * (4 + 5);
 SELECT @MyNumber;  
 ```  
   
- Si una expresión tiene paréntesis anidados, se evalúa primero la expresión más anidada. El siguiente ejemplo contiene paréntesis anidados, con la expresión `5 - 3` en el conjunto de paréntesis más anidado. Esta expresión produce un valor de `2`. Entonces, el operador de suma (`+`) suma este resultado a `4`. Esto produce un valor de `6`. Finalmente, `6` se multiplica por `2` para producir un resultado de expresión de `12`.  
+ Si una expresión tiene paréntesis anidados, se evalúa primero la expresión más anidada. El siguiente ejemplo contiene paréntesis anidados, con la expresión `5 - 3` en el conjunto de paréntesis más anidado. Esta expresión produce un valor de `2`. Entonces, el operador de suma (`+`) suma este resultado a `4`, dando como resultado `6`. Finalmente, `6` se multiplica por `2` para producir un resultado de expresión de `12`.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -86,5 +86,4 @@ SELECT @MyNumber;
  [Operadores lógicos &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  
   

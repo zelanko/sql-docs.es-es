@@ -1,7 +1,7 @@
 ---
 title: time (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 6/7/2017
+ms.date: 06/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff303fd066e1a12ccbd33e1479648001fe5a389b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762593"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079461"
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47762593"
 |Sintaxis|**time** [ (*escala de fracciones de segundo*) ]|  
 |Uso|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*escala de fracciones de segundo*|Especifica el número de dígitos de la parte fraccionaria de los segundos.<br /><br /> Este valor puede ser un entero de 0 a 7. En Informatica, puede ser un entero de 0 a 3.<br /><br /> La escala predeterminada de las fracciones es 7 (100 ns).|  
-|Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|hh:mm:ss[.nnnnnnn] en Informatica)<br /><br /> Para obtener más información, vea la sección "Compatibilidad con versiones anteriores de los clientes de niveles inferiores" más adelante.|  
+|Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|hh:mm:ss[.nnnnnnn] en Informatica)<br /><br /> Para obtener más información, consulte la sección [Compatibilidad con versiones anteriores de clientes de niveles inferiores](#BackwardCompatibilityforDownlevelClients).|  
 |Intervalo|De 00:00:00.0000000 a 23:59:59.9999999 (de 00:00:00.000 a 23:59:59.999 en Informatica)|  
 |Intervalos de elementos|hh es una cifra de dos dígitos, comprendida entre 0 y 23, que representa la hora.<br /><br /> mm es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los minutos.<br /><br /> ss es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los segundos.<br /><br /> n\* es una cifra de cero a siete dígitos comprendida entre 0 y 9999999 que representa las fracciones de segundos. En Informatica, n\* es una cifra de cero a tres dígitos comprendida entre 0 y 999.|  
 |Longitud en caracteres|De 8 posiciones como mínimo (hh:mm:ss) a 16 como máximo (hh:mm:ss.nnnnnnn). En Informatica, el máximo es 12 (hh:mm:ss.nnn).|  
@@ -54,8 +54,8 @@ ms.locfileid: "47762593"
 |Precisión|100 nanosegundos (1 milisegundo en Informatica)|  
 |Valor predeterminado|00:00:00<br /><br /> Este valor se usa para la parte de fecha anexada en la conversión implícita de **date** a **datetime2** o **datetimeoffset**.|  
 |Precisión de fracciones de segundo definida por el usuario|Sí|  
-|Conservación y reconocimiento del ajuste de zona horaria|no|  
-|Reconocimiento del horario de verano|no|  
+|Conservación y reconocimiento del ajuste de zona horaria|No|  
+|Reconocimiento del horario de verano|No|  
   
 |Escala especificada|Resultado (precisión, escala)|Longitud de la columna (bytes)|Fracciones<br /><br /> segundos<br /><br /> precisión|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
@@ -121,8 +121,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- Si la conversión es a  
-                    **date**, la conversión no tiene lugar y se recibe el mensaje de error 206: "Conflicto de tipos de operandos: date es incompatible con time".  
+ Cuando es una conversión a **date**, se produce un error en la conversión y se muestra el mensaje de error 206: "Conflicto de tipos de operandos: date es incompatible con time".  
   
  Cuando la conversión es a **datetime**, se copian los valores de hora, minuto y segundo y el componente de fecha se establece en '1900-01-01'. Cuando la precisión de las fracciones de segundo del valor de **time(n)** es superior a tres dígitos, el resultado de **datetime** se truncará. En el código siguiente se muestran los resultados de convertir un valor `time(4)` en un valor `datetime`.  
   
@@ -270,7 +269,7 @@ SELECT
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|Si la precisión en fracciones de segundo supera el valor especificado en la columna, la cadena quedará truncada y no generará un error.|  
 |'12:12:12.1234567'|**datetimeoffset(7)**|1900-01-01 12:12:12.1234567 +00:00|Si la precisión en fracciones de segundo supera el valor especificado en la columna, la cadena quedará truncada y no generará un error.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

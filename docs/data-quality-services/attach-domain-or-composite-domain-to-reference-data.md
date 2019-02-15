@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617087"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010726"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia
 
@@ -35,9 +35,9 @@ ms.locfileid: "52617087"
   
  Un esquema del servicio de datos de referencia puede tener una columna obligatoria que se debe asignar al dominio apropiado si decide usar el servicio de datos de referencia. La columna obligatoria de un esquema de datos de referencia se identifica mediante "(M)" en el nombre de columna. Por ejemplo, **AddressLine** es la columna de esquema obligatoria en **Melissa Data - Address Data** y **CompanyName** es la columna de esquema obligatoria en **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- En este tema, se crearán cuatro dominios: **Address Line**, **City**, **State** y **Zip**, bajo un dominio compuesto, **Address Verification**, se adjuntará el dominio compuesto al servicio de datos de referencia **Melissa Data - Address Check** y después se asignarán los dominios individuales dentro del dominio compuestas a las columnas adecuadas del esquema del servicio de datos de referencia.  
+ En este tema, crearemos cuatro dominios: **Línea de dirección**, **Ciudad**, **Estado** y **Código postal** bajo un dominio compuesto, **Verificación de direcciones**; después, se adjuntará el dominio compuesto al servicio de datos de referencia **Datos de Melissa Data: comprobación de dirección** y, por último, se asignarán los dominios individuales dentro del dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia.  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Es necesario configurar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para utilizar los servicios de datos de referencia. Vea [Configurar DQS para usar datos de referencia](../data-quality-services/configure-dqs-to-use-reference-data.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "52617087"
   
 3.  En la pantalla **Nueva base de conocimiento** , escriba un nombre para la nueva base de conocimiento, haga clic en la actividad **Administración de dominios** y, por último, haga clic en **Crear**.  
   
-4.  En la pantalla **Administración de dominios** , haga clic en el icono **Crear un dominio** para crear un dominio. Cree los cuatro dominios siguientes: **Address line**, **City**, **State**y **Zip**.  
+4.  En la pantalla **Administración de dominios** , haga clic en el icono **Crear un dominio** para crear un dominio. Cree estos cuatro dominios: **Línea de dirección**, **Ciudad**, **Estado** y **Código postal**.  
   
 5.  Haga clic en el icono **Crear un dominio compuesto** para crear un dominio compuesto. En el cuadro de diálogo **Crear un dominio compuesto** , escriba **Address Verification** en el cuadro **Nombre de dominio compuesto** e incluya en el dominio compuesto todos los dominios creados en el paso 3. Haga clic en **Aceptar**.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "52617087"
   
 9. Regresará a la pestaña **Datos de referencia** . En el área **Configuración de proveedores**, cambie los valores de los cuadros siguientes, si es necesario:  
   
-    -   **Umbral de corrección automática**: las correcciones del servicio de datos de referencia con un nivel de confianza por encima de estos valores de umbral se llevan a cabo automáticamente. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,9 para un porcentaje del 90%.  
+    -   **Umbral de corrección automática**: las correcciones del servicio de datos de referencia con un nivel de confianza por encima de estos valores de umbral se ejecutan automáticamente. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,9 para un porcentaje del 90%.  
   
-    -   **Candidatos sugeridos**: el número de candidatos sugeridos que se van a mostrar del servicio de datos de referencia.  
+    -   **Candidatos sugeridos**: número de candidatos sugeridos que se van a mostrar del servicio de datos de referencia.  
   
-    -   **Confianza mínima**: las sugerencias del servicio de datos de referencia con un nivel de confianza por debajo de este valor se omitirán. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,6 para un porcentaje del 60 %.  
+    -   **Confianza mínima**: se omitirán las sugerencias del servicio de datos de referencia con un nivel de confianza por debajo de este valor. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,6 para un porcentaje del 60 %.  
   
 10. Haga clic en **Finalizar** para publicar la base de conocimiento. Aparecerá un mensaje de confirmación una vez que la base de conocimiento se haya publicado correctamente.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "52617087"
 ##  <a name="FollowUp"></a> Seguimiento: después de asignar un dominio a datos de referencia  
  Cree un proyecto de calidad de datos y ejecute la actividad de limpieza en los datos de origen que incluyan direcciones de EE. UU., comparándolos con la base de conocimiento creada en este tema. Vea [Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Servicios de datos de referencia en DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Limpieza de datos](../data-quality-services/data-cleansing.md)  
   

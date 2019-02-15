@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 20968e8218eb2440873a60ed3f99ef746ff6f2d2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617275"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024676"
 ---
 # <a name="create-term-based-relations"></a>Crear relaciones basadas en términos
 
@@ -94,14 +94,14 @@ ms.locfileid: "52617275"
   
     6.  Busque un valor en la tabla de relaciones; para ello, especifique uno o varios caracteres en el cuadro de texto **Buscar** . Se resaltarán las cadenas que coincidan con la especificada. Utilice las flechas arriba y abajo para desplazarse por las distintas instancias de la cadena en la tabla.  
   
-    7.  **Corrector ortográfico**: si un valor de la columna **Valor** o **Corregir a** tiene un carácter de subrayado rojo ondulado, el corrector ortográfico está sugiriendo una corrección al valor. Haga clic con el botón secundario en el valor que tiene el carácter de subrayado y seleccione uno de los valores propuestos por el corrector ortográfico. O bien, puede hacer clic en **Agregar** en el menú contextual para seguir usando el valor original. Para obtener más información, consulte [Utilizar el corrector ortográfico de DQS](../data-quality-services/use-the-dqs-speller.md) y [Establecer propiedades de dominio](../data-quality-services/set-domain-properties.md).  
+    7.  **Corrector ortográfico**: si un valor de la columna **Valor** o **Corregir a** tiene un carácter de subrayado rojo ondulado, quiere decir que el corrector ortográfico sugiere una corrección para el valor. Haga clic con el botón secundario en el valor que tiene el carácter de subrayado y seleccione uno de los valores propuestos por el corrector ortográfico. O bien, puede hacer clic en **Agregar** en el menú contextual para seguir usando el valor original. Para obtener más información, consulte [Utilizar el corrector ortográfico de DQS](../data-quality-services/use-the-dqs-speller.md) y [Establecer propiedades de dominio](../data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Para utilizar el corrector ortográfico, puede habilitarlo en la página **Propiedades del dominio** o, si está deshabilitado en la página **Propiedades del dominio** , puede hacer clic en el icono **Habilitar o deshabilitar el corrector ortográfico** de la página **Relaciones basadas en términos** para habilitarlo en esta página.  
   
 6.  Haga clic en **Aplicar cambios** para aplicar las relaciones basadas en el término al dominio.  
   
-7.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de crear las relaciones basadas en términos  
  Una vez creadas las relaciones basadas en términos, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  

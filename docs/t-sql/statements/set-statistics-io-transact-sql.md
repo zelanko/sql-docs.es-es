@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 20099478d1d2dd047b1f17fe963c8fc45b1418fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670285"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760128"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ SET STATISTICS IO { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Notas  
- Cuando STATISTICS IO es ON se muestra información estadística. Cuando es OFF, esta información no se muestra.  
+ Cuando STATISTICS IO tiene el estado ON, se muestra información estadística; con el estado OFF, no se muestra la información.   
   
- Cuando esta opción es ON, las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes devolverán la información estadística hasta que la opción sea OFF.  
+ Cuando esta opción se establece en ON, las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes devolverán la información estadística hasta que la opción sea OFF.  
   
  La siguiente tabla muestra y describe los elementos de salida.  
   
 |Elemento de salida|Significado|  
 |-----------------|-------------|  
 |**Table**|Nombre de la tabla.|  
-|**Scan count**|Número de búsquedas y exploraciones iniciadas tras alcanzar el nivel hoja en cualquier dirección para recuperar todos los valores y generar el conjunto de datos final de la salida.<br /><br /> El recuento de la exploración es 0 si el índice utilizado es un índice único o un índice clúster en una clave principal y está buscando un solo valor. Por ejemplo, `WHERE Primary_Key_Column = <value>`.<br /><br /> El número de exploraciones es 1 cuando está buscando un valor con un índice clúster que no es único y que se define en una columna de clave de no principal. Esto se hace para comprobar si hay valores duplicados para el valor de clave que está buscando. Por ejemplo, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> El recuento de exploraciones es N si N es el número de exploraciones y búsquedas diferentes comenzó hacia la izquierda o la derecha del nivel hoja después de encontrar un valor de clave mediante la clave de índice.|  
+|**Scan count**|Número de búsquedas o exámenes iniciados después de alcanzar el nivel hoja en cualquier dirección para recuperar todos los valores y generar el conjunto de datos final de la salida.<br /><br /> El número de exámenes es 0 si el índice usado es un índice único o un índice agrupado en una clave principal y está buscando un solo valor. Por ejemplo, `WHERE Primary_Key_Column = <value>`.<br /><br /> El número de exámenes es 1 cuando se busca un valor con un índice agrupado que no es único y que se define en una columna de clave de no principal. Este proceso se realiza para comprobar si hay valores duplicados para el valor de clave que está buscando. Por ejemplo, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> El número de exámenes es N si N es el número de exploraciones y búsquedas diferentes empezó hacia la izquierda o la derecha del nivel hoja después de encontrar un valor de clave mediante la clave de índice.|  
 |**logical reads**|Número de páginas leídas de la caché de datos.|  
 |**physical reads**|Número de páginas leídas del disco.|  
 |**read-ahead reads**|Número de páginas llevadas a la caché por la consulta.|  
@@ -97,7 +97,7 @@ reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0,
 lob read-ahead reads 0.  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
  [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  

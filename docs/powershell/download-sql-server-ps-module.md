@@ -1,7 +1,7 @@
 ---
 title: Descarga del módulo de PowerShell de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/08/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40873fe63b897da52fc9a7d440a8568872431d72
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: f0f14a3cee050fff07c7fe5bc2467bcb8209a53c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851760"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037496"
 ---
 # <a name="install-sql-server-powershell-module"></a>Instalación de un módulo de SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,12 +25,13 @@ ms.locfileid: "48851760"
 En este artículo se proporcionan instrucciones para instalar el módulo de PowerShell **SqlServer**.
 > [!NOTE]
 > Hay dos módulos de SQL Server PowerShell: 
-> * **SQLPS**: este módulo está incluido en la instalación de SQL Server (por motivos de compatibilidad con versiones anteriores), pero ya no se actualiza. El módulo de PowerShell más actualizado es **SqlServer**.
-> * **SqlServer**: este módulo incluye nuevos cmdlets para la compatibilidad con las características más recientes de SQL. El módulo además contiene versiones actualizadas de los cmdlets de **SQLPS**. 
+> * **SQLPS**: este módulo se incluye en la instalación de SQL Server (por motivos de compatibilidad con versiones anteriores), pero ya no se actualiza. El módulo de PowerShell más actualizado es **SqlServer**.
+> * **SqlServer**: en este módulo, se incluyen nuevos cmdlets para la compatibilidad con las características más recientes de SQL. El módulo además contiene versiones actualizadas de los cmdlets de **SQLPS**. 
 
 Las versiones anteriores del módulo **SqlServer** *estaban incluidas* en SQL Server Management Studio (SSMS), pero solo con las versiones 16.x de SSMS. Para usar PowerShell con SSMS 17.0 y versiones posteriores, debe tener el módulo **SqlServer** instalado desde la [Galería de PowerShell](https://www.powershellgallery.com/packages/Sqlserver).
-La versión actual del módulo **SqlServer** es 21.0.17279. Se basa en la versión v140 de Microsoft.SQLServer.SMO.  
-Si busca una versión del módulo que sea compatible con la próxima versión de SQL Server (basada en la versión v150 de Microsoft.SQLServer.SMO), vea la sección de la parte inferior de esta página sobre cómo obtener versiones preliminares del módulo. La versión preliminar más reciente del módulo es 21.1.18040-preview.
+La versión actual del módulo **SqlServer** es 21.1.18080. Se basa en la versión 150 de Microsoft.SQLServer.SMO y admite la próxima versión de SQL Server. La versión más reciente del módulo basada en la versión 140 de Microsoft.SQLServer.SMO es 21.0.17279.
+
+Las versiones preliminares del módulo pueden estar disponibles con mayor frecuencia: vea la sección al final de esta página para obtener información sobre cómo descargar esas versiones del módulo.
 
 Para instalar el módulo **SqlServer** desde la Galería de PowerShell, inicie una sesión de [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) y use los siguientes comandos. Si le surgen problemas durante la instalación, consulte la [documentación de instalación de módulos](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module) y la [referencia de instalación de módulos](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
 
@@ -56,7 +57,7 @@ Para ver las versiones del módulo instaladas:
 
 Para usar una versión específica del módulo, puede importarla con un número de versión específico de forma similar a la siguiente:
 
-```Import-Module SqlServer -Version 21.0.17178```
+```Import-Module SqlServer -Version 21.1.18080```
 
 > [!NOTE]
 > Las versiones preliminares del módulo pueden estar disponibles en la Galería de PowerShell. Se pueden detectar e instalar mediante los cmdlets actualizados *Find-Module* e *Install-Module* que forman parte del módulo [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) si se pasa el modificador *-AllowPrerelease*.

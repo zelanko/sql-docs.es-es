@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca00ce6884ca1e36d25a7c593b0f65ac6b5c2809
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 226998dccce432a2203782d667c35285860fa926
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617405"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014227"
 ---
 # <a name="create-a-cross-domain-rule"></a>Crear una regla entre dominios
 
@@ -29,7 +29,7 @@ ms.locfileid: "52617405"
   
  La cláusula If de una regla entre dominios se define para uno de los dominios individuales del dominio compuesto y la cláusula Then para otro distinto. Se debe definir cada una de las cláusulas para un dominio individual distinto. Una regla entre dominios debe estar relacionada con varios dominios individuales; no es posible definir una regla de dominio simple (solo para un dominio individual) para un dominio compuesto. Para ello, deberá definir una regla de dominio para un dominio individual. Cada una de las cláusulas If y Then puede contener una o varias condiciones.  
   
- Una regla entre dominios que tenga condiciones definitivas aplicará la lógica de la regla a los sinónimos del valor en las condiciones, así como a los propios valores. Las condiciones definitivas para las cláusulas If y Then son El valor es igual a, El valor no es igual a, El valor está en o El valor no está en. Por ejemplo, imagine que dispone de la siguiente regla entre dominios para un dominio compuesto: "Para "City", si el valor es igual a "Los Angeles", entonces para "State", el valor es igual a "CA"". Si "Los Angeles" y "LA" son sinónimos, esta regla dará un resultado correcto para "Los Angeles CA" y "LA CA", y un error para "Los Angeles WA" y "LA WA".  
+ Una regla entre dominios que tenga condiciones definitivas aplicará la lógica de la regla a los sinónimos del valor en las condiciones, así como a los propios valores. Las condiciones definitivas para las cláusulas If y Then son El valor es igual a, El valor no es igual a, El valor está en o El valor no está en. Por ejemplo, imagine que tiene la siguiente regla entre dominios para un dominio compuesto: "Para «Ciudad», si Valor es igual a «Los Ángeles», entonces para «Estado», el Valor es igual a «California»". Si "Los Angeles" y "LA" son sinónimos, esta regla dará un resultado correcto para "Los Angeles CA" y "LA CA", y un error para "Los Angeles WA" y "LA WA".  
   
  Además de permitirle conocer la validez de una regla entre dominios, la cláusula *Then* definitiva **El valor es igual a**de una regla entre dominios también corrige los datos durante la actividad de limpieza de datos. Para obtener más información, vea [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) en [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   

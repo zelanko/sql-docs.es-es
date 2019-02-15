@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b9bb2a1744b7fdc8b734ab3435ef53e0710d8c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411522"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771351"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +30,13 @@ Antes de empezar, revise la siguiente información importante:
   
 - [Actualizaciones de ediciones y versiones admitidas](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-- [Elegir un método de actualización del motor de base de datos](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
+- [Elegir un método de actualización del motor de base de datos:](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
   
-- [Planear y probar el plan de actualización del motor de base de datos](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, la lista de comprobación previa a la actualización, y desarrolle y pruebe el plan de actualización.  
+- [Planeación y prueba del plan de actualización del motor de base de datos](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, así como la lista de comprobación previa a la actualización, y desarrolle y pruebe el plan de actualización.  
   
-- [Requisitos de hardware y software para instalar SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
+- [Requisitos de hardware y software para instalar SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
 
-- [Actualización de instancias de la réplica del grupo de disponibilidad Always On](#special-steps-for-change-data-capture-or-replication): si hay bases de datos en el AG habilitadas para la captura de datos modificados (CDC), complete estas [instrucciones](#special-steps-for-change-data-capture-or-replication).
+- [Compruebe si se usa la replicación o captura de datos modificados para las bases de datos del grupo de disponibilidad](#special-steps-for-change-data-capture-or-replication): si alguna de las bases de datos en el grupo de disponibilidad se habilita para la captura de datos modificados (CDC), complete estas [instrucciones](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
 >No se permite mezclar versiones de instancias de SQL Server en el mismo AG fuera de una actualización gradual, que actualiza las réplicas locales. No se puede agregar una versión superior de una instancia de SQL Server como réplica nueva a un AG existente. Por ejemplo, no se puede agregar una réplica de SQL Server 2017 a un AG de SQL Server 2016. Para migrar a una versión nueva de la instancia de SQL Server con AG, el único método admitido es un AG distribuido que esté en SQL Server 2016 Enterprise Edition o en una versión posterior.
@@ -67,6 +67,11 @@ Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de serv
 -   No actualice la instancia de la réplica principal antes de actualizar cualquier otra instancia de una réplica secundaria. Una réplica principal actualizada ya no puede entregar registrar a ninguna réplica secundaria cuya instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aún no haya sido actualizada a la misma versión. Cuando el movimiento de datos a una réplica secundaria se suspenda, no puede producirse la conmutación por error automática para dicha réplica y las bases de datos de disponibilidad son vulnerables ante la pérdida de datos.  
   
 -   Ante de conmutar por error un AG, compruebe que el estado de sincronización del destino de la conmutación sea SINCRONIZADO.  
+
+  > [!WARNING]
+  > Si se instala una nueva instancia o una nueva versión de SQL Server en un servidor que tiene instalada una versión anterior de SQL Server, puede **producirse por error una interrupción de los grupos de disponibilidad hospedados por la versión anterior de SQL Server**. La causa es que, durante la instalación de la instancia o versión de SQL Server, se actualiza el módulo de alta disponibilidad de SQL Server (RHS.EXE). Esto causa una interrupción temporal de los grupos de disponibilidad existentes en el rol principal del servidor. Por lo tanto, es muy recomendable que siga uno de estos procedimientos al instalar una versión más reciente de SQL Server en un sistema donde ya se hospeda una versión anterior de SQL Server con un grupo de disponibilidad:
+  > - Instale la nueva versión de SQL Server durante una ventana de mantenimiento. 
+  > - Conmute por error el grupo de disponibilidad en la réplica secundaria para que no sea el grupo principal durante la instalación de la nueva instancia de SQL Server. 
   
 ## <a name="rolling-upgrade-process"></a>Proceso de actualización gradual  
  En la práctica, el proceso exacto depende de factores como la topología de implementación de los AG y del modo de confirmación de cada réplica. Pero, en un escenario más sencillo, una actualización gradual es un proceso de varias fases que en su forma más sencilla implica los pasos siguientes:  
@@ -191,7 +196,7 @@ Para realizar una actualización gradual de un grupo de disponibilidad distribui
 
 >[!IMPORTANT]
 >- Compruebe la sincronización entre cada paso. Antes de continuar con el siguiente paso, confirme que las réplicas de confirmación sincrónica estén sincronizadas con el grupo de disponibilidad y que la principal global esté sincronizada con el reenviador del grupo de disponibilidad distribuido. 
->- **Recomendación**: Cada vez que compruebe la sincronización, actualice tanto el nodo de la base de datos como el nodo del grupo de disponibilidad distribuido en SQL Server Management Studio. Una vez que todo esté sincronizado, guarde una captura de pantalla de los estados de las réplicas. De este modo, podrá realizar el seguimiento del paso en el que está, proporcionar pruebas de que todo funcionaba correctamente antes de avanzar al siguiente paso y solucionar problemas, en caso de que haya algún error. 
+>- **Recomendación:** Cada vez que compruebe la sincronización, actualice tanto el nodo de la base de datos como el nodo del grupo de disponibilidad distribuido en SQL Server Management Studio. Una vez que todo esté sincronizado, guarde una captura de pantalla de los estados de las réplicas. De este modo, podrá realizar el seguimiento del paso en el que está, proporcionar pruebas de que todo funcionaba correctamente antes de avanzar al siguiente paso y solucionar problemas, en caso de que haya algún error. 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Ejemplo de diagrama de una actualización gradual de un grupo de disponibilidad distribuido
@@ -248,7 +253,7 @@ Dependiendo de la actualización que se aplique, es posible que sea necesario re
 Para obtener información general, consulte [CDC functionality may break after upgrading to the latest CU](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/) (Es posible que la funcionalidad CDC no funcione después de actualizar a la última CU).
 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
 
  [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  

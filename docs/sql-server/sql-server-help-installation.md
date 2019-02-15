@@ -10,50 +10,53 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 41b14322d3c895e687add2236c2447d93df62586
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202454"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771341"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Visor de Ayuda y ayuda sin conexión de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Puede usar el Visor de Ayuda en SQL Server Management Studio (SSMS) o Visual Studio (VS) para descargar e instalar paquetes de ayuda de SQL Server de orígenes en línea o de un disco para poder verlos sin conexión. En este artículo se describen las herramientas para instalar el Visor de Ayuda, cómo instalar contenido de ayuda sin conexión y cómo ver la ayuda para [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 y SQL Server 2017.
+Puede usar la aplicación Visor de Ayuda de Microsoft para descargar e instalar los paquetes de ayuda de SQL Server desde el disco o desde orígenes en línea y verlos sin conexión. Visor de Ayuda se instala con SQL Server Management Studio (SSMS) o Visual Studio (VS). En este artículo, se describen las herramientas que instalan esta aplicación, cómo instalar el contenido de la ayuda sin conexión y cómo ver la ayuda de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 y SQL Server 2017.
 
-Una vez que se ha descargado el contenido en un sistema que tiene acceso a Internet, podrá migrarlo a un sistema que no tenga acceso a Internet. 
+Se necesita acceso a Internet para descargar el contenido de Visor de Ayuda. Después, podrá migrar el contenido a un equipo que no tenga acceso a Internet.
 
 > [!NOTE]
 > Las ayudas de SQL Server 2016 y 2017 están combinadas, aunque algunos temas solo se aplican a una versión. Esto se indica en dichos temas. La mayoría de los temas se aplican a ambas versiones.
 
 ## <a name="install-the-help-viewer"></a>Instalar el Visor de Ayuda
 
-El Visor de Ayuda tiene dos versiones: la versión 2.x es compatible con la ayuda de SQL Server 2016 y 2017, mientras que la versión 1.x es compatible con la ayuda de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]. El Visor de Ayuda no admite la configuración del proxy ni tampoco el formato ISO. 
+Hay dos versiones de Visor de Ayuda.  Cada versión admite distintas versiones del contenido de SQL Server.  El formato de los libros sin conexión ha cambiado con el paso del tiempo y las versiones anteriores de Visor de Ayuda no son compatibles con las versiones más recientes de los libros:
+- v2.x admite la ayuda de SQL Server 2016 y SQL Server 2017. 
+- v1.x admite la ayuda de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]. Visor de Ayuda no admite la configuración de proxy ni el formato ISO.
 
-El Visor de Ayuda se puede instalar con las siguientes herramientas: 
 
-|**Herramienta que instala el Visor de Ayuda**|**Versión del Visor de Ayuda que se instala**|
+|**Herramienta**|**Instalar la versión de Visor de Ayuda**|
 |---------|---------|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)| v2.2|
-|[SQL Server Data Tools para Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| v2.2|
-|Visual Studio 2017* | v2.3|
+|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
+|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Data Tools para Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
 |Visual Studio 2015 | v2.2|
+|SQL Server 2016 | v1.x|
 |SQL Server 2014 Management Studio | v1.x|
 |Versiones anteriores de Visual Studio | v1.x|
-|SQL Server 2016 | v1.x|
+| | |
 
-\* Para instalar el Visor de Ayuda con Visual Studio 2017, en la pestaña Componentes individuales del instalador de Visual Studio, seleccione **Visor de Ayuda** en Herramientas de código y haga clic en **Instalar**. 
+\* Para instalar el Visor de Ayuda con Visual Studio 2017, en la pestaña Componentes individuales del instalador de Visual Studio, seleccione **Visor de Ayuda** en Herramientas de código y haga clic en **Instalar**.
 
 >[!NOTE]
 > - SQL Server 2016 instala el Visor de Ayuda 1.1, que no admite la ayuda de SQL Server 2016. 
-> - Si instala SQL Server 2017 no se instalará el Visor de Ayuda.
+> - Si instala SQL Server 2017, no se instalará Visor de Ayuda. Visor de Ayuda ya no se incluye en la instalación de SQL Server.
 > - El Visor de Ayuda v2.x también puede ser compatible con la ayuda de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] si instala el contenido desde un disco.
 
 ## <a name="use-help-viewer-v2x"></a>Uso del Visor de Ayuda v2.x
 
-SSMS 17.x y VS 2015 y 2017 usan el Visor de Ayuda 2.x, que es compatible con la ayuda de SQL Server 2016 y 2017. 
+SSMS 17.x y VS 2015 y 2017 usan Visor de Ayuda 2.x, que es compatible con la ayuda de SQL Server 2016 y SQL Server 2017. 
 
 **Para descargar e instalar contenido de ayuda sin conexión con el Visor de Ayuda v2.x**
 
@@ -70,7 +73,7 @@ SSMS 17.x y VS 2015 y 2017 usan el Visor de Ayuda 2.x, que es compatible con la 
    >[!NOTE]
    > Para instalar contenido desde el disco (ayuda de SQL Server 2014), seleccione **Disco** en Origen de la instalación y especifique la ubicación del disco.
    
-   En Ruta de acceso del almacén local de la pestaña Administrar contenido se muestra dónde se instalará el contenido en el equipo local. Si quiere cambiar la ubicación, haga clic en **Mover**, indique otra ruta de acceso de carpeta en el campo **A** y haga clic en **Aceptar**.
+   En "Ruta de acceso del almacén local" de la pestaña "Administrar contenido", se muestra dónde se instalará el contenido en el equipo local. Para cambiar la ubicación, haga clic en **Mover**, especifique otra ruta de carpeta en el campo **A** y, después, haga clic en **Aceptar**.
    Si se produce un error de instalación de ayuda después de cambiar la ruta de acceso del almacén local, cierre y vuelva a abrir el Visor de Ayuda, asegúrese de que se muestra la nueva ubicación en Ruta de acceso del almacén local y vuelva a intentar realizar la instalación.
 
 3. Haga clic en **Agregar** al lado de cada paquete de contenido (libro) que quiera instalar. 
@@ -84,21 +87,25 @@ SSMS 17.x y VS 2015 y 2017 usan el Visor de Ayuda 2.x, que es compatible con la 
 > [!NOTE]
 > No todos los títulos de nodos superiores de la tabla de contenido de SQL Server coinciden exactamente con los nombres de los libros de ayuda descargables correspondientes. Los títulos de la TDC están relacionados con los nombres de libros de la siguiente forma:
 
-| Panel de contenido | Libro de SQL Server |
-|-----|-----|
-|Referencia del lenguaje de Analysis Services | Referencia del lenguaje de Analysis Services (MDX)|
-|Referencia de expresiones de análisis de datos (DAX) | Referencia de expresiones de análisis de datos (DAX)|
-|Referencia de Extensiones de minería de datos (DMX) | Referencia de Extensiones de minería de datos (DMX)|
-|Guías del desarrollador para SQL Server | Referencia para desarrolladores de SQL Server|
-|Descargar SQL Server Management Studio | SQL Server Management Studio|
-|Getting started with machine learning in SQL Server (Introducción al aprendizaje automático en SQL Server) | Microsoft Machine Learning Services|
-|Power Query M Reference (Referencia de Power Query M) | Power Query M Reference (Referencia de Power Query M)|
-|Controladores de SQL Server | Controladores de conexión de SQL Server|
-|SQL Server en Linux | SQL Server en Linux|
-|Documentación técnica de SQL Server | Documentación técnica de SQL Server (SSIS, SSRS, motor de base de datos, instalación)|
-|Herramientas y utilidades de Azure SQL Database | Herramientas de SQL Server|
-|Referencia de Transact-SQL (motor de base de datos) | Referencia de Transact-SQL|
-|Referencia del lenguaje XQuery (SQL Server) | Referencia del lenguaje XQuery (SQL Server)|
+(*) indica contenido de la primera versión de disponibilidad general del contenido de SQL Server 2017, así como contenido de 2016 anterior. Estos libros se quitarán, ya que los libros completos y separados de SQL Server 2016 y 2017 contienen ediciones de contenido realizadas en enero de 2019.  
+
+| | Panel de contenido | Libro de SQL Server |
+|-----|-----|-----|
+|*|Referencia del lenguaje de Analysis Services | Referencia del lenguaje de Analysis Services (MDX)|
+|*|Referencia de expresiones de análisis de datos (DAX) | Referencia de expresiones de análisis de datos (DAX)|
+|*|Referencia de Extensiones de minería de datos (DMX) | Referencia de Extensiones de minería de datos (DMX)|
+|*|Getting started with Machine learning in SQL Server (Introducción al aprendizaje automático en SQL Server) | Microsoft Machine Learning Services|
+|*|Power Query M Reference (Referencia de Power Query M) | Power Query M Reference (Referencia de Power Query M)|
+||Documentación de SQL Server 2016 | Documentación de SQL Server 2016|
+||Documentación de SQL Server 2017| Documentación de SQL Server 2017|
+|*|Guías del desarrollador para SQL Server | Referencia para desarrolladores de SQL Server|
+|*|Descargar SQL Server Management Studio | SQL Server Management Studio|
+|*|Página principal de la programación de clientes de Microsoft SQL Server | Controladores de conexión de SQL Server|
+|*|SQL Server en Linux | SQL Server en Linux|
+|*|Documentación técnica de SQL Server | Documentación técnica de SQL Server (SSIS, SSRS, motor de base de datos, instalación)|
+|*|Herramientas y utilidades de Azure SQL Database | Herramientas de SQL Server|
+|*|Referencia de Transact-SQL (motor de base de datos) | Referencia de Transact-SQL|
+|*|Referencia del lenguaje XQuery (SQL Server) | Referencia del lenguaje XQuery (SQL Server)|
 
 > [!NOTE]
 > Si el Visor de Ayuda se bloquea al agregar contenido, cambie la línea Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" en los archivos %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings a una fecha en el futuro. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio)(El Visor de Ayuda de Visual Studio se bloquea).
@@ -176,7 +183,7 @@ La ayuda en línea siempre mostrará el contenido más actualizado.
 
 **Para ver ayuda en línea de SQL Server en SSMS 17.x**
 
-- Haga clic en **Ver ayuda** en el menú **Ayuda**. La documentación de SQL Server 2016 y 2017 más reciente de [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) se muestra en un explorador. 
+- Haga clic en **Ver ayuda** en el menú **Ayuda**. La documentación de SQL Server 2016 y 2017 más reciente de [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) se muestra en un explorador. 
 
    ![Ver Ayuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -195,7 +202,7 @@ La ayuda en línea siempre mostrará el contenido más actualizado.
 3. Haga clic en **I want to use online help** (Usar ayuda en línea), en **Aceptar** y luego en **Salir**.  
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
-   
+
 4. Abra el Visor de Ayuda para ver el contenido al hacer clic en **Ver Ayuda** en el menú **Ayuda**. 
 
 ## <a name="view-f1-help"></a>Ver la Ayuda de F1
@@ -204,28 +211,27 @@ Al presionar F1 o al hacer clic en **Ayuda** o en el icono **?** de un cuadro de
 
 **Para ver la ayuda de F1**
 
-1. Seleccione **Establecer preferencias de la Ayuda** en el menú Ayuda y seleccione **Iniciar en el explorador** o **Iniciar en el Visor de Ayuda**. 
-2. Presione F1 o haga clic en **Ayuda** o en **?** en los cuadros de diálogo en los que estén disponibles para ver temas en línea contextuales en el entorno elegido.
+1. Seleccione **Establecer preferencias de la Ayuda** en el menú Ayuda y seleccione **Iniciar en el explorador** o **Iniciar en el Visor de Ayuda**.
+2. Presione F1, o bien haga clic en **Ayuda** o en **?**. en los cuadros de diálogo en los que estén disponibles para ver temas en línea contextuales en el entorno elegido.
 
 > [!NOTE]
->  La ayuda de F1 solo funciona cuando está conectado a Internet. No hay ningún origen sin conexión para la ayuda de F1. 
+> La ayuda de F1 solo funciona cuando está conectado a Internet. No hay ningún origen sin conexión para la ayuda de F1.
 
 ## <a name="systems-without-internet-access"></a>Sistemas sin acceso a Internet
-Una vez que ha seguido los [pasos mencionados anteriormente](#use-help-viewer-v2x) para descargar el contenido sin conexión con el Visor de Ayuda de SQL Server a un sistema que tiene acceso a Internet, podrá migrar ese contenido a un sistema sin acceso a Internet. Puede hacerlo mediante los pasos siguientes. 
+Después de descargar los libros sin conexión en un sistema que tenga acceso a Internet, siga este procedimiento para migrar el contenido a un sistema que no tenga conexión a Internet.
 
   >[!NOTE]
-  >En el sistema sin conexión tendrá que instalar software compatible con el Visor de ayuda, como SQL Server Management Studio. 
+  >En el sistema sin conexión tendrá que instalar software compatible con el Visor de ayuda, como SQL Server Management Studio.
 
 1. Abra el Visor de ayuda (Ctrl + Alt + F1).
-1. Seleccione la documentación que le interese. Por ejemplo, filtre por SQL y seleccione la documentación técnica de SQL Server. 
+1. Seleccione la documentación que le interese. Por ejemplo, filtre por SQL y seleccione la documentación técnica de SQL Server.
 1. Identifique la ruta de acceso física de los archivos en disco, que se puede encontrar en **Ruta de acceso del almacén local**.
-1. Vaya hasta esta ubicación mediante el explorador del sistema de archivos. 
+1. Vaya hasta esta ubicación mediante el explorador del sistema de archivos.
     1.  La ubicación predeterminada es `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
-1. Seleccione las tres carpetas (**ContentStore**, **Incoming**, **IndexStore**) y cópielas en la misma ubicación en el sistema sin conexión. Es posible que tenga que usar un dispositivo de medios provisional, como un CD o USB. 
+1. Seleccione las tres carpetas (**ContentStore**, **Incoming**, **IndexStore**) y cópielas en la misma ubicación en el sistema sin conexión. Es posible que tenga que usar un dispositivo de medios provisional, como un CD o USB.
 1. Una vez que se hayan movido estos archivos, inicie el Visor de ayuda en el sistema sin conexión y la documentación técnica de SQL Server estará disponible.
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
-   
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Visor de Ayuda de Microsoft (Visual Studio)](/visualstudio/ide/microsoft-help-viewer)  

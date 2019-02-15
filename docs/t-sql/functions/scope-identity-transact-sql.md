@@ -18,15 +18,15 @@ helpviewer_keywords:
 - last-inserted identity values
 - identity values [SQL Server], last-inserted
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7daf2ac60021e75b98403dc5b2b1ef4098507a5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83d1ad7e793e7072345ad0b4ada34162d039ed45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746183"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033036"
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-Conjunto de resultados: este es el aspecto de la tabla TZ.  
+Conjunto de resultados: Esta es la apariencia de la tabla TZ.  
   
 ```  
 Z_id   Z_name  
@@ -93,7 +93,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-Conjunto de resultados: este es el aspecto de TY.  
+Conjunto de resultados: Esta es la apariencia de TY:  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -133,7 +133,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Uso de @@IDENTITY y SCOPE_IDENTITY() con una replicación  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>b. Uso de @@IDENTITY y SCOPE_IDENTITY() con una replicación  
  Los ejemplos siguientes muestran cómo se usan `@@IDENTITY` y `SCOPE_IDENTITY()` para las inserciones en una base de datos publicada para la replicación de mezcla. Las dos tablas de los ejemplos se encuentran en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]: `Person.ContactType` no está publicado y `Sales.Customer` sí. La replicación de mezcla agrega desencadenadores a las tablas publicadas. Por lo tanto, `@@IDENTITY` puede devolver el valor de la inserción en una tabla de sistema de replicación en lugar de la inserción en una tabla de usuario.  
   
  La tabla `Person.ContactType` tiene un valor de identidad máximo de 20. Si inserta una fila en la tabla, `@@IDENTITY` y `SCOPE_IDENTITY()` devolverán el mismo valor.  
@@ -176,7 +176,7 @@ GO
  89
  ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   

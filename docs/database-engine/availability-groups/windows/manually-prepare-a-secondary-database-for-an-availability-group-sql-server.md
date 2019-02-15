@@ -19,12 +19,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209304"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832087"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparación de una base de datos secundaria para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -194,36 +194,36 @@ En este tema se describe cómo preparar una base de datos de un grupo de disponi
         GO  
         ```  
   
-5.  Una vez restaurada la copia de seguridad completa, debe crearse una copia de seguridad del registro en la base de datos principal. Por ejemplo, la siguiente instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] realiza una copia de seguridad del registro en un archivo de copia de seguridad denominado *E:\MyDB1_log.bak*:  
+5.  Una vez restaurada la copia de seguridad completa, debe crearse una copia de seguridad del registro en la base de datos principal. Por ejemplo, la siguiente instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] realiza una copia de seguridad del registro en un archivo de copia de seguridad denominado *E:\MyDB1_log.trn*:  
   
     ```  
     BACKUP LOG MyDB1   
-      TO DISK = 'E:\MyDB1_log.bak'   
+      TO DISK = 'E:\MyDB1_log.trn'   
     GO  
     ```  
   
 6.  Para poder unir la base de datos a la réplica secundaria, se debe aplicar la copia de seguridad de registros obligatoria (y las copias de seguridad de registros subsiguientes).  
   
-     Por ejemplo, la siguiente instrucción de [!INCLUDE[tsql](../../../includes/tsql-md.md)] restaura el primer registro de *C:\MyDB1.bak*:  
+     Por ejemplo, la siguiente instrucción de [!INCLUDE[tsql](../../../includes/tsql-md.md)] restaura el primer registro de *C:\MyDB1.trn*:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=1, NORECOVERY  
     GO  
     ```  
   
 7.  Si las copias de seguridad del registro adicionales se producen antes de que la base de datos se una a la réplica secundaria, también debe restaurar todas las copias de seguridad del registro, de forma secuencial, a la instancia del servidor que hospeda la réplica secundaria mediante RESTORE WITH NORECOVERY.  
   
-     Por ejemplo, la siguiente instrucción de [!INCLUDE[tsql](../../../includes/tsql-md.md)] restaura dos registros adicionales de *E:\MyDB1_log.bak*:  
+     Por ejemplo, la siguiente instrucción de [!INCLUDE[tsql](../../../includes/tsql-md.md)] restaura dos registros adicionales de *E:\MyDB1_log.trn*:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=2, NORECOVERY  
     GO  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=3, NORECOVERY  
     GO  
     ```  

@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732032"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889986"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,12 @@ Cuando se ejecuta una sesión de eventos extendidos que usa el evento *query_thr
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 incluye una versión revisada de la generación de perfiles ligera con sobrecarga mínima. La generación de perfiles ligera también puede habilitarse de forma global mediante la [marca de seguimiento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para las versiones indicadas anteriormente en *Se aplica a*. Se ha incorporado una nueva DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) para devolver el plan de ejecución de consultas de las solicitudes en curso.
 
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, si la generación de perfiles ligera no está habilitada de forma global, se puede usar el nuevo argumento de [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **QUERY_PLAN_PROFILE** para habilitarla en el nivel de consulta y para cualquier sesión. Cuando una consulta que contiene esta nueva sugerencia finaliza, también se devuelve un nuevo evento extendido ***query_plan_profile*** que proporciona un archivo XML de plan de ejecución real similar al evento extendido *query_post_execution_showplan*. Se puede configurar una sesión de ejemplo con este evento extendido como en el ejemplo siguiente:
+A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, si la generación de perfiles ligera no está habilitada de forma global, se puede usar el nuevo argumento de [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **QUERY_PLAN_PROFILE** para habilitarla en el nivel de consulta y para cualquier sesión. Cuando una consulta que contiene esta nueva sugerencia finaliza, también se devuelve un nuevo evento extendido ***query_plan_profile*** que proporciona un archivo XML de plan de ejecución real similar al evento extendido *query_post_execution_showplan*. 
+
+> [!NOTE]
+> El evento ampliado *query_plan_profile* también usa la generación de perfiles ligera, incluso si no se usa la sugerencia de consulta. 
+
+Se puede configurar una sesión de ejemplo que use el evento ampliado *query_plan_profile*, como en el ejemplo siguiente:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER

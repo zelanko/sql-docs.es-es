@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0a4fd0f249d65708c316a7cb5ada0b582bebf8d
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535591"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760088"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funciones escalares de ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,15 +69,15 @@ ms.locfileid: "52535591"
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## <a name="functions"></a>Funciones  
- Las tablas siguientes enumeran las funciones escalares de ODBC que no se duplican en [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ En las tablas siguientes se muestra una lista de las funciones escalares de ODBC que no se duplican en [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ### <a name="string-functions"></a>Funciones de cadena  
   
 |Función|Descripción|  
 |--------------|-----------------|  
-|BIT_LENGTH( string_exp ) (ODBC 3.0)|Devuelve la longitud en bits de la expresión de cadena.<br /><br /> No funciona únicamente para los tipos de datos de cadena. Por consiguiente, no convertirá implícitamente string_exp en una cadena sino que, en su lugar, devolverá el tamaño (interno) del tipo de datos que se proporcione.|  
+|BIT_LENGTH( string_exp ) (ODBC 3.0)|Devuelve la longitud en bits de la expresión de cadena.<br /><br /> Devuelve el tamaño interno del tipo de datos especificado, sin convertir a una cadena string_exp.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Devuelve una cadena de caracteres que es el resultado de concatenar string_exp2 con string_exp1. La cadena resultante es dependiente de DBMS. Por ejemplo, si la columna representada por string_exp1 contenía un valor NULL, DB2 devolvería NULL, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolvería la cadena distinta de NULL.|  
-|OCTET_LENGTH( string_exp ) (ODBC 3.0)|Devuelve la longitud en bytes de la expresión de cadena. El resultado es el entero más pequeño que no es inferior al número de bits dividido por 8.<br /><br /> No funciona únicamente para los tipos de datos de cadena. Por consiguiente, no convertirá implícitamente string_exp en una cadena sino que, en su lugar, devolverá el tamaño (interno) del tipo de datos que se proporcione.|  
+|OCTET_LENGTH( string_exp ) (ODBC 3.0)|Devuelve la longitud en bytes de la expresión de cadena. El resultado es el entero más pequeño que no es inferior al número de bits dividido por 8.<br /><br /> Devuelve el tamaño interno del tipo de datos especificado, sin convertir a una cadena string_exp.|  
   
 ### <a name="numeric-function"></a>Función numéricas  
   
@@ -93,15 +93,15 @@ ms.locfileid: "52535591"
 |CURDATE( ) (ODBC 3.0)|Devuelve la fecha actual.|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|Devuelve la hora local actual. El argumento de precisión de la hora determina la precisión en segundos del valor devuelto|  
 |CURTIME() (ODBC 3.0)|Devuelve la hora local actual.|  
-|DAYNAME( date_exp ) (ODBC 2.0)|Devuelve una cadena de caracteres que contiene el nombre específico del origen de datos del día (por ejemplo, Sunday a Saturday o Sun. a Sat. para un origen de datos que utiliza inglés, o bien Sonntag a Samstag para un origen de datos que utiliza alemán) para la parte del día de date_exp.|  
-|DAYOFMONTH( date_exp ) (ODBC 1.0)|Devuelve el día del mes basado en el campo de mes en date_exp como un valor entero en el intervalo de 1-31.|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|Devuelve el día de la semana basado en el campo de semana en date_exp como un valor entero en el intervalo de 1-7, donde 1 representa el domingo.|  
+|DAYNAME( date_exp ) (ODBC 2.0)|Devuelve una cadena de caracteres que contiene el nombre específico del origen de datos del día para la parte del día de date_exp. Por ejemplo, el nombre es Sunday a Saturday o Sun. a Sat. para un origen de datos que use el idioma inglés. El nombre será Domingo a sábado para un origen de datos que use el idioma español.|
+|DAYOFMONTH( date_exp ) (ODBC 1.0)|Devuelve el día del mes basado en el campo de mes en date_exp como un valor entero. El valor devuelto se encuentra en el intervalo de 1-31.|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|Devuelve el día de la semana basándose en el campo de semana de date_exp como un valor entero. El valor devuelto se encuentra en el intervalo de 1-7, donde 1 representa el domingo.|  
 |HOUR( time_exp ) (ODBC 1.0)|Devuelve la hora basada en el campo de hora en time_exp como un valor entero en el intervalo de 0-23.|  
 |MINUTE( time_exp ) (ODBC 1.0)|Devuelve los minutos basados en el campo de minutos en time_exp como un valor entero en el intervalo de 0-59.|  
 |SECOND( time_exp ) (ODBC 1.0)|Devuelve los segundos basados en el campo de segundos en time_exp como un valor entero en el intervalo de 0-59.|  
-|MONTHNAME( date_exp ) (ODBC 2.0)|Devuelve una cadena de caracteres que contiene el nombre específico del origen de datos del mes (por ejemplo, January a December o Jan. a Dec. para un origen de datos que utiliza inglés, o bien Januar a Dezember para un origen de datos que utiliza alemán) para la parte del mes de date_exp.|  
+|MONTHNAME( date_exp ) (ODBC 2.0)|Devuelve una cadena de caracteres que contiene el nombre específico del origen de datos del mes para la parte del mes de date_exp. Por ejemplo, el nombre es January a December o Jan. a Dec. para un origen de datos que use el idioma inglés. El nombre es "Enero a diciembre" para un origen de datos que use el idioma español.|  
 |QUARTER( date_exp ) (ODBC 1.0)|Devuelve el trimestre en date_exp como un valor entero en el intervalo de 1-4, donde 1 representa el trimestre del 1 de enero al 31 de marzo.|  
-|WEEK( date_exp ) (ODBC 1.0)|Devuelve la semana del año basado en el campo de semana en date_exp como un valor entero en el intervalo de 1-53.|  
+|WEEK( date_exp ) (ODBC 1.0)|Devuelve la semana del año basándose en el campo de semana en date_exp como un valor entero en el intervalo de 1-53.|  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -117,7 +117,7 @@ AS
 SELECT {fn OCTET_LENGTH( @string_exp )};  
 ```  
   
-### <a name="b-using-an-odbc-function-in-a-user-defined-function"></a>B. Utilizar una función ODBC en una función definida por el usuario  
+### <a name="b-using-an-odbc-function-in-a-user-defined-function"></a>b. Utilizar una función ODBC en una función definida por el usuario  
  El siguiente ejemplo utiliza una función ODBC en una función definida por el usuario:  
   
 ```  
@@ -249,10 +249,6 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
-  
-
-
-

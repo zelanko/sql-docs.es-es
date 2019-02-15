@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6aae15d10385a3668a247db8482615d0510155b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616865"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026216"
 ---
 # <a name="create-a-composite-domain"></a>Crear un dominio compuesto
 
@@ -83,17 +83,17 @@ ms.locfileid: "52616865"
   
 4.  En **Método de análisis**, seleccione una de las opciones siguientes:  
   
-    -   **Datos de referencia**: analiza los valores del campo en función del formato que Reference Data Service (RDS) haya dado a los datos de referencia. Data Quality Services enviará los valores del dominio compuesto a RDS, y RDS devuelve datos corregidos y analizados en función del dominio compuesto.  
+    -   **Datos de referencia**: analiza los valores del campo en función del formato que el servicio de datos de referencia (RDS) haya aplicado a los datos de referencia. Data Quality Services enviará los valores del dominio compuesto a RDS, y RDS devuelve datos corregidos y analizados en función del dominio compuesto.  
   
     -   **En orden**: analiza los valores de los campos según el orden que tienen los dominios en el dominio compuesto. El primer valor se incluirá en el primer dominio, el segundo valor en el segundo dominio, y así sucesivamente.  
   
-    -   **Delimitadores**: analiza los valores del campo según el delimitador seleccionado en los botones de opción que se muestran cuando se selecciona Delimitadores. Pueden ser **Carácter de tabulación**, **Punto y coma**, **Coma**, **Espacio**u **Otros**. Si selecciona **Otros**, escriba el valor que servirá como delimitador.  
+    -   **Delimitadores**: analiza los valores del campo según el delimitador seleccionado en los botones de radio que se muestran cuando se selecciona Delimitadores. Pueden ser **Carácter de tabulación**, **Punto y coma**, **Coma**, **Espacio**u **Otros**. Si selecciona **Otros**, escriba el valor que servirá como delimitador.  
   
 5.  Si selecciona **Delimitadores** como método de análisis, también puede seleccionar **Usar el análisis de bases de conocimiento**. Para obtener más información, consulte [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Seguimiento: después de crear un dominio compuesto  
+##  <a name="FollowUp"></a> Seguimiento: crear un dominio compuesto  
  Una vez creado el dominio compuesto, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

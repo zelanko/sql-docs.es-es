@@ -16,17 +16,17 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: bc02cf0c9076f036bb2b199e4eb0627103e4c03b
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072239"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807455"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Convierte un valor *inputdate* en el valor *datetimeoffset* correspondiente en la zona horaria de destino. Si *inputdate* se proporciona sin información de desplazamiento, la función aplica el desplazamiento de la zona horaria, suponiendo que el valor *inputdate* se proporciona en la zona horaria de destino. Si *inputdate* se proporciona como un valor *datetimeoffset*, la cláusula **AT TIME ZONE** lo convierte en la zona horaria de destino mediante las reglas de conversión de zona horaria.  
+  Convierte un valor *inputdate* en el valor *datetimeoffset* correspondiente en la zona horaria de destino. Si *inputdate* se proporciona sin información de desplazamiento, la función aplica el desplazamiento de la zona horaria, suponiendo que el valor *inputdate* se proporcione en la zona horaria de destino. Si *inputdate* se proporciona como un valor *datetimeoffset*, la cláusula **AT TIME ZONE** lo convierte en la zona horaria de destino mediante las reglas de conversión de zona horaria.  
   
  La implementación de **AT TIME ZONE** se basa en un mecanismo de Windows para convertir valores **datetime** entre zonas horarias.  
   
@@ -43,7 +43,7 @@ inputdate AT TIME ZONE timezone
  Es una expresión que se puede resolver en un valor **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset**.  
   
  *timezone*  
- Nombre de la zona horaria de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se basa en las zonas horarias almacenadas en el Registro de Windows. Todas las zonas horarias instaladas en el equipo se almacenan en el siguiente subárbol del Registro: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. También se puede exponer una lista de las zonas horarias instaladas a través de la vista [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
+ Nombre de la zona horaria de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se basa en las zonas horarias almacenadas en el Registro de Windows. Las zonas horarias instaladas en el equipo se almacenan en el siguiente subárbol del Registro: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. También se puede exponer una lista de las zonas horarias instaladas a través de la vista [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Devuelve el tipo de datos de **datetimeoffset**.  
@@ -52,9 +52,9 @@ inputdate AT TIME ZONE timezone
  Valor **datetimeoffset** de la zona horaria de destino.  
   
 ## <a name="remarks"></a>Notas  
- **AT TIME ZONE** aplica reglas específicas para la conversión de valores de entrada en tipos de datos **smalldatetime**, **datetime** y **datetime2**, que se encuentran en un intervalo que se ve afectado por el cambio del horario de verano:  
+ **AT TIME ZONE** aplica reglas específicas para la conversión de valores de entrada en tipos de datos **smalldatetime**, **datetime** y **datetime2**, que se encuentran en un intervalo afectado por el cambio del horario de verano:  
   
--   Cuando el reloj está adelantado, hay una diferencia en la hora local cuya duración depende de la duración del ajuste del reloj (normalmente una hora, pero pueden ser 30 o 45 minutos, según la zona horaria). En ese caso, los momentos que coinciden con este intervalo se convierten con el desplazamiento *después* del cambio del horario de verano.  
+-   Cuando los relojes están adelantados, hay un desfase en la hora local igual a la duración del ajuste de reloj. La duración suele ser de 1 hora, pero también puede ser de 30 o 45 minutos, según la zona horaria. Los puntos en tiempo que están en este desfase se convierten con el desplazamiento *después* del cambio del horario de verano.  
   
     ```  
     /*  
@@ -133,7 +133,7 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>B. Convertir valores entre zonas horarias diferentes  
+### <a name="b-convert-values-between-different-time-zones"></a>b. Convertir valores entre zonas horarias diferentes  
  En el ejemplo siguiente se convierten valores entre zonas horarias diferentes:  
   
 ```  
@@ -166,8 +166,7 @@ FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tipos de fecha y hora](../../t-sql/data-types/date-and-time-types.md)   
  [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

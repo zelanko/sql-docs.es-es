@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f97176e1600ca741ddc20eed03aed639c945c76
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616435"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024596"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acceso a datos para las operaciones de DQS
 
@@ -44,11 +44,11 @@ ms.locfileid: "52616435"
   
 4.  En el cuadro de diálogo **Propiedades de inicio de sesión** , haga clic en la página **Asignación de usuarios** en el panel izquierdo.  
   
-5.  En el panel derecho, seleccione la casilla en la columna **Asignar** para la base de datos **DQS_STAGING_DATA** y, después, seleccione los siguientes roles en el panel **Pertenencia al rol de base de datos para: DQS_STAGING_DATA** :  
+5.  En el panel derecho, active la casilla de la columna **Asignar** para la base de datos **DQS_STAGING_DATA** y, después, seleccione los siguientes roles en el panel **Pertenencia al rol de la base de datos para: Panel DQS_STAGING_DATA**:  
   
-    -   **db_datareader**: leer datos de las tablas y de las vistas.  
+    -   **db_datareader**: leer datos de tablas o vistas.  
   
-    -   **db_datawriter**: agregar, eliminar o cambiar los datos de las tablas.  
+    -   **db_datawriter**: agregar, eliminar o cambiar datos en tablas.  
   
     -   **db_ddladmin**: crear, modificar o eliminar las tablas o vistas.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "52616435"
 ## <a name="next-steps"></a>Next Steps  
  Intente realizar operaciones de DQS que obtengan acceso a la base de datos como origen de datos para la operación de DQS, y después exporte los datos procesados a la base de datos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

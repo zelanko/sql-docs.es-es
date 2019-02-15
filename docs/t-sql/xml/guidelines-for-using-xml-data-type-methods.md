@@ -3,7 +3,6 @@ title: Directrices para usar los métodos del tipo de datos xml | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5639083c4e1491adeaa78ec090c660e2faaa6c39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e1471792a30cfccfe0e19f878929dc74bc8775
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643893"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022886"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Directrices para utilizar los métodos del tipo de datos xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
   
  Es importante ser consciente de la diferencia entre //first-name[1] y (//first-name)[1] para la comprobación de tipos. La primera expresión devuelve una secuencia de nodos \<first-name> en la que cada nodo es el nodo \<first-name> que está más a la izquierda entre los de su mismo nivel. La última expresión devuelve el primer nodo singleton \<first-name> por orden de los documentos en la instancia XML.  
   
-### <a name="example-using-value"></a>Ejemplo: utilizar value()  
+### <a name="example-using-value"></a>Ejemplo: uso de value()  
  La siguiente consulta en una columna XML sin tipo da como resultado un error de compilación estático. Esto se debe a que **value()** espera un nodo singleton como primer argumento y el compilador no puede determinar si solo va a aparecer un nodo \<last-name> en tiempo de ejecución:  
   
 ```  
@@ -104,7 +103,7 @@ FROM   T
   
  Esta consulta devuelve el valor del primer elemento `<last-name>` de cada instancia XML.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)  
   
   

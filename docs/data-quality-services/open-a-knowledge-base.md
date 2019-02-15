@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e724810a6626a15b9a2a81cfce9354c126680366
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 937e7258777e1ce4f3a147e099252d95de23997d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617795"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027176"
 ---
 # <a name="open-a-knowledge-base"></a>Abrir una base de conocimiento
 
@@ -81,20 +81,20 @@ ms.locfileid: "52617795"
 ##  <a name="State"></a> Estado de una base de conocimiento  
  El campo Estado indica en qué fase de una actividad se encuentra la base de conocimiento. Si abre la base de conocimiento, se abrirá en esa fase.  
   
--   **\<Vacío>**: el campo Estado aparece vacío para una base de conocimiento que se ha publicado al hacer clic en **Publicar** en la actividad Administración de dominios y, después, en **Sí - Publicar la base de conocimiento y salir**.  
+-   **\<Vacío>**: el campo Estado aparece vacío para una base de conocimiento que se ha publicado al hacer clic en **Publicar** en la actividad Administración de dominios y seleccionar **Sí: publicar la base de conocimiento y salir**.  
   
--   **Trabajando**: el trabajo realizado en la base de conocimiento se ha guardado al hacer clic en **Publicar** en la actividad Administración de dominios y, después, en **No - Guardar el trabajo en la base de conocimiento y salir**.  
+-   **Trabajando**: el trabajo realizado en la base de conocimiento se ha guardado al hacer clic en **Publicar** en la actividad Administración de dominios y, después, en **No: guardar el trabajo en la base de conocimiento y salir**.  
   
 -   **Administración de dominios**: se han especificado datos para un dominio de la base de conocimiento, pero esta no se ha publicado y el trabajo permanece en la actividad Administración de dominios. La actividad Detección de conocimiento no está disponible. Esto sucede si se hace clic en **Cerrar** en la pantalla **Administración de dominios** .  
   
--   **Detección de conocimiento: asignar**: la base de conocimiento se cerró en la página **Administración de la base de conocimiento: Asignación** . La base de conocimiento está bloqueada y las actividades de administración de dominios y búsqueda de coincidencias no están disponibles.  
+-   **Detección (asignación)**: la base de conocimiento se ha cerrado en la página **Administración de la base de conocimiento: asignación**. La base de conocimiento está bloqueada y las actividades de administración de dominios y búsqueda de coincidencias no están disponibles.  
   
--   **Detección de conocimiento: detectar**: la base de conocimiento se cerró en la página **Administración de la base de conocimiento: Detectar** . La base de conocimiento está bloqueada y la actividad Administración de dominios no está disponible.  
+-   **Detección (detección)**: la base de conocimiento se ha cerrado en la página **Administración de la base de conocimiento: analizar**. La base de conocimiento está bloqueada y la actividad Administración de dominios no está disponible.  
   
--   **Detección de conocimiento: administrar valores del dominio**: la base de datos se cerró en la página **Administración de la base de conocimiento: Administrar valores del dominio**. La base de conocimiento está bloqueada y la actividad Administración de dominios no está disponible.  
+-   **Detección (administración de valores)**: la base de conocimiento se ha cerrado en la página **Administración de la base de conocimiento: administrar términos de dominio**. La base de conocimiento está bloqueada y la actividad Administración de dominios no está disponible.  
   
--   **Directiva de coincidencia: directiva de coincidencia**: la base de conocimiento se cerró en la página **Directiva de coincidencia: directiva de coincidencia**. La base de conocimiento está bloqueada y las actividades de detección de conocimiento y administración de dominios no están disponibles.  
+-   **Directiva de coincidencia (directiva de coincidencia)**: la base de conocimiento se ha cerrado en la página **Directiva de coincidencia: directiva de coincidencia**. La base de conocimiento está bloqueada y las actividades de detección de conocimiento y administración de dominios no están disponibles.  
   
--   **Directiva de coincidencia: resultados**: la base de conocimiento se cerró en la página de **Directiva de coincidencia: resultados**. La base de conocimiento está bloqueada y las actividades de detección de conocimiento y administración de dominios no están disponibles.  
+-   **Directiva de coincidencia (directiva de coincidencia)**: la base de conocimiento se ha cerrado en la página **Directiva de coincidencia: resultados coincidentes**. La base de conocimiento está bloqueada y las actividades de detección de conocimiento y administración de dominios no están disponibles.  
   
   

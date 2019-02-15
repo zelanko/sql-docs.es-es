@@ -18,17 +18,17 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3706237fdd673e4bcf42fbcc5e611e094fd1ebf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3177340b6944da812c93075f6b2fd5561192f33
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805623"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807425"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve una aproximación de la instancia de **geometry** especificada que se genera al ejecutar una extensión del algoritmo de Douglas-Peucker en la instancia con la tolerancia indicada.
+Devuelve una aproximación de la instancia de **geometry** especificada. La aproximación se produce al ejecutar una extensión del algoritmo de Douglas-Peucker en la instancia con la tolerancia especificada.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,13 +51,13 @@ Devuelve una aproximación de la instancia de **geometry** especificada que se g
   
  Este algoritmo no modifica las instancias de **Point**.  
   
- En las instancias de **LineString**, **CircularString** y **CompoundCurve**, el algoritmo de aproximación conserva los puntos iniciales y finales originales de la instancia y va agregando el punto de la instancia original que más se desvía del resultado hasta que ningún punto se desvíe más que la tolerancia especificada.  
+ En las instancias **LineString**, **CircularString** y **CompoundCurve**, el algoritmo de aproximación mantiene los puntos iniciales y finales originales de la instancia. El algoritmo "next" vuelve a agregar de forma iterativa el punto desde la instancia original que se más desvíe del resultado. El proceso continúa hasta que ningún punto se desvía más de la tolerancia especificada.  
   
  `Reduce()` devuelve una instancia de **LineString**, **CircularString** o **CompoundCurve** para las instancias de **CircularString**.  `Reduce()` devuelve una instancia de **CompoundCurve** o **LineString** para las instancias de **CompoundCurve**.  
   
  En las instancias de **Polygon**, el algoritmo de aproximación se aplica independientemente a cada anillo. El método generará una excepción `FormatException` si la instancia de **Polygon** devuelta no es válida; por ejemplo, se crea una instancia de **MultiPolygon** no válida si se aplica `Reduce()` para simplificar cada anillo de la instancia y los anillos resultantes se superponen.  En las instancias de **CurvePolygon** con un anillo exterior y sin anillos interiores, `Reduce()` devuelve una instancia de **CurvePolygon**, **LineString** o **Point**.  Si **CurvePolygon** tiene anillos interiores, se devuelve una instancia de **CurvePolygon** o **MultiPoint**.  
   
- Cuando se detecta un segmento de arco circular, el algoritmo de aproximación comprueba si se puede aproximar al arco su cuerda en la mitad de la tolerancia indicada.  Si la cuerda satisface este criterio, la cuerda reemplaza el arco circular en los cálculos. Si no satisface este criterio, se conserva el arco circular y se aplica el algoritmo de aproximación a los segmentos restantes.  
+ Cuando se detecta un segmento de arco circular, el algoritmo de aproximación comprueba si se puede aproximar al arco su cuerda en la mitad de la tolerancia indicada. En las cuerdas que cumplen estos criterios, el arco circular se reemplaza en los cálculos por la cuerda. Si una cuerda no satisface este criterio, se conserva el arco circular y se aplica el algoritmo de aproximación a los segmentos restantes.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -70,7 +70,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0, 2 1, 3 0, 4 1)', 0)
 SELECT @g.Reduce(.75).ToString();  
 ```  
   
-### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. Usar Reduce() con niveles de tolerancia que varían en CircularString  
+### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>b. Usar Reduce() con niveles de tolerancia que varían en CircularString  
  En el ejemplo siguiente se usa `Reduce()` con tres niveles de tolerancia en una instancia de **CircularString**:  
   
 ```
@@ -102,7 +102,7 @@ SELECT @g.Reduce(.75).ToString();
  En este ejemplo, observe que la segunda instrucción **SELECT** devuelve la instancia de **LineString**: `LineString(0 0, 16 0)`.  
   
 ### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>Mostrar un ejemplo en el que se pierdan los puntos inicial y final originales  
- En el siguiente ejemplo se muestra cómo la instancia resultante no conserva los puntos inicial y final originales. Esto se produce porque si se conservan los puntos inicial y final originales, el resultado sería una instancia de **LineString** no válida.  
+ En el ejemplo siguiente, se muestra cómo la instancia resultante no conserva los puntos inicial y final originales. Este comportamiento se produce porque, si se conservan los puntos inicial y final originales, el resultado sería una instancia de **LineString** no válida.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  
@@ -111,8 +111,6 @@ SELECT @g.STIsValid() AS Valid
 SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geometría estáticos ampliados](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
-  
-

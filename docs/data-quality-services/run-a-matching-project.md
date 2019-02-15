@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617955"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015436"
 ---
 # <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
 
@@ -45,7 +45,7 @@ ms.locfileid: "52617955"
 ####  <a name="Permissions"></a> Permissions  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para ejecutar un proyecto de búsqueda de coincidencias.  
   
-##  <a name="StartingaMatchingProject"></a> Primer paso: iniciar un proyecto de búsqueda de coincidencias  
+##  <a name="StartingaMatchingProject"></a> Primer paso: Iniciar un proyecto de búsqueda de coincidencias  
  Realizará la actividad de búsqueda de coincidencias en un proyecto de calidad de datos que creará en la aplicación cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -111,7 +111,7 @@ ms.locfileid: "52617955"
   
  La permanencia es opcional. Puede exportar los resultados sin ejecutar la permanencia, en cuyo caso DQS utilizará el registro dinámico que designó en el análisis de coincidencia. Si dos o más registros de un clúster cumplen la regla de permanencia, el proceso de permanencia seleccionará como el registro que permanece aquel cuyo identificador de registro sea más bajo. Puede exportar los registros que permanecen a varios archivos o tablas usando reglas de permanencia diferentes.  
   
-1.  En la página **Exportar** , seleccione el destino al que desea exportar los datos coincidentes en **Tipo de destino**: **SQL Server**, **Archivo CSV**o **Archivo de Excel**.  
+1.  En la página **Exportar**, seleccione el destino al que quiera exportar los datos coincidentes en **Tipo de destino**: **SQL Server**, **Archivo CSV** o **Archivo de Excel**.  
   
     > [!IMPORTANT]  
     >  Si utiliza la versión de 64 bits de Excel, no puede exportar los datos coincidentes en un archivo de Excel; puede exportar únicamente a una base de datos de SQL Server o un archivo .csv.  
@@ -168,7 +168,7 @@ ms.locfileid: "52617955"
     > [!NOTE]  
     >  Si finaliza un proyecto de búsqueda de coincidencias y, más adelante, lo vuelve a utilizar, este usará la base de conocimiento que tenía cuando se publicó. No usará ninguno de los cambios realizados en la base de conocimiento desde la finalización del proyecto. Para utilizar estos cambios, o para utilizar una base de conocimiento nueva, tendrá que crear un proyecto de búsqueda de coincidencias nuevo. Por otro lado, si ha creado, pero no finalizado, un proyecto de búsqueda de coincidencias, los cambios que haya publicado en la directiva de coincidencia se utilizarán si ejecuta la búsqueda de coincidencias en el proyecto.  
   
-##  <a name="FollowUp"></a> Seguimiento: después de ejecutar un proyecto de búsqueda de coincidencias  
+##  <a name="FollowUp"></a> Seguimiento: ejecutar un proyecto de búsqueda de coincidencias  
  Después de ejecutar un proyecto de búsqueda de coincidencias, puede cambiar la directiva de coincidencia en la base de conocimiento y crear y ejecutar otro proyecto de búsqueda de coincidencias basado en la directiva de coincidencia actualizada. Para obtener más información, consulte [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Pestañas Generador de perfiles y Resultados  
@@ -179,27 +179,27 @@ ms.locfileid: "52617955"
   
  Las estadísticas de la base de datos de origen incluyen:  
   
--   **Registros**: el número total de registros existentes en la base de datos  
+-   **Registros**: El número total de registros existentes en la base de datos  
   
--   **Valores totales**: el número total de valores existentes en los campos  
+-   **Valores totales**: número total de valores existentes en los campos.  
   
--   **Nuevos valores**: el número total de valores que son nuevos desde la ejecución anterior y su porcentaje del total  
+-   **Nuevos valores**: número total de valores que son nuevos desde la ejecución anterior y su porcentaje del total.  
   
--   **Valores únicos**: el número total de valores únicos existentes en los campos y su porcentaje del total  
+-   **Valores únicos**: número total de valores únicos existentes en los campos y su porcentaje del total.  
   
--   **Nuevos valores únicos**: el número total de valores únicos que son nuevos en los campos y su porcentaje del total  
+-   **Nuevos valores únicos**: número total de valores únicos que son nuevos en los campos y su porcentaje del total.  
   
  Las estadísticas del campo incluyen las siguientes:  
   
--   **Campo**: nombre del campo incluido en las asignaciones  
+-   **Campo**: nombre del campo incluido en las asignaciones.  
   
--   **Dominio**: nombre del dominio asignado al campo  
+-   **Dominio**: nombre del dominio asignado al campo.  
   
--   **Nuevo**: el número de nuevas coincidencias encontradas y su porcentaje del total  
+-   **Nuevo**: número de nuevas coincidencias encontradas y su porcentaje del total.  
   
--   **Único**: el número de registros únicos del campo y su porcentaje sobre el total  
+-   **Único**: número de registros únicos del campo y su porcentaje sobre el total.  
   
--   **Integridad**: el porcentaje de la regla que se ha ejecutado  
+-   **Integridad**: porcentaje de la regla que se ha completado.  
   
 ### <a name="matching-policy-notifications"></a>Notificaciones de directiva de coincidencia  
  En la actividad de directiva de coincidencia, se producen notificaciones cuando se dan las condiciones siguientes:  

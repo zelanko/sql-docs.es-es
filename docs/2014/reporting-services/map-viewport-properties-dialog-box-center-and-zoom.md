@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 883f39c6d7db59fd02aea53096b3502c722dca54
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b29cc14559b1c81646a2285106e04b7380e6a77e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026189"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296273"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Cuadro de diálogo Propiedades de ventanilla de mapa, Centrar y hacer zoom
   Seleccione **Centrar y hacer zoom** en el cuadro de diálogo **Propiedades de ventanilla de mapa** para establecer la vista de centro y el factor de zoom de un mapa. Después de especificar un origen de datos de mapa y los límites del mapa que desee incluir en el informe, puede especificar el centro de la vista y el factor de zoom para controlar más la presentación del mapa. Las opciones cambian en función de qué método se use para especificar los valores del centro y el zoom. Haga clic en el botón **Expresión** (*fx*) para modificar una expresión que establezca el valor de la opción.  

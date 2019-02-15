@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c57ce5992349aa9fe195620b8ac1c1d2b2ba4744
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 13ff0172847968439143edfd322ec895f8b0929c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034206"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298463"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Propiedades del origen de datos (cuadro de diálogo), Credenciales (Generador de informes)
   Seleccione **Credenciales** en el cuadro de diálogo **Propiedades del origen de datos** para mostrar y modificar las credenciales para conectarse a un origen de datos incrustado en el informe. Las credenciales que proporcione se usarán para tener acceso al origen de datos con el fin de obtener una vista previa de los informes. Para obtener más información, vea [Especificar credenciales en el Generador de informes](../../2014/reporting-services/specify-credentials-in-report-builder.md).  

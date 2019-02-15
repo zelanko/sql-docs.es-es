@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ded5827fa476d6d71839d77fd00f56d69e7cd710
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3a52ab0ae1f602af8a5a517bd7946a39a1bf954a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024196"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294049"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Imágenes, cuadros de texto rectángulos y líneas (Generador de informes y SSRS)
   Además de regiones de datos como tablas, matrices y gráficos, los informes usan otros elementos de informe, como imágenes, cuadros de texto y rectángulos, para agregar interés visual, resaltar información clave o proporcionar información relacionada. Puede cambiar el formato de un elemento de informe. Por ejemplo, puede agregar un borde o un relleno, cambiar la visibilidad o la dirección inicial, o especificar una ubicación y un tamaño determinados para el elemento.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 977a7dcb943b3479dd5649cfcf842aefcf469e90
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031856"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285723"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Propiedades del origen de datos (cuadro de diálogo), General (Generador de informes)
   Seleccione **General** en el cuadro de diálogo **Propiedades del origen de datos** para seleccionar un origen de datos compartido desde un servidor de informes o para crear o modificar información de conexión de un origen de datos incrustado en el informe.  

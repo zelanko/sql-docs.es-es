@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.calculatedseriesproperties.formula.f1
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8dd12cb87bdc4c88aca9fe68455a179bcd5896c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 11e035ea7b89e3871253db907f34c620f99bf085
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033666"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295963"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de la serie calculada, General (Generador de informes y SSRS)
   Seleccione **Fórmula** en el cuadro de diálogo **Propiedades de la serie calculada** para agregar o modificar una serie que se calculará en función de fórmulas integradas que usan datos de series existentes como entrada.  

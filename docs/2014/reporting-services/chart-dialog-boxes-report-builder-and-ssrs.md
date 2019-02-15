@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3a62e345-d67f-4387-a7ca-e5c4728a7b16
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 776d52c5e34bb44942fc4dedfee83164f3121166
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a063c20ce3fdb98cc86232bbe1492e7e0c603408
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022106"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296032"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>Cuadros de diálogo de gráficos (Generador de informes y SSRS)
   Esta sección contiene Ayuda para algunos de los cuadros de diálogo correspondientes a los gráficos. También puede abrir la Ayuda presionando F1 o haciendo clic en el botón Ayuda que se muestra en el cuadro de diálogo.  

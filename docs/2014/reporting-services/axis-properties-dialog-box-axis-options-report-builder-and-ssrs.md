@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 690f092b98a76ddd9ccc18d15f4250e7e856efa0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eb65c421d1e79a6bdd625ad627aca841dbc410bc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030656"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286504"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades del eje, Opciones del eje (Generador de informes y SSRS)
   Seleccione **opciones del eje** en el **Horizontal** o **propiedades del eje vertical** cuadro de diálogo para definir la apariencia del eje del gráfico especificado. En versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], el gráfico mostraba todas las etiquetas en el eje X de forma predeterminada. Sin embargo, en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, el gráfico omite las etiquetas para generar una imagen más limpia en el gráfico y evitar las colisiones entre etiquetas. Para más información, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  

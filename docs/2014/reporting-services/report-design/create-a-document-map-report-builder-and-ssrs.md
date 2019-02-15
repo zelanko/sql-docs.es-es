@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e898f33545364b5ad44d4c0cbf281555638ab2e2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026516"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286231"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Crear un mapa del documento (Generador de informes y SSRS)
   Un mapa del documento proporciona un conjunto de vínculos de navegación a los elementos de informe de un informe representado. Cuando se ve un informe que incluya un mapa del documento, aparece un panel lateral separado junto al informe. Un usuario puede hacer clic en los vínculos del mapa del documento para saltar a la página del informe que muestra el elemento. Las secciones y los grupos del informe se organizan en una jerarquía de vínculos. Cada vez que se hace clic en un elemento del mapa del documento, se actualiza el informe y se muestra el área del mismo correspondiente a dicho elemento en el mapa del documento.  

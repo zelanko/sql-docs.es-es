@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 45273aa1bce0e0caec60ce415762f0c52fe67a98
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b46d985a4b43fc55fdbae3fa1012e77e4c2c0316
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010816"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285633"
 ---
 # <a name="reporting-services-query-designers"></a>Diseñadores de consultas de Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona diseñadores de consultas gráfico y basado en texto para ayudarle a crear consultas para cada tipo de origen de datos en el informe.  

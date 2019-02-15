@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Report Wizard
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5e08d75c67bf1f335279dd1dcf3885017342e4ad
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7f481692acf68d84916f11babf10562d0f1d0b9c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041336"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285543"
 ---
 # <a name="report-wizard-help"></a>Ayuda del Asistente para informes
   En esta sección se proporciona Ayuda del Asistente para informes al utilizar la tecla F1. El Asistente para informes automatiza el proceso de creación de informes tabulares y de matriz. En la tabla siguiente se describen los temas de esta sección.  

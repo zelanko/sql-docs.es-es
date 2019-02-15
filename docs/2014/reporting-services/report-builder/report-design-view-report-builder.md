@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d1a9e3264ce3580ec5b1c6d110ce745236accff1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012100"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287023"
 ---
 # <a name="report-design-view-report-builder"></a>Vista de diseño de informe (Generador de informes)
   La ventana del Generador de informes está diseñada para ayudarle a organizar con facilidad sus recursos de informes y a generar rápidamente los informes que necesita. La superficie de diseño está en el centro de la ventana, con la Cinta de opciones arriba y los paneles Datos de informe, Agrupación y Propiedades y la Galería de elementos de informe a la izquierda, abajo y a la derecha. La superficie de diseño es donde agrega y organiza sus elementos de informe. La Cinta de opciones organiza los elementos de menú tradicionales en categorías que puede buscar y utilizar con facilidad. Los paneles le ayudan a agregar, seleccionar y organizar sus recursos de informe y a cambiar las propiedades de los elementos de informe.  

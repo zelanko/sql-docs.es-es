@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d6b0523bad560c2ca84396562a46d52a91fe0cb8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5b6c53e1e3fff9309ec46529abd382864e91db43
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020367"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285163"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Tipos de gráficos (Generador de informes y SSRS)
   Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se va a presentar. Esto determinará en qué medida se podrán interpretar correctamente los datos cuando se trasladen al gráfico. Por ejemplo, si el conjunto de datos contiene muchos puntos de datos expresados en relación con el tamaño del gráfico, es posible que resulte más adecuado presentarlos en un gráfico de áreas, de líneas o de dispersión. Para obtener más información sobre cómo preparar los datos en función del tipo de gráfico seleccionado, vea [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  

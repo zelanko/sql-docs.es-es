@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 27b03c35d329f207805521a70e628a7dc2045a94
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a88f06bec5a488ffde925cdcb32e0e7078da165a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025816"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294443"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>Cuadro de diálogo Visibilidad de columna (Generador de informes)
   Use el cuadro de diálogo **Visibilidad de columna** para mostrar u ocultar la columna seleccionada cuando se ejecuta el informe por primera vez o para usar otro elemento de informe para activar o desactivar la visibilidad de la columna.  

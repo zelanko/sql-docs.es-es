@@ -31,15 +31,15 @@ f1_keywords:
 - "10540"
 - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f27196d59a8e2dd65fb935c79338ecac7995cf22
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3deeceee2baae356dee30cc4eea29e0366c9f952
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041116"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287063"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Cambiar leyendas de mapa, escala de colores y reglas asociadas (Generador de informes y SSRS)
   Un mapa puede contener leyendas de mapa, una escala de colores y una escala de distancia. Estas partes de un mapa ayudan a los usuarios a interpretar la visualización de los datos del mapa.  

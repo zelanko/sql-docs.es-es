@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.number.f1
 - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ff184ad75c495d9f18f5e9d9e1d3aa1bdfa7132e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2ea5a469c43ce89cb4d5f73f29b7c192fde08678
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042776"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284493"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Aplicar formato a números y fechas (Generador de informes y SSRS)
   Para dar formato a los números y fechas de las regiones de datos, seleccione un formato en la página **Número** del cuadro de diálogo **Propiedades** de la región de datos correspondiente.  

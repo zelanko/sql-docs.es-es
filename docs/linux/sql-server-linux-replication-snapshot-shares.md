@@ -4,18 +4,18 @@ description: En este artículo se describe cómo configurar la replicación de S
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 9/24/2018
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3f05aa128aa8296d3860cf3ff81a642a0dc5d5a
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 37b2aeb0ad03f0762fc593f5d9b4d2a0fec7a6a4
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254312"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319136"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>Configurar la carpeta de instantáneas de replicación con recursos compartidos
 
@@ -140,7 +140,7 @@ Agregue la siguiente sección para `mssql.conf` en ambos equipos. Usar siempre q
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Conceptos: Replicación SQL Server en Linux](sql-server-linux-replication.md)
+[Conceptos: Replicación de SQL Server en Linux](sql-server-linux-replication.md)
 
 [Procedimientos almacenados de replicación](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 

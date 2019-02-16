@@ -5,14 +5,18 @@ title: SQL Server - Cargar y mover datos
 description: Explore las características que le ayudan a cargar, mover y migrar las bases de datos y los datos con SQL Server.
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 75a5da55b81e1ae007372174e18670d48c847372
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 601bf4bdfae6b896c218d30c9b943bd1e97ba70c
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079361"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319236"
 ---
 <div id="main" class="v2">
     <div class="container">

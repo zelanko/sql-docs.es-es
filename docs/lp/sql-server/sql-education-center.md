@@ -5,14 +5,18 @@ title: Documentación de Microsoft Azure
 description: Obtenga información sobre cómo compilar y administrar potentes aplicaciones mediante Microsoft Azure Cloud Services. Obtenga documentación, un código de ejemplo, tutoriales y mucho más.
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 8a4fb39ae8b2d6b65701d6bb7ad863c8b0351283
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 73d8181f8e8d04d23dc5adce5a6279c6c4e884be
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079321"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319446"
 ---
 <div id="main" class="v2">
     <div class="container">

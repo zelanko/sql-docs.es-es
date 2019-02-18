@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e3b3789b28a63d91dd11ce9238b9c3e4a35325be
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087914"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319386"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -557,7 +557,7 @@ Scripting:
     
 SMO:
 
-- Se ha corregido un problema por el cual se produce un problema en Table.Alter() si se agrega una columna con restricción predeterminada y la tabla ya tiene datos. Para obtener información detallada, vea [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625) (SMO de SQL Server genera una restricción predeterminada en línea al agregar una columna a una tabla que contiene datos).
+- Se ha corregido un problema por el cual se produce un problema en Table.Alter() si se agrega una columna con restricción predeterminada y la tabla ya tiene datos. Para obtener más información, consulte [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625) (generación de restricción predeterminada en línea al agregar una columna a una tabla que contiene datos).
     
 Always Encrypted:
 
@@ -834,7 +834,7 @@ XE Profiler:
 - Se han agregado las acciones database\_name y client\_hostname a los eventos pertinentes en las sesiones del generador de perfiles XEvent. Para que el cambio surta efecto, puede que sea necesario eliminar las instancias de sesión QuickSessionStandard o QuickSessionTSQL existentes en los servidores (vea el [artículo 3142981 de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3142981)).
 
 Línea de comandos:
-- Se ha agregado una nueva opción de línea de comandos ("-G") que sirve para conectar SSMS automáticamente a un servidor o a una base de datos por medio de la autenticación de Active Directory ("Integrada" o "Contraseña"). Para obtener información detallada, vea [Ssms (Utilidad)](ssms-utility.md).
+- Se ha agregado una nueva opción de línea de comandos ("-G") que sirve para conectar SSMS automáticamente a un servidor o a una base de datos por medio de la autenticación de Active Directory ("Integrada" o "Contraseña"). Para más información, vea [Ssms (Utilidad)](ssms-utility.md).
 
 Asistente para la importación de archivos planos:
 - Se ha agregado un método para seleccionar un nombre de esquema distinto del predeterminado ("dbo") al crear la tabla.
@@ -893,8 +893,8 @@ Disponible con carácter general | Número de compilación: 14.0.17199.0
 
 ### <a name="enhancements"></a>Mejoras
 
-- Se ha agregado el nuevo asistente "Importar archivo plano" para simplificar la experiencia de importación de archivos CSV con un marco de trabajo inteligente, que ahora no exige prácticamente intervención por parte del usuario ni tener conocimientos especializados sobre dominios. Para obtener información detallada, vea [Importación de archivos planos mediante el asistente de SQL](../relational-databases/import-export/import-flat-file-wizard.md).
-- Se ha agregado el nodo "XEvent Profiler" al Explorador de objetos. Para obtener información detallada, vea [Uso de XEvent Profiler de SSMS](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+- Se ha agregado el nuevo asistente "Importar archivo plano" para simplificar la experiencia de importación de archivos CSV con un marco de trabajo inteligente, que ahora no exige prácticamente intervención por parte del usuario ni tener conocimientos especializados sobre dominios. Para obtener detalles, vea [Importación de archivos planos mediante el asistente de SQL](../relational-databases/import-export/import-flat-file-wizard.md).
+- Se ha agregado el nodo "XEvent Profiler" al Explorador de objetos. Para obtener detalles, vea [Uso de XEvent Profiler de SSMS](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 - Se han actualizado el filtrado y la categorización de esperas en el informe histórico de esperas del panel de rendimiento.
 - Se ha agregado la comprobación de sintaxis de la función "Predict".
 - Se ha agregado la comprobación de sintaxis de las consultas de administración de biblioteca externa.

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 11d0e5fcc8400f3272d07439adb4658ed46a9675
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 70d5030e0d406dd5078a94b9c7b2bee332546249
+ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702303"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240819"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -94,20 +94,30 @@ De forma predeterminada, solo los miembros del rol fijo de servidor **sysadmin**
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
     ```  
-    -- adds an alert (Test Alert) that runs the Back up
-    -- the AdventureWorks2012 Database job when fired   
-    -- assumes that the message 55001 and the Back up
-    -- the AdventureWorks2012 Database job already exist.  
+    -- Adds an alert (Test Alert) that notifies the
+    -- Alert Operator via email when an error with a 
+    -- severity of 23 is detected.
+    
+    -- Assumes that the Alert Operator already exists 
+    -- and that database mail is configured.
+    
     USE msdb ;  
     GO  
   
-    EXEC dbo.sp_add_alert  
-        @name = N'Test Alert',  
-        @message_id = 55001,   
-       @severity = 0,   
-       @notification_message = N'Error 55001 has occurred. The DB will be backed up...',   
-       @job_name = N'Back up the AdventureWorks2012 Database' ;  
-    GO  
+    EXEC dbo.sp_add_alert @name=N'Test Alert', 
+      @message_id = 0, 
+      @severity = 23, 
+      @enabled = 1, 
+      @include_event_description_in = 1
+    ;
+    GO
+    
+    EXEC dbo.sp_add_notification @alert_name=N'Test Alert',
+      @operator_name=N'Alert Operator',
+      @notification_method=1
+    ;
+    GO
+
     ```  
   
 Para más información, consulte [sp_add_alert (Transact-SQL)](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
@@ -14,12 +13,12 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d7686844144b43467c152907dfdff10a033005b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165215"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407575"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocolos de cliente y Propiedades de TCP/IP (pestaña Protocolo)
   En el Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use la pestaña **Protocolo** del cuadro de diálogo **Propiedades de TCP/IP** para ver o especificar las siguientes opciones. Para conectar a un puerto diferente, escriba el número de puerto en el cuadro **Puerto predeterminado** . Para obtener más información sobre cadenas de conexión, vea [Crear una cadena de conexión válida con TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
@@ -44,6 +43,6 @@ ms.locfileid: "48165215"
 ## <a name="see-also"></a>Vea también  
  [Elegir un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Nuevo alias &#40;pestaña Alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [&#60;Alias&#62; propiedades &#40;pestaña Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [Propiedades de &#60;Alias&#62; &#40;pestaña Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

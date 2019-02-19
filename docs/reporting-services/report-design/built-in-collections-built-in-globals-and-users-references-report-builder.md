@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a6ae1e843a2f4c829f5dd21f7795681bb962e025
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bdfb2cfca82df57d76c321957bbcb565fb2b058
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031584"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298443"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Colecciones integradas: referencias a campos globales y de usuario integrados (Generador de informes)
   La colección de campos integrados, que incluye las colecciones **Globals** y **User** , representa valores globales proporcionados por Reporting Services al procesar un informe. La colección **Globals** proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección **User** proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  
@@ -84,7 +84,7 @@ ms.locfileid: "50031584"
 ### <a name="identifying-userid-for-snapshot-or-history-reports"></a>Identificar el identificador de usuario para informes de historial o instantánea  
  En algunas ocasiones, los informes que incluyen la variable *User!UserID* no podrán mostrar los datos de informe específicos del usuario que está viendo el informe en ese momento.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Expresión &#40;cuadro de diálogo del Generador de informes&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

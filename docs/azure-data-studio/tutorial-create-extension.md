@@ -11,12 +11,12 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030609"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407585"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutorial: Crear una extensión de Azure Data Studio
 
@@ -37,16 +37,15 @@ Azure Data Studio se basa en el mismo marco de trabajo como código de Visual St
 
 - [Node.js](https://nodejs.org) instalados y disponibles en su `$PATH`. Node.js incluye [npm](https://www.npmjs.com/), el Administrador de paquetes de Node.js que se usa para instalar el generador de extensión.
 - [Código de Visual Studio](https://code.visualstudio.com) para depurar la extensión.
-- Los datos de Azure Studio [depurar la extensión](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
-- Asegúrese de `sqlops` en su ruta. Para Windows, asegúrese de elegir el `Add to Path` opción en setup.exe. Para Mac o Linux, ejecute el *instalar el comando 'sqlops' en la ruta de acceso* opción.
-- Depuración de SQL Operations Studio extensión (opcional). Esto le permite probar la extensión sin necesidad de paquete e instalarlo en Azure Data Studio.
+- Los datos de Azure Studio [depurar extensión](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (opcional). Esto le permite probar la extensión sin necesidad de paquete e instalarlo en Azure Data Studio.
+- Asegúrese de `azuredatastudio` en su ruta. Para Windows, asegúrese de elegir el `Add to Path` opción en setup.exe. Para Mac o Linux, ejecute el *instalar el comando 'azuredatastudio' en la ruta de acceso* opción.
 
 
 ## <a name="install-the-extension-generator"></a>Instalar el generador de extensión
 
 Para simplificar el proceso de creación de extensiones, hemos creado un [generador extensión](https://code.visualstudio.com/docs/extensions/yocode) mediante Yeoman. Para instalarlo, ejecute lo siguiente desde el símbolo del sistema:
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
 ## <a name="create-your-extension"></a>Crear su extensión
 
@@ -54,13 +53,13 @@ Para crear una extensión:
 
 1. Inicie el generador de extensión con el siguiente comando:
 
-   `yo sqlops`
+   `yo azuredatastudio`
 
 2. Elija **nuevo mapa de teclas** en la lista de tipos de extensión:
 
    ![Generador de extensión](./media/tutorial-create-extension/extension-generator.png)
 
-3. Siga los pasos necesarios para que rellene el nombre de extensión (para este tutorial, use **ssmskeymap**) y agregar una descripción.
+3. Siga los pasos necesarios para que rellene el nombre de extensión (para este tutorial, use **ssmskeymap2**) y agregar una descripción.
 
 Completar los pasos anteriores, crea una nueva carpeta. Abra la carpeta de código de Visual Studio y está listo para crear su propia extensión de enlace de teclado.
 

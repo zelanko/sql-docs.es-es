@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 76d019a5171b64c06e346b02d1c92d610b0fe13c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 16f4adc3b2aefa00ad02f8e39f8cd17f3366e9ee
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835643"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298203"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Aplicar formato a los elementos de informe (Generador de informes y SSRS)
   Aplicar formato a los elementos del informe hace que este tenga una apariencia más atractiva y mejora su legibilidad. En el modo de diseño de informe se puede aplicar formato a los cuadros de texto y a los elementos incluidos en ellos, a las imágenes, a las expresiones y a los datos.  
@@ -24,13 +24,13 @@ ms.locfileid: "47835643"
   
  A. Cuadro de texto con un borde de línea doble y varios estilos de formato, incluido un vínculo.  
   
- B. Cuadro de texto con un borde de línea discontinua, y con HTML sin formato y HTML representado.  
+ b. Cuadro de texto con un borde de línea discontinua, y con HTML sin formato y HTML representado.  
   
  C. Cuadro de texto con una etiqueta de texto y un marcador de posición.  
   
  Para cambiar las opciones de formato, solo tiene que seleccionar el elemento al que desea dar formato y, a continuación, abrir el cuadro de diálogo de propiedades del elemento. Por ejemplo, si quiere dar formato al contenido de un cuadro de texto completo o a una palabra seleccionada dentro de dicho cuadro, haga clic con el botón derecho en el elemento y seleccione **Propiedades de cuadro de texto**. A continuación, puede aplicar los estilos de formato que desee.  
   
- Para más información, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Para empezar rápidamente, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "47835643"
  [Establecer la configuración regional de un informe o un cuadro de texto &#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Describe cómo cambiar la configuración de los formatos de presentación de datos que difieren en función del idioma y de la región, como fecha, moneda y valores numéricos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 20ef203c4fbb377c62eede7186cecf811aa942ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da900964e69bc36828726e8874222e5e1e3f0541
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845735"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291623"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas
   Puede organizar los datos de distintas formas para mostrar la relación entre lo general y lo detallado.  Puede incluir todos los datos en el informe, pero establecer que permanezcan ocultos hasta que un usuario haga clic para mostrar los detalles; esta es una acción *de obtención de detalles* . Puede mostrar los datos en una región de datos, como una tabla o un gráfico, que *está anidada* en otra, como una tabla o matriz. Puede mostrar los datos en un *subinforme* que esté completamente incluido dentro de un informe principal. O también, puede colocar los datos detallados en informes *detallados* , informes independientes que se muestran cuando un usuario hace clic en un vínculo.  
@@ -22,7 +22,7 @@ ms.locfileid: "47845735"
   
  A. Informe detallado  
   
- B. subinforme  
+ b. subinforme  
   
  C. Regiones de datos anidadas  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47845735"
 |Recuperación de datos|Los datos se recuperan al mismo tiempo que el informe principal.|Los datos se recuperan en un informe detallado cada vez.|Los datos se recuperan todos al mismo tiempo que el informe principal.|  
 |Proceso y representación|Con el informe principal|Cuando se hace clic en el vínculo.|Con el informe principal|  
 |Rendimiento|Más lento (pero recupera todos los datos con el informe principal).|Más rápido (pero no recupera todos los datos con el informe principal).|Más rápido (y recupera todos los datos con el informe principal).|  
-|Uso de parámetros|Sí|Sí|no|  
+|Uso de parámetros|Sí|Sí|No|  
 |Reusabilidad|Como informe, subinforme o informe detallado en otros informes.|Como informe, subinforme o informe detallado en otros informes.|No se puede volver a utilizar.|  
 |Ubicación|Fuera del informe principal, en el mismo servidor de informes o en otro distinto.|Fuera del informe principal, en el mismo servidor de informes.|Dentro del informe principal.|  
 |Presentación|En el informe principal|En otro informe|En el informe principal|  
@@ -93,7 +93,7 @@ ms.locfileid: "47845735"
  [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explica cómo hacer referencia a elementos que están fuera del archivo de definición de informe.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

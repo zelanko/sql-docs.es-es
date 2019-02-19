@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine], named pipes
@@ -17,15 +16,15 @@ ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 95c094282aa185f79f9399a26e3b6fe8049cc965
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167585"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407595"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Crear una cadena de conexión válida con canalizaciones con nombre
-  A menos que cambie el usuario, cuando la instancia predeterminada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha en el protocolo Canalizaciones con nombre, usa `\\.\pipe\sql\query` como el nombre de canalización. El punto indica que el equipo es el equipo local, `pipe` indica que la conexión es una canalización con nombre, y `sql\query` es el nombre de la canalización. Para conectarse a la canalización predeterminada, el alias debe incluir `\\<computer_name>\pipe\sql\query` como el nombre de canalización. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha configurado para escuchar en una canalización diferente, el nombre de canalización debe utilizar esa canalización. Por ejemplo, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza `\\.\pipe\unit\app` como canalización, el alias debe utilizar `\\<computer_name>\pipe\unit\app` como el nombre de canalización.  
+  A menos que cambie el usuario, cuando la instancia predeterminada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha en el protocolo Canalizaciones con nombre, usa `\\.\pipe\sql\query` como el nombre de canalización. El punto indica que el equipo es el equipo local, `pipe` indica que la conexión es una canalización con nombre, y `sql\query` es el nombre de la canalización. Para conectarse a la canalización predeterminada, debe tener el alias `\\<computer_name>\pipe\sql\query` como el nombre de canalización. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha configurado para escuchar en una canalización diferente, el nombre de canalización debe utilizar esa canalización. Por ejemplo, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa `\\.\pipe\unit\app` como canalización, el alias debe usar `\\<computer_name>\pipe\unit\app` como el nombre de canalización.  
   
  Para crear un nombre de canalización válido:  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48167585"
  En el momento de la conexión, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente Native Client lee el servidor, protocolo y nombre de canalización de los valores del registro para el nombre de alias especificado y crea una canalización con nombre en el formato `np:\\<computer_name>\pipe\<pipename>` o `np:\\<IPAddress>\pipe\<pipename>`. Para una instancia con nombre, el nombre de canalización predeterminado es `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`.  
   
 > [!NOTE]  
->  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Firewall cierra el puerto 445, de forma predeterminada. Dado que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comunica a través del puerto 445, debe volver a abrir el puerto si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para escuchar las conexiones de cliente entrantes mediante canalizaciones con nombre. Para obtener más información acerca de cómo configurar un firewall, vea “Cómo configurar un firewall para el acceso a SQL Server” en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o revise la documentación del firewall.  
+>  De forma predeterminada, el Firewall de Windows de [!INCLUDE[msCoName](../../includes/msconame-md.md)] cierra el puerto 445. Dado que [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comunica a través del puerto 445, debe volver a abrir el puerto si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha configurado para escuchar las conexiones de cliente entrantes que utilizan canalizaciones con nombre. Para obtener información acerca de cómo configurar un firewall, consulte "Cómo: Configurar firewall para el acceso al motor de base de datos" en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o consulte la documentación del firewall.  
   
 ## <a name="connecting-to-the-local-server"></a>Conectarse al servidor local  
  Al conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se ejecuta en el mismo equipo que el cliente, puede utilizar `(local)` como el nombre del servidor. El uso de `(local)` no se recomienda porque genera ambigüedad, pero puede ser útil cuando se sabe que el cliente se ejecuta en el equipo de destino. Por ejemplo, al crear una aplicación para usuarios desconectados móviles, como puede ser el personal de ventas, en la que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutará en equipos portátiles y se almacenarán datos de proyectos, un cliente que se conecte a (local) siempre se conectará al servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en el equipo portátil. En lugar de `localhost`, es posible usar `(local)` o un punto (.).  
@@ -117,7 +116,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  Para especificar el protocolo de red como un **sqlcmd** parámetro, vea "Cómo: conectarse a la base de datos motor mediante sqlcmd.exe" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+>  Para especificar el protocolo de red como un **sqlcmd** parámetro, vea "Cómo: Conectarse al motor de base de datos con sqlcmd" en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una cadena de conexión válida con el protocolo de memoria compartida](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

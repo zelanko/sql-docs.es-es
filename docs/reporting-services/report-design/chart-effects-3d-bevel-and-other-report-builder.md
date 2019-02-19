@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d40b8179e008312752e6b1a90f83627fdcf88eea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8b1c5bc212be33c352110694b4bc9c12f715b33c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826983"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297423"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Efectos de gráfico: 3D, bisel y otros (Generador de informes)
   Se pueden usar efectos tridimensionales (3D) para dar profundidad y agregar impacto visual a los gráficos de los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo, si desea resaltar un sector específico de un gráfico circular seccionado, puede girar y cambiar la perspectiva del gráfico para que los usuarios se fijen primero en dicho sector. Cuando se aplican efectos 3D al gráfico, se deshabilitan todos los colores de degradado y los estilos de sombreado.  
@@ -57,7 +57,7 @@ ms.locfileid: "47826983"
 ## <a name="highlighting-3d-effects"></a>Efectos 3D de resaltado  
  Puede agregar estilos de resaltado a un gráfico 3D mediante la propiedad **Shading** , que aparece debajo de Area3DStyle en el panel Propiedades cuando se selecciona el área del gráfico. Un estilo de iluminación simple aplica el mismo matiz a los elementos del área del gráfico. Un estilo realista cambia los matices de los elementos del área del gráfico que dependen de un ángulo de iluminación especificado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Agregar efectos 3D a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  

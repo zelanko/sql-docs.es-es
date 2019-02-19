@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b707897d5be5d85dc3a7442a777decbd43801a52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f51a83fca42e1f736a0e0295d2443193b17df5d3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790323"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296943"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funciones del Generador de informes: referencia de funciones de agregado
   Para incluir valores de agregado en un informe, puede utilizar las funciones de agregado integradas en las expresiones. La función de agregado predeterminada para los campos numéricos es SUM. Puede modificar la expresión y utilizar una función de agregado integrada diferente o especificar un ámbito diferente. El ámbito identifica qué conjunto de datos utilizar para el cálculo.  
@@ -72,18 +72,18 @@ ms.locfileid: "47790323"
 |Ubicación en informe|Campos|Parámetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Encabezado de página<br /><br /> Pie de página|Sí|Sí|A lo sumo uno<br /><br /> Nota 1|Sí|Sí|Sí|Sí|  
-|Cuerpo|Sí<br /><br /> Nota 2|Sí|Solo los elementos del ámbito actual o de un ámbito que lo contenga<br /><br /> Nota 3|no|Sí|Sí|Sí|  
-|Parámetro de informe|no|Solo los parámetros anteriores en la lista<br /><br /> Nota 4|no|no|no|no|no|  
-|Campo|Sí|Sí|no|no|no|no|no|  
-|Parámetro de consulta|no|Sí|no|no|no|no|no|  
-|Expresión de grupo|Sí|Sí|no|no|Sí|no|no|  
-|Expresión de ordenación|Sí|Sí|no|no|Sí|Sí<br /><br /> Nota 5|no|  
-|Expresión de filtro|Sí|Sí|no|no|Sí|Sí<br /><br /> Nota 6|no|  
-|código|no|Sí<br /><br /> Nota 7|no|no|no|no|no|  
-|Idioma de los informes|no|Sí|no|no|no|no|no|  
-|Variables|Sí|Sí|no|no|Sí|Ámbito actual o que lo contiene|no|  
-|Agregados|Sí|Sí|Solo en encabezado de página o pie de página|Solo en agregados de elementos de informe|Sí|no|no|  
-|Funciones de búsqueda|Sí|Sí|Sí|no|Sí|no|no|  
+|Cuerpo|Sí<br /><br /> Nota 2|Sí|Solo los elementos del ámbito actual o de un ámbito que lo contenga<br /><br /> Nota 3|No|Sí|Sí|Sí|  
+|Parámetro de informe|No|Solo los parámetros anteriores en la lista<br /><br /> Nota 4|No|No|No|No|No|  
+|Campo|Sí|Sí|No|No|No|No|No|  
+|Parámetro de consulta|No|Sí|No|No|No|No|No|  
+|Expresión de grupo|Sí|Sí|No|No|Sí|No|No|  
+|Expresión de ordenación|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 5|No|  
+|Expresión de filtro|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 6|No|  
+|código|No|Sí<br /><br /> Nota 7|No|No|No|No|No|  
+|Idioma de los informes|No|Sí|No|No|No|No|No|  
+|Variables|Sí|Sí|No|No|Sí|Ámbito actual o que lo contiene|No|  
+|Agregados|Sí|Sí|Solo en encabezado de página o pie de página|Solo en agregados de elementos de informe|Sí|No|No|  
+|Funciones de búsqueda|Sí|Sí|Sí|No|Sí|No|No|  
   
 -   **Nota 1.** ReportItems debe existir en la página del informe representado o su valor es Null. Si la visibilidad de un elemento de informe depende de una expresión que se evalúa como False, el elemento de informe no existe en la página.  
   
@@ -108,13 +108,13 @@ ms.locfileid: "47790323"
   
 |Contexto|RunningValue|RowNumber|Primero<br /><br /> Último|Previous|Funciones de suma y otras de ordenación previa|Agregados ReportItem|Funciones de búsqueda|Función de agregado|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valor actual|no|no|no|no|Sí|no|Sí|no|  
-|Primero<br /><br /> Último|no|no|no|no|Sí|no|no|no|  
-|Previous|Sí|Sí|Sí|no|Sí|no|Sí|no|  
-|Funciones de suma y otras de ordenación previa|no|no|no|no|Sí|no|Sí|no|  
-|Agregados ReportItem|no|no|no|no|no|no|no|no|  
-|Funciones de búsqueda|Sí|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|no|no|  
-|Función de agregado|no|no|no|no|no|no|no|no|  
+|Valor actual|No|No|No|No|Sí|No|Sí|No|  
+|Primero<br /><br /> Último|No|No|No|No|Sí|No|No|No|  
+|Previous|Sí|Sí|Sí|No|Sí|No|Sí|No|  
+|Funciones de suma y otras de ordenación previa|No|No|No|No|Sí|No|Sí|No|  
+|Agregados ReportItem|No|No|No|No|No|No|No|No|  
+|Funciones de búsqueda|Sí|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|No|No|  
+|Función de agregado|No|No|No|No|No|No|No|No|  
   
 -   **Nota 1.** Las funciones de agregado solo se permiten dentro de la expresión *Source* de una función de búsqueda si la función de búsqueda no está contenida en un agregado. Las funciones de agregado no se permiten dentro de las expresiones *Destination* o *Result* de una función Lookup.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "47790323"
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  

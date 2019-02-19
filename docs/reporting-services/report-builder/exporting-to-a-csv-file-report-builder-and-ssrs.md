@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 697934ebe182f82e4f9c668439afb6ecf2bc5631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f7f0033a5ed81cb21d7c77038cf95ec8123c3d64
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702603"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297615"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportar a un archivo CSV (Generador de informes y SSRS)
   La extensión de representación de valores separados por comas (CSV) representa los informes paginados como una representación sin estructura jerárquica de los datos a partir de un informe estándar de texto sin formato para que resulten fáciles de leer e intercambiar con muchas aplicaciones.  
@@ -68,7 +68,7 @@ ms.locfileid: "47702603"
 |Elemento|Comportamiento de la representación|  
 |----------|------------------------|  
 |Cuadro de texto|Representa el contenido del cuadro de texto. En el modo predeterminado, se da formato a los elementos según las propiedades de formato de los mismos. En modo compatible, la configuración de la información del dispositivo puede cambiar el formato. Para obtener más información sobre los modos de representación de CSV, vea la sección correspondiente a continuación.|  
-|Tabla|Realiza la representación mediante la expansión de la tabla y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila. No se admiten informes detallados.|  
+|Table|Realiza la representación mediante la expansión de la tabla y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila. No se admiten informes detallados.|  
 |Matriz|Realiza la representación mediante la expansión de la matriz y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila.|  
 |Lista|Representa un registro para cada instancia o fila de detalle de la lista.|  
 |Subinforme|El elemento primario se repite en todas las instancias del contenido.|  
@@ -141,7 +141,7 @@ ms.locfileid: "47702603"
  Mediante la modificación de la configuración de la información del dispositivo, puede cambiar algunos valores de configuración predeterminados para este representador, incluidos el modo de representación, los caracteres que se usarán como delimitadores y los caracteres que se usarán como cadena predeterminada para el calificador de texto. Para obtener más información, consulte [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

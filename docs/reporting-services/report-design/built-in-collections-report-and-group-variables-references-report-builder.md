@@ -15,14 +15,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a68f9d4f0eea662b143b6a37dd5d2e5d5faeb846
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5e23ffcae117f42770604ca60cd2fc2d313eb8a5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673173"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286123"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Colecciones integradas: referencias a variables de grupo e informe (Generador de informes)
   Si existe un cálculo complejo que se usa más de una vez en las expresiones de un informe, es probable que le interese crear una variable. Puede crear una variable de informe o una variable de grupo. Los nombres de variable deben ser únicos en un informe.  
@@ -69,7 +69,7 @@ ms.locfileid: "47673173"
   
  Para hacer referencia a la variable en una expresión, use la sintaxis de colección global, por ejemplo, `=Variables!GroupDescription.Value`. En la superficie de diseño, el valor aparece en un cuadro de texto como `<<Expr>>`.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

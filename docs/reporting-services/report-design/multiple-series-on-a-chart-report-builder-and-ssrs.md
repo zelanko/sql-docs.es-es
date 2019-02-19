@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 0ad5cd38b1ec69c0a54444e63462957094d47498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d5e77dd2ff54fec6e79724c00dc30fa0f727150e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736663"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286033"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Mostrar varias series en un gráfico (Generador de informes y SSRS)
   Cuando hay varias series en un gráfico, es necesario determinar la mejor manera de compararlas. Puede usar un gráfico apilado para mostrar las proporciones relativas de cada serie. Si está comparando únicamente dos series que comparten un eje de categoría común (X), use el eje secundario. Esto es útil cuando se muestran dos series de datos relacionadas, por ejemplo, el precio y el volumen, o los ingresos y los impuestos. Si el gráfico se vuelve ilegible, considere la posibilidad de usar varias áreas de gráfico para crear una mayor separación visual entre una serie y otra.  
@@ -51,7 +51,7 @@ ms.locfileid: "47736663"
 ## <a name="using-range-charts"></a>Usar gráficos de intervalos  
  Los gráficos de intervalos tienen dos valores por cada punto de datos. Si el gráfico contiene dos series que comparten el mismo eje de categorías (X), puede usar un gráfico de intervalos para mostrar la diferencia entre ambas. Los gráficos de intervalos son los más adecuados para mostrar información en formato máximo-mínimo o superior-inferior. Por ejemplo, si la primera serie contiene la venta de mayor importe para cada día durante el mes de enero, y la segunda serie contiene la venta de menor importe para cada día durante el mismo período, puede usar un gráfico de intervalos para mostrar la diferencia entre ambas ventas para cada día. Para más información, vea [Gráficos de intervalos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mostrar una serie con varios rangos de datos en un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  

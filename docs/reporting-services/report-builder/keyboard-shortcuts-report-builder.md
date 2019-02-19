@@ -9,14 +9,14 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 0d51d20ae6e3ce9ff780de03a105be31a1466e74
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 17718148e369e53d9b33867975ca4d3b9af1a13f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712676"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292213"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Métodos abreviados de teclado (Generador de informes)
   Al crear y editar informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el Generador de informes, tendrá acceso a todas las teclas de método abreviado para la navegación que se proporcionan para el entorno de Windows. Puede seleccionar entre varios esquemas de asignación de teclado estándar.  
@@ -89,7 +89,7 @@ ms.locfileid: "52712676"
 |Alejar un área de vista del mapa cuando una ventanilla de mapa está seleccionada.|CTRL+Signo menos (-)|  
 |Modo Acelerador para realizar una panorámica y ampliar el área de vista del mapa cuando una ventanilla de mapa está seleccionada.|CTRL+Clic con el botón primario|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Generador de informes en SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Glosario &#40;Generador de informes&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  

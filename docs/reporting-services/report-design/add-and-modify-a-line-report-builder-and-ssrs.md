@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fa58344c4543c04bd6c16647fd524252539937c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb679941710f145d5a35aeaecc60996eaf69c607
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785303"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296893"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Agregar y modificar una línea (Generador de informes y SSRS)
   Puede agregar una línea a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] cuando quiera incluir en él un elemento gráfico para separar dos secciones. Puede personalizar el aspecto de la línea modificando sus propiedades, como el color o el estilo. Por ejemplo, puede incorporar los colores de la compañía en el informe.    
@@ -34,7 +34,7 @@ ms.locfileid: "47785303"
     > [!NOTE]    
     >  Si configura el estilo de línea en **Doble** y el ancho de línea es de punto y medio o inferior, es posible que la línea no aparezca como doble cuando ejecute el informe en el Generador de informes, el Diseñador de informes o un portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Aparecerá como doble cuando exporte el informe a otros formatos, como Microsoft Word y Acrobat PDF.    
     
-## <a name="see-also"></a>Ver también    
+## <a name="see-also"></a>Consulte también    
  [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   

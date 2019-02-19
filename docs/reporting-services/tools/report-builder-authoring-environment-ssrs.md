@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ed90c887a9aeaeca9939511e215464b0b51ba226
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 68728f18f72aed6316f3764d81889f1ab5368d25
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711676"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295303"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>entorno de creación del Generador de informes (SSRS)
   El Generador de informes [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] es un entorno de creación independiente para crear informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fuera de Visual Studio. Al diseñar un informe, especifica dónde obtener los datos, qué datos obtener y cómo mostrar los datos. Al ejecutar el informe, el procesador de informes toma toda la información especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede instalarlo desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o desde el Centro de descarga de Microsoft.  
@@ -43,7 +43,7 @@ ms.locfileid: "52711676"
   
  El Generador de informes y el Diseñador de informes comparten muchas características. Más información sobre [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  

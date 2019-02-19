@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 12b769f09f89f0d844b090c9ad8fc00863e9ab81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8176db14311914a3935d86fdf83cc88e5428630f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831473"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295583"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Crear un informe escalonado (Generador de informes y SSRS)
 Un informe escalonado es un tipo de informe paginado de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] donde se muestran filas de detalles o grupos secundarios con una sangría debajo de un grupo primario en la misma columna, como se muestra en el ejemplo siguiente:  
@@ -101,7 +101,7 @@ Un informe escalonado es un tipo de informe paginado de  [!INCLUDE[ssRSnoversion
   
 3.  Cambie el relleno para la celda que muestra los datos del grupo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b5b32e5131e460c359e6b16c3ae3ece058184e77
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100316"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294683"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Usar expresiones en informes (Generador de informes y SSRS)
 En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , las expresiones se usan durante la definición de informe para especificar o calcular valores para parámetros, consultas, filtros, propiedades de elementos de informe, definiciones de ordenación y de grupos, propiedades de cuadros de texto, marcadores, mapas de documento, contenido de encabezados y pies de página dinámicos, imágenes, y definiciones de orígenes de datos dinámicas. En este tema, se proporcionan ejemplos de los muchos lugares en los que se pueden usar expresiones para modificar el contenido o el aspecto de un informe. Esta lista no es una lista completa. Puede establecer una expresión para una propiedad de un cuadro de diálogo que muestre el botón (**fx**) de la expresión o en una lista desplegable que muestre **\<Expression...>**.  
@@ -66,7 +66,7 @@ En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnove
 |Especificar una fecha con formato para una referencia cultural concreta.|Propiedad Value de un marcador de posición dentro de un cuadro de texto de una región de datos. Use **Propiedades de cuadro de texto (cuadro de diálogo), General**.|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |Concatenar una cadena y un número con formato de porcentaje con dos decimales.|Propiedad Value de un marcador de posición dentro de un cuadro de texto de una región de datos. Use **Propiedades de cuadro de texto (cuadro de diálogo), General**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

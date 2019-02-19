@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2d184a787becf3e82df7f9051eb8ad576ec1efa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 672633023578e309ca3e40fe48b9a5bcc2286b86
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644283"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296513"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Representar en HTML (Generador de informes y SSRS)
   La extensión de representación en HTML representa un informe paginado en formato HTML. La extensión de representación también puede generar páginas HTML completas o fragmentos de HTML para incrustarlos en otras páginas HTML. Todos los HTML se generan con la codificación UTF-8.  
 
  La extensión de representación en HTML es la predeterminada para los informes que se visualizan en un explorador, lo que incluye cuando se ejecutan en el portal web de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . La extensión de representación en HTML puede representar HTML como un fragmento o como un documento HTML completo. Si el HTML es un fragmento, se quitan las etiquetas **HEAD**, **HTML**y **BODY** del documento HTML. Solo se representa el contenido de la etiqueta **BODY** . Esto resulta de gran utilidad para incrustar el HTML en HTML generado en otra aplicación.  
   
- En algunos escenarios, los parámetros de informe se pueden utilizar para iniciar ataques de inserción de script al representar los informes en HTML. Para obtener más información sobre cómo proteger informes, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  
+ En algunos escenarios, los parámetros de informe se pueden utilizar para iniciar ataques de inserción de script al representar los informes en HTML. Para más información sobre cómo proteger informes, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  
   
  Para más información sobre exploradores, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47644283"
  Para cambiar algunos valores de configuración predeterminados para este representador, incluido el modo de representación, solo tiene que cambiar la configuración de la información del dispositivo. Para más información, consulte [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

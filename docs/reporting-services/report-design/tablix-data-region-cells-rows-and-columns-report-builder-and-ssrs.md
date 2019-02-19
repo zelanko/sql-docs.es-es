@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee4c33b671e691aa6303c501c8080c3c66464f9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 528341a6537c78e62ae0d689ee59bb59a6ecab9f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835963"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288103"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)
   Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para más información, vea [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) o [Listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "47835963"
   
  Puede dividir una celda combinada con anterioridad. Las celdas se pueden dividir horizontalmente por columnas o verticalmente por filas. Para dividir una celda en un bloque de celdas, primero divida horizontalmente la celda y, a continuación, divídala verticalmente tantas veces como sea necesario.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -9,14 +9,14 @@ f1_keywords:
 - "10121"
 - sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1c7c9ddd615ef5dda1bccd9a1e3d90cf54fdc993
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b0a742ce22f6d5683cacd84ffc6701c577b0966b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851433"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294383"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Agregar una ordenación interactiva a una tabla o una matriz (Generador de informes y SSRS)
   Agregue botones de ordenación interactiva para que los usuarios puedan cambiar el criterio de ordenación de las filas y las columnas en las tablas y matrices. Esta característica solo es compatible con los formatos de representación que admiten la interacción con el usuario, como HTML.  
@@ -215,7 +215,7 @@ ms.locfileid: "47851433"
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ordenación interactiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   

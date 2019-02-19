@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 55d78c64367e654873950d05baabbb6d94f33882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73fe1f786148046e699509eb3000a63f20ce8f0e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608013"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290353"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Cambiar un tipo de gráfico (Generador de informes y SSRS)
 Cuando se inserta un gráfico en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] por primera vez, aparece el cuadro de diálogo **Seleccionar tipo de gráfico** . Si cancela este cuadro de diálogo, se agrega un gráfico de columnas de forma predeterminada.  
@@ -34,7 +34,7 @@ Cuando se inserta un gráfico en un informe paginado de [!INCLUDE[ssRSnoversion]
   
 2.  En el cuadro de diálogo **Seleccionar tipo de gráfico** , seleccione un tipo de gráfico en la lista.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  

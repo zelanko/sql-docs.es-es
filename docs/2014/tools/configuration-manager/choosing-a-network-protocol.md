@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
@@ -24,12 +23,12 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 86a15b6617b85de2e0a44287344ef47c92546072
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068575"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407555"
 ---
 # <a name="choosing-a-network-protocol"></a>Elegir un protocolo de red
   Para conectarse a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , debe tener habilitado un protocolo de red. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede atender solicitudes en varios protocolos al mismo tiempo. Los clientes se conectan a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un único protocolo. Si el programa cliente no sabe en qué protocolo escucha [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure el cliente para intentar secuencialmente varios protocolos. Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para habilitar, deshabilitar y configurar protocolos de red.  
@@ -62,6 +61,6 @@ ms.locfileid: "48068575"
 ## <a name="enabling-the-protocol"></a>Habilitar el protocolo  
  Para que funcione, el protocolo debe estar habilitado en el cliente y el servidor. El servidor puede escuchar solicitudes en todos los protocolos habilitados al mismo tiempo. Los equipos cliente pueden elegir un protocolo o intentar usar los protocolos en el orden mostrado en el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Para obtener un tutorial breve sobre cómo configurar protocolos y conectar al [!INCLUDE[ssDE](../../includes/ssde-md.md)], vea [Tutorial: Introducción al motor de base de datos](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+ Para información sobre cómo configurar protocolos y conectarse a [!INCLUDE[ssDE](../../includes/ssde-md.md)], consulte este breve [Tutorial: Introducción al motor de base de datos](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
   

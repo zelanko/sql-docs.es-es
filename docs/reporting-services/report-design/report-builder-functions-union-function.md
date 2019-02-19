@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6fa469c83bf1aa75be583a553ecf3668db4c4b07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1b31943b01ff49e81a88f35a4a5c3063173e75d6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730883"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290293"
 ---
 # <a name="report-builder-functions---union-function"></a>Funciones del Generador de informes: función Union
   Devuelve la unión de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el ámbito especificado.  
@@ -75,7 +75,7 @@ Union(expression, scope, recursive)
 =Union(Fields!PolygonDefinition.Value, "Group1")  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: f3eafaec96e27d6e78521b0c4ef7580af103a12e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3d3e1eca43d386a11955eac7974baaf4a1d7282a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792253"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292591"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Mostrar los mismos datos en una matriz y en un gráfico (Generador de informes y SSRS)
   Cuando se desea mostrar los mismos datos en una matriz y en un gráfico, se deben establecer propiedades en ambas regiones de datos para especificar el mismo conjunto de datos, y también las mismas expresiones para los filtros, los grupos, las ordenaciones y los datos.  
@@ -93,7 +93,7 @@ ms.locfileid: "47792253"
   
 25. Obtenga una vista previa del resultado. Los grupos de filas y de columnas de la matriz muestran los mismos datos que los grupos de series y de categorías del gráfico.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

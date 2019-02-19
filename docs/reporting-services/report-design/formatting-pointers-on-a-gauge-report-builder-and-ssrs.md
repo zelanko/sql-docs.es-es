@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b4ebed5355fdbbd4185301fa87e4c525a89b3171
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d718dec9ee17f64177ae5749b862f9edff616f15
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504044"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293774"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a los punteros de un medidor (Generador de informes y SSRS)
  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el puntero de un medidor indica el valor actual del medidor.   
@@ -50,7 +50,7 @@ ms.locfileid: "52504044"
   
  Si la imagen del puntero tiene forma irregular, debe definir el color como transparente para ocultar las áreas de la imagen que no deben aparecer en el medidor. Al definir un color transparente, el medidor transpone la imagen encima del puntero existente y la recorta para que solo aparezca la forma del puntero. El medidor cambia la escala de la imagen para que se ajuste al tamaño del puntero. Al especificar una imagen para un puntero, cualquier puntero que se agregue posteriormente encima del medidor se dibujará debajo la imagen. Por este motivo, se recomienda no especificar una imagen para el puntero si hay varios punteros en el medidor. Para obtener más información, vea [Especificar una imagen como puntero en un medidor (Generador de informes y SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Aplicar formato a los rangos de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  

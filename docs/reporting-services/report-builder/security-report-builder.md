@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ce603b38e1e210944cc27b7d25c9ee5df3c3c027
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bd51af5b1fe70d73d37f1bbefb07ada68d56cd4a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030104"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290813"
 ---
 # <a name="security-report-builder"></a>Seguridad (Generador de informes)
   El Generador de informes es una aplicación cliente de creación de informes diseñada para que funcione con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El servidor de informes se puede configurar para funcione en modo nativo como un servidor independiente o en modo integrado de SharePoint, para que admita los informes de un sitio de SharePoint.  
@@ -113,7 +113,7 @@ ms.locfileid: "50030104"
  Después de la publicación de elementos en un servidor de informes, el administrador del servidor de informes puede contribuir a protegerlos asignando seguridad del nivel de rol o seguridad del nivel de carpeta y elemento. Para más información, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instalar y desinstalar el Generador de informes](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   

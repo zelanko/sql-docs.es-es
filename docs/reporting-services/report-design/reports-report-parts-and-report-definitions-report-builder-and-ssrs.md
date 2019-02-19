@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 40b055260c82e1237f21ae55fffff800f23c5014
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff7bc69b5d2277d8ee0c87978c27c531a794daec
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711916"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292033"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Informes, elementos de informe y definiciones de informe (Generador de informes y SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos términos para describir un informe paginado en distintos estados, incluida la definición inicial, el informe publicado y el informe visualizado como lo ve el usuario.  
@@ -62,7 +62,7 @@ ms.locfileid: "52711916"
   
  Suscríbase a un informe, que se entrega a una bandeja de entrada de correo electrónico o a un recurso compartido de archivos en un formato de salida que especifique. El formato de representación predeterminado para un informe es HTML 4.0. Además del formato HTML, los informes se pueden representar en varios formatos de salida, entre los que se incluyen Excel, Word, XML, PDF, TIFF y CSV. Al igual que ocurre con los informes publicados, los informes representados no se pueden editar ni volver a guardar en el servidor de informes. Para más información, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Generador de informes en SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

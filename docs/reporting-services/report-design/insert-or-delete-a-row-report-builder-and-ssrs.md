@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8f60cd93baed4f1f3bd6aec837c6c9304729d061
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9e1698d581d920379b085290d646bca12ab5ff6a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612903"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289144"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Insertar o eliminar una fila (Generador de informes y SSRS)
 Puede agregar o eliminar filas de una región de datos Tablix en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La región de datos Tablix puede ser una tabla, una matriz o una lista. Los procedimientos siguientes no se aplican a las regiones de datos Gráfico y Medidor.  
@@ -27,7 +27,7 @@ Puede agregar o eliminar filas de una región de datos Tablix en un informe pagi
   
 -   En la vista Diseño, haga clic en la esquina superior izquierda de la región de datos Tablix para que los identificadores de columna y de fila aparezcan por encima y junto a ella.  
   
-     Para más información sobre las áreas de regiones de datos, vea [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+     Para más información sobre las áreas de regiones de datos, vea [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="to-insert-a-row-in-a-selected-data-region"></a>Para insertar una fila en una región de datos seleccionada  
   
@@ -55,7 +55,7 @@ Puede agregar o eliminar filas de una región de datos Tablix en un informe pagi
   
 -   Haga clic con el botón derecho en una celda de grupo de filas del área de grupo de filas de una región de datos Tablix de la que quiere eliminar una fila y, después, haga clic en **Eliminar filas**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

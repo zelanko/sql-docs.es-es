@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6a7aad9e50122a04f26d07d36f2384bc47625781
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1e8966ddbecc88b5bcf6d2a5024f0dd2228b4fc2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255590"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286793"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportar a XML (Generador de informes y SSRS)
   La extensión de representación en XML devuelve un informe paginado en formato XML. El esquema XML del informe es específico de éste y solamente contiene datos. La extensión de representación en XML no representa la información de diseño ni mantiene la paginación. El XML que genera esta extensión se puede importar a una base de datos, se puede usar como mensaje de datos XML o se puede enviar a una aplicación personalizada.  

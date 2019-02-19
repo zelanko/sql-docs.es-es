@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 717f817e7d318e4eae40e071f925264c42878a16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 384619d6b5e688ff5f1823872140ad5b1df7d283
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675853"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289303"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Representar elementos de informe (Generador de informes y SSRS)
   El número, tamaño y ubicación de los elementos de informe afectan a la manera en que los representadores paginan el cuerpo del informe. A continuación se incluye una descripción de cómo se representan los distintos elementos de informe.  
@@ -102,7 +102,7 @@ ms.locfileid: "47675853"
   
  Para más información sobre los subinformes, vea [Subinformes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

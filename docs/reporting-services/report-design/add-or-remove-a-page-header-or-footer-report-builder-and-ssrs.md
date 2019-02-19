@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: be9b19dc11917de04b00592d1dbfdb22b54cd742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cba12c0524f3f6955a720f54322d220209c36b55
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790883"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294153"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Agregar o quitar un encabezado o un pie de página (Generador de informes y SSRS)
   Puede agregar texto estático, imágenes, líneas, rectángulos y bordes a encabezados y pies de página. Puede colocar expresiones e imágenes enlazadas a datos en un cuadro de texto si desea incluir datos variables o calculados en un encabezado o pie de página.  
@@ -60,7 +60,7 @@ ms.locfileid: "47790883"
 > [!NOTE]  
 >  Cuando se quita un encabezado o pie de página, se elimina del informe. Los elementos que agregó previamente al encabezado o el pie de página no aparecerán de nuevo si vuelve a agregar uno u otro.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

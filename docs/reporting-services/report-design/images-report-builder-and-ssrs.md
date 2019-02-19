@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a1437f92ffe497d7b1511bf369e7073d5551ba7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 72beb990337daa9d55a57410b90f522194506353
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790506"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296123"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Imágenes (Generador de informes y SSRS)
   Una imagen es un elemento de informe que contiene una referencia a una imagen incrustada en el informe, o almacenada en una base de datos, en el servidor de informes o en cualquier lugar de Internet. Una imagen puede ser una imagen que se repite con filas de datos. También se puede utilizar una imagen como fondo para determinados elementos del informe.  
@@ -76,7 +76,7 @@ ms.locfileid: "47790506"
  [Agregar una imagen enlazada a datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Exportar a un archivo de imagen &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

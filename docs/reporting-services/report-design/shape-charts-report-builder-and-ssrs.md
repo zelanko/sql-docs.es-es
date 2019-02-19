@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bb7e960f98e4f1d866e5a43d9cbc34aa155527ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 84b61392cc0b080ae8e58e5518ad920bc756a64f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847923"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291653"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de formas (Generador de informes y SSRS)
   Los gráficos de formas muestran los datos de valores como porcentajes de un total. Los gráficos de formas se usan normalmente para mostrar comparaciones proporcionales entre distintos valores de un conjunto. Las categorías se representan mediante segmentos individuales de la forma. El tamaño del segmento lo determina el valor. Los gráficos de formas son similares en cuanto a uso a los gráficos circulares, excepto en que los primeros ordenan las categorías de mayor a menor.  
@@ -51,7 +51,7 @@ ms.locfileid: "47847923"
   
 -   Puede aplicar estilos de dibujo adicionales a los gráficos circulares y de anillos para aumentar su impacto visual. Para más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

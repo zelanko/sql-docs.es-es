@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b4a5339c18b724531609fe27f237157f1ae86116
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 319e00685255e77c7afe17fc932467268e020873
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617139"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294363"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimir un informe (Reporting Services en el modo de SharePoint)
   Para un servidor de informes que se ejecuta en el modo integrado de SharePoint, existen tres formas de imprimir un informe desde una aplicación web de SharePoint:  
@@ -46,7 +46,7 @@ ms.locfileid: "47617139"
   
      Para ver el informe antes de imprimirlo, haga clic en el botón **Vista previa** . Se abre la primera página del informe en una ventana de vista previa independiente. A medida que el informe se representa en el servidor de informes, se proporcionan más páginas. Un informe en vista previa se representa en formato EMF. Puede navegar hasta la página anterior o siguiente hasta llegar a la última página y hasta que el botón **Siguiente** aparezca deshabilitado. Para modificar los márgenes de impresión de la página de vista previa, haga clic en el botón **Márgenes** . Se mostrará el cuadro de diálogo **Márgenes** . Configure los márgenes superior, inferior, derecho e izquierdo y haga clic en **Aceptar**. El cuadro de diálogo se cierra y la configuración se almacena para representar la vista previa y la impresión.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

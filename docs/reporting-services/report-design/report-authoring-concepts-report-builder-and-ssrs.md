@@ -9,14 +9,14 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fab47f8994be4500cca49bc427aa7ec7292be2a2
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7357530ed6990c10ece43748c6ef7dd3a00c6454
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710996"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288733"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceptos de creación de informes (Generador de informes y SSRS)
   En esta sección se definen brevemente algunos conceptos clave que se usan para describir informes paginados en la documentación del Generador de informes y del Diseñador de informes. Para obtener definiciones de términos o palabras específicas, vea el [Glosario &#40;Generador de informes&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "52710996"
  [Concepto de parámetros de informe (Generador de informes y SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Describe los modos de definir y usar los parámetros de informe, y el modo en que se administran independientemente de la definición de informe en el servidor de informes.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Generador de informes en SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

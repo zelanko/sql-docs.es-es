@@ -12,12 +12,12 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 439967d45e74b0069d3064af64393151f9efc735
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 15f9bb429509f64909888883a718325b76efae27
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376607"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331505"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Optimización de la base de datos mediante carga de trabajo del Almacén de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ La diferencia entre las opciones Almacén de consultas y caché de planes es que
 
 ## <a name="see-also"></a>Consulte también  
 [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[Tutorial: Asistente para la optimización de motor de base de datos](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
+[Tutorial: Asistente para la optimización de motor de base de datos](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [Introducción a la recopilación de datos del almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Almacén de consultas, procedimientos recomendados](../../relational-databases/performance/best-practice-with-the-query-store.md)

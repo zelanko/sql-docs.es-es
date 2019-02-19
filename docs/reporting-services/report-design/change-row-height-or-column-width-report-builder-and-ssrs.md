@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e9441e98b9ef36672ce0643ec7856cd3fb618ca7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3027bec5e3334128dc893e574915f89e066d6792
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612723"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292003"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Cambiar el alto de fila o el ancho de columna (Generador de informes y SSRS)
   Cuando se establece un alto de fila, se está especificando el alto máximo para la fila en el informe representado. Sin embargo, de forma predeterminada, los cuadros de texto de la fila están configurados para crecer verticalmente con objeto de dar cabida a sus datos en tiempo de ejecución, y esto puede ocasionar que una fila crezca más allá del alto especificado. Para establecer un alto de fila fijo, debe cambiar las propiedades del cuadro de texto de modo que no se expandan automáticamente.  
@@ -62,7 +62,7 @@ ms.locfileid: "47612723"
   
 3.  Haga clic para arrastrar el borde de la columna y muévalo hacia la derecha o hacia la izquierda para ajustar el ancho de columna.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Región de datos Tablix (Generador de informes y SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
  [Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [Tablas (Generador de informes y SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

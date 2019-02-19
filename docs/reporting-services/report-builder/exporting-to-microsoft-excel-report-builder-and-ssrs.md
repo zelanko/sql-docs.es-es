@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f57f685532ee11f960fe71243944b819ef0dbd5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400029"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295163"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportar a Microsoft Excel (Generador de informes y SSRS)
   La extensión de representación de Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] representa un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el formato de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xlsx). Con la extensión de representación de Excel, el ancho de las columnas de Excel refleja más exactamente el ancho de las columnas de los informes.  
@@ -265,7 +265,7 @@ ms.locfileid: "52400029"
 ##  <a name="ConditionalFormat"></a> Cambiar informes en tiempo de ejecución  
  Si un informe se debe representar en varios formatos y no es posible crear un diseño del informe que se represente de la manera que desea en todos los formatos necesarios, podría considerar la utilización del valor del RenderFormat integrado global, para cambiar condicionalmente la apariencia del informe en tiempo de ejecución. De este modo puede ocultar o presentar los elementos de informe dependiendo del representador usado para obtener los mejores resultados en cada formato. Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

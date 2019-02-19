@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9cb351a5627dd525dd1eeb7bbeb9b7a9be821bc0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394018"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297483"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ámbito de expresión para los totales, agregados y colecciones integradas
   Al escribir expresiones, encontrará que el término *ámbito* se utiliza en varios contextos. El ámbito puede especificar los datos que se deben utilizar para evaluar una expresión, el conjunto de cuadros de texto de una página representada o el conjunto de elementos de informe que se pueden mostrar u ocultar mediante un comando de alternancia. Verá el término *ámbito* en temas relacionados con la evaluación de expresiones, la sintaxis de funciones de agregado, la visibilidad condicional, y también en mensajes de error relacionados con estas áreas. Las siguientes descripciones le ayudarán a diferenciar el significado de *ámbito* que corresponda:  
@@ -157,7 +157,7 @@ ms.locfileid: "52394018"
  Para muchos informes, los cálculos cuyo ámbito son grupos pueden crear muchas celdas con valores cero (0) o NULL. Para conseguir que el informe esté más despejado, agregue una expresión que devuelva espacios en blanco si el valor de agregado es 0. Para obtener más información, vea los ejemplos de "Suprimir valores NULL o valores cero" en [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   

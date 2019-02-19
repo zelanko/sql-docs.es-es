@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d78d5bd802b1c194cb4b1cf09a81a1eecc9f54df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b4d2193730a07ff59ddfc8c74189663f74e804b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413702"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289473"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
 Obtenga información sobre las extensiones de representación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los informes paginados, de forma que esté seguro de que el informe tiene el aspecto que quiere, incluidos el diseño y los saltos de página, y el tamaño del papel. 
@@ -111,7 +111,7 @@ Un informe también puede contener subinformes.
  [Controlar saltos de página, encabezados, columnas y filas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Proporciona información sobre cómo utilizar saltos de página.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

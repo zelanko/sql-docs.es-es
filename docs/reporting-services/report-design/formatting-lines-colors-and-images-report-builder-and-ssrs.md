@@ -19,14 +19,14 @@ f1_keywords:
 - "10066"
 - sql13.rtp.rptdesigner.subreportproperties.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4800b340a11f6bde2a45bfb60c3061f19c822177
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5011f6e70ae4dc938ec90d06c6b32a0f78117ff9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031687"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292173"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Aplicar formato a líneas, colores e imágenes (Generador de informes y SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le permite dar formato a las líneas, los colores, las regiones de datos, las imágenes y otros elementos de informe.  
@@ -53,7 +53,7 @@ ms.locfileid: "50031687"
   
  También puede agregar imágenes, como los logotipos, al fondo de su informe o a un rectángulo, cuadro de texto, tabla, matriz o algunas partes de un gráfico o a las secciones de página y al cuerpo de un informe. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   

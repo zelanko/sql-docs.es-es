@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4be086fc974ccb6338f75eed0cf10ccb0087edc0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 50a51ce650bf4c9b7fa7ff4b8cd19f940d54d04b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031690"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298493"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Representar datos (Generador de informes y SSRS)
   Cuando se usan representadores de diseño, como HTML, MHTML, Word, Excel, PDF o Image, los datos y su organización permanecen invariables. Cuando se exporta usando un formato de representador de datos, como Separado por comas (CSV) o XML, no se representa ningún elemento de diseño visual. Al representar el informe, CSV y XML aplican ciertas reglas al cuerpo del informe y a su contenido. Estas reglas determinan el modo en que se representan los datos en estos formatos.  
@@ -43,7 +43,7 @@ ms.locfileid: "50031690"
   
  El archivo XML con la opción de exportación de los datos del informe guarda el informe como un archivo XML. El esquema XML para el informe es específico del informe. La opción de exportación XML no guarda la información de diseño del informe. El XML que se genera mediante esta opción se puede importar a una base de datos, se puede utilizar como mensaje de datos XML o se puede enviar a una aplicación personalizada. Para más información sobre cómo representar el informe en el tipo de archivo XML, vea [Exportar a XML &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

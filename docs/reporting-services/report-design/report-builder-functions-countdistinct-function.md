@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9b1cbc3721c90beae1203cb1f9391b7d86b071b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fdf0446082a3cfde45f3093e2d6cd0b5077e3b8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816207"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287873"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>Funciones del Generador de informes: función CountDistinct
   Devuelve un recuento de todos los valores no NULL distintos especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  
@@ -69,7 +69,7 @@ CountDistinct(expression, scope, recursive)
 "Distinct count (Category): " & CountDistinct(Fields!Size.Value,"GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 66d349e2cb6203689ec2bdee70345c0968699a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: df76a5ec3434119c7d40ed23f3d41b1f197ca20b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785453"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294163"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Describir las áreas de la región de datos Tablix (Generador de informes y SSRS)
  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , una región de datos Tablix tiene cuatro áreas que contienen celdas de Tablix:   
@@ -46,12 +46,12 @@ En la superficie de diseño, las líneas de puntos representan las cuatro áreas
   
  El área de grupo de filas muestra dos instancias de grupo de categorías para Clothing y Components. El grupo de columnas muestra una instancia de grupo de geografía para América del Norte, con dos instancias de grupo anidado de país o región para Canadá (CA) y los Estados Unidos (US). Además, la columna adyacente muestra dos instancias de grupo de dos años para 2003 y 2004. La fila de columnas Total muestra los totales de fila; la fila de totales que se repite con el grupo de categorías muestra los totales de subcategoría, y la fila de total general muestra los totales de categoría una vez para la región de datos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tutoriales del Generador de informes](../../reporting-services/report-builder-tutorials.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Creación de una matriz](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Creación de facturas y formularios con listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Crear facturas y formularios con listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   

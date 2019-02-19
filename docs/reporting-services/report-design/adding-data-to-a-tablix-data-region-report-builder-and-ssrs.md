@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 057b2805c611957babd3b2b6e4237dce7a1d8d49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4bee88917f0bb4e512002549b17469004cd2880
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632053"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286514"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Agregar datos a una región de datos Tablix (Generador de informes y SSRS)
 Para mostrar los datos de un conjunto de datos de informe en una tabla o una matriz en informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , especifique en cada celda de datos el nombre del campo de conjunto de datos que se debe mostrar. Puede mostrar datos detallados o datos agrupados. Si agrega grupos a una tabla o matriz, las filas y las columnas para los valores y los datos de grupo se agregan automáticamente. A continuación, puede agregar subtotales y totales para los datos.  
@@ -48,7 +48,7 @@ Para mostrar los datos de un conjunto de datos de informe en una tabla o una mat
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>Agregar una región de datos Tablix existente de otro informe  
  Puede copiar una región de datos de otro informe y pegarla en un informe nuevo o en uno ya existente. Tras pegar la región de datos, debe asegurarse de que el conjunto de datos que usa la región de datos esté definido, y de que los campos de conjunto de datos tengan nombres y tipos de datos idénticos a los del informe original. No puede copiar los conjuntos de datos de un informe en otro, pero si los informes utilizan orígenes de datos compartidos, puede duplicar rápidamente el conjunto de datos en el otro el informe. También puede importar el texto de consulta correspondiente a las consultas que recuperan los datos del conjunto de datos, lo que simplifica la duplicación de las consultas en los informes. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

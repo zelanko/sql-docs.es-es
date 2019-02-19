@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6291fa6f851116ed5c0010211ce7278e4cafee3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9519e413c9ff80d0757457e7c1624f6f5ace1831
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678583"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287403"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Ocultar un encabezado o un pie de página en la primera o en la última página (Generador de informes y SSRS)
   Un informe puede contener un encabezado de página y un pie de página que aparecen en la parte superior e inferior de cada página, respectivamente. Después de agregar un encabezado o un pie de página, puede ocultarlo selectivamente en la primera y en la última página de un informe.  
@@ -45,7 +45,7 @@ ms.locfileid: "47678583"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Agregar o quitar un encabezado o un pie de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  

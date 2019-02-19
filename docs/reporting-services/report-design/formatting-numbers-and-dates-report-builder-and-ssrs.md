@@ -15,14 +15,14 @@ f1_keywords:
 - "10285"
 - sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 379f8a3cc95df4bfb2ed55ac639516d025abc32f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6fa925a95f14191c87fedeca1abe2f39e68f9cca
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029214"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284533"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Aplicar formato a números y fechas (Generador de informes y SSRS)
   Para dar formato a los números y fechas de las regiones de datos, seleccione un formato en la página **Número** del cuadro de diálogo **Propiedades** de la región de datos correspondiente.  
@@ -54,7 +54,7 @@ ms.locfileid: "50029214"
   
 -   Si selecciona **Moneda** en **Categoría** y activa **Mostrar valores en**, puede seleccionar **Miles**, **Millones**o **Miles de millones** para mostrar los números mediante formatos financieros. Por ejemplo, si el valor del campo es 1.789.905.394, y selecciona **Miles de millones** y especifica 2 decimales, el valor mostrado en el informe será 1,78.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Aplicar formato a líneas, colores e imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

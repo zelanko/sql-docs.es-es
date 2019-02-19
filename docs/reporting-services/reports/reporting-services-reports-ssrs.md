@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 37a2fa01004fb3550422b44f48d83e1c79dc587b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030334"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291363"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Informes de Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Los informes paginados son definiciones de informes basados en XML donde se incluyen datos y elementos de diseño de informes. En un sistema de archivos de cliente, las definiciones de informe tienen la extensión de archivo .rdl. Una vez que se publica un informe paginado, se convierte en un elemento de informe que se almacena en el servidor de informes o en el sitio de SharePoint. Los informes paginados son una parte de la plataforma de generación de informes basada en servidor que proporciona [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. También puede [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -173,7 +173,7 @@ ms.locfileid: "50030334"
   
 -   **Determine dónde puede buscar más información.** Por ejemplo, si el diseño de informe incluye expresiones, la herramienta Diseñador de informes proporciona más información sobre los problemas de evaluación de expresiones que la herramienta Generador de informes. Si se producen errores de procesamiento de informes, los archivos de registro contienen información detallada.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Extensiones &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
  [Servidor de informes de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  

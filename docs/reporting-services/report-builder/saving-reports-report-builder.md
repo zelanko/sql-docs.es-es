@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ea2e2b6ef177f4c11d7655f4a4a66c159d40961a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 42817b1524bd2bc0ada10e4b49bcd511c51dc549
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029054"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289494"
 ---
 # <a name="saving-reports-report-builder"></a>Guardar informes (Generador de informes)
   En el Generador de informes puede guardar un informe pagina en un servidor de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , una biblioteca de SharePoint, un recurso compartido de archivos en el que tenga permiso de escritura o en su equipo. 
@@ -60,7 +60,7 @@ Cuando guarda un informe, lo que realmente se guarda es la definición de inform
   
 -   [Guardar un informe en una biblioteca de SharePoint &#40;Generador de informes&#41;](../../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
    
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Instalar, desinstalar y asistencia del Generador de informes 3.0](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

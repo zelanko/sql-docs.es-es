@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c536d94d9bbec76cb4b1887f46890680c26a116
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542218"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291293"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Elementos de informe (Generador de informes y SSRS)
   Las tablas, las matrices, los gráficos y las imágenes que se incluyen en los informes, se pueden publicar como *elementos de informe*. Se trata de elementos de informe paginado que se han publicado por separado en un servidor de informes y se pueden volver a usar en otros informes paginados. Los elementos de informe tienen una extensión de archivo .rsc.  
@@ -138,7 +138,7 @@ ms.locfileid: "52542218"
   
  [Buscar o desactivar actualizaciones (Generador de informes y SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Solucionar problemas de elementos de informe (Generador de informes y SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Administrar elementos de informe](../../reporting-services/report-design/managing-report-parts.md)  

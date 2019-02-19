@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7619852bae5989dcf12b571175d21243f6968051
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7742e9e69a88768f5f2c3a8d1ca21554436907d9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516040"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295923"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Dar formato al texto en un cuadro de texto (Generador de informes y SSRS)
   Puede dar formato por separado a cualquier parte del texto de un cuadro de texto, y usar texto de marcador de posición y texto estático en un mismo cuadro de texto. Esta capacidad de mezclar formatos y agregar texto de marcador de posición permite crear combinaciones de correspondencia o plantillas para el texto del informe. Podrá definir y dar formato a cualquier expresión de forma independiente mediante un marcador de posición.  
@@ -63,7 +63,7 @@ ms.locfileid: "52516040"
   
  La lista se repite una vez por cada valor del campo y el marcador de posición *FieldName* se reemplaza cada vez por el valor de ese campo en el conjunto de datos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cuadros de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   

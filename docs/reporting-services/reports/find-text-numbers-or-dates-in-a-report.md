@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d17541a43178f7ebe5161904266087096844b680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ea304423f392815b2eeeca18580ad5a73f140751
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620993"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296923"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>Buscar texto, números o fechas en un informe
   Puede buscar contenido del informe si escribe una palabra o una frase que se desee encontrar (el valor máximo de un término de búsqueda es 256 caracteres). La búsqueda es una técnica de navegación que encuentra un valor coincidente en el informe y se centra en la parte del informe que contiene ese valor.  
@@ -40,7 +40,7 @@ ms.locfileid: "47620993"
   
 4.  Para buscar más repeticiones del mismo valor, haga clic en **Siguiente**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Agregar el elemento web Visor de informes a una página web &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

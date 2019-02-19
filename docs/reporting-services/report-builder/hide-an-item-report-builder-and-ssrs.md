@@ -9,14 +9,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fa904bc1df8cb53935bc674e79bae387e33e9244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 202f74b4e01780d7fa738b0c9905b8a29436bb52
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843343"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285233"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar un elemento (Generador de informes y SSRS)
   Establezca la visibilidad de un elemento de informe cuando desee ocultar condicionalmente un elemento basándose en un parámetro de informe o en alguna otra expresión que especifique.  
@@ -67,7 +67,7 @@ ms.locfileid: "47843343"
   
 3.  En el cuadro de diálogo **Visibilidad de columna** , siga los pasos 3 y 4 del primer procedimiento.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
  [Agregar una acción de expandir y contraer a un elemento &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

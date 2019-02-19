@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c9e980b05432f9e7fdd54bbd45165d62bff88c4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83398ce2bf9e12a6b16ef5495d63716d4f3b1903
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789083"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286583"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidad interactiva para diferentes extensiones de representación de informes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona características para interactuar con un informe paginado en tiempo de ejecución. No todos los formatos de representación de informes son compatibles con todas las características interactivas. Use la tabla siguiente para comprender el funcionamiento de las características interactivas en los diferentes formatos.  
@@ -94,7 +94,7 @@ ms.locfileid: "47789083"
 |PDF|El servidor de informes exporta el informe a PDF utilizando los valores de parámetros que están activos para el informe.|  
 |Excel|El servidor de informes exporta el informe a Excel utilizando los valores de parámetros que están activos para el informe.|  
 |Word|El servidor de informes exporta el informe a Word usando los valores de los parámetros que están activos para el informe.|  
-|Otro|El servidor de informes exporta el informe a otros formatos utilizando los valores de parámetros que están activos para el informe.|  
+|Otros|El servidor de informes exporta el informe a otros formatos utilizando los valores de parámetros que están activos para el informe.|  
   
 ### <a name="filters-applied-at-run-time"></a>Filtros aplicados en tiempo de ejecución  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47789083"
 |Word|El servidor de informes exporta el informe a Word utilizando los datos filtrados en el informe actual.|  
 |Otros|El servidor de informes exporta el informe a otros formatos utilizando los datos filtrados en el informe actual.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     

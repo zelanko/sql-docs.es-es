@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: cef9239250bccd043d530917a284913db3e0d6e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6fe16659ce288a664d684eced0de22ce4382f3a7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795183"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288293"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Mostrar la vista previa de informes en el Generador de informes
   Durante la creación de un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , resulta útil obtener una vista previa del mismo a menudo para comprobar que muestra lo que se pretende. Para obtener una vista previa de un informe, haga clic en **Ejecutar**. El informe se representa en el modo de vista previa.  
@@ -73,7 +73,7 @@ ms.locfileid: "47795183"
   
  Si el subinforme utilizado por el informe cambia una vez creada la sesión de edición, este no se representará en la vista previa. Para obtener correctamente una vista previa del informe, debe guardarlo o hacer clic en **Actualizar** para obtener los datos nuevos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

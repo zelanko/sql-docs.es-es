@@ -122,21 +122,21 @@ ms.locfileid: "47599953"
   
 #### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>Para configurar la regla de firewall de una dirección IP concreta  
   
-1.  En la página **Reglas de entrada** del **Firewall de Windows con seguridad avanzada**, haga clic con el botón derecho en la regla recién creada y, después, haga clic en **Propiedades**.  
+1.  En la página **Reglas de entrada** del **Firewall de Windows con seguridad avanzada**, haga clic con el botón derecho en la regla recién creada, y después, haga clic en **Propiedades**.  
   
-2.  En el cuadro de diálogo **Propiedades de la regla** , seleccione la pestaña **Ámbito** .  
+2.  En el cuadro de diálogo **Propiedades de la regla**, seleccione la pestaña **Ámbito** .  
   
-3.  En el área **Dirección IP local** , seleccione **Estas direcciones IP**y, a continuación, haga clic en **Agregar**.  
+3.  En el área **Dirección IP local**, seleccione **Estas direcciones IP**, y a continuación, haga clic en **Agregar**.  
   
-4.  En el cuadro de diálogo **Dirección IP** , seleccione **Esta dirección IP o subred**y escriba una de las direcciones IP que desea configurar.  
+4.  En el cuadro de diálogo **Dirección IP** , seleccione **Esta dirección IP o subred** y escriba una de las direcciones IP que desea configurar.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-6.  En el área **Dirección IP remota** , seleccione **Estas direcciones IP**y, a continuación, haga clic en **Agregar**.  
+6.  En el área **Dirección IP remota**, seleccione **Estas direcciones IP**, y a continuación, haga clic en **Agregar**.  
   
 7.  Use el cuadro de diálogo **Dirección IP** para configurar la conectividad de la dirección IP seleccionada en el equipo. Puede habilitar las conexiones desde direcciones IP especificadas, intervalos de direcciones IP, subredes enteras o ciertos equipos. Para configurar esta opción correctamente, debe tener un gran conocimiento de la red. Para obtener información sobre la red, consulte al administrador de red.  
   
-8.  Para cerrar el cuadro de diálogo **Dirección IP** , haga clic en **Aceptar**y haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de la regla** .  
+8.  Para cerrar el cuadro de diálogo **Dirección IP**, haga clic en **Aceptar** y haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de la regla**.  
   
 9. Para configurar las otras direcciones IP en un equipo de host múltiple, repita este procedimiento con otra dirección IP y otra regla.  
   

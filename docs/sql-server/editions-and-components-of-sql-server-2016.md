@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f00d147c5b9a3e6a2ec6137d72940cae9e67158d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420230"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265402"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Ediciones y características admitidas de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |regulador de recursos|Sí|No|No|No|No|  
 |Paralelismo de tabla con particiones|Sí|No|No|No|No|
 |Varios contenedores de secuencias de archivo|Sí|Sí <sup>2</sup>|Sí <sup>2</sup>|Sí <sup>2</sup>|Sí <sup>2</sup>|
-|Asignación de memoria de página grande habilitada para NUMA y matriz de búferes|Sí|No|No|No|No|
+|Asignación de memoria de página grande habilitada para NUMA y matriz de búferes|Sí|No <sup>4</sup>|No|No|No|
 |Buffer Pool Extension|Sí|Sí|No|No|No|
 |Regulación de recursos de E/S|Sí|No|No|No|No|  
 |Perdurabilidad diferida|Sí|Sí|Sí|Sí|Sí|
@@ -188,6 +188,8 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 <sup>2</sup> Se aplica a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
 
 <sup>3</sup> Esta característica no está incluida en la opción de instalación LocalDB.
+
+<sup>4</sup> La licencia basada en Standard Edition y SQL Server con licencia de acceso de cliente (CAL) puede restringir el número de procesadores que puede usar SQL Server Standard, pero SQL Server Standard es compatible con NUMA. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Característica|Enterprise|Estándar|Web|Express|Express con Advanced Services|  

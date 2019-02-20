@@ -1,6 +1,6 @@
 ---
 title: Especificaciones de capacidad máxima para SQL Server | Microsoft Docs
-ms.date: 11/6/2017
+ms.date: 11/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d189ed1e434380f409fdec0fee799801934019a
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383615"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319406"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "49383615"
 |Subconsultas anidadas||32||  
 |Niveles de desencadenadores anidados||32||  
 |Índices no clúster por tabla||999||  
-|El número de expresiones distintas en la cláusula BY GROUP cuando cualquiera de los elementos siguientes está presente: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  
+|Número de expresiones distintas en la cláusula GROUP BY cuando existe alguna de las siguientes opciones: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  
 |El número de conjuntos de agrupamiento generados por los operadores de la cláusula BY GROUP||4,096||  
 |Parámetros por procedimiento almacenado||2,100||  
 |Parámetros por función definida por el usuario||2,100||  
@@ -148,7 +148,7 @@ ms.locfileid: "49383615"
   
  **La tabla base puede incluir el número máximo de columnas permitido en la base de datos de publicación (1024 para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), pero las columnas deben filtrarse desde el artículo si superan el máximo especificado para el tipo de publicación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Requisitos de hardware y software para instalar SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Comprobar los parámetros del Comprobador de configuración del sistema](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

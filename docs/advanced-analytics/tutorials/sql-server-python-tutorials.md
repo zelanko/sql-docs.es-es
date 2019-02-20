@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f5dab603a7295009bee5275b721e987d5de76710
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046465"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425790"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>Tutoriales de Python de SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ En este artículo se describe los tutoriales de Python para realizar análisis e
 
 | Vínculo | Descripción |
 |------|-------------|
-| [Inicio rápido: Script de Python "Hello world" en SQL Server](quickstart-r-run-using-tsql.md) | Obtenga información sobre los conceptos básicos de cómo llamar a Python en T-SQL. |
+| [Inicio rápido: Script de Python "Hello world" en SQL Server](quickstart-python-run-using-t-sql.md) | Obtenga información sobre los conceptos básicos de cómo llamar a Python en T-SQL. |
 | [Inicio rápido: Crear, entrenar y usar un modelo de Python con procedimientos almacenados en SQL Server](quickstart-python-train-score-in-tsql.md) | Explica los mecanismos de incrustación de código de Python en un procedimiento almacenado, que proporciona las entradas y ejecución del procedimiento almacenado. |
 | [Tutorial: Crear un modelo mediante revoscalepy](use-python-revoscalepy-to-create-model.md) | Muestra cómo ejecutar código desde un terminal de Python remoto, utilizando el contexto de proceso de SQL Server. Debe estar un poco familiarizado con los entornos y herramientas de Python. Código de ejemplo es que crea un modelo con **rxLinMod**, desde el nuevo **revoscalepy** biblioteca. |
 | [Tutorial: Obtenga información sobre análisis de Python en bases de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md) | En este tutorial de extremo a extremo muestra el proceso de creación de una solución completa de Python mediante procedimientos almacenado de Transact-SQL. Se incluye todo el código Python.|

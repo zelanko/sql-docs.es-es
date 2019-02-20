@@ -132,7 +132,7 @@ ms.locfileid: "47599953"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-6.  En el área **Dirección IP remota**, seleccione **Estas direcciones IP**, y a continuación, haga clic en **Agregar**.  
+6.  En el área **Dirección IP remota** , seleccione **Estas direcciones IP**y, a continuación, haga clic en **Agregar**.  
   
 7.  Use el cuadro de diálogo **Dirección IP** para configurar la conectividad de la dirección IP seleccionada en el equipo. Puede habilitar las conexiones desde direcciones IP especificadas, intervalos de direcciones IP, subredes enteras o ciertos equipos. Para configurar esta opción correctamente, debe tener un gran conocimiento de la red. Para obtener información sobre la red, consulte al administrador de red.  
   

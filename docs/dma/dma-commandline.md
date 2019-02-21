@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7769edd1718881a01fe0f40ae2b7dc0e8b8ec78a
-ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
+ms.openlocfilehash: 505ea8d199ee2fe666d65c474e7f11dfaadcf18f
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56159770"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464731"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ejecutar Data Migration Assistant desde la línea de comandos
 Con la versión 2.1 y anteriores, cuando instale Data Migration Assistant, también instalará dmacmd.exe en *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Usar dmacmd.exe para evaluar las bases de datos en modo desatendido y generar el resultado al archivo JSON o CSV. Este método es especialmente útil al evaluar varias bases de datos o bases de datos enormes. 
@@ -45,7 +45,7 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Cómo usar el texto de ayuda dmacmd.exe        | N
 |`/AssessmentName`     |   Nombre del proyecto de evaluación   | S
 |`/AssessmentDatabases`     | Lista delimitada por espacios de las cadenas de conexión. Nombre de base de datos (catálogo inicial) distingue mayúsculas de minúsculas. | S
-|`/AssessmentTargetPlatform`     | Plataforma de destino para la evaluación, los valores admitidos: SqlServer2012, SqlServer2014, SqlServer2016 y AzureSqlDatabaseV12. El valor predeterminado es SqlServer2016   | N
+|`/AssessmentTargetPlatform`     | Plataforma de destino para la evaluación, los valores admitidos: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 y SqlServerWindows2017. El valor predeterminado es SqlServerWindows2017   | N
 |`/AssessmentEvaluateFeatureParity`  | Ejecutar reglas de paridad de características  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Ejecutar las reglas de compatibilidad  | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations es necesario).
 |`/AssessmentEvaluateRecommendations`     | Ejecute la recomendación de característica        | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendationsis necesarios)

@@ -2,7 +2,7 @@
 title: Evaluar una empresa y consolidar los informes de evaluación (SQL Server) | Microsoft Docs
 description: Obtenga información sobre cómo usar DMA para evaluar una empresa y consolidar los informes de evaluación antes de actualizar SQL Server o la migración a Azure SQL Database.
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/20/20198
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d26de5c86485e6e7a2c6a11b8528c55c8ce92229
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300092"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464781"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluar una empresa y consolidar los informes de evaluación con DMA
 
@@ -37,15 +37,15 @@ Las siguientes instrucciones paso a paso para ayudarán a usar Data Migration As
     - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
     - [Módulos de PowerShell de Azure](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Descargar y extraer:
-    - El [plantilla DMA informes Power BI](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
-    - El [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
+    - El [plantilla DMA informes Power BI](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports1.zip).
+    - El [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Cargando los módulos de PowerShell
 Guardado de los módulos de PowerShell en el directorio de módulos de PowerShell le permite llamar a los módulos sin necesidad de cargarlos explícitamente antes de su uso.
 
 Para cargar los módulos, realice los pasos siguientes:
 1. Vaya a C:\Program Files\WindowsPowerShell\Modules y, a continuación, cree una carpeta denominada **DataMigrationAssistant**.
-2. Abra el [módulos de PowerShell](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip)y, a continuación, guardarlos en la carpeta que creó.
+2. Abra el [módulos de PowerShell](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules.zip)y, a continuación, guardarlos en la carpeta que creó.
 
       ![Módulos de PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -97,13 +97,13 @@ Después de cargar los módulos de PowerShell en el directorio modules y crear u
 
 Los parámetros asociados con la función dmaDataCollector se describen en la tabla siguiente.
 
-|Parámetro  |Descripción
+|Parámetro  |Descripción |
 |---------|---------|
 |**getServerListFrom** | El inventario. Los valores posibles son **SqlServer** y **CSV**.<br/>Para obtener más información, consulte [crear un inventario de servidores SQL Server](#create-inventory). |
 |**serverName** | El nombre de instancia de SQL Server del inventario cuando se usa **SqlServer** en el **getServerListFrom** parámetro. |
 |**databaseName** | La base de datos que hospeda la tabla de inventario. |
 |**AssessmentName** | El nombre de la evaluación de DMA. |
-|**TargetPlatform** | El tipo de destino de evaluación que se desea realizar.  Los valores posibles son **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, y **SQLServerWindows2017**. |
+|**TargetPlatform** | El tipo de destino de evaluación que se desea realizar.  Los valores posibles son **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, **SQLServerWindows2017**, y **ManagedSqlServer**. |
 |**AuthenticationMethod** | El método de autenticación para conectarse a los destinos de SQL Server van a evaluar. Los valores posibles son **SQLAuth** y **WindowsAuth**. |
 |**OutputLocation** | El directorio en el que se va a almacenar el archivo JSON evaluación de archivo de salida. Según el número de bases de datos que se evalúa y el número de objetos dentro de las bases de datos, las evaluaciones pueden tardar demasiado tiempo. Después de han completado todas las evaluaciones, se escribirá el archivo. |
 
@@ -119,9 +119,9 @@ Una vez finalizada la evaluación, ahora está listo para importar los datos en 
 
 Los parámetros asociados con la función dmaProcessor se describen en la tabla siguiente.
 
-|Parámetro  |Descripción
+|Parámetro  |Descripción |
 |---------|---------|
-|**processTo**  | La ubicación a la que se procesará el archivo JSON. Los valores posibles son **SQLServer** y **AzureSQLDatabase**. |
+|**processTo** | La ubicación a la que se procesará el archivo JSON. Los valores posibles son **SQLServer** y **AzureSQLDatabase**. |
 |**serverName** | La instancia de SQL Server a la que se procesarán los datos.  Si especifica **AzureSQLDatabase** para el **encarguen** parámetro, a continuación, incluir solo el nombre de SQL Server (no incluya. database.windows.net). Se le pedirá para dos inicios de sesión cuando el destino es Azure SQL Database; la primera es sus credenciales de inquilino de Azure, mientras que el segundo es el inicio de sesión de administrador para el servidor de SQL Azure. |
 |**CreateDMAReporting** | La base de datos de almacenamiento provisional para crear para procesar el archivo JSON.  Si la base de datos especificada ya existe y se establece este parámetro en uno, no se crean los objetos.  Este parámetro es útil para volver a crear un único objeto que se ha quitado. |
 |**CreateDataWarehouse** | Crea el almacenamiento de datos que se usará en el informe de Power BI. |
@@ -161,22 +161,43 @@ También puede usar la secuencia de comandos LoadWarehouse para proporcionar las
 
    Después de que el informe actualice los datos de la **DMAWarehouse** base de datos, se le presentará un informe similar al siguiente.
 
-   ![Vista de informe DMAWarehouse](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
+   ![Vista de informe DMAWarehouse](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report1.png)
 
    > [!TIP]
-   > Si no ve los datos esperados, pruebe a cambiar el marcador activo.  Para obtener más información, consulte la sección de funcionalidad.
+   > Si no ve los datos esperados, pruebe a cambiar el marcador activo.  Para obtener más información, vea el los detalles en la sección siguiente.
 
 ## <a name="working-with-dma-reports"></a>Trabajar con informes DMA
-Para trabajar con un informe DMA, use las segmentaciones para filtrar por:
+Para trabajar con informes DMA, utilizar marcadores y las segmentaciones para filtrar por:
+- Tipos de evaluación (Azure SQL Database, instancia Administrada de SQL Azure, SQL local) 
 - Nombre de la instancia
 - Nombre de la base de datos
 - Nombre de equipo
 
-También puede usar marcadores para cambiar el contexto de generación de informes entre:
-- Evaluaciones en la nube
+Para obtener acceso a la hoja de marcadores y filtros, seleccione el marcador de filtros en la página del informe principal:
+
+![Los filtros y los marcadores del informe DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
+
+Esto permite a la hoja siguiente:
+
+![Hoja de las vistas de informes de DMA](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
+
+Puede usar marcadores para cambiar el contexto de generación de informes entre:
+- Evaluaciones en la nube de Azure SQL DB
+- Evaluaciones de nube Administrada de SQL Azure
 - Evaluaciones de forma local
 
-  ![Marcadores de informe DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks.png)
+  ![Marcadores de vistas de informes de DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+
+Para ocultar la hoja de filtros, CTRL-clic el botón Atrás:
+
+![Botón Atrás de vistas de informes de DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
+
+Hay un símbolo del sistema en la parte inferior izquierda de la página del informe para mostrar si se aplica un filtro actualmente en cualquiera de las siguientes acciones:
+* FactAssessment – InstanceName
+* FactAssessment: DatabaseName
+* dimDBOwner - DBOwner
+
+![Símbolo del sistema de filtro aplicado](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
 > [!NOTE]
 > Si sólo realiza una evaluación de Azure SQL Database, se rellenan solo los informes en la nube. Por el contrario, si sólo realiza una evaluación en el entorno local, se rellenan solo los informes locales. Sin embargo, si se realizan una instancia de Azure y una evaluación local y, a continuación, cargar ambas evaluaciones en el almacenamiento, puede cambiar entre los informes en la nube y local mediante CTRL-clic el icono asociado.

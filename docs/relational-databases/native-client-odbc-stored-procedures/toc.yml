@@ -1,8 +1,0 @@
-- name: Ejecutar procedimientos almacenados
-  href: running-stored-procedures.md
-- name: Procesar por lotes las llamadas a procedimientos almacenados
-  href: batching-stored-procedure-calls.md
-- name: Llamar a un procedimiento almacenado
-  href: calling-a-stored-procedure.md
-- name: Procesar resultados de procedimientos almacenados
-  href: processing-stored-procedure-results.md

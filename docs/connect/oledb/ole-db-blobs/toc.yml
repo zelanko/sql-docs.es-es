@@ -1,8 +1,0 @@
-- name: BLOB y objetos OLE
-  href: blobs-and-ole-objects.md
-- name: Obtener datos grandes
-  href: getting-large-data.md
-- name: Definir datos grandes
-  href: setting-large-data.md
-- name: Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB
-  href: streaming-support-for-blob-output-parameters.md

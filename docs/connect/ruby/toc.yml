@@ -1,8 +1,0 @@
-- name: Controlador Ruby para SQL Server
-  href: ruby-driver-for-sql-server.md
-- name: 'Paso 1: Configurar el entorno de desarrollo para el desarrollo Ruby'
-  href: step-1-configure-development-environment-for-ruby-development.md
-- name: 'Paso 2: Crear una base de datos SQL para el desarrollo Ruby'
-  href: step-2-create-a-sql-database-for-ruby-development.md
-- name: 'Paso 3: Prueba de concepto que se conecta a SQL con Ruby'
-  href: step-3-proof-of-concept-connecting-to-sql-using-ruby.md

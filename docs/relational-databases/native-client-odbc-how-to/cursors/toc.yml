@@ -1,8 +1,0 @@
-- name: Temas de procedimientos del uso de cursores (ODBC)
-  href: using-cursors-how-to-topics-odbc.md
-- name: Capturar y actualizar conjuntos de filas (ODBC)
-  href: fetch-and-update-rowsets-odbc.md
-- name: Usar cursores (ODBC)
-  href: use-cursors-odbc.md
-- name: Usar enlace de conjuntos de filas (ODBC)
-  href: use-rowset-binding-odbc.md

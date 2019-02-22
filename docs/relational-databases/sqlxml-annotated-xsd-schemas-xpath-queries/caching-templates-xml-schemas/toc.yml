@@ -1,8 +1,0 @@
-- name: 'Almacenar en memoria caché plantillas, XSL y esquemas (SQLXML 4.0)'
-  href: caching-templates-xsl-and-schemas-sqlxml-4-0.md
-- name: Almacenamiento de esquemas en caché (SQLXML 4.0)
-  href: schema-caching-sqlxml-4-0.md
-- name: Almacenamiento en caché de plantillas (SQLXML 4.0)
-  href: template-caching-sqlxml-4-0.md
-- name: Almacenamiento en caché XSL (SQLXML 4.0)
-  href: xsl-caching-sqlxml-4-0.md

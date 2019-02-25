@@ -1,233 +1,235 @@
 items:
+- name: Tabla de contenido raíz de SQL Server +
+  href: /sql/sql-server/sql-server-technical-documentation
 - name: Novedades de APS
-  href: whats-new-analytics-platform-system.md
+  href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
   - name: APS CU7.3
-    href: whats-new-analytics-platform-system.md#h2-aps-cu7.3
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.3
   - name: APS CU7.2
-    href: whats-new-analytics-platform-system.md#h2-aps-cu7.2
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.2
   - name: APS CU7.1
-    href: whats-new-analytics-platform-system.md#h2-aps-cu7.1
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.1
   - name: APS AU7
-    href: whats-new-analytics-platform-system.md#h2-aps-au7
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au7
   - name: APS 2016
-    href: whats-new-analytics-platform-system.md#h2-aps-au6
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au6
 - name: Architecture
   items:
   - name: Información general sobre Almacenamiento de datos paralelo
-    href: parallel-data-warehouse-overview.md
+    href: ../analytics-platform-system/parallel-data-warehouse-overview.md
   - name: Componentes de hardware
-    href: hardware-components.md
+    href: ../analytics-platform-system/hardware-components.md
   - name: Configuraciones de hardware
-    href: hardware-configurations.md
+    href: ../analytics-platform-system/hardware-configurations.md
   - name: Capacidad de procesamiento y almacenamiento
-    href: processing-and-storage-capacity-planning.md
+    href: ../analytics-platform-system/processing-and-storage-capacity-planning.md
   - name: Alta disponibilidad
-    href: high-availability.md
+    href: ../analytics-platform-system/high-availability.md
 - name: Copia de seguridad y carga de hardware
   items:
   - name: Información general
-    href: backup-and-loading-hardware.md
+    href: ../analytics-platform-system/backup-and-loading-hardware.md
   - name: Adquisición y configuración de servidores de carga
-    href: acquire-and-configure-loading-server.md
+    href: ../analytics-platform-system/acquire-and-configure-loading-server.md
   - name: Hoja de cálculo de planeamiento de capacidad del servidor de carga
-    href: loading-server-capacity-planning-worksheet.md
+    href: ../analytics-platform-system/loading-server-capacity-planning-worksheet.md
   - name: Adquisición y configuración de servidores de copia de seguridad
-    href: acquire-and-configure-backup-server.md
+    href: ../analytics-platform-system/acquire-and-configure-backup-server.md
   - name: Hoja de cálculo de planeamiento de capacidad del servidor de copia de seguridad
-    href: backup-capacity-planning-worksheet.md
+    href: ../analytics-platform-system/backup-capacity-planning-worksheet.md
   - name: Configuración de adaptadores de red InfiniBand
-    href: configure-infiniband-network-adapters.md
+    href: ../analytics-platform-system/configure-infiniband-network-adapters.md
 - name: Consulta
   items:
   - name: Configurar estadísticas automáticas
-    href: configure-auto-statistics.md
+    href: ../analytics-platform-system/configure-auto-statistics.md
   - name: Supervisión de consultas activas
-    href: monitoring-active-queries.md
+    href: ../analytics-platform-system/monitoring-active-queries.md
   - name: Eliminación de subexpresiones comunes
-    href: common-sub-expression-elimination.md
+    href: ../analytics-platform-system/common-sub-expression-elimination.md
 - name: Cargar
   items:
   - name: Información general
-    href: load-overview.md
+    href: ../analytics-platform-system/load-overview.md
   - name: Creación de bases de datos de almacenamiento provisional
-    href: staging-database.md
+    href: ../analytics-platform-system/staging-database.md
   - name: Carga con Integration Services
-    href: load-with-ssis.md
+    href: ../analytics-platform-system/load-with-ssis.md
   - name: Creación de tareas de script de Integration Services que utiliza el adaptador de destino de PDW
-    href: create-ssis-script-task-using-pdw-destination-adapter.md
+    href: ../analytics-platform-system/create-ssis-script-task-using-pdw-destination-adapter.md
   - name: Reglas de conversión de tipos de datos para dwloader
-    href: dwloader-data-type-conversion-rules.md
+    href: ../analytics-platform-system/dwloader-data-type-conversion-rules.md
   - name: Carga de datos con INSERT
-    href: load-with-insert.md
+    href: ../analytics-platform-system/load-with-insert.md
   - name: Herramienta de carga de la línea de comandos de dwloader
-    href: dwloader.md
+    href: ../analytics-platform-system/dwloader.md
   - name: Cargas de monitor
-    href: monitor-loads.md
+    href: ../analytics-platform-system/monitor-loads.md
 - name: Administración de bases de datos
   items:
   - name: Copias de seguridad y restauración
     items:
     - name: Información general
-      href: backup-and-restore-overview.md
+      href: ../analytics-platform-system/backup-and-restore-overview.md
     - name: Restauración de bases de datos protegidas mediante TDE
-      href: restore-database-protected-by-tde.md
+      href: ../analytics-platform-system/restore-database-protected-by-tde.md
   - name: Permisos de PDW
-    href: pdw-permissions.md
+    href: ../analytics-platform-system/pdw-permissions.md
     items:
     - name: Conceder permisos
-      href: grant-permissions.md
+      href: ../analytics-platform-system/grant-permissions.md
   - name: Mensajes de error
-    href: error-messages.md
+    href: ../analytics-platform-system/error-messages.md
   - name: Comportamiento de bloqueo
-    href: locking-behavior.md
+    href: ../analytics-platform-system/locking-behavior.md
   - name: Copia de la tabla remota
-    href: remote-table-copy.md
+    href: ../analytics-platform-system/remote-table-copy.md
     items:
     - name: Configuración de sistemas externos de Windows para recibir copias de la tabla remota con InfiniBand
-      href: configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
+      href: ../analytics-platform-system/configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
     - name: Configuración de SQL Server de SMP externo para recibir copias de la tabla remota
-      href: configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
+      href: ../analytics-platform-system/configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
     - name: Configuración de SQL Server PDW para las copias de la tabla remota
-      href: configure-sql-server-pdw-for-remote-table-copies.md
+      href: ../analytics-platform-system/configure-sql-server-pdw-for-remote-table-copies.md
   - name: Bases de datos del sistema
-    href: system-databases.md
+    href: ../analytics-platform-system/system-databases.md
     items:
     - name: Nombres reservados de la base de datos
-      href: reserved-database-names.md
+      href: ../analytics-platform-system/reserved-database-names.md
     - name: tempdb [base de datos]
-      href: tempdb-database.md
+      href: ../analytics-platform-system/tempdb-database.md
     - name: base de datos maestra
-      href: master-database.md
+      href: ../analytics-platform-system/master-database.md
   - name: Sesiones de usuario
-    href: user-sessions.md
+    href: ../analytics-platform-system/user-sessions.md
   - name: Administración de cargas de trabajo
-    href: workload-management.md
+    href: ../analytics-platform-system/workload-management.md
     items:
     - name: Tareas de administración de cargas de trabajo
-      href: workload-management-tasks.md
+      href: ../analytics-platform-system/workload-management-tasks.md
 - name: Seguridad
   items:
   - name: Cifrado de datos transparente
-    href: transparent-data-encryption.md
+    href: ../analytics-platform-system/transparent-data-encryption.md
   - name: Aprovisionamiento de certificados
-    href: provision-certificate.md
+    href: ../analytics-platform-system/provision-certificate.md
 - name: Tareas de administración del dispositivo
-  href: appliance-management-tasks.md
+  href: ../analytics-platform-system/appliance-management-tasks.md
   items:
   - name: Información general sobre la instalación y configuración del dispositivo
-    href: appliance-installation-and-configuration-overview.md
+    href: ../analytics-platform-system/appliance-installation-and-configuration-overview.md
     items:
     - name: Información que es necesario obtener de IHV
-      href: information-to-obtain-from-your-ihv.md
+      href: ../analytics-platform-system/information-to-obtain-from-your-ihv.md
     - name: Instalación de hardware
-      href: hardware-installation.md
+      href: ../analytics-platform-system/hardware-installation.md
   - name: Conexión a los nodos del dispositivo
-    href: connect-to-appliance-nodes.md
+    href: ../analytics-platform-system/connect-to-appliance-nodes.md
   - name: Software antivirus
-    href: antivirus-software.md
+    href: ../analytics-platform-system/antivirus-software.md
   - name: Configuración del dispositivo
-    href: appliance-configuration.md
+    href: ../analytics-platform-system/appliance-configuration.md
     items:
     - name: Componentes físicos del tejido del dispositivo y de PDW
-      href: pdw-and-appliance-fabric-physical-components.md
+      href: ../analytics-platform-system/pdw-and-appliance-fabric-physical-components.md
     - name: Inicio de Configuration Manager
-      href: launch-the-configuration-manager.md
+      href: ../analytics-platform-system/launch-the-configuration-manager.md
     - name: Topología del dispositivo
-      href: appliance-topology.md
+      href: ../analytics-platform-system/appliance-topology.md
     - name: Restablecimiento de contraseña
-      href: password-reset.md
+      href: ../analytics-platform-system/password-reset.md
     - name: Configuración de la zona horaria del dispositivo
-      href: appliance-time-zone-configuration.md
+      href: ../analytics-platform-system/appliance-time-zone-configuration.md
     - name: Configuración de la red del dispositivo
-      href: appliance-network-configuration.md
+      href: ../analytics-platform-system/appliance-network-configuration.md
     - name: Topología de PDW
-      href: pdw-topology.md
+      href: ../analytics-platform-system/pdw-topology.md
     - name: Aprovisionamiento del certificado de PDW
-      href: pdw-certificate-provisioning.md
+      href: ../analytics-platform-system/pdw-certificate-provisioning.md
     - name: Modificador de características de PDW
-      href: appliance-feature-switch.md
+      href: ../analytics-platform-system/appliance-feature-switch.md
     - name: Configuración de firewall de PDW
-      href: pdw-firewall-configuration.md
+      href: ../analytics-platform-system/pdw-firewall-configuration.md
     - name: Estado de los servicios de PDW
-      href: pdw-services-status.md
+      href: ../analytics-platform-system/pdw-services-status.md
     - name: Configuración de la inicialización instantánea de archivos
-      href: instant-file-initialization-configuration.md
+      href: ../analytics-platform-system/instant-file-initialization-configuration.md
     - name: Restauración de la base de datos maestra
-      href: restore-the-master-database.md
+      href: ../analytics-platform-system/restore-the-master-database.md
     - name: Establecimiento de la contraseña de administrador para iniciar sesión en los nodos de AD en el modo de restauración de servicios de directorio (DSRM)
-      href: set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
+      href: ../analytics-platform-system/set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
     - name: Configuración de Windows Server Update Services
-      href: configure-windows-server-update-services-wsus.md
+      href: ../analytics-platform-system/configure-windows-server-update-services-wsus.md
     - name: Configuración de la conectividad de PolyBase a datos externos
-      href: configure-polybase-connectivity-to-external-data.md
+      href: ../analytics-platform-system/configure-polybase-connectivity-to-external-data.md
       items:
       - name: Conectarse a Hadoop
-        href: polybase-configure-hadoop.md
+        href: ../analytics-platform-system/polybase-configure-hadoop.md
       - name: Configuración de seguridad de Hadoop
-        href: polybase-configure-hadoop-security.md
+        href: ../analytics-platform-system/polybase-configure-hadoop-security.md
       - name: Azure Blob Storage
-        href: polybase-configure-azure-blob-storage.md
+        href: ../analytics-platform-system/polybase-configure-azure-blob-storage.md
     - name: Configuración de TLS 1.2 en APS
-      href: configure-tls12-aps.md
+      href: ../analytics-platform-system/configure-tls12-aps.md
     - name: Uso de un reenviador DNS para resolver los nombres DNS que no sean de dispositivos
-      href: use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
+      href: ../analytics-platform-system/use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
     - name: Creación de un administrador de dominio de APS
-      href: create-an-aps-domain-administrator-aps.md
+      href: ../analytics-platform-system/create-an-aps-domain-administrator-aps.md
     - name: Envío de comentarios de telemetría a Microsoft
-      href: send-telemetry-feedback-to-microsoft-sql-server-pdw.md
+      href: ../analytics-platform-system/send-telemetry-feedback-to-microsoft-sql-server-pdw.md
   - name: Servicio de software
-    href: software-servicing.md
+    href: ../analytics-platform-system/software-servicing.md
     items:
     - name: Descarga y aplicación de las actualizaciones de Microsoft
-      href: download-and-apply-microsoft-updates.md
+      href: ../analytics-platform-system/download-and-apply-microsoft-updates.md
     - name: Desinstalación de las actualizaciones de Microsoft
-      href: uninstall-microsoft-updates.md
+      href: ../analytics-platform-system/uninstall-microsoft-updates.md
     - name: Aplicación de las revisiones de Analytics Platform System
-      href: apply-analytics-platform-system-hotfixes.md
+      href: ../analytics-platform-system/apply-analytics-platform-system-hotfixes.md
     - name: Desinstalación de las revisiones de Analytics Platform System
-      href: uninstall-analytics-platform-system-hotfixes.md
+      href: ../analytics-platform-system/uninstall-analytics-platform-system-hotfixes.md
   - name: Encendido y apagado del dispositivo APS
-    href: power-the-aps-appliance-on-or-off.md
+    href: ../analytics-platform-system/power-the-aps-appliance-on-or-off.md
   - name: Supervisión del dispositivo
-    href: appliance-monitoring.md
+    href: ../analytics-platform-system/appliance-monitoring.md
     items:
     - name: Supervisión del dispositivo mediante la consola de administración
-      href: monitor-the-appliance-by-using-the-admin-console.md
+      href: ../analytics-platform-system/monitor-the-appliance-by-using-the-admin-console.md
     - name: Supervisión del dispositivo mediante el uso de vistas del sistema
-      href: monitor-the-appliance-by-using-system-views.md
+      href: ../analytics-platform-system/monitor-the-appliance-by-using-system-views.md
     - name: Supervisión del dispositivo mediante el uso de System Center Operations Manager
-      href: monitor-the-appliance-by-using-system-center-operations-manager.md
+      href: ../analytics-platform-system/monitor-the-appliance-by-using-system-center-operations-manager.md
       items:
       - name: Instalación de los módulos de administración de SCOM
-        href: install-the-scom-management-packs.md
+        href: ../analytics-platform-system/install-the-scom-management-packs.md
       - name: Importación del módulo de administración de SCOM para PDW
-        href: import-the-scom-management-pack-for-pdw.md
+        href: ../analytics-platform-system/import-the-scom-management-pack-for-pdw.md
       - name: Configuración de SCOM para supervisar Analytics Platform System
-        href: configure-scom-to-monitor-analytics-platform-system.md
+        href: ../analytics-platform-system/configure-scom-to-monitor-analytics-platform-system.md
     - name: Supervisión del estado de mantenimiento del dispositivo
-      href: monitor-appliance-health-state.md
+      href: ../analytics-platform-system/monitor-appliance-health-state.md
     - name: Seguimiento de las alertas del dispositivo
-      href: track-appliance-alerts.md
+      href: ../analytics-platform-system/track-appliance-alerts.md
     - name: Consulta del uso de la capacidad
-      href: view-capacity-utilization.md
+      href: ../analytics-platform-system/view-capacity-utilization.md
     - name: Determinar la frecuencia de sondeo
-      href: determine-polling-frequency.md
+      href: ../analytics-platform-system/determine-polling-frequency.md
     - name: Determinar en qué nodo de clúster se ha producido un error
-      href: determine-which-cluster-node-failed.md
+      href: ../analytics-platform-system/determine-which-cluster-node-failed.md
     - name: Información sobre las alertas de la consola de administración
-      href: understanding-admin-console-alerts.md
+      href: ../analytics-platform-system/understanding-admin-console-alerts.md
 - name: Referencia
   items:
   - name: Elementos de lenguaje T-SQL
-    href: tsql-language-elements.md
+    href: ../analytics-platform-system/tsql-language-elements.md
   - name: Instrucciones T-SQL
-    href: tsql-statements.md
+    href: ../analytics-platform-system/tsql-statements.md
   - name: Vistas del sistema T-SQL
-    href: tsql-system-views.md
-ms.openlocfilehash: d1aef2cdc187c2bcf8c53a8e675b1f1c11cad1d6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+    href: ../analytics-platform-system/tsql-system-views.md
+ms.openlocfilehash: 8b437c93b4fee98c1ad29b9ab10c6c97f633fceb
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626306"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676033"

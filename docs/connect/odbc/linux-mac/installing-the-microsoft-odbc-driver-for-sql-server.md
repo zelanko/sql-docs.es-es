@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 5f9392d0ba5b07a489caffdd2e496051e842b1c8
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MTE75
+ms.openlocfilehash: 6b9ea2618f51eb167f63232b79c61d9ecdc0e746
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984066"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331615"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -56,7 +56,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6-and-7"></a>Red Hat Enterprise Server 6 y 7
+### <a name="redhat-enterprise-server-6-and-7"></a>RedHat Enterprise Server 6 y 7
 ```
 sudo su
 
@@ -147,7 +147,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql17 mssql-tools
+brew install msodbcsql17 mssql-tools
 ```
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
@@ -169,7 +169,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6"></a>Red Hat Enterprise Server 6
+### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -185,7 +185,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="redhat-enterprise-server-7"></a>Servidor de Red Hat Enterprise 7
+### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -295,7 +295,7 @@ brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server
 
-### <a name="redhat-enterprise-server-6"></a>Red Hat Enterprise Server 6
+### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -309,7 +309,7 @@ ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
-### <a name="redhat-enterprise-server-7"></a>Servidor de Red Hat Enterprise 7
+### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -366,11 +366,11 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 
 ### <a name="offline-installation"></a>Instalación sin conexión
 Si prefiere o requiere la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 para instalarse en un equipo sin conexión a internet, deberá resolver manualmente las dependencias del paquete. El [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 tiene las siguientes dependencias directas:
-- Ubuntu: libc6 (> = 2.21), libstdc ++ 6 (> = 4.9), libkrb5-3, libcurl3, openssl, debconf (> = 0,5), unixodbc (> = 2.3.1-1)
+- Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Cada uno de estos paquetes a su vez tiene sus propias dependencias, que pueden o no pueden estar presentes en el sistema. Una solución general para este problema, consulte la documentación del paquete del Administrador de su distribución: [RedHat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), y [SUSE](https://en.opensuse.org/Portal:Zypper)
+Cada uno de estos paquetes a su vez tiene sus propias dependencias, que pueden o no pueden estar presentes en el sistema. Una solución general para este problema, consulte la documentación de administrador de paquetes de su distribución: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), y [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 También es común para descargar manualmente todos los paquetes dependientes y colocarlas juntas en el equipo de instalación y, a continuación, instalar manualmente cada paquete a su vez, finalizando con la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 paquete.
 

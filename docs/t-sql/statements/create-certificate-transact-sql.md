@@ -161,7 +161,7 @@ CREATE CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Hace que el certificado esté disponible para el iniciador de una conversación de diálogo de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. El valor predeterminado es ON.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un certificado es un elemento protegible de nivel de base de datos que sigue el estándar X.509 y admite los campos V1 de X.509. CREATE CERTIFICATE puede cargar un certificado desde un archivo o ensamblado. Esta instrucción también puede generar un par de claves y crear un certificado con firma personal.  
   
  La clave privada debe ser \<= 2500 bytes en formato cifrado. Las claves privadas generadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una longitud de 1024 bits hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y tienen 2048 bits a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Las claves privadas importadas de un origen externo presentan una longitud mínima de 384 bits y una máxima de 4.096 bits. La longitud de una clave privada importada debe ser un entero múltiplo de 64 bits. Los certificados que se usan para TDE tienen un límite de tamaño de clave privada de 3456 bits.  

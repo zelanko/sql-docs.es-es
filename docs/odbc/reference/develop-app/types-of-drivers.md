@@ -31,7 +31,7 @@ Controladores ODBC se pueden clasificar como sigue:
   
     -   Exporta solo ODBC 2 *.x* funciones.  
   
-    -   Exhibe ODBC 2. *x* comportamiento cambios de comportamiento.  
+    -   Exhibe ODBC 2.*x* comportamiento cambios de comportamiento.  
   
 -   **ISO y el controlador de grupo conforme abra** controladores de 32 bits que:  
   
@@ -45,7 +45,7 @@ Controladores ODBC se pueden clasificar como sigue:
   
     -   Exporta solo las funciones que se encuentran en ODBC 3.0 menos funciones en desuso.  
   
-    -   Es capaz de presenta ODBC 2. *x* comportamiento o el comportamiento de ODBC 3.0 con respecto a los cambios de comportamiento, según el atributo de entorno SQL_ATTR_APP_ODBC_VERSION.  
+    -   Es capaz de presenta ODBC 2.*x* comportamiento o el comportamiento de ODBC 3.0 con respecto a los cambios de comportamiento, según el atributo de entorno SQL_ATTR_APP_ODBC_VERSION.  
   
 -   **Controlador ODBC 3.5 (o posterior) ANSI** controladores de 32 bits que:  
   

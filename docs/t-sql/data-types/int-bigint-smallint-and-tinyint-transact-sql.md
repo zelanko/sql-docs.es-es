@@ -29,18 +29,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 805cb2e6f3b7d9138e2bdd14518632c82251242c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 758b31fc070c78e4129447cd02ef5c3360c9fc5e
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319356"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802579"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint y tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Tipos de datos numéricos exactos que utilizan datos enteros. Para ahorrar espacio en la base de datos, use el tipo de datos más pequeño que puede contener todos los valores posibles de manera confiable. Por ejemplo, con tinyint bastaría en el caso de la edad de una persona, puesto que nadie vive más de 255 años, pero no sería suficiente en el caso de la antigüedad de un edificio, porque un edificio puede tener más de 255 años.
   

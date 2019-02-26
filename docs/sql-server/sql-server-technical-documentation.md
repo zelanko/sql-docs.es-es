@@ -21,18 +21,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a880b2e2239978f4d8638e0749360a1ac662ece
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 523b1cc852c7098f6c18828efdb789fa2fcafcdf
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676073"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801749"
 ---
 # <a name="sql-server-documentation"></a>Documentación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL Server es líder del sector de sistemas de administración de bases de datos operativas (ODBMS). Esta documentación ayuda a instalar, configurar y usar SQL Server en Windows y Linux. El contenido incluye ejemplos descentralizados, ejemplos de código y vídeos. Para temas sobre el lenguaje de SQL Server, consulte [Referencia del lenguaje](../t-sql/language-reference.md).

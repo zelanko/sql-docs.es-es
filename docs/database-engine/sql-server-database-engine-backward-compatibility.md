@@ -16,19 +16,16 @@ ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b15e3f46c277daf7004abf0bc2212ab59364b632
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 855c1e51b165cb625110972709b2d02ba9e7ae05
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298552"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801269"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   Los temas de la sección de compatibilidad con versiones anteriores describen cambios de comportamiento entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-
-> [!div class="nextstepaction"]
-> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

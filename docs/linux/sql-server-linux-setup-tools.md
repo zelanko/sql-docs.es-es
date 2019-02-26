@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 80bff9787e750e39a0747be831b1fc902d6923a8
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 20b383929910bf24ef9dc89950f15815afdef3bd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270178"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801759"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalar sqlcmd y bcp las herramientas de línea de comandos de SQL Server en Linux
 
@@ -23,8 +23,8 @@ ms.locfileid: "51270178"
 
 Los pasos siguientes instalan las herramientas de línea de comandos, controladores ODBC de Microsoft y sus dependencias. El **mssql-tools** paquete contiene:
 
-- **Sqlcmd**: utilidad de línea de comandos de consulta.
-- **BCP**: utilidad de importación y exportación de forma masiva.
+- **sqlcmd**: Utilidad de línea de comandos de consulta.
+- **bcp**: Utilidad de importación y exportación de forma masiva.
 
 Instalar las herramientas para su plataforma:
 
@@ -77,7 +77,7 @@ Use los pasos siguientes para instalar el **mssql-tools** en Red Hat Enterprise 
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Opcional**: agregar `/opt/mssql-tools/bin/` a su **ruta** variable de entorno en un shell de bash.
+1. **Opcional**: Agregar `/opt/mssql-tools/bin/` a su **ruta** variable de entorno en un shell de bash.
 
    Para realizar **sqlcmd y bcp** accesible desde el shell de bash para sesiones de inicio de sesión, modifique su **ruta de acceso** en el **~/.bash_profile** archivo con el siguiente comando:
 
@@ -122,7 +122,7 @@ Use los pasos siguientes para instalar el **mssql-tools** en Ubuntu.
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Opcional**: agregar `/opt/mssql-tools/bin/` a su **ruta** variable de entorno en un shell de bash.
+1. **Opcional**: Agregar `/opt/mssql-tools/bin/` a su **ruta** variable de entorno en un shell de bash.
 
    Para realizar **sqlcmd y bcp** accesible desde el shell de bash para sesiones de inicio de sesión, modifique su **ruta de acceso** en el **~/.bash_profile** archivo con el siguiente comando:
 
@@ -161,7 +161,7 @@ Use los pasos siguientes para instalar el **mssql-tools** en SUSE Linux Enterpri
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Opcional**: agregar `/opt/mssql-tools/bin/` a su **ruta** variable de entorno en un shell de bash.
+1. **Opcional**: Agregar `/opt/mssql-tools/bin/` a su **ruta** variable de entorno en un shell de bash.
 
    Para realizar **sqlcmd y bcp** accesible desde el shell de bash para sesiones de inicio de sesión, modifique su **ruta de acceso** en el **~/.bash_profile** archivo con el siguiente comando:
 
@@ -190,9 +190,9 @@ Para instalar las herramientas para Mac El capitán y Sierra, use los siguientes
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox mssql-tools
+brew install mssql-tools
 #for silent install: 
-#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
+#HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
 ## <a id="docker"></a> Docker
@@ -225,7 +225,7 @@ Para instalar manualmente estos paquetes, siga estos pasos:
 
 1. **Mover los paquetes descargados en el equipo Linux**. Si usa un equipo diferente para descargar los paquetes, es una manera de mover los paquetes a la máquina Linux con la **scp** comando.
 
-1. **Instalar los paquetes y**: instalar el **mssql-tools** y **msodbc** paquetes. Si recibe errores de dependencia, omitir hasta el paso siguiente.
+1. **Instalar los paquetes y**: Instalar el **mssql-tools** y **msodbc** paquetes. Si recibe errores de dependencia, omitir hasta el paso siguiente.
 
     | Plataforma | Comandos de instalación del paquete |
     |-----|-----|
@@ -233,7 +233,7 @@ Para instalar manualmente estos paquetes, siga estos pasos:
     | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
 
-1. **Resolver las dependencias que faltan**: es posible que tenga dependencias que faltan en este momento. Si no es así, puede omitir este paso. En algunos casos, debe buscar manualmente e instalar estas dependencias.
+1. **Resolver las dependencias que faltan**: Es posible que tenga dependencias que faltan en este momento. Si no es así, puede omitir este paso. En algunos casos, debe buscar manualmente e instalar estas dependencias.
 
     Para los paquetes RPM, puede inspeccionar las dependencias necesarias con los siguientes comandos:
 

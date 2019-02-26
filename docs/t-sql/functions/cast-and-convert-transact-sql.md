@@ -36,18 +36,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce80e0d5936c0a09eefc8abb09b35846bf5dc13
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045024"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801839"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST y CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Estas funciones convierten una expresión de un tipo de datos a otro.  
 
@@ -327,7 +324,7 @@ En la siguiente tabla se muestran los estilos para los que la conversión de cad
   
 <sup>1</sup> Con la excepción de los estilos 20 y 21
 
-Para obtener más información, vea [Nondeterministic conversion of literal date strings into DATE values](../data-types/nondeterministic-convert-date-literals.md) (Conversión no determinista de las cadenas de fecha literales en valores DATE).
+Para obtener más información, vea [Conversión no determinista de las cadenas de fecha literales en valores DATE](../data-types/nondeterministic-convert-date-literals.md).
 
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)
 A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], si se usan intercalaciones de caracteres complementarios (SC), lasa operaciones CAST de **nchar** o **nvarchar** a un tipo **nchar** o **nvarchar** de menor longitud no se truncarán dentro de un par suplente, sino que lo hará antes del carácter suplementario. Por ejemplo, el fragmento de código siguiente deja `@x` con solo `'ab'`. No hay espacio suficiente para albergar el carácter suplementario.

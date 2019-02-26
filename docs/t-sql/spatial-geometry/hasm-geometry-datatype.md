@@ -15,12 +15,12 @@ ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9062dbbbb5f650597f323b2c427b1b7825e7f7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab164bf204b7fa7d65e5a8a879422a95b208f0ec
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853813"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800969"
 ---
 # <a name="hasm-geometry-datatype"></a>HasM (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47853813"
 ## <a name="return-types"></a>Tipos devueltos  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de valor devuelto de CLR: **booleano**  
+ Tipo de valor devuelto de CLR: **Boolean**  
   
 ## <a name="remarks"></a>Notas  
   
@@ -49,8 +49,7 @@ SELECT @p.HasM
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [M &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
-  
   

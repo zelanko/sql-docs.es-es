@@ -35,18 +35,16 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dccf940867666cf9d3a6ca88c2e6980cc4db0dc7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 10cb5b9b4e5083781f65766d97a810a1e5a7323b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300262"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801559"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
   Busca coincidencias precisas o aproximadas (menos precisas) de palabras o frases, palabras que se encuentran a cierta distancia de otra o coincidencias ponderadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS es un predicado que se usa en la [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) de una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar una búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las columnas indizadas de texto completo que contienen tipos de datos basados en caracteres.  
   

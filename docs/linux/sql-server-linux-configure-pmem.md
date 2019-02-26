@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba2ed69239313a7933840d7a99ccbf3ce0864bfd
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510824"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828425"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Cómo configurar memoria persistente (PMEM) para SQL Server en Linux
 
@@ -80,7 +80,7 @@ ndctl list
 
   Una vez que el dispositivo se ha configurado con ndctl, con el formato y montado, puede colocar los archivos de base de datos en ella. También puede crear una nueva base de datos 
 
-1. Habilitar la sensación de archivo de base de datos de SQL Server mediante la marca de seguimiento 3979. Esta marca de seguimiento es una marca de seguimiento de inicio y, por lo tanto debe habilitarse mediante la utilidad mssql-conf.
+1. Puesto que los dispositivos PMEM O_DIRECT seguro, habilite la marca de seguimiento 3979 para deshabilitar el mecanismo de vaciado forzado. Esta marca de seguimiento es una marca de seguimiento de inicio y, por lo tanto debe habilitarse mediante la utilidad mssql-conf. Tenga en cuenta que este es un cambio de configuración del servidor y no debe usar esta marca de seguimiento si tiene dispositivos no conformes O_DIRECT que necesitan el mecanismo de vaciado forzado para garantizar la integridad de datos. Para obtener más información, vea https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. Reinicie SQL Server.
 

@@ -10,12 +10,6 @@ ms.topic: hub-page
 ms.prod: sql
 ms.technology: release-landing
 ms.date: 12/15/2018
-ms.openlocfilehash: 24e2c8e6c11eb3f00a413b62952846e2b3b69d55
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407625"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -97,7 +91,7 @@ ms.locfileid: "56407625"
                                           <div class="cardText">
                                               <h3>SQL Server en Windows</h3>
                                               <ul class="noBullet">
-                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation/"><strong>Local</strong></a></li>
+                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?toc=..%2ftoc%2ftoc.json"><strong>Local</strong></a></li>
                                               <li><a class="barLink" href="/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/"> <strong>En una VM de Azure</strong></a></li>
                                               <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-ver15/"><strong>Novedades</strong></a></li>
                                               </ul>

@@ -2,7 +2,7 @@
 title: Configuración del enrutamiento de solo lectura para un grupo de disponibilidad
 description: Enrute de forma automática todo el tráfico de solo lectura a una réplica secundaria mediante enrutamiento de solo lectura para el grupo de disponibilidad Always On con Transact-SQL (T-SQL) o PowerShell.
 ms.custom: seodec18
-ms.date: 08/14/2017
+ms.date: 02/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed04fab7d5496f71bc4c9accbcb4fd2e5579df5c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 937fb97a9ed59793b532a8dcae0903fab5580678
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126145"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828005"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configuración del enrutamiento de solo lectura para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
   
 -   Para cada réplica secundaria legible que vaya a admitir el enrutamiento de solo lectura, debe especificar una *dirección URL de enrutamiento de solo lectura*. Esta dirección URL tiene efecto cuando la réplica local se ejecuta en el rol secundario. La dirección URL de enrutamiento de solo lectura debe especificarse réplica a réplica, según sea necesario. Cada dirección URL de solo lectura se usa para enrutar las solicitudes de conexión de intento de lectura a una réplica secundaria legible específica. Normalmente, cada réplica secundaria legible se asigna a una dirección URL de enrutamiento de solo lectura.  
   
-     Para obtener información sobre cómo calcular la dirección URL de enrutamiento de solo lectura para una réplica de disponibilidad, vea [Calcular Read_only_routing_url para AlwaysOn](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
+     Para obtener información sobre cómo calcular la dirección URL de enrutamiento de solo lectura para una réplica de disponibilidad, vea [Calcular Read_only_routing_url para AlwaysOn](https://web.archive.org/web/20170512023255/ https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   Para cada réplica de disponibilidad que quiera que admita el enrutamiento de solo lectura cuando sea la réplica principal, debe especificar una *lista de enrutamiento de solo lectura*. Una lista de enrutamiento de solo lectura dada solo tiene efecto cuando la réplica local se ejecuta en el rol principal. Esta lista se debe especificar réplica a réplica, según sea necesario. Normalmente, cada lista de enrutamiento de solo lectura contendría cada dirección URL de enrutamiento de solo lectura con la dirección URL de la réplica local al final de la lista.  
   

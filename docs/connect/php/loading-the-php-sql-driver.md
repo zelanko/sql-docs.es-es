@@ -1,7 +1,7 @@
 ---
 title: Carga de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606205"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744615"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Carga de los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +28,8 @@ En esta página se proporcionan instrucciones para cargar los [!INCLUDE[ssDriver
 Puede descargar los controladores creados previamente para su plataforma desde el [Microsoft Drivers para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases) página de Github del proyecto. Cada paquete de instalación contiene archivos de controlador PDO_SQLSRV SQLSRV en subprocesos y un subproceso que no son variantes. En Windows, también están disponibles en las variantes de 32 bits y 64 bits. Consulte [requisitos del sistema para el Drivers de Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) para obtener una lista de los archivos de controlador que se encuentran en cada paquete. El archivo del controlador debe coincidir con la versión PHP, arquitectura y threadedness de su entorno de PHP.
 
 En Linux y macOS, los controladores también se pueden instalar mediante PECL, que se encuentra en la [tutorial de instalación](../../connect/php/installation-tutorial-linux-mac.md).
+
+También puede crear los controladores de origen al compilar PHP o mediante `phpize`. Si decide crear los controladores de origen, tendrá la opción de crearlas de forma estática en PHP en lugar de compilar extensiones como compartidas mediante la adición de `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (en Linux y macOS) o `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (en Windows) para el `./configure` comando cuando creación de PHP. Sistema de compilación para obtener más información sobre PHP y `phpize`, consulte el [documentación de PHP](http://php.net/manual/install.php).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Traslado del archivo del controlador al directorio de extensión  
 El archivo del controlador debe encontrarse en un directorio donde puede encontrar el tiempo de ejecución PHP. Es más fácil colocar el archivo de controlador en el directorio de extensión PHP predeterminado - para encontrar el directorio predeterminado, ejecute `php -i | sls extension_dir` en Windows o `php -i | grep extension_dir` en Linux y macOS. Si no utiliza el directorio de extensión predeterminado, especifique un directorio en el archivo de configuración de PHP (php.ini) mediante el **extension_dir** opción. Por ejemplo, en Windows, si ha colocado el archivo del controlador su `c:\php\ext` directory, agregue la siguiente línea a php.ini:
@@ -81,7 +83,7 @@ Para cargar el controlador de SQLSRV cuando se inicie PHP, mueva primero un arch
   
 Para obtener más información sobre las directivas de **php.ini**, vea el artículo [Descripción de las directivas del núcleo de php.ini](https://php.net/manual/en/ini.core.php).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Introducción a los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)

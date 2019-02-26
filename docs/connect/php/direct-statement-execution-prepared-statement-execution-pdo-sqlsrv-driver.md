@@ -11,12 +11,12 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dba0e72f3575c0958ad142b6d27b7be410d6cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658753"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676113"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (Ejecución de la instrucción preparada o directa en el controlador PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +34,11 @@ Después de llamar a [PDO:: Prepare](../../connect/php/pdo-prepare.md), no se pu
   
 Si una consulta necesita el contexto que se estableció en una consulta anterior, a continuación, ejecutar las consultas con PDO:: sqlsrv_attr_direct_query establecida en True. Por ejemplo, si usa tablas temporales en las consultas, PDO:: sqlsrv_attr_direct_query debe establecerse en True.  
   
-El ejemplo siguiente se muestra que, cuando se requiere el contexto de una instrucción anterior, deberá establecer PDO:: sqlsrv_attr_direct_query en True.  Este ejemplo usa las tablas temporales, que solo están disponibles para las instrucciones posteriores en el programa cuando se ejecutan consultas directamente.  
+El ejemplo siguiente se muestra que, cuando se requiere el contexto de una instrucción anterior, deberá establecer PDO:: sqlsrv_attr_direct_query en True. Este ejemplo usa las tablas temporales, que solo están disponibles para las instrucciones posteriores en el programa cuando se ejecutan consultas directamente.  
   
+> [!NOTE]
+> Si la consulta consiste en invocar un procedimiento almacenado y las tablas temporales se usan en este procedimiento almacenado, utilice [PDO:: exec](../../connect/php/pdo-exec.md) en su lugar.
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  
@@ -66,6 +69,6 @@ El ejemplo siguiente se muestra que, cuando se requiere el contexto de una instr
 ?>  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

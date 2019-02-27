@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
+title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/16/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980051"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852960"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,58 +84,60 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Tablas devueltas  
  En la tabla siguiente se describe el contenido del archivo de auditoría que puede devolver esta función.  
   
-|Nombre de columna|Tipo|Descripción|  
-|-----------------|----------|-----------------|  
-|event_time|**datetime2**|Fecha y hora cuando se desencadena la acción auditable. No admite valores NULL.|  
-|sequence_number|**int**|Realiza un seguimiento de la secuencia de registros de un único registro de auditoría que era demasiado grande para caber en el búfer de escritura destinado a las auditorías. No admite valores NULL.|  
-|action_id|**varchar(4)**|Id. de la acción. No admite valores NULL.|  
-|succeeded|**bit**|Indica si la acción que desencadenó el evento se ha llevado a cabo correctamente. No admite valores NULL. Para todos los eventos que no sean los eventos de inicio de sesión, esto solo notifica si la comprobación del permiso tuvo o no tuvo éxito, no la operación.<br /> 1 = correcto<br /> 0 = error|  
-|permission_bitmask|**varbinary (16)**|En algunas acciones, este es el permiso que se concedió, denegó o revocó.|  
-|is_column_permission|**bit**|Marca que indica si éste es un permiso de nivel de columna. No admite valores NULL. Devuelve 0 si permission_bitmask = 0.<br /> 1 = verdadero<br /> 0 = falso|  
-|session_id|**smallint**|Identificador de la sesión en la que se produjo el evento. No admite valores NULL.|  
-|server_principal_id|**int**|Identificador del contexto de inicio de sesión en el que se realiza la acción. No admite valores NULL.|  
-|database_principal_id|**int**|Identificador del contexto de usuario de la base de datos en el que se realiza la acción. No admite valores NULL. Devuelve 0 si esto no es aplicable. Por ejemplo, una operación de servidor.|  
-|target_server_principal_id|**int**|Entidad de seguridad de servidor en la que se realiza la operación GRANT/DENY/REVOKE. No admite valores NULL. Devuelve 0 si no es aplicable.|  
-|target_database_principal_id|**int**|Entidad de seguridad de base de datos en la que se realiza la operación GRANT/DENY/REVOKE. No admite valores NULL. Devuelve 0 si no es aplicable.|  
-|object_id|**int**|Identificador de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> No admite valores NULL. Devuelve 0 si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación.|  
-|class_type|**varchar(2)**|El tipo de entidad auditable en la que se produce la auditoría. No admite valores NULL.|  
-|session_server_principal_name|**sysname**|Entidad de seguridad de servidor para la sesión. Acepta valores NULL.|  
-|server_principal_name|**sysname**|Inicio de sesión actual. Acepta valores NULL.|  
-|server_principal_sid|**varbinary**|SID del inicio de sesión actual. Acepta valores NULL.|  
-|database_principal_name|**sysname**|Usuario actual. Acepta valores NULL. Devuelve NULL si no está disponible.|  
-|target_server_principal_name|**sysname**|Inicio de sesión de destino de acción. Acepta valores NULL. Devuelve NULL si no es aplicable.|  
-|target_server_principal_sid|**varbinary**|SID del inicio de sesión de destino. Acepta valores NULL. Devuelve NULL si no es aplicable.|  
-|target_database_principal_name|**sysname**|Usuario de destino de la acción. Acepta valores NULL. Devuelve NULL si no es aplicable.|  
-|server_instance_name|**sysname**|Nombre de la instancia de servidor donde se ha producido la auditoría. Se usa el formato servidor\instancia estándar.|  
-|database_name|**sysname**|Contexto de base de datos en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se producen en el nivel de servidor.|  
-|schema_name|**sysname**|El contexto del esquema en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se producen fuera de un esquema.|  
-|object_name|**sysname**|El nombre de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> Acepta valores NULL. Devuelve NULL si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación.|  
-|instrucción|**nvarchar(4000)**|Instrucción TSQL, si existe. Acepta valores NULL. Devuelve NULL si no es aplicable.|  
-|additional_information|**nvarchar(4000)**|La información única que se aplica exclusivamente a un evento se devuelve como XML. Este tipo de información está incluida en un pequeño número de acciones de auditoría.<br /><br /> Un nivel de pila de TSQL se mostrará en formato XML para las acciones que tienen asociada la pila de TSQL. El formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indica el nivel de anidamiento actual del marco. El nombre del módulo se representa en formato de tres partes (nombreDeBaseDeDatos, nombreDeEsquema y nombreDeObjeto).  El nombre del módulo se analizará para escapar caracteres xml no válidos, como `'\<'`, `'>'`, `'/'`, `'_x'`. Se produce el escape como `_xHHHH\_`. HHHH representa el código UCS-2 hexadecimal de cuatro dígitos para el carácter.<br /><br /> Acepta valores NULL. Devuelve NULL si el evento no proporciona información adicional.|  
-|file_name|**varchar(260)**|Ruta de acceso y nombre del archivo de registro de auditoría del que procede el registro. No admite valores NULL.|  
-|audit_file_offset|**bigint**|Desplazamiento de búfer del archivo que contiene el registro de auditoría. No admite valores NULL.|  
-|user_defined_event_id|**smallint**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Id. de evento definido por usuario se pasa como argumento a **sp_audit_write**. **NULL** para eventos del sistema (valor predeterminado) y distinto de cero para el evento definido por el usuario. Para obtener más información, consulte [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
-|user_defined_information|**nvarchar(4000)**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Permite registrar cualquier información adicional que el usuario desea grabar en |registro de auditoría mediante el uso de la **sp_audit_write** procedimiento almacenado.|  
-|audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **Se aplica a**: Sólo servidor SQL Server (a partir de 2016) |  
-|transaction_id |**bigint** | **Se aplica a**: Sólo servidor SQL Server (a partir de 2016) |  
-|client_ip |**nvarchar(128)** | **Se aplica a**: Azure SQL DB + SQL Server (a partir de 2017) |  
-|application_name |**nvarchar(128)** | **Se aplica a**: Azure SQL DB + SQL Server (a partir de 2017) |  
-|duration_milliseconds |**bigint** | **Se aplica a**: La base de datos de SQL Azure solo |  
-|response_rows |**bigint** | **Se aplica a**: La base de datos de SQL Azure solo |  
-|affected_rows |**bigint** | **Se aplica a**: La base de datos de SQL Azure solo |  
-|connection_id |GUID | **Se aplica a**: La base de datos de SQL Azure solo |
-|data_sensitivity_information |nvarchar(4000) | **Se aplica a**: La base de datos de SQL Azure solo |
+| Nombre de columna | Tipo | Descripción |  
+|-------------|------|-------------|  
+| action_id | **varchar(4)** | Id. de la acción. No acepta valores NULL. |  
+| additional_information | **nvarchar(4000)** | La información única que se aplica exclusivamente a un evento se devuelve como XML. Este tipo de información está incluida en un pequeño número de acciones de auditoría.<br /><br /> Un nivel de pila de TSQL se mostrará en formato XML para las acciones que tienen asociada la pila de TSQL. El formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indica el nivel de anidamiento actual del marco. El nombre del módulo se representa en formato de tres partes (nombreDeBaseDeDatos, nombreDeEsquema y nombreDeObjeto).  El nombre del módulo se analizará para escapar caracteres xml no válidos, como `'\<'`, `'>'`, `'/'`, `'_x'`. Se produce el escape como `_xHHHH\_`. HHHH representa el código UCS-2 hexadecimal de cuatro dígitos para el carácter.<br /><br /> Acepta valores NULL. Devuelve NULL si el evento no proporciona información adicional. |
+| affected_rows | **bigint** | **Se aplica a**: La base de datos de SQL Azure solo<br /><br /> Número de filas afectadas por la instrucción ejecutada. |  
+| application_name | **nvarchar(128)** | **Se aplica a**: Azure SQL DB + SQL Server (a partir de 2017)<br /><br /> Nombre de aplicación de cliente que ejecuta la instrucción que provocó el evento de auditoría |  
+| audit_file_offset | **bigint** | **Se aplica a**: Sólo servidor SQL Server<br /><br /> Desplazamiento de búfer del archivo que contiene el registro de auditoría. No admite valores NULL. |  
+| audit_schema_version | **int** | Siempre es 1 |  
+| class_type | **varchar(2)** | El tipo de entidad auditable en la que se produce la auditoría. No admite valores NULL. |  
+| client_ip | **nvarchar(128)** | **Se aplica a**: Azure SQL DB + SQL Server (a partir de 2017)<br /><br />    IP de la aplicación cliente de origen |  
+| connection_id | GUID | **Se aplica a**: Instancia administrada y de base de datos SQL Azure<br /><br /> Identificador de la conexión en el servidor |
+| data_sensitivity_information | nvarchar(4000) | **Se aplica a**: La base de datos de SQL Azure solo<br /><br /> Tipos de información y las etiquetas de confidencialidad devueltas por la consulta auditada, basándose en las columnas clasificadas en la base de datos. Obtenga más información sobre [clasificación y detección de datos de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
+| database_name | **sysname** | Contexto de base de datos en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se producen en el nivel de servidor. |  
+| database_principal_id | **int** |Identificador del contexto de usuario de la base de datos en el que se realiza la acción. No admite valores NULL. Devuelve 0 si esto no es aplicable. Por ejemplo, una operación de servidor.|
+| database_principal_name | **sysname** | Usuario actual. Acepta valores NULL. Devuelve NULL si no está disponible. |  
+| duration_milliseconds | **bigint** | **Se aplica a**: Instancia administrada y de base de datos SQL Azure<br /><br /> Duración de la ejecución de consulta en milisegundos |
+| event_time | **datetime2** | Fecha y hora cuando se desencadena la acción auditable. No admite valores NULL. |  
+| file_name | **varchar(260)** | Ruta de acceso y nombre del archivo de registro de auditoría del que procede el registro. No admite valores NULL. |
+| is_column_permission | **bit** | Marca que indica si éste es un permiso de nivel de columna. No admite valores NULL. Devuelve 0 si permission_bitmask = 0.<br /> 1 = verdadero<br /> 0 = falso |
+| object_id | **int** | Identificador de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> No admite valores NULL. Devuelve 0 si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |  
+| object_name | **sysname** | El nombre de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> Acepta valores NULL. Devuelve NULL si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |
+| permission_bitmask | **varbinary(16)** | En algunas acciones, este es el permiso que se concedió, denegó o revocó. |
+| response_rows | **bigint** | **Se aplica a**: Instancia administrada y de base de datos SQL Azure<br /><br /> Número de filas devueltas en el conjunto de resultados. |  
+| schema_name | **sysname** | El contexto del esquema en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se producen fuera de un esquema. |  
+| sequence_group_id | **varbinary** | **Se aplica a**: Sólo servidor SQL Server (a partir de 2016)<br /><br />  Identificador único |  
+| sequence_number | **int** | Realiza un seguimiento de la secuencia de registros de un único registro de auditoría que era demasiado grande para caber en el búfer de escritura destinado a las auditorías. No admite valores NULL. |  
+| server_instance_name | **sysname** | Nombre de la instancia de servidor donde se ha producido la auditoría. Se usa el formato servidor\instancia estándar. |  
+| server_principal_id | **int** | Identificador del contexto de inicio de sesión en el que se realiza la acción. No admite valores NULL. |  
+| server_principal_name | **sysname** | Inicio de sesión actual. Acepta valores NULL. |  
+| server_principal_sid | **varbinary** | SID del inicio de sesión actual. Acepta valores NULL. |  
+| session_id | **smallint** | Identificador de la sesión en la que se produjo el evento. No admite valores NULL. |  
+| session_server_principal_name | **sysname** | Entidad de seguridad de servidor para la sesión. Acepta valores NULL. |  
+| instrucción | **nvarchar(4000)** | Instrucción TSQL, si existe. Acepta valores NULL. Devuelve NULL si no es aplicable. |  
+| succeeded | **bit** | Indica si la acción que desencadenó el evento se ha llevado a cabo correctamente. No admite valores NULL. Para todos los eventos que no sean los eventos de inicio de sesión, esto solo notifica si la comprobación del permiso tuvo o no tuvo éxito, no la operación.<br /> 1 = correcto<br /> 0 = error |
+| target_database_principal_id | **int** | Entidad de seguridad de base de datos en la que se realiza la operación GRANT/DENY/REVOKE. No admite valores NULL. Devuelve 0 si no es aplicable. |  
+| target_database_principal_name | **sysname** | Usuario de destino de la acción. Acepta valores NULL. Devuelve NULL si no es aplicable. |  
+| target_server_principal_id | **int** | Entidad de seguridad de servidor en la que se realiza la operación GRANT/DENY/REVOKE. No admite valores NULL. Devuelve 0 si no es aplicable. |  
+| target_server_principal_name | **sysname** | Inicio de sesión de destino de acción. Acepta valores NULL. Devuelve NULL si no es aplicable. |  
+| target_server_principal_sid | **varbinary** | SID del inicio de sesión de destino. Acepta valores NULL. Devuelve NULL si no es aplicable. |  
+| transaction_id | **bigint** | **Se aplica a**: Sólo servidor SQL Server (a partir de 2016)<br /><br /> Identificador único para identificar varios eventos de auditoría en una transacción |  
+| user_defined_event_id | **smallint** | **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], instancia administrada y de base de datos de SQL Azure<br /><br /> Id. de evento definido por usuario se pasa como argumento a **sp_audit_write**. **NULL** para eventos del sistema (valor predeterminado) y distinto de cero para el evento definido por el usuario. Para obtener más información, consulte [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
+| user_defined_information | **nvarchar(4000)** | **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], instancia administrada y de base de datos de SQL Azure<br /><br /> Permite registrar cualquier información adicional que el usuario desea grabar en el registro de auditoría mediante el **sp_audit_write** procedimiento almacenado. |  
+
   
 ## <a name="remarks"></a>Comentarios  
  Si el *file_pattern* argumento pasado a **fn_get_audit_file** hace referencia a una ruta de acceso o archivo que no existe, o si el archivo no es un archivo de auditoría, el **MSG_INVALID_AUDIT_FILE**devuelve el mensaje de error.  
   
-## <a name="permissions"></a>Permisos  
- - **SQL Server**: Requiere el permiso **CONTROL SERVER** .  
- - **Azure SQL DB**: Requiere el **CONTROL DATABASE** permiso.     
-    - Los administradores de servidor pueden tener acceso a los registros de auditoría de todas las bases de datos en el servidor.
-    - Servidor que no sean administradores solo pueden acceder a los registros de auditoría de la base de datos actual.
-    - Se omitirán los blobs que no cumplen los criterios anteriores (se mostrará una lista de blobs omitidos en el mensaje de salida de consulta), y la función devolverá los registros solo de blobs para el que se permite el acceso.  
+## <a name="permissions"></a>Permisos
+
+- **SQL Server**: Requiere el permiso **CONTROL SERVER** .  
+- **Azure SQL DB**: Requiere el **CONTROL DATABASE** permiso.     
+  - Los administradores de servidor pueden tener acceso a los registros de auditoría de todas las bases de datos en el servidor.
+  - Servidor que no sean administradores solo pueden acceder a los registros de auditoría de la base de datos actual.
+  - Se omitirán los blobs que no cumplen los criterios anteriores (se mostrará una lista de blobs omitidos en el mensaje de salida de consulta), y la función devolverá los registros solo de blobs para el que se permite el acceso.  
   
 ## <a name="examples"></a>Ejemplos
 

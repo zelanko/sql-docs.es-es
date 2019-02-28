@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532112"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154750"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tarea Limpieza de mantenimiento (Plan de mantenimiento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52532112"
  Ruta de acceso y nombre de la carpeta que contiene los archivos que se van a eliminar.  
   
  **Extensión de archivo**  
- Indique la extensión de archivo de los archivos que se van a eliminar.  
+ Proporcione la extensión de archivo del archivo que se va a eliminar. No incluya ningún otro carácter antes o después de la extensión (por ejemplo, no incluya BAK o TRN). 
   
  **Incluir subcarpetas de primer nivel**  
  Elimina archivos con la extensión especificada para **Extensión del archivo** en las subcarpetas de primer nivel, en **Carpeta**.  
@@ -97,7 +97,7 @@ ms.locfileid: "52532112"
  **Contraseña**  
  Proporcione una contraseña para que se utilice en la autenticación. Esta opción no está disponible.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

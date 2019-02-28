@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eef1a8c7ca2d1a7aaff29e04455f17a7cc236b78
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646963"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291263"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Agregar un mapa personalizado a un informe de Reporting Services móvil
 Los mapas personalizados requieren dos archivos:  
@@ -26,7 +26,7 @@ Almacene ambos archivos en la misma carpeta. Los nombres de los dos archivos deb
   
 ## <a name="load-a-custom-map"></a>Cargar un mapa personalizado  
   
-1. En la pestaña **Diseño** , seleccione un tipo de mapa: **Gradient Heat Map**(Mapa térmico de degradado), **Range Stop Heat Map**(Mapa térmico de umbrales de rangos) or **Bubble Map**(Mapa de burbujas), arrástrelo a la superficie de diseño y desígnele el tamaño que desee.  
+1. En la pestaña **Diseño**, seleccione un tipo de mapa: **Mapa término degradado**, **Mapa térmico de detención de rango** o **Mapa de burbujas**, arrástrelo a la superficie de diseño y desígnele el tamaño que desee.  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

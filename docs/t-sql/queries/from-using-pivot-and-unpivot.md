@@ -25,25 +25,22 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8781f155f96fa9e80270eaf6f75f2438eae4549
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0455bd8f5655a25aa55978dcfaa2dc3c3c14fabd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299482"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802080"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM: uso de PIVOT y UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
-
-  Se pueden usar los operadores relacionales `PIVOT` y `UNPIVOT` para modificar una expresión con valores de tabla en otra tabla. `PIVOT` gira una expresión con valores de tabla convirtiendo los valores únicos de una columna de la expresión en varias columnas en la salida y realiza agregaciones donde son necesarias en cualquier valor de columna restante que se quiera en la salida final. `UNPIVOT` realiza la operación contraria a PIVOT girando las columnas de una expresión con valores de tabla a valores de columna.  
+Se pueden usar los operadores relacionales `PIVOT` y `UNPIVOT` para modificar una expresión con valores de tabla en otra tabla. `PIVOT` gira una expresión con valores de tabla convirtiendo los valores únicos de una columna de la expresión en varias columnas en la salida y ejecuta agregaciones donde son necesarias en cualquier valor de columna que se deje que se quiera en la salida final. `UNPIVOT` realiza la operación contraria a PIVOT girando las columnas de una expresión con valores de tabla a valores de columna.  
   
- La sintaxis de `PIVOT` es más sencilla y legible que la sintaxis que se puede especificar en una serie compleja de instrucciones `SELECT...CASE`. Para obtener una descripción completa de la sintaxis de `PIVOT`, vea [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
+La sintaxis de `PIVOT` es más sencilla y legible que la sintaxis que se puede especificar en una serie compleja de instrucciones `SELECT...CASE`. Para obtener una descripción completa de la sintaxis de `PIVOT`, vea [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
- La sintaxis siguiente resume cómo se usa el operador `PIVOT`.  
+La sintaxis siguiente resume cómo se usa el operador `PIVOT`.  
   
 ```  
 SELECT <non-pivoted column>,  
@@ -70,7 +67,7 @@ Los identificadores de columna de la cláusula `UNPIVOT` siguen la intercalació
 
   
 ## <a name="basic-pivot-example"></a>Ejemplo PIVOT básico  
- En el ejemplo de código siguiente se genera una tabla de dos columnas con cuatro filas.  
+En el ejemplo de código siguiente se genera una tabla de dos columnas con cuatro filas.  
   
 ```sql
 USE AdventureWorks2014 ;  
@@ -81,20 +78,20 @@ GROUP BY DaysToManufacture;
   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- DaysToManufacture AverageCost
- ----------------- -----------
- 0                 5.0885
- 1                 223.88
- 2                 359.1082
- 4                 949.4105
- ```
+```
+DaysToManufacture AverageCost
+----------------- -----------
+0                 5.0885
+1                 223.88
+2                 359.1082
+4                 949.4105
+```
   
- No hay productos definidos con tres `DaysToManufacture`.  
+No hay productos definidos con tres `DaysToManufacture`.  
   
- En el código siguiente se muestra el mismo resultado, dinamizado para que los valores de `DaysToManufacture` se conviertan en encabezados de columna. Se proporciona una columna para tres `[3]` días, aunque los resultados son `NULL`.  
+En el código siguiente se muestra el mismo resultado, dinamizado para que los valores de `DaysToManufacture` se conviertan en encabezados de columna. Se proporciona una columna para tres `[3]` días, aunque los resultados son `NULL`.  
   
 ```sql
 -- Pivot table with one row and five columns  
@@ -111,7 +108,7 @@ FOR DaysToManufacture IN ([0], [1], [2], [3], [4])
   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 Cost_Sorted_By_Production_Days 0           1           2           3           4         
@@ -120,7 +117,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ```
   
 ## <a name="complex-pivot-example"></a>Ejemplo PIVOT complejo  
- Un escenario habitual en el que `PIVOT` puede ser útil es cuando se desea generar informes de tabla cruzada para resumir datos. Por ejemplo, suponga que desea consultar la tabla `PurchaseOrderHeader` en la base de datos de ejemplo `AdventureWorks2014` para determinar el número de pedidos de compra colocados por ciertos empleados. En la siguiente consulta se proporciona este informe, ordenado por proveedor.  
+Un escenario habitual en el que `PIVOT` puede ser útil es cuando se desea generar informes de tabulación cruzada para proporcionar un resumen de los datos. Por ejemplo, suponga que desea consultar la tabla `PurchaseOrderHeader` en la base de datos de ejemplo `AdventureWorks2014` para determinar el número de pedidos de compra colocados por ciertos empleados. En la siguiente consulta se proporciona este informe, ordenado por proveedor.  
   
 ```sql
 USE AdventureWorks2014;  
@@ -138,7 +135,7 @@ FOR EmployeeID IN
 ORDER BY pvt.VendorID;  
 ```  
   
- A continuación se muestra un conjunto parcial de resultados.  
+A continuación se muestra un conjunto parcial de resultados.  
   
 ```
 VendorID    Emp1        Emp2        Emp3        Emp4        Emp5  
@@ -150,19 +147,19 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
 1500        3           4           4           5           4
 ```
   
- Los resultados devueltos por esta instrucción de subselección se dinamizan en la columna `EmployeeID`.  
+Los resultados devueltos por esta instrucción de subselección se dinamizan en la columna `EmployeeID`.  
   
 ```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
   
- Esto significa que los valores únicos devueltos por la columna `EmployeeID` se convierten en campos del conjunto de resultados finales. Por lo tanto, hay una columna para cada número de `EmployeeID` especificado en la cláusula dinámica: en este caso empleados `164`, `198`, `223`, `231` y `233`. La columna `PurchaseOrderID` se utiliza como columna de valores, respecto a la que se ordenan las columnas del resultado final, denominadas columnas de agrupamiento. En este caso, las columnas de agrupamiento se agregan mediante la función `COUNT`. Tenga presente que aparece un mensaje de advertencia que indica que los valores NULL que aparecen en la columna `PurchaseOrderID` no se tuvieron en cuenta cuando se contabilizó `COUNT` para cada empleado.  
+Los valores únicos devueltos por la columna `EmployeeID` se convierten en campos en el conjunto de resultados finales. Como tal, hay una columna para cada número de `EmployeeID` especificado en la cláusula dinámica: en este caso los empleados `164`, `198`, `223`, `231` y `233`. La columna `PurchaseOrderID` se utiliza como columna de valores, respecto a la que se ordenan las columnas del resultado final, denominadas columnas de agrupamiento. En este caso, las columnas de agrupamiento se agregan mediante la función `COUNT`. Tenga presente que aparece un mensaje de advertencia que indica que los valores NULL que aparecen en la columna `PurchaseOrderID` no se tuvieron en cuenta cuando se contabilizó `COUNT` para cada empleado.  
   
 > [!IMPORTANT]  
 >  Cuando se usan funciones de agregado con `PIVOT`, la presencia de valores NULL en la columna de valores no se tiene en cuenta cuando se calcula una agregación.  
   
- `UNPIVOT` realiza casi la operación inversa de `PIVOT`, girando columnas en filas. Suponga que la tabla producida en el ejemplo anterior se almacena en la base de datos como `pvt` y que desea girar los identificadores de columna `Emp1`, `Emp2`, `Emp3`, `Emp4` y `Emp5` a valores de fila que correspondan a un determinado proveedor. Esto significa que debe identificar dos columnas adicionales. La columna que contendrá los valores de columna que se están girando (`Emp1`, `Emp2`,...) se denominará `Employee` y la columna que contendrá los valores que residen actualmente en las columnas que se giran se denominará `Orders`. Estas columnas corresponden a *columna_dinámica* y *columna_de_valor*, respectivamente, en la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esta es la consulta.  
+`UNPIVOT` realiza casi la operación inversa de `PIVOT`, girando columnas en filas. Suponga que la tabla producida en el ejemplo anterior se almacena en la base de datos como `pvt` y que desea girar los identificadores de columna `Emp1`, `Emp2`, `Emp3`, `Emp4` y `Emp5` a valores de fila que correspondan a un determinado proveedor. Como tal, debe identificar dos columnas adicionales. La columna que contendrá los valores de columna que se están girando (`Emp1`, `Emp2`,...) se denominará `Employee` y la columna que contendrá los valores que existen actualmente en las columnas que se giran se denominará `Orders`. Estas columnas corresponden a *columna_dinámica* y *columna_de_valor*, respectivamente, en la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esta es la consulta.  
   
 ```sql
 -- Create the table and insert values as portrayed in the previous example.  
@@ -187,7 +184,7 @@ UNPIVOT
 GO  
 ```  
   
- A continuación se muestra un conjunto parcial de resultados.  
+A continuación se muestra un conjunto parcial de resultados.  
   
 ```
 VendorID    Employee    Orders
@@ -205,12 +202,11 @@ VendorID    Employee    Orders
 ...
 ```
   
- Tenga en cuenta que `UNPIVOT` no es exactamente lo contrario a `PIVOT`. `PIVOT` realiza una agregación y, por tanto, combina posibles múltiples filas en una sola fila en la salida. `UNPIVOT` no reproduce el resultado de la expresión con valores de tabla original porque las filas se han combinado. Además, los valores NULL de la entrada de `UNPIVOT` desaparecen en la salida, mientras que puede haber habido valores NULL en la entrada antes de la operación `PIVOT`.  
+Tenga en cuenta que `UNPIVOT` no es exactamente lo contrario a `PIVOT`. `PIVOT` realiza una agregación y combina posibles múltiples filas en una sola fila en la salida. `UNPIVOT` no reproduce el resultado de la expresión con valores de tabla original porque las filas se han combinado. Además, los valores null de la entrada de `UNPIVOT` desaparecen en la salida. Cuando los valores desaparecen, se muestra que puede haber habido valores null originales en la entrada antes de la operación `PIVOT`.  
   
- En la vista `Sales.vSalesPersonSalesByFiscalYears` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] se usa `PIVOT` para devolver el total de ventas de cada vendedor, para cada año fiscal. Para generar el script de la vista en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el **Explorador de objetos**, localice la vista en la carpeta **Views** de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Haga clic con el botón derecho en el nombre de la vista y después seleccione **Incluir vista como**.  
+En la vista `Sales.vSalesPersonSalesByFiscalYears` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] se usa `PIVOT` para devolver el total de ventas de cada vendedor, para cada año fiscal. Para generar el script de la vista en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el **Explorador de objetos**, localice la vista en la carpeta **Views** de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Haga clic con el botón derecho en el nombre de la vista y después seleccione **Incluir vista como**.  
   
 ## <a name="see-also"></a>Consulte también  
- [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
-  
+[FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+[CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   

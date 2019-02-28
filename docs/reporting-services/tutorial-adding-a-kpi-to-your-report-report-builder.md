@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a19d1fee2e7e9fc1fd5efd8fe2c0007548bcaf2d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712646"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290723"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
-En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , agregue un indicador de rendimiento clave (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes)
+En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], agregará un indicador clave de rendimiento (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
 
 Los KPI son valores medibles con significado empresarial. En este escenario, el resumen de ventas por subcategorías de producto es el KPI. El estado actual del KPI se muestra con colores, medidores e indicadores.
   
@@ -25,7 +25,7 @@ La ilustración siguiente es similar al informe que va a crear.
 ![generador-de-informes-informe-kpi](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
   
 Tiempo estimado para completar este tutorial: 15 minutos.  
   
@@ -51,7 +51,7 @@ En esta sección, elija un origen de datos compartido, cree un conjunto de datos
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para más información, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para más información, consulte el [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -184,7 +184,7 @@ Los colores de fondo se pueden establecer en una expresión que se evalúe al ej
     
     ![generador-de-informes-cuadro-de-texto-propiedades](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  En la pestaña **Relleno** , haga clic en el botón **fx** situado junto a la opción **Color de relleno** y escriba la siguiente expresión en el campo **Establecer expresión para: BackgroundColor** :  
+2.  En la pestaña **Relleno**, haga clic en el botón **fx** situado junto a la opción **Color de relleno** y escriba la siguiente expresión en el campo **Establecer expresión para: BackgroundColor**:  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -340,7 +340,7 @@ Ha completado correctamente el tutorial Agregar un KPI a un informe. Para obtene
 *  [Medidores](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicadores](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 * [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)
 * [Generador de informes en SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

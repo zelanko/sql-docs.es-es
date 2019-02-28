@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810995"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294783"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Mapas en informes para dispositivos móviles de Reporting Services
 Los mapas constituyen una forma excelente de visualizar datos geográficos. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] ofrece tres tipos distintos de visualización en mapas, así como mapas integrados para continentes y diversos países individuales. También puede [cargar y usar mapas personalizados](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -32,7 +32,7 @@ Los informes móviles de SQL Server ofrecen tres tipos distintos de mapas, que r
   
 ## <a name="select-the-map-type-and-region"></a>Selección del tipo de mapa y la región  
   
-1. En la pestaña **Diseño**, seleccione un tipo de mapa, arrástrelo a la superficie de diseño y modifique su tamaño hasta que se ajuste a sus requisitos.  
+1. En la pestaña **Diseño** , seleccione un tipo de mapa, arrástrelo a la superficie de diseño y modifique su tamaño hasta que se ajuste a sus requisitos.  
   
 2. En la vista **Diseño** > panel **Visual Properties** (Propiedades visuales) > **Mapa**, seleccione el mapa de la región concreta que necesite.  
   
@@ -58,7 +58,7 @@ Para mostrar los datos reales en el mapa, debe establecer los valores de, como m
   
 2. Seleccione **Agregar datos**y, después, **Local Excel** (Excel local) o **SSRS Server**(Servidor de SSRS).  
   
-   > **Sugerencia**: asegúrese de que [los datos están en un formato apto para informes para dispositivos móviles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
+   > **Sugerencia**: Asegúrese de que [los datos están en un formato apto para informes para dispositivos móviles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
 3. Elija las hojas de cálculo que desee y seleccione **Importar**.  
    Verá los datos en el [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)].  

@@ -11,12 +11,12 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1de57ab14dc4dcfc07f838494ca48f8b12da6660
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 058f392079c466d34505fac57653d34d37401cc3
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143565"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265302"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lección 2-3: Modificación del Administrador de conexiones de archivos planos
 
@@ -27,20 +27,22 @@ Al modificar el administrador de conexiones para que use el valor de la variable
 ## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>Configuración del Administrador de conexiones de archivos planos para usar una variable  
   
 1.  En el panel **Administradores de conexión** , haga clic con el botón derecho en **Sample Flat File Source Data**y, después, seleccione **Propiedades**.  
+
+2.  En la ventana **Propiedades**, asegúrese de que **PackagePath** comienza con **\Package.Connections**. Si no, en el panel **Administradores de conexión**, haga clic con el botón derecho en **Sample Flat File Source Data** (Datos de origen de archivos planos de ejemplo) y seleccione **Convertir en conexión de paquete** .
   
-2.  En la ventana **Propiedades**, para **Expresiones**, seleccione la celda vacía y, después, haga clic en el botón de puntos suspensivos **(...)**.  
+3.  En la ventana **Propiedades**, para **Expresiones**, seleccione la celda vacía y, después, haga clic en el botón de puntos suspensivos **(...)**.  
   
-3.  En el cuadro de diálogo **Editor de expresiones de propiedad**, en la columna **Propiedad**, seleccione **ConnectionString**.  
+4.  En el cuadro de diálogo **Editor de expresiones de propiedad**, en la columna **Propiedad**, seleccione **ConnectionString**.  
   
-4.  En la columna **Expresión**, haga clic en el botón de puntos suspensivos **(…)** para abrir el cuadro de diálogo **Generador de expresiones**.  
+5.  En la columna **Expresión**, haga clic en el botón de puntos suspensivos **(…)** para abrir el cuadro de diálogo **Generador de expresiones**.  
   
-5.  En el cuadro de diálogo **Generador de expresiones**, expanda el nodo **Variables**.  
+6.  En el cuadro de diálogo **Generador de expresiones**, expanda el nodo **Variables**.  
   
-6.  Arrastre la variable **User::varFileName** hasta el cuadro **Expresión**.  
+7.  Arrastre la variable **User::varFileName** hasta el cuadro **Expresión**.  
   
-7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Generador de expresiones**.  
+8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Generador de expresiones**.  
   
-8.  Haga clic en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Editor de expresiones de propiedad**.  
+9.  Haga clic en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Editor de expresiones de propiedad**.  
   
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente  
 [Paso 4: Prueba del paquete del tutorial de la lección 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  

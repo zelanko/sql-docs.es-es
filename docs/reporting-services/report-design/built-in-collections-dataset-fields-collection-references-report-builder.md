@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 662c4b4fbd3eb754a971b0228e403c64e71b684b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 888f5e89b86d8fec157bf2f4c8c1893875ca048e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789933"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285513"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Colecciones integradas: referencias a la colección de campos de conjunto de datos (Generador de informes)
   Cada conjunto de datos de un informe contiene una colección Fields. La colección Fields es el conjunto de campos especificados por la consulta de conjunto de datos, más los campos calculados adicionales que se hayan creado. Una vez creado el conjunto de datos, la colección de campos aparece en el panel **Datos de informe** .  
@@ -88,7 +88,7 @@ End Function
   
  Si especifica una propiedad no admitida para ese campo, la expresión se evalúa como **null** (**Nothing** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Si un proveedor de datos no admite propiedades de campo extendidas o si no se encuentra el campo al ejecutar la consulta, el valor de la propiedad será **null** (**Nothing** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) para las propiedades de tipo **String** y **Object**, y cero (0) para las propiedades de tipo **Integer**. Una extensión de procesamiento de datos puede sacar partido de las propiedades predefinidas optimizando consultas que incluyan esta sintaxis.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   

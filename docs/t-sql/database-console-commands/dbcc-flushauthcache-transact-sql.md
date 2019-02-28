@@ -19,19 +19,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3f6d11a425da5daee9cb9caf0b64a2eefed117b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 16267d2af81e3338bb04f5f548e2f9d14d1d4186
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025286"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231012"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Vacía la caché de autenticación de base de datos que contiene información sobre los inicios de sesión y las reglas de firewall para la base de datos de usuario actual en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Esta instrucción no se aplica a la base de datos maestra lógica, dado que la base de datos maestra contiene el almacenamiento físico de la información sobre los inicios de sesión y las reglas de firewall. El usuario que ejecuta la instrucción y otros usuarios conectados permanecen conectados. (DBCC FLUSHAUTHCACHE no se admite actualmente para [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]).
  
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ Ninguno.
   
 ## <a name="remarks"></a>Notas  
 La caché de autenticación realiza una copia de los inicios de sesión y las reglas de firewall del servidor que se almacenan en la base de datos maestra y las coloca en la memoria en la base de datos de usuario.  Puesto que la información sobre los usuarios de bases de datos independientes ya está almacenada en la base de datos de usuario, los usuarios de bases de datos independientes no forman parte de la caché de autenticación.
-Las conexiones activas continuamente a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requieren una reautorización (realizada por el [!INCLUDE[ssDE](../../includes/ssde-md.md)]) como mínimo cada 10 horas. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] intenta la reautorización con la contraseña enviada originalmente y no se requiere la intervención del usuario. Por motivos de rendimiento, cuando una contraseña se restablece en [!INCLUDE[ssSDS](../../includes/sssds-md.md)], la conexión no se volverá a autenticar, incluso si se restablece la conexión debido a la agrupación de conexiones. Esto es diferente del comportamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local. Si la contraseña se ha cambiado desde que se autorizó inicialmente la conexión, es necesario terminar la conexión y establecer una nueva conexión con la nueva contraseña. Un usuario con el permiso KILL DATABASE CONNECTION puede terminar explícitamente una conexión con [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante el comando [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).
+Las conexiones activas continuamente a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requieren una reautorización (realizada por el [!INCLUDE[ssDE](../../includes/ssde-md.md)]) como mínimo cada 10 horas. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] intenta la reautorización con la contraseña enviada originalmente y no se requiere la intervención del usuario. Por motivos de rendimiento, cuando una contraseña se restablece en [!INCLUDE[ssSDS](../../includes/sssds-md.md)], la conexión no se volverá a autenticar, incluso si se restablece la conexión debido a la agrupación de conexiones. Este comportamiento es diferente del comportamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local. Si la contraseña se ha cambiado desde que se autorizó inicialmente la conexión, es necesario terminar la conexión y establecer una nueva con la nueva contraseña. Un usuario con el permiso KILL DATABASE CONNECTION puede terminar explícitamente una conexión con [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante el comando [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).
   
 ## <a name="permissions"></a>Permisos  
 Requiere la cuenta de administrador [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
@@ -58,5 +58,4 @@ DBCC FLUSHAUTHCACHE;
   
 ## <a name="see-also"></a>Consulte también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-  
   

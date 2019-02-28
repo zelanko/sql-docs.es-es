@@ -31,14 +31,14 @@ f1_keywords:
 - "10043"
 - sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 369c70b35d76b48c3c2b18039250c7b9b016057a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4454983baf5b4e24cf5ad422f6793b29e59d4861
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653714"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295863"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tablas, matrices y listas (Generador de informes y SSRS)
  En [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], las tablas, matrices y listas son *regiones de datos* en las que se muestran los datos del informe paginado en celdas organizadas en filas y columnas. Normalmente, las celdas contienen datos como texto, fechas y números, pero también pueden contener medidores, gráficos o elementos de informe como imágenes. Colectivamente, las tablas, matrices y listas se denominan a menudo regiones de datos *Tablix* .  
@@ -53,7 +53,7 @@ ms.locfileid: "47653714"
   
  ![RS_TableMatrixList](../../reporting-services/report-design/media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Para empezar a trabajar rápidamente con tablas, matrices y listas, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) y [Tutorial: Crear un informe de forma libre &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Para obtener información sobre tablas, matrices y listas, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) y [Tutorial: Creación de un informe de forma libre &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Puede publicar tablas, matrices y listas por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "47653714"
   
  ![Nueva matriz agregada desde el cuadro de herramientas, seleccionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nueva matriz agregada desde el cuadro de herramientas, seleccionada")  
   
- Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. En tiempo de ejecución, cuando se combinan las regiones de datos y los datos del informe, una matriz crece en horizontal y vertical en la página al irse agregando columnas a los grupos de columnas y filas a los grupos de filas. Las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Por ejemplo, si la matriz tiene un grupo de filas (Categoría) y dos grupos de columnas (Territorio y Año) que muestran la suma de las ventas, el informe muestra dos celdas con las sumas de ventas de cada valor del grupo de categorías. El ámbito de las celdas es las dos intersecciones: Categoría y Territorio y Categoría y Año. La matriz puede tener grupos anidados y adyacentes. Los grupos anidados tienen una relación primario-secundario y los adyacentes una relación del mismo nivel. Puede agregar los subtotales a cualquiera de los niveles de grupos anidados de filas y columnas de la matriz.  
+ Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. En tiempo de ejecución, cuando se combinan las regiones de datos y los datos del informe, una matriz crece en horizontal y vertical en la página al irse agregando columnas a los grupos de columnas y filas a los grupos de filas. Las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Por ejemplo, si la matriz tiene un grupo de filas (Categoría) y dos grupos de columnas (Territorio y Año) que muestran la suma de las ventas, el informe muestra dos celdas con las sumas de ventas de cada valor del grupo de categorías. El ámbito de las celdas son las dos intersecciones: Category y Territory, y Category y Year. La matriz puede tener grupos anidados y adyacentes. Los grupos anidados tienen una relación primario-secundario y los adyacentes una relación del mismo nivel. Puede agregar los subtotales a cualquiera de los niveles de grupos anidados de filas y columnas de la matriz.  
   
  Para que los datos de la matriz sean más legibles y resaltar los datos a los que desea dar énfasis, puede combinar celdas, dividir los datos en horizontal y en vertical, o aplicar formato a los datos y encabezados de grupo.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "47653714"
  [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
  Se explica qué son los grupos y cuándo utilizarlos, y se describen los grupos disponibles para las distintas regiones de datos Tablix.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   

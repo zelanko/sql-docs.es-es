@@ -18,19 +18,19 @@ ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f14609b70d5984be8166e17a5388297fead4db0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cda6f09124127d04c8ded1773feab4e9ffbf2ba9
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800096"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265232"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve una instancia de **geography** con las regiones interiores y exteriores intercambiadas.  
+Devuelve una instancia de **geography** con las regiones interiores y exteriores intercambiadas.  
   
- Este método del tipo de datos **geography** admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.  
+Este método del tipo de datos **geography** admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,18 +40,18 @@ ms.locfileid: "47800096"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *geography*  
- Es otra instancia de **geography** en la que se invoca `ReorientObject()`.  
+_geography_  
+Es otra instancia de **geography** en la que se invoca `ReorientObject()`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
+Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de valor devuelto de CLR: **SqlGeography**  
+Tipo de valor devuelto de CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Notas  
- Este método cambia la orientación de anillo de todos los **Polygons** de **GeometryCollection**, pero no quita ni cambia los **Points** o **Linestrings** de la colección especificada.  
+Este método cambia la orientación de anillo de todos los **Polygons** de **GeometryCollection**, pero no quita ni cambia los **Points** o **LineStrings** de la colección especificada.  
   
- Si se pasa **GeometryCollection** a este método, se reorientan todas las instancias de la colección, pero la colección en su totalidad no se reorienta.  
+Si se pasa **GeometryCollection** a este método, se reorientan todas las instancias de la colección, pero la colección en su totalidad no se reorienta.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -61,7 +61,6 @@ SELECT @R.ReorientObject().STAsText();
 --Result: POLYGON ((10 10, -10 10, -10 -10, 10 -10, 10 10))  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+## <a name="see-also"></a>Consulte también  
+[Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

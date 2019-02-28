@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24d21ae735b44a7068ca929515b66e8a33aade8d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813678"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290083"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lección 6: Agregar grupos y totales (Reporting Services)
 En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar y resumir los datos.  
   
   
@@ -70,7 +70,7 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
 6.  En el menú **Formato** , haga clic en **Color de fondo**y, a continuación, haga clic en **Gris claro**y en **Aceptar**.  
   
-    ![Vista Diseño: tabla básica con total de pedidos](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Vista Diseño: tabla básica con total de pedidos")  
+    ![Vista de diseño: tabla básica con total de pedidos](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Vista de diseño: tabla básica con total general")  
   
 ## <a name="bkmk_adddailytotal"></a>Para agregar un total diario a un informe  
   
@@ -98,7 +98,7 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
 4.  En el menú **Formato** , haga clic en **Color de fondo**y, a continuación, haga clic en **Azul claro**y en **Aceptar**.  
   
-    ![Vista Diseño: total general en tabla básica](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Vista Diseño: total general en tabla básica")  
+    ![Vista de diseño: total general en tabla básica](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Vista de diseño: total general en la tabla básica")  
   
 5.  Haga clic en **Vista previa**.  
   
@@ -125,15 +125,15 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
     Si ve un mensaje similar al siguiente en la ventana de salida, indica que la implementación se realiza correctamente.  
   
-    > ------ Compilación iniciada: proyecto: tutorial, configuración: depurar ------  
+    > ------ Compilación iniciada: Proyecto: tutorial, configuración: Debug ------  
     > Omitiendo 'Sales Orders.rdl'. El elemento está actualizado.  
     > Generación completa -- 0 errores, 0 advertencias  
-    > ------ Operación Implementar iniciada: proyecto: tutorial, configuración: depurar ------  
+    > ------ Deploy started: Proyecto: tutorial, configuración: Debug ------  
     > Implementando en https://[nombre del servidor]/servidor_de_informes  
     > Implementando el informe '/tutorial/Sales Orders'.  
     > Implementación completa -- 0 errores, 0 advertencias  
-    > ========== Compilar: 1 correctos o actualizados, 0 incorrectos, 0 omitidos==========  
-    > ========== Implementar: 1 correctos, 0 incorrectos, 0 omitidos==========  
+    > ========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
+    > ========== Deploy: 1 con éxito, 0 con errores, 0 omitidos ==========  
   
     Si aparece un mensaje de error similar al siguiente, compruebe que dispone de permisos en el servidor de informes y que ha iniciado [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegios de administrador.  
   
@@ -153,7 +153,7 @@ Haga clic en el nombre del informe **Sales Orders** para verlo representado en e
  
 Ha completado correctamente el tutorial Crear un informe de tabla básico.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

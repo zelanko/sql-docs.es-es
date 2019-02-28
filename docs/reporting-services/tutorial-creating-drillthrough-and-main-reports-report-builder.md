@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526180"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286933"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
 En este tutorial se explica cómo crear dos tipos de informes paginados de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. 
@@ -120,7 +120,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea**, en **Distribuidor**y, después, en **Aceptar**.  
   
-    La consulta incluye ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
+    La consulta contiene ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
   
 6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
   
@@ -411,7 +411,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea** y en **Distribuidor**y, después, en **Aceptar**.  
   
-    La consulta incluye ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
+    La consulta contiene ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
   
 6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
   
@@ -511,7 +511,7 @@ Puede mostrar subtotales y totales generales en informes. Los datos del informe 
   
 1.  En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
-    El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente manera: la primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de la categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`y la fila cuarta contiene los totales.  
+    El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente forma: La primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`) y la cuarta fila contiene los totales.  
   
 2.  Haga clic en **Siguiente**.  
   
@@ -627,7 +627,7 @@ Agregar un título al informe principal.
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Ventas por categoría de producto de 2009: categoría En línea y Distribuidor**.  
+2.  Escriba **Ventas por categoría de producto de 2009: categoría En línea y Distribuidor:**.  
   
 3.  Seleccione el texto que escribió.  
   
@@ -680,6 +680,6 @@ Ejecute el informe principal y, a continuación, haga clic en los valores de la 
   
 5.  Opcionalmente, explore otras categorías de producto haciendo clic en sus nombres.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  
   

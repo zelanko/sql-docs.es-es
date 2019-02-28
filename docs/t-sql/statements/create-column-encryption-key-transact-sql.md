@@ -29,19 +29,19 @@ ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5148c640dc862d641453a72592e861d0a26f98d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c99c5348b5ba0f3638fd3eaaaf261caa984a6fd
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766719"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154820"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Crea una clave de cifrado de columna con el conjunto inicial de valores, cifrados con las claves maestras de columna especificadas. Se trata de una operación de metadatos. Una clave de cifrado de columna puede tener hasta dos valores, lo que permite una rotación de claves maestras de columna. Es necesario crear una clave de cifrado de columna para poder cifrar cualquier columna de la base de datos mediante la característica [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Las claves de cifrado de columna también se pueden crear mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Antes de crear una clave de cifrado de columna, es necesario definir una clave maestra de columna mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o la instrucción [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
+Crea una clave de cifrado de columna con el conjunto inicial de valores, cifrados con las claves maestras de columna especificadas. Este cifrado es una operación de metadatos. Una clave de cifrado de columna puede tener hasta dos valores, lo que permite una rotación de claves maestras de columna. Es necesario crear una clave de cifrado de columna antes de que la característica [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) cifre cualquier columna de la base de datos. Las claves de cifrado de columna también se pueden crear mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Antes de crear una clave de cifrado de columna, es necesario definir una clave maestra de columna mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o la instrucción [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,39 +62,38 @@ WITH VALUES
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *key_name*  
- Es el nombre por el que se conocerá la clave de cifrado de columna en la base de datos.  
+_key\_name_  
+Es el nombre por el que se conocerá la clave de cifrado de columna en la base de datos.  
   
- *column_master_key_name*  
- Especifica el nombre de la clave maestra de columna personalizada que se usa para cifrar la clave de cifrado de columna.  
+_column\_master\_key\_name_ Especifica el nombre de la clave maestra de columna personalizada utilizada para cifrar la clave de cifrado de columna.  
   
- *algorithm_name*  
- El nombre del algoritmo de cifrado que se usó para cifrar el valor de la clave de cifrado de columna. El algoritmo para los proveedores del sistema debe ser **RSA_OAEP**.  
+_algorithm\_name_  
+El nombre del algoritmo de cifrado que se usó para cifrar el valor de la clave de cifrado de columna. El algoritmo para los proveedores del sistema debe ser **RSA_OAEP**.  
   
- *varbinary_literal*  
- El BLOB del valor de la clave de cifrado de columna.  
+_varbinary\_literal_  
+El BLOB del valor de la clave de cifrado de columna.  
   
 > [!WARNING]  
 >  En esta instrucción no se deben pasar nunca valores de clave de cifrado de columna con texto simple. Si lo hace, perderá las ventajas que ofrece esta característica.  
   
 ## <a name="remarks"></a>Notas  
- La instrucción CREATE COLUMN ENCRYPTION KEY debe incluir al menos una cláusula VALUES y puede tener hasta dos. Si solo se proporciona una, puede usar la instrucción ALTER COLUMN ENCRYPTION KEY para agregar un segundo valor más adelante. También puede usar la instrucción ALTER COLUMN ENCRYPTION KEY para quitar una cláusula VALUES.  
+La instrucción CREATE COLUMN ENCRYPTION KEY debe incluir al menos una cláusula VALUES y puede tener hasta dos. Si solo se proporciona una, puede usar la instrucción ALTER COLUMN ENCRYPTION KEY para agregar un segundo valor más adelante. También puede usar la instrucción ALTER COLUMN ENCRYPTION KEY para quitar una cláusula VALUES.  
   
- Normalmente, una clave de cifrado de columna se crea con un solo valor cifrado. Cuando es necesario rotar una clave maestra de columna (la clave maestra de columna actual debe reemplazarse con la nueva clave maestra de columna), puede agregar un nuevo valor de la clave de cifrado de columna, que se cifra con la nueva clave maestra de columna. De este modo, conseguirá que las aplicaciones cliente puedan acceder a los datos cifrados con la clave de cifrado de columna, mientras la nueva clave maestra de columna se pone a disposición de las aplicaciones cliente. Un controlador compatible con Always Encrypted en una aplicación cliente que no tenga acceso a la nueva clave maestra podrá usar el valor de clave de cifrado de columna que está cifrado con la clave maestra de columna para tener acceso a datos confidenciales.  
+Normalmente, una clave de cifrado de columna se crea con un solo valor cifrado. En ocasiones, necesite rotar una clave maestra de columna. Reemplace la clave maestra de columna actual por la nueva. Cuando necesite rotar la clave, agregue un nuevo valor de la clave de cifrado de columna, que se cifra con la nueva clave maestra de columna. Esta rotación le permite garantizar que las aplicaciones cliente pueden acceder a los datos cifrados con la clave de cifrado de columna, mientras la nueva clave maestra de columna se pone a disposición de las aplicaciones cliente. Un controlador compatible con Always Encrypted en una aplicación cliente que no tenga acceso a la nueva clave maestra podrá usar el valor de clave de cifrado de columna que está cifrado con la clave maestra de columna anterior para tener acceso a datos confidenciales.  
   
- Los algoritmos de cifrado, compatibles con Always Encrypted, necesitan que el valor de texto simple tenga 256 bits.  
+Los algoritmos de cifrado, compatibles con Always Encrypted, necesitan que el valor de texto simple tenga 256 bits.  
   
- Un valor cifrado se debe generar usando un proveedor de almacén de claves que encapsule el almacén de claves que contiene la clave maestra de columna. Para más información, vea [Always Encrypted &#40;desarrollo de cliente&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)).  
+Un valor cifrado se debe generar usando un proveedor de almacén de claves que encapsule el almacén de claves que contiene la clave maestra de columna. Para más información, vea [Always Encrypted &#40;desarrollo de cliente&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)).  
   
- Eche un vistazo a [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) y [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) para saber más sobre las claves de cifrado de columna.  
+Eche un vistazo a [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) y [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) para saber más sobre las claves de cifrado de columna.  
   
 ## <a name="permissions"></a>Permisos  
- Necesita el permiso **ALTER ANY COLUMN ENCRYPTION KEY**.  
+Necesita el permiso **ALTER ANY COLUMN ENCRYPTION KEY**.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-creating-a-column-encryption-key"></a>A. Crear una clave de cifrado de columna  
- En este ejemplo se quita una clave de cifrado de columna denominada `MyCEK`.  
+En este ejemplo se quita una clave de cifrado de columna denominada `MyCEK`.  
   
 ```  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
@@ -107,8 +106,8 @@ WITH VALUES
 GO  
 ```  
   
-### <a name="creating-a-column-encryption-key-with-2-values"></a>Crear una clave de cifrado de columna con dos valores  
- En este ejemplo se crea una clave de cifrado de columna con dos valores denominada `TwoValueCEK`.  
+### <a name="creating-a-column-encryption-key-with-two-values"></a>Creación de una clave de cifrado de columna con dos valores  
+En este ejemplo se crea una clave de cifrado de columna con dos valores denominada `TwoValueCEK`.  
   
 ```  
   
@@ -127,13 +126,13 @@ WITH VALUES
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
- [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
- [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+[ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+[DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+[CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+[Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
+[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+[sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

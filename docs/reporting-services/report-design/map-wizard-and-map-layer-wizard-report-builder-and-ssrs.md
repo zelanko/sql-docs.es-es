@@ -10,14 +10,14 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1353356a4fb0116e4eed34ef79a8d7a0997db0bb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c624ba5df22bdd519b464677c154c1718beab3c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813778"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294944"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
  En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el Asistente para mapas y el Asistente para capas de mapa automatizan las tareas de crear un mapa, agregar una capa de mapa o cambiar las opciones de capas de mapa en una capa existente.  
@@ -70,13 +70,13 @@ ms.locfileid: "51813778"
   
     -   [¿Cuál es la diferencia entre un mapa básico, un mapa de burbujas y un mapa analítico?](#MapType)  
   
-    -   Elegir visualización de mapa: polígonos  
+    -   Elija la visualización del mapa: Polígonos  
   
-    -   Elegir visualización de mapa: líneas  
+    -   Elija la visualización del mapa: Líneas  
   
-    -   Elegir visualización de mapa: puntos  
+    -   Elija la visualización del mapa: Puntos  
   
-4.  Elegir una conexión a un origen de datos. Elegir una visualización de mapa: puntos. Elija una conexión a un origen de datos o cree una conexión a un origen de datos externo que contenga los datos analíticos que se van a mostrar en el mapa.  
+4.  Elegir una conexión a un origen de datos. Elegir una visualización de mapa: Puntos. Elija una conexión a un origen de datos o cree una conexión a un origen de datos externo que contenga los datos analíticos que se van a mostrar en el mapa.  
   
 5.  Diseñar una consulta. Diseñe una consulta que especifique los datos analíticos.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "51813778"
   
  Después de agregar un mapa o una capa de mapa, y obtener una vista previa del informe, puede cambiar las opciones del mapa y de la capa de mapa que estableció en los asistentes. Para más información, vea [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para más información sobre los mapas, vea [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Para obtener instrucciones paso a paso para agregar un mapa a un informe, vea [Tutorial: Informe de mapa &#40;Generador de informes&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
+ Para más información sobre los mapas, vea [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Para obtener instrucciones paso a paso para agregar un mapa a un informe, vea [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../../reporting-services/tutorial-map-report-report-builder.md)  
   
 ##  <a name="SpatialDataSource"></a> Elegir un origen de datos espaciales  
  En esta página, especifique el origen de datos espaciales y qué datos espaciales se incluirán. Los datos espaciales pueden proceder de la galería de mapas, un archivo de forma ESRI o una consulta del conjunto de datos que especifica los datos espaciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una base de datos de versión de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  
@@ -185,7 +185,7 @@ ms.locfileid: "51813778"
   
  Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](https://go.microsoft.com/fwlink/?LinkId=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
- Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para más información, vea [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y [Planear un informe de mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
+ Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para obtener más información, consulte [Informes de solución de problemas: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y [Planear un informe de mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
  Para más información sobre otras formas de personalizar una capa de mosaico, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -247,7 +247,7 @@ ms.locfileid: "51813778"
   
  El procesador de informes aplica las reglas que establezca y determina automáticamente la lista de elementos que se mostrarán en una leyenda. De forma predeterminada, los resultados de todas las capas se muestran en la primera leyenda. Puede ajustar esto al completar el asistente. Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planear un informe de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  

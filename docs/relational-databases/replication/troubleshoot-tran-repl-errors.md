@@ -1,5 +1,5 @@
 ---
-title: 'Troubleshooter: Find errors with SQL Server transactional replication (Solucionador de problemas: buscar errores con la replicación transaccional de SQL Server) | Microsoft Docs'
+title: 'Solucionador de problemas: Búsqueda de errores con la replicación transaccional de SQL Server | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675904"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154890"
 ---
-# <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solucionador de problemas: buscar errores con la replicación transaccional de SQL Server 
+# <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solucionador de problemas: Búsqueda de errores con la replicación transaccional de SQL Server 
 La solución de problemas de errores de replicación puede resultar frustrante sin un conocimiento básico de cómo funciona la replicación transaccional. El primer paso para crear una publicación es hacer que el Agente de instantáneas cree la instantánea y la guarde en la carpeta de instantáneas. Después, el Agente de distribución aplica la instantánea al suscriptor. 
 
 Este proceso crea la publicación y la coloca en el estado de *sincronización*. La sincronización funciona en tres fases:
@@ -45,7 +45,7 @@ En cualquier paso de este proceso se pueden producir errores. La búsqueda de es
 1. Use el Monitor de replicación para identificar en qué punto de la replicación se encuentra el error (en qué agente):
    - Si los errores se producen en la sección **Publicador a distribuidor**, el problema está relacionado con el Agente de registro del LOG. 
    - Si los errores se producen en la sección **Distribuidor a publicador**, el problema está relacionado con el Agente de distribución.  
-2. Examine el historial de trabajos de ese agente en el Monitor de actividad de trabajo para identificar los detalles del error. Si en el historial de trabajos no se muestran detalles suficientes, puede [habilitar el registro detallado](#enable-verbose-logging) en ese agente específico.
+2. Examine el historial de trabajos de ese agente en el Monitor de actividad de trabajo para identificar los detalles del error. Si en el historial de trabajos no se muestran detalles suficientes, puede [habilitar el registro detallado](#enable-verbose-logging-on-any-agent) en ese agente específico.
 3. Intente determinar una solución para el error.
 
 
@@ -86,7 +86,7 @@ El Agente de registro del LOG se conecta a la base de datos del publicador y exa
 
     ![Comando "Iniciar el Monitor de replicación" en el menú contextual](media/troubleshooting-tran-repl-errors/launch-repl-monitor.png)
   
-    Se abre el Monitor de replicación: ![Monitor de replicación](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
+    Se abre el monitor de replicación: ![Monitor de replicación](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
    
 2. La X de color rojo indica que la publicación no se está sincronizando. Expanda **Mis publicadores** en el lado izquierdo y, después, expanda el servidor del publicador relevante.  
   

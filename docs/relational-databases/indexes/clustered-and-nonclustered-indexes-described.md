@@ -1,7 +1,7 @@
 ---
 title: Índices agrupados y no agrupados descritos | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8daf01c2676c72630beb80d7511e2fa84afe9c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299272"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265222"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Índices agrupados y no agrupados descritos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,10 @@ ms.locfileid: "54299272"
  Vea [Indexes](../../relational-databases/indexes/indexes.md) para los tipos adicionales de índices de propósito especial.  
   
 ## <a name="indexes-and-constraints"></a>Índices y restricciones  
- Los índices se crean automáticamente cuando las restricciones PRIMARY KEY y UNIQUE se definen en las columnas de tabla. Por ejemplo, cuando cree una tabla e identifique una determinada columna como la clave principal, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] creará automáticamente una restricción PRIMARY KEY y un índice en esa columna. Para obtener más información, consulte [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) y [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
+
+Los índices se crean automáticamente cuando las restricciones PRIMARY KEY y UNIQUE se definen en las columnas de tabla. Por ejemplo, cuando crea una tabla con una restricción UNIQUE, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea automáticamente un índice no agrupado. Si configura una restricción PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea automáticamente un índice agrupado, a menos que ya exista uno. Cuando intenta aplicar una restricción PRIMARY KEY en una tabla existente y ya existe un índice agrupado en esa tabla, SQL Server aplica la clave principal mediante un índice no agrupado.
+
+Para obtener más información, consulte [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) y [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Cómo usa los índices el optimizador de consultas  
  Los índices bien diseñados pueden reducir las operaciones de E/S de disco y consumen menos recursos del sistema, con lo que mejoran el rendimiento de la consulta. Los índices pueden ser útiles para diversas consultas que contienen instrucciones SELECT, UPDATE, DELETE o MERGE. Fíjese en la consulta `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Cuando se ejecuta la consulta, el optimizador de consultas evalúa cada método disponible para recuperar datos y selecciona el método más eficiente. El método puede ser un recorrido de la tabla o puede ser recorrer uno o más índices si existen.  

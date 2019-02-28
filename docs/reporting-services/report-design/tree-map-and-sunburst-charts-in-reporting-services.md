@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 012963436b26952cd730a82bbf407803ac600fe2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814108"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295553"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de rectángulos y de proyección solar en Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -114,7 +114,7 @@ En un gráfico de proyección solar, la jerarquía se representa mediante una se
   
 1.  **Obtener los datos**.  
   
-     La consulta de esta sección se basa en la base de datos de AdventureWorks, que puede descargar en GitHub: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
+     La consulta de esta sección se basa en la base de datos de AdventureWorks, que puede descargar en GitHub: [Copia de seguridad completa de AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
   
   
 2.  **Crear un origen de datos**.  

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3de7c69169198302535eb7ff5dc855faa4f44974
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418816"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319116"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Consulta de los datos de una tabla temporal con control de versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 Las dos primeras subcláusulas devuelven versiones de fila que se superponen en un periodo específico (es decir, aquellas que empezaron antes del periodo dado y terminaron después de este), mientras que CONTAINED IN devuelve solo las que existieron dentro de los límites del periodo especificado.  
   
 > [!IMPORTANT]  
->  Si solo busca versiones de fila no actuales, se recomienda usar **CONTAINED IN** , ya que funciona solo con la tabla de historial y producirá el mejor rendimiento de consultas. Use **ALL** cuando necesite consultar datos históricos y actuales sin restricciones.  
+>  Si busca versiones de fila no actuales, le recomendamos que consulte la tabla de historial directamente, ya que producirá el mejor rendimiento de la consulta. Use **ALL** cuando necesite consultar datos históricos y actuales sin restricciones.  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  
@@ -134,7 +134,7 @@ ORDER BY [DeptID], [SysStartTime] Desc
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Creación de una tabla temporal con control de versiones del sistema](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   

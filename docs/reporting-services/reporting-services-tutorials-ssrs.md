@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4fd17b54127da70a5afd37b518ccab9ced606dae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2496d85fc0c6aaf3cbcea1abe2893e5435d970d8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029184"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293803"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Tutoriales de Reporting Services (SSRS)
 
@@ -37,10 +37,10 @@ Siga los pasos de este tutorial para aprender a crear un informe detallado con p
 Estos tutoriales le presentan una variedad de visualizaciones que puede crear en el Generador de informes, como mapas y minigráficos, así como tutoriales sobre cómo usar parámetros y expresiones.   
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 * [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases)  
 * [Ejemplos de Reporting Services en el sitio wiki de TechNet](https://go.microsoft.com/fwlink/?LinkId=198283)  
-* [Wiki de TechNet: ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
+* [Wiki de TechNet: Ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
  
   
   

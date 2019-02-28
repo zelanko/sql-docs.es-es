@@ -29,30 +29,30 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9241c31831fa4fe4447fb00471288028dacbe41e
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397654"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802401"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Crea un desencadenador DML, DDL o logon. Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando se produce un evento en el servidor de bases de datos. Los desencadenadores DML se ejecutan cuando un usuario intenta modificar datos mediante un evento de lenguaje de manipulación de datos (DML). Los eventos DML son instrucciones INSERT, UPDATE o DELETE de una tabla o vista. Estos desencadenadores se activan cuando se desencadena cualquier evento válido, con independencia de que las filas de la tabla se vean o no afectadas. Para más información, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
- Los desencadenadores DDL se ejecutan como respuesta a diversos eventos del lenguaje de definición de datos (DDL). Estos eventos corresponden principalmente a instrucciones CREATE, ALTER y DROP de [!INCLUDE[tsql](../../includes/tsql-md.md)], y a determinados procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL. Los desencadenadores logon se activan en respuesta al evento LOGON que se genera cuando se establece la sesión de un usuario. Los desencadenadores pueden crearse directamente a partir de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] o de métodos de ensamblados creados en Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y cargados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite crear varios desencadenadores para cualquier instrucción específica.  
+Los desencadenadores DDL se ejecutan en respuesta a una variedad de eventos de lenguaje de definición de datos (DDL). Estos eventos corresponden principalmente a instrucciones CREATE, ALTER y DROP de [!INCLUDE[tsql](../../includes/tsql-md.md)], y a determinados procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL. 
+
+Los desencadenadores LOGON se activan en respuesta al evento LOGON que se genera cuando se establece la sesión de un usuario. Puede crear desencadenadores directamente a partir de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] o de métodos de ensamblados creados en Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y cargados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite crear varios desencadenadores para cualquier instrucción específica.  
   
 > [!IMPORTANT]  
 >  El código malintencionado de los desencadenadores se puede ejecutar con privilegios concentrados. Para obtener más información sobre cómo mitigar este riesgo, vea [Administrar la seguridad de los desencadenadores](../../relational-databases/triggers/manage-trigger-security.md).  
   
 > [!NOTE]  
->  La integración de CLR de .NET Framework en SQL Server se describe en este tema. La integración de CLR no es válida con Azure SQL Database.  
+>  En este artículo se describe la integración de CLR de .NET Framework en SQL Server. La integración de CLR no es válida con Azure SQL Database.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -163,162 +163,162 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>Argumentos
 OR ALTER  
- **Se aplica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
+**Se aplica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
   
- Altera el desencadenador condicionalmente solo si ya existe. 
+Altera el desencadenador condicionalmente solo si ya existe. 
   
- *schema_name*  
- Es el nombre del esquema al que pertenece un desencadenador DML. Los desencadenadores DML tienen como ámbito el esquema de la tabla o la vista donde se crean. *schema_name* no se puede especificar para los desencadenadores DDL o de inicio de sesión.  
+*schema_name*  
+El nombre del esquema al que pertenece un desencadenador DML. Los desencadenadores DML tienen como ámbito el esquema de la tabla o la vista donde se crean. *schema_name* no se puede especificar para los desencadenadores DDL o de inicio de sesión.  
   
- *trigger_name*  
- Es el nombre del desencadenador. El parámetro *trigger_name* debe cumplir con las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md), con la excepción de que *trigger_name* no puede comenzar con los símbolos # o ##.  
+*trigger_name*  
+El nombre del desencadenador. El parámetro *trigger_name* debe cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md), con la excepción de que *trigger_name* no puede comenzar con los símbolos # o ##.  
   
- *table* | *view*  
- Es la tabla o vista en que se ejecuta el desencadenador DML; algunas veces se denomina tabla del desencadenador o vista del desencadenador. Especificar el nombre completo de la tabla o vista es opcional. Solo se puede hacer referencia a una vista mediante un desencadenador INSTEAD OF. No es posible definir desencadenadores DML en tablas temporales locales o globales.  
+*table* | *view*  
+La tabla o la vista en que se ejecuta el desencadenador DML. A veces, se hace referencia a esta tabla o vista como tabla de desencadenador o vista de desencadenador, respectivamente. Especificar el nombre completo de la tabla o vista es opcional. Solo puede hacer referencia a una vista mediante un desencadenador INSTEAD OF. No puede definir desencadenadores DML en tablas temporales locales o globales.  
   
- DATABASE  
- Aplica el ámbito de un desencadenador DDL a la base de datos actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en la base de datos actual.  
+DATABASE  
+Aplica el ámbito de un desencadenador DDL a la base de datos actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en la base de datos actual.  
   
- ALL SERVER  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ALL SERVER  
+**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Aplica el ámbito de un desencadenador DDL o logon al servidor actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en cualquier lugar del servidor actual.  
+Aplica el ámbito de un desencadenador DDL o logon al servidor actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en cualquier lugar del servidor actual.  
   
- WITH ENCRYPTION  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+WITH ENCRYPTION  
+**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Ofusca el texto de la instrucción CREATE TRIGGER. El uso de WITH ENCRYPTION impide que el desencadenador se publique como parte de la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. WITH ENCRYPTION no se puede especificar para desencadenadores CLR.  
+Ofusca el texto de la instrucción CREATE TRIGGER. El uso de WITH ENCRYPTION impide que el desencadenador se publique como parte de la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. WITH ENCRYPTION no se puede especificar para desencadenadores CLR.  
   
- EXECUTE AS  
- Especifica el contexto de seguridad en el que se ejecuta el desencadenador. Permite controlar qué cuenta de usuario utiliza la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para validar los permisos sobre cualquier objeto de base de datos al que haga referencia el desencadenador.  
+EXECUTE AS  
+Especifica el contexto de seguridad en el que se ejecuta el desencadenador. Permite controlar qué cuenta de usuario utiliza la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para validar los permisos sobre cualquier objeto de base de datos al que haga referencia el desencadenador.  
   
- Esta opción es necesaria para los desencadenadores en tablas optimizadas para memoria.  
+Esta opción es necesaria para los desencadenadores en tablas optimizadas para memoria.  
   
- Para obtener más información, vea [EXECUTE AS &#40;cláusula de Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+Para obtener más información, vea [EXECUTE AS &#40;cláusula de Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
- NATIVE_COMPILATION  
- Indica que el desencadenador está compilado de forma nativa.  
+NATIVE_COMPILATION  
+Indica que el desencadenador está compilado de forma nativa.  
   
- Esta opción es necesaria para los desencadenadores en tablas optimizadas para memoria.  
+Esta opción es necesaria para los desencadenadores en tablas optimizadas para memoria.  
   
- SCHEMABINDING  
- Se garantiza que las tablas a las que un desencadenador hace referencia no se pueden quitar o modificar.  
+SCHEMABINDING  
+Garantiza que las tablas a las que un desencadenador hace referencia no se puedan quitar o modificar.  
   
- Esta opción es necesaria para desencadenadores en tablas optimizadas para memoria y no se admite en desencadenadores de tablas tradicionales.  
+Esta opción es necesaria para desencadenadores en tablas optimizadas para memoria y no se admite en desencadenadores de tablas tradicionales.  
   
- FOR | AFTER  
- AFTER especifica que el desencadenador DML solo se activa cuando todas las operaciones especificadas en la instrucción SQL desencadenadora se han ejecutado correctamente. Además, todas las acciones referenciales en cascada y las comprobaciones de restricciones deben ser correctas para que este desencadenador se active.  
+FOR | AFTER  
+AFTER especifica que el desencadenador DML solo se activa cuando todas las operaciones especificadas en la instrucción SQL desencadenadora se han iniciado correctamente. Además, todas las acciones referenciales en cascada y las comprobaciones de restricciones también deben ser correctas para que este desencadenador se active.  
   
- AFTER es el valor predeterminado cuando solo se especifica la palabra clave FOR.  
+AFTER es el valor predeterminado cuando solo se especifica la palabra clave FOR.  
   
- Los desencadenadores AFTER no se pueden definir en las vistas.  
+No puede definir desencadenadores AFTER en vistas.  
   
- INSTEAD OF  
- Especifica que se ejecuta el desencadenador DML *en vez de* la instrucción SQL desencadenadora, por lo que se suplantan las acciones de las instrucciones desencadenadoras. INSTEAD OF no se puede especificar para los desencadenadores DDL o logon.  
+INSTEAD OF  
+Especifica que se inicia el desencadenador DML *en lugar de* la instrucción SQL desencadenadora, por lo que se sobrescriben las acciones de las instrucciones desencadenadoras. No puede especificar INSTEAD OF para los desencadenadores DDL o LOGON.  
   
- Como máximo, se puede definir un desencadenador INSTEAD OF por cada instrucción INSERT, UPDATE o DELETE en cada tabla o vista. No obstante, en las vistas es posible definir otras vistas que tengan su propio desencadenador INSTEAD OF.  
+Como máximo, puede definir un desencadenador INSTEAD OF por cada instrucción INSERT, UPDATE o DELETE en una tabla o vista. También puede definir otras vistas en las vistas que tengan su propio desencadenador INSTEAD OF.  
   
- Los desencadenadores INSTEAD OF no se permiten en vistas actualizables que usan WITH CHECK OPTION. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error cuando se agrega un desencadenador INSTEAD OF a una vista actualizable para la que se especificó WITH CHECK OPTION. El usuario debe quitar esta opción mediante ALTER VIEW antes de definir el desencadenador INSTEAD OF.  
+No puede definir desencadenadores INSTEAD OF en vistas actualizables que usan WITH CHECK OPTION. Al hacerlo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error cuando se agrega un desencadenador INSTEAD OF a una vista actualizable para la que se especificó WITH CHECK OPTION. Puede quitar esta opción mediante ALTER VIEW antes de definir el desencadenador INSTEAD OF.  
   
- { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }   
- Especifica las instrucciones de modificación de datos que activan el desencadenador DML cuando se intenta en esta tabla o vista. Se debe especificar al menos una opción. En la definición del desencadenador se permite cualquier combinación de estas opciones, en cualquier orden.  
+{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }   
+Especifica las instrucciones de modificación de datos que activan el desencadenador DML cuando se intenta en esta tabla o vista. Especifique al menos una opción. Use cualquier combinación de estas opciones en cualquier orden en la definición del desencadenador.  
   
- Para los desencadenadores INSTEAD OF, no se permite la opción DELETE en tablas que tengan una relación de integridad referencial que especifica una acción ON DELETE en cascada. Tampoco se permite la opción UPDATE en tablas que tengan una relación referencial que especifique una acción ON UPDATE en cascada.  
+Para los desencadenadores INSTEAD OF, no puede utilizar la opción DELETE en tablas que tengan una relación referencial que especifica una acción ON DELETE en cascada. Tampoco se permite la opción UPDATE en tablas que tengan una relación referencial que especifica una acción ON UPDATE en cascada.  
   
- WITH APPEND  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
+WITH APPEND  
+**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
   
- Especifica que debe agregarse un desencadenador adicional de un tipo existente. WITH APPEND no se puede utilizar con desencadenadores INSTEAD OF o cuando se ha declarado AFTER explícitamente. WITH APPEND solo se puede utilizar si se especificó FOR (sin INSTEAD OF ni AFTER) por motivos de compatibilidad con versiones anteriores. WITH APPEND no se puede especificar si se ha especificado EXTERNAL NAME (es decir, si el desencadenador es de tipo CLR).  
+Especifica que debe agregarse un desencadenador adicional de un tipo existente. WITH APPEND no se puede utilizar con desencadenadores INSTEAD OF o cuando se declara un desencadenador AFTER de forma explícita. Por motivos de compatibilidad con versiones anteriores, use solo WITH APPEND si se especifica FOR, sin INSTEAD OF o AFTER. No puede especificar WITH APPEND si usa EXTERNAL NAME (es decir, si se trata de un desencadenador CLR).  
   
- *event_type*  
- Es el nombre de un evento de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] que, después de su ejecución, hace que se active un desencadenador DDL. Los eventos válidos para los desencadenadores DDL se enumeran en [Eventos DDL](../../relational-databases/triggers/ddl-events.md).  
+*event_type*  
+El nombre de un evento de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] que, después del inicio, hace que se active un desencadenador DDL. Los eventos válidos para los desencadenadores DDL se enumeran en [Eventos DDL](../../relational-databases/triggers/ddl-events.md).  
   
- *event_group*  
- Es el nombre de un agrupamiento predefinido de eventos de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El desencadenador DDL se activa tras la ejecución de cualquier evento de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] que pertenezca a *event_group*. Los grupos de eventos válidos para los desencadenadores DDL se enumeran en [Grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md).  
+*event_group*  
+El nombre de un agrupamiento predefinido de eventos de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)]. El desencadenador DDL se activa tras el inicio de cualquier evento de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] que pertenece a *event_group*. Los grupos de eventos válidos para los desencadenadores DDL se enumeran en [Grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md).  
   
- Una vez que CREATE TRIGGER ha terminado de ejecutarse, *event_group* también actúa como una macro al agregar los tipos de eventos que comprende a la vista de catálogo sys.trigger_events.  
+Una vez que CREATE TRIGGER ha terminado de ejecutarse, *event_group* también actúa como una macro al agregar los tipos de eventos que comprende a la vista de catálogo sys.trigger_events.  
   
- NOT FOR REPLICATION  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+NOT FOR REPLICATION  
+**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Indica que el desencadenador no debe ejecutarse cuando un agente de replicación modifica la tabla involucrada en el mismo.  
+Indica que el desencadenador no debe ejecutarse cuando un agente de replicación modifica la tabla involucrada en el mismo.  
   
- *sql_statement*  
- Son las condiciones y acciones del desencadenador. Las condiciones del desencadenador especifican los criterios adicionales que determinan si los intentos de los eventos DML, DDL o logon hacen que se lleven a cabo las acciones del desencadenador.  
+*sql_statement*  
+Las condiciones y acciones del desencadenador. Las condiciones del desencadenador especifican los criterios adicionales que determinan si los intentos de los eventos DML, DDL o LOGON dan lugar a la ejecución de las acciones del desencadenador.  
   
- Las acciones del desencadenador especificadas en las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] surten efecto cuando se intenta la operación.  
+Las acciones del desencadenador especificadas en las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] surten efecto cuando se intenta la operación.  
   
- Los desencadenadores pueden incluir cualquier número y tipo de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], con excepciones. Para obtener más información, vea la sección Comentarios. Un desencadenador está diseñado para comprobar o cambiar los datos en base a una instrucción de modificación o definición de datos; no debe devolver datos al usuario. Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de un desencadenador incluyen a menudo [lenguaje de control de flujo](~/t-sql/language-elements/control-of-flow.md).  
+Los desencadenadores pueden incluir cualquier número y tipo de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], con excepciones. Para obtener más información, vea la sección Comentarios. Un desencadenador está diseñado para comprobar o cambiar los datos según una instrucción de modificación o definición de datos; no debe devolver datos al usuario. Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de un desencadenador incluyen a menudo [lenguaje de control de flujo](~/t-sql/language-elements/control-of-flow.md).  
   
- Los desencadenadores DML usan las tablas lógicas (conceptuales) insertadas y eliminadas. Son de estructura similar a la tabla en que se define el desencadenador, es decir, la tabla en que se intenta la acción del usuario. Las tablas insertadas y eliminadas contienen los valores antiguos o nuevos de las filas que pueden modificarse mediante la acción del usuario. Por ejemplo, para recuperar todos los valores de la tabla `deleted`, utilice:  
+Los desencadenadores DML usan las tablas lógicas (conceptuales) insertadas y eliminadas. Presentan una estructura similar a la tabla en que se define el desencadenador, es decir, la tabla en que se intenta la acción del usuario. Las tablas insertadas y eliminadas contienen los valores antiguos o nuevos de las filas que pueden modificarse mediante la acción del usuario. Por ejemplo, para recuperar todos los valores de la tabla `deleted`, utilice:  
   
 ```sql  
 SELECT * FROM deleted;  
 ```  
   
- Para obtener más información, vea [Usar las tablas insertadas y eliminadas](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md).  
+Para obtener más información, vea [Usar las tablas insertadas y eliminadas](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md).  
   
- Los desencadenadores DDL y logon capturan información acerca del evento desencadenador mediante el uso de la función [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md). Para obtener más información, vea [Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
+Los desencadenadores DDL y logon capturan información acerca del evento desencadenador mediante el uso de la función [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md). Para obtener más información, vea [Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite actualizar las columnas **text**, **ntext** o **image** mediante el uso del desencadenador INSTEAD OF en tablas o vistas.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite actualizar las columnas **text**, **ntext** o **image** mediante el uso del desencadenador INSTEAD OF en tablas o vistas.  
   
 > [!IMPORTANT]
 >  Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)y [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) en su lugar. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos **varchar(MAX)**, **nvarchar(MAX)** y **varbinary(MAX)** en las tablas insertadas y eliminadas.  
   
- Para los desencadenadores en tablas optimizadas para memoria, el único *sql_statement* permitido en el nivel superior es un bloque ATOMIC. El código T-SQL permitido dentro del bloque ATOMIC está limitado por el código T-SQL permitido dentro de los procedimientos nativos.  
+Para los desencadenadores en tablas optimizadas para memoria, el único *sql_statement* permitido en el nivel superior es un bloque ATOMIC. El código T-SQL permitido dentro del bloque ATOMIC está limitado por el código T-SQL permitido dentro de los procedimientos nativos.  
   
- \< method_specifier > **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+\< method_specifier > **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- En el caso de un desencadenador CLR, especifica el método de enlace de un ensamblado con el desencadenador. El método no debe tomar argumentos y debe devolver void. *class_name* debe ser un identificador válido de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y debe existir como clase en el ensamblado con visibilidad de ensamblado. Si la clase tiene un nombre calificado como espacio de nombres que utiliza '.' para separar las partes del espacio de nombres, el nombre de la clase debe estar delimitado por delimitadores de tipo [ ] o " ". La clase no puede ser anidada.  
+En el caso de un desencadenador CLR, especifica el método de enlace de un ensamblado con el desencadenador. El método no debe tomar argumentos y debe devolver void. *class_name* debe ser un identificador válido de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y debe existir como clase en el ensamblado con visibilidad de ensamblado. Si la clase tiene un nombre calificado como espacio de nombres que utiliza '.' para separar las partes del espacio de nombres, el nombre de la clase debe estar delimitado por delimitadores de tipo [ ] o " ". La clase no puede ser anidada.  
   
 > [!NOTE]  
->  De manera predeterminada, la capacidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de ejecutar código CLR está desactivada. Se puede crear, modificar y quitar objetos de bases de datos que hagan referencia a módulos de código administrados, pero estas referencias no se ejecutarán en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a menos que la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) esté habilitada mediante el uso de [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+>  De manera predeterminada, la capacidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de ejecutar código CLR está desactivada. Puede crear, modificar y quitar objetos de bases de datos que hagan referencia a módulos de código administrados, pero estas referencias no se ejecutarán en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a menos que la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) esté habilitada mediante [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 ## <a name="remarks-for-dml-triggers"></a>Comentarios para los desencadenadores DML  
- Los desencadenadores DML se usan con frecuencia para aplicar las reglas de negocios y la integridad de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona integridad referencial declarativa (DRI) mediante las instrucciones ALTER TABLE y CREATE TABLE. Sin embargo, DRI no proporciona integridad referencial entre bases de datos. La integridad referencial se refiere a las reglas acerca de la relación entre la clave principal y la clave externa de las tablas. Para exigir la integridad referencial, utilice las restricciones de tipo PRIMARY KEY y FOREIGN KEY en ALTER TABLE y CREATE TABLE. Si existen restricciones en la tabla de desencadenadores, se comprueban después de la ejecución del desencadenador INSTEAD OF y antes de la de AFTER. Si se infringen las restricciones, se revierten las acciones del desencadenador INSTEAD OF y el desencadenador AFTER no se ejecuta.  
+Los desencadenadores DML se usan con frecuencia para aplicar las reglas de negocios y la integridad de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona integridad referencial declarativa (DRI) mediante las instrucciones ALTER TABLE y CREATE TABLE. Sin embargo, DRI no proporciona integridad referencial entre bases de datos. La integridad referencial se refiere a las reglas acerca de la relación entre la clave principal y la clave externa de las tablas. Para exigir la integridad referencial, utilice las restricciones de tipo PRIMARY KEY y FOREIGN KEY en ALTER TABLE y CREATE TABLE. Si existen restricciones en la tabla de desencadenadores, se comprueban después de la ejecución del desencadenador INSTEAD OF y antes de la de AFTER. Si se infringen las restricciones, se revierten las acciones del desencadenador INSTEAD OF y el desencadenador AFTER no se activa.  
   
- El primer y último desencadenador AFTER que se ejecuta en una tabla se puede especificar mediante sp_settriggerorder. Solo se puede especificar el primer y último desencadenador AFTER para cada una de las operaciones INSERT, UPDATE y DELETE de una tabla. Si hay otros desencadenadores AFTER en la misma tabla, se ejecutan aleatoriamente.  
+Puede especificar el primer y último desencadenador AFTER que se ejecuta en una tabla mediante sp_settriggerorder. Solo puede especificar el primer y último desencadenador AFTER para cada operación INSERT, UPDATE y DELETE de una tabla. Si hay otros desencadenadores AFTER en la misma tabla, se ejecutan aleatoriamente.  
   
- Si una instrucción ALTER TRIGGER modifica el primer o último desencadenador, se elimina el primer o último atributo establecido en el desencadenador modificado, y el valor del orden se debe restablecer mediante sp_settriggerorder.  
+Si una instrucción ALTER TRIGGER modifica el primer o último desencadenador, se elimina el primer o último atributo establecido en el desencadenador modificado, y debe restablecer el valor del orden mediante sp_settriggerorder.  
   
- Un desencadenador AFTER se ejecuta solo después de ejecutar correctamente la instrucción SQL desencadenadora. La ejecución correcta incluye todas las acciones referenciales en cascada y las comprobaciones de restricciones asociadas al objeto actualizado o eliminado. Un desencadenador AFTER no activará de forma recursiva un desencadenador INSTEAD OF en la misma tabla.  
+Un desencadenador AFTER se ejecuta solo después de ejecutar correctamente la instrucción SQL desencadenadora. La ejecución correcta incluye todas las acciones referenciales en cascada y las comprobaciones de restricciones asociadas al objeto actualizado o eliminado. Un desencadenador AFTER no activa de forma recursiva un desencadenador INSTEAD OF en la misma tabla.  
   
- Si un desencadenador INSTEAD OF definido en una tabla ejecuta una instrucción en la tabla que normalmente volvería a activarlo, al desencadenador no se lo llama de forma recursiva. En su lugar, la instrucción se procesa como si la tabla no tuviera un desencadenador INSTEAD OF e inicia la cadena de operaciones de restricción y ejecuciones de desencadenadores AFTER. Por ejemplo, si para una tabla se define un desencadenador como INSTEAD OF INSERT, y éste ejecuta una instrucción INSERT en la misma tabla, la instrucción INSERT ejecutada por el desencadenador INSTEAD OF no vuelve a llamar al desencadenador. La instrucción INSERT ejecutada por el desencadenador inicia el proceso que realiza las acciones de restricción y activa cualquier desencadenador AFTER INSERT definido para la tabla.  
+Si un desencadenador INSTEAD OF definido en una tabla ejecuta una instrucción en la tabla que normalmente volvería a activarlo, al desencadenador no se le llama de forma recursiva. En su lugar, la instrucción se procesa como si la tabla no tuviera un desencadenador INSTEAD OF e inicia la cadena de operaciones de restricción y ejecuciones de desencadenadores AFTER. Por ejemplo, si un desencadenador se define como INSTEAD OF INSERT para una tabla. Además, el desencadenador ejecuta una instrucción INSERT en la misma tabla, y la instrucción INSERT iniciada por el desencadenador INSTEAD OF no vuelve a llamar al desencadenador. La instrucción INSERT iniciada por el desencadenador activa el proceso que ejecuta las acciones de restricción y activa cualquier desencadenador AFTER INSERT definido para la tabla.  
   
- Si un desencadenador INSTEAD OF definido en una vista ejecuta una instrucción en la vista que normalmente volvería a activarlo, no se llamará el desencadenador de forma recursiva. En su lugar, la instrucción se resuelve a modo de modificaciones en las tablas base subyacentes de la vista. En este caso, la definición de la vista debe cumplir todas las restricciones para una vista actualizable. Para obtener una definición de vistas actualizables, vea [Modificar datos mediante una vista](../../relational-databases/views/modify-data-through-a-view.md).  
+Si un desencadenador INSTEAD OF definido en una vista ejecuta una instrucción en la vista que normalmente volvería a activarlo, no se llamará al desencadenador de forma recursiva. En su lugar, la instrucción se resuelve a modo de modificaciones en las tablas base subyacentes de la vista. En este caso, la definición de la vista debe cumplir todas las restricciones para una vista actualizable. Para obtener una definición de vistas actualizables, vea [Modificar datos mediante una vista](../../relational-databases/views/modify-data-through-a-view.md).  
   
- Por ejemplo, si para una tabla se define un desencadenador como INSTEAD OF UPDATE y éste ejecuta una instrucción UPDATE que hace referencia a la misma vista, la instrucción UPDATE, que ejecuta el desencadenador INSTEAD OF, no vuelve a llamar al desencadenador. La instrucción UPDATE que ejecuta el desencadenador se procesa en la vista, como si ésta no tuviera un desencadenador INSTEAD OF. Las columnas que modifica la instrucción UPDATE deben resolverse en una única tabla base. Cada vez que se modifica una tabla base subyacente se inicia la cadena para aplicar restricciones y activar los desencadenadores AFTER definidos para la tabla.  
+Por ejemplo, si un desencadenador se define como INSTEAD OF UPDATE para una vista. Además, el desencadenador ejecuta una instrucción UPDATE que hace referencia a la misma vista, y la instrucción UPDATE iniciada por el desencadenador INSTEAD OF no vuelve a llamar al desencadenador. La instrucción UPDATE iniciada por el desencadenador se procesa en la vista, como si esta no tuviera un desencadenador INSTEAD OF. Las columnas que modifica la instrucción UPDATE deben resolverse en una única tabla base. Cada vez que se modifica una tabla base subyacente se inicia la cadena para aplicar restricciones y activar los desencadenadores AFTER definidos para la tabla.  
   
 ### <a name="testing-for-update-or-insert-actions-to-specific-columns"></a>Probar las acciones de UPDATE o INSERT en columnas específicas  
- Se puede diseñar un desencadenador [!INCLUDE[tsql](../../includes/tsql-md.md)] que realice determinadas acciones según modificaciones de UPDATE o INSERT en columnas específicas. Para ello, utilice [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) o [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) en el cuerpo del desencadenador. UPDATE() comprueba los intentos de UPDATE o INSERT en una columna. COLUMNS_UPDATED comprueba las acciones de UPDATE o INSERT que se realizaron en varias columnas y devuelve un patrón de bits que indica las columnas que fueron insertadas o actualizadas.  
+Puede diseñar un desencadenador [!INCLUDE[tsql](../../includes/tsql-md.md)] que realice determinadas acciones según modificaciones de UPDATE o INSERT en columnas específicas. Para ello, utilice [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) o [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) en el cuerpo del desencadenador. UPDATE() comprueba los intentos de UPDATE o INSERT en una columna. COLUMNS_UPDATED comprueba las acciones UPDATE o INSERT que se ejecutan en varias columnas. Esta función devuelve un patrón de bits que indica las columnas que se insertaron o se actualizaron.  
   
 ### <a name="trigger-limitations"></a>Limitaciones de los desencadenadores  
- CREATE TRIGGER debe ser la primera instrucción en el proceso por lotes y solo se puede aplicar a una tabla.  
+CREATE TRIGGER debe ser la primera instrucción en el proceso por lotes y solo se puede aplicar a una tabla.  
   
- Un desencadenador se crea solamente en la base de datos actual; sin embargo, un desencadenador puede hacer referencia a objetos que están fuera de la base de datos actual.  
+Un desencadenador se crea solamente en la base de datos actual; sin embargo, un desencadenador puede hacer referencia a objetos que están fuera de la base de datos actual.  
   
- Si se especifica el nombre del esquema del desencadenador (para calificar el desencadenador), califique el nombre de la tabla de la misma forma.  
+Si se especifica el nombre del esquema del desencadenador (para calificar el desencadenador), califique el nombre de la tabla de la misma forma.  
   
- La misma acción del desencadenador puede definirse para más de una acción del usuario (por ejemplo, INSERT y UPDATE) en la misma instrucción CREATE TRIGGER.  
+La misma acción del desencadenador puede definirse para más de una acción del usuario (por ejemplo, INSERT y UPDATE) en la misma instrucción CREATE TRIGGER.  
   
- Los desencadenadores INSTEAD OF DELETE/UPDATE no pueden definirse en una tabla con una clave externa definida en cascada en la acción DELETE/UPDATE.  
+Los desencadenadores INSTEAD OF DELETE/UPDATE no pueden definirse en una tabla con una clave externa definida en cascada en la acción DELETE/UPDATE.  
   
- En un desencadenador se puede especificar cualquier instrucción SET. La opción SET seleccionada permanece en efecto durante la ejecución del desencadenador y, después, vuelve a su configuración anterior.  
+En un desencadenador se puede especificar cualquier instrucción SET. La opción SET seleccionada permanece en efecto durante la ejecución del desencadenador y, después, vuelve a su configuración anterior.  
   
- Cuando se activa un desencadenador, los resultados se devuelven a la aplicación que llama, exactamente igual que con los procedimientos almacenados. Para impedir que se devuelvan resultados a la aplicación debido a la activación de un desencadenador, no incluya las instrucciones SELECT que devuelven resultados ni las instrucciones que realizan una asignación variable en un desencadenador. Un desencadenador que incluya instrucciones SELECT que devuelven resultados al usuario o instrucciones que realizan asignaciones de variables requiere un tratamiento especial; estos resultados devueltos tendrían que escribirse en cada aplicación en la que se permiten modificaciones a la tabla del desencadenador. Si es preciso que existan asignaciones de variable en un desencadenador, utilice una instrucción SET NOCOUNT al principio del mismo para impedir la devolución de cualquier conjunto de resultados.  
+Cuando se activa un desencadenador, los resultados se devuelven a la aplicación que llama, exactamente igual que con los procedimientos almacenados. Para impedir que se devuelvan resultados a una aplicación debido a la activación de un desencadenador, no incluya las instrucciones SELECT que devuelven resultados ni las instrucciones que realizan una asignación de variable en un desencadenador. Un desencadenador que incluye tanto instrucciones SELECT que devuelven resultados al usuario como instrucciones que realizan la asignación de variables requiere un tratamiento especial. Debería escribir los resultados devueltos en todas las aplicaciones en que se permite modificar la tabla del desencadenador. Si es preciso que existan asignaciones de variable en un desencadenador, utilice una instrucción SET NOCOUNT al principio del mismo para impedir la devolución de cualquier conjunto de resultados.  
   
- Una instrucción TRUNCATE TABLE es de hecho una instrucción DELETE, pero no activa un desencadenador porque la operación no registra eliminaciones de filas individuales. Sin embargo, solo los usuarios con permisos para ejecutar una instrucción TRUNCATE TABLE tienen que ocuparse de cómo sortear un desencadenador de DELETE de esta manera.  
+Aunque una instrucción TRUNCATE TABLE es de hecho una instrucción DELETE, no activa un desencadenador porque la operación no registra eliminaciones de filas individuales. Sin embargo, solo los usuarios con permisos para ejecutar una instrucción TRUNCATE TABLE tienen que preocuparse de eludir inadvertidamente un desencadenador DELETE de esta manera.  
   
- La instrucción WRITETEXT, ya se registre o no, no activa un desencadenador.  
+La instrucción WRITETEXT, independientemente de que se registre o no, no activa un desencadenador.  
   
- Las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] no están permitidas en un desencadenador DML:  
+Las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] no están permitidas en un desencadenador DML:  
   
 ||||  
 |-|-|-|  
 |ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
 |RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
   
- Además, las siguientes instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] no se permiten en el cuerpo de un desencadenador DML cuando este se usa en la tabla o la vista que es objeto de la acción desencadenadora.  
+Además, las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] no se permiten en el cuerpo de un desencadenador DML cuando este se usa en la tabla o la vista que es objeto de la acción desencadenadora.  
   
 ||||  
 |-|-|-|  
@@ -330,11 +330,11 @@ SELECT * FROM deleted;
 >  Ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite desencadenadores definidos por el usuario en tablas del sistema, se recomienda no crearlos. 
 
 ### <a name="optimizing-dml-triggers"></a>Optimización de los desencadenadores DML
- Los desencadenadores funcionan en transacciones (implícitas o no) y, mientras están abiertos, bloquean recursos. El bloqueo seguirá vigente hasta que la transacción se confirme (con COMMIT) o se rechace (con ROLLBACK). Cuanto más tiempo se ejecute un desencadenador, mayor será la probabilidad de que se bloquee otro proceso. Por lo tanto, los desencadenadores se deben escribir de forma que se reduzca su duración siempre que sea posible. Una manera de conseguirlo consiste en liberar un desencadenador cuando una instrucción DML cambie 0 filas. 
+Los desencadenadores funcionan en transacciones (implícitas o no) y, mientras están abiertos, bloquean recursos. El bloqueo se mantiene hasta que la transacción se confirma (con COMMIT) o se rechaza (con ROLLBACK). Cuanto más tiempo se ejecuta un desencadenador, mayor es la probabilidad de que se bloquee otro proceso. Por lo tanto, escriba desencadenadores para reducir su duración siempre que sea posible. Una manera de conseguir acortar la duración consiste en liberar un desencadenador cuando una instrucción DML cambia cero filas. 
 
 Para liberar el desencadenador de un comando que no cambia ninguna fila, use la variable del sistema [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md). 
 
-El siguiente fragmento de código de T-SQL lo consigue, y debería aparecer al principio de cada desencadenador DML:
+El fragmento de código T-SQL siguiente muestra cómo liberar el desencadenador de un comando que no cambia ninguna fila. Este código debe estar presente al principio de cada desencadenador DML:
 
 ```sql
 IF (ROWCOUNT_BIG() = 0)
@@ -343,81 +343,81 @@ RETURN;
   
   
 ## <a name="remarks-for-ddl-triggers"></a>Comentarios para los desencadenadores DDL  
- Los desencadenadores DDL, al igual que los estándar, ejecutan procedimientos almacenados como respuesta a un evento. Pero a diferencia de los desencadenadores estándar, no se ejecutan como respuesta a instrucciones UPDATE, INSERT o DELETE en una tabla o vista. En cambio, se ejecutan principalmente como respuesta a instrucciones de lenguaje de definición de datos (o DDL). Entre ellas se incluyen instrucciones CREATE, ALTER, DROP, GRANT, DENY, REVOKE y UPDATE STATISTICS. Algunos procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL también pueden activar desencadenadores DDL.  
+Los desencadenadores DDL, al igual que los estándar, inician procedimientos almacenados como respuesta a un evento. Pero, a diferencia de los desencadenadores estándar, no se ejecutan como respuesta a instrucciones UPDATE, INSERT o DELETE en una tabla o vista. En cambio, se ejecutan principalmente como respuesta a instrucciones de lenguaje de definición de datos (DDL). Los tipos de instrucciones incluyen CREATE, ALTER, DROP, GRANT, DENY, REVOKE y UPDATE STATISTICS. Algunos procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL también pueden activar desencadenadores DDL.  
   
 > [!IMPORTANT]  
->  Pruebe los desencadenadores DDL para determinar sus respuestas a la ejecución de los procedimientos almacenados del sistema. Por ejemplo, la instrucción CREATE TYPE y los procedimientos almacenados sp_addtype y sp_rename activarán un desencadenador DDL creado en un evento CREATE_TYPE.  
+>  Pruebe los desencadenadores DDL para determinar sus respuestas a la ejecución de los procedimientos almacenados del sistema. Por ejemplo, la instrucción CREATE TYPE y los procedimientos almacenados sp_addtype y sp_rename activan un desencadenador DDL creado en un evento CREATE_TYPE.  
   
- Para obtener más información sobre los desencadenadores DDL, vea [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md).  
+Para obtener más información sobre los desencadenadores DDL, vea [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
- Los desencadenadores DDL no se activan como respuesta a eventos que afectan a procedimientos almacenados y tablas temporales, ya sean locales o globales.  
+Los desencadenadores DDL no se activan como respuesta a eventos que afectan a procedimientos almacenados y tablas temporales, ya sean locales o globales.  
   
- A diferencia de los desencadenadores DML, los desencadenadores DDL no tienen como ámbito los esquemas. Por tanto, las funciones como OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY y OBJECTPROPERTYEX no se pueden usar para efectuar consultas en metadatos sobre desencadenadores DDL. Utilice en su lugar las vistas de catálogo. Para más información, vea [Obtener información sobre los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
+A diferencia de los desencadenadores DML, los desencadenadores DDL no tienen como ámbito los esquemas. Por tanto, no puede usar funciones como OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY y OBJECTPROPERTYEX para efectuar consultas en metadatos sobre desencadenadores DDL. Utilice en su lugar las vistas de catálogo. Para más información, vea [Obtener información sobre los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 > [!NOTE]  
 >  Los desencadenadores DDL con ámbito en el servidor aparecen en el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en la carpeta **Desencadenadores**. Dicha carpeta se encuentra en la carpeta **Server Objects** . Los desencadenadores DDL de ámbito de base de datos aparecen en la carpeta **Desencadenadores de bases de datos**. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos correspondiente.  
   
 ## <a name="logon-triggers"></a>Desencadenadores logon  
- Los desencadenadores logon activan procedimientos almacenados en respuesta a un evento LOGON. Este evento se genera cuando se establece una sesión de usuario con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los desencadenadores logon se activan después de que termine la fase de autenticación del inicio de sesión, pero antes de que se establezca la sesión de usuario realmente. Por tanto, todos los mensajes que se originan dentro del desencadenador y que normalmente llegarían hasta el usuario, como los mensajes de error y los mensajes de la instrucción PRINT, se desvían al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Desencadenadores logon](../../relational-databases/triggers/logon-triggers.md).  
+Los desencadenadores LOGON realizan procedimientos almacenados en respuesta a un evento LOGON. Este evento se genera cuando se establece una sesión de usuario con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los desencadenadores LOGON se activan después de que termine la fase de autenticación del inicio de sesión, pero antes de que se establezca la sesión de usuario. Por tanto, todos los mensajes que se originan dentro del desencadenador y que normalmente llegarían hasta el usuario, como los mensajes de error y los mensajes de la instrucción PRINT, se desvían al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Desencadenadores logon](../../relational-databases/triggers/logon-triggers.md).  
   
- Los desencadenadores logon no se activan si se produce un error en la autenticación.  
+Los desencadenadores LOGON no se activan si se produce un error en la autenticación.  
   
- Los desencadenadores logon no admiten las transacciones distribuidas. Se devuelve el error 3969 cuando se activa un desencadenador logon que contiene una transacción distribuida.  
+Los desencadenadores LOGON no admiten las transacciones distribuidas. Se devuelve el error 3969 cuando se activa un desencadenador LOGON que contiene una transacción distribuida.  
   
 ### <a name="disabling-a-logon-trigger"></a>Deshabilitar un desencadenador logon  
- Un desencadenador LOGON puede evitar la conexión a [!INCLUDE[ssDE](../../includes/ssde-md.md)] de todos los usuarios, incluidos los miembros del rol fijo de servidor **sysadmin** . Cuando el desencadenador LOGON evita que se realicen las conexiones, los miembros del rol fijo de servidor **sysadmin** pueden conectarse mediante la conexión de administrador dedicada o iniciando [!INCLUDE[ssDE](../../includes/ssde-md.md)] en modo de configuración mínima (-f). Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+Un desencadenador LOGON puede evitar la conexión a [!INCLUDE[ssDE](../../includes/ssde-md.md)] de todos los usuarios, incluidos los miembros del rol fijo de servidor **sysadmin** . Cuando el desencadenador LOGON evita que se realicen las conexiones, los miembros del rol fijo de servidor **sysadmin** pueden conectarse mediante la conexión de administrador dedicada o iniciando [!INCLUDE[ssDE](../../includes/ssde-md.md)] en modo de configuración mínima (-f). Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ## <a name="general-trigger-considerations"></a>Consideraciones generales sobre los desencadenadores  
   
 ### <a name="returning-results"></a>Devolver resultados  
- En una versión futura de SQL, se quitará la capacidad de devolver resultados desde los desencadenadores. Los desencadenadores que devuelven conjuntos de resultados pueden provocar un comportamiento inesperado en aplicaciones que no estén diseñadas para utilizarlos. Evite la devolución de conjuntos de resultados desde desencadenadores en los nuevos trabajos de desarrollo y piense en modificar las aplicaciones que la usan actualmente. Para evitar que los desencadenadores devuelvan conjuntos de resultados, establezca la opción [No permitir resultados de desencadenadores](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) en 1.  
+En una versión futura de SQL, se quitará la capacidad de devolver resultados desde los desencadenadores. Los desencadenadores que devuelven conjuntos de resultados pueden provocar un comportamiento inesperado en aplicaciones que no están diseñadas para utilizarlos. Evite la devolución de conjuntos de resultados desde desencadenadores en los nuevos trabajos de desarrollo y piense en modificar las aplicaciones que la usan actualmente. Para evitar que los desencadenadores devuelvan conjuntos de resultados, establezca la opción [No permitir resultados de desencadenadores](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) en 1.  
   
- Los desencadenadores LOGON impiden que se devuelvan conjuntos de resultados y este comportamiento no se puede configurar. Si un desencadenador LOGON genera un conjunto de resultados, no se puede ejecutar y se rechazará el intento de iniciar sesión activado por el desencadenador.  
+Los desencadenadores LOGON siempre impiden que se devuelvan conjuntos de resultados y este comportamiento no se puede configurar. Si un desencadenador LOGON genera un conjunto de resultados, no se puede iniciar el desencadenador y se rechaza el intento de inicio de sesión activado por el desencadenador.  
   
 ### <a name="multiple-triggers"></a>Desencadenadores múltiples  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que se creen varios desencadenadores para cada evento DML, DDL o LOGON. Por ejemplo, si se ejecuta CREATE TRIGGER FOR UPDATE para una tabla que ya tiene un desencadenador UPDATE, se creará un desencadenador de actualización adicional. En las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solo se permitía un desencadenador por cada evento de modificación (INSERT, UPDATE, DELETE) en cada tabla.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite crear varios desencadenadores para cada evento DML, DDL o LOGON. Por ejemplo, si se ejecuta CREATE TRIGGER FOR UPDATE para una tabla que ya tiene un desencadenador UPDATE, se crea un desencadenador de actualización adicional. En las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solo se permitía un desencadenador por cada evento de modificación (INSERT, UPDATE, DELETE) en cada tabla.  
   
 ### <a name="recursive-triggers"></a>Desencadenadores recursivos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite también la invocación recursiva de desencadenadores cuando el valor RECURSIVE_TRIGGERS está habilitado mediante ALTER DATABASE.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también admite la invocación recursiva de desencadenadores cuando el valor RECURSIVE_TRIGGERS está habilitado mediante ALTER DATABASE.  
   
- Los desencadenadores recursivos permiten dos tipos de repetición:  
+Los desencadenadores recursivos permiten dos tipos de repetición:  
   
 -   Recursión indirecta  
   
-     Con la repetición indirecta, una aplicación actualiza la tabla T1. Así se activa el desencadenador TR1 para actualizar la tabla T2. En esta situación, el desencadenador T2 activa y actualiza la tabla T1.  
+     Con la repetición indirecta, una aplicación actualiza la tabla T1. Así se activa el desencadenador TR1 para actualizar la tabla T2. El desencadenador T2 activa y actualiza a continuación la tabla T1.  
   
 -   Recursión directa  
   
-     Con la repetición directa, una aplicación actualiza la tabla T1. Así se activa el desencadenador TR1 para actualizar la tabla T1. Debido a que la tabla T1 se ha actualizado, el desencadenador TR1 se activa de nuevo, y así sucesivamente.  
+     En la recursividad directa, una aplicación actualiza la tabla T1. Así se activa el desencadenador TR1 para actualizar la tabla T1. Debido a que la tabla T1 se ha actualizado, el desencadenador TR1 se activa de nuevo, y así sucesivamente.  
   
- En el ejemplo siguiente se usa la recursividad de desencadenadores directa e indirecta. Suponga que en la tabla T1 se han definido dos desencadenadores de actualización, TR1 y TR2. El desencadenador TR1 actualiza la tabla T1 recursivamente. Una instrucción UPDATE ejecuta cada TR1 y TR2 una vez. Además, la ejecución de TR1 desencadena la ejecución de TR1 (recursivamente) y TR2. Las tablas inserted y deleted de un desencadenador específico contienen filas que corresponden solo a la instrucción UPDATE que invocó al desencadenador.  
+En el ejemplo siguiente se usa la recursividad de desencadenadores directa e indirecta. Suponga que en la tabla T1 se han definido dos desencadenadores de actualización, TR1 y TR2. El desencadenador TR1 actualiza la tabla T1 recursivamente. Una instrucción UPDATE ejecuta cada TR1 y TR2 una vez. Además, el inicio de TR1 desencadena la ejecución de TR1 (recursivamente) y TR2. Las tablas inserted y deleted de un desencadenador específico contienen filas que corresponden solo a la instrucción UPDATE que invocó al desencadenador.  
   
 > [!NOTE]  
->  El comportamiento anterior solo se produce si el valor RECURSIVE_TRIGGERS está habilitado mediante ALTER DATABASE. No hay un orden definido en el que se ejecuten los distintos desencadenadores definidos de un evento específico. Cada desencadenador debe ser independiente.  
+>  El comportamiento anterior solo se produce si el valor RECURSIVE_TRIGGERS está habilitado mediante ALTER DATABASE. No hay un orden establecido en el que se ejecuten los distintos desencadenadores definidos para un evento específico. Cada desencadenador debe ser independiente.  
   
- Deshabilitar RECURSIVE_TRIGGERS solo evita las recursiones directas. Para deshabilitar la repetición indirecta, establezca la opción de servidor de desencadenadores anidados en 0 con sp_configure.  
+Deshabilitar RECURSIVE_TRIGGERS solo evita las recursiones directas. Para deshabilitar la repetición indirecta, establezca la opción de servidor de desencadenadores anidados en 0 con sp_configure.  
   
- Si alguno de los desencadenadores ejecuta una instrucción ROLLBACK TRANSACTION, no se ejecuta ningún desencadenador posterior, independientemente del nivel de anidamiento.  
+Si alguno de los desencadenadores activa una instrucción ROLLBACK TRANSACTION, no se ejecuta ningún desencadenador posterior, independientemente del nivel de anidamiento.  
   
 ### <a name="nested-triggers"></a>Desencadenadores anidados  
- Los desencadenadores pueden anidarse hasta un máximo de 32 niveles. Si un desencadenador cambia una tabla en la que hay otro desencadenador, el segundo se activa y puede, entonces, llamar a un tercero, y así sucesivamente. Si algún desencadenador de la cadena causa un bucle infinito, el nivel de anidamiento se habrá superado, con lo que se cancela el desencadenador. Cuando un desencadenador [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecuta código administrado haciendo referencia a una rutina, un tipo o agregado CLR, esta referencia cuenta como un nivel para el límite de anidamiento de 32 niveles. Los métodos que se invocan desde el código administrado no cuentan para este límite.  
+Puede anidar desencadenadores hasta un máximo de 32 niveles. Si un desencadenador cambia una tabla en la que hay otro desencadenador, el segundo se activa y puede, entonces, llamar a un tercero, y así sucesivamente. Si algún desencadenador de la cadena causa un bucle infinito, el nivel de anidamiento se habrá superado, con lo que se cancela el desencadenador. Cuando un desencadenador [!INCLUDE[tsql](../../includes/tsql-md.md)] inicia código administrado haciendo referencia a una rutina, un tipo o agregado CLR, esta referencia cuenta como un nivel en relación con el límite de anidamiento de 32 niveles. Los métodos invocados desde el código administrado no cuentan para este límite.  
   
- Para deshabilitar los desencadenadores anidados, establezca la opción nested triggers de sp_configure en 0 (desactivada). La configuración predeterminada permite desencadenadores anidados. Si los desencadenadores anidados están desactivados, los desencadenadores recursivos también se deshabilitan, independientemente del valor de RECURSIVE_TRIGGERS establecido mediante ALTER DATABASE.  
+Para deshabilitar los desencadenadores anidados, establezca la opción nested triggers de sp_configure en 0 (desactivada). La configuración predeterminada admite desencadenadores anidados. Si los desencadenadores anidados están desactivados, los desencadenadores recursivos también se deshabilitan, independientemente del valor de RECURSIVE_TRIGGERS establecido mediante ALTER DATABASE.  
   
- El primer desencadenador AFTER anidado que esté dentro de un desencadenador INSTEAD OF se activará si la opción de configuración del servidor de **desencadenadores anidados** está establecida en 0. Sin embargo, con esta configuración, no se activarán posteriormente los desencadenadores AFTER. Es recomendable que revise sus aplicaciones en busca de desencadenadores anidados para determinar si las aplicaciones cumplen con sus reglas de negocios en relación con este comportamiento nuevo, siempre que la opción de configuración del servidor de **desencadenadores anidados** esté establecida en 0 y, a continuación, realice las modificaciones apropiadas.  
+El primer desencadenador AFTER anidado que esté dentro de un desencadenador INSTEAD OF se activará si la opción de configuración del servidor de **desencadenadores anidados** es 0. Sin embargo, con esta configuración, los desencadenadores AFTER posteriores no se activarán. Revise las aplicaciones en busca de desencadenadores anidados para determinar si las aplicaciones siguen las reglas de negocio cuando la configuración del servidor de **desencadenadores anidados** está establecida en 0. Si no es así, realice las modificaciones apropiadas.  
   
 ### <a name="deferred-name-resolution"></a>Resolución diferida de nombres  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que los procedimientos almacenados, los desencadenadores y los procesos por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] hagan referencia a tablas que no existen en tiempo de compilación. Esta capacidad se denomina resolución diferida de nombres.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que los procedimientos almacenados, los desencadenadores y los procesos por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] hagan referencia a tablas que no existen en tiempo de compilación. Esta capacidad se denomina resolución diferida de nombres.  
   
 ## <a name="permissions"></a>Permisos  
- Para crear un desencadenador DML, es necesario contar con permiso ALTER sobre la tabla o vista en la que se crea el desencadenador.  
+Para crear un desencadenador DML, es necesario contar con permiso ALTER en la tabla o vista en la que se crea el desencadenador.  
   
- Para crear un desencadenador DDL con ámbito de servidor (ON ALL SERVER) o un desencadenador logon se requiere el permiso CONTROL SERVER en el servidor. Para crear un desencadenador DDL con ámbito en la base de datos (ON DATABASE) es necesario un permiso ALTER ANY DATABASE DDL TRIGGER en la base de datos actual.  
+Para crear un desencadenador DDL con ámbito de servidor (ON ALL SERVER) o un desencadenador LOGON, se requiere el permiso CONTROL SERVER en el servidor. Para crear un desencadenador DDL con ámbito en la base de datos (ON DATABASE), es necesario un permiso ALTER ANY DATABASE DDL TRIGGER en la base de datos actual.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. Usar desencadenador DML con un mensaje de aviso  
- El siguiente desencadenador DML imprime un mensaje en el cliente cuando alguien intenta agregar o cambiar datos en la tabla `Customer` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+El siguiente desencadenador DML imprime un mensaje en el cliente cuando alguien intenta agregar o cambiar datos en la tabla `Customer` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 CREATE TRIGGER reminder1  
@@ -428,7 +428,7 @@ GO
 ```  
   
 ### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>b. Usar un desencadenador DML con un mensaje de correo electrónico de aviso  
- Este ejemplo envía un mensaje de correo electrónico a una persona especificada (`MaryM`) cuando cambia la tabla `Customer`.  
+Este ejemplo envía un mensaje de correo electrónico a una persona especificada (`MaryM`) cuando cambia la tabla `Customer`.  
   
 ```sql  
 CREATE TRIGGER reminder2  
@@ -444,9 +444,9 @@ GO
 ```  
   
 ### <a name="c-using-a-dml-after-trigger-to-enforce-a-business-rule-between-the-purchaseorderheader-and-vendor-tables"></a>C. Usar un desencadenador DML AFTER para exigir una regla de negocios entre las tablas PurchaseOrderHeader y Vendor  
- Debido a que las restricciones CHECK solo pueden hacer referencia a las columnas en las que se han definido las restricciones de columna o de tabla, cualquier restricción entre tablas, en este caso, reglas de negocios, debe definirse como desencadenadores.  
+Debido a que las restricciones CHECK solo hacen referencia a las columnas en las que se han definido las restricciones de columna o de tabla, debe definir como desencadenadores cualquier restricción entre tablas, en este caso, las reglas de negocio.  
   
- En el ejemplo siguiente se crea un desencadenador DML en la base de datos AdventureWorks2012. El desencadenador comprueba que la solvencia del proveedor es satisfactoria (no es 5) cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader`. Para obtener la solvencia del proveedor, debe hacerse referencia a la tabla `Vendor`. Si la solvencia no es satisfactoria, se obtiene un mensaje y no se ejecuta la inserción.  
+En el ejemplo siguiente se crea un desencadenador DML en la base de datos AdventureWorks2012. Este desencadenador comprueba que la solvencia crediticia del proveedor es satisfactoria (no es 5) cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader`. Para obtener la solvencia crediticia del proveedor, debe hacerse referencia a la tabla `Vendor`. Si la solvencia crediticia es demasiado baja, aparece un mensaje y no se ejecuta la inserción.  
   
 ```sql  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
@@ -495,7 +495,7 @@ GO
 ```  
   
 ### <a name="d-using-a-database-scoped-ddl-trigger"></a>D. Usar un desencadenador DDL con ámbito de base de datos  
- En el ejemplo siguiente se usa un desencadenador DDL para impedir que se quiten sinónimos de una base de datos.  
+En el ejemplo siguiente se usa un desencadenador DDL para impedir que se quiten sinónimos de una base de datos.  
   
 ```sql  
 CREATE TRIGGER safety   
@@ -513,7 +513,7 @@ GO
 ```  
   
 ### <a name="e-using-a-server-scoped-ddl-trigger"></a>E. Usar un desencadenador DDL con ámbito de servidor  
- En el ejemplo siguiente se utiliza un desencadenador DDL para imprimir un mensaje si se produce un evento CREATE DATABASE en la instancia actual del servidor, y se utiliza la función `EVENTDATA` para recuperar el texto de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente. Para obtener más ejemplos que usan EVENTDATA en desencadenadores DDL, vea [Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
+En el ejemplo siguiente se utiliza un desencadenador DDL para imprimir un mensaje si se produce un evento CREATE DATABASE en la instancia actual del servidor, y se utiliza la función `EVENTDATA` para recuperar el texto de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente. Para obtener más ejemplos que usan EVENTDATA en desencadenadores DDL, vea [Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -531,7 +531,7 @@ GO
 ```  
   
 ### <a name="f-using-a-logon-trigger"></a>F. Usar un desencadenador LOGON  
- El ejemplo siguiente de desencadenador logon rechaza un intento de iniciar sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como miembro del inicio de sesión *login_test* si ya hay tres sesiones de usuario ejecutándose con ese inicio de sesión.  
+El ejemplo siguiente de desencadenador logon rechaza un intento de iniciar sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como miembro del inicio de sesión *login_test* si ya hay tres sesiones de usuario ejecutándose con ese inicio de sesión.  
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -558,7 +558,7 @@ END;
 ```  
   
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>G. Ver los eventos que hacen que se active un desencadenador  
- En el ejemplo siguiente se efectúa una consulta en las vistas de catálogo `sys.triggers` y `sys.trigger_events` para determinar qué eventos de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] hacen que se active el desencadenador `safety`. El desencadenador, `safety`, se crea en el ejemplo "D", encontrado más arriba.  
+En el ejemplo siguiente se efectúa una consulta en las vistas de catálogo `sys.triggers` y `sys.trigger_events` para determinar qué eventos de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] hacen que se active el desencadenador `safety`. El desencadenador, `safety`, se crea en el ejemplo "D", encontrado más arriba.  
   
 ```sql  
 SELECT TE.*  

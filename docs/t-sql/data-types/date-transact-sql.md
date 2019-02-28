@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc046c9e6f033dc77c85401b2007321c94e803e8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018157"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287187"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ Define una fecha en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 |Uso|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|YYYY-MM-DD<br /><br /> Para más información, vea la sección "Compatibilidad con versiones anteriores de clientes de niveles inferiores" más adelante.|  
 |Intervalo|De 0001-01-01 a 9999-12-31 (de 1582-10-15 a 9999-12-31 para Informatica)<br /><br /> Del 1 de enero del año 1 E. C. al 31 de diciembre de 9999 E. C. (del 15 de octubre de 1582 E. C. al 31 de diciembre de 9999 E. C. para Informatica)|  
-|Intervalos de elementos|YYYY es una cifra de cuatro dígitos comprendida entre 0001 y 9999 que representa un año. Para Informatica, YYYY se limita al intervalo entre 1582 y 9999.<br /><br /> MM es una cifra de dos dígitos comprendida entre 01 y 12 que representa un mes del año especificado.<br /><br /> DD es una cifra de dos dígitos comprendida entre 01 y 31 dependiendo del mes, que representa un día del mes especificado.|  
+|Intervalos de elementos|YYYY es una cifra de cuatro dígitos comprendida entre 0001 y 9999 que representa un año. Para Informatica, YYYY se limita al intervalo entre 1582 y 9999.<br /><br /> MM es una cifra de dos dígitos comprendida entre 01 y 12 que representa un mes del año especificado.<br /><br /> DD es una cifra de dos dígitos comprendida entre 01 y 31, dependiendo del mes, que representa un día del mes especificado.|  
 |Longitud en caracteres|10 posiciones|  
 |Precisión, escala|10, 0|  
 |Tamaño de almacenamiento|3 bytes, fijo|  
@@ -60,15 +60,15 @@ En las tablas siguientes se muestran los formatos de literales de cadena válido
   
 |Numérico|Descripción|  
 |-------------|-----------------|  
-|mdy<br /><br /> [m]m/dd/[aa]aa<br /><br /> [m]m-dd-[aa]aa<br /><br /> [m]m.dd.[aa]aa<br /><br /> mad<br /><br /> mm/[aa]aa/dd<br /><br /> mm-[aa]aa/dd<br /><br /> [m]m.[aa]aa.dd<br /><br /> dma<br /><br /> dd/[m]m/[aa]aa<br /><br /> dd-[m]m-[aa]aa<br /><br /> dd.[m]m.[aa]aa<br /><br /> dam<br /><br /> dd/[aa]aa/[m]m<br /><br /> dd-[aa]aa-[m]m<br /><br /> dd.[aa]aa.[m]m<br /><br /> amd<br /><br /> [aa]aa/[m]m/dd<br /><br /> [aa]aa-[m]m-dd<br /><br /> [aa]aa-[m]m-dd|[m]m, dd, y [aa]aa representa el mes, el día y el año en una cadena con marcas de barras diagonales (/), guiones (-) o puntos (.) como separadores.<br /><br /> Solo se admiten los años de dos o cuatro dígitos. Siempre que sea posible utilice los años de cuatro dígitos. Use la opción Fecha límite de año de dos dígitos (vea [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)) para especificar un número entero entre 0001 y 9999 que represente el año límite para interpretar años de dos dígitos como años de cuatro dígitos.<br /><br /> **Nota:** Para Informatica, YYYY se limita al intervalo entre 1582 y 9999.<br /><br /> Un año de dos dígitos menor o igual que los últimos dos dígitos del año límite pertenece al mismo siglo que el año límite. En cambio, un año de dos dígitos mayor que los últimos dos dígitos del año límite pertenece al siglo anterior al año límite. Por ejemplo, si el valor del año límite de dos dígitos es 2049 (el valor predeterminado), el año de dos dígitos 49 se interpreta como 2049 y el año de dos dígitos 50 se interpreta como 1950.<br /><br /> La configuración de idioma actual está determinada por el formato de fecha predeterminado. Para cambiar el formato de fecha, use las instrucciones [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) y [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> No se admite el formato **adm** para **date**.|  
+|mdy<br /><br /> [m]m/dd/[aa]aa<br /><br /> [m]m-dd-[aa]aa<br /><br /> [m]m.dd.[aa]aa<br /><br /> mad<br /><br /> mm/[aa]aa/dd<br /><br /> mm-[aa]aa/dd<br /><br /> [m]m.[aa]aa.dd<br /><br /> dma<br /><br /> dd/[m]m/[aa]aa<br /><br /> dd-[m]m-[aa]aa<br /><br /> dd.[m]m.[aa]aa<br /><br /> dam<br /><br /> dd/[aa]aa/[m]m<br /><br /> dd-[aa]aa-[m]m<br /><br /> dd.[aa]aa.[m]m<br /><br /> amd<br /><br /> [aa]aa/[m]m/dd<br /><br /> [aa]aa-[m]m-dd<br /><br /> [aa]aa-[m]m-dd|[m]m, dd, y [aa]aa representan el mes, el día y el año en una cadena con marcas de barra diagonal (/), guiones (-) o puntos (.) como separadores.<br /><br /> Solo se admiten los años de dos o cuatro dígitos. Siempre que sea posible utilice los años de cuatro dígitos. Use la opción Fecha límite de año de dos dígitos (vea [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)) para especificar un número entero entre 0001 y 9999 que represente el año límite para interpretar años de dos dígitos como años de cuatro dígitos.<br /><br /> **Nota:** Para Informatica, YYYY se limita al intervalo entre 1582 y 9999.<br /><br /> Un año de dos dígitos menor o igual que los últimos dos dígitos del año límite pertenece al mismo siglo que el año límite. Un año de dos dígitos mayor que los últimos dos dígitos del año límite pertenece al siglo anterior al año límite. Por ejemplo, si el valor del año límite de dos dígitos es 2049 (el valor predeterminado), el año de dos dígitos 49 se interpreta como 2049 y el año de dos dígitos 50 se interpreta como 1950.<br /><br /> La configuración de idioma actual está determinada por el formato de fecha predeterminado. Para cambiar el formato de fecha, use las instrucciones [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) y [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> No se admite el formato **ydm** para **date**.|  
   
 |Alfabético|Descripción|  
 |------------------|-----------------|  
-|mes [dd][,] aaaa<br /><br /> mes dd[,] [aa]aa<br /><br /> mes aaaa [dd]<br /><br /> [dd] mes[,] aaaa<br /><br /> dd mes[,][aa]aa<br /><br /> dd [aa]aa mes<br /><br /> [dd] aaaa mes<br /><br /> aaaa mes [dd]<br /><br /> aaaa [dd] mes|**mes** representa el nombre completo del mes o la abreviatura del mes en el idioma actual. Las comas son opcionales y se omite el uso de mayúsculas.<br /><br /> Para evitar ambigüedades, use años de cuatro dígitos.<br /><br /> Si falta el día, se usará el primer día del mes.|  
+|mes [dd][,] aaaa<br /><br /> mes dd[,] [aa<br /><br /> mes aaaa [dd]<br /><br /> [dd] mes[,] aaaa<br /><br /> dd mes[,][aa]aa<br /><br /> dd [aa]aa mes<br /><br /> [dd] aaaa mes<br /><br /> aaaa mes [dd]<br /><br /> aaaa [dd] mes|**mes** representa el nombre completo del mes o la abreviatura del mes en el idioma actual. Las comas son opcionales y se omite el uso de mayúsculas.<br /><br /> Para evitar ambigüedades, use años de cuatro dígitos.<br /><br /> Si falta el día, se usará el primer día del mes.|  
   
 |ISO 8601|Descripción|  
 |--------------|----------------|  
-|YYYY-MM-DD<br /><br /> YYYYMMDD|Igual que el estándar SQL. Éste es el único formato que se define como una norma internacional.|  
+|YYYY-MM-DD<br /><br /> YYYYMMDD|Igual que el estándar SQL. Este es el único formato que se define como estándar internacional.|  
   
 |Sin separación|Descripción|  
 |-----------------|-----------------|  
@@ -80,7 +80,7 @@ En las tablas siguientes se muestran los formatos de literales de cadena válido
   
 |Formato W3C XML|Descripción|  
 |--------------------|-----------------|  
-|aaaa-mm-ddTZD|Específicamente admitido para uso de XML/SOAP.<br /><br /> DZH es el designador de zona horaria (Z o + hh: mm o -hh:mm).<br /><br /> -   hh:mm representa el desplazamiento de zona horaria. hh es una cifra de dos dígitos, de 0 a 14, que representa el número de horas del ajuste de zona horaria.<br />-   MM es una cifra de dos dígitos, de 0 a 59, que representa el número de minutos adicionales en el desplazamiento de zona horaria.<br />-   + (más) o - (menos) es el signo que se usa obligatoriamente para indicar el desplazamiento de zona horaria. Indica si el ajuste de zona horaria se suma o resta de la hora universal coordinada (UTC) para obtener la hora local. El intervalo válido de ajuste de zona horaria es de -14: 00 a +14: 00.|  
+|aaaa-mm-ddTZD|Se admite para el uso de XML y SOAP.<br /><br /> DZH es el designador de zona horaria (Z o + hh: mm o -hh:mm).<br /><br /> -   hh:mm representa el desplazamiento de zona horaria. hh es una cifra de dos dígitos, de 0 a 14, que representa el número de horas del ajuste de zona horaria.<br />-   MM es una cifra de dos dígitos, de 0 a 59, que representa el número de minutos adicionales en el desplazamiento de zona horaria.<br />-   + (más) o - (menos) es el signo que se usa obligatoriamente para indicar el desplazamiento de zona horaria. Este signo indica que, para obtener la hora local, el desplazamiento de zona horaria se suma a la hora UTC (Hora universal coordinada) o se resta de ella. El intervalo válido de ajuste de zona horaria es de -14: 00 a +14: 00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Compatibilidad con ANSI e ISO 8601  
 **date** cumple la definición del estándar ANSI SQL para el calendario Gregoriano: "NOTA 85: Los tipos de datos datetime permitirán que las fechas en el formato Gregoriano se almacenen en el intervalo de fechas de 01-01-0001 CE a 12-31-9999 CE".
@@ -101,9 +101,10 @@ Algunos clientes de nivel inferior no admiten los tipos de datos **time**, **dat
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
   
 ## <a name="converting-date-and-time-data"></a>Convertir datos de fecha y hora
-Cuando se convierte a los tipos de datos de fecha y hora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechaza todos los valores que no reconoce como fechas u horas. Para más información sobre cómo usar las funciones CAST y CONVERT con datos de fecha y hora, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+Cuando se realiza la conversión a los tipos de datos de fecha y hora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechaza todos los valores que no reconoce como fechas u horas. Para más información sobre cómo usar las funciones CAST y CONVERT con datos de fecha y hora, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>Convertir tipos date a otros tipos de fecha y hora
+
 En esta tabla se describe lo que ocurre cuando un tipo de datos **date** se convierte a otros tipos de datos de fecha y hora.
   
 Cuando es una conversión a **time(n)**, se produce un error en la conversión y se muestra el mensaje de error 206: "Conflicto de tipos de operandos: date es incompatible con time".
@@ -124,7 +125,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-Cuando la conversión es a **smalldatetime** y el valor **date** se encuentra en el intervalo de [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), se copia el componente de fecha y el componente de hora se establece en 00:00:00.000. Cuando el valor **date** está fuera del rango de un valor **smalldatetime**, se produce el mensaje de error 242: "La conversión de un tipo de datos date en un tipo de datos smalldatetime da como resultado un valor que no se inscribe en el intervalo"; y el valor **smalldatetime** se establece en NULL. En el código siguiente se muestran los resultados de convertir un valor `date` en un valor `smalldatetime`.
+Cuando la conversión es a **smalldatetime** y el valor **date** se encuentra en el intervalo de [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), el componente de fecha se copia y el componente de hora se establece en 00:00:00.000. Cuando el valor **date** está fuera del rango de un valor **smalldatetime**, se produce el mensaje de error 242: "La conversión de un tipo de datos date a un tipo de datos smalldatetime da como resultado un valor que no se encuentra dentro del intervalo"; y el valor **smalldatetime** se establece en NULL. En el código siguiente se muestran los resultados de convertir un valor `date` en un valor `smalldatetime`.
   
 ```sql
 DECLARE @date date= '1912-10-25';  
@@ -173,11 +174,11 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 ```  
   
 ### <a name="converting-string-literals-to-date"></a>Convertir literales de cadena en fechas
-Las conversiones de literales de cadena en tipos de fecha y hora son posibles cuando todas las partes de las cadenas están en formatos válidos. En caso contrario, se generará un error en el tiempo de ejecución. Las conversiones implícitas o explícitas que no especifican un estilo (desde tipos de fecha y hora hasta literales de cadena) estarán en el formato predeterminado de la sesión actual. En esta tabla se muestran las reglas para convertir un literal de cadena al tipo de datos **date**.
+Las conversiones de literales de cadena a tipos de fecha y hora son posibles cuando todas las partes de las cadenas están en formatos válidos. En caso contrario, se generará un error en el tiempo de ejecución. Las conversiones implícitas o explícitas que no especifican un estilo (desde tipos de fecha y hora hasta literales de cadena) estarán en el formato predeterminado de la sesión actual. En esta tabla se muestran las reglas para convertir un literal de cadena al tipo de datos **date**.
   
 |Literal de cadena de entrada|**date**|  
 |---|---|
-|DATE de ODBC|Los literales de cadena de ODBC se asignan al tipo de datos **datetime**. Cualquier operación de asignación de los literales de DATETIME de ODBC a un tipo **date** provocará una conversión implícita entre **datetime** y este tipo, tal y como se define en las reglas de conversión.|  
+|DATE de ODBC|Los literales de cadena de ODBC se asignan al tipo de datos **datetime**. Cualquier operación de asignación de los literales de DATETIME de ODBC a un tipo **date** provoca una conversión implícita entre **datetime** y el tipo que definen las reglas de conversión.|  
 |TIME de ODBC|Vea la regla anterior de DATE de ODBC.|  
 |DATETIME DE ODBC|Vea la regla anterior de DATE de ODBC.|  
 |Solo DATE|Trivial|  

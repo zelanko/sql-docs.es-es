@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 029e026134f29f2aba56fd37566f384b8d35ccf5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5238c7dba330074f9802fa30b631edba09d3b552
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015501"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231052"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal y numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,16 +41,16 @@ Tipos de datos numéricos que tienen precisión y escala fijas. Los tipos decima
   
 ## <a name="arguments"></a>Argumentos  
 **decimal**[ **(**_p_[ **,**_s_] **)**] y **numeric**[ **(**_p_[ **,**_s_] **)**]  
-Números de precisión y escala fijas. Cuando se utiliza la precisión máxima, los valores válidos se sitúan entre - 10^38 +1 y 10^38 - 1. Los sinónimos ISO para **decimal** son **dec** y **dec(**_p_, _s_**)**. **numeric** equivale desde el punto de vista funcional a **decimal**.
+Números de precisión y escala fijas. Cuando se utiliza la precisión máxima, los valores válidos se sitúan entre - 10^38 +1 y 10^38 - 1. Los sinónimos ISO para **decimal** son **dec** y **dec(**_p_, _s_**)**. **numeric** es funcionalmente idéntico a **decimal**.
   
 p (precisión)  
-El número total máximo de dígitos decimales que almacenará, tanto a la izquierda como a la derecha del separador decimal. La precisión debe ser un valor comprendido entre 1 y la precisión máxima de 38. La precisión predeterminada es 18.
+El número total máximo de dígitos decimales que se almacenarán. Este número incluye los lados derecho e izquierdo del separador decimal. La precisión debe ser un valor comprendido entre 1 y la precisión máxima de 38. La precisión predeterminada es 18.
   
 > [!NOTE]  
 >  Informatica solo admite 16 dígitos significativos, sin tener en cuenta la precisión y la escala especificada.  
   
 *s* (escala)  
-El número de dígitos decimales que se almacenará a la derecha del separador decimal. Este número se extrae de *p* para determinar el número máximo de dígitos a la izquierda del separador decimal. La escala debe ser un valor comprendido entre 0 y *p*. Solo es posible especificar la escala si se ha especificado la precisión. La escala predeterminada es 0; por tanto, 0 <= *s* \<= *p*. Los tamaños de almacenamiento máximo varían según la precisión.
+El número de dígitos decimales que se almacenarán a la derecha del separador decimal. Este número se extrae de *p* para determinar el número máximo de dígitos a la izquierda del separador decimal. La escala debe ser un valor comprendido entre 0 y *p*, y solo se puede especificar si se especifica la precisión. La escala predeterminada es 0, por lo que 0 < = *s* \<=  *p*. Los tamaños de almacenamiento máximo varían según la precisión.
   
 |Precisión|Bytes de almacenamiento|  
 |---|---|
@@ -63,18 +63,18 @@ El número de dígitos decimales que se almacenará a la derecha del separador d
 >  Informatica (conectado a través del conector PDW de SQL Server de Informatica) solo admite 16 dígitos significativos, sin tener en cuenta la precisión y la escala especificada.  
   
 ## <a name="converting-decimal-and-numeric-data"></a>Convertir datos decimal y numeric
-En el caso de los tipos de datos **decimal** y **numeric**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera cada combinación específica de precisión y escala como un tipo de datos distinto. Por ejemplo, **decimal(5,5)** y **decimal(5,0)** se consideran tipos de datos diferentes.
+En el caso de los tipos de datos **decimal** y **numeric**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera cada combinación de precisión y escala como un tipo de datos distinto. Por ejemplo, **decimal(5,5)** y **decimal(5,0)** se consideran tipos de datos diferentes.
   
 En las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], una constante con un separador decimal se convierte automáticamente a un valor de datos **numeric**, con la precisión y escala mínimas necesarias. Por ejemplo, la constante 12.345 se convierte a un valor **numeric** con una precisión de 5 y una escala de 3.
   
 Al convertir de **decimal** o **numeric** a **float** o **real** se puede provocar una pérdida de precisión. Al convertir de **int**, **smallint**, **tinyint**, **float**, **real**, **money**  o **smallmoney** a **decimal** o **numeric** se puede provocar un desbordamiento.
   
-De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el redondeo cuando convierte un número a un valor **decimal** o **numeric** con una precisión y una escala inferiores. Sin embargo, si la opción SET ARITHABORT está establecida en ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error cuando se produce un desbordamiento. La pérdida de precisión y escala no es suficiente para generar un error.
+De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el redondeo cuando convierte un número a un valor **decimal** o **numeric** con una precisión y una escala inferiores. Y a la inversa, si la opción SET ARITHABORT está establecida en ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error cuando se produce un desbordamiento. La pérdida de únicamente precisión y escala no es suficiente para generar un error.
   
 Cuando se conviertan valores float o reales a valores decimales o numéricos, el valor decimal nunca tendrá más de 17 decimales. Los valores float < 5E-18 se convertirán siempre en 0.
   
 ## <a name="examples"></a>Ejemplos  
-En este ejemplo se crea una tabla con los tipos de datos **decimal** y **numeric**.  Se insertan valores en cada columna y los resultados se devuelven con una instrucción SELECT.
+En este ejemplo se crea una tabla con los tipos de datos **decimal** y **numeric**.  Los valores se insertan en cada columna. Los resultados se devuelven mediante una instrucción SELECT.
   
 ```sql
 CREATE TABLE dbo.MyTable  
@@ -110,5 +110,4 @@ MyDecimalColumn                         MyNumericColumn
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
-  
   

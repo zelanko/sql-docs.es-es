@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531544"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294453"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "52531544"
   
 -   [Columnstore index and the merge policy for rowgroups (Índice de almacén de columnas y directiva de combinación de grupos de filas)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>Consejo de rendimiento n.º 1: usar índices filtrados para mejorar el rendimiento de las consultas  
+## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>Sugerencia de rendimiento 1: usar índices filtrados para mejorar el rendimiento de las consultas  
  Los análisis operativos en tiempo real pueden tener un impacto negativo en el rendimiento de la carga de trabajo OLTP.  Este impacto debería ser mínimo. En el siguiente ejemplo se muestra cómo usar índices filtrados para minimizar el impacto del índice de almacén de columnas no agrupado en la carga de trabajo transaccional, mientras se siguen realizando análisis en tiempo real.  
   
  Para reducir la sobrecarga derivada de mantener un índice de almacén de columnas no agrupado en una carga de trabajo operativa, puede usar una condición de filtrado para crear un índice de almacén de columnas no agrupado únicamente de los datos *semiactivos* o de variación lenta. Por ejemplo, en una aplicación de administración de pedidos, puede crear un índice de almacén de columnas no agrupado de los pedidos que ya se hayan enviado. Una vez que un pedido se envía, este apenas si cambia y, por tanto, se puede considerar como un dato semiactivo. Con el índice filtrado, los datos del índice de almacén de columnas no agrupado requieren menos actualizaciones, lo que reduce el impacto en la carga de trabajo transaccional.  
@@ -170,10 +170,10 @@ Group By customername
   
  Consulte el blog para obtener información detallada sobre los [índices de almacén de columnas no agrupado filtrado](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/).  
   
-## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>Consejo de rendimiento n.º 2: descargar el análisis en una secundaria legible de AlwaysOn  
+## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>Sugerencia de rendimiento 2: descargar el análisis en una secundaria legible de AlwaysOn  
  Aunque puede usar un índice de almacén de columnas filtrado para minimizar el mantenimiento de los índices de almacén de columnas, las consultas de análisis seguirán necesitando importantes cantidades de recursos informáticos (CPU, E/S, memoria) que afectan al rendimiento de las cargas de trabajo operativas. Nuestra recomendación para la mayor parte de las cargas de trabajo críticas es usar la configuración de AlwaysOn. En esta configuración, puede eliminar el impacto de los análisis descargándolos en una secundaria legible.  
   
-## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>Consejo de rendimiento n.º 3: reducir la fragmentación de índice conservando los datos activos en grupos de filas delta  
+## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>Sugerencia de rendimiento 3: reducir la fragmentación de índice conservando los datos activos en grupos de filas delta  
  Las tablas con índices de almacén de columnas pueden llegar a fragmentarse (se eliminan filas) de forma muy acusada si la carga de trabajo actualiza o elimina filas que se han comprimido. Un índice de almacén de columnas fragmentado conduce a un uso ineficaz de la memoria y el almacenamiento. Pero, aparte del uso ineficaz de los recursos, también repercute negativamente en el rendimiento de las consultas de análisis, dada la E/S adicional y la necesidad de filtrar las filas eliminadas del conjunto de resultados.  
   
  Las filas eliminadas no se quitarán físicamente hasta que se lleve a cabo una desfragmentación del índice con el comando REORGANIZE o hasta que se vuelva a generar el índice de almacén de columnas en toda la tabla o en las particiones afectadas. Ambos comandos, REORGANIZE y REBUILD, son operaciones costosas que consumen recursos que, de otro modo, se podrían usar para la carga de trabajo. Además, si las filas se comprimen demasiado pronto, puede que haya que volver a comprimirlas varias veces debido a las actualizaciones, lo que daría lugar a una sobrecarga de compresión innecesaria.  
@@ -220,7 +220,7 @@ ORDER BY created_time DESC
   
  Si el número de filas eliminadas en los grupos de filas comprimidas es mayor del 20 %, teniendo un nivel predefinido de los grupos de filas más antiguos con una variación inferior a 5 % (denominados grupos de filas inactivos), establezca COMPRESSION_DELAY = (youngest_rowgroup_created_time -  current_time). Tenga en cuenta que este método funciona mejor en cargas de trabajo estables y relativamente homogéneas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Guía de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)   
  [Carga de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

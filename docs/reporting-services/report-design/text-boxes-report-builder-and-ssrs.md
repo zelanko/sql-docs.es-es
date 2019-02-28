@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ccfc1e3c3c455a191d6a4a76c6e44a8df0289aee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef1eb498077cf7d2592592f9c74b5af0516dbceb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815483"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294663"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Cuadros de texto (Generador de informes y SSRS)
   Al pensar en un cuadro de texto, probablemente se imagina un cuadro independiente que contiene el texto en una superficie, como en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. En informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , algunos cuadros de texto son así y pueden mostrar texto estático de títulos, descripciones y etiquetas, o bien texto dinámico basado en expresiones. Pero, además, todas las celdas de una tabla o una matriz (región de datos Tablix) contienen un cuadro de texto al que se puede dar formato de la misma forma que a los cuadros de texto independientes de un informe.  
@@ -51,7 +51,7 @@ ms.locfileid: "47815483"
   
  La orientación se establece en el cuadro de texto y se aplica a todo el texto del cuadro. No puede especificar una orientación diferente para las partes del cuadro de texto.  
   
- Para empezar, vea la sección sobre cómo girar texto en el [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md) y vea [Establecer la orientación del cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
+ Para empezar, vea la sección sobre cómo girar texto en [Tutorial: Dar formato al texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md)y en [Establecer la orientación del cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
  [Agregar, mover o eliminar un cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "47815483"
   
  [Permitir que un cuadro de texto aumente o se reduzca &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   

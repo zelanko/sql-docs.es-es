@@ -2,7 +2,7 @@
 title: Procesamiento de consultas adaptable en bases de datos de Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Características de procesamiento de consultas adaptable para mejorar el rendimiento de las consultas en SQL Server (2017 y versiones posteriores) y Azure SQL Database.
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,18 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aba4aa388cb9ffac518b09077d535b618206ab71
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207319"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319266"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Procesamiento de consultas adaptable en bases de datos SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 En este artículo se presentan las características de procesamiento de consultas adaptables que se pueden usar para aumentar el rendimiento de las consultas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:
 - Comentarios de concesión de memoria de modo de proceso por lotes
+- Comentarios de concesión de memoria del modo de filas (versión preliminar pública en el nivel de compatibilidad de base de datos 150)
 - Combinación adaptable de modo de proceso por lotes
 - Ejecución intercalada
 
@@ -36,8 +37,6 @@ En un nivel general, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e
 Para obtener más información sobre el procesamiento de consultas y los modos de ejecución de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md).
 
 A veces, el plan elegido por el optimizador de consultas no es óptimo por una serie de motivos. Por ejemplo, el número estimado de filas que pasan por el plan de consulta puede ser incorrecto. Los costos estimados ayudan a determinar el plan que se selecciona para la ejecución. Si las estimaciones de cardinalidad son incorrectas, se sigue usando el plan original a pesar de los deficientes supuestos originales.
-
-![Características de procesamiento de consultas adaptable](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>Cómo habilitar el procesamiento de consultas adaptable
 Puede hacer que las cargas de trabajo sean aptas automáticamente para el procesamiento de consultas adaptable si habilita el nivel de compatibilidad 140 para la base de datos.  Puede establecerlo con Transact-SQL. Por ejemplo:  
@@ -368,6 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de ámbito de base de datos o una opción de marca de seguimiento.
 
 ## <a name="see-also"></a>Consulte también
+[Procesamiento de consultas inteligente en bases de datos SQL](../../relational-databases/performance/intelligent-query-processing.md)   
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)    (Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database)  
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)   (Guía de arquitectura de procesamiento de consultas)  
 [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

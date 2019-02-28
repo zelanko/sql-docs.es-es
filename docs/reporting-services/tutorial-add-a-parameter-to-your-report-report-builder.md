@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712366"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286953"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
 En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que los lectores del informe puedan filtrar los datos del informe para uno o más valores. 
@@ -23,7 +23,7 @@ En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssR
 Los parámetros del informe se crean automáticamente para cada parámetro de la consulta que incluya en una consulta del conjunto de datos. El tipo de datos de parámetro determina cómo aparece en la barra de herramientas de visualización de informe. 
    
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
   
 Tiempo estimado para completar este tutorial: 25 minutos.  
   
@@ -82,7 +82,7 @@ Cree un informe de matriz, un origen de datos y un conjunto de datos.
   
 11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**) para ver los datos.   
   
-    El conjunto de resultados consta de 11 filas de datos que muestran la cantidad de elementos vendidos para cada subcategoría de cuatro almacenes en las columnas siguientes: StoreID, Subcategory, Quantity. El nombre del almacén no forma parte del conjunto de resultados. Más adelante en este tutorial, buscará en otro conjunto de datos el nombre del almacén que corresponde al identificador del almacén.  
+    El conjunto de resultados consta de 11 filas de datos que muestran la cantidad de elementos vendidos en cada subcategoría de cuatro almacenes e incluye las columnas siguientes: StoreID, Subcategoría, Cantidad. El nombre del almacén no forma parte del conjunto de resultados. Más adelante en este tutorial, buscará en otro conjunto de datos el nombre del almacén que corresponde al identificador del almacén.  
   
     Esta consulta no contiene parámetros de consulta. Agregará los parámetros de consulta posteriormente en este tutorial.   
   
@@ -308,7 +308,7 @@ Un conjunto de datos podría contener el identificador y el campo de nombre corr
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    El encabezado de columna del almacén contiene el texto para mostrar de una expresión compleja: **Expr**.  
+    El encabezado de columna de almacén contiene el texto para mostrar de una expresión compleja: **Expr**.  
   
 8.  Obtenga una vista previa del informe.  
   
@@ -499,7 +499,7 @@ El informe se guarda en el servidor de informes. El servidor de informes al que 
 ## <a name="next-steps"></a>Next Steps  
 De esta forma se concluye el tutorial sobre cómo agregar un parámetro a un informe. Para obtener más información sobre los parámetros, consulte [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 * [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)
 * [Generador de informes en SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Función Lookup](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

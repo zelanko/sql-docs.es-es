@@ -11,14 +11,14 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711423"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290303"
 ---
 # <a name="report-builder-in-sql-server"></a>Generador de informes en SQL Server
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] es una herramienta de creación de informes paginados para usuarios profesionales que prefieren trabajar en un entorno independiente en lugar de usar el Diseñador de informes de Visual Studio.  Al diseñar un informe paginado, crea una definición de informe que especifica dónde obtener los datos, qué datos obtener y cómo visualizarlos. Al ejecutar el informe, el procesador de informes usa la definición de informe especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede obtener una vista previa del informe en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Después, el informe se publica en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint (2016 y versiones anteriores). También puede publicar un informe paginado en el servicio Power BI. Obtenga más información sobre [informes paginados en Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (versión preliminar).
@@ -66,14 +66,14 @@ ms.locfileid: "52711423"
 > [!NOTE]  
 >  El administrador del servidor de informes se encarga de administrar los informes publicados en un servidor de informes o un servidor de informes en el modo integrado de SharePoint. Los administradores del servidor de informes pueden definir la seguridad, establecer las propiedades y programar operaciones como el historial de informes y la entrega de informes por correo electrónico. Pueden crear programaciones compartidas y orígenes de datos compartidos, y ponerlos a disposición de todos los usuarios. Los administradores también controlan todas las carpetas del servidor de informes. La posibilidad de realizar tareas de administración depende de los permisos de usuario.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
   [Inicio del Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
   
   [Instalación del Generador de informes](../../reporting-services/install-windows/install-report-builder.md)
 
   [Novedades en SQL Server Reporting Services y el Generador de informes](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Se describen las nuevas características de esta versión de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
-  [Tutorial: crear un informe de gráfico rápido sin conexión](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Tutorial: Crear un informe de gráfico rápido sin conexión](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Presenta el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y los asistentes disponibles para ayudarlo a crear los informes. El tutorial proporciona un conjunto de datos para que los use de modo que no tenga que conectarse a un origen de datos para empezar.  
   
  [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  

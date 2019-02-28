@@ -20,19 +20,19 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c9e4de5e7255c43460c9566f089f416a1e36782
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011796"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331595"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   OPENXML proporciona una vista de un conjunto de filas en un documento XML. Puesto que OPENXML es un proveedor de conjuntos de filas, puede utilizarse en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en las que pueden aparecer proveedores de conjuntos de filas como una tabla, vista o la función OPENROWSET.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +47,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  Es el identificador del documento de la representación interna de un documento XML. La representación interna de un documento XML se crea mediante una llamada a **sp_xml_preparedocument**.  
   
  *rowpattern*  
- Es el patrón XPath usado para identificar los nodos (en el documento XML cuyo identificador se pasa en el parámetro *idoc*) que se van a procesar como filas.  
+ El patrón XPath se usa para identificar los nodos con el fin de que se procesen como filas. Los nodos proceden del documento XML cuyo manipulador se pasa en el parámetro *idoc*.
   
  *flags*  
  Indica la asignación que debe utilizarse entre los datos XML y el conjunto de filas relacional, y cómo debe llenarse la columna de desbordamiento; *flags* es un parámetro de entrada opcional y puede tomar uno de los valores siguientes.  
@@ -55,8 +55,8 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |Valor del byte|Descripción|  
 |----------------|-----------------|  
 |**0**|Establece como valor predeterminado la asignación **centrada en atributos**.|  
-|**1**|Usa la asignación **centrada en atributos**. Se puede combinar con XML_ELEMENTS. En ese caso, primero se aplica la asignación **centrada en atributos** y, después, la asignación **centrada en elementos** en todas las columnas que todavía no se han visto afectadas.|  
-|**2**|Usa la asignación **centrada en elementos**. Se puede combinar con XML_ATTRIBUTES. En ese caso, primero se aplica la asignación **centrada en atributos** y, después, la asignación **centrada en elementos** en todas las columnas que todavía no se han visto afectadas.|  
+|**1**|Usa la asignación **centrada en atributos**. Se puede combinar con XML_ELEMENTS. En este caso, la asignación **centrada en atributos** se aplica primero. A continuación, la asignación **centrada en elementos** se aplica en las columnas restantes.|  
+|**2**|Usa la asignación **centrada en elementos**. Se puede combinar con XML_ATTRIBUTES. En este caso, la asignación **centrada en atributos** se aplica primero. A continuación, la asignación **centrada en elementos** se aplica en las columnas restantes.|  
 |**8**|Puede combinarse (OR lógico) con XML_ATTRIBUTES o XML_ELEMENTS. Si se trata de una recuperación, esta marca informa de que los datos consumidos no se deberían copiar a la propiedad de desbordamiento **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
@@ -76,7 +76,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  El patrón XPath general especificado como *ColPattern* también admite las metapropiedades.  
   
  *MetaProperty*  
- Es una de las metapropiedades que proporciona OPENXML. Si se especifica *MetaProperty*, la columna contiene información proporcionada por la metapropiedad. Las metapropiedades permiten extraer información (como información sobre el espacio de nombres y la posición relativa) acerca de nodos XML. Esto proporciona más información que la que se puede ver en la representación de texto.  
+ Es una de las metapropiedades que proporciona OPENXML. Si se especifica *MetaProperty*, la columna contiene información proporcionada por la metapropiedad. Las metapropiedades permiten extraer información (como información sobre el espacio de nombres y la posición relativa) acerca de nodos XML. Estas metapropiedades proporcionan más información que la que se puede ver en la representación de texto.  
   
  *TableName*  
  Es el nombre de tabla que puede proporcionarse (en lugar de *SchemaDeclaration*) si ya existe una tabla con el esquema deseado y no se requieren patrones de columna.  
@@ -103,7 +103,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. Usar una instrucción SELECT simple con OPENXML  
  En el siguiente ejemplo se crea una representación interna de la imagen XML utilizando `sp_xml_preparedocument`. A continuación se ejecuta una instrucción `SELECT` que usa un proveedor del conjunto de filas `OPENXML` contra la representación interna del documento XML.  
   
- El valor de *flag* se establece en `1`. Esto indica una asignación **centrada en atributos**. Por tanto, los atributos XML se asignan a las columnas del conjunto de filas. El valor *rowpattern* especificado como `/ROOT/Customer` identifica los nodos `<Customers>` que se van a procesar.  
+ El valor de *flag* se establece en `1`. Este valor indica una asignación **centrada en atributos**. Por tanto, los atributos XML se asignan a las columnas del conjunto de filas. El valor *rowpattern* especificado como `/ROOT/Customer` identifica los nodos `<Customers>` que se van a procesar.  
   
  El parámetro opcional *ColPattern* (patrón de columna) no se especifica porque el nombre de columna coincide con los nombres de atributos XML.  
   
@@ -158,7 +158,7 @@ NULL       NULL
 ### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>b. Especificar ColPattern para la asignación entre columnas y los atributos XML  
  En la siguiente consulta se devuelven los atributos de CustomerID, OrderDate, ProductID y Quantity del documento XML. *rowpattern* identifica los elementos `<OrderDetails>`. `ProductID` y `Quantity` son los atributos del elemento `<OrderDetails>`. No obstante, `OrderID`, `CustomerID` y `OrderDate` son los atributos del elemento primario (`<Orders>`).  
   
- Se especifica el parámetro opcional *colpattern*. Indica lo siguiente:  
+ El elemento opcional *ColPattern* se especifica para las siguientes asignaciones:  
   
 -   Los valores `OrderID`, `CustomerID` y `OrderDate` del conjunto de filas se asignan a los atributos del elemento primario de los nodos identificados por *rowpattern* en el documento XML.  
   
@@ -247,5 +247,4 @@ EXEC sp_xml_removedocument @idoc;
   
 ## <a name="see-also"></a>Consulte también  
  [Ejemplos: usar OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
-  
   

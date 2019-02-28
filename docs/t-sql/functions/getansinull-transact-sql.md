@@ -21,19 +21,19 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95e76ebfc1bca5aa310d8c4e377592ec1670721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081425bf857be0a637159304facdcfb1aa625642
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753393"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287833"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve la nulabilidad predeterminada para la base de datos para esta sesión.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,13 +44,13 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>Argumentos  
  "*database*"  
- Es el nombre de la base de datos para la que se devuelve información sobre nulabilidad. *database* es o **char** o **nchar**. Si **char**, *database* se convierte implícitamente en **nchar**.  
+ Es el nombre de la base de datos para la que se devuelve información sobre nulabilidad. *database es **char** o **nchar**. Si **char**, *database* se convierte implícitamente en **nchar**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
 ## <a name="remarks"></a>Notas  
- Cuando la nulabilidad de la base de datos especificada permite valores NULL y la nulabilidad de la columna o del tipo de datos no está definida explícitamente, GETANSINULL devuelve 1. Este valor es el predeterminado para ANSI NULL.  
+GETANSINULL devuelve 1 si la nulabilidad de la base de datos permite valores null. Este valor devuelto también requiere que la nulabilidad del tipo de dato o columna no se defina explícitamente. El valor predeterminado NULL de ANSI es 1. 
   
  Para habilitar el comportamiento predeterminado de ANSI NULL, se debe establecer una de las siguientes condiciones:  
   
@@ -79,7 +79,7 @@ GO
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

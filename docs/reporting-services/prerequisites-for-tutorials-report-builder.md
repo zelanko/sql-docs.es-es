@@ -6,20 +6,20 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee3cd480edacdaa0283c0862076a9ff20b84ecca
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9584e07c3669548418a641eae4e3e92281a397f9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813108"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296393"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Requisitos previos para los tutoriales (Generador de informes)
 
 Para realizar los tutoriales del Generador de informes, tiene que poder ver y guardar los informes paginados de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] en un servidor de informes o un sitio de SharePoint que esté integrado con un servidor de informes. Por lo que se refiere a los datos, todos los tutoriales usan consultas literales que deben ser procesadas por una instancia de SQL Server.  
   
-Si no tiene acceso a un servidor de informes, un sitio o un origen de datos de informes, puede obtener información acerca del Generador de informes generando un informe sin conexión. Vea [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+Si no tiene acceso a un servidor de informes, un sitio o un origen de datos de informes, puede obtener información acerca del Generador de informes generando un informe sin conexión. Consulte [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
 
 ## <a name="requirements"></a>Requisitos
 
@@ -37,7 +37,7 @@ Debe disponer de los siguientes requisitos previos para poder completar los tuto
   
 -   Para el [Tutorial: Informe de asignaciones (Generador de informes)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md), debe configurarse el servidor de informes para que admita mapas de Bing como fondo. Para obtener más información, consulte [Planear la compatibilidad de informe de mapa](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
 
--   El [Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) necesita acceso al cubo Contoso Sales. Para obtener más información, consulte el tutorial. 
+-   Para el [Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) necesita acceso al cubo Contoso Sales. Para obtener más información, consulte el tutorial. 
   
 El administrador del servidor de informes debe otorgarle los permisos necesarios en el servidor de informes, configurar las ubicaciones de carpeta de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] y configurar las opciones predeterminadas del Generador de informes. Para obtener más información, consulte [Instalar y desinstalar el Generador de informes](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416).  
 

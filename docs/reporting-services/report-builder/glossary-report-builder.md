@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541805"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296483"
 ---
 # <a name="glossary-report-builder"></a>Glosario (Generador de informes)
   
@@ -166,7 +166,7 @@ ms.locfileid: "52541805"
 |mapa térmico|Tipo de representación de mapa en que la intensidad del color de cada polígono se corresponde con los datos analíticos relacionados. Por ejemplos, los valores bajos de un intervalo aparecen en azul (fríos) y los valores altos en rojo (cálidos)|  
 |jerarquía|Estructura lógica de árbol que organiza los miembros de una dimensión para que cada uno de ellos tenga un miembro primario y cero o más miembros secundarios.|  
 |alta disponibilidad|Estado de un recurso que permanece operativo y pueden usar los clientes la mayor parte del tiempo con un porcentaje muy bajo de errores que interrumpan el servicio.|  
-|HTML|Véase: Lenguaje de marcado de hipertexto|  
+|HTML|Véase también: lenguaje de marcado de hipertexto|  
 |Visor HTML|Interfaz de usuario formada por una barra de herramientas de informe y otros elementos de navegación usados para trabajar en un informe.|  
 |lenguaje de marcado de hipertexto|Lenguaje de marcado de texto que se usa para crear documentos para Internet. HTML define la estructura y el diseño de un documento web mediante diversas etiquetas y atributos.|  
 |identificador|Nombre de un objeto de una base de datos.|  
@@ -177,7 +177,7 @@ ms.locfileid: "52541805"
 |instancia|1. Copia de SQL Server que se ejecuta en un equipo. 2. Copia específica de un elemento de informe, por ejemplo un elemento de informe, subinforme, miembro dinámico o grupo.|  
 |integer|Categoría de tipo de datos numéricos que incluye los tipos de datos bigint, int, smallint y tinyint.|  
 |protocolo de seguridad de Internet|Reglas que siguen los equipos para ofrecer una comunicación privada y segura a través de redes IP (protocolo de Internet) mediante el uso de servicios de seguridad de cifrado.|  
-|IPsec|Véase: protocolo de seguridad de Internet|  
+|IPsec|Véase también: protocolo de seguridad de Internet|  
 |ISO|Uno de los dos organismos de estándares internacionales responsables del desarrollo de estándares de comunicaciones de datos internacionales. La Organización internacional de normalización (ISO) trabaja en estrecha colaboración con la Comisión electrotécnica internacional (CEI) con el fin de definir los estándares informáticos. Publicaron conjuntamente el estándar ISO/IEC SQL 92 para SQL.|  
 |asignación de roles de nivel de elemento|Directiva de seguridad que se aplica a un elemento en la carpeta del servidor de informes.|  
 |definición de roles de nivel de elemento|Plantilla de seguridad que define un rol usado para controlar el acceso a un elemento o la interacción con él en el espacio de nombres de las carpetas del servidor de informes.|  
@@ -210,7 +210,7 @@ ms.locfileid: "52541805"
 |archivo maestro|Archivo instalado con versiones anteriores de SQL Server usado para almacenar las bases de datos del sistema maestra, model y tempdb, así como los registros de transacciones, la base de datos de ejemplo pubs y el registro de transacciones.|  
 |campos coincidentes|Conjunto de los campos que se utilizan para generar una relación entre los datos analíticos y los datos espaciales.|  
 |región de datos de matriz|Región de datos del diseño de un informe que proporciona funcionalidad parecida a la de los informes de referencias cruzadas o de tabla dinámica. En tiempo de ejecución, a medida que se combinan los datos del informe y las regiones de datos, la matriz aumenta de tamaño horizontal y verticalmente en la página. Los valores de las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda.|  
-|MDX|Véase: expresiones multidimensionales (MDX)|  
+|MDX|Véase también: Expresiones multidimensionales (MDX)|  
 |proyección de Mercator|En un elemento de informe de mapa, proyección de mapa cilíndrica ideada por Gerardus Mercator en 1569.|  
 |metadatos|Información sobre las propiedades de datos, como el tipo de datos de una columna (numéricos, texto, etc.) o la longitud de una columna; información sobre un archivo, como su título, descripción, fecha de creación y fecha de la última modificación; información sobre la estructura de los datos o información que especifica el diseño de objetos como cubos o dimensiones.|  
 |método|Función que lleva a cabo una acción mediante un objeto COM, como en SQL-DMO, OLE DB y Objetos de datos ActiveX (ADO).|  
@@ -261,7 +261,7 @@ ms.locfileid: "52541805"
 |protocol|Conjunto estándar de formatos y procedimientos que permiten que los equipos intercambien información.|  
 |proveedor|1. Proveedor OLE DB. 2. Biblioteca de vínculos dinámicos (DLL) en proceso que proporciona acceso a una base de datos.|  
 |parámetros de consulta|Parámetros que se especifican en una consulta del conjunto de datos, como una consulta de Transact-SQL.|  
-|RDL|Véase: lenguaje RDL (Report Definition Language)|  
+|RDL|Véase también: lenguaje RDL (Report Definition Language)|  
 |registro|Grupo de campos, o columnas, de información relacionados que se trata como una unidad. En una base de datos relacional, un registro se suele denominar fila.|  
 |rectángulo|Elemento de informe que se puede usar como contenedor para varios elementos de informe o como elemento gráfico de un informe.|  
 |jerarquía recursiva|1. Jerarquía de datos de un único conjunto de datos de informe donde existen varios niveles jerárquicos, como puede ser la estructura de mando para las relaciones entre jefes y empleados en una jerarquía de organización. 2. En Master Data Services, una jerarquía recursiva es una jerarquía derivada que incluye una relación recursiva. Una relación recursiva existe cuando una entidad tiene un atributo basado en dominio en la propia entidad.|  
@@ -329,12 +329,12 @@ ms.locfileid: "52541805"
 |SKU|Método para identificar diferentes ediciones de un producto; además, acrónimo para la referencia de almacén (basado en el término inglés, Stock Keeping Unit, terminología comercial estándar).|  
 |segmento|Subconjunto de datos de un cubo, especificado mediante la limitación de una o más dimensiones por los miembros de la dimensión.|  
 |etiqueta inteligente|Una etiqueta inteligente expone las configuraciones clave directamente en la superficie de diseño para mejorar la productividad general en tiempo de diseño en Visual Studio 2005.|  
-|SMDL|Véase: Lenguaje de definición de modelos semánticos (SMDL)|  
+|SMDL|Véase también: Lenguaje de definición de modelos semánticos (SMDL)|  
 |snapshot|Véase: instantánea de informe|  
 |criterio de ordenación|Conjunto de reglas de una intercalación que define cómo se evalúan los caracteres en operaciones de comparación y la secuencia en la que se ordenan.|  
 |datos espaciales|Datos que especifican las ubicaciones de objetos en una superficie plana o curva. Los datos espaciales pueden ser puntos, líneas o polígonos.|  
 |tipo de datos espaciales|Especifica datos que representan información geométrica (plana) o geográfica (geodésica).|  
-|SQL|Véase: Lenguaje de consulta estructurado (SQL)|  
+|SQL|Véase también: Lenguaje de consulta estructurado (SQL)|  
 |consulta SQL|Instrucción SQL, como SELECT, INSERT, UPDATE, DELETE o CREATE TABLE.|  
 |Autenticación de SQL Server|Mecanismo para validar un intento de conexión a una instancia de SQL Server especificando un identificador de inicio de sesión y una contraseña de SQL Server.|  
 |inicio de sesión de SQL Server|Cuenta almacenada en SQL Server que permite a los usuarios conectarse a SQL Server.|  
@@ -363,11 +363,11 @@ ms.locfileid: "52541805"
 |Instrumental de administración de Windows|Interfaz que proporciona información acerca de los objetos de un entorno administrado.|  
 |WKB|Representación de datos Well Known Binary tal y como la define Open Geospatial Consortium (OGC).|  
 |WKT|Representación de datos Well Known Text tal y como la define Open Geospatial Consortium (OGC).|  
-|WMI|Véase: Instrumental de administración de Windows|  
+|WMI|Véase también: Instrumental de administración de Windows|  
 |eje X|Véase: eje de categorías (X)|  
 |eje Y|Véase: eje de valores (Y)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

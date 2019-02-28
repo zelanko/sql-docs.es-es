@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e7b776893c15532efc1d2dac54d16a7bc9035991
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813968"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295913"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Trabajar con datos simulados en los informes móviles de Reporting Services
 Cuando se coloca un elemento de galería en la superficie de diseño, el [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera de inmediato datos simulados para ese elemento. Estos datos sirven para una serie de propósitos útiles al crear informes móviles.   

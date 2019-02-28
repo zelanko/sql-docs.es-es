@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 08a71374d72a70e9bba6863eb9f6b5ac548d28f7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712556"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297403"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>¿Qué es SQL Server Reporting Services (SSRS)?
 
@@ -63,7 +63,7 @@ Esta carga de trabajo esencial de BI sigue existiendo en la actualidad, por lo q
 * Hemos actualizado todos los estilos y paletas de colores predeterminados, de manera que puede crear informes con un nuevo estilo moderno y minimalista de forma predeterminada.
 * Hemos actualizado el panel de parámetros para que pueda organizar los parámetros como quiera.
 * Puede exportar a nuevos formatos, como PowerPoint. Las visualizaciones de Reporting Services en PowerPoint son activas y se pueden editar; es decir, no son capturas de pantalla.
-* Puede crear una experiencia híbrida de Power BI o de Reporting Services: en lugar de volver a crear los informes locales de Reporting Services en Power BI, puede anclar elementos visuales de estos informes en los paneles de Power BI. Luego puede supervisarlo todo desde un lugar en el panel de Power BI.
+* Puede crear una experiencia de Power BI o Reporting Services híbrida:  en lugar de volver a crear los informes locales de Reporting Services en Power BI, puede anclar elementos visuales de estos informes en los paneles de Power BI. Luego puede supervisarlo todo desde un lugar en el panel de Power BI.
 
 ## <a name="mobile-reports"></a>Informes móviles
 
@@ -83,9 +83,9 @@ Para los usuarios finales de Reporting Services en modo nativo, la entrada princ
 
 Puede aplicar su propia marca personalizada al portal web y puede crear KPI directamente en él. Los KPI pueden hacer que en el explorador aparezcan métricas empresariales clave para que pueda echarles un vistazo sin tener que abrir ningún informe. 
 
-El nuevo portal web es una versión totalmente nueva del Administrador de informes. Ahora se trata de una aplicación HTML5 de una sola página y basada en estándares, para la que están optimizados los exploradores modernos: Edge, Internet Explorer 10 y 11, Chrome, Firefox, Safari y todos los exploradores principales.
+El nuevo portal web es una versión totalmente nueva del Administrador de informes. Ahora es una aplicación HTML5 de una página basada en estándares optimizada para los exploradores modernos: Edge, Internet Explorer 10 and 11, Chrome, Firefox, Safari y todos los exploradores importantes.
 
-El contenido del portal web está organizado por tipo: informes móviles y paginados y KPI de Reporting Services, libros de Excel, conjuntos de datos compartidos y orígenes de datos compartidos que se usan como bloques de creación de los informes. Puede almacenarlos y administrarlos con seguridad aquí, en la jerarquía de carpetas tradicional. Puede etiquetar sus favoritos y administrar el contenido si dispone de ese rol.
+El contenido en el portal web está organizado por tipo: informes móviles y paginados y KPI de Reporting Services, libros de Excel, conjuntos de datos compartidos y orígenes de datos compartidos que se usan como bloques de creación de los informes. Puede almacenarlos y administrarlos con seguridad aquí, en la jerarquía de carpetas tradicional. Puede etiquetar sus favoritos y administrar el contenido si dispone de ese rol.
 
 También puede seguir programando el procesamiento de informes, obtener acceso a los informes a petición y suscribirse a informes publicados en el nuevo portal web.
 

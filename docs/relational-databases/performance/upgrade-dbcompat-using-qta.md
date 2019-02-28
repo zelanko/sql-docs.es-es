@@ -1,7 +1,7 @@
 ---
 title: Actualización de bases de datos mediante el Asistente para la optimización de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2018
+ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317805"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295673"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Actualización de bases de datos mediante el Asistente para la optimización de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Esta capacidad de canalización proporcionada por el nivel de compatibilidad de 
 
 Este control sobre las actualizaciones se ha mejorado aún más con [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], donde se ha incorporado el [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md) y se permite la automatización del último paso del flujo de trabajo recomendado anterior.
 
-A partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, la nueva característica **Asistente para la optimización de consultas (QTA)** guía a los usuarios a través del flujo de trabajo recomendado para mantener la estabilidad del rendimiento durante las actualizaciones a las versiones más recientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como se documenta en la sección *Mantener la estabilidad del rendimiento al actualizar a una versión más reciente de SQL Server* de [Escenarios de uso del Almacén de consultas](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). 
+A partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, la nueva característica **Asistente para la optimización de consultas (QTA)** guía a los usuarios a través del flujo de trabajo recomendado para mantener la estabilidad del rendimiento durante las actualizaciones a las versiones más recientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como se documenta en la sección *Mantener la estabilidad del rendimiento al actualizar a una versión más reciente de SQL Server* de [Escenarios de uso del Almacén de consultas](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). Sin embargo, QTA no puede revertir a un buen plan conocido previamente como se muestra en el último paso del flujo de trabajo recomendado. En su lugar, QTA realizará el seguimiento de las regresiones encontradas en la vista [Consultas devueltas de **Query Stores**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) y recorrerá en iteración las permutaciones posibles de variaciones de modelos de optimizador aplicables para que se genere un plan mejor.
 
 > [!IMPORTANT]
 > QTA no genera carga de trabajo de usuario. Si ejecuta QTA en un entorno que las aplicaciones no usan, asegúrese de que todavía se puedan ejecutar cargas de trabajo de prueba representativas en el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de destino por otros medios. 

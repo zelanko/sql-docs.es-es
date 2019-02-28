@@ -2,7 +2,7 @@
 title: Novedades de SSMA para Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,15 +10,44 @@ ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bc54f3046ec3163e3d480dd6feae906368fa4c12
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6523c3d3b7f6a1a0e75ca8641e3bf96520f889af
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406002"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955966"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novedades de SSMA para Oracle (OracleToSQL)
-En este artículo se enumera SSMA para los cambios de Oracle en cada versión.  
+Este artículo se enumeran los cambios de Oracle en cada versión de SQL Server Migration Assistant (SSMA).
+
+## <a name="ssma-v80"></a>SSMA v8.0
+La versión v8.0 de SSMA para Oracle se ha mejorado para proporcionar diseñadas para mejorar la calidad y la conversión de las métricas de correcciones de destino. Esta versión también ofrece las siguientes características nuevas:
+
+* Compatibilidad con **Azure SQL Database Managed Instance** como destino. Ahora puede crear nuevos proyectos destinados a la instancia administrada de Azure SQL Database:
+
+  ![Proyecto de base de datos de SQL para MI](../media/ssma-newproject-sqldbmi.png)
+
+    > [!NOTE]
+    > SSMA para Oracle: paquete de extensión también se actualizó para permitir que las instalaciones remotas de la instancia administrada de Azure SQL Database:
+    >
+    > ![SSMA para Oracle: paquete de extensión](../media/ssma-oracle-ext-pack.png)
+
+    No se admiten algunas características, incluida la migración de datos de evaluador y del lado servidor, cuando el destino es la instancia administrada de Azure SQL Database. Obtenga más información sobre [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
+
+*   Después de la conversión **corrección advisor**. Más información sobre él [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+
+* Selección de base de datos/esquema preliminar.
+
+    Al conectarse al origen, el usuario ahora puede seleccionar las bases de datos y esquemas de interés. Seleccionar sólo los esquemas que se va a migrar ahorrará tiempo durante la conexión inicial y mejorar el rendimiento general de SSMA.
+
+    ![Objetos de filtro SSMA](../media/ssma-filter-objects.png)
+
+* La capacidad para usar el controlador de red oficial, administrado para conectarse a Oracle. El controlador OCI ya no es un requisito previo para utilizar SQL Server Migration Assistant para Oracle.
+
+* La capacidad para asignar ROWID y UROWID a VARCHAR de forma predeterminada. Ha cambiado de 'uniqueidentifier' para dar cabida a la migración de datos para columnas ROWID explícitas.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 La versión v7.10 de SSMA para Oracle contiene los siguientes cambios:

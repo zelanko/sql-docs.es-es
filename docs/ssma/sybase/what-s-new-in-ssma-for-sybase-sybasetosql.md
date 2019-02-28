@@ -1,7 +1,7 @@
 ---
 title: Novedades de SSMA para SAP ASE (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -10,15 +10,33 @@ ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 460506c8c29a3ee92f362db57719a711626d83a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2345fd2f5a30c8eba610a49524c058ebf1cfae5f
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398318"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955956"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novedades de SSMA para SAP ASE (SybaseToSQL)
-En este artículo se enumera SSMA para SAP ASE (anteriormente SSMA para Sybase) cambios en cada versión. 
+Este artículo se enumeran los cambios de SAP ASE (anteriormente SSMA para Sybase) en cada versión de SQL Server Migration Assistant (SSMA). 
+
+## <a name="ssma-v80"></a>SSMA v8.0
+La versión v8.0 de SSMA para Access se ha mejorado para proporcionar diseñadas para mejorar la calidad y la conversión de las métricas de correcciones de destino. Además, esta versión ofrece las siguientes características nuevas:
+
+* Compatibilidad con **Azure SQL Database Managed Instance** como destino. Ahora puede crear nuevos proyectos destinados a la instancia administrada de Azure SQL Database:
+
+    ![Proyecto de base de datos de SQL para MI](../media/ssma-newproject-sqldbmi.png)
+
+*   Después de la conversión **corrección advisor**. Más información sobre él [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+
+*   Selección de base de datos/esquema preliminar.
+
+    Al conectarse al origen, el usuario ahora puede seleccionar las bases de datos y esquemas de interés. Seleccionar sólo los esquemas que se va a migrar ahorrará tiempo durante la conexión inicial y mejorar el rendimiento general de SSMA.
+
+    ![Objetos de filtro SSMA](../media/ssma-filter-objects.png)
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 La versión de v7.10 de SSMA para SAP ASE se ha mejorado con correcciones de destino diseñadas para proporcionar seguridad adicional y protecciones de seguridad para satisfacer los cambios en los requisitos globales.

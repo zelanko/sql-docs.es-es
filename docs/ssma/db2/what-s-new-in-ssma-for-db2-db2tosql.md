@@ -2,7 +2,7 @@
 title: Novedades de SSMA para DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,15 +10,33 @@ ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8b72d53f001654a085b8d2b5d01e203fd1b29ebe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0254f57e5c653c68762159c7e51e71e70fa5fcd2
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400328"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955896"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
-En este artículo se enumera SSMA para DB2 cambios en cada versión.  
+Este artículo se enumeran los cambios de DB2 en cada versión de SQL Server Migration Assistant (SSMA).
+
+## <a name="ssma-v80"></a>SSMA v8.0
+La versión v8.0 de SSMA para DB2 se ha mejorado para proporcionar diseñadas para mejorar la calidad y la conversión de las métricas de correcciones de destino. Esta versión también ofrece las siguientes características nuevas:
+
+* Compatibilidad con **Azure SQL Database Managed Instance** como destino. Ahora puede crear nuevos proyectos destinados a la instancia administrada de Azure SQL Database:
+
+    ![Proyecto de base de datos de SQL para MI](../media/ssma-newproject-sqldbmi.png)
+
+*   Después de la conversión **corrección advisor**. Más información sobre él [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+
+*   Selección de base de datos/esquema preliminar.
+
+    Al conectarse al origen, el usuario ahora puede seleccionar las bases de datos y esquemas de interés. Seleccionar sólo los esquemas que se va a migrar ahorrará tiempo durante la conexión inicial y mejorar el rendimiento general de SSMA.
+
+    ![Objetos de filtro SSMA](../media/ssma-filter-objects.png)
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 La versión v7.10 de SSMA para DB2 contiene los siguientes cambios:

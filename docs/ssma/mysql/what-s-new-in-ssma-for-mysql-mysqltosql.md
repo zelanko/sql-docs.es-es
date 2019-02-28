@@ -2,7 +2,7 @@
 title: Novedades de SSMA para MySQL (MySQLToSql) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,15 +10,33 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b927d9116424f1b471dc675189548e3c6a459569
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 16bd63c55eb46bf5e98698eb117efa15afaafc06
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531759"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955766"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novedades de SSMA para MySQL (MySQLToSql)
-En este artículo se enumera SSMA para MySQL cambios en cada versión. 
+Este artículo se enumeran los cambios de MySQL en cada versión de SQL Server Migration Assistant (SSMA).
+
+## <a name="ssma-v80"></a>SSMA v8.0
+La versión v8.0 de SSMA para MySQL se ha mejorado para proporcionar diseñadas para mejorar la calidad y la conversión de las métricas de correcciones de destino. Esta versión también ofrece las siguientes características nuevas:
+
+* Compatibilidad con **Azure SQL Database Managed Instance** como destino. Ahora puede crear nuevos proyectos destinados a la instancia administrada de Azure SQL Database:
+
+    ![Proyecto de base de datos de SQL para MI](../media/ssma-newproject-sqldbmi.png)
+
+*   Después de la conversión **corrección advisor**. Más información sobre él [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+
+*   Selección de base de datos/esquema preliminar.
+
+    Al conectarse al origen, el usuario ahora puede seleccionar las bases de datos y esquemas de interés. Seleccionar sólo los esquemas que se va a migrar ahorrará tiempo durante la conexión inicial y mejorar el rendimiento general de SSMA.
+
+    ![Objetos de filtro SSMA](../media/ssma-filter-objects.png)
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 La versión de v7.10 de SSMA para MySQL contiene los siguientes cambios:

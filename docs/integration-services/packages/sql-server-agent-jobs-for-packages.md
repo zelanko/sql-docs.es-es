@@ -16,12 +16,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a2468c9c129c1c2e06101d7d7d1ec44c712f9bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d46d2a2fb807174b4302aeb8996d1801768c6179
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400708"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231142"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabajos del Agente SQL Server para paquetes
   Puede automatizar y programar la ejecución de paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede programar paquetes que se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
@@ -60,14 +60,14 @@ ms.locfileid: "52400708"
   
  Para más información, vea [Programar un paquete mediante el Agente SQL Server](#schedule).  
   
- Para ver un vídeo donde se muestra cómo usar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un paquete, visite la página principal del vídeo [Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771)en MSDN Library.  
+ Para ver un vídeo que muestra cómo usar el agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un paquete, vea la página principal del vídeo [ Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) en MSDN Library.  
   
 ##  <a name="trouble"></a> Solucionar problemas  
  Es posible que un paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pueda iniciar un paquete aunque el paquete se ejecute correctamente en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y desde la línea de comandos. Hay algunos motivos frecuentes para este problema y varias soluciones recomendadas. Para obtener más información, vea los recursos siguientes.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, [Un paquete SSIS no se ejecuta al llamarlo desde un paso de trabajo del Agente SQL Server](https://support.microsoft.com/kb/918760)  
   
--   Vídeo [Solucionar problemas de ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772)en MSDN Library.  
+-   Vídeo [Solucionar problemas de ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772) en MSDN Library.  
   
  Una vez que un paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia un paquete, se puede producir un error en la ejecución del paquete o el paquete se puede ejecutar correctamente pero con resultados inesperados. Puede usar las herramientas siguientes para solucionar estos problemas.  
   
@@ -120,11 +120,18 @@ ms.locfileid: "52400708"
   
 7.  En la lista **Ejecutar como** , seleccione **Cuenta de servicio del Agente SQL Server** o seleccione una cuenta de proxy que tenga las credenciales que el paso de trabajo usará. Para obtener información acerca de cómo crear una cuenta de proxy, vea [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
-     El uso de una cuenta de proxy en lugar la **Cuenta de servicio del Agente SQL Server** puede resolver problemas frecuentes que pueden surgir al ejecutar un paquete mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre estos problemas, vea el artículo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base [Un paquete SSIS no se ejecuta cuando se le llama desde un paso de trabajo del Agente SQL Server](https://support.microsoft.com/kb/918760).  
+     El uso de una cuenta de proxy en lugar la **Cuenta de servicio del Agente SQL Server** puede resolver problemas frecuentes que pueden surgir al ejecutar un paquete mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre estos problemas, vea el artículo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base [Un paquete SSIS no se ejecuta cuando se le llama desde un paso de trabajo del Agente SQL Server](https://support.microsoft.com/kb/918760). 
+     
+  7.1 Al ejecutar el trabajo con un proxy, uno debe tener los siguientes elementos de seguridad preparados para que dicho trabajo se ejecute correctamente.
+
+      Inicio de sesión mediante credenciales utilizado por el proxy, la cuenta que ejecuta el Agente SQL Server y la cuenta que ejecuta el servicio SQL Server requieren los permisos siguientes: Atributo de directiva de seguridad local: reemplace el control total de token de nivel de proceso a través de %SYSTEMROOT%\Temp 
+
+Si no pone los elementos de seguridad, se producirá un error en el trabajo y un mensaje de error similar al siguiente: Se produjo un error en el trabajo.  El cliente no dispone de un privilegio requerido.
+     
   
-    > **NOTA:** Si cambia la contraseña para la credencial que la cuenta de proxy usa, necesita actualizar la contraseña de la credencial. De lo contrario, se producirá un error en el paso de trabajo.  
+    > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
   
-     Para más información sobre cómo configurar la cuenta del servicio del Agente SQL Server, vea [Establecer la cuenta de inicio del servicio para el Agente SQL Server &#40;Administrador de configuración de SQL Server &#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
+     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
   
 8.  En el cuadro de lista **Origen del paquete** , haga clic en el origen del paquete y configure después las opciones del paso de trabajo.  
   
@@ -197,9 +204,9 @@ ms.locfileid: "52400708"
   
 -   Artículo de Knowledge Base, [Un paquete SSIS no se ejecuta al llamarlo desde un paso de trabajo del Agente SQL Server](https://support.microsoft.com/kb/918760), en el sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   Vídeo [Solucionar problemas de ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772)en MSDN Library  
+-   Vídeo [Solucionar problemas de ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772) en MSDN Library  
   
--   Vídeo [Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771)en MSDN Library  
+-   Vídeo [ Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) en MSDN Library  
   
 -   Artículo técnico relativo a la [comprobación de trabajos del Agente SQL Server mediante Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675), en mssqltips.com  
   

@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo implementar clústeres de macrodat
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087864"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018011"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes
 
@@ -84,10 +84,10 @@ La configuración del clúster puede personalizarse mediante un conjunto de vari
 
 | Variable de entorno | Obligatorio | Valor predeterminado | Descripción |
 |---|---|---|---|
-| **ACCEPT_EULA** | Sí | N/D | Acepte el contrato de licencia de SQL Server (por ejemplo, ' Y').  |
+| **ACCEPT_EULA** | Sí | N/D | Acepte el contrato de licencia de SQL Server (por ejemplo, 'Yes').  |
 | **CLUSTER_NAME** | Sí | N/D | El nombre del espacio de nombres para implementar SQLServer agrupar datos de gran tamaño en Kubernetes. |
 | **CLUSTER_PLATFORM** | Sí | N/D | La plataforma que se implementa el clúster de Kubernetes. Puede ser `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | El número de réplicas del grupo de proceso para elaborar. En CTP 2.2 solo con valores permitido es 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | El número de réplicas del grupo de proceso para elaborar. En CTP 2.3 solo con valores permitido es 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | El número de datos de grupo de réplicas para elaborar. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | El número de réplicas de grupo de almacenamiento para elaborar. |
 | **DOCKER_REGISTRY** | Sí | TBD | El registro privado donde se almacenan las imágenes se usan para implementar el clúster. |
@@ -189,7 +189,7 @@ Si va a implementar con kubeadm en sus propias máquinas físicas o virtuales, d
 La API de creación de clústeres se utiliza para inicializar el espacio de nombres de Kubernetes e implementar todos los pods de aplicación en el espacio de nombres. Para implementar el clúster de macrodatos de SQL Server en el clúster de Kubernetes, ejecute el siguiente comando:
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 Durante el arranque del clúster, la ventana de comandos de cliente dará como resultado el estado de implementación. Durante el proceso de implementación, debería ver una serie de mensajes donde está esperando el pod del controlador:
@@ -202,7 +202,7 @@ Después de 10 a 20 minutos, se debería notificar que se está ejecutando el po
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -215,21 +215,23 @@ Cuando finalice la implementación, la salida le notifica de éxito:
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> Obtener la instancia de SQL Server Master y direcciones IP del clúster de macrodatos de SQL Server
+## <a id="masterip"></a> Obtener puntos de conexión de clúster de macrodatos
 
-Después de que el script de implementación se ha completado correctamente, puede obtener la dirección IP de la instancia principal de SQL Server siguiendo los pasos descritos a continuación. Utilizará esta dirección IP y puerto número 31433 para conectarse a la instancia principal de SQL Server (por ejemplo:  **\<ip-address\>, 31433**). De forma similar, para la IP del clúster de SQL Server datos de gran tamaño. Todos los puntos de conexión de clúster se describen en la pestaña de extremos de servicio en el Portal de administración de clúster. Puede usar el Portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `service-proxy-lb` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente.
+Después de que el script de implementación se ha completado correctamente, puede obtener la dirección IP de la instancia principal de SQL Server siguiendo los pasos descritos a continuación. Utilizará esta dirección IP y puerto número 31433 para conectarse a la instancia principal de SQL Server (por ejemplo:  **\<ip-address-of-endpoint-master-pool\>, 31433**). De forma similar, puede conectarse a SQL Server IP del clúster (puerta de enlace de Spark o HDFS) de datos de gran tamaño asociado con el **endpoint security** service.
 
-### <a name="aks"></a>AKS
-
-Si usa AKS, Azure proporciona el servicio del equilibrador de carga de Azure. Ejecute el siguiente comando:
+Los siguientes comandos de kubectl para recuperar los puntos de conexión común para el clúster de macrodatos:
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-Busque el **External-IP** valor que se asigna al servicio. Después, conéctese a la instancia principal de SQL Server con la dirección IP en el puerto 31433 (p. ej.:  **\<ip-address\>, 31433**) y al extremo de clúster de macrodatos de SQL Server mediante la IP externa para `service-security-lb` service. 
+Busque el **External-IP** valor que se asigna a cada servicio.
+
+También se describen todos los puntos de conexión de clúster en el **los extremos de servicio** ficha en el Portal de administración de clúster. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `endpoint-service-proxy` (por ejemplo: **https://\<ip-address-of-endpoint-service-proxy\>: 30777/portal**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente. También puede usar el Portal de administración de clúster para supervisar la implementación.
+
+Para obtener más información sobre cómo conectar, consulte [conectar a SQL Server del clúster macrodatos con Azure Data Studio](connect-to-big-data-cluster.md).
 
 ### <a name="minikube"></a>Minikube
 
@@ -253,8 +255,11 @@ Actualmente, la única manera de actualizar un clúster de macrodatos a una nuev
 1. Eliminar el clúster antiguo con el `mssqlctl delete cluster` comando.
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > Use la versión de **mssqlctl** que coincide con el clúster. No elimine un clúster anterior con la versión más reciente de **mssqlctl**.
 
 1. Desinstale cualquier versión anterior de **mssqlctl**.
 
@@ -270,13 +275,13 @@ Actualmente, la única manera de actualizar un clúster de macrodatos a una nuev
    **Windows:**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
    ```
 
    **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
    ```
 
    > [!IMPORTANT]
@@ -328,14 +333,11 @@ Para supervisar o solucionar problemas de una implementación, use **kubectl** p
    | ssNoVersion | Descripción |
    |---|---|
    | **endpoint-master-pool** | Proporciona acceso a la instancia maestra.<br/>(**EXTERNAL-IP, 31433** y **SA** usuario) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Es compatible con las herramientas y los clientes que administran el clúster. |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Proporciona acceso a la [Portal de administración de clúster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
-   | **service-security-lb**<br/>**service-security-nodeport** | Proporciona acceso a la puerta de enlace de Spark o HDFS.<br/>(**EXTERNAL-IP** y **raíz** usuario) |
+   | **endpoint-controller** | Es compatible con las herramientas y los clientes que administran el clúster. |
+   | **endpoint-service-proxy** | Proporciona acceso a la [Portal de administración de clúster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **endpoint-security** | Proporciona acceso a la puerta de enlace de Spark o HDFS.<br/>(**EXTERNAL-IP** y **raíz** usuario) |
 
-   > [!NOTE]
-   > Los nombres de servicio pueden variar según el entorno de Kubernetes. Al implementar en Azure Kubernetes Service (AKS), los nombres de servicio acabar **-lb**. Para las implementaciones de minikube y kubeadm, los nombres de servicio acaban **- nodeport**.
-
-1. Use la [Portal de administración de clúster](cluster-admin-portal.md) para supervisar la implementación en el **implementación** ficha. Tendrá que esperar el **proxy-service-lb** que se inicie antes de acceder a este portal, por lo que no estará disponible al principio de una implementación de servicio.
+1. Use la [Portal de administración de clúster](cluster-admin-portal.md) para supervisar la implementación en el **implementación** ficha. Tendrá que esperar el **proxy de servicio de punto de conexión** que se inicie antes de acceder a este portal, por lo que no estará disponible al principio de una implementación de servicio.
 
 > [!TIP]
 > Para obtener más información sobre cómo solucionar problemas del clúster, consulte [comandos Kubectl para la supervisión y solución de problemas de clústeres de SQL Server macrodatos](cluster-troubleshooting-commands.md).

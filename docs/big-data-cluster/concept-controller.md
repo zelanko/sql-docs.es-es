@@ -5,17 +5,17 @@ description: En este artículo se describe el controlador de un clúster de macr
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 84162981b68a309f4a21efc0c0610837be308ddb
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241286"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017871"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>¿Qué es el controlador en un clúster de macrodatos de 2019 de SQL Server?
 
@@ -29,15 +29,15 @@ El servicio del controlador proporciona la funcionalidad siguiente:
 - Exponer las herramientas de supervisión para observar el estado del clúster
 - Exponer las herramientas de solución de problemas para detectar y reparar problemas inesperados
 - Administrar seguridad del clúster: asegúrese de puntos de conexión del clúster seguro, administrar usuarios y roles, configurar las credenciales para la comunicación dentro del clúster
-- Administrar el flujo de trabajo de actualización de modo que se implementan de forma segura (no disponible en CTP 2.2)
-- Administración de alta disponibilidad y recuperación ante desastres para los servicios con estado en el clúster (no están disponibles en CTP 2.2)
+- Administrar el flujo de trabajo de actualización de modo que se implementan de forma segura (no disponible en CTP 2.3)
+- Administración de alta disponibilidad y recuperación ante desastres para los servicios con estado en el clúster (no están disponibles en CTP 2.3)
 
 ## <a name="deploying-the-controller-service"></a>Implementar el servicio de controlador
 
 El controlador está implementado y hospedado en el mismo espacio de nombres de Kubernetes donde el cliente desea crear un clúster de macrodatos. Este servicio instalado por un administrador de Kubernetes durante el arranque del clúster, mediante la utilidad de línea de comandos mssqlctl:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl cluster create --name <name of your cluster>
 ```
 
 El flujo de trabajo buildout preparará sobre Kubernetes un clúster de macrodatos totalmente funcional de SQL Server que incluye todos los componentes descritos en la [Introducción](big-data-cluster-overview.md) artículo. El flujo de trabajo de bootstrap crea primero el servicio de controlador y una vez implementado, el servicio de controlador coordinará la instalación y configuración del resto de la parte de los servicios de grupos de almacenamiento, proceso, datos y master.

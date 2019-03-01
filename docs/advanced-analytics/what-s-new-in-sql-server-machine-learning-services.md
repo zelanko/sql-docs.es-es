@@ -3,20 +3,20 @@ title: '¿Qué&#39;s new: SQL Server Machine Learning Services'
 description: Anuncios sobre nuevas características para cada versión de SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/18/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a3450b308918e51b370865db4ad2bedeb8e004c
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 43f1f5fb9ace80da357ecca9e4abd715bd4a6048
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397624"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018051"
 ---
-# <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services 
+# <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -29,6 +29,11 @@ Esta versión agrega las características más solicitadas para las operaciones 
 
 | Versión | Actualización de características |
 |---------|----------------|
+| CTP 2.3 | Admitidas [tipos de datos Java](java/java-sql-datatypes.md). |
+| | En Windows solo, puede obtenerse el código de Java en una biblioteca externa con la [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) instrucción. Una funcionalidad equivalente estará disponible en Linux en una próxima versión de CTP. Más información: [Cómo llamar a Java desde SQL Server](java/howto-call-java-from-sql.md). |
+| | En Windows solo, código de Python puede obtenerse en una biblioteca externa con la [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) instrucción. Una funcionalidad equivalente estará disponible en Linux en una próxima versión de CTP. |
+| CTP 2.2 | No hay cambios. |
+| CTP 2.1 | No hay cambios. |
 | CTP 2.0 | Compatibilidad con la plataforma de Linux para el aprendizaje automático R y Python. Introducción a [instalar SQL Server Machine Learning Services en Linux](../linux/sql-server-linux-setup-machine-learning.md). |
 |   | [Extensión del lenguaje Java](java/extension-java.md) en Windows y Linux es nueva en versión preliminar de SQL Server 2019. Puede hacer Java compilada de código disponible para SQL Server mediante la asignación de permisos y establecer la ruta de acceso. Aplicaciones de cliente con acceso a SQL Server pueden utilizar los datos y ejecutar el código mediante una llamada a [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), el mismo procedimiento que se usa para la integración de R y Python en SQL Server. | 
 |  | El [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) introduce dos nuevos parámetros que permiten generar fácilmente varios modelos de datos con particiones. Obtenga más información en este tutorial, [crear modelos basados en la partición en R](tutorials/r-tutorial-create-models-per-partition.md). |
@@ -100,7 +105,7 @@ Para todos los anuncios de características de seguridad, consulte [What ' s New
 
 ## <a name="linux-support-roadmap"></a>Plan de soporte técnico de Linux
 
-SQL Server 2019 CTP 2.0 agrega compatibilidad con Linux R, Python y Java al instalar los paquetes con una instancia del motor de base de datos de aprendizaje automático. Para obtener más información, consulte [instalar SQL Server Machine Learning Services en Linux](../linux/sql-server-linux-setup-machine-learning.md).
+SQL Server 2019 CTP 2.3 agrega compatibilidad con Linux R, Python y Java al instalar los paquetes con una instancia del motor de base de datos de aprendizaje automático. Para obtener más información, consulte [instalar SQL Server Machine Learning Services en Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 En Linux, SQL Server 2017 no tiene la integración de R o Python, pero puede usar [puntuación nativa](sql-native-scoring.md) en Linux porque esta funcionalidad está disponible a través de Transact-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), que se ejecuta en Linux. Puntuación nativa permite puntuar alto rendimiento desde un modelo previamente entrenado, sin llamar a, o incluso un runtime de R.
 

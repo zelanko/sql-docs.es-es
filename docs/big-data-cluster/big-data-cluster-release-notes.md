@@ -5,17 +5,17 @@ description: En este artículo se describe las últimas actualizaciones y proble
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4f16ee38b09198c036941085c9d7a5a1ee35f01b
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242076"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017951"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Notas de la versión para los clústeres de macrodatos de SQL Server 2019
 
@@ -23,11 +23,98 @@ Este artículo proporciona las últimas actualizaciones y problemas conocidos de
 
 | Versión | date |
 |---|---|
+| [CTP 2.3](#ctp23) | Febrero de 2019 |
 | [CTP 2.2](#ctp22) | Diciembre de 2018 |
 | [CTP 2.1](#ctp21) | Noviembre de 2018 |
-| [EN CTP 2.0](#ctp20) | Octubre de 2018 |
+| [CTP 2.0](#ctp20) | Octubre de 2018 |
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp23"></a> CTP 2.3 (febrero de 2019)
+
+Las secciones siguientes describen las nuevas características y problemas conocidos de clústeres de datos de gran tamaño en SQL Server 2019 CTP 2.3.
+
+### <a name="whats-in-the-ctp-23-release"></a>¿Qué es la versión de CTP 2.3?
+
+- [Enviar trabajos de Spark en clústeres SQL Server de datos grande en IntelliJ](spark-submit-job-intellij-tool-plugin.md).
+- [CLI comunes para la administración de clúster y la implementación de aplicación](big-data-cluster-create-apps.md).
+- [Extensión de VS Code para implementar aplicaciones en clústeres de SQL Server macrodatos](app-deployment-extension.md).
+- Nuevo parámetro de ordenación para el **mssqlctl** herramienta.
+- [Usar Sparklyr en clúster de SQL Server 2019 Big data](sparklyr-from-RStudio.md).
+- Nueva experiencia de conexión unificado para la [instancia principal de SQL Server y la puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md).
+- Al eliminar un clúster con **mssqlctl clúster delete** ahora elimina sólo los objetos en el espacio de nombres que formaban parte del clúster de macrodatos, pero deja el espacio de nombres. Anteriormente, este comando elimina el espacio de nombres completo.
+- Se han cambiado los nombres de extremo y consolidado en esta versión:
+
+   | Puntos de conexión anteriores | Nuevo punto de conexión |
+   |---|---|
+   | **service-security-lb**<br/>**service-security-nodeport** | **endpoint-security** |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | **endpoint-service-proxy** |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | **endpoint-controller** |
+
+### <a name="known-issues"></a>Problemas conocidos
+
+Las secciones siguientes proporcionan los problemas conocidos para los clústeres de macrodatos de SQL Server en CTP 2.3.
+
+#### <a name="deployment"></a>Implementación
+
+- No se admite la actualización de un clúster de macrodatos datos desde una versión anterior.
+
+   > [!IMPORTANT]
+   > Debe los datos de copia de seguridad y, a continuación, eliminar el clúster existente de datos de gran tamaño (con la versión anterior de **mssqlctl**) antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-guidance.md#upgrade).
+
+- El **ACCEPT_EULA** variable de entorno debe ser "yes" o "Sí" para aceptar los términos de licencia. Las versiones anteriores permiten "y" e "Y", pero estos ya no se aceptan y producirá un error de implementación.
+
+- El **CLUSTER_PLATFORM** variables de entorno no tiene valor predeterminado es igual que en versiones anteriores.
+
+- Después de implementar en AKS, es posible que vea los siguientes dos eventos de advertencia de la implementación. Ambos de estos eventos son problemas conocidos, pero no podrá implementar correctamente el clúster de macrodatos en AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
+
+#### <a name="cluster-administration-portal"></a>Portal de administración de clústeres
+
+El portal de administración de clúster no muestra el punto de conexión para la instancia principal de SQL Server. Para encontrar la dirección IP y puerto de la instancia maestra, use el siguiente **kubectl** comando:
+
+```
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
+```
+
+#### <a name="external-tables"></a>Tablas externas
+
+- Es posible crear una tabla externa de grupo de datos para una tabla que tiene no compatibles de tipos de columna. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Si consulta una tabla externa del grupo de almacenamiento, podría obtener un error si se está copiando el archivo subyacente en HDFS al mismo tiempo.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+#### <a name="spark-and-notebooks"></a>Spark y cuadernos
+
+- Pueden cambiar las direcciones IP de POD en el entorno de Kubernetes como reinicios de PODs. En el escenario donde se reinicia el patrón de pod, puede producir un error de la sesión de Spark con `NoRoteToHostException`. Esto se produce por las cachés JVM que no se actualiza con la nueva dirección IP direcciones.
+
+- Si tiene Jupyter ya instalado y un independiente de Python en Windows, se pueden producir un error en cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
+
+- En un bloc de notas, si hace clic en el **agregar texto** comando, se agrega el texto de la celda en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para activar o desactivar para el modo de edición y editar la celda.
+
+#### <a name="hdfs"></a>HDFS
+
+- Si hace clic derecho en un archivo de HDFS para obtener la vista previa, puede aparecer el siguiente error:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Actualmente no hay ninguna manera de obtener una vista previa de los archivos mayores de 30 MB en Azure Data Studio.
+
+- No se admiten los cambios de configuración HDFS que implican cambios en hdfs-site.xml.
+
+#### <a name="security"></a>Seguridad
+
+- El contraseña_sa forma parte del entorno y reconocibles (por ejemplo, en un archivo de volcado de cable). Debe restablecer el contraseña_sa en la instancia principal después de la implementación. Esto no es un error, pero un paso de seguridad. Para obtener más información sobre cómo cambiar el contraseña_sa en un contenedor de Linux, consulte [cambiar la contraseña de SA](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- Los registros AKS pueden contener la contraseña de SA para las implementaciones de clústeres de datos de gran tamaño.
 
 ## <a id="ctp22"></a> CTP 2.2 (diciembre de 2018)
 

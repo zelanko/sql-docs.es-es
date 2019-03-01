@@ -2,17 +2,17 @@
 title: 'Problemas conocidos de lenguaje R y la integración de Python: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6dc02c56bda3cdf904e0c53115d4fbbfcfafe9fc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645534"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018071"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conocidos de Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +83,7 @@ Si intenta instalar SQL Server 2016 R Services o SQL Server 2017 Machine Learnin
 > 
 > *No se puede encontrar el grupo con la identidad*
 > 
-> *Código de error de componente: 0 x 80131509*
+> *Código de error de componente: 0x80131509*
 
 El error se produce porque, en un controlador de dominio, el servicio no puede crear el 20 cuentas locales necesarias para ejecutar aprendizaje automático. En general, no se recomienda instalar SQL Server en un controlador de dominio. Para obtener más información, consulte [boletín de soporte técnico 2032911](https://support.microsoft.com/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 

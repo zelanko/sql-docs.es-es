@@ -3,18 +3,18 @@ title: 'Ejemplo de Java y el tutorial de SQL Server 2019: SQL Server Machine Lea
 description: Ejecutar código de ejemplo de Java en SQL Server de 2019 para conocer los pasos para usar la extensión del lenguaje Java con datos de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069065"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018041"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Tutorial de ejemplo de Java de SQL Server
 
@@ -26,7 +26,7 @@ En este ejemplo se muestra una clase de Java que recibe dos columnas (ID y text)
 
 + SQL Server Management Studio u otra herramienta para ejecutar T-SQL.
 
-+ Java SE Development Kit (JDK) 1.10 en Windows o JDK 1.8 en Linux.
++ Java SE Development Kit (JDK) 8 en Windows o Linux.
 
 Compilación de línea de comandos utilizando **javac** es suficiente para este tutorial. 
 
@@ -232,7 +232,7 @@ Asegúrese de que ambas identidades de seguridad tienen permisos de 'Lectura y e
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7 - llamada *getNgrams()*
+## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
 
 Para llamar al código de SQL Server, especifique el método Java **getNgrams()** en el parámetro "script" de sp_execute_external_script. Este método pertenece a un paquete denominado "paquete" y un archivo de clase denominado **Ngram.java**.
 
@@ -240,7 +240,7 @@ En este ejemplo pasa el parámetro de ruta de clase para proporcionar la ruta de
 
 + En Linux, ejecute el siguiente código en SQL Server Management Studio u otra herramienta que puede usada para ejecutar Transact-SQL. 
 
-+ En Windows, cambie **@myClassPath** a N'C:\myJavaCode\' (suponiendo que es la carpeta principal de \pkg) antes de ejecutar la consulta en SQL Server Management Studio u otra herramienta.
++ En Windows, cambie @myClassPath a N'C:\myJavaCode\' (suponiendo que es la carpeta principal de \pkg) antes de ejecutar la consulta en SQL Server Management Studio u otra herramienta.
 
 ```sql
 DECLARE @myClassPath nvarchar(50)

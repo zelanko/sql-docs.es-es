@@ -5,17 +5,17 @@ description: Tutorial de una implementación de clústeres de macrodatos de 2019
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/17/2018
+ms.date: 02/28/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231072"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017881"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -108,7 +108,7 @@ Después de 10 a 20 minutos, se debería notificar que se está ejecutando el po
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -151,16 +151,16 @@ Abra una ventana de comandos para usar **kubectl** durante el proceso de impleme
 
 ### <a name="use-the-cluster-administration-portal"></a>Usar el Portal de administración de clúster
 
-Una vez que se está ejecutando el pod del controlador, también puede usar el Portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `service-proxy-lb` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales usadas para iniciar sesión en el portal coinciden con los valores para **controlador para el usuario** y **contraseña** que especificó en el script de implementación.
+Una vez que se está ejecutando el pod del controlador, también puede usar el Portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `endpoint-service-proxy` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales usadas para iniciar sesión en el portal coinciden con los valores para **controlador para el usuario** y **contraseña** que especificó en el script de implementación.
 
-Puede obtener la dirección IP de la **proxy-service-lb** servicio, ejecute este comando en una ventana cmd o bash:
+Puede obtener la dirección IP de la **proxy de servicio de punto de conexión** servicio, ejecute este comando en una ventana cmd o bash:
 
 ```bash
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> En CTP 2.2, verá una advertencia de seguridad al obtener acceso a la página web, porque los clústeres de macrodatos actualmente está usando certificados SSL generados automáticamente. Además, en CTP 2.2, no muestra el estado de la instancia principal de SQL Server.
+> En CTP 2.3, verá una advertencia de seguridad al obtener acceso a la página web, porque los clústeres de macrodatos actualmente está usando certificados SSL generados automáticamente. Además, en CTP 2.3, no muestra el estado de la instancia principal de SQL Server.
 
 ## <a name="connect-to-the-cluster"></a>Conéctese al clúster
 

@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo configurar Kubernetes en varios Ub
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 78d2024f09e78645d8fa1c35279b296e3cda53d7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 56eb95042199298be2728c475d26cb52bea993e2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241596"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017991"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configuración de Kubernetes en varios equipos para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019
 
@@ -26,9 +26,11 @@ Este artículo proporciona un ejemplo de cómo usar **kubeadm** configuración d
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Varias máquinas de Linux físicas o máquinas virtuales que se usará para el clúster
-- Configuración recomendada: 8 CPU, 32 GB de memoria y al menos 100 GB de almacenamiento para cada máquina
-- Mínimo de tres máquinas del clúster
+- Mínimo de 3 máquinas de Linux físicas o máquinas virtuales
+- Configuración recomendada por máquina:
+   - 8 CPU
+   - 32 GB de memoria
+   - 100 GB de almacenamiento
 
 ## <a name="prepare-the-machines"></a>Preparar las máquinas
 
@@ -146,4 +148,4 @@ kubectl get nodes
 
 Los pasos descritos en este artículo, configura un clúster de Kubernetes en varios equipos de Ubuntu. El siguiente paso es implementar el clúster de macrodatos de SQL Server 2019. Para obtener instrucciones, consulte el artículo siguiente:
 
-[Implementar 2019 CTP 2.2 de SQL Server en Kubernetes](deployment-guidance.md#deploy)
+[Implementar SQL Server en Kubernetes](deployment-guidance.md#deploy)

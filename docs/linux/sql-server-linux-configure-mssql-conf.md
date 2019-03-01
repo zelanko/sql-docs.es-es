@@ -4,18 +4,18 @@ description: En este artículo se describe cómo usar la herramienta mssql-conf 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401900"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018081"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar SQL Server en Linux con la herramienta mssql-conf
 
@@ -46,7 +46,7 @@ ms.locfileid: "52401900"
 | [Límite de memoria](#memorylimit) | Establecer el límite de memoria para SQL Server. |
 | [Puerto TCP](#tcpport) | Cambiar el puerto donde escucha SQL Server para las conexiones. |
 | [TLS](#tls) | Configurar la seguridad de nivel de transporte. |
-| [Marcas de seguimiento](#traceflags) | Establecer las marcas de seguimiento que se va a usar el servicio. |
+| [Traceflags](#traceflags) | Establecer las marcas de seguimiento que se va a usar el servicio. |
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -74,9 +74,10 @@ ms.locfileid: "52401900"
 | [Límite de memoria](#memorylimit) | Establecer el límite de memoria para SQL Server. |
 | [Coordinador de transacciones distribuidas de Microsoft](#msdtc) | Configurar y solucionar problemas de MSDTC en Linux. |
 | [CLUF de MLServices](#mlservices-eula) | Aceptar R y Python CLUF para mlservices paquetes. Se aplica a SQL Server de 2019 únicamente.|
+| [outboundnetworkaccess](#mlservices-outbound-access) |Habilitar el acceso de red saliente para [mlservices](sql-server-linux-setup-machine-learning.md) extensiones de R, Python y Java.|
 | [Puerto TCP](#tcpport) | Cambiar el puerto donde escucha SQL Server para las conexiones. |
 | [TLS](#tls) | Configurar la seguridad de nivel de transporte. |
-| [Marcas de seguimiento](#traceflags) | Establecer las marcas de seguimiento que se va a usar el servicio. |
+| [Traceflags](#traceflags) | Establecer las marcas de seguimiento que se va a usar el servicio. |
 
 ::: moniker-end
 
@@ -396,10 +397,10 @@ La primera captura de fase se controla mediante el **coredump.coredumptype** con
 
     | Tipo | Descripción |
     |-----|-----|
-    | **Mini** | Mini es el tipo de archivo de volcado de memoria más pequeño. La información del sistema Linux usa para determinar los subprocesos y módulos en el proceso. El volcado de memoria contiene solo los módulos y las pilas de subprocesos del entorno de host. No tiene referencias de memoria indirecta o variables globales. |
+    | **mini** | Mini es el tipo de archivo de volcado de memoria más pequeño. La información del sistema Linux usa para determinar los subprocesos y módulos en el proceso. El volcado de memoria contiene solo los módulos y las pilas de subprocesos del entorno de host. No tiene referencias de memoria indirecta o variables globales. |
     | **miniplus** | Es similar a mini miniPlus, pero incluye memoria adicional. Comprende los aspectos internos de SQLPAL y el entorno de host, agregar las siguientes regiones de memoria para el volcado de memoria:</br></br> -Globals varios</br> -Toda la memoria por encima de 64TB</br> -Denominado regiones se encuentra en   **/proc / pid de $/ asignaciones**</br> -Memoria indirecta de subprocesos y las pilas</br> : La información de subproceso</br> -Asociada del Teb y del Peb</br> : Información de módulo</br> -VMM y VAD árbol |
-    | **filtrado** | Diseño de usos filtrado basado en una resta donde se incluye toda la memoria en el proceso a menos que se excluyan específicamente. El diseño comprende los aspectos internos de SQLPAL y el entorno de host, exclusión de determinadas regiones del volcado de memoria.
-    | **completo** | Completa se encuentra un volcado de memoria de proceso completo que incluye todas las regiones en **/proc / pid de $/ asignaciones**. Esto no se controla mediante **coredump.captureminiandfull** configuración. |
+    | **filtered** | Diseño de usos filtrado basado en una resta donde se incluye toda la memoria en el proceso a menos que se excluyan específicamente. El diseño comprende los aspectos internos de SQLPAL y el entorno de host, exclusión de determinadas regiones del volcado de memoria.
+    | **full** | Completa se encuentra un volcado de memoria de proceso completo que incluye todas las regiones en **/proc / pid de $/ asignaciones**. Esto no se controla mediante **coredump.captureminiandfull** configuración. |
 
 ## <a id="dbmail"></a> Establecer el perfil de correo electrónico de base de datos predeterminada de SQL Server en Linux
 
@@ -508,11 +509,11 @@ Además de establecer estos valores, también debe configurar el enrutamiento y 
 
 Hay otras opciones para mssql-conf que puede usar para supervisar y solucionar problemas de MSDTC. La siguiente tabla describe brevemente estos valores. Para obtener más información sobre su uso, consulte los detalles en el artículo de soporte técnico de Windows, [cómo habilitar el seguimiento de diagnóstico de MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| configuración de MSSQL-conf | Descripción |
+| mssql-conf setting | Descripción |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configurar las llamadas rpc solo segura para las transacciones distribuidas |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Configurar llamadas rpc solo de seguridad para distribuir |transacciones
-| distributedtransaction.MAXLOGSIZE | Tamaño de archivo del registro de transacciones DTC en MB. El valor predeterminado es 64MB |
+| distributedtransaction.maxlogsize | Tamaño de archivo del registro de transacciones DTC en MB. El valor predeterminado es 64MB |
 | distributedtransaction.memorybuffersize | Tamaño del búfer circular en el que se almacenan los seguimientos. Este tamaño en MB y el valor predeterminado es 10MB |
 | distributedtransaction.servertcpport | Puerto del servidor de rpc MSDTC |
 | distributedtransaction.trace_cm | Seguimientos en el Administrador de conexiones |
@@ -544,10 +545,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Add R or Python to an existing installation
+# Adds the EULA section to the INI and sets acceptulam to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance
+# Rescind EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -558,7 +559,34 @@ También puede agregar directamente a la aceptación del CLUF del [mssql.conf ar
 accepteula = Y
 accepteulaml = Y
 ```
+:::moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+## <a id="mlservices-outbound-access"></a> Habilitar el acceso de red saliente
+
+Acceso de red saliente para las extensiones de Java, Python y R en el [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) característica está deshabilitada de forma predeterminada. Para habilitar las solicitudes salientes, establezca el "outboundnetworkaccess" propiedad Boolean mediante mssql-conf.
+
+Después de establecer la propiedad, reinicie el servicio Launchpad de SQL Server para leer los valores actualizados en el archivo INI. Un mensaje de reinicio le recuerda que cada vez que se modifica una configuración de extensibilidad.
+
+```bash
+# Adds the extensibility section and property.
+# Sets "outboundnetworkaccess" to true.
+# This setting is required if you want to access data or operations off the server.
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+
+# Turns off network access but preserves the setting
+/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+
+# Removes the setting and rescinds network access
+sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
+```
+
+También puede agregar "outboundnetworkaccess" directamente a la [mssql.conf archivo](#mssql-conf-format):
+
+```ini
+[extensibility]
+outboundnetworkaccess = 1
+```
 :::moniker-end
 
 ## <a id="tcpport"></a> Cambiar el puerto TCP
@@ -589,10 +617,10 @@ Las siguientes opciones de configuración TLS para una instancia de SQL Server q
 
 |Opción |Descripción |
 |--- |--- |
-|**Network.forceencryption** |Si es 1, a continuación, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] obliga a todas las conexiones a cifrarse. De forma predeterminada, esta opción es 0. |
+|**network.forceencryption** |Si es 1, a continuación, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] obliga a todas las conexiones a cifrarse. De forma predeterminada, esta opción es 0. |
 |**network.tlscert** |Archivo de la ruta de acceso absoluta para el certificado que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa TLS. Ejemplo:   `/etc/ssl/certs/mssql.pem`  El archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlskey** |Archivo de la ruta de acceso absoluta a la clave privada que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa TLS. Ejemplo:  `/etc/ssl/private/mssql.key`  El archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**Network.tlsprotocols** |Una lista separada por comas de qué TLS protocolos se admiten en SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] siempre intenta negociar el protocolo permitido más fuerte. Si un cliente no es compatible con cualquier protocolo permitido, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rechazará el intento de conexión.  Para la compatibilidad, se permiten todos los protocolos admitidos de forma predeterminada (1.2, 1.1, 1.0).  Si los clientes admiten TLS 1.2, Microsoft recomienda que permite solo TLS 1.2. |
+|**network.tlsprotocols** |Una lista separada por comas de qué TLS protocolos se admiten en SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] siempre intenta negociar el protocolo permitido más fuerte. Si un cliente no es compatible con cualquier protocolo permitido, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rechazará el intento de conexión.  Para la compatibilidad, se permiten todos los protocolos admitidos de forma predeterminada (1.2, 1.1, 1.0).  Si los clientes admiten TLS 1.2, Microsoft recomienda que permite solo TLS 1.2. |
 |**network.tlsciphers** |Especifica los cifrados que están permitidos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para TLS. Esta cadena debe tener el formato por [formato de lista de cifrado de OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). En general, no es necesario cambiar esta opción. <br /> De forma predeterminada, se permiten los cifrados siguientes: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Ruta de acceso al archivo keytab de Kerberos |
 
@@ -653,7 +681,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Tenga en cuenta que cualquier configuración que no se muestra en este archivo usa sus valores predeterminados. La siguiente sección proporciona un ejemplo **mssql.conf** archivo.
 
 
-## <a id="mssql-conf-format"></a> formato MSSQL.conf
+## <a id="mssql-conf-format"></a> mssql.conf format
 
 La siguiente **/var/opt/mssql/mssql.conf** archivo proporciona un ejemplo para cada configuración. Puede usar este formato para realizar manualmente los cambios realizados en el **mssql.conf** archivo según sea necesario. Si cambia manualmente el archivo, debe reiniciar SQL Server antes de aplicarán los cambios. Para usar el **mssql.conf** archivo con Docker, debe tener Docker [conservar los datos](sql-server-linux-configure-docker.md). En primer lugar, agregue una completa **mssql.conf** de archivos a su directorio de host y, a continuación, ejecute el contenedor. Hay un ejemplo de esto en [comentarios de los clientes](sql-server-linux-customer-feedback.md).
 

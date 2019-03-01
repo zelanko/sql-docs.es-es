@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 24e93c91c916272f71f137dd10bf402d693bbcd8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 5b6ea2144fe333f87123abdf92e16aa7122e98b4
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52615985"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007558"
 ---
 # <a name="configure-tls-12-in-aps"></a>Configurar TLS 1.2 en puntos de acceso
 
-Para proteger los puntos de acceso para que solo use TLS 1.2, tendrá que deshabilitar explícitamente otro protocolo en todos los hosts físicos y virtuales. Deshabilitar protocolos requieren cambios de configuración del registro.
+Para proteger los puntos de acceso para que solo use TLS 1.2, tendrá que deshabilitar explícitamente otro protocolo en todos los hosts físicos y virtuales. Deshabilitar protocolos requieren cambios de configuración del registro. Los cambios del registro requieren un reinicio de los hosts físicos y virtuales.
 
 > [!WARNING]
 > En esta sección, el método o la tarea contiene los pasos que indican cómo modificar el Registro. Sin embargo, pueden producirse problemas graves si modifica el registro incorrectamente que puede provocar la pérdida de datos y requerir la reinstalación del sistema operativo. Se recomienda encarecidamente hacer copia de seguridad del registro antes de modificarlo. A continuación, puede restaurar el Registro si se produjo un problema. Para obtener más información acerca de cómo realizar copias de seguridad y restaurar el registro, haga clic en el número de artículo siguiente para ver el artículo de Microsoft Knowledge Base:<br>

@@ -5,17 +5,17 @@ description: En este artículo se describe la instancia principal de SQL Server 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 778645079d2585bd86fc01c5d5e1130c564b0de5
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 67109dc6af3c03960435116c79e9f92ae79f595c
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242016"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017801"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>¿Qué es la instancia maestra en un clúster de macrodatos de 2019 de SQL Server?
 
@@ -29,7 +29,7 @@ La instancia principal de SQL Server proporciona un punto de conexión accesible
 
 ## <a name="scale-out-query-management"></a>Administración de la consulta de escalabilidad horizontal
 
-La instancia principal de SQL Server contiene el motor de consultas de escalabilidad horizontal que se utiliza para distribuir las consultas entre instancias de SQL Server en nodos de la [proceso grupo](concept-compute-pool.md). El motor de consultas de escalado horizontal también proporciona acceso a través de Transact-SQL para todas las tablas de Hive en el clúster sin ninguna configuración adicional. (Compatibilidad con las tablas de hive no está en CTP 2.2)
+La instancia principal de SQL Server contiene el motor de consultas de escalabilidad horizontal que se utiliza para distribuir las consultas entre instancias de SQL Server en nodos de la [proceso grupo](concept-compute-pool.md). El motor de consultas de escalado horizontal también proporciona acceso a través de Transact-SQL para todas las tablas de Hive en el clúster sin ninguna configuración adicional. (Compatibilidad con las tablas de hive no está en CTP 2.3)
 
 ## <a name="metadata-and-user-databases"></a>Bases de datos de usuario y los metadatos
 

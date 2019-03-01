@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo configurar Azure Kubernetes Servic
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5e4ec4e6f0de497e3ec5d35293ad142696a19a46
-ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.openlocfilehash: ae8a8b2869a46a9157c805edcb8c6d74ca49e3d0
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229036"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018001"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configuración de Azure Kubernetes Service para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019
 
@@ -38,36 +38,39 @@ En este artículo se describe los pasos para implementar en Kubernetes en AKS me
 
 - Versión mínima 1.10 para servidor de Kubernetes. Para AKS, deberá usar `--kubernetes-version` parámetro para especificar una versión distinta de la predeterminada.
 
-- Para un entorno de AKS, para una experiencia óptima al validar escenarios básicos, se recomienda al menos tres máquinas virtuales de agente con al menos 4 vCPU y 32 GB de memoria de cada uno. Infraestructura de Azure ofrece varias opciones de tamaño para máquinas virtuales, consulte [aquí](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) selecciones en la región que se va a implementar.
+- Para obtener una experiencia óptima al validar escenarios básicos en AKS, use:
+   - Mínimo de 3 VM del agente
+   - 4 vCPU por máquina virtual
+   - 32 GB de memoria por máquina virtual
+
+   > [!TIP]
+   > Infraestructura de Azure ofrece varias opciones de tamaño para máquinas virtuales, consulte [aquí](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) selecciones en la región que se va a implementar.
 
 ## <a name="create-a-resource-group"></a>Crear un grupo de recursos
 
 Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y administran los recursos. Los pasos siguientes, se inicia sesión en Azure y creación un grupo de recursos para el clúster de AKS.
 
-> [!TIP]
-> Si usa Windows, use PowerShell para el resto de los pasos.
-
 1. En el símbolo del sistema, ejecute el siguiente comando y siga las indicaciones para iniciar sesión en su suscripción de Azure:
 
-    ```bash
+    ```azurecli
     az login
     ```
 
 1. Si tiene varias suscripciones, puede ver todas las suscripciones, ejecute el comando siguiente:
 
-   ```bash
+   ```azurecli
    az account list
    ```
 
 1. Si desea cambiar a otra suscripción puede ejecutar este comando:
 
-   ```bash
+   ```azurecli
    az account set --subscription <subscription id>
    ```
 
 1. Crear un grupo de recursos con el **crear grupo az** comando. En el ejemplo siguiente se crea un grupo de recursos denominado `sqlbigdatagroup` en el `westus2` ubicación.
 
-   ```bash
+   ```azurecli
    az group create --name sqlbigdatagroup --location westus2
    ```
 
@@ -75,7 +78,7 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
 
 1. Crear un clúster de Kubernetes en AKS con la [crear az aks](https://docs.microsoft.com/cli/azure/aks) comando. En el ejemplo siguiente se crea un clúster de Kubernetes denominado *kubcluster* con tres nodos de agente de Linux. Asegúrese de que crear el clúster de AKS en el mismo grupo de recursos que usó en las secciones anteriores.
 
-    ```bash
+    ```azurecli
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
@@ -94,13 +97,13 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
 
 1. Para configurar kubectl para conectarse al clúster de Kubernetes, ejecute el [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) comando. Este paso descarga las credenciales y configura la CLI para usarlos de kubectl.
 
-   ```bash
+   ```azurecli
    az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
    ```
 
 1. Para comprobar la conexión con el clúster, use la [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) comando para devolver una lista de los nodos del clúster.  El ejemplo siguiente muestra la salida si fuera a tener 1 maestro y 3 nodos de agente.
 
-   ```bash
+   ```
    kubectl get nodes
    ```
 

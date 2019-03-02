@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017951"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227217"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Notas de la versión para los clústeres de macrodatos de SQL Server 2019
 
@@ -41,6 +41,7 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 - [Extensión de VS Code para implementar aplicaciones en clústeres de SQL Server macrodatos](app-deployment-extension.md).
 - Nuevo parámetro de ordenación para el **mssqlctl** herramienta.
 - [Usar Sparklyr en clúster de SQL Server 2019 Big data](sparklyr-from-RStudio.md).
+- Monte almacenamiento compatible con HDFS externo en el clúster de macrodatos con [HDFS niveles](hdfs-tiering.md).
 - Nueva experiencia de conexión unificado para la [instancia principal de SQL Server y la puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md).
 - Al eliminar un clúster con **mssqlctl clúster delete** ahora elimina sólo los objetos en el espacio de nombres que formaban parte del clúster de macrodatos, pero deja el espacio de nombres. Anteriormente, este comando elimina el espacio de nombres completo.
 - Se han cambiado los nombres de extremo y consolidado en esta versión:
@@ -74,14 +75,6 @@ Las secciones siguientes proporcionan los problemas conocidos para los clústere
 
 - Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
 
-#### <a name="cluster-administration-portal"></a>Portal de administración de clústeres
-
-El portal de administración de clúster no muestra el punto de conexión para la instancia principal de SQL Server. Para encontrar la dirección IP y puerto de la instancia maestra, use el siguiente **kubectl** comando:
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### <a name="external-tables"></a>Tablas externas
 
 - Es posible crear una tabla externa de grupo de datos para una tabla que tiene no compatibles de tipos de columna. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
@@ -91,6 +84,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - Si consulta una tabla externa del grupo de almacenamiento, podría obtener un error si se está copiando el archivo subyacente en HDFS al mismo tiempo.
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Si va a crear una tabla externa a Oracle que usan tipos de datos de caracteres, el Asistente para la virtualización de Azure Data Studio interpreta estas columnas como VARCHAR en la definición de tabla externa. Esto provocará un error en el DDL de tabla externa. Modifique el esquema de Oracle para usar el tipo NVARCHAR2, o crear manualmente las instrucciones de la tabla externa y especificar NVARCHAR en lugar de usar al asistente.
 
 #### <a name="spark-and-notebooks"></a>Spark y cuadernos
 

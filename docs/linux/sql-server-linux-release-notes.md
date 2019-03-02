@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 49c16a062977e13f8bf30de10811f48f24d380d3
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: cd5c39f230db8fc72388d006fc17302956424633
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069841"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227317"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
@@ -49,22 +49,22 @@ La siguiente tabla enumera el historial de versiones para [!INCLUDE[ssSQL17](../
 | Versión               | Versión       | Fecha de la versión |
 |-----------------------|---------------|--------------|
 | [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
-| [CU12](#CU12)         | 14.0.3045.24  | 24-10-2018   |
+| [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
-| [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [CU9-GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
-| [CU9](#CU9)           | 14.0.3030.27  | 18-07-2018   |
-| [CU8](#CU8)           | 14.0.3029.16  | 21-06-2018   |
-| [CU7](#CU7)           | 14.0.3026.27  | 24-05-2018   |
-| [CU6](#CU6)           | 14.0.3025.34  | 19-04-2018   |
+| [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
+| [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21   |
+| [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
+| [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
 | [CU5](#CU5)           | 14.0.3023.8   | 2018-03-20   |
 | [CU4](#CU4)           | 14.0.3022.28  | 2018-02-20   |
-| [CU3](#CU3)           | 14.0.3015.40  | 03-01-2018   |
-| [GDR1](#GDR1)         | 14.0.2000.63  | 03-01-2018   |
-| [CU2](#CU2)           | 14.0.3008.27  | 28-11-2017   |
-| [CU1](#CU1)           | 14.0.3006.16  | 24-10-2017   |
-| [GA](#GA)             | 14.0.1000.169 | 10-2017-02   |
+| [CU3](#CU3)           | 14.0.3015.40  | 2018-01-03   |
+| [GDR1](#GDR1)         | 14.0.2000.63  | 2018-01-03   |
+| [CU2](#CU2)           | 14.0.3008.27  | 2017-11-28   |
+| [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
+| [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
 ## <a id="cuinstall"></a> Cómo instalar actualizaciones
 
@@ -382,8 +382,6 @@ Las siguientes características y servicios no están disponibles en Linux en el
 Las siguientes secciones describen los problemas conocidos con la versión de disponibilidad General (GA) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] en Linux.
 
 #### <a name="general"></a>General
-
-- Versión de las actualizaciones a la disponibilidad general de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] se admiten solo desde CTP 2.1 o superior. 
 
 - La longitud del nombre de host donde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está instalado necesita tener 15 caracteres o menos. 
 

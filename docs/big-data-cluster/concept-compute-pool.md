@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7d5a81479e798d3d97547eb67b17e62444cd2941
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 272f10cfed8f7cd1b07633b81642323a8c74b6d7
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017581"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227137"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>¿Cuáles son los grupos de proceso en un clúster de macrodatos de 2019 de SQL Server?
 
@@ -24,9 +24,6 @@ En este artículo se describe el rol de *grupos de proceso de SQL Server* en un 
 ## <a name="compute-pool-architecture"></a>Arquitectura del grupo de proceso
 
 Un grupo de proceso está formado por uno o más pods que se ejecutan en Kubernetes de proceso. La creación automatizada y la administración de estos pods se coordinan mediante el [instancia principal de SQL Server](concept-master-instance.md). Cada pod contiene un conjunto de servicios de bases y una instancia del motor de base de datos de SQL Server.
-
-> [!NOTE]
-> CTP 2.3 solo admite un grupo de proceso único por clúster.
 
 ## <a name="scale-out-groups"></a>Grupos de escalado horizontal
 

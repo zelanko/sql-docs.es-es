@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: d3567b3bc82a97c831abac252bebd0c523ed3fac
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017881"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227118"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -85,7 +85,7 @@ Utilice los pasos siguientes para ejecutar el script de implementación. Este sc
    | **Controlador para el usuario** | Nombre de usuario para el usuario del controlador (predeterminado: **admin**). |
 
    > [!IMPORTANT]
-   > El valor predeterminado **Standard_L4s** tamaño de la máquina no estén disponible en todas las regiones de Azure. Si selecciona un tamaño de máquina diferentes, asegúrese de que el número total de discos que se puede conectar a través de los nodos del clúster es mayor o igual a 21. Cada notificación de volumen persistente en el clúster requiere un disco conectado. Actualmente, el clúster de macrodatos requiere 21 notificaciones de volumen persistente. Por ejemplo, el [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamaño de máquina admite 16 discos conectados, por lo que significa de tres nodos que se pueden conectar 48 discos.
+   > El valor predeterminado **Standard_L4s** tamaño de la máquina no estén disponible en todas las regiones de Azure. Si selecciona un tamaño de máquina diferentes, asegúrese de que el número total de discos que se puede conectar a través de los nodos del clúster es mayor o igual a 24. Cada notificación de volumen persistente en el clúster requiere un disco conectado. Actualmente, el clúster de macrodatos requiere 24 notificaciones de volumen persistente. Por ejemplo, el [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamaño de máquina admite 16 discos conectados, por lo que significa de tres nodos que se pueden conectar 48 discos.
 
    > [!NOTE]
    > El `sa` cuenta es un administrador del sistema en la instancia principal de SQL Server que se crea durante la instalación. Después de crear la implementación, el `MSSQL_SA_PASSWORD` variable de entorno es reconocible ejecutando `echo $MSSQL_SA_PASSWORD` en el contenedor de la instancia maestra. Por motivos de seguridad, cambiar su `sa` contraseña en la instancia principal después de la implementación. Para obtener más información, consulte [cambiar la contraseña de SA](../linux/quickstart-install-connect-docker.md#sapassword).
@@ -160,7 +160,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> En CTP 2.3, verá una advertencia de seguridad al obtener acceso a la página web, porque los clústeres de macrodatos actualmente está usando certificados SSL generados automáticamente. Además, en CTP 2.3, no muestra el estado de la instancia principal de SQL Server.
+> En CTP 2.3, verá una advertencia de seguridad al obtener acceso a la página web, porque los clústeres de macrodatos actualmente está usando certificados SSL generados automáticamente.
 
 ## <a name="connect-to-the-cluster"></a>Conéctese al clúster
 

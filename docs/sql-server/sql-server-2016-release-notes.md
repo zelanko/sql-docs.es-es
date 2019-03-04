@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c243af9bdc0963ba83e94f8e35d90b68c5874a2c
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 3e06d2f4bacffb1334724c3d7f936e051009ad04
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044382"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852950"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de la versión de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "55044382"
 
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 incluye todas las actualizaciones acumulativas publicadas después de 2016 SP1, hasta e incluyendo CU8. 
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 incluye todas las actualizaciones acumulativas publicadas después de 2016 SP1, hasta e incluyendo CU8.
 
 - [![Centro de descarga de Microsoft](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [Descargar Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
 - Para obtener una lista completa de las actualizaciones, vea [Información de versión de Service Pack 2 de SQL Server de 2016](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information).
@@ -41,7 +41,7 @@ La instalación de SQL Server 2016 SP2 puede requerir el reinicio después de la
 Mejoras relacionadas con rendimiento y escala incluidas en SQL Server 2016 SP2.
 
 |Característica|Descripción|Más información|
-|   --- |   --- |   --- |
+|---|---|---|
 |Procedimiento de limpieza de bases de datos de distribución mejorado |   Las tablas de una base de datos de distribución demasiado grande provocaron la situación de bloqueo e interbloqueo. Un procedimiento de limpieza mejorado aspira a eliminar algunos de estos escenarios de bloqueo o interbloqueo. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |Limpieza de seguimiento de cambios    |   Rendimiento y eficacia mejorados de limpieza del seguimiento de cambios para tablas de Change Tracking.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |Uso del tiempo de espera de CPU para cancelar la solicitud de Resource Governor   |   Mejora el control de las solicitudes de consulta mediante la cancelación de la solicitud, si se alcanzan los umbrales de CPU para una solicitud. Este comportamiento se habilita en la marca de seguimiento 2422. |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
@@ -55,8 +55,8 @@ Mejoras relacionadas con rendimiento y escala incluidas en SQL Server 2016 SP2.
 
 Mejoras relacionadas con la compatibilidad y el diagnóstico incluidas en SQL Server 2016 SP2.
 
-|Característica |Descripción   |Más información   |
-|   --- |   --- |   --- |
+|Característica|Descripción|Más información|
+|---|---|---|
 |Compatibilidad total de DTC con las bases de datos de un grupo de disponibilidad    |   Las transacciones entre varias bases de datos que no forman parte de un grupo de disponibilidad no se admiten por el momento en SQL Server 2016. Con SQL Server 2016 SP2, introducimos la compatibilidad total de transacciones distribuidas con las bases de datos de grupos de disponibilidad.   |       |
 |Actualización a la columna is_encrypted de sys.databases para reflejar con precisión el estado de cifrado de TempDB |   El valor de la columna is_encryptedcolumn en sys.databases es 1 para TempDB, incluso después de desactivar el cifrado para todas las bases de datos de usuario y reiniciar SQL Server. El comportamiento esperado sería que el valor de este parámetro fuese 0, porque TempDB ya no está cifrado en esta situación. A partir de SQL Server 2016 SP2, sys.databases.is_encrypted ahora refleja con precisión el estado de cifrado de TempDB.  |       |
 |Nuevas opciones de DBCC CLONEDATABASE para generar una copia de seguridad y un clon comprobado   |   Con SQL Server 2016 SP2, DBCC CLONEDATABASE permite dos opciones nuevas: generar un clon comprobado o un clon de copia de seguridad. Cuando se crea una base de datos de clonación con la opción WITH VERIFY_CLONEDB, se crea un clon de base de datos coherente y se comprueba que Microsoft lo admitirá para su uso en el entorno de producción. Se ha introducido una propiedad nueva para validar si el clon es del tipo SELECT DATABASEPROPERTYEX("clone_database_name", "IsVerifiedClone") comprobado. Cuando se crea un clon con la opción BACKUP_CLONEDB, se genera una copia de seguridad en la misma carpeta en que está el archivo de datos para facilitar que los clientes muevan el clon a un servidor distinto o lo envíen a Soporte al cliente de Microsoft (CSS) para la solución de problemas.  |       |
@@ -106,7 +106,7 @@ Están disponibles las siguientes características en las ediciones Standard, We
 
 En la siguiente tabla se resumen las mejoras principales proporcionadas en SQL Server 2016 SP1.
 
-|Característica|Descripción|Para obtener más información|
+|Característica|Descripción|Más información|
 |---|---|---|
 |Inserción masiva en montones con TABLOCK automático en TF 715| La marca de seguimiento 715 permite el bloqueo de tabla para operaciones de carga masiva en un montón sin índices no agrupados.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/) (La migración de las cargas de trabajo de SAP a SQL Server ahora es 2,5 veces más rápida)|
 |CREATE OR ALTER|Implementación de objetos (por ejemplo, procedimientos almacenados, desencadenadores, funciones definidas por el usuario o vistas).|[Blog del Motor de base de datos de SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -123,7 +123,7 @@ En la siguiente tabla se resumen las mejoras principales proporcionadas en SQL S
 Además, tenga en cuenta las revisiones siguientes:
 - A partir de los comentarios de los DBA y de la comunidad de SQL, a partir de SQL 2016 SP1, lo mensajes de registro de Hekaton se han reducido al mínimo.
 - Revise las nuevas [marcas de seguimiento](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
-- Las versiones completas de las bases de datos de ejemplo de WideWorldImporters ya funcionan con las ediciones Standard y Express a partir de SQL Server 2016 SP1 y están disponibles en [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). En el ejemplo no es necesario efectuar ningún cambio. Las copias de seguridad de base de datos creadas en RTM para la edición Enterprise funcionan con las ediciones Standard y Express en SP1. 
+- Las versiones completas de las bases de datos de ejemplo de WideWorldImporters ya funcionan con las ediciones Standard y Express a partir de SQL Server 2016 SP1 y están disponibles en [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). En el ejemplo no es necesario efectuar ningún cambio. Las copias de seguridad de base de datos creadas en RTM para la edición Enterprise funcionan con las ediciones Standard y Express en SP1.
 
 La instalación de SQL Server 2016 SP1 puede requerir el reinicio después de la instalación. Como procedimiento recomendado, se aconseja planear y llevar a cabo un reinicio después de la instalación de SQL Server 2016 SP1.
 
@@ -132,22 +132,22 @@ La instalación de SQL Server 2016 SP1 puede requerir el reinicio después de la
 - [Descargar Service Pack 1 para Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 (SP1) publicado](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
 - [Información de lanzamiento de SQL Server 2016 Service Pack 1](https://support.microsoft.com/kb/3182545)
-- ![info_tip](../sql-server/media/info-tip.png) [Centro de actualización de SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) para obtener vínculos e información de todas las versiones compatibles, incluidos los Service Packs de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+- ![info_tip](../sql-server/media/info-tip.png) [Centro de actualización de SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) para obtener vínculos e información de todas las versiones compatibles, incluidos los Service Packs de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
 ##  <a name="bkmk_2016_ga"></a>SQL Server 2016 Release: Disponibilidad general
--   [Motor de base de datos (disponibilidad general)](#bkmk_ga_instalpatch) 
+-   [Motor de base de datos (disponibilidad general)](#bkmk_ga_instalpatch)
 -   [Stretch Database (disponibilidad general)](#bkmk_ga_stretch)
 -   [Almacén de consultas (disponibilidad general)](#bkmk_ga_query_store)
 -   [Documentación del producto (disponibilidad general)](#bkmk_ga_docs)
- 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-**Problema e impacto en el cliente:** Microsoft ha identificado un problema que afecta a los archivos binarios del Runtime de Microsoft VC++ 2013 que SQL Server 2016 instala como requisito previo. Hay disponible una actualización para corregir este problema. Si esta actualización de los archivos binarios en tiempo de ejecución de VC++ no se instala, puede que SQL Server 2016 experimente problemas de estabilidad en determinados escenarios. Antes de instalar SQL Server 2016, compruebe si el equipo necesita la revisión descrita en [KB 3164398](https://support.microsoft.com/kb/3164398). La revisión también está incluida en el [paquete de actualizaciones acumulativas 1 (CU1) para SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338). 
+
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA)
+**Problema e impacto en el cliente:** Microsoft ha identificado un problema que afecta a los archivos binarios del Runtime de Microsoft VC++ 2013 que SQL Server 2016 instala como requisito previo. Hay disponible una actualización para corregir este problema. Si esta actualización de los archivos binarios en tiempo de ejecución de VC++ no se instala, puede que SQL Server 2016 experimente problemas de estabilidad en determinados escenarios. Antes de instalar SQL Server 2016, compruebe si el equipo necesita la revisión descrita en [KB 3164398](https://support.microsoft.com/kb/3164398). La revisión también está incluida en el [paquete de actualizaciones acumulativas 1 (CU1) para SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338).
 
 **Solución:** Pruebe una de estas soluciones:
 
-- Instale [la actualización de Visual C++ 2013 y del paquete redistribuible de Visual C++ (KB 3138367)](https://support.microsoft.com/kb/3138367). KB es el método preferido. Puede instalarla antes o después de instalar SQL Server 2016. 
+- Instale [la actualización de Visual C++ 2013 y del paquete redistribuible de Visual C++ (KB 3138367)](https://support.microsoft.com/kb/3138367). KB es el método preferido. Puede instalarla antes o después de instalar SQL Server 2016.
 
     Si SQL Server 2016 ya está instalado, haga lo siguiente en este orden:
 
@@ -155,17 +155,17 @@ La instalación de SQL Server 2016 SP1 puede requerir el reinicio después de la
     1.  Detenga el servicio SQL Server de todas las instancias del motor de base de datos.
     1.  Instale **KB 3138367**.
     1.  Reinicie el equipo.
- 
 
- - Instale la  [actualización crítica para requisitos previos de MSVCRT de SQL Server 2016 (KB 3164398)](https://support.microsoft.com/kb/3164398).  
- 
-    Si se decanta por **KB 3164398**, puede instalar durante la instalación de SQL Server, a través de Microsoft Update o desde el Centro de descarga de Microsoft. 
+
+ - Instale la  [actualización crítica para requisitos previos de MSVCRT de SQL Server 2016 (KB 3164398)](https://support.microsoft.com/kb/3164398).
+
+    Si se decanta por **KB 3164398**, puede instalar durante la instalación de SQL Server, a través de Microsoft Update o desde el Centro de descarga de Microsoft.
 
     - **Durante la instalación de SQL Server 2016:** Si el equipo donde se ejecuta el programa de instalación de SQL Server tiene acceso a Internet, el programa de instalación de SQL Server busca la actualización como parte de la instalación global de SQL Server. Si acepta la actualización, el programa de instalación descarga y actualiza los archivos binarios durante la instalación.
 
-    - **Microsoft Update:** La actualización está disponible en Microsoft Update como una actualización crítica de SQL Server 2016 no de seguridad. Si la instalación se realiza a través de Microsoft Update (esto es, después de SQL Server 2016), es necesario reiniciar el servidor después de actualizar. 
+    - **Microsoft Update:** La actualización está disponible en Microsoft Update como una actualización crítica de SQL Server 2016 no de seguridad. Si la instalación se realiza a través de Microsoft Update (esto es, después de SQL Server 2016), es necesario reiniciar el servidor después de actualizar.
 
-    - **Centro de descarga:** Por último, la actualización está disponible en el Centro de descarga de Microsoft. Puede descargar el software correspondiente a la actualización e instalarlo en los servidores cuando tengan instalado SQL Server 2016. 
+    - **Centro de descarga:** Por último, la actualización está disponible en el Centro de descarga de Microsoft. Puede descargar el software correspondiente a la actualización e instalarlo en los servidores cuando tengan instalado SQL Server 2016.
 
 
 ### <a name="bkmk_ga_stretch"></a>Stretch Database
@@ -186,7 +186,8 @@ La instalación de SQL Server 2016 SP1 puede requerir el reinicio después de la
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Problema con la limpieza automática de los datos en las ediciones distintas de Enterprise y Developer
 
- **Problema e impacto en el cliente:** Error de la limpieza automática de datos en las ediciones distintas a Enterprise y Developer. Por lo tanto, si los datos no se purgan de forma manual, el espacio usado por el Almacén de consultas crece con el tiempo hasta que se alcanza el límite configurado. Si no se soluciona, este problema también rellena el espacio en disco asignado a los registros de errores, ya que cada intento de ejecutar una limpieza crea un archivo de volcado. El período de activación de limpieza depende de la frecuencia de la carga de trabajo, pero no es superior a 15 minutos.
+ **Problema e impacto en el cliente:** Error de la limpieza automática de datos en las ediciones distintas a Enterprise y Developer.
+Por lo tanto, si los datos no se purgan de forma manual, el espacio usado por el Almacén de consultas crece con el tiempo hasta que se alcanza el límite configurado. Si no se soluciona, este problema también rellena el espacio en disco asignado a los registros de errores, ya que cada intento de ejecutar una limpieza crea un archivo de volcado. El período de activación de limpieza depende de la frecuencia de la carga de trabajo, pero no es superior a 15 minutos.
 
  **Solución alternativa:** Si tiene previsto usar Almacén de consultas en ediciones distintas a Enterprise y Developer, tiene que desactivar expresamente las directivas de limpieza. Esto se puede hacer desde SQL Server Management Studio (página Propiedades de la base de datos) o a través de este script de Transact-SQL:
 
@@ -205,25 +206,25 @@ De igual modo, ejecute regularmente los siguientes procedimientos almacenados de
 - `sp_query_store_remove_query`
 
 
-###  <a name="bkmk_ga_docs"></a> Documentación del producto (disponibilidad general) 
- **Problema e impacto en el cliente:** Aún no hay disponible ninguna versión descargable de la documentación de SQL Server 2016. Cuando use el Administrador de bibliotecas de ayuda para intentar **instalar contenido desde Internet**, verá la documentación de SQL Server 2012 y SQL Server 2014, pero ninguna opción para la documentación de SQL Server 2016.    
-    
- **Solución alternativa:** Pruebe una de las siguientes soluciones:    
-    
- ![Administrar la configuración de la Ayuda de SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Administrar la configuración de la Ayuda de SQL Server")    
-    
--   **Elegir Ayuda en línea o local** para configurar la ayuda para "Quiero usar la Ayuda en línea".    
-    
--   **Instalar contenido desde Internet** y descargar el contenido de SQL Server 2014.    
+###  <a name="bkmk_ga_docs"></a> Documentación del producto (disponibilidad general)
+ **Problema e impacto en el cliente:** Aún no hay disponible ninguna versión descargable de la documentación de SQL Server 2016. Cuando use el Administrador de bibliotecas de ayuda para intentar **instalar contenido desde Internet**, verá la documentación de SQL Server 2012 y SQL Server 2014, pero ninguna opción para la documentación de SQL Server 2016.
 
- **Ayuda F1:** Por diseño, cuando se presiona F1 en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], la versión en línea del artículo de F1 Ayuda se muestra en el explorador. El problema es que aparece la ayuda basada en el explorador incluso si se ha configurado e instalado la ayuda local. 
+ **Solución alternativa:** Pruebe una de las siguientes soluciones:
 
-**Actualización de contenido:** En SQL Server Management Studio y Visual Studio, la aplicación del Visor de Ayuda puede bloquearse mientras se agrega la documentación. Para solucionar este problema, realice los siguientes pasos. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx)(El Visor de Ayuda de Visual Studio se bloquea).    
-    
+ ![Administrar la configuración de la Ayuda de SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Administrar la configuración de la Ayuda de SQL Server")
+
+-   **Elegir Ayuda en línea o local** para configurar la ayuda para "Quiero usar la Ayuda en línea".
+
+-   **Instalar contenido desde Internet** y descargar el contenido de SQL Server 2014.
+
+ **Ayuda F1:** Por diseño, cuando se presiona F1 en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], la versión en línea del artículo de F1 Ayuda se muestra en el explorador. El problema es que aparece la ayuda basada en el explorador incluso si se ha configurado e instalado la ayuda local.
+
+**Actualización de contenido:** En SQL Server Management Studio y Visual Studio, la aplicación del Visor de Ayuda puede bloquearse mientras se agrega la documentación. Para solucionar este problema, realice los siguientes pasos. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx)(El Visor de Ayuda de Visual Studio se bloquea).
+
 * Abra el archivo %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings en el Bloc de notas y cambie la fecha en el siguiente código a una fecha en el futuro.
 
 ```
-     Cache LastRefreshed="12/31/2017 00:00:00"    
+     Cache LastRefreshed="12/31/2017 00:00:00"
 ```
 
 ## <a name="additional-information"></a>Información adicional

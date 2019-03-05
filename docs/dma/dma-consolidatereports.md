@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956036"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305363"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluar una empresa y consolidar los informes de evaluación con DMA
 
@@ -71,6 +71,9 @@ Este inventario puede estar en uno de dos formas:
 - Tabla de SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Si usa un archivo CSV
+> [!IMPORTANT]
+> Asegúrese de que el archivo de inventario se guarda como archivo separados por comas (CSV).
+
 Cuando se usa un archivo csv para importar los datos, asegúrese de que hay solo dos columnas de datos - **nombre de instancia** y **nombre de base de datos**, y que las columnas no tienen filas de encabezado.
  
  ![contenido del archivo CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -153,10 +156,7 @@ También puede usar la secuencia de comandos LoadWarehouse para proporcionar las
 
 1. Abra la plantilla de DMA informes Power BI en Power BI Desktop.
 2. Escriba los detalles del servidor que señalan a su **DMAWarehouse** de base de datos y, a continuación, seleccione **carga**.
-
-    > [!IMPORTANT]
-    > No presione ENTRAR para aceptar los valores.
-
+   
       ![Carga plantilla de DMA informes Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    Después de que el informe actualice los datos de la **DMAWarehouse** base de datos, se le presentará un informe similar al siguiente.

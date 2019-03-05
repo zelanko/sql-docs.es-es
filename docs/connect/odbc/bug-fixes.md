@@ -13,16 +13,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3c0b2b86bee4cccd9e8074529362b7e9c8ff6b20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dba11c0130dc3b969a9fcec46b631abd7d62fe8
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725773"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956056"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de errores corregidos
 
 Esta página contiene una lista de errores corregidos en cada versión, empezando por [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.3 de controlador ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Pérdida de fijo TCP envío notificaciones evento identificador de memoria
+- Problema de redefinición fijo de enumeración _SQL_FILESTREAM_DESIRED_ACCESS en el archivo de encabezado msodbcsql.h
+- Fijo ACCESS_TOKEN que faltan y autenticación relacionados con la definición en el archivo de encabezado msodbcsql.h para Linux
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.2 del controlador de ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

@@ -5,17 +5,17 @@ description: En este artículo se describe las últimas actualizaciones y proble
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227217"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334752"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Notas de la versión para los clústeres de macrodatos de SQL Server 2019
 
@@ -39,7 +39,7 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 - [Enviar trabajos de Spark en clústeres SQL Server de datos grande en IntelliJ](spark-submit-job-intellij-tool-plugin.md).
 - [CLI comunes para la administración de clúster y la implementación de aplicación](big-data-cluster-create-apps.md).
 - [Extensión de VS Code para implementar aplicaciones en clústeres de SQL Server macrodatos](app-deployment-extension.md).
-- Nuevo parámetro de ordenación para el **mssqlctl** herramienta.
+- [Cambia a la **mssqlctl** herramienta de uso del comando](#mssqlctlctp23).
 - [Usar Sparklyr en clúster de SQL Server 2019 Big data](sparklyr-from-RStudio.md).
 - Monte almacenamiento compatible con HDFS externo en el clúster de macrodatos con [HDFS niveles](hdfs-tiering.md).
 - Nueva experiencia de conexión unificado para la [instancia principal de SQL Server y la puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md).
@@ -74,6 +74,18 @@ Las secciones siguientes proporcionan los problemas conocidos para los clústere
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- El **mssqlctl** herramienta cambió de un comando verbo-nombre pedidos a un pedido de nombre-verbo. Por ejemplo, `mssqlctl create cluster` es ahora `mssqlctl cluster create`.
+
+- El `--name` parámetro ahora es necesario al crear un clúster con `mssqlctl cluster create`.
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- Para obtener información importante sobre cómo actualizar a la versión más reciente de los clústeres de macrodatos y **mssqlctl**, consulte [actualizar a una nueva versión](deployment-guidance.md#upgrade).
 
 #### <a name="external-tables"></a>Tablas externas
 

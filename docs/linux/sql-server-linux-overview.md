@@ -59,7 +59,7 @@ Para empezar, instale a SQL Server en Linux mediante uno de los siguientes inici
 
 ## <a name="connect"></a>Conectar
 
-Después de la instalación, conéctese a la instancia de SQL Server en su equipo Linux. Puede conectarse localmente o de forma remota y con una variedad de herramientas y controladores. Los tutoriales muestran cómo usar el [sqlcmd](sql-server-linux-setup-tools.md) herramienta de línea de comandos. Otras herramientas incluyen lo siguiente:
+Después de la instalación, conéctese a la instancia de SQL Server en su equipo Linux. Puede conectarse de forma local o remota y con una variedad de herramientas y controladores. En los tutoriales de inicio rápido se muestra cómo usar la herramienta de línea de comandos [sqlcmd](sql-server-linux-setup-tools.md). Entre las otras herramientas se incluyen las siguientes:
 
 | Herramienta | Tutorial |
 |-----|-----|

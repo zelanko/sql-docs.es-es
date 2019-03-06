@@ -1,7 +1,7 @@
 ---
 title: Constantes (controladores de Microsoft para PHP para SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94be5540c0fedcf3449b8ac41398ab3f08abbd32
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409532"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744455"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,6 +68,11 @@ Puede seleccionar la ejecución de la consulta directa o la ejecución de la ins
 ### <a name="handling-numeric-fetches"></a>Control numérico de captura
 El atributo PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE puede utilizarse para controlar numéricos obtenciones de columnas con tipos SQL numéricos (bit, integer, smallint, tinyint, float y real). Cuando PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE se establece en true, los resultados de una columna de enteros se representan como ints, mientras que flota de SQL y reals se representan como valores de punto flotante. Este atributo se puede establecer con [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
+Puede modificar el comportamiento predeterminado de formato decimal con los atributos PDO::SQLSRV_ATTR_FORMAT_DECIMALS y PDO::SQLSRV_ATTR_DECIMAL_PLACES. El comportamiento de estos atributos es idéntico de las opciones correspondientes en el lado SQLSRV (**FormatDecimals** y **DecimalPlaces**), salvo que no se admiten parámetros de salida para el formato. Estos atributos se pueden establecer en el nivel de la conexión o la instrucción con [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) o [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), pero cualquier atributo de instrucción anulará las correspondientes atributo de conexión. Para obtener más información, consulte [dar formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+
+### <a name="handling-date-and-time-fetches"></a>Control de las recuperaciones de fecha y hora
+
+El PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE especifica si se debe recuperar tipos de fecha y hora como [DateTime PHP](http://php.net/manual/en/class.datetime.php) objetos. Si se deja en false, el comportamiento predeterminado es devolverlos como cadenas. Este atributo puede establecerse en el nivel de la conexión o la instrucción con [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) o [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), pero el atributo de instrucción anulará las correspondientes atributo de conexión. Para obtener más información, consulte [Cómo: recuperar la fecha y hora tipos como objetos de fecha y hora de PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 En las siguientes secciones se incluyen las constantes que utiliza el controlador SQLSRV.  
@@ -139,8 +144,8 @@ En la siguiente tabla se muestran las constantes que se utilizan para describir 
 |SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|DATETIME|  
 |SQLSRV_PHPTYPE_FLOAT|float|  
-|SQLSRV_PHPTYPE_STREAM (codificación $<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING (codificación $<sup>1</sup>)|String|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** y **SQLSRV_PHPTYPE_STRING** aceptan un parámetro que especifique la codificación de la secuencia. En la siguiente tabla se indican las constantes de SQLSRV que constituyen parámetros aceptables y una descripción de la codificación correspondiente.  
   
@@ -177,7 +182,7 @@ En la siguiente tabla se muestran las constantes que se utilizan para describir 
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
-|SQLSRV_SQLTYPE_NUMERIC|numérico<sup>5</sup>|
+|SQLSRV_SQLTYPE_NUMERIC|numeric<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  
@@ -264,6 +269,6 @@ Las siguientes constantes especifican qué fila se debe seleccionar en el conjun
   
 Para obtener información sobre cómo usar estas constantes, consulte [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

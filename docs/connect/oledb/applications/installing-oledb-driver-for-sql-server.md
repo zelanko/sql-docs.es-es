@@ -2,7 +2,7 @@
 title: Instalación del controlador OLE DB para SQL Server | Microsoft Docs
 description: Instalar y desinstalar el controlador de OLE DB para SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7dc75f03ac806c50008f7b536e7a1f0ed037d496
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602225"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744385"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Instalación del controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ El controlador OLE DB para los archivos de SQL Server (msoledbsql.dll, msoledbsq
 > [!NOTE]  
 > Todas las configuraciones del Registro adecuados para el controlador OLE DB para SQL Server se realizan como parte del proceso de instalación.  
 
-El controlador OLE DB para SQL Server encabezado y biblioteca de archivos (msoledbsql.h y msoledbsql.lib) se instalan en `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`. Además, el x64 msoledbsql.msi instala los mismos archivos de `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`.  
+El controlador OLE DB para SQL Server encabezado y biblioteca de archivos (msoledbsql.h y msoledbsql.lib) se instalan en `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`. Además, el x64 msoledbsql.msi instala los mismos archivos de `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`.  
 
 Puede distribuir el controlador OLE DB para SQL Server a través de msoledbsql.msi. Es posible que deba instalar el controlador de OLE DB para SQL Server al implementar una aplicación. Una manera de instalar varios paquetes en lo que al usuario le parece ser una instalación única es usar tecnología de encadenador y arranque. Para obtener más información, vea [Authoring a Custom Bootstrapper Package for Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) (Crear un paquete de arranque personalizado para Visual Studio 2005) y [Adding Custom Prerequisites](https://go.microsoft.com/fwlink/?LinkId=115668) (Agregar requisitos previos personalizados).  
   
@@ -55,7 +55,7 @@ Cuando se invoca a msoledbsql.msi, solo los componentes cliente se instalan de f
 ## <a name="silent-install"></a>Instalación silenciosa  
  Si usa las opciones /passive, /qn, /qb o /qr con msiexec, también debe especificar IACCEPTMSOLEDBSQLLICENSETERMS=YES para indicar explícitamente que acepta los términos de la licencia de usuario final. Esta opción se debe especificar con todas las letras mayúsculas.  
 
-## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>Instalar el controlador OLE DB para SQL Server como una dependencia  
+## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>Instalar el controlador de OLE DB para SQL Server como una dependencia  
 Es importante no desinstalar el controlador OLE DB para SQL Server hasta que se desinstalen todas las aplicaciones dependientes. Para proporcionar a los usuarios con una advertencia de que la aplicación depende de controlador de OLE DB para SQL Server, use la opción de instalación APPGUID en su MSI, como se indica a continuación:  
 
  `msiexec /i msoledbsql.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
@@ -63,5 +63,5 @@ Es importante no desinstalar el controlador OLE DB para SQL Server hasta que se 
 El valor pasado a APPGUID es su código de producto específico. Se debe crear un código de producto al usar Microsoft Installer para empaquetar su programa de instalación de la aplicación.
 La opción APPGUID requiere ejecutando el programa de instalación desde un símbolo del sistema con privilegios elevados.
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Compilación de aplicaciones con el controlador OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

@@ -1,7 +1,7 @@
 ---
-title: Recuperación del tipo de fecha y hora como cadenas con el controlador SQLSRV | Microsoft Docs
+title: Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,159 +13,186 @@ ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29e36f2246556da7a43c3b8335f7a4e3479ae63c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b83978f35dadff86e231b93b836c7ffdd1e0f08
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686993"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676053"
 ---
-# <a name="how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver"></a>Cómo recuperar el tipo de fecha y hora como cadenas con el controlador SQLSRV
+# <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Esta característica se agregó en la versión 1.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] y solo es válida cuando se utiliza el controlador SQLSRV para dichos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. No se debe utilizar la opción de conexión ReturnDatesAsStrings con el controlador PDO_SQLSRV.  
-  
-Puede recuperar tipos de fecha y hora (**datetime**, **date**, **time**, **datetime2** y **datetimeoffset**) como cadenas especificando una opción en la cadena de conexión.  
-  
-### <a name="to-retrieve-date-and-time-types-as-strings"></a>Pasos para recuperar los tipos de fecha y hora como cadenas  
-  
--   Utilice la opción de conexión siguiente:  
-  
-    ```  
-    'ReturnDatesAsStrings'=>true  
-    ```  
-  
-    El valor predeterminado es **False**, lo que significa que los tipos **datetime**, **Date**, **Time**, **DateTime2**y **DateTimeOffset** se devolverán como tipos de datos PHP **Datetime** .  
-  
-## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se muestra la sintaxis que especifica cómo recuperar tipos de fecha y hora como cadenas.  
-  
-```  
-<?php  
-$serverName = "MyServer";  
-$connectionInfo = array( "Database"=>"AdventureWorks", 'ReturnDatesAsStrings '=> true);  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
-   echo "Could not connect.\n";  
-   die( print_r( sqlsrv_errors(), true));  
-}  
-  
-sqlsrv_close( $conn);  
-?>  
-```  
-  
-## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se muestra que se pueden recuperar las fechas como cadenas especificando UTF-8 al recuperar dichas cadenas, incluso cuando la conexión se realiza con `"ReturnDatesAsStrings" => false`.  
-  
-```  
-<?php  
-$serverName = "MyServer";  
-$connectionInfo = array( "Database"=>"AdventureWorks", "ReturnDatesAsStrings" => false);  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false ) {  
-   echo "Could not connect.\n";  
-   die( print_r( sqlsrv_errors(), true));  
-}  
-  
-$tsql = "SELECT VersionDate FROM AWBuildVersion";  
-  
-$stmt = sqlsrv_query( $conn, $tsql);  
-  
-if ( $stmt === false ) {  
-   echo "Error in statement preparation/execution.\n";  
-   die( print_r( sqlsrv_errors(), true));  
-}  
-  
-sqlsrv_fetch( $stmt );  
-  
-// retrieve date as string  
-$date = sqlsrv_get_field( $stmt, 0, SQLSRV_PHPTYPE_STRING("UTF-8"));  
-  
-if( $date === false ) {  
-   die( print_r( sqlsrv_errors(), true ));  
-}  
-  
-echo $date;  
-  
-sqlsrv_close( $conn);  
-?>  
-```  
-  
-## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se muestra cómo recuperar las fechas como cadenas especificando UTF-8 y `"ReturnDatesAsStrings" => true` en la cadena de conexión.  
-  
-```  
-<?php  
-$serverName = "MyServer";  
-$connectionInfo = array( "Database"=>"AdventureWorks", 'ReturnDatesAsStrings'=> true, "CharacterSet" => 'utf-8' );  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false ) {  
-   echo "Could not connect.\n";  
-   die( print_r( sqlsrv_errors(), true));  
-}  
-  
-$tsql = "SELECT VersionDate FROM AWBuildVersion";  
-  
-$stmt = sqlsrv_query( $conn, $tsql);  
-  
-if ( $stmt === false ) {  
-   echo "Error in statement preparation/execution.\n";  
-   die( print_r( sqlsrv_errors(), true));  
-}  
-  
-sqlsrv_fetch( $stmt );  
-  
-// retrieve date as string  
-$date = sqlsrv_get_field( $stmt, 0 );  
-  
-if ( $date === false ) {  
-   die( print_r( sqlsrv_errors(), true ));  
-}  
-  
-echo $date;  
-sqlsrv_close( $conn);  
-?>  
-```  
-  
-## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se muestra cómo recuperar la fecha como un tipo de datos PHP. `'ReturnDatesAsStrings'=> false` está activado.  
-  
-```  
-<?php  
-$serverName = "MyServer";  
-$connectionInfo = array( "Database"=>"AdventureWorks");  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false ) {  
-   echo "Could not connect.\n";  
-   die( print_r( sqlsrv_errors(), true));  
-}  
-  
-$tsql = "SELECT VersionDate FROM AWBuildVersion";  
-  
-$stmt = sqlsrv_query( $conn, $tsql);  
-  
-if ( $stmt === false ) {  
-   echo "Error in statement preparation/execution.\n";  
-   die( print_r( sqlsrv_errors(), true));  
-}  
-  
-sqlsrv_fetch( $stmt );  
-  
-// retrieve date as string  
-$date = sqlsrv_get_field( $stmt, 0 );  
-  
-if ( $date === false ) {  
-   die( print_r( sqlsrv_errors(), true ));  
-}  
-  
-$date_string = date_format( $date, 'jS, F Y' );  
-echo "Date = $date_string\n";  
-  
-sqlsrv_close( $conn);  
-?>  
-```  
-  
-## <a name="see-also"></a>Ver también  
-[Recuperación de datos](../../connect/php/retrieving-data.md)  
-  
+Cuando se usa el controlador SQLSRV para el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], puede recuperar tipos de fecha y hora (**smalldatetime**, **datetime**, **fecha**, **tiempo**, **datetime2**, y **datetimeoffset**) como cadenas especificando la opción siguiente en la cadena de conexión o en el nivel de instrucción:
+
+```
+'ReturnDatesAsStrings'=>true
+```
+
+El valor predeterminado es **false**, lo que significa que los tipos **smalldatetime**, **datetime**, **date**, **time**, **datetime2** y **datetimeoffset** se devolverán como tipos de objetos [PHP DateTime](http://php.net/manual/en/class.datetime.php). Si esta opción se establece en el nivel de instrucción, invalida la configuración del nivel de conexión.
+
+El controlador PDO_SQLSRV devuelve tipos de fecha y hora como cadenas de forma predeterminada. Para recuperarlos como objetos DateTime PHP, consulte [Cómo: recuperar tipos de fecha y hora como objetos de fecha y hora de PHP mediante el PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+
+## <a name="example"></a>Ejemplo
+En el ejemplo siguiente se muestra la sintaxis que especifica cómo recuperar tipos de fecha y hora como cadenas.
+
+```php
+<?php
+$serverName = "MyServer";
+$connectionInfo = array("Database"=>"AdventureWorks", 'ReturnDatesAsStrings '=> true);
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+if ($conn === false) {
+   echo "Could not connect.\n";
+   die(print_r(sqlsrv_errors(), true));
+}
+
+sqlsrv_close($conn);
+?>
+```
+
+## <a name="example"></a>Ejemplo
+En el ejemplo siguiente se muestra que se pueden recuperar las fechas como cadenas especificando UTF-8 al recuperar dichas cadenas, incluso cuando la conexión se realiza con `"ReturnDatesAsStrings" => false`.
+
+```php
+<?php
+$serverName = "MyServer";
+$connectionInfo = array("Database"=>"AdventureWorks", "ReturnDatesAsStrings" => false);
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+if ($conn === false) {
+   echo "Could not connect.\n";
+   die(print_r(sqlsrv_errors(), true));
+}
+
+$tsql = "SELECT VersionDate FROM AWBuildVersion";
+
+$stmt = sqlsrv_query($conn, $tsql);
+
+if ($stmt === false) {
+   echo "Error in statement preparation/execution.\n";
+   die(print_r(sqlsrv_errors(), true));
+}
+
+sqlsrv_fetch($stmt);
+
+// retrieve date as string
+$date = sqlsrv_get_field($stmt, 0, SQLSRV_PHPTYPE_STRING("UTF-8"));
+
+if ($date === false) {
+   die(print_r(sqlsrv_errors(), true));
+}
+
+echo $date;
+
+sqlsrv_close($conn);
+?>
+```
+
+## <a name="example"></a>Ejemplo
+En el ejemplo siguiente se muestra cómo recuperar las fechas como cadenas especificando UTF-8 y `"ReturnDatesAsStrings" => true` en la cadena de conexión.
+
+```php
+<?php
+$serverName = "MyServer";
+$connectionInfo = array("Database"=>"AdventureWorks", 'ReturnDatesAsStrings'=> true, "CharacterSet" => 'utf-8');
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+if ($conn === false) {
+   echo "Could not connect.\n";
+   die(print_r(sqlsrv_errors(), true));
+}
+
+$tsql = "SELECT VersionDate FROM AWBuildVersion";
+
+$stmt = sqlsrv_query($conn, $tsql);
+
+if ($stmt === false) {
+   echo "Error in statement preparation/execution.\n";
+   die(print_r(sqlsrv_errors(), true));
+}
+
+sqlsrv_fetch($stmt);
+
+// retrieve date as string
+$date = sqlsrv_get_field($stmt, 0);
+
+if ($date === false) {
+   die(print_r(sqlsrv_errors(), true));
+}
+
+echo $date;
+sqlsrv_close($conn);
+?>
+```
+
+## <a name="example"></a>Ejemplo
+En el ejemplo siguiente se muestra cómo recuperar la fecha como un tipo de datos PHP. `'ReturnDatesAsStrings'=> false` está activado.
+
+```php
+<?php
+$serverName = "MyServer";
+$connectionInfo = array("Database"=>"AdventureWorks");
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+if ($conn === false) {
+   echo "Could not connect.\n";
+   die(print_r(sqlsrv_errors(), true));
+}
+
+$tsql = "SELECT VersionDate FROM AWBuildVersion";
+
+$stmt = sqlsrv_query($conn, $tsql);
+
+if ($stmt === false) {
+   echo "Error in statement preparation/execution.\n";
+   die(print_r(sqlsrv_errors(), true));
+}
+
+sqlsrv_fetch($stmt);
+
+// retrieve date as a DateTime object, then convert to string using PHP's date_format function
+$date = sqlsrv_get_field($stmt, 0);
+
+if ($date === false) {
+   die(print_r(sqlsrv_errors(), true));
+}
+
+$date_string = date_format($date, 'jS, F Y');
+echo "Date = $date_string\n";
+
+sqlsrv_close($conn);
+?>
+```
+
+## <a name="example"></a>Ejemplo
+La opción ReturnDatesAsStrings en el nivel de instrucción invalida la opción de conexión correspondiente.
+
+```php
+<?php
+$serverName = 'MyServer';
+$connectionInfo = array('Database' => 'MyDatabase', 'ReturnDatesAsStrings' => false);
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+if ($conn === false) {
+   echo "Could not connect.\n";
+   die(print_r(sqlsrv_errors(), true));
+}
+
+$tableName = 'MyTable';
+$options = array('ReturnDatesAsStrings' => true);
+$query = "SELECT DateTimeCol FROM $tableName";
+$stmt = sqlsrv_prepare($conn, $query, array(), $options);
+if ($stmt === false) {
+   echo "Error in statement preparation/execution.\n";
+   die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_execute($stmt);
+
+// Expect the fetched value to be a string
+$field = sqlsrv_get_field($stmt, 0);
+echo $field . PHP_EOL;
+
+sqlsrv_close($conn);
+?>
+```
+
+## <a name="see-also"></a>Consulte también
+[Recuperación de datos](../../connect/php/retrieving-data.md)
+
+[Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)

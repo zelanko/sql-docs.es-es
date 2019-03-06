@@ -2,7 +2,7 @@
 title: Compilación de aplicaciones con el controlador OLE DB para SQL Server | Microsoft Docs
 description: Compilación de aplicaciones con el controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8be648639f3b345f6d6eb16c6f51c58064d9270a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2e9b88c12a4abb25fed87c8f273a9949b85c4ee
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691795"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744415"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Compilación de aplicaciones con el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47691795"
  [Uso del controlador OLE DB para los archivos de encabezado y biblioteca de SQL Server](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
  Describe cómo usar el controlador OLE DB para SQL Server archivos de encabezado y biblioteca dentro de una aplicación.  
 
- [Actualizar una aplicación al controlador OLE DB para SQL Server de MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
+ [Actualización de una aplicación al controlador OLE DB para SQL Server desde MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
  Describe las diferencias entre el controlador OLE DB para SQL Server y MDAC y los problemas que deben tenerse en cuenta al actualizar de MDAC a controlador de OLE DB para SQL Server.  
 
  [Actualizar una aplicación desde SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
@@ -55,6 +55,6 @@ ms.locfileid: "47691795"
  [Directivas de compatibilidad del controlador OLE DB para SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  Describe cómo los distintos componentes de acceso a datos pueden usarse con diferentes versiones del controlador de OLE DB para SQL Server.  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Controlador OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [Temas de procedimientos de OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

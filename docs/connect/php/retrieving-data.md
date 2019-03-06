@@ -11,12 +11,12 @@ ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6ac8e52e46108e88693a96d587e3af2b79e4ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbc6d4e971a810d581b8ace2de8fd7882171c460
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833113"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676063"
 ---
 # <a name="retrieving-data"></a>Recuperación de datos
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,13 +74,16 @@ Puede ver cuántas filas se encuentran en un conjunto de resultados si especific
 |---------|---------------|  
 |[Recuperación de datos como una cadena](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Proporciona una visión general de cómo transmitir datos del servidor y proporciona vínculos a casos de uso específicos.|  
 |[Uso de parámetros direccionales](../../connect/php/using-directional-parameters.md)|Describe cómo usar parámetros direccionales cuando se llama a un procedimiento almacenado.|  
-|[Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Muestra cómo crear un conjunto de resultados con filas a las que acceder en cualquier orden cuando se utiliza el controlador SQLSRV.|  
-|[Cómo recuperar el tipo de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Describe cómo recuperar tipos de fecha y hora como cadenas.|  
+|[Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Muestra cómo crear un conjunto de resultados con filas que se pueden acceder en cualquier orden.|  
+|[Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Describe cómo recuperar los tipos de fecha y hora como cadenas con el controlador SQLSRV.|  
+|[Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Describe cómo recuperar tipos de fecha y hora como objetos mediante el controlador PDO_SQLSRV.|  
+|[Cadenas con formato decimal con el controlador SQLSRV](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Muestra cómo dar formato a valores decimales o dinero con el controlador SQLSRV.|  
+|[Cadenas con formato decimal con el controlador PDO_SQLSRV](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Muestra cómo dar formato a valores decimales o dinero utilizando el controlador PDO_SQLSRV.|  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 [Cómo especificar tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Recuperación de datos](../../connect/php/retrieving-data.md)  

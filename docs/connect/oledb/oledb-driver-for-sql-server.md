@@ -2,7 +2,7 @@
 title: Controlador Microsoft OLE DB para SQL Server | Microsoft Docs
 description: Controlador Microsoft OLE DB para SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: befcc84662b2273f81faaded76045d4d44b03e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00be1d87dbc8ba071403722b7e575e5ab1c7a215
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687873"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744575"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Controlador Microsoft OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ El nuevo proveedor de OLE DB se llama el controlador OLE DB de Microsoft para SQ
 [Casos de uso del controlador OLE DB para SQL Server](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  Describe la forma en que el controlador OLE DB para SQL Server se ajusta a las tecnologías de acceso a datos de Microsoft, sus semejanzas y diferencias con Windows DAC y ADO.NET, y, además, proporciona indicaciones para decidir qué tecnología de acceso a datos se va a usar.  
   
- [Controlador OLE DB para las características de SQL Server](../oledb/features/oledb-driver-for-sql-server-features.md )  
+ [Características del controlador OLE DB para SQL Server](../oledb/features/oledb-driver-for-sql-server-features.md )  
  Describe las características admitidas por el controlador OLE DB para SQL Server.  
   
  [Compilación de aplicaciones con el controlador OLE DB para SQL Server](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
@@ -86,8 +86,8 @@ El nuevo proveedor de OLE DB se llama el controlador OLE DB de Microsoft para SQ
  Proporciona recursos adicionales sobre el controlador de OLE DB para SQL Server, incluidos vínculos a recursos externos y obtención de más ayuda.  
   
   
-## <a name="see-also"></a>Ver también  
- [Actualizar una aplicación desde SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
+## <a name="see-also"></a>Vea también  
+ [Actualización de una aplicación desde SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
  [Temas de procedimientos de OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

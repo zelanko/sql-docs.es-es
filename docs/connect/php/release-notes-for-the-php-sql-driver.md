@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,34 @@ ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22e88aef13c86179dc4cea71ed1003eadfd8661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2e7377b1072c30e5c5ef038b93a88f0c222260
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624063"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744355"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notas de la versión de los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Esta página describe las nuevas funciones de cada versión de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## <a name="whats-new-in-version-56"></a>Novedades de la versión 5.6
+
+- Compatibilidad con PHP 7.3
+- Soporte técnico para Microsoft ODBC Driver 17.3 en todas las plataformas
+- Compatibilidad con macOS Mojave (requiere ODBC Driver 17.3 o superior)
+- Compatibilidad con 18.10 Ubuntu y Suse Linux 15 (ambos requieren ODBC Driver 17.3 o superior)
+- Quita la compatibilidad para PHP 7.0
+- Quita la compatibilidad con Ubuntu 17.10 de Linux y macOS El capitán
+- Compatibilidad con Token de acceso de Azure AD (en Linux y macOS, requiere el controlador ODBC 17.2 + y unixODBC 2.3.6+)
+- Compatibilidad con la autenticación con Azure AD mediante la identidad administrada para Azure Resources (requiere el controlador ODBC 17.3 +)
+- Nuevas funcionalidades de captura:
+  - Nueva marca PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE para pdo_sqlsrv devolver la fecha y hora como objetos
+  - Agregar opción ReturnDatesAsStrings a nivel de instrucción de sqlsrv
+  - Nuevas opciones de niveles de conexión y la instrucción para que ambos controladores para dar formato a valores decimales en los resultados recuperados
+- Compatibilidad con la compilación estática de controladores si los usuarios deciden construido a partir de código fuente
+- Mejorar el rendimiento, almacenamiento en caché los metadatos de capturas y acelerar las conversiones de cadena Unicode
 
 ## <a name="whats-new-in-version-53"></a>Novedades de la versión 5.3
 
@@ -84,12 +101,12 @@ Esta página describe las nuevas funciones de cada versión de la [!INCLUDE[ssDr
 - Se agrega la opción de conexión AttachDBFileName. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md).  
 - Compatibilidad con LocalDB, que se agregó en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Para obtener más información, consulte [compatibilidad con LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
 - Se agrega la opción de conexión AttachDBFileName. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md).  
-- Admite las características de alta disponibilidad y recuperación ante desastres. Para obtener más información, consulte [compatibilidad con alta disponibilidad, recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
+- Admite las características de alta disponibilidad y recuperación ante desastres. Para más información, consulte [Compatibilidad con alta disponibilidad y recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
 - Admite cursores de cliente (almacenamiento en caché de un conjunto de resultados en memoria). Para obtener más información, vea [Cursor Types &#40;SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador SQLSRV&#41;)](../../connect/php/cursor-types-sqlsrv-driver.md) y [Cursor Types &#40;PDO_SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador PDO_SQLSRV&#41;)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 - Se ha agregado el atributo PDO::ATTR_EMULATE_PREPARES. Para obtener más información, vea [PDO::prepare](../../connect/php/pdo-prepare.md).  
 
 ## <a name="whats-new-in-version-20"></a>Novedades de la versión 2.0  
 En la versión 2.0, se ha agregado la compatibilidad con el controlador PDO_SQLSRV. Para obtener más información, vea [Referencia del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md).  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Información general de los controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)

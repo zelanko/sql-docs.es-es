@@ -21,7 +21,7 @@ ms.locfileid: "56464771"
 # <a name="system-requirements-installation-and-driver-files"></a>Requisitos del sistema, instalación y archivos del controlador
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite conexiones a SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]y [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite conexiones a SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]y [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows puede instalarse en un equipo que también tenga una o varias versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -99,10 +99,10 @@ Por ejemplo, cuando se compila una aplicación ODBC con `msodbcsql11.lib` y `mso
 |---------------|-----------------|  
 |msodbcsql17.dll o <br> msodbcsql13.dll o <br> msodbcsql11.dll|El archivo de biblioteca de vínculos dinámicos (DLL) que contiene toda la funcionalidad del controlador. Este archivo está instalado en % SYSTEMROOT%\System32.|  
 |msodbcdiag17.dll o <br> msodbcdiag13.dll o <br> msodbcdiag11.dll|El archivo de biblioteca de vínculos dinámicos (DLL) que contiene la interfaz de diagnósticos (seguimiento) del controlador. Este archivo está instalado en % SYSTEMROOT%\System32.|
-|msodbcsqlr17.rll or <br> msodbcsqlr13.rll o <br> msodbcsqlr11.rll|El archivo de recursos asociado de la biblioteca de controladores. Este archivo está instalado en % SYSTEMROOT%\System32\1033.| 
+|msodbcsqlr17.rll o <br> msodbcsqlr13.rll o <br> msodbcsqlr11.rll|El archivo de recursos asociado de la biblioteca de controladores. Este archivo está instalado en % SYSTEMROOT%\System32\1033.| 
 |s13ch_msodbcsql.chm o <br> s11ch_msodbcsql.chm |El archivo de Ayuda del Asistente para orígenes de datos que documenta cómo crear un origen de datos para el controlador. Este archivo se instala en %SYSTEMROOT%\System32\1033 <br /> <br /> **Nota:** no hay ningún archivo chm para ODBC Driver 17. |  
 |msodbcsql.h|El archivo de encabezado que contiene todas las definiciones nuevas necesarias para utilizar el controlador.<br /><br /> **Nota:**  No se puede hacer referencia a msodbcsql.h y odbcss.h en el mismo programa.<br /><br /> msodbcsql.h para ODBC Driver 17 o 13 está instalado en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK. <br /> msodbcsql.h para ODBC Driver 11 está instalado en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 
-|msodbcsql17.lib or <br> msodbcsql13.lib o <br> msodbcsql11.lib|El archivo de biblioteca necesario para llamar a las funciones de la utilidad **bcp** que forman parte del controlador.<br /><br /> **Nota:** Si hace referencia a este archivo de biblioteca en el programa, asegúrese de que se encuentra en la ruta de acceso de su sistema y en la de los usuarios que usen la aplicación.<br /><br /> msodbcsql17.lib o msodbcsql13.lib está instalado en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK.<br /> msodbcsql11.lib está instalado en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.|
+|msodbcsql17.lib o <br> msodbcsql13.lib o <br> msodbcsql11.lib|El archivo de biblioteca necesario para llamar a las funciones de la utilidad **bcp** que forman parte del controlador.<br /><br /> **Nota:** Si hace referencia a este archivo de biblioteca en el programa, asegúrese de que se encuentra en la ruta de acceso de su sistema y en la de los usuarios que usen la aplicación.<br /><br /> msodbcsql17.lib o msodbcsql13.lib está instalado en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK.<br /> msodbcsql11.lib está instalado en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.|
 
   
 ## <a name="see-also"></a>Consulte también  

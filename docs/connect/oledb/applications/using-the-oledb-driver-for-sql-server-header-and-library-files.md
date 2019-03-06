@@ -2,7 +2,7 @@
 title: Uso del controlador OLE DB para los archivos de encabezado y biblioteca de SQL Server | Microsoft Docs
 description: Uso del controlador OLE DB para los archivos de encabezado y biblioteca de SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9cd6a50bec611b7068b3f79f3867f9e2a6242a70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 528f55ba4a95da2f7e68de47ad25f88eae3af668
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816043"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744425"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Uso del controlador OLE DB para los archivos de encabezado y biblioteca de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "47816043"
   
  El controlador OLE DB para SQL Server archivos de encabezado y biblioteca se instalan en la siguiente ubicación:  
   
- *% PROGRAM FILES %* \Microsoft SQL Server\Client SDK\OLEDB\181\SDK  
+ *% PROGRAM FILES %* \Microsoft SQL Server\Client SDK\OLEDB\182\SDK  
   
  El controlador OLE DB para el archivo de encabezado de SQL Server (msoledbsql.h) puede utilizarse para agregar el controlador de OLE DB para la funcionalidad de acceso de datos de SQL Server a las aplicaciones personalizadas. El archivo de encabezado del controlador de OLE DB para SQL Server contiene todas las definiciones, atributos, propiedades e interfaces necesarios para aprovechar las nuevas características introducidas en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Además del controlador OLE DB para el archivo de encabezado de SQL Server, también hay un archivo de biblioteca msoledbsql.lib que es la biblioteca de exportación para [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) funcionalidad.  
+ Además del controlador OLE DB para el archivo de encabezado de SQL Server, también hay un archivo de biblioteca msoledbsql.lib, que es la biblioteca de exportación para [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) funcionalidad.  
   
  El archivo de encabezado del controlador de OLE DB para SQL Server es compatible con las versiones anteriores del archivo de encabezado sqloledb.h utilizados con Microsoft Data Access Components (MDAC), pero no contiene CLSID para SQLOLEDB (el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluido con MDAC) ni los símbolos de la funcionalidad XML (que el controlador de OLE DB para SQL Server no admite).    
   
- Las aplicaciones OLE DB que utiliza el controlador OLE DB para SQL Server solo se necesitan hacer referencia a msoledbsql.h. Si una aplicación utiliza MDAC (SQLOLEDB) y el proveedor OLE DB del controlador de OLE DB para SQL Server, puede hacer referencia a sqloledb.h y a msoledbsql.h, pero la referencia a sqloledb.h debe aparecer en primer lugar.  
+ Las aplicaciones OLE DB que usan el controlador OLE DB para SQL Server solo se necesitan hacer referencia a msoledbsql.h. Si una aplicación utiliza MDAC (SQLOLEDB) y el proveedor OLE DB del controlador de OLE DB para SQL Server, puede hacer referencia a sqloledb.h y a msoledbsql.h, pero la referencia a sqloledb.h debe aparecer en primer lugar.  
   
-## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>Uso del controlador OLE DB para el archivo de encabezado SQL Server  
- Para usar el controlador OLE DB para el archivo de encabezado de SQL Server, debe usar un **incluyen** instrucción dentro de su código de programación de C o C++. Las secciones siguientes describen cómo realizar esta aplicaciones OLE DB.  
+## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>Usar el controlador OLE DB para el archivo de encabezado de SQL Server  
+ Para usar el controlador OLE DB para el archivo de encabezado de SQL Server, debe usar un **incluyen** instrucción dentro de su código de programación de C o C++. Las secciones siguientes describen cómo hacerlo en las aplicaciones OLE DB.  
   
 > [!NOTE]  
 >  El controlador OLE DB para los archivos de encabezado y biblioteca de SQL Server sólo puede ser compilado con C++ de Visual Studio 2012 o posterior.  
@@ -80,7 +80,7 @@ include "msoledbsql.h";
   
  Para obtener más información, vea realizar [realizar operaciones de copia masiva](../../oledb/features/performing-bulk-copy-operations.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Compilación de aplicaciones con el controlador OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

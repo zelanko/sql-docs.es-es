@@ -2,7 +2,7 @@
 title: Controlador OLE DB para características de SQL Server | Microsoft Docs
 description: Características del controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fa0fcda394142cd8ac2b3df5b91f5f8c4ad25739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840913"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744465"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Características del controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,10 @@ ms.locfileid: "47840913"
   
  [Realizar operaciones asincrónicas](../../oledb/features/performing-asynchronous-operations.md)  
  Explica la compatibilidad del controlador OLE DB para SQL Server con operaciones asincrónicas, que es la capacidad de devolver resultados inmediatamente sin bloquear el subproceso de llamada.  
-  
+
+[Uso de Azure Active Directory](using-azure-active-directory.md)  
+Describe nuevos métodos de autenticación se introdujo en el controlador de OLE DB 18.2.1 que tienen valores predeterminados más seguros y permiten la conexión a una instancia de Azure SQL Database mediante una identidad federada.
+
  [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  Describe cómo el controlador OLE DB para SQL Server es compatible con conjuntos de resultados activos múltiples (MARS). MARS permite ejecutar y recibir varios conjuntos de resultados mediante una conexión a una base de datos única.  
   
@@ -86,6 +89,9 @@ ms.locfileid: "47840913"
   
  [Compatibilidad de UTF-16 con el controlador OLE DB para SQL Server](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  Describe un cambio de comportamiento presentado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si proporciona un búfer de longitud fija al enlazar un parámetro de salida o el resultado de una columna, y si el carácter **wchar** escrito en el búfer antes del carácter de finalización es un punto de código que actúa como suplente superior de un par de suplentes y el carácter **wchar** siguiente es un punto de código que actúa como suplente inferior, el controlador OLE DB para SQL Server no agregará el punto de código que actúa como suplente superior al búfer.  
+ 
+ [Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+ Explica la compatibilidad con UTF-8 server codificación configuración las precauciones y los usuarios deben seguir al trabajar con datos con codificación UTF-8.
   
  [Controlador OLE DB para la compatibilidad de SQL Server con la alta disponibilidad y la recuperación ante desastres](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Describe cómo se puede configurar una aplicación para aprovechar las características de alta disponibilidad con recuperación ante desastres que se han agregado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
@@ -96,7 +102,7 @@ ms.locfileid: "47840913"
  [Controlador OLE DB para la compatibilidad de SQL Server con LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  Describe el controlador OLE DB para SQL Server admiten la característica mejorada LocalDB.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Controlador OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
  [Temas de procedimientos de OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [Instalación del controlador OLE DB para SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  

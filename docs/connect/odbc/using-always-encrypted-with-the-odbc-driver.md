@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044952"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662859"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ En este ejemplo se inserta una fila en la tabla Patients. Observe lo siguiente:
 
 - Los valores que se insertan en las columnas de bases de datos, incluidas las columnas cifradas, se pasan como parámetros enlazados (consulte [Función SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Aunque el uso de parámetros es opcional al enviar valores a las columnas no cifradas (aunque es altamente recomendable porque ayuda a evitar la inyección de código SQL), es necesario para los valores que tienen como destino las columnas cifradas. Si los valores insertados en las columnas SSN o BirthDate se pasan como literales incrustados en la instrucción de consulta, la consulta produciría un error porque el controlador no intenta cifrar o procesar de otro modo, los literales en consultas. Como resultado, el servidor los rechazará considerándolos incompatibles con las columnas cifradas.
 
-- El tipo SQL del parámetro insertado en la columna SSN se establece en SQL_CHAR, que se asigna a la **char** tipo de datos de SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Si el tipo del parámetro se estableció en SQL_WCHAR, que se asigna a **nchar**, la consulta producirá, ya que Always Encrypted no admite conversiones de servidor de los valores cifrados de nchar a valores cifrados char. Consulte [referencia del programador de ODBC: Apéndice D: Tipos de datos](https://msdn.microsoft.com/library/ms713607.aspx) para obtener información acerca de las asignaciones de tipos de datos.
+- El tipo SQL del parámetro insertado en la columna SSN se establece en SQL_CHAR, que se asigna a la **char** tipo de datos de SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Si el tipo del parámetro se estableció en SQL_WCHAR, que se asigna a **nchar**, la consulta producirá, ya que Always Encrypted no admite conversiones de servidor de los valores cifrados de nchar a valores cifrados char. Consulte [referencia del programador de ODBC: Apéndice D: tipos de datos](https://msdn.microsoft.com/library/ms713607.aspx) para obtener información acerca de las asignaciones de tipos de datos.
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ En esta sección se describen las optimizaciones integradas de rendimiento en OD
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controlar los ciclos de ida y vuelta para recuperar metadatos para los parámetros de consulta
 
-De forma predeterminada, si Always Encrypted está habilitado para una conexión, el controlador llamará a [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta con parámetros, al pasar la instrucción de consulta (sin ningún valor de parámetro) a SQL Server. Este procedimiento almacenado analiza la instrucción de consulta para averiguar si algún parámetro necesita cifrarse y, si es así, se devuelve la información relacionada con el cifrado para cada parámetro permitir que el controlador cifrarlos. El comportamiento anterior garantiza un alto nivel de transparencia para la aplicación cliente: la aplicación (y el desarrollador de la aplicación) no necesita conocer qué consultas tienen acceso a las columnas cifradas, siempre y cuando los valores que tienen como destino estas columnas se pasen al controlador en parámetros.
+De forma predeterminada, si Always Encrypted está habilitado para una conexión, el controlador llamará a [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta con parámetros, al pasar la instrucción de consulta (sin ningún valor de parámetro) a SQL Server. Este procedimiento almacenado analiza la instrucción de consulta para averiguar si algún parámetro necesita cifrarse y, si es así, se devuelve la información relacionada con el cifrado para cada parámetro permitir que el controlador cifrarlos. El comportamiento anterior garantiza un alto nivel de transparencia a la aplicación cliente: la aplicación (y el desarrollador de aplicaciones) que no deberá tener en cuenta qué consultas acceden a las columnas cifradas, siempre y cuando se pasan los valores que se dirigen a columnas cifradas a el controlador de parámetros.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Por cada instrucción Always Encrypted comportamiento
 
@@ -369,11 +369,13 @@ El controlador admite la autenticación en Azure Key Vault mediante los siguient
 
 - Id. de cliente/secreto: con este método, las credenciales son un identificador de cliente de aplicación y un secreto de aplicación.
 
+- -La identidad de servicio administrada con este método, son las credenciales de identidad asignada por el sistema o la identidad asignada por el usuario. Para la identidad asignada por el usuario, UID se establece en el identificador de objeto de la identidad del usuario.
+
 Para permitir que el controlador use CMK almacenada en AKV para el cifrado de columna, utilice las siguientes palabras clave de cadena de conexión solo:
 
 |Tipo de credencial| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|Nombre de usuario/contraseña| `KeyVaultPassword`|Nombre principal del usuario|Contraseña|
+|Nombre de usuario y contraseña| `KeyVaultPassword`|Nombre principal del usuario|Contraseña|
 |Id. o el secreto de cliente| `KeyVaultClientSecret`|Id. de cliente|Secreto|
 
 #### <a name="example-connection-strings"></a>Ejemplos de cadena de conexión
@@ -386,7 +388,7 @@ Las cadenas de conexión siguiente muestran cómo autenticarse en Azure Key Vaul
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Nombre de usuario/contraseña**
+**Nombre de usuario y contraseña**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -551,7 +553,7 @@ El uso de la [funciones de copia masiva de SQL](../../relational-databases/nativ
 
 - Para insertar texto cifrado en formato varbinary (max) (p. ej., como recuperados anteriormente), establezca el `BCPMODIFYENCRYPTED` opción en TRUE y realizar una operación BCP IN. En el orden de los datos resultantes se decryptable, asegúrese de que el destino CEK de la columna es igual que desde el que se ha obtenido originalmente el texto cifrado.
 
-Cuando se usa el **bcp** utilidad: Para controlar la `ColumnEncryption` establecer, use la opción -D y especifique un DSN que contiene el valor deseado. Para insertar texto cifrado, asegúrese del `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` está habilitada la configuración del usuario.
+Cuando se usa el **bcp** utilidad: controlar la `ColumnEncryption` establecer, use la opción -D y especifique un DSN que contiene el valor deseado. Para insertar texto cifrado, asegúrese del `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` está habilitada la configuración del usuario.
 
 En la tabla siguiente proporciona un resumen de las acciones cuando se trabaja en una columna cifrada:
 
@@ -577,7 +579,8 @@ Vea [Migración de datos confidenciales protegidos mediante Always Encrypted](..
 |`ColumnEncryption`|Valores aceptados son `Enabled` / `Disabled`.<br>`Enabled`: habilita o deshabilita la funcionalidad de Always Encrypted para la conexión.<br>`Disabled`: deshabilita la funcionalidad de Always Encrypted para la conexión. <br><br>El valor predeterminado es `Disabled`.|  
 |`KeyStoreAuthentication` | Valores válidos: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Cuando `KeyStoreAuthentication`  =  `KeyVaultPassword`, establezca este valor en un nombre válido de entidad de usuario de Active Directory de Azure. <br>Cuando `KeyStoreAuthetication`  =  `KeyVaultClientSecret` establezca este valor en un Azure Active Directory aplicación cliente identificador válido |
-|`KeyStoreSecret` | Cuando `KeyStoreAuthentication`  =  `KeyVaultPassword` establezca este valor en la contraseña para el nombre de usuario correspondiente. <br>Cuando `KeyStoreAuthentication`  =  `KeyVaultClientSecret` establezca este valor en el secreto de aplicación asociados con un Azure Active Directory aplicación cliente identificador válido|
+|`KeyStoreSecret` | Cuando `KeyStoreAuthentication`  =  `KeyVaultPassword` establezca este valor en la contraseña para el nombre de usuario correspondiente. <br>Cuando `KeyStoreAuthentication`  =  `KeyVaultClientSecret` establezca este valor en el secreto de aplicación asociados con un Azure Active Directory aplicación cliente identificador válido |
+
 
 ### <a name="connection-attributes"></a>Atributos de conexión
 

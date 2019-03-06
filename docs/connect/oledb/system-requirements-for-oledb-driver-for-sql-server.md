@@ -2,7 +2,7 @@
 title: Requisitos del sistema del controlador OLE DB para SQL Server | Microsoft Docs
 description: Requisitos del controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a2ff38f4322209c7ed6eb46a5ba97f360ca3650b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821033"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744435"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Requisitos del sistema del controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,12 +38,16 @@ ms.locfileid: "47821033"
 >  Asegúrese de que inicia sesión con privilegios de administrador antes de instalar este software.  
 
 ## <a name="operating-system-requirements"></a>Requisitos de sistema operativo  
- Para obtener una lista de sistemas operativos que admiten el controlador de OLE DB para SQL Server, vea [las directivas de soporte técnico para el controlador OLE DB para SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
+ Para obtener una lista de sistemas operativos que admiten el controlador de OLE DB para SQL Server, vea [admiten las directivas de controlador de OLE DB para SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
 
-## <a name="sql-server-requirements"></a>Requisitos de SQL Server  
+ ## <a name="azure-active-directory-authentication-requirements"></a>Requisitos de autenticación de Azure Active Directory  
+ Al usar métodos de autenticación de Azure Active Directory con el controlador OLE DB, asegúrese de que el [Active Directory Authentication Library para SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) se ha instalado. ADAL no es necesario para los otros métodos de autenticación o las operaciones de OLE DB.
+Para más información, consulte [Uso de Azure Active Directory](features/using-azure-active-directory.md).
+
+## <a name="sql-server-requirements"></a>requisitos de SQL Server  
  Para usar el controlador OLE DB para SQL Server para acceder a los datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos, debe tener una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado.  
 
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] admite las conexiones de todas las versiones de MDAC, Componentes de Windows Data Access y todas las versiones del controlador OLE DB para SQL Server. Cuando una versión del cliente anterior se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los tipos de datos del servidor que el cliente no conoce se asignan a tipos que son compatibles con la versión del cliente. Para obtener más información, vea Compatibilidad de tipo de datos para versiones del cliente, más adelante en este tema.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] admite las conexiones de todas las versiones de MDAC, Componentes de Windows Data Access y todas las versiones del controlador OLE DB para SQL Server. Cuando una versión del cliente anterior se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los tipos de datos del servidor que el cliente no conoce se asignan a tipos que son compatibles con la versión del cliente. Para más información, consulte [Compatibilidad de tipo de datos para las versiones del cliente](#data-type-compatibility-for-client-versions).  
 
 ## <a name="cross-language-requirements"></a>Requisitos de idiomas  
  La versión en inglés del controlador OLE DB para SQL Server se admite en todas las versiones localizadas de los sistemas operativos compatibles. Las versiones localizadas del controlador OLE DB para SQL Server se admiten en sistemas operativos localizados que son el mismo idioma que el localizado controlador OLE DB para la versión de SQL Server. Las versiones localizadas del controlador OLE DB para SQL Server también se admiten en las versiones en inglés de los sistemas operativos compatibles (siempre que se instale la configuración de idioma correspondiente).  
@@ -68,17 +72,17 @@ ms.locfileid: "47821033"
 
 |Tipo de datos|SQL Server Native Client<br /><br />Resultado de|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Controlador OLE DB para SQL Server|Windows Data Access Components, MDAC y<br /><br /> Controlador OLE DB para las aplicaciones OLE DB de SQL Server con DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8Kb)|udt|udt|udt|Varbinary|  
+|CLR UDT (\<= 8 Kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|imagen|  
 |ntext|varchar|varchar|varchar|Texto|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|varbinary|udt|udt|imagen|  
+|UDT de CLR (> 8 Kb)|varbinary|udt|udt|imagen|  
 |Date|varchar|Date|Date|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |time|varchar|time|time|Varchar|  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Controlador OLE DB para SQL Server](../oledb/oledb-driver-for-sql-server.md)   
  [Instalación del controlador OLE DB para SQL Server](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

@@ -155,7 +155,7 @@ $stmt->execute();
 Los ejemplos siguientes muestran datos filtrados según valores cifrados y la recuperación de datos de texto simple de las columnas cifradas con los controladores de SQLSRV y PDO_SQLSRV. Tenga en cuenta lo siguiente:
  -   El valor que se ha usado en la cláusula WHERE para filtrar por la columna SSN necesita pasarse mediante el parámetro bind, de forma que el controlador pueda cifrarlo de manera transparente antes de enviarlo al servidor.
  -   Al ejecutar una consulta con parámetros enlazados, los controladores PHP determina automáticamente el tipo SQL para el usuario a menos que el usuario especifica explícitamente el tipo SQL al usar el controlador SQLSRV.
- -   Todos los valores impresos por el programa estarán en texto sin formato, ya que el controlador descifrará los datos que se han recuperado de las columnas SSN y BirthDate de manera transparente.
+ -   Todos los valores impresos por el programa están en texto sin formato, ya que el controlador descifra los datos que se han recuperado de las columnas SSN y BirthDate de manera transparente.
  
 Nota: Las consultas pueden realizar comparaciones de igualdad en las columnas cifradas solo si el cifrado es determinista. Para obtener más información, vea la sección [Selección del cifrado determinista o aleatorio](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
@@ -269,7 +269,7 @@ Microsoft Driver 5.3.0 para PHP para SQL Server, se admiten sólo Windows Certif
 
 El controlador ODBC para SQL Server en Windows incluye un proveedor de almacén de claves maestras de columna integrada para el Store de certificados de Windows denominado `MSSQL_CERTIFICATE_STORE`. (Este proveedor no está disponible en macOS o Linux). Con este proveedor, la CMK se almacena localmente en el equipo cliente y no es necesaria para usarlo con el controlador de ninguna configuración adicional por parte de la aplicación. Sin embargo, la aplicación debe tener acceso al certificado y su clave privada en el almacén. Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-### <a name="using-azure-key-vault"></a>EKM mediante Azure Key Vault
+### <a name="using-azure-key-vault"></a>Uso de Azure Key Vault
 
 Azure Key Vault ofrece una forma de almacenar las claves de cifrado, contraseñas y otros secretos con Azure y puede usarse para almacenar las claves de Always Encrypted. El controlador ODBC para SQL Server (versión 17 y versiones posterior) incluye un proveedor de almacén de claves maestra integrado para Azure Key Vault. Las siguientes opciones de conexión controlan la configuración de Azure Key Vault: `KeyStoreAuthentication`, `KeyStorePrincipalId`, y `KeyStoreSecret`. 
  -   `KeyStoreAuthentication` puede tomar uno de dos posibles valores de cadena: `KeyVaultPassword` y `KeyVaultClientSecret`. Estos valores controlan qué tipo de credenciales de autenticación se utilizan con las otras dos palabras clave.

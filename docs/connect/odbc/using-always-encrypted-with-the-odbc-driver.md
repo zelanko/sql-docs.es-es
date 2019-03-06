@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: HT
+ms.openlocfilehash: dd6037cbc40c9cf422c38827d5c96115db33db73
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662859"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956066"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -538,7 +538,7 @@ Mientras que el controlador ODBC permitirá el uso de [operaciones asincrónicas
 Antes de cifrar ODBC Driver 17 for SQL Server, las columnas binarias y carácter no se puede recuperar en partes con SQLGetData. Sólo una llamada a SQLGetData puede realizarse con un búfer de longitud suficiente para contener los datos de la columna completa.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Enviar datos de partes con SQLPutData
-No se puede enviar datos de inserción o de comparación en partes con SQLPutData. Puede realizar solo una llamada a SQLPutData, con un búfer que contiene todos los datos. Para insertar datos long en columnas cifradas, use la API de copia masiva, se describe en la sección siguiente, con un archivo de datos de entrada.
+Antes de 17.3 de controlador ODBC para SQL Server, no se puede enviar datos de inserción o de comparación en partes con SQLPutData. Puede realizar solo una llamada a SQLPutData, con un búfer que contiene todos los datos. Para insertar datos long en columnas cifradas, use la API de copia masiva, se describe en la sección siguiente, con un archivo de datos de entrada.
 
 ### <a name="encrypted-money-and-smallmoney"></a>Smallmoney y money cifrada
 Cifrado **dinero** o **smallmoney** parámetros no pueden tener como destino las columnas, ya que no específicos para el que se asigna a esos tipos, lo que produce errores de conflicto de tipo de operando de tipo de datos ODBC.

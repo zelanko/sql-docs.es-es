@@ -1,5 +1,5 @@
 ---
-title: Notas (controlador ODBC para SQL Server) | Microsoft Docs
+title: Notas de la versión (Controlador ODBC para SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
@@ -11,17 +11,28 @@ ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cb599d59a374fc09dbc0009f0288296cc1df9d9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc1321ac161923499d57ab69374b8ed603d272e0
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702074"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955776"
 ---
 # <a name="release-notes"></a>Notas de la versión
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Notas de la versión de Microsoft ODBC Driver for SQL Server en Windows.  
+
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Novedades del [!INCLUDE[msCoName](../../../includes/msconame_md.md)] controlador ODBC 17.3 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows
+
+**Características agregadas**:
+
+- Azure Active Directory Managed Service Identity (sistema y usuario asignado) el modo de autenticación, para obtener más información, vea [mediante Azure Active Directory con el controlador ODBC](../using-azure-active-directory.md)
+- Capacidad de transmitir los parámetros de entrada con columnas de Always Encrypted, para obtener más información, vea [limitaciones del controlador ODBC cuando se usa Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- XA transacciones distribuidas, para obtener más información, vea [uso de transacciones XA](../use-xa-with-dtc.md)
+
+[Correcciones de errores](../bug-fixes.md)
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Novedades de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows
 

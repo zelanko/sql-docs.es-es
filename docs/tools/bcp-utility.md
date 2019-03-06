@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6d96aabb002cafa5ea8d6b3043b39d89a0a86a15
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
-ms.translationtype: HT
+ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801549"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955996"
 ---
 # <a name="bcp-utility"></a>bcp (utilidad)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ Fecha de lanzamiento: 18 de octubre de 2018
 La nueva versión de SQLCMD admite la autenticación de Azure AD, incluida la compatibilidad con la autenticación multifactor (MFA) para las características de SQL Database, SQL Data Warehouse y Always Encrypted.
 El nuevo BCP admite autenticación de Azure AD, incluida la compatibilidad con la autenticación multifactor (MFA) para SQL Database y SQL Data Warehouse.
 
-**Requisitos del sistema** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2: este componente también requiere [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) y [17.2 del Microsoft ODBC Driver para SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+**Requisitos del sistema** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2: este componente también requiere [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) y [17.3 del Microsoft ODBC Driver para SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
  
 Para comprobar la versión BCP ejecutar `bcp /v` comando y confirme que 15.0.1000.34 o superior está en uso.
 

@@ -8,18 +8,18 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7f759dbe9022cff557461d900a35b3ccc91d2c4b
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600375"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007578"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexión para bases de datos SQL de Microsoft
 
 En este artículo proporciona vínculos de descarga de módulos de conexión o *controladores* que los programas cliente pueden usar para interactuar con [Microsoft SQL Server](../relational-databases/database-features.md)y con su gemelo en la nube [Azure Base de datos SQL](https://docs.microsoft.com/azure/sql-database/). Los controladores están disponibles para una variedad de lenguajes de programación, que se ejecutan en los sistemas operativos siguientes:
 
-- Linux (Ubuntu)
+- Linux
 - MacOS
 - Windows
 

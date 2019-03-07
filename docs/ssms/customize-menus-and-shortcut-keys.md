@@ -21,16 +21,16 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bffe558ea76b3adf7cc6e70c423587a5f7ee27d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05dbc7ae15ba70b4bb0133f8b02d9e57a4330046
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852033"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801309"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar los menús y los métodos abreviados de teclado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Una tecla de aceleración permite seleccionar un botón o comando de menú presionando ALT+*<single letter>*. Por ejemplo, para abrir el menú **Editar** , presione ALT+E. Puede reorganizar y modificar los botones, los menús y los comandos de menú de la barra de herramientas mediante el cuadro de diálogo **Personalizar** . Se proporcionan instrucciones para cambiar la configuración mediante el mouse (ratón) y mediante el teclado.  
+Una tecla de método abreviado permite seleccionar un botón o comando de menú presionando ALT+*\<una letra>*. Por ejemplo, para abrir el menú **Editar** , presione ALT+E. Puede reorganizar y modificar los botones, los menús y los comandos de menú de la barra de herramientas mediante el cuadro de diálogo **Personalizar** . Se proporcionan instrucciones para cambiar la configuración mediante el mouse (ratón) y mediante el teclado.  
   
 Las teclas de aceleración de los procedimientos almacenados que usan la tecla Ctrl se pueden crear desde la página **Teclado** del cuadro de diálogo **Herramientas**/**Opciones** .  
   
@@ -162,6 +162,6 @@ Las teclas de aceleración de los procedimientos almacenados que usan la tecla C
 > [!NOTE]  
 > Algunos comandos solo están disponibles cuando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] está mostrando el contenido pertinente. Si no está disponible ninguno de los comandos del menú, el elemento de menú no estará disponible.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Características de SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  
   

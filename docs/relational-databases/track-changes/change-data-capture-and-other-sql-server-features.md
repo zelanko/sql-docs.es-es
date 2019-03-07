@@ -12,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a293914cad908b8c4d7fc295bf1e0846446dc2ec
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: eddf09ca0ff3f07f058b439c49a69eea366add85
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991828"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590410"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Captura de datos modificados y otras características de SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "53991828"
   
 2.  Cree el trabajo de captura y el trabajo de limpieza en la nueva base de datos principal, la antigua base de datos de reflejo. Para crear los trabajos, use el procedimiento almacenado [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) .  
   
- Para ver la configuración actual de un trabajo de captura o limpieza, use el procedimiento almacenado [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) en la nueva instancia de servidor principal. Para una base de datos concreta, el trabajo de captura se denomina cdc.*database_name*_capture y el trabajo de limpieza, cdc.*database_name*_cleanup, donde *database_name* es el nombre de la base de datos.  
+ Para ver la configuración actual de un trabajo de captura o limpieza, use el procedimiento almacenado [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) en la nueva instancia de servidor principal. Para una base de datos concreta, el trabajo de captura se denomina cdc.*database\_name*\_capture y el trabajo de limpieza se llama cdc.*database\_name*\_cleanup, donde *database_name* es el nombre de la base de datos.  
   
- Para cambiar la configuración de un trabajo, use el procedimiento almacenado [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
+ Para cambiar la configuración de un trabajo, use el procedimiento almacenado [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) .  
   
  Para obtener más información sobre la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

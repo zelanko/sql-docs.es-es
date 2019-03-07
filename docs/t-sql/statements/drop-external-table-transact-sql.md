@@ -14,19 +14,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e95c6459b5ad7c495307b0facbfa965aa44531d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 047adc4654d4e0104aa0fab79ba2be7a002de738
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660463"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801049"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Quita una tabla externa de PolyBase. Esto no elimina los datos externos.  
+  Quita una tabla externa de PolyBase de una base de datos, pero no elimina los datos externos.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,7 +45,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
 -   Requiere el permiso **ALTER** en el esquema al que la tabla pertenece.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Al quitar una tabla externa, se quitan todos los metadatos relacionados con dicha tabla. Esto no elimina los datos externos.  
+ Al quitar una tabla externa, se quitan todos los metadatos relacionados con dicha tabla. No se eliminan los datos externos.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -57,7 +57,7 @@ DROP EXTERNAL TABLE dbo.SalesPerson;
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
-### <a name="b-dropping-an-external-table-from-the-current-database"></a>B. Quitar una tabla externa de la base de datos actual  
+### <a name="b-dropping-an-external-table-from-the-current-database"></a>b. Quitar una tabla externa de la base de datos actual  
  En el siguiente ejemplo se quita la tabla `ProductVendor1` y sus datos e índices, así como cualquier vista dependiente, de la base de datos actual.  
   
 ```  
@@ -71,8 +71,6 @@ DROP EXTERNAL TABLE ProductVendor1;
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
-  
-

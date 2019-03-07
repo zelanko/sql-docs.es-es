@@ -25,17 +25,17 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 4656a02f268987db7375e8211aec5a275379ea00
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ce6ac47c2348f1acd082cb86e1d4756df6012a91
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209734"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662809"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Libera todas las entradas de caché no utilizadas de todas las memorias caché. El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] limpia automáticamente y en segundo plano todas las entradas de caché no utilizadas para permitir que haya memoria disponible para las entradas actuales. Sin embargo, puede utilizar este comando para quitar de forma manual las entradas no usadas de todas las memorias caché o de la memoria caché especificada de un grupo del regulador de recursos.
+Libera todas las entradas de caché no utilizadas de todas las memorias caché. El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] limpia automáticamente y en segundo plano todas las entradas de caché no utilizadas para permitir que haya memoria disponible para las entradas actuales. Sin embargo, puede usar este comando para quitar de forma manual las entradas no usadas de todas las cachés o de la caché especificada de un grupo de Resource Governor.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,18 +49,18 @@ DBCC FREESYSTEMCACHE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ( 'ALL' [,*pool_name* ] )  
- ALL especifica todas las memorias caché compatibles.  
- *pool_name* especifica una memoria caché de conjunto del regulador de recursos. Solo se liberarán las entradas asociadas a este grupo.  
+( 'ALL' [,_pool\_name_ ] )  
+ALL especifica todas las memorias caché compatibles.  
+_pool\_name_ especifica una caché del grupo de Resource Governor. Solo se liberarán las entradas asociadas a este grupo.  
   
- MARK_IN_USE_FOR_REMOVAL  
- Libera asincrónicamente las entradas utilizadas actualmente de sus respectivas cachés después de que dejan de utilizarse. No se verán afectadas las nuevas entradas creadas en la memoria caché después de ejecutar DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL.  
+MARK_IN_USE_FOR_REMOVAL  
+Libera asincrónicamente las entradas utilizadas actualmente de sus respectivas cachés después de que dejan de utilizarse. No se verán afectadas las nuevas entradas creadas en la caché después de ejecutar DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL.  
   
- NO_INFOMSGS  
- Suprime todos los mensajes de información.  
+NO_INFOMSGS  
+Suprime todos los mensajes de información.  
   
 ## <a name="remarks"></a>Notas  
-Al ejecutar DBCC FREESYSTEMCACHE se borra la memoria caché del plan para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché del plan, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la caché del plan) debidas a operaciones "DBCC FREEPROCCACHE" o "DBCC FREESYSTEMCACHE"". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
+Al ejecutar DBCC FREESYSTEMCACHE se borra la memoria caché del plan para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la caché de planes, se provoca una nueva compilación de todos los planes de ejecución próximos, lo que puede dar lugar a una reducción repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché del plan, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la caché del plan) debidas a operaciones "DBCC FREEPROCCACHE" o "DBCC FREESYSTEMCACHE"". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC FREESYSTEMCACHE devuelve: "La ejecución de DBCC se ha completado. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."

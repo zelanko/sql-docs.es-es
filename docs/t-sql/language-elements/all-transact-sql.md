@@ -19,19 +19,19 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d30c93cd56467c6137db647e52ea97f2cc7641ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a9598ccdb6ed8e38c5b7a44341dcf3e54732418a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509585"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802839"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Compara un valor escalar con un conjunto de valores de una sola columna.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,14 +56,14 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>Valor del resultado  
- Devuelve TRUE cuando la comparación especificada es TRUE para todos los pares (_scalar_expression_**,**_x_), donde *x* es un valor del conjunto de una sola columna; de lo contrario, devuelve FALSE.  
+ Devuelve TRUE cuando la comparación especificada es TRUE para todos los pares (_scalar_expression_**,**_x_), donde *x* es un valor del conjunto de una sola columna. En caso contrario, devuelve FALSE.  
   
 ## <a name="remarks"></a>Notas  
  ALL requiere que *scalar_expression* se compare de forma positiva con cada valor devuelto por la subconsulta. Por ejemplo, si la subconsulta devuelve los valores 2 y 3, *scalar_expression* <= ALL (subconsulta) se evaluaría como TRUE para una *scalar_expression* de 2. Si la subconsulta devuelve los valores 2 y 3, *scalar_expression* = ALL (subconsulta) se evaluaría como FALSE, porque algunos de los valores de la subconsulta (el valor 3) no cumplirían los criterios de la expresión.  
   
  Para instrucciones que requieren que *scalar_expression* se compare de forma positiva con solo un valor devuelto por la subconsulta, vea [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
- Este tema hace referencia a ALL cuando se utiliza con una subconsulta. ALL también se puede usar con [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) y [SELECT](../../t-sql/queries/select-transact-sql.md).  
+ Este artículo hace referencia a ALL cuando se utiliza con una subconsulta. ALL también se puede usar con [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) y [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea un procedimiento almacenado que determina si todos los componentes de un `SalesOrderID` especificado en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] se pueden fabricar en el número de días especificado. En el ejemplo se usa una subconsulta para crear una lista del número del valor de `DaysToManufacture` para todos los componentes del `SalesOrderID` específico y, a continuación, confirma que todos los `DaysToManufacture` están dentro del número de días especificado.  
@@ -84,11 +84,11 @@ IF
    )  
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
-PRINT 'Some items for this order cannot be manufactured in specified number of days or less.' ;  
+PRINT 'Some items for this order cann't be manufactured in specified number of days or less.' ;  
   
 ```  
   
- Para probar el procedimiento, ejecútelo con `SalesOrderID 49080`, que tiene un componente que requiere `2` días y dos componentes que requieren 0 días. La primera instrucción que se indica a continuación cumple los criterios. La segunda consulta no los cumple.  
+ Para probar el procedimiento, ejecútelo con `SalesOrderID 49080`, que tiene un componente que requiere `2` días y dos componentes que requieren 0 días. La primera instrucción que se indica a continuación cumple los criterios. La segunda consulta no.  
   
 ```  
 EXECUTE DaysToBuild 49080, 2 ;  
@@ -104,9 +104,9 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Some items for this order cannot be manufactured in specified number of days or less.`  
+ `Some items for this order can't be manufactured in specified number of days or less.`  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
@@ -115,5 +115,4 @@ EXECUTE DaysToBuild 49080, 1 ;
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
-  
   

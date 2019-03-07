@@ -25,18 +25,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 60bec45b4feacff0390bfb359010767dc3bcd2af
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299392"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801409"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char y varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Los tipos de datos de caracteres son de longitud fija, **char**, o de longitud variable, **varchar**. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], cuando se usa una intercalación con UTF-8 habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Si se especifica una intercalación cuyo formato no es UTF-8, estos tipos de datos solo almacenan un subconjunto de caracteres admitidos por la página de códigos correspondiente de esa intercalación.
   
@@ -46,7 +43,7 @@ Los tipos de datos de caracteres son de longitud fija, **char**, o de longitud v
 **varchar** [ ( *n* | **max** ) ] Datos de cadena de longitud variable. *n* define la longitud de la cadena en bytes y puede ser un valor entre 1 y 8000. **max** indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes (2 GB). Para juegos de caracteres de codificación de byte único, como el *latino*, el tamaño de almacenamiento es *n* bytes + 2 bytes y el número de caracteres que se pueden almacenar también es *n*. Para los juegos de caracteres de codificación multibyte, el tamaño de almacenamiento sigue siendo *n* bytes + 2 bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n*. Los sinónimos ISO para **varchar** son **charvarying** o **charactervarying**. Para más información sobre los juegos de caracteres, vea [Juegos de caracteres de un solo byte y de varios bytes](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## <a name="remarks"></a>Notas  
-Cuando no se especifica el argumento *n* en una instrucción de definición de datos o de declaración de variable, la longitud predeterminada es 1. Cuando no se especifica *n* al usar las funciones CAST y CONVERT, la longitud predeterminada es 30.
+Cuando no se especifica *n* en una instrucción de definición de datos o de declaración de variable, la longitud predeterminada es 1. Cuando no se especifica *n* al usar las funciones CAST y CONVERT, la longitud predeterminada es 30.
   
 Los objetos que utilizan **char** o **varchar** se asignan a la intercalación predeterminada de la base de datos, a menos que se asigne una intercalación específica por medio de la cláusula COLLATE. La intercalación controla la página de códigos utilizada para almacenar los datos de caracteres.
 
@@ -67,17 +64,17 @@ Si SET ANSI_PADDING es OFF cuando se ejecuta CREATE TABLE o ALTER TABLE, una col
   
 > [!WARNING]
 > Cada columna varchar(max) o nvarchar(max) cuyo valor no sea NULL requiere 24 bytes de asignación fija adicional que se descuentan del límite de 8060 bytes de las filas durante una operación de ordenación. Esto puede crear un límite implícito del número de columnas varchar(max) o varchar(max) cuyo valor no sea NULL que es posible crear en una tabla.  
-No se produce ningún error especial cuando se crea la tabla (más allá de la advertencia habitual de que el tamaño máximo de la fila supera el máximo permitido de 8060 bytes) ni en el momento de la inserción de los datos. Este tamaño de fila grande puede provocar errores (como el error 512) durante algunas operaciones normales, como una actualización de claves de índices agrupados u ordenaciones del conjunto completo de columnas, que los usuarios no pueden prever hasta que lleven a cabo alguna operación.
+No se produce ningún error especial cuando se crea la tabla (más allá de la advertencia habitual de que el tamaño máximo de la fila supera el máximo permitido de 8060 bytes) ni en el momento de la inserción de los datos. Este tamaño grande de fila puede provocar errores (como el error 512) durante algunas operaciones normales, como la actualización de claves de un índice agrupado o las ordenaciones del conjunto completo de columnas, que los usuarios no pueden prever hasta que lleven a cabo alguna operación.
   
 ##  <a name="_character"></a> Convertir datos de caracteres  
-Cuando se convierten expresiones de caracteres a un tipo de datos de caracteres de un tamaño distinto, se truncan los valores que son demasiado grandes para el nuevo tipo de datos. El tipo **uniqueidentifier** se considera un tipo de carácter para la conversión desde una expresión de caracteres y, por tanto, está sujeto a las reglas de truncamiento para la conversión a un tipo de carácter. Vea la sección Ejemplos que aparece más adelante.
+Cuando se convierten expresiones de caracteres a un tipo de datos de caracteres de un tamaño distinto, se truncan los valores que son demasiado grandes para el nuevo tipo de datos. El tipo **uniqueidentifier** se considera un tipo de carácter para la conversión de una expresión de caracteres y, por tanto, está sujeto a las reglas de truncamiento de la conversión a un tipo de carácter. Vea la sección Ejemplos que aparece más adelante.
   
 Cuando una expresión de caracteres se convierte a una expresión de caracteres de un tipo de datos o tamaño distinto (como de **char(5)** a **varchar(5)** o de **char(20)** a **char(15)**), se asigna la intercalación del valor de entrada al valor convertido. Si una expresión que no es de carácter se convierte a un tipo de datos de carácter, se asigna al valor convertido la intercalación predeterminada de la base de datos actual. En cualquiera de los casos, puede asignar una intercalación específica mediante la cláusula [COLLATE](../../t-sql/statements/collations.md).
   
 > [!NOTE]  
-> Las traducciones de páginas de códigos se admiten para los tipos de datos **char** y **varchar**, pero no para el tipo de datos **text**. Al igual que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las pérdidas de datos durante las conversiones de la página de códigos no se notifican.  
+> Las traducciones de páginas de códigos se admiten para los tipos de datos **char** y **varchar**, pero no para el tipo de datos **text**. Al igual que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las pérdidas de datos durante las conversiones de páginas de códigos no se notifican.  
   
-Las expresiones de carácter que se convierten a un tipo de datos **numeric** aproximado pueden incluir una notación exponencial opcional (una e minúscula o una E mayúscula seguida de un signo más (+) o menos (-) opcional y un número).
+Las expresiones de caracteres que se van a convertir a un tipo de datos **numeric** aproximado pueden incluir una notación exponencial opcional. Esta notación es una e minúscula o una E mayúscula seguida de un signo opcional más (+) o menos (-) y un número.
   
 Las expresiones de carácter que se convierten a un tipo de datos **numeric** exacto se componen de dígitos, un separador decimal y un signo más (+) o menos (-) opcional. Los espacios en blanco iniciales se omiten. En la cadena no se permiten los separadores de coma (como el separador de miles en algunas representaciones de 123,456.00).
   

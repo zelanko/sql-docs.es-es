@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d89750c6ddac45af82824b2449c9e415561814
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031006"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802262"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,12 +47,12 @@ Define una fecha que se combina con una hora del día. La hora está en un forma
 |Formatos de literal de cadena predeterminados<br /><br /> (se usa para el cliente de nivel inferior)|No aplicable|  
 |Intervalo de fechas|De 1900-01-01 a 2079-06-06<br /><br /> Del 1 de enero de 1900 hasta el 6 de junio de 2079|  
 |Intervalo de horas|De 00:00:00 a 23:59:59<br /><br /> 2007-05-09 23:59:59 se redondeará a<br /><br /> 2007-05-10 00:00:00|  
-|Intervalos de elementos|AAAA es una cifra de cuatro dígitos comprendida entre 1900 y 2079 que representa un año.<br /><br /> MM es una cifra de dos dígitos, comprendida entre 01 y 12, que representa un mes del año especificado.<br /><br /> DD es una cifra de dos dígitos, comprendida entre 01 y 31 dependiendo del mes, que representa un día del mes especificado.<br /><br /> hh es una cifra de dos dígitos comprendida entre 00 y 23 que representa la hora.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59 que representa los minutos.<br /><br /> s es una cifra de dos dígitos comprendida entre 00 y 59 que representa los segundos. Los valores de 29,998 segundos o menos se redondean a la baja hasta el minuto más cercano; los valores de 29,999 segundos o más se redondean al alza hasta el minuto más cercano.|  
+|Intervalos de elementos|AAAA es una cifra de cuatro dígitos comprendida entre 1900 y 2079 que representa un año.<br /><br /> MM es una cifra de dos dígitos, comprendida entre 01 y 12, que representa un mes del año especificado.<br /><br /> DD es una cifra de dos dígitos, comprendida entre 01 y 31 dependiendo del mes, que representa un día del mes especificado.<br /><br /> hh es una cifra de dos dígitos comprendida entre 00 y 23 que representa la hora.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59 que representa los minutos.<br /><br /> s es una cifra de dos dígitos comprendida entre 00 y 59 que representa los segundos. Los valores que son 29.998 segundos o menos se redondean al minuto más cercano. Los valores de 29.999 segundos o más se redondean al minuto más cercano.|  
 |Longitud en caracteres|19 posiciones como máximo|  
 |Tamaño de almacenamiento|4 bytes, fijo.|  
 |Precisión|Un minuto|  
 |Valor predeterminado|1900-01-01 00:00:00|  
-|Calendario|Gregoriano<br /><br /> (no incluye el intervalo completo de años.)|  
+|Calendario|Gregoriano<br /><br /> (No incluye el intervalo completo de años).|  
 |Precisión de fracciones de segundo definida por el usuario|No|  
 |Conservación y reconocimiento del ajuste de zona horaria|No|  
 |Reconocimiento del horario de verano|No|  
@@ -66,7 +66,7 @@ Cuando se convierte a los tipos de datos de fecha y hora, [!INCLUDE[ssNoVersion]
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>Convertir tipos smalldatetime a otros tipos de fecha y hora
 En esta tabla se describe lo que ocurre cuando un tipo de datos **smalldatetime** se convierte a otros tipos de datos de fecha y hora.
   
-Cuando la conversión es desde **date**, se copian los valores de año, mes y día. En el código siguiente se muestran los resultados de convertir un valor `smalldatetime` en un valor `date`.
+Cuando la conversión es a **date**, se copian los valores de año, mes y día. En el código siguiente se muestran los resultados de convertir un valor `smalldatetime` en un valor `date`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -191,5 +191,4 @@ SELECT
   
 ## <a name="see-also"></a>Vea también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

@@ -18,17 +18,17 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f96840516b160a7fef7fd97454250131695fc7f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4bca90e100baf2a7509636966ee1391645827bb9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033056"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662789"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un nodo cuya ruta desde la raíz es la ruta a *newRoot*, seguido de la ruta desde *oldRoot* a *this*.
+Devuelve un nodo cuya ruta de acceso desde la raíz es la que va a _newRoot_, seguida de la ruta de acceso desde _oldRoot_.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,11 +43,11 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*oldRoot*  
+_oldRoot_  
 **hierarchyid** que es el nodo que representa el nivel de la jerarquía que se va a modificar.
   
-*newRoot*  
-**hierarchyid** que representa el nodo que reemplazará la sección *oldRoot* del nodo actual para mover el nodo.
+_newRoot_  
+**hierarchyid** que representa el nodo. Reemplace la sección _oldRoot_ del nodo actual para mover el nodo.
   
 ## <a name="return-types"></a>Tipos devueltos  
 **Tipo de valor devuelto de SQL Server: hierarchyid**
@@ -55,12 +55,12 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 **Tipo devuelto de CLR: SqlHierarchyId**
   
 ## <a name="remarks"></a>Notas  
-Se puede usar para modificar el árbol moviendo los nodos de *oldRoot* a *newRoot*. GetReparentedValue se puede utilizar para mover un nodo de una jerarquía a una ubicación nueva en la jerarquía. El tipo de datos **hierarchyid** representa la estructura jerárquica, pero no la exige. Los usuarios deben asegurarse de que el identificador hierarchyid se estructura de forma apropiada para la nueva ubicación. Un índice único en el tipo de datos **hierarchyid** puede ayudar a evitar las entradas duplicadas. Para obtener un ejemplo de cómo mover un subárbol completo, vea [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
+Se usa para modificar el árbol, de forma que los nodos se mueven de _oldRoot_ a _newRoot_. GetReparentedValue se usa para mover un nodo de la jerarquía a una nueva ubicación de la jerarquía. El tipo de datos **hierarchyid** representa la estructura jerárquica, pero no la exige. Los usuarios deben asegurarse de que el identificador hierarchyid se estructura de forma apropiada para la nueva ubicación. Un índice único en el tipo de datos **hierarchyid** puede ayudar a evitar las entradas duplicadas. Para obtener un ejemplo de cómo mover un subárbol completo, vea [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Comparar dos ubicaciones de nodo  
-En el ejemplo siguiente se muestra el identificador hierarchyid actual de un nodo. También se muestra cuál sería el **hierarchyid** del nodo si este se moviera para convertirse en descendiente del nodo **@NewParent**. Utiliza el método `ToString()` para mostrar las relaciones jerárquicas.
+En el ejemplo siguiente se muestra el identificador hierarchyid actual de un nodo. También se muestra cuál sería el valor de **hierarchyid** del nodo si este se moviera para convertirse en descendiente del nodo **@NewParent**. Utiliza el método `ToString()` para mostrar las relaciones jerárquicas.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

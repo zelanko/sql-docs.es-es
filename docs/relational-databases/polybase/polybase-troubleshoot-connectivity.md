@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: eaa93142b7a00f581d90dcb0a7be4a94a4ae6477
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072860"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803160"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
 
@@ -68,7 +68,7 @@ Estos archivos se encuentran en:
 
 Por ejemplo, el valor predeterminado para SQL Server 2016 es `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
-Actualice  **core-site.xml** y agregue las tres propiedades siguientes. Establezca los valores según el entorno:
+Actualice **core-site.xml** y agregue las tres propiedades siguientes. Establezca los valores según el entorno:
 
 ```xml
 <property>

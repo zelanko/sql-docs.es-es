@@ -18,12 +18,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3737c5dabc8b88970a24cbadcc9617457cf862eb
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202814"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828135"
 ---
 # <a name="connect-to-server-database-engine"></a>Conectar al servidor (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ Seleccione la instancia de servidor a la que va a conectarse. De forma predeterm
   
 > [!NOTE]  
 > Para conectarse a una instancia de usuarios activos de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] , use el protocolo Canalizaciones con nombre especificando el nombre de canalización, como `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`. Para obtener más información, consulte la documentación de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] .  
-  
+> [!NOTE]  
+> Las conexiones normalmente se conservan en el historial "Usados recientemente". Para quitar las entradas de los elementos usados recientemente, simplemente haga clic en el control de cuadro combinado **Nombre del servidor**, seleccione el nombre del servidor para quitar y, a continuación, presione la tecla **SUPR**.  
+   
 **Autenticación**  
 La versión actual de SSMS ofrece cinco modos de autenticación al conectarse a una instancia del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Si el cuadro de diálogo de autenticación no coincide con la lista siguiente, descargue la versión más reciente de SSMS desde [Descarga de SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 

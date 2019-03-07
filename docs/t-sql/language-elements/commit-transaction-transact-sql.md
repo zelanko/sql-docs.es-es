@@ -30,19 +30,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b4a2ef2ec0367bdae858578f07cc062fd5cf50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f35a455b23d9fed53d40810a4aac87353458f11
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799413"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801459"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Marca el final de una transacción correcta, implícita o explícita. Si @@TRANCOUNT es 1, COMMIT TRANSACTION hace que todas las modificaciones de datos realizadas desde el inicio de la transacción sean parte permanente de la base de datos, libera los recursos mantenidos por la transacción y reduce @@TRANCOUNT a 0. Si @@TRANCOUNT es mayor que 1, COMMIT TRANSACTION solo reduce @@TRANCOUNT en 1 y la transacción se mantiene activa.  
+  Marca el final de una transacción correcta, implícita o explícita. Si @@TRANCOUNT es 1, COMMIT TRANSACTION hace que todas las modificaciones de datos desde el inicio de la transacción sean parte permanente de la base de datos, libera los recursos de la transacción y reduce @@TRANCOUNT a 0. Si @@TRANCOUNT es mayor que 1, COMMIT TRANSACTION solo reduce @@TRANCOUNT en 1 y la transacción se mantiene activa.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,7 +65,7 @@ COMMIT [ TRAN | TRANSACTION ]
  *transaction_name*  
  **SE APLICA A:** SQL Server y Azure SQL Database
  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo omite. *transaction_name* especifica un nombre de transacción asignado por una instrucción BEGIN TRANSACTION anterior. *transaction_name* debe cumplir con las reglas para identificadores, pero no puede superar los 32 caracteres. *transaction_name* se puede usar como una ayuda de legibilidad, ya que indica a los programadores a qué instrucción BEGIN TRANSACTION anidada está asociada la instrucción COMMIT TRANSACTION.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo omite. *transaction_name* especifica un nombre de transacción asignado por una instrucción BEGIN TRANSACTION anterior. *transaction_name* debe cumplir con las reglas para identificadores, pero no puede superar los 32 caracteres. *transaction_name* indica a los programadores a qué instrucción BEGIN TRANSACTION anidada está asociada la instrucción COMMIT TRANSACTION.  
   
  *@tran_name_variable*  
  **SE APLICA A:** SQL Server y Azure SQL Database  
@@ -75,7 +75,7 @@ Se trata del nombre de una variable definida por el usuario que contiene un nomb
  DELAYED_DURABILITY  
  **SE APLICA A:** SQL Server y Azure SQL Database   
 
- La opción que solicita esta transacción se confirma con la durabilidad diferida. Se omitirá la solicitud si la base de datos se ha modificado con `DELAYED_DURABILITY = DISABLED` o `DELAYED_DURABILITY = FORCED`. Vea el tema [Control de la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md) para más obtener información.  
+ La opción que solicita esta transacción se confirma con la durabilidad diferida. Se omitirá la solicitud si la base de datos se ha modificado con `DELAYED_DURABILITY = DISABLED` o `DELAYED_DURABILITY = FORCED`. Para saber más, vea [Control de la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md).  
   
 ## <a name="remarks"></a>Notas  
  Es responsabilidad del programador de [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizar COMMIT TRANSACTION solo en el punto donde todos los datos a los que hace referencia la transacción sean lógicamente correctos.  
@@ -107,10 +107,10 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT TRANSACTION;   
 ```  
   
-### <a name="b-committing-a-nested-transaction"></a>B. Confirmar una transacción anidada  
+### <a name="b-committing-a-nested-transaction"></a>b. Confirmar una transacción anidada  
 **SE APLICA A:** SQL Server y Azure SQL Database    
 
-En el siguiente ejemplo se crea una tabla, se generan tres niveles de transacciones anidadas y después se confirma la transacción anidada. Aunque cada instrucción `COMMIT TRANSACTION` cuenta con un parámetro *transaction_name*, no existe ninguna relación entre las instrucciones `COMMIT TRANSACTION` y `BEGIN TRANSACTION`. Los parámetros *transaction_name* solo son ayudas de legibilidad para que el programador pueda asegurarse de que escribe el número apropiado de confirmaciones para reducir `@@TRANCOUNT` hasta 0, confirmando así la transacción más externa. 
+En el siguiente ejemplo se crea una tabla, se generan tres niveles de transacciones anidadas y después se confirma la transacción anidada. Aunque cada instrucción `COMMIT TRANSACTION` cuenta con un parámetro *transaction_name*, no existe ninguna relación entre las instrucciones `COMMIT TRANSACTION` y `BEGIN TRANSACTION`. Los parámetros *transaction_name* ayudan al programador a asegurarse de que escribe el número apropiado de confirmaciones para reducir `@@TRANCOUNT` hasta 0, confirmando así la transacción más externa. 
   
 ```   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
@@ -164,7 +164,7 @@ PRINT N'Transaction count after COMMIT OuterTran = '
     + CAST(@@TRANCOUNT AS nvarchar(10));  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
@@ -172,5 +172,4 @@ PRINT N'Transaction count after COMMIT OuterTran = '
  [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

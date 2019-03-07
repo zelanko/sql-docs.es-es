@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8637754097be0837f51ef3fda06375abcb084cae
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532549"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590440"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,8 +83,8 @@ El archivo de registro de rastreo sigue el siguiente esquema de nomenclatura:
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 Las partes variables del nombre de archivo de registro de rastreo son las siguientes.
--   <**DatabaseID**> - El identificador de una base de datos. <**dbid**> es un número de cinco dígitos con ceros a la izquierda.  
--   <**FullTextCatalogID**> - Identificador de catálogo de texto completo. <**catid**> es un número de cinco dígitos con ceros a la izquierda.  
+-   \<**DatabaseID**> - El identificador de una base de datos. <**dbid**> es un número de cinco dígitos con ceros a la izquierda.  
+-   <**FullTextCatalogID**> - Identificador de catálogo de texto completo. \<**catid**> es un número de cinco dígitos con ceros a la izquierda.  
 -   <**n**> - Es un entero que indica la existencia de uno o varios registros de rastreo del mismo catálogo de texto completo.  
   
  Por ejemplo, `SQLFT0000500008.2` es el archivo de registro de rastreo para un identificador de base de datos = 5 y un identificador de catálogo de texto completo = 8. El 2 al final del nombre de archivo indica que existen dos archivos de registro de rastreo para esta pareja de base de datos y catálogo.  
@@ -142,7 +142,7 @@ Para información esencial sobre las fórmulas siguientes, vea las notas que sig
 2.  500 MB es un cálculo de la memoria requerida por otros procesos en el sistema. Si el sistema está realizando trabajo adicional, aumente este valor en consecuencia.  
 3.  .*ism_size* es 8 MB para plataformas x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Ejemplo: evaluar los requisitos de memoria de fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Ejemplo: Evaluación de los requisitos de memoria de fdhost.exe  
   
  Este ejemplo corresponde a un equipo de 64 bits que tiene 8 GB de RAM y 4 procesadores de doble núcleo. El primer cálculo evalúa la memoria que necesita fdhost.exe-*F*. El número de rangos de rastreo es `8`.  
   
@@ -152,7 +152,7 @@ Para información esencial sobre las fórmulas siguientes, vea las notas que sig
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Ejemplo: establecer max server memory  
+ #### <a name="example-setting-max-server-memory"></a>Ejemplo: Establecimiento de max server memory  
   
  En este ejemplo, se usan las instrucciones [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer **max server memory** en el valor que se calculó para *M* en el ejemplo precedente, `7052`:  
   
@@ -210,7 +210,7 @@ El motor de texto completo usa dos tipos de filtros cuando rellena un índice de
   
 Para solucionar este problema, marque el filtro para el documento contenedor (en este ejemplo, el documento de Word) como filtro de un solo subproceso. Para marcar un filtro como de un solo subproceso, establezca el valor del Registro **ThreadingModel** del filtro en **Apartment Threaded**. Para obtener más información sobre los contenedores uniproceso, vea las notas del producto [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Descripción y uso de modelos de subprocesos COM).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [max full-text crawl range (opción de configuración del servidor)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)   

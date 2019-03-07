@@ -16,12 +16,12 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93461858c1318b65d3fd75160e06785847c265a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 178d926dbcbfc6e599a57207369bf61e603468a9
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598293"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828455"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +83,8 @@ ms.locfileid: "47598293"
 -   Las operaciones de la API de Windows no son transaccionales por naturaleza y no se asocian con transacciones de usuario. No obstante, el acceso transaccional a los datos FILESTREAM almacenados en una FileTable son totalmente compatibles, como es el caso de cualquier columna FILESTREAM de una tabla normal.  
   
 -   Las FileTables también se pueden consultar y actualizar mediante el acceso normal de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Además, se integran con las herramientas de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y características como la copia de seguridad.  
+
+-   No se puede enviar una solicitud de correo electrónico a través de dbmail ni adjuntar un archivo ubicado en un directorio de secuencia de archivos (y, por tanto, filetable). El controlador del filtro del sistema de archivos RsFx0420 inspecciona las solicitudes entrantes de E/S que entran y salen de la carpeta de la secuencia de archivos. Si la solicitud no procede del archivo ejecutable SQLServer y el código Filestream, se deshabilitan explícitamente.
   
 ##  <a name="additional"></a> Consideraciones adicionales sobre el uso de FileTables  
   
@@ -134,7 +136,7 @@ ms.locfileid: "47598293"
  [DDL de FileTable, funciones, procedimientos almacenados y vistas](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
  Enumera las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] y objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se han agregado o se han cambiado para admitir la característica de FileTable.  
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [Vistas de administración dinámica de secuencia de archivo y FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Vistas de catálogo de secuencia de archivo y FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[Procedimientos almacenados del sistema de Filestream y FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

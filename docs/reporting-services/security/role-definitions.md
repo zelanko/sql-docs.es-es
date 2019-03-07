@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5dd1e17cbef4dd716959c38d852b2a8def8853a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35178456afe22fe89bd849b61a3e4e67166367be
+ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849473"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56444230"
 ---
 # <a name="role-definitions"></a>Definiciones de roles
-  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], una *definición de**rol* es una colección con nombre de tareas que definen las operaciones disponibles en un servidor de informes. Las definiciones de roles proporcionan las reglas que el servidor de informes utiliza para aplicar la seguridad. Cuando un usuario intenta realizar una tarea, como publicar un informe, el servidor de informes comprueba la asignación de roles de dicho usuario para determinar si la tarea está incluida en su definición de roles. Si la tarea está incluida en la definición de roles, se envía la solicitud.  
+  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], una *definición de rol* es una colección con nombre de tareas que definen las operaciones disponibles en un servidor de informes. Las definiciones de roles proporcionan las reglas que el servidor de informes utiliza para aplicar la seguridad. Cuando un usuario intenta realizar una tarea, como publicar un informe, el servidor de informes comprueba la asignación de roles de dicho usuario para determinar si la tarea está incluida en su definición de roles. Si la tarea está incluida en la definición de roles, se envía la solicitud.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Usar roles para autorizar el acceso a un servidor de informes  
  Un rol será operativo solo cuando se utilice en una asignación de roles. Para obtener más información sobre el modo en que los roles proporcionan seguridad, vea [Asignaciones de roles](../../reporting-services/security/role-assignments.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "47849473"
   
  Puede eliminar una definición de roles si ya no la utiliza. No se puede eliminar la definición de rol seleccionada para la característica Mis informes mientras ésta siga habilitada. Para poder eliminar la definición de rol utilizada por Mis informes, primero debe deshabilitar la característica o seleccionar una definición de rol diferente para usarla con ella.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)   
  [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

@@ -2,7 +2,7 @@
 title: Procesamiento de consultas inteligente en bases de datos de Microsoft SQL | Microsoft Docs
 description: Características de procesamiento de consultas inteligente para mejorar el rendimiento de las consultas en SQL Server y Azure SQL Database.
 ms.custom: ''
-ms.date: 02/14/2019
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc47ad30edc0eb4092aa1f92fef703c95cb34593
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1b92bc15079fcc85212ea3d1b51be64a3348a4b1
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291663"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305373"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
@@ -29,13 +29,14 @@ La familia de características de procesamiento de consultas (QP) inteligentes i
 | **Característica de procesamiento de consultas inteligentes** | **Compatible con Azure SQL Database** | **Compatible con SQL Server** |
 | --- | --- | --- |
 | [Combinaciones adaptables (modo por lotes)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Sí, en el nivel de compatibilidad 140| Sí, a partir de SQL Server 2017 en el nivel de compatibilidad 140|
+| [Count Distinct aproximada](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Sí, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0, versión preliminar pública|
+| [Modo por lotes en el almacén de filas](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|
 | [Ejecución intercalada](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#interleaved-execution-for-multi-statement-table-valued-functions) | Sí, en el nivel de compatibilidad 140| Sí, a partir de SQL Server 2017 en el nivel de compatibilidad 140|
 | [Comentarios de concesión de memoria (modo por lotes)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 140| Sí, a partir de SQL Server 2017 en el nivel de compatibilidad 140|
 | [Comentarios de concesión de memoria (modo de fila)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|
-| [Count Distinct aproximada](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Sí, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0, versión preliminar pública|
-| [Compilación diferida de variables de tabla](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|
-| [Modo por lotes en el almacén de filas](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|
 | [Inserción de UDF escalar](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | No, pero se prevé para una actualización futura | Sí, a partir de SQL Server 2019 CTP 2.1 en el nivel de compatibilidad 150, versión preliminar pública|
+| [Compilación diferida de variables de tabla](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|
+
 
 
 ## <a name="adaptive-query-processing"></a>Procesamiento de consultas adaptable
@@ -101,6 +102,8 @@ Para más información, consulte [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-
 
 > [!NOTE]
 > El modo por lotes en el almacén de filas es una característica en versión preliminar pública.  
+
+El modo por lotes en el almacén de filas permite la ejecución en modo por lotes de las cargas de trabajo de análisis sin necesidad de índices de almacén de columnas.  Esta característica admite la ejecución en modo por lotes y filtros de mapa de bits para montones en disco e índices de árbol B. El modo por lotes en el almacén de filas permite la compatibilidad con todos operadores habilitados para el modo por lotes existentes.
 
 ### <a name="background"></a>Información previa
 

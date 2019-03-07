@@ -1,7 +1,7 @@
 ---
 title: Guía de arquitectura de procesamiento de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591889"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802411"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,6 @@ Para más información sobre los índices de almacén de columnas, vea [Arquitec
 La forma más básica de ejecutar instrucciones SQL en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consiste en procesar una única instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. Los pasos que se usan para procesar una única instrucción `SELECT` que solo hace referencia a tablas base locales (no a vistas ni a tablas remotas) ilustran el proceso básico.
 
 ### <a name="logical-operator-precedence"></a>Prioridad de los operadores lógicos
-
 Cuando en una instrucción se usa más de un operador lógico, primero se evalúa `NOT`, luego `AND` y, finalmente, `OR`. Los operadores aritméticos y bit a bit se tratan antes que los operadores lógicos. Para más información, vea [Prioridad de operador](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
 En el siguiente ejemplo, la condición de color pertenece al modelo de producto 21 y no al modelo de producto 20, ya que porque `AND` tiene prioridad sobre `OR`.
@@ -88,7 +87,6 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>Optimización de las instrucciones SELECT
-
 Una instrucción `SELECT` no es de procedimiento, ya que no expone los pasos exactos que el servidor de la base de datos debe usar para recuperar los datos solicitados. Esto significa que el servidor de la base de datos debe analizar la instrucción para determinar la manera más eficaz de extraer los datos solicitados. Este proceso se denomina optimizar la instrucción `SELECT` . El componente que lo lleva a cabo se denomina Optimizador de consultas. La entrada al Optimizador de consultas consta de la consulta, el esquema de la base de datos (definiciones de tabla e índice) y las estadísticas de base de datos. La salida del Optimizador de consultas es un plan de ejecución de consultas, en ocasiones denominado plan de consulta o simplemente plan. El contenido de un plan de consulta se describe con más detalle posteriormente en este tema.
 
 En el siguiente diagrama se muestran las entradas y salidas del optimizador de consultas durante la optimización de una única instrucción `SELECT`:
@@ -126,7 +124,6 @@ El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es importante porque permite que el servidor de la base de datos se ajuste dinámicamente a las condiciones cambiantes de la base de datos, sin necesitar la entrada de un programador o de un administrador de base de datos. Esto permite a los programadores centrarse en la descripción del resultado final de la consulta. Pueden estar seguros de que el Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creará un plan de ejecución eficaz para el estado de la base de datos cada vez que se ejecuta la instrucción.
 
 ### <a name="processing-a-select-statement"></a>Procesar una instrucción SELECT
-
 Los pasos básicos que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza para procesar una única instrucción SELECT incluyen lo siguiente: 
 
 1. El analizador examina la instrucción `SELECT` y la divide en unidades lógicas como palabras clave, expresiones, operadores e identificadores.
@@ -135,18 +132,97 @@ Los pasos básicos que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ut
 4. El motor relacional comienza a ejecutar el plan de ejecución. A medida que se procesan los pasos que necesitan datos de las tablas base, el motor relacional solicita al motor de almacenamiento que pase los datos de los conjuntos de filas solicitados desde el motor relacional.
 5. El motor relacional procesa los datos que devuelve el motor de almacenamiento en el formato definido para el conjunto de resultados y devuelve el conjunto de resultados al cliente.
 
-### <a name="processing-other-statements"></a>Procesar otras instrucciones
+### <a name="ConstantFolding"></a> Doblado de constantes y evaluación de expresiones 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] evalúa algunas expresiones constantes con antelación para mejorar el rendimiento de las consultas. Es lo que se conoce como doblado de constantes. Una constante es un literal de [!INCLUDE[tsql](../includes/tsql-md.md)], como 3, "ABC", "2005-12-31", 1.0e3 o 0x12345678.
 
-Los pasos básicos descritos para procesar una instrucción `SELECT` se aplican a otras instrucciones SQL como `INSERT`, `UPDATE`y `DELETE`. Las instrucciones`UPDATE` y `DELETE` deben identificar el conjunto de filas que se van a modificar o eliminar. El proceso de identificación de estas filas es el mismo que se utiliza para identificar las filas de origen que contribuyen al conjunto de resultados de una instrucción `SELECT` . Las instrucciones `UPDATE` e `INSERT` pueden contener instrucciones 'SELECT' incrustadas que proporcionan los valores de los datos que se van a actualizar o insertar.
+#### <a name="foldable-expressions"></a>Expresiones que pueden doblarse
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa el doblado de constantes con los siguientes tipos de expresiones:
+- Expresiones aritméticas, como 1+1, 5/3*2, que solo incluyen constantes.
+- Expresiones lógicas, como 1=1 y 1>2 AND 3>4, que solo incluyen constantes.
+- Funciones integradas que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera que pueden doblarse, incluidas `CAST` y `CONVERT`. Por lo general, una función intrínseca puede doblarse si se trata de una función exclusiva de sus entradas y no contiene ninguna otra información contextual, como opciones SET, configuración de idioma, opciones de la base de datos y claves de cifrado. Las funciones no deterministas no pueden doblarse. Excepto algunas excepciones, las funciones deterministas integradas pueden doblarse.
+
+> [!NOTE] 
+> Los tipos de objetos grandes constituyen una excepción. Si el tipo de salida del proceso de doblado es un tipo de objeto grande (text, image, nvarchar(max), varchar(max) o varbinary(max)), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no dobla la expresión.
+
+#### <a name="nonfoldable-expressions"></a>Expresiones que no pueden doblarse
+El resto de tipos de expresiones no pueden doblarse. En concreto, los siguientes tipos de expresiones no pueden doblarse:
+- Expresiones no constantes como una expresión cuyo resultado dependa del valor de una columna.
+- Expresiones cuyos resultados dependan de una variable o parámetro locales, como @x.
+- Funciones no deterministas.
+- Funciones definidas por el usuario ([!INCLUDE[tsql](../includes/tsql-md.md)] y CLR)
+- Expresiones cuyos resultados dependan de la configuración de idioma.
+- Expresiones cuyos resultados dependan de las opciones SET.
+- Expresiones cuyos resultados dependan de las opciones de configuración del servidor.
+
+#### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>Ejemplos de expresiones constantes que pueden doblarse y que no pueden doblarse
+Estudie la siguiente consulta:
+
+```sql
+SELECT *
+FROM Sales.SalesOrderHeader AS s 
+INNER JOIN Sales.SalesOrderDetail AS d 
+ON s.SalesOrderID = d.SalesOrderID
+WHERE TotalDue > 117.00 + 1000.00;
+```
+
+Si la opción de base de datos `PARAMETERIZATION` no se establece en `FORCED` para la consulta, la expresión `117.00 + 1000.00` se evalúa y sustituye por su resultado, `1117.00`, antes de que se compile la consulta. Entre las ventajas de este doblado de constantes figuran las siguientes:
+- La expresión no tiene que evaluarse repetidas veces durante el tiempo de ejecución.
+- El valor de la expresión después de su evaluación lo utiliza el optimizador de consultas para estimar el tamaño del conjunto de resultados del fragmento de la consulta `TotalDue > 117.00 + 1000.00`.
+
+Por otra parte, si la función `dbo.f` es una función escalar definida por el usuario, la expresión `dbo.f(100)` no se dobla, puesto que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no dobla las expresiones que impliquen a funciones definidas por el usuario, incluso si son deterministas. Para obtener más información sobre la parametrización, consulte [Parametrización forzada](#ForcedParam) más adelante en este artículo.
+
+#### <a name="ExpressionEval"></a>Evaluación de expresiones 
+Además, durante la optimización el estimador (de cardinalidad) del tamaño del conjunto de resultados que forma parte del optimizador evalúa algunas expresiones cuyas constantes no se doblan pero cuyos argumentos se conocen en tiempo de compilación, tanto si se trata de parámetros como de constantes.
+
+Se evalúan las funciones integradas siguientes y los operadores especiales en tiempo de compilación específicamente, si se conocen todas sus entradas: `UPPER`, `LOWER`, `RTRIM`, `DATEPART( YY only )`, `GETDATE`, `CAST` y `CONVERT`. Los siguientes operadores también se evalúan en tiempo de compilación si se conocen todas sus entradas:
+- Operadores aritméticos: +, -, \*, /, unarios -
+- Operadores lógicos: `AND`, `OR`, `NOT`
+- Operadores de comparación: <, >, <=, >=, <>, `LIKE`, `IS NULL`, `IS NOT NULL`
+
+El optimizador de consultas no evalúa ninguna otra función ni operador durante la estimación de la cardinalidad.
+
+#### <a name="examples-of-compile-time-expression-evaluation"></a>Ejemplos de evaluación de expresiones en tiempo de compilación
+Observe este procedimiento almacenado:
+
+```sql
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc( @d datetime )
+AS
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d+1;
+```
+
+Durante la optimización de la instrucción `OrderDate > @d+1` del procedimiento, el optimizador de consultas intenta evaluar la cardinalidad esperada del conjunto de resultados para la condición `SELECT`. La expresión `@d+1` no admite el doblado de constantes porque `@d` es un parámetro. Sin embargo, el valor del parámetro ya se conoce durante la optimización. Esto permite que el optimizador de consultas estime con exactitud el tamaño del conjunto de resultados, lo que ayuda a seleccionar un buen plan de consulta.
+
+Observe ahora un ejemplo similar al anterior, con la diferencia de que se utiliza una variable local, `@d2`, para sustituir `@d+1` en la consulta y de que la expresión se evalúa en una instrucción SET en lugar de en una consulta.
+
+```sql 
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc2( @d datetime )
+AS
+BEGIN
+DECLARE @d2 datetime
+SET @d2 = @d+1
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d2
+END;
+```
+
+Cuando se optimiza la instrucción `SELECT` de *MyProc2* en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el valor de `@d2` no se conoce. Por lo tanto, el optimizador de consultas utiliza una estimación predeterminada para la selectividad de `OrderDate > @d2`, (en este caso, un 30 por ciento).
+
+### <a name="processing-other-statements"></a>Procesar otras instrucciones
+Los pasos básicos descritos para procesar una instrucción `SELECT` se aplican a otras instrucciones SQL como `INSERT`, `UPDATE`y `DELETE`. Las instrucciones`UPDATE` y `DELETE` deben identificar el conjunto de filas que se van a modificar o eliminar. El proceso de identificación de estas filas es el mismo que se utiliza para identificar las filas de origen que contribuyen al conjunto de resultados de una instrucción `SELECT` . Las instrucciones `UPDATE` e `INSERT` pueden contener instrucciones `SELECT` incrustadas que proporcionan los valores de los datos que se van a actualizar o insertar.
 
 Incluso las instrucciones del lenguaje de definición de datos (DDL), como `CREATE PROCEDURE` o `ALTER TABLE`, se resuelven en última instancia en un conjunto de operaciones relacionales en las tablas de catálogo del sistema y, a veces (como `ALTER TABLE ADD COLUMN`) en las tablas de datos.
 
 ### <a name="worktables"></a>Tablas de trabajo
-
 El motor relacional puede necesitar generar una tabla de trabajo para realizar una operación lógica que se especifica en una instrucción SQL. Las tablas de trabajo son tablas internas que se utilizan para almacenar resultados intermedios. Se generan para determinadas consultas `GROUP BY`, `ORDER BY`o `UNION` . Por ejemplo, si una cláusula `ORDER BY` hace referencia a columnas que no están cubiertas por índices, el motor relacional puede necesitar generar una tabla de trabajo para ordenar el conjunto de resultados en el orden solicitado. Las tablas de trabajo también se utilizan en ocasiones a modo de colas que contienen temporalmente el resultado de ejecutar parte de un plan de consulta. Las tablas de trabajo se generan en tempdb y se eliminan de forma automática cuando ya no se necesitan.
 
 ### <a name="view-resolution"></a>Resolución de vistas
-
 El procesador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trata las vistas indizadas y no indizadas de manera diferente. 
 
 * Las filas de una vista indizada se almacenan en la base de datos con el mismo formato que una tabla. Si el optimizador de consultas decide utilizar una vista indizada en un plan de consulta, ésta recibe el mismo tratamiento que la tabla base.
@@ -192,7 +268,6 @@ WHERE OrderDate > '20020531';
 La característica del plan de presentación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio muestra que el motor relacional genera el mismo plan de ejecución para estas dos instrucciones `SELECT`.
 
 ### <a name="using-hints-with-views"></a>Utilizar sugerencias con vistas
-
 Las sugerencias que se colocan en las vistas de una consulta pueden entrar en conflicto con otras sugerencias que se descubren al expandir la vista para obtener acceso a sus tablas base. En ese caso, la consulta devuelve un error. Por ejemplo, considere la siguiente vista que contiene una sugerencia de tabla en su definición:
 
 ```sql
@@ -455,7 +530,7 @@ La única diferencia entre los planes de ejecución para estas consultas es el v
 
 Separar las constantes de la instrucción SQL mediante parámetros ayuda al motor relacional a reconocer los planes duplicados. Puede utilizar los parámetros de varias maneras: 
 
-* En Transact-SQL, utilice `sp_executesql`: 
+* En [!INCLUDE[tsql](../includes/tsql-md.md)], use `sp_executesql`: 
 
    ```sql
    DECLARE @MyIntParm INT
@@ -468,7 +543,7 @@ Separar las constantes de la instrucción SQL mediante parámetros ayuda al moto
      @MyIntParm
    ```
 
-   Este método se recomienda para las scripts de Transact-SQL, procedimientos almacenados o desencadenadores que generan dinámicamente instrucciones SQL. 
+   Este método se recomienda para los scripts [!INCLUDE[tsql](../includes/tsql-md.md)], procedimientos almacenados o desencadenadores que generan dinámicamente instrucciones SQL. 
 
 * Con ADO, OLE DB y ODBC, utilice marcadores de parámetros. Los marcadores de parámetros son signos de interrogación (?) que sustituyen a una constante en una instrucción SQL y se enlazan a una variable de programa. Por ejemplo, podría hacer lo siguiente en una aplicación ODBC: 
 

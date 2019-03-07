@@ -23,18 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0297c6aa82ff318d7e00ee022a5f9b25ad309358
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b4b6b8e386ee8391ab40bf6152d3c8c3cf6e315f
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012127"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801579"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Comparta sus comentarios sobre la tabla de contenido de la documentación de SQL.](https://aka.ms/sqldocsurvey)
 
 Define una fecha que se combina con una hora del día con fracciones de segundos basada en un reloj de 24 horas.
   
@@ -56,7 +53,7 @@ Define una fecha que se combina con una hora del día con fracciones de segundos
 |Tamaño de almacenamiento|8 bytes|  
 |Precisión|Se redondea en incrementos de 0,000, 0,003 o 0.007 segundos|  
 |Valor predeterminado|1900-01-01 00:00:00|  
-|Calendario|Gregoriano (no incluye el intervalo completo de años.)|  
+|Calendario|Gregoriano (incluye el intervalo completo de años).|  
 |Precisión de fracciones de segundo definida por el usuario|No|  
 |Conservación y reconocimiento del ajuste de zona horaria|No|  
 |Reconocimiento del horario de verano|No|  
@@ -66,7 +63,7 @@ En estas tablas se enumeran los formatos de literales de cadena compatibles para
   
 |Numérico|Descripción|  
 |---|---|
-|Formatos de fecha:<br /><br /> [0]4/15/[19]96 -- (mda)<br /><br /> [0]4-15-[19]96 -- (mda)<br /><br /> [0]4.15.[19]96 -- (mda)<br /><br /> [0]4/[19]96/15 -- (mad)<br /><br /> 15/[0]4/[19]96 -- (dma)<br /><br /> 15/[19]96/[0]4 -- (dam)<br /><br /> [19]96/15/[0]4 -- (adm)<br /><br /> [19]96/[0]4/15 -- (amd)<br /><br /> Formatos de hora:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|Puede especificar datos de fecha con un mes en forma de número. Por ejemplo, 5/20/97 representa el veinte de mayo de 1997. Cuando use un formato numérico de fecha, especifique el mes, el día y el año en una cadena con barras diagonales (/), guiones (-) o puntos (.) como separadores. Esta cadena debe aparecer de la forma siguiente:<br /><br /> *número separador número separador número [hora] [hora]*<br /><br /> <br /><br /> Cuando el idioma establecido es **us_english**, el orden predeterminado de la fecha es mdy (mes, día, año). Para cambiar el orden de la fecha, use la instrucción [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> La configuración de SET DATEFORMAT determina cómo se interpretan los valores de fecha. Si el orden no coincide con esta configuración, los valores no se interpretarán como fechas porque se encuentran fuera del intervalo, o bien se interpretarán incorrectamente. Por ejemplo, 12/10/08 se puede interpretar de seis formas distintas, en función de la configuración de DATEFORMAT. Un año en cuatro partes se interpreta como el año.|  
+|Formatos de fecha:<br /><br /> [0]4/15/[19]96 -- (mda)<br /><br /> [0]4-15-[19]96 -- (mda)<br /><br /> [0]4.15.[19]96 -- (mda)<br /><br /> [0]4/[19]96/15 -- (mad)<br /><br /> 15/[0]4/[19]96 -- (dma)<br /><br /> 15/[19]96/[0]4 -- (dam)<br /><br /> [19]96/15/[0]4 -- (adm)<br /><br /> [19]96/[0]4/15 -- (amd)<br /><br /> Formatos de hora:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|Puede especificar datos de fecha con un mes en forma de número. Por ejemplo, 5/20/97 representa el veinte de mayo de 1997. Cuando use un formato numérico de fecha, especifique el mes, el día y el año en una cadena con barras diagonales (/), guiones (-) o puntos (.) como separadores. Esta cadena debe aparecer de la forma siguiente:<br /><br /> *número separador número separador número [hora] [hora]*<br /><br /> <br /><br /> Cuando el idioma establecido es **us_english**, el orden predeterminado de la fecha es mdy (mes, día, año). Para cambiar el orden de la fecha, use la instrucción [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> La configuración de SET DATEFORMAT determina cómo se interpretan los valores de fecha. Si el orden no coincide con la configuración, los valores no se interpretan como fechas. Las fechas desordenadas pueden interpretarse como fuera del intervalo o con valores erróneos. Por ejemplo, 12/10/08 se puede interpretar de seis formas distintas, en función de la configuración de DATEFORMAT. Un año en cuatro partes se interpreta como el año.|  
   
 |Alfabético|Descripción|  
 |---|---|
@@ -74,7 +71,7 @@ En estas tablas se enumeran los formatos de literales de cadena compatibles para
   
 |ISO 8601|Descripción|  
 |---|---|
-|AAAA-MM-DDThh:mm:ss[.mmm]<br /><br /> AAAMMDD[ hh:mm:ss[.mmm]]|Ejemplos:<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> Para utilizar el formato ISO 8601, debe especificar todos los elementos del formato. Esto también incluye la **T**, los dos puntos (:) y el punto (.) que se muestran en el formato.<br /><br /> Los corchetes indican que el componente de fracción de segundo es opcional. El componente de hora se especifica en el formato de 24 horas.<br /><br /> La T indica el inicio de la parte de la hora del valor de **datetime**.<br /><br /> La ventaja de utilizar el formato ISO 8601 es que se trata de un estándar internacional con una especificación que evita ambigüedades. Además, este formato no se ve afectado por la configuración de SET DATEFORMAT o [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).|  
+|AAAA-MM-DDThh:mm:ss[.mmm]<br /><br /> AAAMMDD[ hh:mm:ss[.mmm]]|Ejemplos:<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> Para usar el formato ISO 8601, debe especificar cada elemento del formato, incluida la **T**, los dos puntos (:) y el punto (.) que se muestran en el formato.<br /><br /> Los corchetes indican que el componente de fracción de segundo es opcional. El componente de hora se especifica en el formato de 24 horas.<br /><br /> La T indica el inicio de la parte de la hora del valor de **datetime**.<br /><br /> La ventaja de utilizar el formato ISO 8601 es que se trata de un estándar internacional con una especificación que evita ambigüedades. Además, este formato no se ve afectado por la configuración de SET DATEFORMAT o [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).|  
   
 |Sin separación|Descripción|  
 |---|---|

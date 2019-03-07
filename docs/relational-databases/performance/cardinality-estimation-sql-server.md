@@ -1,7 +1,7 @@
 ---
 title: Estimación de cardinalidad (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,17 +16,37 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328859"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828025"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-En este artículo se explica cómo evaluar y elegir la mejor configuración de estimación de cardinalidad para su sistema SQL. La mayoría de los sistemas sacan partido de la última estimación de cardinalidad, porque es la más precisa. Con la estimación de cardinalidad se predice cuántas filas va a devolver la consulta casi con toda seguridad. El optimizador de consultas usa la predicción de cardinalidad para generar el mejor plan de consulta posible. Con estimaciones más precisas, el optimizador de consultas normalmente puede hacer mejor su trabajo a la hora de generar un plan de consulta óptimo.  
+El Optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un optimizador basado en el costo. Esto significa que selecciona los planes de consulta cuya ejecución tiene el menor costo de procesamiento estimado. El optimizador de consultas determina el costo de ejecución de un plan de consulta en función de dos factores principales:
+
+- El número total de filas procesadas en cada nivel de un plan de consulta, denominado cardinalidad del plan.
+- El modelo de costos del algoritmo determinado por los operadores que se utiliza en la consulta.
+
+El primer factor, la cardinalidad, se utiliza como parámetro de entrada del segundo factor, el modelo de costos. Por lo tanto, una cardinalidad mejorada se traduce en menores costos y, a su vez, en planes de ejecución más rápidos.
+
+La estimación de cardinalidad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calcula la cardinalidad principalmente a partir de histogramas que se crean al crear, manual o automáticamente, índices o estadísticas. En ocasiones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también utiliza información de restricciones y nuevas versiones lógicas de consultas para determinar la cardinalidad.
+
+En los casos siguientes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede calcular con precisión las cardinalidades. Esto deriva en cálculos de costos inexactos que pueden provocar planes de consulta de menor calidad. Si evita estas construcciones en las consultas, el rendimiento de las mismas podría mejora. En ocasiones es posible utilizar formulaciones de consulta alternativas u otras medidas; esto se indicará en esas ocasiones:
+
+- Consultas con predicados que utilizan operadores de comparación entre distintas columnas de la misma tabla.
+- Consultas con predicados que utilizan operadores y se cumple alguna de las siguientes condiciones:
+  - No hay estadísticas en las columnas que se utilizan a uno u otro lado de los operadores.
+  - La distribución de valores en las estadísticas no es uniforme, pero la consulta busca un conjunto de valores muy selectivos. Esta situación se cumple especialmente cuando el operador es distinto al operador de igualdad (=).
+  - El predicado utiliza el operador de comparación No es igual a (!=) o el operador lógico `NOT`.
+- Consultas que utilizan alguna de las funciones integradas de SQL Server o una función escalar definida por el usuario cuyo argumento no es un valor constante.
+- Consultas que implican columnas de combinación por medio de operadores aritméticos o de concatenación de cadenas.
+- Consultas que comparan variables cuyos valores no se conocen cuando la consulta se compila y optimiza.
+
+En este artículo se explica cómo evaluar y elegir la mejor configuración de estimación de cardinalidad para su sistema. La mayoría de los sistemas sacan partido de la última estimación de cardinalidad, porque es la más precisa. Con la estimación de cardinalidad se predice cuántas filas va a devolver la consulta casi con toda seguridad. El optimizador de consultas usa la predicción de cardinalidad para generar el mejor plan de consulta posible. Con estimaciones más precisas, el optimizador de consultas normalmente puede hacer mejor su trabajo a la hora de generar un plan de consulta óptimo.  
   
 Es bastante probable que el sistema de aplicaciones tenga una consulta importante cuyo plan cambie a un plan más lento debido a la nueva estimación de cardinalidad. Esa consulta podría ser una de las siguientes:  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 75e71b4a17aa74ecb33f0a0d8c195b2e60b0e5a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506928"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579385"
 ---
 # <a name="data-mining-projects"></a>Proyectos de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "52506928"
 |Proporciona vínculos a información sobre cada uno de los visores de modelos de minería de datos|[Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Proporciona información sobre cómo crear un gráfico de elevación, un gráfico de beneficios o una matriz de clasificación, o probar una estructura de minería de datos|[Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Proporciona información sobre los permisos y las opciones de procesamiento|[Procesar objetos de minería de datos](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Proporciona información acerca de Analysis Services|[Bases de datos de modelo multidimensional ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Proporciona información acerca de Analysis Services|[Bases de datos de modelo multidimensional](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   

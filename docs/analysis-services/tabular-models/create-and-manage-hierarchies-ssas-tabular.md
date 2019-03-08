@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e9e5fc942aa7b03cd4cb9a15d8b474a12f12a8d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 5e785fe0e4a5f0030beceff7b9393932a29eaa52
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072602"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579560"
 ---
 # <a name="create-and-manage-hierarchies"></a>Crear y administrar jerarquías 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "53072602"
 -   O bien, haga clic en el nivel primario de la jerarquía y, a continuación, presione Supr. Esto también quitará todos los niveles secundarios.  
   
 ## <a name="see-also"></a>Vea también  
- [Diseñador de modelos tabulares ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Diseñador de modelos tabulares](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [Jerarquías](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   

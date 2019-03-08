@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a4fdd31cddaba1c46cc14ae6dbdeeb6ad92449da
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017941"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579135"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Solución de problemas de recopilación de datos para el aprendizaje automático
 
@@ -121,7 +121,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Si no se está ejecutando servicios Machine Learning, puede determinar la versión de Python instalada examinando el archivo pythonlauncher.config. Se recomienda que haga y abrir una copia del archivo para que accidentalmente no cambie las propiedades.
 
-1. Para SQL Server 2017 solo: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. Para SQL Server 2017 solo: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
 2. Obtener el valor de **PYTHONHOME**.
 3. Obtiene el valor del directorio de trabajo actual.
 
@@ -209,7 +209,7 @@ Puede obtener estos registros desde las siguientes ubicaciones predeterminadas:
 
 * SQL Server 2017
   
-  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog `
+  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
 > [!NOTE]
 > El nombre de carpeta exacto es diferente según el nombre de instancia. Según la configuración, la carpeta puede estar en una unidad diferente.

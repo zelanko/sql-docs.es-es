@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77889113dd7987827426bae2357e89590754a545
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0fc639564c1ac37af1cf29cc119cbf48cbf3baee
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072352"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579547"
 ---
 # <a name="tabular-model-solution-deployment"></a>Implementación de la solución de modelo tabular 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "53072352"
 |--------------|---------------------|-----------------|  
 |**Servidor**<br /><br /> Establézcalo cuando se cree el proyecto.|**localhost**|Esta propiedad, establecida cuando se crea el proyecto, especifica el nombre de la instancia de Analysis Services en la que se implementará el modelo. De forma predeterminada, el modelo se implementará en la instancia predeterminada de Analysis Services del equipo local. Sin embargo, puede cambiar este valor para especificar una instancia con nombre en el equipo local o cualquier instancia en cualquier equipo remoto en el que tenga permiso para crear objetos de Analysis Services.|  
 |**Edición**|La misma edición que la instancia en la que se encuentra el servidor del área de trabajo.|Esta propiedad especifica la edición del servidor de Analysis Services en la que se implementará el modelo. La edición del servidor define varias características que se pueden incorporar al proyecto. De forma predeterminada, la edición será la del servidor de Analysis Services local. Si especifica otro servidor de Analysis Services, por ejemplo, uno de producción, asegúrese de especificar la edición de ese servidor de Analysis Services.|  
-|**Base de datos**|**\<ProjectName >**|Esta propiedad especifica el nombre de la base de datos de Analysis Services en la que se crearán instancias de los objetos de modelo durante la implementación. Este nombre también se especificará en una conexión de datos del cliente de informes o en un archivo de conexión de datos .bism.<br /><br /> Puede cambiar este nombre en cualquier momento durante la creación del modelo. Si cambia el nombre después de haber implementado el modelo, los cambios realizados no afectarán al modelo implementado previamente. Por ejemplo, si abre una solución denominada **TestDB** e implementa la solución con el nombre predeterminado de la base de datos del modelo (Modelo) y, a continuación, modifica la solución y cambia el nombre de la base de datos del modelo a **Sales**, la instancia de Analysis Services en la que se implementaron las soluciones mostrará bases de datos independientes, una denominada Modelo y otra Ventas.|  
+|**Base de datos**|**\<projectname>**|Esta propiedad especifica el nombre de la base de datos de Analysis Services en la que se crearán instancias de los objetos de modelo durante la implementación. Este nombre también se especificará en una conexión de datos del cliente de informes o en un archivo de conexión de datos .bism.<br /><br /> Puede cambiar este nombre en cualquier momento durante la creación del modelo. Si cambia el nombre después de haber implementado el modelo, los cambios realizados no afectarán al modelo implementado previamente. Por ejemplo, si abre una solución denominada **TestDB** e implementa la solución con el nombre predeterminado de la base de datos del modelo (Modelo) y, a continuación, modifica la solución y cambia el nombre de la base de datos del modelo a **Sales**, la instancia de Analysis Services en la que se implementaron las soluciones mostrará bases de datos independientes, una denominada Modelo y otra Ventas.|  
 |**Nombre del cubo**|**Modelo**|Esta propiedad especifica el nombre del cubo como se muestra en las herramientas cliente (por ejemplo, Excel) y en AMO (Objetos de administración de análisis).|  
   
 ### <a name="directquery-options-properties"></a>Propiedades de las opciones de DirectQuery  
@@ -86,6 +86,6 @@ ms.locfileid: "53072352"
 |[Sincronizar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|Describe cómo usar el Asistente para sincronizar bases de datos con el fin de sincronizar los metadatos y los datos entre dos bases de datos tabulares o multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Vea también  
- [Conectarse a una base de datos de modelo tabular ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [Conectarse a una base de datos de modelo tabular](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

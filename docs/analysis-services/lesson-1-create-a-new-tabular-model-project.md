@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410782"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579435"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lección 1: Crear un nuevo proyecto de modelo tabular
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -46,7 +46,7 @@ Este tema es la primera lección de un tutorial de creación de modelos tabulare
       
 6.  En **Nivel de compatibilidad**, compruebe que está seleccionado **SQL Server 2016 (1200)** y haga clic en **Aceptar**.   
  
-    ![como-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
+    ![as-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
       
     Si no ve SQL Server 2016 RTM (1200) en el cuadro de lista de nivel de compatibilidad, no se está usando la versión más reciente de SQL Server Data Tools. Para obtener la versión más reciente, vea [Instalar SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
@@ -59,15 +59,15 @@ Ahora que ha creado un nuevo proyecto de modelo tabular, dedique un momento a ex
   
 Una vez creado el proyecto, se abrirá en SSDT. En el lado derecho, en **Explorador de modelos tabulares**, verá una vista de árbol de los objetos en el modelo. Puesto que todavía no ha importado datos, las carpetas estarán vacías. Puede hacer clic en una carpeta de objetos para llevar a cabo acciones, similares a la barra de menús. Paso a paso a través de este tutorial, usará el Explorador de modelos tabulares para navegar por los distintos objetos en el proyecto de modelo.
 
-![como-tabular-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
+![as-tabular-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
 
 Haga clic en el **el Explorador de soluciones** ficha. En este caso, verá su **Model.bim** archivo. Si no ve la ventana del diseñador a la izquierda (la ventana vacía con la pestaña Model.bim), en **el Explorador de soluciones**, en **proyecto AW Internet Sales**, haga doble clic en el **Model.bim** archivo. El archivo Model.bim contiene todos los metadatos del proyecto de modelo. 
 
-![como-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![as-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
 Echemos un vistazo a las propiedades del modelo. Haga clic en **Model.bim**. En el **propiedades** ventana, verá el [propiedades de los modelos](../analysis-services/tabular-models/model-properties-ssas-tabular.md), más importante es la **el modo DirectQuery** propiedad. Esta propiedad especifica si el modelo se va a implementar en modo de almacenamiento en memoria (desactivada) o en modo DirectQuery (activada). En este tutorial, creará e implementará el modelo en modo de almacenamiento en memoria.
 
-![como-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
+![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 Cuando se crea un nuevo modelo, algunas de sus propiedades se establecen automáticamente según las opciones del modelado de datos que se pueden especificar en el **herramientas** > **opciones** cuadro de diálogo. Las propiedades Copia de seguridad de datos, Retención de área de trabajo y Servidor del área de trabajo especifican cómo y dónde se realiza una copia de seguridad, se conserva en memoria y se crea la base de datos del área de trabajo (la base de datos de creación del modelo). Puede cambiar esta configuración más adelante si es necesario, pero de momento deje estas propiedades tal como están.  
 
@@ -83,7 +83,7 @@ Examine algunos de los cuadros de diálogo y ubicaciones de las distintas caract
 
 
 ## <a name="additional-resources"></a>Recursos adicionales
-Para obtener más información acerca de los diferentes tipos de proyectos de modelos tabulares, vea [proyectos de modelos tabulares](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Para obtener más información sobre el entorno de creación de modelos tabulares, vea [Diseñador de modelos tabulares ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Para obtener más información acerca de los diferentes tipos de proyectos de modelos tabulares, vea [proyectos de modelos tabulares](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Para obtener más información sobre el entorno de creación de modelos tabulares, vea [Diseñador de modelos tabulares](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## <a name="whats-next"></a>¿Qué sigue?

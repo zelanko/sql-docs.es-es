@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bb0ee8ad06d217cd6441527a1505311dac8e926
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044402"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579185"
 ---
 # <a name="backup-and-restore"></a>Copias de seguridad y restauración
 
@@ -120,7 +120,7 @@ Al restaurar los datos, el dispositivo detecta el número de nodos de proceso en
   
 5.  Cada nodo de proceso restaura su parte de la base de datos de usuario. Si cualquiera de las restauraciones no finaliza correctamente, se quitan todas las bases de datos y la restauración se complete correctamente.  
   
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restaurar a un dispositivo con un mayor número de nodos de proceso  
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restaurar a un dispositivo con más nodos de ejecución  
   
 Restaurar una copia de seguridad en un dispositivo con un gran número de nodos de ejecución aumenta el tamaño de base de datos asignado en proporción al número de nodos de ejecución.  
   
@@ -132,7 +132,7 @@ Después de la redistribución, cada nodo de ejecución contendrá menos datos r
   
 |Tareas de restauración y copia de seguridad|Descripción|  
 |---------------------------|---------------|  
-|Prepare un servidor como un servidor de copia de seguridad.|[Adquirir y configurar un servidor de copia de seguridad ](acquire-and-configure-backup-server.md)|  
+|Prepare un servidor como un servidor de copia de seguridad.|[Adquisición y configuración de servidores de copia de seguridad](acquire-and-configure-backup-server.md)|  
 |Copia de seguridad de una base de datos.|[BASE DE DATOS DE COPIA DE SEGURIDAD](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Restaurar una base de datos.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 

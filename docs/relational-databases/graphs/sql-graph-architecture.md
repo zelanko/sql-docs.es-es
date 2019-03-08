@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044551"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579355"
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura SQL Graph  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ Obtenga información sobre la [!INCLUDE[tsql-md](../../includes/tsql-md.md)] ext
 
 |Tarea   |Artículo relacionado  |Notas
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` Ahora se amplía para admitir la creación de una tabla como nodo o PERIMETRAL AS. Tenga en cuenta que una tabla perimetral puede o no tener ningún atributo definido por el usuario.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` Ahora se amplía para admitir la creación de una tabla como nodo o PERIMETRAL AS. Tenga en cuenta que una tabla perimetral puede o no tener ningún atributo definido por el usuario.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Se pueden modificar las tablas perimetrales y de nodo del mismo modo que una tabla relacional, usa el `ALTER TABLE`. Los usuarios pueden agregar o modificar las columnas definidas por el usuario, los índices o restricciones. Sin embargo, como la modificación de las columnas de gráfico interno, `$node_id` o `$edge_id`, se producirá un error.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Los usuarios pueden crear índices en columnas pseudo y definido por el usuario en las tablas perimetrales y de nodo. Se admiten todos los tipos de índices, incluidos los índices de almacén de columnas en clúster y no clúster.  |
 |CREAR LAS RESTRICCIONES PERIMETRALES    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Los usuarios pueden ahora crear las restricciones perimetrales en las tablas perimetrales para exigir la semántica específica y también mantener la integridad de datos  |

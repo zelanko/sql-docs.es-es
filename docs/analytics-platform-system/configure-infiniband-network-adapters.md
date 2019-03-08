@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518274"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579405"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurar adaptadores de red InfiniBand para Analytics Platform System
 Describe cómo configurar los adaptadores de red InfiniBand en un servidor que no sea de dispositivo cliente para conectarse al nodo de Control en el almacenamiento de datos paralelos (PDW). Siga estas instrucciones para la conectividad básica y de alta disponibilidad, para que los procesos de copia de seguridad, la cargando y otros se conectan automáticamente a la red InfiniBand activa.  
@@ -179,8 +179,8 @@ Para satisfacer sus requisitos empresariales, también puede unir el servidor de
   
     -   MyPDW-SQLCTL01.MyAPS.local  
   
-    -   MyPDW SQLCTL01  
+    -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>Vea también  
-[Adquirir y configurar un servidor de carga ](acquire-and-configure-loading-server.md)  
+[Adquirir y configurar un servidor de carga](acquire-and-configure-loading-server.md)  
   

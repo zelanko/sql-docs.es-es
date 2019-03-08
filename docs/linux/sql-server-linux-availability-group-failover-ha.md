@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 891f86328042091bb1e7a67f725f13ee160dccf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79b55906477d091f4e61883a2f24d991f655054b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665834"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579465"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Conmutación por error del grupo de disponibilidad AlwaysOn en Linux
 
@@ -38,7 +38,7 @@ Para conmutar por error, la réplica secundaria que se convertirá en la réplic
 
 Conmutación por error manual en dos pasos.
 
-   Primero,[ manualmente conmutar por error y mover el recurso de AG](#manualMove) desde el nodo de clúster que pertenece a los recursos a un nuevo nodo.
+   Primero, [manualmente conmutar por error y mover el recurso de AG](#manualMove) desde el nodo de clúster que pertenece a los recursos a un nuevo nodo.
 
    El clúster de conmutación por error el recurso AG y agrega una restricción de ubicación. Esta restricción configura el recurso para ejecutarse en el nuevo nodo. Quitar esta restricción para correctamente la conmutación por error en el futuro.
 

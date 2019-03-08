@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: d73a1a3b75bbdce6604677464b6947c789bedbac
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 66d4015f31c08d0d67069147effac15ff5edd8ea
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160563"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579475"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Inicio rápido: Instalar a SQL Server y crear una base de datos en SUSE Linux Enterprise Server
 
@@ -44,7 +44,7 @@ Debe tener una máquina SLES v12 SP2 con **al menos 2 GB** de memoria. El sistem
 
 Para instalar SUSE Linux Enterprise Server en su propio equipo, vaya a [ https://www.suse.com/products/server ](https://www.suse.com/products/server). También puede crear máquinas virtuales SLES en Azure. Consulte [crear y administrar máquinas virtuales Linux con la CLI de Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)y usar `--image SLES` en la llamada a `az vm create`.
 
-Si anteriormente ha instalado un CTP o la versión RC de SQL Server 2017, primero debe quitar el repositorio antiguo antes de seguir estos pasos. Para obtener más información, consulte [repositorios de configuración de Linux para SQL Server 2017 y 2019 ](sql-server-linux-change-repo.md).
+Si anteriormente ha instalado un CTP o la versión RC de SQL Server 2017, primero debe quitar el repositorio antiguo antes de seguir estos pasos. Para obtener más información, consulte [repositorios de configuración de Linux para SQL Server 2017 y 2019](sql-server-linux-change-repo.md).
 
 > [!NOTE]
 > En este momento, el [subsistema Windows para Linux](https://msdn.microsoft.com/commandline/wsl/about) para Windows 10 no se admite como destino de la instalación.

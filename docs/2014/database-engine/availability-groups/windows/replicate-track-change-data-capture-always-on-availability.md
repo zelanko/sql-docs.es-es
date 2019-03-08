@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134095"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579325"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ayuda a proporcionar alta disponibilidad y capacidades adicionales de recuperación de base de datos.  
@@ -218,7 +218,7 @@ ms.locfileid: "54134095"
   
 ### <a name="considerations"></a>Consideraciones  
   
--   La base de datos de distribución no se puede usar con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o con la creación de reflejo de la base de datos. La configuración de replicación se acopla a la instancia de SQL Server donde se ha configurado el distribuidor; por lo tanto, la base de datos de distribución no se puede reflejar ni replicar. Para proporcionar alta disponibilidad para el distribuidor, utilice un clúster de conmutación por error de SQL Server. Para obtener más información, consulte [ instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   La base de datos de distribución no se puede usar con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o con la creación de reflejo de la base de datos. La configuración de replicación se acopla a la instancia de SQL Server donde se ha configurado el distribuidor; por lo tanto, la base de datos de distribución no se puede reflejar ni replicar. Para proporcionar alta disponibilidad para el distribuidor, utilice un clúster de conmutación por error de SQL Server. Para obtener más información, vea [Always On Failover Cluster Instances (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) (Instancias de clúster de conmutación por error de Always On [SQL Server]).  
   
 -   La conmutación por error del suscriptor a una base de datos de secundaria, aunque se admite, es un procedimiento manual relativamente complejo. El procedimiento es básicamente idéntico al método utilizado para la conmutación por error de una base de datos de suscriptor reflejada. Los suscriptores deben ejecutar [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o una versión posterior para participar en un grupo de disponibilidad.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "54134095"
   
 -   [Mantener una base de datos de publicación AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Preguntas más frecuentes sobre la administración de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [Preguntas más frecuentes para administradores de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54134095"
  [Los suscriptores de replicación y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidad AlwaysOn: Interoperabilidad (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [Grupos de disponibilidad AlwaysOn: Interoperabilidad (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Replicación de SQL Server](../../../relational-databases/replication/sql-server-replication.md)   

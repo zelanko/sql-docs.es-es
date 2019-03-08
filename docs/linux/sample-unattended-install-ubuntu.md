@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: c6327ae25e9e0b22310e810cd33f7176ecc1349d
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 878eda9c8816e400c873154f1c1cf3d613f8fea3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760058"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579055"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ejemplo: Script de instalación desatendida de SQL Server para Ubuntu
 
@@ -176,7 +176,7 @@ Para ejecutar el script
    ```
 
 ### <a name="understanding-the-script"></a>Descripción de la secuencia de comandos
-Lo primero que hace el script de Bash se establece algunas variables. Pueden ser variables de scripting, como en el ejemplo, o las variables de entorno. La variable ``` MSSQL_SA_PASSWORD ``` es **requiere** mediante la instalación de SQL Server, los demás son variables personalizadas creadas para la secuencia de comandos. El script de ejemplo lleva a cabo los pasos siguientes:
+Lo primero que hace el script de Bash se establece algunas variables. Pueden ser variables de scripting, como en el ejemplo, o las variables de entorno. La variable `MSSQL_SA_PASSWORD` es **requiere** mediante la instalación de SQL Server, los demás son variables personalizadas creadas para la secuencia de comandos. El script de ejemplo lleva a cabo los pasos siguientes:
 
 1. Importe las claves públicas de GPG de Microsoft.
 

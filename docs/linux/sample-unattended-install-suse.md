@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 91ff8bfa90fd691d4314e56e751d3ebde1079180
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 0e61b42cb7a0d0f0262a4ac4a38c413bf4c4b512
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759958"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579721"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Ejemplo: Script de instalación desatendida de SQL Server para SUSE Linux Enterprise Server
 
@@ -178,7 +178,7 @@ Para ejecutar el script
    ```
 
 ### <a name="understanding-the-script"></a>Descripción de la secuencia de comandos
-Lo primero que hace el script de Bash se establece algunas variables. Pueden ser variables de scripting, como en el ejemplo, o las variables de entorno. La variable ``` MSSQL_SA_PASSWORD ``` es **requiere** mediante la instalación de SQL Server, los demás son variables personalizadas creadas para la secuencia de comandos. El script de ejemplo lleva a cabo los pasos siguientes:
+Lo primero que hace el script de Bash se establece algunas variables. Pueden ser variables de scripting, como en el ejemplo, o las variables de entorno. La variable `MSSQL_SA_PASSWORD` es **requiere** mediante la instalación de SQL Server, los demás son variables personalizadas creadas para la secuencia de comandos. El script de ejemplo lleva a cabo los pasos siguientes:
 
 1. Importe las claves públicas de GPG de Microsoft.
 

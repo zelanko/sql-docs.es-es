@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543590"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579045"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Soluciones de alta disponibilidad (SQL Server)
   En este tema se presentan varias soluciones de alta disponibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que mejoran la disponibilidad de los servidores o las bases de datos. Una solución de alta disponibilidad enmascara los efectos de un error de hardware o software y mantiene la disponibilidad de las aplicaciones a fin de minimizar el tiempo de inactividad que perciben los usuarios.  
@@ -36,10 +36,10 @@ ms.locfileid: "52543590"
  Instancias de clúster de conmutación por error de AlwaysOn  
  Como parte de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn oferta, instancias de clúster de conmutación por error de AlwaysOn aprovechan la funcionalidad de agrupación en clústeres de conmutación por error de servidor de Windows (WSFC) para proporcionar alta disponibilidad local mediante la redundancia en la instancia del servidor-un nivel de  *instancia de clúster de conmutación por error* (FCI). Una FCI es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se instala a través de los nodos de Clústeres de conmutación por error de Windows Server (WSFC) y, posiblemente, a través de varias subredes. En la red, una FCI aparece como una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en un equipo individual, pero proporciona la conmutación por error entre nodos de WSFC si el nodo actual deja de estar disponible.  
   
- Para obtener más información, consulte [ instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
+ Para obtener más información, vea [Always On Failover Cluster Instances (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md) (Instancias de clúster de conmutación por error de Always On [SQL Server]).  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] es una solución de alta disponibilidad y recuperación ante desastres de nivel empresarial presentada en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] que permite maximizar la disponibilidad para una o varias bases de datos de usuario. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] necesita que las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentren en nodos de Clústeres de conmutación por error de Windows Server (WSFC). Para obtener más información, consulte [ grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] es una solución de alta disponibilidad y recuperación ante desastres de nivel empresarial presentada en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] que permite maximizar la disponibilidad para una o varias bases de datos de usuario. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] necesita que las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentren en nodos de Clústeres de conmutación por error de Windows Server (WSFC). Para obtener más información, consulte [grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
 >  Una FCI puede aprovechar las ventajas de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] para proporcionar recuperación remota ante desastres en la base de datos. Para más información, vea [Clúster de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "52543590"
   
 ## <a name="see-also"></a>Vea también  
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Creación de reflejo de base de datos: Interoperabilidad y coexistencia &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Creación de reflejo de base de datos: interoperabilidad y coexistencia &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Características desusadas del motor de base de datos de SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

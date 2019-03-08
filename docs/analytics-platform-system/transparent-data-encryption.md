@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534078"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578495"
 ---
 # <a name="transparent-data-encryption"></a>Cifrado de datos transparente
 Puede tomar varias precauciones para proteger la base de datos, como diseñar un sistema seguro, cifrar los datos confidenciales e instalar un firewall alrededor de los servidores de bases de datos. Sin embargo, para un escenario en el que se roban medios físicos (como unidades o cintas de copia de seguridad), un tercero malintencionado puede simplemente restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
@@ -123,7 +123,7 @@ En la tabla siguiente se proporcionan vínculos y explicaciones de los comandos 
 |[CREAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crea una clave que se utiliza para cifrar una base de datos.|  
 |[MODIFICAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Cambia la clave que se utiliza para cifrar una base de datos.|  
 |[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Quita la clave que se utilizó para cifrar una base de datos.|  
-|[MODIFICAR BASE DE DATOS](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explica la opción **ALTER DATABASE** que se utiliza para habilitar TDE.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explica la opción **ALTER DATABASE** que se utiliza para habilitar TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Vistas de catálogo y vistas de administración dinámica  
 En la tabla siguiente se muestran las vistas de catálogo y las vistas de administración dinámica de TDE.  
@@ -238,15 +238,15 @@ Si existe una DMK en el dispositivo en el que se realizó la actualización o re
   
 Ejemplo de la acción de actualización. Reemplace `**********` con la contraseña de la DMK.  
   
-`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'`  
   
 Ejemplo de la acción que se va a reemplazar una máquina virtual.  
   
-`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
 Durante la actualización, si un usuario de base de datos se cifran y no se proporciona la contraseña de la DMK, la acción de actualización se producirá un error. Durante el reemplazo, si no se proporciona la contraseña correcta cuando existe una DMK, la operación omitirá el paso de recuperación de la DMK. Todos los demás pasos se completará al final de la acción de máquina virtual de reemplazo, sin embargo, la acción notificará un error al final para indicar que se requieren pasos adicionales. En los registros de instalación (ubicado en **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\\Detail-Setup < marca de tiempo >**), se mostrará la siguiente advertencia cerca del final.  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
+`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 Ejecute estas instrucción manualmente en PDW y reinicie el dispositivo después de con el fin de recuperar la DMK:  
   
@@ -278,8 +278,8 @@ Los vínculos siguientes contienen información general acerca de cómo SQL Serv
 
   
 ## <a name="see-also"></a>Vea también  
-[MODIFICAR BASE DE DATOS](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CREAR LA CLAVE MAESTRA](../t-sql/statements/create-master-key-transact-sql.md)  
+[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  

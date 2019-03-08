@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c9bcc5ba99736a6bb65bde4aff20e220d70303d4
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242026"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578115"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>Entrenar y crear modelos de aprendizaje automático con Spark
 
@@ -88,7 +88,7 @@ data = data_all.select(select_cols)
 
 ## <a name="step-4---split-as-training-and-test-set"></a>Paso 4: dividir como conjunto de entrenamiento y prueba
 
-Utilice el 75% de las filas para entrenar el modelo y el resto del 25% para evaluar el modelo. Además, conservar el entrenamiento y probar los conjuntos de datos en el almacenamiento HDFS. El paso no es necesario, pero se muestra para demostrar cómo guardar y cargar con el formato ORC. Otros formatos, por ejemplo, `Parquet `también pueden usarse.
+Utilice el 75% de las filas para entrenar el modelo y el resto del 25% para evaluar el modelo. Además, conservar el entrenamiento y probar los conjuntos de datos en el almacenamiento HDFS. El paso no es necesario, pero se muestra para demostrar cómo guardar y cargar con el formato ORC. Otros formatos, por ejemplo, `Parquet` también pueden usarse.
 
 Registrar este paso que debería ver dos directorios creados con el nombre AdultCensusIncomeTrain y AdultCensusIncomeTest
 

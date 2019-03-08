@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ca902670ae5947b88a306680855e92719fe44591
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295123"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579605"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
   Las expresiones ayudan a crear informes eficaces y flexibles. Este tutorial enseña a crear e implementar expresiones que usen operadores y funciones comunes. Usará el **expresión** cuadro de diálogo para escribir expresiones que concatenan valores de nombres, buscan valores en un conjunto de datos independiente, mostrar diferentes imágenes según los valores de campo y así sucesivamente.  
@@ -66,7 +66,7 @@ ms.locfileid: "56295123"
 >  En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, elija un origen de datos y crear un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>Para crear un nuevo informe de tabla  
   
@@ -698,7 +698,7 @@ ms.locfileid: "56295123"
   
 1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
-2.  Haga clic en **Desktop`, `Mis documentos**, o **mi equipo**y, a continuación, vaya a la carpeta donde desea guardar el informe.  
+2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde desea guardar el informe.  
   
 3.  En **Nombre**, reemplace el nombre predeterminado por **Resumen de comparación de ventas**.  
   

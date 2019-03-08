@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b0ef5d33757d9f8c4e3aed53d3867bfd5b1297b2
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513765"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57577935"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>Inicio rápido: Comprobación de que Python existe en SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -146,4 +146,4 @@ Microsoft proporciona una serie de paquetes de Python preinstalados con Machine 
 Ahora que ha confirmado que la instancia está lista para trabajar con Python, eche un vistazo más de cerca en una interacción básica de Python.
 
 > [!div class="nextstepaction"]
-> [Inicio rápido: Script de Python "Hello world" en SQL Server ](quickstart-python-run-using-t-sql.md)
+> [Inicio rápido: Script de Python "Hello world" en SQL Server](quickstart-python-run-using-t-sql.md)

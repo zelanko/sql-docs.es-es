@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba6b9184dba10ecdd9f466304dd114247ee4ac27
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 9635dfd55e9ad78e70d849f46c7dafe880a1870d
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072552"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579615"
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: configurar las propiedades del comportamiento de tabla para los informes
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "53072552"
   
 -   Quite los subtotales no deseados de un informe de matriz. La agrupación predeterminada en el nivel de campo crea un subtotal para cada campo. Si desea que solo se calcule un subtotal en el nivel de fila, con el establecimiento del identificador de fila obtendrá este resultado.  
   
- No puede establecer un identificador de fila para las tablas marcadas como tablas de fechas. En las tablas de fechas, el identificador de fila se especifica cuando se marca la tabla. Para obtener más información, consulte [marcar como tabla de fechas, cuadro de diálogo ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
+ No puede establecer un identificador de fila para las tablas marcadas como tablas de fechas. En las tablas de fechas, el identificador de fila se especifica cuando se marca la tabla. Para obtener más información, consulte [marcar como tabla de fechas, cuadro de diálogo](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>Definindo a propriedade Manter Linhas Exclusivas  
  Esta propiedad permite especificar las columnas que contienen información de identidad (como un nombre de empleado o un código de producto) de manera que se distinga una fila de otra. En los casos en que las filas parezcan idénticas (como dos clientes con el mismo nombre), las columnas que especifique para esta propiedad se repetirán en la tabla de informe.  

@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126075"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578325"
 ---
 # <a name="sql-server-replication"></a>Replicación de SQL Server
   La replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos desde una base de datos a otra, para luego sincronizar ambas bases de datos y mantener su coherencia. La replicación permite distribuir datos entre diferentes ubicaciones y entre usuarios remotos o móviles mediante redes locales y de área extensa, conexiones de acceso telefónico, conexiones inalámbricas e Internet.  
@@ -29,10 +29,10 @@ ms.locfileid: "54126075"
   
 
 ## <a name="whats-new"></a>Novedades 
-- SQL Server 2017 no ha presentado nuevas características importantes para la replicación de SQL Server. 
-- SQL Server 2016 no ha presentado nuevas características importantes para la replicación de SQL Server. 
+- En SQL Server 2017 no se han presentado nuevas características importantes para la replicación de SQL Server. 
+- En SQL Server 2016 no se han presentado nuevas características importantes para la replicación de SQL Server. 
 
-Para obtener información, vea compatibilidad con versiones anteriores [compatibilidad con versiones anteriores de replicación](replication-backward-compatibility.md) 
+Para obtener información sobre la compatibilidad con versiones anteriores, vea [Compatibilidad con versiones anteriores de replicación](replication-backward-compatibility.md). 
 
 
  ## <a name="replication-security"></a>Seguridad de la replicación
@@ -46,7 +46,7 @@ Para obtener información, vea compatibilidad con versiones anteriores [compatib
 -   [Ver y modificar propiedades de publicación](publish/view-and-modify-publication-properties.md)   
 -   [Deshabilitar la publicación y la distribución](disable-publishing-and-distribution.md)  
   
-## <a name="publications-and-articles"></a>Las publicaciones y artículos 
+## <a name="publications-and-articles"></a>Publicaciones y artículos 
   
 -   [Create a Publication](publish/create-a-publication.md)    
 -   [Definir un artículo](publish/define-an-article.md)   
@@ -66,7 +66,7 @@ Para obtener información, vea compatibilidad con versiones anteriores [compatib
 -   [Configurar propiedades de instantáneas](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
 -   [Entregar una instantánea mediante FTP](publish/deliver-a-snapshot-through-ftp.md) 
   
-### <a name="filter-data"></a>Filtrar datos  
+### <a name="filter-data"></a>Filtrado de datos  
   
 -   [Definir y modificar un filtro de columna](publish/define-and-modify-a-column-filter.md)    
 -   [Definir y modificar un filtro de fila estático](publish/define-and-modify-a-static-row-filter.md)    
@@ -82,7 +82,7 @@ Para obtener información, vea compatibilidad con versiones anteriores [compatib
 ### <a name="merge-replication-options"></a>Opciones de la replicación de mezcla  
   
 -   [Definir una relación de registros lógicos entre artículos de tabla de mezcla](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
--   [Especifique las propiedades de replicación de mezcla](publish/specify-merge-replication-properties.md)    
+-   [Especificación de las propiedades de replicación de mezcla](publish/specify-merge-replication-properties.md)    
 -   [Especificar un solucionador de artículos de mezcla](publish/specify-a-merge-article-resolver.md)    
 
   
@@ -98,7 +98,7 @@ Para obtener información, vea compatibilidad con versiones anteriores [compatib
 -   [Crear una suscripción actualizable en una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [Crear una suscripción para un suscriptor que no sea de SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
-## <a name="synchronize-subscriptions"></a>Sincronizar las suscripciones  
+## <a name="synchronize-subscriptions"></a>Sincronización de suscripciones  
   
 -   [Crear y aplicar la instantánea inicial](create-and-apply-the-initial-snapshot.md)   
 -   [Crear una instantánea para una publicación de mezcla con filtros con parámetros](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
@@ -126,13 +126,13 @@ Para obtener información, vea compatibilidad con versiones anteriores [compatib
 -   [Administrar una topología punto a punto](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [Detener una topología de replicación](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [Configurar el trabajo del conjunto de transacciones para un publicador de Oracle](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [Actualizar Scripts de replicación ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [Actualizar Scripts de replicación](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
 ## <a name="monitor"></a>Monitor
   
 -   [Permitir el uso del Monitor de replicación a los usuarios que no son administradores](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Supervisar la replicación mediante programación](monitor/programmatically-monitor-replication.md)    
--   [Ver comandos replicados y otra información en la base de datos de distribución ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [Ver información de conflictos para publicaciones de mezcla ](view-conflict-information-for-merge-publications.md) 
+-   [Ver comandos replicados y otra información en la base de datos de distribución](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [Ver información de conflictos para publicaciones de mezcla](view-conflict-information-for-merge-publications.md) 
 -   [Medir la latencia y validar las conexiones de la replicación transaccional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

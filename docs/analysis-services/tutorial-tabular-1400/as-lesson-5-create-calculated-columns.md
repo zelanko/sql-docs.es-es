@@ -1,6 +1,6 @@
 ---
-title: 'Lección del tutorial de Analysis Services 5: crear columnas calculadas | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lección 5 del tutorial: Crear columnas calculadas | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58a7f38dbbe7a68668418db4d1bef16e08784a08
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063864"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685562"
 ---
 # <a name="create-calculated-columns"></a>Crear columnas calculadas
 
@@ -30,7 +31,7 @@ Tiempo estimado para completar esta lección: **15 minutos**
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 4: crear relaciones](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 4: Crear relaciones](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Crear columnas calculadas  
   
@@ -46,7 +47,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
     Una nueva columna denominada **Columna calculada 1** se inserta a la izquierda de la columna **Calendar Quarter** .  
   
-4.  En la barra de fórmulas situada encima de la tabla, escriba la siguiente fórmula DAX: Autocompletar le ayuda a escribir el nombres completos de columnas y tablas y enumera las funciones que están disponibles.  
+4.  En la barra de fórmulas situada encima de la tabla, escriba la siguiente fórmula DAX: Autocompletar sirve de ayuda para escribir los nombres completos de columnas y tablas, y enumera las funciones que están disponibles.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -56,7 +57,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
 5.  Cambiar el nombre de esta columna a **MonthCalendar**. 
 
-    ![newcolumn como lesson5](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
+    ![as-lesson5-newcolumn](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
   
 La columna calculada MonthCalendar proporciona un nombre ordenable del mes.  
   
@@ -124,7 +125,7 @@ La columna calculada ProductCategoryName se usa para crear una jerarquía en la 
 
 4.  Cambie el nombre de la columna a **Margen**.  
  
-      ![newmargin como lesson5](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
+      ![as-lesson5-newmargin](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
       
     La columna calculada margen se utiliza para analizar los márgenes de beneficios de cada venta.  
   

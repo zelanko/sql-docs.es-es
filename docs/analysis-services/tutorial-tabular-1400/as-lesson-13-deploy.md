@@ -1,6 +1,6 @@
 ---
-title: 'Lección del tutorial de Analysis Services 13: implementación | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lección 13 del tutorial: Implementar | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bad6f58800e6a023fe5014462fbe6bbaf76bfe8e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090437"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685312"
 ---
 # <a name="deploy"></a>Implementar
 
@@ -26,7 +27,7 @@ Tiempo estimado para completar esta lección: **5 minutos**
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 12: analizar en Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 12: Analizar en Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
 
 > [!IMPORTANT]  
 > Si la implementación en Azure Analysis Services, debe tener [permisos de administrador](https://docs.microsoft.com/azure/analysis-services/analysis-services-server-admins) en el serever.  
@@ -43,7 +44,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
 2.  En el **AW Internet Sales Property Pages** cuadro de diálogo **servidor de implementación**, en el **Server** propiedad, escriba el nombre completo del servidor. Si se conecta a Azure Analysis Services, nombre del servidor debe incluir la dirección URL completa.
 
-    ![como lesson13-implementar-propiedades](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
+    ![as-lesson13-deploy-property](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
   
 3.  En el **base de datos** propiedad, tipo **Adventure Works Internet Sales**.  
   
@@ -61,7 +62,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
     Cuadro de diálogo implementar aparece y muestra el estado de implementación de los metadatos y cada tabla incluida en el modelo.  
     
-    ![como-lesson13-implementar-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
+    ![as-lesson13-deploy-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
   
 3. Cuando se complete correctamente la implementación, continúe y haga clic en **Cerrar**.  
   
@@ -71,7 +72,7 @@ En esta lección se describe el método más común y sencillo para implementar 
 ## <a name="conclusion"></a>Conclusión  
 ¡Enhorabuena! Ha terminado de crear e implementar su primer modelo Tabular de Analysis Services. Este tutorial le ha guiado por las tareas más comunes para crear un modelo tabular. Ahora que su modelo Ventas por Internet de Adventure Works está implementado, puede utilizar el SQL Server Management Studio para administrarlo, crear scripts de proceso y realizar un plan de copia de seguridad. Los usuarios ahora también pueden conectarse al modelo mediante una aplicación cliente de informes como Microsoft Excel o Power BI.  
 
-![ssms como lesson13](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
+![as-lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   
   
   

@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services tutorial lección 8: creación de perspectivas | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,28 +9,29 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 080b20dbcf7438d26102a3bf906256343271af45
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 29a49478d75d7af5670f3e693cd87a5238c4ae11
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085326"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57684942"
 ---
 # <a name="create-perspectives"></a>Crear perspectivas
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-En esta lección, creará una perspectiva venta por Internet. Una perspectiva define un subconjunto visible de un modelo que ofrece puntos de vista centrados, específicos del negocio o específicos de la aplicación. Cuando un usuario se conecta a un modelo mediante una perspectiva, verán sólo los objetos de modelo (tablas, columnas, medidas, jerarquías y KPI) como campos definidos en esa perspectiva. Para obtener más información, consulte [perspectivas](../tabular-models/perspectives-ssas-tabular.md).
+En esta lección, creará una perspectiva venta por Internet. Una perspectiva define un subconjunto visible de un modelo que ofrece puntos de vista centrados, específicos del negocio o específicos de la aplicación. Cuando un usuario se conecta a un modelo mediante una perspectiva, verán sólo los objetos de modelo (tablas, columnas, medidas, jerarquías y KPI) como campos definidos en esa perspectiva. Para obtener más información, consulte [Perspectivas](../tabular-models/perspectives-ssas-tabular.md).
   
 La perspectiva de ventas por Internet que creará en esta lección excluye el objeto de tabla DimCustomer. Cuando se crea una perspectiva que excluye ciertos objetos de vista, ese objeto todavía existe en el modelo. Sin embargo, no está visible en una lista de campos de cliente de informes. Las columnas calculadas y medidas se pueden incluir en una perspectiva o no pueden calcularse a partir de los datos del objeto excluido.  
   
 El propósito de esta lección es describir cómo se crean las perspectivas y permitir que se familiarice con las herramientas de creación de modelos tabulares. Si posteriormente amplía este modelo para incluir tablas adicionales, puede crear otras perspectivas para definir puntos de vista diferentes del modelo, por ejemplo, inventario y ventas.  
   
-Tiempo estimado para completar esta lección: **cinco minutos**  
+Tiempo estimado para completar esta lección: **Cinco minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 7: crear indicadores clave de rendimiento](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md).  
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 7: Creación de indicadores clave de rendimiento](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md).  
   
 ## <a name="create-perspectives"></a>Crear perspectivas  
   
@@ -50,7 +51,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
 
 ## <a name="whats-next"></a>¿Qué sigue?
 
-[Lección 9: Creación de jerarquías](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).
+[Lección 9: Crear jerarquías](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).
   
   
   

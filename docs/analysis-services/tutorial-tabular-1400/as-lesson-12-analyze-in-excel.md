@@ -1,6 +1,6 @@
 ---
-title: 'Lección del tutorial de Analysis Services 12: analizar en Excel | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lección 12 del tutorial: Analizar en Excel | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4b4531183c890e43158f2d9c0f9f4b18f5d303be
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084458"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685433"
 ---
 # <a name="analyze-in-excel"></a>Analizar en Excel
 
@@ -28,7 +29,7 @@ Tiempo estimado para completar esta lección: **5 minutos**
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 11: crear roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 11: Crear roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Examinar utilizando las perspectivas Predeterminada y Venta por Internet  
 
@@ -52,11 +53,11 @@ En estas primeras tareas, examinar el modelo utilizando tanto la perspectiva pre
   
 2.  En el cuadro de diálogo **Analizar en Excel** , mantenga seleccionado **Usuario de Windows actual** y, después, en el cuadro de lista desplegable **Perspectiva** , seleccione **Venta por Internet**y haga clic en **Aceptar**. 
     
-    ![perspectiva como lección 12](../tutorial-tabular-1400/media/as-lesson12-perspective.png)
+    ![as-lesson12-perspective](../tutorial-tabular-1400/media/as-lesson12-perspective.png)
     
 3.  En Excel, en **PivotTable Fields**, tenga en cuenta la tabla DimCustomer se excluye de la lista de campos.  
     
-    ![campos como lección 12](../tutorial-tabular-1400/media/as-lesson12-fields.png)
+    ![as-lesson12-fields](../tutorial-tabular-1400/media/as-lesson12-fields.png)
     
 4.  Cierre Excel sin guardar el libro.  
   
@@ -76,7 +77,7 @@ Las funciones son una parte importante de cualquier modelo tabular. Si no hay al
   
 ## <a name="whats-next"></a>¿Qué sigue?
 
-Vaya a la siguiente lección: [lección 13: implementar](../tutorial-tabular-1400/as-lesson-13-deploy.md).
+Vaya a la lección siguiente: [Lección 13: Implementar](../tutorial-tabular-1400/as-lesson-13-deploy.md).
 
   
   

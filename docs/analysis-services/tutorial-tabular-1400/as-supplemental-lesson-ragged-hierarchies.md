@@ -1,6 +1,6 @@
 ---
-title: 'Lección complementaria tutorial de Analysis Services: jerarquías desiguales | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lección complementaria del tutorial: Jerarquías desiguales | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074835"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685404"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Lección complementaria: Jerarquías desiguales
 
@@ -22,7 +23,7 @@ ms.locfileid: "43074835"
 
 En esta lección complementaria, resolverá un problema común al dinamizar en jerarquías que contienen valores en blanco (miembros) en distintos niveles. Por ejemplo, una organización donde un director de alto nivel tiene tanto directores de departamento como no directores como subordinados directos. O bien, las jerarquías geográficas formadas país-región-ciudad, donde algunas ciudades no tienen un elemento primario estado o provincia, como Washington D.C., ciudad del Vaticano. Cuando una jerarquía tiene miembros en blanco, a menudo desciende en niveles diferentes o desiguales.
 
-![As-Lesson-Detail-ragged-Hierarchies-Table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
+![as-lesson-detail-ragged-hierarchies-table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
 
 Los modelos tabulares en el nivel de compatibilidad 1400 tienen más **ocultar miembros** propiedad para las jerarquías. El **predeterminado** configuración asume que no hay ningún miembro en blanco en cualquier nivel. El **ocultar miembros en blanco** configuración excluye los miembros en blanco de la jerarquía cuando se agrega a una tabla dinámica o informe.  
   
@@ -48,8 +49,8 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
     | tabla 1           | columna       | Dirección del filtro   | tabla 2     | columna      | Activo |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
     | FactResellerSales | OrderDateKey | Default            | DimDate     | date        | Sí    |
-    | FactResellerSales | DueDate      | Default            | DimDate     | date        | no     |
-    | FactResellerSales | ShipDateKey  | Default            | DimDate     | date        | no     |
+    | FactResellerSales | DueDate      | Default            | DimDate     | date        | No     |
+    | FactResellerSales | ShipDateKey  | Default            | DimDate     | date        | No     |
     | FactResellerSales | ProductKey   | Default            | DimProduct  | ProductKey  | Sí    |
     | FactResellerSales | EmployeeKey  | Ambas tablas | DimEmployee | EmployeeKey | Sí    |
 
@@ -60,7 +61,7 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
     =PATH([EmployeeKey],[ParentEmployeeKey])
     ```
 
-    **fullName** 
+    **FullName** 
     ```
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
@@ -102,7 +103,7 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
 
 9.  En **PivotTable Fields**, agregar el **organización** jerarquía desde el **DimEmployee** tabla **filas**y el  **ResellerTotalSales** medida desde la **FactResellerSales** tabla **valores**.
 
-    ![As-Lesson-Detail-ragged-Hierarchies-PivotTable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
+    ![as-lesson-detail-ragged-hierarchies-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
 
     Como puede ver en la tabla dinámica, la jerarquía muestra filas desiguales. Hay muchas filas donde se muestran los miembros en blanco.
 
@@ -112,11 +113,11 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
 
 2.  En **propiedades** > **ocultar miembros**, seleccione **ocultar miembros en blanco**. 
 
-    ![As-Lesson-Detail-ragged-Hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
+    ![as-lesson-detail-ragged-hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
 
 3.  En Excel, actualice la tabla dinámica. 
 
-    ![As-Lesson-Detail-ragged-Hierarchies-PivotTable-Refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
+    ![as-lesson-detail-ragged-hierarchies-pivottable-refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
 
     ¡Ahora se ve mucho mejor!
 

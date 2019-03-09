@@ -1,6 +1,6 @@
 ---
-title: 'Lección del tutorial de Analysis Services 2: obtención de datos | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lección del tutorial 2: Obtención de datos | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01bf31c3d4f89b77ebdceae2e69d4054a578b03f
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062216"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685322"
 ---
 # <a name="get-data"></a>Obtener datos
 
@@ -31,7 +32,7 @@ Tiempo estimado para completar esta lección: **10 minutos**
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 1: crear un nuevo proyecto de modelo tabular](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 1: Cree un nuevo proyecto de modelo tabular](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Crear una conexión  
   
@@ -41,7 +42,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
     Esto inicia **obtener datos**, que le guiará a través de conectarse a un origen de datos. Si no ve el Explorador de modelos tabulares, en **el Explorador de soluciones**, haga doble clic en **Model.bim** para abrir el modelo en el diseñador. 
     
-    ![getdata como lección 2](../tutorial-tabular-1400/media/as-lesson2-getdata.png)
+    ![as-lesson2-getdata](../tutorial-tabular-1400/media/as-lesson2-getdata.png)
   
 2.  Obtener los datos, haga clic en **base de datos** > **base de datos de SQL Server** > **Connect**.  
   
@@ -49,16 +50,16 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
 
 4.  Cuando se le pida que escriba las credenciales, deberá especificar las credenciales que Analysis Services usa para conectarse al origen de datos al importar y procesar datos. En **modo de suplantación**, seleccione **suplantar cuenta**, a continuación, escriba las credenciales y, a continuación, haga clic en **Connect**. Se recomienda que usar una cuenta que la contraseña no caduca.
 
-    ![Lección 2-cuenta](../tutorial-tabular-1400/media/as-lesson2-account.png)
+    ![as-lesson2-account](../tutorial-tabular-1400/media/as-lesson2-account.png)
   
     > [!NOTE]  
     > El uso de una cuenta de usuario y una contraseña de Windows es el método más seguro de conexión a un origen de datos.
   
 5.  En el navegador, seleccione el **AdventureWorksDW** de base de datos y, a continuación, haga clic en **Aceptar**. Esto crea la conexión a la base de datos. 
   
-6.  En el navegador, seleccione la casilla de verificación para las siguientes tablas: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**,  **DimProductCategory**, **DimProductSubcategory**, y **FactInternetSales**.  
+6.  En el navegador, seleccione la casilla de verificación para las siguientes tablas: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, y **FactInternetSales**.  
 
-    ![como-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 Tras hacer clic en Aceptar, se abre el Editor de consultas. En la sección siguiente, seleccione solo los datos que desea importar.
 
@@ -73,14 +74,14 @@ Tablas de la base de datos de ejemplo AdventureWorksDW tienen datos que no es ne
   
 2.  Realice una selección múltiple (Ctrl + clic) **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**, a continuación, Haga clic en y, a continuación, haga clic en **quitar columnas**. 
 
-    ![como-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
+    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
   
     Puesto que los valores de estas columnas no son pertinentes para el análisis de ventas por Internet, no hay necesidad de importarlas. Eliminación de columnas innecesarias, el modelo más pequeño y eficaz.  
 
     > [!TIP]
     > Si comete un error, puede hacer una copia mediante la eliminación de un paso en **pasos aplicados**.   
     
-    ![como-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
+    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
 
   
 4.  Filtrar las tablas restantes mediante la eliminación de las siguientes columnas en cada tabla:  
@@ -144,7 +145,7 @@ Ahora que ha muestra una vista previa y filtrar los datos innecesarios, puede im
   
 1.  Revise las opciones seleccionadas. Si todo parece correcto, haga clic en **importación**. El cuadro de diálogo de procesamiento de datos muestra el estado de los datos que se va a importar desde el origen de datos a la base de datos del área de trabajo.
   
-    ![éxito como lección 2](../tutorial-tabular-1400/media/as-lesson2-success.png) 
+    ![as-lesson2-success](../tutorial-tabular-1400/media/as-lesson2-success.png) 
   
 2.  Haga clic en **Cerrar**.  
 

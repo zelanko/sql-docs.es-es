@@ -7,12 +7,12 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 06ce1d325caa0835381fd6f9ecd5428d2bbb6f66
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018481"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683625"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Enviar trabajos de Spark en clústeres SQL Server de datos grande en IntelliJ
 
@@ -21,14 +21,14 @@ Uno de los escenarios clave para los clústeres grandes de datos de SQL Server e
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Clúster de Macrodatos SQL Server.
-- Kit de desarrollo de Java de Oracle. Puede instalarlo desde el [sitio Web de Oracle](https://aka.ms/azure-jdks).
+- Kit de desarrollo de Java de Oracle. Puede instalarlo desde el [sitio Web de Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 - IntelliJ IDEA. Puede instalarlo desde el [sitio Web de JetBrains](https://www.jetbrains.com/idea/download/).
 - Azure Toolkit for IntelliJ extension. Para obtener instrucciones de instalación, consulte [instalar Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
 
 ## <a name="link-sql-server-big-data-cluster"></a>Clúster de Macrodatos de vínculo SQL Server
 1. Abra la herramienta de IntelliJ IDEA.
 
-2. Si está utilizando un certificado autofirmado, deshabilite validación del certificado SSL desde **herramientas** menú, seleccione **Azure**, **validar un certificado de SSL de clúster de Spark**, a continuación, **Deshabilitar**.
+2. Si usa un certificado autofirmado, deshabilitar la validación del certificado SSL de **herramientas** menú, seleccione **Azure**, **validar un certificado de SSL de clúster de Spark**, entonces  **Deshabilitar**.
 
     ![vincular el clúster grande de datos de SQL Server: deshabilitar SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
@@ -66,7 +66,7 @@ Uno de los escenarios clave para los clústeres grandes de datos de SQL Server e
 
    ![El cuadro de diálogo de instalación de complemento de Scala](./media/spark-submit-job-intellij-tool-plugin/Choose-Scala-Plugin.PNG)
 
-5. En el **nuevo proyecto** ventana, haga lo siguiente:  
+5. En el **nuevo proyecto** ventana, realice los pasos siguientes:  
 
     ![Selección del SDK de Spark](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
@@ -78,7 +78,7 @@ Uno de los escenarios clave para los clústeres grandes de datos de SQL Server e
 
 6. Seleccione **Finalizar**.
 
-7. El proyecto Spark creará automáticamente un artefacto para usted. Para ver el artefacto, haga lo siguiente:
+7. El proyecto Spark creará automáticamente un artefacto para usted. Para ver el artefacto, siga los pasos siguientes:
 
    a. En el **archivo** menú, seleccione **estructura del proyecto**.
 
@@ -120,6 +120,75 @@ Después de vincular un clúster grande de datos de SQL Server, puede enviar la 
 2. Haga clic en **SparkJobRun** para enviar el proyecto para el clúster seleccionado. El **trabajo de Spark remoto en clúster** pestaña muestra el progreso de ejecución del trabajo en la parte inferior. Puede detener la aplicación, haga clic en el botón rojo.  
 
     ![clúster de Big Data Link - ejecutar](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
+
+## <a name="spark-console"></a>Consola de Spark
+Puede ejecutar Spark Local Console(Scala) o ejecutar Console(Scala) de sesión interactivas de Spark Livy.
+
+### <a name="spark-local-consolescala"></a>Console(Scala) Local de Spark
+Asegúrese de que haber satisfecho el WINUTILS. Requisito previo EXE.
+
+1. En la barra de menús, vaya a **ejecutar** > **editar configuraciones...** .
+
+2. Desde el **ejecutar/depurar configuraciones** ventana, en el panel izquierdo, vaya a **Apache Spark en el clúster grande de datos de SQL Server** > **[Spark en SQL] myApp**.
+
+3. En la ventana principal, seleccione el **ejecutar localmente** ficha.
+
+4. Proporcione los valores siguientes y, a continuación, seleccione **Aceptar**:
+
+    |Property |Valor |
+    |----|----|
+    |Clase principal del trabajo|El valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase seleccionando el botón de puntos suspensivos (**...** ) y elija otra clase.|
+    |Variables de entorno|Asegúrese de que el valor de HADOOP_HOME es correcto.|
+    |Ubicación de WINUTILS.exe|Asegúrese de que la ruta de acceso es correcta.|
+
+    ![Configuración de la consola local](./media/spark-submit-job-intellij-tool-plugin/console-set-configuration.png)
+
+5. En el proyecto, vaya a **myApp** > **src** > **principal** > **scala**  >  **myApp**.  
+
+6. En la barra de menús, vaya a **herramientas** > **Spark consola** > **ejecutar Spark Local Console(Scala)**.
+
+7. A continuación, pueden aparecer dos cuadros de diálogo para preguntar si desea auto corregir las dependencias. Si es así, seleccione **Autocorregir**.
+
+    ![Fix1 automático de Spark](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix1.png)
+
+    ![Fix2 automático de Spark](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix2.png)
+
+8. La consola debe ser similar a la siguiente imagen. En el tipo de ventana de consola `sc.appName`y, a continuación, presione ctrl + ENTRAR.  Se mostrará el resultado. Puede finalizar la consola local, haga clic en el botón rojo.
+
+    ![Resultado de la consola local](./media/spark-submit-job-intellij-tool-plugin/local-console-result.png)
+
+
+### <a name="spark-livy-interactive-session-consolescala"></a>Spark Console(Scala) sesión interactiva de Livy
+Solo se admite la Console(Scala) de sesión de Spark interactiva de Livy en IntelliJ 2018.2 y 2018.3.
+
+1. En la barra de menús, vaya a **ejecutar** > **editar configuraciones...** .
+
+2. Desde el **ejecutar/depurar configuraciones** ventana, en el panel izquierdo, vaya a **Apache Spark en el clúster grande de datos de SQL Server** > **[Spark en SQL] myApp**.
+
+3. En la ventana principal, seleccione el **ejecutar de forma remota en clúster** ficha.
+
+4. Proporcione los valores siguientes y, a continuación, seleccione **Aceptar**:
+
+    |Property |Valor |
+    |----|----|
+    |Clústeres de Spark (solo Linux)|Seleccione el clúster de SQL Server Big Data en el que desea ejecutar la aplicación.|
+    |Nombre de la clase principal|El valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase seleccionando el botón de puntos suspensivos (**...** ) y elija otra clase.|
+
+    ![Configuración de la consola interactiva](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
+
+5. En el proyecto, vaya a **myApp** > **src** > **principal** > **scala**  >  **myApp**.  
+
+6. En la barra de menús, vaya a **herramientas** > **Spark consola** > **Console(Scala) de sesión interactiva de Livy de Spark de ejecutar**.
+
+7. La consola debe ser similar a la siguiente imagen. En el tipo de ventana de consola `sc.appName`y, a continuación, presione ctrl + ENTRAR.  Se mostrará el resultado. Puede finalizar la consola local, haga clic en el botón rojo.
+
+    ![Resultado de la consola interactiva](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
+
+### <a name="send-selection-to-spark-console"></a>Enviar selección a la consola de Spark
+
+Para mayor comodidad, puede ver el resultado del script mediante el envío de código a la consola Local o Console(Scala) sesión interactiva de Livy. Puede resaltar el código en el archivo de Scala y luego haga clic en **Enviar selección a la consola de Spark**. El código seleccionado se enviarán a la consola y se puede realizar. El resultado se mostrará después del código en la consola. La consola comprobará los errores si existentes.  
+
+   ![Enviar selección a la consola de Spark](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información sobre los escenarios relacionados y clúster grande de datos de SQL Server, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos](big-data-cluster-overview.md)?

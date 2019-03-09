@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services tutorial la lección 4: Crear relaciones | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394536"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685638"
 ---
 # <a name="create-relationships"></a>Crear relaciones
 
@@ -41,7 +42,7 @@ Antes de continuar creando el modelo, debe comprobar que las relaciones entre ta
 
     El Diseñador de modelos aparece ahora en la vista de diagrama, un formato gráfico que muestra todas las tablas que importó con líneas entre ellas. Las líneas entre las tablas indican las relaciones que se crearon automáticamente cuando importó los datos.
     
-    ![diagrama como lesson4](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
+    ![as-lesson4-diagram](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
   
     > [!NOTE]
     > Si no ve las relaciones entre tablas, probablemente significa que no hay ninguna relación entre esas tablas en el origen de datos.
@@ -71,11 +72,11 @@ Antes de continuar creando el modelo, debe comprobar que las relaciones entre ta
 
 En la vista de diagrama, observe una flecha, un asterisco y un número en las líneas que muestran la relación entre tablas.
 
-![como en línea lesson4](../tutorial-tabular-1400/media/as-lesson4-line.png)
+![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
 La flecha muestra la dirección del filtro. El asterisco muestra que esta tabla es la *muchos* lado en la cardinalidad de la relación y la muestra de esta tabla es la *uno* lado de la relación. Si necesita modificar una relación; Por ejemplo, cambiar la dirección de filtro de la relación y cardinalidad, haga doble clic en la línea de relación para abrir el cuadro de diálogo Editar relación.
 
-![Editar como lesson4](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 Estas características están diseñadas para el modelado de datos avanzados y están fuera del ámbito de este tutorial. Para obtener más información, consulte [bidireccional entre los filtros para modelos tabulares de Analysis Services](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -87,7 +88,7 @@ En algunos casos, tal vez necesite crear relaciones adicionales entre las tablas
 
     Aparece una línea sólida que indica que ha creado una relación activa entre la **OrderDate** columna en el **Internet Sales** tabla y el **fecha** columna en el  **Fecha** tabla. 
   
-      ![como lesson4-nuevo](../tutorial-tabular-1400/media/as-lesson4-new.png) 
+      ![as-lesson4-new](../tutorial-tabular-1400/media/as-lesson4-new.png) 
   
     > [!NOTE]  
     > Al crear relaciones, se selecciona automáticamente la dirección del filtro y cardinalidad entre la tabla principal y la tabla de búsqueda relacionada.  
@@ -98,7 +99,7 @@ En algunos casos, tal vez necesite crear relaciones adicionales entre las tablas
   
 3.  Por último, cree una relación más. En el **FactInternetSales** de tabla, haga clic y mantenga presionado el **ShipDate** columna, a continuación, arrastre el cursor hasta la **fecha** columna en el **DimDate** tabla y, a continuación, suelte.  
     
-     ![newinactive como lesson4](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
+     ![as-lesson4-newinactive](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>¿Qué sigue?
 

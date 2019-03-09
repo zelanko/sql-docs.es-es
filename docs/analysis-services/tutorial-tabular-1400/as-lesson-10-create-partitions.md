@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services lección del tutorial de 10: Creación de particiones | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401148"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685702"
 ---
 # <a name="create-partitions"></a>Crear particiones
 
@@ -42,11 +43,11 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
 
 5.  En vista previa, haga clic en la flecha hacia abajo en la **OrderDate** encabezado de columna y, a continuación, haga clic en **filtros de fecha y hora** > **entre**.
 
-    ![como-lesson10--editor de consultas](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
+    ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
 6.  En el cuadro de diálogo Filtrar filas en **mostrar filas donde: OrderDate**, deje **es posterior o igual a**y, a continuación, en el campo de fecha, escriba **1/1/2010**. Deje el **y** , a continuación, seleccione el operador seleccionado, **antes**, a continuación, en el campo de fecha, escriba **1/1/2011**y, a continuación, haga clic en **Aceptar**.
 
-    ![como-lesson10-filtro de filas](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     Tenga en cuenta en el Editor de consultas, en pasos aplicados, verá otro paso llamado filas filtradas. Este filtro consiste en seleccionar solo las fechas de pedidos de 2010.
 
@@ -54,7 +55,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
 
     En el Administrador de particiones, observe que ahora la expresión de consulta tiene una cláusula filas filtradas adicional.
 
-    ![consulta como lesson10](../tutorial-tabular-1400/media/as-lesson10-query.png)
+    ![as-lesson10-query](../tutorial-tabular-1400/media/as-lesson10-query.png)
   
     Esta instrucción especifica que esta partición debe incluir solo los datos de esas filas donde el valor OrderDate está en el año 2010 tal como se especifica en la cláusula filas filtradas.  
   
@@ -107,13 +108,13 @@ En el Administrador de particiones, tenga en cuenta la **procesado por última v
   
 4.  Active la casilla de la columna **Procesar** para cada una de las cinco particiones que ha creado y haga clic en **Aceptar**.  
 
-    ![como-lesson10-procesar-particiones](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     Si se le pidan las credenciales de suplantación, escriba el nombre de usuario de Windows y la contraseña que especificó en la lección 2.  
   
     Aparece el cuadro de diálogo **Procesamiento de datos** con los detalles del proceso de cada partición. Observe que se ha transferido un número diferente de filas para cada partición. Cada partición incluye solamente las filas del año especificado en la cláusula WHERE en la instrucción SQL. Cuando finalice el procesamiento, continúe y cierre el cuadro de diálogo Procesamiento de datos.  
   
-    ![como lesson10-proceso-completo](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
+    ![as-lesson10-process-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>¿Qué sigue?
 

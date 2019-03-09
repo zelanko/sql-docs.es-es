@@ -1,6 +1,6 @@
 ---
-title: 'Lección del tutorial de Analysis Services 7: crear indicadores clave de rendimiento | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lección 7 del tutorial: Creación de indicadores clave de rendimiento | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e0cd1cfa0c468f28b5cadfc9757671f18206d2cd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087570"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685412"
 ---
 # <a name="create-key-performance-indicators"></a>Crear indicadores clave de rendimiento
 
@@ -26,7 +27,7 @@ Tiempo estimado para completar esta lección: **15 minutos**
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 6: crear medidas](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 6: Crear medidas](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Crear indicadores clave de rendimiento  
   
@@ -52,7 +53,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
 8.  En **Seleccionar el estilo de icono**, seleccione el tipo de icono de rombo (rojo), triángulo (amarillo), círculo (verde).
   
-    ![kpi como lesson7](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
+    ![as-lesson7-kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
     > Observe la **descripciones** etiqueta debajo de los estilos de icono disponibles. Utilice descripciones para los distintos elementos KPI para que sean más fáciles de identificar en las aplicaciones cliente.  

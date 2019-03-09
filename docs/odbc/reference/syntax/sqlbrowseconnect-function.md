@@ -11,6 +11,7 @@ apiname:
 - SQLBrowseConnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBrowseConnect
@@ -20,12 +21,12 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211715"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683615"
 ---
 # <a name="sqlbrowseconnect-function"></a>Función SQLBrowseConnect
 **Conformidad**  
@@ -112,10 +113,10 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Argumento InConnectionString  
  Una cadena de conexión de la solicitud de exploración tiene la siguiente sintaxis:  
   
- *cadena de conexión* :: = *atributo*[`;`] &#124; *atributo* `;` *cadena de conexión*;<br>
- *atributo* :: = *palabra clave de atributo*`=`*atributo-valor* &#124; `DRIVER=`[`{`]*atributo-valor*[`}`]<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
  *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
- *valor del atributo* :: = *cadena de caracteres*<br>
+ *attribute-value* ::= *character-string*<br>
  *driver-defined-attribute-keyword* ::= *identifier*<br>
   
  donde *cadena de caracteres* tiene cero o más caracteres; *identificador* tiene uno o más caracteres; *palabra clave de atributo* no distingue mayúsculas de minúsculas; *atributo-valor* puede distinguir mayúsculas de minúsculas; y el valor de la **DSN** palabra clave no consta únicamente de espacios en blanco. ¿Debido a cadena e inicialización archivo gramática, palabras clave y atributo de valores de conexión que contienen los caracteres **[]{}(),? \*=! @** debe evitarse. Debido a la gramática de la información del sistema, los nombres de origen de datos y las palabras clave no pueden contener la barra diagonal inversa (\\) caracteres. Para un ODBC 2. *x* controlador, se requieren llaves alrededor del valor de atributo para la palabra clave DRIVER.  
@@ -127,11 +128,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Argumento OutConnectionString  
  La cadena de conexión de resultados de exploración es una lista de atributos de conexión. Un atributo de conexión consta de una palabra clave de atributo y un valor de atributo correspondiente. La cadena de conexión de resultados de exploración tiene la siguiente sintaxis:  
   
- *cadena de conexión* :: = *atributo*[`;`] &#124; *atributo* `;` *cadena de conexión*<br>
- *atributo* :: = [`*`]*palabra clave de atributo*`=`*valores de atributo*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
  *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
- *lista de valores de atributo* :: = *cadena de caracteres* [`:`*cadena de caracteres localizados*] &#124; *cadena de caracteres* [`:` *cadena de caracteres localizados*] `,` *lista de valores de atributo*<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  donde *cadena de caracteres* y *cadena de caracteres localizados* tiene cero o más caracteres; *identificador* y *identificador localizado* tiene uno o más caracteres; *palabra clave de atributo* no distingue mayúsculas de minúsculas; y *atributo-valor* puede distinguir mayúsculas de minúsculas. ¿Debido a la conexión de cadena e inicialización gramática, palabras clave, localizados de los identificadores de archivos y valores de atributo que contienen los caracteres **[]{}(),? \*=! @** debe evitarse. Debido a la gramática de la información del sistema, los nombres de origen de datos y las palabras clave no pueden contener la barra diagonal inversa (\\) caracteres.  
   

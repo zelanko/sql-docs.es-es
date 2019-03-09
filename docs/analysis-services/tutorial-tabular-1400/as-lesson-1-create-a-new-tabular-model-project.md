@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services lección del tutorial 1: Cree un nuevo proyecto de modelo tabular | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417236"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685222"
 ---
 # <a name="create-a-tabular-model-project"></a>Crear un proyecto de modelos tabulares
 
@@ -48,7 +49,7 @@ En este artículo es la primera lección de un tutorial de creación de modelos 
       
 6.  En **ivel**, seleccione **SQL Server 2017 / Azure Analysis Services (1400)**.   
  
-    ![tmd como lesson1](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
+    ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       
     Si no ve SQL Server 2017 / Azure Analysis Services (1400) en el cuadro de lista de nivel de compatibilidad, no se está usando la versión más reciente de SQL Server Data Tools. Para obtener la versión más reciente, vea [Instalar SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
       
@@ -59,15 +60,15 @@ Ahora que ha creado un nuevo proyecto de modelo tabular, dedique un momento a ex
   
 Una vez creado el proyecto, se abre en Visual Studio. En el lado derecho, en **Explorador de modelos tabulares**, verá una vista de árbol de los objetos en el modelo. Puesto que todavía no ha importado datos, las carpetas están vacías. Puede hacer clic en una carpeta de objetos para llevar a cabo acciones, similares a la barra de menús. Paso a paso a través de este tutorial, use el Explorador de modelos tabulares para navegar por los distintos objetos en el proyecto de modelo.
 
-![como-lesson1-tme](../tutorial-tabular-1400/media/as-lesson1-tme.png)
+![as-lesson1-tme](../tutorial-tabular-1400/media/as-lesson1-tme.png)
 
 Haga clic en el **el Explorador de soluciones** ficha. En este caso, verá su **Model.bim** archivo. Si no ve la ventana del diseñador a la izquierda (la ventana vacía con la pestaña Model.bim), en **el Explorador de soluciones**, en **proyecto AW Internet Sales**, haga doble clic en el **Model.bim** archivo. El archivo Model.bim contiene los metadatos del proyecto de modelo. 
 
-![como-lesson1-se](../tutorial-tabular-1400/media/as-lesson1-se.png)
+![as-lesson1-se](../tutorial-tabular-1400/media/as-lesson1-se.png)
   
 Haga clic en **Model.bim**. En el **propiedades** , ver las propiedades del modelo, más importantes es la **el modo DirectQuery** propiedad. Esta propiedad especifica si el modelo se implementa en modo en memoria (desactivado) o el modo DirectQuery (activado). Para este tutorial, se e implementará el modelo en el modo en memoria.
 
-![como-lesson1-properties](../tutorial-tabular-1400/media/as-lesson1-properties.png)
+![as-lesson1-properties](../tutorial-tabular-1400/media/as-lesson1-properties.png)
   
 Al crear un proyecto de modelo, algunas de sus propiedades se establecen automáticamente según las opciones del modelado de datos que se pueden especificar en el **herramientas** menú > **opciones** cuadro de diálogo. Las propiedades Copia de seguridad de datos, Retención de área de trabajo y Servidor del área de trabajo especifican cómo y dónde se realiza una copia de seguridad, se conserva en memoria y se crea la base de datos del área de trabajo (la base de datos de creación del modelo). Puede cambiar esta configuración más adelante si es necesario, pero por ahora, deje estas propiedades tal como están.  
 

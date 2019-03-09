@@ -1,6 +1,6 @@
 ---
-title: 'Lección del tutorial de Analysis Services 3: marcar como tabla de fechas | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services lección del tutorial 3: Marcar como tabla de fechas | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,18 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 282103baa0283e46e31b9ffe6b837e90e4bfac3c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2008f066d537b1f88b9bf674c4a864217eae9890
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069402"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685576"
 ---
 # <a name="mark-as-date-table"></a>Marcar como tabla de fechas
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-En la lección 2: Obtención de datos, importó una tabla de dimensiones denominada **DimDate**. Mientras que en el modelo esta tabla se denomina DimDate, también puede ser conocida como un *tabla de fechas*, porque contiene datos de fecha y hora.  
+En la lección 2: Obtener datos, importó una tabla de dimensiones denominada **DimDate**. Mientras que en el modelo esta tabla se denomina DimDate, también puede ser conocida como un *tabla de fechas*, porque contiene datos de fecha y hora.  
   
 Siempre que use las funciones de inteligencia de tiempo DAX, como al crear medidas más adelante, debe especificar las propiedades que incluyen un *tabla de fechas* y un identificador único *columna de fecha* en esa tabla.
   
@@ -28,11 +29,11 @@ En esta lección, se marca el **DimDate** tabla como el *tabla de fechas* y **fe
 
 Antes de marcar la tabla de fechas y la columna de fecha, es un buen momento para realizar un pequeño mantenimiento para que su modelo sea más fácil de entender. Tenga en cuenta en la tabla DimDate una columna denominada **FullDateAlternateKey**. Esta columna contiene una fila por cada día de cada año de calendario incluido en la tabla. Utilice esta columna mucho en las fórmulas de medida y los informes. Sin embargo, FullDateAlternateKey no es realmente un buen identificador en esta columna. Cambiar el nombre a **fecha**, lo que sea más fácil identificarlo e incluirlo en fórmulas. Siempre que sea posible, es una buena idea cambiar el nombre de objetos como tablas y columnas para que sean fáciles de identificar en SSDT y las aplicaciones de informes. 
   
-Tiempo estimado para completar esta lección: **tres minutos**  
+Tiempo estimado para completar esta lección: **Tres minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 2: obtener datos](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 2: Obtener datos](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Para cambiar el nombre de la columna FullDateAlternateKey
 
@@ -49,10 +50,10 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
 3.  En el cuadro de diálogo **Marcar como tabla de fechas** en el cuadro de lista **Date** , seleccione la columna **Date** como identificador único. Normalmente se selecciona de forma predeterminada. Haga clic en **Aceptar**. 
 
-    ![como-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
+    ![as-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
   
 
 ## <a name="whats-next"></a>¿Qué sigue?
 
-[Lección 4: Creación de relaciones](../tutorial-tabular-1400/as-lesson-4-create-relationships.md).
+[Lección 4: Crear relaciones](../tutorial-tabular-1400/as-lesson-4-create-relationships.md).
   

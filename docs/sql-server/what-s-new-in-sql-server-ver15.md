@@ -1,7 +1,7 @@
 ---
 title: Novedades de SQL Server 2019 | Microsoft Docs
-ms.date: 02/28/2019
-ms.prod: sql-server-2018
+ms.date: 03/01/2019
+ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fdc1191b5f0ef7d475e23bbcb56081821d6882b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334822"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579775"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -189,7 +189,7 @@ El enmascaramiento de datos estático funciona a nivel de columna. Seleccione la
 
 #### <a name="static-data-masking-vs-dynamic-data-masking"></a>Enmascaramiento de datos estático frente a enmascaramiento de datos dinámico
 
-El enmascaramiento de datos es el proceso de aplicar una máscara a una base de datos para ocultar información confidencial y reemplazarla por datos nuevos o limpios. Microsoft ofrece dos opciones de enmascaramiento: el enmascaramiento de datos estático y el enmascaramiento de datos dinámico. El enmascaramiento de datos dinámico se incluyó por primera vez en [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La tabla siguiente compara estas dos soluciones:
+El enmascaramiento de datos es el proceso de aplicar una máscara a una base de datos para ocultar información confidencial y reemplazarla por datos nuevos o limpios. Microsoft ofrece dos opciones de enmascaramiento: el enmascaramiento de datos estático y el enmascaramiento de datos dinámico. El enmascaramiento de datos dinámico se incluyó por primera vez en [!INCLUDE[ssSQL16](../includes/sssql16-md.md)]. La tabla siguiente compara estas dos soluciones:
 
 |Enmascaramiento de datos estático |Enmascaramiento de datos dinámicos|
 |:----|:----|
@@ -463,7 +463,7 @@ FROM sys.dm_exec_requests AS d
   - Admite escenarios que usen el clúster de macrodatos de SQL Server. (CTP 2.0)
   
   > [!TIP]
-  > Para obtener las mejoras más recientes de Azure Data Studio, vea las [notas de la versión de Azure Data Studio](../azure-data-studio/release-notes.md).
+  > Para obtener las mejoras más recientes de Azure Data Studio, vea las [notas de la versión de Azure Data Studio](../azure-data-studio/release-notes-azure-data-studio.md).
 
 - [**SQL Server Management Studio (SSMS) 18.0 (versión preliminar)**](../ssms/sql-server-management-studio-ssms.md): admite [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 

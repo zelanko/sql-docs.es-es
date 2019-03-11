@@ -2,7 +2,7 @@
 title: Inserción de UDF escalares en bases de datos de Microsoft SQL | Microsoft Docs
 description: Característica Inserción de UDF escalar para mejorar el rendimiento de las consultas que llaman a UDF escalares en SQL Server (2018 y versiones posteriores) y Azure SQL Database.
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 709f4a25ec4536c9ff1ba10cdaddd2ef8c104db2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51222107"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017931"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
@@ -38,7 +38,7 @@ Las funciones definidas por el usuario que se implementan en Transact-SQL y que 
 Las UDF escalares suelen tener un rendimiento deficiente debido a las razones siguientes.
 
 - **Invocación iterativa:** las UDF se invocan de forma iterativa, una vez por cada tupla certificada. Esto supone costos adicionales de cambio de contexto repetido debido a la invocación de funciones. En concreto, las UDF que ejecutan consultas SQL en su definición se ven gravemente afectadas.
-- **Falta de costos:** durante la optimización, solo se calcula el costo de los operadores relacionales, mientras que de los operadores escalares no. Antes de la introducción de las UDF escalares, otros operadores escalares eran normalmente baratos y no requerían una estimación de los costos. Un pequeño costo de CPU agregado para una operación escalar era suficiente. Hay escenarios donde el costo real es significativo y, aun así, se sigue representando de forma insuficiente.
+- **Falta de costos:** durante la optimización, solo se calcula el costo de los operadores relacionales, mientras que el de los operadores escalares no. Antes de la introducción de las UDF escalares, otros operadores escalares eran normalmente baratos y no requerían una estimación de los costos. Un pequeño costo de CPU agregado para una operación escalar era suficiente. Hay escenarios donde el costo real es significativo y, aun así, se sigue representando de forma insuficiente.
 - **Ejecución interpretada:** las UDF se evalúan como un lote de instrucciones, y se ejecutan instrucción por instrucción. Se compila cada instrucción y el plan compilado se almacena en caché. Aunque esta estrategia de almacenamiento en caché ahorra algo de tiempo porque evita las recompilaciones, cada instrucción se ejecuta de forma aislada. No se realizan optimizaciones entre instrucciones.
 - **Ejecución en serie:** SQL Server no admite el paralelismo entre consultas en las consultas que invocan las UDF. 
 
@@ -151,6 +151,7 @@ Una UDF escalar de T-SQL se puede insertar si se cumplen todas las condiciones s
 - La UDF usa la cláusula `EXECUTE AS CALLER` (el comportamiento predeterminado si no se especifica la cláusula `EXECUTE AS`).
 - La UDF no hace referencia a variables de tabla ni a parámetros con valores de tabla.
 - La consulta que invoca una UDF escalar no hace referencia a una llamada a la UDF escalar en su cláusula `GROUP BY`.
+- La consulta que invoca una UDF escalar en su lista de selección con la cláusula `DISTINCT` no hace referencia a una llamada a la UDF escalar en su cláusula `ORDER BY`.
 - La UDF no se compila de forma nativa (se admite la interoperabilidad).
 - La UDF no se usa en una columna calculada ni en una definición de restricción CHECK.
 - La UDF no hace referencia a tipos definidos por el usuario.
@@ -252,7 +253,7 @@ Como se describe en este artículo, la inserción de UDF escalar transforma una 
 1. Puede haber algunas diferencias en el comportamiento del [enmascaramiento dinámico de datos](../security/dynamic-data-masking.md) con la inserción de UDF. En determinadas situaciones (en función de la lógica de la UDF), es posible que la inserción sea más conservadora que el enmascaramiento de las columnas de salida. En escenarios donde las columnas a las que se hace referencia en una UDF no son columnas de salida, no se enmascararán. 
 1. Si una UDF hace referencia a funciones integradas como `SCOPE_IDENTITY()`, con la inserción se cambiará el valor devuelto por la función integrada. Este cambio de comportamiento se debe a que la inserción modifica el ámbito de las instrucciones dentro de la UDF.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 

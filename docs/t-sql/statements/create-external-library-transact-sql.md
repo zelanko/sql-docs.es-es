@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -15,48 +15,93 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - CREATE EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d75671550d6e935216fd4d265777b31c81af7675
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205165"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017891"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-Carga los archivos de paquete de R en una base de datos desde la ruta de acceso de archivo o la secuencia de bytes especificada. Esta instrucción actúa como un mecanismo genérico para que el administrador de base de datos pueda cargar los artefactos necesarios para cualquier tiempo de ejecución de lenguaje externo nuevo (actualmente, solo R) y plataformas de sistemas operativos compatibles con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
+Carga los archivos de paquete de R, Python o Java en una base de datos desde la ruta de acceso de archivo o la secuencia de bytes especificada. Esta instrucción actúa como un mecanismo genérico para que el administrador de base de datos pueda cargar los artefactos necesarios para cualquier runtime de lenguaje externo nuevo y plataformas de sistema operativo compatibles con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
-En SQL Server 2017 y versiones posteriores, se admiten el lenguaje R y la plataforma Windows. Está previsto incluir la compatibilidad con Python y Linux en una versión posterior.
+> [!NOTE]
+> En SQL Server 2017, se admiten el lenguaje R y la plataforma Windows. En SQL Server 2019 CTP 2.3 R se admiten Python y Java en la plataforma Windows. La compatibilidad con Linux está prevista para una versión posterior.
 
-## <a name="syntax"></a>Sintaxis
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2019"></a>Sintaxis para SQL Server 2019
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
-    [ AUTHORIZATION owner_name ]  
-FROM <file_spec> [,...2]  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = <language> )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = { <client_library_specifier> | <library_bits> }  
+    [, PLATFORM = WINDOWS ])  
+}  
+
+<client_library_specifier> :: = 
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'  
+    | '[local_path\]manifest_file_name'  
+    | '<relative_path_in_external_data_source>'  
+} 
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+    | 'Java'
+}
+```
+::: moniker-end
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2017"></a>Sintaxis para SQL Server 2017
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
 WITH ( LANGUAGE = 'R' )  
 [ ; ]  
 
 <file_spec> ::=  
 {  
-(CONTENT = { <client_library_specifier> | <library_bits> }  
-[, PLATFORM = WINDOWS ])  
+    (CONTENT = { <client_library_specifier> | <library_bits> }  
+    [, PLATFORM = WINDOWS ])  
 }  
 
-<client_library_specifier> :: =  
-  '[\\computer_name\]share_name\[path\]manifest_file_name'  
-| '[local_path\]manifest_file_name'  
-| '<relative_path_in_external_data_source>'  
+<client_library_specifier> :: = 
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'  
+    | '[local_path\]manifest_file_name'  
+    | '<relative_path_in_external_data_source>'  
+} 
 
 <library_bits> :: =  
-{ varbinary_literal | varbinary_expression }  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
 ```
+::: moniker-end
 
 ### <a name="arguments"></a>Argumentos
 
@@ -64,7 +109,7 @@ WITH ( LANGUAGE = 'R' )
 
 Las bibliotecas se agregan a la base de datos dentro del ámbito del usuario. Los nombres de biblioteca deben ser únicos dentro del contexto de un usuario o propietario específico. Por ejemplo, dos usuarios, **RUser1** y **RUser2**, pueden cargar individualmente y por separado la biblioteca de R `ggplot2`. Sin embargo, si **RUser1** desea cargar una versión más reciente de `ggplot2`, la segunda instancia debe llamarse de forma diferente o debe reemplazar la biblioteca existente. 
 
-Los nombres de biblioteca no se pueden asignar de forma arbitraria; en este sentido, los nombres de biblioteca deben ser los mismos que los nombres necesarios para cargar la biblioteca de R desde R.
+Los nombres de biblioteca no se pueden asignar de forma arbitraria; el nombre de biblioteca debe ser el mismo que el nombre necesario para cargar la biblioteca en el script externo.
 
 **owner_name**
 
@@ -72,7 +117,7 @@ Especifica el nombre del usuario o rol que es propietario de la biblioteca exter
 
 Las bibliotecas que pertenecen al propietario de la base de datos se consideran globales en la base de datos y en tiempo de ejecución. Dicho de otro modo, los propietarios de bases de datos pueden crear bibliotecas que contienen un conjunto común de bibliotecas o paquetes que se comparten entre varios usuarios. Cuando un usuario distinto del usuario `dbo` crea una biblioteca externa, esta es privada exclusivamente de ese usuario.
 
-Cuando el usuario **RUser1** ejecuta un script de R, el valor de `libPath` puede contener varias rutas de acceso. La primera ruta de acceso es siempre la ruta de acceso a la biblioteca compartida creada por el propietario de la base de datos. La segunda parte de `libPath` especifica la ruta de acceso que contiene paquetes cargados individualmente por **RUser1**.
+Cuando el usuario **RUser1** ejecuta un script externo, el valor de `libPath` puede contener varias rutas de acceso. La primera ruta de acceso es siempre la ruta de acceso a la biblioteca compartida creada por el propietario de la base de datos. La segunda parte de `libPath` especifica la ruta de acceso que contiene paquetes cargados individualmente por **RUser1**.
 
 **file_spec**
 
@@ -94,9 +139,19 @@ Especifica la plataforma para el contenido de la biblioteca. El valor se estable
 
 Actualmente, Windows es la única plataforma admitida.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**language**
+
+Especifica el lenguaje del paquete. El valor puede ser `R`, `Python` o `Java`.
+::: moniker-end
+
 ## <a name="remarks"></a>Notas
 
 En el lenguaje R, cuando se usa un archivo, los paquetes deben estar preparados en forma de archivos de almacenamiento comprimidos con la extensión .ZIP para Windows. Actualmente, solo se admite la plataforma Windows. 
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Para el lenguaje Python, el paquete en un archivo .whl o .zip se debe preparar como un archivo comprimido. Si el paquete ya es un archivo .zip, se debe incluir en un nuevo archivo .zip. En la actualidad no se permite la carga directa de un paquete como archivo .whl o .zip.
+::: moniker-end
 
 La instrucción `CREATE EXTERNAL LIBRARY` carga los bits de biblioteca en la base de datos. La biblioteca se instala cuando un usuario ejecuta un script externo con [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) y llama al paquete o a la biblioteca.
 
@@ -126,6 +181,10 @@ EXEC sp_execute_external_script
 @language =N'R', 
 @script=N'library(customPackage)'
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Para el lenguaje Python en SQL Server 2019, el ejemplo también funciona si se reemplaza `'R'` con `'Python'`.
+::: moniker-end
 
 ### <a name="b-installing-packages-with-dependencies"></a>b. Instalar paquetes con dependencias
 
@@ -173,9 +232,12 @@ Dado que puede ser difícil determinar todas las dependencias únicamente consul
     @script=N'
     # load the desired package packageA
     library(packageA)
-    print(packageVersion("packageA"))
     '
     ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Para el lenguaje Python en SQL Server 2019, el ejemplo también funciona si se reemplaza `'R'` con `'Python'`.
+::: moniker-end
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. Crear una biblioteca a partir de una secuencia de bytes
 
@@ -185,6 +247,10 @@ Si no tiene la posibilidad de guardar los archivos del paquete en una ubicación
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Para el lenguaje Python en SQL Server 2019, el ejemplo también funciona si se reemplaza **"R"** con **"Python"**.
+::: moniker-end
+
 > [!NOTE]
 > En este ejemplo de código solo se muestra la sintaxis; el valor binario de `CONTENT =` se ha truncado para mejorar la lectura y no se puede crear una biblioteca funcional. El contenido real de la variable binaria sería mucho más largo.
 
@@ -193,6 +259,28 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 La instrucción DDL `ALTER EXTERNAL LIBRARY` sirve para agregar nuevo contenido de biblioteca o para modificar el contenido de biblioteca ya existente. Para modificar una biblioteca existente, se necesita el permiso `ALTER ANY EXTERNAL LIBRARY`.
 
 Para más información, vea [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md).
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+### <a name="e-add-a-java-jar-file-to-a-database"></a>E. Agregar un archivo .jar de Java a una base de datos  
+
+En el ejemplo siguiente se agrega un archivo JAR externo denominado `customJar` a una base de datos.
+
+```sql
+CREATE EXTERNAL LIBRARY customJar
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\customJar.jar') 
+WITH (LANGUAGE = 'Java');
+```
+
+Después de que la biblioteca se haya cargado correctamente en la instancia, un usuario ejecuta el procedimiento `sp_execute_external_script` para instalar esa biblioteca.
+
+```sql
+EXEC sp_execute_external_script
+    @language = N'Java'
+    , @script = N'customJar.MyCLass.myMethod'
+    , @input_data_1 = N'SELECT * FROM dbo.MyTable'
+WITH RESULT SETS ((column1 int))
+```
+::: moniker-end
 
 ## <a name="see-also"></a>Vea también
 

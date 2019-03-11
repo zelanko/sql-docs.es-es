@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403650"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017921"
 ---
 # <a name="temporal-tables"></a>Tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 incorpora una característica de base de datos que admite tablas temporales con versión del sistema, lo que permite proporcionar información sobre los datos almacenados en la tabla en cualquier momento, en vez de únicamente los datos que son correctos en la actualidad. La característica temporal de las bases de datos surgió con ANSI SQL 2011.  
+  En SQL Server 2016 se presentó la compatibilidad con las tablas temporales (también denominadas tablas temporales con versión del sistema) como función de base de datos que incorpora compatibilidad integrada para proporcionar información sobre los datos almacenados en la tabla en cualquier momento, en vez de solo los datos que son correctos en la actualidad. La característica temporal de las bases de datos surgió con ANSI SQL 2011.  
   
  **Inicio rápido**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52403650"
   
     -   [Consulta de los datos de una tabla temporal con control de versiones del sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Descargue la base de datos de ejemplo Adventure Works:** para empezar a trabajar con las tablas temporales, descargue la [base de datos AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) con scripts de ejemplo y siga las instrucciones de la carpeta "Temporal".  
+    -   **Descarga de la base de datos de ejemplo de Adventure Works:** para empezar a trabajar con las tablas temporales, descargue la [base de datos AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) con scripts de ejemplo y siga las instrucciones de la carpeta "Temporal".  
   
 -   **Sintaxis:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52403650"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **Vídeo:** si le interesa ver un análisis de 20 minutos sobre las tablas temporales, vea [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)(Temporal en SQL Server 2016).  
+-   **Vídeo:** para obtener un análisis de 20 minutos sobre las tablas temporales, vea [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016) (Tablas temporales en SQL Server 2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>¿Qué es una tabla temporal con versión del sistema?  
  Una tabla temporal con versión del sistema es un tipo de tabla de usuario pensada para conservar un historial completo de los cambios de datos y para facilitar los análisis en un momento específico. Este tipo de tabla temporal se conoce como tabla temporal con versión del sistema, porque el período de validez de cada fila se administra por medio del sistema (es decir, del motor de base de datos).  
@@ -81,9 +81,9 @@ ms.locfileid: "52403650"
 ## <a name="how-does-temporal-work"></a>¿Cómo funciona la característica temporal?  
  La versión del sistema de una tabla se implementa como un par de tablas: una tabla actual y una tabla de historial. Dentro de cada una de estas tablas, se usan las dos columnas **datetime2** adicionales siguientes para definir el período de validez de cada fila:  
   
--   Columna de inicio del periodo: el sistema registra la hora de inicio de la fila en esta columna, que normalmente se denomina **SysStartTime** .  
+-   Columna de inicio del período: el sistema registra la hora de inicio de la fila en esta columna, que normalmente se denomina **SysStartTime**.  
   
--   Columna de fin del periodo: el sistema registra la hora de fin de la fila en esta columna, que normalmente se denomina **SysEndTime** .  
+-   Columna de fin del período: el sistema registra la hora de fin de la fila en esta columna, que normalmente se denomina **SysEndTime**.  
   
  La tabla actual contiene el valor actual de cada fila. La tabla de historial contiene cada valor anterior de cada fila, si existe, y las horas de inicio y fin del periodo de validez.  
   
@@ -107,13 +107,13 @@ CREATE TABLE dbo.Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- **INSERTS:** en una instrucción **INSERT**, el sistema establece el valor de la columna **SysStartTime** en la hora de inicio de la transacción actual (en la zona horaria UTC) según el reloj del sistema y asigna el valor de la columna **SysEndTime** en el valor máximo de 9999-12-31. Esto marca la fila como abierta.  
+ **Instrucciones INSERT:** en una instrucción **INSERT**, el sistema establece el valor de la columna **SysStartTime** en la hora de inicio de la transacción actual (en la zona horaria UTC) según el reloj del sistema y asigna el valor de la columna **SysEndTime** al valor máximo de 31-12-9999. Esto marca la fila como abierta.  
   
- **UPDATES:** en una instrucción **UPDATE**, el sistema almacena el valor anterior de la fila en la tabla de historial y establece el valor de la columna **SysEndTime** en la hora de inicio de la transacción actual (en la zona horaria UTC) según el reloj del sistema. Esto marca la fila como cerrada, con un periodo registrado durante el que la fila fue válida. En la tabla actual, la fila se actualiza con su nuevo valor y el sistema establece el valor de la columna **SysStartTime** en la hora de inicio de la transacción actual (en la zona horaria UTC) según el reloj del sistema. El valor de la fila actualizada en la tabla actual para la columna **SysEndTime** sigue siendo el valor máximo de 9999-12-31.  
+ **Instrucciones UPDATE:** en una instrucción **UPDATE**, el sistema almacena el valor anterior de la fila en la tabla de historial y establece el valor de la columna **SysEndTime** en la hora de inicio de la transacción actual (en la zona horaria UTC) según el reloj del sistema. Esto marca la fila como cerrada, con un periodo registrado durante el que la fila fue válida. En la tabla actual, la fila se actualiza con su nuevo valor y el sistema establece el valor de la columna **SysStartTime** en la hora de inicio de la transacción actual (en la zona horaria UTC) según el reloj del sistema. El valor de la fila actualizada en la tabla actual para la columna **SysEndTime** sigue siendo el valor máximo de 9999-12-31.  
   
- **DELETES:** en una instrucción **DELETES**, el sistema almacena el valor anterior de la fila en la tabla de historial y establece el valor de la columna **SysEndTime** en la hora de inicio de la transacción actual (en la zona horaria UTC) según el reloj del sistema. Esto marca la fila como cerrada, con un periodo registrado durante el que la fila anterior fue válida. En la tabla actual, la fila se quita. Las consultas de la tabla actual no devolverán esa fila. Solo las consultas que tengan que ver con los datos de historial devolverán datos relativos a una fila cerrada.  
+ **Operaciones DELETE:** en una operación **DELETE**, el sistema almacena el valor anterior de la fila en la tabla de historial y establece el valor de la columna **SysEndTime** en la hora de inicio de la transacción actual (en la zona horaria UTC) según el reloj del sistema. Esto marca la fila como cerrada, con un periodo registrado durante el que la fila anterior fue válida. En la tabla actual, la fila se quita. Las consultas de la tabla actual no devolverán esa fila. Solo las consultas que tengan que ver con los datos de historial devolverán datos relativos a una fila cerrada.  
   
- **MERGE:** en una instrucción **MERGE**, la operación es exactamente igual a si se ejecutaran hasta las tres instrucciones anteriores ( **INSERT**, **UPDATE**y/o **DELETE**), en función de lo que se haya especificado como acción en la instrucción **MERGE** .  
+ **Instrucción MERGE:** en una instrucción **MERGE**, la operación se comporta exactamente igual que si se ejecutaran hasta tres instrucciones (**INSERT**, **UPDATE** y/o **DELETE**), en función de lo que se haya especificado como acción en la instrucción **MERGE**.  
   
 > [!IMPORTANT]  
 >  Las horas registradas en las columnas datetime2 del sistema se basan en la hora de inicio de la propia transacción. Por ejemplo, todas las filas insertadas en una única transacción tendrán la misma hora UTC registrada en la columna correspondiente al inicio del período **SYSTEM_TIME** .  
@@ -151,7 +151,7 @@ SELECT * FROM Employee
 > [!NOTE]  
 >  Si quiere, puede ocultar estas columnas de período, de forma que las consultas que no hagan referencia explícitamente a estas columnas de período no devuelvan esas columnas (el escenario de **SELECT \* FROM**_\<tabla\>_). Para devolver una columna oculta, basta con hacer referencia explícita a dicha columna en la consulta. Del mismo modo, las instrucciones **INSERT** y **BULK INSERT** continuarán como si estas nuevas columnas de periodo no estuvieran presentes (y los valores de columna se rellenarán automáticamente). Para obtener más información sobre cómo usar la cláusula **HIDDEN** , vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) y [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Tablas temporales con control de versiones del sistema con tablas con optimización para memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Escenarios de uso de tablas temporales](../../relational-databases/tables/temporal-table-usage-scenarios.md)   

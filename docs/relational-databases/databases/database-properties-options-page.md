@@ -13,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659374"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007598"
 ---
 # <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51659374"
  Especifique la intercalación de la base de datos seleccionándola en la lista. Para más información, vea [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modelo de recuperación**  
- Especifique uno de los modelos siguientes para la recuperación de la base de datos: **Completa**, **Registro masivo**o **Simple**. Para obtener más información sobre los modelos de recuperación, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Especifique uno de los modelos siguientes para la recuperación de la base de datos: **Completo**, **Registro masivo** o **Simple**. Para obtener más información sobre los modelos de recuperación, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Nivel de compatibilidad**  
  Especifique la versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitida por la base de datos. Para ver los valores posibles, vea [ALTER DATABASE (Transact-SQL) Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) (Nivel de compatibilidad ALTER DATABASE (Transact-SQL)). Cuando se actualiza una base de datos de SQL Server, el nivel de compatibilidad de esa base de datos se conserva (si es posible) o bien se cambia al nivel mínimo compatible con el nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -44,7 +44,7 @@ ms.locfileid: "51659374"
 ## <a name="automatic"></a>Automático  
  **Cerrar automáticamente**  
  Especifique si la base de datos se cierra sin problemas y libera los recursos cuando sale el último usuario. Los valores posibles son **True** o **False**. Con el valor **True**, la base de datos se cierra sin problemas y se liberan sus recursos después de que salga el último usuario.  
-  
+
  **Creación automática de estadísticas incrementales**  
  Especifique si desea utilizar la opción incremental cuando se crean estadísticas por partición. Para obtener más información sobre las estadísticas incrementales, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
@@ -63,6 +63,15 @@ ms.locfileid: "51659374"
  Con el valor **False**, las consultas que inician una actualización automática de las estadísticas obsoletas esperan a que las estadísticas actualizadas se puedan usar en el plan de optimización de consultas.  
   
  Establecer esta opción en **True** no tiene ningún efecto a menos que **Actualizar estadísticas automáticamente** también se establezca en **True**.  
+
+## <a name="azure"></a>Azure
+Cuando se conecta a Azure SQL Database, esta sección tiene opciones para controlar el objetivo de nivel de servicio (SLO). El SLO predeterminado para una base de datos nueva es Estándar S2.
+
+  **Objetivo de nivel de servicio actual** El SLO específico que se va a usar. Los valores válidos están restringidos por la edición seleccionada. Si el valor de SLO deseado no está en la lista, puede escribirlo.
+
+  **Edición** La edición de Azure SQL Database que se va a usar, como Básico o Premium. Si el valor de edición que necesita no está en la lista, puede escribirlo, y debe coincidir con el valor que se usa en las API REST de Azure.
+  
+  **Tamaño máximo** El tamaño máximo de la base de datos. Si el valor de tamaño deseado no está en la lista, puede escribirlo. Déjelo en blanco para el tamaño predeterminado de la edición y el SLO especificados.
   
 ## <a name="containment"></a>Containment  
  En las bases de datos independientes, algunos valores que se suelen configurar en el nivel de servidor se pueden configurar en el nivel de base de datos.  
@@ -123,7 +132,7 @@ ms.locfileid: "51659374"
  Especifique el nombre del directorio para los datos de FILESTREAM asociados a la base de datos seleccionada.  
   
  **Acceso sin transacciones de FILESTREAM**  
- Especifique una de las siguientes opciones para el acceso no transaccional a través del sistema de archivos a los datos de FILESTREAM almacenados en tablas FileTable: **OFF**, **READ_ONLY**o **FULL**. Si FILESTREAM no está habilitado en el servidor, este valor se establece en OFF y está deshabilitado. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Especifique una de las opciones siguientes para el acceso no transaccional a través del sistema de archivos a los datos FILESTREAM almacenados en tablas FileTable: **OFF**, **READ_ONLY** o **FULL**. Si FILESTREAM no está habilitado en el servidor, este valor se establece en OFF y está deshabilitado. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Varios  
 **Permitir el aislamiento de instantánea**  
@@ -235,7 +244,7 @@ Identificador de solo lectura.
   
 
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   

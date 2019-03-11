@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2da642b1b380e45ffdde2ac48bd37764a12b2dd
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a1bb91e4b5429e6b101d6cdb0ffa73c9953ab198
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980431"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955746"
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta función calcula la distribución acumulativa de un valor en un grupo de valores. Es decir, `CUME_DIST` calcula la posición relativa de un valor especificado en un grupo de valores. Suponiendo un orden ascendente, el `CUME_DIST` de un valor en la fila *r* se define como el número de filas con valores menores o iguales que el valor de la fila *r*, dividido entre el número de filas evaluadas en la partición o el conjunto de resultados de la consulta. `CUME_DIST` es similar a la función `PERCENT_RANK`.
+Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta función calcula la distribución acumulativa de un valor en un grupo de valores. Es decir, `CUME_DIST` calcula la posición relativa de un valor especificado en un grupo de valores. Suponiendo un orden ascendente, el `CUME_DIST` de un valor en la fila _r_ se define como el número de filas con valores menores o iguales que el valor de la fila _r_, dividido entre el número de filas evaluadas en la partición o el conjunto de resultados de la consulta. `CUME_DIST` es similar a la función `PERCENT_RANK`.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,9 +43,9 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-OVER **(** [ *partition_by_clause* ] *order_by_clause*)  
+OVER **(** [ _cláusula\_partition\_by_ ] _cláusula\_order\_by_)  
 
-El argumento *partition_by_clause* divide el conjunto de resultados de la cláusula FROM en particiones, a las que se aplica la función. Si no se especifica el argumento *partition_by_clause*, `CUME_DIST` trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que tiene lugar la operación. `CUME_DIST` requiere *order_by_clause*. `CUME_DIST` no aceptará las \<filas o cláusula de rango> de la sintaxis OVER. Para más información, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+El argumento _cláusula\_partition\_by_ divide el conjunto de resultados de la cláusula FROM en particiones, a las que se aplica la función. Si no se especifica el argumento _cláusula\_partition\_by_, `CUME_DIST` trata todas las filas del conjunto de resultados de la consulta como un único grupo. El argumento _cláusula\_order\_by_ determina el orden lógico en el que se produce la operación. `CUME_DIST` requiere el argumento _cláusula\_order\_by_. `CUME_DIST` no aceptará la \<cláusula de filas o rango> de la sintaxis OVER. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **float(53)**
@@ -53,10 +53,10 @@ El argumento *partition_by_clause* divide el conjunto de resultados de la cláus
 ## <a name="remarks"></a>Notas  
 `CUME_DIST` devuelve un intervalo de valores mayor que 0 y menor o igual que 1. Los valores equivalentes siempre se evalúan como el mismo valor de distribución acumulativa. `CUME_DIST` incluye valores NULL de forma predeterminada y los trata como los posibles valores más bajos.
   
-`CUME_DIST` sea no determinista. Para más información, consulte [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`CUME_DIST` sea no determinista. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Ejemplos  
-En este ejemplo se usa la función `CUME_DIST` para calcular el percentil de salario de cada empleado dentro de un departamento determinado. `CUME_DIST` devuelve un valor que representa el porcentaje de empleados que tienen un salario menor o igual que el empleado actual del mismo departamento. La función `PERCENT_RANK` calcula el intervalo de porcentaje de salario del empleado dentro de un departamento. Para crear particiones de las filas del conjunto de resultados por departamento, el ejemplo especifica el valor de *partition_by_clause*. La cláusula ORDER BY de la cláusula OVER ordena lógicamente las filas de cada partición. La cláusula ORDER BY de la instrucción SELECT determina el orden de presentación del conjunto de resultados.
+En este ejemplo se usa la función `CUME_DIST` para calcular el percentil de salario de cada empleado dentro de un departamento determinado. `CUME_DIST` devuelve un valor que representa el porcentaje de empleados que tienen un salario menor o igual que el empleado actual del mismo departamento. La función `PERCENT_RANK` calcula el intervalo de porcentaje de salario del empleado dentro de un departamento. Para crear particiones de las filas del conjunto de resultados por departamento, en el ejemplo se especifica el valor de la _cláusula\_partition\_by_. La cláusula ORDER BY de la cláusula OVER ordena lógicamente las filas de cada partición. La cláusula ORDER BY de la instrucción SELECT determina el orden de presentación del conjunto de resultados.
   
 ```sql
 USE AdventureWorks2012;  

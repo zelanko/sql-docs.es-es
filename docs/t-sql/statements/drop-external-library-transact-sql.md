@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -13,21 +13,24 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DROP EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cdf4e44a1c22d78fbc05a3bcd182bbc507527f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 129aafce2e270f85506d056d5d083d34176aa8a0
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666853"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018021"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Elimina una biblioteca de paquetes existente. Los tiempos de ejecución externos admitidos, como R o Python, usan las bibliotecas de paquetes.
+Elimina una biblioteca de paquetes existente. Los tiempos de ejecución externos admitidos, como R, Python o Java, usan bibliotecas de paquetes.
+
+> [!NOTE]
+> En SQL Server 2017, se admiten el lenguaje R y la plataforma Windows. En SQL Server 2019 CTP 2.3 R se admiten Python y Java en la plataforma Windows. La compatibilidad con Linux está prevista para una versión posterior.
 
 ## <a name="syntax"></a>Sintaxis
 

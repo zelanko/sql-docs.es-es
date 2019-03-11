@@ -10,12 +10,12 @@ ms.author: mathoma
 manager: craigg
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f2e8a96d6f9a6270cec06aaa47f33b3b830f4e5
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 3c947da650b7ba5d5e968464cc022839ca908ef0
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419750"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334662"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>Archivos de inclusión de SQL Server para el control de versiones y "applies-to"
 
@@ -140,3 +140,5 @@ Estos archivos de inclusión applies-to se usan con la documentación de Reporti
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información sobre cómo usar estos archivos de inclusión, vea [Archivos de inclusión applies-to](sql-server-docs-contribute.md#applies-to-includes).
+
+esto es una prueba

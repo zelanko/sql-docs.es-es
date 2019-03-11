@@ -18,27 +18,27 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0a22547436f8a511a5a61db35ec99a919d84e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644033"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852870"
 ---
 # <a name="insert-sql-graph"></a>INSERT (gráfico SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Agrega una o varias filas a una tabla `node` o `edge` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+Agrega una o varias filas a una tabla `node` o `edge` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]   
 >  Para obtener instrucciones Transact-SQL estándar, vea [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>Sintaxis INSERT en tabla de nodo 
-La sintaxis para insertar en una tabla de nodo es la misma que la de una tabla normal. 
+La sintaxis para insertar en una tabla de nodo es la misma que para una tabla normal. 
 
-```  
+```sql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
@@ -102,19 +102,19 @@ INSERT
   
  
 ## <a name="arguments"></a>Argumentos  
- En este documento se describen los argumentos pertenecientes a un gráfico SQL. Para obtener una lista completa y una descripción de los argumentos admitidos en una instrucción INSERT, vea [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
+En este documento se describen los argumentos relacionados con un gráfico SQL. Para obtener una lista completa y una descripción de los argumentos admitidos en una instrucción INSERT, vea [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
 
- INTO  
- Es una palabra clave opcional que se puede usar entre `INSERT` y la tabla de destino.  
+INTO  
+Es una palabra clave opcional que se puede usar entre `INSERT` y la tabla de destino.  
   
- *search_condition_with_match*   
- La cláusula `MATCH` se puede usar en una subconsulta mientras se realiza una operación de inserción en una tabla de nodo o perimetral. Para obtener la sintaxis la instrucción `MATCH`, vea [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md).
+*search_condition_with_match*   
+La cláusula `MATCH` se puede usar en una subconsulta mientras se realiza una operación de inserción en una tabla de nodo o perimetral. Para obtener la sintaxis la instrucción `MATCH`, vea [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md).
 
- *graph_search_pattern*   
- Patrón de búsqueda proporcionado a la cláusula `MATCH` como parte del predicado del gráfico.
+*graph_search_pattern*   
+Patrón de búsqueda proporcionado a la cláusula `MATCH` como parte del predicado del gráfico.
 
- *edge_table_column_list*   
- Los usuarios deben proporcionar valores en `$from_id` y `$to_id` al realizar una operación de inserción en una tabla perimetral. De lo contrario, se devolverá un error o se insertará NULL en esas columnas. 
+*edge_table_column_list*   
+Los usuarios deben proporcionar valores en `$from_id` y `$to_id` al realizar una operación de inserción en una tabla perimetral. Se devolverá un error si no se proporciona un valor o se insertan valores NULL en esas columnas. 
   
 
 ## <a name="remarks"></a>Notas  
@@ -122,48 +122,48 @@ Insertar en un nodo es lo mismo que insertar en cualquier tabla relacional. Los 
 
 Al insertar en una tabla perimetral, los usuarios deben proporcionar valores para las columnas `$from_id` y `$to_id`.   
 
-La inserción con BULK en una tabla de nodo permanece igual que en una tabla relacional.
+La inserción con BULK en una tabla de nodo es igual que para una tabla relacional.
 
 Antes de insertar con BULK en una tabla perimetral, las tablas de nodo se deben importar. Así, los valores de `$from_id` y `$to_id` se podrán extraer de la columna `$node_id` de la tabla de nodo y se insertarán en la tabla perimetral. 
 
   
 ### <a name="permissions"></a>Permisos  
- El permiso INSERT es obligatorio en la tabla de destino.  
+El permiso INSERT es obligatorio en la tabla de destino.  
   
- Los permisos INSERT corresponden de forma predeterminada a los miembros del rol fijo de servidor **sysadmin**, de los roles fijos de base de datos **db_owner** y **db_datawriter** y al propietario de la tabla. Los miembros de los roles **sysadmin**, **db_owner** y **db_securityadmin** y el propietario de la tabla pueden transferir permisos a otros usuarios.  
+Los permisos INSERT corresponden de forma predeterminada a los miembros del rol fijo de servidor **sysadmin**, de los roles fijos de base de datos **db_owner** y **db_datawriter** y al propietario de la tabla. Los miembros de los roles **sysadmin**, **db_owner** y **db_securityadmin** y el propietario de la tabla pueden transferir permisos a otros usuarios.  
   
- Para ejecutar INSERT con la opción BULK de la función OPENROWSET, debe ser miembro de los roles fijos de servidor **sysadmin** o **bulkadmin**.  
+Para ejecutar INSERT con la opción BULK de la función OPENROWSET, debe ser miembro de los roles fijos de servidor **sysadmin** o **bulkadmin**.  
   
 
 ## <a name="examples"></a>Ejemplos  
   
 #### <a name="a--insert-into-node-table"></a>A.  Insertar en una tabla de nodo  
- En el siguiente ejemplo se crea una tabla de nodo Person y se insertan 2 filas en ella.
+En el ejemplo siguiente se crea una tabla de nodo Person y se insertan dos filas en ella.
 
- ```
- -- Create person node table
- CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
+```sql
+-- Create person node table
+CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
  
- -- Insert records for Alice and John
- INSERT INTO dbo.Person VALUES (1, 'Alice');
- INSERT INTO dbo.Person VALUES (2,'John');
- ```
+-- Insert records for Alice and John
+INSERT INTO dbo.Person VALUES (1, 'Alice');
+INSERT INTO dbo.Person VALUES (2,'John');
+```
   
-#### <a name="b--insert-into-edge-table"></a>B.  Insertar en una tabla perimetral  
- En el siguiente ejemplo se crea una tabla perimetral friend y se inserta un borde en ella.
+#### <a name="b--insert-into-edge-table"></a>b.  Insertar en una tabla perimetral  
+En el siguiente ejemplo se crea una tabla perimetral friend y se inserta un borde en ella.
 
- ```
- -- Create friend edge table
- CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
+```sql
+-- Create friend edge table
+CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
 
- -- Create a friend edge, that connect Alice and John
- INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
+-- Create a friend edge, that connect Alice and John
+INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
         (SELECT $node_id FROM dbo.Person WHERE name = 'John'), '9/15/2011');
- ```
+```
 
   
-## <a name="see-also"></a>Ver también  
- [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Procesamiento de gráficos con SQL Server 2017)  
+## <a name="see-also"></a>Consulte también  
+[INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+[Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Procesamiento de gráficos con SQL Server 2017)  
 
 

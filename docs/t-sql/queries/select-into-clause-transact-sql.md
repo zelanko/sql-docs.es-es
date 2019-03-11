@@ -26,16 +26,16 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509012"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334542"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT: cláusula INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ SELECT…INTO crea una tabla en el grupo de archivos predeterminado e inserta la
  *grupo_de_archivos*    
  Especifica el nombre del grupo de archivos en el que se creará la tabla. El grupo de archivos especificado debe existir en la base de datos; de lo contrario, se mostrará un error en el motor de SQL Server.   
  
- **Se aplica a:** de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Tipos de datos  
  El atributo FILESTREAM no transfiere a la nueva tabla. Los BLOB FILESTREAM se copian y se almacenan en la nueva tabla como BLOB **varbinary(max)**. Sin el atributo FILESTREAM, el tipo de datos **varbinary(max)** tiene una limitación de 2 GB. Si un FILESTREAM BLOB supera este valor, se produce el error 7119 y se detiene la instrucción.  
@@ -82,6 +82,9 @@ SELECT…INTO crea una tabla en el grupo de archivos predeterminado e inserta la
 -   La columna de identidad es de un origen de datos remoto.  
   
 Si se cumple alguna de estas condiciones, la columna se crea como NOT NULL en lugar de heredar la propiedad IDENTITY. Si una columna de identidad se requiere en la nueva tabla pero este tipo de columna no está disponible o desea un valor de inicialización o de incremento diferente de la columna de identidad de origen, defina la columna en la lista de selección utilizando la función IDENTITY. Vea "Crear una columna de identidad utilizando la función IDENTITY" en la sección Ejemplos siguiente.  
+
+## <a name="remarks"></a>Notas  
+El funcionamiento de la instrucción `SELECT...INTO` consta de dos pasos: se crea la tabla y, después, se insertan filas.  Esto significa que si se produce un error en las operaciones de inserción, se revertirán todas, pero la tabla nueva (vacía) se conservará.  Si necesita que la operación sea correcta o no en su totalidad, use una [transacción explícita](../language-elements/begin-transaction-transact-sql.md).
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  No puede especificar una variable de tabla o parámetro con valores de tabla como la nueva tabla.  
@@ -123,7 +126,7 @@ FROM Person.Person AS c
 GO  
 ```  
   
-### <a name="b-inserting-rows-using-minimal-logging"></a>B. Insertar las filas utilizando el registro mínimo  
+### <a name="b-inserting-rows-using-minimal-logging"></a>b. Insertar las filas utilizando el registro mínimo  
  El ejemplo siguiente crea la tabla `dbo.NewProducts` e inserta filas de la tabla `Production.Product`. El ejemplo supone que el modelo de recuperación de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] está establecido en FULL. Para asegurarse de que se utiliza el registro mínimo, el modelo de recuperación de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] se establece en BULK_LOGGED antes de que las filas se inserten y se restablece en FULL después de la instrucción SELECT...INTO. De esta manera se asegura de que la instrucción SELECT...INTO use el espacio mínimo en el registro de transacciones y funcione eficazmente.  
   
 ```sql  
@@ -229,7 +232,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Crear una tabla como una copia de otra tabla y cargarla en un grupo de archivos especificado
 En el ejemplo siguiente se muestra cómo crear una tabla como una copia de otra tabla y cargarla en un grupo de archivos especificado diferente del grupo de archivos predeterminado del usuario.
 
- **Se aplica a:** de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -244,7 +247,7 @@ GO
 SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Ejemplos de SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37fe6d7b3dfe92e2cdf53e7a7b26ab363a567510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9ebd016ba06c24d742c099f346076111bd98751b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409172"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334522"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Detención del control de versiones en una tabla temporal con control de versiones
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ Puede hacerlo estableciendo la cláusula **SYSTEM_VERSIONING** en **OFF**.
 -   Tabla de historial como una tabla normal  
   
 ### <a name="important-remarks"></a>Notas importantes  
-  
--   No se produce ninguna pérdida de datos cuando se establece  **SYSTEM_VERSIONING = OFF** o se quita el período **SYSTEM_TIME** .  
+-   La tabla de historial **dejará** de capturar la actualizaciones mientras dure **SYSTEM_VERSIONING = OFF**.
+-   No se produce ninguna pérdida de datos en la **tabla temporal** cuando se establece **SYSTEM_VERSIONING = OFF** o se quita el período **SYSTEM_TIME**.
   
 -   Si establece **SYSTEM_VERSIONING = OFF** y no quita el período **SYSTEM_TIME** , el sistema seguirá actualizando las columnas de período en cada operación de inserción y actualización. Las eliminaciones en la tabla actual serán permanentes.  
   
@@ -64,7 +64,10 @@ DROP PERIOD FOR SYSTEM_TIME;
   
 -   Partición **SWITCH IN** en la tabla de historial  
   
- En este ejemplo se detiene temporalmente SYSTEM_VERSIONING para que se puedan realizar operaciones de mantenimiento concretas. Si se detiene temporalmente el control de versiones como un requisito previo para el mantenimiento de una tabla, se recomienda encarecidamente hacerlo en una transacción para mantener la coherencia de los datos.  
+ En este ejemplo se detiene temporalmente SYSTEM_VERSIONING para que se puedan realizar operaciones de mantenimiento concretas. Si se detiene temporalmente el control de versiones como un requisito previo para el mantenimiento de una tabla, se recomienda encarecidamente hacerlo en una transacción para mantener la coherencia de los datos.
+ 
+> [!NOTE]  
+>  Al volver a activar el control de versiones del sistema, no olvide especificar el argumento HISTORY_TABLE.  Si no lo hace, el resultado será la creación de una tabla de historial que se asociará a la tabla actual.  La tabla de historial original seguirá existiendo como una tabla normal, pero no se asociará con la tabla actual.  
   
 ```  
 BEGIN TRAN   
@@ -79,7 +82,7 @@ COMMIT ;
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Administración de la retención de datos históricos en las tablas temporales con versiones del sistema](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   

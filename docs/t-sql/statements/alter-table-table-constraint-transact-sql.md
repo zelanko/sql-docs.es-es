@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef0833709d409e7393d71a402b823375b895fb2a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: bcab3eb3b41cf0dbbcb46a48a612d35bde66de14
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327397"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227157"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54327397"
           [ , {node_table TO node_table }]
           [ , ...n ]
         )
-        [ ON DELETE NO ACTION]
+        [ ON DELETE { NO ACTION | CASCADE } ]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -163,7 +163,7 @@ ms.locfileid: "54327397"
   
  Se puede especificar para restricciones FOREIGN KEY y CHECK. Si se especifica esta cláusula para una restricción, la restricción no se aplica cuando los agentes de replicación realizan operaciones de inserción, actualización o eliminación.  
 
- CONNECTION Especifica el par de tablas de nodo a la que puede conectarse la restricción perimetral determinada.  
+ CONNECTION Especifica el par de tablas de nodo a la que puede conectarse la restricción perimetral determinada. ON DELETE especifica lo que sucede con las filas de la tabla perimetral cuando se eliminan los nodos que se han conectado a través de esta tabla perimetral. 
  
  DEFAULT  
  Especifica el valor predeterminado de la columna. Las definiciones DEFAULT se pueden utilizar para proporcionar valores a una nueva columna de las filas existentes de datos. Las definiciones DEFAULT no se pueden agregar a las columnas que tengan un tipo de datos **timestamp**, una propiedad IDENTITY, una definición DEFAULT existente o un valor predeterminado enlazado. Si la columna tiene un valor predeterminado existente, éste debe quitarse para poder agregar uno nuevo. Si se especifica un valor predeterminado para una columna de un tipo definido por el usuario, dicho tipo debe admitir la conversión implícita de *constant_expression* al tipo definido por el usuario. Para mantener la compatibilidad con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede asignar un nombre de restricción a DEFAULT.  

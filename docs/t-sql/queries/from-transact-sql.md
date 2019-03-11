@@ -31,16 +31,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c36325e68fbf9692c9f8f057e5aa215de2ad49b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408812"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334792"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -230,7 +230,7 @@ FROM { <table_source> [ ,...n ] }
  Especifica que se devuelva una versión determinada de los datos de la tabla temporal especificada y su tabla de historial de versiones del sistema vinculada.  
   
 ### <a name="tablesample-clause"></a>Cláusula Tablesample
-**Se aplica a:** SQL Server y SQL Database 
+**Se aplica a:** SQL Server, SQL Database 
  
  Especifica que se devuelva un ejemplo de los datos de la tabla. El ejemplo puede ser aproximado. Esta cláusula se puede usar en cualquier tabla principal o combinada de una instrucción SELECT o UPDATE. TABLESAMPLE no se puede especificar con vistas.  
   
@@ -256,7 +256,7 @@ FROM { <table_source> [ ,...n ] }
  Es una expresión de tipo entero constante utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para generar un número aleatorio. *repeat_seed* es **bigint**. Si no se especifica *repeat_seed*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un valor de forma aleatoria. Para un valor *repeat_seed* específico, el resultado del muestreo es siempre el mismo si no se ha aplicado ningún cambio a la tabla. La expresión *repeat_seed* debe evaluarse como un entero mayor que cero.  
   
 ### <a name="tablesample-clause"></a>Cláusula Tablesample
-**Se aplica a:** SQL Data Warehouse
+**Se aplica a:** Almacenamiento de datos SQL
 
  Especifica que se devuelva un ejemplo de los datos de la tabla. El ejemplo puede ser aproximado. Esta cláusula se puede usar en cualquier tabla principal o combinada de una instrucción SELECT o UPDATE. TABLESAMPLE no se puede especificar con vistas. 
 
@@ -473,7 +473,7 @@ TerritoryID Name
 (10 row(s) affected)  
 ```  
   
-### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. Usar las sugerencias del optimizador TABLOCK y HOLDLOCK  
+### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>b. Usar las sugerencias del optimizador TABLOCK y HOLDLOCK  
  En la siguiente transacción parcial se muestra cómo colocar un bloqueo explícito de tabla compartida en `Employee` y cómo leer el índice. El bloqueo se mantiene durante toda la transacción.  
   
 ```sql    
@@ -878,7 +878,7 @@ SELECT *
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   

@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab667a25583a8415d44cbc40f1116cac2fb254c3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 870d1b5d1a7bedb0d758be7eef4cb3f7b2e0106c
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326626"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527088"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,33 +50,33 @@ ms.locfileid: "54326626"
   
 4.  **Generar una firma de acceso compartido (SAS):** para acceder al contenedor, debe crear una SAS. Puede hacerlo en algunas herramientas, código y Azure PowerShell. El siguiente comando `New-AzureStorageContainerSASToken` crea un token de SAS para el contenedor de blobs `backupcontainer` que expira en un año.  
   
-    ```powershell  
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
-    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
-    ```  
-    Para Azure, use el siguiente comando:
-       ```powershell
-    Connect-AzAccount
-    Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
-    $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
-    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
-   ```  
+  ```powershell  
+  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
+  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
+  ```  
+
+Para Azure, use el siguiente comando:
+  ```powershell
+  Connect-AzAccount
+  Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
+  $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+  ```  
   
-     La salida de este comando contendrá la dirección URL del contenedor y el token de SAS. A continuación se muestra un ejemplo:  
+La salida de este comando contendrá la dirección URL del contenedor y el token de SAS. A continuación se muestra un ejemplo:  
   
-    ```  
-    https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl  
-    ```  
+  `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
   
-     En el ejemplo anterior, separe la dirección URL del contenedor y el token de SAS en el signo de interrogación (no incluya el signo de interrogación). Por ejemplo, la salida anterior tendría como resultado los dos valores siguientes.  
+En el ejemplo anterior, separe la dirección URL del contenedor y el token de SAS en el signo de interrogación (no incluya el signo de interrogación). Por ejemplo, la salida anterior tendría como resultado los dos valores siguientes.  
   
-    |||  
-    |-|-|  
-    |**Dirección URL del contenedor:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
-    |**Token de SAS:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|||  
+|-|-|  
+|**Dirección URL del contenedor:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
+|**Token de SAS:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|||
   
-     Anote la dirección URL del contenedor y la SAS para usarlos al crear una credencial de SQL. Para más información sobre SAS, vea [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+Anote la dirección URL del contenedor y la SAS para usarlos al crear una credencial de SQL. Para más información sobre SAS, vea [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>Habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -137,7 +137,7 @@ ms.locfileid: "54326626"
   
 8.  **Supervise el estado de mantenimiento:**  puede supervisar a través de notificaciones por correo electrónico que ha configurado previamente, o bien supervisar los eventos registrados de forma activa. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
   
-    ```  
+    ```sql  
     --  view all admin events  
     Use msdb;  
     Go  
@@ -161,7 +161,7 @@ ms.locfileid: "54326626"
   
     ```  
   
-    ```  
+    ```sql  
     -- to enable debug events  
     Use msdb;  
     Go  
@@ -169,7 +169,7 @@ ms.locfileid: "54326626"
   
     ```  
   
-    ```  
+    ```sql  
     --  View all events in the current week  
     Use msdb;  
     Go  
@@ -179,12 +179,9 @@ ms.locfileid: "54326626"
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
     EXEC managed_backup.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
-    ```  
+    ```
   
  Los pasos descritos en esta sección son específicos para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez en la base de datos. Puede modificar las configuraciones existentes usando los mismos procedimientos almacenados del sistema y proporcionar los nuevos valores.  
   
 ## <a name="see-also"></a>Consulte también  
  [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
-  
-  

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c046b2c2288264062f9f837c7a2bd3b74de83c35
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425870"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572828"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ Un campo público de un tipo definido por el usuario.
 *udt_name*  
 El nombre de un tipo definido por el usuario CLR (Common Language Runtime).  
   
-{ **.** | **::** }  
+`{ . | :: }`  
 Especifica el método de un tipo definido por el usuario CLR. En métodos de instancia (no estáticos), use un punto (**.**). En métodos estáticos, use dos puntos dobles (**::**). Para invocar un método, propiedad o campo de un tipo definido por el usuario CLR, debe tener el permiso EXECUTE para el tipo.  
   
 _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
@@ -91,7 +91,7 @@ Una variable cuyo tipo se encuentra en un ensamblado. Para obtener más informac
 *mutator_method*  
 Un método del ensamblado que puede cambiar el estado del objeto. SQLMethodAttribute.IsMutator se aplica a este método.  
   
-{ **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+`{ += | -= | *= | /= | %= | &= | ^= | |= }`  
 Operador de asignación compuesta:  
   
  +=              Sumar y asignar  
@@ -166,7 +166,7 @@ Si *select_statement* contiene una cláusula ORDER BY y las columnas indicadas n
 READ ONLY  
 Impide que se realicen actualizaciones a través de este cursor. No es posible hacer referencia al cursor en una cláusula WHERE CURRENT OF de una instrucción UPDATE o DELETE. Esta opción reemplaza la capacidad predeterminada de actualizar el cursor. Esta palabra clave varía con respecto a la READ_ONLY anterior en que contiene un espacio en lugar de un carácter de subrayado entre READ y ONLY.  
   
-UPDATE [OF *column_name*[ **,**... *n* ] ]  
+`UPDATE [OF column_name[ ,... n ] ]`  
 Define las columnas actualizables en el cursor. Si se especifica OF*column_name* [**,**...*n*], solo las columnas enumeradas admiten modificaciones. Si no se especifica ninguna lista, se podrán actualizar todas las columnas, a menos que el cursor se haya definido como READ_ONLY.  
   
 ## <a name="remarks"></a>Notas  

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e13fd0eacc1bb9584b59ac309724516e83e9698
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: f1ce25ad1f6ac2a84b391a50e1be6014dae23c5b
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828165"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683705"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -728,49 +728,41 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
--- Azure SQL Database Syntax ALTER DATABASE { database_name | CURRENT } {     <file_and_filegroup_options>   | SET <option_spec> [ ,...n ]   | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } } [;]
-
-<file_and_filegroup_options>::=   <add_or_modify_files>::=   <filespec>::=   <add_or_modify_filegroups>::=   <filegroup_updatability_option>::=
-
-<option_spec> ::= {     <auto_option>   | <change_tracking_option>   | <cursor_option>   | <db_encryption_option>   | <db_update_option>   | <db_user_access_option>   | <delayed_durability_option>   | <parameterization_option>   | <query_store_options>   | <snapshot_option>   | <sql_option>   | <target_recovery_time_option>   | <temporal_history_retention> }
-
-```
-
-## Arguments
+## <a name="arguments"></a>Argumentos
 
 *database_name*
 
-Is the name of the database to be modified.
+Es el nombre de la base de datos que se va a modificar.
 
 CURRENT
 
-Designates that the current database in use should be altered.
+Designa que la base de datos actual en uso se debe modificar.
 
-## Remarks
+## <a name="remarks"></a>Notas
 
-To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
-To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
+Para quitar una base de datos, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
+Para reducir el tamaño de una base de datos, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-The ALTER DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
+La instrucción ALTER DATABASE se debe ejecutar en el modo de confirmación automática (modo de administración de transacciones predeterminado) y no se permite en una transacción explícita o implícita.
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
+Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 
-The procedure cache is also flushed in the following scenario: You run several queries against a database that has default options. Then, the database is dropped.
+La caché de procedimientos también se vacía en el escenario siguiente: Ejecuta varias consultas con una base de datos que tiene opciones predeterminadas. Después, la base de datos se quita.
 
-## Viewing Database Information
+## <a name="viewing-database-information"></a>Ver la información de la base de datos
 
-You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.
+Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos almacenados del sistema para devolver información sobre bases de datos, archivos y grupos de archivos.
 
-## Permissions
+## <a name="permissions"></a>Permisos
 
-Only the server-level principal login (created by the provisioning process) or members of the `dbmanager` database role can alter a database.
+Solo el inicio de sesión principal de nivel de servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos `dbcreator` pueden modificar una base de datos.
 
 > [!IMPORTANT]
-> The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.
+> El propietario de la base de datos no puede modificarla a menos que sea miembro del rol `dbcreator`.
 
-## Examples
+## <a name="examples"></a>Ejemplos
 
-The following examples show you how to set automatic tuning and how to add a file in a managed instance.
+En los ejemplos siguientes se muestra cómo establecer el ajuste automático y cómo agregar un archivo en una instancia administrada.
 
 ```sql
 ALTER DATABASE WideWorldImporters

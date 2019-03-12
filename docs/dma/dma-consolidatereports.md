@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 6c41910b17744a0ff0c86e41c321fae67d59d3a1
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305363"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756720"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluar una empresa y consolidar los informes de evaluación con DMA
 
@@ -103,6 +103,7 @@ Los parámetros asociados con la función dmaDataCollector se describen en la ta
 |Parámetro  |Descripción |
 |---------|---------|
 |**getServerListFrom** | El inventario. Los valores posibles son **SqlServer** y **CSV**.<br/>Para obtener más información, consulte [crear un inventario de servidores SQL Server](#create-inventory). |
+|**csvPath** | La ruta de acceso al archivo de inventario de CSV.  Usa solo cuando **getServerListFrom** está establecido en **CSV**. |
 |**serverName** | El nombre de instancia de SQL Server del inventario cuando se usa **SqlServer** en el **getServerListFrom** parámetro. |
 |**databaseName** | La base de datos que hospeda la tabla de inventario. |
 |**AssessmentName** | El nombre de la evaluación de DMA. |

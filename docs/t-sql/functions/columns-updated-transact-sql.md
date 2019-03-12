@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 02cc6ae014dc52df01e08c13b9610be5ffa50c6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720323"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736763"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` devuelve uno o más bytes que se ordenan de izquierda a derecha. El bit situado más a la derecha de cada byte es el menos significativo. El primer bit por la derecha del byte situado más a la izquierda representa la primera columna de la tabla, el siguiente bit a la izquierda representa la segunda columna, y así sucesivamente. `COLUMNS_UPDATED` devuelve varios bytes si la tabla en que se ha creado el desencadenador contiene más de ocho columnas, siendo el menos significativo el primero por la izquierda. `COLUMNS_UPDATED` devuelve TRUE en todas las columnas de las acciones INSERT porque en las columnas se insertaron valores explícitos o implícitos (NULL).
   
-Para probar las actualizaciones o inserciones en columnas específicas, siga la sintaxis con un operador bit a bit y una máscara de bits de enteros de las columnas probadas. Por ejemplo, supongamos que la tabla **t1** contiene las columnas **C1**, **C2**, **C3**, **C4** y **C5**. Para comprobar que las columnas **C2**, **C3** y **C4** se han actualizado correctamente (donde la tabla **t1** tiene un desencadenador UPDATE), siga la sintaxis con **& 14**. Para comprobar si solo se ha actualizado la columna **C2**, especifique **& 2**. Vea [Ejemplo A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) y [Ejemplo B](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns) para obtener ejemplos reales.
+Para probar las actualizaciones o inserciones en columnas específicas, siga la sintaxis con un operador bit a bit y una máscara de bits de enteros de las columnas probadas. Por ejemplo, supongamos que la tabla **t1** contiene las columnas **C1**, **C2**, **C3**, **C4** y **C5**. Para comprobar que las columnas **C2**, **C3** y **C4** se han actualizado correctamente (donde la tabla **t1** tiene un desencadenador UPDATE), siga la sintaxis con **& 14**. Para comprobar si solo se ha actualizado la columna **C2**, especifique **& 2**. Vea [Ejemplo A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) y [Ejemplo B](#b-using-columns_updated-to-test-more-than-eight-columns) para obtener ejemplos reales.
   
 Use `COLUMNS_UPDATED` en cualquier parte dentro de un desencadenador INSERT o UPDATE de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
@@ -181,7 +181,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Utilizar COLUMNS_UPDATED para comprobar más de ocho columnas  
+### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>b. Utilizar COLUMNS_UPDATED para comprobar más de ocho columnas  
 Para comprobar las actualizaciones que afectan a otras columnas que no sean las ocho primeras de la tabla, use la función `SUBSTRING` para comprobar si `COLUMNS_UPDATED` devuelve el bit correcto. En este ejemplo se comprueban las actualizaciones que afectan a las columnas `3`, `5` y `9` de la tabla `AdventureWorks2012.Person.Person`.
   
 ```sql

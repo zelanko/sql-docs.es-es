@@ -31,15 +31,15 @@ helpviewer_keywords:
 - row count accuracy [SQL Server]
 - page count accuracy [SQL Server]
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 68e7743681c6023c86d0298eef022ef178eeb411
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c880ac0db330ce03f45d469cffd717970d0b2d5e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611873"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685482"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ DBCC UPDATEUSAGE (0);
 GO  
 ```  
   
-### <a name="b-updating-page-or-row-counts-or-both-for-adventureworks-and-suppressing-informational-messages"></a>B. Actualizar recuentos de páginas o filas, o ambos, para AdventureWorks y suprimir los mensajes informativos  
+### <a name="b-updating-page-or-row-counts-or-both-for-adventureworks-and-suppressing-informational-messages"></a>b. Actualizar recuentos de páginas o filas, o ambos, para AdventureWorks y suprimir los mensajes informativos  
 En el siguiente ejemplo se especifica [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] como nombre de la base de datos y se suprimen todos los mensajes informativos.
   
 ```sql
@@ -129,7 +129,7 @@ DBCC UPDATEUSAGE (AdventureWorks2012, 'HumanResources.Employee', IX_Employee_Org
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)

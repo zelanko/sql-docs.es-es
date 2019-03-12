@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: La sintaxis de CREATE DATABASE para SQL Server, Azure SQL Database, Azure SQL Data Warehouse y Analytics Platform System
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bcbd86b04acf394bc9909369968f552e08a0c22
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 81464ed0bdb3246b805a0c44f17baa9fdeaf59e5
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828225"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683695"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1258,7 +1258,7 @@ Para crear una base de datos, el inicio de sesión debe ser uno de los siguiente
 
 - El inicio de sesión de entidad de seguridad a nivel de servidor
 - El administrador de Azure AD para el Azure SQL Server local
-- El inicio de sesión de un miembro del rol de base de datos `dbmanager`
+- El inicio de sesión de un miembro del rol de base de datos `dbcreator`
 
 ## <a name="examples"></a>Ejemplos
 

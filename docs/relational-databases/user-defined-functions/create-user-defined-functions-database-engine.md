@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b2ff8188f2733fd0467ac39266bc9f0510de621
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8c69ac0361f29c81341831b25e3591716484902
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515480"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579725"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Crear funciones definidas por el usuario (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -200,12 +200,12 @@ Es posible unirse a una MSTVF en una cláusula `FROM`, pero puede provocar un re
 > [!IMPORTANT]
 > Las MSTVF tienen una estimación de cardinalidad fija de 100 a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], y de 1 en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
 > A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], la optimización de un plan de ejecución en el que se usan MSTVF puede aprovechar la ejecución intercalada, lo que resulta en el uso de la cardinalidad real en lugar de la heurística anterior.     
-> Para obtener más información, vea [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+> Para obtener más información, vea [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
 
 > [!NOTE]  
 > ANSI_WARNINGS no se respeta al pasar parámetros en un procedimiento almacenado o una función definida por el usuario, ni cuando se declaran y se establecen variables en una instrucción por lotes. Por ejemplo, si una variable se define como **char(3)** y después se establece en un valor de más de tres caracteres, los datos se truncan hasta el tamaño definido y la instrucción `INSERT` o `UPDATE` se ejecuta correctamente.
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md)     
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)    
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../tools/sql-server-profiler/start-sql-server-profiler.md)    

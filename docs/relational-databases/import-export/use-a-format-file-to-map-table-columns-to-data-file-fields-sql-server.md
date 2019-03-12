@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df69488ebf433257ba4b1af7c13ec1c299afa831
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 04681d455fe4589135cd0b112c310e2dd0a027b3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256380"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579105"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,10 +102,10 @@ Compare los cambios:
 
 ```
 El archivo de formato modificado ahora refleja:
-* El primer campo de datos de `myRemap.bcp` está asignado a la primera columna, ` myRemap.. PersonID`
+* El primer campo de datos de `myRemap.bcp` está asignado a la primera columna, `myRemap.. PersonID`
 * El segundo campo de datos de `myRemap.bcp` está asignado a la tercera columna, `myRemap.. LastName`
 * El tercer campo de datos de `myRemap.bcp` está asignado a la segunda columna, `myRemap.. FirstName`
-* El cuarto campo de datos de `myRemap.bcp` está asignado a la cuarta columna, ` myRemap.. Gender`
+* El cuarto campo de datos de `myRemap.bcp` está asignado a la cuarta columna, `myRemap.. Gender`
 
 ### Creación de un archivo de formato XML <a name="xml_format_file"></a>  
 Revise [Archivos de formato XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) para información detallada.  El siguiente comando hará uso de la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato xml, `myRemap.xml`, basado en el esquema de `myRemap`.  Además, el calificador `c` se utiliza para especificar los datos de caracteres, `t,` se utiliza para especificar una coma como terminador de campo y `T` se utiliza para especificar una conexión de confianza que usa seguridad integrada.  El calificador `x` se debe usar para generar un archivo de formato basado en XML.  En el símbolo del sistema, escriba el siguiente comando:

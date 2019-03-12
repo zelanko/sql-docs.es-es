@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 953fcb26527f709abd9679da3a3f061976d3ef74
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 5be56de82834133127700b945440ffb0e013fa4c
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334802"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556155"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -269,13 +269,13 @@ Se admiten los siguientes nombres de sugerencia:
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan con una selectividad mínima al estimar predicados AND para que los filtros tengan en cuenta la correlación. Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 cuando se usa con el modelo de estimación de la cardinalidad de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores, y tiene un efecto similar cuando se usa la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 con el modelo de estimación de la cardinalidad de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones posteriores.
 *  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"       
-   Deshabilita las combinaciones adaptables del modo por lotes. Para obtener más información, vea [Combinaciones adaptables del modo por lotes](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+   Deshabilita las combinaciones adaptables del modo por lotes. Para obtener más información, vea [Combinaciones adaptables del modo por lotes](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).
 *  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"       
-   Deshabilita los comentarios de concesión de memoria en modo por lotes. Para obtener más información, vea [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).   
+   Deshabilita los comentarios de concesión de memoria en modo por lotes. Para obtener más información, vea [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).   
 * "DISABLE_DEFERRED_COMPILATION_TV"    
   Deshabilita la compilación diferida de variables de tabla. Para obtener más información, consulte [Compilación diferida de variables de tabla](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 *  "DISABLE_INTERLEAVED_EXECUTION_TVF"      
-   Deshabilita la ejecución intercalada de las funciones con valores de tabla de múltiples instrucciones. Para más información, consulte [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+   Deshabilita la ejecución intercalada de las funciones con valores de tabla de múltiples instrucciones. Para más información, consulte [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
 *  "DISABLE_OPTIMIZED_NESTED_LOOP"      
    Indica al procesador de consultas que no use una operación de ordenación (ordenación por lotes) para las combinaciones de bucle anidado optimizadas cuando se genera un plan de consulta. Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -290,7 +290,7 @@ Se admiten los siguientes nombres de sugerencia:
 *  "DISABLE_PARAMETER_SNIFFING"      
    Indica al optimizador de consultas que utilice el promedio de distribución de datos al compilar una consulta con uno o más parámetros. Esta instrucción hace que el plan de consulta sea independiente en el valor del parámetro que se utilizó en primer lugar cuando se compiló la consulta. Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 o a PARAMETER_SNIFFING=OFF de la opción [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 * "DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK"    
-  Deshabilita los comentarios de concesión de memoria del modo de fila. Para más información, consulte [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback).
+  Deshabilita los comentarios de concesión de memoria del modo de fila. Para más información, consulte [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).
 * "DISABLE_TSQL_SCALAR_UDF_INLINING"    
   Deshabilita la inserción de UDF escalar. Para obtener más información, vea [Scalar UDF inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md) (Inserción de UDF escalar).
 * "DISALLOW_BATCH_MODE"    

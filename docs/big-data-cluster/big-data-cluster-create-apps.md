@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017831"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756640"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Cómo implementar una aplicación en clúster de macrodatos de 2019 de SQL Server (versión preliminar)
 
 En este artículo se describe cómo implementar y administrar el script de R y Python como una aplicación dentro de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
- 
-## <a name="whats-new-and-improved"></a>¿Qué es nuevo y mejorado 
+
+## <a name="whats-new-and-improved"></a>¿Qué es nuevo y mejorado
 
 - Una única utilidad de línea de comandos para administrar el clúster y la aplicación.
 - Implementación de aplicaciones simplificada al tiempo que proporciona un control granular a través de los archivos de especificación.
@@ -80,13 +80,12 @@ Si usa AKS, deberá ejecutar el comando siguiente para obtener la dirección IP 
 kubectl get svc endpoint-service-proxy -n <name of your cluster>
 ```
 
-
 ## <a name="kubeadm-or-minikube"></a>Kubeadm o Minikube
 
 Si usas Kubeadm o Minikube, ejecute el siguiente comando para obtener la dirección IP para el inicio de sesión en el clúster
 
 ```bash
-kubectl get node --selector='node-role.kubernetes.io/master' 
+kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
 ## <a name="create-an-app"></a>Creación de una aplicación
@@ -101,16 +100,17 @@ mssqlctl app create -n <app_name> -v <version_number> --spec <directory containi
 
 El comando siguiente muestra un ejemplo del aspecto que podría tener este comando:
 
-Esto se da por supuesto que tiene el archivo denominado `spec.yaml` dentro de la `addpy` carpeta. El `addpy` carpeta contiene el `add.py` y `spec.yaml` el `spec.yaml` es un archivo de especificación para el `add.py` app.
+Esto se da por supuesto que tiene el archivo denominado `spec.yaml` dentro de la `addpy` carpeta.
+El `addpy` carpeta contiene el `add.py` y `spec.yaml` el `spec.yaml` es un archivo de especificación para el `add.py` app.
 
 
-`add.py` crea la siguiente aplicación de python: 
+`add.py` crea la siguiente aplicación de python:
 
 ```py
 #add.py
 def add(x,y):
         result = x+y
-        return result;
+        return result
 result=add(x,y)
 ```
 
@@ -119,9 +119,9 @@ El script siguiente es un ejemplo del contenido para `spec.yaml`:
 ```yaml
 #spec.yaml
 name: add-app #name of your python script
-version: v1  #version of the app 
-runtime: Python #the languge this app uses (R or Python)
-src: ./add.py #full path to the loction of the app
+version: v1  #version of the app
+runtime: Python #the language this app uses (R or Python)
+src: ./add.py #full path to the location of the app
 entrypoint: add #the function that will be called upon execution
 replicas: 1  #number of replicas needed
 poolsize: 1  #the pool size that you need your app to scale
@@ -144,13 +144,13 @@ Puede comprobar si la aplicación se implementa mediante el comando de lista:
 mssqlctl app list
 ```
 
-Si no se ha completado la implementación debería ver el `state` mostrar `WaitingforCreate` como en el ejemplo siguiente: 
+Si no se ha completado la implementación debería ver el `state` mostrar `WaitingforCreate` como en el ejemplo siguiente:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: "WaitingforCreate",
+    "state": "WaitingforCreate",
     "version": "v1"
   }
 ]
@@ -158,11 +158,11 @@ Si no se ha completado la implementación debería ver el `state` mostrar `Waiti
 
 Después de la implementación es correcta, debería ver el `state` cambie a `Ready` estado:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -192,11 +192,11 @@ mssqlctl app list --name add-app --version v1
 
 Debería ver resultados similares al ejemplo siguiente:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -218,7 +218,7 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 Si la ejecución se realizó correctamente, debería ver la salida que especificó cuando creó la aplicación. A continuación se muestra un ejemplo.
 
-```
+```json
 {
   "changedFiles": [],
   "consoleOutput": "",
@@ -233,13 +233,13 @@ Si la ejecución se realizó correctamente, debería ver la salida que especific
 
 ## <a name="create-an-app-skeleton"></a>Creación de un esqueleto de la aplicación
 
-El comando init proporciona una plantilla scaffold con los artefactos relevante que es necesario para implementar una aplicación. El ejemplo siguiente crea hello puede hacerlo ejecutando el comando siguiente.
+El comando init proporciona una plantilla scaffold con los artefactos relevantes que es necesaria para implementar una aplicación. El ejemplo siguiente crea hello puede hacerlo ejecutando el comando siguiente.
 
-```
+```bash
 mssqlctl app init --name hello --version v1 --template python
 ```
 
-Esto creará una carpeta denominada hello.  Puede cd en el directorio e inspeccionar los archivos generados en la carpeta. spec.yaml define la aplicación, como nombre, versión y el código fuente. Puede editar la especificación para cambiar el nombre, versión, entradas y salidas.
+Esto creará una carpeta denominada hello.  También puede `cd` en el directorio e inspeccionar los archivos generados en la carpeta. spec.yaml define la aplicación, como nombre, versión y el código fuente. Puede editar la especificación para cambiar el nombre, versión, entradas y salidas.
 
 Esta es una salida de ejemplo del comando init que ve en la carpeta
 
@@ -255,7 +255,7 @@ spec.yaml
 
 El comando descripción proporciona información detallada acerca de la aplicación, incluido el punto final en el clúster. Esto se usa normalmente por un desarrollador de aplicaciones para compilar una aplicación mediante el cliente de swagger y usar el servicio Web para interactuar con la aplicación de forma RESTful.
 
-```
+```json
 {
   "input_param_defs": [
     {
@@ -278,10 +278,9 @@ El comando descripción proporciona información detallada acerca de la aplicaci
       "type": "int"
     }
   ],
-  `state`: `Ready`,
+  "state": "Ready",
   "version": "v1"
 }
-
 ```
 
 ## <a name="delete-an-app"></a>Eliminar una aplicación

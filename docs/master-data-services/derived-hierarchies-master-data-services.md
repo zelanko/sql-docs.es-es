@@ -15,12 +15,12 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2158ebe21779866fbdc3c356164eb3a17d1eed04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 126ebfadfea6b67c0627984bac34b8925d766771
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767817"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736787"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Jerarquías derivadas (Master Data Services)
 
@@ -68,7 +68,7 @@ ms.locfileid: "52767817"
  Este tipo de jerarquía no le permitirá mover miembros a niveles que no sean válidos. Por ejemplo, puede mover la bicicleta Road-650 de una subcategoría, Road Bikes (bicicletas de carretera), a otra, Mountain Bikes (bicicletas de montaña). Pero no puede mover directamente Road-650 a una categoría, como 1 {Bikes} (bicicletas). Cada vez que mueve un miembro en el árbol de jerarquía, el valor del atributo basado en dominio del miembro cambia para reflejar el movimiento.  
   
 ## <a name="notes"></a>Notas  
- Todos los miembros en un árbol de jerarquía derivada se ordenan por código. No puede cambiar el criterio de ordenación.  
+ Todos los miembros de un árbol de jerarquía derivada se ordenan por identificador. No puede cambiar el criterio de ordenación.  
   
  Si el atributo basado en dominio de un miembro está vacío y el atributo se utiliza para una jerarquía derivada, el miembro no se mostrará en la jerarquía. Cree reglas de negocio para exigir que se rellenen los atributos. Para más información, vea [Requerir valores de atributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   

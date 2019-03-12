@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe9d543b9772bfef11fa31cfce0ce35c58b68b4e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: aa7bd2ea2812df56e1f4b2f642c3abca3102a8d9
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802849"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756760"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ROW_NUMBER y RANK son similares. ROW_NUMBER enumera todas las filas secuencialme
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql  
 RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
@@ -66,7 +66,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ### <a name="a-ranking-rows-within-a-partition"></a>A. Clasificar filas dentro de una partición  
  En el ejemplo siguiente se otorga un rango a los productos de inventario de las ubicaciones de inventario especificadas según sus cantidades. `LocationID` divide en particiones el conjunto de resultados y `Quantity` lo ordena lógicamente. Observe que los productos 494 y 495 tienen la misma cantidad. Como están enlazados, ambos tienen rango uno.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -82,7 +82,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
   
 ProductID   Name                   LocationID   Quantity Rank  
 ----------- ---------------------- ------------ -------- ----  
@@ -102,7 +102,7 @@ ProductID   Name                   LocationID   Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>b. Clasificar todas las filas de un conjunto de resultados  
  En el ejemplo siguiente se devuelven los diez primeros empleados clasificados por su salario. Como no se especifica ninguna cláusula PARTITION BY, la función RANK se aplica a todas las filas del conjunto de resultados.  
   
-```  
+```sql  
 USE AdventureWorks2012  
 SELECT TOP(10) BusinessEntityID, Rate,   
        RANK() OVER (ORDER BY Rate DESC) AS RankBySalary  
@@ -115,7 +115,7 @@ ORDER BY BusinessEntityID;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
 BusinessEntityID Rate                  RankBySalary  
 ---------------- --------------------- --------------------  
 1                125.50                1  
@@ -135,7 +135,7 @@ BusinessEntityID Rate                  RankBySalary
 ### <a name="c-ranking-rows-within-a-partition"></a>C: Clasificar filas dentro de una partición  
  En el siguiente ejemplo se clasifican los representantes de ventas de cada territorio de ventas según sus ventas totales. Se crean particiones del conjunto de filas por `SalesTerritoryGroup` y se ordenan por `SalesAmountQuota`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryRegion,  
@@ -149,7 +149,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```
+```sql
 LastName          TotalSales     SalesTerritoryGroup  RankResult
 ----------------  -------------  -------------------  --------
 Tsoflias          1687000.0000   Australia            1

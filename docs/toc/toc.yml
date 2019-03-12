@@ -156,6 +156,32 @@ items:
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: Usar el servidor de historial de Spark extendido
         href: ../big-data-cluster/spark-history-server.md
+  - name: Referencia
+    items:
+    - name: Referencia de mssqlctl
+      items:
+      - name: mssqlctl
+        href: ../big-data-cluster/reference-mssqlctl.md
+      - name: Implementación de la aplicación
+        items:
+        - name: Aplicación mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-app.md
+        - name: Plantilla de aplicación mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-app-template.md
+      - name: Clúster
+        items:
+        - name: Clúster mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-cluster.md
+        - name: Configuración de clúster mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+        - name: Depuración de clúster mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
+      - name: Storage
+        items:
+        - name: Almacenamiento mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-storage.md
+        - name: Montaje del almacenamiento mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Continuidad empresarial
   href: redirectfrom-business-continuity-10.md
   items:
@@ -6847,8 +6873,6 @@ items:
             href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: Optimización
     items:
-    - name: Procesamiento de consultas adaptable
-      href: ../relational-databases/performance/adaptive-query-processing.md
     - name: Ajuste automático
       href: ../relational-databases/automatic-tuning/automatic-tuning.md
     - name: Estimación de cardinalidad
@@ -7988,7 +8012,7 @@ items:
     - name: Install
       href: ../azure-data-studio/download.md
     - name: Notas de la versión
-      href: ../azure-data-studio/release-notes.md
+      href: ../azure-data-studio/release-notes-azure-data-studio.md
     - name: Tutoriales rápidos
       items:
       - name: Conectar y consultar SQL Server
@@ -9367,7 +9391,7 @@ items:
           href: ../ssms/solution/view-project-properties.md
         - name: Quitar o eliminar un elemento o un proyecto
           href: ../ssms/solution/remove-or-delete-an-item-or-project.md
-        - name: archivos varios
+        - name: Archivos varios
           href: ../ssms/solution/miscellaneous-files.md
         - name: Cambiar la ubicación predeterminada de los proyectos
           href: ../ssms/solution/change-the-default-location-for-projects.md
@@ -10976,7 +11000,7 @@ items:
         href: ../relational-databases/event-classes/database-suspect-data-page-event-class.md
       - name: ErrorLog [clase de eventos]
         href: ../relational-databases/event-classes/errorlog-event-class.md
-      - name: EventLog [clase de eventos]
+      - name: EventLog (clase de eventos)
         href: ../relational-databases/event-classes/eventlog-event-class.md
       - name: Exception, clase de eventos
         href: ../relational-databases/event-classes/exception-event-class.md
@@ -17159,9 +17183,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Controlar espacios de nombres en XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 085652bdfcac1b7bea33c7e9307da37d749a65ea
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401977"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579795"

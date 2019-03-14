@@ -80,7 +80,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  Especifica la capacidad máxima de CPU de destino para las solicitudes del grupo de recursos. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
 > [!NOTE]  
->  Debido a la naturaleza estadística del gobierno de la CPU, es posible que observe picos ocasionales que superen el valor especificado en CAP_CPU_PERCENT.  
+>  Debido a la naturaleza estadística de la gobernanza de la CPU, es posible que observe picos ocasionales que superen el valor especificado en CAP_CPU_PERCENT.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

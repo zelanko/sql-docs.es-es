@@ -24,7 +24,7 @@ En este tutorial, usará [!INCLUDE[name-sos](../includes/name-sos-short.md)] par
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para completar este tutorial rápido, necesitará [!INCLUDE[name-sos](../includes/name-sos-short.md)]y un servidor de base de datos de SQL Azure.
+Para completar el estudio de este tutorial rápido, necesitará [!INCLUDE[name-sos](../includes/name-sos-short.md)]y un servidor de base de datos de SQL Azure.
 
 - [Instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 
@@ -39,7 +39,7 @@ Si no tiene un servidor SQL Azure, complete uno de los siguientes inicios rápid
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para establecer una conexión al servidor de Azure SQL Database.
 
-1. La primera vez que ejecute [!INCLUDE[name-sos](../includes/name-sos-short.md)] el **conexión** debe abrir la página. Si no ve el **conexión** página, seleccione **Agregar conexión**, o el **nueva conexión** icono en el **servidores** sidebar:
+1. La primera vez que ejecute [!INCLUDE[name-sos](../includes/name-sos-short.md)] el apartado **conexión** debe de abrir la página. Si no ve el icono **conexión** página, seleccione **Agregar conexión**, o en **nueva conexión** del icono en el **servidores** sidebar:
    
    ![Nuevo icono de conexión](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -59,7 +59,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para establecer una cone
 
 3. Seleccione **Conectar**.
 
-4. Si el servidor no tiene una regla de firewall que permita Studio de datos de Azure para conectarse, el **crear nueva regla de firewall** se abrirá el formulario. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4.Si el servidor no tiene una regla de firewall que permita Studio de datos de Azure para conectarse, se abrirá el formulario **crear nueva regla de firewall**. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nueva regla de firewall](media/quickstart-sql-database/firewall.png)  
 
@@ -67,7 +67,7 @@ Después de conectarse correctamente, el servidor se abre en el **servidores** b
 
 ## <a name="create-the-tutorial-database"></a>Crear la base de datos tutorial
 
-Las secciones siguientes creación la base de datos TutorialDB que se usa en otros [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
+En las secciones siguientes crearemos la base de datos TutorialDB que son usadas en otros  [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
 
 1. Haga doble clic en el servidor SQL de Azure en el **servidores** barra lateral y seleccione **nueva consulta**.
 

@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421322"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579685"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -223,31 +223,31 @@ DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Permite habilitar o deshabilitar la ejecución intercalada de funciones con valores de tabla de múltiples instrucciones en el ámbito de base de datos o de instrucción a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. La ejecución intercalada es una característica que forma parte del procesamiento de consultas adaptable en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Para obtener más información, vea [Procesamiento de consultas adaptable](../../relational-databases/performance/adaptive-query-processing.md)
+Permite habilitar o deshabilitar la ejecución intercalada de funciones con valores de tabla de múltiples instrucciones en el ámbito de base de datos o de instrucción a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. La ejecución intercalada es una característica que forma parte del procesamiento de consultas adaptable en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Para obtener más información, vea [Procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Permite habilitar o deshabilitar las combinaciones adaptables en el ámbito de base de datos o de instrucción a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. Las combinaciones adaptables son una característica que forma parte del [Procesamiento de consultas adaptable](../../relational-databases/performance/adaptive-query-processing.md) incorporado en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+Permite habilitar o deshabilitar las combinaciones adaptables en el ámbito de base de datos o de instrucción a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. Las combinaciones adaptables son una característica que forma parte del [Procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md) incorporado en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (la característica está en versión preliminar pública)
 
-Permite habilitar o deshabilitar los comentarios de concesión de memoria en modo de fila en el ámbito de base de datos a la vez que se mantiene el nivel de compatibilidad de la base de datos 150 y superior. Los comentarios de concesión de memoria en modo de fila son una característica que forma parte del [Procesamiento de consultas adaptable](../../relational-databases/performance/adaptive-query-processing.md) incorporado en SQL Server 2017 (el modo de fila es compatible en SQL Server 2019 y Azure SQL Database).
+Permite habilitar o deshabilitar los comentarios de concesión de memoria en modo de fila en el ámbito de base de datos a la vez que se mantiene el nivel de compatibilidad de la base de datos 150 y superior. Los comentarios de concesión de memoria en modo de fila son una característica que forma parte del [Procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md) incorporado en SQL Server 2017 (el modo de fila es compatible en SQL Server 2019 y Azure SQL Database).
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y[!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-Permite habilitar o deshabilitar los comentarios de concesión de memoria en modo por lotes en el ámbito de base de datos a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. Los comentarios de concesión de memoria en modo por lotes son una característica que forma parte del [Procesamiento de consultas adaptable](../../relational-databases/performance/adaptive-query-processing.md) incorporado en SQL Server 2017.
+Permite habilitar o deshabilitar los comentarios de concesión de memoria en modo por lotes en el ámbito de base de datos a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. Los comentarios de concesión de memoria en modo por lotes son una característica que forma parte del [Procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md) incorporado en SQL Server 2017.
 
 BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
 **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y[!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-Permite habilitar o deshabilitar las combinaciones adaptables en modo por lotes lote en el ámbito de base de datos a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. Las combinaciones adaptables en modo por lotes son una característica que forma parte del [Procesamiento de consultas adaptable](../../relational-databases/performance/adaptive-query-processing.md) incorporado en SQL Server 2017.
+Permite habilitar o deshabilitar las combinaciones adaptables en modo por lotes lote en el ámbito de base de datos a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. Las combinaciones adaptables en modo por lotes son una característica que forma parte del [Procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md) incorporado en SQL Server 2017.
 
 BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 

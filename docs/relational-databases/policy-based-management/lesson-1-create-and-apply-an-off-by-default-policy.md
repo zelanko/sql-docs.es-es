@@ -11,14 +11,14 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 678f9da12655cc733dcdf95aca5f61e5aa1cd45e
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158641"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579545"
 ---
-# <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lección 1: Crear y aplicar una directiva Desactivado de forma predeterminada
+# <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lección 1: Creación y aplicación de una directiva Desactivado de forma predeterminada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 El uso de directivas de administración basada en directivas permite administrar una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uno o varios objetos de instancia, instancias de servidor, una o varias bases de datos o uno o varios objetos de base de datos. Como administrador de bases de datos, debe asegurarse de que ciertos servidores no tienen habilitado Correo electrónico de base de datos. En esta lección, creará una condición y una directiva que establezca esa opción de servidor. Probará el servidor para ver si cumple con la directiva. A continuación, utilizará la directiva para volver a configurar el servidor de modo que cumpla con ella.  
 
@@ -79,7 +79,7 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio y a
   
 6.  En el área **Detalles del destino** , verá información adicional en la columna **Mensaje** si se produce un error. En la columna **Mensaje** , haga clic en **Ver** para ver un informe que contiene los resultados de la comprobación de cada propiedad de faceta que se comprobó. 
 
-    ![Visualización los resultados de evaluación de la directiva ](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
+    ![Visualización los resultados de evaluación de la directiva](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
   
 7.  La descripción de la directiva se muestra en la parte inferior de la página y la sección **Ayuda adicional** muestra el hipervínculo que ha configurado para la directiva. Haga clic en el hipervínculo de mensaje para abrir la página web que especificó al crear la directiva.   
 
@@ -91,7 +91,7 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio y a
 
    
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 2: Crear y aplicar una directiva de normas de denominación](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[Lección 2: Creación y aplicación de una directiva de normas de denominación](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   
   

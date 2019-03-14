@@ -1,7 +1,7 @@
 ---
 title: Nombre de intercalación de Windows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b871541215597d82d1ccda81cebe1b9cbe3a433
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827995"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572848"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nombre de intercalación de Windows (Transact-SQL)
 
@@ -42,7 +42,7 @@ Especifica el nombre de intercalación de Windows en la cláusula COLLATE en [!I
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
 }
 | { _BIN | _BIN2 }
 ```
@@ -51,41 +51,53 @@ CollationDesignator_<ComparisonStyle>
 
 *CollationDesignator* Especifica las reglas de intercalación base utilizadas por la intercalación de Windows. Las reglas de intercalación base abarcan lo siguiente:
 
-- Las reglas de ordenación que se aplican cuando se especifica la ordenación del diccionario. Las reglas de ordenación se basan en el alfabeto o en el idioma.
-- La página de códigos que se utiliza para almacenar datos de caracteres no Unicode.
+- Las reglas de ordenación y comparación que se aplican cuando se especifica la ordenación del diccionario. Las reglas de ordenación se basan en el alfabeto o en el idioma.
+- La página de códigos que se usa para almacenar datos **varchar**.
 
 He aquí algunos ejemplos:
 
-- Latín-1_General o francés: ambos utilizan la página de códigos 1252.
+- Latin1\_General o francés: ambos usan la página de códigos 1252.
 - Turco: utiliza la página de códigos 1254.
 
-*CaseSensitivity*
+*CaseSensitivity*  
 **CI** especifica que no se diferencia mayúsculas de minúsculas, **CS** especifica que se diferencia mayúsculas de minúsculas.
 
-*AccentSensitivity*
+*AccentSensitivity*  
 **AI** especifica que no se distinguen acentos, **AS** especifica que se distinguen acentos.
 
-*KanatypeSensitive*
+*KanatypeSensitive*  
 **Omitted** especifica que no se distinguen tipos de kana, **KS** especifica que se distinguen tipos de kana.
 
-*WidthSensitivity*
+*WidthSensitivity*  
 **Omitted** especifica que no se distingue el ancho, **WS** especifica que se distingue el ancho.
 
-**BIN** Especifica el criterio de ordenación binario compatible con versiones anteriores que se va a utilizar.
+*VariationSelectorSensitivity*  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**BIN2** Especifica el criterio de ordenación binario que utiliza la semántica de comparación de punto de código.
+**Omitted** especifica que no se distingue el selector de variación, **VSS** especifica que se distingue el selector de variación.
+
+**BIN**  
+Especifica el criterio de ordenación binario compatible con versiones anteriores que se va a utilizar.
+
+**BIN2**  
+Especifica el criterio de ordenación binario que utiliza la semántica de comparación de punto de código.
 
 ## <a name="remarks"></a>Notas
 
- En función de la versión de las intercalaciones, es posible que algunos puntos de código no estén definidos. Por ejemplo, compare:
+Según cuál sea la versión de la intercalación, puede que algunos puntos de código no tengan definida ninguna prioridad de ordenación y/o asignación de mayúsculas o minúsculas. Por ejemplo, compare el resultado de la función `LOWER` cuando se indica en ella el mismo carácter, pero con diferentes versiones de la misma intercalación:
 
 ```sql
-SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);
-SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);
-GO
+SELECT NCHAR(504) COLLATE Latin1_General_CI_AS AS [Uppercase],
+       NCHAR(505) COLLATE Latin1_General_CI_AS AS [Lowercase];
+-- Ǹ    ǹ
+
+
+SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
+       LOWER(NCHAR(504) COLLATE Latin1_General_100_CI_AS) AS [Version100Collation];
+-- Ǹ    ǹ
 ```
 
-La primera línea devuelve un carácter en mayúsculas cuando la intercalación es Latin1_General_CI_AS, porque este punto de código no está definido en esta intercalación.
+La primera instrucción muestra formas tanto en mayúsculas como en minúsculas de este carácter en la intercalación más antigua (la intercalación no afecta a la disponibilidad de los caracteres cuando se trabaja con datos Unicode). Sin embargo, la segunda instrucción pone de manifiesto que se devuelve un carácter en mayúsculas cuando la intercalación es Latin1\_General\_CI\_AS, porque este punto de código no tiene definida una asignación de minúsculas en esa intercalación.
 
 Cuando se trabaja con algunos idiomas, puede resultar crucial evitar intercalaciones antiguas. Por ejemplo, esto es así para telegu.
 
@@ -95,24 +107,24 @@ En algunos casos, las intercalaciones de Windows y de [!INCLUDE[ssNoVersion](../
 
 Estos son algunos ejemplos de nombres de intercalación de Windows:
 
-- **Latin1_General_100_**
+- **Latin1\_General\_100\_CI\_AS**
 
-  La intercalación utiliza las reglas de ordenación del diccionario Latin1 General, página de códigos 1252. No se distinguen mayúsculas y minúsculas y se distinguen caracteres acentuados. La intercalación utiliza las reglas de ordenación del diccionario Latin1 General y se asigna a la página de códigos 1252. Muestra el número de versión de la intercalación si es una intercalación de Windows: _90 o _100. No se distinguen mayúsculas y minúsculas (CI) y se distinguen caracteres acentuados (AS).
+  La intercalación utiliza las reglas de ordenación del diccionario Latin1 General y se asigna a la página de códigos 1252. Se trata de una versión de la intercalación \_100 que no distingue mayúsculas y minúsculas (CI) y distingue caracteres acentuados (AS).
 
-- **Estonian_CS_AS**
+- **Estonian\_CS\_AS**
 
-  La intercalación utiliza las reglas de ordenación del diccionario Estonian, página de códigos 1257. Se distinguen mayúsculas y minúsculas y caracteres acentuados.
+  La intercalación usa las reglas de ordenación del diccionario Estonian y se asigna a la página de códigos 1257. Se trata de una versión de la intercalación \_80 (se deduce porque no hay un número de versión en el nombre) que distingue mayúsculas y minúsculas (CI) y los caracteres acentuados (AS).
 
-- **Latin1_General_BIN**
+- **Japanese\_Bushu\_Kakusu\_140\_BIN2**
 
-  La intercalación usa la página de códigos 1252 y las reglas de ordenación binaria. Se pasan por alto las reglas de ordenación del diccionario Latin1-General.
+  La intercalación usa reglas de ordenación de punto de código binario y se asigna a la página de códigos 932. Se trata de una versión de la intercalación \_140 y las reglas de ordenación del diccionario Japanese Bushu Kakusu se omiten.
 
 ## <a name="windows-collations"></a>Intercalaciones de Windows
 
 Para enumerar las intercalaciones de Windows admitidas por la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute la consulta siguiente.
 
 ```sql
-SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
+SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
 En la tabla siguiente se muestran todas las intercalaciones de Windows admitidas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].

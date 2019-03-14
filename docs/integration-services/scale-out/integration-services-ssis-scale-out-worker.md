@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1612e35dc2b586825d47979b6baa1a002b0d9895
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419820"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578815"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabajador de escalado horizontal de Integration Services (SSIS)
 
 El trabajador de escalabilidad horizontal ejecuta el servicio de trabajador de escalabilidad horizontal para extraer las tareas de ejecución del patrón de escalabilidad horizontal. Después, ejecuta los paquetes localmente con `ISServerExec.exe`.
 
 ## <a name="configure-the-scale-out-worker-service"></a>Configuración del servicio de escalabilidad horizontal
-Puede configurar el servicio de trabajador de escalabilidad horizontal mediante el archivo ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. Deberá reiniciar el servicio después de actualizar el archivo de configuración.
+Puede configurar el servicio de trabajador de escalabilidad horizontal mediante el archivo `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. Deberá reiniciar el servicio después de actualizar el archivo de configuración.
 
 |Configuración  |Descripción  |Valor predeterminado|
 |---------|---------|---------|
@@ -36,7 +36,7 @@ Puede configurar el servicio de trabajador de escalabilidad horizontal mediante 
 |StoreName|Nombre del almacén en el que está el certificado de ese trabajador.|My|
 |AgentHeartbeatInterval|Intervalo del latido del trabajador de escalado horizontal.|00:01:00|
 |TaskHeartbeatInterval|Intervalo del estado de la tarea de generación de informes del trabajador de escalado horizontal.|00:00:10|
-|HeartbeatErrorTollerance|Una vez transcurrido este período desde el último latido correcto, la tarea finaliza si se recibe una respuesta de error del latido.|00:10:00|
+|HeartbeatErrorTolerance|Una vez transcurrido este período desde el último latido correcto, la tarea finaliza si se recibe una respuesta de error del latido.|00:10:00|
 |TaskRequestMaxCPU|Límite superior de CPU del trabajador de escalado horizontal para solicitar tareas.|70.0|
 |TaskRequestMinMemory|Límite inferior de memoria en MB del trabajador de escalado horizontal para solicitar tareas.|100.0|
 |MaxTaskCount|Número máximo de tareas que puede contener el trabajador de escalado horizontal.|10|
@@ -45,7 +45,7 @@ Puede configurar el servicio de trabajador de escalabilidad horizontal mediante 
 |TaskLogLevel|Nivel de registro de tarea del trabajador de escalado horizontal. (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126 (Information, Warning, Error, Progress, CriticalError, Audit)|
 |TaskLogSegment|Intervalo de tiempo de un archivo de registro de tarea.|00:00:00|
 |TaskLogEnabled|Especifica si el registro de tarea está habilitado.|true|
-|ExecutionLogCacheFolder|Carpeta que se usa para almacenar en caché el registro de ejecución del paquete. Si el valor está vacío, se usará la ruta de acceso de carpeta ` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache`. [cuenta] es la cuenta que ejecuta el servicio de trabajador de escalado horizontal. De forma predeterminada, la cuenta es SSISScaleOutWorker140.|Vacía|
+|ExecutionLogCacheFolder|Carpeta que se usa para almacenar en caché el registro de ejecución del paquete. Si el valor está vacío, se usará la ruta de acceso de carpeta `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache`. [cuenta] es la cuenta que ejecuta el servicio de trabajador de escalado horizontal. De forma predeterminada, la cuenta es SSISScaleOutWorker140.|Vacía|
 |ExecutionLogMaxBufferLogCount|Número máximo de registros de ejecución en caché en un búfer de registro de ejecución en memoria.|10000|
 |ExecutionLogMaxInMemoryBufferCount|Número máximo de búferes de registro de ejecución en memoria para los registros de ejecución.|10|
 |ExecutionLogRetryCount|Número de reintentos si se produce un error en el registro de ejecución.|3|

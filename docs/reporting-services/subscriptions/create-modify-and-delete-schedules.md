@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 346b348f2df1ccb6cd6373dad130b10c71ea1bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb639dd907367a033ef48e15c86828fc908a6b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679793"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578145"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Use este tema para obtener información sobre cómo crear, modificar y eliminar programaciones compartidas de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Para administrar programaciones compartidas para el modo nativo, use la página Programaciones del portal web o la carpeta Programaciones compartidas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para el modo de SharePoint, use las páginas de administración para la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -34,7 +34,7 @@ ms.locfileid: "47679793"
   
 -   **Portal web:** en la página Configuración del sitio, página Programaciones compartidas, revise los valores de los campos de fecha Última ejecución, Siguiente ejecución y Estado. Cuando una programación ya no se ejecuta porque ha expirado, aparece su fecha de expiración en el campo Estado. Para más información, vea [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
   
--   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** visualice la página Informes de una programación compartida específica. Esta página enumera todos los informes y los conjuntos de datos compartidos que utilizan la programación compartida. Para más información, vea [Reporting Services en SQL Server Management Studio ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
+-   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** visualice la página Informes de una programación compartida específica. Esta página enumera todos los informes y los conjuntos de datos compartidos que utilizan la programación compartida. Para más información, consulte [Reporting Services en SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
   
 -  **Registros:** visualice los archivos de registro de ejecución de informes o registros de seguimiento para determinar si se han ejecutado los informes las veces especificadas por la programación. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -136,7 +136,7 @@ Haga clic en **Cancelar**.
 4.  Seleccione la programación y haga clic en **Eliminar**.  
  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Pausar y reanudar las programaciones compartidas](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
  [Almacenar en caché un informe &#40;Administrador de informes&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   

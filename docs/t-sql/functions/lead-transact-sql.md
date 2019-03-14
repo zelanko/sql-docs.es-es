@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa6df6038d13ffae258a2b71baaaa9b3415ebbc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 335e923b802e98545ab6cb100d292dfe695202b0
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695813"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572838"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -49,7 +49,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  El número de filas hacia delante de la fila actual de la que se va a obtener un valor. Si no se especifica, el valor predeterminado es 1. *offset* puede ser una columna, una subconsulta u otra expresión que se evalúa como un entero positivo o que se puede convertir implícitamente en **bigint**. *offset* no puede ser un valor negativo o una función analítica.  
   
  *default*  
- Valor que se devuelve cuando *scalar_expression* en *offset* es NULL. Si no se especifica ningún valor predeterminado, se devuelve NULL. *default* puede ser una columna, una subconsulta u otra expresión, pero no puede ser una función analítica. *default* debe tener un tipo compatible con *scalar_expression*.  
+ Valor que se devuelve cuando *offset* está fuera del ámbito de la partición. Si no se especifica ningún valor predeterminado, se devuelve NULL. *default* puede ser una columna, una subconsulta u otra expresión, pero no puede ser una función analítica. *default* debe tener un tipo compatible con *scalar_expression*.
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden de los datos antes de que se aplique la función. Cuando se especifica *partition_by_clause*, determina el orden de los datos en cada partición. *order_by_clause* es obligatorio. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -86,7 +86,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 275              2006        1324000.00            0.00  
 ```  
   
-### <a name="b-compare-values-within-partitions"></a>B. Comparar valores dentro de particiones  
+### <a name="b-compare-values-within-partitions"></a>b. Comparar valores dentro de particiones  
  En el ejemplo siguiente se usa la función LEAD para comparar las ventas anuales hasta la fecha entre los empleados. La cláusula PARTITION BY se especifica para crear particiones de las filas del conjunto de resultados por territorio de ventas. La función LEAD se aplica a cada partición por separado y el cálculo se reinicia para cada partición. La cláusula ORDER BY especificada en la cláusula OVER ordena las filas de cada partición antes de que se aplique la función. La cláusula ORDER BY de la instrucción SELECT ordena las filas del conjunto de resultados completo. Observe que como no hay ningún valor inicial disponible para la última fila de cada partición, se devuelve el valor predeterminado de cero (0).  
   
 ```sql  
@@ -140,7 +140,7 @@ b           c           i
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D. Comparar valores entre trimestres  
+### <a name="d-compare-values-between-quarters"></a>D: Comparar valores entre trimestres  
  En este ejemplo se muestra el uso de la función LEAD. La consulta obtiene la diferencia en los valores de cuota de ventas para un determinado empleado durante trimestres naturales consecutivos. Observe que, como no hay ningún valor inicial disponible después de la última fila, se usa el valor predeterminado cero (0).  
   
 ```sql  
@@ -167,7 +167,7 @@ Year Quarter  SalesQuota  NextQuota  Diff
 2002 4       154000.0000      0.0000  154000.0000
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   

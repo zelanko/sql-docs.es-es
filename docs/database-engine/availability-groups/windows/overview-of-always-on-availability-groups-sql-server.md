@@ -17,12 +17,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab315e41607d528a1d34be6e61a6344350eb240
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 69efd860fe91080960ffb12995bea675e4686878
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215262"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579680"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Información general de los grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "53215262"
  La implementación de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para alta disponibilidad en Windows requiere un clúster de conmutación por error de Windows Server (WSFC). Cada réplica de disponibilidad de un determinado grupo de disponibilidad debe residir en otro nodo del mismo WSFC. La única excepción es que mientras se migra a otro clúster de WSFC, un grupo de disponibilidad puede ocupar temporalmente dos clústeres. 
 
  >[!NOTE]
- >Para más información sobre los grupos de disponibilidad en Linux, vea [Always On availability group for SQL Server on Linux ](../../../linux/sql-server-linux-availability-group-overview.md) (Grupos de disponibilidad AlwaysOn de SQL Server en Linux). 
+ >Para obtener más información sobre los grupos de disponibilidad en Linux, vea [Always On availability group for SQL Server on Linux ](../../../linux/sql-server-linux-availability-group-overview.md) (Grupos de disponibilidad AlwaysOn de SQL Server en Linux). 
 
  En una configuración de alta disponibilidad, se crea un rol de clúster por cada grupo de disponibilidad que cree. El clúster de WSFC supervisa este rol para evaluar el estado de la réplica principal. El quorum para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] se basa en todos los nodos del clúster de WSFC independientemente de si un nodo de clúster determinado hospeda alguna réplica de disponibilidad. A diferencia de la creación de reflejo de la base de datos, no hay ningún rol testigo en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   

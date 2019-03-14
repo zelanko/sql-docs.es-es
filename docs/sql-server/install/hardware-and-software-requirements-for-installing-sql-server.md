@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e7b0f75274504ce035d46e0277fc939ef74adda
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 093a70a8e9651271aa2a8df4641f6f1e568fc2a7
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334672"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756740"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware y software para instalar SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -135,6 +135,25 @@ Los siguientes requisitos se aplican a todas las instalaciones:
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 > 
 >-   Complemento[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint  
+
+**Compatibilidad con Server Core:**
+
+ ahora, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se admite en las instalaciones Server Core de Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 y Windows Server 2019. 
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se puede instalar en el modo Server Core en las siguientes ediciones de Windows Server:
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2 Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
+| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
+   | &nbsp; | &nbsp; |
+
+Para más información sobre cómo instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en Server Core, vea [Instalar SQL Server en Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+
   
 ### <a name="features-supported-on-32-bit-client-operating-systems"></a>Características admitidas en sistemas operativos de cliente de 32 bits  
  Los sistemas operativos de cliente de Windows, como Windows 10 y Windows 8.1, están disponibles en arquitecturas tanto de 32 bits como de 64 bits.   Los sistemas operativos de cliente de 64 bits admiten todas las características de SQL Server. En cuanto a los sistemas operativos de cliente de 32 bits compatibles, Microsoft admite las siguientes características:  

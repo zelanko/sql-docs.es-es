@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 46249b24fcc46980023a8a7b65890af1374ca4b4
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154750"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736759"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tarea Limpieza de mantenimiento (Plan de mantenimiento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "56154750"
  Ruta de acceso y nombre de la carpeta que contiene los archivos que se van a eliminar.  
   
  **Extensión de archivo**  
- Proporcione la extensión de archivo del archivo que se va a eliminar. No incluya ningún otro carácter antes o después de la extensión (por ejemplo, no incluya BAK o TRN). 
+ Proporcione la extensión de archivo del archivo que se va a eliminar. No incluya ningún otro carácter antes o después de la extensión (por ejemplo, use BAK o TRN). 
   
  **Incluir subcarpetas de primer nivel**  
  Elimina archivos con la extensión especificada para **Extensión del archivo** en las subcarpetas de primer nivel, en **Carpeta**.  

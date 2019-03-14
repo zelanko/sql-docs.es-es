@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01459443d4fbcfeb770f24fad61adabc0bc1dc91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66a53dcece274df879242ac8a7d3315882bad84f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785923"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572798"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funciones de intercalación: COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Esta función devuelve la propiedad de una intercalación especificada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Esta función devuelve la propiedad solicitada de una intercalación especificada.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,10 +49,10 @@ La propiedad de intercalación. El argumento *propiedad* tiene un tipo de datos 
   
 |Nombre de propiedad|Descripción|  
 |---|---|
-|**CodePage**|La página de códigos no Unicode de la intercalación. Vea [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx) (Apéndice G: tablas de asignaciones DBCS/Unicode) y [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx) (Apéndice H: páginas de código) para traducir estos valores y ver sus asignaciones de caracteres.|  
-|**LCID**|LCID de Windows de la intercalación. Vea [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx) (Estructura de LCID) para traducir estos valores (primero hay que convertirlos a **varbinary**).|  
-|**ComparisonStyle**|Estilo de comparación de Windows de la intercalación. Devuelve 0 para todas las intercalaciones binarias, tanto (\_BIN) como (\_BIN2), así como cuando todas las propiedades distinguen entre mayúsculas y minúsculas. Valores de máscara de bits:<br /><br /> Omitir mayúsculas y minúsculas: 1<br /><br /> Omitir acento: 2<br /><br /> Omitir Kana: 65536<br /><br /> Omitir ancho: 131072<br /><br /> Nota: La opción de distinción de selector de variación (\_VSS) no se representa en este valor, aunque afecta al comportamiento de las comparaciones.|  
-|**Versión**|La versión de la intercalación, derivada del campo Id. de versión de la intercalación. Devuelve un valor entero comprendido entre 0 y 3.<br /><br /> Las intercalaciones con "140" en el nombre devuelven 3.<br /><br /> Las intercalaciones con "100" en el nombre devuelven 2.<br /><br /> Las intercalaciones con "90" en el nombre devuelven 1.<br /><br /> Todas las demás intercalaciones devuelven 0.|  
+|**CodePage**|La página de códigos no Unicode de la intercalación. Se trata del juego de caracteres usado con los datos **varchar**. Vea [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx) (Apéndice G: tablas de asignaciones DBCS/Unicode) y [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx) (Apéndice H: páginas de código) para traducir estos valores y ver sus asignaciones de caracteres.<br /><br />Tipo de datos base: **int**|  
+|**LCID**|Identificador de configuración regional de Windows de la intercalación. Se trata de la referencia cultural usada en las reglas de ordenación y comparación. Vea [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx) (Estructura de LCID) para traducir estos valores (primero hay que convertirlos a **varbinary**).<br /><br />Tipo de datos base: **int**|  
+|**ComparisonStyle**|Estilo de comparación de Windows de la intercalación. Devuelve 0 en las intercalaciones binarias, tanto (\_BIN) como (\_BIN2), así como cuando todas las propiedades distinguen mayúsculas y minúsculas, como (\_CS\_AS\_KS\_WS), (\_CS\_AS\_KS\_WS\_SC) y (\_CS\_AS\_KS\_WS\_VSS). Valores de máscara de bits:<br /><br /> Omitir mayúsculas y minúsculas: 1<br /><br /> Omitir acento: 2<br /><br /> Omitir Kana: 65536<br /><br /> Omitir ancho: 131072<br /><br /> Nota: La opción de distinción de selector de variación (\_VSS) no se representa en este valor, aunque afecta al comportamiento de las comparaciones.<br /><br />Tipo de datos base: **int**|  
+|**Versión**|La versión de la intercalación. Devuelve un valor entre 0 y 3.<br /><br /> Las intercalaciones con "140" en el nombre devuelven 3.<br /><br /> Las intercalaciones con "100" en el nombre devuelven 2.<br /><br /> Las intercalaciones con "90" en el nombre devuelven 1.<br /><br /> Todas las demás intercalaciones devuelven 0.<br /><br />Tipo de datos base: **tinyint**|  
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **sql_variant**

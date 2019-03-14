@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Aplicación de formato a texto (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Dar formato a texto (Generador de informes) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddc7aefa65f87e5647186358e0f7ae0019964ff0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 42d55cf53d282b2c092769cf4435fd240ba0cbce
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289652"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579345"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Tutorial: Aplicación de formato a un texto (Generador de informes)
+# <a name="tutorial-format-text-report-builder"></a>Tutorial: Dar formato a texto (Generador de informes)
 
 En este tutorial, puede practicar el proceso de dar formato al texto de varias maneras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Puede experimentar con diferentes formatos. 
 
@@ -50,7 +50,7 @@ Para obtener información sobre los requisitos, vea [Requisitos previos para los
 
     Si no ve el panel **Datos de informe** , en la pestaña **Ver** haga clic en **Datos de informe**.
   
-2.  En el cuadro **Nombre**, escriba: **TextDataSource**  
+2.  En el cuadro **Nombre** , escriba: **TextDataSource**  
   
 3.  Haga clic en **Usar una conexión incrustada en mi informe**.  
   
@@ -67,7 +67,7 @@ Para obtener información sobre los requisitos, vea [Requisitos previos para los
   
 2.  Compruebe que el origen de datos es **TextDataSource**.  
   
-3.  En el cuadro **Nombre**, escriba: **TextDataset.**  
+3.  En el cuadro **Nombre** , escriba: **TextDataset.**  
   
 4.  Compruebe que el tipo de consulta **Texto** está seleccionado, y, a continuación, haga clic en **Diseñador de consultas**.  
   
@@ -355,7 +355,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
 
 ## <a name="next-steps"></a>Next Steps
 
-Existen numerosas formas de dar formato al texto en el Generador de informes. [Tutorial: Creación de un informe de forma libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contiene más ejemplos.  
+Existen numerosas formas de dar formato al texto en el Generador de informes. [Tutorial: Crear un informe de forma libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contiene más ejemplos.  
 
 [Tutoriales del Generador de informes ](../reporting-services/report-builder-tutorials.md) 
 [Aplicar formato a elementos de informe](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

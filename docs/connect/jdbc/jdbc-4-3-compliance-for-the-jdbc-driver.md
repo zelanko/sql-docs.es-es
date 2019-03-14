@@ -11,12 +11,12 @@ ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f38b700f998babd9af54c3bf8a27409a4d2b6ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc2fbb2b217880b255d522149dabd38701a8c0e4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623943"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579065"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>Cumplimiento de JDBC 4.3 con el controlador JDBC
 
@@ -31,5 +31,5 @@ Con Microsoft JDBC Driver 7.0 para la versión de SQL Server, el controlador aho
 
 |Nueva API|Descripción|Implementación importante|  
 |-----------------|-----------------|-------------------------------|  
-|void java.sql.connection.beginRequest()|Sugerencias para el controlador que se está iniciando una solicitud, una unidad independiente de trabajo, en esta conexión. Para más información, vea [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Guarda los valores de los campos de conexión son modificables a través de métodos de la API públicos: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall `, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert `.|
+|void java.sql.connection.beginRequest()|Sugerencias para el controlador que se está iniciando una solicitud, una unidad independiente de trabajo, en esta conexión. Para más información, vea [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Guarda los valores de los campos de conexión son modificables a través de métodos de la API públicos: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
 |void java.sql.connection.endRequest()|Sugerencias para el controlador que se ha completado una solicitud, una unidad de trabajo independiente. Para más información, vea [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Las instrucciones que se crean durante la unidad de trabajo se cierra y revierte cualquier transacción abierta. El método también revierte los cambios realizados en los campos de conexión que se indican a continuación.|

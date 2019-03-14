@@ -16,12 +16,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c1be5887e4d3b6ff4af02e12e8af26a456987e2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125437"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527128"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Habilitación o deshabilitación de la característica de grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "54125437"
 ###  <a name="SQLCM2Procedure"></a> Usar el Administrador de configuración de SQL Server  
  **Para habilitar los grupos de disponibilidad AlwaysOn**  
   
-1.  Conéctese al nodo de los clústeres de conmutación por error de Windows Server (WSFC) que hospeda la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde quiere habilitar los grupos de disponibilidad AlwaysOn.  
+1.  Conéctese al nodo del clúster de conmutación por error de Windows Server (WSFC) que hospeda la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde quiere habilitar los grupos de disponibilidad AlwaysOn.  
   
 2.  En el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Herramientas de configuración**y haga clic en **Administrador de configuración de SQL Server**.  
   
@@ -194,7 +194,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="SQLCM3Procedure"></a> Usar el Administrador de configuración de SQL Server  
  **Para deshabilitar AlwaysOn**  
   
-1.  Conéctese al nodo de los clústeres de conmutación por error de Windows Server (WSFC) que hospeda la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde quiere deshabilitar los grupos de disponibilidad AlwaysOn.  
+1.  Conéctese al nodo del clúster de conmutación por error de Windows Server (WSFC) que hospeda la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde quiere deshabilitar los grupos de disponibilidad AlwaysOn.  
   
 2.  En el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Herramientas de configuración**y haga clic en **Administrador de configuración de SQL Server**.  
   
@@ -243,7 +243,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  Si no ha quitado las réplicas de disponibilidad locales antes de deshabilitar AlwaysOn, elimine (quite) cada grupo de disponibilidad para el que la instancia de servidor hospeda una réplica de disponibilidad. Para obtener información sobre cómo eliminar un grupo de disponibilidad, vea [Quitar un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
   
-2.  Para quitar los metadatos que quedan atrás, elimine (quite) cada grupo de disponibilidad afectado en una instancia de servidor que forme parte del clúster de WSFC original.  
+2.  Para quitar los metadatos que quedan atrás, elimine (quite) cada grupo de disponibilidad afectado en una instancia de servidor que forme parte del WSFC original.  
   
 3.  Cualquier base de datos principal continúa estando accesible para todas las conexiones, pero se detiene la sincronización de datos entre las bases de datos primaria y secundaria.  
   

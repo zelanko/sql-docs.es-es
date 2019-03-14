@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512536"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579265"
 ---
 # <a name="connecting-with-sqlcmd"></a>Conexión con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,7 +46,7 @@ En la versión actual, están disponibles las siguientes opciones:
   
 - -C confiar en el certificado de servidor.  
 
-- -d *database_name* problema una `USE ` *database_name* instrucción cuando se inicia `sqlcmd`.  
+- -d *database_name* problema una `USE` *database_name* instrucción cuando se inicia `sqlcmd`.  
 
 - -D hace que el valor transmitido a la opción `sqlcmd` -S se interprete como un nombre de origen de datos (DSN). Para obtener más información, vea la sección "Compatibilidad de DSN en `sqlcmd` y `bcp`" al final de este tema.  
   
@@ -64,7 +64,7 @@ En la versión actual, están disponibles las siguientes opciones:
   
 - -k quitar o reemplazar caracteres de control.  
   
-- **-K**_aplicación\_intención_  
+- **-K**_application\_intent_  
 Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. El único valor actualmente admitido es **de solo lectura**. Si no se especifica **-K**, la utilidad `sqlcmd` no admitirá la conectividad con una réplica secundaria en un grupo de disponibilidad AlwaysOn. Para más información, vea [Controlador ODBC en Linux y macOS: alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -74,8 +74,8 @@ Declara el tipo de carga de trabajo de la aplicación al conectarse a un servido
 
 - -m *error_level* controlar qué mensajes de error se envían a stdout.  
   
-- **-M**_subredes\_conmutación por error_  
-Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibilidad de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o a una instancia de clúster de conmutación por error de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** proporciona una detección más rápida de conmutaciones por error del servidor activo actualmente y de la conexión a este. Si **-M** no se especifica, el valor de **-M** será OFF. Para más información sobre [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vea [Controlador ODBC en Linux y macOS: alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+- **-M**_multisubnet\_failover_  
+Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibilidad de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o a una instancia de clúster de conmutación por error de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** proporciona una detección más rápida de conmutaciones por error del servidor activo actualmente y de la conexión a este. Si no se especifica **-M**, **-M** se desactiva. Para más información sobre [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vea [Controlador ODBC en Linux y macOS: alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** no se admite en la versión de CTP para SUSE Linux. Pero puede especificar la palabra clave **MultiSubnetFailover=Yes** en un archivo de DSN transmitido a `sqlcmd`. Para obtener más información, vea la sección "Compatibilidad de DSN en `sqlcmd` y `bcp`" al final de este tema.  
@@ -226,6 +226,6 @@ Si se especifica la misma opción en el DSN y la línea de comandos `sqlcmd` o `
 
 Los scripts existentes que invocan a `isql` pueden modificarse para usar `sqlcmd` definiendo el siguiente alias: `alias isql="sqlcmd -D"`.  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Conexión con **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
  

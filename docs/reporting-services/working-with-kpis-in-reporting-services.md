@@ -1,44 +1,44 @@
 ---
 title: Uso de los KPI en Reporting Services | Microsoft Docs
-ms.date: 07/02/2017
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b1960771504184706bf21e9746a4fa3c784aad3b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.date: 07/02/2017
+ms.openlocfilehash: 4e6a5bbf2d744475ca49e3917f6539e81e6439ea
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212438"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572808"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Un indicador clave de rendimiento (KPI) es una indicación visual que transmite la cantidad de progreso realizado hacia la consecución de un objetivo.  Los indicadores clave de rendimiento sirven para que los equipos, los administradores y las empresas evalúen rápidamente el progreso realizado frente a objetivos cuantificables.   
+Un *indicador clave de rendimiento (KPI)* es una indicación visual que transmite la cantidad de progreso realizado hacia la consecución de un objetivo.  Los indicadores clave de rendimiento sirven para que los equipos, los administradores y las empresas evalúen rápidamente el progreso realizado frente a objetivos cuantificables.
   
 Si usa KPI en SQL Server Reporting Services, podrá visualizar rápidamente las respuestas a las preguntas siguientes:  
   
--   ¿Voy adelantado o atrasado?  
+- ¿Voy adelantado o atrasado?  
   
--   ¿Qué adelanto o atraso llevo?  
+- ¿Qué adelanto o atraso llevo?  
   
--   ¿Cuál es el progreso mínimo completado?  
+- ¿Cuáles son las cantidades mínimas que he completado?  
   
-## <a name="creating-a-dataset"></a>Creación de un conjunto de datos  
+## <a name="creating-a-dataset"></a>Creación de un conjunto de datos
+
 Un KPI solo utilizará la primera fila de datos de un conjunto de datos compartido. Asegúrese de que los datos que desea utilizar se encuentran en la primera fila. Para crear un conjunto de datos compartido, puede utilizar el Generador de informes o SQL Server Data Tools.  
   
 > **Nota**: El conjunto de datos no tiene que estar en la misma carpeta que el KPI.  
   
 ## <a name="placement-of-kpis"></a>Ubicación de los KPI  
   
-Los KPI pueden crearse en cualquier carpeta de su servidor de informes.  Antes de crear un KPI, deberá tener clara la ubicación correcta donde colocarlo. Se recomienda colocarlo en una carpeta que sea visible para los usuarios y a la vez pertinente para otros informes y KPI relacionados.  
-  
-## <a name="adding-a-kpi"></a>Adición de un KPI  
+Los KPI pueden crearse en cualquier carpeta de su servidor de informes.  Antes de crear un KPI, deberá tener clara la ubicación correcta donde colocarlo. Puede colocarlo en una carpeta que sea visible para los usuarios y a la vez pertinente para otros informes y KPI relacionados.  
+## <a name="adding-a-kpi"></a>Adición de un KPI
   
 Después de determinar la ubicación de los KPI, vaya a la carpeta y seleccione **Nuevo** > **KPI** en el menú superior.  
   
@@ -50,51 +50,68 @@ Así se abrirá la pantalla **Nuevo KPI** .
   
 Puede asignar valores estáticos o utilizar los datos de un conjunto de datos compartido. Al crear un nuevo KPI, se rellenará con un conjunto aleatorio de datos manuales.  
   
-|Campo|Descripción|  
-|---|---|  
-|Formato del valor|  Se utiliza para cambiar el formato del valor que se muestra.|   
-|Valor|El valor para mostrar del KPI.|  
-|Objetivo|Se utiliza como comparación con un valor numérico y se muestra en forma de diferencia porcentual.|  
-|Estado|Valor numérico que se usa para determinar el color del icono de KPI. Los valores válidos son 1 (verde), 0 (ámbar) y -1 (rojo).|  
-|Conjunto de tendencias|Valores numéricos separados por comas usados para la visualización de gráficos. También puede establecerse en una columna de un conjunto de datos con valores que representen la tendencia.|  
+| Campo | Descripción |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| Formato del valor | Se utiliza para cambiar el formato del valor que se muestra. |
+| Valor | El valor para mostrar del KPI. |
+| Objetivo | Se utiliza como comparación con un valor numérico y se muestra en forma de diferencia porcentual. |
+| Estado | Valor numérico que se usa para determinar el color del icono de KPI. Los valores válidos son 1 (verde), 0 (ámbar) y -1 (rojo). |
+| Conjunto de tendencias | Valores numéricos separados por comas usados para la visualización de gráficos. También puede establecerse en una columna de un conjunto de datos con valores que representen la tendencia. |
+| Contenido relacionado | La capacidad para establecer un vínculo de obtención de detalles. Este vínculo puede ser un informe móvil publicado en el portal o una dirección URL personalizada. |
   
-> **Advertencia**: Aunque puede usar el valor de palabra para el campo **Estado** en tiempo de diseño, debe usar el valor de número si va a actualizar un conjunto de datos. Si actualiza un conjunto de datos con el valor de palabra, en lugar del de número, se podría dañar los KPI en el servidor.  
-> 
+> **Advertencia**: Aunque puede usar el valor de palabra para el campo **Estado** en tiempo de diseño, debe utilizar el valor de número si va a actualizar un conjunto de datos. Si actualiza un conjunto de datos con el valor de palabra, en lugar del de número, se podría dañar los KPI en el servidor.  
+>
 > **Nota**: Los campos **Valor**, **Objetivo** y **Estado** solo pueden elegir un valor de la primera fila del resultado de un conjunto de datos. El campo **Trend set** (Conjunto de tendencias), sin embargo, puede elegir qué columna refleja la tendencia.  
   
-Para utilizar datos de un conjunto de datos compartido, puede realizar lo siguiente:  
+Para usar datos de un conjunto de datos compartido, puede realizar los siguientes pasos:
   
-1.  Cambie el valor del cuadro desplegable del campo de **Set manually**(Establecer manualmente), o **Not set**(No establecido), a **Dataset field**(Campo de conjunto de datos).  
+1. Cambie el valor del cuadro desplegable del campo de **Set manually**(Establecer manualmente), o **Not set**(No establecido), a **Dataset field**(Campo de conjunto de datos).  
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Haga clic en los **puntos suspensivos (...)** en el cuadro de datos. Se abrirá la pantalla **Pick a Dataset** (Elegir un conjunto de datos).  
+2. Haga clic en los **puntos suspensivos (...)** en el cuadro de datos. Se abrirá la pantalla **Pick a Dataset** (Elegir un conjunto de datos).  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
-3.  Seleccione el conjunto de datos que contenga los datos que desea mostrar.  
+3. Seleccione el conjunto de datos que contenga los datos que desea mostrar.  
   
-4.  Elija el campo que desea usar. Seleccione **Aceptar**.  
+4. Elija el campo que desea usar. Seleccione **Aceptar**.  
   
     ![rsCreateKPI5](../reporting-services/media/rscreatekpi5.png)  
   
-5.  Cambie **Value format** (Formato de valor) para que coincida con el formato del valor. En este ejemplo, el valor es una moneda.  
+5. Cambie **Value format** (Formato de valor) para que coincida con el formato del valor. En este ejemplo, el valor es una moneda.  
   
     ![rsCreateKPI6](../reporting-services/media/rscreatekpi6.png)  
   
-6.  Seleccione **Aplicar**.  
+6. Seleccione **Aplicar**.  
   
-    ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
+    ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
+
+## <a name="configuring-related-content"></a>Configuración de contenido relacionado
+
+Cuando se elige **informe móvil**, puede elegir el destino en un cuadro de diálogo.
+
+   ![Informe móvil](media/rscreatekpi-related-content-mobile-report.png)
+
+Al hacer clic ahora en el KPI en el portal, se muestra una vista en miniatura del informe móvil en la lista desplegable de contenido relacionada. Al hacer clic en esta vista en miniatura puede navegar directamente, para este informe.
+
+También puede especificar una dirección URL personalizada. Esta tarea puede ser cualquier cosa: un sitio Web, un sitio de SharePoint, una dirección URL a un informe de SSRS (que le permite pasar parámetros codificados de forma rígida).
+
+![Dirección URL personalizada](media/rscreatekpi-related-content-custom-url.png)
+
+Al hacer clic ahora en el KPI, la dirección URL se muestra en el contenido relacionado.
+
+Solo es posible agregar un informe móvil o una dirección URL personalizada.
   
 ## <a name="removing-a-kpi"></a>Eliminación de un KPI  
   
-Para quitar un KPI, puede hacer lo siguiente.  
+Para quitar un KPI, puede realizar los siguientes pasos.
   
-1.  Haga clic en los **puntos suspensivos (...)** del KPI que quiera quitar. Seleccione **Administrar**.  
+1. Haga clic en los **puntos suspensivos (...)** del KPI que quiera quitar. Seleccione **Administrar**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
-2.  Seleccione **Eliminar**. Vuelva a seleccionar **Eliminar** en el cuadro de diálogo de confirmación.  
+2. Seleccione **Eliminar**. Vuelva a seleccionar **Eliminar** en el cuadro de diálogo de confirmación.  
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   

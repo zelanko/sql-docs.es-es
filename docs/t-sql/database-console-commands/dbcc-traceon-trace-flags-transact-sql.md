@@ -1,7 +1,7 @@
 ---
 title: Marcas de seguimiento (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/15/2019
+ms.date: 03/10/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4d3d7488e60c95766c64d2b9d0ec3646b978c63
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: e75de200f8a55b57ba417e2f08bf875eda88a88e
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652604"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736835"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON: marcas de seguimiento (Transact-SQL)
 
@@ -136,7 +136,7 @@ En la siguiente tabla se enumeran y se describen las marcas de seguimiento dispo
 |**9347**|Deshabilita el modo por lotes del operador Sort. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] introdujo un nuevo operador Sort de modo por lotes que mejora el rendimiento de muchas consultas analíticas. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/3172787).<br /><br />**Ámbito**: global, sesión o consulta|
 |**9349**|Deshabilita el modo por lotes del operador Top N Sort. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] introdujo un nuevo operador Top Sort de modo por lotes que mejora el rendimiento de muchas consultas analíticas.<br /><br />**Ámbito**: global, sesión o consulta|
 |**9389**|Habilita la concesión de memoria dinámica adicional para operadores de modo por lotes. Si una consulta no obtiene toda la memoria que necesita, los datos desbordan en tempdb, lo que provoca una E/S adicional y puede afectar al rendimiento de las consultas. Si está habilitada la marca de seguimiento de concesión de memoria dinámica, un operador de modo por lotes puede solicitar más memoria y evitar el desbordamiento en tempdb si hay memoria adicional disponible. Para obtener más información, vea la sección *Efectos de las opciones min y max server memory* de la [Guía de arquitectura de administración de memoria](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-memory-per-query).<br /><br />**Ámbito**: global o sesión| 
-|**9398**|Deshabilita el operador [Combinación adaptable](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins) que posibilita la elección de un método de [combinación hash o de bucles anidados](../../relational-databases/performance/joins.md) que se retrasa hasta después de que se haya analizado la primera entrada, tal y como se presenta en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/4099126).<br /><br />**Nota:** Asegúrese de probar exhaustivamente esta opción antes de aplicarla en un entorno de producción.<br /><br />**Ámbito**: global, sesión y consulta|
+|**9398**|Deshabilita el operador [Combinación adaptable](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins) que posibilita la elección de un método de [combinación hash o de bucles anidados](../../relational-databases/performance/joins.md) que se retrasa hasta después de que se haya analizado la primera entrada, tal y como se presenta en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/4099126).<br /><br />**Nota:** Asegúrese de probar exhaustivamente esta opción antes de aplicarla en un entorno de producción.<br /><br />**Ámbito**: global, sesión y consulta|
 |**9453**|Deshabilita la ejecución del modo por lotes. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/help/4016902).<br /><br />**Nota:** Asegúrese de probar exhaustivamente esta opción antes de aplicarla en un entorno de producción.<br /><br />**Ámbito**: global, sesión y consulta|
 |**9471**|Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan con una selectividad mínima para filtros de tabla única, en el modelo de estimación de la cardinalidad del optimizador de consultas de las versiones de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, para realizar esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' en lugar de usar esta marca de seguimiento .<br /><br />**Nota:** Asegúrese de probar exhaustivamente esta opción antes de aplicarla en un entorno de producción.<br /><br />**Nota:** Esta marca de seguimiento no se aplica a la estimación de cardinalidad versión 70. Use en su lugar la marca de seguimiento 4137.<br /><br />**Ámbito**: global, sesión o consulta| 
 |**9476**|Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan mediante la suposición de contención simple en lugar de la suposición de contención de base predeterminada, en el modelo de estimación de la cardinalidad del optimizador de consultas de las versiones de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/3189675).<br /><br />A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, para realizar esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' en lugar de usar esta marca de seguimiento.<br /><br />**Nota:** Asegúrese de probar exhaustivamente esta opción antes de aplicarla en un entorno de producción.<br /><br />**Ámbito**: global, sesión o consulta| 
@@ -167,7 +167,7 @@ Las marcas de seguimiento se activan o se desactivan mediante uno de los siguien
      Por ejemplo, para habilitar la marca de seguimiento 2528 de forma global, use [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) con el argumento -1: `DBCC TRACEON (2528, -1)`. El efecto de habilitar una marca de seguimiento global con DBCC TRACEON se pierde al reiniciar el servidor. Para desactivar una marca de seguimiento global, use [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) con el argumento -1.  
 -   Use la opción de inicio **-T** para especificar que la marca de seguimiento se active durante el inicio.  
      La opción de inicio **-T** habilita una marca de seguimiento globalmente. No puede habilitar una marca de seguimiento de nivel de sesión mediante una opción de inicio. Esto garantiza que la marca de seguimiento permanezca activa después del reinicio de un servidor. Para obtener más información sobre las opciones de inicio del servicio, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md).
--   En el nivel de consulta, mediante la [sugerencia de consulta](https://support.microsoft.com/kb/2801413) QUERYTRACEON.
+-   En el nivel de consulta, mediante la [sugerencia de consulta](https://support.microsoft.com/kb/2801413) QUERYTRACEON. La opción QUERYTRACEON solo se admite en las marcas de seguimiento del optimizador de consultas incluidas en la tabla anterior.
   
 Use el comando `DBCC TRACESTATUS` para determinar qué marcas de seguimiento están activas actualmente.
   

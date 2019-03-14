@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e213eb323de92abf048bdd94e8e2463f42f5cb3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cf64e248d8fb9cb727114521cac9b6444fc1f710
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591429"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401887"
 ---
 # <a name="dtexec-utility"></a>dtexec (utilidad)
   La utilidad del símbolo del sistema **dtexec** se usa para configurar y ejecutar paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad **dtexec** otorga acceso a todas las características de configuración y ejecución de paquetes, como parámetros, conexiones, propiedades, variables, registro e indicadores de progreso. La utilidad **dtexec** permite cargar paquetes desde estos orígenes: el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un archivo de proyecto .ispac, una base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
@@ -38,6 +38,8 @@ ms.locfileid: "53591429"
 -   [Reglas de sintaxis](#syntaxRules)  
   
 -   [Usar dtexec desde xp_cmdshell](#cmdshell)  
+
+-   [Usar dtexec desde Bash](#bash)
   
 -   [Sintaxis](#syntax)  
   
@@ -139,7 +141,15 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > **IMPORTANTE:** En [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción **xp_cmdshell** se deshabilita de forma predeterminada en las instalaciones nuevas. La opción se puede habilitar se ejecuta el procedimiento almacenado del sistema **sp_configure** . Para más información, vea [xp_cmdshell (opción de configuración del servidor)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
-  
+
+##  <a name="bash"></a> Usar dtexec desde Bash
+
+El shell **Bash** es un shell de Linux muy conocido que también se puede usar en Windows. Puede ejecutar dtexec desde el símbolo del sistema de Bash. Tenga en cuenta que, en Bash, un punto y coma (`;`) es un operador delimitador de comandos. Esto es especialmente importante cuando se pasan valores al paquete mediante las opciones `/Conn[ection]`, `/Par[arameter]` o `/Set`, ya que usan el punto y coma para separar el nombre y el valor del elemento proporcionado. En el siguiente ejemplo se muestra cómo escapar el punto y coma y otros elementos al usar Bash y pasar valores a un paquete:
+
+```bash
+dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
+```
+
 ##  <a name="syntax"></a> Sintaxis  
   
 ```  

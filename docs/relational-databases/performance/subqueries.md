@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356025"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579395"
 ---
 # <a name="subqueries-sql-server"></a>Subconsultas (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -490,7 +490,7 @@ GO
 Esta instrucción no se puede convertir en una combinación. La combinación no igual análoga tiene otro significado: busca los nombres de todos los productos presentes en una subcategoría que no es la de bicicletas acabadas.      
 
 ### <a name="upsert"></a> Subconsultas en las instrucciones UPDATE, DELETE e INSERT
-Las subconsultas se pueden anidar en instrucciones de manipulación de datos (DML) `UPDATE`, `DELETE`, `INSERT` y `SELECT `.    
+Las subconsultas se pueden anidar en las instrucciones de manipulación de datos (DML) `UPDATE`, `DELETE`, `INSERT` y `SELECT`.    
 
 En el ejemplo siguiente se duplica el valor de la columna *ListPrice* en la tabla *Production.Product*. La subconsulta de la cláusula `WHERE` hace referencia a la tabla *Purchasing.ProductVendor* para limitar las filas que se actualizan en la tabla *Product* únicamente a las que proporciona *BusinessEntity* 1540.
 

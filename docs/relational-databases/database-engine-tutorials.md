@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45966a43686992f2b8f5f735cc6b9fef566a800d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e7e3f28304a61d79736a0c51450dc57d0a1ef97d
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669334"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579625"
 ---
 # <a name="database-engine-tutorials"></a>Tutoriales del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,21 +41,21 @@ En este tutorial se enseña cómo convertir una tabla en una estructura jerárqu
 [Tutorial: Firmar procedimientos almacenados con un certificado](../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md)  
 En este tutorial se describe cómo se firman los procedimientos almacenados con un certificado generado por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-[Tutorial: Ownership Chains and Context Switching](../relational-databases/tutorial-ownership-chains-and-context-switching.md)  
+[Tutorial: Cadenas de propiedad y cambio de contexto](../relational-databases/tutorial-ownership-chains-and-context-switching.md)  
 En este tutorial se usa un escenario para ilustrar los conceptos de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relacionados con las cadenas de propiedad y el cambio de contexto de usuario.  
   
 [Tutorial: Administrar servidores mediante administración basada en directivas](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 En este tutorial se enseña a crear directivas que aplican las normas de administración del sitio.  
   
-[Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md) (Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage)  
+[Tutorial: copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 Este tutorial ilustra el modo de hacer una copia de seguridad y una restauración de SQL Server para el servicio Azure Blob Storage.  
   
-[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases (Tutorial: Usar el servicio de almacenamiento de blobs de Microsoft Azure con bases de datos de SQL Server 2016) ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+[Tutorial: Uso del servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 Este tutorial le ayudará a saber cómo almacenar archivos de datos de SQL Server en el servicio de almacenamiento Blob de Windows Azure directamente.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Tutoriales de SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  
-[TechNet WIKI: Ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
+[Wiki de TechNet: Ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   
   

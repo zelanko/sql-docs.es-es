@@ -11,12 +11,12 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51ca1188b8954564fc929dd0cdc34715466aee8b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605693"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756680"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lección 1-4: Agregar configuraciones de paquetes
 En esta tarea, agregará una configuración a cada paquete. Las configuraciones actualizan los valores de las propiedades de los paquetes y los objetos de los paquetes en tiempo de ejecución.  
@@ -32,6 +32,8 @@ Creará dos archivos de configuración, DataTransferConfig.dtsConfig y LoadXMLDa
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] reconoce que los archivos DataTransferConfig.dtsConfig y LoadXMLData.dtsConfig son dependencias de los paquetes DataTransfer y LoadXMLData y automáticamente incluye los archivos de configuración al crear el paquete de implementación en la siguiente lección.  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>Para crear una configuración indirecta para el paquete DataTransfer  
+
+Compruebe el modelo de implementación actual del proyecto y establézcalo en **Modelo de implementación de paquetes** si es necesario. En el menú **Proyecto**, haga clic en **Convertir al modelo de implementación de paquetes**.
   
 1.  En el Explorador de soluciones, haga doble clic en DataTransfer.dtsx.  
   
@@ -132,7 +134,7 @@ Creará dos archivos de configuración, DataTransferConfig.dtsConfig y LoadXMLDa
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Paso 5: Probar los paquetes actualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Configuraciones de paquetes](../integration-services/packages/package-configurations.md)  
 [Crear configuraciones de paquetes](../integration-services/packages/create-package-configurations.md)  
 [Acceso a los archivos usados por los paquetes](../integration-services/security/security-overview-integration-services.md#files)  

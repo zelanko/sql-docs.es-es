@@ -59,7 +59,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para establecer una cone
 
 3. Seleccione **Conectar**.
 
-4.Si el servidor no tiene una regla de firewall que permita Studio de datos de Azure para conectarse, se abrirá el formulario **crear nueva regla de firewall**. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. Si el servidor no tiene una regla de firewall que permita Studio de datos de Azure para conectarse, se abrirá el formulario **crear nueva regla de firewall**. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nueva regla de firewall](media/quickstart-sql-database/firewall.png)  
 

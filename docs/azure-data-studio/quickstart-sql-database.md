@@ -67,7 +67,7 @@ Después de conectarse correctamente, el servidor se abre en el **servidores** b
 
 ## <a name="create-the-tutorial-database"></a>Crear la base de datos tutorial
 
-Las secciones siguientes creación la base de datos TutorialDB que se usa en otros [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
+En las secciones siguientes crearemos la base de datos TutorialDB que se usa en otros tutoriales de [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
 1. Haga doble clic en el servidor SQL de Azure en el **servidores** barra lateral y seleccione **nueva consulta**.
 

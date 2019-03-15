@@ -2,7 +2,7 @@
 title: Procedimientos recomendados para Data Migration Assistant (SQL Server) | Microsoft Docs
 description: Aprenda las prácticas recomendadas para migrar bases de datos de SQL Server con Data Migration Assistant
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,20 +12,20 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: cb355cbe1e32c97e59d61eb55ca70023b03acd6b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643833"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973674"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Procedimientos recomendados para ejecutar Data Migration Assistant
 Este artículo proporciona algunos procedimientos recomendados para la instalación, evaluación y migración.
 
-## <a name="installation"></a>Installation
+## <a name="installation"></a>Instalación
 No instale y ejecute el Asistente para migración de datos directamente en el equipo de host de SQL Server.
 
 ## <a name="assessment"></a>Evaluación de
@@ -41,4 +41,4 @@ No instale y ejecute el Asistente para migración de datos directamente en el eq
 
 - Habilitar cifrar la conexión al conectarse a los servidores de origen y destino. Uso de SSL cifrado aumenta la seguridad de los datos transmitidos a través de las redes entre Data Migration Assistant y la instancia de SQL Server, que es útil, especialmente al migrar los inicios de sesión SQL. Si no se usa el cifrado SSL y un atacante pone en peligro la red, los inicios de sesión SQL que se está migrados se podrían obtener interceptar o sobre la marcha, el atacante puede modificar.
 
-    Sin embargo, si todo el acceso se realiza dentro de una configuración de intranet segura, el cifrado podría no ser necesario. Habilitación del cifrado reduce el rendimiento porque la sobrecarga adicional se necesita para cifrar y descifrar los paquetes. Para obtener más información, consulte [cifrar conexiones a SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Sin embargo, si todo el acceso se realiza dentro de una configuración de intranet segura, el cifrado podría no ser necesario. Habilitación del cifrado reduce el rendimiento porque la sobrecarga adicional se necesita para cifrar y descifrar los paquetes. Para obtener más información, consulte [cifrar conexiones a SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).

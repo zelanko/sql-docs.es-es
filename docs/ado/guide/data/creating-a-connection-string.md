@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +14,17 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41732b25c7b2c02f5b6b8a319e057d204a3a3384
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611399"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972774"
 ---
 # <a name="creating-a-connection-string"></a>Creación de una cadena de conexión
 Una cadena de conexión consta de una lista de pares de valor del argumento (es decir, los parámetros), separada por punto y coma. Por ejemplo:  
   
-```  
+```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
@@ -38,13 +38,13 @@ Una cadena de conexión consta de una lista de pares de valor del argumento (es 
 |*Nombre de archivo*|Especifica el nombre de un archivo específico del proveedor (por ejemplo, un objeto de origen de datos almacenados) que contiene información de conexión predefinida.|  
 |*Dirección URL*|Especifica la cadena de conexión como una dirección URL absoluta que identifica un recurso, como un archivo o directorio.|  
 |*Proveedor remoto*|Especifica el nombre de un proveedor que se usará al abrir una conexión de cliente. (Solo servicio de datos remotos).|  
-|*Servidor remoto*|Especifica el nombre de ruta de acceso del servidor que se usará al abrir una conexión de cliente. (Solo servicio de datos remotos).|  
+|*Remote Server*|Especifica el nombre de ruta de acceso del servidor que se usará al abrir una conexión de cliente. (Solo servicio de datos remotos).|  
   
  Otros argumentos se pasan al proveedor con nombre en el *proveedor* argumento, sin ningún procesamiento ADO.  
   
- La aplicación HelloData en [HelloData: una aplicación ADO sencilla](../../../ado/guide/data/hellodata-a-simple-ado-application.md) usa la cadena de conexión siguiente:  
+ La aplicación HelloData en [HelloData: Una aplicación ADO Simple](../../../ado/guide/data/hellodata-a-simple-ado-application.md) usa la cadena de conexión siguiente:  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
@@ -53,7 +53,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
   
  Según el proveedor OLE DB para la documentación de SQL Server, se puede sustituir "Server" para el *origen de datos* parámetro y "Database" para el *Initial Catalog* parámetro. Por lo tanto, la cadena de conexión siguiente generaría resultados idénticos al anterior:  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  
              "Database=Northwind;Integrated Security='SSPI';"  
 ```

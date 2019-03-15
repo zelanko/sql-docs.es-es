@@ -1,7 +1,7 @@
 ---
 title: Novedades de Data Migration Assistant (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ac3f4b2ab00b7a2c792788d6e778857c7d563f66
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410412"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973214"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novedades de Data Migration Assistant
 En este artículo se enumera las adiciones en cada versión de Data Migration Assistant (DMA).
@@ -71,7 +71,7 @@ La versión 3.4 de DMA incluye las siguientes adiciones:
 - Compatibilidad con SQL Server 2017 como origen para las migraciones a Azure SQL Database.
 - Mejoras de estabilidad, rendimiento y evaluación de la corrección de regla.
 
-## <a name="dma-v33"></a>V3.3 DMA
+## <a name="dma-v33"></a>DMA v3.3
 La versión v3.3 de DMA permite la migración de una instancia de SQL Server local a la nueva versión de SQL Server 2017 en Windows y Linux. Aunque el flujo de trabajo de migración general para Windows y Linux es el mismo, la migración a SQL Server 2017 para Linux requiere algunas consideraciones adicionales.
 
 ### <a name="specifying-the-back-up-path"></a>Especifica la ruta de acceso de copia de seguridad
@@ -92,7 +92,7 @@ La versión v3.2 de DMA incluye las siguientes adiciones:
 - Migración de esquema y los datos están habilitadas de bases de datos de SQL Server local a Azure SQL Database con un nuevo flujo de trabajo de migración.
 - Durante la migración de esquema a Azure SQL Database, DMA scripts los objetos de base de datos de origen, proporciona instrucciones sobre cómo solucionar los posibles problemas de compatibilidad y, a continuación, implementa el esquema en Azure.
 
-## <a name="dma-v31"></a>V3.1 DMA
+## <a name="dma-v31"></a>DMA v3.1
 La versión de v3.1 de DMA incluye las siguientes adiciones:
 
 - Las recomendaciones de evaluación mejorada para bases de datos de SQL Azure en cuanto a las intercalaciones de base de datos, el uso de procedimientos almacenados del sistema no compatibles y objetos de CLR.

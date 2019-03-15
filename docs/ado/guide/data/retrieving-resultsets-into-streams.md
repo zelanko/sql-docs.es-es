@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45ba231b1523a74ac8b2c09f55e19c3dc287ef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734963"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973504"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recuperar conjuntos de resultados en secuencias
 En lugar de recibir los resultados en el tradicional **Recordset** objeto ADO en su lugar, puede recuperar los resultados de la consulta en una secuencia. ADO **Stream** objeto (u otros objetos que admiten el COM **IStream** interfaz, por ejemplo, el ASP **solicitar** y **respuesta** objetos ) se puede usar para contener estos resultados. Un uso de esta característica es para recuperar los resultados en formato XML. Con SQL Server, por ejemplo, los resultados XML pueden devolverse de varias formas, por ejemplo, mediante la cláusula FOR XML con una consulta SELECT de SQL o mediante una consulta XPath.  
@@ -30,7 +30,7 @@ En lugar de recibir los resultados en el tradicional **Recordset** objeto ADO en
 ## <a name="for-xml-query-example"></a>Por ejemplo de consulta XML  
  En el siguiente ejemplo está escrito en VBScript a la base de datos Northwind:  
   
-```  
+```html
 <!-- BeginRecordAndStreamVBS -->  
 <%@ LANGUAGE = VBScript %>  
 <%  Option Explicit      %>  
@@ -145,7 +145,7 @@ En lugar de recibir los resultados en el tradicional **Recordset** objeto ADO en
   
 ### <a name="for-xml-syntax"></a>Para conocer la sintaxis XML  
   
-```  
+```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
@@ -153,7 +153,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
   
  Un instrucción SQL SELECT FOR XML de ejemplo:  
   
-```  
+```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
@@ -161,19 +161,19 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
   
  Como una consulta de la plantilla XML, la consulta FOR XML aparece como sigue:  
   
-```  
+```xml
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
  Este ejemplo especifica el ASP **respuesta** de objeto para el **salida Stream** propiedad:  
   
-```  
+```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
  A continuación, especifique **adExecuteStream** parámetro de **Execute**. Este ejemplo ajusta la secuencia de etiquetas XML para crear una isla de datos XML:  
   
-```  
+```vb
 Response.write "<XML ID=MyDataIsle>"  
 adoCmd.Execute , , adExecuteStream  
 Response.write "</XML>"  

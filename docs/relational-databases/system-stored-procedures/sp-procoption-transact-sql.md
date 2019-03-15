@@ -18,12 +18,12 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fcde4fd9439862dd88bdb1ff8c9eb40ff85ce0d4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: aee8c496db092787720ea8f778697b5a7b3fdd22
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590429"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973924"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_procoption [ @ProcName = ] 'procedure'
  [  **@ProcName =** ] **'**_procedimiento_**'**  
  Es el nombre del procedimiento que se va a establecer una opción. *procedimiento* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
   
- [  **@OptionName =** ] **'**_opción_**'**  
+ [ **@OptionName =** ] **'**_option_**'**  
  Es el nombre de la opción que se va a establecer. El único valor para *opción* es **inicio**.  
   
- [  **@OptionValue =** ] **'**_valor_**'**  
+ [ **@OptionValue =** ] **'**_value_**'**  
  Indica si se establece la opción en (**true** o **en**) u off (**false** o **desactivar**). *valor* es **varchar (12)**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -64,15 +64,16 @@ sp_procoption [ @ProcName = ] 'procedure'
  En el ejemplo siguiente se establece un procedimiento para la ejecución automática.  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+EXEC sp_procoption @ProcName = N'<procedure name>'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';   
 ```  
   
  En el ejemplo siguiente se detiene la ejecución automática de un procedimiento.  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
+EXEC sp_procoption @ProcName = N'<procedure name>'      
+    , @OptionName = 'startup'
     , @OptionValue = 'off';   
 ```  
   

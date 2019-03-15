@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b42f0a70765744147a44c8b4d274b87cc00ca43
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3a5bc7dfcfd36c16b6f281db8eb57e74e97601b6
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215431"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974154"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Implementar un grupo de disponibilidad SQL Server Always On en un clúster de Kubernetes
 
@@ -29,17 +29,20 @@ En Kubernetes, la implementación incluye un operador de SQL Server, los contene
 
 ## <a name="requirements"></a>Requisitos
 
-- Un clúster de Kubernetes
-- Kubernetes versión 1.11.0 o superior
+- Un clúster de Kubernetes de AKS con la versión más reciente
 - Al menos tres nodos
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - El acceso a la [ejemplos de sql server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) repositorio de GitHub
 
 > [!NOTE]
 > Puede usar cualquier tipo de clúster de Kubernetes. Para crear un clúster de Kubernetes en Azure Kubernetes Service (AKS), consulte [crear un clúster de AKS](https://docs.microsoft.com/azure/aks/create-cluster).
-> El script siguiente crea un clúster de cuatro nodos de Kubernetes en Azure.
+>
+> Use la versión más reciente de Kubernetes. La versión específica depende de su suscripción y región. Consulte [versiones compatibles de Kubernetes en AKS](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions).  
+>
+> El script siguiente crea un clúster de cuatro nodos de Kubernetes en Azure. Antes de ejecutar el script de reemplazar `<latest version>` con la última versión disponible. Por ejemplo, `1.12.5`.
+>
 > ```azure-cli
-> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
+> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version <latest version> --generate-ssh-keys
 > ```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>Implementar el operador, los contenedores de SQL Server y servicios de equilibrio de carga

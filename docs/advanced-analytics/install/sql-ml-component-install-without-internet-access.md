@@ -3,17 +3,17 @@ title: 'Instalar el lenguaje R y componentes de Python sin acceso a internet: SQ
 description: Sin conexión o desconectada R de Machine Learning y Python el programa de instalación en una instancia de SQL Server aislado detrás de un firewall de red.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 37cd555ec099b11c6dbf792ff5f4e0ac869a0792
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596996"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976325"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar SQL Server de aprendizaje automático R y Python en equipos sin acceso a internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,8 +22,8 @@ De forma predeterminada, los instaladores de conecten a sitios de descarga de Mi
 
 Análisis en bases de datos constan de instancia del motor de base de datos, además de otros componentes de integración de R y Python, según la versión de SQL Server. 
 
-+ SQL Server 2017 incluye R y Python. 
-+ SQL Server 2016 es solo para R. 
++ SQL Server 2017 incluye R y Python 
++ SQL Server 2016 es solo para R.
 
 En un servidor aislado, aprendizaje automático y las características específicas del lenguaje de R o Python se agregan a través de los archivos CAB. 
 
@@ -43,7 +43,7 @@ Versión  |Vínculo de descarga  |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Apertura de Python de Microsoft     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Servidor de Python de Microsoft    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 ###  <a name="2---get-sql-server-2017-installation-media"></a>2 - obtener medios de instalación de SQL Server 2017
 
@@ -55,7 +55,7 @@ Servidor de Python de Microsoft    |[SPS_9.2.0.24_1033.cab](https://go.microsoft
 
 ## <a name="sql-server-2016-offline-install"></a>Instalación sin conexión de SQL Server 2016
 
-Análisis en bases de datos de SQL Server 2016 es sólo R, con sólo dos CAB los archivos de paquetes de productos y la distribución de Microsoft de R de código abierto, respectivamente. Comience por instalar cualquiera de estas versiones: RTM, SERVICE PACK 1, SERVICE PACK 2. Una vez que una instalación básica está en su lugar, se pueden aplicar las actualizaciones acumulativas como paso siguiente.
+Análisis en bases de datos de SQL Server 2016 es sólo R, con sólo dos CAB los archivos de paquetes de productos y la distribución de Microsoft de R de código abierto, respectivamente. Comience por instalar cualquiera de estas versiones: RTM, SP 1, SP 2. Una vez que una instalación básica está en su lugar, se pueden aplicar las actualizaciones acumulativas como paso siguiente.
 
 En un equipo que tiene una conexión a internet, descargue los archivos CAB que se usa el programa de instalación para instalar el análisis en bases de datos en SQL Server 2016. 
 
@@ -65,7 +65,7 @@ Versión  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
-**SQL Server 2016 Service Pack 2**  |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038) |
+**SQL Server 2016 SP 2**  |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038) |
 
 ### <a name="2---get-sql-server-2016-installation-media"></a>2 - obtener medios de instalación de SQL Server 2016
 
@@ -75,7 +75,9 @@ Es una manera de obtener un archivo .iso que contiene el medio de instalación a
 
 ## <a name="transfer-files"></a>Transferencia de archivos
 
-Copie los medios de instalación de SQL Server (.iso o .cab) y los archivos de análisis en bases de datos CAB en el equipo de destino. Coloque los archivos CAB y el archivo de medios de instalación en la misma carpeta en el equipo de destino, como **descargas** o la carpeta temp * % del usuario del programa de instalación.
+Copie los medios de instalación de SQL Server (.iso o .cab) y los archivos de análisis en bases de datos CAB en el equipo de destino. Coloque los archivos CAB y el archivo de medios de instalación en la misma carpeta en el equipo de destino, como la carpeta TEMP * % del usuario del programa de instalación.
+
+Falta la carpeta % TEMP % para los archivos CAB de Python. Para R, puede usar % TEMP % o establezca el parámetro de myrcachedirectory en la ruta de acceso del archivo CAB.
 
 Captura de pantalla siguiente muestra los archivos CAB de SQL Server 2017 e ISO. Descargas de SQL Server 2016 tienen un aspecto distintas: es el nombre de archivo menos archivos (sin Python) y los medios de instalación para 2016.
 

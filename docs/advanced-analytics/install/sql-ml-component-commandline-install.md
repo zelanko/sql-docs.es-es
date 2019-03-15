@@ -3,17 +3,17 @@ title: 'Línea de comandos de instalación de componentes de R y Python: SQL Ser
 description: Ejecute el programa de instalación de línea de comandos de SQL Server para agregar el lenguaje R y la integración de Python a una instancia del motor de base de datos de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/21/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 3f78447054d96f1552ae09c62f3b8a2f18bc58bf
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645532"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976355"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Instalar componentes de R y Python desde la línea de comandos de aprendizaje de automático de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ Al realizar la instalación a través del símbolo del sistema, [!INCLUDE[ssNoVe
 | /IACCEPTPYTHONLICENSETERMS | Indica que ha aceptado los términos de licencia para usar los componentes de Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indica que ha aceptado los términos de licencia para el uso de SQL Server.|
 | /MRCACHEDIRECTORY | Para la instalación sin conexión, Establece la carpeta que contiene los archivos CAB de componentes de R. |
-| / MPYCACHEDIRECTORY | Para la instalación sin conexión, Establece la carpeta que contiene los archivos CAB de componentes de Python. |
+| / MPYCACHEDIRECTORY | Reservado para uso futuro. Use % TEMP % para almacenar archivos de archivo CAB de componentes de Python para la instalación en equipos que no tienen una conexión a internet. |
 
 
 ## <a name="indb"></a> Instalaciones de instancias de base de datos
@@ -132,13 +132,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a> Instalación silenciosa
 
-Una instalación silenciosa suprime la comprobación de ubicaciones de archivos .cab. Por este motivo, debe especificar la ubicación donde se puede desempaquetar los archivos .cab. Puede el directorio temporal para este.
+Una instalación silenciosa suprime la comprobación de ubicaciones de archivos .cab. Por este motivo, debe especificar la ubicación donde se puede desempaquetar los archivos .cab. Para Python, archivos CAB deben encontrarse en % TEMP *. Para R, puede establecer la carpeta ruta de acceso mediante puede el directorio temporal para este.
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
-/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+/MRCACHEDIRECTORY=%temp% 
 ```
 
 ## <a name="shared-feature"></a> Instalaciones de servidor independiente

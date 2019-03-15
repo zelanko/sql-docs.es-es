@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 03/13/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,14 +13,15 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: edbed9f5f0e8672c4f779431f810099b50470a9a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 972a5a5f1be1f06f22a520281b1eaa0e1e3a03b1
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016796"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973414"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene información sobre todas las solicitudes activas actualmente o recientemente en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Muestra una fila por cada solicitud o consulta.  
@@ -34,25 +35,27 @@ ms.locfileid: "56016796"
 |start_time|**datetime**|Hora a la que se inició la ejecución de la solicitud.|NULL para las solicitudes en cola; de lo contrario, válido **datetime** menor o igual que la hora actual.|  
 |end_compile_time|**datetime**|Hora en que completó el motor de compilación de la solicitud.|NULL para las solicitudes que no se han compilado aún; en caso contrario válido **datetime** start_time inferior y menor o igual a la hora actual.|
 |end_time|**datetime**|Hora a la que la ejecución de la solicitud completado, error o se canceló.|NULL para las solicitudes en cola o activas; en caso contrario, válido **datetime** menor o igual que la hora actual.|  
-|total_elapsed_time|**int**|Tiempo transcurrido en ejecución desde que se inició la solicitud, en milisegundos.|Entre 0 y la diferencia entre start_time y end_time.<br /><br /> Si total_elapsed_time supera el valor máximo de un entero, continuará total_elapsed_time sea el valor máximo. Esta condición generará la advertencia "se superó el valor máximo."<br /><br /> El valor máximo en milisegundos equivale a 24,8 días.|  
+|total_elapsed_time|**int**|Tiempo transcurrido en ejecución desde que se inició la solicitud, en milisegundos.|Entre 0 y la diferencia entre start_time y end_time.</br></br> Si total_elapsed_time supera el valor máximo de un entero, continuará total_elapsed_time sea el valor máximo. Esta condición generará la advertencia "se superó el valor máximo."</br></br> El valor máximo en milisegundos equivale a 24,8 días.|  
 |etiqueta|**nvarchar(255)**|Cadena de etiqueta opcional asociada con algunas instrucciones de consulta SELECT.|Cualquier cadena que contiene "a-z", "A-z", "0-9', '_'.|  
 |error_id|**nvarchar(36)**|Identificador único del error asociado a la solicitud, si existe.|Consulte [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); se establece en NULL si se ha producido ningún error.|  
 |database_id|**int**|Identificador de base de datos usada el contexto explícito (por ejemplo, USE DB_X).|Vea el Id. de [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |comando|**nvarchar(4000)**|Contiene el texto completo de la solicitud como enviado por el usuario.|Cualquier texto de consulta o de solicitud válido. Las consultas que duran más de 4000 bytes se truncan.|  
-|resource_class|**nvarchar(20)**|La clase de recursos para esta solicitud. Consulte el artículo relacionado **concurrency_slots_used** en [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
+|resource_class|**nvarchar(20)**|La clase de recursos para esta solicitud. Consulte el artículo relacionado **concurrency_slots_used** en [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).|Clases de recursos estáticos</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>SmallRC de clases de recursos dinámicos</br>MediumRC</br>LargeRC</br>XLargeRC|
+|importancia (versión preliminar de SQL DW Gen2)|**nvarchar(32)**|La importancia de la configuración de la solicitud se envió con. Las solicitudes con un testamento de importancia menor permanecieron en cola en estado suspendido, si se envían solicitudes mayor importancia.  Las solicitudes con mayor importancia se ejecutarán antes de menor importancia las solicitudes enviadas anteriormente. |NULL</br>low</br>below_normal</br>normal</br>above_normal</br>high|
   
  Para obtener información sobre el número máximo de filas retenidas por esta vista, vea "Como mínimo y máximo Values" en el [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permisos
+
  Requiere el permiso VIEW SERVER STATE.  
   
-## <a name="security"></a>Seguridad  
+## <a name="security"></a>Seguridad
+
  Sys.dm_pdw_exec_requests no filtra los resultados de la consulta según los permisos específicos de la base de datos. Inicios de sesión con el permiso VIEW SERVER STATE pueden obtener los resultados de los resultados de consulta para todas las bases de datos  
   
-> [!WARNING]  
->  Un atacante puede usar sys.dm_pdw_exec_requests para recuperar información acerca de los objetos de base de datos específica por el solo hecho de tener permiso VIEW SERVER STATE y al no tener un permiso específico de la base de datos.  
+>[!WARNING]  
+>Un atacante puede usar sys.dm_pdw_exec_requests para recuperar información acerca de los objetos de base de datos específica por el solo hecho de tener permiso VIEW SERVER STATE y al no tener un permiso específico de la base de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de almacenamiento de datos en paralelo y SQL Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
-  
-  
+## <a name="see-also"></a>Vea también
+
+ [Vistas de administración dinámica de almacenamiento de datos en paralelo y SQL Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md) </br>[Importancia de carga de trabajo SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)

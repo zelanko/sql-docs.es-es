@@ -2,7 +2,7 @@
 title: Identificar la SKU de base de datos SQL de Azure adecuada para la base de datos local (Data Migration Assistant) | Microsoft Docs
 description: Aprenda a usar Data Migration Assistant para identificar a la derecha de la SKU de base de datos SQL de Azure para la base de datos local
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 578e6ac47e84ad764cb050112eae768ff21444f3
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226502"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973837"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificar la SKU de base de datos SQL de Azure adecuada para la base de datos local
 
@@ -75,22 +75,22 @@ Usar el archivo de salida de los contadores de rendimiento en el paso anterior c
 
 Ejecute el dmacmd.exe con los argumentos siguientes:
 
-- **/ Action = SkuRecommendation**: Escriba este argumento para ejecutar las evaluaciones de SKU.
-- **/ SkuRecommendationInputDataFilePath**: La ruta de acceso al archivo de contadores recopilado en la sección anterior.
-- **/ SkuRecommendationTsvOutputResultsFilePath**: La ruta de acceso para escribir los resultados de salida en formato TSV.
-- **/ SkuRecommendationJsonOutputResultsFilePath**: La ruta de acceso para escribir los resultados de salida en formato JSON.
-- **/ SkuRecommendationHtmlResultsFilePath**: Ruta de acceso para escribir los resultados de salida en formato HTML.
+- **/Action=SkuRecommendation**: Escriba este argumento para ejecutar las evaluaciones de SKU.
+- **/SkuRecommendationInputDataFilePath**: La ruta de acceso al archivo de contadores recopilado en la sección anterior.
+- **/SkuRecommendationTsvOutputResultsFilePath**: La ruta de acceso para escribir los resultados de salida en formato TSV.
+- **/SkuRecommendationJsonOutputResultsFilePath**: La ruta de acceso para escribir los resultados de salida en formato JSON.
+- **/SkuRecommendationHtmlResultsFilePath**: Ruta de acceso para escribir los resultados de salida en formato HTML.
 
 Además, debe elegir uno de los argumentos siguientes:
 - Evitar la actualización de precios
-    - **/ SkuRecommendationPreventPriceRefresh**: Impide que la actualización de precios que se producen. Utilizar si está ejecutando en modo sin conexión.
+    - **/SkuRecommendationPreventPriceRefresh**: Impide que la actualización de precios que se producen. Utilizar si está ejecutando en modo sin conexión.
 - Obtener los precios más recientes 
-    - **/ SkuRecommendationCurrencyCode**: La moneda en que se va a mostrar los precios (p. ej. "USD").
-    - **/ SkuRecommendationOfferName**: Nombre de la oferta (p. ej. "MS-AZR - 0003P"). Para obtener más información, consulte el [detalles de la oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
-    - **/ SkuRecommendationRegionName**: Nombre de la región (por ejemplo "WestUS").
-    - **/ SkuRecommendationSubscriptionId**: Identificador de la suscripción.
-    - **/ AzureAuthenticationTenantId**: El inquilino de autenticación.
-    - **/ AzureAuthenticationClientId**: El identificador de cliente de la aplicación AAD que se usa para la autenticación.
+    - **/SkuRecommendationCurrencyCode**: La moneda en que se va a mostrar los precios (p. ej. "USD").
+    - **/SkuRecommendationOfferName**: Nombre de la oferta (p. ej. "MS-AZR-0003P"). Para obtener más información, consulte el [detalles de la oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
+    - **/SkuRecommendationRegionName**: Nombre de la región (por ejemplo "WestUS").
+    - **/SkuRecommendationSubscriptionId**: Identificador de la suscripción.
+    - **/AzureAuthenticationTenantId**: El inquilino de autenticación.
+    - **/AzureAuthenticationClientId**: El identificador de cliente de la aplicación AAD que se usa para la autenticación.
     - Una de las opciones de autenticación siguientes:
         - Interactiva
             - **AzureAuthenticationInteractiveAuthentication**: Establecido en true para una ventana emergente de autenticación.

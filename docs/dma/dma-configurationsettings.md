@@ -2,7 +2,7 @@
 title: Configurar opciones para Data Migration Assistant (SQL Server) | Microsoft Docs
 description: Aprenda a configurar la configuración de Data Migration Assistant actualizando los valores del archivo de configuración
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 206a0fe9ae945267483cf7ee2ccec08eda2696c2
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419256"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973954"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurar opciones para Data Migration Assistant
 
@@ -91,7 +91,7 @@ Durante la valoración, Data Migration Assistant extrae la aplicación de capa d
 
 - databaseLockTimeout
 
-   Este parámetro es equivalente a [establecer bloqueo\_tiempo de espera de tiempo de espera\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Predeterminado = 5000)
+   Este parámetro es equivalente a [establecer bloqueo\_tiempo de espera de tiempo de espera\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Default=5000)
 
 - maxDataReaderDegreeOfParallelism
 

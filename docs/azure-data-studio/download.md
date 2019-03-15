@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f148c4cee111febc5d1e0203cc5eb484ec556d4f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 16f3ffbbd1435e9006bcbc26c86fb53dfca9bf65
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801356"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973135"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Descargue e instale Data Studio de Azure
 
@@ -38,11 +38,12 @@ Para obtener más información acerca de la versión más reciente, consulte el 
 
 ## <a name="get-azure-data-studio-for-windows"></a>Obtener Azure Data Studio para Windows
 
-Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una experiencia de instalador de Windows estándar y un archivo .zip:
+Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una experiencia de instalador de Windows estándar y un archivo zip.
+
+El *instalador usuario* se recomienda porque no requiere privilegios de administrador, lo que simplifica las instalaciones y actualizaciones. El instalador de usuario no requiere privilegios de administrador que la ubicación está en la carpeta AppData Local (LOCALAPPDATA) de usuario. El instalador de usuario también proporciona una experiencia más fluida de actualización en segundo plano. Para obtener más información, consulte [configuración de usuario para Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+
 
 **Instalador de usuario** (recomendado)
-
-El instalador de usuario se recomienda porque no requiere privilegios de administrador, lo que simplifica las instalaciones y actualizaciones.
 
 1. Descargue y ejecute el [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *usuario* installer para Windows](https://go.microsoft.com/fwlink/?linkid=2072725).
 2. Iniciar el [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.

@@ -1,6 +1,6 @@
 ---
 title: Propiedades OLAP de Analysis Services | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 8e2643488710548b3a773730e9b9898125783dc3
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072522"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072349"
 ---
 # <a name="olap-properties"></a>Propiedades OLAP
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor OLAP enumeradas en las tablas siguientes. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
@@ -203,7 +203,7 @@ ms.locfileid: "53072522"
  **ROLAPDimensionProcessingEffort**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="query"></a>Consulta  
+## <a name="query"></a>Consultar  
  **AggregationsUseEnabled**  
  Una propiedad booleana que define si se utilizan agregaciones almacenadas en el tiempo de ejecución. Esta propiedad permite deshabilitar las agregaciones sin cambiar el diseño de la agregación y sin necesidad de repetir el procesamiento. Sirve para realizar pruebas comparativas y con fines informativos.  
   
@@ -266,7 +266,10 @@ Enfoque para calcular los requisitos de memoria caché de dimensión:
   
  **MaxRolapOrConditions**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
-  
+ 
+ **RowsetSerializationLimit**   
+ Se aplica a Azure Analysis Services. Limita el número de filas devueltas en un conjunto de filas a los clientes. Valor predeterminado es -1, lo que significa que no hay ningún límite se aplica. Se aplica a las consultas DAX y MDX. Puede usar para proteger los recursos del servidor de exportación de todos los datos. Las consultas enviadas al servidor que superan el límite se cancelan y se devuelve un error.  
+
  **UseCalculationCacheRegistry**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044631"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072309"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,23 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>Comentarios
 Esta función del sistema está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Vea KB [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-Esta función del sistema que funciona en ambos **estándar** y **ligera** consultar las estadísticas de ejecución de generación de perfiles de infraestructura.  
-  
-**Estándar** estadísticas de generación de perfiles de infraestructura pueden habilitarse mediante el uso de:
-  -  [SET STATISTICS XML EN](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [SET STATISTICS PROFILE EN](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  el `query_post_execution_showplan` eventos extendidos.  
-  
-**Ligero** está disponible en las estadísticas de generación de perfiles de infraestructura [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 y se puede habilitar:
-  -  Globalmente mediante el uso de seguimiento marca 7412.
-  -  Mediante el [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) eventos extendidos.
-  
-> [!NOTE]
-> Una vez habilitada la marca de seguimiento 7412, generación de perfiles ligera se habilitará para cualquier consumidor de las estadísticas de ejecución de consulta generación de perfiles de infraestructura en lugar de una generación de perfiles estándar, como la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> Sin embargo, la generación de perfiles estándar todavía se usa para SET STATISTICS XML, *incluir Plan real* acción en [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], y `query_post_execution_showplan` xEvent.
-
-> [!IMPORTANT]
-> En TPC-C como pruebas de carga de trabajo, la habilitación de la infraestructura de generación de perfiles de estadísticas ligeras agrega una sobrecarga de 1,5 ó 2 por ciento. En cambio, la infraestructura de generación de perfiles de estadísticas estándar puede agregar hasta un 90% de sobrecarga para el mismo escenario de carga de trabajo.
+Esta función del sistema que funciona en ambos **estándar** y **ligera** consultar las estadísticas de ejecución de generación de perfiles de infraestructura. Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
 
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE` en el servidor.  

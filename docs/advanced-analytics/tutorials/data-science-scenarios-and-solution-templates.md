@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 936bc010838b3869c567117a9e87cdc2c4ce6d52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1c98f6110aa6cc0bbb86f04a685211d7dc58447a
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596131"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072159"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Escenarios de ciencia de datos y plantillas de solución
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ Cada solución incluye datos de ejemplo, código de R o código de Python y proc
 
 ## <a name="customer-churn"></a>Abandono de clientes
 
-[Plantilla de predicción de abandono de clientes (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[Plantilla de predicción de abandono de clientes (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **Qué:** Analizar y predecir el abandono de clientes es importante en cualquier sector donde debe administrarse y evitar la pérdida de clientes a los competidores: banca, telecomunicaciones y comercial, por nombrar algunos. El objetivo del análisis del abandono es identificar qué clientes tienen probabilidades de abandonar y después adoptar las acciones adecuadas para conservar a esos clientes y mantener su negocio.
 
@@ -64,7 +64,7 @@ Cada solución incluye datos de ejemplo, código de R o código de Python y proc
   
 ## <a name="predictive-maintenance"></a>Mantenimiento predictivo
 
-[Plantilla de mantenimiento predictivo (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[Plantilla de mantenimiento predictivo (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **Qué:** Mantenimiento predictivo pretende aumentar la eficacia de las tareas de mantenimiento mediante la captura de errores del pasado y usar esa información para predecir cuándo o dónde se puede producir un error en un dispositivo. La capacidad de previsión de obsolescencia de los dispositivos es especialmente valiosa para aquellas aplicaciones que se basan en datos distribuidos o sensores. Este método también se pueden aplicar para supervisar o predecir errores en los dispositivos de IoT (Internet de las cosas).
 

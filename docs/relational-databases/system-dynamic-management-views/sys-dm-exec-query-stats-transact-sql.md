@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2018
 ms.prod: sql
@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8df3c13b42df1b842d784fedd1720d2e9bfc258
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626394"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072359"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve estadísticas de rendimiento de agregado para planes de consulta en caché en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vista contiene una fila por cada instrucción de consulta dentro del plan en caché, y la duración de las filas está ligada al propio plan. Cuando se quita un plan de la caché, se eliminan las filas correspondientes de esta vista.  
+Devuelve estadísticas de rendimiento de agregado para planes de consulta en caché en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vista contiene una fila por cada instrucción de consulta dentro del plan en caché, y la duración de las filas está ligada al propio plan. Cuando se quita un plan de la caché, se eliminan las filas correspondientes de esta vista.  
   
 > [!NOTE]
 > Una consulta inicial de **sys.dm_exec_query_stats** podría producir resultados imprecisos si hay una carga de trabajo ejecutándose actualmente en el servidor. Pueden determinarse resultados más precisos volviendo a ejecutar la consulta.  
@@ -41,11 +41,11 @@ ms.locfileid: "53626394"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary (64)**  |Es un token que hace referencia al lote o al procedimiento almacenado del que forma parte la consulta.<br /><br /> **sql_handle**, junto con **statement_start_offset** y **statement_end_offset**, puede usarse para recuperar el texto SQL de la consulta mediante una llamada a la **sys.dm_exec_sql_ texto** función de administración dinámica.|  
+|**sql_handle**|**varbinary(64)**  |Es un símbolo (token) que identifica el lote o procedimiento almacenado que forma parte de la consulta.<br /><br /> **sql_handle**, junto con **statement_start_offset** y **statement_end_offset**, puede usarse para recuperar el texto SQL de la consulta mediante una llamada a la **sys.dm_exec_sql_ texto** función de administración dinámica.|  
 |**statement_start_offset**|**int**|Indica (en bytes y empezando por 0) la posición inicial de la consulta que la fila describe en el texto del lote o del objeto persistente.|  
 |**statement_end_offset**|**int**|Indica (en bytes y empezando por 0) la posición final de la consulta que la fila describe en el texto del lote o del objeto persistente. Para las versiones anteriores [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], un valor de -1 indica el final del lote. Comentarios finales ya no se incluyen.|  
 |**plan_generation_num**|**bigint**|Número de secuencia que se puede usar para distinguir entre instancias de los planes después de una nueva compilación.|  
-|**plan_handle**|**varbinary (64)**|Token que hace referencia al plan compilado del que forma parte la consulta. Este valor puede pasarse a la [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) función de administración dinámica para obtener el plan de consulta.<br /><br /> Será siempre 0x000 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
+|**plan_handle**|**varbinary(64)**|Es un token que identifica de forma exclusiva un plan de ejecución de consulta para un lote que se ha ejecutado y su plan reside en la caché del plan o se está ejecutando actualmente. Este valor puede pasarse a la [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) función de administración dinámica para obtener el plan de consulta.<br /><br /> Será siempre 0x000 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
 |**creation_time**|**datetime**|Hora en que se compiló el plan.|  
 |**last_execution_time**|**datetime**|Hora a la que se inició la ejecución del plan por última vez.|  
 |**execution_count**|**bigint**|Número de veces que se ha ejecutado el plan desde que se compiló por última vez.|  
@@ -73,13 +73,13 @@ ms.locfileid: "53626394"
 |**last_elapsed_time**|**bigint**|Tiempo transcurrido, notificado en microsegundos (pero solo con precisión de milisegundos), para la ejecución completada más recientemente de este plan.|  
 |**min_elapsed_time**|**bigint**|Tiempo mínimo transcurrido, notificado en microsegundos (pero solo con precisión de milisegundos), para cualquier ejecución completada de este plan.|  
 |**max_elapsed_time**|**bigint**|Tiempo máximo transcurrido, notificado en microsegundos (pero solo con precisión de milisegundos), para cualquier ejecución completada de este plan.|  
-|**query_hash**|**binary (8)**|Valor hash binario que se calcula en la consulta y que se usa para identificar consultas con una lógica similar. Puede usar el hash de consulta para determinar el uso de recursos agregados para las consultas que solo se diferencian en los valores literales.|  
-|**query_plan_hash**|**binary (8)**|Valor hash binario que se calcula en el plan de ejecución de consulta y que se usa para identificar planes de ejecución de consulta similares. Puede usar el hash del plan de consulta para buscar el costo acumulativo de las consultas con planes de ejecución similares.<br /><br /> Será siempre 0x000 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
+|**query_hash**|**Binary(8)**|Valor hash binario que se calcula en la consulta y que se usa para identificar consultas con una lógica similar. Puede usar el hash de consulta para determinar el uso de recursos agregados para las consultas que solo se diferencian en los valores literales.|  
+|**query_plan_hash**|**binary(8)**|Valor hash binario que se calcula en el plan de ejecución de consulta y que se usa para identificar planes de ejecución de consulta similares. Puede usar el hash del plan de consulta para buscar el costo acumulativo de las consultas con planes de ejecución similares.<br /><br /> Será siempre 0x000 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
 |**total_rows**|**bigint**|Número total de filas devueltas por la consulta. No puede ser null.<br /><br /> Será siempre 0 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
 |**last_rows**|**bigint**|Número de filas devueltas por la última ejecución de la consulta. No puede ser null.<br /><br /> Será siempre 0 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
 |**min_rows**|**bigint**|Número mínimo de filas devuelto nunca por la consulta durante una ejecución. No puede ser null.<br /><br /> Será siempre 0 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
 |**max_rows**|**bigint**|Número máximo de filas devuelto nunca por la consulta durante una ejecución. No puede ser null.<br /><br /> Será siempre 0 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
-|**statement_sql_handle**|**varbinary (64)**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Rellena con valores no NULL solo si se activa la consulta Store y recopilar estadísticas de consulta en particular.|  
+|**statement_sql_handle**|**varbinary(64)**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Rellena con valores no NULL solo si se activa la consulta Store y recopilar estadísticas de consulta en particular.|  
 |**statement_context_id**|**bigint**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Rellena con valores no NULL solo si se activa la consulta Store y recopilar estadísticas de consulta en particular.|  
 |**total_dop**|**bigint**|La suma total de grado de paralelismo en este plan se utiliza desde que se compiló. Siempre será 0 para consultar una tabla optimizada para memoria.<br /><br /> **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**last_dop**|**bigint**|El grado de paralelismo de la última ejecución de este plan. Siempre será 0 para consultar una tabla optimizada para memoria.<br /><br /> **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78a5b1462316f859339f5922a0fa9aa098c6e854
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a5c0b2714637068f72aa9e8caf7f7213c865131f
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803290"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974484"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Ediciones y características admitidas de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,9 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Varios contenedores de secuencias de archivo|Sí|Sí <sup>2</sup>|Sí <sup>2</sup>|Sí <sup>2</sup>|Sí <sup>2</sup>|
 |Asignación de memoria de página grande habilitada para NUMA y matriz de búferes|Sí|No <sup>4</sup>|No|No|No|
 |Buffer Pool Extension|Sí|Sí|No|No|No|
-|Regulación de recursos de E/S|Sí|No|No|No|No|  
+|Regulación de recursos de E/S|Sí|No|No|No|No|
+|Lectura anticipada|Sí|No|No|No|No|
+|Recorrido avanzado|Sí|No|No|No|No|
 |Perdurabilidad diferida|Sí|Sí|Sí|Sí|Sí|
 
 <sup>1</sup> El tamaño de los datos de OLTP en memoria y la memoria caché del segmento del almacén de columnas se limitan a la cantidad de memoria especificada por edición en la sección Límites de escala. Los grados de paralelismo máximos están limitados. Los grados de paralelismo (DOP) para la compilación de un índice se limitan a 2 DOP para Standard Edition y 1 DOP para las ediciones Web y Express. Se refiere a los índices de almacén de columnas que se crean en tablas basadas en disco y en tablas optimizadas para memoria.

@@ -1,9 +1,7 @@
 ---
 title: Elección de un idioma al crear un índice de texto completo | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.prod_service: search, sql-database
 ms.technology: search
 ms.topic: conceptual
@@ -17,16 +15,17 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2aa416e1913925c095e75888a624021f7eb3543f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f1310318cde48b1cd5c001e655ed341bc9cc780
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541264"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973478"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Elegir un idioma al crear un índice de texto completo
 
@@ -118,7 +117,7 @@ ms.locfileid: "52541264"
  De forma predeterminada, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la búsqueda de texto completo analizará los términos de consulta mediante el idioma especificado para cada columna que se incluya en la cláusula de texto completo. Para invalidar este comportamiento, especifique un idioma no predeterminado en el momento de la consulta. Para los idiomas admitidos cuyos recursos estén instalados, se puede usar la cláusula LANGUAGE *language_term* de una consulta [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) para especificar el idioma que se usa para la separación de palabras, la lematización, el diccionario de sinónimos y el procesamiento de las palabras irrelevantes de los términos de las consultas.  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

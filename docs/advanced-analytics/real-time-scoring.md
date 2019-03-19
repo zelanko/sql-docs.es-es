@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: ed1fbe8be63cd184fd49b1e76f94583bd50cf380
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645164"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161522"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Puntuación con sp_rxPredict en aprendizaje automático de SQL Server en tiempo real
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ Usos de puntuación en tiempo real la [sp_rxPredict](https://docs.microsoft.com/
 
 ## <a name="how-real-time-scoring-works"></a>En tiempo real cómo funciona la puntuación
 
-Puntuación en tiempo real se admite en SQL Server 2017 y SQL Server 2016, en [admite tipos de modelo](#bkmk_py_supported_algos) para lineal y logístico modelado de árbol de decisión y regresión. Usa las bibliotecas nativas de C++ para generar puntuaciones, basadas en la entrada de usuario proporcionado a un modelo almacenado en un formato binario especial de aprendizaje automático.
+Puntuación en tiempo real se admite en SQL Server 2017 y SQL Server 2016, en tipos de modelos concretos según las funciones de RevoScaleR o MicrosoftML como [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Usa las bibliotecas nativas de C++ para generar puntuaciones, basadas en la entrada de usuario proporcionado a un modelo almacenado en un formato binario especial de aprendizaje automático.
 
 Dado que puede usar un modelo entrenado para puntuar sin tener que llamar en tiempo de ejecución de un lenguaje externo, se reduce la sobrecarga de varios procesos. Esto es compatible con un rendimiento de predicción mucho más rápido para escenarios de puntuación de producción. Dado que los datos nunca abandonan el SQL Server, se pueden generar resultados e inserta una nueva tabla sin sufrir ninguna traducción de datos entre R y SQL.
 
@@ -80,7 +80,7 @@ Puntuación en tiempo real es un proceso de varios pasos:
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [categorías](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
 
 
@@ -111,7 +111,7 @@ Puntuación en tiempo real es un proceso de varios pasos:
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [categorías](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 

@@ -11,16 +11,47 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b481151636db4f54212c96b0ea21f989afb917d3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581680"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161632"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión para Azure Data Studio
 
 **[Descargue e instale la versión más reciente.](download.md)**
+
+## <a name="march-2019"></a>Marzo de 2019
+
+18 de marzo de 2019 &nbsp;  /  &nbsp; versión: 1.5.1
+
+&nbsp;
+
+| Cambiar | Detalles |
+| :----- | :------ |
+| Agregar [extensión PostgreSQL para Azure Data Studio](postgres-extension.md) | Características admitidas: <br/>&bull; &nbsp; Cuadro de diálogo de conexión <br/>&bull; &nbsp; Explorador de objetos <br/>&bull; &nbsp; Editor de consultas <br/>&bull; &nbsp; Creación de gráficos <br/>&bull; &nbsp; Paneles <br/>&bull; &nbsp; Fragmentos de código <br/>&bull; &nbsp; Editar datos <br/>&bull; &nbsp; Blocs de notas |
+| Se ha agregado SQL blocs de notas | Se agregó compatibilidad de Kernel de SQL al Visor de cuaderno integrada: <br/>&bull; &nbsp; Es compatible con Transact-SQL <br/>&bull; &nbsp; Compatibilidad con PGSQL |
+| Extensión de PowerShell agregada  | Lleva a través de la [extensión PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) experiencia desde VS Code.  |
+| Extensión agregada de dacpac de SQL Server  | Quita al Asistente para aplicaciones de capa de datos de extensión de importación de SQL Server en una nueva extensión.  |
+| Extensión de la Comunidad se ha agregado QueryPlan.show | Agrega compatibilidad con la integración para visualizar los planes de consulta  |
+| Extensión de SQL Server de 2019 Preview actualizada | &bull; &nbsp; Compatibilidad con Jupyter Notebook, específicamente kernels Python3 y Spark, se han movido a la herramienta de Azure Data Studio core. <br/>&bull; &nbsp; Correcciones de errores para el Asistente de datos externos  |
+| Resolver errores y problemas. | Consulte [errores y problemas en GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conocidos
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427): Al hacer clic en ejecutar en la celda antes de Kernel está listo para Spark produce Error irrecuperable **solución alternativa:** Espere hasta que los kernels se cargan hasta que se ejecuta ninguna de las celdas
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): ANUNCIOS iniciadas desde SSMS con autenticación de SQL: contraseña solicita al usuario **solución alternativa:** Uso de la autenticación de Windows por ahora. 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494): No se puede instalar la característica de Bloc de notas SQL <br/>
+**Solución alternativa:** Siga los pasos de solución [aquí](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832). 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503): Azure Data Studio no puede estar abierto directamente desde la carpeta de descarga (Mac) <br />
+**Solución alternativa:** Reinicie el equipo después de la descompresión de la aplicación. Investigar. 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):  Guardar como Bloc de notas pierde el contexto de conexión <br />
+**Solución alternativa:** Se corregirá en la siguiente versión. 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Extraer dacpac se bloquea SqlToolsService si se usa la versión no válida <br/>
+**Solución alternativa:** Reinicie Azure Data Studio y asegúrese de que se usa la versión correcta.
+- Nuevos iconos de Bloc de notas y Abrir Bloc de notas se pierden <br/> 
+**Solución alternativa:** El tipo de conexión heredada está en desuso. Se recomienda conectar al punto de conexión de SQL Server y obtendrá todas las acciones (nuevo bloc de notas, trabajo de Spark) según lo previsto. 
 
 ## <a name="february-2019"></a>Febrero de 2019
 

@@ -3,7 +3,7 @@ title: Extensión de SQL Server 2019 (versión preliminar)
 titleSuffix: Azure Data Studio
 description: Extensión de la versión preliminar de SQL Server de 2019 para Azure Data Studio
 ms.custom: seodec18
-ms.date: 02/13/2019
+ms.date: 03/18/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,13 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231062"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161553"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
 
@@ -31,9 +30,9 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 
    |Plataforma|Descargar|Fecha de la versión|Versión
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|13 de febrero de 2019 |0.10.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|13 de febrero de 2019 |0.10.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|13 de febrero de 2019 |0.10.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|18 de marzo de 2019 |0.11.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|18 de marzo de 2019 |0.11.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|18 de marzo de 2019 |0.11.0
 
 1. En Azure Data Studio elija **la extensión de instalación de paquete VSIX** desde el **archivo** menú y seleccione el archivo .vsix descargado.
 
@@ -44,6 +43,14 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 1. Después de volver a cargar, la extensión instalará las dependencias. Puede ver el progreso en la ventana de salida, y puede tardar varios minutos.
 
 1. Las dependencias después de finalizar la instalación, cierre y vuelva a abrir Azure Data Studio. El **clúster de SQL Server macrodatos** tipo de conexión no está disponible hasta que reinicie Azure Data Studio.
+
+## <a name="release-notes-v0110"></a>Notas de la versión (v0.11.0)
+  * Compatibilidad con Jupyter Notebook, específicamente el soporte técnico para los kernels de Python3 y Spark, se ha movido a Azure Data Studio. Esta extensión ya no es necesaria para poder usar los blocs de notas.
+  * Varias correcciones de errores en los asistentes para datos externos:
+    * Se actualizaron las asignaciones de tipos de Oracle para que coincida con los cambios que se incluye en SQL Server 2019 CTP 2.3.
+    * Se corrigió un problema donde estaban que se pierdan nuevos esquemas escritos en los controles de la asignación de tabla.
+    * Se ha corregido un problema donde la comprobación de un nodo de base de datos en las asignaciones de tabla no se ha producido en todas las tablas y vistas que se está comprueba.
+
 
 ## <a name="release-notes-v0102"></a>Notas de la versión (v0.10.2)
 ### <a name="sql-server-2019-support"></a>Compatibilidad con SQL Server 2019

@@ -2,7 +2,7 @@
 title: Evaluar una empresa y consolidar los informes de evaluación (SQL Server) | Microsoft Docs
 description: Obtenga información sobre cómo usar DMA para evaluar una empresa y consolidar los informes de evaluación antes de actualizar SQL Server o la migración a Azure SQL Database.
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 03/19/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b2723d437a8171570436fb42f7cd9e305e3a8fea
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
+ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974294"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198204"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluar una empresa y consolidar los informes de evaluación con DMA
 
@@ -37,15 +37,15 @@ Las siguientes instrucciones paso a paso para ayudarán a usar Data Migration As
     - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
     - [Módulos de PowerShell de Azure](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Descargar y extraer:
-    - El [plantilla DMA informes Power BI](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports.zip).
-    - El [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse1.zip).
+    - El [plantilla DMA informes Power BI](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
+    - El [LoadWarehouse script](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Cargando los módulos de PowerShell
 Guardado de los módulos de PowerShell en el directorio de módulos de PowerShell le permite llamar a los módulos sin necesidad de cargarlos explícitamente antes de su uso.
 
 Para cargar los módulos, realice los pasos siguientes:
 1. Vaya a C:\Program Files\WindowsPowerShell\Modules y, a continuación, cree una carpeta denominada **DataMigrationAssistant**.
-2. Abra el [módulos de PowerShell](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules2.zip)y, a continuación, guardarlos en la carpeta que creó.
+2. Abra el [módulos de PowerShell](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip)y, a continuación, guardarlos en la carpeta que creó.
 
       ![Módulos de PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 

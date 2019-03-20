@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1bba732674123debb0153a426ca9fd99f7894454
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: bb822890e3a54be5c221c41a0c1489a4e2b252b5
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402117"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973484"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Cambiar las zonas horarias y la configuración del reloj en un servidor de informes
-  Un servidor de informes siempre utiliza la hora local del equipo donde esté instalado. No puede configurarlo para que use una zona horaria diferente. Si una aplicación cliente señala a un servidor de informes en una zona horaria diferente, para ejecutar una operación programada se utilizará la zona horaria del servidor de informes. En el Administrador de informes y en las páginas de administración de SharePoint, la zona horaria se indica en cada página de programación para que sepa exactamente cuándo se realizará una operación programada. Por ejemplo, la página para crear programaciones personalizadas indicará "Las horas están expresadas en (UTC-08:00) Hora del Pacífico (EE. UU. y Canadá)".  
+  Un servidor de informes siempre utiliza la hora local del equipo donde esté instalado. No puede configurarlo para que use una zona horaria diferente. Si una aplicación cliente señala a un servidor de informes en una zona horaria diferente, para ejecutar una operación programada se utilizará la zona horaria del servidor de informes. En el Administrador de informes y en las páginas de administración de SharePoint, la zona horaria se indica en cada página de programación para que sepa exactamente cuándo se realizará una operación programada. Por ejemplo, la página para crear programaciones personalizadas indicará "Las horas están expresadas en (UTC-08:00) Hora del Pacífico (EE. UU. y Canadá)".
+El servidor de informes crea un trabajo del Agente SQL Server que se usa para desencadenar la programación. Cuando el servidor de informes y el Agente SQL Server se encuentran en servidores independientes, la zona horaria debe ser el mismo en todos los servidores.
   
 ## <a name="changing-the-time-zone-native-mode"></a>Cambiar la zona horaria (modo nativo)  
  Si cambia la zona horaria en el equipo que hospeda un servidor de informes, deberá reiniciar el servicio del servidor de informes para que el cambio de zona horaria surta efecto.  
@@ -38,7 +39,7 @@ ms.locfileid: "52402117"
 ## <a name="changing-the-clock-settings"></a>Cambiar la configuración del reloj  
  El cambio del reloj del equipo no afecta a los valores de marca de tiempo existentes (por ejemplo, si adelanta el reloj una hora, las marcas de tiempo de las instantáneas de historial del informe no cambian). Es posible que se produzca una demora de 10 segundos antes de que el Procesador de entrega y programación utilice la nueva configuración. La demora real puede variar si ha modificado la configuración de intervalo de sondeo en los archivos de configuración.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [Programaciones](../../reporting-services/subscriptions/schedules.md)  
   

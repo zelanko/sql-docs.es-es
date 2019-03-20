@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión para el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 02/07/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,62 +11,87 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b720f2b146273fb694ad0a55b013d20bd65a6a6a
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 3335e474819d43854bc3cf59158d04a78649c130
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154880"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974364"
 ---
-# <a name="release-notes-for-the-jdbc-driver"></a>Notas de la versión para JDBC Driver
+# <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Notas de la versión para el controlador JDBC de Microsoft
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="updates-in-microsoft-jdbc-driver-72-for-sql-server"></a>Actualizaciones de Microsoft JDBC Driver 7.2 para SQL Server
+Este artículo enumeran las versiones de la _Microsoft JDBC Driver para SQL Server_. Para cada versión de lanzamiento, los cambios se denominado y se describe.
 
-7.2 de Microsoft JDBC Driver para SQL Server es totalmente compatible con la especificación de API de JDBC 4.2. Los archivos JAR en el paquete 7.2 se denominan según la compatibilidad de la versión de Java. Por ejemplo, el archivo mssql-jdbc-7.2.1.jre11.jar desde el paquete 7,2 debe utilizarse con Java 11.
+## <a name="721"></a>7.2.1
 
-> [!NOTE]  
-> Se encontró un problema con la instrucción SQL de análisis en el controlador JDBC 7.2 RTW publicado en el 31 de enero de 2019. Se ha deshecho el cambio y nuevos archivos JAR (versión 7.2.1) publicada el 11 de febrero de 2019. 
+### <a name="compliance"></a>Cumplimiento
+
+11 de febrero de 2019
+
+| Cambio de cumplimiento | Detalles |
+| :---------------- | :------ |
+| Descargue las actualizaciones más recientes para 7.2 del controlador JDBC. | &bull; &nbsp; [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1)<br/>&bull; &nbsp; [Central de maven](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Totalmente compatible con la especificación de API de JDBC 4.2. | Los archivos JAR en el paquete 7.2 se denominan según la compatibilidad de la versión de Java.<br/><br/>Por ejemplo, el archivo mssql-jdbc-7.2.1.jre11.jar desde el paquete 7,2 debe utilizarse con Java 11. |
+| Compatible con Java Development Kit (JDK) versión 11.0, además de con JDK 1.8. | Ahora es compatible con Java Development Kit (JDK) versión 11.0, además de JDK 1.8 7.2 de Microsoft JDBC Driver para SQL Server. |
+| &nbsp; | &nbsp; |
+
+> [!NOTE]
+> Se encontró un problema con la instrucción SQL de análisis en el controlador JDBC 7.2 versión para Web (RTW) publicado en el 31 de enero de 2019. Se ha deshecho el cambio y nuevos archivos JAR (versión 7.2.1) publicada el 11 de febrero de 2019.
 >
-> Descargar las actualizaciones más recientes para 7.2 de controlador JDBC de [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2063159), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1), y [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). Actualice sus proyectos para usar el 7.2.1 archivos JAR de versión. Para obtener más información, vea notas de la versión [7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1).
+> Actualizar los proyectos para usar el 7.2.1 archivos JAR de versión. Para obtener más información, vea notas de la versión [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1).
 
+### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory _Managed Service Identity_ autenticación (MSI)
 
-### <a name="support-for-jdk-11"></a>Compatibilidad con JDK 11
+| Cambio MSI | Detalles |
+| :--------- | :------ |
+| Admite el modo de autenticación de Active Directory Managed Service Identity (MSI). | Este modo de autenticación es aplicable en los recursos de Azure con compatibilidad para la característica "Identity" habilitada.<br/><br/>Ambos tipos de identidades de sistema administrada (MSI) son compatibles con el controlador para adquirir **accessToken** para establecer una conexión segura. |
+| Obtener más información y una aplicación de ejemplo para usar este modo de autenticación. | Consulte [Conectarse mediante la autenticación de Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| &nbsp; | &nbsp; |
 
-Ahora es compatible con Java Development Kit (JDK) versión 11.0, además de JDK 1.8 7.2 de Microsoft JDBC Driver para SQL Server.
+### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>Presenta _iniciativa Open de puerta de enlace de servicio_ soporte técnico (OSGi)
 
-### <a name="support-for-active-directory-managed-service-identity-msi-authentication"></a>Compatibilidad con la autenticación de Active Directory Managed Service Identity (MSI)
+| Cambio de OSGi | Detalles |
+| :---------- | :------ |
+| **DataSourceFactory** agregado de implementación. | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory` |
+| **Activador** agregado de implementación. | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
+| &nbsp; | &nbsp; |
 
-7.2 de Microsoft JDBC Driver para SQL Server ahora admite el modo de autenticación de Active Directory Managed Service Identity (MSI). Este modo de autenticación es aplicable en los recursos de Azure con compatibilidad para la característica "Identity" habilitada. Ambos tipos de identidades de sistema administrada (MSI) son compatibles con el controlador para adquirir **accessToken** para establecer una conexión segura.
+### <a name="introduces-sqlservererror-apis"></a>Presenta _SQLServerError_ API
 
-Obtener más información y una aplicación de ejemplo para usar este modo de autenticación pueden encontrarse aquí: [conectarse usando la autenticación de Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
+| Cambio de la API de error | Detalles |
+| :--------------- | :------ |
+| API de SQLServerError. | Captador de API para recuperar los detalles adicionales sobre el error generado en el servidor.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
+| Detalles adicionales. | Consulte [Control de errores](../../connect/jdbc/handling-errors.md). |
+| &nbsp; | &nbsp; |
 
-### <a name="osgi-support"></a>Compatibilidad con OSGi
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>Se ha actualizado la versión 1.6.3 de _Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java_.
 
-7.2 de Microsoft JDBC Driver para SQL Server presenta OSGi soporte para el controlador mediante la adición de debajo de las implementaciones para `org.osgi.service.jdbc.DataSourceFactory` y `org.osgi.framework.BundleActivator` :
+| Cambio en ADAL4J | Detalles |
+| :------------ | :------ |
+| Actualiza su dependencia de Maven en ADAL4J a versión 1.6.3. | &nbsp; |
+| Presenta _en tiempo de ejecución del cliente de Java para AutoRest_ como una dependencia de Maven, versión 1.6.5. | &nbsp; |
+| Detalles adicionales. | Consulte [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) (Dependencias de características de Microsoft JDBC Driver para SQL Server). |
+| &nbsp; | &nbsp; |
 
-- `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory`
-- `com.microsoft.sqlserver.jdbc.osgi.Activator`
+### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Actualizar _SDK de Microsoft Azure Key Vault para Java_, versión 1.2.0
 
-### <a name="sqlservererror-apis"></a>API de SQLServerError
-
-7.2 de Microsoft JDBC Driver para SQL Server presenta `SQLServerException.getSQLServerError()` y `SQLServerError` captador API para recuperar los detalles adicionales sobre el error generado en el servidor. Para obtener más información, vea [Handling Errors](../../connect/jdbc/handling-errors.md) (Control de errores).
-
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>Se ha actualizado la versión 1.6.3 de "Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java".
-
-7.2 de Microsoft JDBC Driver para SQL Server ha actualizado su dependencia de Maven en "Microsoft Azure Active Directory Authentication Library (ADAL4J) para Java" a la versión 1.6.3, que también se presenta "En tiempo de ejecución de cliente de Java para la AutoRest" como una dependencia de Maven (versión: 1.6.5). Para obtener más información acerca de las dependencias, consulte [dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
-
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Versión actualizada de "Microsoft Azure Key Vault SDK para Java": 1.2.0
-
-7.2 de Microsoft JDBC Driver para SQL Server ha actualizado su dependencia de Maven en "Microsoft Azure Key Vault SDK para Java" a la versión 1.2.0, que también se presenta "Microsoft Azure SDK para Key Vault WebKey" como una dependencia de Maven (versión: 1.2.0). Para obtener más información acerca de las dependencias, consulte [dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+| Cambio del SDK de Key Vault | Detalles |
+| :------------------- | :------ |
+| Actualice su dependencia de Maven en _SDK de Microsoft Azure Key Vault para Java_ a la versión 1.2.0. | &nbsp; |
+| Presenta el _SDK de Microsoft Azure para Key Vault WebKey_ como dependencia de Maven, versión 1.2.0. | &nbsp; |
+| Detalles adicionales. | Consulte [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) (Dependencias de características de Microsoft JDBC Driver para SQL Server). |
+| &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-Con Microsoft JDBC Driver 7.2 para SQL Server, existe un problema conocido con determinadas consultas con parámetros. Una actualización de la versión 7.2 (v7.2.1), se publicará pronto para solucionar este problema.
+| Problemas conocidos | Detalles |
+| :----------- | :------ |
+| Consultas parametrizadas en ciertos casos. | Se publicará una actualización de la versión 7.2, que será v7.2.1, en febrero de 2019 para resolver este problema. |
+| &nbsp; | &nbsp; |
 
-
-## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Actualizaciones de Microsoft JDBC Driver 7.0 para SQL Server
+## <a name="70"></a>7.0
 
 7.0 de Microsoft JDBC Driver para SQL Server es totalmente compatible con la especificación de API de JDBC 4.2. Los archivos JAR en el paquete 7.0 se denominan según la compatibilidad de la versión de Java. Por ejemplo, el archivo mssql-jdbc-7.0.0.jre10.jar desde el paquete 7.0 debe utilizarse con Java 10.
 
@@ -123,7 +148,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 7.0 de Microsoft JDBC Driver para SQL Server ha actualizado su dependencia de Maven en "Microsoft Azure Active Directory Authentication Library (ADAL4J) para Java" a la versión 1.6.0. Para obtener más información acerca de las dependencias, consulte [dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
-## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Actualizaciones de Microsoft JDBC Driver 6.4 para SQL Server
+## <a name="64"></a>6.4
 
 Microsoft JDBC Driver 6.4 para SQL Server es totalmente compatible con las especificaciones de JDBC 4.1 y 4.2. Los archivos JAR en el paquete de 6,4 denominación de compatibilidad de la versión de Java. Por ejemplo, se debe usar el archivo mssql-jdbc-6.4.0.jre8.jar desde el paquete de 6,4 con Java 8.
 
@@ -179,7 +204,7 @@ JDBC Driver ahora admite la autenticación integrada de Azure Active Directory (
 
 El controlador JDBC actualizó su dependencia de Maven en "Microsoft Azure Active Directory Authentication Library (ADAL4J) para Java" a la versión 1.4.0. Para obtener más información acerca de las dependencias, consulte [dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
-## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Actualizaciones de Microsoft JDBC Driver 6.2 para SQL Server
+## <a name="62"></a>6.2
 
 Microsoft JDBC Driver 6.2 para SQL Server es totalmente compatible con las especificaciones de JDBC 4.1 y 4.2. Los archivos JAR en el paquete 6.2 se denominan según la compatibilidad de la versión de Java. Por ejemplo, el archivo mssql-jdbc-6.2.2.jre8.jar desde el paquete 6.2 se recomienda para su uso con Java 8.
 
@@ -213,11 +238,11 @@ El controlador JDBC ahora admite los siguientes tiempos de espera configurables.
 - Tiempo de espera de consulta para controlar el número de segundos que deben transcurrir antes de que se produce un tiempo de espera al ejecutar una consulta.
 - Tiempo de espera de socket para especificar el número de milisegundos que transcurrirán antes de que se produce un tiempo de espera en un socket de lectura o acepta.
 
-## <a name="updates-in-microsoft-jdbc-driver-61-for-sql-server"></a>Actualizaciones de Microsoft JDBC Driver 6.1 para SQL Server
+## <a name="61"></a>6.1
 
 Microsoft JDBC Driver 6.1 para SQL Server es totalmente compatible con las especificaciones de JDBC 4.1 y 4.2. Se trata de la versión inicial de código abierto del controlador JDBC. Contiene los archivos mssql-jdbc-6.1.0.jre8.jar y mssql-jdbc-6.1.0.jre7.jar, que corresponden a la compatibilidad de versiones de Java.
 
-## <a name="updates-in-microsoft-jdbc-driver-60-for-sql-server"></a>Actualizaciones de Microsoft JDBC Driver 6.0 para SQL Server
+## <a name="60"></a>6.0
 
 Microsoft JDBC Driver 6.0 para SQL Server es totalmente compatible con las especificaciones de JDBC 4.1 y 4.2. Los archivos JAR en el paquete 6.0 se nombran según su cumplimiento con la versión de API de JDBC. Por ejemplo, el archivo sqljdbc42.jar del paquete 6.0 es compatible con JDBC API 4.2. De forma similar, el archivo sqljdbc41.jar es compatible con la API de JDBC 4.1.
 
@@ -254,7 +279,7 @@ Los parámetros con valores de tabla proporcionan una manera sencilla de seriali
 
 El controlador ahora admite conexiones transparentes a grupos de disponibilidad AlwaysOn. El controlador detecta rápidamente la topología Always On actual de la infraestructura de servidor y conecta con el servidor activo actual de forma transparente.
 
-## <a name="updates-in-microsoft-jdbc-driver-42-for-sql-server-and-later"></a>Actualizaciones de Microsoft JDBC Driver 4.2 para SQL Server y versiones posteriores
+## <a name="42"></a>4.2
 
 Microsoft JDBC Driver 4.2 para SQL Server es totalmente compatible con las especificaciones de JDBC 4.1 y 4.2. Los archivos JAR en el paquete de 4.2 se nombran según su cumplimiento con la versión de API de JDBC. Por ejemplo, el archivo sqljdbc42.jar desde el paquete de 4.2 es compatible con JDBC API 4.2. De forma similar, el archivo sqljdbc41.jar es compatible con la API de JDBC 4.1.
 
@@ -285,7 +310,7 @@ El controlador dispone de nuevas opciones de tiempo de espera para la reversión
 
 El controlador usa una nueva propiedad de conexión para facilitar la flexibilidad con las conexiones de Kerberos. Para obtener más información, vea [Using Kerberos Integrated Authentication to Connect to SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) (Uso de la autenticación integrada de Kerberos para conectar con SQL Server).
 
-## <a name="updates-in-microsoft-jdbc-driver-41-for-sql-server-and-later"></a>Actualizaciones de Microsoft JDBC Driver 4.1 para SQL Server y versiones posteriores
+## <a name="41"></a>4.1
 
 ### <a name="support-for-jdk-7"></a>Compatibilidad con JDK 7
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675464"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280629"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
 
@@ -38,9 +38,9 @@ SQL Server 2017 es compatible con Ubuntu, SUSE Linux Enterprise Server (SLES) y 
 
 | Plataforma | Versiones admitidas | Obtener
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 o 7.4 | [Obtener RHEL 7.4](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | SP2 de V12 | [Obtener el Service Pack 2 SLES v12](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Obtener Ubuntu 16.04](https://www.ubuntu.com/download/server)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Obtener RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](https://www.ubuntu.com/download/server)
 | **Motor de docker** | 1.8+ | [Obtener Docker](https://www.docker.com/products/overview)
 
 Microsoft también admite la implementación y administración de contenedores de SQL Server mediante el uso de OpenShift y Kubernetes.
@@ -193,7 +193,7 @@ Si su equipo Linux no tiene acceso a los repositorios en línea que se usan en e
     > [!NOTE]
     > También puede instalar los paquetes RPM (RHEL y SLES) con el `rpm -ivh` comando, pero los comandos en la tabla anterior instalan automáticamente dependencias si aprueban disponibles desde los repositorios.
 
-1. **Resolver las dependencias que faltan**: es posible que tenga dependencias que faltan en este momento. Si no es así, puede omitir este paso. En Ubuntu, si tiene acceso a repositorios aprobados que contiene esas dependencias, la solución más fácil es usar el `apt-get -f install` comando. Este comando también completa la instalación de SQL Server. Para inspeccionar manualmente las dependencias, use los siguientes comandos:
+1. **Resolver las dependencias que faltan**: Es posible que tenga dependencias que faltan en este momento. Si no es así, puede omitir este paso. En Ubuntu, si tiene acceso a repositorios aprobados que contiene esas dependencias, la solución más fácil es usar el `apt-get -f install` comando. Este comando también completa la instalación de SQL Server. Para inspeccionar manualmente las dependencias, use los siguientes comandos:
 
    | Plataforma | Mostrar dependencias (comando) |
    |-----|-----|

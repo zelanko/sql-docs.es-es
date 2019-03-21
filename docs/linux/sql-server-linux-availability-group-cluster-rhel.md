@@ -5,18 +5,18 @@ description: Obtenga información acerca de los clústeres de grupo de disponibi
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 06/14/2017
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 44d39a44597a789c031ee10b862bffa2af6da883
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160611"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305634"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configuración de clúster RHEL para el grupo de disponibilidad de SQL Server
 
@@ -34,7 +34,7 @@ Para obtener más información sobre la configuración del clúster, las opcione
 
 Las siguientes secciones se recorra los pasos para configurar un clúster de Pacemaker y agregar un grupo de disponibilidad como recurso en el clúster de alta disponibilidad.
 
-## <a name="roadmap"></a>Mapa de ruta
+## <a name="roadmap"></a>Roadmap
 
 Los pasos para crear un grupo de disponibilidad en los servidores de Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto nivel: 
 
@@ -89,7 +89,7 @@ Cada nodo del clúster debe tener una suscripción adecuada para RHEL y la alta 
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Para obtener más información, consulte [del clúster de Pacemaker: el código abierto, alta disponibilidad](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Para obtener más información, consulte [del clúster de Pacemaker: el código abierto, alta disponibilidad](https://clusterlabs.org/pacemaker/). 
 
 Después de haber configurado la suscripción, complete los pasos siguientes para configurar a Pacemaker:
 
@@ -111,7 +111,7 @@ Vallado de nivel de nodo, se garantiza que un nodo no ejecuta todos los recursos
 
 Para obtener información acerca de STONITH y vallado, consulte los artículos siguientes:
 
-* [Clústeres de pacemaker desde cero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Clústeres de pacemaker desde cero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 * [Vallado y STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Complemento de alta disponibilidad de Red Hat con Pacemaker: Vallado](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
@@ -143,10 +143,10 @@ Para actualizar el valor de propiedad `true` ejecutar:
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-Para actualizar el `ag1` propiedad de recurso `failure-timeout` a `60s` ejecutar:
+Para actualizar el `ag_cluster` propiedad de recurso `failure-timeout` a `60s` ejecutar:
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 

@@ -13,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6c32d4cf8fe16ec52d8af3ade01cea82badd40cd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809447"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305843"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Información sobre SQL Server Master Data Services
 
@@ -27,13 +27,13 @@ ms.locfileid: "52809447"
   
   
 ## <a name="training"></a>Aprendizaje  
-* Para explorar las nuevas características y funciones introducidas en [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], pruebe este [**laboratorio virtual de TechNet**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) (es necesario iniciar sesión con la cuenta de Microsoft).  
-* Desarrolle una solución de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] para almacenar y administrar listas maestras de datos geográficos, con el Complemento para Excel y [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]; pruebe este [**laboratorio virtual de TechNet**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true). Creará entidades y jerarquías y usará [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para rellenar una tabla de dimensiones.  
+* Para explorar las nuevas características y las funciones introducidas en [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], pruebe una [Self-Paced laboratorio](https://www.microsoft.com/handsonlabs/selfpacedlabs) (inicie sesión con su cuenta de Microsoft es necesario).  
+* Para desarrollar un [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] soluciones para almacenar y administrar listas maestras de datos geográficos, con el complemento para Excel y el [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], pruebe una [Self-Paced laboratorio](https://www.microsoft.com/handsonlabs/selfpacedlabs). Creará entidades y jerarquías y usará [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para rellenar una tabla de dimensiones.  
   
 ## <a name="videos"></a>Vídeos  
 * Para obtener información sobre las nuevas capacidades de la versión [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**vea este vídeo**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
   
-## <a name="samples"></a>Ejemplos  
+## <a name="samples"></a>Muestras  
 * Para obtener más información sobre cómo se pueden estructurar los datos en [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] con modelos, entidades y jerarquías, pruebe los modelos de ejemplo que se incluyen al instalar [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Para obtener instrucciones sobre la implementación de los ejemplos, consulte [Implementar modelos de ejemplo y datos](../master-data-services/master-data-services-installation-and-configuration.md#deploySample).   
   
     Para obtener información sobre las actualizaciones de [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] de los modelos de ejemplo, vea [Ejemplos de SQL Server: Paquetes de implementación de modelo](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  

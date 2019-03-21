@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979921"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306043"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
@@ -203,7 +203,7 @@ Para obtener más información sobre el uso de NFS, consulte los siguientes recu
 
 * [NFS servidores y firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Montaje de un volumen NFS | Guía de administradores de red de Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Configuración del servidor NFS](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
+* [Configuración del servidor NFS | Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montar el directorio de archivos de base de datos para que apunte al almacenamiento compartido
 
@@ -334,9 +334,9 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
    - **Nombre del recurso IP de flotante**: Un nombre para el recurso de dirección IP virtual.
    - **Dirección IP**: La dirección IP que los clientes usarán para conectarse a la instancia en clúster de SQL Server. 
    - **Nombre del recurso del sistema de archivos**: Un nombre para el recurso de sistema de archivos.
-   - **dispositivo**: El recurso compartido NFS ruta de acceso
-   - **dispositivo**: La ruta de acceso local que está montado en el recurso compartido
-   - **fsType**: Tipo de recurso compartido de archivo (es decir, nfs)
+   - **device**: El recurso compartido NFS ruta de acceso
+   - **device**: La ruta de acceso local que está montado en el recurso compartido
+   - **fstype**: Tipo de recurso compartido de archivo (es decir, nfs)
 
    Actualice los valores de la siguiente secuencia de comandos para su entorno. Ejecutar en un nodo para configurar e iniciar el servicio en clúster.  
 

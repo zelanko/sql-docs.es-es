@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d86628ead47e1862c1fa1a3aea0e0c32f17f7700
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014846"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161652"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -234,7 +234,7 @@ Notas sobre la tabla:
  TRUE  
  Al recuperar datos del archivo de texto, cada valor que falta se almacena mediante el valor predeterminado del tipo de datos de la columna correspondiente en la definición de la tabla externa. Por ejemplo, reemplace un valor que falta con:  
   
--   0 si la columna se define como una columna numérica.
+-   0 si la columna se define como una columna numérica. Las columnas decimales no se admiten y generarán un error.
   
 -   Cadena vacía "" si la columna es una columna de cadena.
   

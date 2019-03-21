@@ -16,12 +16,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: ac844c8155202270dc9661c256259dd67d5f60ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997577"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973434"
 ---
 # <a name="sql-server-databases-object"></a>Databases (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53997577"
 |**Tamaño de registro activo total de grupo de registros**|Registro activo total actual almacenado en el administrador de búfer de caché compartido en bytes.|
 |**Tamaño de grupo compartido total del grupo de registros**|Uso de memoria total actual del administrador de búfer de caché compartido en bytes.|
 |**Reducciones del registro**|Número total de reducciones del registro para esta base de datos.|  
-|**Truncamientos de registro**|El número de veces que se ha reducido el registro de transacciones.|  
+|**Truncamientos de registro**|Número de truncamientos del registro de transacciones (en el modelo de recuperación simple).|  
 |**Porcentaje utilizado del registro**|Porcentaje de espacio del registro que está en uso.|  
 |**Transacciones pendientes de réplica**|Número de transacciones del registro de transacciones de la base de datos de publicación que están marcadas para replicación, pero que no se han entregado todavía a la base de datos de distribución.|  
 |**Transacciones de transacciones de replicación**|Número de transacciones leídas por segundo del registro de transacciones de la base de datos de publicación y entregadas a la base de datos de distribución.|  

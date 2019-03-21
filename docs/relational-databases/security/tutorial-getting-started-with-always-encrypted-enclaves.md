@@ -13,18 +13,18 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046585"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072319"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este tutorial se explica cómo empezar a trabajar con los [enclaves seguros de Always Encrypted](encryption/always-encrypted-enclaves.md). En él encontrará:
-- Cómo crear un entorno simple para probar y evaluar Always Encrypted con enclaves seguros.
+- Cómo crear un entorno básico para probar y evaluar Always Encrypted con enclaves seguros.
 - Cómo cifrar datos in situ y emitir consultas enriquecidas en columnas cifradas mediante SQL Server Management Studio (SSMS).
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -139,11 +139,11 @@ Si todo lo demás falla, ejecute Clear-HgsClientHostKey y repita los pasos del 4
 En este paso, deberá habilitar la funcionalidad de Always Encrypted usando enclaves en su instancia de SQL Server.
 
 1. Abra SSMS, conéctese a la instancia de SQL Server como sysadmin y abra una nueva ventana de consulta.
-2. Configure el tipo de enclave seguro a VBS.
+2. Establezca el tipo de enclave seguro para la seguridad basada en la virtualización (VBS).
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. Reinicie su instancia de SQL Server para que se aplique el cambio anterior. Puede reiniciar la instancia en SSMS haciendo clic con el botón derecho en ella en el Explorador de objetos y seleccionando Reiniciar. Cuando se reinicie la instancia, vuelva a conectarse a ella.
@@ -152,10 +152,10 @@ En este paso, deberá habilitar la funcionalidad de Always Encrypted usando encl
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
-    La consulta debería devolver una fila con un aspecto similar al siguiente:  
+    La consulta debe devolver el resultado siguiente:  
 
     | NAME                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -164,7 +164,7 @@ En este paso, deberá habilitar la funcionalidad de Always Encrypted usando encl
 5. Para habilitar los cálculos completos en columnas cifradas, ejecute la siguiente consulta:
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -177,7 +177,7 @@ En este paso, creará una base de datos con algunos datos de ejemplo, que cifrar
 2. Cree una base de datos denominada ContosoHR.
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR];
     ```
 
 3. Compruebe que esté conectado a la base de datos recién creada. Cree una tabla denominada Empleados.
@@ -190,8 +190,7 @@ En este paso, creará una base de datos con algunos datos de ejemplo, que cifrar
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
-    GO
+    ) ON [PRIMARY];
     ```
 
 4. Agregue algunos registros de empleados a la tabla Empleados.
@@ -206,9 +205,8 @@ En este paso, creará una base de datos con algunos datos de ejemplo, que cifrar
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
-    GO
-
+            , $31692);
+ 
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -218,8 +216,7 @@ En este paso, creará una base de datos con algunos datos de ejemplo, que cifrar
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
-    GO
+            , $55415);
     ```
 
 ## <a name="step-5-provision-enclave-enabled-keys"></a>Paso 5: Aprovisionar claves habilitadas para el enclave
@@ -238,7 +235,7 @@ En este paso, creará una clave de columna maestra y una clave de cifrado de col
     7. Seleccione **Aceptar**.
 
         ![Permitir cálculos de enclave](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-
+    
 4. Cree una nueva clave de cifrado de columnas habilitada para el enclave:
 
     1. Haga clic con el botón derecho en **Claves de Always Encrypted** y seleccione **Nueva clave maestra de columna**.
@@ -254,40 +251,40 @@ En este paso, va a cifrar los datos almacenados en las columnas SSN y Salario de
     1. En SSMS, abra una nueva ventana de consulta.
     2. Haga clic con el botón derecho en la ventana de consulta nueva.
     3. Seleccione Conexión \> Cambiar conexión.
-    4. Seleccione **Opciones**. Vaya a la pestaña **Always Encrypted**, seleccione **Habilitar Always Encrypted** y especifique su dirección URL de atestación de enclave.
+    4. Seleccione **Opciones**. Vaya a la pestaña **Always Encrypted**, seleccione **Habilitar Always Encrypted** y especifique su dirección URL de atestación de enclave (por ejemplo, ht<span>tp://</span>hgs.bastion.local/Attestation).
     5. Seleccione **Conectar**.
-2. En SSMS, configure otra ventana de consulta con la opción Always Encrypted deshabilitada para la conexión de base de datos.
+    6. Cambie el contexto de la base de datos por la base de datos ContosoHR.
+1. En SSMS, configure otra ventana de consulta con la opción Always Encrypted deshabilitada para la conexión de base de datos.
     1. En SSMS, abra una nueva ventana de consulta.
     2. Haga clic con el botón derecho en la ventana de consulta nueva.
     3. Seleccione Conexión \> Cambiar conexión.
     4. Seleccione **Opciones**. Vaya a la pestaña **Always Encrypted**, asegúrese de que la opción **Habilitar Always Encrypted** no esté seleccionada.
     5. Seleccione **Conectar**.
-3. Cifre las columnas SSN y Salario. En la ventana de consulta, con la opción Always Encrypted habilitada, pegue y ejecute las siguientes instrucciones:
+    6. Cambie el contexto de la base de datos por la base de datos ContosoHR.
+1. Cifre las columnas SSN y Salario. En la ventana de consulta, con la opción Always Encrypted habilitada, pegue y ejecute el siguiente script:
 
     ```sql
     ALTER TABLE [dbo].[Employees]
-    ALTER COLUMN [SSN] [char] (11)
+    ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
-
+    (ONLINE = ON);
+     
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
+    (ONLINE = ON);
+ 
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+    > [!NOTE]
+    > Observe la instrucción ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE para borrar la memoria caché del plan de consulta para la base de datos en el script anterior. Después de modificar la tabla, deberá borrar los planes de todos los lotes y procedimientos almacenados que tengan acceso a la tabla con el fin de actualizar la información de cifrado de los parámetros. 
 
 4. Para comprobar si las columnas SSN y Salario están cifradas, pegue la siguiente instrucción en la ventana de consulta y ejecútela con la opción Always Encrypted deshabilitada. La ventana de consulta debe devolver valores cifrados de las columnas SSN y Salario. Con la ventana de consulta habilitada para Always Encrypted, pruebe la misma consulta para ver los datos descifrados.
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>Paso 7: Ejecutar consultas completas sobre columnas cifradas
@@ -298,13 +295,13 @@ Ahora puede ejecutar consultas completas sobre columnas cifradas. Se realizará 
     1. Seleccione **Consulta** en el menú principal de SSMS.
     2. Seleccione **Opciones de consulta…**.
     3. Vaya a **Ejecución** > **Avanzadas**.
-    4. Seleccione o anule la selección de Habilitar parametrización de Always Encrypted.
-    5. Seleccione Aceptar.
+    4. Seleccione **Habilitar parametrización para Always Encrypted**.
+    5. Seleccione **Aceptar**.
 2. En la ventana de consulta, con la opción Always Encrypted habilitada, pegue y ejecute la siguiente consulta. La consulta debe devolver los valores de texto no cifrado y las filas que cumplan los criterios de búsqueda especificados.
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```

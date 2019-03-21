@@ -1,7 +1,7 @@
 ---
 title: Guía de arquitectura de páginas y extensiones | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748487"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974374"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guía de arquitectura de páginas y extensiones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,6 +64,18 @@ Las filas no pueden abarcar páginas; no obstante, se pueden apartar de la pági
 Esta restricción es menos estricta para tablas que contienen columnas varchar, nvarchar, varbinary o sql_variant. Cuando el tamaño de fila total de todas las columnas variables y fijas de una tabla excede el límite de 8060 bytes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mueve dinámicamente una o más columnas de longitud variable a páginas de la unidad de asignación ROW_OVERFLOW_DATA, empezando por la columna con el mayor ancho. 
 
 Esto se realiza cuando una operación de inserción o actualización aumenta el tamaño total de la fila más allá del límite de 8060 bytes. Cuando una columna se mueve a una página de la unidad de asignación ROW_OVERFLOW_DATA, se mantiene un puntero de 24 bytes de la página original de la unidad de asignación IN_ROW_DATA. Si una operación posterior reduce el tamaño de la fila ,[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vuelve a mover las columnas dinámicamente a la página de datos original. 
+
+##### <a name="row-overflow-considerations"></a>Consideraciones acerca del desbordamiento de fila 
+
+Al combinar las columnas varchar, nvarchar, varbinary, sql_variant o de tipo definido por el usuario CLR que superen los 8060 bytes por fila, tenga en cuenta lo siguiente: 
+-  El movimiento de registros grandes a otra página tiene lugar de forma dinámica a medida que la longitud de los registros aumenta en función de las operaciones de actualización. Las operaciones de actualización que reducen la longitud de los registros pueden hacer que los registros se vuelvan a colocar en la página original de la unidad de asignación IN_ROW_DATA. El hecho de consultar y realizar otras operaciones de selección, como puedan ser ordenaciones o combinaciones en registros grandes que contengan datos de desbordamiento de fila, ralentiza el tiempo de procesamiento, ya que estos registros se procesan sincrónicamente en lugar de asincrónicamente.   
+   Por lo tanto, al diseñar una tabla con varias columnas varchar, nvarchar, varbinary, sql_variant o de tipo definido por el usuario CLR, tenga en cuenta el porcentaje de filas que tienen posibilidades de desbordarse y la frecuencia con la que se consultarán estos datos de desbordamiento. Si es muy probable que se realicen consultas con frecuencia en muchas filas de los datos de desbordamiento de fila, considere la posibilidad de normalizar la tabla para que algunas columnas se muevan a otra tabla. Más adelante, puede realizar la consulta en una operación JOIN asincrónica. 
+-  La longitud de las columnas individuales debe estar comprendida en el límite de 8000 bytes para las columnas varchar, nvarchar, varbinary, sql_variant y de tipo definido por el usuario CLR. Solo la combinación de sus longitudes puede superar el límite de fila de 8.060 bytes de una tabla.
+-  La suma de otras columnas de tipos de datos, incluidos los datos char y nchar, debe estar comprendida en el límite de fila de 8060 bytes. Los datos de objeto grande no están sometidos al límite de fila de 8.060 bytes. 
+-  La clave de índice de un índice agrupado no puede contener columnas varchar con datos existentes en la unidad de asignación ROW_OVERFLOW_DATA. Si se crea un índice agrupado en una columna varchar y los datos existentes están en la unidad de asignación IN_ROW_DATA, no se realizarán correctamente las siguientes acciones de inserción o actualización en la columna que intenten insertar los datos de manera no consecutiva. Para obtener más información acerca de las unidades de asignación, vea Organización de tablas e índices.
+-  Puede incluir columnas que contengan datos de desbordamiento de fila como columnas de clave o sin clave de un índice no clúster.
+-  El tamaño máximo del registro para las tablas que usan columnas dispersas es de 8.018 bytes. Si los datos convertidos más los datos de registro existentes superan los 8018 bytes, se devolverá el error [MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md). Si las columnas pasan de dispersas a no dispersas y viceversa, el Motor de base de datos mantendrá una copia de los datos del registro actuales. Esto duplica temporalmente el almacenamiento necesario para el registro.
+-  Para obtener más información sobre las tablas o los índices que pueden contener datos de desbordamiento de fila, use la función de administración dinámica [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
 ### <a name="extents"></a>Extents 
 
@@ -177,4 +189,6 @@ El intervalo entre las páginas DCM y BCM es el mismo que el intervalo entre las
 
 ## <a name="see-also"></a>Consulte también
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[Montones &#40;tablas sin índices agrupados&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[Montones &#40;tablas sin índices agrupados&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[Leer páginas](../relational-databases/reading-pages.md)   
+[Escribir páginas](../relational-databases/writing-pages.md)   

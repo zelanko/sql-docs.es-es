@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 881949902c2c198db4f03b2741a822d9c2b2e13e
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579735"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161692"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57579735"
 El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] procesa consultas en varias arquitecturas de almacenamiento de datos como tablas locales, tablas con particiones y tablas distribuidas en varios servidores. En los temas siguientes se trata el modo en que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procesa las consultas y optimiza la reutilización de consultas a través del almacenamiento en caché de los planes de ejecución.
 
 ## <a name="execution-modes"></a>Modos de ejecución
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] puede procesar las instrucciones SQL mediante dos modos de procesamiento distintos:
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] puede procesar las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] mediante dos modos de procesamiento distintos:
 - Ejecución del modo de fila
 - Ejecución del modo por lotes
 
@@ -51,7 +51,7 @@ Para más información sobre los índices de almacén de columnas, vea [Arquitec
 > La ejecución del modo por lotes es muy eficaz en escenarios de almacenamiento de datos, donde se leen y se agregan grandes cantidades de datos.
 
 ## <a name="sql-statement-processing"></a>Procesamiento de instrucciones SQL
-La forma más básica de ejecutar instrucciones SQL en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consiste en procesar una única instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. Los pasos que se usan para procesar una única instrucción `SELECT` que solo hace referencia a tablas base locales (no a vistas ni a tablas remotas) ilustran el proceso básico.
+La forma más básica de ejecutar instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consiste en procesar una única instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. Los pasos que se usan para procesar una única instrucción `SELECT` que solo hace referencia a tablas base locales (no a vistas ni a tablas remotas) ilustran el proceso básico.
 
 ### <a name="logical-operator-precedence"></a>Prioridad de los operadores lógicos
 Cuando en una instrucción se usa más de un operador lógico, primero se evalúa `NOT`, luego `AND` y, finalmente, `OR`. Los operadores aritméticos y bit a bit se tratan antes que los operadores lógicos. Para más información, vea [Prioridad de operador](../t-sql/language-elements/operator-precedence-transact-sql.md).
@@ -215,22 +215,22 @@ END;
 Cuando se optimiza la instrucción `SELECT` de *MyProc2* en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el valor de `@d2` no se conoce. Por lo tanto, el optimizador de consultas utiliza una estimación predeterminada para la selectividad de `OrderDate > @d2`, (en este caso, un 30 por ciento).
 
 ### <a name="processing-other-statements"></a>Procesar otras instrucciones
-Los pasos básicos descritos para procesar una instrucción `SELECT` se aplican a otras instrucciones SQL como `INSERT`, `UPDATE`y `DELETE`. Las instrucciones`UPDATE` y `DELETE` deben identificar el conjunto de filas que se van a modificar o eliminar. El proceso de identificación de estas filas es el mismo que se utiliza para identificar las filas de origen que contribuyen al conjunto de resultados de una instrucción `SELECT` . Las instrucciones `UPDATE` e `INSERT` pueden contener instrucciones `SELECT` incrustadas que proporcionan los valores de los datos que se van a actualizar o insertar.
+Los pasos básicos descritos para procesar una instrucción `SELECT` se aplican a otras instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)], como `INSERT`, `UPDATE` y `DELETE`. Las instrucciones`UPDATE` y `DELETE` deben identificar el conjunto de filas que se van a modificar o eliminar. El proceso de identificación de estas filas es el mismo que se utiliza para identificar las filas de origen que contribuyen al conjunto de resultados de una instrucción `SELECT` . Las instrucciones `UPDATE` e `INSERT` pueden contener instrucciones `SELECT` incrustadas que proporcionan los valores de los datos que se van a actualizar o insertar.
 
 Incluso las instrucciones del lenguaje de definición de datos (DDL), como `CREATE PROCEDURE` o `ALTER TABLE`, se resuelven en última instancia en un conjunto de operaciones relacionales en las tablas de catálogo del sistema y, a veces (como `ALTER TABLE ADD COLUMN`) en las tablas de datos.
 
 ### <a name="worktables"></a>Tablas de trabajo
-El motor relacional puede necesitar generar una tabla de trabajo para realizar una operación lógica que se especifica en una instrucción SQL. Las tablas de trabajo son tablas internas que se utilizan para almacenar resultados intermedios. Se generan para determinadas consultas `GROUP BY`, `ORDER BY`o `UNION` . Por ejemplo, si una cláusula `ORDER BY` hace referencia a columnas que no están cubiertas por índices, el motor relacional puede necesitar generar una tabla de trabajo para ordenar el conjunto de resultados en el orden solicitado. Las tablas de trabajo también se utilizan en ocasiones a modo de colas que contienen temporalmente el resultado de ejecutar parte de un plan de consulta. Las tablas de trabajo se generan en tempdb y se eliminan de forma automática cuando ya no se necesitan.
+El motor relacional puede necesitar generar una tabla de trabajo para realizar una operación lógica que se especifica en una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. Las tablas de trabajo son tablas internas que se utilizan para almacenar resultados intermedios. Se generan para determinadas consultas `GROUP BY`, `ORDER BY`o `UNION` . Por ejemplo, si una cláusula `ORDER BY` hace referencia a columnas que no están cubiertas por índices, el motor relacional puede necesitar generar una tabla de trabajo para ordenar el conjunto de resultados en el orden solicitado. Las tablas de trabajo también se utilizan en ocasiones a modo de colas que contienen temporalmente el resultado de ejecutar parte de un plan de consulta. Las tablas de trabajo se generan en tempdb y se eliminan de forma automática cuando ya no se necesitan.
 
 ### <a name="view-resolution"></a>Resolución de vistas
 El procesador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trata las vistas indizadas y no indizadas de manera diferente. 
 
 * Las filas de una vista indizada se almacenan en la base de datos con el mismo formato que una tabla. Si el optimizador de consultas decide utilizar una vista indizada en un plan de consulta, ésta recibe el mismo tratamiento que la tabla base.
-* Solo se almacena la definición de una vista no indizada, y no las filas de la vista. El Optimizador de consultas incorpora la lógica de la definición de la vista en el plan de ejecución que genera para la instrucción SQL que hace referencia a la vista no indexada. 
+* Solo se almacena la definición de una vista no indizada, y no las filas de la vista. El optimizador de consultas incorpora la lógica de la definición de la vista en el plan de ejecución que genera para la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] que hace referencia a la vista no indexada. 
 
-La lógica usada por el Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para decidir cuándo se usa una vista indexada es muy similar a la lógica que se usa para decidir cuándo se usa un índice en una tabla. Si los datos de la vista indexada cubren toda o parte de la instrucción SQL y el Optimizador de consultas determina que un índice de la vista es la ruta de acceso menos costosa, el Optimizador de consultas elegirá el índice independientemente de si se hace referencia a la vista por su nombre en la consulta.
+La lógica usada por el Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para decidir cuándo se usa una vista indexada es muy similar a la lógica que se usa para decidir cuándo se usa un índice en una tabla. Si los datos de la vista indexada cubren toda o parte de la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] y el optimizador de consultas determina que un índice de la vista es la ruta de acceso menos costosa, este elegirá el índice independientemente de si se hace referencia a la vista por su nombre en la consulta.
 
-Cuando una instrucción SQL hace referencia a una vista no indizada, el analizador y el optimizador de consultas analizan el origen de la instrucción SQL y de la vista, y luego las resuelven en un plan de ejecución único. No hay un plan para la instrucción SQL y otro plan para la vista.
+Si una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] hace referencia a una vista no indizada, el analizador y el optimizador de consultas analizarán el origen de la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] y de la vista. Luego, las resolverán en un plan de ejecución único. No hay un plan para la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] y otro para la vista.
 
 Por ejemplo, considere la vista siguiente:
 
@@ -245,7 +245,7 @@ ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
-En función de esta vista, ambas instrucciones SQL realizan las mismas operaciones en las tablas base y producen el mismo resultado:
+En función de esta vista, ambas instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] realizan las mismas operaciones en las tablas base y producen el mismo resultado:
 
 ```sql
 /* SELECT referencing the EmployeeName view. */
@@ -371,7 +371,7 @@ El procesador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea planes dinámicos e inteligentes que hacen un uso eficaz de las consultas distribuidas para tener acceso a los datos de las tablas miembro remotas: 
 
 * El Procesador de consultas usa en primer lugar OLE DB para recuperar las definiciones de la restricción CHECK de cada tabla miembro. Esto permite al procesador de consultas asignar la distribución de valores clave a las tablas miembro.
-* The Query Processor compares the key ranges specified in an SQL statement `WHERE` de una instrucción SQL con el mapa que muestra cómo se distribuyen las filas en las tablas miembro. El procesador de consultas crea entonces un plan de ejecución de consultas que utiliza consultas distribuidas para recuperar únicamente las filas remotas necesarias para completar la instrucción SQL. El plan de ejecución se crea también de tal manera que cualquier acceso a las tablas miembro remotas, para datos o metadatos, se demora hasta que se requiere la información.
+* El procesador de consultas compara los intervalos de clave especificados en la cláusula `WHERE` de una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] con el mapa que muestra cómo se distribuyen las filas en las tablas miembro. El procesador de consultas crea entonces un plan de ejecución de consultas que utiliza consultas distribuidas para recuperar únicamente las filas remotas necesarias para completar la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. El plan de ejecución se crea también de tal manera que cualquier acceso a las tablas miembro remotas, para datos o metadatos, se demora hasta que se requiere la información.
 
 Por ejemplo, imagine un sistema donde una tabla de clientes está dividida en Server1 (`CustomerID` de 1 a 3299999), Server2 (`CustomerID` de 3300000 a 6599999) y Server3 (`CustomerID` de 6600000 a 9999999).
 
@@ -385,7 +385,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 El plan de ejecución para esta consulta extrae las filas con los valores clave de `CustomerID` de 3200000 a 3299999 de la tabla miembro local, y emite una consulta distribuida para recuperar las filas con los valores de clave de 3300000 a 3400000 de Server2.
 
-El Procesador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] también puede crear lógica dinámica en planes de ejecución de consultas para instrucciones SQL. Los valores clave de estas instrucciones no se conocen cuando se tiene que crear el plan. Tome como ejemplo este procedimiento almacenado:
+El procesador de consultas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] también puede crear lógica dinámica en planes de ejecución de consultas para instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]. Los valores clave de estas instrucciones no se conocen cuando se tiene que crear el plan. Tome como ejemplo este procedimiento almacenado:
 
 ```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
@@ -410,7 +410,7 @@ A veces [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera ese tipo d
 
 ## <a name="stored-procedure-and-trigger-execution"></a>Ejecutar un procedimiento almacenado y un desencadenador
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]almacena únicamente el origen de procedimientos almacenados y desencadenadores. La primera vez que se ejecuta un procedimiento almacenado o un desencadenador, el origen se compila en un plan de ejecución. Si el procedimiento almacenado o el desencadenador se ejecutan de nuevo antes de que el plan de ejecución quede anticuado en la memoria, el motor relacional detecta el plan existente y vuelve a utilizarlo. Si el plan ha quedado anticuado en la memoria, se genera uno nuevo. Este proceso es similar al que sigue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para procesar todas las instrucciones SQL. La principal ventaja de rendimiento que tienen los procedimientos almacenados y los desencadenadores en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en comparación con lotes de SQL dinámico, es que sus instrucciones SQL siempre son las mismas. Por lo tanto, el motor relacional los hace coincidir fácilmente con los planes de ejecución existentes. El procedimiento almacenado y los planes del desencadenador se reutilizan fácilmente.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]almacena únicamente el origen de procedimientos almacenados y desencadenadores. La primera vez que se ejecuta un procedimiento almacenado o un desencadenador, el origen se compila en un plan de ejecución. Si el procedimiento almacenado o el desencadenador se ejecutan de nuevo antes de que el plan de ejecución quede anticuado en la memoria, el motor relacional detecta el plan existente y vuelve a utilizarlo. Si el plan ha quedado anticuado en la memoria, se genera uno nuevo. Este proceso es similar al que sigue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para procesar todas las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]. La principal ventaja de rendimiento que tienen los procedimientos almacenados y los desencadenadores en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en comparación con lotes de [!INCLUDE[tsql](../includes/tsql-md.md)] dinámico, es que sus instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] siempre son las mismas. Por lo tanto, el motor relacional los hace coincidir fácilmente con los planes de ejecución existentes. El procedimiento almacenado y los planes del desencadenador se reutilizan fácilmente.
 
 El plan de ejecución para los procedimientos almacenados y los desencadenadores se ejecuta aparte del plan de ejecución del lote que llama al procedimiento almacenado o que activa el desencadenador. Esto proporciona mayor flexibilidad para volver a utilizar los planes de ejecución de los procedimientos almacenados y desencadenadores.
 
@@ -420,16 +420,21 @@ El plan de ejecución para los procedimientos almacenados y los desencadenadores
 
 Los planes de ejecución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tienen los siguientes componentes principales: 
 
-* Plan de ejecución de consulta: la mayor parte del plan de ejecución es una estructura de datos reentrante de solo lectura que varios usuarios pueden usar. Esto se conoce como plan de consulta. No se almacena ningún contexto de usuario en el plan de consulta. Nunca hay más de una o dos copias del plan de consulta en la memoria: una copia para todas las ejecuciones en serie y otra para todas las ejecuciones en paralelo. La copia en paralelo cubre todas las ejecuciones en paralelo, sin tener en cuenta el grado de paralelismo. 
-* Contexto de ejecución: cada usuario que ejecuta la consulta tiene una estructura de datos que alberga los datos específicos de su ejecución, como los valores de los parámetros. Esta estructura de datos se conoce como contexto de ejecución. Las estructuras de datos del contexto de ejecución se vuelven a utilizar. Si un usuario ejecuta una consulta y una de las estructuras no está en uso, ésta se reinicializa con el contexto del nuevo usuario. 
+- **Plan de ejecución de la consulta**     
+  La mayor parte del plan de ejecución es una estructura de datos reentrante de solo lectura que varios usuarios pueden utilizar. Esto se conoce como plan de consulta. No se almacena ningún contexto de usuario en el plan de consulta. Nunca hay más de una o dos copias del plan de consulta en la memoria: una copia para todas las ejecuciones en serie y otra para todas las ejecuciones en paralelo. La copia en paralelo cubre todas las ejecuciones en paralelo, sin tener en cuenta el grado de paralelismo. 
+- **Contexto de ejecución**     
+  Cada usuario que ejecuta la consulta tiene una estructura de datos que alberga los datos específicos de su ejecución, como los valores de los parámetros. Esta estructura de datos se conoce como contexto de ejecución. Las estructuras de datos del contexto de ejecución se vuelven a utilizar. Si un usuario ejecuta una consulta y una de las estructuras no está en uso, ésta se reinicializa con el contexto del nuevo usuario. 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-Cuando se ejecuta una instrucción SQL en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el motor relacional busca primero en la caché de planes para comprobar la existencia de un plan de ejecución para la misma instrucción SQL. La instrucción SQL se considera existente si coincide literalmente con una instrucción SQL ejecutada anteriormente con un plan en caché, carácter a carácter. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vuelve a usar cualquier plan existente que encuentra, de forma que se ahorra la sobrecarga de volver a compilar la instrucción SQL. Si no existe ningún plan de ejecución, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera uno nuevo para la consulta.
+Al ejecutar una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el motor relacional busca primero en la caché de planes para comprobar la existencia de un plan de ejecución para la misma instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. La instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] se considera existente si coincide literalmente con una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] ejecutada anteriormente con un plan en caché, carácter a carácter. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vuelve a usar cualquier plan existente que encuentra, de forma que se ahorra la sobrecarga de volver a compilar la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. Si no existe ningún plan de ejecución, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera uno nuevo para la consulta.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene un algoritmo eficiente que permite encontrar cualquier plan de ejecución existente para una determinada instrucción SQL. En la mayor parte de los sistemas, los recursos mínimos que utiliza este recorrido son menos que los recursos que se ahorran al poder utilizar de nuevo los planes existentes en lugar de compilar cada instrucción SQL.
+> [!NOTE]
+> Algunas instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] no se almacenan en la caché, como, por ejemplo, instrucciones de operaciones masivas que se ejecutan en almacén de filas o instrucciones que contienen literales de cadenas de más de 8 KB.
 
-Los algoritmos que hacen coincidir las instrucciones SQL nuevas con los planes de ejecución existentes no utilizados de la caché requieren que todas las referencias a objetos estén completas. Por ejemplo, supongamos que `Person` es el esquema predeterminado para el usuario que ejecuta las instrucciones `SELECT` siguientes. Aunque en este ejemplo no es necesario que la tabla `Person` tenga un nombre completo para ejecutarse, significa que la segunda instrucción no se corresponde con un plan existente, pero se hace coincidir con la tercera:
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene un algoritmo eficiente que permite encontrar cualquier plan de ejecución existente para una determinada instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. En la mayor parte de los sistemas, los recursos mínimos que utiliza este recorrido son menos que los recursos que se ahorran al poder utilizar de nuevo los planes existentes en lugar de compilar cada instrucción [!INCLUDE[tsql](../includes/tsql-md.md)].
+
+Los algoritmos que hacen coincidir las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] nuevas con los planes de ejecución existentes no utilizados de la caché requieren que todas las referencias a objetos estén completas. Por ejemplo, supongamos que `Person` es el esquema predeterminado para el usuario que ejecuta las instrucciones `SELECT` siguientes. Aunque en este ejemplo no es necesario que la tabla `Person` tenga un nombre completo para ejecutarse, significa que la segunda instrucción no se corresponde con un plan existente, pero se hace coincidir con la tercera:
 
 ```sql
 SELECT * FROM Person;
@@ -499,8 +504,8 @@ La columna `recompile_cause` del xEvent `sql_statement_recompile` contiene un c�
 
 > [!NOTE]
 > En las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en las que no hay xEvents disponibles, se puede usar el evento de seguimiento [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) del generador de perfiles de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para crear informes de recompilaciones de instrucciones.
-> El evento de seguimiento [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) también informa de recompilaciones de instrucciones, y se puede usar para realizar un seguimiento de las recompilaciones y depurarlas. Aunque SP:Recompile solo se genera para procedimientos almacenados y desencadenadores, SQL:StmtRecompile se genera para procedimientos almacenados, desencadenadores, lotes ad hoc, lotes que se ejecutan mediante `sp_executesql`, consultas preparadas y SQL dinámico.
-> La columna *EventSubClass* de SP:Recompile y SQL:StmtRecompile contiene un código entero que indica la razón de la recompilación. Los códigos se describen [aquí](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
+> El evento de seguimiento [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) también informa de recompilaciones de instrucciones, y se puede usar para realizar un seguimiento de las recompilaciones y depurarlas. Aunque SP:Recompile solo se genera para procedimientos almacenados y desencadenadores, `SQL:StmtRecompile` se genera para procedimientos almacenados, desencadenadores, lotes ad hoc, lotes que se ejecutan mediante `sp_executesql`, consultas preparadas y SQL dinámico.
+> La columna *EventSubClass* de `SP:Recompile` y `SQL:StmtRecompile` contiene un código de número entero que indica la razón de la recompilación. Los códigos se describen [aquí](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
 
 > [!NOTE]
 > Si la opción de base de datos `AUTO_UPDATE_STATISTICS` se establece en `ON`, las consultas se vuelven a compilar cuando su destino son tablas o vistas indexadas cuyas estadísticas se han actualizado o cuyas cardinalidades han cambiado mucho desde la última ejecución. Este comportamiento se aplica a tablas estándar definidas por el usuario, a tablas temporales y a tablas insertadas y eliminadas creadas por desencadenadores DML. Si el rendimiento de la consulta se ve afectado por un número excesivo de recompilaciones, considere la posibilidad de cambiar esta opción a `OFF`. Cuando la opción de base de datos `AUTO_UPDATE_STATISTICS` está establecida en `OFF`, no se producen recompilaciones basadas en estadísticas o cambios en la cardinalidad, a excepción de las tablas insertadas y eliminadas que se crean mediante los desencadenadores DML `INSTEAD OF`. Como estas tablas se crean en tempdb, la recompilación de las consultas a las que tienen acceso depende de la configuración de `AUTO_UPDATE_STATISTICS` en tempdb. Tenga en cuenta que en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, las consultas se siguen recompilando en función de los cambios de cardinalidad de las tablas insertadas y eliminadas del desencadenador DML, incluso cuando esta opción está establecida en `OFF`.
@@ -526,9 +531,9 @@ FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-La única diferencia entre los planes de ejecución para estas consultas es el valor que se almacena para la comparación con la columna `ProductSubcategoryID` . Aunque el objetivo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es reconocer siempre que las instrucciones generan básicamente el mismo plan y volver a utilizar los planes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no siempre lo detecta en las instrucciones SQL complejas.
+La única diferencia entre los planes de ejecución para estas consultas es el valor que se almacena para la comparación con la columna `ProductSubcategoryID` . Aunque el objetivo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es reconocer siempre que las instrucciones generan básicamente el mismo plan y volver a utilizar los planes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no siempre lo detecta en las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] complejas.
 
-Separar las constantes de la instrucción SQL mediante parámetros ayuda al motor relacional a reconocer los planes duplicados. Puede utilizar los parámetros de varias maneras: 
+Separar las constantes de la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] mediante parámetros ayuda al motor relacional a reconocer los planes duplicados. Puede utilizar los parámetros de varias maneras: 
 
 * En [!INCLUDE[tsql](../includes/tsql-md.md)], use `sp_executesql`: 
 
@@ -576,12 +581,12 @@ Sin embargo, se puede parametrizar según las reglas de parametrización simple.
 
 ### <a name="SimpleParam"></a> Parametrización simple
 
-En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el uso de parámetros o marcadores de parámetros en instrucciones Transact-SQL aumenta la posibilidad de que el motor relacional encuentre planes de ejecución existentes y compilados previamente que coincidan con nuevas instrucciones SQL.
+En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el uso de parámetros o marcadores de parámetros en instrucciones Transact-SQL aumenta la posibilidad de que el motor relacional encuentre planes de ejecución existentes y compilados previamente que coincidan con nuevas instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)].
 
 > [!WARNING] 
 > La utilización de parámetros o marcadores de parámetros para contener valores que especifican los usuarios finales es más segura que la concatenación de valores en una cadena que después se ejecuta mediante un método de la API de acceso de datos, la instrucción `EXECUTE` o el procedimiento almacenado `sp_executesql` .
 
-Si una instrucción SQL se ejecuta sin parámetros, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametriza la instrucción internamente para aumentar las posibilidades de hacerla coincidir con un plan de ejecución existente. Este proceso se denomina parametrización simple. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, el proceso se denominaba parametrización automática.
+Si una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] se ejecuta sin parámetros, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametriza la instrucción internamente para aumentar las posibilidades de hacerla coincidir con un plan de ejecución existente. Este proceso se denomina parametrización simple. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, el proceso se denominaba parametrización automática.
 
 Considere esta instrucción:
 
@@ -601,7 +606,7 @@ SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-Cuando se procesan instrucciones SQL complejas, el motor relacional puede tener dificultades para determinar qué expresiones pueden parametrizarse. Para aumentar las posibilidades de que el motor relacional encuentre planes de ejecución existentes no utilizados que coincidan con instrucciones SQL complejas, especifique explícitamente los parámetros con sp_executesql o con marcadores de parámetros. 
+Al procesar instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] complejas, el motor relacional puede tener dificultades para determinar qué expresiones pueden parametrizarse. Para aumentar las posibilidades de que el motor relacional encuentre planes de ejecución existentes no utilizados que coincidan con instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] complejas, especifique explícitamente los parámetros con sp_executesql o con marcadores de parámetros. 
 
 > [!NOTE]
 > Cuando los operadores aritméticos +, -, \*, / o % se usan para realizar la conversión implícita o explícita de los valores de constante int, smallint, tinyint o bigint en los tipos de datos flotantes, reales, decimales o numéricos, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aplica reglas específicas para calcular el tipo y la precisión de los resultados de expresión. Sin embargo, estas reglas varían en función de si la consulta se parametriza o no. Por lo tanto, expresiones similares utilizadas en consultas pueden, en ciertos casos, producir resultados diferentes.
@@ -620,7 +625,7 @@ Cuando la opción `PARAMETERIZATION` está establecida en `FORCED`, cualquier va
 * Instrucciones incluidas en los cuerpos de procedimientos almacenados, desencadenadores o funciones definidas por el usuario. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ya vuelve a usar planes de consultas para estas rutinas.
 * Instrucciones preparadas que ya incluyen parámetros en la aplicación del lado cliente.
 * Instrucciones que contienen llamadas a métodos XQuery, en las que el método aparece en un contexto en el que los argumentos suelen incluir parámetros, como una cláusula `WHERE` . Si el método aparece en un contexto en el que los argumentos no incluyen parámetros, el resto de la instrucción incluye parámetros.
-* Instrucciones dentro de un cursor de Transact-SQL. (Las instrucciones`SELECT` contenidas en cursores de la API incluyen parámetros).
+* Instrucciones incluidas en un cursor de [!INCLUDE[tsql](../includes/tsql-md.md)]. (Las instrucciones`SELECT` contenidas en cursores de la API incluyen parámetros).
 * Construcciones de consulta desaprobadas.
 * Cualquier instrucción que se ejecuta en el contexto de `ANSI_PADDING` o `ANSI_NULLS` establecido en `OFF`.
 * Instrucciones que contienen más de 2.097 literales aptos para parametrización.
@@ -644,7 +649,7 @@ Las siguientes cláusulas de consulta no incluyen parámetros. Tenga en cuenta q
   * La expresión contiene una cláusula `CASE` .  
 * Argumentos para cláusulas de sugerencias de consulta. Estos incluyen el argumento `number_of_rows` de la sugerencia de consulta `FAST` , el argumento `number_of_processors` de la sugerencia de consulta `MAXDOP` y el argumento de número de la sugerencia de consulta `MAXRECURSION` .
 
-La parametrización se produce a nivel de instrucciones Transact-SQL individuales. En otras palabras, las instrucciones individuales de un lote incluyen parámetros. Tras la compilación, una consulta con parámetros se ejecuta en el contexto del lote en el que se envió originalmente. Si un plan de ejecución de una consulta se almacena en caché, puede determinar si la consulta incluía parámetros haciendo referencia a la columna sql de la vista de administración dinámica sys.syscacheobjects. Si una consulta incluye parámetros, los nombres y tipos de datos de parámetros se anteponen al texto del lote enviado en esta columna, como (\@1 tinyint).
+La parametrización se produce a nivel de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] individuales. En otras palabras, las instrucciones individuales de un lote incluyen parámetros. Tras la compilación, una consulta con parámetros se ejecuta en el contexto del lote en el que se envió originalmente. Si un plan de ejecución de una consulta se almacena en caché, puede determinar si la consulta incluía parámetros haciendo referencia a la columna sql de la vista de administración dinámica sys.syscacheobjects. Si una consulta incluye parámetros, los nombres y tipos de datos de parámetros se anteponen al texto del lote enviado en esta columna, como (\@1 tinyint).
 
 > [!NOTE]
 > Los nombres de parámetros son arbitrarios. Los usuarios o las aplicaciones no deben basarse en un determinado orden de nombres. Además, puede cambiar lo siguiente entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y las actualizaciones de Service Pack: los nombres de parámetro, la elección de literales con parámetros y el espaciado en el texto con parámetros.
@@ -678,15 +683,15 @@ Puede reemplazar el comportamiento de parametrización forzada si especifica que
 
 ### <a name="preparing-sql-statements"></a>Preparar instrucciones SQL
 
-El motor relacional de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona compatibilidad completa para preparar las instrucciones SQL antes de que se ejecuten. Si una aplicación necesita ejecutar una instrucción SQL varias veces, puede utilizar la API de bases de datos para lo siguiente: 
+El motor relacional de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona compatibilidad completa para preparar las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] antes de que se ejecuten. Si una aplicación necesita ejecutar una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] varias veces, puede utilizar la API de bases de datos para lo siguiente: 
 
-* Preparar la instrucción una vez. Esto compila la instrucción SQL en un plan de ejecución.
-* Ejecutar el plan de ejecución compilado previamente cada vez que necesite ejecutar la instrucción. Esto evita tener que volver a compilar la instrucción SQL después de la primera ejecución.   
-  Las funciones y los métodos de la API controlan la preparación y la ejecución de las instrucciones. No es parte del lenguaje Transact-SQL. El modelo de preparación y ejecución para ejecutar instrucciones SQL es compatible con el proveedor OLE DB de Native Client de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y con el controlador ODBC de Native Client de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En una solicitud de preparación, el proveedor o el controlador envían la instrucción a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con una solicitud para preparar la instrucción. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila un plan de ejecución y devuelve un identificador para ese plan al proveedor o al controlador. En una solicitud de ejecución, el proveedor o el controlador envían al servidor una solicitud para ejecutar el plan asociado al identificador. 
+* Preparar la instrucción una vez. Esto compila la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] en un plan de ejecución.
+* Ejecutar el plan de ejecución compilado previamente cada vez que necesite ejecutar la instrucción. Esto evita tener que volver a compilar la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] después de la primera ejecución.   
+  Las funciones y los métodos de la API controlan la preparación y la ejecución de las instrucciones. No forma parte del lenguaje [!INCLUDE[tsql](../includes/tsql-md.md)]. El modelo de preparación y ejecución para ejecutar instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] es compatible con el proveedor OLE DB de Native Client de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y con el controlador ODBC de Native Client de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En una solicitud de preparación, el proveedor o el controlador envían la instrucción a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con una solicitud para preparar la instrucción. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila un plan de ejecución y devuelve un identificador para ese plan al proveedor o al controlador. En una solicitud de ejecución, el proveedor o el controlador envían al servidor una solicitud para ejecutar el plan asociado al identificador. 
 
 Las instrucciones preparadas no se pueden utilizar para crear objetos temporales en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las instrucciones preparadas no pueden hacer referencia a procedimientos almacenados del sistema que creen objetos temporales, como tablas temporales. Estos procedimientos deben ejecutarse directamente.
 
-El uso excesivo del modelo de preparación y ejecución puede reducir el rendimiento. Si una instrucción solo se ejecuta una vez, una ejecución directa solo requiere un recorrido de ida y vuelta por la red al servidor. Preparar y ejecutar una instrucción SQL que solo se ejecuta una vez requiere un recorrido de ida y vuelta adicional al servidor; uno para preparar la instrucción y otro para ejecutarla.
+El uso excesivo del modelo de preparación y ejecución puede reducir el rendimiento. Si una instrucción solo se ejecuta una vez, una ejecución directa solo requiere un recorrido de ida y vuelta por la red al servidor. El hecho de preparar y ejecutar una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] que solo se ejecuta una vez requiere un recorrido de ida y vuelta adicional al servidor: uno para preparar la instrucción y otro para ejecutarla.
 
 Preparar una instrucción es más eficaz si se utilizan marcadores de parámetros. Por ejemplo, suponga que se solicita ocasionalmente a una aplicación que recupere información de productos de la base de datos de ejemplo `AdventureWorks` . Hay dos maneras en que la aplicación puede llevarlo cabo. 
 
@@ -709,9 +714,9 @@ En la segunda, la aplicación hace lo siguiente:
 
 La segunda forma es más eficaz cuando la instrucción se ejecuta más de tres veces.
 
-En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el modelo de preparación y ejecución no tiene ninguna ventaja significativa sobre el rendimiento de la ejecución directa, debido a la manera en que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reutiliza los planes de ejecución. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispone de algoritmos eficientes para hacer corresponder las instrucciones SQL actuales con los planes de ejecución que se generan para ejecuciones anteriores de la misma instrucción SQL. Si una aplicación ejecuta varias veces una instrucción SQL con marcadores de parámetros, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] volverá a usar el plan de ejecución de la primera ejecución para la segunda ejecución, así como para las siguientes (a menos que el plan quede anticuado en la caché de planes). El modelo de preparación y ejecución sigue teniendo estas ventajas: 
+En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el modelo de preparación y ejecución no tiene ninguna ventaja significativa sobre el rendimiento de la ejecución directa, debido a la manera en que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reutiliza los planes de ejecución. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispone de algoritmos eficientes para hacer corresponder las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] actuales con los planes de ejecución que se generan para ejecuciones anteriores de la misma instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. Si una aplicación ejecuta varias veces una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] con marcadores de parámetros, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] volverá a usar el plan de ejecución de la primera ejecución para la segunda ejecución, así como para las siguientes (a menos que el plan quede anticuado en la caché de planes). El modelo de preparación y ejecución sigue teniendo estas ventajas: 
 
-* Buscar un plan de ejecución mediante un identificador es más eficaz que los algoritmos que se utilizan para encontrar planes de ejecución existentes que coincidan con una instrucción SQL.
+* Buscar un plan de ejecución mediante un identificador es más eficaz que los algoritmos que se utilizan para encontrar planes de ejecución existentes que coincidan con una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)].
 * La aplicación puede controlar cuándo se crea el plan de ejecución y cuándo se vuelve a utilizar.
 * El modelo de preparación y ejecución se puede transportar a otras bases de datos, incluidas las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
@@ -908,20 +913,20 @@ Las instrucciones individuales `CREATE TABLE` o `ALTER TABLE` pueden tener varia
 
 ## <a name="distributed-query-architecture"></a>Arquitectura de consultas distribuidas
 
-Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos métodos para hacer referencia a orígenes de datos OLE DB heterogéneos en instrucciones Transact-SQL:
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos métodos para referenciar orígenes de datos OLE DB heterogéneos en instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)]:
 
 * Nombres de servidores vinculados  
-  Los procedimientos almacenados del sistema `sp_addlinkedserver` y `sp_addlinkedsrvlogin` se utilizan para dar un nombre de servidor a un origen de datos OLE DB. Se puede hacer referencia a los objetos de estos servidores vinculados en instrucciones Transact-SQL mediante nombres que consten de cuatro partes. Por ejemplo, si un nombre de servidor vinculado de `DeptSQLSrvr` se define en otra instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la instrucción siguiente hace referencia a una tabla de ese servidor: 
+  Los procedimientos almacenados del sistema `sp_addlinkedserver` y `sp_addlinkedsrvlogin` se utilizan para dar un nombre de servidor a un origen de datos OLE DB. Se puede hacer referencia a los objetos de estos servidores vinculados en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] mediante nombres que consten de cuatro partes. Por ejemplo, si un nombre de servidor vinculado de `DeptSQLSrvr` se define en otra instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la instrucción siguiente hace referencia a una tabla de ese servidor: 
   
   ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   El nombre del servidor vinculado también puede especificarse en una instrucción `OPENQUERY` para abrir un conjunto de filas desde un origen de datos OLE DB. Se puede hacer referencia a este conjunto de filas del mismo modo que a una tabla en las instrucciones Transact-SQL. 
+   El nombre del servidor vinculado también puede especificarse en una instrucción `OPENQUERY` para abrir un conjunto de filas desde un origen de datos OLE DB. Se puede hacer referencia a este conjunto de filas del mismo modo que a una tabla en las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]. 
 
 * Nombres de conectores ad hoc  
-  Para las referencias poco frecuentes a un origen de datos, las funciones `OPENROWSET` o `OPENDATASOURCE` se especifican con la información necesaria para conectarse a un servidor vinculado. A continuación, se puede hacer referencia al conjunto de filas del mismo modo que se hace referencia a una tabla en instrucciones Transact-SQL: 
+  Para las referencias poco frecuentes a un origen de datos, las funciones `OPENROWSET` o `OPENDATASOURCE` se especifican con la información necesaria para conectarse a un servidor vinculado. A continuación, se puede hacer referencia al conjunto de filas del mismo modo que se hace referencia a una tabla en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]: 
   
   ```sql
   SELECT *
@@ -930,19 +935,19 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos mét
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza OLE DB para la comunicación entre el motor relacional y el motor de almacenamiento. El motor relacional divide cada instrucción Transact-SQL en un grupo de operaciones sobre conjuntos de filas OLE DB simples abiertos por el motor de almacenamiento desde las tablas base. Esto significa que el motor relacional también puede abrir conjuntos de filas OLE DB simples en cualquier origen de datos OLE DB.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza OLE DB para la comunicación entre el motor relacional y el motor de almacenamiento. El motor relacional divide cada instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] en un grupo de operaciones sobre conjuntos de filas OLE DB simples abiertos por el motor de almacenamiento desde las tablas base. Esto significa que el motor relacional también puede abrir conjuntos de filas OLE DB simples en cualquier origen de datos OLE DB.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 El motor relacional utiliza la interfaz de programación de aplicaciones (API) OLE DB para abrir los conjuntos de filas en servidores vinculados, capturar las filas y administrar las transacciones.
 
-Es necesario que haya un proveedor OLE DB en el servidor que ejecute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] por cada origen de datos OLE DB al que se tenga acceso como servidor vinculado. El conjunto de operaciones Transact-SQL que puede utilizarse con un origen de datos OLE DB específico depende de las funcionalidades del proveedor OLE DB.
+Es necesario que haya un proveedor OLE DB en el servidor que ejecute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] por cada origen de datos OLE DB al que se tenga acceso como servidor vinculado. El conjunto de operaciones [!INCLUDE[tsql](../includes/tsql-md.md)] que puede utilizarse con un origen de datos OLE DB específico depende de las capacidades del proveedor OLE DB.
 
-Para cada instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], los miembros del rol fijo de servidor `sysadmin` pueden habilitar o deshabilitar el uso de nombres de conectores ad hoc para un proveedor OLE DB mediante la propiedad `DisallowAdhocAccess` de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cuando se habilita el acceso ad hoc, cualquier usuario que haya iniciado sesión en esa instancia puede ejecutar instrucciones SQL que contengan nombres de conectores ad hoc, haciendo referencia a cualquier origen de datos de la red al que se pueda obtener acceso mediante el proveedor OLE DB. Para controlar el acceso a orígenes de datos, los miembros del rol `sysadmin` pueden deshabilitar el acceso ad hoc para ese proveedor OLE DB, limitando así a los usuarios solo a los orígenes de datos a los que se hace referencia mediante nombres de servidores vinculados definidos por los administradores. De forma predeterminada, el acceso ad hoc está habilitado para el proveedor OLE DB de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y deshabilitado para los demás proveedores OLE DB.
+Para cada instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], los miembros del rol fijo de servidor `sysadmin` pueden habilitar o deshabilitar el uso de nombres de conectores ad hoc para un proveedor OLE DB mediante la propiedad `DisallowAdhocAccess` de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al habilitar el acceso ad hoc, cualquier usuario que haya iniciado sesión en esa instancia puede ejecutar instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que contengan nombres de conectores ad hoc, haciendo referencia a cualquier origen de datos de la red al que se pueda obtener acceso mediante el proveedor OLE DB. Para controlar el acceso a orígenes de datos, los miembros del rol `sysadmin` pueden deshabilitar el acceso ad hoc para ese proveedor OLE DB, limitando así a los usuarios solo a los orígenes de datos a los que se hace referencia mediante nombres de servidores vinculados definidos por los administradores. De forma predeterminada, el acceso ad hoc está habilitado para el proveedor OLE DB de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y deshabilitado para los demás proveedores OLE DB.
 
 Las consultas distribuidas pueden permitir que los usuarios tengan acceso a otro origen de datos (por ejemplo, archivos, orígenes de datos no relacionales como Active Directory, etc.) mediante el contexto de seguridad de la cuenta de Microsoft Windows con la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] suplanta el inicio de sesión de forma apropiada para inicios de sesión de Windows, pero eso no es posible para inicios de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esto puede permitir potencialmente que un usuario de consultas distribuidas obtenga acceso a un origen de datos para el que no tiene permisos, pero para el que la cuenta con la que el servicio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se está ejecutando sí tiene permisos. Utilice `sp_addlinkedsrvlogin` para definir los inicios de sesión específicos con acceso autorizado al servidor vinculado correspondiente. Este control no está disponible para nombres ad hoc; por tanto, tenga precaución a la hora de habilitar el proveedor OLE DB para el acceso ad hoc.
 
 Cuando es posible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inserta operaciones relacionales como combinaciones, restricciones, proyecciones, ordenaciones y operaciones "group by" al origen de datos OLE DB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no explora de forma predeterminada la tabla base en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y realiza las operaciones relacionales por sí mismo. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consulta el proveedor de OLE DB para determinar el nivel de gramática de SQL que admite y, en función de esa información, inserta tantas operaciones relacionales como sea posible en el proveedor. 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especifica un mecanismo para que un proveedor OLE DB devuelva estadísticas que indiquen cómo se distribuyen los valores de clave en el origen de datos OLE DB. Esto permite que el Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] analice mejor el patrón de datos del origen de datos según los requisitos de cada instrucción SQL, lo que mejora la capacidad del optimizador a la hora de generar planes de ejecución óptimos. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especifica un mecanismo para que un proveedor OLE DB devuelva estadísticas que indiquen cómo se distribuyen los valores de clave en el origen de datos OLE DB. Esto permite que el optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] analice mejor el patrón de datos del origen de datos según los requisitos de cada instrucción [!INCLUDE[tsql](../includes/tsql-md.md)], lo que mejora su capacidad a la hora de generar planes de ejecución óptimos. 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Mejoras de procesamiento de consultas en las tablas e índices con particiones
 
@@ -977,7 +982,7 @@ La siguiente ilustración es una representación lógica de la operación de bú
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>Visualización de la información del particionamiento en los planes de ejecución de consultas
 
-Los planes de ejecución de consultas en tablas e índices con particiones pueden examinarse mediante las instrucciones `SET` de Transact-SQL `SET SHOWPLAN_XML` o `SET STATISTICS XML`, o mediante la salida gráfica del plan de ejecución en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. Por ejemplo, puede ver el plan de ejecución en tiempo de compilación haciendo clic en *Mostrar plan de ejecución estimado* en la barra de herramientas del editor de consultas y el plan en tiempo de ejecución haciendo clic en *Incluir plan de ejecución real*. 
+Los planes de ejecución de consultas en tablas e índices con particiones pueden examinarse mediante las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` (`SET SHOWPLAN_XML` o `SET STATISTICS XML`), o mediante la salida gráfica del plan de ejecución en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. Por ejemplo, puede ver el plan de ejecución en tiempo de compilación haciendo clic en *Mostrar plan de ejecución estimado* en la barra de herramientas del editor de consultas y el plan en tiempo de ejecución haciendo clic en *Incluir plan de ejecución real*. 
 
 Estas herramientas le proporcionarán la siguiente información:
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 980bbb179c92e95d0386e672ed0b62d7ac8cc968
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803160"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976335"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
 
@@ -38,7 +38,7 @@ Ayuda a comprender el protocolo Kerberos por encima. Aquí participan tres actor
 1. Recursos protegidos (HDFS, MR2, YARN, historial de trabajos, etc.)
 1. Centro de distribución de claves (que en Active Directory se denomina controlador de dominio)
 
-Cada uno de los recursos protegidos de Hadoop se registra en el  **Centro de distribución de claves (KDC)**  con un  **nombre de entidad de seguridad de servicio (SPN)** único cuando Kerberos se configura en el clúster de Hadoop. El objetivo es que el cliente obtenga un vale de usuario temporal, llamado  **Vale de concesión de vales (TGT)**, para solicitar otro vale temporal, llamado  **Vale de servicio (ST)**, desde el Centro de distribución de claves contra el nombre de entidad de seguridad de servicio concreto al que quiere acceder.  
+Cada uno de los recursos protegidos de Hadoop se registra en el **Centro de distribución de claves (KDC)** con un **Nombre de entidad de seguridad de servicio (SPN)** único cuando Kerberos se configura en el clúster de Hadoop. El objetivo es que el cliente obtenga un vale de usuario temporal, llamado **Vale de concesión de vales (TGT)**, para solicitar otro vale temporal, llamado **Vale de servicio (ST)**, desde el Centro de distribución de claves contra el nombre de entidad de seguridad de servicio que desea acceder.  
 
 En PolyBase, cuando se solicita autenticación con respecto a cualquier recurso protegido con Kerberos, se produce el siguiente protocolo de enlace de cuatro recorridos de ida y vuelta:
 
@@ -102,7 +102,7 @@ La herramienta se ejecuta de forma independiente de SQL Server, por lo que no es
 | *Puerto del nodo de nombre* | El puerto del nodo de nombre. Hace referencia al argumento "LOCATION" de CREATE EXTERNAL DATA SOURCE T-SQL. Por ejemplo, 8020. |
 | *Entidad de servicio* | La entidad de servicio de administración del Centro de distribución de claves. Coincide con el argumento "IDENTITY" de `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
 | *Contraseña del servicio* | En lugar de escribir la contraseña en la consola, almacénela en un archivo y pase aquí la ruta de acceso al archivo. El contenido del archivo debe coincidir con el que use como argumento "SECRET" en `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
-| *Ruta de acceso al archivo HDFS remoto (opcional) * | La ruta de acceso de un archivo existente al cual acceder. Si no se especifica, se usará la raíz "/". |
+| *Ruta de acceso a archivo HDFS remoto (opcional) * | La ruta de acceso de un archivo existente al cual acceder. Si no se especifica, se usará la raíz "/". |
 
 ## <a name="example"></a>Ejemplo
 
@@ -210,11 +210,12 @@ Si se ejecutó la herramienta y *no* se imprimieron las propiedades de archivo d
 
 ## <a name="debugging-tips"></a>Sugerencias de depuración
 
-### <a name="mit-kdc"></a>KDC de MIT  
+### <a name="mit-kdc"></a>KDC de MIT  
 
-Puede ver todos los nombres de entidad de seguridad de servicio registrados con el KDC, incluidos los administradores, si ejecuta  **kadmin.local** > (inicio de sesión de administrador) > **listprincs**  en el host de KDC o en cualquier cliente de KDC configurado. Si Kerberos está bien configurado en el clúster de Hadoop, debería haber un SPN para cada uno de los servicios disponibles en el clúster (por ejemplo: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.) De manera predeterminada, los archivos keytab correspondientes (sustitutos de la contraseña) se pueden ver en  **/etc/security/keytabs**. Se cifran con la clave privada del Centro de distribución de claves.  
+Puede ver todos los nombres de entidad de seguridad de servicio registrados con el KDC, incluidos los administradores, si ejecuta **kadmin.local** > (inicio de sesión de administrador) > **listprincs** en el host de KDC o en cualquier cliente de KDC configurado. Si Kerberos está bien configurado en el clúster de Hadoop, debería haber un SPN para cada uno de los servicios disponibles en el clúster (por ejemplo: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.) De manera predeterminada, puede ver los archivos keytab correspondientes (sustitutos de la contraseña) en **/etc/security/keytabs**. Se cifran con la clave privada del Centro de distribución de claves.  
 
-Considere también la posibilidad de usar [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) para comprobar las credenciales de administrador en el Centro de distribución de claves localmente. Un uso de ejemplo sería:  `kinit identity@MYREALM.COM`. Un mensaje para una contraseña indica que la identidad existe.  De manera predeterminada, los registros de KDC están disponibles en  **/var/log/krb5kdc.log**, lo que incluye todas las solicitudes de vales, incluida la dirección IP del cliente que hizo la solicitud. Debe haber dos solicitudes desde la dirección IP del equipo SQL Server en el que se ejecutó la herramienta: en primer lugar, para el TGT del servidor de autenticación como **AS\_REQ**, seguido de  **TGS\_REQ**  para el vale de servicio del servidor de concesión de vales.
+Considere también la posibilidad de usar [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) para comprobar las credenciales de administrador en el Centro de distribución de claves localmente. Un ejemplo de uso sería: `kinit identity@MYREALM.COM`. Un mensaje que aparece para solicitar contraseña indica que existe la identidad.  
+De manera predeterminada, los registros de KDC están disponibles en **/var/log/krb5kdc.log**, lo que incluye todas las solicitudes de vales, incluida la dirección IP del cliente que hizo la solicitud. Debe haber dos solicitudes desde la dirección IP de la máquina SQL Server en que se ejecutó la herramienta: en primer lugar, para el TGT del servidor de autenticación como **AS\_REQ**, seguido de **TGS\_REQ** para el vale de servicio desde el servidor de concesión de vales.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -224,7 +225,7 @@ Considere también la posibilidad de usar [`kinit`](https://web.mit.edu/kerberos
 
 ### <a name="active-directory"></a>Active Directory 
 
-En Active Directory, puede ver los nombres de entidad de seguridad de servicio si va a Panel de control > Usuarios y equipos de Active Directory > *Mi_dominio_kerberos* > *Mi_unidad_organizativa*. Si Kerberos está bien configurado en el clúster de Hadoop, hay un SPN para cada uno de los servicios disponibles (por ejemplo: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.)
+En Active Directory, puede ver los nombres de entidad de seguridad de servicio si va a Panel de control > Usuarios y equipos de Active Directory > *MyRealm* > *MyOrganizationalUnit*. Si Kerberos está bien configurado en el clúster de Hadoop, hay un SPN para cada uno de los servicios disponibles (por ejemplo: `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.)
 
 ### <a name="general-debugging-tips"></a>Sugerencias generales de depuración
 

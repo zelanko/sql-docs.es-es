@@ -1,6 +1,5 @@
 ---
 title: Instalar SQL Server mediante un archivo de configuración | Microsoft Docs
-ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1c52536b52fa63b61b24247f9df3854b712d86c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5127fd5aec582db4f8e574f29cab5cec3809252
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672263"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072219"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Instalar SQL Server mediante un archivo de configuración
 
@@ -24,7 +23,7 @@ ms.locfileid: "47672263"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación permite generar un archivo de configuración basado en las entradas de tiempo de ejecución y en la configuración predeterminada del sistema. Puede usar el archivo de configuración para implementar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en toda la empresa con la misma configuración. También puede normalizar las instalaciones manuales en toda la empresa mediante la creación de un archivo por lotes que inicie Setup.exe. 
  
-Este artículo está actualizado específicamente para SQL Server 2016 y SQL Server 2017. En cuanto a las versiones anteriores de SQL Server, vea [Instalar SQL Server 2014 mediante un archivo de configuración](install-sql-server-2016-using-a-configuration-file.md).
+Este artículo se mantiene para SQL Server 2016 y versiones posteriores. En cuanto a las versiones anteriores de SQL Server, vea [Instalar SQL Server 2014 mediante un archivo de configuración](/../../2014/database-engine/install-windows/install-sql-server-using-a-configuration-file.md).
  
 El programa de instalación admite el uso del archivo de configuración solamente a través del símbolo del sistema. A continuación se indica el orden de procesamiento de los parámetros cuando se usa el archivo de configuración:  
   

@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572848"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974354"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nombre de intercalación de Windows (Transact-SQL)
 
@@ -42,8 +42,9 @@ Especifica el nombre de intercalación de Windows en la cláusula COLLATE en [!I
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -72,9 +73,14 @@ He aquí algunos ejemplos:
 **Omitted** especifica que no se distingue el ancho, **WS** especifica que se distingue el ancho.
 
 *VariationSelectorSensitivity*  
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**Se aplica a**: A partir de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 **Omitted** especifica que no se distingue el selector de variación, **VSS** especifica que se distingue el selector de variación.
+
+**UTF8**  
+**Se aplica a**: A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+
+Especifica la codificación UTF-8 que se usará para los tipos de datos aptos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Especifica el criterio de ordenación binario compatible con versiones anteriores que se va a utilizar.
@@ -83,7 +89,6 @@ Especifica el criterio de ordenación binario compatible con versiones anteriore
 Especifica el criterio de ordenación binario que utiliza la semántica de comparación de punto de código.
 
 ## <a name="remarks"></a>Notas
-
 Según cuál sea la versión de la intercalación, puede que algunos puntos de código no tengan definida ninguna prioridad de ordenación y/o asignación de mayúsculas o minúsculas. Por ejemplo, compare el resultado de la función `LOWER` cuando se indica en ella el mismo carácter, pero con diferentes versiones de la misma intercalación:
 
 ```sql

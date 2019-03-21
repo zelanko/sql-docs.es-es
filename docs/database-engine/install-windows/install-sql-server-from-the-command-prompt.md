@@ -1,7 +1,7 @@
 ---
 title: Instalar SQL Server desde el símbolo del sistema | Microsoft Docs
 ms.custom: ''
-ms.date: 01/17/2018
+ms.date: 03/13/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1aa7350ca8232f0b57a8d7ecf960d69838b26d8b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: a0aa770bfbf3486dedf045b6a6da3f88c89bbade
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662989"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976439"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar SQL Server desde el símbolo del sistema
 
@@ -274,7 +274,7 @@ Use las instrucciones siguientes para desarrollar comandos de instalación que t
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta de inicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de la cuenta de inicio del servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|Python/Machine Learning Services (en base de datos)|MPYCACHEDIRECTORY|Use este parámetro para especificar el directorio Caché para la compatibilidad con las características de Python en SQL Server 2017 Machine Learning Services o Machine Learning Server (independiente). Esta opción se usa normalmente cuando se instalan componentes de Python desde la [línea de comandos en un equipo sin acceso a Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|Python/Machine Learning Services (en base de datos)|MPYCACHEDIRECTORY|Reservado para uso futuro. Use %TEMP% para almacenar archivos .CAB de Python para su instalación en un equipo que no tenga conexión a Internet. |  
 |R/Machine Learning Services (en base de datos)|MRCACHEDIRECTORY|Use este parámetro para especificar el directorio Caché para la compatibilidad con las características de Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (independiente) o R en SQL Server 2017 Machine Learning Services o Machine Learning Server (independiente). Esta opción se usa normalmente cuando se instalan componentes de R desde la [línea de comandos en un equipo sin acceso a Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
   
 ###### <a name="sample-syntax"></a>Sintaxis de ejemplo:  
@@ -846,7 +846,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |:---|:---|:---|  
 |SQL||Instala los componentes [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replicación, Texto completo y [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].|  
 ||SQLEngine|Instala solamente [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
-||REPLICATION|Instala el componente Replicación junto con [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
+||Replicación|Instala el componente Replicación junto con [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 ||FullText|Instala el componente Texto completo junto con el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 ||DQ|Copia los archivos requeridos para completar la instalación de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Tras finalizar la instalación de SQL Server, debe ejecutar el archivo DQSInstaller.exe para completar la instalación de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Para obtener más información, vea [Ejecutar DQSInstaller.exe para completar la instalación del servidor de calidad de datos](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md). Esto también instala [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 ||PolyBase|Instala los componentes de PolyBase.|  

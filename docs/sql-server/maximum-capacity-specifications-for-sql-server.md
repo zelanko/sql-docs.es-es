@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319406"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973814"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "56319406"
 |Bytes por clave de índice en tablas optimizadas para memoria||2500 bytes para un índice no agrupado. No hay límite para un índice de hash, siempre y cuando todas claves de índice quepan en la fila.|En una tabla optimizada para memoria, un índice no agrupado no puede tener columnas de clave cuyos tamaños máximos declarados superen los 2500 bytes. No importa si los datos reales de las columnas de clave son más cortos que los tamaños máximos declarados.<br /><br /> Las clave de índice de hash no tienen límite máximo de tamaño.<br /><br /> En el caso de los índices de tablas optimizadas para memoria no existe el concepto de columnas incluidas, ya que todos los índices cubren de forma inherente todas las columnas.<br /><br /> En el caso de las tablas optimizadas para memoria, aunque el tamaño de fila sea de 8060 bytes, algunas columnas de longitud variable pueden almacenarse físicamente fuera de esos 8060 bytes. Pero los tamaños máximos declarados de todas las columnas de clave para todos los índices de una tabla, más las columnas adicionales de longitud fija de la tabla, deben caber en dichos 8060 bytes.|  
 |Bytes por clave externa||900||  
 |Bytes por clave principal||900||  
-|Bytes por fila||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite el almacenamiento de desbordamiento de fila, lo que habilita la inserción de columnas de longitud variable de manera no consecutiva. Solo se almacena una raíz de 24 bytes en el registro principal para las columnas de longitud variable que se insertan de manera no consecutiva; por ello, el límite real por fila es más alto que en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea el tema "Datos de desbordamiento de fila superiores a 8 kB" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|Bytes por fila||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite el almacenamiento de desbordamiento de fila, lo que habilita la inserción de columnas de longitud variable de manera no consecutiva. Solo se almacena una raíz de 24 bytes en el registro principal para las columnas de longitud variable que se insertan de manera no consecutiva; por ello, el límite real por fila es más alto que en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Compatibilidad con filas largas](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
 |Bytes por fila en tablas optimizadas para memoria||8,060|A partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , las tablas optimizadas para memoria admiten el almacenamiento no consecutivo. Las columnas de longitud variable se insertan de manera no consecutiva si el tamaño máximo de todas las columnas de la tabla supera los 8060 bytes; se trata de una decisión en tiempo de compilación. Solo se almacena una referencia de 8 bytes de forma consecutiva para las columnas almacenadas de forma no consecutiva. Para obtener más información, vea [Tamaño de tabla y fila de las tablas con optimización para memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Bytes en texto de origen de un procedimiento almacenado||El menor del tamaño del lote o 250 MB||  
 |Bytes por columna **varchar(max)**, **varbinary(max)**, **xml**, **text**o **image**||2^31-1||  

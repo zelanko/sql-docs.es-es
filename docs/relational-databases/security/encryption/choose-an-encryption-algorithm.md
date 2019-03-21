@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52336c3ec3ab0565177f94400fb8320808bc8c90
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 399143bffbe2f49c4cb3a3f5c846caf4657ab74a
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671715"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974014"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Elegir un algoritmo de cifrado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51671715"
   
 -   Las contraseñas largas y complejas son más seguras que las contraseñas cortas.  
 
--   Por lo general, el cifrado simétrico se recomienda cuando la clave solo se almacena de forma local; el asimétrico se recomienda cuando las claves deben compartirse a través de la conexión.
+-   Por lo general, el cifrado simétrico se recomienda en los casos en los que la clave solo se almacena de forma local, mientras que el asimétrico es pertinente cuando las claves deben compartirse a través de la conexión.
   
 -   Si cifra una gran cantidad de datos, debe cifrar los datos con una clave simétrica y cifrar la clave simétrica con una clave asimétrica.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "51671715"
 |Cifrar los archivos de base de datos mediante el cifrado de datos transparente.|[Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)|  
 |Cómo cifrar una columna de una tabla.|[Cifrar una columna de datos](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cifrado de SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Jerarquía de cifrado](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

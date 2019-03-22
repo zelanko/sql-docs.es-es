@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_db_resource_stats (base de datos de SQL Azure) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 03/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b05472f52bf182768740c8c01e8b60021dc898f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030156"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58325508"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de datos SQL de Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "56030156"
 |avg_cpu_percent|**decimal (5,2)**|Uso de proceso promedio como porcentaje del límite del nivel de servicio.|  
 |avg_data_io_percent|**decimal (5,2)**|Promedio de datos de uso de E/S en porcentaje del límite del nivel de servicio.|  
 |avg_log_write_percent|**decimal (5,2)**|Uso de rendimiento de E/S como porcentaje del límite del nivel de servicio de escritura promedio.|  
-|avg_memory_usage_percent|**decimal (5,2)**|Uso de memoria promedio como porcentaje del límite del nivel de servicio.<br /><br /> Esto incluye la memoria utilizada para el almacenamiento de objetos de OLTP en memoria.|  
+|avg_memory_usage_percent|**decimal (5,2)**|Uso de memoria promedio como porcentaje del límite del nivel de servicio.<br /><br /> Esto incluye la memoria usada para las páginas del grupo de búferes y el almacenamiento de objetos de OLTP en memoria.|  
 |xtp_storage_percent|**decimal (5,2)**|Utilización del almacenamiento de OLTP en memoria en porcentaje del límite del nivel de servicio (al final del intervalo de informes). Esto incluye la memoria utilizada para el almacenamiento de los siguientes objetos de OLTP en memoria: las tablas optimizadas para memoria, índices y las variables de tabla. También incluye la memoria usada para procesar las operaciones ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza OLTP en memoria en la base de datos.|  
 |max_worker_percent|**decimal (5,2)**|Máximo de trabajos simultáneos (solicitudes) en porcentaje del límite del nivel de servicio de la base de datos.|  
 |max_session_percent|**decimal (5,2)**|Número máximo de sesiones simultáneo en porcentaje del límite del nivel de servicio de la base de datos.|  

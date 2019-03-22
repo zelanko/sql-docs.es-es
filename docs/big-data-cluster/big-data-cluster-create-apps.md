@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756640"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222068"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Cómo implementar una aplicación en clúster de macrodatos de 2019 de SQL Server (versión preliminar)
 
@@ -253,7 +253,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>Describe una aplicación
 
-El comando descripción proporciona información detallada acerca de la aplicación, incluido el punto final en el clúster. Esto se usa normalmente por un desarrollador de aplicaciones para compilar una aplicación mediante el cliente de swagger y usar el servicio Web para interactuar con la aplicación de forma RESTful.
+El comando descripción proporciona información detallada acerca de la aplicación, incluido el punto final en el clúster. Esto se usa normalmente por un desarrollador de aplicaciones para compilar una aplicación mediante el cliente de swagger y usar el servicio Web para interactuar con la aplicación de forma RESTful. Consulte [consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información.
 
 ```json
 {
@@ -293,6 +293,6 @@ mssqlctl app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-También puede consultar ejemplos adicionales en [ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy).
+Explore cómo integrar las aplicaciones implementadas en SQL Server, clústeres de macrodatos en sus propias aplicaciones en [consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información. También puede consultar ejemplos adicionales en [ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy).
 
 Para obtener más información acerca de los clústeres de macrodatos de SQL Server, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos?](big-data-cluster-overview.md).

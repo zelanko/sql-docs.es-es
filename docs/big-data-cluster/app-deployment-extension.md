@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f45817510cb63937544fa4f0f7af5bb42a0c883
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018471"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222029"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Cómo utilizar VS Code para implementar aplicaciones en clústeres de macrodatos de SQL Server
 
@@ -105,7 +105,7 @@ Puede implementar esta aplicación desde el prisma de código al instante `Deplo
 
 ![Implementar el botón de la aplicación](media/vs-extension/deploy_app_lightning.png)
 
-![Implementar aplicación de Codelens](media/vs-extension/deploy_app_codelens.png)
+![Implementar aplicación de CodeLens](media/vs-extension/deploy_app_codelens.png)
 
 Se le notificará cuando la aplicación está lista para su uso en función del estado de la aplicación en la barra lateral:
 
@@ -127,9 +127,11 @@ Puede ver todas las aplicaciones que haya implementado en la barra lateral con l
   - swagger
   - detalles
 
-Si hace clic en `Links`, verá que puede tener acceso a la `swagger.json` de la aplicación implementada, así que escribir sus propios clientes que llaman a la aplicación:
+Si hace clic en `Links`, verá que puede tener acceso a la `swagger.json` de la aplicación implementada, por lo que puede escribir sus propios clientes que llaman a la aplicación:
 
 ![Swagger](media/vs-extension/swagger.png)
+
+Consulte [consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información.
 
 ### <a name="app-run"></a>Ejecución de la aplicación
 
@@ -173,7 +175,7 @@ Para eliminar una aplicación, simplemente haga clic en la Papelera puede situad
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-También puede hacer referencia a los ejemplos adicionales en [ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy) para probar con la extensión.
+Explore cómo integrar las aplicaciones implementadas en SQL Server, clústeres de macrodatos en sus propias aplicaciones en [consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información. También puede hacer referencia a los ejemplos adicionales en [ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy) para probar con la extensión.
 
 Para obtener más información acerca de los clústeres de macrodatos de SQL Server, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos?](big-data-cluster-overview.md).
 

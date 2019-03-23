@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f36c00689d372f407fd4f1d062a937be390f5f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a47ce85dbd2979fe5ff9c1a048c60d0720ae32f2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121065"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377113"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>Editor de origen de archivos planos (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen de archivos planos** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de error.  
@@ -52,9 +52,9 @@ ms.locfileid: "48121065"
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Flat File Source Editor &#40;página Administrador de conexiones&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [Flat File Source Editor &#40;página columnas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de origen de archivos planos &#40;página Administrador de conexiones&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
+ [Editor de origen de archivos planos &#40;página Columnas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [Administrador de conexiones de archivos planos](connection-manager/file-connection-manager.md)  
   
   

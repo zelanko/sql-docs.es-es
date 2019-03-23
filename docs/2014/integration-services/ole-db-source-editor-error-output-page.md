@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05ba0c0d3ac25a30bbc823fb23e8f09f3cdf5d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df4932604a6de27c2205ad0f619939587d02b916
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185005"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393865"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Editor de origen de OLE DB (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de origen de OLE DB** para seleccionar opciones de control de errores y establecer propiedades en columnas de salida de errores.  
@@ -52,9 +52,9 @@ ms.locfileid: "48185005"
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de origen de OLE DB &#40;página Administrador de conexiones&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [Editor de origen de OLE DB &#40;página columnas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Editor de origen de OLE DB &#40;página Columnas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Extraer datos mediante el origen de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md)  
   

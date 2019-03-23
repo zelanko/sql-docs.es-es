@@ -12,21 +12,21 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf19f89656b7c93c4c97ea8e09b62afadf069eee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4cc83f8c1aa545be505247317b0b047394fca26f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047608"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375653"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>Editor de rutas de flujo de datos (página Visores de datos)
   Utilice la página **Visores de datos** del cuadro de diálogo **Editor de rutas de flujo de datos** para administrar los visores de datos que se adjuntan a la ruta.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Muestra los visores de datos.  
   
  **Tipo de visor de datos**  

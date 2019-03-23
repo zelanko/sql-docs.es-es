@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e70590fb67c1fba5c3781fb224211aaab721f5bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773017"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388832"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Asistente para dimensiones variables (Ayuda F1)
   Utilice el **Asistente para dimensiones variables** para configurar la carga de datos en diferentes tipos de dimensiones de variación lenta. En esta sección se ofrece la Ayuda F1 de las páginas del **Asistente para dimensiones variables**. En la tabla siguiente se describen los temas de esta sección.  

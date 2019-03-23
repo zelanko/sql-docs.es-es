@@ -13,21 +13,21 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0c61c5db632121f99f8c22c8dd474d5597cb547
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221545"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389243"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Conectar tareas y contenedores mediante una restricción de precedencia predeterminada
   Las restricciones de precedencia conectan dos ejecutables. Un ejecutable puede ser cualquier tarea en un contenedor de bucles For, bucles Foreach o de secuencia. Este procedimiento describe cómo se configura el comportamiento predeterminado para las restricciones de precedencia y cómo se conectan los ejecutables mediante las restricciones de precedencia predeterminadas.  
   
 ## <a name="creating-default-precedence-constraints"></a>Crear restricciones de precedencia predeterminadas  
- Cuando usa [!INCLUDE[ssIS](../includes/ssis-md.md)] diseñador, el valor predeterminado de una restricción de precedencia es `Success`. Siga estos pasos para configurar el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] y usar un valor predeterminado diferente para las restricciones de precedencia.  
+ Cuando se usa por primera vez el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)], el valor predeterminado de una restricción de precedencia es `Success`. Siga estos pasos para configurar el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] y usar un valor predeterminado diferente para las restricciones de precedencia.  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>Para establecer el valor predeterminado para las restricciones de precedencia  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7489a23fdf7b9501b4b7bc0a41967b0407558a22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5fbff347c6b06d500f3baebe3dd980000f0bd2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106445"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383222"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor de orígenes de ADO NET (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de orígenes de ADO NET** para asignar una columna de salida a cada columna externa (origen).  
@@ -44,8 +44,8 @@ ms.locfileid: "48106445"
  Permite proporcionar un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre proporcionado se mostrará en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de origen de ADO NET &#40;página Administrador de conexiones&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Editor de origen de ADO NET &#40;página de salida de Error&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor de orígenes de ADO NET &#40;página Administrador de conexiones&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [Editor de orígenes de ADO NET &#40;página Salida de error&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

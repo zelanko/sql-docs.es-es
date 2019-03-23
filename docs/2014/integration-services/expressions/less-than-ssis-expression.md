@@ -10,15 +10,15 @@ helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bf00ad5c0fa4478b308ec3feb38a7896e186e81
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0683f741de16b688330fcd7833d5705e4bbb9a2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799775"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394363"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (Menor que) (expresión de SSIS)
   Realiza una comparación para determinar si la primera expresión es menor que la segunda. El evaluador de expresiones convierte automáticamente muchos tipos de datos antes de realizar la comparación.  

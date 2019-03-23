@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5959d49f6bc9c2ac140da6b16e7926cfa94634e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02ab48e21ff7c0f881cb0d0b830ce03207666c7c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155925"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389203"
 ---
 # <a name="connect-to-integration-services"></a>Conectarse a Integration Services
   Antes de conectar con el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , el administrador debe concederle acceso al servicio. Para más información, consulte [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48155925"
   
 3.  En la barra de herramientas del Explorador de objetos, haga clic en **Conectar**y, a continuación, en **Integration Services**.  
   
-4.  En el cuadro de diálogo **Conectar al servidor** , indique el nombre del servidor. Puede utilizar un punto (.), (local), o `localhost` para indicar el servidor local.  
+4.  En el cuadro de diálogo **Conectar al servidor** , indique el nombre del servidor. Puede utilizar un punto (.), (local) o `localhost` para indicar el servidor local.  
   
 5.  Haga clic en **Conectar**.  
   

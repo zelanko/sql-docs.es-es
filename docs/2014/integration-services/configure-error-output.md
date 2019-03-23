@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configureerroroutput.f1
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 279cacedf44d237de2821cb0ec7da837a43c2f06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91e07bdf70954079e24b39bd345e33b348958ae0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162205"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376753"
 ---
 # <a name="configure-error-output"></a>Configurar la salida de errores
   Use el cuadro de diálogo **Configurar la salida de errores** para configurar las opciones de control de errores para las transformaciones de flujo de datos que admiten salida de errores.  

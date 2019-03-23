@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 71f7bf54684a762d72689e37a8ca324a49b7a750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c2dc53c1bd3644e1c7dfdb9a4ff1310f6caa7e1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198135"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382163"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Editor de entrenamiento de modelos de minería de datos (pestaña Columnas)
   Utilice la página **Columnas** del cuadro de diálogo **Editor de entrenamiento de modelos de minería de datos** para asignar columnas de entrada a las columnas de la estructura de minería de datos.  
@@ -41,7 +41,7 @@ ms.locfileid: "48198135"
  Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de entrenamiento de modelos de minería de datos &#40;ficha conexión&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de entrenamiento de modelos de minería de datos &#40;pestaña Conexión&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

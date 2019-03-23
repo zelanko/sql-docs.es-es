@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ff990559adb693ac9e3db1ceb18843978fcfe0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0e421d6ba1aaf69c04a450d8d93ff1ddf385935
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190485"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391493"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Editor de origen de CDC (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo del **Editor de origen de CDC** con el fin de seleccionar el administrador de conexiones de ADO.NET para la base de datos de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] donde el origen de CDC lee las filas de cambios (la base de datos CDC). Una vez que se haya seleccionado la base de datos CDC, debe seleccionar una tabla capturada en la base de datos.  
@@ -52,15 +52,15 @@ ms.locfileid: "48190485"
  **Modo de procesamiento CDC**  
  Seleccione el modo de procesamiento que mejor controle las necesidades de procesamiento. Las opciones posibles son:  
   
--   **Todos**: devuelve los cambios en el intervalo CDC actual sin los valores de **Antes de actualización** .  
+-   **todos los**: Devuelve los cambios en el intervalo CDC actual sin la **Before Update** valores.  
   
--   **Todos con valores antiguos**: devuelve los cambios en el intervalo de procesamiento CDC actual, incluidos los valores antiguos (**Antes de actualización**). Para cada operación de actualización habrá dos filas: una con los valores anteriores a la actualización y otra con los valores posteriores a la actualización.  
+-   **Todos con valores antiguos**: Devuelve los cambios en el intervalo de procesamiento CDC actual incluyendo los valores antiguos (**Before Update**). Para cada operación de actualización habrá dos filas: una con los valores anteriores a la actualización y otra con los valores posteriores a la actualización.  
   
--   **Neto**: devuelve una sola fila de cambios por cada fila de origen modificada en el intervalo de procesamiento de CDC actual. Si una fila de origen se actualizó varias veces, se genera el cambio combinado (por ejemplo, se genera insertar+actualizar como una actualización única y se genera actualizar+eliminar como una eliminación única). Al trabajar en el modo de procesamiento de cambios Neto, es posible dividir los cambios en salidas de eliminar, insertar y actualizar y controlarlos todos en paralelo, ya que la fila de origen única aparece en más de un resultado.  
+-   **NET**: Devuelve solo un cambio de fila por cada fila de origen modificada en el intervalo de procesamiento de CDC actual. Si una fila de origen se actualizó varias veces, se genera el cambio combinado (por ejemplo, se genera insertar+actualizar como una actualización única y se genera actualizar+eliminar como una eliminación única). Al trabajar en el modo de procesamiento de cambios Neto, es posible dividir los cambios en salidas de eliminar, insertar y actualizar y controlarlos todos en paralelo, ya que la fila de origen única aparece en más de un resultado.  
   
--   **Neto con máscara de actualización**: este modo es similar al modo Neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indica las columnas modificadas en la fila de cambio actual.  
+-   **Neto con máscara de actualización**: Este modo es similar al modo neto normal pero también agrega columnas booleanas con el patrón de nombre **__ $\<nombre-columna >\__Changed** que indica la fila de cambio de las columnas cambiadas en la actual.  
   
--   **Neto con combinación**: este modo es similar al modo Neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
+-   **Neto con combinación**: Este modo es similar a la normal modo neto, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
   
 > [!NOTE]  
 >  Para todas las opciones de cambio Neto, la tabla de origen debe tener una clave principal o un índice único. Para las tablas sin una clave principal o índices únicos, debe usar la opción **Todos** .  
@@ -76,7 +76,7 @@ ms.locfileid: "48190485"
  Para más información, consulte [CDC Source Custom Properties](data-flow/cdc-source-custom-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de origen de CDC &#40;página columnas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
- [Editor de origen de CDC &#40;página de salida de Error&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [Editor de origen de CDC &#40;página Columnas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [Editor de origen de CDC &#40;página Salida de error&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

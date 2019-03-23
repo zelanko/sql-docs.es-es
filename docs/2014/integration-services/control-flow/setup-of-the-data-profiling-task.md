@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6bc7964ee9ffaca02a81d52a50104089736e2ae
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376557"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389133"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuración de la Tarea de generación de perfiles de datos
   El primer paso previo a la revisión de un perfil de los datos de origen consiste en configurar y ejecutar la tarea de generación de perfiles de datos. Esta tarea se crea dentro de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para configurar la tarea de generación de perfiles de datos, utilice el Editor de tareas de generación de perfiles de datos. Este editor le permite seleccionar dónde deben generarse los perfiles y qué perfiles deben calcularse. Una vez configurada la tarea, se ejecuta el paquete para calcular los perfiles de datos.  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Sort Transformation Editor
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d57129a0997093aa351b83b09f87ee7d38bb2a25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abc74915adf0f2b3fd3ae96420dea921f28ff8e3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178315"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389043"
 ---
 # <a name="sort-transformation-editor"></a>Editor de transformación Ordenar
   Use el cuadro de diálogo **Editor de transformación Ordenar** para seleccionar las columnas que desea ordenar, establecer el orden y especificar si deben quitarse los duplicados.  
@@ -31,7 +31,7 @@ ms.locfileid: "48178315"
  **Columnas de entrada disponibles**  
  Active las casillas de las columnas que desea ordenar.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre de todas las columnas de entrada disponibles.  
   
  **Paso a través**  
@@ -50,7 +50,7 @@ ms.locfileid: "48178315"
  Permite indicar el orden en que deben ordenarse las columnas. Esta característica debe establecerse manualmente para cada columna.  
   
  **Marcas de comparación**  
- Para obtener más información sobre las opciones de comparación de cadenas, vea [Comparar datos de cadena](data-flow/comparing-string-data.md).  
+ Para más información sobre las opciones de comparación de cadenas, vea [Comparar datos de cadena](data-flow/comparing-string-data.md).  
   
  **Quitar filas con valores de ordenación duplicados**  
  Permite indicar si la transformación copia filas duplicadas en la salida o crea una única entrada para todos los duplicados utilizando las opciones de comparación de cadenas especificadas.  

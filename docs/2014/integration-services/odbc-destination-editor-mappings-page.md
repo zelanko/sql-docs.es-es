@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.columns.f1
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e39bb53ab0333f11d916f24d7dff3a00b78a6dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4237a49fe6c49078bf2ee8f1f1558092f9747ea
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150755"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380763"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Editor de destino de ODBC (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destino de ODBC** para asignar columnas de entrada a columnas de destino.  
@@ -41,6 +41,6 @@ ms.locfileid: "48150755"
   
 ## <a name="see-also"></a>Vea también  
  [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [Editor de destino de ODBC &#40;página de salida de Error&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [Editor de destinos de ODBC &#40;página Salida de error&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

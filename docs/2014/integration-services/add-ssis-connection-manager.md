@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Add SSIS Connection Manager
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f0e7717aeee978626718ba9c2969b5097772b95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b711562d966e0a28349b666505dff9542098fd4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169005"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377263"
 ---
 # <a name="add-ssis-connection-manager"></a>Agregar administrador de conexiones SSIS
   Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para seleccionar el tipo de conexión que se va a agregar a un paquete.  
@@ -35,7 +35,7 @@ ms.locfileid: "48169005"
  Especifique las propiedades de conexión mediante el editor para cada tipo de conexión.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Agregar, eliminar o compartir un administrador de conexiones en un paquete](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   
   

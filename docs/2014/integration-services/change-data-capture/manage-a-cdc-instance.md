@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e4a563a47500a329a79513afb83aff4f93ebda7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3215f28615511f3c35fcc6cc3ea80209c7c44d41
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748267"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378823"
 ---
 # <a name="manage-a-cdc-instance"></a>Administrar una instancia CDC
   Puede usar la Consola del diseñador CDC para ver información acerca de las instancias que crea y para administrar el funcionamiento de las instancias.  
@@ -65,12 +65,12 @@ ms.locfileid: "52748267"
  **Estado**  
  Esta pestaña proporciona información y estadísticas sobre el estado actual de la instancia CDC. Contiene la información siguiente.  
   
--   **estado**: Un icono que indica el estado actual de la instancia CDC. A continuación se describen los estados.  
+-   **Estado**: Un icono que indica el estado actual de la instancia CDC. A continuación se describen los estados.  
   
     |||  
     |-|-|  
     |![Error](../media/error.gif "Error")|**Error**. La instancia CDC de Oracle no se está ejecutando porque se produjo un error que no se puede reintentar. Están disponibles los subestados siguientes:<br /><br /> **Mal configurada**: Se ha producido un error de configuración que requiere la intervención manual.<br /><br /> **Contraseña necesaria**: Se estableció ninguna contraseña para la instancia CDC de Oracle o la contraseña no es válida.<br /><br /> **Inesperado**. Todos los demás errores irrecuperables.|  
-    |![Correcto](../media/okay.gif "Okay")|**Ejecutando**: La instancia CDC se está ejecutando y está procesando los registros de cambios. Están disponibles los subestados siguientes.<br /><br /> **Inactividad**: Todos los registros de cambios se han procesado y almacenado en las tablas de cambio de destino. No hay más transacciones activas.<br /><br /> **Procesamiento**: Hay registros de cambios que se están procesando que no se han escrito todavía en las tablas de cambios.|  
+    |![Correcto](../media/okay.gif "Okay")|**En ejecución**: La instancia CDC se está ejecutando y está procesando los registros de cambios. Están disponibles los subestados siguientes.<br /><br /> **Idle**: Todos los registros de cambios se han procesado y almacenado en las tablas de cambio de destino. No hay más transacciones activas.<br /><br /> **Procesamiento**: Hay registros de cambios que se están procesando que no se han escrito todavía en las tablas de cambios.|  
     |![Detener](../media/stop.gif "Detener")|**Detenido**: La instancia CDC no se está ejecutando. El estado de detenido indica que la instancia CDC se detuvo de forma normal.|  
     |![Pausado](../media/paused.gif "Pausado")|**En pausa**: La instancia CDC se está ejecutando pero el procesamiento está suspendido debido a un error recuperable. Están disponibles los subestados siguientes:<br /><br /> **Desconectado**: No se puede establecer la conexión a la base de datos de Oracle de origen. El procesamiento se reanudará cuando se restaure la conexión.<br /><br /> **Almacenamiento**: El almacenamiento está lleno. El procesamiento se reanudará cuando haya más almacenamiento disponible.<br /><br /> **Registrador**: El registrador está conectado a Oracle pero no puede leer los registros de transacciones de Oracle debido a un problema temporal, por ejemplo, un registro de transacciones necesario no está disponible.|  
   

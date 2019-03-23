@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b25d629c510e6220ee361643502a2e178a7ae172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176145"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390813"
 ---
 # <a name="select-variables"></a>Seleccionar variables
   Utilice el cuadro de diálogo **Seleccionar variables** para especificar las variables que se van a utilizar en una operación de envío de mensaje en la tarea Cola de mensajes. La lista **Variables disponibles** incluye las variables definidas por el usuario y de sistema que se encuentran en el ámbito de la tarea Cola de mensaje o en su contenedor principal. La tarea utiliza las variables de la lista **Variables seleccionadas** .  

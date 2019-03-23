@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a247233157dbf83fe29089eff9c67442e00b8809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f2389946ac8780fb15fb5708138883ac0219369
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157735"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388072"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor de origen de Excel (página Administrador de conexiones)
   Utilice el nodo **Administrador de conexiones** del cuadro de diálogo **Editor de origen de Excel** para seleccionar el libro de [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] que utilizará el origen. El origen de Excel lee los datos de una hoja de cálculo o un rango con nombre de un libro existente.  
@@ -43,7 +43,7 @@ ms.locfileid: "48157735"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |Tabla o vista|Recupera los datos de una hoja de cálculo o un rango con nombre del archivo Excel.|  
-|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada** [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada:** [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Recupera datos del archivo Excel mediante una consulta SQL. Para obtener información acerca de la sintaxis de consultas, vea [Excel Source](data-flow/excel-source.md).|  
 |Comando SQL de variable|Especifique el texto de la consulta SQL de una variable.|  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48157735"
  Seleccione la variable que contiene el texto de la consulta SQL.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origen de Excel &#40;página columnas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Editor de origen de Excel &#40;página de salida de Error&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de origen de Excel &#40;página Columnas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Editor de origen de Excel &#40;página Salida de error&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Administrador de conexiones de Excel](connection-manager/excel-connection-manager.md)   
  [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](control-flow/foreach-loop-container.md)  
   

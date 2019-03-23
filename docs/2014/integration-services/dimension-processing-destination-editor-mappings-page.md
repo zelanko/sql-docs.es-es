@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed72704f230ede202d9363a37d4775b2fdd250d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3865407fce809380900408b079a026f3d1eba75d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178346"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375334"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>Editor de destino de procesamiento de dimensiones (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para asignar columnas de entrada a columnas de dimensión.  
@@ -41,8 +41,8 @@ ms.locfileid: "48178346"
  Muestra las columnas de destino disponibles e indica si están asignadas.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino de procesamiento de dimensiones &#40;página Administrador de conexiones&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [Editor de destino de procesamiento de dimensiones &#40;página Opciones avanzadas&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de destino de procesamiento de dimensiones página &#40;Administrador de conexiones&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
+ [Editor de destino de procesamiento de dimensiones &#40;página Avanzadas&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

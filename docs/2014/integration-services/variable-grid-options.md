@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36f44d123216d11034092806a4f7d616f8968d90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89828a105e04c54c1bfecda59670a273583998cb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172655"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393913"
 ---
 # <a name="variable-grid-options"></a>Opciones de la cuadrícula de variables
   Utilice el cuadro de diálogo **Opciones de la cuadrícula de variables** para seleccionar las columnas que se mostrarán en la ventana **Variables** y seleccionar los filtros para aplicarlos a la lista de variables. Para más información sobre las propiedades de variable correspondientes, vea [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48172655"
  **Mostrar variables de todos los ámbitos**  
  Seleccione mostrar las variables en el ámbito del paquete y, en el ámbito de los contenedores, tareas y controladores de eventos en el paquete. Desactive esta opción para mostrar solo variables en el ámbito del paquete y en el ámbito de un contenedor, una tarea o un controlador de eventos seleccionada.  
   
- Para obtener más información sobre el ámbito de las variables, vea [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Para más información sobre el ámbito de las variables, vea [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ## <a name="options-for-columns"></a>Opciones de las columnas  
  Seleccione las columnas que desea que aparezcan en la ventana **Variables** .  
@@ -54,9 +54,9 @@ ms.locfileid: "48172655"
 -   **Expresión**  
   
 ## <a name="see-also"></a>Vea también  
- [Ventana variables](../../2014/integration-services/variables-window.md)   
- [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
- [Usar Variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)   
- [Servicios de integración &#40;SSIS&#41; controladores de eventos](integration-services-ssis-event-handlers.md)  
+ [Ventana Variables](../../2014/integration-services/variables-window.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)   
+ [Controladores de eventos de Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], modifying
 - modifying connection managers
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0148cca6701db9f28ed6dd7abccb1a1f00269510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92ac3366a2473fb92fe33dcf884d3806c65e8609
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111865"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388263"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>Establecer las propiedades de un administrador de conexiones
   Todos los administradores de conexión se pueden configurar en la ventana **Propiedades** .  
@@ -61,15 +61,15 @@ ms.locfileid: "48111865"
     |[Administrador de conexiones de archivos](connection-manager/file-connection-manager.md)|[Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[Administrador de conexiones de varios archivos](connection-manager/multiple-files-connection-manager.md)|[Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones de archivos](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Administrador de conexiones de archivos planos](connection-manager/flat-file-connection-manager.md)|[Editor del administrador de conexiones de archivos planos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[Administrador de conexiones de varios archivos planos](connection-manager/multiple-flat-files-connection-manager.md)|[Editor del Administrador de conexiones de varios archivos planos &#40;página General&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Editor del Administrador de conexiones de varios archivos planos &#40;página columnas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Editor del Administrador de conexiones de varios archivos planos &#40;página Opciones avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Editor del Administrador de conexiones de varios archivos planos &#40;vista previa de página&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[Administrador de conexiones de varios archivos planos](connection-manager/multiple-flat-files-connection-manager.md)|[Editor del administrador de conexiones de varios archivos planos &#40;página General&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Editor del administrador de conexiones de varios archivos planos &#40;página Columnas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Editor del administrador de conexiones de varios archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[Administrador de conexiones FTP](connection-manager/ftp-connection-manager.md)|[Editor del administrador de conexiones FTP](../../2014/integration-services/ftp-connection-manager-editor.md)|  
-    |[Administrador de conexiones HTTP](connection-manager/http-connection-manager.md)|[Editor del Administrador de conexiones HTTP &#40;página del servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Editor del Administrador de conexiones HTTP &#40;página Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
+    |[Administrador de conexiones HTTP](connection-manager/http-connection-manager.md)|[Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Editor del administrador de conexiones HTTP &#40;página Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[Administrador de conexiones MSMQ](connection-manager/msmq-connection-manager.md)|[Editor del administrador de conexiones MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[Administrador de conexiones ODBC](connection-manager/odbc-connection-manager.md)|[Referencia de la interfaz de usuario del administrador de conexiones ODBC](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md)|[Configurar el administrador de conexiones OLE DB](configure-ole-db-connection-manager.md)|  
     |[Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)|[Editor del administrador de conexiones SMO](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[Administrador de conexiones SMTP](connection-manager/smtp-connection-manager.md)|[Editor del administrador de conexiones SMTP](../../2014/integration-services/smtp-connection-manager-editor.md)|  
-    |[Administrador de conexiones con SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor del Administrador de conexiones Edition con SQL Server Compact &#40;página de conexión&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Editor del Administrador de conexiones Edition con SQL Server Compact &#40;página todo&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
+    |[Administrador de conexiones con SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Conexión&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Todo&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[Administrador de conexiones WMI](connection-manager/wmi-connection-manager.md)|[Editor del administrador de conexiones WMI](../../2014/integration-services/wmi-connection-manager-editor.md)|  
   
 5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  

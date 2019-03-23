@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6ce4cb57a7ee3329bb3eb123a23b740ba5b156c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a06c6b71be6e889cc223aa72338ae70f0ea82e3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085835"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393963"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Configurar visor de datos (pestaña Gráfico de columnas)
   Utilice la pestaña **Gráfico de columnas** del cuadro de diálogo **Configurar visor de datos** para especificar una columna que se va a mostrar como gráfico de barras. La cantidad de barras muestra la cantidad de valores de datos discretos de la columna y la altura de la barra muestra la cantidad de instancias de cada valor. El gráfico solo refleja el contenido de un búfer.  

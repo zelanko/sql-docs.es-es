@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Message Queue task [Integration Services]
 - Script task [Integration Services], examples
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9f9c07d52fe1920c65c1f758a0e86c13037945a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e4791e826adccb925241b02312900ea524f228e0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352900"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374522"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Enviar a una cola de mensajes privada remota con la tarea Script
   Message Queue Server (también conocido como MSMQ) facilita a los desarrolladores la comunicación rápida y confiable con los programas de aplicación mediante el envío y la recepción de mensajes. Una cola de mensajes se puede encontrar en el equipo local o en un equipo remoto y puede ser pública o privada. En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el administrador de conexiones MSMQ y la tarea Cola de mensajes no admiten el envío a una cola privada en un equipo remoto. Sin embargo, si se utiliza la tarea Script, resulta sencillo enviar un mensaje a una cola privada remota.  

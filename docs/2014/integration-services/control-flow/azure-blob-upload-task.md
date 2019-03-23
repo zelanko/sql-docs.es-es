@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dts.designer.afpblobuptask.f1
 - sql11.dts.designer.afpblobuptask.f1
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b544d2783e91de19b9745ed27b443f38928b5667
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758047"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375583"
 ---
 # <a name="azure-blob-upload-task"></a>Tarea de carga de blobs de Azure
   La tarea de carga de blobs de Azure permite que un paquete SSIS cargar archivos en Azure blob storage.   

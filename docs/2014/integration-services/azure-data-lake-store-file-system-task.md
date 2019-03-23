@@ -11,15 +11,15 @@ f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSTASK.F1
 - SQL11.DTS.DESIGNER.AFPADLSTASK.F1
 ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1b3fc1317e4454008a628c03e189e690bfeb21d
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: aeabdcfa1fd36adf9bd4291623c56fbfecf0520e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206281"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390253"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Tarea Sistema de archivos de Azure Data Lake Store
 
@@ -30,7 +30,7 @@ Para agregar una tarea Sistema de archivos de Azure Data Lake Store a un paquete
 La propiedad **Operación** especifica la operación del sistema de archivos que se va a realizar. Se admiten las siguientes operaciones.
 
 * **CopyToADLS:** Cargar archivos en ADLS.
-* **Copytoadls:** Descargar archivos de ADLS.
+* **CopyFromADLS:** Descargar archivos de ADLS.
 
 Para cualquier operación, tendrá que especificar un administrador de conexiones de Azure Data Lake.
 

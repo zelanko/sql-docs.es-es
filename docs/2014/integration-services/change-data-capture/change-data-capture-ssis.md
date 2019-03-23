@@ -10,15 +10,15 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a65ec13f342dc890511e7b99258a41456cd989b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 391bf9204beeb6222a6e736125e5630bd5b1565e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362397"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375887"
 ---
 # <a name="change-data-capture-ssis"></a>Captura de datos modificados (SSIS)
   En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la captura de datos modificados ofrece una solución efectiva al desafío de realizar eficazmente las cargas incrementales de las tablas de origen a los data mart y a los almacenamientos de datos.  
@@ -40,7 +40,7 @@ ms.locfileid: "53362397"
   
  Tal como se muestra en el diagrama anterior, la creación de un paquete que realiza una carga incremental de datos modificados conlleva los pasos siguientes:  
   
- **Paso 1: Diseñar el flujo de Control**  
+ **Paso 1: Diseñar el flujo de control**  
  Debe definir las tareas siguientes en el flujo de control del paquete:  
   
 -   Calcule los valores `datetime` inicial y final para el intervalo de cambios en los datos de origen que desea recuperar.  

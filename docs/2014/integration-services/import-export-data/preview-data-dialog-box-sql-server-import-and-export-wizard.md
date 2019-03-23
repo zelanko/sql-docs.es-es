@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3942480268d5a9e6e51b324dea3afba69d4eb331
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769304"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386475"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Cuadro de diálogo Vista previa de los datos (Asistente para importación y exportación de SQL Server)
   Use la **datos de vista previa** cuadro de diálogo para ver la consulta que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard enviará al origen de datos. También puede usar este cuadro de diálogo para obtener una vista previa de hasta 200 filas de datos de ejemplo.  

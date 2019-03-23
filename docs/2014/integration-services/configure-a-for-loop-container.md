@@ -11,15 +11,15 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a88ca178770bb3326202b603318be30119b2febe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b5d09e160dfa4974704ea3e4ee1b6400f983fe88
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350842"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392984"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurar un contenedor de bucles For
   En este procedimiento se describe cómo configurar un contenedor de bucles For mediante el cuadro de diálogo **Editor de bucles For** .  

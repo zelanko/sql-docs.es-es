@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f6f584d49bfa238a5eda76b18f0dccb59db303f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0eff54a87d3b38f1cf027d272d75c36d2e15316
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186835"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380893"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor de transformación Combinación de mezcla
   Use el cuadro de diálogo **Editor de transformación Combinación de mezcla** para especificar el tipo de combinación, las columnas de combinación y las columnas de salida para mezclar dos entradas fusionadas por combinación.  
@@ -49,10 +49,10 @@ ms.locfileid: "48186835"
  Escriba un alias para cada columna de salida. El nombre predeterminado es el de la columna de entrada, pero puede elegir cualquier nombre descriptivo único.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ordenar datos para las transformaciones mezclar y Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Ampliar un conjunto de datos mediante la transformación combinación de mezcla](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
- [Transformación mezclar](data-flow/transformations/merge-transformation.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Ampliar un conjunto de datos con la transformación Combinación de mezcla](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Transformación Mezclar](data-flow/transformations/merge-transformation.md)   
  [Transformación Unión de todo](data-flow/transformations/union-all-transformation.md)  
   
   

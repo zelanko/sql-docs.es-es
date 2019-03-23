@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - MSMQ Connection Manager Editor
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42fe0f316914a83ab87deed68ff7095b66b80402
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d532433c36f3b4c18b39d16dcbbe81a3d969acfc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226555"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393074"
 ---
 # <a name="msmq-connection-manager-editor"></a>administrador de conexiones MSMQ, editor del
   Use el cuadro de diálogo **Administrador de conexiones MSMQ** para especificar la ruta de acceso a una cola de mensajes de Message Queuing (que también recibe el nombre de MSMQ).  
@@ -31,7 +31,7 @@ ms.locfileid: "48226555"
 >  El administrador de conexiones MSMQ admite colas públicas y privadas locales, además de colas públicas remotas. No admite colas privadas remotas. Para obtener una solución que utilice la tarea Script, vea [Enviar a una cola de mensajes privada remota con la tarea Script](control-flow/script-task.md).  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Proporcione un nombre único para el administrador de conexiones MSMQ en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Descripción**  

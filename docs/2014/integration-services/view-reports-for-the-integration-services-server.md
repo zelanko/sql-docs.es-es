@@ -8,18 +8,18 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9ccae1f9ff9d2ab69408e36d8c8ef1cc071eaf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4948973576eb0b541892fe84bc86edea1514fe92
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077227"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389053"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Ver informes del servidor de Integration Services
-  En la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], existen informes estándares en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proyectos que se han implementado en el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  Para más información sobre los informes, vea [Informes para el servidor de Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  
+  En la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]existen dos informes estándar en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar los proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  Para más información sobre los informes, vea [Informes para el servidor de Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Para ver informes del servidor de Integration Services  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48077227"
     -   **Todas las conexiones**  
   
 ## <a name="see-also"></a>Vea también  
- [Informes del servidor de Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md)   
+ [Informes para el servidor de Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md)   
  [Implementar proyectos en el servidor de Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

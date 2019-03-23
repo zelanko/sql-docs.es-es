@@ -11,15 +11,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fdbea022082e2606fe991176524127a615464a98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fdcc6285ba1a75827f91f856319d296c0cbbff5d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533387"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391693"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Agregar, eliminar o compartir un administrador de conexiones en un paquete
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye varios tipos de administradores de conexiones para conectar con diferentes orígenes de datos, como bases de datos relacionales, bases de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y archivos en formatos CSV Y XML. Se puede crear un administrador de conexiones en el nivel de paquete o en el nivel de proyecto. El administrador de conexiones creado en el nivel de proyecto está disponible para todos los paquetes del proyecto. En tanto que el administrador de conexiones creado en el nivel de paquete está disponible para ese paquete específico.  

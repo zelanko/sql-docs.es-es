@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 224345a2dc32f12e925a6f97299c91a5e2f7e9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096175"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394093"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Informes para el servidor de Integration Services
-  En la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], existen informes estándares en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proyectos que se han implementado en el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. Estos informes le ayudan a ver el estado y historial de los paquetes y, si es necesario, identificar la causa de los errores de ejecución de paquetes.  
+  En la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]existen dos informes estándar en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar los proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Estos informes le ayudan a ver el estado y historial de los paquetes y, si es necesario, identificar la causa de los errores de ejecución de paquetes.  
   
  En la parte superior de cada página de informe, el icono Atrás le lleva a la página que vio anteriormente, el icono Actualizar actualiza la información que se muestra en la página y el icono Imprimir le permite imprimir la página actual.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48096175"
   
 |Sección|Descripción|  
 |-------------|-----------------|  
-|Filtro|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
+|Filter|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
 |Información de ejecución|Muestra la hora de inicio, la hora de finalización y la duración de cada ejecución del paquete. Puede ver una lista de los valores de parámetro usados con una ejecución de paquete, como los valores que se pasaron a un paquete secundario mediante la tarea Ejecutar paquete. Para ver la lista de parámetros, haga clic en Información general.|  
   
  Para obtener más información sobre cómo utilizar la tarea Ejecutar paquete con el fin de que los valores estén disponibles para un paquete secundario, vea [Execute Package Task](control-flow/execute-package-task.md).  

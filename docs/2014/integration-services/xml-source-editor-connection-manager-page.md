@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7c10a7febfcb5df1f2702498fe30148f1794095b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096055"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393893"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Editor de origen de XML (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del **Editor de origen de XML** para especificar un archivo XML y el XSD que transforma los datos XML.  
@@ -34,7 +34,7 @@ ms.locfileid: "48096055"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |Ubicación del archivo XML|Recupera datos de un archivo XML.|  
-|Archivo XML de variable|Especifica el nombre de archivo XML en una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Archivo XML de variable|Especifica el nombre de archivo XML en una variable.<br /><br /> **Información relacionada con**: [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Datos XML de variable|Recupera datos XML de una variable.|  
   
  **Utilizar esquema insertado**  
@@ -67,9 +67,9 @@ ms.locfileid: "48096055"
  Seleccione la variable que contiene los datos XML.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de código fuente XML &#40;página columnas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [Editor de código fuente XML &#40;página de salida de Error&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de origen de XML &#40;página Columnas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Editor de origen de XML &#40;página Salida de error&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extraer datos mediante el origen de XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

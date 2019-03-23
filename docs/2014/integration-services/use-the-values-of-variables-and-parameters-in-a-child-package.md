@@ -13,15 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99194829b63bfbc41caa4ef1e400eb37cf6de64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055644"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374974"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Usar los valores de variables y parámetros en un paquete secundario
   Este procedimiento describe cómo crear una configuración de paquete que utiliza el tipo de configuración de variables primarias. Este tipo de configuración habilita un paquete secundario que se ejecuta desde un paquete primario para tener acceso a una variable del elemento primario.  
@@ -107,7 +107,7 @@ ms.locfileid: "48055644"
 ## <a name="see-also"></a>Vea también  
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   
  [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)   
- [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69ab9ccde1d3f14a4cf3d28c856350aef4c80b56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b74ef55a8b957a7cc8503a56601162060d0749c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071670"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378058"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor de transformación Búsqueda de términos (pestaña Tabla de referencia)
   Use la pestaña **Tabla de referencia** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para especificar la conexión con la tabla de referencia (búsqueda).  
@@ -41,9 +41,9 @@ ms.locfileid: "48071670"
  Use el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) para especificar las opciones de control de errores de las filas que provocan errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación Búsqueda de términos &#40;pestaña búsqueda de términos&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
- [Editor de transformación Búsqueda de términos &#40;ficha Opciones avanzadas&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de transformación Búsqueda de términos &#40;pestaña Búsqueda de términos&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [Editor de transformación Búsqueda de términos &#40;pestaña Avanzadas&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [Transformación Extracción de términos](data-flow/transformations/term-extraction-transformation.md)  
   
   

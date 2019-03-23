@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9b37af7069468bff1235c713f82f0b3444d0683
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3eee8a69013975f7bfe9febcfa85d8143dcef68
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062365"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374929"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Editor de destino de procesamiento de particiones (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de procesamiento de particiones** para configurar el control de errores.  
@@ -102,7 +102,7 @@ ms.locfileid: "48062365"
  Seleccione una ruta de acceso para el registro de errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino de procesamiento de particiones &#40;página asignaciones&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de destino de procesamiento de particiones &#40;página Asignaciones&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0c778d51d5fb8f8c0598fb8aefb747e41271c815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc651d10df7433bdb0217414f251d16ed6abdf70
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060715"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390873"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>Editor de destino de ODBC (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de ODBC** para seleccionar el administrador de conexiones de ODBC para el destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -49,16 +49,16 @@ ms.locfileid: "48060715"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Nombre de la tabla - Lote|Seleccione esta opción para configurar el destino de ODBC de manera que funcione en modo por lotes. Cuando seleccione esta opción, aparecerán las opciones siguientes:|  
-||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible en la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el carácter comodín (\*) para escribir cualquier parte del nombre con el fin de mostrar las tablas que quiere usar.<br /><br /> **Tamaño del lote**: escriba el tamaño del lote para la carga masiva. Es el número de filas cargadas como un lote.|  
+||**Nombre de la tabla o la vista**: Seleccione una tabla o vista disponible en la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el carácter comodín (\*) para escribir cualquier parte del nombre con el fin de mostrar las tablas que quiere usar.<br /><br /> **Tamaño del lote**: Escriba el tamaño del lote para la carga masiva. Es el número de filas cargadas como un lote.|  
 |Nombre de la tabla - Fila a fila|Seleccione esta opción para configurar el destino de ODBC de manera que se inserte cada una de las filas en la tabla de destino de una en una. Cuando seleccione esta opción, aparecerá la opción siguiente:|  
-||**Nombre de la tabla o la vista**: seleccione en la lista una tabla o vista disponible en la base de datos.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.|  
+||**Nombre de la tabla o la vista**: Seleccione una tabla o vista disponible desde la base de datos de la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.|  
   
 ### <a name="preview"></a>Vista previa  
  Haga clic en **Vista previa** para ver hasta 200 filas de datos para la tabla que ha seleccionado.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades personalizadas del destino de ODBC](data-flow/odbc-destination-custom-properties.md)   
+ [Propiedades personalizadas de los destinos ODBC](data-flow/odbc-destination-custom-properties.md)   
  [Editor de destino de ODBC &#40;página Asignaciones&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
- [Editor de destino de ODBC &#40;página de salida de Error&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [Editor de destinos de ODBC &#40;página Salida de error&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d84f3158b41f2cff79572ad7a65c3033a4d2ca77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2f7e59f10b7a54e46e259fff8a4f60b42803a19
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112751"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377513"
 ---
 # <a name="date-and-time-formats"></a>Formatos de fecha y hora
   El análisis rápido ofrece un conjunto rápido y simple de rutinas para analizar datos. El análisis rápido admite los siguientes formatos para los tipos de datos de fecha y hora.  
@@ -53,7 +53,7 @@ ms.locfileid: "48112751"
   
  El análisis rápido genera los datos como DT_DBDATE. Los valores de fechas en formatos truncados se rellenan. Por ejemplo, YYYY pasa a ser YYYY0101.  
   
- Para más información, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
 ## <a name="time-data-type"></a>Tipo de datos de hora  
  El análisis rápido admite los siguientes formatos de cadena para tipos de datos de hora:  
@@ -81,7 +81,7 @@ ms.locfileid: "48112751"
     |-HH|Formato truncado que indica el número de horas que se restan a la UTC para obtener la hora local.|  
     |Z|Un valor de 0 que indica que la hora se representa en UTC.|  
   
-     Los formatos para todos los datos de fecha/hora pueden incluir un elemento de zona horaria. Sin embargo, el sistema omite el valor de zona horaria, excepto cuando los datos son del tipo DT_DBTIMESTAMPOFFSET. Para más información, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+     Los formatos para todos los datos de fecha/hora pueden incluir un elemento de zona horaria. Sin embargo, el sistema omite el valor de zona horaria, excepto cuando los datos son del tipo DT_DBTIMESTAMPOFFSET. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
      En formatos que incluyen un elemento de zona horaria, no hay ningún espacio entre el elemento de tiempo y el elemento de zona horaria, como se muestra en el ejemplo siguiente:  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48112751"
   
  El análisis rápido genera cadenas como DT_DBTIME y DT_DBTIME2. Los valores de horas en formatos truncados se rellenan. Por ejemplo, HH:MI pasa a ser HH:MM:00.000.  
   
- Para más información, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
 ## <a name="datetime-data-type"></a>Tipo de datos de fecha/hora  
  El análisis rápido admite los siguientes formatos de cadena para tipos de datos de fecha/hora:  
@@ -129,6 +129,6 @@ ms.locfileid: "48112751"
 |Day|Agregar 01 para el día del mes.|  
 |Month|Agregar 01 para el mes del año.|  
   
- Para más información, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
   

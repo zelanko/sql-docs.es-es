@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e12fa5ca9d9295ffe1311062215217044ada2135
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7682e3c22885b50e1516a8f30cce468852ae2c7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048395"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378064"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor de transformación Exportar columna (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de transformación Exportar columna** para especificar las columnas del flujo de datos que desea extraer a los archivos. Podrá especificar si desea que la transformación Exportar columna anexe los datos a un archivo o sobrescriba un archivo existente.  
@@ -41,10 +41,10 @@ ms.locfileid: "48048395"
  Especifique si desea que la transformación elimine el contenido de los archivos existentes antes de escribir los datos. De manera predeterminada, es `false`.  
   
  **BOM de escritura**  
- Especifique si desea escribir una marca de orden de bytes (BOM) en el archivo. Solo se escribirá una BOM si los datos tienen el `DT_NTEXT` o tipo de datos DT_WSTR y no se anexan a un archivo de datos existente.  
+ Especifique si desea escribir una marca de orden de bytes (BOM) en el archivo. Solo se escribirá una BOM si los datos poseen el tipo de datos `DT_NTEXT` o DT_WSTR y no están anexados a un archivo de datos existente.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación de columna exportar &#40;página de salida de Error&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de transformación Exportar columna &#40;página Salida de error&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

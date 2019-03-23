@@ -16,20 +16,20 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 807241aec9544c8a6366b8d12c0aaddb4b0d228a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef2ea7fa43556f0c4f12ee41101aedf396a23382
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074472"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374093"
 ---
 # <a name="create-connection-managers"></a>Crear administradores de conexiones
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye una serie de administradores de conexión adaptados a las necesidades de las tareas que se conectan a diferentes tipos de servidores y orígenes de datos. Los administradores de conexión son utilizados por los componentes de flujo de datos, que extraen y cargan datos en diferentes tipos de almacenes de datos, y por los proveedores de registro que escriben registros en un servidor, tabla o archivo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Por ejemplo, un paquete con una tarea Enviar correo usa un tipo de administrador de conexiones SMTP para conectarse a un servidor de Protocolo simple de transferencia de correo (SMTP). Un paquete con una tarea Ejecutar SQL puede usar un administrador de conexiones OLE DB para conectarse a una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
- Para crear y configurar automáticamente los administradores de conexiones al crear un paquete nuevo, puede utilizar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Este asistente también ayuda a crear y configurar los orígenes y destinos que utilizan los administradores de conexiones. Para más información, consulte [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
+ Para crear y configurar automáticamente los administradores de conexiones al crear un paquete nuevo, puede utilizar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Este asistente también ayuda a crear y configurar los orígenes y destinos que utilizan los administradores de conexiones. Para obtener más información, vea [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
   
  Para crear manualmente un nuevo administrador de conexiones y agregarlo a un paquete existente, se usa el área **Administradores de conexiones** que aparece en las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] . Desde el área **Administrador de conexiones** , se elige el tipo de administrador de conexiones que se desea crear y luego se establecen las propiedades del administrador de conexiones mediante un cuadro de diálogo proporcionado por el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para obtener más información, vea la sección "Usar el área Administradores de conexiones" más adelante en este tema.  
   
@@ -58,6 +58,6 @@ ms.locfileid: "48074472"
 ## <a name="see-also"></a>Vea también  
  [Flujo de control](control-flow/control-flow.md)   
  [Flujo de datos](data-flow/data-flow.md)   
- [Servicios de integración &#40;SSIS&#41; controladores de eventos](integration-services-ssis-event-handlers.md)  
+ [Controladores de eventos de Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  
   
   

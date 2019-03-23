@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a43085040e3bc1fde5f01b9ccb769695ea877341
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a5a98644dc9c8f887b72cd5cc76c1d7c38ae174
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129845"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389313"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Editor de origen de CDC (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen de CDC** para seleccionar las opciones de control de errores.  
@@ -70,6 +70,6 @@ ms.locfileid: "48129845"
   
 ## <a name="see-also"></a>Vea también  
  [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [Editor de origen de CDC &#40;página columnas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
+ [Editor de origen de CDC &#40;página Columnas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   
   

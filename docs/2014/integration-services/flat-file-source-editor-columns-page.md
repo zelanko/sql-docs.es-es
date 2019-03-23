@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f65e6e5dd0561960c36eea953b39b71906981fa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a698bf1a8078f969875ce9deba28c3673f1c292
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118735"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394385"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Editor de origen de archivos planos (página Columnas)
   Use el nodo **Columnas** del cuadro de diálogo **Editor de origen de archivos planos** para asignar una columna de salida a cada columna externa (origen).  
@@ -41,9 +41,9 @@ ms.locfileid: "48118735"
  Permite proporcionar un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Flat File Source Editor &#40;página Administrador de conexiones&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [Flat File Source Editor &#40;página de salida de Error&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de origen de archivos planos &#40;página Administrador de conexiones&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
+ [Editor de origen de archivos planos &#40;página Salida de error&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Administrador de conexiones de archivos planos](connection-manager/file-connection-manager.md)  
   
   

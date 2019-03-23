@@ -15,24 +15,24 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4093d5ce5feb9a5498fbc6213e5c63cc8bf83536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c555b22ae219eeec9e0b1670f407c2504ac7f7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047846"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389253"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Agregar iteración a un flujo de control
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye el contenedor de bucles Para, un elemento de flujo de control que simplifica la inclusión de bucles que repiten condicionalmente un flujo de control en un paquete. Para más información, consulte [For Loop Container](control-flow/for-loop-container.md).  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye el contenedor de bucles Para, un elemento de flujo de control que simplifica la inclusión de bucles que repiten condicionalmente un flujo de control en un paquete. Para más información, vea [Contenedor de bucles For](control-flow/for-loop-container.md).  
   
  El contenedor de bucles For evalúa una condición en cada iteración del bucle y se detiene cuando la condición es false. El contenedor de bucles For incluye expresiones para inicializar el bucle, especificando la condición de evaluación que detiene la ejecución del flujo de control repetido y asignando un valor a una expresión que actualiza el valor con el que se compara la condición de evaluación. Debe proporcionar una condición de evaluación, pero las expresiones de inicialización y asignación son opcionales.  
   
  El contenedor de bucles For no proporciona ninguna funcionalidad, sino que proporciona solo la estructura sobre la que se genera un flujo de control repetible. Para proporcionar la funcionalidad del contenedor, debe incluir por lo menos una tarea en el contenedor de bucles For. Para más información, consulte [Integration Services Tasks](control-flow/integration-services-tasks.md).  
   
- El contenedor de bucles For puede incluir un flujo de control con varias tareas y otros contenedores. Agregar tareas y contenedores a un contenedor de bucles For es similar a agregarlas a un paquete, salvo que las tareas y contenedores se arrastran al contenedor de bucles For en lugar de al paquete. Si el contenedor de bucles For incluye más de una tarea o contenedor, puede conectarlos mediante restricciones de precedencia, tal y como se hace en un paquete. Para más información, consulte [Precedence Constraints](control-flow/precedence-constraints.md).  
+ El contenedor de bucles For puede incluir un flujo de control con varias tareas y otros contenedores. Agregar tareas y contenedores a un contenedor de bucles For es similar a agregarlas a un paquete, salvo que las tareas y contenedores se arrastran al contenedor de bucles For en lugar de al paquete. Si el contenedor de bucles For incluye más de una tarea o contenedor, puede conectarlos mediante restricciones de precedencia, tal y como se hace en un paquete. Para obtener más información, vea [Restricciones de precedencia](control-flow/precedence-constraints.md).  
   
 ## <a name="using-expressions-in-for-loop-configuration"></a>Uso de expresiones en la configuración de bucles For  
  Al configurar el contenedor de bucles For especificando una condición de evaluación, valor de inicialización o valor de asignación, puede usar literales o expresiones.  
@@ -58,7 +58,7 @@ ms.locfileid: "48047846"
 4.  Configure el contenedor de bucles For. Para más información, vea [Configurar un contenedor de bucles For](../../2014/integration-services/configure-a-for-loop-container.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Agregar o eliminar tareas o contenedores en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Agrupar o desagrupar componentes](group-or-ungroup-components.md)   
  [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Agregar enumeración a un flujo de Control](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   

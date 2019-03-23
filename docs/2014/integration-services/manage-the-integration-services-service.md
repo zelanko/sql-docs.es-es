@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6b8ea946def4811332e6783e881e968c5a91f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f6251ac85fe76d775fd84b6463d20532615d28c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193405"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375133"
 ---
 # <a name="manage-the-integration-services-service"></a>Administrar el servicio Integration Services
     
@@ -55,9 +55,9 @@ ms.locfileid: "48193405"
   
 ## <a name="see-also"></a>Vea también  
  [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   
- [Configurar la integración de servicios de Service &#40;servicio SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
- [Importación de SQL Server y el Asistente para exportación](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
+ [Asistente para importación y exportación de SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [dtexec (utilidad)](packages/dtexec-utility.md)   
- [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md) (Ejecución de proyectos y paquetes)  
+ [Ejecución de proyectos y paquetes](packages/run-integration-services-ssis-packages.md)  
   
   

@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d20e7102df982f961aed770aedc19812c5aca949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efb8341b4e7124e244b5994aa2f83c664348b865
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185885"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388023"
 ---
 # <a name="active-operations-dialog-box"></a>Operaciones activas, cuadro de diálogo
   Utilice el cuadro de diálogo **Operaciones activas** para ver el estado de las operaciones de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se están ejecutando actualmente en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , como implementación, validación, y ejecución del paquete. Estos datos se almacenan en el catálogo de SSISDB.  
@@ -28,13 +28,13 @@ ms.locfileid: "48185885"
   
  **¿Qué desea hacer?**  
   
-1.  [Abra el cuadro de diálogo operaciones activas](#open_dialog)  
+1.  [Abrir el cuadro de diálogo Operaciones activas](#open_dialog)  
   
 2.  [Configurar las opciones](#options)  
   
 ##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Operaciones activas  
   
-1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 2.  Conéctese al motor de base de datos de Microsoft SQL Server  
   

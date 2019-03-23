@@ -12,15 +12,15 @@ helpviewer_keywords:
 - service [Integration Services], events
 - Integration Services service, events
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 887fa745a0f4fab9d7faf716fd7ad26fb3be1fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c00739cefe457575e6b05dee368d8965775a387
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158475"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389199"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Ver los eventos para el servicio Integration Services
   Hay dos herramientas en las que puede ver los eventos para el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  

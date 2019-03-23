@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0aee7f7a06d1188944857f2b6f157520cbc388b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 33ea6f845c323a858d1bd89318f2b8e07b734edd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372857"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387793"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Actualizar la versión de un componente de flujo de datos
   Los paquetes que se crearon con una versión anterior de su componente pueden contener metadatos que ya no son válidos, como propiedades personalizadas cuyo uso se ha modificado en versiones más recientes del componente. Puede invalidar el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> de la clase base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> para actualizar los metadatos previamente guardados en paquetes anteriores para reflejar las propiedades actuales de su componente.  

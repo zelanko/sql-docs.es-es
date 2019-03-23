@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff0f1ef3f7baff1c39b3d338f47eb5eddde286e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c78fb92078c604d881f18ea3472e23619771b49
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098186"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374623"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor
   Este procedimiento describe cómo establecer puntos de interrupción en un paquete, una tarea, un contenedor de bucles For o Foreach o un contenedor de secuencias.  
@@ -46,8 +46,8 @@ ms.locfileid: "48098186"
 6.  Para guardar el paquete, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
 ## <a name="see-also"></a>Vea también  
- [Solución de problemas de las herramientas de desarrollo de paquetes](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Depurar un Script estableciendo puntos de interrupción en una tarea Script y componente de Script](data-flow/transformations/script-component.md)   
+ [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Depurar un script estableciendo puntos de interrupción en una tarea Script y un componente Script](data-flow/transformations/script-component.md)   
  [Codificar y depurar la tarea Script](control-flow/script-task.md)   
  [Codificar y depurar el componente de script](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   

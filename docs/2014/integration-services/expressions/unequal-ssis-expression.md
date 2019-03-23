@@ -10,15 +10,15 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7df4340e2dc54a2c30b1c5693efeda26ecc9b3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4752685d9590056cb47e88ee2ec4fea5128cc86b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785527"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378853"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Diferente) (expresión de SSIS)
   Realiza una comparación para determinar si dos expresiones con tipos de datos compatibles no son iguales. El evaluador de expresiones convierte automáticamente muchos tipos de datos antes de realizar la comparación.  

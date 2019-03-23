@@ -13,21 +13,21 @@ helpviewer_keywords:
 - locale-sensitive parsing [Integration Services]
 - fast parse [Integration Services]
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 92dc9782a00a55a9409bd5e87dd00a423002d200
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a89b37f2210b2a80d22747a816e4f937cbc54ee1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105445"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375643"
 ---
 # <a name="numeric-data-formats"></a>Formatos de datos numéricos
   El análisis rápido ofrece un conjunto rápido y simple de rutinas, que no distinguen la configuración regional, para analizar datos. El análisis rápido admite solo un conjunto limitado de formatos para tipos de datos enteros.  
   
 ## <a name="integer-data-types"></a>Tipos de datos enteros  
- Los tipos de datos enteros que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] son DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 y DT_UI8. Para más información, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Los tipos de datos enteros que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] son DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 y DT_UI8. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
  El análisis rápido admite los siguientes formatos para tipos de datos enteros:  
   

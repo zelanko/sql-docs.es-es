@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: ceaf172fc36ee92d15be326d4356061ea1674df1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162201"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392723"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Uso de cuadernos en Azure Data Studio
 
@@ -85,7 +85,7 @@ Una vez que la instalación se realiza correctamente, encontrará una notificaci
 
 |Kernel|Descripción
 |:-----|:-----
-| SQL Kernel | Escribir el código SQL en SQL Server.
+| SQL Kernel | Escribir código de SQL destinado a la base de datos relacional.
 |PySpark3 y Kernel PySpark| Escribir código de Python mediante el proceso de Spark del clúster.
 |Spark Kernel|Escribir código de Scala y R mediante el proceso de Spark del clúster.
 |Python Kernel|Escribir código de Python para el desarrollo local.

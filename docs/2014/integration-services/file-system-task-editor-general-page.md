@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6778bd585d84601d35846cafca3822a81a3bb60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b010d4c532db61d65fb312cdf9b02a1684332c3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208755"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377283"
 ---
 # <a name="file-system-task-editor-general-page"></a>Editor de la tarea Sistema de archivos (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Sistema de archivos** para configurar la operación del sistema de archivos que lleva a cabo la tarea.  
@@ -49,7 +49,7 @@ ms.locfileid: "48208755"
  **OverwriteDestination**  
  Especifique si la operación puede sobrescribir archivos en el directorio de destino.  
   
- **Nombre**  
+ **Name**  
  Proporcione un nombre único para la tarea Sistema de archivos. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
@@ -70,8 +70,8 @@ ms.locfileid: "48208755"
 |**Eliminar contenido de directorio**|Elimine el contenido de un directorio. Al seleccionar este valor se muestran las opciones dinámicas para un origen.|  
 |**Eliminar archivo**|Elimine un archivo. Al seleccionar este valor se muestran las opciones dinámicas para un origen.|  
 |**Mover directorio**|Mueva un directorio. Al seleccionar este valor se muestran las opciones dinámicas para un origen y un destino.|  
-|**Mover archivo**|Mueva un archivo. Al seleccionar este valor se muestran las opciones dinámicas para un origen y un destino.<br /><br /> Nota: Al mover un archivo, no incluya un nombre de archivo en la ruta de acceso de directorio que proporcione como destino.|  
-|**Cambiar nombre de archivo**|Cambie el nombre de un archivo. Al seleccionar este valor se muestran las opciones dinámicas para un origen y un destino.<br /><br /> Nota: Al cambiar el nombre de un archivo, incluya el nuevo nombre de archivo en la ruta de acceso de directorio que se proporciona para el destino.|  
+|**Mover archivo**|Mueva un archivo. Al seleccionar este valor se muestran las opciones dinámicas para un origen y un destino.<br /><br /> Nota: Al mover un archivo, no incluya el nombre del archivo en la ruta de acceso del directorio que proporcione como destino.|  
+|**Cambiar nombre de archivo**|Cambie el nombre de un archivo. Al seleccionar este valor se muestran las opciones dinámicas para un origen y un destino.<br /><br /> Nota: Al cambiar el nombre de un archivo, incluya el nuevo nombre del archivo en la ruta de acceso del directorio que proporcione como destino.|  
 |**Establecer atributos**|Establezca los atributos de un archivo o un directorio. Al seleccionar este valor se muestran las opciones dinámicas para un origen y una operación.|  
   
  `IsSourcePathVariable`  
@@ -88,13 +88,13 @@ ms.locfileid: "48208755"
  **DestinationVariable**  
  Seleccione el nombre de la variable en la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
+ **Temas relacionados:** [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [agregar Variable](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
  Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del Administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>Opciones dinámicas de IsSourcePathVariable  
   
@@ -102,18 +102,18 @@ ms.locfileid: "48208755"
  **SourceVariable**  
  Seleccione el nombre de la variable en la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
+ **Temas relacionados:** [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [agregar Variable](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
  Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del Administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>Opciones dinámicas de Operación  
   
 ### <a name="operation--set-attributes"></a>Operación = Establecer atributos  
- **Oculto**  
+ **Hidden**  
  Indique si el archivo o el directorio está visible.  
   
  **Solo lectura**  
@@ -130,7 +130,7 @@ ms.locfileid: "48208755"
  Indica si la operación **Crear directorio** usa un directorio existente con el nombre especificado, en lugar de crear un directorio.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

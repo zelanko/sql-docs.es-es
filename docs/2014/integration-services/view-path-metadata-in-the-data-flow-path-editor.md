@@ -11,15 +11,15 @@ helpviewer_keywords:
 - metadata [Integration Services]
 - paths [Integration Services], metadata
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b495401e95971848a864b228368c17231bee5e4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d185dc36c81863176f7249c4fa680c37069c2f28
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122465"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393859"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Ver los metadatos de rutas con el Editor de rutas de flujo de datos
   Las rutas conectan dos componentes de flujo de datos. Antes de poder ver los metadatos de ruta, el flujo de datos debe contener por lo menos dos componentes de flujo de datos conectados. Para más información, vea [Agregar o eliminar un componente en un flujo de datos](data-flow/add-or-delete-a-component-in-a-data-flow.md) y [Conectar componentes de un flujo de datos](data-flow/connect-components-in-a-data-flow.md).  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1fc2e587f38f13730f8455b04d0542079158da9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354634"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389863"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabajar con imágenes con la tarea Script
   Una base de datos de productos o usuarios suele incluir imágenes además de datos de texto y numéricos. El espacio de nombres `System.Drawing` de Microsoft .NET Framework proporciona clases para manipular las imágenes.  

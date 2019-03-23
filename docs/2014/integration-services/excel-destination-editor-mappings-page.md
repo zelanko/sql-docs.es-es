@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff6e51c15678d50b6ebb39614441419dd13ad3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39c766acdd171db17c2b3f5ba0623b57a36ca145
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047576"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387803"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Editor de destino de Excel (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de Excel** para asignar columnas de entrada a columnas de destino.  
@@ -41,9 +41,9 @@ ms.locfileid: "48047576"
  Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de Excel &#40;página Administrador de conexiones&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Editor de destino de Excel &#40;página de salida de Error&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Editor de destino de Excel &#40;página Salida de error&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](control-flow/foreach-loop-container.md)  
   
   

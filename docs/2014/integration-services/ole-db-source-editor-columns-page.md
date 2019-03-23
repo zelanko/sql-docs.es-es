@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 915479d218e8ecee950609a5431bdb0331242fcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c68996ab5c4aa204a8aa1139253dd946e558bba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125511"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390833"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Editor de origen de OLE DB (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen de OLE DB** para asignar una columna de salida a cada columna externa (origen).  
@@ -38,9 +38,9 @@ ms.locfileid: "48125511"
  Permite proporcionar un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre que indique se mostrará en el Diseñador SSIS.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de origen de OLE DB &#40;página Administrador de conexiones&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [Editor de origen de OLE DB &#40;página de salida de Error&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Editor de origen de OLE DB &#40;página Salida de error&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extraer datos mediante el origen de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md)  
   
